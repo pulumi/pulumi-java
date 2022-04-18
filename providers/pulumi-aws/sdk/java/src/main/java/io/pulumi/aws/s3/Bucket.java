@@ -56,7 +56,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
      * 
      */
-    public Output<String> getAccelerationStatus() {
+    public Output<String> accelerationStatus() {
         return this.accelerationStatus;
     }
     /**
@@ -70,7 +70,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
      * 
      */
-    public Output</* @Nullable */ String> getAcl() {
+    public Output</* @Nullable */ String> acl() {
         return this.acl;
     }
     /**
@@ -84,7 +84,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -98,7 +98,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -112,7 +112,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
      * 
      */
-    public Output<String> getBucketDomainName() {
+    public Output<String> bucketDomainName() {
         return this.bucketDomainName;
     }
     /**
@@ -126,7 +126,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
      * 
      */
-    public Output</* @Nullable */ String> getBucketPrefix() {
+    public Output</* @Nullable */ String> bucketPrefix() {
         return this.bucketPrefix;
     }
     /**
@@ -140,7 +140,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
      * 
      */
-    public Output<String> getBucketRegionalDomainName() {
+    public Output<String> bucketRegionalDomainName() {
         return this.bucketRegionalDomainName;
     }
     /**
@@ -154,7 +154,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
      * 
      */
-    public Output</* @Nullable */ List<BucketCorsRule>> getCorsRules() {
+    public Output</* @Nullable */ List<BucketCorsRule>> corsRules() {
         return this.corsRules;
     }
     /**
@@ -168,7 +168,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -182,7 +182,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
      * 
      */
-    public Output</* @Nullable */ List<BucketGrant>> getGrants() {
+    public Output</* @Nullable */ List<BucketGrant>> grants() {
         return this.grants;
     }
     /**
@@ -196,7 +196,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -210,7 +210,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
      * 
      */
-    public Output</* @Nullable */ List<BucketLifecycleRule>> getLifecycleRules() {
+    public Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules() {
         return this.lifecycleRules;
     }
     /**
@@ -224,7 +224,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
      * 
      */
-    public Output</* @Nullable */ List<BucketLogging>> getLoggings() {
+    public Output</* @Nullable */ List<BucketLogging>> loggings() {
         return this.loggings;
     }
     /**
@@ -238,7 +238,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
      * 
      */
-    public Output</* @Nullable */ BucketObjectLockConfiguration> getObjectLockConfiguration() {
+    public Output</* @Nullable */ BucketObjectLockConfiguration> objectLockConfiguration() {
         return this.objectLockConfiguration;
     }
     /**
@@ -252,7 +252,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
      * 
      */
-    public Output</* @Nullable */ String> getPolicy() {
+    public Output</* @Nullable */ String> policy() {
         return this.policy;
     }
     /**
@@ -266,7 +266,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The AWS region this bucket resides in.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -280,7 +280,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketReplicationConfiguration> getReplicationConfiguration() {
+    public Output</* @Nullable */ BucketReplicationConfiguration> replicationConfiguration() {
         return this.replicationConfiguration;
     }
     /**
@@ -300,7 +300,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * developer guide for more information.
      * 
      */
-    public Output<String> getRequestPayer() {
+    public Output<String> requestPayer() {
         return this.requestPayer;
     }
     /**
@@ -314,7 +314,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
      * 
      */
-    public Output</* @Nullable */ BucketServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ BucketServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     /**
@@ -328,7 +328,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the bucket.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -342,7 +342,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -356,7 +356,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
      * 
      */
-    public Output<BucketVersioning> getVersioning() {
+    public Output<BucketVersioning> versioning() {
         return this.versioning;
     }
     /**
@@ -370,7 +370,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A website object (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketWebsite> getWebsite() {
+    public Output</* @Nullable */ BucketWebsite> website() {
         return this.website;
     }
     /**
@@ -384,7 +384,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
      * 
      */
-    public Output<String> getWebsiteDomain() {
+    public Output<String> websiteDomain() {
         return this.websiteDomain;
     }
     /**
@@ -398,7 +398,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
      * 
      */
-    public Output<String> getWebsiteEndpoint() {
+    public Output<String> websiteEndpoint() {
         return this.websiteEndpoint;
     }
 

@@ -32,19 +32,19 @@ public final class InstanceMemcacheNode {
         this.zone = zone;
     }
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
-    public Optional<String> getNodeId() {
+    public Optional<String> nodeId() {
         return Optional.ofNullable(this.nodeId);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

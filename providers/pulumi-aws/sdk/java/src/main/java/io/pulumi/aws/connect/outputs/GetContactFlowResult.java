@@ -72,51 +72,51 @@ public final class GetContactFlowResult {
      * The Amazon Resource Name (ARN) of the Contact Flow.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getContactFlowId() {
+    public String contactFlowId() {
         return this.contactFlowId;
     }
     /**
      * Specifies the logic of the Contact Flow.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * Specifies the description of the Contact Flow.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A the map of tags to assign to the Contact Flow.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Specifies the type of Contact Flow.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

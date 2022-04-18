@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
     @Import(name="infoTypeTransformations", required=true)
       private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
-    public GooglePrivacyDlpV2InfoTypeTransformationsResponse getInfoTypeTransformations() {
+    public GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
     @Import(name="recordTransformations", required=true)
       private final GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
 
-    public GooglePrivacyDlpV2RecordTransformationsResponse getRecordTransformations() {
+    public GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations() {
         return this.recordTransformations;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
     @Import(name="transformationErrorHandling", required=true)
       private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
-    public GooglePrivacyDlpV2TransformationErrorHandlingResponse getTransformationErrorHandling() {
+    public GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling() {
         return this.transformationErrorHandling;
     }
 

@@ -26,7 +26,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -37,7 +37,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -48,7 +48,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

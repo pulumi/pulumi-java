@@ -28,7 +28,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<String> weight;
 
-    public Output<String> getWeight() {
+    public Output<String> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 
@@ -39,7 +39,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Output<List<WidgetArgs>> getWidgets() {
+    public Output<List<WidgetArgs>> widgets() {
         return this.widgets == null ? Codegen.empty() : this.widgets;
     }
 

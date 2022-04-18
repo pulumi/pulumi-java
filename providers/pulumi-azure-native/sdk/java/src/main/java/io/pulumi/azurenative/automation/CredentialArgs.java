@@ -22,7 +22,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -33,7 +33,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
-    public Output<String> getCredentialName() {
+    public Output<String> credentialName() {
         return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
@@ -44,7 +44,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -66,7 +66,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -77,7 +77,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +88,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

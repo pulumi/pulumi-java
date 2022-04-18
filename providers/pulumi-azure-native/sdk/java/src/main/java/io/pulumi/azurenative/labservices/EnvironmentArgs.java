@@ -24,7 +24,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentSettingName", required=true)
       private final Output<String> environmentSettingName;
 
-    public Output<String> getEnvironmentSettingName() {
+    public Output<String> environmentSettingName() {
         return this.environmentSettingName;
     }
 
@@ -46,7 +46,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -57,7 +57,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -68,7 +68,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -90,7 +90,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSets")
       private final @Nullable Output<ResourceSetArgs> resourceSets;
 
-    public Output<ResourceSetArgs> getResourceSets() {
+    public Output<ResourceSetArgs> resourceSets() {
         return this.resourceSets == null ? Codegen.empty() : this.resourceSets;
     }
 
@@ -112,7 +112,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 

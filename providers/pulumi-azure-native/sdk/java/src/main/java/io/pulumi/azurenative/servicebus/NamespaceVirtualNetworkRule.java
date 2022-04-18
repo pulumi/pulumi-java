@@ -42,7 +42,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -70,7 +70,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return Resource ID of Virtual Network Subnet
      * 
      */
-    public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
+    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

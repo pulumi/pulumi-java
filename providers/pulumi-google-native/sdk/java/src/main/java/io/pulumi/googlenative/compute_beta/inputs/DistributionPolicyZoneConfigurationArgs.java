@@ -22,7 +22,7 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

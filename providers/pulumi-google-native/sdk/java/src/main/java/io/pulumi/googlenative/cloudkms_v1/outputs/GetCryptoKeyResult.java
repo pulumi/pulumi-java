@@ -99,77 +99,77 @@ public final class GetCryptoKeyResult {
      * The time at which this CryptoKey was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      * 
     */
-    public String getCryptoKeyBackend() {
+    public String cryptoKeyBackend() {
         return this.cryptoKeyBackend;
     }
     /**
      * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
      * 
     */
-    public String getDestroyScheduledDuration() {
+    public String destroyScheduledDuration() {
         return this.destroyScheduledDuration;
     }
     /**
      * Immutable. Whether this key may contain imported versions only.
      * 
     */
-    public Boolean getImportOnly() {
+    public Boolean importOnly() {
         return this.importOnly;
     }
     /**
      * Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
     */
-    public String getNextRotationTime() {
+    public String nextRotationTime() {
         return this.nextRotationTime;
     }
     /**
      * A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be omitted.
      * 
     */
-    public CryptoKeyVersionResponse getPrimary() {
+    public CryptoKeyVersionResponse primary() {
         return this.primary;
     }
     /**
      * Immutable. The immutable purpose of this CryptoKey.
      * 
     */
-    public String getPurpose() {
+    public String purpose() {
         return this.purpose;
     }
     /**
      * next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
     */
-    public String getRotationPeriod() {
+    public String rotationPeriod() {
         return this.rotationPeriod;
     }
     /**
      * A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
      * 
     */
-    public CryptoKeyVersionTemplateResponse getVersionTemplate() {
+    public CryptoKeyVersionTemplateResponse versionTemplate() {
         return this.versionTemplate;
     }
 

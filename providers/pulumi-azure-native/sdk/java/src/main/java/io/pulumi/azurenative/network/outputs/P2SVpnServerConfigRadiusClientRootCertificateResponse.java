@@ -55,35 +55,35 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the radius client root certificate resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Radius client root certificate thumbprint.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
 

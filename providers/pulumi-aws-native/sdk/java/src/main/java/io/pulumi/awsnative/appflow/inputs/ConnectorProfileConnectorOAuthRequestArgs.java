@@ -22,7 +22,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     @Import(name="authCode")
       private final @Nullable Output<String> authCode;
 
-    public Output<String> getAuthCode() {
+    public Output<String> authCode() {
         return this.authCode == null ? Codegen.empty() : this.authCode;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
-    public Output<String> getRedirectUri() {
+    public Output<String> redirectUri() {
         return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 

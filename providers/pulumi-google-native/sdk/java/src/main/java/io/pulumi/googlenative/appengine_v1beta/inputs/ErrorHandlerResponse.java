@@ -23,7 +23,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorCode", required=true)
       private final String errorCode;
 
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
 
@@ -34,7 +34,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mimeType", required=true)
       private final String mimeType;
 
-    public String getMimeType() {
+    public String mimeType() {
         return this.mimeType;
     }
 
@@ -45,7 +45,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="staticFile", required=true)
       private final String staticFile;
 
-    public String getStaticFile() {
+    public String staticFile() {
         return this.staticFile;
     }
 

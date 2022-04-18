@@ -29,7 +29,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -40,7 +40,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -51,7 +51,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -62,7 +62,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="spec", required=true)
       private final Output<CustomResourceDefinitionSpecArgs> spec;
 
-    public Output<CustomResourceDefinitionSpecArgs> getSpec() {
+    public Output<CustomResourceDefinitionSpecArgs> spec() {
         return this.spec;
     }
 
@@ -73,7 +73,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="status")
       private final @Nullable Output<CustomResourceDefinitionStatusArgs> status;
 
-    public Output<CustomResourceDefinitionStatusArgs> getStatus() {
+    public Output<CustomResourceDefinitionStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -27,7 +27,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="env")
       private final @Nullable Output<Map<String,String>> env;
 
-    public Output<Map<String,String>> getEnv() {
+    public Output<Map<String,String>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -38,7 +38,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 

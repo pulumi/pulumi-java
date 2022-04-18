@@ -25,7 +25,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -36,7 +36,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZoneId")
       private final @Nullable String availabilityZoneId;
 
-    public Optional<String> getAvailabilityZoneId() {
+    public Optional<String> availabilityZoneId() {
         return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
     }
 
@@ -47,7 +47,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock")
       private final @Nullable String cidrBlock;
 
-    public Optional<String> getCidrBlock() {
+    public Optional<String> cidrBlock() {
         return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
     }
 
@@ -58,7 +58,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultForAz")
       private final @Nullable Boolean defaultForAz;
 
-    public Optional<Boolean> getDefaultForAz() {
+    public Optional<Boolean> defaultForAz() {
         return this.defaultForAz == null ? Optional.empty() : Optional.ofNullable(this.defaultForAz);
     }
 
@@ -69,7 +69,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetSubnetFilter> filters;
 
-    public List<GetSubnetFilter> getFilters() {
+    public List<GetSubnetFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -80,7 +80,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -91,7 +91,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv6CidrBlock")
       private final @Nullable String ipv6CidrBlock;
 
-    public Optional<String> getIpv6CidrBlock() {
+    public Optional<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Optional.empty() : Optional.ofNullable(this.ipv6CidrBlock);
     }
 
@@ -102,7 +102,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -113,7 +113,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
       private final @Nullable String vpcId;
 
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
     }
 

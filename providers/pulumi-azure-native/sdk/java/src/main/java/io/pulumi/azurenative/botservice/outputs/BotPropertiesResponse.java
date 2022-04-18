@@ -254,231 +254,231 @@ public final class BotPropertiesResponse {
      * Contains resource all settings defined as key/value pairs.
      * 
     */
-    public Map<String,String> getAllSettings() {
+    public Map<String,String> allSettings() {
         return this.allSettings == null ? Map.of() : this.allSettings;
     }
     /**
      * The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
      * 
     */
-    public Optional<String> getAppPasswordHint() {
+    public Optional<String> appPasswordHint() {
         return Optional.ofNullable(this.appPasswordHint);
     }
     /**
      * The CMK encryption status
      * 
     */
-    public String getCmekEncryptionStatus() {
+    public String cmekEncryptionStatus() {
         return this.cmekEncryptionStatus;
     }
     /**
      * The CMK Url
      * 
     */
-    public Optional<String> getCmekKeyVaultUrl() {
+    public Optional<String> cmekKeyVaultUrl() {
         return Optional.ofNullable(this.cmekKeyVaultUrl);
     }
     /**
      * Collection of channels for which the bot is configured
      * 
     */
-    public List<String> getConfiguredChannels() {
+    public List<String> configuredChannels() {
         return this.configuredChannels;
     }
     /**
      * The description of the bot
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Application Insights key
      * 
     */
-    public Optional<String> getDeveloperAppInsightKey() {
+    public Optional<String> developerAppInsightKey() {
         return Optional.ofNullable(this.developerAppInsightKey);
     }
     /**
      * The Application Insights Api Key
      * 
     */
-    public Optional<String> getDeveloperAppInsightsApiKey() {
+    public Optional<String> developerAppInsightsApiKey() {
         return Optional.ofNullable(this.developerAppInsightsApiKey);
     }
     /**
      * The Application Insights App Id
      * 
     */
-    public Optional<String> getDeveloperAppInsightsApplicationId() {
+    public Optional<String> developerAppInsightsApplicationId() {
         return Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
     /**
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
     */
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * The Name of the bot
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Collection of channels for which the bot is enabled
      * 
     */
-    public List<String> getEnabledChannels() {
+    public List<String> enabledChannels() {
         return this.enabledChannels;
     }
     /**
      * The bot's endpoint
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The bot's endpoint version
      * 
     */
-    public String getEndpointVersion() {
+    public String endpointVersion() {
         return this.endpointVersion;
     }
     /**
      * The Icon Url of the bot
      * 
     */
-    public Optional<String> getIconUrl() {
+    public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
      * Whether Cmek is enabled
      * 
     */
-    public Optional<Boolean> getIsCmekEnabled() {
+    public Optional<Boolean> isCmekEnabled() {
         return Optional.ofNullable(this.isCmekEnabled);
     }
     /**
      * Whether the bot is developerAppInsightsApiKey set
      * 
     */
-    public Boolean getIsDeveloperAppInsightsApiKeySet() {
+    public Boolean isDeveloperAppInsightsApiKeySet() {
         return this.isDeveloperAppInsightsApiKeySet;
     }
     /**
      * Whether the bot is streaming supported
      * 
     */
-    public Optional<Boolean> getIsStreamingSupported() {
+    public Optional<Boolean> isStreamingSupported() {
         return Optional.ofNullable(this.isStreamingSupported);
     }
     /**
      * Collection of LUIS App Ids
      * 
     */
-    public List<String> getLuisAppIds() {
+    public List<String> luisAppIds() {
         return this.luisAppIds == null ? List.of() : this.luisAppIds;
     }
     /**
      * The LUIS Key
      * 
     */
-    public Optional<String> getLuisKey() {
+    public Optional<String> luisKey() {
         return Optional.ofNullable(this.luisKey);
     }
     /**
      * The bot's manifest url
      * 
     */
-    public Optional<String> getManifestUrl() {
+    public Optional<String> manifestUrl() {
         return Optional.ofNullable(this.manifestUrl);
     }
     /**
      * Token used to migrate non Azure bot to azure subscription
      * 
     */
-    public String getMigrationToken() {
+    public String migrationToken() {
         return this.migrationToken;
     }
     /**
      * Microsoft App Id for the bot
      * 
     */
-    public String getMsaAppId() {
+    public String msaAppId() {
         return this.msaAppId;
     }
     /**
      * Microsoft App Managed Identity Resource Id for the bot
      * 
     */
-    public Optional<String> getMsaAppMSIResourceId() {
+    public Optional<String> msaAppMSIResourceId() {
         return Optional.ofNullable(this.msaAppMSIResourceId);
     }
     /**
      * Microsoft App Tenant Id for the bot
      * 
     */
-    public Optional<String> getMsaAppTenantId() {
+    public Optional<String> msaAppTenantId() {
         return Optional.ofNullable(this.msaAppTenantId);
     }
     /**
      * Microsoft App Type for the bot
      * 
     */
-    public Optional<String> getMsaAppType() {
+    public Optional<String> msaAppType() {
         return Optional.ofNullable(this.msaAppType);
     }
     /**
      * The hint to browser (e.g. protocol handler) on how to open the bot for authoring
      * 
     */
-    public Optional<String> getOpenWithHint() {
+    public Optional<String> openWithHint() {
         return Optional.ofNullable(this.openWithHint);
     }
     /**
      * Contains resource parameters defined as key/value pairs.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Provisioning state of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether the bot is in an isolated network
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Publishing credentials of the resource
      * 
     */
-    public Optional<String> getPublishingCredentials() {
+    public Optional<String> publishingCredentials() {
         return Optional.ofNullable(this.publishingCredentials);
     }
     /**
      * The channel schema transformation version for the bot
      * 
     */
-    public Optional<String> getSchemaTransformationVersion() {
+    public Optional<String> schemaTransformationVersion() {
         return Optional.ofNullable(this.schemaTransformationVersion);
     }
     /**
      * The storage resourceId for the bot
      * 
     */
-    public Optional<String> getStorageResourceId() {
+    public Optional<String> storageResourceId() {
         return Optional.ofNullable(this.storageResourceId);
     }
 

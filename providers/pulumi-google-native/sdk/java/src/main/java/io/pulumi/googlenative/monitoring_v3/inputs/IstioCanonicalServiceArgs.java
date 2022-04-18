@@ -26,7 +26,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="canonicalService")
       private final @Nullable Output<String> canonicalService;
 
-    public Output<String> getCanonicalService() {
+    public Output<String> canonicalService() {
         return this.canonicalService == null ? Codegen.empty() : this.canonicalService;
     }
 
@@ -37,7 +37,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="canonicalServiceNamespace")
       private final @Nullable Output<String> canonicalServiceNamespace;
 
-    public Output<String> getCanonicalServiceNamespace() {
+    public Output<String> canonicalServiceNamespace() {
         return this.canonicalServiceNamespace == null ? Codegen.empty() : this.canonicalServiceNamespace;
     }
 
@@ -48,7 +48,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="meshUid")
       private final @Nullable Output<String> meshUid;
 
-    public Output<String> getMeshUid() {
+    public Output<String> meshUid() {
         return this.meshUid == null ? Codegen.empty() : this.meshUid;
     }
 

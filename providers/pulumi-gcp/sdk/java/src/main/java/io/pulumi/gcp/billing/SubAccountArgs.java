@@ -24,7 +24,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
-    public Output<String> getDeletionPolicy() {
+    public Output<String> deletionPolicy() {
         return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
@@ -35,7 +35,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount", required=true)
       private final Output<String> masterBillingAccount;
 
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
 

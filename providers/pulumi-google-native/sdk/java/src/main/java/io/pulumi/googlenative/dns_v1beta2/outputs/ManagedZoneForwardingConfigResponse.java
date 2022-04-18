@@ -26,14 +26,14 @@ public final class ManagedZoneForwardingConfigResponse {
         this.targetNameServers = targetNameServers;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
      * 
     */
-    public List<ManagedZoneForwardingConfigNameServerTargetResponse> getTargetNameServers() {
+    public List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers() {
         return this.targetNameServers;
     }
 

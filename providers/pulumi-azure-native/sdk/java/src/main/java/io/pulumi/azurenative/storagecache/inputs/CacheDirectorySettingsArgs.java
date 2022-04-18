@@ -27,7 +27,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="activeDirectory")
       private final @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory;
 
-    public Output<CacheActiveDirectorySettingsArgs> getActiveDirectory() {
+    public Output<CacheActiveDirectorySettingsArgs> activeDirectory() {
         return this.activeDirectory == null ? Codegen.empty() : this.activeDirectory;
     }
 
@@ -38,7 +38,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="usernameDownload")
       private final @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
-    public Output<CacheUsernameDownloadSettingsArgs> getUsernameDownload() {
+    public Output<CacheUsernameDownloadSettingsArgs> usernameDownload() {
         return this.usernameDownload == null ? Codegen.empty() : this.usernameDownload;
     }
 

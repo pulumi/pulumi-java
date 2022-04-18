@@ -21,7 +21,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dbInstanceIdentifier", required=true)
       private final Output<String> dbInstanceIdentifier;
 
-    public Output<String> getDbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
@@ -32,7 +32,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
 
@@ -43,7 +43,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

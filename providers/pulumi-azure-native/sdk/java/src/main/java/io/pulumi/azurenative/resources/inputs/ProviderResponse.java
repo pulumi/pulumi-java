@@ -27,7 +27,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="namespace")
       private final @Nullable String namespace;
 
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
@@ -49,7 +49,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="registrationPolicy", required=true)
       private final String registrationPolicy;
 
-    public String getRegistrationPolicy() {
+    public String registrationPolicy() {
         return this.registrationPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="registrationState", required=true)
       private final String registrationState;
 
-    public String getRegistrationState() {
+    public String registrationState() {
         return this.registrationState;
     }
 
@@ -71,7 +71,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceTypes", required=true)
       private final List<ProviderResourceTypeResponse> resourceTypes;
 
-    public List<ProviderResourceTypeResponse> getResourceTypes() {
+    public List<ProviderResourceTypeResponse> resourceTypes() {
         return this.resourceTypes;
     }
 

@@ -33,14 +33,14 @@ public final class EgressFromResponse {
      * A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
      * 
     */
-    public List<String> getIdentities() {
+    public List<String> identities() {
         return this.identities;
     }
     /**
      * Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
      * 
     */
-    public String getIdentityType() {
+    public String identityType() {
         return this.identityType;
     }
 

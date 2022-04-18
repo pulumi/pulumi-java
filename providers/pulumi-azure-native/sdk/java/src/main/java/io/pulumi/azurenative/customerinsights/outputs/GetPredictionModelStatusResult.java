@@ -96,77 +96,77 @@ public final class GetPredictionModelStatusResult {
      * The model status message.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Version of the model.
      * 
     */
-    public String getModelVersion() {
+    public String modelVersion() {
         return this.modelVersion;
     }
     /**
      * The prediction GUID ID.
      * 
     */
-    public String getPredictionGuidId() {
+    public String predictionGuidId() {
         return this.predictionGuidId;
     }
     /**
      * The prediction name.
      * 
     */
-    public String getPredictionName() {
+    public String predictionName() {
         return this.predictionName;
     }
     /**
      * The signals used.
      * 
     */
-    public Integer getSignalsUsed() {
+    public Integer signalsUsed() {
         return this.signalsUsed;
     }
     /**
      * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Count of the test set.
      * 
     */
-    public Integer getTestSetCount() {
+    public Integer testSetCount() {
         return this.testSetCount;
     }
     /**
      * The training accuracy.
      * 
     */
-    public Integer getTrainingAccuracy() {
+    public Integer trainingAccuracy() {
         return this.trainingAccuracy;
     }
     /**
      * Count of the training set.
      * 
     */
-    public Integer getTrainingSetCount() {
+    public Integer trainingSetCount() {
         return this.trainingSetCount;
     }
     /**
      * Count of the validation set.
      * 
     */
-    public Integer getValidationSetCount() {
+    public Integer validationSetCount() {
         return this.validationSetCount;
     }
 

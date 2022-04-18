@@ -24,7 +24,7 @@ public final class RolloutIdentityAuthenticationResponse extends io.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

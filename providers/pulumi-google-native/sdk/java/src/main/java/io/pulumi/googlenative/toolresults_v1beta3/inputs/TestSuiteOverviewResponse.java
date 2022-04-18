@@ -26,7 +26,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="elapsedTime", required=true)
       private final DurationResponse elapsedTime;
 
-    public DurationResponse getElapsedTime() {
+    public DurationResponse elapsedTime() {
         return this.elapsedTime;
     }
 
@@ -37,7 +37,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="errorCount", required=true)
       private final Integer errorCount;
 
-    public Integer getErrorCount() {
+    public Integer errorCount() {
         return this.errorCount;
     }
 
@@ -48,7 +48,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="failureCount", required=true)
       private final Integer failureCount;
 
-    public Integer getFailureCount() {
+    public Integer failureCount() {
         return this.failureCount;
     }
 
@@ -59,7 +59,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="flakyCount", required=true)
       private final Integer flakyCount;
 
-    public Integer getFlakyCount() {
+    public Integer flakyCount() {
         return this.flakyCount;
     }
 
@@ -70,7 +70,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -81,7 +81,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="skippedCount", required=true)
       private final Integer skippedCount;
 
-    public Integer getSkippedCount() {
+    public Integer skippedCount() {
         return this.skippedCount;
     }
 
@@ -92,7 +92,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="totalCount", required=true)
       private final Integer totalCount;
 
-    public Integer getTotalCount() {
+    public Integer totalCount() {
         return this.totalCount;
     }
 
@@ -103,7 +103,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
     @Import(name="xmlSource", required=true)
       private final FileReferenceResponse xmlSource;
 
-    public FileReferenceResponse getXmlSource() {
+    public FileReferenceResponse xmlSource() {
         return this.xmlSource;
     }
 

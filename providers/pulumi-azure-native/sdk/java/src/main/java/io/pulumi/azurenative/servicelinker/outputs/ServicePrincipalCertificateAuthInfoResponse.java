@@ -48,28 +48,28 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
      * Expected value is 'servicePrincipalCertificate'.
      * 
     */
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
     /**
      * ServicePrincipal certificate for servicePrincipal auth.
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
     /**
      * Application clientId for servicePrincipal auth.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Principal Id for servicePrincipal auth.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

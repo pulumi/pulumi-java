@@ -26,7 +26,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -37,7 +37,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="error")
       private final @Nullable Output<ErrorResponseArgs> error;
 
-    public Output<ErrorResponseArgs> getError() {
+    public Output<ErrorResponseArgs> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 
@@ -48,7 +48,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="scheduleInfo", required=true)
       private final Output<SUCSchedulePropertiesArgs> scheduleInfo;
 
-    public Output<SUCSchedulePropertiesArgs> getScheduleInfo() {
+    public Output<SUCSchedulePropertiesArgs> scheduleInfo() {
         return this.scheduleInfo;
     }
 
@@ -70,7 +70,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="softwareUpdateConfigurationName")
       private final @Nullable Output<String> softwareUpdateConfigurationName;
 
-    public Output<String> getSoftwareUpdateConfigurationName() {
+    public Output<String> softwareUpdateConfigurationName() {
         return this.softwareUpdateConfigurationName == null ? Codegen.empty() : this.softwareUpdateConfigurationName;
     }
 
@@ -81,7 +81,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="tasks")
       private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
-    public Output<SoftwareUpdateConfigurationTasksArgs> getTasks() {
+    public Output<SoftwareUpdateConfigurationTasksArgs> tasks() {
         return this.tasks == null ? Codegen.empty() : this.tasks;
     }
 
@@ -92,7 +92,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     @Import(name="updateConfiguration", required=true)
       private final Output<UpdateConfigurationArgs> updateConfiguration;
 
-    public Output<UpdateConfigurationArgs> getUpdateConfiguration() {
+    public Output<UpdateConfigurationArgs> updateConfiguration() {
         return this.updateConfiguration;
     }
 

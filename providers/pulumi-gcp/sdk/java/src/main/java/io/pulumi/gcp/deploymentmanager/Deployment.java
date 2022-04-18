@@ -76,7 +76,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
      * 
      */
-    public Output</* @Nullable */ String> getCreatePolicy() {
+    public Output</* @Nullable */ String> createPolicy() {
         return this.createPolicy;
     }
     /**
@@ -104,7 +104,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Possible values are `ABANDON` and `DELETE`.
      * 
      */
-    public Output</* @Nullable */ String> getDeletePolicy() {
+    public Output</* @Nullable */ String> deletePolicy() {
         return this.deletePolicy;
     }
     /**
@@ -118,7 +118,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Unique identifier for deployment. Output only.
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -132,7 +132,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Optional user-provided description of deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -148,7 +148,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentLabel>> getLabels() {
+    public Output</* @Nullable */ List<DeploymentLabel>> labels() {
         return this.labels;
     }
     /**
@@ -162,7 +162,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Output only. URL of the manifest representing the last manifest that was successfully deployed.
      * 
      */
-    public Output<String> getManifest() {
+    public Output<String> manifest() {
         return this.manifest;
     }
     /**
@@ -178,7 +178,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -206,7 +206,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * to true or if other fields are updated while preview is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPreview() {
+    public Output</* @Nullable */ Boolean> preview() {
         return this.preview;
     }
     /**
@@ -222,7 +222,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -236,7 +236,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Output only. Server defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -254,7 +254,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<DeploymentTarget> getTarget() {
+    public Output<DeploymentTarget> target() {
         return this.target;
     }
 

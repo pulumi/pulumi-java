@@ -127,105 +127,105 @@ public final class GetLinkedSubscriptionResult {
      * The status of the remote management connection of the Azure Stack device.
      * 
     */
-    public String getDeviceConnectionStatus() {
+    public String deviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
     /**
      * The identifier of the Azure Stack device for remote management.
      * 
     */
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
     /**
      * The connection state of the Azure Stack device.
      * 
     */
-    public String getDeviceLinkState() {
+    public String deviceLinkState() {
         return this.deviceLinkState;
     }
     /**
      * The object identifier associated with the Azure Stack device connecting to Azure.
      * 
     */
-    public String getDeviceObjectId() {
+    public String deviceObjectId() {
         return this.deviceObjectId;
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The kind of the resource.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
      * 
     */
-    public String getLastConnectedTime() {
+    public String lastConnectedTime() {
         return this.lastConnectedTime;
     }
     /**
      * The identifier associated with the device subscription.
      * 
     */
-    public Optional<String> getLinkedSubscriptionId() {
+    public Optional<String> linkedSubscriptionId() {
         return Optional.ofNullable(this.linkedSubscriptionId);
     }
     /**
      * Location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The identifier associated with the device registration.
      * 
     */
-    public Optional<String> getRegistrationResourceId() {
+    public Optional<String> registrationResourceId() {
         return Optional.ofNullable(this.registrationResourceId);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Custom tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of Resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

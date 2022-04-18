@@ -27,7 +27,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="diskCapacityInBytes")
       private final @Nullable Double diskCapacityInBytes;
 
-    public Optional<Double> getDiskCapacityInBytes() {
+    public Optional<Double> diskCapacityInBytes() {
         return this.diskCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskCapacityInBytes);
     }
 
@@ -38,7 +38,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="diskId")
       private final @Nullable String diskId;
 
-    public Optional<String> getDiskId() {
+    public Optional<String> diskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
     }
 
@@ -49,7 +49,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="diskName")
       private final @Nullable String diskName;
 
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
     }
 
@@ -60,7 +60,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="diskResized")
       private final @Nullable String diskResized;
 
-    public Optional<String> getDiskResized() {
+    public Optional<String> diskResized() {
         return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
     }
 
@@ -71,7 +71,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="fileSystemCapacityInBytes")
       private final @Nullable Double fileSystemCapacityInBytes;
 
-    public Optional<Double> getFileSystemCapacityInBytes() {
+    public Optional<Double> fileSystemCapacityInBytes() {
         return this.fileSystemCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.fileSystemCapacityInBytes);
     }
 
@@ -82,7 +82,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="healthErrorCode")
       private final @Nullable String healthErrorCode;
 
-    public Optional<String> getHealthErrorCode() {
+    public Optional<String> healthErrorCode() {
         return this.healthErrorCode == null ? Optional.empty() : Optional.ofNullable(this.healthErrorCode);
     }
 
@@ -93,7 +93,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
 
-    public Optional<String> getLastRpoCalculatedTime() {
+    public Optional<String> lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
@@ -104,7 +104,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="protectionStage")
       private final @Nullable String protectionStage;
 
-    public Optional<String> getProtectionStage() {
+    public Optional<String> protectionStage() {
         return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
     }
 
@@ -115,7 +115,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="psDataInMB")
       private final @Nullable Double psDataInMB;
 
-    public Optional<Double> getPsDataInMB() {
+    public Optional<Double> psDataInMB() {
         return this.psDataInMB == null ? Optional.empty() : Optional.ofNullable(this.psDataInMB);
     }
 
@@ -126,7 +126,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="resyncDurationInSeconds")
       private final @Nullable Double resyncDurationInSeconds;
 
-    public Optional<Double> getResyncDurationInSeconds() {
+    public Optional<Double> resyncDurationInSeconds() {
         return this.resyncDurationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.resyncDurationInSeconds);
     }
 
@@ -137,7 +137,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="resyncProgressPercentage")
       private final @Nullable Integer resyncProgressPercentage;
 
-    public Optional<Integer> getResyncProgressPercentage() {
+    public Optional<Integer> resyncProgressPercentage() {
         return this.resyncProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.resyncProgressPercentage);
     }
 
@@ -148,7 +148,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="resyncRequired")
       private final @Nullable String resyncRequired;
 
-    public Optional<String> getResyncRequired() {
+    public Optional<String> resyncRequired() {
         return this.resyncRequired == null ? Optional.empty() : Optional.ofNullable(this.resyncRequired);
     }
 
@@ -159,7 +159,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
 
-    public Optional<Double> getRpoInSeconds() {
+    public Optional<Double> rpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
@@ -170,7 +170,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="sourceDataInMB")
       private final @Nullable Double sourceDataInMB;
 
-    public Optional<Double> getSourceDataInMB() {
+    public Optional<Double> sourceDataInMB() {
         return this.sourceDataInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceDataInMB);
     }
 
@@ -181,7 +181,7 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
     @Import(name="targetDataInMB")
       private final @Nullable Double targetDataInMB;
 
-    public Optional<Double> getTargetDataInMB() {
+    public Optional<Double> targetDataInMB() {
         return this.targetDataInMB == null ? Optional.empty() : Optional.ofNullable(this.targetDataInMB);
     }
 

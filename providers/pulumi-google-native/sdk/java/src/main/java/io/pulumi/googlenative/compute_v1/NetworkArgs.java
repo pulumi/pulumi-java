@@ -25,7 +25,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateSubnetworks")
       private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> getAutoCreateSubnetworks() {
+    public Output<Boolean> autoCreateSubnetworks() {
         return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
     }
 
@@ -36,7 +36,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -58,21 +58,21 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -83,7 +83,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
-    public Output<NetworkRoutingConfigArgs> getRoutingConfig() {
+    public Output<NetworkRoutingConfigArgs> routingConfig() {
         return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 

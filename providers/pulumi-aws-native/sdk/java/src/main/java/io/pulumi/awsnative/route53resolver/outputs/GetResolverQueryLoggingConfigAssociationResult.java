@@ -57,35 +57,35 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * ResolverQueryLogConfigAssociationError
      * 
     */
-    public Optional<ResolverQueryLoggingConfigAssociationError> getError() {
+    public Optional<ResolverQueryLoggingConfigAssociationError> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * ResolverQueryLogConfigAssociationErrorMessage
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * ResolverQueryLogConfigAssociationStatus
      * 
     */
-    public Optional<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
+    public Optional<ResolverQueryLoggingConfigAssociationStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

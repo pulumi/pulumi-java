@@ -30,7 +30,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="executionRole")
       private final @Nullable Output<String> executionRole;
 
-    public Output<String> getExecutionRole() {
+    public Output<String> executionRole() {
         return this.executionRole == null ? Codegen.empty() : this.executionRole;
     }
 
@@ -41,7 +41,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Output<DomainJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
+    public Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
     }
 
@@ -52,7 +52,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Output<DomainKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
+    public Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
     }
 
@@ -63,7 +63,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -74,7 +74,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sharingSettings")
       private final @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
 
-    public Output<DomainSharingSettingsArgs> getSharingSettings() {
+    public Output<DomainSharingSettingsArgs> sharingSettings() {
         return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
     }
 

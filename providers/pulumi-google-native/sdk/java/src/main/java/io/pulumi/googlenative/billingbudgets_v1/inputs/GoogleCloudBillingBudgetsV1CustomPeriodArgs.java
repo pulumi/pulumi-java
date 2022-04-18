@@ -26,7 +26,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
     @Import(name="endDate")
       private final @Nullable Output<GoogleTypeDateArgs> endDate;
 
-    public Output<GoogleTypeDateArgs> getEndDate() {
+    public Output<GoogleTypeDateArgs> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
     @Import(name="startDate", required=true)
       private final Output<GoogleTypeDateArgs> startDate;
 
-    public Output<GoogleTypeDateArgs> getStartDate() {
+    public Output<GoogleTypeDateArgs> startDate() {
         return this.startDate;
     }
 

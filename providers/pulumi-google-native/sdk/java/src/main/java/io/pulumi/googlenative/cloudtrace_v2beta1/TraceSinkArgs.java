@@ -23,7 +23,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,14 +34,14 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
       private final Output<OutputConfigArgs> outputConfig;
 
-    public Output<OutputConfigArgs> getOutputConfig() {
+    public Output<OutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

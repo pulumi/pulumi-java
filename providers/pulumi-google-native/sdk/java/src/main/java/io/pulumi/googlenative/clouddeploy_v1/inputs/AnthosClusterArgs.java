@@ -26,7 +26,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membership")
       private final @Nullable Output<String> membership;
 
-    public Output<String> getMembership() {
+    public Output<String> membership() {
         return this.membership == null ? Codegen.empty() : this.membership;
     }
 

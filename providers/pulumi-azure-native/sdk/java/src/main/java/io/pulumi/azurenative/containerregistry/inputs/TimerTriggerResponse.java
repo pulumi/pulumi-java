@@ -25,7 +25,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schedule", required=true)
       private final String schedule;
 
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 
@@ -47,7 +47,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

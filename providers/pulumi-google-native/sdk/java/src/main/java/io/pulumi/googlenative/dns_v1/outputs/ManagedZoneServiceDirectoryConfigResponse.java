@@ -25,14 +25,14 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
         this.namespace = namespace;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Contains information about the namespace associated with the zone.
      * 
     */
-    public ManagedZoneServiceDirectoryConfigNamespaceResponse getNamespace() {
+    public ManagedZoneServiceDirectoryConfigNamespaceResponse namespace() {
         return this.namespace;
     }
 

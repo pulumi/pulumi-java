@@ -25,7 +25,7 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 
@@ -37,7 +37,7 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

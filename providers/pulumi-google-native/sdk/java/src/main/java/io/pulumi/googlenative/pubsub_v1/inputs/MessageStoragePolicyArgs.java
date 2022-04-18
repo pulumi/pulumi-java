@@ -27,7 +27,7 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     @Import(name="allowedPersistenceRegions")
       private final @Nullable Output<List<String>> allowedPersistenceRegions;
 
-    public Output<List<String>> getAllowedPersistenceRegions() {
+    public Output<List<String>> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions == null ? Codegen.empty() : this.allowedPersistenceRegions;
     }
 

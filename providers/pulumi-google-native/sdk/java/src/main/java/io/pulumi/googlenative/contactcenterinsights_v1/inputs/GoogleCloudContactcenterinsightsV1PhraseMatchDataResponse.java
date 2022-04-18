@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
     @Import(name="phraseMatcher", required=true)
       private final String phraseMatcher;
 
-    public String getPhraseMatcher() {
+    public String phraseMatcher() {
         return this.phraseMatcher;
     }
 

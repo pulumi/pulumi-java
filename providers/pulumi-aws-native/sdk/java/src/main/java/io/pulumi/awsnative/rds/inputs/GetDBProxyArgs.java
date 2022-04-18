@@ -19,7 +19,7 @@ public final class GetDBProxyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dBProxyName", required=true)
       private final String dBProxyName;
 
-    public String getDBProxyName() {
+    public String dBProxyName() {
         return this.dBProxyName;
     }
 

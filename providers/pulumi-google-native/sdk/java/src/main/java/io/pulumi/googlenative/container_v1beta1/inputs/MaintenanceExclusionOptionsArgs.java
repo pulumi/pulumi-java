@@ -26,7 +26,7 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
     @Import(name="scope")
       private final @Nullable Output<MaintenanceExclusionOptionsScope> scope;
 
-    public Output<MaintenanceExclusionOptionsScope> getScope() {
+    public Output<MaintenanceExclusionOptionsScope> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

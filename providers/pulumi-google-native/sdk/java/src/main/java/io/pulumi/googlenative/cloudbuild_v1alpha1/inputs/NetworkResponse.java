@@ -23,7 +23,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

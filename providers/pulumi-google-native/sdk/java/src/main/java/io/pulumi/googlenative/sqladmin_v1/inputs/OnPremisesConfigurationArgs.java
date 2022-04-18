@@ -27,7 +27,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
@@ -38,7 +38,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
+    public Output<String> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
@@ -49,7 +49,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
+    public Output<String> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
@@ -60,7 +60,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
-    public Output<String> getDumpFilePath() {
+    public Output<String> dumpFilePath() {
         return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
     }
 
@@ -71,7 +71,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
 
-    public Output<String> getHostPort() {
+    public Output<String> hostPort() {
         return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
@@ -82,7 +82,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -93,7 +93,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -104,7 +104,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="sourceInstance")
       private final @Nullable Output<InstanceReferenceArgs> sourceInstance;
 
-    public Output<InstanceReferenceArgs> getSourceInstance() {
+    public Output<InstanceReferenceArgs> sourceInstance() {
         return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
     }
 
@@ -115,7 +115,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

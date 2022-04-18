@@ -24,7 +24,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends io.pulumi.r
     @Import(name="cronJobDuration")
       private final @Nullable Output<String> cronJobDuration;
 
-    public Output<String> getCronJobDuration() {
+    public Output<String> cronJobDuration() {
         return this.cronJobDuration == null ? Codegen.empty() : this.cronJobDuration;
     }
 
@@ -37,7 +37,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends io.pulumi.r
     @Import(name="cronSpec")
       private final @Nullable Output<String> cronSpec;
 
-    public Output<String> getCronSpec() {
+    public Output<String> cronSpec() {
         return this.cronSpec == null ? Codegen.empty() : this.cronSpec;
     }
 
@@ -49,7 +49,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends io.pulumi.r
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -61,7 +61,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends io.pulumi.r
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

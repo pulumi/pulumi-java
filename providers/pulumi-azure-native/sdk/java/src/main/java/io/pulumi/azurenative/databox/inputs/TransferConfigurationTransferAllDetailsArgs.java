@@ -26,7 +26,7 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
     @Import(name="include")
       private final @Nullable Output<TransferAllDetailsArgs> include;
 
-    public Output<TransferAllDetailsArgs> getInclude() {
+    public Output<TransferAllDetailsArgs> include() {
         return this.include == null ? Codegen.empty() : this.include;
     }
 

@@ -50,28 +50,28 @@ public final class DerivedResponse {
      * This contains the base image URL for the derived image occurrence.
      * 
     */
-    public String getBaseResourceUrl() {
+    public String baseResourceUrl() {
         return this.baseResourceUrl;
     }
     /**
      * The number of layers by which this image differs from the associated image basis.
      * 
     */
-    public Integer getDistance() {
+    public Integer distance() {
         return this.distance;
     }
     /**
      * The fingerprint of the derived image.
      * 
     */
-    public FingerprintResponse getFingerprint() {
+    public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
     /**
      * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
     */
-    public List<LayerResponse> getLayerInfo() {
+    public List<LayerResponse> layerInfo() {
         return this.layerInfo;
     }
 

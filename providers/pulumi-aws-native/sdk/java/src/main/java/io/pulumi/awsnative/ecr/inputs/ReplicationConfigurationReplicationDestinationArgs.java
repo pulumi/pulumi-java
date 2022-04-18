@@ -21,14 +21,14 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="registryId", required=true)
       private final Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 

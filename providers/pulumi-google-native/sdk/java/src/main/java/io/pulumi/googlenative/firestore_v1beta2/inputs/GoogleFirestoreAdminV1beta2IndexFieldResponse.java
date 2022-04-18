@@ -23,7 +23,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
     @Import(name="arrayConfig", required=true)
       private final String arrayConfig;
 
-    public String getArrayConfig() {
+    public String arrayConfig() {
         return this.arrayConfig;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
     @Import(name="fieldPath", required=true)
       private final String fieldPath;
 
-    public String getFieldPath() {
+    public String fieldPath() {
         return this.fieldPath;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
     @Import(name="order", required=true)
       private final String order;
 
-    public String getOrder() {
+    public String order() {
         return this.order;
     }
 

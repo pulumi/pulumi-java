@@ -22,7 +22,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoStorageContainerName")
       private final @Nullable Output<String> autoStorageContainerName;
 
-    public Output<String> getAutoStorageContainerName() {
+    public Output<String> autoStorageContainerName() {
         return this.autoStorageContainerName == null ? Codegen.empty() : this.autoStorageContainerName;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobPrefix")
       private final @Nullable Output<String> blobPrefix;
 
-    public Output<String> getBlobPrefix() {
+    public Output<String> blobPrefix() {
         return this.blobPrefix == null ? Codegen.empty() : this.blobPrefix;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileMode")
       private final @Nullable Output<String> fileMode;
 
-    public Output<String> getFileMode() {
+    public Output<String> fileMode() {
         return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
@@ -66,7 +66,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;
 
-    public Output<String> getHttpUrl() {
+    public Output<String> httpUrl() {
         return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
     }
 
@@ -77,7 +77,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageContainerUrl")
       private final @Nullable Output<String> storageContainerUrl;
 
-    public Output<String> getStorageContainerUrl() {
+    public Output<String> storageContainerUrl() {
         return this.storageContainerUrl == null ? Codegen.empty() : this.storageContainerUrl;
     }
 

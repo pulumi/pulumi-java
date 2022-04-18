@@ -74,7 +74,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @return Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -90,7 +90,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppEngineServiceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ AppEngineServiceIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -104,13 +104,13 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -126,7 +126,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -144,7 +144,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -158,7 +158,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @return Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

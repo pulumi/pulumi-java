@@ -27,7 +27,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxBurstSize")
       private final @Nullable Output<Integer> maxBurstSize;
 
-    public Output<Integer> getMaxBurstSize() {
+    public Output<Integer> maxBurstSize() {
         return this.maxBurstSize == null ? Codegen.empty() : this.maxBurstSize;
     }
 
@@ -38,7 +38,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentDispatches")
       private final @Nullable Output<Integer> maxConcurrentDispatches;
 
-    public Output<Integer> getMaxConcurrentDispatches() {
+    public Output<Integer> maxConcurrentDispatches() {
         return this.maxConcurrentDispatches == null ? Codegen.empty() : this.maxConcurrentDispatches;
     }
 
@@ -49,7 +49,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDispatchesPerSecond")
       private final @Nullable Output<Double> maxDispatchesPerSecond;
 
-    public Output<Double> getMaxDispatchesPerSecond() {
+    public Output<Double> maxDispatchesPerSecond() {
         return this.maxDispatchesPerSecond == null ? Codegen.empty() : this.maxDispatchesPerSecond;
     }
 

@@ -79,56 +79,56 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. The available quantity of the item.
      * 
     */
-    public String getAvailableQuantity() {
+    public String availableQuantity() {
         return this.availableQuantity;
     }
     /**
      * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
     */
-    public String getCanonicalProductUri() {
+    public String canonicalProductUri() {
         return this.canonicalProductUri;
     }
     /**
      * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
      * 
     */
-    public Map<String,String> getCosts() {
+    public Map<String,String> costs() {
         return this.costs;
     }
     /**
      * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
     */
-    public String getCurrencyCode() {
+    public String currencyCode() {
         return this.currencyCode;
     }
     /**
      * Optional. The exact product price.
      * 
     */
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse getExactPrice() {
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice() {
         return this.exactPrice;
     }
     /**
      * Optional. Product images for the catalog item.
      * 
     */
-    public List<GoogleCloudRecommendationengineV1beta1ImageResponse> getImages() {
+    public List<GoogleCloudRecommendationengineV1beta1ImageResponse> images() {
         return this.images;
     }
     /**
      * Optional. The product price range.
      * 
     */
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse getPriceRange() {
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange() {
         return this.priceRange;
     }
     /**
      * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
     */
-    public String getStockState() {
+    public String stockState() {
         return this.stockState;
     }
 

@@ -34,14 +34,14 @@ public final class BucketLogging {
      * The name of the bucket that will receive the log objects.
      * 
     */
-    public String getTargetBucket() {
+    public String targetBucket() {
         return this.targetBucket;
     }
     /**
      * To specify a key prefix for log objects.
      * 
     */
-    public Optional<String> getTargetPrefix() {
+    public Optional<String> targetPrefix() {
         return Optional.ofNullable(this.targetPrefix);
     }
 

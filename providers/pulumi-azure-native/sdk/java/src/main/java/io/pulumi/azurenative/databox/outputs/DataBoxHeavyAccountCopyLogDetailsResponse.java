@@ -48,7 +48,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
      * Account name.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
@@ -56,21 +56,21 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
      * Expected value is 'DataBoxHeavy'.
      * 
     */
-    public String getCopyLogDetailsType() {
+    public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Link for copy logs.
      * 
     */
-    public List<String> getCopyLogLink() {
+    public List<String> copyLogLink() {
         return this.copyLogLink;
     }
     /**
      * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
      * 
     */
-    public List<String> getCopyVerboseLogLink() {
+    public List<String> copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }
 

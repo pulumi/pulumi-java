@@ -15,14 +15,14 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

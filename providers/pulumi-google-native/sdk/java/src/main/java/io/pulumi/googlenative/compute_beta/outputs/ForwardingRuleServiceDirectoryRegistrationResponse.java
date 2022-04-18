@@ -39,21 +39,21 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
      * Service Directory namespace to register the forwarding rule under.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * Service Directory service to register the forwarding rule under.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
     /**
      * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
      * 
     */
-    public String getServiceDirectoryRegion() {
+    public String serviceDirectoryRegion() {
         return this.serviceDirectoryRegion;
     }
 

@@ -33,7 +33,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp of a triggeredJob.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return User provided description (max 256 chars)
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return Display name (max 100 chars)
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
      * 
      */
-    public Output<List<GooglePrivacyDlpV2ErrorResponse>> getErrors() {
+    public Output<List<GooglePrivacyDlpV2ErrorResponse>> errors() {
         return this.errors;
     }
     /**
@@ -89,7 +89,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return For inspect jobs, a snapshot of the configuration.
      * 
      */
-    public Output<GooglePrivacyDlpV2InspectJobConfigResponse> getInspectJob() {
+    public Output<GooglePrivacyDlpV2InspectJobConfigResponse> inspectJob() {
         return this.inspectJob;
     }
     /**
@@ -103,7 +103,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return The timestamp of the last time this trigger executed.
      * 
      */
-    public Output<String> getLastRunTime() {
+    public Output<String> lastRunTime() {
         return this.lastRunTime;
     }
     /**
@@ -117,7 +117,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return A status for this trigger.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -145,7 +145,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
      */
-    public Output<List<GooglePrivacyDlpV2TriggerResponse>> getTriggers() {
+    public Output<List<GooglePrivacyDlpV2TriggerResponse>> triggers() {
         return this.triggers;
     }
     /**
@@ -159,7 +159,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * @return The last update timestamp of a triggeredJob.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

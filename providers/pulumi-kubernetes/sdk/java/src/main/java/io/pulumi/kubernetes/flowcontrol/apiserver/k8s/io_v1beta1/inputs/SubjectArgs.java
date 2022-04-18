@@ -29,7 +29,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="group")
       private final @Nullable Output<GroupSubjectArgs> group;
 
-    public Output<GroupSubjectArgs> getGroup() {
+    public Output<GroupSubjectArgs> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -40,7 +40,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -51,7 +51,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
-    public Output<ServiceAccountSubjectArgs> getServiceAccount() {
+    public Output<ServiceAccountSubjectArgs> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -62,7 +62,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<UserSubjectArgs> user;
 
-    public Output<UserSubjectArgs> getUser() {
+    public Output<UserSubjectArgs> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

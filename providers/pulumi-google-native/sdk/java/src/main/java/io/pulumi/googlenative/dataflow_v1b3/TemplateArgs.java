@@ -24,7 +24,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<RuntimeEnvironmentArgs> environment;
 
-    public Output<RuntimeEnvironmentArgs> getEnvironment() {
+    public Output<RuntimeEnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -35,7 +35,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsPath", required=true)
       private final Output<String> gcsPath;
 
-    public Output<String> getGcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath;
     }
 
@@ -46,7 +46,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -57,7 +57,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -68,14 +68,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -24,7 +24,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowAll")
       private final @Nullable Output<String> allowAll;
 
-    public Output<String> getAllowAll() {
+    public Output<String> allowAll() {
         return this.allowAll == null ? Codegen.empty() : this.allowAll;
     }
 
@@ -35,7 +35,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<PolicySpecRuleConditionGetArgs> condition;
 
-    public Output<PolicySpecRuleConditionGetArgs> getCondition() {
+    public Output<PolicySpecRuleConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -46,7 +46,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="denyAll")
       private final @Nullable Output<String> denyAll;
 
-    public Output<String> getDenyAll() {
+    public Output<String> denyAll() {
         return this.denyAll == null ? Codegen.empty() : this.denyAll;
     }
 
@@ -57,7 +57,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enforce")
       private final @Nullable Output<String> enforce;
 
-    public Output<String> getEnforce() {
+    public Output<String> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -68,7 +68,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="values")
       private final @Nullable Output<PolicySpecRuleValuesGetArgs> values;
 
-    public Output<PolicySpecRuleValuesGetArgs> getValues() {
+    public Output<PolicySpecRuleValuesGetArgs> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

@@ -24,28 +24,28 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
-    public Output<String> getOutputLocation() {
+    public Output<String> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     @Import(name="removeEncryptionConfiguration")
       private final @Nullable Output<Boolean> removeEncryptionConfiguration;
 
-    public Output<Boolean> getRemoveEncryptionConfiguration() {
+    public Output<Boolean> removeEncryptionConfiguration() {
         return this.removeEncryptionConfiguration == null ? Codegen.empty() : this.removeEncryptionConfiguration;
     }
 
     @Import(name="removeOutputLocation")
       private final @Nullable Output<Boolean> removeOutputLocation;
 
-    public Output<Boolean> getRemoveOutputLocation() {
+    public Output<Boolean> removeOutputLocation() {
         return this.removeOutputLocation == null ? Codegen.empty() : this.removeOutputLocation;
     }
 

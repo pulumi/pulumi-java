@@ -23,7 +23,7 @@ public final class SourceScoringConfigResponse extends io.pulumi.resources.Invok
     @Import(name="sourceImportance", required=true)
       private final String sourceImportance;
 
-    public String getSourceImportance() {
+    public String sourceImportance() {
         return this.sourceImportance;
     }
 

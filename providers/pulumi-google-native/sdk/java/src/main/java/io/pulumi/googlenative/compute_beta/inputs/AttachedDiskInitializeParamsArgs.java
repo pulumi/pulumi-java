@@ -32,7 +32,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
@@ -54,7 +54,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -65,7 +65,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -76,7 +76,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -87,7 +87,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -98,7 +98,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -109,7 +109,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="multiWriter")
       private final @Nullable Output<Boolean> multiWriter;
 
-    public Output<Boolean> getMultiWriter() {
+    public Output<Boolean> multiWriter() {
         return this.multiWriter == null ? Codegen.empty() : this.multiWriter;
     }
 
@@ -120,7 +120,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="onUpdateAction")
       private final @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
-    public Output<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
+    public Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction() {
         return this.onUpdateAction == null ? Codegen.empty() : this.onUpdateAction;
     }
 
@@ -131,7 +131,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="provisionedIops")
       private final @Nullable Output<String> provisionedIops;
 
-    public Output<String> getProvisionedIops() {
+    public Output<String> provisionedIops() {
         return this.provisionedIops == null ? Codegen.empty() : this.provisionedIops;
     }
 
@@ -142,7 +142,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> getResourcePolicies() {
+    public Output<List<String>> resourcePolicies() {
         return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
@@ -153,7 +153,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
-    public Output<String> getSourceImage() {
+    public Output<String> sourceImage() {
         return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
@@ -164,7 +164,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
     }
 
@@ -175,7 +175,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> getSourceSnapshot() {
+    public Output<String> sourceSnapshot() {
         return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 
@@ -186,7 +186,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
     }
 

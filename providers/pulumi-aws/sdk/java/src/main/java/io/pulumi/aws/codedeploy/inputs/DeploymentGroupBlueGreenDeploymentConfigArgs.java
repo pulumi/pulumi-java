@@ -24,7 +24,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
     @Import(name="deploymentReadyOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs> deploymentReadyOption;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs> getDeploymentReadyOption() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs> deploymentReadyOption() {
         return this.deploymentReadyOption == null ? Codegen.empty() : this.deploymentReadyOption;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
     @Import(name="greenFleetProvisioningOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs> greenFleetProvisioningOption;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs> getGreenFleetProvisioningOption() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs> greenFleetProvisioningOption() {
         return this.greenFleetProvisioningOption == null ? Codegen.empty() : this.greenFleetProvisioningOption;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
     @Import(name="terminateBlueInstancesOnDeploymentSuccess")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs> terminateBlueInstancesOnDeploymentSuccess;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs> getTerminateBlueInstancesOnDeploymentSuccess() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs> terminateBlueInstancesOnDeploymentSuccess() {
         return this.terminateBlueInstancesOnDeploymentSuccess == null ? Codegen.empty() : this.terminateBlueInstancesOnDeploymentSuccess;
     }
 

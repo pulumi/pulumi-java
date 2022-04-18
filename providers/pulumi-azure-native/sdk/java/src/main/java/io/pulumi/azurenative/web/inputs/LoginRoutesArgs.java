@@ -26,7 +26,7 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logoutEndpoint")
       private final @Nullable Output<String> logoutEndpoint;
 
-    public Output<String> getLogoutEndpoint() {
+    public Output<String> logoutEndpoint() {
         return this.logoutEndpoint == null ? Codegen.empty() : this.logoutEndpoint;
     }
 

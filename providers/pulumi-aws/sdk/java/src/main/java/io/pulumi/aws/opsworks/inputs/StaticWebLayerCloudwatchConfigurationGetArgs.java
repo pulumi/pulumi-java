@@ -20,14 +20,14 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+    public Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

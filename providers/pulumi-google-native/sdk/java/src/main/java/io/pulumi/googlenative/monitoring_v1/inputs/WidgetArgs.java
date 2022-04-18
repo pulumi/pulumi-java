@@ -33,7 +33,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertChart")
       private final @Nullable Output<AlertChartArgs> alertChart;
 
-    public Output<AlertChartArgs> getAlertChart() {
+    public Output<AlertChartArgs> alertChart() {
         return this.alertChart == null ? Codegen.empty() : this.alertChart;
     }
 
@@ -44,7 +44,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blank")
       private final @Nullable Output<EmptyArgs> blank;
 
-    public Output<EmptyArgs> getBlank() {
+    public Output<EmptyArgs> blank() {
         return this.blank == null ? Codegen.empty() : this.blank;
     }
 
@@ -55,7 +55,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logsPanel")
       private final @Nullable Output<LogsPanelArgs> logsPanel;
 
-    public Output<LogsPanelArgs> getLogsPanel() {
+    public Output<LogsPanelArgs> logsPanel() {
         return this.logsPanel == null ? Codegen.empty() : this.logsPanel;
     }
 
@@ -66,7 +66,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scorecard")
       private final @Nullable Output<ScorecardArgs> scorecard;
 
-    public Output<ScorecardArgs> getScorecard() {
+    public Output<ScorecardArgs> scorecard() {
         return this.scorecard == null ? Codegen.empty() : this.scorecard;
     }
 
@@ -77,7 +77,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text")
       private final @Nullable Output<TextArgs> text;
 
-    public Output<TextArgs> getText() {
+    public Output<TextArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 
@@ -88,7 +88,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesTable")
       private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
-    public Output<TimeSeriesTableArgs> getTimeSeriesTable() {
+    public Output<TimeSeriesTableArgs> timeSeriesTable() {
         return this.timeSeriesTable == null ? Codegen.empty() : this.timeSeriesTable;
     }
 
@@ -99,7 +99,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -110,7 +110,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xyChart")
       private final @Nullable Output<XyChartArgs> xyChart;
 
-    public Output<XyChartArgs> getXyChart() {
+    public Output<XyChartArgs> xyChart() {
         return this.xyChart == null ? Codegen.empty() : this.xyChart;
     }
 

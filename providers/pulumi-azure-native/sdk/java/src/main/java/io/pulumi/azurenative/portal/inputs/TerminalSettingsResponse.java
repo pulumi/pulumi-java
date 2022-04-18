@@ -25,7 +25,7 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fontSize")
       private final @Nullable String fontSize;
 
-    public Optional<String> getFontSize() {
+    public Optional<String> fontSize() {
         return this.fontSize == null ? Optional.empty() : Optional.ofNullable(this.fontSize);
     }
 
@@ -36,7 +36,7 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fontStyle")
       private final @Nullable String fontStyle;
 
-    public Optional<String> getFontStyle() {
+    public Optional<String> fontStyle() {
         return this.fontStyle == null ? Optional.empty() : Optional.ofNullable(this.fontStyle);
     }
 

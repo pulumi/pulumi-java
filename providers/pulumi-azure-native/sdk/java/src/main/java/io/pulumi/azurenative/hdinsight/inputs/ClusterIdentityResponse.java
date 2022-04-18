@@ -27,7 +27,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -60,7 +60,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    public Map<String,ClusterIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
+    public Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

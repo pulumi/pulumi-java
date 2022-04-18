@@ -26,7 +26,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rangeEnd")
       private final @Nullable Output<String> rangeEnd;
 
-    public Output<String> getRangeEnd() {
+    public Output<String> rangeEnd() {
         return this.rangeEnd == null ? Codegen.empty() : this.rangeEnd;
     }
 
@@ -37,7 +37,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rangeStart")
       private final @Nullable Output<String> rangeStart;
 
-    public Output<String> getRangeStart() {
+    public Output<String> rangeStart() {
         return this.rangeStart == null ? Codegen.empty() : this.rangeStart;
     }
 

@@ -23,7 +23,7 @@ public final class IapCredentialResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="iapTestServiceAccountInfo", required=true)
       private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
-    public IapTestServiceAccountInfoResponse getIapTestServiceAccountInfo() {
+    public IapTestServiceAccountInfoResponse iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }
 

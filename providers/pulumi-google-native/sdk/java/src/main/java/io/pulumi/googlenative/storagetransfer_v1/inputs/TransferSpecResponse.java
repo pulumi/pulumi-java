@@ -31,7 +31,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="awsS3DataSource", required=true)
       private final AwsS3DataResponse awsS3DataSource;
 
-    public AwsS3DataResponse getAwsS3DataSource() {
+    public AwsS3DataResponse awsS3DataSource() {
         return this.awsS3DataSource;
     }
 
@@ -42,7 +42,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="azureBlobStorageDataSource", required=true)
       private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
 
-    public AzureBlobStorageDataResponse getAzureBlobStorageDataSource() {
+    public AzureBlobStorageDataResponse azureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
     }
 
@@ -53,7 +53,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsDataSink", required=true)
       private final GcsDataResponse gcsDataSink;
 
-    public GcsDataResponse getGcsDataSink() {
+    public GcsDataResponse gcsDataSink() {
         return this.gcsDataSink;
     }
 
@@ -64,7 +64,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsDataSource", required=true)
       private final GcsDataResponse gcsDataSource;
 
-    public GcsDataResponse getGcsDataSource() {
+    public GcsDataResponse gcsDataSource() {
         return this.gcsDataSource;
     }
 
@@ -75,7 +75,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsIntermediateDataLocation", required=true)
       private final GcsDataResponse gcsIntermediateDataLocation;
 
-    public GcsDataResponse getGcsIntermediateDataLocation() {
+    public GcsDataResponse gcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
     }
 
@@ -86,7 +86,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpDataSource", required=true)
       private final HttpDataResponse httpDataSource;
 
-    public HttpDataResponse getHttpDataSource() {
+    public HttpDataResponse httpDataSource() {
         return this.httpDataSource;
     }
 
@@ -97,7 +97,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectConditions", required=true)
       private final ObjectConditionsResponse objectConditions;
 
-    public ObjectConditionsResponse getObjectConditions() {
+    public ObjectConditionsResponse objectConditions() {
         return this.objectConditions;
     }
 
@@ -108,7 +108,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="posixDataSink", required=true)
       private final PosixFilesystemResponse posixDataSink;
 
-    public PosixFilesystemResponse getPosixDataSink() {
+    public PosixFilesystemResponse posixDataSink() {
         return this.posixDataSink;
     }
 
@@ -119,7 +119,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="posixDataSource", required=true)
       private final PosixFilesystemResponse posixDataSource;
 
-    public PosixFilesystemResponse getPosixDataSource() {
+    public PosixFilesystemResponse posixDataSource() {
         return this.posixDataSource;
     }
 
@@ -130,7 +130,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinkAgentPoolName", required=true)
       private final String sinkAgentPoolName;
 
-    public String getSinkAgentPoolName() {
+    public String sinkAgentPoolName() {
         return this.sinkAgentPoolName;
     }
 
@@ -141,7 +141,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceAgentPoolName", required=true)
       private final String sourceAgentPoolName;
 
-    public String getSourceAgentPoolName() {
+    public String sourceAgentPoolName() {
         return this.sourceAgentPoolName;
     }
 
@@ -152,7 +152,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="transferManifest", required=true)
       private final TransferManifestResponse transferManifest;
 
-    public TransferManifestResponse getTransferManifest() {
+    public TransferManifestResponse transferManifest() {
         return this.transferManifest;
     }
 
@@ -163,7 +163,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="transferOptions", required=true)
       private final TransferOptionsResponse transferOptions;
 
-    public TransferOptionsResponse getTransferOptions() {
+    public TransferOptionsResponse transferOptions() {
         return this.transferOptions;
     }
 

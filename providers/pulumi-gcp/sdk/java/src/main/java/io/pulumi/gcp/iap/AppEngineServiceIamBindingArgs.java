@@ -24,7 +24,7 @@ public final class AppEngineServiceIamBindingArgs extends io.pulumi.resources.Re
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -36,14 +36,14 @@ public final class AppEngineServiceIamBindingArgs extends io.pulumi.resources.Re
     @Import(name="condition")
       private final @Nullable Output<AppEngineServiceIamBindingConditionArgs> condition;
 
-    public Output<AppEngineServiceIamBindingConditionArgs> getCondition() {
+    public Output<AppEngineServiceIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -55,7 +55,7 @@ public final class AppEngineServiceIamBindingArgs extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class AppEngineServiceIamBindingArgs extends io.pulumi.resources.Re
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -79,7 +79,7 @@ public final class AppEngineServiceIamBindingArgs extends io.pulumi.resources.Re
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

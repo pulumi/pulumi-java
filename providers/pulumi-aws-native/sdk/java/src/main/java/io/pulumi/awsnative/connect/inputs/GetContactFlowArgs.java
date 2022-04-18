@@ -19,7 +19,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactFlowArn", required=true)
       private final String contactFlowArn;
 
-    public String getContactFlowArn() {
+    public String contactFlowArn() {
         return this.contactFlowArn;
     }
 

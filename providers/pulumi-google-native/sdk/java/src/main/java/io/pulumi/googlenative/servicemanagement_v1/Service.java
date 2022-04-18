@@ -30,7 +30,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return ID of the project that produces and owns this service.
      * 
      */
-    public Output<String> getProducerProjectId() {
+    public Output<String> producerProjectId() {
         return this.producerProjectId;
     }
     /**
@@ -44,7 +44,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

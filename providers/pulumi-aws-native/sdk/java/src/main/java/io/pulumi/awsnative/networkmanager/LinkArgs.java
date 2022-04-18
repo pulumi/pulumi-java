@@ -25,7 +25,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bandwidth", required=true)
       private final Output<LinkBandwidthArgs> bandwidth;
 
-    public Output<LinkBandwidthArgs> getBandwidth() {
+    public Output<LinkBandwidthArgs> bandwidth() {
         return this.bandwidth;
     }
 
@@ -36,7 +36,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -58,7 +58,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 
@@ -69,7 +69,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -80,7 +80,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LinkTagArgs>> tags;
 
-    public Output<List<LinkTagArgs>> getTags() {
+    public Output<List<LinkTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

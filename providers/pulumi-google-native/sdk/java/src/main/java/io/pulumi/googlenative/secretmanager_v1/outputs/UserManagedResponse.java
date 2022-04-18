@@ -25,7 +25,7 @@ public final class UserManagedResponse {
      * The list of Replicas for this Secret. Cannot be empty.
      * 
     */
-    public List<ReplicaResponse> getReplicas() {
+    public List<ReplicaResponse> replicas() {
         return this.replicas;
     }
 

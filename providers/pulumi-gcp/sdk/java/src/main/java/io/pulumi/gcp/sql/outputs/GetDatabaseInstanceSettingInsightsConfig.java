@@ -27,16 +27,16 @@ public final class GetDatabaseInstanceSettingInsightsConfig {
         this.recordClientAddress = recordClientAddress;
     }
 
-    public Boolean getQueryInsightsEnabled() {
+    public Boolean queryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
-    public Integer getQueryStringLength() {
+    public Integer queryStringLength() {
         return this.queryStringLength;
     }
-    public Boolean getRecordApplicationTags() {
+    public Boolean recordApplicationTags() {
         return this.recordApplicationTags;
     }
-    public Boolean getRecordClientAddress() {
+    public Boolean recordClientAddress() {
         return this.recordClientAddress;
     }
 

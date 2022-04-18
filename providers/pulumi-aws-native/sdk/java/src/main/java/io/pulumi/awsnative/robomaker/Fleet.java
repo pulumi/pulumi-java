@@ -24,7 +24,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -38,13 +38,13 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="tags", type=FleetTags.class, parameters={})
     private Output</* @Nullable */ FleetTags> tags;
 
-    public Output</* @Nullable */ FleetTags> getTags() {
+    public Output</* @Nullable */ FleetTags> tags() {
         return this.tags;
     }
 

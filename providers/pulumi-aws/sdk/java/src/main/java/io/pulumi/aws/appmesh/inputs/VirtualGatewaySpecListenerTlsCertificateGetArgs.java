@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
     @Import(name="acm")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm;
 
-    public Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> getAcm() {
+    public Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm() {
         return this.acm == null ? Codegen.empty() : this.acm;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
     @Import(name="file")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file;
 
-    public Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> getFile() {
+    public Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
     @Import(name="sds")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds;
 
-    public Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> getSds() {
+    public Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

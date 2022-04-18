@@ -36,14 +36,14 @@ public final class SecurityScanConfigAuthenticationGoogleAccount {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The user name of the custom account.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

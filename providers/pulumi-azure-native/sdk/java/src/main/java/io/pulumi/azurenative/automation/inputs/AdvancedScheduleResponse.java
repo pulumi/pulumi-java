@@ -28,7 +28,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="monthDays")
       private final @Nullable List<Integer> monthDays;
 
-    public List<Integer> getMonthDays() {
+    public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
 
@@ -39,7 +39,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="monthlyOccurrences")
       private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
-    public List<AdvancedScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
+    public List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
 
@@ -50,7 +50,7 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
-    public List<String> getWeekDays() {
+    public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
 

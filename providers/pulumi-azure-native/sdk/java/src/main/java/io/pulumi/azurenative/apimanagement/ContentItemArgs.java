@@ -22,7 +22,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentItemId")
       private final @Nullable Output<String> contentItemId;
 
-    public Output<String> getContentItemId() {
+    public Output<String> contentItemId() {
         return this.contentItemId == null ? Codegen.empty() : this.contentItemId;
     }
 
@@ -33,7 +33,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentTypeId", required=true)
       private final Output<String> contentTypeId;
 
-    public Output<String> getContentTypeId() {
+    public Output<String> contentTypeId() {
         return this.contentTypeId;
     }
 
@@ -44,7 +44,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

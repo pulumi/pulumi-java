@@ -24,7 +24,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -35,7 +35,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="progressMessages", required=true)
       private final List<String> progressMessages;
 
-    public List<String> getProgressMessages() {
+    public List<String> progressMessages() {
         return this.progressMessages;
     }
 

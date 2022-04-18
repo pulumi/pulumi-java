@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="urlTypeHint", required=true)
       private final String urlTypeHint;
 
-    public String getUrlTypeHint() {
+    public String urlTypeHint() {
         return this.urlTypeHint;
     }
 

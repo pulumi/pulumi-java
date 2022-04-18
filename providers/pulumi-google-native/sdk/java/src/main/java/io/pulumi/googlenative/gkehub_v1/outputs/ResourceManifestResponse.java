@@ -33,14 +33,14 @@ public final class ResourceManifestResponse {
      * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
      * 
     */
-    public Boolean getClusterScoped() {
+    public Boolean clusterScoped() {
         return this.clusterScoped;
     }
     /**
      * YAML manifest of the resource.
      * 
     */
-    public String getManifest() {
+    public String manifest() {
         return this.manifest;
     }
 

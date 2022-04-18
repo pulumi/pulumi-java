@@ -28,7 +28,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recursiveDeleteOption")
       private final @Nullable Output<Boolean> recursiveDeleteOption;
 
-    public Output<Boolean> getRecursiveDeleteOption() {
+    public Output<Boolean> recursiveDeleteOption() {
         return this.recursiveDeleteOption == null ? Codegen.empty() : this.recursiveDeleteOption;
     }
 
@@ -61,7 +61,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<WorkGroupState> state;
 
-    public Output<WorkGroupState> getState() {
+    public Output<WorkGroupState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -72,7 +72,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<WorkGroupTagArgs>> tags;
 
-    public Output<List<WorkGroupTagArgs>> getTags() {
+    public Output<List<WorkGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -83,7 +83,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workGroupConfiguration")
       private final @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
 
-    public Output<WorkGroupConfigurationArgs> getWorkGroupConfiguration() {
+    public Output<WorkGroupConfigurationArgs> workGroupConfiguration() {
         return this.workGroupConfiguration == null ? Codegen.empty() : this.workGroupConfiguration;
     }
 
@@ -94,7 +94,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workGroupConfigurationUpdates")
       private final @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
-    public Output<WorkGroupConfigurationUpdatesArgs> getWorkGroupConfigurationUpdates() {
+    public Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates() {
         return this.workGroupConfigurationUpdates == null ? Codegen.empty() : this.workGroupConfigurationUpdates;
     }
 

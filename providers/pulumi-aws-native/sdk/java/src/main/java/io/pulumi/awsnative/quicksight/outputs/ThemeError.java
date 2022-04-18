@@ -31,10 +31,10 @@ public final class ThemeError {
      * <p>The error message.</p>
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<ThemeErrorType> getType() {
+    public Optional<ThemeErrorType> type() {
         return Optional.ofNullable(this.type);
     }
 

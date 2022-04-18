@@ -24,7 +24,7 @@ public final class GatewayGreengrassV2 {
      * The name of the CoreDevice in GreenGrass V2.
      * 
     */
-    public String getCoreDeviceThingName() {
+    public String coreDeviceThingName() {
         return this.coreDeviceThingName;
     }
 

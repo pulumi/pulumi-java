@@ -32,14 +32,14 @@ public final class FixedOrPercentResponse {
      * Specifies a fixed value.
      * 
     */
-    public Integer getFixed() {
+    public Integer fixed() {
         return this.fixed;
     }
     /**
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
     */
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
 

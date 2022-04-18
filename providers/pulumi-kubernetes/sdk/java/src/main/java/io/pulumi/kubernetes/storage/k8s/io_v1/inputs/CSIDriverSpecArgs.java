@@ -31,7 +31,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachRequired")
       private final @Nullable Output<Boolean> attachRequired;
 
-    public Output<Boolean> getAttachRequired() {
+    public Output<Boolean> attachRequired() {
         return this.attachRequired == null ? Codegen.empty() : this.attachRequired;
     }
 
@@ -46,7 +46,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsGroupPolicy")
       private final @Nullable Output<String> fsGroupPolicy;
 
-    public Output<String> getFsGroupPolicy() {
+    public Output<String> fsGroupPolicy() {
         return this.fsGroupPolicy == null ? Codegen.empty() : this.fsGroupPolicy;
     }
 
@@ -62,7 +62,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podInfoOnMount")
       private final @Nullable Output<Boolean> podInfoOnMount;
 
-    public Output<Boolean> getPodInfoOnMount() {
+    public Output<Boolean> podInfoOnMount() {
         return this.podInfoOnMount == null ? Codegen.empty() : this.podInfoOnMount;
     }
 
@@ -75,7 +75,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiresRepublish")
       private final @Nullable Output<Boolean> requiresRepublish;
 
-    public Output<Boolean> getRequiresRepublish() {
+    public Output<Boolean> requiresRepublish() {
         return this.requiresRepublish == null ? Codegen.empty() : this.requiresRepublish;
     }
 
@@ -94,7 +94,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageCapacity")
       private final @Nullable Output<Boolean> storageCapacity;
 
-    public Output<Boolean> getStorageCapacity() {
+    public Output<Boolean> storageCapacity() {
         return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
@@ -113,7 +113,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenRequests")
       private final @Nullable Output<List<TokenRequestArgs>> tokenRequests;
 
-    public Output<List<TokenRequestArgs>> getTokenRequests() {
+    public Output<List<TokenRequestArgs>> tokenRequests() {
         return this.tokenRequests == null ? Codegen.empty() : this.tokenRequests;
     }
 
@@ -126,7 +126,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeLifecycleModes")
       private final @Nullable Output<List<String>> volumeLifecycleModes;
 
-    public Output<List<String>> getVolumeLifecycleModes() {
+    public Output<List<String>> volumeLifecycleModes() {
         return this.volumeLifecycleModes == null ? Codegen.empty() : this.volumeLifecycleModes;
     }
 

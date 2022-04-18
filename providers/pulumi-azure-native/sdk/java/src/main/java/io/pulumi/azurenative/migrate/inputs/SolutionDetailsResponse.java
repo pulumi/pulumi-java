@@ -27,7 +27,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="assessmentCount")
       private final @Nullable Integer assessmentCount;
 
-    public Optional<Integer> getAssessmentCount() {
+    public Optional<Integer> assessmentCount() {
         return this.assessmentCount == null ? Optional.empty() : Optional.ofNullable(this.assessmentCount);
     }
 
@@ -38,7 +38,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="extendedDetails")
       private final @Nullable Map<String,String> extendedDetails;
 
-    public Map<String,String> getExtendedDetails() {
+    public Map<String,String> extendedDetails() {
         return this.extendedDetails == null ? Map.of() : this.extendedDetails;
     }
 
@@ -49,7 +49,7 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="groupCount")
       private final @Nullable Integer groupCount;
 
-    public Optional<Integer> getGroupCount() {
+    public Optional<Integer> groupCount() {
         return this.groupCount == null ? Optional.empty() : Optional.ofNullable(this.groupCount);
     }
 

@@ -31,16 +31,16 @@ public final class StudioComponentConfiguration {
         this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
     }
 
-    public Optional<StudioComponentActiveDirectoryConfiguration> getActiveDirectoryConfiguration() {
+    public Optional<StudioComponentActiveDirectoryConfiguration> activeDirectoryConfiguration() {
         return Optional.ofNullable(this.activeDirectoryConfiguration);
     }
-    public Optional<StudioComponentComputeFarmConfiguration> getComputeFarmConfiguration() {
+    public Optional<StudioComponentComputeFarmConfiguration> computeFarmConfiguration() {
         return Optional.ofNullable(this.computeFarmConfiguration);
     }
-    public Optional<StudioComponentLicenseServiceConfiguration> getLicenseServiceConfiguration() {
+    public Optional<StudioComponentLicenseServiceConfiguration> licenseServiceConfiguration() {
         return Optional.ofNullable(this.licenseServiceConfiguration);
     }
-    public Optional<StudioComponentSharedFileSystemConfiguration> getSharedFileSystemConfiguration() {
+    public Optional<StudioComponentSharedFileSystemConfiguration> sharedFileSystemConfiguration() {
         return Optional.ofNullable(this.sharedFileSystemConfiguration);
     }
 

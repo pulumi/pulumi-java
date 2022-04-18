@@ -22,7 +22,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     @Import(name="linkedStorageAccount")
       private final @Nullable Output<String> linkedStorageAccount;
 
-    public Output<String> getLinkedStorageAccount() {
+    public Output<String> linkedStorageAccount() {
         return this.linkedStorageAccount == null ? Codegen.empty() : this.linkedStorageAccount;
     }
 
@@ -33,7 +33,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -55,7 +55,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 

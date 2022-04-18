@@ -31,7 +31,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="allowModelOverride")
       private final @Nullable Boolean allowModelOverride;
 
-    public Optional<Boolean> getAllowModelOverride() {
+    public Optional<Boolean> allowModelOverride() {
         return this.allowModelOverride == null ? Optional.empty() : Optional.ofNullable(this.allowModelOverride);
     }
 
@@ -42,7 +42,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="configuration")
       private final @Nullable String configuration;
 
-    public Optional<String> getConfiguration() {
+    public Optional<String> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -54,7 +54,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="configurationUrl")
       private final @Nullable String configurationUrl;
 
-    public Optional<String> getConfigurationUrl() {
+    public Optional<String> configurationUrl() {
         return this.configurationUrl == null ? Optional.empty() : Optional.ofNullable(this.configurationUrl);
     }
 
@@ -65,7 +65,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="extensionProfile")
       private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
-    public Optional<CloudServiceExtensionProfileResponse> getExtensionProfile() {
+    public Optional<CloudServiceExtensionProfileResponse> extensionProfile() {
         return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
     }
 
@@ -76,7 +76,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="networkProfile")
       private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
-    public Optional<CloudServiceNetworkProfileResponse> getNetworkProfile() {
+    public Optional<CloudServiceNetworkProfileResponse> networkProfile() {
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
     }
 
@@ -87,7 +87,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="osProfile")
       private final @Nullable CloudServiceOsProfileResponse osProfile;
 
-    public Optional<CloudServiceOsProfileResponse> getOsProfile() {
+    public Optional<CloudServiceOsProfileResponse> osProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
@@ -99,7 +99,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="packageUrl")
       private final @Nullable String packageUrl;
 
-    public Optional<String> getPackageUrl() {
+    public Optional<String> packageUrl() {
         return this.packageUrl == null ? Optional.empty() : Optional.ofNullable(this.packageUrl);
     }
 
@@ -110,7 +110,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -121,7 +121,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="roleProfile")
       private final @Nullable CloudServiceRoleProfileResponse roleProfile;
 
-    public Optional<CloudServiceRoleProfileResponse> getRoleProfile() {
+    public Optional<CloudServiceRoleProfileResponse> roleProfile() {
         return this.roleProfile == null ? Optional.empty() : Optional.ofNullable(this.roleProfile);
     }
 
@@ -133,7 +133,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="startCloudService")
       private final @Nullable Boolean startCloudService;
 
-    public Optional<Boolean> getStartCloudService() {
+    public Optional<Boolean> startCloudService() {
         return this.startCloudService == null ? Optional.empty() : Optional.ofNullable(this.startCloudService);
     }
 
@@ -144,7 +144,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="uniqueId", required=true)
       private final String uniqueId;
 
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
 
@@ -157,7 +157,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
     @Import(name="upgradeMode")
       private final @Nullable String upgradeMode;
 
-    public Optional<String> getUpgradeMode() {
+    public Optional<String> upgradeMode() {
         return this.upgradeMode == null ? Optional.empty() : Optional.ofNullable(this.upgradeMode);
     }
 

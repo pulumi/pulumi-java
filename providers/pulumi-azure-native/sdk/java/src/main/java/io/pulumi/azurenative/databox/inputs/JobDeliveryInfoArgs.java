@@ -26,7 +26,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scheduledDateTime")
       private final @Nullable Output<String> scheduledDateTime;
 
-    public Output<String> getScheduledDateTime() {
+    public Output<String> scheduledDateTime() {
         return this.scheduledDateTime == null ? Codegen.empty() : this.scheduledDateTime;
     }
 

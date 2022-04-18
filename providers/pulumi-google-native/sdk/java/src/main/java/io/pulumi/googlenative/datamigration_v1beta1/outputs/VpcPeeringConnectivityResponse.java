@@ -24,7 +24,7 @@ public final class VpcPeeringConnectivityResponse {
      * The name of the VPC network to peer with the Cloud SQL private network.
      * 
     */
-    public String getVpc() {
+    public String vpc() {
         return this.vpc;
     }
 

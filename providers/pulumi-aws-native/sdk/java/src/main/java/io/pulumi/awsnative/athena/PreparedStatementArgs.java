@@ -22,7 +22,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="queryStatement", required=true)
       private final Output<String> queryStatement;
 
-    public Output<String> getQueryStatement() {
+    public Output<String> queryStatement() {
         return this.queryStatement;
     }
 
@@ -44,7 +44,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="statementName", required=true)
       private final Output<String> statementName;
 
-    public Output<String> getStatementName() {
+    public Output<String> statementName() {
         return this.statementName;
     }
 
@@ -55,7 +55,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workGroup", required=true)
       private final Output<String> workGroup;
 
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup;
     }
 

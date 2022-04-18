@@ -24,21 +24,21 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="iamRole")
       private final @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
 
-    public Output<AccessPolicyIamRoleArgs> getIamRole() {
+    public Output<AccessPolicyIamRoleArgs> iamRole() {
         return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
     @Import(name="iamUser")
       private final @Nullable Output<AccessPolicyIamUserArgs> iamUser;
 
-    public Output<AccessPolicyIamUserArgs> getIamUser() {
+    public Output<AccessPolicyIamUserArgs> iamUser() {
         return this.iamUser == null ? Codegen.empty() : this.iamUser;
     }
 
     @Import(name="user")
       private final @Nullable Output<AccessPolicyUserArgs> user;
 
-    public Output<AccessPolicyUserArgs> getUser() {
+    public Output<AccessPolicyUserArgs> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

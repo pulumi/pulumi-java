@@ -38,7 +38,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -49,7 +49,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bucketName", required=true)
       private final Output<Object> bucketName;
 
-    public Output<Object> getBucketName() {
+    public Output<Object> bucketName() {
         return this.bucketName;
     }
 
@@ -60,7 +60,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> getCompression() {
+    public Output<DatasetCompressionArgs> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -71,7 +71,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -93,7 +93,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="format")
       private final @Nullable Output<Object> format;
 
-    public Output<Object> getFormat() {
+    public Output<Object> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -104,7 +104,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="key")
       private final @Nullable Output<Object> key;
 
-    public Output<Object> getKey() {
+    public Output<Object> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -115,7 +115,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -126,7 +126,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> getModifiedDatetimeEnd() {
+    public Output<Object> modifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
     }
 
@@ -137,7 +137,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> getModifiedDatetimeStart() {
+    public Output<Object> modifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
     }
 
@@ -148,7 +148,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -159,7 +159,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="prefix")
       private final @Nullable Output<Object> prefix;
 
-    public Output<Object> getPrefix() {
+    public Output<Object> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -170,7 +170,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -181,7 +181,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -193,7 +193,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -204,7 +204,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<Object> version;
 
-    public Output<Object> getVersion() {
+    public Output<Object> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

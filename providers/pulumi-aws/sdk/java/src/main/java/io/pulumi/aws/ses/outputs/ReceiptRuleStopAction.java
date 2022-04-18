@@ -42,21 +42,21 @@ public final class ReceiptRuleStopAction {
      * The position of the action in the receipt rule
      * 
     */
-    public Integer getPosition() {
+    public Integer position() {
         return this.position;
     }
     /**
      * The scope to apply
      * 
     */
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
     /**
      * The ARN of an SNS topic to notify
      * 
     */
-    public Optional<String> getTopicArn() {
+    public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
 

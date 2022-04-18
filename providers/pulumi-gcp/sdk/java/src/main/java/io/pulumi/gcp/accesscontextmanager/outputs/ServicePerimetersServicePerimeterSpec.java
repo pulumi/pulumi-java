@@ -100,7 +100,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
     */
-    public List<String> getAccessLevels() {
+    public List<String> accessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
     /**
@@ -111,7 +111,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimetersServicePerimeterSpecEgressPolicy> getEgressPolicies() {
+    public List<ServicePerimetersServicePerimeterSpecEgressPolicy> egressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
     /**
@@ -122,7 +122,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimetersServicePerimeterSpecIngressPolicy> getIngressPolicies() {
+    public List<ServicePerimetersServicePerimeterSpecIngressPolicy> ingressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
     /**
@@ -133,7 +133,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * the perimeter.
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
@@ -144,7 +144,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * restrictions.
      * 
     */
-    public List<String> getRestrictedServices() {
+    public List<String> restrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
     /**
@@ -153,7 +153,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterSpecVpcAccessibleServices> getVpcAccessibleServices() {
+    public Optional<ServicePerimetersServicePerimeterSpecVpcAccessibleServices> vpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }
 

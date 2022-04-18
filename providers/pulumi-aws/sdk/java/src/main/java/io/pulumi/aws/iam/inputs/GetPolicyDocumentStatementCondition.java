@@ -20,7 +20,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
     @Import(name="test", required=true)
       private final String test;
 
-    public String getTest() {
+    public String test() {
         return this.test;
     }
 
@@ -31,7 +31,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 
@@ -42,7 +42,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
     @Import(name="variable", required=true)
       private final String variable;
 
-    public String getVariable() {
+    public String variable() {
         return this.variable;
     }
 

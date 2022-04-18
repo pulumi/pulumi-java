@@ -26,7 +26,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authentication", required=true)
       private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
-    public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> getAuthentication() {
+    public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication() {
         return this.authentication;
     }
 
@@ -37,7 +37,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="method", required=true)
       private final String method;
 
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
 
@@ -48,7 +48,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

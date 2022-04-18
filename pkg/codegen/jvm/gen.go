@@ -695,7 +695,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
@@ -972,10 +972,10 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
-		setterName := names.Ident(prop.Name).AsProperty().Setter()
+		setterName := propertyName.AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -1832,7 +1832,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		}
 
 		propertyType, getFunc := mod.getConfigProperty(ctx, typ, p.Name)
-		propertyName := names.Ident(mod.propertyName(p))
+		getterName := names.Ident(mod.propertyName(p)).AsProperty().Getter()
 		returnStatement := getFunc.String()
 
 		if p.DefaultValue != nil {
@@ -1856,7 +1856,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          "    ",
 			GetterType:      propertyType.ToCode(ctx.imports),
-			GetterName:      propertyName.String(),
+			GetterName:      getterName,
 			ReturnStatement: returnStatement,
 		}); err != nil {
 			return err

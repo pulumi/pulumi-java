@@ -23,7 +23,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata", required=true)
       private final Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

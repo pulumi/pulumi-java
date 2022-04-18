@@ -19,14 +19,14 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     @Import(name="replacementStrategy")
       private final @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+    public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy() {
         return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
     }
 
     @Import(name="terminationDelay")
       private final @Nullable Output<Integer> terminationDelay;
 
-    public Output<Integer> getTerminationDelay() {
+    public Output<Integer> terminationDelay() {
         return this.terminationDelay == null ? Codegen.empty() : this.terminationDelay;
     }
 

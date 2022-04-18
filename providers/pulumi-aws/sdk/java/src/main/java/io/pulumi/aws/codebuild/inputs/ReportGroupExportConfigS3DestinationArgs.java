@@ -23,7 +23,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> getEncryptionDisabled() {
+    public Output<Boolean> encryptionDisabled() {
         return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
     }
 
@@ -46,7 +46,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     @Import(name="encryptionKey", required=true)
       private final Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
 
@@ -57,7 +57,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     @Import(name="packaging")
       private final @Nullable Output<String> packaging;
 
-    public Output<String> getPackaging() {
+    public Output<String> packaging() {
         return this.packaging == null ? Codegen.empty() : this.packaging;
     }
 
@@ -68,7 +68,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

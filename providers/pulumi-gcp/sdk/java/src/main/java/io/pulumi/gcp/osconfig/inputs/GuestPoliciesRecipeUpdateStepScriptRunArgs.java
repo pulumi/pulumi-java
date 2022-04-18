@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
+    public Output<List<Integer>> allowedExitCodes() {
         return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
@@ -37,7 +37,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
-    public Output<String> getInterpreter() {
+    public Output<String> interpreter() {
         return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
@@ -48,7 +48,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 

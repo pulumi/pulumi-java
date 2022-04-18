@@ -62,7 +62,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * @return The name of the instance group.
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -78,7 +78,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * long, and comply with RFC1035.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -92,7 +92,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * @return The port number, which can be a value between 1 and 65535.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -108,7 +108,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -122,7 +122,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * @return The zone of the instance group.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

@@ -33,7 +33,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
      * The key value of the key
      * 
     */
-    public String getKeyValue() {
+    public String keyValue() {
         return this.keyValue;
     }
     /**
@@ -41,7 +41,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
      * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

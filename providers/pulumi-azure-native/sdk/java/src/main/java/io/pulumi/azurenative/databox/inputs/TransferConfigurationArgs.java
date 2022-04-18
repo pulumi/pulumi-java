@@ -30,7 +30,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferAllDetails")
       private final @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
-    public Output<TransferConfigurationTransferAllDetailsArgs> getTransferAllDetails() {
+    public Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails() {
         return this.transferAllDetails == null ? Codegen.empty() : this.transferAllDetails;
     }
 
@@ -41,7 +41,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferConfigurationType", required=true)
       private final Output<Either<String,TransferConfigurationType>> transferConfigurationType;
 
-    public Output<Either<String,TransferConfigurationType>> getTransferConfigurationType() {
+    public Output<Either<String,TransferConfigurationType>> transferConfigurationType() {
         return this.transferConfigurationType;
     }
 
@@ -52,7 +52,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferFilterDetails")
       private final @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
-    public Output<TransferConfigurationTransferFilterDetailsArgs> getTransferFilterDetails() {
+    public Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails() {
         return this.transferFilterDetails == null ? Codegen.empty() : this.transferFilterDetails;
     }
 

@@ -22,7 +22,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization", required=true)
       private final Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 

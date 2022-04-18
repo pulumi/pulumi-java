@@ -24,7 +24,7 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
     @Import(name="recurrence", required=true)
       private final String recurrence;
 
-    public String getRecurrence() {
+    public String recurrence() {
         return this.recurrence;
     }
 
@@ -35,7 +35,7 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
     @Import(name="window", required=true)
       private final TimeWindowResponse window;
 
-    public TimeWindowResponse getWindow() {
+    public TimeWindowResponse window() {
         return this.window;
     }
 

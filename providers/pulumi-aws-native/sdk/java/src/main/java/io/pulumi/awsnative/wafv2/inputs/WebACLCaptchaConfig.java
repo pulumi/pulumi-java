@@ -17,7 +17,7 @@ public final class WebACLCaptchaConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="immunityTimeProperty")
       private final @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
 
-    public Optional<WebACLImmunityTimeProperty> getImmunityTimeProperty() {
+    public Optional<WebACLImmunityTimeProperty> immunityTimeProperty() {
         return this.immunityTimeProperty == null ? Optional.empty() : Optional.ofNullable(this.immunityTimeProperty);
     }
 

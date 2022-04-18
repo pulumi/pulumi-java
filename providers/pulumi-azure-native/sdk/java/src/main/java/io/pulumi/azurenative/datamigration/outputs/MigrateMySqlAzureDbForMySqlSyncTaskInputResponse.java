@@ -41,21 +41,21 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
      * Databases to migrate
      * 
     */
-    public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source MySQL
      * 
     */
-    public MySqlConnectionInfoResponse getSourceConnectionInfo() {
+    public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for MySQL
      * 
     */
-    public MySqlConnectionInfoResponse getTargetConnectionInfo() {
+    public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

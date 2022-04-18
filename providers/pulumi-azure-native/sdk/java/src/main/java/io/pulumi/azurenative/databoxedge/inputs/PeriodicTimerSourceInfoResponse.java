@@ -25,7 +25,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
     @Import(name="schedule", required=true)
       private final String schedule;
 
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 
@@ -36,7 +36,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -47,7 +47,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
     @Import(name="topic")
       private final @Nullable String topic;
 
-    public Optional<String> getTopic() {
+    public Optional<String> topic() {
         return this.topic == null ? Optional.empty() : Optional.ofNullable(this.topic);
     }
 

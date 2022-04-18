@@ -24,7 +24,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -46,7 +46,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="valueFrom", required=true)
       private final EnvVarSourceResponse valueFrom;
 
-    public EnvVarSourceResponse getValueFrom() {
+    public EnvVarSourceResponse valueFrom() {
         return this.valueFrom;
     }
 

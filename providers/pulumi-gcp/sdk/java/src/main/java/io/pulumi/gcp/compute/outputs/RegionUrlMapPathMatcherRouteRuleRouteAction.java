@@ -106,7 +106,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy> getCorsPolicy() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
     /**
@@ -120,7 +120,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
     /**
@@ -131,7 +131,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
     /**
@@ -139,7 +139,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy> getRetryPolicy() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
@@ -150,7 +150,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionTimeout> getTimeout() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -159,7 +159,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite> getUrlRewrite() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
     /**
@@ -174,7 +174,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> getWeightedBackendServices() {
+    public List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }
 

@@ -62,42 +62,42 @@ public final class CertificateSigningRequestCondition {
      * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * timestamp for the last update to this condition
      * 
     */
-    public Optional<String> getLastUpdateTime() {
+    public Optional<String> lastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
     /**
      * human readable message with details about the request state
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * brief reason for the request state
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * request approval state, currently Approved or Denied.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

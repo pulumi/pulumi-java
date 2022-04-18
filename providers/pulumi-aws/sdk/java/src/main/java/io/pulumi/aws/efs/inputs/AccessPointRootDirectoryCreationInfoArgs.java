@@ -22,7 +22,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
     @Import(name="ownerGid", required=true)
       private final Output<Integer> ownerGid;
 
-    public Output<Integer> getOwnerGid() {
+    public Output<Integer> ownerGid() {
         return this.ownerGid;
     }
 
@@ -33,7 +33,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
     @Import(name="ownerUid", required=true)
       private final Output<Integer> ownerUid;
 
-    public Output<Integer> getOwnerUid() {
+    public Output<Integer> ownerUid() {
         return this.ownerUid;
     }
 
@@ -44,7 +44,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 

@@ -43,7 +43,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @return The name of the bucket this intelligent tiering configuration is associated with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -57,7 +57,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @return A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> getFilter() {
+    public Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> filter() {
         return this.filter;
     }
     /**
@@ -71,7 +71,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @return The unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @return Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -99,7 +99,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * @return The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).
      * 
      */
-    public Output<List<BucketIntelligentTieringConfigurationTiering>> getTierings() {
+    public Output<List<BucketIntelligentTieringConfigurationTiering>> tierings() {
         return this.tierings;
     }
 

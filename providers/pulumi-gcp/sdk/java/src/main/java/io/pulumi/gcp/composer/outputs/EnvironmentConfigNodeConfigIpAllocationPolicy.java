@@ -32,19 +32,19 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
         this.useIpAliases = useIpAliases;
     }
 
-    public Optional<String> getClusterIpv4CidrBlock() {
+    public Optional<String> clusterIpv4CidrBlock() {
         return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
-    public Optional<String> getClusterSecondaryRangeName() {
+    public Optional<String> clusterSecondaryRangeName() {
         return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
-    public Optional<String> getServicesIpv4CidrBlock() {
+    public Optional<String> servicesIpv4CidrBlock() {
         return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
-    public Optional<String> getServicesSecondaryRangeName() {
+    public Optional<String> servicesSecondaryRangeName() {
         return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
-    public Optional<Boolean> getUseIpAliases() {
+    public Optional<Boolean> useIpAliases() {
         return Optional.ofNullable(this.useIpAliases);
     }
 

@@ -17,14 +17,14 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
 
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 

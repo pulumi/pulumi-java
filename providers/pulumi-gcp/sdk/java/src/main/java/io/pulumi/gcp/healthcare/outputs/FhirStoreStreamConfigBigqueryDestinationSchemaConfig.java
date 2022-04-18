@@ -45,7 +45,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      * value 2. The maximum depth allowed is 5.
      * 
     */
-    public Integer getRecursiveStructureDepth() {
+    public Integer recursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
     /**
@@ -56,7 +56,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      *   Possible values are `ANALYTICS`.
      * 
     */
-    public Optional<String> getSchemaType() {
+    public Optional<String> schemaType() {
         return Optional.ofNullable(this.schemaType);
     }
 

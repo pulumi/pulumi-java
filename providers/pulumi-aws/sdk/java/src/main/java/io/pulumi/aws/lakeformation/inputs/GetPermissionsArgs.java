@@ -26,7 +26,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="catalogId")
       private final @Nullable String catalogId;
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
@@ -37,7 +37,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="catalogResource")
       private final @Nullable Boolean catalogResource;
 
-    public Optional<Boolean> getCatalogResource() {
+    public Optional<Boolean> catalogResource() {
         return this.catalogResource == null ? Optional.empty() : Optional.ofNullable(this.catalogResource);
     }
 
@@ -48,7 +48,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataLocation")
       private final @Nullable GetPermissionsDataLocation dataLocation;
 
-    public Optional<GetPermissionsDataLocation> getDataLocation() {
+    public Optional<GetPermissionsDataLocation> dataLocation() {
         return this.dataLocation == null ? Optional.empty() : Optional.ofNullable(this.dataLocation);
     }
 
@@ -59,7 +59,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="database")
       private final @Nullable GetPermissionsDatabase database;
 
-    public Optional<GetPermissionsDatabase> getDatabase() {
+    public Optional<GetPermissionsDatabase> database() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
@@ -70,7 +70,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="principal", required=true)
       private final String principal;
 
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 
@@ -81,7 +81,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="table")
       private final @Nullable GetPermissionsTable table;
 
-    public Optional<GetPermissionsTable> getTable() {
+    public Optional<GetPermissionsTable> table() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
     }
 
@@ -92,7 +92,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableWithColumns")
       private final @Nullable GetPermissionsTableWithColumns tableWithColumns;
 
-    public Optional<GetPermissionsTableWithColumns> getTableWithColumns() {
+    public Optional<GetPermissionsTableWithColumns> tableWithColumns() {
         return this.tableWithColumns == null ? Optional.empty() : Optional.ofNullable(this.tableWithColumns);
     }
 

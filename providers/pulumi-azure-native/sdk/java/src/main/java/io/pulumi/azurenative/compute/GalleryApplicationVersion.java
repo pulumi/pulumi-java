@@ -45,7 +45,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -87,7 +87,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return The publishing profile of a gallery image version.
      * 
      */
-    public Output<GalleryApplicationVersionPublishingProfileResponse> getPublishingProfile() {
+    public Output<GalleryApplicationVersionPublishingProfileResponse> publishingProfile() {
         return this.publishingProfile;
     }
     /**
@@ -101,7 +101,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return This is the replication status of the gallery image version.
      * 
      */
-    public Output<ReplicationStatusResponse> getReplicationStatus() {
+    public Output<ReplicationStatusResponse> replicationStatus() {
         return this.replicationStatus;
     }
     /**
@@ -115,7 +115,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

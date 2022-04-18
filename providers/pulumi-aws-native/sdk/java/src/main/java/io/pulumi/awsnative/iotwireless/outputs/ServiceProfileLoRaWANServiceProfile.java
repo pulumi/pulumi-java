@@ -75,61 +75,61 @@ public final class ServiceProfileLoRaWANServiceProfile {
         this.ulRatePolicy = ulRatePolicy;
     }
 
-    public Optional<Boolean> getAddGwMetadata() {
+    public Optional<Boolean> addGwMetadata() {
         return Optional.ofNullable(this.addGwMetadata);
     }
-    public Optional<String> getChannelMask() {
+    public Optional<String> channelMask() {
         return Optional.ofNullable(this.channelMask);
     }
-    public Optional<Integer> getDevStatusReqFreq() {
+    public Optional<Integer> devStatusReqFreq() {
         return Optional.ofNullable(this.devStatusReqFreq);
     }
-    public Optional<Integer> getDlBucketSize() {
+    public Optional<Integer> dlBucketSize() {
         return Optional.ofNullable(this.dlBucketSize);
     }
-    public Optional<Integer> getDlRate() {
+    public Optional<Integer> dlRate() {
         return Optional.ofNullable(this.dlRate);
     }
-    public Optional<String> getDlRatePolicy() {
+    public Optional<String> dlRatePolicy() {
         return Optional.ofNullable(this.dlRatePolicy);
     }
-    public Optional<Integer> getDrMax() {
+    public Optional<Integer> drMax() {
         return Optional.ofNullable(this.drMax);
     }
-    public Optional<Integer> getDrMin() {
+    public Optional<Integer> drMin() {
         return Optional.ofNullable(this.drMin);
     }
-    public Optional<Boolean> getHrAllowed() {
+    public Optional<Boolean> hrAllowed() {
         return Optional.ofNullable(this.hrAllowed);
     }
-    public Optional<Integer> getMinGwDiversity() {
+    public Optional<Integer> minGwDiversity() {
         return Optional.ofNullable(this.minGwDiversity);
     }
-    public Optional<Boolean> getNwkGeoLoc() {
+    public Optional<Boolean> nwkGeoLoc() {
         return Optional.ofNullable(this.nwkGeoLoc);
     }
-    public Optional<Boolean> getPrAllowed() {
+    public Optional<Boolean> prAllowed() {
         return Optional.ofNullable(this.prAllowed);
     }
-    public Optional<Boolean> getRaAllowed() {
+    public Optional<Boolean> raAllowed() {
         return Optional.ofNullable(this.raAllowed);
     }
-    public Optional<Boolean> getReportDevStatusBattery() {
+    public Optional<Boolean> reportDevStatusBattery() {
         return Optional.ofNullable(this.reportDevStatusBattery);
     }
-    public Optional<Boolean> getReportDevStatusMargin() {
+    public Optional<Boolean> reportDevStatusMargin() {
         return Optional.ofNullable(this.reportDevStatusMargin);
     }
-    public Optional<Integer> getTargetPer() {
+    public Optional<Integer> targetPer() {
         return Optional.ofNullable(this.targetPer);
     }
-    public Optional<Integer> getUlBucketSize() {
+    public Optional<Integer> ulBucketSize() {
         return Optional.ofNullable(this.ulBucketSize);
     }
-    public Optional<Integer> getUlRate() {
+    public Optional<Integer> ulRate() {
         return Optional.ofNullable(this.ulRate);
     }
-    public Optional<String> getUlRatePolicy() {
+    public Optional<String> ulRatePolicy() {
         return Optional.ofNullable(this.ulRatePolicy);
     }
 

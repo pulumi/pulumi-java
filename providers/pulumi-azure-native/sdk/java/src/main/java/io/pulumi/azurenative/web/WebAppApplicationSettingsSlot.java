@@ -40,7 +40,7 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -54,7 +54,7 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @return Settings.
      * 
      */
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties;
     }
     /**
@@ -82,7 +82,7 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

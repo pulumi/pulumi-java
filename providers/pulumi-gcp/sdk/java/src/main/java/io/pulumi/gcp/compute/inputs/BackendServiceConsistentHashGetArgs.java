@@ -28,7 +28,7 @@ public final class BackendServiceConsistentHashGetArgs extends io.pulumi.resourc
     @Import(name="httpCookie")
       private final @Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
 
-    public Output<BackendServiceConsistentHashHttpCookieGetArgs> getHttpCookie() {
+    public Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie() {
         return this.httpCookie == null ? Codegen.empty() : this.httpCookie;
     }
 
@@ -40,7 +40,7 @@ public final class BackendServiceConsistentHashGetArgs extends io.pulumi.resourc
     @Import(name="httpHeaderName")
       private final @Nullable Output<String> httpHeaderName;
 
-    public Output<String> getHttpHeaderName() {
+    public Output<String> httpHeaderName() {
         return this.httpHeaderName == null ? Codegen.empty() : this.httpHeaderName;
     }
 
@@ -56,7 +56,7 @@ public final class BackendServiceConsistentHashGetArgs extends io.pulumi.resourc
     @Import(name="minimumRingSize")
       private final @Nullable Output<Integer> minimumRingSize;
 
-    public Output<Integer> getMinimumRingSize() {
+    public Output<Integer> minimumRingSize() {
         return this.minimumRingSize == null ? Codegen.empty() : this.minimumRingSize;
     }
 

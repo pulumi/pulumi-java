@@ -27,7 +27,7 @@ public final class GroupMembershipPreferredMemberKeyGetArgs extends io.pulumi.re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -43,7 +43,7 @@ public final class GroupMembershipPreferredMemberKeyGetArgs extends io.pulumi.re
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

@@ -40,7 +40,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="aggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
 
-    public Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> getAggregations() {
+    public Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations() {
         return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
@@ -59,7 +59,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="comparison", required=true)
       private final Output<String> comparison;
 
-    public Output<String> getComparison() {
+    public Output<String> comparison() {
         return this.comparison;
     }
 
@@ -86,7 +86,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="denominatorAggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
 
-    public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> getDenominatorAggregations() {
+    public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations() {
         return this.denominatorAggregations == null ? Codegen.empty() : this.denominatorAggregations;
     }
 
@@ -111,7 +111,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="denominatorFilter")
       private final @Nullable Output<String> denominatorFilter;
 
-    public Output<String> getDenominatorFilter() {
+    public Output<String> denominatorFilter() {
         return this.denominatorFilter == null ? Codegen.empty() : this.denominatorFilter;
     }
 
@@ -136,7 +136,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -147,7 +147,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -159,7 +159,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="thresholdValue")
       private final @Nullable Output<Double> thresholdValue;
 
-    public Output<Double> getThresholdValue() {
+    public Output<Double> thresholdValue() {
         return this.thresholdValue == null ? Codegen.empty() : this.thresholdValue;
     }
 
@@ -178,7 +178,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> getTrigger() {
+    public Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

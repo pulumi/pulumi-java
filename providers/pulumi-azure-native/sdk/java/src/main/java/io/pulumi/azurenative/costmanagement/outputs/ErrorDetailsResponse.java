@@ -32,14 +32,14 @@ public final class ErrorDetailsResponse {
      * Error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Error message indicating why the operation failed.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -42,7 +42,7 @@ public class EncryptionConfig extends io.pulumi.resources.CustomResource {
      * @return An AWS KMS customer master key (CMK) ARN.
      * 
      */
-    public Output</* @Nullable */ String> getKeyId() {
+    public Output</* @Nullable */ String> keyId() {
         return this.keyId;
     }
     /**
@@ -56,7 +56,7 @@ public class EncryptionConfig extends io.pulumi.resources.CustomResource {
      * @return The type of encryption. Set to `KMS` to use your own key for encryption. Set to `NONE` for default encryption.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

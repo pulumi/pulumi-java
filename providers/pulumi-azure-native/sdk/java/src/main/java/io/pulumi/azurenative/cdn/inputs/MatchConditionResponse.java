@@ -27,7 +27,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="matchValue", required=true)
       private final List<String> matchValue;
 
-    public List<String> getMatchValue() {
+    public List<String> matchValue() {
         return this.matchValue;
     }
 
@@ -38,7 +38,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="matchVariable", required=true)
       private final String matchVariable;
 
-    public String getMatchVariable() {
+    public String matchVariable() {
         return this.matchVariable;
     }
 
@@ -49,7 +49,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
@@ -60,7 +60,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -71,7 +71,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="selector")
       private final @Nullable String selector;
 
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
@@ -82,7 +82,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

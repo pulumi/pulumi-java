@@ -42,7 +42,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +56,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationSet() {
+    public Output</* @Nullable */ String> configurationSet() {
         return this.configurationSet;
     }
     /**
@@ -70,7 +70,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -84,7 +84,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
-    public Output<String> getFromAddress() {
+    public Output<String> fromAddress() {
         return this.fromAddress;
     }
     /**
@@ -98,7 +98,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return The ARN of an identity verified with SES.
      * 
      */
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
     /**
@@ -112,7 +112,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return Messages per second that can be sent.
      * 
      */
-    public Output<Integer> getMessagesPerSecond() {
+    public Output<Integer> messagesPerSecond() {
         return this.messagesPerSecond;
     }
     /**
@@ -126,7 +126,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * @return The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
 

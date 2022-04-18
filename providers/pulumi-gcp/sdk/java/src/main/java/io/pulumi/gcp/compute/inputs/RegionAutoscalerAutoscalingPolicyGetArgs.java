@@ -38,7 +38,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="cooldownPeriod")
       private final @Nullable Output<Integer> cooldownPeriod;
 
-    public Output<Integer> getCooldownPeriod() {
+    public Output<Integer> cooldownPeriod() {
         return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
     }
 
@@ -52,7 +52,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="cpuUtilization")
       private final @Nullable Output<RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
 
-    public Output<RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs> getCpuUtilization() {
+    public Output<RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization() {
         return this.cpuUtilization == null ? Codegen.empty() : this.cpuUtilization;
     }
 
@@ -64,7 +64,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="loadBalancingUtilization")
       private final @Nullable Output<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
 
-    public Output<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> getLoadBalancingUtilization() {
+    public Output<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization() {
         return this.loadBalancingUtilization == null ? Codegen.empty() : this.loadBalancingUtilization;
     }
 
@@ -78,7 +78,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas;
     }
 
@@ -90,7 +90,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="metrics")
       private final @Nullable Output<List<RegionAutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
 
-    public Output<List<RegionAutoscalerAutoscalingPolicyMetricGetArgs>> getMetrics() {
+    public Output<List<RegionAutoscalerAutoscalingPolicyMetricGetArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -104,7 +104,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="minReplicas", required=true)
       private final Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
+    public Output<Integer> minReplicas() {
         return this.minReplicas;
     }
 
@@ -117,7 +117,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -130,7 +130,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="scaleDownControl")
       private final @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
 
-    public Output<RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs> getScaleDownControl() {
+    public Output<RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl() {
         return this.scaleDownControl == null ? Codegen.empty() : this.scaleDownControl;
     }
 
@@ -143,7 +143,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="scaleInControl")
       private final @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
 
-    public Output<RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs> getScaleInControl() {
+    public Output<RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl() {
         return this.scaleInControl == null ? Codegen.empty() : this.scaleInControl;
     }
 
@@ -155,7 +155,7 @@ public final class RegionAutoscalerAutoscalingPolicyGetArgs extends io.pulumi.re
     @Import(name="scalingSchedules")
       private final @Nullable Output<List<RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
 
-    public Output<List<RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs>> getScalingSchedules() {
+    public Output<List<RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules() {
         return this.scalingSchedules == null ? Codegen.empty() : this.scalingSchedules;
     }
 

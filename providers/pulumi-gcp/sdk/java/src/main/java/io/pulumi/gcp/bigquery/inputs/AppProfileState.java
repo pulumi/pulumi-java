@@ -24,7 +24,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appProfileId")
       private final @Nullable Output<String> appProfileId;
 
-    public Output<String> getAppProfileId() {
+    public Output<String> appProfileId() {
         return this.appProfileId == null ? Codegen.empty() : this.appProfileId;
     }
 
@@ -35,7 +35,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreWarnings")
       private final @Nullable Output<Boolean> ignoreWarnings;
 
-    public Output<Boolean> getIgnoreWarnings() {
+    public Output<Boolean> ignoreWarnings() {
         return this.ignoreWarnings == null ? Codegen.empty() : this.ignoreWarnings;
     }
 
@@ -57,7 +57,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -70,7 +70,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiClusterRoutingUseAny")
       private final @Nullable Output<Boolean> multiClusterRoutingUseAny;
 
-    public Output<Boolean> getMultiClusterRoutingUseAny() {
+    public Output<Boolean> multiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny == null ? Codegen.empty() : this.multiClusterRoutingUseAny;
     }
 
@@ -82,7 +82,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -106,7 +106,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleClusterRouting")
       private final @Nullable Output<AppProfileSingleClusterRoutingGetArgs> singleClusterRouting;
 
-    public Output<AppProfileSingleClusterRoutingGetArgs> getSingleClusterRouting() {
+    public Output<AppProfileSingleClusterRoutingGetArgs> singleClusterRouting() {
         return this.singleClusterRouting == null ? Codegen.empty() : this.singleClusterRouting;
     }
 

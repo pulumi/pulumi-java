@@ -31,7 +31,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -42,7 +42,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultResponsePlatforms")
       private final @Nullable Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
 
-    public Output<List<IntentDefaultResponsePlatformsItem>> getDefaultResponsePlatforms() {
+    public Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms() {
         return this.defaultResponsePlatforms == null ? Codegen.empty() : this.defaultResponsePlatforms;
     }
 
@@ -53,7 +53,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -64,7 +64,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endInteraction")
       private final @Nullable Output<Boolean> endInteraction;
 
-    public Output<Boolean> getEndInteraction() {
+    public Output<Boolean> endInteraction() {
         return this.endInteraction == null ? Codegen.empty() : this.endInteraction;
     }
 
@@ -75,7 +75,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
@@ -86,14 +86,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputContextNames")
       private final @Nullable Output<List<String>> inputContextNames;
 
-    public Output<List<String>> getInputContextNames() {
+    public Output<List<String>> inputContextNames() {
         return this.inputContextNames == null ? Codegen.empty() : this.inputContextNames;
     }
 
     @Import(name="intentView")
       private final @Nullable Output<String> intentView;
 
-    public Output<String> getIntentView() {
+    public Output<String> intentView() {
         return this.intentView == null ? Codegen.empty() : this.intentView;
     }
 
@@ -104,14 +104,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -122,14 +122,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="liveAgentHandoff")
       private final @Nullable Output<Boolean> liveAgentHandoff;
 
-    public Output<Boolean> getLiveAgentHandoff() {
+    public Output<Boolean> liveAgentHandoff() {
         return this.liveAgentHandoff == null ? Codegen.empty() : this.liveAgentHandoff;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -140,7 +140,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messages")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> getMessages() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages() {
         return this.messages == null ? Codegen.empty() : this.messages;
     }
 
@@ -151,7 +151,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mlDisabled")
       private final @Nullable Output<Boolean> mlDisabled;
 
-    public Output<Boolean> getMlDisabled() {
+    public Output<Boolean> mlDisabled() {
         return this.mlDisabled == null ? Codegen.empty() : this.mlDisabled;
     }
 
@@ -162,7 +162,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -173,7 +173,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputContexts")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts;
 
-    public Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> getOutputContexts() {
+    public Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts() {
         return this.outputContexts == null ? Codegen.empty() : this.outputContexts;
     }
 
@@ -184,7 +184,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> getParameters() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -195,7 +195,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Output<String> getParentFollowupIntentName() {
+    public Output<String> parentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 
@@ -206,14 +206,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -224,7 +224,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resetContexts")
       private final @Nullable Output<Boolean> resetContexts;
 
-    public Output<Boolean> getResetContexts() {
+    public Output<Boolean> resetContexts() {
         return this.resetContexts == null ? Codegen.empty() : this.resetContexts;
     }
 
@@ -235,7 +235,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trainingPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> getTrainingPhrases() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases() {
         return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 
@@ -246,7 +246,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookState")
       private final @Nullable Output<IntentWebhookState> webhookState;
 
-    public Output<IntentWebhookState> getWebhookState() {
+    public Output<IntentWebhookState> webhookState() {
         return this.webhookState == null ? Codegen.empty() : this.webhookState;
     }
 

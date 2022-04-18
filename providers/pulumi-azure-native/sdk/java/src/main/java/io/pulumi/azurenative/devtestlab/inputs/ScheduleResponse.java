@@ -30,7 +30,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdDate", required=true)
       private final String createdDate;
 
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
 
@@ -41,7 +41,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dailyRecurrence")
       private final @Nullable DayDetailsResponse dailyRecurrence;
 
-    public Optional<DayDetailsResponse> getDailyRecurrence() {
+    public Optional<DayDetailsResponse> dailyRecurrence() {
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
     }
 
@@ -52,7 +52,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hourlyRecurrence")
       private final @Nullable HourDetailsResponse hourlyRecurrence;
 
-    public Optional<HourDetailsResponse> getHourlyRecurrence() {
+    public Optional<HourDetailsResponse> hourlyRecurrence() {
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
     }
 
@@ -63,7 +63,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -74,7 +74,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -85,7 +85,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -96,7 +96,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="notificationSettings")
       private final @Nullable NotificationSettingsResponse notificationSettings;
 
-    public Optional<NotificationSettingsResponse> getNotificationSettings() {
+    public Optional<NotificationSettingsResponse> notificationSettings() {
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
     }
 
@@ -107,7 +107,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -118,7 +118,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -129,7 +129,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -140,7 +140,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
 
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
     }
 
@@ -151,7 +151,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="taskType")
       private final @Nullable String taskType;
 
-    public Optional<String> getTaskType() {
+    public Optional<String> taskType() {
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
     }
 
@@ -162,7 +162,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeZoneId")
       private final @Nullable String timeZoneId;
 
-    public Optional<String> getTimeZoneId() {
+    public Optional<String> timeZoneId() {
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
     }
 
@@ -173,7 +173,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -184,7 +184,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uniqueIdentifier", required=true)
       private final String uniqueIdentifier;
 
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
@@ -195,7 +195,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="weeklyRecurrence")
       private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
+    public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return this.weeklyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.weeklyRecurrence);
     }
 

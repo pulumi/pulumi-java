@@ -17,14 +17,14 @@ public final class GetTestMatrixArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="testMatrixId", required=true)
       private final String testMatrixId;
 
-    public String getTestMatrixId() {
+    public String testMatrixId() {
         return this.testMatrixId;
     }
 

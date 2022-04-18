@@ -27,7 +27,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
     @Import(name="blobContainerUri")
       private final @Nullable Output<String> blobContainerUri;
 
-    public Output<String> getBlobContainerUri() {
+    public Output<String> blobContainerUri() {
         return this.blobContainerUri == null ? Codegen.empty() : this.blobContainerUri;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
     @Import(name="sasToken")
       private final @Nullable Output<SecureStringArgs> sasToken;
 
-    public Output<SecureStringArgs> getSasToken() {
+    public Output<SecureStringArgs> sasToken() {
         return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 

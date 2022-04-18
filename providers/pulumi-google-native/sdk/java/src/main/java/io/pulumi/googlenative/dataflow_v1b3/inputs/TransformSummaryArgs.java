@@ -29,7 +29,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayData")
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Output<List<DisplayDataArgs>> getDisplayData() {
+    public Output<List<DisplayDataArgs>> displayData() {
         return this.displayData == null ? Codegen.empty() : this.displayData;
     }
 
@@ -40,7 +40,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inputCollectionName")
       private final @Nullable Output<List<String>> inputCollectionName;
 
-    public Output<List<String>> getInputCollectionName() {
+    public Output<List<String>> inputCollectionName() {
         return this.inputCollectionName == null ? Codegen.empty() : this.inputCollectionName;
     }
 
@@ -62,7 +62,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<TransformSummaryKind> kind;
 
-    public Output<TransformSummaryKind> getKind() {
+    public Output<TransformSummaryKind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -73,7 +73,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="outputCollectionName")
       private final @Nullable Output<List<String>> outputCollectionName;
 
-    public Output<List<String>> getOutputCollectionName() {
+    public Output<List<String>> outputCollectionName() {
         return this.outputCollectionName == null ? Codegen.empty() : this.outputCollectionName;
     }
 

@@ -26,21 +26,21 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="specification")
       private final @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
 
-    public Output<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
+    public Output<DefaultRolloutPropertiesSpecificationArgs> specification() {
         return this.specification == null ? Codegen.empty() : this.specification;
     }
 
     @Import(name="status")
       private final @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
-    public Output<DefaultRolloutPropertiesStatusArgs> getStatus() {
+    public Output<DefaultRolloutPropertiesStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

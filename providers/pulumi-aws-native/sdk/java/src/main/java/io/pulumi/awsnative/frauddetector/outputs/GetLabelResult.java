@@ -57,35 +57,35 @@ public final class GetLabelResult {
      * The label ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The timestamp when the label was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The label description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp when the label was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this label.
      * 
     */
-    public List<LabelTag> getTags() {
+    public List<LabelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

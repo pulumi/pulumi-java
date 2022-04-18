@@ -21,7 +21,7 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -32,7 +32,7 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

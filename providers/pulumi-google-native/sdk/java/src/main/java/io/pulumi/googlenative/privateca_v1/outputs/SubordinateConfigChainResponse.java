@@ -25,7 +25,7 @@ public final class SubordinateConfigChainResponse {
      * Expected to be in leaf-to-root order according to RFC 5246.
      * 
     */
-    public List<String> getPemCertificates() {
+    public List<String> pemCertificates() {
         return this.pemCertificates;
     }
 

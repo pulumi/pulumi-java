@@ -25,7 +25,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="virtualNetworkResourceId", required=true)
       private final String virtualNetworkResourceId;
 
-    public String getVirtualNetworkResourceId() {
+    public String virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
 

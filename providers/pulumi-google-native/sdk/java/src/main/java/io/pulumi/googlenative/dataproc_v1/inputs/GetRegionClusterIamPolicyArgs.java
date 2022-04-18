@@ -17,21 +17,21 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
       private final String regionId;
 
-    public String getRegionId() {
+    public String regionId() {
         return this.regionId;
     }
 

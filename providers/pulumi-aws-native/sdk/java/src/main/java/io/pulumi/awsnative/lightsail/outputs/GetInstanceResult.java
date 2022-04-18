@@ -120,92 +120,92 @@ public final class GetInstanceResult {
      * An array of objects representing the add-ons to enable for the new instance.
      * 
     */
-    public List<InstanceAddOn> getAddOns() {
+    public List<InstanceAddOn> addOns() {
         return this.addOns == null ? List.of() : this.addOns;
     }
-    public Optional<InstanceHardware> getHardware() {
+    public Optional<InstanceHardware> hardware() {
         return Optional.ofNullable(this.hardware);
     }
-    public Optional<String> getInstanceArn() {
+    public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * Is the IP Address of the Instance is the static IP
      * 
     */
-    public Optional<Boolean> getIsStaticIp() {
+    public Optional<Boolean> isStaticIp() {
         return Optional.ofNullable(this.isStaticIp);
     }
     /**
      * The name of your key pair.
      * 
     */
-    public Optional<String> getKeyPairName() {
+    public Optional<String> keyPairName() {
         return Optional.ofNullable(this.keyPairName);
     }
-    public Optional<InstanceLocation> getLocation() {
+    public Optional<InstanceLocation> location() {
         return Optional.ofNullable(this.location);
     }
-    public Optional<InstanceNetworking> getNetworking() {
+    public Optional<InstanceNetworking> networking() {
         return Optional.ofNullable(this.networking);
     }
     /**
      * Private IP Address of the Instance
      * 
     */
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * Public IP Address of the Instance
      * 
     */
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
     /**
      * Resource type of Lightsail instance.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * SSH Key Name of the  Lightsail instance.
      * 
     */
-    public Optional<String> getSshKeyName() {
+    public Optional<String> sshKeyName() {
         return Optional.ofNullable(this.sshKeyName);
     }
-    public Optional<InstanceState> getState() {
+    public Optional<InstanceState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Support code to help identify any issues
      * 
     */
-    public Optional<String> getSupportCode() {
+    public Optional<String> supportCode() {
         return Optional.ofNullable(this.supportCode);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<InstanceTag> getTags() {
+    public List<InstanceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
      * 
     */
-    public Optional<String> getUserData() {
+    public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
     /**
      * Username of the  Lightsail instance.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

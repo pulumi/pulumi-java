@@ -34,14 +34,14 @@ public final class JobRecipe {
      * Recipe name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Recipe version
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

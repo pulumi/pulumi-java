@@ -39,21 +39,21 @@ public final class PositionResponse {
      * The source code column position (of the line) the current instruction was generated from.
      * 
     */
-    public String getColumn() {
+    public String column() {
         return this.column;
     }
     /**
      * The number of bytes of source code making up this stack trace element.
      * 
     */
-    public String getLength() {
+    public String length() {
         return this.length;
     }
     /**
      * The source code line number the current instruction was generated from.
      * 
     */
-    public String getLine() {
+    public String line() {
         return this.line;
     }
 

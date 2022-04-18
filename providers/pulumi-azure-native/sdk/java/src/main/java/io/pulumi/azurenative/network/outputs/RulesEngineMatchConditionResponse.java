@@ -64,42 +64,42 @@ public final class RulesEngineMatchConditionResponse {
      * Describes if this is negate condition or not
      * 
     */
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
     */
-    public List<String> getRulesEngineMatchValue() {
+    public List<String> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
     /**
      * Match Variable
      * 
     */
-    public String getRulesEngineMatchVariable() {
+    public String rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
     /**
      * Describes operator to apply to the match condition.
      * 
     */
-    public String getRulesEngineOperator() {
+    public String rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
     /**
      * Name of selector in RequestHeader or RequestBody to be matched
      * 
     */
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms
      * 
     */
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

@@ -26,7 +26,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodes")
       private final @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
-    public Output<List<ClusterShardNodeGetArgs>> getNodes() {
+    public Output<List<ClusterShardNodeGetArgs>> nodes() {
         return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> getNumNodes() {
+    public Output<Integer> numNodes() {
         return this.numNodes == null ? Codegen.empty() : this.numNodes;
     }
 
@@ -59,7 +59,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="slots")
       private final @Nullable Output<String> slots;
 
-    public Output<String> getSlots() {
+    public Output<String> slots() {
         return this.slots == null ? Codegen.empty() : this.slots;
     }
 

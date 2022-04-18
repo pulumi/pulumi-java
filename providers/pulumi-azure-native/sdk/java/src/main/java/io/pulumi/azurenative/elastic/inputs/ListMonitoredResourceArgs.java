@@ -19,7 +19,7 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -30,7 +30,7 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

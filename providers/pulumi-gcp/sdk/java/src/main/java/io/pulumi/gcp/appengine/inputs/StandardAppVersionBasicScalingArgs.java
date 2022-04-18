@@ -24,7 +24,7 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
     @Import(name="idleTimeout")
       private final @Nullable Output<String> idleTimeout;
 
-    public Output<String> getIdleTimeout() {
+    public Output<String> idleTimeout() {
         return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class StandardAppVersionBasicScalingArgs extends io.pulumi.resource
     @Import(name="maxInstances", required=true)
       private final Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
 

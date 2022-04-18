@@ -27,7 +27,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
     @Import(name="inline")
       private final @Nullable Output<List<String>> inline;
 
-    public Output<List<String>> getInline() {
+    public Output<List<String>> inline() {
         return this.inline == null ? Codegen.empty() : this.inline;
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
-    public Output<String> getScriptUri() {
+    public Output<String> scriptUri() {
         return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 
@@ -60,7 +60,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
-    public Output<String> getSha256Checksum() {
+    public Output<String> sha256Checksum() {
         return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
@@ -72,7 +72,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

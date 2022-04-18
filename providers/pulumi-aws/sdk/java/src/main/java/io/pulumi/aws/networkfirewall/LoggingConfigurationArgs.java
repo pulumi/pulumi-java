@@ -22,7 +22,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="firewallArn", required=true)
       private final Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
 
@@ -33,7 +33,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="loggingConfiguration", required=true)
       private final Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<LoggingConfigurationLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 

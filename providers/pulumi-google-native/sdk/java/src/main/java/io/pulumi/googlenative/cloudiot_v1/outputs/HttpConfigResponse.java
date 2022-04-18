@@ -24,7 +24,7 @@ public final class HttpConfigResponse {
      * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
      * 
     */
-    public String getHttpEnabledState() {
+    public String httpEnabledState() {
         return this.httpEnabledState;
     }
 

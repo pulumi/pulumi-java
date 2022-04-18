@@ -24,7 +24,7 @@ public final class SandboxConfigResponse {
      * Type of the sandbox to use for the node.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

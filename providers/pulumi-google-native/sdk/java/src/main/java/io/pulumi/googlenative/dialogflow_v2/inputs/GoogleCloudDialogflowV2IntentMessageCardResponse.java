@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons;
 
-    public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> getButtons() {
+    public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons() {
         return this.buttons;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
     @Import(name="imageUri", required=true)
       private final String imageUri;
 
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
     @Import(name="subtitle", required=true)
       private final String subtitle;
 
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

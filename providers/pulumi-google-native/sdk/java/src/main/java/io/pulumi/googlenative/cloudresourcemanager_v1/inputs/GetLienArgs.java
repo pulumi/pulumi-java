@@ -15,7 +15,7 @@ public final class GetLienArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="lienId", required=true)
       private final String lienId;
 
-    public String getLienId() {
+    public String lienId() {
         return this.lienId;
     }
 

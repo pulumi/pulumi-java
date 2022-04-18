@@ -19,19 +19,19 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
     @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
-    public Output</* @Nullable */ SomeOtherObject> getBar() {
+    public Output</* @Nullable */ SomeOtherObject> bar() {
         return this.bar;
     }
     @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
-    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> getBaz() {
+    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz() {
         return this.baz;
     }
     @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
-    public Output</* @Nullable */ Object> getFoo() {
+    public Output</* @Nullable */ Object> foo() {
         return this.foo;
     }
 

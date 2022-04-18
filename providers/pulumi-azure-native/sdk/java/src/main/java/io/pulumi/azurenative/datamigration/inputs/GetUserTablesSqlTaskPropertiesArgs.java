@@ -27,7 +27,7 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resource
     @Import(name="input")
       private final @Nullable Output<GetUserTablesSqlTaskInputArgs> input;
 
-    public Output<GetUserTablesSqlTaskInputArgs> getInput() {
+    public Output<GetUserTablesSqlTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resource
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

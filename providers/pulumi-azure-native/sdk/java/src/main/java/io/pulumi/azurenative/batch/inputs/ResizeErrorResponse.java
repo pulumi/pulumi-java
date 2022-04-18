@@ -22,14 +22,14 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
     @Import(name="details")
       private final @Nullable List<ResizeErrorResponse> details;
 
-    public List<ResizeErrorResponse> getDetails() {
+    public List<ResizeErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
 
@@ -40,7 +40,7 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

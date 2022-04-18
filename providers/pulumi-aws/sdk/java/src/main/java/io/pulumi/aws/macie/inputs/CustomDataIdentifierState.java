@@ -25,7 +25,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -47,7 +47,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
 
-    public Output<List<String>> getIgnoreWords() {
+    public Output<List<String>> ignoreWords() {
         return this.ignoreWords == null ? Codegen.empty() : this.ignoreWords;
     }
 
@@ -69,7 +69,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
 
-    public Output<List<String>> getKeywords() {
+    public Output<List<String>> keywords() {
         return this.keywords == null ? Codegen.empty() : this.keywords;
     }
 
@@ -80,14 +80,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
 
-    public Output<Integer> getMaximumMatchDistance() {
+    public Output<Integer> maximumMatchDistance() {
         return this.maximumMatchDistance == null ? Codegen.empty() : this.maximumMatchDistance;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -98,7 +98,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -109,7 +109,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="regex")
       private final @Nullable Output<String> regex;
 
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -120,14 +120,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

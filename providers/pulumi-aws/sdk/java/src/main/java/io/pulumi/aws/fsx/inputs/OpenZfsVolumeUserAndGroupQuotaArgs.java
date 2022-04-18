@@ -22,7 +22,7 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
     @Import(name="id", required=true)
       private final Output<Integer> id;
 
-    public Output<Integer> getId() {
+    public Output<Integer> id() {
         return this.id;
     }
 
@@ -33,14 +33,14 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
     @Import(name="storageCapacityQuotaGib", required=true)
       private final Output<Integer> storageCapacityQuotaGib;
 
-    public Output<Integer> getStorageCapacityQuotaGib() {
+    public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

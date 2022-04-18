@@ -22,7 +22,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
     @Import(name="effectiveEngineVersion")
       private final @Nullable Output<String> effectiveEngineVersion;
 
-    public Output<String> getEffectiveEngineVersion() {
+    public Output<String> effectiveEngineVersion() {
         return this.effectiveEngineVersion == null ? Codegen.empty() : this.effectiveEngineVersion;
     }
 
@@ -33,7 +33,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
     @Import(name="selectedEngineVersion")
       private final @Nullable Output<String> selectedEngineVersion;
 
-    public Output<String> getSelectedEngineVersion() {
+    public Output<String> selectedEngineVersion() {
         return this.selectedEngineVersion == null ? Codegen.empty() : this.selectedEngineVersion;
     }
 

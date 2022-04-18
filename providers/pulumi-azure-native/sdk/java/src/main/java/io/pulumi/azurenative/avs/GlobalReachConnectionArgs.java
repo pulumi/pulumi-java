@@ -22,7 +22,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -33,7 +33,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="globalReachConnectionName")
       private final @Nullable Output<String> globalReachConnectionName;
 
-    public Output<String> getGlobalReachConnectionName() {
+    public Output<String> globalReachConnectionName() {
         return this.globalReachConnectionName == null ? Codegen.empty() : this.globalReachConnectionName;
     }
 
@@ -44,7 +44,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="peerExpressRouteCircuit")
       private final @Nullable Output<String> peerExpressRouteCircuit;
 
-    public Output<String> getPeerExpressRouteCircuit() {
+    public Output<String> peerExpressRouteCircuit() {
         return this.peerExpressRouteCircuit == null ? Codegen.empty() : this.peerExpressRouteCircuit;
     }
 
@@ -55,7 +55,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -66,7 +66,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -23,7 +23,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
-    public Output<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
+    public Output<KeyVaultContractCreatePropertiesArgs> keyVault() {
         return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
@@ -56,7 +56,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -67,7 +67,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

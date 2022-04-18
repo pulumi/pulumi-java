@@ -35,7 +35,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
     @Import(name="destination")
       private final @Nullable Output<Object> destination;
 
-    public Output<Object> getDestination() {
+    public Output<Object> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -46,7 +46,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
     @Import(name="identity")
       private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
-    public Output<EventSubscriptionIdentityArgs> getIdentity() {
+    public Output<EventSubscriptionIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 

@@ -25,7 +25,7 @@ public final class ManagedZoneForwardingConfigTargetNameServerGetArgs extends io
     @Import(name="forwardingPath")
       private final @Nullable Output<String> forwardingPath;
 
-    public Output<String> getForwardingPath() {
+    public Output<String> forwardingPath() {
         return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedZoneForwardingConfigTargetNameServerGetArgs extends io
     @Import(name="ipv4Address", required=true)
       private final Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address;
     }
 

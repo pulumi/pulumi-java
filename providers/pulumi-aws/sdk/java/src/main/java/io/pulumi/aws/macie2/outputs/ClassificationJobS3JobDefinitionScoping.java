@@ -35,14 +35,14 @@ public final class ClassificationJobS3JobDefinitionScoping {
      * The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
      * 
     */
-    public Optional<ClassificationJobS3JobDefinitionScopingExcludes> getExcludes() {
+    public Optional<ClassificationJobS3JobDefinitionScopingExcludes> excludes() {
         return Optional.ofNullable(this.excludes);
     }
     /**
      * The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
      * 
     */
-    public Optional<ClassificationJobS3JobDefinitionScopingIncludes> getIncludes() {
+    public Optional<ClassificationJobS3JobDefinitionScopingIncludes> includes() {
         return Optional.ofNullable(this.includes);
     }
 

@@ -32,7 +32,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
-    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
+    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
 
@@ -43,7 +43,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
 
@@ -54,7 +54,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="input")
       private final @Nullable ConnectToSourcePostgreSqlSyncTaskInputResponse input;
 
-    public Optional<ConnectToSourcePostgreSqlSyncTaskInputResponse> getInput() {
+    public Optional<ConnectToSourcePostgreSqlSyncTaskInputResponse> input() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
@@ -65,7 +65,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="output", required=true)
       private final List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> output;
 
-    public List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> getOutput() {
+    public List<ConnectToSourcePostgreSqlSyncTaskOutputResponse> output() {
         return this.output;
     }
 
@@ -76,7 +76,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -88,7 +88,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse extends i
     @Import(name="taskType", required=true)
       private final String taskType;
 
-    public String getTaskType() {
+    public String taskType() {
         return this.taskType;
     }
 

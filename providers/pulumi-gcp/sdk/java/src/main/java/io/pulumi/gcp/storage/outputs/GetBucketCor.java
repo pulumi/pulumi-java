@@ -28,16 +28,16 @@ public final class GetBucketCor {
         this.responseHeaders = responseHeaders;
     }
 
-    public Integer getMaxAgeSeconds() {
+    public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods;
     }
-    public List<String> getOrigins() {
+    public List<String> origins() {
         return this.origins;
     }
-    public List<String> getResponseHeaders() {
+    public List<String> responseHeaders() {
         return this.responseHeaders;
     }
 

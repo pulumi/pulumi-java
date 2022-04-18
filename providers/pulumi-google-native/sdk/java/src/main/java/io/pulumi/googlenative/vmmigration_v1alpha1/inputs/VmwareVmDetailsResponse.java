@@ -24,7 +24,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="bootOption", required=true)
       private final String bootOption;
 
-    public String getBootOption() {
+    public String bootOption() {
         return this.bootOption;
     }
 
@@ -35,7 +35,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="committedStorage", required=true)
       private final String committedStorage;
 
-    public String getCommittedStorage() {
+    public String committedStorage() {
         return this.committedStorage;
     }
 
@@ -46,7 +46,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="committedStorageMb", required=true)
       private final String committedStorageMb;
 
-    public String getCommittedStorageMb() {
+    public String committedStorageMb() {
         return this.committedStorageMb;
     }
 
@@ -57,7 +57,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="cpuCount", required=true)
       private final Integer cpuCount;
 
-    public Integer getCpuCount() {
+    public Integer cpuCount() {
         return this.cpuCount;
     }
 
@@ -68,7 +68,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="datacenterDescription", required=true)
       private final String datacenterDescription;
 
-    public String getDatacenterDescription() {
+    public String datacenterDescription() {
         return this.datacenterDescription;
     }
 
@@ -79,7 +79,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="datacenterId", required=true)
       private final String datacenterId;
 
-    public String getDatacenterId() {
+    public String datacenterId() {
         return this.datacenterId;
     }
 
@@ -90,7 +90,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="diskCount", required=true)
       private final Integer diskCount;
 
-    public Integer getDiskCount() {
+    public Integer diskCount() {
         return this.diskCount;
     }
 
@@ -101,7 +101,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -112,7 +112,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="guestDescription", required=true)
       private final String guestDescription;
 
-    public String getGuestDescription() {
+    public String guestDescription() {
         return this.guestDescription;
     }
 
@@ -123,7 +123,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="memoryMb", required=true)
       private final Integer memoryMb;
 
-    public Integer getMemoryMb() {
+    public Integer memoryMb() {
         return this.memoryMb;
     }
 
@@ -134,7 +134,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="powerState", required=true)
       private final String powerState;
 
-    public String getPowerState() {
+    public String powerState() {
         return this.powerState;
     }
 
@@ -145,7 +145,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="uuid", required=true)
       private final String uuid;
 
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
 
@@ -156,7 +156,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="vmId", required=true)
       private final String vmId;
 
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
 

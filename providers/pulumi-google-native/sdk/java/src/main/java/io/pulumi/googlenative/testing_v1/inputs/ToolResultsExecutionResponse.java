@@ -23,7 +23,7 @@ public final class ToolResultsExecutionResponse extends io.pulumi.resources.Invo
     @Import(name="executionId", required=true)
       private final String executionId;
 
-    public String getExecutionId() {
+    public String executionId() {
         return this.executionId;
     }
 
@@ -34,7 +34,7 @@ public final class ToolResultsExecutionResponse extends io.pulumi.resources.Invo
     @Import(name="historyId", required=true)
       private final String historyId;
 
-    public String getHistoryId() {
+    public String historyId() {
         return this.historyId;
     }
 
@@ -45,7 +45,7 @@ public final class ToolResultsExecutionResponse extends io.pulumi.resources.Invo
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

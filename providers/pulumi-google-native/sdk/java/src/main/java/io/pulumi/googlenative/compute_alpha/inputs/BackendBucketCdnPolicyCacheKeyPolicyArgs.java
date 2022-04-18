@@ -27,7 +27,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     @Import(name="includeHttpHeaders")
       private final @Nullable Output<List<String>> includeHttpHeaders;
 
-    public Output<List<String>> getIncludeHttpHeaders() {
+    public Output<List<String>> includeHttpHeaders() {
         return this.includeHttpHeaders == null ? Codegen.empty() : this.includeHttpHeaders;
     }
 
@@ -38,7 +38,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     @Import(name="queryStringWhitelist")
       private final @Nullable Output<List<String>> queryStringWhitelist;
 
-    public Output<List<String>> getQueryStringWhitelist() {
+    public Output<List<String>> queryStringWhitelist() {
         return this.queryStringWhitelist == null ? Codegen.empty() : this.queryStringWhitelist;
     }
 

@@ -69,14 +69,14 @@ public final class StandardAppVersionAutomaticScaling {
      * Defaults to a runtime-specific value.
      * 
     */
-    public Optional<Integer> getMaxConcurrentRequests() {
+    public Optional<Integer> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
     /**
      * Maximum number of idle instances that should be maintained for this version.
      * 
     */
-    public Optional<Integer> getMaxIdleInstances() {
+    public Optional<Integer> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
     /**
@@ -84,14 +84,14 @@ public final class StandardAppVersionAutomaticScaling {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMaxPendingLatency() {
+    public Optional<String> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
     /**
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
     */
-    public Optional<Integer> getMinIdleInstances() {
+    public Optional<Integer> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
     /**
@@ -99,7 +99,7 @@ public final class StandardAppVersionAutomaticScaling {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMinPendingLatency() {
+    public Optional<String> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
     /**
@@ -107,7 +107,7 @@ public final class StandardAppVersionAutomaticScaling {
      * Structure is documented below.
      * 
     */
-    public Optional<StandardAppVersionAutomaticScalingStandardSchedulerSettings> getStandardSchedulerSettings() {
+    public Optional<StandardAppVersionAutomaticScalingStandardSchedulerSettings> standardSchedulerSettings() {
         return Optional.ofNullable(this.standardSchedulerSettings);
     }
 

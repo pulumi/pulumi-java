@@ -32,14 +32,14 @@ public final class JobStatisticsReservationUsageItemResponse {
      * Reservation name or "unreserved" for on-demand resources usage.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Slot-milliseconds the job spent in the given reservation.
      * 
     */
-    public String getSlotMs() {
+    public String slotMs() {
         return this.slotMs;
     }
 

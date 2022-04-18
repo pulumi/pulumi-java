@@ -31,16 +31,16 @@ public final class ResourceDataSyncSyncSource {
         this.sourceType = sourceType;
     }
 
-    public Optional<ResourceDataSyncAwsOrganizationsSource> getAwsOrganizationsSource() {
+    public Optional<ResourceDataSyncAwsOrganizationsSource> awsOrganizationsSource() {
         return Optional.ofNullable(this.awsOrganizationsSource);
     }
-    public Optional<Boolean> getIncludeFutureRegions() {
+    public Optional<Boolean> includeFutureRegions() {
         return Optional.ofNullable(this.includeFutureRegions);
     }
-    public List<String> getSourceRegions() {
+    public List<String> sourceRegions() {
         return this.sourceRegions;
     }
-    public String getSourceType() {
+    public String sourceType() {
         return this.sourceType;
     }
 

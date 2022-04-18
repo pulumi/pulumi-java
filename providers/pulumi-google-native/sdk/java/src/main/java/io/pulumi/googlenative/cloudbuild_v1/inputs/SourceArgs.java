@@ -28,7 +28,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoSource")
       private final @Nullable Output<RepoSourceArgs> repoSource;
 
-    public Output<RepoSourceArgs> getRepoSource() {
+    public Output<RepoSourceArgs> repoSource() {
         return this.repoSource == null ? Codegen.empty() : this.repoSource;
     }
 
@@ -39,7 +39,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSource")
       private final @Nullable Output<StorageSourceArgs> storageSource;
 
-    public Output<StorageSourceArgs> getStorageSource() {
+    public Output<StorageSourceArgs> storageSource() {
         return this.storageSource == null ? Codegen.empty() : this.storageSource;
     }
 
@@ -50,7 +50,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSourceManifest")
       private final @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
-    public Output<StorageSourceManifestArgs> getStorageSourceManifest() {
+    public Output<StorageSourceManifestArgs> storageSourceManifest() {
         return this.storageSourceManifest == null ? Codegen.empty() : this.storageSourceManifest;
     }
 

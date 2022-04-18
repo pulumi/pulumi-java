@@ -45,7 +45,7 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
      * @return The backend service this signed URL key belongs.
      * 
      */
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
     /**
@@ -63,7 +63,7 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getKeyValue() {
+    public Output<String> keyValue() {
         return this.keyValue;
     }
     /**
@@ -77,7 +77,7 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
      * @return Name of the signed URL key.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -93,7 +93,7 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

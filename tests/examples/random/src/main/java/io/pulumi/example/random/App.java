@@ -32,10 +32,10 @@ public class App {
                         .special(true)
                         .overrideSpecial("_@")
                         .build());
-        ctx.export("randomPassword", randomPassword.getResult());
+        ctx.export("randomPassword", randomPassword.result());
 
         var randomPet = new RandomPet("my-pet");
-        ctx.export("randomPetKeepers", randomPet.getKeepers());
+        ctx.export("randomPetKeepers", randomPet.keepers());
 
         var randomInteger = new RandomInteger("my-int",
                 RandomIntegerArgs.builder()
@@ -43,13 +43,13 @@ public class App {
                         .min(0)
                         .build()
         );
-        ctx.export("randomInteger", randomInteger.getResult());
+        ctx.export("randomInteger", randomInteger.result());
 
         var randomString = new RandomString("my-string",
                 RandomStringArgs.builder()
                         .length(10)
                         .build()
-        ).getResult();
+        ).result();
         ctx.export("randomString", randomString);
 
         var randomId = new RandomId("my-id",
@@ -57,16 +57,16 @@ public class App {
                         .byteLength(10)
                         .build()
         );
-        ctx.export("randomIdHex", randomId.getHex());
+        ctx.export("randomIdHex", randomId.hex());
 
-        var randomUuid = new RandomUuid("my-uuid").getResult();
+        var randomUuid = new RandomUuid("my-uuid").result();
         ctx.export("randomUuid", randomUuid);
 
         var randomShuffle = new RandomShuffle("my-shuffle",
                 RandomShuffleArgs.builder()
                         .inputs(List.of("A", "B", "C"))
                         .build()
-        ).getResults();
+        ).results();
         ctx.export("shuffled", randomShuffle);
 
         ctx.export("randomTuple", Output.tuple(randomString, randomUuid)

@@ -25,7 +25,7 @@ public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeA
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

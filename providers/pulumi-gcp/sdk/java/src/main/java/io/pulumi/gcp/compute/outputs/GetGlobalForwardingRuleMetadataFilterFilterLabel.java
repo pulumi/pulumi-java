@@ -28,10 +28,10 @@ public final class GetGlobalForwardingRuleMetadataFilterFilterLabel {
      * The name of the global forwarding rule.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

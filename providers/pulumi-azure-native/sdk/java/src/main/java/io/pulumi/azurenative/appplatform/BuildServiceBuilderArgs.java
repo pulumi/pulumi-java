@@ -23,7 +23,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     @Import(name="buildServiceName", required=true)
       private final Output<String> buildServiceName;
 
-    public Output<String> getBuildServiceName() {
+    public Output<String> buildServiceName() {
         return this.buildServiceName;
     }
 
@@ -34,7 +34,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     @Import(name="builderName")
       private final @Nullable Output<String> builderName;
 
-    public Output<String> getBuilderName() {
+    public Output<String> builderName() {
         return this.builderName == null ? Codegen.empty() : this.builderName;
     }
 
@@ -45,7 +45,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     @Import(name="properties")
       private final @Nullable Output<BuilderPropertiesArgs> properties;
 
-    public Output<BuilderPropertiesArgs> getProperties() {
+    public Output<BuilderPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

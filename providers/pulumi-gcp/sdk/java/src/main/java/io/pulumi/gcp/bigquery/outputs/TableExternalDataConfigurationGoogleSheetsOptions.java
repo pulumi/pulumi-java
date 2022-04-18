@@ -39,7 +39,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      * Structure is documented below.
      * 
     */
-    public Optional<String> getRange() {
+    public Optional<String> range() {
         return Optional.ofNullable(this.range);
     }
     /**
@@ -48,7 +48,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      * `skip_leading_rows` must be set.
      * 
     */
-    public Optional<Integer> getSkipLeadingRows() {
+    public Optional<Integer> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
 

@@ -23,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
     @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> getBootDiskSizeGb() {
+    public Output<Integer> bootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
@@ -34,7 +34,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
     @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;
 
-    public Output<String> getBootDiskType() {
+    public Output<String> bootDiskType() {
         return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
     }
 
@@ -45,7 +45,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
     @Import(name="numLocalSsds")
       private final @Nullable Output<Integer> numLocalSsds;
 
-    public Output<Integer> getNumLocalSsds() {
+    public Output<Integer> numLocalSsds() {
         return this.numLocalSsds == null ? Codegen.empty() : this.numLocalSsds;
     }
 

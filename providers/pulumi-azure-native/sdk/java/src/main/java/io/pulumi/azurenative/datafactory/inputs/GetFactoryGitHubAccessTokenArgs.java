@@ -22,7 +22,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -33,7 +33,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="gitHubAccessCode", required=true)
       private final String gitHubAccessCode;
 
-    public String getGitHubAccessCode() {
+    public String gitHubAccessCode() {
         return this.gitHubAccessCode;
     }
 
@@ -44,7 +44,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="gitHubAccessTokenBaseUrl", required=true)
       private final String gitHubAccessTokenBaseUrl;
 
-    public String getGitHubAccessTokenBaseUrl() {
+    public String gitHubAccessTokenBaseUrl() {
         return this.gitHubAccessTokenBaseUrl;
     }
 
@@ -55,7 +55,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="gitHubClientId")
       private final @Nullable String gitHubClientId;
 
-    public Optional<String> getGitHubClientId() {
+    public Optional<String> gitHubClientId() {
         return this.gitHubClientId == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientId);
     }
 
@@ -66,7 +66,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="gitHubClientSecret")
       private final @Nullable GitHubClientSecret gitHubClientSecret;
 
-    public Optional<GitHubClientSecret> getGitHubClientSecret() {
+    public Optional<GitHubClientSecret> gitHubClientSecret() {
         return this.gitHubClientSecret == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientSecret);
     }
 
@@ -77,7 +77,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

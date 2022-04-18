@@ -24,14 +24,14 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boundingPolys")
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
-    public Output<List<BoundingPolyArgs>> getBoundingPolys() {
+    public Output<List<BoundingPolyArgs>> boundingPolys() {
         return this.boundingPolys == null ? Codegen.empty() : this.boundingPolys;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -42,28 +42,28 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="referenceImageId")
       private final @Nullable Output<String> referenceImageId;
 
-    public Output<String> getReferenceImageId() {
+    public Output<String> referenceImageId() {
         return this.referenceImageId == null ? Codegen.empty() : this.referenceImageId;
     }
 
@@ -74,7 +74,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

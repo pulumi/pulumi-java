@@ -25,56 +25,56 @@ public final class ListenerRuleRuleConditionArgs extends io.pulumi.resources.Res
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
     @Import(name="hostHeaderConfig")
       private final @Nullable Output<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig;
 
-    public Output<ListenerRuleHostHeaderConfigArgs> getHostHeaderConfig() {
+    public Output<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig() {
         return this.hostHeaderConfig == null ? Codegen.empty() : this.hostHeaderConfig;
     }
 
     @Import(name="httpHeaderConfig")
       private final @Nullable Output<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig;
 
-    public Output<ListenerRuleHttpHeaderConfigArgs> getHttpHeaderConfig() {
+    public Output<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig() {
         return this.httpHeaderConfig == null ? Codegen.empty() : this.httpHeaderConfig;
     }
 
     @Import(name="httpRequestMethodConfig")
       private final @Nullable Output<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig;
 
-    public Output<ListenerRuleHttpRequestMethodConfigArgs> getHttpRequestMethodConfig() {
+    public Output<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig() {
         return this.httpRequestMethodConfig == null ? Codegen.empty() : this.httpRequestMethodConfig;
     }
 
     @Import(name="pathPatternConfig")
       private final @Nullable Output<ListenerRulePathPatternConfigArgs> pathPatternConfig;
 
-    public Output<ListenerRulePathPatternConfigArgs> getPathPatternConfig() {
+    public Output<ListenerRulePathPatternConfigArgs> pathPatternConfig() {
         return this.pathPatternConfig == null ? Codegen.empty() : this.pathPatternConfig;
     }
 
     @Import(name="queryStringConfig")
       private final @Nullable Output<ListenerRuleQueryStringConfigArgs> queryStringConfig;
 
-    public Output<ListenerRuleQueryStringConfigArgs> getQueryStringConfig() {
+    public Output<ListenerRuleQueryStringConfigArgs> queryStringConfig() {
         return this.queryStringConfig == null ? Codegen.empty() : this.queryStringConfig;
     }
 
     @Import(name="sourceIpConfig")
       private final @Nullable Output<ListenerRuleSourceIpConfigArgs> sourceIpConfig;
 
-    public Output<ListenerRuleSourceIpConfigArgs> getSourceIpConfig() {
+    public Output<ListenerRuleSourceIpConfigArgs> sourceIpConfig() {
         return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
     }
 
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

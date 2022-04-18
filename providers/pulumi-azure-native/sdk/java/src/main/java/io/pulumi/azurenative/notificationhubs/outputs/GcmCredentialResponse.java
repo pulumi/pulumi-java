@@ -34,14 +34,14 @@ public final class GcmCredentialResponse {
      * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
      * 
     */
-    public Optional<String> getGcmEndpoint() {
+    public Optional<String> gcmEndpoint() {
         return Optional.ofNullable(this.gcmEndpoint);
     }
     /**
      * The Google API key.
      * 
     */
-    public Optional<String> getGoogleApiKey() {
+    public Optional<String> googleApiKey() {
         return Optional.ofNullable(this.googleApiKey);
     }
 

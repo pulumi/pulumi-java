@@ -44,7 +44,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    public Output</* @Nullable */ String> getHotCachePeriod() {
+    public Output</* @Nullable */ String> hotCachePeriod() {
         return this.hotCachePeriod;
     }
     /**
@@ -58,7 +58,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the database is followed.
      * 
      */
-    public Output<Boolean> getIsFollowed() {
+    public Output<Boolean> isFollowed() {
         return this.isFollowed;
     }
     /**
@@ -74,7 +74,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * Expected value is 'ReadWrite'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -88,7 +88,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -102,7 +102,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    public Output</* @Nullable */ String> getSoftDeletePeriod() {
+    public Output</* @Nullable */ String> softDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
@@ -144,7 +144,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The statistics of the database.
      * 
      */
-    public Output<DatabaseStatisticsResponse> getStatistics() {
+    public Output<DatabaseStatisticsResponse> statistics() {
         return this.statistics;
     }
     /**
@@ -158,7 +158,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

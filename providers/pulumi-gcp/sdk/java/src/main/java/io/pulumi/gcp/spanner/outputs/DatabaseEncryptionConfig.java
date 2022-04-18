@@ -26,7 +26,7 @@ public final class DatabaseEncryptionConfig {
      * in the same location as the Spanner Database.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

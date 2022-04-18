@@ -33,14 +33,14 @@ public final class IstioConfigResponse {
      * The specified Istio auth mode, either none, or mutual TLS.
      * 
     */
-    public String getAuth() {
+    public String auth() {
         return this.auth;
     }
     /**
      * Whether Istio is enabled for this cluster.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

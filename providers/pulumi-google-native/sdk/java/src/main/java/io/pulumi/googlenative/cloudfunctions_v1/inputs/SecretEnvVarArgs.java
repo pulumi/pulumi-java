@@ -26,7 +26,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -37,7 +37,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -48,7 +48,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -59,7 +59,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

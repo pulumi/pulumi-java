@@ -35,7 +35,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -46,7 +46,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -57,7 +57,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="clusterId")
       private final @Nullable Output<Object> clusterId;
 
-    public Output<Object> getClusterId() {
+    public Output<Object> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -68,7 +68,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -79,7 +79,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -90,7 +90,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="domain", required=true)
       private final Output<Object> domain;
 
-    public Output<Object> getDomain() {
+    public Output<Object> domain() {
         return this.domain;
     }
 
@@ -112,7 +112,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -123,7 +123,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -135,7 +135,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -146,7 +146,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Object> workspaceResourceId;
 
-    public Output<Object> getWorkspaceResourceId() {
+    public Output<Object> workspaceResourceId() {
         return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 

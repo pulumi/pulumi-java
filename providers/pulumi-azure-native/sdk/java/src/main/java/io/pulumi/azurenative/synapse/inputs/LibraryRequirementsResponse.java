@@ -25,7 +25,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -36,7 +36,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
     @Import(name="filename")
       private final @Nullable String filename;
 
-    public Optional<String> getFilename() {
+    public Optional<String> filename() {
         return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
     }
 
@@ -47,7 +47,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

@@ -26,7 +26,7 @@ public final class EventTargetSqsTarget {
      * The FIFO message group ID to use as the target.
      * 
     */
-    public Optional<String> getMessageGroupId() {
+    public Optional<String> messageGroupId() {
         return Optional.ofNullable(this.messageGroupId);
     }
 

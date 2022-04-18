@@ -26,7 +26,7 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="useSystemAssignedIdentity")
       private final @Nullable Boolean useSystemAssignedIdentity;
 
-    public Optional<Boolean> getUseSystemAssignedIdentity() {
+    public Optional<Boolean> useSystemAssignedIdentity() {
         return this.useSystemAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.useSystemAssignedIdentity);
     }
 
@@ -37,7 +37,7 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
     }
 

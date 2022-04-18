@@ -22,7 +22,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="registryId")
       private final @Nullable String registryId;
 
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
     }
 
@@ -44,7 +44,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

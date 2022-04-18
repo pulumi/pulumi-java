@@ -55,35 +55,35 @@ public final class ImageReferenceResponse {
      * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * For example, UbuntuServer or WindowsServer.
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * For example, Canonical or MicrosoftWindowsServer.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * For example, 18.04-LTS or 2019-Datacenter.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

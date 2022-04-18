@@ -19,7 +19,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="inventoryItemName", required=true)
       private final String inventoryItemName;
 
-    public String getInventoryItemName() {
+    public String inventoryItemName() {
         return this.inventoryItemName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vcenterName", required=true)
       private final String vcenterName;
 
-    public String getVcenterName() {
+    public String vcenterName() {
         return this.vcenterName;
     }
 

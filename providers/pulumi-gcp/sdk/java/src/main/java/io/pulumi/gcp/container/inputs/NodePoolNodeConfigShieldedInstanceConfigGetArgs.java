@@ -18,14 +18,14 @@ public final class NodePoolNodeConfigShieldedInstanceConfigGetArgs extends io.pu
     @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
-    public Output<Boolean> getEnableIntegrityMonitoring() {
+    public Output<Boolean> enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
     }
 
     @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
 
-    public Output<Boolean> getEnableSecureBoot() {
+    public Output<Boolean> enableSecureBoot() {
         return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
     }
 

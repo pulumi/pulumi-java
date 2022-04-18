@@ -46,28 +46,28 @@ public final class BigQueryIODetailsResponse {
      * Dataset accessed in the connection.
      * 
     */
-    public String getDataset() {
+    public String dataset() {
         return this.dataset;
     }
     /**
      * Project accessed in the connection.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * Query used to access data in the connection.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * Table accessed in the connection.
      * 
     */
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 

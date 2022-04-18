@@ -86,63 +86,63 @@ public final class GetEndpointAuthorizationResult {
      * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
     */
-    public Optional<Boolean> getAllowedAllVPCs() {
+    public Optional<Boolean> allowedAllVPCs() {
         return Optional.ofNullable(this.allowedAllVPCs);
     }
     /**
      * The VPCs allowed access to the cluster.
      * 
     */
-    public List<String> getAllowedVPCs() {
+    public List<String> allowedVPCs() {
         return this.allowedVPCs == null ? List.of() : this.allowedVPCs;
     }
     /**
      * The time (UTC) when the authorization was created.
      * 
     */
-    public Optional<String> getAuthorizeTime() {
+    public Optional<String> authorizeTime() {
         return Optional.ofNullable(this.authorizeTime);
     }
     /**
      * The status of the cluster.
      * 
     */
-    public Optional<String> getClusterStatus() {
+    public Optional<String> clusterStatus() {
         return Optional.ofNullable(this.clusterStatus);
     }
     /**
      * The number of Redshift-managed VPC endpoints created for the authorization.
      * 
     */
-    public Optional<Integer> getEndpointCount() {
+    public Optional<Integer> endpointCount() {
         return Optional.ofNullable(this.endpointCount);
     }
     /**
      * The AWS account ID of the grantee of the cluster.
      * 
     */
-    public Optional<String> getGrantee() {
+    public Optional<String> grantee() {
         return Optional.ofNullable(this.grantee);
     }
     /**
      * The AWS account ID of the cluster owner.
      * 
     */
-    public Optional<String> getGrantor() {
+    public Optional<String> grantor() {
         return Optional.ofNullable(this.grantor);
     }
     /**
      * The status of the authorization action.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
     */
-    public List<String> getVpcIds() {
+    public List<String> vpcIds() {
         return this.vpcIds == null ? List.of() : this.vpcIds;
     }
 

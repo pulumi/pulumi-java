@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceZypperResponse extends io.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

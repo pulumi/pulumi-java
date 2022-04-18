@@ -28,7 +28,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
     @Import(name="defaultMode")
       private final @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> getDefaultMode() {
+    public Output<Integer> defaultMode() {
         return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
@@ -39,7 +39,7 @@ public final class DownwardAPIVolumeSourceArgs extends io.pulumi.resources.Resou
     @Import(name="items")
       private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
-    public Output<List<DownwardAPIVolumeFileArgs>> getItems() {
+    public Output<List<DownwardAPIVolumeFileArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

@@ -23,7 +23,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -45,7 +45,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

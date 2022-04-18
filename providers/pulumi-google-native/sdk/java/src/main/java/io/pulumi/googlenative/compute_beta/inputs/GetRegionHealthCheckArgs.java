@@ -17,21 +17,21 @@ public final class GetRegionHealthCheckArgs extends io.pulumi.resources.InvokeAr
     @Import(name="healthCheck", required=true)
       private final String healthCheck;
 
-    public String getHealthCheck() {
+    public String healthCheck() {
         return this.healthCheck;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

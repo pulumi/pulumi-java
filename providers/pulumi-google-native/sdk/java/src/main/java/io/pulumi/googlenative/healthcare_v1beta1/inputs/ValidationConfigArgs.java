@@ -28,7 +28,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableFhirpathValidation")
       private final @Nullable Output<Boolean> disableFhirpathValidation;
 
-    public Output<Boolean> getDisableFhirpathValidation() {
+    public Output<Boolean> disableFhirpathValidation() {
         return this.disableFhirpathValidation == null ? Codegen.empty() : this.disableFhirpathValidation;
     }
 
@@ -39,7 +39,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableProfileValidation")
       private final @Nullable Output<Boolean> disableProfileValidation;
 
-    public Output<Boolean> getDisableProfileValidation() {
+    public Output<Boolean> disableProfileValidation() {
         return this.disableProfileValidation == null ? Codegen.empty() : this.disableProfileValidation;
     }
 
@@ -50,7 +50,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableReferenceTypeValidation")
       private final @Nullable Output<Boolean> disableReferenceTypeValidation;
 
-    public Output<Boolean> getDisableReferenceTypeValidation() {
+    public Output<Boolean> disableReferenceTypeValidation() {
         return this.disableReferenceTypeValidation == null ? Codegen.empty() : this.disableReferenceTypeValidation;
     }
 
@@ -61,7 +61,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableRequiredFieldValidation")
       private final @Nullable Output<Boolean> disableRequiredFieldValidation;
 
-    public Output<Boolean> getDisableRequiredFieldValidation() {
+    public Output<Boolean> disableRequiredFieldValidation() {
         return this.disableRequiredFieldValidation == null ? Codegen.empty() : this.disableRequiredFieldValidation;
     }
 
@@ -72,7 +72,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabledImplementationGuides")
       private final @Nullable Output<List<String>> enabledImplementationGuides;
 
-    public Output<List<String>> getEnabledImplementationGuides() {
+    public Output<List<String>> enabledImplementationGuides() {
         return this.enabledImplementationGuides == null ? Codegen.empty() : this.enabledImplementationGuides;
     }
 

@@ -17,14 +17,14 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig extends io
     @Import(name="cidrBlocks", required=true)
       private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
-    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
+    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks() {
         return this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

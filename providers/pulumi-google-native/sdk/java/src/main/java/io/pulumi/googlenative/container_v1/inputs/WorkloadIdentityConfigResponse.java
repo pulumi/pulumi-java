@@ -23,7 +23,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
     @Import(name="workloadPool", required=true)
       private final String workloadPool;
 
-    public String getWorkloadPool() {
+    public String workloadPool() {
         return this.workloadPool;
     }
 

@@ -26,7 +26,7 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
-    public Output<Boolean> getRequesterPays() {
+    public Output<Boolean> requesterPays() {
         return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
     }
 

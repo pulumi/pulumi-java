@@ -40,21 +40,21 @@ public final class FingerprintResponse {
      * The layer-id of the final layer in the Docker image's v1 representation. This field can be used as a filter in list requests.
      * 
     */
-    public String getV1Name() {
+    public String v1Name() {
         return this.v1Name;
     }
     /**
      * The ordered list of v2 blobs that represent a given image.
      * 
     */
-    public List<String> getV2Blob() {
+    public List<String> v2Blob() {
         return this.v2Blob;
     }
     /**
      * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
      * 
     */
-    public String getV2Name() {
+    public String v2Name() {
         return this.v2Name;
     }
 

@@ -27,7 +27,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
+    public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
@@ -38,7 +38,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuerUri", required=true)
       private final Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
+    public Output<String> issuerUri() {
         return this.issuerUri;
     }
 

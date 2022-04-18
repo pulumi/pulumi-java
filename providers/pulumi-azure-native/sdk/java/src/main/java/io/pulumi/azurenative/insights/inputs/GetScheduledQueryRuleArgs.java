@@ -19,7 +19,7 @@ public final class GetScheduledQueryRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScheduledQueryRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

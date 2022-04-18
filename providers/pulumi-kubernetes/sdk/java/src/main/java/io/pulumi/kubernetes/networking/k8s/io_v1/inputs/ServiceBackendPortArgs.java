@@ -27,7 +27,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number == null ? Codegen.empty() : this.number;
     }
 

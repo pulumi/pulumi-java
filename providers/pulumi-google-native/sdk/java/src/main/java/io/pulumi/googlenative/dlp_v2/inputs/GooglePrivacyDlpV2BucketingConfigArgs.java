@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
     @Import(name="buckets")
       private final @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
-    public Output<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {
+    public Output<List<GooglePrivacyDlpV2BucketArgs>> buckets() {
         return this.buckets == null ? Codegen.empty() : this.buckets;
     }
 

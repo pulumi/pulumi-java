@@ -25,7 +25,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowCustomSans", required=true)
       private final Boolean allowCustomSans;
 
-    public Boolean getAllowCustomSans() {
+    public Boolean allowCustomSans() {
         return this.allowCustomSans;
     }
 
@@ -36,7 +36,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowGlobbingDnsWildcards", required=true)
       private final Boolean allowGlobbingDnsWildcards;
 
-    public Boolean getAllowGlobbingDnsWildcards() {
+    public Boolean allowGlobbingDnsWildcards() {
         return this.allowGlobbingDnsWildcards;
     }
 
@@ -47,7 +47,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowedDnsNames", required=true)
       private final List<String> allowedDnsNames;
 
-    public List<String> getAllowedDnsNames() {
+    public List<String> allowedDnsNames() {
         return this.allowedDnsNames;
     }
 
@@ -58,7 +58,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowedEmailAddresses", required=true)
       private final List<String> allowedEmailAddresses;
 
-    public List<String> getAllowedEmailAddresses() {
+    public List<String> allowedEmailAddresses() {
         return this.allowedEmailAddresses;
     }
 
@@ -69,7 +69,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowedIps", required=true)
       private final List<String> allowedIps;
 
-    public List<String> getAllowedIps() {
+    public List<String> allowedIps() {
         return this.allowedIps;
     }
 
@@ -80,7 +80,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
     @Import(name="allowedUris", required=true)
       private final List<String> allowedUris;
 
-    public List<String> getAllowedUris() {
+    public List<String> allowedUris() {
         return this.allowedUris;
     }
 

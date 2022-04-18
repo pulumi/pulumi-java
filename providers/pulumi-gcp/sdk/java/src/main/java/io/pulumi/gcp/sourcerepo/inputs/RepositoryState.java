@@ -26,7 +26,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -51,7 +51,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfigs")
       private final @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
 
-    public Output<List<RepositoryPubsubConfigGetArgs>> getPubsubConfigs() {
+    public Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs() {
         return this.pubsubConfigs == null ? Codegen.empty() : this.pubsubConfigs;
     }
 
@@ -62,7 +62,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -73,7 +73,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -63,7 +63,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * file mode, like fsGroup, and the result can be other mode bits set.
      * 
     */
-    public Optional<Integer> getDefaultMode() {
+    public Optional<Integer> defaultMode() {
         return Optional.ofNullable(this.defaultMode);
     }
     /**
@@ -75,7 +75,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecVolumeSecretItem> getItems() {
+    public List<ServiceTemplateSpecVolumeSecretItem> items() {
         return this.items == null ? List.of() : this.items;
     }
     /**
@@ -90,7 +90,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * annotation.
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

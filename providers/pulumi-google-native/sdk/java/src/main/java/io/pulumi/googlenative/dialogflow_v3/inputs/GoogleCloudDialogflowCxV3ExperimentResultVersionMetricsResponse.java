@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
     @Import(name="metrics", required=true)
       private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
 
-    public List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> getMetrics() {
+    public List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics() {
         return this.metrics;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
     @Import(name="sessionCount", required=true)
       private final Integer sessionCount;
 
-    public Integer getSessionCount() {
+    public Integer sessionCount() {
         return this.sessionCount;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

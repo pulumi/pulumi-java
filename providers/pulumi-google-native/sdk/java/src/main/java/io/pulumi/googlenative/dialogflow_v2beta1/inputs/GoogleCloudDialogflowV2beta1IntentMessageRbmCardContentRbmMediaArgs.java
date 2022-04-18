@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="fileUri", required=true)
       private final Output<String> fileUri;
 
-    public Output<String> getFileUri() {
+    public Output<String> fileUri() {
         return this.fileUri;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="height")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> getHeight() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="thumbnailUri")
       private final @Nullable Output<String> thumbnailUri;
 
-    public Output<String> getThumbnailUri() {
+    public Output<String> thumbnailUri() {
         return this.thumbnailUri == null ? Codegen.empty() : this.thumbnailUri;
     }
 

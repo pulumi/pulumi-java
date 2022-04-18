@@ -19,7 +19,7 @@ public final class NetworkSecurityGroupRuleResponse extends io.pulumi.resources.
     @Import(name="access", required=true)
       private final String access;
 
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
 
@@ -30,7 +30,7 @@ public final class NetworkSecurityGroupRuleResponse extends io.pulumi.resources.
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkSecurityGroupRuleResponse extends io.pulumi.resources.
     @Import(name="sourceAddressPrefix", required=true)
       private final String sourceAddressPrefix;
 
-    public String getSourceAddressPrefix() {
+    public String sourceAddressPrefix() {
         return this.sourceAddressPrefix;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkSecurityGroupRuleResponse extends io.pulumi.resources.
     @Import(name="sourcePortRanges")
       private final @Nullable List<String> sourcePortRanges;
 
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 

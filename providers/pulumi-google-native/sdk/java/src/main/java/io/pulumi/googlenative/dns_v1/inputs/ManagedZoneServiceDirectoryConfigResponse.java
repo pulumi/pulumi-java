@@ -20,7 +20,7 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -31,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
     @Import(name="namespace", required=true)
       private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
-    public ManagedZoneServiceDirectoryConfigNamespaceResponse getNamespace() {
+    public ManagedZoneServiceDirectoryConfigNamespaceResponse namespace() {
         return this.namespace;
     }
 

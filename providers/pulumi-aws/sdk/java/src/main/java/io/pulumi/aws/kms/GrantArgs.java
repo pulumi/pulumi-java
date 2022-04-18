@@ -25,7 +25,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="constraints")
       private final @Nullable Output<List<GrantConstraintArgs>> constraints;
 
-    public Output<List<GrantConstraintArgs>> getConstraints() {
+    public Output<List<GrantConstraintArgs>> constraints() {
         return this.constraints == null ? Codegen.empty() : this.constraints;
     }
 
@@ -36,7 +36,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grantCreationTokens")
       private final @Nullable Output<List<String>> grantCreationTokens;
 
-    public Output<List<String>> getGrantCreationTokens() {
+    public Output<List<String>> grantCreationTokens() {
         return this.grantCreationTokens == null ? Codegen.empty() : this.grantCreationTokens;
     }
 
@@ -47,7 +47,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="granteePrincipal", required=true)
       private final Output<String> granteePrincipal;
 
-    public Output<String> getGranteePrincipal() {
+    public Output<String> granteePrincipal() {
         return this.granteePrincipal;
     }
 
@@ -58,7 +58,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -69,7 +69,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operations", required=true)
       private final Output<List<String>> operations;
 
-    public Output<List<String>> getOperations() {
+    public Output<List<String>> operations() {
         return this.operations;
     }
 
@@ -92,7 +92,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retireOnDelete")
       private final @Nullable Output<Boolean> retireOnDelete;
 
-    public Output<Boolean> getRetireOnDelete() {
+    public Output<Boolean> retireOnDelete() {
         return this.retireOnDelete == null ? Codegen.empty() : this.retireOnDelete;
     }
 
@@ -103,7 +103,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retiringPrincipal")
       private final @Nullable Output<String> retiringPrincipal;
 
-    public Output<String> getRetiringPrincipal() {
+    public Output<String> retiringPrincipal() {
         return this.retiringPrincipal == null ? Codegen.empty() : this.retiringPrincipal;
     }
 

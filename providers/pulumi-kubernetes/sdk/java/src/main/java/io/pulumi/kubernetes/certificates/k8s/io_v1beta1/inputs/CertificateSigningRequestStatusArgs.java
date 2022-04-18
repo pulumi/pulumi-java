@@ -24,7 +24,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     @Import(name="conditions")
       private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
-    public Output<List<CertificateSigningRequestConditionArgs>> getConditions() {
+    public Output<List<CertificateSigningRequestConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 

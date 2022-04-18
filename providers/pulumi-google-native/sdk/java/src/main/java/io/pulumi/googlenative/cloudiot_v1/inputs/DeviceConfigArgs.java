@@ -26,7 +26,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
-    public Output<String> getBinaryData() {
+    public Output<String> binaryData() {
         return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 

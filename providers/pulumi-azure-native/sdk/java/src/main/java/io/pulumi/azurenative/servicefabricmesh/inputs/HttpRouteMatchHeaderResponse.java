@@ -25,7 +25,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -47,7 +47,7 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

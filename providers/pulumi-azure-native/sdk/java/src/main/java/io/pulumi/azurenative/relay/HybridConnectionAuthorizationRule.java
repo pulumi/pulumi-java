@@ -42,7 +42,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * @return The rights associated with the rule.
      * 
      */
-    public Output<List<String>> getRights() {
+    public Output<List<String>> rights() {
         return this.rights;
     }
     /**
@@ -70,7 +70,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

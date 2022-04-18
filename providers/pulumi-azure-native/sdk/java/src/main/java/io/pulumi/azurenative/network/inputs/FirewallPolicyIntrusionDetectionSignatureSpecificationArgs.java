@@ -28,7 +28,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -39,7 +39,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
     @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
-    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
+    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

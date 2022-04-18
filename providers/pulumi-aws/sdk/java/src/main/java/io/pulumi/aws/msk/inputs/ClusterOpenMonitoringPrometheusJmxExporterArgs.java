@@ -21,7 +21,7 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterArgs extends io.pul
     @Import(name="enabledInBroker", required=true)
       private final Output<Boolean> enabledInBroker;
 
-    public Output<Boolean> getEnabledInBroker() {
+    public Output<Boolean> enabledInBroker() {
         return this.enabledInBroker;
     }
 

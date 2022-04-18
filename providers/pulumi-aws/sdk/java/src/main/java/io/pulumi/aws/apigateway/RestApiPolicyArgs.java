@@ -21,7 +21,7 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -32,7 +32,7 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 

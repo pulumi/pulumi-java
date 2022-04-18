@@ -67,49 +67,49 @@ public final class SubjectResponse {
      * The country code of the subject.
      * 
     */
-    public String getCountryCode() {
+    public String countryCode() {
         return this.countryCode;
     }
     /**
      * The locality or city of the subject.
      * 
     */
-    public String getLocality() {
+    public String locality() {
         return this.locality;
     }
     /**
      * The organization of the subject.
      * 
     */
-    public String getOrganization() {
+    public String organization() {
         return this.organization;
     }
     /**
      * The organizational_unit of the subject.
      * 
     */
-    public String getOrganizationalUnit() {
+    public String organizationalUnit() {
         return this.organizationalUnit;
     }
     /**
      * The postal code of the subject.
      * 
     */
-    public String getPostalCode() {
+    public String postalCode() {
         return this.postalCode;
     }
     /**
      * The province, territory, or regional state of the subject.
      * 
     */
-    public String getProvince() {
+    public String province() {
         return this.province;
     }
     /**
      * The street address of the subject.
      * 
     */
-    public String getStreetAddress() {
+    public String streetAddress() {
         return this.streetAddress;
     }
 

@@ -25,7 +25,7 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cmd", required=true)
       private final Output<String> cmd;
 
-    public Output<String> getCmd() {
+    public Output<String> cmd() {
         return this.cmd;
     }
 
@@ -36,7 +36,7 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 

@@ -26,7 +26,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
     @Import(name="capacity", required=true)
       private final Integer capacity;
 
-    public Integer getCapacity() {
+    public Integer capacity() {
         return this.capacity;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

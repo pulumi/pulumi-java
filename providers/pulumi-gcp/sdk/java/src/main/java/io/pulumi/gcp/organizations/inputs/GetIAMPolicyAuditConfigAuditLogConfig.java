@@ -22,7 +22,7 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
     @Import(name="exemptedMembers")
       private final @Nullable List<String> exemptedMembers;
 
-    public List<String> getExemptedMembers() {
+    public List<String> exemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
     }
 
@@ -33,7 +33,7 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
     @Import(name="logType", required=true)
       private final String logType;
 
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

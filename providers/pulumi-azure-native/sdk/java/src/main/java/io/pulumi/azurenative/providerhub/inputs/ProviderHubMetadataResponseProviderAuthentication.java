@@ -16,7 +16,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends io.
     @Import(name="allowedAudiences", required=true)
       private final List<String> allowedAudiences;
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 

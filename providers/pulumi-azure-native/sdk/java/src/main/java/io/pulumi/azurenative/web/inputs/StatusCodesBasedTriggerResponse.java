@@ -26,7 +26,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="count")
       private final @Nullable Integer count;
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -37,7 +37,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -48,7 +48,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="status")
       private final @Nullable Integer status;
 
-    public Optional<Integer> getStatus() {
+    public Optional<Integer> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -59,7 +59,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="subStatus")
       private final @Nullable Integer subStatus;
 
-    public Optional<Integer> getSubStatus() {
+    public Optional<Integer> subStatus() {
         return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
     }
 
@@ -70,7 +70,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="timeInterval")
       private final @Nullable String timeInterval;
 
-    public Optional<String> getTimeInterval() {
+    public Optional<String> timeInterval() {
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
     }
 
@@ -81,7 +81,7 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
     @Import(name="win32Status")
       private final @Nullable Integer win32Status;
 
-    public Optional<Integer> getWin32Status() {
+    public Optional<Integer> win32Status() {
         return this.win32Status == null ? Optional.empty() : Optional.ofNullable(this.win32Status);
     }
 

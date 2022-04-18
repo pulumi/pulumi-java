@@ -34,14 +34,14 @@ public final class NonResourceAttributes {
      * Path is the URL path of the request
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Verb is the standard HTTP verb
      * 
     */
-    public Optional<String> getVerb() {
+    public Optional<String> verb() {
         return Optional.ofNullable(this.verb);
     }
 

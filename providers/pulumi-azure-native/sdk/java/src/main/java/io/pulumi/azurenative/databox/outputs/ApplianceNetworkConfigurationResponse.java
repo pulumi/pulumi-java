@@ -32,14 +32,14 @@ public final class ApplianceNetworkConfigurationResponse {
      * Mac Address.
      * 
     */
-    public String getMacAddress() {
+    public String macAddress() {
         return this.macAddress;
     }
     /**
      * Name of the network.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

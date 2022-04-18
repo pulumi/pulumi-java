@@ -47,7 +47,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return Device Mappings.
      * 
      */
-    public Output</* @Nullable */ IotMappingPropertiesResponse> getDeviceMapping() {
+    public Output</* @Nullable */ IotMappingPropertiesResponse> deviceMapping() {
         return this.deviceMapping;
     }
     /**
@@ -61,7 +61,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -75,7 +75,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -89,7 +89,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return Source configuration.
      * 
      */
-    public Output</* @Nullable */ IotEventHubIngestionEndpointConfigurationResponse> getIngestionEndpointConfiguration() {
+    public Output</* @Nullable */ IotEventHubIngestionEndpointConfigurationResponse> ingestionEndpointConfiguration() {
         return this.ingestionEndpointConfiguration;
     }
     /**
@@ -103,7 +103,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -117,7 +117,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +145,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -159,7 +159,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -173,7 +173,7 @@ public class IotConnector extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

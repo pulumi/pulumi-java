@@ -28,7 +28,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
       private final @Nullable Output<RegionDiskArchitecture> architecture;
 
-    public Output<RegionDiskArchitecture> getArchitecture() {
+    public Output<RegionDiskArchitecture> architecture() {
         return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
@@ -39,7 +39,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
@@ -61,7 +61,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eraseWindowsVssSignature")
       private final @Nullable Output<Boolean> eraseWindowsVssSignature;
 
-    public Output<Boolean> getEraseWindowsVssSignature() {
+    public Output<Boolean> eraseWindowsVssSignature() {
         return this.eraseWindowsVssSignature == null ? Codegen.empty() : this.eraseWindowsVssSignature;
     }
 
@@ -72,7 +72,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -83,7 +83,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -94,7 +94,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseCodes")
       private final @Nullable Output<List<String>> licenseCodes;
 
-    public Output<List<String>> getLicenseCodes() {
+    public Output<List<String>> licenseCodes() {
         return this.licenseCodes == null ? Codegen.empty() : this.licenseCodes;
     }
 
@@ -105,7 +105,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -116,7 +116,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
+    public Output<String> locationHint() {
         return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
@@ -127,7 +127,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiWriter")
       private final @Nullable Output<Boolean> multiWriter;
 
-    public Output<Boolean> getMultiWriter() {
+    public Output<Boolean> multiWriter() {
         return this.multiWriter == null ? Codegen.empty() : this.multiWriter;
     }
 
@@ -138,7 +138,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -149,7 +149,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<String> options;
 
-    public Output<String> getOptions() {
+    public Output<String> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -160,14 +160,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="physicalBlockSizeBytes")
       private final @Nullable Output<String> physicalBlockSizeBytes;
 
-    public Output<String> getPhysicalBlockSizeBytes() {
+    public Output<String> physicalBlockSizeBytes() {
         return this.physicalBlockSizeBytes == null ? Codegen.empty() : this.physicalBlockSizeBytes;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -178,14 +178,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedIops")
       private final @Nullable Output<String> provisionedIops;
 
-    public Output<String> getProvisionedIops() {
+    public Output<String> provisionedIops() {
         return this.provisionedIops == null ? Codegen.empty() : this.provisionedIops;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -196,14 +196,14 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicaZones")
       private final @Nullable Output<List<String>> replicaZones;
 
-    public Output<List<String>> getReplicaZones() {
+    public Output<List<String>> replicaZones() {
         return this.replicaZones == null ? Codegen.empty() : this.replicaZones;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -214,7 +214,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> getResourcePolicies() {
+    public Output<List<String>> resourcePolicies() {
         return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
@@ -225,7 +225,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
       private final @Nullable Output<String> sizeGb;
 
-    public Output<String> getSizeGb() {
+    public Output<String> sizeGb() {
         return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
@@ -236,7 +236,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
@@ -247,7 +247,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
-    public Output<String> getSourceImage() {
+    public Output<String> sourceImage() {
         return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
@@ -258,7 +258,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
     }
 
@@ -269,7 +269,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstantSnapshot")
       private final @Nullable Output<String> sourceInstantSnapshot;
 
-    public Output<String> getSourceInstantSnapshot() {
+    public Output<String> sourceInstantSnapshot() {
         return this.sourceInstantSnapshot == null ? Codegen.empty() : this.sourceInstantSnapshot;
     }
 
@@ -280,7 +280,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> getSourceSnapshot() {
+    public Output<String> sourceSnapshot() {
         return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 
@@ -291,7 +291,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
     }
 
@@ -302,7 +302,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceStorageObject")
       private final @Nullable Output<String> sourceStorageObject;
 
-    public Output<String> getSourceStorageObject() {
+    public Output<String> sourceStorageObject() {
         return this.sourceStorageObject == null ? Codegen.empty() : this.sourceStorageObject;
     }
 
@@ -313,7 +313,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -324,7 +324,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLicenses")
       private final @Nullable Output<List<String>> userLicenses;
 
-    public Output<List<String>> getUserLicenses() {
+    public Output<List<String>> userLicenses() {
         return this.userLicenses == null ? Codegen.empty() : this.userLicenses;
     }
 

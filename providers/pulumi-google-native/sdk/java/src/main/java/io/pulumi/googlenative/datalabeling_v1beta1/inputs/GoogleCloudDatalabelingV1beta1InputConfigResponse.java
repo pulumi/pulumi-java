@@ -27,7 +27,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="annotationType", required=true)
       private final String annotationType;
 
-    public String getAnnotationType() {
+    public String annotationType() {
         return this.annotationType;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="bigquerySource", required=true)
       private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
 
-    public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse getBigquerySource() {
+    public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource() {
         return this.bigquerySource;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="classificationMetadata", required=true)
       private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
 
-    public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse getClassificationMetadata() {
+    public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata() {
         return this.classificationMetadata;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="dataType", required=true)
       private final String dataType;
 
-    public String getDataType() {
+    public String dataType() {
         return this.dataType;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="gcsSource", required=true)
       private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
 
-    public GoogleCloudDatalabelingV1beta1GcsSourceResponse getGcsSource() {
+    public GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 
@@ -82,7 +82,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
     @Import(name="textMetadata", required=true)
       private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
-    public GoogleCloudDatalabelingV1beta1TextMetadataResponse getTextMetadata() {
+    public GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata() {
         return this.textMetadata;
     }
 

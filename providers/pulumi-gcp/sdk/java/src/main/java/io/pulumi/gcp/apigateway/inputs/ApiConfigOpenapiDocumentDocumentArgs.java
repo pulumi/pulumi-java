@@ -21,7 +21,7 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends io.pulumi.resour
     @Import(name="contents", required=true)
       private final Output<String> contents;
 
-    public Output<String> getContents() {
+    public Output<String> contents() {
         return this.contents;
     }
 
@@ -32,7 +32,7 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends io.pulumi.resour
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

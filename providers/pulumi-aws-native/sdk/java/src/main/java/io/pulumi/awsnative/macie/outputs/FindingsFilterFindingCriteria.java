@@ -18,7 +18,7 @@ public final class FindingsFilterFindingCriteria {
         this.criterion = criterion;
     }
 
-    public Optional<FindingsFilterCriterion> getCriterion() {
+    public Optional<FindingsFilterCriterion> criterion() {
         return Optional.ofNullable(this.criterion);
     }
 

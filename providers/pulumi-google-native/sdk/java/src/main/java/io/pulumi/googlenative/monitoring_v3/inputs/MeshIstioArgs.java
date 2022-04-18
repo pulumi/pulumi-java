@@ -26,7 +26,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshUid")
       private final @Nullable Output<String> meshUid;
 
-    public Output<String> getMeshUid() {
+    public Output<String> meshUid() {
         return this.meshUid == null ? Codegen.empty() : this.meshUid;
     }
 
@@ -37,7 +37,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -48,7 +48,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 

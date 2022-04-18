@@ -41,21 +41,21 @@ public final class TrackPropertyConditionResponse {
      * Track property condition operation
      * 
     */
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
     /**
      * Track property type
      * 
     */
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
     /**
      * Track property value
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

@@ -19,7 +19,7 @@ public final class GetLocationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="locationCode", required=true)
       private final String locationCode;
 
-    public String getLocationCode() {
+    public String locationCode() {
         return this.locationCode;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="domainMappingReason", required=true)
       private final String domainMappingReason;
 
-    public String getDomainMappingReason() {
+    public String domainMappingReason() {
         return this.domainMappingReason;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="executionReason", required=true)
       private final String executionReason;
 
-    public String getExecutionReason() {
+    public String executionReason() {
         return this.executionReason;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="internalReason", required=true)
       private final String internalReason;
 
-    public String getInternalReason() {
+    public String internalReason() {
         return this.internalReason;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="lastTransitionTime", required=true)
       private final String lastTransitionTime;
 
-    public String getLastTransitionTime() {
+    public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -78,7 +78,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
@@ -89,7 +89,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="revisionReason", required=true)
       private final String revisionReason;
 
-    public String getRevisionReason() {
+    public String revisionReason() {
         return this.revisionReason;
     }
 
@@ -100,7 +100,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -111,7 +111,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -122,7 +122,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

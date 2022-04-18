@@ -22,7 +22,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -44,7 +44,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -55,7 +55,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -66,7 +66,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectArn")
       private final @Nullable Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn == null ? Codegen.empty() : this.projectArn;
     }
 
@@ -88,7 +88,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -99,7 +99,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

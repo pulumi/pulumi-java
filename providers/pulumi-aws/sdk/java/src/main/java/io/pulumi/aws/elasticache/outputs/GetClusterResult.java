@@ -170,14 +170,14 @@ public final class GetClusterResult {
         this.tags = tags;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The Availability Zone for the cache cluster.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -185,45 +185,45 @@ public final class GetClusterResult {
      * Referenceable e.g., as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
      * 
     */
-    public List<GetClusterCacheNode> getCacheNodes() {
+    public List<GetClusterCacheNode> cacheNodes() {
         return this.cacheNodes;
     }
     /**
      * (Memcached only) The DNS name of the cache cluster without the port appended.
      * 
     */
-    public String getClusterAddress() {
+    public String clusterAddress() {
         return this.clusterAddress;
     }
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
     /**
      * (Memcached only) The configuration endpoint to allow host discovery.
      * 
     */
-    public String getConfigurationEndpoint() {
+    public String configurationEndpoint() {
         return this.configurationEndpoint;
     }
     /**
      * Name of the cache engine.
      * 
     */
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
     /**
      * Version number of the cache engine.
      * 
     */
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -231,14 +231,14 @@ public final class GetClusterResult {
      * on the cache cluster is performed.
      * 
     */
-    public String getMaintenanceWindow() {
+    public String maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
      * The cluster node type.
      * 
     */
-    public String getNodeType() {
+    public String nodeType() {
         return this.nodeType;
     }
     /**
@@ -246,21 +246,21 @@ public final class GetClusterResult {
      * SNS topic that ElastiCache notifications get sent to.
      * 
     */
-    public String getNotificationTopicArn() {
+    public String notificationTopicArn() {
         return this.notificationTopicArn;
     }
     /**
      * The number of cache nodes that the cache cluster has.
      * 
     */
-    public Integer getNumCacheNodes() {
+    public Integer numCacheNodes() {
         return this.numCacheNodes;
     }
     /**
      * Name of the parameter group associated with this cache cluster.
      * 
     */
-    public String getParameterGroupName() {
+    public String parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -268,28 +268,28 @@ public final class GetClusterResult {
      * accept connections.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The replication group to which this cache cluster belongs.
      * 
     */
-    public String getReplicationGroupId() {
+    public String replicationGroupId() {
         return this.replicationGroupId;
     }
     /**
      * List VPC security groups associated with the cache cluster.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * List of security group names associated with this cache cluster.
      * 
     */
-    public List<String> getSecurityGroupNames() {
+    public List<String> securityGroupNames() {
         return this.securityGroupNames;
     }
     /**
@@ -297,7 +297,7 @@ public final class GetClusterResult {
      * retain automatic cache cluster snapshots before deleting them.
      * 
     */
-    public Integer getSnapshotRetentionLimit() {
+    public Integer snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
@@ -305,21 +305,21 @@ public final class GetClusterResult {
      * begin taking a daily snapshot of the cache cluster.
      * 
     */
-    public String getSnapshotWindow() {
+    public String snapshotWindow() {
         return this.snapshotWindow;
     }
     /**
      * Name of the subnet group associated to the cache cluster.
      * 
     */
-    public String getSubnetGroupName() {
+    public String subnetGroupName() {
         return this.subnetGroupName;
     }
     /**
      * The tags assigned to the resource
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

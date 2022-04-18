@@ -29,7 +29,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
+    public Output<List<String>> cidrs() {
         return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="count")
       private final @Nullable Output<String> count;
 
-    public Output<String> getCount() {
+    public Output<String> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="number")
       private final @Nullable Output<Double> number;
 
-    public Output<Double> getNumber() {
+    public Output<Double> number() {
         return this.number == null ? Codegen.empty() : this.number;
     }
 
@@ -62,7 +62,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="numbers")
       private final @Nullable Output<List<Double>> numbers;
 
-    public Output<List<Double>> getNumbers() {
+    public Output<List<Double>> numbers() {
         return this.numbers == null ? Codegen.empty() : this.numbers;
     }
 
@@ -73,7 +73,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
+    public Output<List<Integer>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -84,7 +84,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     @Import(name="strings")
       private final @Nullable Output<List<String>> strings;
 
-    public Output<List<String>> getStrings() {
+    public Output<List<String>> strings() {
         return this.strings == null ? Codegen.empty() : this.strings;
     }
 

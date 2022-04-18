@@ -31,16 +31,16 @@ public final class TaskDefinitionVolume {
         this.name = name;
     }
 
-    public Optional<TaskDefinitionDockerVolumeConfiguration> getDockerVolumeConfiguration() {
+    public Optional<TaskDefinitionDockerVolumeConfiguration> dockerVolumeConfiguration() {
         return Optional.ofNullable(this.dockerVolumeConfiguration);
     }
-    public Optional<TaskDefinitionEFSVolumeConfiguration> getEFSVolumeConfiguration() {
+    public Optional<TaskDefinitionEFSVolumeConfiguration> eFSVolumeConfiguration() {
         return Optional.ofNullable(this.eFSVolumeConfiguration);
     }
-    public Optional<TaskDefinitionHostVolumeProperties> getHost() {
+    public Optional<TaskDefinitionHostVolumeProperties> host() {
         return Optional.ofNullable(this.host);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

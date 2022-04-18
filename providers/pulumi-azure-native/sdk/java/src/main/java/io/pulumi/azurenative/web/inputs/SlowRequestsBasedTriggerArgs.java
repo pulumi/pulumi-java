@@ -27,7 +27,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
+    public Output<String> timeInterval() {
         return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
@@ -60,7 +60,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     @Import(name="timeTaken")
       private final @Nullable Output<String> timeTaken;
 
-    public Output<String> getTimeTaken() {
+    public Output<String> timeTaken() {
         return this.timeTaken == null ? Codegen.empty() : this.timeTaken;
     }
 

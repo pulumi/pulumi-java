@@ -23,7 +23,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> getCoreCount() {
+    public Output<Integer> coreCount() {
         return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
@@ -36,7 +36,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

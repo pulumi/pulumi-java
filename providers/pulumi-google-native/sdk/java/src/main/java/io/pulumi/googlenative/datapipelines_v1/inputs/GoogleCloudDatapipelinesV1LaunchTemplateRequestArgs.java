@@ -28,7 +28,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     @Import(name="gcsPath")
       private final @Nullable Output<String> gcsPath;
 
-    public Output<String> getGcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath == null ? Codegen.empty() : this.gcsPath;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     @Import(name="launchParameters")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> getLaunchParameters() {
+    public Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters() {
         return this.launchParameters == null ? Codegen.empty() : this.launchParameters;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> getValidateOnly() {
+    public Output<Boolean> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

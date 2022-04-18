@@ -27,7 +27,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedLocation", required=true)
       private final Output<VulnerabilityLocationArgs> affectedLocation;
 
-    public Output<VulnerabilityLocationArgs> getAffectedLocation() {
+    public Output<VulnerabilityLocationArgs> affectedLocation() {
         return this.affectedLocation;
     }
 
@@ -38,7 +38,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Output<VulnerabilityLocationArgs> getFixedLocation() {
+    public Output<VulnerabilityLocationArgs> fixedLocation() {
         return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
     }
 
@@ -49,7 +49,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 

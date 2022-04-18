@@ -23,7 +23,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="clusterAutoscalingConfig", required=true)
       private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
-    public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
+    public ClusterAutoscalingConfigResponse clusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }
 

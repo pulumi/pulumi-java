@@ -17,14 +17,14 @@ public final class DatasetIotEventsDestinationConfigurationArgs extends io.pulum
     @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

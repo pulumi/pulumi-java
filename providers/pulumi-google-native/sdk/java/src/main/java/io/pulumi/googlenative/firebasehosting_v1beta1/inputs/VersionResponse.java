@@ -26,7 +26,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
       private final ServingConfigResponse config;
 
-    public ServingConfigResponse getConfig() {
+    public ServingConfigResponse config() {
         return this.config;
     }
 
@@ -37,7 +37,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -48,7 +48,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createUser", required=true)
       private final ActingUserResponse createUser;
 
-    public ActingUserResponse getCreateUser() {
+    public ActingUserResponse createUser() {
         return this.createUser;
     }
 
@@ -59,7 +59,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deleteTime", required=true)
       private final String deleteTime;
 
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
 
@@ -70,7 +70,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deleteUser", required=true)
       private final ActingUserResponse deleteUser;
 
-    public ActingUserResponse getDeleteUser() {
+    public ActingUserResponse deleteUser() {
         return this.deleteUser;
     }
 
@@ -81,7 +81,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileCount", required=true)
       private final String fileCount;
 
-    public String getFileCount() {
+    public String fileCount() {
         return this.fileCount;
     }
 
@@ -92,7 +92,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="finalizeTime", required=true)
       private final String finalizeTime;
 
-    public String getFinalizeTime() {
+    public String finalizeTime() {
         return this.finalizeTime;
     }
 
@@ -103,7 +103,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="finalizeUser", required=true)
       private final ActingUserResponse finalizeUser;
 
-    public ActingUserResponse getFinalizeUser() {
+    public ActingUserResponse finalizeUser() {
         return this.finalizeUser;
     }
 
@@ -114,7 +114,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -125,7 +125,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -136,7 +136,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -147,7 +147,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="versionBytes", required=true)
       private final String versionBytes;
 
-    public String getVersionBytes() {
+    public String versionBytes() {
         return this.versionBytes;
     }
 

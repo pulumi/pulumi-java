@@ -19,7 +19,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<InstanceIamMemberConditionGetArgs> condition;
 
-    public Output<InstanceIamMemberConditionGetArgs> getCondition() {
+    public Output<InstanceIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,7 +30,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -41,7 +41,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -52,14 +52,14 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -84,7 +84,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

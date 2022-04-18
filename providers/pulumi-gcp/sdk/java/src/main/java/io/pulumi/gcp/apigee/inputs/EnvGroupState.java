@@ -23,7 +23,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnames")
       private final @Nullable Output<List<String>> hostnames;
 
-    public Output<List<String>> getHostnames() {
+    public Output<List<String>> hostnames() {
         return this.hostnames == null ? Codegen.empty() : this.hostnames;
     }
 
@@ -34,7 +34,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 

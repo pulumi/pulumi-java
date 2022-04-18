@@ -41,21 +41,21 @@ public final class CounterOptionsResponse {
      * Custom fields.
      * 
     */
-    public List<CustomFieldResponse> getCustomFields() {
+    public List<CustomFieldResponse> customFields() {
         return this.customFields;
     }
     /**
      * The field value to attribute.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * The metric to update.
      * 
     */
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 

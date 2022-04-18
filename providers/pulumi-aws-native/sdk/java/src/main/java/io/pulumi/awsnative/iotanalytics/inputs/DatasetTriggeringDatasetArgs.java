@@ -17,7 +17,7 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
     @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 

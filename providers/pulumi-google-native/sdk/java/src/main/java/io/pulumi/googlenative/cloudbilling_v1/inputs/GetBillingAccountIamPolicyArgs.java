@@ -17,14 +17,14 @@ public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.In
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
-    public String getBillingAccountId() {
+    public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 

@@ -23,7 +23,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
     @Import(name="credential", required=true)
       private final Output<ConnectionCloudSqlCredentialArgs> credential;
 
-    public Output<ConnectionCloudSqlCredentialArgs> getCredential() {
+    public Output<ConnectionCloudSqlCredentialArgs> credential() {
         return this.credential;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

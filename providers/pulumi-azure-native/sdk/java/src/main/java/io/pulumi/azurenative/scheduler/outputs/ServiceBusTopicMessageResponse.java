@@ -72,49 +72,49 @@ public final class ServiceBusTopicMessageResponse {
      * Gets or sets the Service Bus authentication.
      * 
     */
-    public Optional<ServiceBusAuthenticationResponse> getAuthentication() {
+    public Optional<ServiceBusAuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Gets or sets the brokered message properties.
      * 
     */
-    public Optional<ServiceBusBrokeredMessagePropertiesResponse> getBrokeredMessageProperties() {
+    public Optional<ServiceBusBrokeredMessagePropertiesResponse> brokeredMessageProperties() {
         return Optional.ofNullable(this.brokeredMessageProperties);
     }
     /**
      * Gets or sets the custom message properties.
      * 
     */
-    public Map<String,String> getCustomMessageProperties() {
+    public Map<String,String> customMessageProperties() {
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
     /**
      * Gets or sets the message.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Gets or sets the namespace.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Gets or sets the topic path.
      * 
     */
-    public Optional<String> getTopicPath() {
+    public Optional<String> topicPath() {
         return Optional.ofNullable(this.topicPath);
     }
     /**
      * Gets or sets the transport type.
      * 
     */
-    public Optional<String> getTransportType() {
+    public Optional<String> transportType() {
         return Optional.ofNullable(this.transportType);
     }
 

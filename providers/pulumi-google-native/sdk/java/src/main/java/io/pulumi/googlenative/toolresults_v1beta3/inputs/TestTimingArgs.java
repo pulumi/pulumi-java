@@ -26,7 +26,7 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testProcessDuration")
       private final @Nullable Output<DurationArgs> testProcessDuration;
 
-    public Output<DurationArgs> getTestProcessDuration() {
+    public Output<DurationArgs> testProcessDuration() {
         return this.testProcessDuration == null ? Codegen.empty() : this.testProcessDuration;
     }
 

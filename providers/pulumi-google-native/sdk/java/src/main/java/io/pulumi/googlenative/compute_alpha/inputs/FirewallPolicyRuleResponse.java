@@ -28,7 +28,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -61,7 +61,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 
@@ -72,7 +72,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="enableLogging", required=true)
       private final Boolean enableLogging;
 
-    public Boolean getEnableLogging() {
+    public Boolean enableLogging() {
         return this.enableLogging;
     }
 
@@ -83,7 +83,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -94,7 +94,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="match", required=true)
       private final FirewallPolicyRuleMatcherResponse match;
 
-    public FirewallPolicyRuleMatcherResponse getMatch() {
+    public FirewallPolicyRuleMatcherResponse match() {
         return this.match;
     }
 
@@ -105,7 +105,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -116,7 +116,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="ruleTupleCount", required=true)
       private final Integer ruleTupleCount;
 
-    public Integer getRuleTupleCount() {
+    public Integer ruleTupleCount() {
         return this.ruleTupleCount;
     }
 
@@ -127,7 +127,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="targetResources", required=true)
       private final List<String> targetResources;
 
-    public List<String> getTargetResources() {
+    public List<String> targetResources() {
         return this.targetResources;
     }
 
@@ -138,7 +138,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="targetSecureTags", required=true)
       private final List<FirewallPolicyRuleSecureTagResponse> targetSecureTags;
 
-    public List<FirewallPolicyRuleSecureTagResponse> getTargetSecureTags() {
+    public List<FirewallPolicyRuleSecureTagResponse> targetSecureTags() {
         return this.targetSecureTags;
     }
 
@@ -149,7 +149,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="targetServiceAccounts", required=true)
       private final List<String> targetServiceAccounts;
 
-    public List<String> getTargetServiceAccounts() {
+    public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
 

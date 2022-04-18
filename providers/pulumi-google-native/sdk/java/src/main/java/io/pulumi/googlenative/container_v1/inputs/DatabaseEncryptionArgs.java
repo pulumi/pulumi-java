@@ -27,7 +27,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -38,7 +38,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<DatabaseEncryptionState> state;
 
-    public Output<DatabaseEncryptionState> getState() {
+    public Output<DatabaseEncryptionState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

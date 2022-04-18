@@ -27,7 +27,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="documentEndpoint", required=true)
       private final String documentEndpoint;
 
-    public String getDocumentEndpoint() {
+    public String documentEndpoint() {
         return this.documentEndpoint;
     }
 
@@ -38,7 +38,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="failoverPriority")
       private final @Nullable Integer failoverPriority;
 
-    public Optional<Integer> getFailoverPriority() {
+    public Optional<Integer> failoverPriority() {
         return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
     }
 
@@ -49,7 +49,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -60,7 +60,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isZoneRedundant")
       private final @Nullable Boolean isZoneRedundant;
 
-    public Optional<Boolean> getIsZoneRedundant() {
+    public Optional<Boolean> isZoneRedundant() {
         return this.isZoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.isZoneRedundant);
     }
 
@@ -71,7 +71,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locationName")
       private final @Nullable String locationName;
 
-    public Optional<String> getLocationName() {
+    public Optional<String> locationName() {
         return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
     }
 
@@ -82,7 +82,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

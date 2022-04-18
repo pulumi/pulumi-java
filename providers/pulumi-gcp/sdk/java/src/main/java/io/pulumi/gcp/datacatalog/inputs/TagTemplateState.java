@@ -25,7 +25,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -37,7 +37,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
 
-    public Output<List<TagTemplateFieldGetArgs>> getFields() {
+    public Output<List<TagTemplateFieldGetArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -48,7 +48,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
+    public Output<Boolean> forceDelete() {
         return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
@@ -60,7 +60,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -83,7 +83,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -94,7 +94,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagTemplateId")
       private final @Nullable Output<String> tagTemplateId;
 
-    public Output<String> getTagTemplateId() {
+    public Output<String> tagTemplateId() {
         return this.tagTemplateId == null ? Codegen.empty() : this.tagTemplateId;
     }
 

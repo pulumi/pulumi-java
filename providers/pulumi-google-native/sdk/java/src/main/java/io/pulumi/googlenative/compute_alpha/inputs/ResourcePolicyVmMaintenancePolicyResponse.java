@@ -16,7 +16,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
     @Import(name="concurrencyControlGroup", required=true)
       private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
 
-    public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {
+    public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup() {
         return this.concurrencyControlGroup;
     }
 
@@ -27,7 +27,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
     @Import(name="maintenanceWindow", required=true)
       private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
-    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
+    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 

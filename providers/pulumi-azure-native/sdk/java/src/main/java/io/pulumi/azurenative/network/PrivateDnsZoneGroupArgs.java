@@ -24,7 +24,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateDnsZoneConfigs")
       private final @Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
 
-    public Output<List<PrivateDnsZoneConfigArgs>> getPrivateDnsZoneConfigs() {
+    public Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs() {
         return this.privateDnsZoneConfigs == null ? Codegen.empty() : this.privateDnsZoneConfigs;
     }
 
@@ -57,7 +57,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateDnsZoneGroupName")
       private final @Nullable Output<String> privateDnsZoneGroupName;
 
-    public Output<String> getPrivateDnsZoneGroupName() {
+    public Output<String> privateDnsZoneGroupName() {
         return this.privateDnsZoneGroupName == null ? Codegen.empty() : this.privateDnsZoneGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateEndpointName", required=true)
       private final Output<String> privateEndpointName;
 
-    public Output<String> getPrivateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
 
@@ -79,7 +79,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

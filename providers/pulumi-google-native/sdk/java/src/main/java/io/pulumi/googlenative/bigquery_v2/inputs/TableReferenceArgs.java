@@ -22,7 +22,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
@@ -33,7 +33,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -44,7 +44,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 

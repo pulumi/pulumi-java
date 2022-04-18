@@ -23,7 +23,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlId")
       private final @Nullable Output<String> controlId;
 
-    public Output<String> getControlId() {
+    public Output<String> controlId() {
         return this.controlId == null ? Codegen.empty() : this.controlId;
     }
 
@@ -34,7 +34,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlStatus")
       private final @Nullable Output<String> controlStatus;
 
-    public Output<String> getControlStatus() {
+    public Output<String> controlStatus() {
         return this.controlStatus == null ? Codegen.empty() : this.controlStatus;
     }
 
@@ -45,7 +45,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlStatusUpdatedAt")
       private final @Nullable Output<String> controlStatusUpdatedAt;
 
-    public Output<String> getControlStatusUpdatedAt() {
+    public Output<String> controlStatusUpdatedAt() {
         return this.controlStatusUpdatedAt == null ? Codegen.empty() : this.controlStatusUpdatedAt;
     }
 
@@ -56,7 +56,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
+    public Output<String> disabledReason() {
         return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
     }
 
@@ -78,7 +78,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="relatedRequirements")
       private final @Nullable Output<List<String>> relatedRequirements;
 
-    public Output<List<String>> getRelatedRequirements() {
+    public Output<List<String>> relatedRequirements() {
         return this.relatedRequirements == null ? Codegen.empty() : this.relatedRequirements;
     }
 
@@ -89,7 +89,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="remediationUrl")
       private final @Nullable Output<String> remediationUrl;
 
-    public Output<String> getRemediationUrl() {
+    public Output<String> remediationUrl() {
         return this.remediationUrl == null ? Codegen.empty() : this.remediationUrl;
     }
 
@@ -100,7 +100,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="severityRating")
       private final @Nullable Output<String> severityRating;
 
-    public Output<String> getSeverityRating() {
+    public Output<String> severityRating() {
         return this.severityRating == null ? Codegen.empty() : this.severityRating;
     }
 
@@ -111,7 +111,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="standardsControlArn")
       private final @Nullable Output<String> standardsControlArn;
 
-    public Output<String> getStandardsControlArn() {
+    public Output<String> standardsControlArn() {
         return this.standardsControlArn == null ? Codegen.empty() : this.standardsControlArn;
     }
 
@@ -122,7 +122,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

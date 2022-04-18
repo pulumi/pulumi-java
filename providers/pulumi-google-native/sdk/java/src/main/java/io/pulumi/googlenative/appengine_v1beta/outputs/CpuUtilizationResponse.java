@@ -33,14 +33,14 @@ public final class CpuUtilizationResponse {
      * Period of time over which CPU utilization is calculated.
      * 
     */
-    public String getAggregationWindowLength() {
+    public String aggregationWindowLength() {
         return this.aggregationWindowLength;
     }
     /**
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
      * 
     */
-    public Double getTargetUtilization() {
+    public Double targetUtilization() {
         return this.targetUtilization;
     }
 

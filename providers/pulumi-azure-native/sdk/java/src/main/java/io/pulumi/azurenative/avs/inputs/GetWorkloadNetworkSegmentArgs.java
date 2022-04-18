@@ -19,7 +19,7 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
     @Import(name="segmentId", required=true)
       private final String segmentId;
 
-    public String getSegmentId() {
+    public String segmentId() {
         return this.segmentId;
     }
 

@@ -19,7 +19,7 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
     @Import(name="securityConnectorName", required=true)
       private final String securityConnectorName;
 
-    public String getSecurityConnectorName() {
+    public String securityConnectorName() {
         return this.securityConnectorName;
     }
 

@@ -22,10 +22,10 @@ public final class RuleGroupRuleVariables {
         this.portSets = portSets;
     }
 
-    public Optional<Object> getIPSets() {
+    public Optional<Object> iPSets() {
         return Optional.ofNullable(this.iPSets);
     }
-    public Optional<Object> getPortSets() {
+    public Optional<Object> portSets() {
         return Optional.ofNullable(this.portSets);
     }
 

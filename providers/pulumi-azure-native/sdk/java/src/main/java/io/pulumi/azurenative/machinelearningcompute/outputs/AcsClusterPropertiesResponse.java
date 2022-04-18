@@ -73,49 +73,49 @@ public final class AcsClusterPropertiesResponse {
      * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
      * 
     */
-    public Optional<Integer> getAgentCount() {
+    public Optional<Integer> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
      * 
     */
-    public Optional<String> getAgentVmSize() {
+    public Optional<String> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
      * The FQDN of the cluster.
      * 
     */
-    public String getClusterFqdn() {
+    public String clusterFqdn() {
         return this.clusterFqdn;
     }
     /**
      * The number of master nodes in the container service.
      * 
     */
-    public Optional<Integer> getMasterCount() {
+    public Optional<Integer> masterCount() {
         return Optional.ofNullable(this.masterCount);
     }
     /**
      * Orchestrator specific properties
      * 
     */
-    public Optional<KubernetesClusterPropertiesResponse> getOrchestratorProperties() {
+    public Optional<KubernetesClusterPropertiesResponse> orchestratorProperties() {
         return Optional.ofNullable(this.orchestratorProperties);
     }
     /**
      * Type of orchestrator. It cannot be changed once the cluster is created.
      * 
     */
-    public String getOrchestratorType() {
+    public String orchestratorType() {
         return this.orchestratorType;
     }
     /**
      * The system services deployed to the cluster
      * 
     */
-    public List<SystemServiceResponse> getSystemServices() {
+    public List<SystemServiceResponse> systemServices() {
         return this.systemServices == null ? List.of() : this.systemServices;
     }
 

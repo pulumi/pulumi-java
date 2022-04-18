@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     @Import(name="action", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse getAction() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     @Import(name="reply", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse getReply() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply() {
         return this.reply;
     }
 

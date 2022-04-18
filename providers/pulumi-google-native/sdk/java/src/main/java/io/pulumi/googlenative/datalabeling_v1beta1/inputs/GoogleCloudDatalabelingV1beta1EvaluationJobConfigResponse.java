@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="bigqueryImportKeys", required=true)
       private final Map<String,String> bigqueryImportKeys;
 
-    public Map<String,String> getBigqueryImportKeys() {
+    public Map<String,String> bigqueryImportKeys() {
         return this.bigqueryImportKeys;
     }
 
@@ -44,7 +44,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="boundingPolyConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
 
-    public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse getBoundingPolyConfig() {
+    public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig() {
         return this.boundingPolyConfig;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="evaluationConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
 
-    public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse getEvaluationConfig() {
+    public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig() {
         return this.evaluationConfig;
     }
 
@@ -66,7 +66,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="evaluationJobAlertConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
 
-    public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse getEvaluationJobAlertConfig() {
+    public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig() {
         return this.evaluationJobAlertConfig;
     }
 
@@ -77,7 +77,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="exampleCount", required=true)
       private final Integer exampleCount;
 
-    public Integer getExampleCount() {
+    public Integer exampleCount() {
         return this.exampleCount;
     }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="exampleSamplePercentage", required=true)
       private final Double exampleSamplePercentage;
 
-    public Double getExampleSamplePercentage() {
+    public Double exampleSamplePercentage() {
         return this.exampleSamplePercentage;
     }
 
@@ -99,7 +99,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="humanAnnotationConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
 
-    public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse getHumanAnnotationConfig() {
+    public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig() {
         return this.humanAnnotationConfig;
     }
 
@@ -110,7 +110,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="imageClassificationConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
 
-    public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse getImageClassificationConfig() {
+    public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig() {
         return this.imageClassificationConfig;
     }
 
@@ -121,7 +121,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="inputConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
 
-    public GoogleCloudDatalabelingV1beta1InputConfigResponse getInputConfig() {
+    public GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig() {
         return this.inputConfig;
     }
 
@@ -132,7 +132,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
     @Import(name="textClassificationConfig", required=true)
       private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
 
-    public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse getTextClassificationConfig() {
+    public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig() {
         return this.textClassificationConfig;
     }
 

@@ -58,7 +58,7 @@ public final class GuestPoliciesRecipeArtifact {
      * GCS: An object generation number must be specified.
      * 
     */
-    public Optional<Boolean> getAllowInsecure() {
+    public Optional<Boolean> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
@@ -66,7 +66,7 @@ public final class GuestPoliciesRecipeArtifact {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeArtifactGcs> getGcs() {
+    public Optional<GuestPoliciesRecipeArtifactGcs> gcs() {
         return Optional.ofNullable(this.gcs);
     }
     /**
@@ -74,7 +74,7 @@ public final class GuestPoliciesRecipeArtifact {
      * Artifacts in a recipe cannot have the same id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -82,7 +82,7 @@ public final class GuestPoliciesRecipeArtifact {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeArtifactRemote> getRemote() {
+    public Optional<GuestPoliciesRecipeArtifactRemote> remote() {
         return Optional.ofNullable(this.remote);
     }
 

@@ -17,21 +17,21 @@ public final class DataSourceToIndexFieldMapping extends io.pulumi.resources.Inv
     @Import(name="dataSourceFieldName", required=true)
       private final String dataSourceFieldName;
 
-    public String getDataSourceFieldName() {
+    public String dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
       private final @Nullable String dateFieldFormat;
 
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
       private final String indexFieldName;
 
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

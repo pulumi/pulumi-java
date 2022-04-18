@@ -26,7 +26,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="drainingTimeoutSec")
       private final @Nullable Output<Integer> drainingTimeoutSec;
 
-    public Output<Integer> getDrainingTimeoutSec() {
+    public Output<Integer> drainingTimeoutSec() {
         return this.drainingTimeoutSec == null ? Codegen.empty() : this.drainingTimeoutSec;
     }
 

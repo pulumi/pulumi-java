@@ -91,70 +91,70 @@ public final class GetAlertsSuppressionRuleResult {
      * Type of the alert to automatically suppress. For all alert types, use '*'
      * 
     */
-    public String getAlertType() {
+    public String alertType() {
         return this.alertType;
     }
     /**
      * Any comment regarding the rule
      * 
     */
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
     */
-    public Optional<String> getExpirationDateUtc() {
+    public Optional<String> expirationDateUtc() {
         return Optional.ofNullable(this.expirationDateUtc);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last time this rule was modified
      * 
     */
-    public String getLastModifiedUtc() {
+    public String lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The reason for dismissing the alert
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
     /**
      * Possible states of the rule
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The suppression conditions
      * 
     */
-    public Optional<SuppressionAlertsScopeResponse> getSuppressionAlertsScope() {
+    public Optional<SuppressionAlertsScopeResponse> suppressionAlertsScope() {
         return Optional.ofNullable(this.suppressionAlertsScope);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

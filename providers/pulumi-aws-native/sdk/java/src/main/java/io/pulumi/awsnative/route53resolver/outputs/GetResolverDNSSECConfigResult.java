@@ -42,21 +42,21 @@ public final class GetResolverDNSSECConfigResult {
      * Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * AccountId
      * 
     */
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
     */
-    public Optional<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
+    public Optional<ResolverDNSSECConfigValidationStatus> validationStatus() {
         return Optional.ofNullable(this.validationStatus);
     }
 

@@ -98,77 +98,77 @@ public final class ServerEndpointSyncStatusResponse {
      * Combined Health Status.
      * 
     */
-    public String getCombinedHealth() {
+    public String combinedHealth() {
         return this.combinedHealth;
     }
     /**
      * Download sync activity
      * 
     */
-    public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
+    public ServerEndpointSyncActivityStatusResponse downloadActivity() {
         return this.downloadActivity;
     }
     /**
      * Download Health Status.
      * 
     */
-    public String getDownloadHealth() {
+    public String downloadHealth() {
         return this.downloadHealth;
     }
     /**
      * Download Status
      * 
     */
-    public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
+    public ServerEndpointSyncSessionStatusResponse downloadStatus() {
         return this.downloadStatus;
     }
     /**
      * Last Updated Timestamp
      * 
     */
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Offline Data Transfer State
      * 
     */
-    public String getOfflineDataTransferStatus() {
+    public String offlineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
     /**
      * Sync activity
      * 
     */
-    public String getSyncActivity() {
+    public String syncActivity() {
         return this.syncActivity;
     }
     /**
      * Total count of persistent files not syncing (combined upload + download).
      * 
     */
-    public Double getTotalPersistentFilesNotSyncingCount() {
+    public Double totalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
     /**
      * Upload sync activity
      * 
     */
-    public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
+    public ServerEndpointSyncActivityStatusResponse uploadActivity() {
         return this.uploadActivity;
     }
     /**
      * Upload Health Status.
      * 
     */
-    public String getUploadHealth() {
+    public String uploadHealth() {
         return this.uploadHealth;
     }
     /**
      * Upload Status
      * 
     */
-    public ServerEndpointSyncSessionStatusResponse getUploadStatus() {
+    public ServerEndpointSyncSessionStatusResponse uploadStatus() {
         return this.uploadStatus;
     }
 

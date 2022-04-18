@@ -25,7 +25,7 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
     @Import(name="parameters", required=true)
       private final HeaderActionParametersResponse parameters;
 
-    public HeaderActionParametersResponse getParameters() {
+    public HeaderActionParametersResponse parameters() {
         return this.parameters;
     }
 

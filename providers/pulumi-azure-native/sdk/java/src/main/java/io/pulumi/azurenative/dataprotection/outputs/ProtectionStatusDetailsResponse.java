@@ -35,14 +35,14 @@ public final class ProtectionStatusDetailsResponse {
      * Specifies the protection status error of the resource
      * 
     */
-    public Optional<UserFacingErrorResponse> getErrorDetails() {
+    public Optional<UserFacingErrorResponse> errorDetails() {
         return Optional.ofNullable(this.errorDetails);
     }
     /**
      * Specifies the protection status of the resource
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

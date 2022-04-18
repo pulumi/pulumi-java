@@ -32,7 +32,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="baseParameters")
       private final @Nullable Map<String,Object> baseParameters;
 
-    public Map<String,Object> getBaseParameters() {
+    public Map<String,Object> baseParameters() {
         return this.baseParameters == null ? Map.of() : this.baseParameters;
     }
 
@@ -43,7 +43,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -54,7 +54,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -65,7 +65,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="libraries")
       private final @Nullable List<Map<String,Object>> libraries;
 
-    public List<Map<String,Object>> getLibraries() {
+    public List<Map<String,Object>> libraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
 
@@ -76,7 +76,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -87,7 +87,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -98,7 +98,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="notebookPath", required=true)
       private final Object notebookPath;
 
-    public Object getNotebookPath() {
+    public Object notebookPath() {
         return this.notebookPath;
     }
 
@@ -109,7 +109,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -121,7 +121,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -132,7 +132,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

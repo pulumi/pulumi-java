@@ -23,7 +23,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     @Import(name="authenticationName")
       private final @Nullable Output<String> authenticationName;
 
-    public Output<String> getAuthenticationName() {
+    public Output<String> authenticationName() {
         return this.authenticationName == null ? Codegen.empty() : this.authenticationName;
     }
 
@@ -34,7 +34,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     @Import(name="azureADOnlyAuthentication", required=true)
       private final Output<Boolean> azureADOnlyAuthentication;
 
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
 
@@ -45,7 +45,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

@@ -25,7 +25,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="accessConfigs", required=true)
       private final List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs;
 
-    public List<GetInstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
+    public List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
     }
 
@@ -36,21 +36,21 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="aliasIpRanges", required=true)
       private final List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
 
-    public List<GetInstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
+    public List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
 
     @Import(name="ipv6AccessConfigs", required=true)
       private final List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
 
-    public List<GetInstanceNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
+    public List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
     @Import(name="ipv6AccessType", required=true)
       private final String ipv6AccessType;
 
-    public String getIpv6AccessType() {
+    public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
 
@@ -61,7 +61,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -83,28 +83,28 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="networkIp", required=true)
       private final String networkIp;
 
-    public String getNetworkIp() {
+    public String networkIp() {
         return this.networkIp;
     }
 
     @Import(name="nicType", required=true)
       private final String nicType;
 
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
 
     @Import(name="queueCount", required=true)
       private final Integer queueCount;
 
-    public Integer getQueueCount() {
+    public Integer queueCount() {
         return this.queueCount;
     }
 
     @Import(name="stackType", required=true)
       private final String stackType;
 
-    public String getStackType() {
+    public String stackType() {
         return this.stackType;
     }
 
@@ -115,7 +115,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
@@ -126,7 +126,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
     @Import(name="subnetworkProject", required=true)
       private final String subnetworkProject;
 
-    public String getSubnetworkProject() {
+    public String subnetworkProject() {
         return this.subnetworkProject;
     }
 

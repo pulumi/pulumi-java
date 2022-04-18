@@ -131,101 +131,101 @@ public final class GetCanaryResult {
      * Provide artifact configuration
      * 
     */
-    public Optional<CanaryArtifactConfig> getArtifactConfig() {
+    public Optional<CanaryArtifactConfig> artifactConfig() {
         return Optional.ofNullable(this.artifactConfig);
     }
     /**
      * Provide the s3 bucket output location for test results
      * 
     */
-    public Optional<String> getArtifactS3Location() {
+    public Optional<String> artifactS3Location() {
         return Optional.ofNullable(this.artifactS3Location);
     }
     /**
      * Provide the canary script source
      * 
     */
-    public Optional<CanaryCode> getCode() {
+    public Optional<CanaryCode> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Lambda Execution role used to run your canaries
      * 
     */
-    public Optional<String> getExecutionRoleArn() {
+    public Optional<String> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
     /**
      * Retention period of failed canary runs represented in number of days
      * 
     */
-    public Optional<Integer> getFailureRetentionPeriod() {
+    public Optional<Integer> failureRetentionPeriod() {
         return Optional.ofNullable(this.failureRetentionPeriod);
     }
     /**
      * Id of the canary
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Provide canary run configuration
      * 
     */
-    public Optional<CanaryRunConfig> getRunConfig() {
+    public Optional<CanaryRunConfig> runConfig() {
         return Optional.ofNullable(this.runConfig);
     }
     /**
      * Runtime version of Synthetics Library
      * 
     */
-    public Optional<String> getRuntimeVersion() {
+    public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
     /**
      * Frequency to run your canaries
      * 
     */
-    public Optional<CanarySchedule> getSchedule() {
+    public Optional<CanarySchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Runs canary if set to True. Default is False
      * 
     */
-    public Optional<Boolean> getStartCanaryAfterCreation() {
+    public Optional<Boolean> startCanaryAfterCreation() {
         return Optional.ofNullable(this.startCanaryAfterCreation);
     }
     /**
      * State of the canary
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Retention period of successful canary runs represented in number of days
      * 
     */
-    public Optional<Integer> getSuccessRetentionPeriod() {
+    public Optional<Integer> successRetentionPeriod() {
         return Optional.ofNullable(this.successRetentionPeriod);
     }
-    public List<CanaryTag> getTags() {
+    public List<CanaryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Provide VPC Configuration if enabled.
      * 
     */
-    public Optional<CanaryVPCConfig> getVPCConfig() {
+    public Optional<CanaryVPCConfig> vPCConfig() {
         return Optional.ofNullable(this.vPCConfig);
     }
     /**
      * Visual reference configuration for visual testing
      * 
     */
-    public Optional<CanaryVisualReference> getVisualReference() {
+    public Optional<CanaryVisualReference> visualReference() {
         return Optional.ofNullable(this.visualReference);
     }
 

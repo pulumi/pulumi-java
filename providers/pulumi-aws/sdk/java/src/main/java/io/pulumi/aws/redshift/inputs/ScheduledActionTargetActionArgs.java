@@ -24,7 +24,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
     @Import(name="pauseCluster")
       private final @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
 
-    public Output<ScheduledActionTargetActionPauseClusterArgs> getPauseCluster() {
+    public Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster() {
         return this.pauseCluster == null ? Codegen.empty() : this.pauseCluster;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
     @Import(name="resizeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
 
-    public Output<ScheduledActionTargetActionResizeClusterArgs> getResizeCluster() {
+    public Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster() {
         return this.resizeCluster == null ? Codegen.empty() : this.resizeCluster;
     }
 
@@ -46,7 +46,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
     @Import(name="resumeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
 
-    public Output<ScheduledActionTargetActionResumeClusterArgs> getResumeCluster() {
+    public Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster() {
         return this.resumeCluster == null ? Codegen.empty() : this.resumeCluster;
     }
 

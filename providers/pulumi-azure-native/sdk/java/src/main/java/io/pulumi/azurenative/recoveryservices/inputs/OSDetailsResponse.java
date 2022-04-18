@@ -25,7 +25,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oSMajorVersion")
       private final @Nullable String oSMajorVersion;
 
-    public Optional<String> getOSMajorVersion() {
+    public Optional<String> oSMajorVersion() {
         return this.oSMajorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMajorVersion);
     }
 
@@ -36,7 +36,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oSMinorVersion")
       private final @Nullable String oSMinorVersion;
 
-    public Optional<String> getOSMinorVersion() {
+    public Optional<String> oSMinorVersion() {
         return this.oSMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMinorVersion);
     }
 
@@ -47,7 +47,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oSVersion")
       private final @Nullable String oSVersion;
 
-    public Optional<String> getOSVersion() {
+    public Optional<String> oSVersion() {
         return this.oSVersion == null ? Optional.empty() : Optional.ofNullable(this.oSVersion);
     }
 
@@ -58,7 +58,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osEdition")
       private final @Nullable String osEdition;
 
-    public Optional<String> getOsEdition() {
+    public Optional<String> osEdition() {
         return this.osEdition == null ? Optional.empty() : Optional.ofNullable(this.osEdition);
     }
 
@@ -69,7 +69,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -80,7 +80,7 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="productType")
       private final @Nullable String productType;
 
-    public Optional<String> getProductType() {
+    public Optional<String> productType() {
         return this.productType == null ? Optional.empty() : Optional.ofNullable(this.productType);
     }
 

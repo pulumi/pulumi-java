@@ -21,7 +21,7 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
     @Import(name="scriptPath", required=true)
       private final Output<String> scriptPath;
 
-    public Output<String> getScriptPath() {
+    public Output<String> scriptPath() {
         return this.scriptPath;
     }
 

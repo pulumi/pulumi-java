@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
     @Import(name="parameters", required=true)
       private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
 
-    public List<GoogleCloudDialogflowCxV3FormParameterResponse> getParameters() {
+    public List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters() {
         return this.parameters;
     }
 

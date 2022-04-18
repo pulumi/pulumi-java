@@ -27,7 +27,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends io.pulumi.resourc
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends io.pulumi.resourc
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -49,7 +49,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends io.pulumi.resourc
     @Import(name="secretNamespace")
       private final @Nullable Output<String> secretNamespace;
 
-    public Output<String> getSecretNamespace() {
+    public Output<String> secretNamespace() {
         return this.secretNamespace == null ? Codegen.empty() : this.secretNamespace;
     }
 
@@ -60,7 +60,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends io.pulumi.resourc
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 

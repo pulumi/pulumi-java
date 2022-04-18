@@ -18,7 +18,7 @@ public final class RegistryCredential {
         this.publicKeyCertificate = publicKeyCertificate;
     }
 
-    public Map<String,Object> getPublicKeyCertificate() {
+    public Map<String,Object> publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
 

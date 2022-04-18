@@ -27,7 +27,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -38,7 +38,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subpages")
       private final @Nullable Output<List<PageArgs>> subpages;
 
-    public Output<List<PageArgs>> getSubpages() {
+    public Output<List<PageArgs>> subpages() {
         return this.subpages == null ? Codegen.empty() : this.subpages;
     }
 

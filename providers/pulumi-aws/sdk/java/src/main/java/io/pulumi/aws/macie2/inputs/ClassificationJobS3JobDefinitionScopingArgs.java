@@ -23,7 +23,7 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
     @Import(name="excludes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> getExcludes() {
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -34,7 +34,7 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
     @Import(name="includes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> getIncludes() {
+    public Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes() {
         return this.includes == null ? Codegen.empty() : this.includes;
     }
 

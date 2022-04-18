@@ -26,7 +26,7 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadataLabelMatcher")
       private final @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
-    public Output<MetadataLabelMatcherArgs> getMetadataLabelMatcher() {
+    public Output<MetadataLabelMatcherArgs> metadataLabelMatcher() {
         return this.metadataLabelMatcher == null ? Codegen.empty() : this.metadataLabelMatcher;
     }
 

@@ -36,14 +36,14 @@ public final class TCPSocketAction {
      * Optional: Host name to connect to, defaults to the pod IP.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
      * 
     */
-    public Either<Integer,String> getPort() {
+    public Either<Integer,String> port() {
         return this.port;
     }
 

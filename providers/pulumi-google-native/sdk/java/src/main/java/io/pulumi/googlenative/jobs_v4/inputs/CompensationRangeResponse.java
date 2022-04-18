@@ -23,7 +23,7 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxCompensation", required=true)
       private final MoneyResponse maxCompensation;
 
-    public MoneyResponse getMaxCompensation() {
+    public MoneyResponse maxCompensation() {
         return this.maxCompensation;
     }
 
@@ -34,7 +34,7 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
     @Import(name="minCompensation", required=true)
       private final MoneyResponse minCompensation;
 
-    public MoneyResponse getMinCompensation() {
+    public MoneyResponse minCompensation() {
         return this.minCompensation;
     }
 

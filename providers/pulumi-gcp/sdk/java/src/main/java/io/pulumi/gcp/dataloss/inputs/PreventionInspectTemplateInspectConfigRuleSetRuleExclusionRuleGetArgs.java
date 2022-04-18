@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="dictionary")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> getDictionary() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> getExcludeInfoTypes() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="matchingType", required=true)
       private final Output<String> matchingType;
 
-    public Output<String> getMatchingType() {
+    public Output<String> matchingType() {
         return this.matchingType;
     }
 
@@ -62,7 +62,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="regex")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> getRegex() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

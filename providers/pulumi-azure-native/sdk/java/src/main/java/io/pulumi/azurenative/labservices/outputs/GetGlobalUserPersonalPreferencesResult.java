@@ -35,14 +35,14 @@ public final class GetGlobalUserPersonalPreferencesResult {
      * Array of favorite lab resource ids
      * 
     */
-    public List<String> getFavoriteLabResourceIds() {
+    public List<String> favoriteLabResourceIds() {
         return this.favoriteLabResourceIds == null ? List.of() : this.favoriteLabResourceIds;
     }
     /**
      * Id to be used by the cache orchestrator
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

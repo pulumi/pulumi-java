@@ -16,14 +16,14 @@ public final class DatasetRetentionPeriod extends io.pulumi.resources.InvokeArgs
     @Import(name="numberOfDays", required=true)
       private final Integer numberOfDays;
 
-    public Integer getNumberOfDays() {
+    public Integer numberOfDays() {
         return this.numberOfDays;
     }
 
     @Import(name="unlimited", required=true)
       private final Boolean unlimited;
 
-    public Boolean getUnlimited() {
+    public Boolean unlimited() {
         return this.unlimited;
     }
 

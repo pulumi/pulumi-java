@@ -19,7 +19,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="planTypeName", required=true)
       private final String planTypeName;
 
-    public String getPlanTypeName() {
+    public String planTypeName() {
         return this.planTypeName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="providerName", required=true)
       private final String providerName;
 
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
 

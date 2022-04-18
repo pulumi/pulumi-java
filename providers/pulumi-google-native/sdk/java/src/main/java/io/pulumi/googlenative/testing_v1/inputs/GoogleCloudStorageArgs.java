@@ -25,7 +25,7 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gcsPath", required=true)
       private final Output<String> gcsPath;
 
-    public Output<String> getGcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath;
     }
 

@@ -23,7 +23,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -47,7 +47,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
@@ -59,7 +59,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="telemetry")
       private final @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
-    public Output<CustomServiceTelemetryArgs> getTelemetry() {
+    public Output<CustomServiceTelemetryArgs> telemetry() {
         return this.telemetry == null ? Codegen.empty() : this.telemetry;
     }
 

@@ -44,7 +44,7 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @return Name of the rule set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @return Properties of the monitoring tag rules.
      * 
      */
-    public Output<MonitoringTagRulesPropertiesResponse> getProperties() {
+    public Output<MonitoringTagRulesPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class TagRule extends io.pulumi.resources.CustomResource {
      * @return The type of the rule set.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

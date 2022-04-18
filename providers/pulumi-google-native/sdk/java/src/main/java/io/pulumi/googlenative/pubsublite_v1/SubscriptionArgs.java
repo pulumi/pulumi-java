@@ -23,14 +23,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryConfig")
       private final @Nullable Output<DeliveryConfigArgs> deliveryConfig;
 
-    public Output<DeliveryConfigArgs> getDeliveryConfig() {
+    public Output<DeliveryConfigArgs> deliveryConfig() {
         return this.deliveryConfig == null ? Codegen.empty() : this.deliveryConfig;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -41,28 +41,28 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="skipBacklog")
       private final @Nullable Output<String> skipBacklog;
 
-    public Output<String> getSkipBacklog() {
+    public Output<String> skipBacklog() {
         return this.skipBacklog == null ? Codegen.empty() : this.skipBacklog;
     }
 
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -73,7 +73,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

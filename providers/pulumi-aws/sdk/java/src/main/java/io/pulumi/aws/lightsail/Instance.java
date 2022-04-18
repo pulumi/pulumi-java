@@ -100,7 +100,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Lightsail instance (matches `id`).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -116,7 +116,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * instance (see list below)
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -130,7 +130,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
      * 
      */
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId;
     }
     /**
@@ -144,7 +144,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The bundle of specification information (see list below)
      * 
      */
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
     /**
@@ -158,7 +158,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The number of vCPUs the instance has.
      * 
      */
-    public Output<Integer> getCpuCount() {
+    public Output<Integer> cpuCount() {
         return this.cpuCount;
     }
     /**
@@ -172,7 +172,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the instance was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -190,7 +190,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return (**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
      * 
      */
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address;
     }
     /**
@@ -204,7 +204,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return List of IPv6 addresses for the Lightsail instance.
      * 
      */
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
@@ -218,7 +218,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A Boolean value indicating whether this instance has a static IP assigned to it.
      * 
      */
-    public Output<Boolean> getIsStaticIp() {
+    public Output<Boolean> isStaticIp() {
         return this.isStaticIp;
     }
     /**
@@ -234,7 +234,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
      * 
      */
-    public Output</* @Nullable */ String> getKeyPairName() {
+    public Output</* @Nullable */ String> keyPairName() {
         return this.keyPairName;
     }
     /**
@@ -248,7 +248,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -262,7 +262,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The private IP address of the instance.
      * 
      */
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
@@ -276,7 +276,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The public IP address of the instance.
      * 
      */
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
@@ -290,7 +290,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The amount of RAM in GB on the instance (e.g., 1.0).
      * 
      */
-    public Output<Double> getRamSize() {
+    public Output<Double> ramSize() {
         return this.ramSize;
     }
     /**
@@ -304,7 +304,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -318,7 +318,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -332,7 +332,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return launch script to configure server with additional user data
      * 
      */
-    public Output</* @Nullable */ String> getUserData() {
+    public Output</* @Nullable */ String> userData() {
         return this.userData;
     }
     /**
@@ -346,7 +346,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The user name for connecting to the instance (e.g., ec2-user).
      * 
      */
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

@@ -25,7 +25,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="controlInputParameters")
       private final @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
 
-    public Output<List<FrameworkControlInputParameterArgs>> getControlInputParameters() {
+    public Output<List<FrameworkControlInputParameterArgs>> controlInputParameters() {
         return this.controlInputParameters == null ? Codegen.empty() : this.controlInputParameters;
     }
 
@@ -36,7 +36,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="controlName", required=true)
       private final Output<String> controlName;
 
-    public Output<String> getControlName() {
+    public Output<String> controlName() {
         return this.controlName;
     }
 
@@ -47,7 +47,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="controlScope")
       private final @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;
 
-    public Output<FrameworkControlControlScopePropertiesArgs> getControlScope() {
+    public Output<FrameworkControlControlScopePropertiesArgs> controlScope() {
         return this.controlScope == null ? Codegen.empty() : this.controlScope;
     }
 

@@ -57,35 +57,35 @@ public final class GetOutcomeResult {
      * The outcome ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The timestamp when the outcome was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The outcome description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp when the outcome was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this outcome.
      * 
     */
-    public List<OutcomeTag> getTags() {
+    public List<OutcomeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

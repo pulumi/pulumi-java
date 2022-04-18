@@ -15,7 +15,7 @@ public final class GetLaunchTemplateElasticGpuSpecification extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

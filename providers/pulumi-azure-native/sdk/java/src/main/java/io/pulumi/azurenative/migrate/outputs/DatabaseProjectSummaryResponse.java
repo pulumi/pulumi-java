@@ -50,7 +50,7 @@ public final class DatabaseProjectSummaryResponse {
      * Gets or sets the extended summary.
      * 
     */
-    public Map<String,String> getExtendedSummary() {
+    public Map<String,String> extendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
     /**
@@ -58,21 +58,21 @@ public final class DatabaseProjectSummaryResponse {
      * Expected value is 'Databases'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * Gets or sets the time when summary was last refreshed.
      * 
     */
-    public Optional<String> getLastSummaryRefreshedTime() {
+    public Optional<String> lastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
     /**
      * Gets or sets the state of refresh summary.
      * 
     */
-    public Optional<String> getRefreshSummaryState() {
+    public Optional<String> refreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
 

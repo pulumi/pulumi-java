@@ -29,7 +29,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     @Import(name="fieldRef")
       private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
-    public Output<ObjectFieldSelectorArgs> getFieldRef() {
+    public Output<ObjectFieldSelectorArgs> fieldRef() {
         return this.fieldRef == null ? Codegen.empty() : this.fieldRef;
     }
 
@@ -40,7 +40,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
+    public Output<Integer> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -51,7 +51,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -62,7 +62,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceFieldRef")
       private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
-    public Output<ResourceFieldSelectorArgs> getResourceFieldRef() {
+    public Output<ResourceFieldSelectorArgs> resourceFieldRef() {
         return this.resourceFieldRef == null ? Codegen.empty() : this.resourceFieldRef;
     }
 

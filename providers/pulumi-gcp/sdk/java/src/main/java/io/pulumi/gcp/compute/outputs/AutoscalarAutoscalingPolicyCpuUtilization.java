@@ -41,7 +41,7 @@ public final class AutoscalarAutoscalingPolicyCpuUtilization {
      * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
      * 
     */
-    public Optional<String> getPredictiveMethod() {
+    public Optional<String> predictiveMethod() {
         return Optional.ofNullable(this.predictiveMethod);
     }
     /**
@@ -50,7 +50,7 @@ public final class AutoscalarAutoscalingPolicyCpuUtilization {
      * be a positive float value. If not defined, the default is 0.8.
      * 
     */
-    public Double getTarget() {
+    public Double target() {
         return this.target;
     }
 

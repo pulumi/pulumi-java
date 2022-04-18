@@ -46,28 +46,28 @@ public final class GetTagResult {
      * Tag name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

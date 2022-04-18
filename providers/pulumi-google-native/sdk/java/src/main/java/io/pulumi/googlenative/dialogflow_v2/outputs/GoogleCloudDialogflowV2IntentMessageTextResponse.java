@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse {
      * Optional. The collection of the agent's responses.
      * 
     */
-    public List<String> getText() {
+    public List<String> text() {
         return this.text;
     }
 

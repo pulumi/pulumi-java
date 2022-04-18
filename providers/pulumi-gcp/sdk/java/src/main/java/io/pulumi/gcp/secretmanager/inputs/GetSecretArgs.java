@@ -21,7 +21,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -32,7 +32,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="secretId", required=true)
       private final String secretId;
 
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
 

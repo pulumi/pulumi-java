@@ -26,7 +26,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryOptions")
       private final @Nullable Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
-    public Output<FolderSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
+    public Output<FolderSinkBigqueryOptionsGetArgs> bigqueryOptions() {
         return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
@@ -37,7 +37,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -62,7 +62,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -73,7 +73,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusions")
       private final @Nullable Output<List<FolderSinkExclusionGetArgs>> exclusions;
 
-    public Output<List<FolderSinkExclusionGetArgs>> getExclusions() {
+    public Output<List<FolderSinkExclusionGetArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -85,7 +85,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -97,7 +97,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -109,7 +109,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeChildren")
       private final @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> getIncludeChildren() {
+    public Output<Boolean> includeChildren() {
         return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
     }
 
@@ -120,7 +120,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -132,7 +132,7 @@ public final class FolderSinkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="writerIdentity")
       private final @Nullable Output<String> writerIdentity;
 
-    public Output<String> getWriterIdentity() {
+    public Output<String> writerIdentity() {
         return this.writerIdentity == null ? Codegen.empty() : this.writerIdentity;
     }
 

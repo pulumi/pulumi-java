@@ -24,7 +24,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition")
       private final @Nullable Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
@@ -35,7 +35,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -60,7 +60,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

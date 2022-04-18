@@ -19,14 +19,14 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     @Import(name="attributes")
       private final @Nullable Output<Object> attributes;
 
-    public Output<Object> getAttributes() {
+    public Output<Object> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

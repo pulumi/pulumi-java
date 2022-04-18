@@ -25,7 +25,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="utilization", required=true)
       private final VmUtilizationMetricsResponse utilization;
 
-    public VmUtilizationMetricsResponse getUtilization() {
+    public VmUtilizationMetricsResponse utilization() {
         return this.utilization;
     }
 
@@ -36,7 +36,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="vmId", required=true)
       private final String vmId;
 
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
 
@@ -47,7 +47,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="vmwareVmDetails", required=true)
       private final VmwareVmDetailsResponse vmwareVmDetails;
 
-    public VmwareVmDetailsResponse getVmwareVmDetails() {
+    public VmwareVmDetailsResponse vmwareVmDetails() {
         return this.vmwareVmDetails;
     }
 

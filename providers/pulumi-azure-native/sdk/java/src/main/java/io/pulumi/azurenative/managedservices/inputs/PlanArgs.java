@@ -25,7 +25,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="product", required=true)
       private final Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product;
     }
 
@@ -47,7 +47,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
@@ -58,7 +58,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

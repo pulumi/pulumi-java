@@ -26,7 +26,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -37,7 +37,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
       private final Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method;
     }
 
@@ -70,7 +70,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationId")
       private final @Nullable Output<String> operationId;
 
-    public Output<String> getOperationId() {
+    public Output<String> operationId() {
         return this.operationId == null ? Codegen.empty() : this.operationId;
     }
 
@@ -81,7 +81,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policies")
       private final @Nullable Output<String> policies;
 
-    public Output<String> getPolicies() {
+    public Output<String> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 
@@ -92,7 +92,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<RequestContractArgs> request;
 
-    public Output<RequestContractArgs> getRequest() {
+    public Output<RequestContractArgs> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
@@ -103,7 +103,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responses")
       private final @Nullable Output<List<ResponseContractArgs>> responses;
 
-    public Output<List<ResponseContractArgs>> getResponses() {
+    public Output<List<ResponseContractArgs>> responses() {
         return this.responses == null ? Codegen.empty() : this.responses;
     }
 
@@ -125,7 +125,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -136,7 +136,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateParameters")
       private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
-    public Output<List<ParameterContractArgs>> getTemplateParameters() {
+    public Output<List<ParameterContractArgs>> templateParameters() {
         return this.templateParameters == null ? Codegen.empty() : this.templateParameters;
     }
 
@@ -147,7 +147,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 

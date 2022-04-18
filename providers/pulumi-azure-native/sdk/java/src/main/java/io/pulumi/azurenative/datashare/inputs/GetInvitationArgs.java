@@ -19,7 +19,7 @@ public final class GetInvitationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInvitationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="invitationName", required=true)
       private final String invitationName;
 
-    public String getInvitationName() {
+    public String invitationName() {
         return this.invitationName;
     }
 
@@ -41,7 +41,7 @@ public final class GetInvitationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetInvitationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 

@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends io.pulumi
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends io.pulumi
     @Import(name="trust", required=true)
       private final Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust;
 
-    public Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
 

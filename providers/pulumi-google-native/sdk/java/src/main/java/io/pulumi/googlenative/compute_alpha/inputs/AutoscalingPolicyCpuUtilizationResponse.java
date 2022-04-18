@@ -24,7 +24,7 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
     @Import(name="predictiveMethod", required=true)
       private final String predictiveMethod;
 
-    public String getPredictiveMethod() {
+    public String predictiveMethod() {
         return this.predictiveMethod;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
     @Import(name="utilizationTarget", required=true)
       private final Double utilizationTarget;
 
-    public Double getUtilizationTarget() {
+    public Double utilizationTarget() {
         return this.utilizationTarget;
     }
 

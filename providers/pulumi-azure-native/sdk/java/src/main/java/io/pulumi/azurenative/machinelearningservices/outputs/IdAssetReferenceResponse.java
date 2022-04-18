@@ -33,7 +33,7 @@ public final class IdAssetReferenceResponse {
      * ARM resource ID of the asset.
      * 
     */
-    public String getAssetId() {
+    public String assetId() {
         return this.assetId;
     }
     /**
@@ -41,7 +41,7 @@ public final class IdAssetReferenceResponse {
      * Expected value is 'Id'.
      * 
     */
-    public String getReferenceType() {
+    public String referenceType() {
         return this.referenceType;
     }
 

@@ -15,14 +15,14 @@ public final class GetClusterNodePoolManagement extends io.pulumi.resources.Invo
     @Import(name="autoRepair", required=true)
       private final Boolean autoRepair;
 
-    public Boolean getAutoRepair() {
+    public Boolean autoRepair() {
         return this.autoRepair;
     }
 
     @Import(name="autoUpgrade", required=true)
       private final Boolean autoUpgrade;
 
-    public Boolean getAutoUpgrade() {
+    public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
 

@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="customInfoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
 
-    public Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> getCustomInfoTypes() {
+    public Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes() {
         return this.customInfoTypes == null ? Codegen.empty() : this.customInfoTypes;
     }
 
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
-    public Output<Boolean> getExcludeInfoTypes() {
+    public Output<Boolean> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="includeQuote")
       private final @Nullable Output<Boolean> includeQuote;
 
-    public Output<Boolean> getIncludeQuote() {
+    public Output<Boolean> includeQuote() {
         return this.includeQuote == null ? Codegen.empty() : this.includeQuote;
     }
 
@@ -65,7 +65,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -76,7 +76,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="limits")
       private final @Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits;
 
-    public Output<GooglePrivacyDlpV2FindingLimitsArgs> getLimits() {
+    public Output<GooglePrivacyDlpV2FindingLimitsArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="minLikelihood")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
 
-    public Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> getMinLikelihood() {
+    public Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood() {
         return this.minLikelihood == null ? Codegen.empty() : this.minLikelihood;
     }
 
@@ -98,7 +98,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     @Import(name="ruleSet")
       private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
 
-    public Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> getRuleSet() {
+    public Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet() {
         return this.ruleSet == null ? Codegen.empty() : this.ruleSet;
     }
 

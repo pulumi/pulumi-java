@@ -21,7 +21,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -32,7 +32,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     @Import(name="vpcEndpointId", required=true)
       private final Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 

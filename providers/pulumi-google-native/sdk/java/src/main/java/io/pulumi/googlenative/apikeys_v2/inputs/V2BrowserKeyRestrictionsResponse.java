@@ -24,7 +24,7 @@ public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.
     @Import(name="allowedReferrers", required=true)
       private final List<String> allowedReferrers;
 
-    public List<String> getAllowedReferrers() {
+    public List<String> allowedReferrers() {
         return this.allowedReferrers;
     }
 

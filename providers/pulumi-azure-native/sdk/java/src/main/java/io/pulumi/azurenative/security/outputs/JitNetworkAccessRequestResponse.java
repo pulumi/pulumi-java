@@ -46,24 +46,24 @@ public final class JitNetworkAccessRequestResponse {
      * The justification for making the initiate request
      * 
     */
-    public Optional<String> getJustification() {
+    public Optional<String> justification() {
         return Optional.ofNullable(this.justification);
     }
     /**
      * The identity of the person who made the request
      * 
     */
-    public String getRequestor() {
+    public String requestor() {
         return this.requestor;
     }
     /**
      * The start time of the request in UTC
      * 
     */
-    public String getStartTimeUtc() {
+    public String startTimeUtc() {
         return this.startTimeUtc;
     }
-    public List<JitNetworkAccessRequestVirtualMachineResponse> getVirtualMachines() {
+    public List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines() {
         return this.virtualMachines;
     }
 

@@ -42,7 +42,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when the directory config was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -56,7 +56,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * @return Fully qualified name of the directory.
      * 
      */
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName;
     }
     /**
@@ -70,7 +70,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * @return Distinguished names of the organizational units for computer accounts.
      * 
      */
-    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
+    public Output<List<String>> organizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
     }
     /**
@@ -84,7 +84,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See `service_account_credentials` below.
      * 
      */
-    public Output<DirectoryConfigServiceAccountCredentials> getServiceAccountCredentials() {
+    public Output<DirectoryConfigServiceAccountCredentials> serviceAccountCredentials() {
         return this.serviceAccountCredentials;
     }
 

@@ -48,7 +48,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Additional data about the assignment
      * 
      */
-    public Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
+    public Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> additionalData() {
         return this.additionalData;
     }
     /**
@@ -62,7 +62,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Component item with key as applied to this standard assignment over the given scope
      * 
      */
-    public Output</* @Nullable */ AssignedComponentItemResponse> getAssignedComponent() {
+    public Output</* @Nullable */ AssignedComponentItemResponse> assignedComponent() {
         return this.assignedComponent;
     }
     /**
@@ -76,7 +76,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Standard item with key as applied to this standard assignment over the given scope
      * 
      */
-    public Output</* @Nullable */ AssignedStandardItemResponse> getAssignedStandard() {
+    public Output</* @Nullable */ AssignedStandardItemResponse> assignedStandard() {
         return this.assignedStandard;
     }
     /**
@@ -90,7 +90,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return description of the standardAssignment
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return display name of the standardAssignment
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -118,7 +118,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return expected effect of this assignment (Disable/Exempt/etc)
      * 
      */
-    public Output</* @Nullable */ String> getEffect() {
+    public Output</* @Nullable */ String> effect() {
         return this.effect;
     }
     /**
@@ -132,7 +132,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -146,7 +146,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Expiration date of this assignment as a full ISO date
      * 
      */
-    public Output</* @Nullable */ String> getExpiresOn() {
+    public Output</* @Nullable */ String> expiresOn() {
         return this.expiresOn;
     }
     /**
@@ -160,7 +160,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -174,7 +174,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -188,7 +188,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -202,7 +202,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -216,7 +216,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -230,7 +230,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -244,7 +244,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -258,7 +258,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

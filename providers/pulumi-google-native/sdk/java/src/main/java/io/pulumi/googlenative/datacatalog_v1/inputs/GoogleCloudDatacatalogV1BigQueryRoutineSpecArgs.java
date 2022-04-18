@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
     @Import(name="importedLibraries")
       private final @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> getImportedLibraries() {
+    public Output<List<String>> importedLibraries() {
         return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
     }
 

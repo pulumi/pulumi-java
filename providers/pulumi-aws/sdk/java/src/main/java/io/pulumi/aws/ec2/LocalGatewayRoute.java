@@ -40,7 +40,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * @return IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
      * 
      */
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
     /**
@@ -54,7 +54,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
@@ -68,7 +68,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Local Gateway Virtual Interface Group.
      * 
      */
-    public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
+    public Output<String> localGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
 

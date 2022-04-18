@@ -22,7 +22,7 @@ public final class AutomationRuleSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="rules")
       private final @Nullable List<AutomationTriggeringRuleResponse> rules;
 
-    public List<AutomationTriggeringRuleResponse> getRules() {
+    public List<AutomationTriggeringRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

@@ -19,7 +19,7 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -30,7 +30,7 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
     @Import(name="settingName", required=true)
       private final String settingName;
 
-    public String getSettingName() {
+    public String settingName() {
         return this.settingName;
     }
 

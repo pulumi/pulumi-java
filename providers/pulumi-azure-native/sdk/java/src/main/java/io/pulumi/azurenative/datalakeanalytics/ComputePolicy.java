@@ -43,7 +43,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The maximum degree of parallelism per job this user can use to submit jobs.
      * 
      */
-    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+    public Output<Integer> maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
@@ -57,7 +57,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The minimum priority per job this user can use to submit jobs.
      * 
      */
-    public Output<Integer> getMinPriorityPerJob() {
+    public Output<Integer> minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
@@ -71,7 +71,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The AAD object identifier for the entity to create a policy for.
      * 
      */
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
     /**
@@ -99,7 +99,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The type of AAD object the object identifier refers to.
      * 
      */
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
     /**
@@ -113,7 +113,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

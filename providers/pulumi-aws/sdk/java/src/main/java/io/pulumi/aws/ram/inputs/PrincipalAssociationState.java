@@ -22,7 +22,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -33,7 +33,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
     @Import(name="resourceShareArn")
       private final @Nullable Output<String> resourceShareArn;
 
-    public Output<String> getResourceShareArn() {
+    public Output<String> resourceShareArn() {
         return this.resourceShareArn == null ? Codegen.empty() : this.resourceShareArn;
     }
 

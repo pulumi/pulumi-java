@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="clicked", required=true)
       private final Boolean clicked;
 
-    public Boolean getClicked() {
+    public Boolean clicked() {
         return this.clicked;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="correctnessLevel", required=true)
       private final String correctnessLevel;
 
-    public String getCorrectnessLevel() {
+    public String correctnessLevel() {
         return this.correctnessLevel;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
     @Import(name="displayed", required=true)
       private final Boolean displayed;
 
-    public Boolean getDisplayed() {
+    public Boolean displayed() {
         return this.displayed;
     }
 

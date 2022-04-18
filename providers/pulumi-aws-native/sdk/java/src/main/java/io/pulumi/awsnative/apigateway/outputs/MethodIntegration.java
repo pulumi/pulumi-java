@@ -126,98 +126,98 @@ public final class MethodIntegration {
      * A list of request parameters whose values API Gateway caches.
      * 
     */
-    public List<String> getCacheKeyParameters() {
+    public List<String> cacheKeyParameters() {
         return this.cacheKeyParameters == null ? List.of() : this.cacheKeyParameters;
     }
     /**
      * An API-specific tag group of related cached parameters.
      * 
     */
-    public Optional<String> getCacheNamespace() {
+    public Optional<String> cacheNamespace() {
         return Optional.ofNullable(this.cacheNamespace);
     }
     /**
      * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
      * 
     */
-    public Optional<String> getConnectionId() {
+    public Optional<String> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
     /**
      * The type of the network connection to the integration endpoint.
      * 
     */
-    public Optional<MethodIntegrationConnectionType> getConnectionType() {
+    public Optional<MethodIntegrationConnectionType> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
      * Specifies how to handle request payload content type conversions.
      * 
     */
-    public Optional<MethodIntegrationContentHandling> getContentHandling() {
+    public Optional<MethodIntegrationContentHandling> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
      * The credentials that are required for the integration.
      * 
     */
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The integration's HTTP method type.
      * 
     */
-    public Optional<String> getIntegrationHttpMethod() {
+    public Optional<String> integrationHttpMethod() {
         return Optional.ofNullable(this.integrationHttpMethod);
     }
     /**
      * The response that API Gateway provides after a method's backend completes processing a request.
      * 
     */
-    public List<MethodIntegrationResponse> getIntegrationResponses() {
+    public List<MethodIntegrationResponse> integrationResponses() {
         return this.integrationResponses == null ? List.of() : this.integrationResponses;
     }
     /**
      * Indicates when API Gateway passes requests to the targeted backend.
      * 
     */
-    public Optional<MethodIntegrationPassthroughBehavior> getPassthroughBehavior() {
+    public Optional<MethodIntegrationPassthroughBehavior> passthroughBehavior() {
         return Optional.ofNullable(this.passthroughBehavior);
     }
     /**
      * The request parameters that API Gateway sends with the backend request.
      * 
     */
-    public Optional<Object> getRequestParameters() {
+    public Optional<Object> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
     /**
      * A map of Apache Velocity templates that are applied on the request payload.
      * 
     */
-    public Optional<Object> getRequestTemplates() {
+    public Optional<Object> requestTemplates() {
         return Optional.ofNullable(this.requestTemplates);
     }
     /**
      * Custom timeout between 50 and 29,000 milliseconds.
      * 
     */
-    public Optional<Integer> getTimeoutInMillis() {
+    public Optional<Integer> timeoutInMillis() {
         return Optional.ofNullable(this.timeoutInMillis);
     }
     /**
      * The type of backend that your method is running.
      * 
     */
-    public MethodIntegrationType getType() {
+    public MethodIntegrationType type() {
         return this.type;
     }
     /**
      * The Uniform Resource Identifier (URI) for the integration.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

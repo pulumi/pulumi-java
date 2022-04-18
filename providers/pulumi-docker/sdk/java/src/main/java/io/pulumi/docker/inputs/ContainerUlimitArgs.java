@@ -18,21 +18,21 @@ public final class ContainerUlimitArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hard", required=true)
       private final Output<Integer> hard;
 
-    public Output<Integer> getHard() {
+    public Output<Integer> hard() {
         return this.hard;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="soft", required=true)
       private final Output<Integer> soft;
 
-    public Output<Integer> getSoft() {
+    public Output<Integer> soft() {
         return this.soft;
     }
 

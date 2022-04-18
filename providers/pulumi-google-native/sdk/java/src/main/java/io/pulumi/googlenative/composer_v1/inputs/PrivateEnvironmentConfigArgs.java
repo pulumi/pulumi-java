@@ -28,7 +28,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="cloudComposerNetworkIpv4CidrBlock")
       private final @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
 
-    public Output<String> getCloudComposerNetworkIpv4CidrBlock() {
+    public Output<String> cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock == null ? Codegen.empty() : this.cloudComposerNetworkIpv4CidrBlock;
     }
 
@@ -39,7 +39,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="cloudSqlIpv4CidrBlock")
       private final @Nullable Output<String> cloudSqlIpv4CidrBlock;
 
-    public Output<String> getCloudSqlIpv4CidrBlock() {
+    public Output<String> cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock == null ? Codegen.empty() : this.cloudSqlIpv4CidrBlock;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="enablePrivateEnvironment")
       private final @Nullable Output<Boolean> enablePrivateEnvironment;
 
-    public Output<Boolean> getEnablePrivateEnvironment() {
+    public Output<Boolean> enablePrivateEnvironment() {
         return this.enablePrivateEnvironment == null ? Codegen.empty() : this.enablePrivateEnvironment;
     }
 
@@ -61,7 +61,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="privateClusterConfig")
       private final @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
 
-    public Output<PrivateClusterConfigArgs> getPrivateClusterConfig() {
+    public Output<PrivateClusterConfigArgs> privateClusterConfig() {
         return this.privateClusterConfig == null ? Codegen.empty() : this.privateClusterConfig;
     }
 
@@ -72,7 +72,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="webServerIpv4CidrBlock")
       private final @Nullable Output<String> webServerIpv4CidrBlock;
 
-    public Output<String> getWebServerIpv4CidrBlock() {
+    public Output<String> webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock == null ? Codegen.empty() : this.webServerIpv4CidrBlock;
     }
 

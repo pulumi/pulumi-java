@@ -25,7 +25,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -47,7 +47,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="rulesPackageArns")
       private final @Nullable Output<List<String>> rulesPackageArns;
 
-    public Output<List<String>> getRulesPackageArns() {
+    public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns == null ? Codegen.empty() : this.rulesPackageArns;
     }
 
@@ -69,7 +69,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -91,7 +91,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 

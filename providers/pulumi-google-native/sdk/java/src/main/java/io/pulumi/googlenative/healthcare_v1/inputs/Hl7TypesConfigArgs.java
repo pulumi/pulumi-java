@@ -28,7 +28,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<List<TypeArgs>> type;
 
-    public Output<List<TypeArgs>> getType() {
+    public Output<List<TypeArgs>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -39,7 +39,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Output<List<VersionSourceArgs>> getVersion() {
+    public Output<List<VersionSourceArgs>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

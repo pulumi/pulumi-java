@@ -25,14 +25,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientPublicKey")
       private final @Nullable Output<String> clientPublicKey;
 
-    public Output<String> getClientPublicKey() {
+    public Output<String> clientPublicKey() {
         return this.clientPublicKey == null ? Codegen.empty() : this.clientPublicKey;
     }
 
     @Import(name="identity")
       private final @Nullable Output<MachineIdentityArgs> identity;
 
-    public Output<MachineIdentityArgs> getIdentity() {
+    public Output<MachineIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -43,7 +43,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -54,7 +54,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationData")
       private final @Nullable Output<LocationDataArgs> locationData;
 
-    public Output<LocationDataArgs> getLocationData() {
+    public Output<LocationDataArgs> locationData() {
         return this.locationData == null ? Codegen.empty() : this.locationData;
     }
 
@@ -65,7 +65,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +87,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -98,7 +98,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
-    public Output<String> getVmId() {
+    public Output<String> vmId() {
         return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 

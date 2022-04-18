@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     @Import(name="errorCount")
       private final @Nullable Output<String> errorCount;
 
-    public Output<String> getErrorCount() {
+    public Output<String> errorCount() {
         return this.errorCount == null ? Codegen.empty() : this.errorCount;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     @Import(name="nodeHours")
       private final @Nullable Output<Double> nodeHours;
 
-    public Output<Double> getNodeHours() {
+    public Output<Double> nodeHours() {
         return this.nodeHours == null ? Codegen.empty() : this.nodeHours;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     @Import(name="outputPath")
       private final @Nullable Output<String> outputPath;
 
-    public Output<String> getOutputPath() {
+    public Output<String> outputPath() {
         return this.outputPath == null ? Codegen.empty() : this.outputPath;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     @Import(name="predictionCount")
       private final @Nullable Output<String> predictionCount;
 
-    public Output<String> getPredictionCount() {
+    public Output<String> predictionCount() {
         return this.predictionCount == null ? Codegen.empty() : this.predictionCount;
     }
 

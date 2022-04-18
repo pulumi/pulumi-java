@@ -34,20 +34,20 @@ public final class GetRouteResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getPathResourceToId() {
+    public Optional<String> pathResourceToId() {
         return Optional.ofNullable(this.pathResourceToId);
     }
-    public Optional<String> getRouteIdentifier() {
+    public Optional<String> routeIdentifier() {
         return Optional.ofNullable(this.routeIdentifier);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
     */
-    public List<RouteTag> getTags() {
+    public List<RouteTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

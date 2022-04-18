@@ -27,7 +27,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="googleCloudStorage", required=true)
       private final Output<GoogleCloudStorageArgs> googleCloudStorage;
 
-    public Output<GoogleCloudStorageArgs> getGoogleCloudStorage() {
+    public Output<GoogleCloudStorageArgs> googleCloudStorage() {
         return this.googleCloudStorage;
     }
 
@@ -38,7 +38,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toolResultsHistory")
       private final @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
-    public Output<ToolResultsHistoryArgs> getToolResultsHistory() {
+    public Output<ToolResultsHistoryArgs> toolResultsHistory() {
         return this.toolResultsHistory == null ? Codegen.empty() : this.toolResultsHistory;
     }
 

@@ -15,14 +15,14 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow extends io.
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -23,14 +23,14 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
     @Import(name="autoScaling")
       private final @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
 
-    public Output<ConnectorAutoScalingArgs> getAutoScaling() {
+    public Output<ConnectorAutoScalingArgs> autoScaling() {
         return this.autoScaling == null ? Codegen.empty() : this.autoScaling;
     }
 
     @Import(name="provisionedCapacity")
       private final @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
-    public Output<ConnectorProvisionedCapacityArgs> getProvisionedCapacity() {
+    public Output<ConnectorProvisionedCapacityArgs> provisionedCapacity() {
         return this.provisionedCapacity == null ? Codegen.empty() : this.provisionedCapacity;
     }
 

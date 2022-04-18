@@ -19,7 +19,7 @@ public final class GetClusterIdentityOidc extends io.pulumi.resources.InvokeArgs
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 

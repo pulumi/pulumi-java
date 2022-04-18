@@ -27,7 +27,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="assetId")
       private final @Nullable String assetId;
 
-    public Optional<String> getAssetId() {
+    public Optional<String> assetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
     }
 
@@ -38,7 +38,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputId")
       private final @Nullable String inputId;
 
-    public Optional<String> getInputId() {
+    public Optional<String> inputId() {
         return this.inputId == null ? Optional.empty() : Optional.ofNullable(this.inputId);
     }
 
@@ -49,7 +49,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputId")
       private final @Nullable String outputId;
 
-    public Optional<String> getOutputId() {
+    public Optional<String> outputId() {
         return this.outputId == null ? Optional.empty() : Optional.ofNullable(this.outputId);
     }
 
@@ -60,7 +60,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    public Map<String,WebServiceParameterResponse> getParameters() {
+    public Map<String,WebServiceParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 

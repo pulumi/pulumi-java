@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
     @Import(name="manual")
       private final @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
 
-    public Output<GooglePrivacyDlpV2ManualArgs> getManual() {
+    public Output<GooglePrivacyDlpV2ManualArgs> manual() {
         return this.manual == null ? Codegen.empty() : this.manual;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
     @Import(name="schedule")
       private final @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
-    public Output<GooglePrivacyDlpV2ScheduleArgs> getSchedule() {
+    public Output<GooglePrivacyDlpV2ScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 

@@ -22,14 +22,14 @@ public final class WorkGroupEngineVersionArgs extends io.pulumi.resources.Resour
     @Import(name="effectiveEngineVersion")
       private final @Nullable Output<String> effectiveEngineVersion;
 
-    public Output<String> getEffectiveEngineVersion() {
+    public Output<String> effectiveEngineVersion() {
         return this.effectiveEngineVersion == null ? Codegen.empty() : this.effectiveEngineVersion;
     }
 
     @Import(name="selectedEngineVersion")
       private final @Nullable Output<String> selectedEngineVersion;
 
-    public Output<String> getSelectedEngineVersion() {
+    public Output<String> selectedEngineVersion() {
         return this.selectedEngineVersion == null ? Codegen.empty() : this.selectedEngineVersion;
     }
 

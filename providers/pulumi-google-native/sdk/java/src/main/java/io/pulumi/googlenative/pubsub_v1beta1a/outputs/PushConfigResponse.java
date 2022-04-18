@@ -24,7 +24,7 @@ public final class PushConfigResponse {
      * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
      * 
     */
-    public String getPushEndpoint() {
+    public String pushEndpoint() {
         return this.pushEndpoint;
     }
 

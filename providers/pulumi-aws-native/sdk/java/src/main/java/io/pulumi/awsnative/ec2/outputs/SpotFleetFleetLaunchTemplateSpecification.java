@@ -25,13 +25,13 @@ public final class SpotFleetFleetLaunchTemplateSpecification {
         this.version = version;
     }
 
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
-    public Optional<String> getLaunchTemplateName() {
+    public Optional<String> launchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

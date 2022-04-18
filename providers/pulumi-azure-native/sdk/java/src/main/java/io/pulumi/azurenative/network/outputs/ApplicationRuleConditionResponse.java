@@ -86,35 +86,35 @@ public final class ApplicationRuleConditionResponse {
      * Description of the rule condition.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
     */
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of FQDN Tags for this rule condition.
      * 
     */
-    public List<String> getFqdnTags() {
+    public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
      * Name of the rule condition.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array of Application Protocols.
      * 
     */
-    public List<FirewallPolicyRuleConditionApplicationProtocolResponse> getProtocols() {
+    public List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
@@ -122,28 +122,28 @@ public final class ApplicationRuleConditionResponse {
      * Expected value is 'ApplicationRuleCondition'.
      * 
     */
-    public String getRuleConditionType() {
+    public String ruleConditionType() {
         return this.ruleConditionType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
     */
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
     */
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * List of FQDNs for this rule condition.
      * 
     */
-    public List<String> getTargetFqdns() {
+    public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
 

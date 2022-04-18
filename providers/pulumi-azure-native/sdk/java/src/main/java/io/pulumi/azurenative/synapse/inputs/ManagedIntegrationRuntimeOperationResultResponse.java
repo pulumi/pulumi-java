@@ -24,7 +24,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="activityId", required=true)
       private final String activityId;
 
-    public String getActivityId() {
+    public String activityId() {
         return this.activityId;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="errorCode", required=true)
       private final String errorCode;
 
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
 
@@ -46,7 +46,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="parameters", required=true)
       private final List<String> parameters;
 
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters;
     }
 
@@ -57,7 +57,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="result", required=true)
       private final String result;
 
-    public String getResult() {
+    public String result() {
         return this.result;
     }
 
@@ -68,7 +68,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -79,7 +79,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

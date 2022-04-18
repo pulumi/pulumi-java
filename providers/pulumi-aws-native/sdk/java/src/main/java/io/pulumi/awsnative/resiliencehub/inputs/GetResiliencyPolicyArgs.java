@@ -19,7 +19,7 @@ public final class GetResiliencyPolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="policyArn", required=true)
       private final String policyArn;
 
-    public String getPolicyArn() {
+    public String policyArn() {
         return this.policyArn;
     }
 

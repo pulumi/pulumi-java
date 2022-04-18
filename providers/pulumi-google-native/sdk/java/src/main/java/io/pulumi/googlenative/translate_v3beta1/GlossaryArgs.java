@@ -25,7 +25,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputConfig", required=true)
       private final Output<GlossaryInputConfigArgs> inputConfig;
 
-    public Output<GlossaryInputConfigArgs> getInputConfig() {
+    public Output<GlossaryInputConfigArgs> inputConfig() {
         return this.inputConfig;
     }
 
@@ -36,7 +36,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCodesSet")
       private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
-    public Output<LanguageCodesSetArgs> getLanguageCodesSet() {
+    public Output<LanguageCodesSetArgs> languageCodesSet() {
         return this.languageCodesSet == null ? Codegen.empty() : this.languageCodesSet;
     }
 
@@ -47,14 +47,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languagePair")
       private final @Nullable Output<LanguageCodePairArgs> languagePair;
 
-    public Output<LanguageCodePairArgs> getLanguagePair() {
+    public Output<LanguageCodePairArgs> languagePair() {
         return this.languagePair == null ? Codegen.empty() : this.languagePair;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -65,14 +65,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

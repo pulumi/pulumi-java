@@ -42,21 +42,21 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGc
      * Required. Bucket of the Cloud Storage object.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object.
      * 
     */
-    public Optional<Integer> getGeneration() {
+    public Optional<Integer> generation() {
         return Optional.ofNullable(this.generation);
     }
     /**
      * Required. Name of the Cloud Storage object.
      * 
     */
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

@@ -22,7 +22,7 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
     @Import(name="acceleratorCount", required=true)
       private final Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
+    public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 

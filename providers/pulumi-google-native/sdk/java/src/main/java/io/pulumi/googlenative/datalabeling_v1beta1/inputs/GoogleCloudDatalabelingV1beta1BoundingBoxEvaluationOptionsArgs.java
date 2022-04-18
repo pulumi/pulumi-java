@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     @Import(name="iouThreshold")
       private final @Nullable Output<Double> iouThreshold;
 
-    public Output<Double> getIouThreshold() {
+    public Output<Double> iouThreshold() {
         return this.iouThreshold == null ? Codegen.empty() : this.iouThreshold;
     }
 

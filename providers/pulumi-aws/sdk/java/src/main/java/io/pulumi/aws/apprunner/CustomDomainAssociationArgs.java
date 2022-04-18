@@ -23,7 +23,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -34,7 +34,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="enableWwwSubdomain")
       private final @Nullable Output<Boolean> enableWwwSubdomain;
 
-    public Output<Boolean> getEnableWwwSubdomain() {
+    public Output<Boolean> enableWwwSubdomain() {
         return this.enableWwwSubdomain == null ? Codegen.empty() : this.enableWwwSubdomain;
     }
 
@@ -45,7 +45,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="serviceArn", required=true)
       private final Output<String> serviceArn;
 
-    public Output<String> getServiceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
 

@@ -36,14 +36,14 @@ public final class EdgeCacheServiceRouting {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingHostRule> getHostRules() {
+    public List<EdgeCacheServiceRoutingHostRule> hostRules() {
         return this.hostRules;
     }
     /**
      * The name of the pathMatcher associated with this hostRule.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcher> getPathMatchers() {
+    public List<EdgeCacheServiceRoutingPathMatcher> pathMatchers() {
         return this.pathMatchers;
     }
 

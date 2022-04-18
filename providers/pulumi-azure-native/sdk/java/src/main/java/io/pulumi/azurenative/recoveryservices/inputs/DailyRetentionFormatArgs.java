@@ -27,7 +27,7 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
     @Import(name="daysOfTheMonth")
       private final @Nullable Output<List<DayArgs>> daysOfTheMonth;
 
-    public Output<List<DayArgs>> getDaysOfTheMonth() {
+    public Output<List<DayArgs>> daysOfTheMonth() {
         return this.daysOfTheMonth == null ? Codegen.empty() : this.daysOfTheMonth;
     }
 

@@ -68,49 +68,49 @@ public final class RemediationDeploymentResponse {
      * The time at which the remediation was created.
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * Resource ID of the template deployment that will remediate the resource.
      * 
     */
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
     /**
      * Error encountered while remediated the resource.
      * 
     */
-    public ErrorDefinitionResponse getError() {
+    public ErrorDefinitionResponse error() {
         return this.error;
     }
     /**
      * The time at which the remediation deployment was last updated.
      * 
     */
-    public String getLastUpdatedOn() {
+    public String lastUpdatedOn() {
         return this.lastUpdatedOn;
     }
     /**
      * Resource ID of the resource that is being remediated by the deployment.
      * 
     */
-    public String getRemediatedResourceId() {
+    public String remediatedResourceId() {
         return this.remediatedResourceId;
     }
     /**
      * Location of the resource that is being remediated.
      * 
     */
-    public String getResourceLocation() {
+    public String resourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Status of the remediation deployment.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

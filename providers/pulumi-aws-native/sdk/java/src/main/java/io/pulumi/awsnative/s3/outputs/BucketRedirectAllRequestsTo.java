@@ -35,14 +35,14 @@ public final class BucketRedirectAllRequestsTo {
      * Name of the host where requests are redirected.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
     */
-    public Optional<BucketRedirectAllRequestsToProtocol> getProtocol() {
+    public Optional<BucketRedirectAllRequestsToProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

@@ -38,7 +38,7 @@ public final class TriggerBuildStepVolume {
      * Each named volume must be used by at least two build steps.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -47,7 +47,7 @@ public final class TriggerBuildStepVolume {
      * build step or with certain reserved volume paths.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

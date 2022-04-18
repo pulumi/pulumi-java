@@ -28,7 +28,7 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fingerprint", required=true)
       private final Output<FingerprintArgs> fingerprint;
 
-    public Output<FingerprintArgs> getFingerprint() {
+    public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
     }
 
@@ -39,7 +39,7 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="layerInfo")
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
-    public Output<List<LayerArgs>> getLayerInfo() {
+    public Output<List<LayerArgs>> layerInfo() {
         return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
     }
 

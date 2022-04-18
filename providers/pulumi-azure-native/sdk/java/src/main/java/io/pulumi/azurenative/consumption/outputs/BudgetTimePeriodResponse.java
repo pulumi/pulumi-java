@@ -34,14 +34,14 @@ public final class BudgetTimePeriodResponse {
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
      * 
     */
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The start date for the budget.
      * 
     */
-    public String getStartDate() {
+    public String startDate() {
         return this.startDate;
     }
 

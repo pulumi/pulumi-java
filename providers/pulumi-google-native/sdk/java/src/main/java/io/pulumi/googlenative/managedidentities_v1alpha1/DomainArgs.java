@@ -25,7 +25,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditLogsEnabled")
       private final @Nullable Output<Boolean> auditLogsEnabled;
 
-    public Output<Boolean> getAuditLogsEnabled() {
+    public Output<Boolean> auditLogsEnabled() {
         return this.auditLogsEnabled == null ? Codegen.empty() : this.auditLogsEnabled;
     }
 
@@ -36,14 +36,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<String>> authorizedNetworks;
 
-    public Output<List<String>> getAuthorizedNetworks() {
+    public Output<List<String>> authorizedNetworks() {
         return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -54,7 +54,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -65,7 +65,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
 
@@ -76,14 +76,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedIdentitiesAdminName")
       private final @Nullable Output<String> managedIdentitiesAdminName;
 
-    public Output<String> getManagedIdentitiesAdminName() {
+    public Output<String> managedIdentitiesAdminName() {
         return this.managedIdentitiesAdminName == null ? Codegen.empty() : this.managedIdentitiesAdminName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -94,7 +94,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedIpRange", required=true)
       private final Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
 

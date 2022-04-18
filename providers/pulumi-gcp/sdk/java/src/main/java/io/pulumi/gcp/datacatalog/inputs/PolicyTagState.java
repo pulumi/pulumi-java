@@ -23,7 +23,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="childPolicyTags")
       private final @Nullable Output<List<String>> childPolicyTags;
 
-    public Output<List<String>> getChildPolicyTags() {
+    public Output<List<String>> childPolicyTags() {
         return this.childPolicyTags == null ? Codegen.empty() : this.childPolicyTags;
     }
 
@@ -37,7 +37,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -62,7 +62,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -75,7 +75,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentPolicyTag")
       private final @Nullable Output<String> parentPolicyTag;
 
-    public Output<String> getParentPolicyTag() {
+    public Output<String> parentPolicyTag() {
         return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
     }
 
@@ -86,7 +86,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="taxonomy")
       private final @Nullable Output<String> taxonomy;
 
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy == null ? Codegen.empty() : this.taxonomy;
     }
 

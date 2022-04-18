@@ -111,56 +111,56 @@ public final class NodeStatus {
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
      * 
     */
-    public List<NodeAddress> getAddresses() {
+    public List<NodeAddress> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
      * Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.
      * 
     */
-    public Map<String,String> getAllocatable() {
+    public Map<String,String> allocatable() {
         return this.allocatable == null ? Map.of() : this.allocatable;
     }
     /**
      * Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      * 
     */
-    public Map<String,String> getCapacity() {
+    public Map<String,String> capacity() {
         return this.capacity == null ? Map.of() : this.capacity;
     }
     /**
      * Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition
      * 
     */
-    public List<NodeCondition> getConditions() {
+    public List<NodeCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Status of the config assigned to the node via the dynamic Kubelet config feature.
      * 
     */
-    public Optional<NodeConfigStatus> getConfig() {
+    public Optional<NodeConfigStatus> config() {
         return Optional.ofNullable(this.config);
     }
     /**
      * Endpoints of daemons running on the Node.
      * 
     */
-    public Optional<NodeDaemonEndpoints> getDaemonEndpoints() {
+    public Optional<NodeDaemonEndpoints> daemonEndpoints() {
         return Optional.ofNullable(this.daemonEndpoints);
     }
     /**
      * List of container images on this node
      * 
     */
-    public List<ContainerImage> getImages() {
+    public List<ContainerImage> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
      * Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info
      * 
     */
-    public Optional<NodeSystemInfo> getNodeInfo() {
+    public Optional<NodeSystemInfo> nodeInfo() {
         return Optional.ofNullable(this.nodeInfo);
     }
     /**
@@ -172,21 +172,21 @@ public final class NodeStatus {
      *  - `"Terminated"` means the node has been removed from the cluster.
      * 
     */
-    public Optional<String> getPhase() {
+    public Optional<String> phase() {
         return Optional.ofNullable(this.phase);
     }
     /**
      * List of volumes that are attached to the node.
      * 
     */
-    public List<AttachedVolume> getVolumesAttached() {
+    public List<AttachedVolume> volumesAttached() {
         return this.volumesAttached == null ? List.of() : this.volumesAttached;
     }
     /**
      * List of attachable volumes in use (mounted) by the node.
      * 
     */
-    public List<String> getVolumesInUse() {
+    public List<String> volumesInUse() {
         return this.volumesInUse == null ? List.of() : this.volumesInUse;
     }
 

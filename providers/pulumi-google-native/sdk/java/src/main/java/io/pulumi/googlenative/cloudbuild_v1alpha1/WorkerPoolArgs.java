@@ -25,7 +25,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -36,7 +36,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -47,7 +47,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<List<WorkerPoolRegionsItem>> regions;
 
-    public Output<List<WorkerPoolRegionsItem>> getRegions() {
+    public Output<List<WorkerPoolRegionsItem>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
@@ -58,7 +58,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> getWorkerConfig() {
+    public Output<WorkerConfigArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
@@ -69,7 +69,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
-    public Output<String> getWorkerCount() {
+    public Output<String> workerCount() {
         return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 

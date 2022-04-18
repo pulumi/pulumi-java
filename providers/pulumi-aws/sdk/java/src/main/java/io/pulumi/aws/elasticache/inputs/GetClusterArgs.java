@@ -22,7 +22,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
@@ -33,7 +33,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -26,7 +26,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
     @Import(name="profileName")
       private final @Nullable String profileName;
 
-    public Optional<String> getProfileName() {
+    public Optional<String> profileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
     }
 
@@ -37,7 +37,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
     @Import(name="profilePropertyName")
       private final @Nullable String profilePropertyName;
 
-    public Optional<String> getProfilePropertyName() {
+    public Optional<String> profilePropertyName() {
         return this.profilePropertyName == null ? Optional.empty() : Optional.ofNullable(this.profilePropertyName);
     }
 
@@ -48,7 +48,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
     @Import(name="rank")
       private final @Nullable Integer rank;
 
-    public Optional<Integer> getRank() {
+    public Optional<Integer> rank() {
         return this.rank == null ? Optional.empty() : Optional.ofNullable(this.rank);
     }
 
@@ -59,7 +59,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -70,7 +70,7 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

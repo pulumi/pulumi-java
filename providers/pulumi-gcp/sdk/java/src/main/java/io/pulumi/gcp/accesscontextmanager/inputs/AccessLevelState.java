@@ -25,7 +25,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="basic")
       private final @Nullable Output<AccessLevelBasicGetArgs> basic;
 
-    public Output<AccessLevelBasicGetArgs> getBasic() {
+    public Output<AccessLevelBasicGetArgs> basic() {
         return this.basic == null ? Codegen.empty() : this.basic;
     }
 
@@ -38,7 +38,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<AccessLevelCustomGetArgs> custom;
 
-    public Output<AccessLevelCustomGetArgs> getCustom() {
+    public Output<AccessLevelCustomGetArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -49,7 +49,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -74,7 +74,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -85,7 +85,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

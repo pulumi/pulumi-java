@@ -28,7 +28,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="committedStorageMb")
       private final @Nullable Output<String> committedStorageMb;
 
-    public Output<String> getCommittedStorageMb() {
+    public Output<String> committedStorageMb() {
         return this.committedStorageMb == null ? Codegen.empty() : this.committedStorageMb;
     }
 
@@ -39,7 +39,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
+    public Output<Integer> cpuCount() {
         return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
@@ -50,7 +50,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="datacenterDescription")
       private final @Nullable Output<String> datacenterDescription;
 
-    public Output<String> getDatacenterDescription() {
+    public Output<String> datacenterDescription() {
         return this.datacenterDescription == null ? Codegen.empty() : this.datacenterDescription;
     }
 
@@ -61,7 +61,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="datacenterId")
       private final @Nullable Output<String> datacenterId;
 
-    public Output<String> getDatacenterId() {
+    public Output<String> datacenterId() {
         return this.datacenterId == null ? Codegen.empty() : this.datacenterId;
     }
 
@@ -72,7 +72,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
 
-    public Output<Integer> getDiskCount() {
+    public Output<Integer> diskCount() {
         return this.diskCount == null ? Codegen.empty() : this.diskCount;
     }
 
@@ -83,7 +83,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -94,7 +94,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="guestDescription")
       private final @Nullable Output<String> guestDescription;
 
-    public Output<String> getGuestDescription() {
+    public Output<String> guestDescription() {
         return this.guestDescription == null ? Codegen.empty() : this.guestDescription;
     }
 
@@ -105,7 +105,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="memoryMb")
       private final @Nullable Output<Integer> memoryMb;
 
-    public Output<Integer> getMemoryMb() {
+    public Output<Integer> memoryMb() {
         return this.memoryMb == null ? Codegen.empty() : this.memoryMb;
     }
 
@@ -116,7 +116,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="powerState")
       private final @Nullable Output<VmwareVmDetailsPowerState> powerState;
 
-    public Output<VmwareVmDetailsPowerState> getPowerState() {
+    public Output<VmwareVmDetailsPowerState> powerState() {
         return this.powerState == null ? Codegen.empty() : this.powerState;
     }
 
@@ -127,7 +127,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid == null ? Codegen.empty() : this.uuid;
     }
 
@@ -138,7 +138,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
-    public Output<String> getVmId() {
+    public Output<String> vmId() {
         return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 

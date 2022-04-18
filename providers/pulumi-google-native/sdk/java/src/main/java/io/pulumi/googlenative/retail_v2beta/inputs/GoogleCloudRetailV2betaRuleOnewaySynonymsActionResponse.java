@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
     @Import(name="onewayTerms", required=true)
       private final List<String> onewayTerms;
 
-    public List<String> getOnewayTerms() {
+    public List<String> onewayTerms() {
         return this.onewayTerms;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
     @Import(name="queryTerms", required=true)
       private final List<String> queryTerms;
 
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 

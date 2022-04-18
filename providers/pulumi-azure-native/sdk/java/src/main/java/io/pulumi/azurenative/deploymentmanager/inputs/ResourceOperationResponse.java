@@ -25,7 +25,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="operationId", required=true)
       private final String operationId;
 
-    public String getOperationId() {
+    public String operationId() {
         return this.operationId;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceName")
       private final @Nullable String resourceName;
 
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
@@ -58,7 +58,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceType")
       private final @Nullable String resourceType;
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
@@ -69,7 +69,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 
@@ -80,7 +80,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

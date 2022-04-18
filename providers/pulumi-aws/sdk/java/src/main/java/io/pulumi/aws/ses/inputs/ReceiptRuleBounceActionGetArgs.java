@@ -23,7 +23,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="sender", required=true)
       private final Output<String> sender;
 
-    public Output<String> getSender() {
+    public Output<String> sender() {
         return this.sender;
     }
 
@@ -56,7 +56,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="smtpReplyCode", required=true)
       private final Output<String> smtpReplyCode;
 
-    public Output<String> getSmtpReplyCode() {
+    public Output<String> smtpReplyCode() {
         return this.smtpReplyCode;
     }
 
@@ -67,7 +67,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
@@ -78,7 +78,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

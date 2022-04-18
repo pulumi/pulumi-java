@@ -27,7 +27,7 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mysqlDatabases")
       private final @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
-    public Output<List<MysqlDatabaseArgs>> getMysqlDatabases() {
+    public Output<List<MysqlDatabaseArgs>> mysqlDatabases() {
         return this.mysqlDatabases == null ? Codegen.empty() : this.mysqlDatabases;
     }
 

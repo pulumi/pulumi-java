@@ -41,7 +41,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The domain's ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The service endpoint for updating documents in a search domain.
      * 
      */
-    public Output<String> getDocumentServiceEndpoint() {
+    public Output<String> documentServiceEndpoint() {
         return this.documentServiceEndpoint;
     }
     /**
@@ -69,7 +69,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return An internally generated unique identifier for the domain.
      * 
      */
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
     /**
@@ -83,7 +83,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Domain endpoint options. Documented below.
      * 
      */
-    public Output<DomainEndpointOptions> getEndpointOptions() {
+    public Output<DomainEndpointOptions> endpointOptions() {
         return this.endpointOptions;
     }
     /**
@@ -97,7 +97,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The index fields for documents added to the domain. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<DomainIndexField>> getIndexFields() {
+    public Output</* @Nullable */ List<DomainIndexField>> indexFields() {
         return this.indexFields;
     }
     /**
@@ -111,7 +111,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
      * 
      */
-    public Output<Boolean> getMultiAz() {
+    public Output<Boolean> multiAz() {
         return this.multiAz;
     }
     /**
@@ -125,7 +125,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -139,7 +139,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Domain scaling parameters. Documented below.
      * 
      */
-    public Output<DomainScalingParameters> getScalingParameters() {
+    public Output<DomainScalingParameters> scalingParameters() {
         return this.scalingParameters;
     }
     /**
@@ -153,7 +153,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The service endpoint for requesting search results from a search domain.
      * 
      */
-    public Output<String> getSearchServiceEndpoint() {
+    public Output<String> searchServiceEndpoint() {
         return this.searchServiceEndpoint;
     }
 

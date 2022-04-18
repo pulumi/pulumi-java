@@ -23,7 +23,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
-    public Output<String> getCookieBehavior() {
+    public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
@@ -34,7 +34,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     @Import(name="cookies")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> getCookies() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies() {
         return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 

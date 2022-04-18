@@ -19,14 +19,14 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     @Import(name="sSEEnabled", required=true)
       private final Output<Boolean> sSEEnabled;
 
-    public Output<Boolean> getSSEEnabled() {
+    public Output<Boolean> sSEEnabled() {
         return this.sSEEnabled;
     }
 
     @Import(name="sSEType")
       private final @Nullable Output<String> sSEType;
 
-    public Output<String> getSSEType() {
+    public Output<String> sSEType() {
         return this.sSEType == null ? Codegen.empty() : this.sSEType;
     }
 

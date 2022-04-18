@@ -21,28 +21,28 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     @Import(name="aggregateKeyType", required=true)
       private final Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
 
-    public Output<WebACLRateBasedStatementAggregateKeyType> getAggregateKeyType() {
+    public Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
+    public Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig() {
         return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
     }
 
     @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit;
     }
 
     @Import(name="scopeDownStatement")
       private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
-    public Output<WebACLStatementArgs> getScopeDownStatement() {
+    public Output<WebACLStatementArgs> scopeDownStatement() {
         return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 

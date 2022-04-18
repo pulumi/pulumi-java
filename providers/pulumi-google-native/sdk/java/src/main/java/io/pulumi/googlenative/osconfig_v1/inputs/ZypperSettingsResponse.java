@@ -25,7 +25,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="categories", required=true)
       private final List<String> categories;
 
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
 
@@ -36,7 +36,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="excludes", required=true)
       private final List<String> excludes;
 
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes;
     }
 
@@ -47,7 +47,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="exclusivePatches", required=true)
       private final List<String> exclusivePatches;
 
-    public List<String> getExclusivePatches() {
+    public List<String> exclusivePatches() {
         return this.exclusivePatches;
     }
 
@@ -58,7 +58,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="severities", required=true)
       private final List<String> severities;
 
-    public List<String> getSeverities() {
+    public List<String> severities() {
         return this.severities;
     }
 
@@ -69,7 +69,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="withOptional", required=true)
       private final Boolean withOptional;
 
-    public Boolean getWithOptional() {
+    public Boolean withOptional() {
         return this.withOptional;
     }
 
@@ -80,7 +80,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="withUpdate", required=true)
       private final Boolean withUpdate;
 
-    public Boolean getWithUpdate() {
+    public Boolean withUpdate() {
         return this.withUpdate;
     }
 

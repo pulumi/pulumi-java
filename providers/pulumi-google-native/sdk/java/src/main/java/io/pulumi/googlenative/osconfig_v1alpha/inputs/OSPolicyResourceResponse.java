@@ -26,7 +26,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="exec", required=true)
       private final OSPolicyResourceExecResourceResponse exec;
 
-    public OSPolicyResourceExecResourceResponse getExec() {
+    public OSPolicyResourceExecResourceResponse exec() {
         return this.exec;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="file", required=true)
       private final OSPolicyResourceFileResourceResponse file;
 
-    public OSPolicyResourceFileResourceResponse getFile() {
+    public OSPolicyResourceFileResourceResponse file() {
         return this.file;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="pkg", required=true)
       private final OSPolicyResourcePackageResourceResponse pkg;
 
-    public OSPolicyResourcePackageResourceResponse getPkg() {
+    public OSPolicyResourcePackageResourceResponse pkg() {
         return this.pkg;
     }
 
@@ -59,7 +59,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="repository", required=true)
       private final OSPolicyResourceRepositoryResourceResponse repository;
 
-    public OSPolicyResourceRepositoryResourceResponse getRepository() {
+    public OSPolicyResourceRepositoryResourceResponse repository() {
         return this.repository;
     }
 

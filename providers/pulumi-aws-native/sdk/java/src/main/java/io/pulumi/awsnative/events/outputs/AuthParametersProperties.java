@@ -31,16 +31,16 @@ public final class AuthParametersProperties {
         this.oAuthParameters = oAuthParameters;
     }
 
-    public Optional<ConnectionApiKeyAuthParameters> getApiKeyAuthParameters() {
+    public Optional<ConnectionApiKeyAuthParameters> apiKeyAuthParameters() {
         return Optional.ofNullable(this.apiKeyAuthParameters);
     }
-    public Optional<ConnectionBasicAuthParameters> getBasicAuthParameters() {
+    public Optional<ConnectionBasicAuthParameters> basicAuthParameters() {
         return Optional.ofNullable(this.basicAuthParameters);
     }
-    public Optional<ConnectionHttpParameters> getInvocationHttpParameters() {
+    public Optional<ConnectionHttpParameters> invocationHttpParameters() {
         return Optional.ofNullable(this.invocationHttpParameters);
     }
-    public Optional<ConnectionOAuthParameters> getOAuthParameters() {
+    public Optional<ConnectionOAuthParameters> oAuthParameters() {
         return Optional.ofNullable(this.oAuthParameters);
     }
 

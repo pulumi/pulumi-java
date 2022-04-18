@@ -99,73 +99,73 @@ public final class GetMediaServiceResult {
      * The account encryption properties.
      * 
     */
-    public Optional<AccountEncryptionResponse> getEncryption() {
+    public Optional<AccountEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Managed Identity for the Media Services account.
      * 
     */
-    public Optional<MediaServiceIdentityResponse> getIdentity() {
+    public Optional<MediaServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The Media Services account ID.
      * 
     */
-    public String getMediaServiceId() {
+    public String mediaServiceId() {
         return this.mediaServiceId;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The storage accounts for this resource.
      * 
     */
-    public List<StorageAccountResponse> getStorageAccounts() {
+    public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
-    public Optional<String> getStorageAuthentication() {
+    public Optional<String> storageAuthentication() {
         return Optional.ofNullable(this.storageAuthentication);
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

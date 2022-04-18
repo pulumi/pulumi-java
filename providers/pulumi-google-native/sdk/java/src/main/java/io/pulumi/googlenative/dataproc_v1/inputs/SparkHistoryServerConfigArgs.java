@@ -26,7 +26,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     @Import(name="dataprocCluster")
       private final @Nullable Output<String> dataprocCluster;
 
-    public Output<String> getDataprocCluster() {
+    public Output<String> dataprocCluster() {
         return this.dataprocCluster == null ? Codegen.empty() : this.dataprocCluster;
     }
 

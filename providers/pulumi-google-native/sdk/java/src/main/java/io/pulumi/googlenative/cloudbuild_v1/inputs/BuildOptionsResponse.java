@@ -27,7 +27,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -38,7 +38,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dynamicSubstitutions", required=true)
       private final Boolean dynamicSubstitutions;
 
-    public Boolean getDynamicSubstitutions() {
+    public Boolean dynamicSubstitutions() {
         return this.dynamicSubstitutions;
     }
 
@@ -49,7 +49,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="env", required=true)
       private final List<String> env;
 
-    public List<String> getEnv() {
+    public List<String> env() {
         return this.env;
     }
 
@@ -60,7 +60,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logStreamingOption", required=true)
       private final String logStreamingOption;
 
-    public String getLogStreamingOption() {
+    public String logStreamingOption() {
         return this.logStreamingOption;
     }
 
@@ -71,7 +71,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logging", required=true)
       private final String logging;
 
-    public String getLogging() {
+    public String logging() {
         return this.logging;
     }
 
@@ -82,7 +82,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -93,7 +93,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pool", required=true)
       private final PoolOptionResponse pool;
 
-    public PoolOptionResponse getPool() {
+    public PoolOptionResponse pool() {
         return this.pool;
     }
 
@@ -104,7 +104,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestedVerifyOption", required=true)
       private final String requestedVerifyOption;
 
-    public String getRequestedVerifyOption() {
+    public String requestedVerifyOption() {
         return this.requestedVerifyOption;
     }
 
@@ -115,7 +115,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secretEnv", required=true)
       private final List<String> secretEnv;
 
-    public List<String> getSecretEnv() {
+    public List<String> secretEnv() {
         return this.secretEnv;
     }
 
@@ -126,7 +126,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceProvenanceHash", required=true)
       private final List<String> sourceProvenanceHash;
 
-    public List<String> getSourceProvenanceHash() {
+    public List<String> sourceProvenanceHash() {
         return this.sourceProvenanceHash;
     }
 
@@ -137,7 +137,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="substitutionOption", required=true)
       private final String substitutionOption;
 
-    public String getSubstitutionOption() {
+    public String substitutionOption() {
         return this.substitutionOption;
     }
 
@@ -148,7 +148,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;
 
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 
@@ -159,7 +159,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workerPool", required=true)
       private final String workerPool;
 
-    public String getWorkerPool() {
+    public String workerPool() {
         return this.workerPool;
     }
 

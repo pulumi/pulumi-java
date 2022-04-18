@@ -59,28 +59,28 @@ public final class MultiplePipelineTriggerResponse {
      * List of tags that can be used for describing the trigger.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Pipelines that need to be started.
      * 
     */
-    public List<TriggerPipelineReferenceResponse> getPipelines() {
+    public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
     */
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
     /**
@@ -88,7 +88,7 @@ public final class MultiplePipelineTriggerResponse {
      * Expected value is 'MultiplePipelineTrigger'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -42,7 +42,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return The registry ID the scanning configuration applies to.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -56,7 +56,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    public Output</* @Nullable */ List<RegistryScanningConfigurationRule>> getRules() {
+    public Output</* @Nullable */ List<RegistryScanningConfigurationRule>> rules() {
         return this.rules;
     }
     /**
@@ -70,7 +70,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return the scanning type to set for the registry. Can be either `ENHANCED` or `BASIC`.
      * 
      */
-    public Output<String> getScanType() {
+    public Output<String> scanType() {
         return this.scanType;
     }
 

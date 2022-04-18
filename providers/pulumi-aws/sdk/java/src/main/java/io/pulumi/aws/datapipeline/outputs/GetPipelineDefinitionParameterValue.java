@@ -32,14 +32,14 @@ public final class GetPipelineDefinitionParameterValue {
      * ID of the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Field value, expressed as a String.
      * 
     */
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

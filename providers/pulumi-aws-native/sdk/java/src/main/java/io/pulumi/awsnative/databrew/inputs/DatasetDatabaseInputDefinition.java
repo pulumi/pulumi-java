@@ -22,7 +22,7 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
     @Import(name="databaseTableName")
       private final @Nullable String databaseTableName;
 
-    public Optional<String> getDatabaseTableName() {
+    public Optional<String> databaseTableName() {
         return this.databaseTableName == null ? Optional.empty() : Optional.ofNullable(this.databaseTableName);
     }
 
@@ -33,7 +33,7 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
     @Import(name="glueConnectionName", required=true)
       private final String glueConnectionName;
 
-    public String getGlueConnectionName() {
+    public String glueConnectionName() {
         return this.glueConnectionName;
     }
 
@@ -44,14 +44,14 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
     @Import(name="queryString")
       private final @Nullable String queryString;
 
-    public Optional<String> getQueryString() {
+    public Optional<String> queryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
     @Import(name="tempDirectory")
       private final @Nullable DatasetS3Location tempDirectory;
 
-    public Optional<DatasetS3Location> getTempDirectory() {
+    public Optional<DatasetS3Location> tempDirectory() {
         return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
     }
 

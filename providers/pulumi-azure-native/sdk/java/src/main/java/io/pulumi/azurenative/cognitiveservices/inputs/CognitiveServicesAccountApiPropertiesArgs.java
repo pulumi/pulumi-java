@@ -27,7 +27,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="aadClientId")
       private final @Nullable Output<String> aadClientId;
 
-    public Output<String> getAadClientId() {
+    public Output<String> aadClientId() {
         return this.aadClientId == null ? Codegen.empty() : this.aadClientId;
     }
 
@@ -38,7 +38,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="aadTenantId")
       private final @Nullable Output<String> aadTenantId;
 
-    public Output<String> getAadTenantId() {
+    public Output<String> aadTenantId() {
         return this.aadTenantId == null ? Codegen.empty() : this.aadTenantId;
     }
 
@@ -49,7 +49,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubConnectionString")
       private final @Nullable Output<String> eventHubConnectionString;
 
-    public Output<String> getEventHubConnectionString() {
+    public Output<String> eventHubConnectionString() {
         return this.eventHubConnectionString == null ? Codegen.empty() : this.eventHubConnectionString;
     }
 
@@ -60,7 +60,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaAzureSearchEndpointId")
       private final @Nullable Output<String> qnaAzureSearchEndpointId;
 
-    public Output<String> getQnaAzureSearchEndpointId() {
+    public Output<String> qnaAzureSearchEndpointId() {
         return this.qnaAzureSearchEndpointId == null ? Codegen.empty() : this.qnaAzureSearchEndpointId;
     }
 
@@ -71,7 +71,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaAzureSearchEndpointKey")
       private final @Nullable Output<String> qnaAzureSearchEndpointKey;
 
-    public Output<String> getQnaAzureSearchEndpointKey() {
+    public Output<String> qnaAzureSearchEndpointKey() {
         return this.qnaAzureSearchEndpointKey == null ? Codegen.empty() : this.qnaAzureSearchEndpointKey;
     }
 
@@ -82,7 +82,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaRuntimeEndpoint")
       private final @Nullable Output<String> qnaRuntimeEndpoint;
 
-    public Output<String> getQnaRuntimeEndpoint() {
+    public Output<String> qnaRuntimeEndpoint() {
         return this.qnaRuntimeEndpoint == null ? Codegen.empty() : this.qnaRuntimeEndpoint;
     }
 
@@ -93,7 +93,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="statisticsEnabled")
       private final @Nullable Output<Boolean> statisticsEnabled;
 
-    public Output<Boolean> getStatisticsEnabled() {
+    public Output<Boolean> statisticsEnabled() {
         return this.statisticsEnabled == null ? Codegen.empty() : this.statisticsEnabled;
     }
 
@@ -104,7 +104,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="storageAccountConnectionString")
       private final @Nullable Output<String> storageAccountConnectionString;
 
-    public Output<String> getStorageAccountConnectionString() {
+    public Output<String> storageAccountConnectionString() {
         return this.storageAccountConnectionString == null ? Codegen.empty() : this.storageAccountConnectionString;
     }
 
@@ -115,7 +115,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="superUser")
       private final @Nullable Output<String> superUser;
 
-    public Output<String> getSuperUser() {
+    public Output<String> superUser() {
         return this.superUser == null ? Codegen.empty() : this.superUser;
     }
 
@@ -126,7 +126,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="websiteName")
       private final @Nullable Output<String> websiteName;
 
-    public Output<String> getWebsiteName() {
+    public Output<String> websiteName() {
         return this.websiteName == null ? Codegen.empty() : this.websiteName;
     }
 

@@ -98,77 +98,77 @@ public final class GetEncryptionProtectorResult {
      * Key auto rotation opt-in flag. Either true or false.
      * 
     */
-    public Optional<Boolean> getAutoRotationEnabled() {
+    public Optional<Boolean> autoRotationEnabled() {
         return Optional.ofNullable(this.autoRotationEnabled);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the server key.
      * 
     */
-    public Optional<String> getServerKeyName() {
+    public Optional<String> serverKeyName() {
         return Optional.ofNullable(this.serverKeyName);
     }
     /**
      * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
      * 
     */
-    public String getServerKeyType() {
+    public String serverKeyType() {
         return this.serverKeyType;
     }
     /**
      * Subregion of the encryption protector.
      * 
     */
-    public String getSubregion() {
+    public String subregion() {
         return this.subregion;
     }
     /**
      * Thumbprint of the server key.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The URI of the server key.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

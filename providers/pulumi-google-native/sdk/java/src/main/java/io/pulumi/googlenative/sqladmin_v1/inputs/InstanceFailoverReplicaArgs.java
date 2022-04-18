@@ -27,7 +27,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     @Import(name="available")
       private final @Nullable Output<Boolean> available;
 
-    public Output<Boolean> getAvailable() {
+    public Output<Boolean> available() {
         return this.available == null ? Codegen.empty() : this.available;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

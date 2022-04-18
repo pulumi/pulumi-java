@@ -23,7 +23,7 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
     @Import(name="egressSetting", required=true)
       private final String egressSetting;
 
-    public String getEgressSetting() {
+    public String egressSetting() {
         return this.egressSetting;
     }
 
@@ -34,7 +34,7 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

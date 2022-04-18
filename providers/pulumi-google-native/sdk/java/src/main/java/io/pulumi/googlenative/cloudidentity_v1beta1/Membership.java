@@ -33,7 +33,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The time when the `Membership` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
      * 
      */
-    public Output<EntityKeyResponse> getMemberKey() {
+    public Output<EntityKeyResponse> memberKey() {
         return this.memberKey;
     }
     /**
@@ -61,7 +61,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
      * 
      */
-    public Output<EntityKeyResponse> getPreferredMemberKey() {
+    public Output<EntityKeyResponse> preferredMemberKey() {
         return this.preferredMemberKey;
     }
     /**
@@ -89,7 +89,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
      * 
      */
-    public Output<List<MembershipRoleResponse>> getRoles() {
+    public Output<List<MembershipRoleResponse>> roles() {
         return this.roles;
     }
     /**
@@ -103,7 +103,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The type of the membership.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -117,7 +117,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The time when the `Membership` was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -19,21 +19,21 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
+    public Output<Integer> shardCount() {
         return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
     @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
-    public Output<String> getTablePrefix() {
+    public Output<String> tablePrefix() {
         return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 

@@ -45,21 +45,21 @@ public final class DashboardLensResponse {
      * The dashboard len's metadata.
      * 
     */
-    public Map<String,Object> getMetadata() {
+    public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The lens order.
      * 
     */
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
     /**
      * The dashboard parts.
      * 
     */
-    public List<DashboardPartsResponse> getParts() {
+    public List<DashboardPartsResponse> parts() {
         return this.parts;
     }
 

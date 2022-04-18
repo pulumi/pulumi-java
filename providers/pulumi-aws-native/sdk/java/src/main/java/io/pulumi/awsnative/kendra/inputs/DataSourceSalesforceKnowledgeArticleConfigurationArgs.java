@@ -21,21 +21,21 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
     @Import(name="customKnowledgeArticleTypeConfigurations")
       private final @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
 
-    public Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> getCustomKnowledgeArticleTypeConfigurations() {
+    public Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? Codegen.empty() : this.customKnowledgeArticleTypeConfigurations;
     }
 
     @Import(name="includedStates", required=true)
       private final Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates;
 
-    public Output<List<DataSourceSalesforceKnowledgeArticleState>> getIncludedStates() {
+    public Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates() {
         return this.includedStates;
     }
 
     @Import(name="standardKnowledgeArticleTypeConfiguration")
       private final @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
 
-    public Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> getStandardKnowledgeArticleTypeConfiguration() {
+    public Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration() {
         return this.standardKnowledgeArticleTypeConfiguration == null ? Codegen.empty() : this.standardKnowledgeArticleTypeConfiguration;
     }
 

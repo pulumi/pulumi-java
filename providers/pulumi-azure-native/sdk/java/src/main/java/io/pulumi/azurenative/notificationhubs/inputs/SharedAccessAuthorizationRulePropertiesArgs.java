@@ -27,7 +27,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
     @Import(name="rights")
       private final @Nullable Output<List<AccessRights>> rights;
 
-    public Output<List<AccessRights>> getRights() {
+    public Output<List<AccessRights>> rights() {
         return this.rights == null ? Codegen.empty() : this.rights;
     }
 

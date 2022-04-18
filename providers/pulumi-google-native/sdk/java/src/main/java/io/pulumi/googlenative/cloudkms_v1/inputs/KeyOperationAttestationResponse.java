@@ -24,7 +24,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
     @Import(name="certChains", required=true)
       private final CertificateChainsResponse certChains;
 
-    public CertificateChainsResponse getCertChains() {
+    public CertificateChainsResponse certChains() {
         return this.certChains;
     }
 
@@ -35,7 +35,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -46,7 +46,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
     @Import(name="format", required=true)
       private final String format;
 
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 

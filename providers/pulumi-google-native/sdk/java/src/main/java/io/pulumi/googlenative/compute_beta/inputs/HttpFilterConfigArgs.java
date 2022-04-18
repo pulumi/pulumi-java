@@ -26,7 +26,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -37,7 +37,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configTypeUrl")
       private final @Nullable Output<String> configTypeUrl;
 
-    public Output<String> getConfigTypeUrl() {
+    public Output<String> configTypeUrl() {
         return this.configTypeUrl == null ? Codegen.empty() : this.configTypeUrl;
     }
 
@@ -48,7 +48,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
-    public Output<String> getFilterName() {
+    public Output<String> filterName() {
         return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 

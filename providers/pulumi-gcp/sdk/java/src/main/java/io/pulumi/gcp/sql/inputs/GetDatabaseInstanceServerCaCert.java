@@ -15,35 +15,35 @@ public final class GetDatabaseInstanceServerCaCert extends io.pulumi.resources.I
     @Import(name="cert", required=true)
       private final String cert;
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
 
     @Import(name="commonName", required=true)
       private final String commonName;
 
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
 
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

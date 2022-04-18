@@ -34,14 +34,14 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
      * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
      * 
     */
-    public Optional<Integer> getPercentage() {
+    public Optional<Integer> percentage() {
         return Optional.ofNullable(this.percentage);
     }
 

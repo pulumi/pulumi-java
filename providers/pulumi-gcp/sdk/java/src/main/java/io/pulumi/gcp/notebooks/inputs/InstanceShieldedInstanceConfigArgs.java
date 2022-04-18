@@ -25,7 +25,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
     @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
-    public Output<Boolean> getEnableIntegrityMonitoring() {
+    public Output<Boolean> enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
     @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
 
-    public Output<Boolean> getEnableSecureBoot() {
+    public Output<Boolean> enableSecureBoot() {
         return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
     }
 
@@ -51,7 +51,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
     @Import(name="enableVtpm")
       private final @Nullable Output<Boolean> enableVtpm;
 
-    public Output<Boolean> getEnableVtpm() {
+    public Output<Boolean> enableVtpm() {
         return this.enableVtpm == null ? Codegen.empty() : this.enableVtpm;
     }
 

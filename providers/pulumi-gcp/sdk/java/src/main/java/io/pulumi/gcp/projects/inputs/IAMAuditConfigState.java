@@ -24,7 +24,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     @Import(name="auditLogConfigs")
       private final @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Output<List<IAMAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
+    public Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs() {
         return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
@@ -35,7 +35,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -47,7 +47,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

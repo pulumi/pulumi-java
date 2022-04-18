@@ -26,7 +26,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="x")
       private final @Nullable Output<Integer> x;
 
-    public Output<Integer> getX() {
+    public Output<Integer> x() {
         return this.x == null ? Codegen.empty() : this.x;
     }
 
@@ -37,7 +37,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="y")
       private final @Nullable Output<Integer> y;
 
-    public Output<Integer> getY() {
+    public Output<Integer> y() {
         return this.y == null ? Codegen.empty() : this.y;
     }
 

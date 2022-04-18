@@ -26,7 +26,7 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
      * The ID of the Capacity Reservation to target.
      * 
     */
-    public Optional<String> getCapacityReservationId() {
+    public Optional<String> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }
 

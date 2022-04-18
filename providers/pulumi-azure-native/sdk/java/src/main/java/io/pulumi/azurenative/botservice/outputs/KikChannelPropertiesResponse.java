@@ -49,28 +49,28 @@ public final class KikChannelPropertiesResponse {
      * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public Optional<String> getApiKey() {
+    public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this channel is validated for the bot
      * 
     */
-    public Optional<Boolean> getIsValidated() {
+    public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
     /**
      * The Kik user name
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

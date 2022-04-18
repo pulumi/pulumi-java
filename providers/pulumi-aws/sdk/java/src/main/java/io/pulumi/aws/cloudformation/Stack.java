@@ -46,7 +46,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    public Output</* @Nullable */ List<String>> getCapabilities() {
+    public Output</* @Nullable */ List<String>> capabilities() {
         return this.capabilities;
     }
     /**
@@ -62,7 +62,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts with `on_failure`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableRollback() {
+    public Output</* @Nullable */ Boolean> disableRollback() {
         return this.disableRollback;
     }
     /**
@@ -76,7 +76,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
      * 
      */
-    public Output</* @Nullable */ String> getIamRoleArn() {
+    public Output</* @Nullable */ String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -90,7 +90,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Stack name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A list of SNS topic ARNs to publish stack related events.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNotificationArns() {
+    public Output</* @Nullable */ List<String>> notificationArns() {
         return this.notificationArns;
     }
     /**
@@ -120,7 +120,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
      * 
      */
-    public Output</* @Nullable */ String> getOnFailure() {
+    public Output</* @Nullable */ String> onFailure() {
         return this.onFailure;
     }
     /**
@@ -134,7 +134,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A map of outputs from the stack.
      * 
      */
-    public Output<Map<String,String>> getOutputs() {
+    public Output<Map<String,String>> outputs() {
         return this.outputs;
     }
     /**
@@ -148,7 +148,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -164,7 +164,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts w/ `policy_url`.
      * 
      */
-    public Output<String> getPolicyBody() {
+    public Output<String> policyBody() {
         return this.policyBody;
     }
     /**
@@ -180,7 +180,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts w/ `policy_body`.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyUrl() {
+    public Output</* @Nullable */ String> policyUrl() {
         return this.policyUrl;
     }
     /**
@@ -194,7 +194,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -208,7 +208,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -222,7 +222,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Structure containing the template body (max size: 51,200 bytes).
      * 
      */
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -236,7 +236,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Location of a file containing the template body (max size: 460,800 bytes).
      * 
      */
-    public Output</* @Nullable */ String> getTemplateUrl() {
+    public Output</* @Nullable */ String> templateUrl() {
         return this.templateUrl;
     }
     /**
@@ -250,7 +250,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutInMinutes() {
+    public Output</* @Nullable */ Integer> timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 

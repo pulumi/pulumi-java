@@ -23,7 +23,7 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceId")
       private final @Nullable Output<Integer> resourceId;
 
-    public Output<Integer> getResourceId() {
+    public Output<Integer> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -34,7 +34,7 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

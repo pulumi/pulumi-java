@@ -28,7 +28,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="backendAddressPools")
       private final @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
 
-    public List<LBBackendAddressPoolResourceSettingsResponse> getBackendAddressPools() {
+    public List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
 
@@ -39,7 +39,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="frontendIPConfigurations")
       private final @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
 
-    public List<LBFrontendIPConfigurationResourceSettingsResponse> getFrontendIPConfigurations() {
+    public List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
 
@@ -51,7 +51,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -62,7 +62,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="sku")
       private final @Nullable String sku;
 
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -73,7 +73,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -85,7 +85,7 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
     @Import(name="zones")
       private final @Nullable String zones;
 
-    public Optional<String> getZones() {
+    public Optional<String> zones() {
         return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);
     }
 

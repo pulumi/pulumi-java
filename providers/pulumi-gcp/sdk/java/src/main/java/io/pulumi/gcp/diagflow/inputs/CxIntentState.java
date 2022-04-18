@@ -28,7 +28,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
@@ -64,7 +64,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -77,7 +77,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -89,7 +89,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<CxIntentParameterGetArgs>> parameters;
 
-    public Output<List<CxIntentParameterGetArgs>> getParameters() {
+    public Output<List<CxIntentParameterGetArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -113,7 +113,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -126,7 +126,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -138,7 +138,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="trainingPhrases")
       private final @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
 
-    public Output<List<CxIntentTrainingPhraseGetArgs>> getTrainingPhrases() {
+    public Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases() {
         return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 

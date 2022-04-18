@@ -70,49 +70,49 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
      * 
     */
-    public String getContainerSpecGcsPath() {
+    public String containerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
     /**
      * The runtime environment for the Flex Template job.
      * 
     */
-    public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse getEnvironment() {
+    public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment() {
         return this.environment;
     }
     /**
      * The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
      * 
     */
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
     /**
      * Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
      * 
     */
-    public Map<String,String> getLaunchOptions() {
+    public Map<String,String> launchOptions() {
         return this.launchOptions;
     }
     /**
      * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
      * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
      * 
     */
-    public Map<String,String> getTransformNameMappings() {
+    public Map<String,String> transformNameMappings() {
         return this.transformNameMappings;
     }
     /**
      * Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
      * 
     */
-    public Boolean getUpdate() {
+    public Boolean update() {
         return this.update;
     }
 

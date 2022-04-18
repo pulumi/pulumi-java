@@ -45,7 +45,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return An array of references to IP addresses defined in network interfaces.
      * 
      */
-    public Output<List<NetworkInterfaceIPConfigurationResponse>> getBackendIPConfigurations() {
+    public Output<List<NetworkInterfaceIPConfigurationResponse>> backendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
@@ -59,7 +59,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -73,7 +73,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return An array of backend addresses.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> getLoadBalancerBackendAddresses() {
+    public Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses;
     }
     /**
@@ -87,7 +87,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return An array of references to load balancing rules that use this backend address pool.
      * 
      */
-    public Output<List<SubResourceResponse>> getLoadBalancingRules() {
+    public Output<List<SubResourceResponse>> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
@@ -101,7 +101,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return The location of the backend address pool.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return A reference to an outbound rule that uses this backend address pool.
      * 
      */
-    public Output<SubResourceResponse> getOutboundRule() {
+    public Output<SubResourceResponse> outboundRule() {
         return this.outboundRule;
     }
     /**
@@ -143,7 +143,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return An array of references to outbound rules that use this backend address pool.
      * 
      */
-    public Output<List<SubResourceResponse>> getOutboundRules() {
+    public Output<List<SubResourceResponse>> outboundRules() {
         return this.outboundRules;
     }
     /**
@@ -157,7 +157,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return The provisioning state of the backend address pool resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -171,7 +171,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

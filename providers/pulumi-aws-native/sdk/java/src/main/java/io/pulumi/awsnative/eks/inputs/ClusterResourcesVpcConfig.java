@@ -27,7 +27,7 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
     @Import(name="endpointPrivateAccess")
       private final @Nullable Boolean endpointPrivateAccess;
 
-    public Optional<Boolean> getEndpointPrivateAccess() {
+    public Optional<Boolean> endpointPrivateAccess() {
         return this.endpointPrivateAccess == null ? Optional.empty() : Optional.ofNullable(this.endpointPrivateAccess);
     }
 
@@ -38,7 +38,7 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
     @Import(name="endpointPublicAccess")
       private final @Nullable Boolean endpointPublicAccess;
 
-    public Optional<Boolean> getEndpointPublicAccess() {
+    public Optional<Boolean> endpointPublicAccess() {
         return this.endpointPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.endpointPublicAccess);
     }
 
@@ -49,7 +49,7 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
     @Import(name="publicAccessCidrs")
       private final @Nullable List<String> publicAccessCidrs;
 
-    public List<String> getPublicAccessCidrs() {
+    public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs == null ? List.of() : this.publicAccessCidrs;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
     @Import(name="securityGroupIds")
       private final @Nullable List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
@@ -71,7 +71,7 @@ public final class ClusterResourcesVpcConfig extends io.pulumi.resources.InvokeA
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 

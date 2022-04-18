@@ -23,7 +23,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -34,7 +34,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -45,7 +45,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 

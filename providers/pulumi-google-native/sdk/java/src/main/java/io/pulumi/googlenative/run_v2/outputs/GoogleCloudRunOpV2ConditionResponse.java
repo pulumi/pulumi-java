@@ -88,70 +88,70 @@ public final class GoogleCloudRunOpV2ConditionResponse {
      * A reason for the domain mapping condition.
      * 
     */
-    public String getDomainMappingReason() {
+    public String domainMappingReason() {
         return this.domainMappingReason;
     }
     /**
      * A reason for the execution condition.
      * 
     */
-    public String getExecutionReason() {
+    public String executionReason() {
         return this.executionReason;
     }
     /**
      * A reason for the internal condition.
      * 
     */
-    public String getInternalReason() {
+    public String internalReason() {
         return this.internalReason;
     }
     /**
      * Last time the condition transitioned from one status to another.
      * 
     */
-    public String getLastTransitionTime() {
+    public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
     /**
      * Human readable message indicating details about the current status.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * A common (service-level) reason for this condition.
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
     /**
      * A reason for the revision condition.
      * 
     */
-    public String getRevisionReason() {
+    public String revisionReason() {
         return this.revisionReason;
     }
     /**
      * How to interpret failures of this condition, one of Error, Warning, Info
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * State of the condition.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

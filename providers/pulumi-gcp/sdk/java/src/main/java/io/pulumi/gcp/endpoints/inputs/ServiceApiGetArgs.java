@@ -20,28 +20,28 @@ public final class ServiceApiGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methods")
       private final @Nullable Output<List<ServiceApiMethodGetArgs>> methods;
 
-    public Output<List<ServiceApiMethodGetArgs>> getMethods() {
+    public Output<List<ServiceApiMethodGetArgs>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="syntax")
       private final @Nullable Output<String> syntax;
 
-    public Output<String> getSyntax() {
+    public Output<String> syntax() {
         return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

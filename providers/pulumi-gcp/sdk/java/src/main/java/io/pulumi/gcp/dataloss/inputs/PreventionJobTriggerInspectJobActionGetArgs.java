@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobActionGetArgs extends io.pulumi
     @Import(name="saveFindings", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings;
 
-    public Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> getSaveFindings() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsGetArgs> saveFindings() {
         return this.saveFindings;
     }
 

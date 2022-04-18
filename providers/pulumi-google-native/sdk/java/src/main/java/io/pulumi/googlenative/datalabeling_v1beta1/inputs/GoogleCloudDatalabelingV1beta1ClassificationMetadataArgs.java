@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     @Import(name="isMultiLabel")
       private final @Nullable Output<Boolean> isMultiLabel;
 
-    public Output<Boolean> getIsMultiLabel() {
+    public Output<Boolean> isMultiLabel() {
         return this.isMultiLabel == null ? Codegen.empty() : this.isMultiLabel;
     }
 

@@ -19,7 +19,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="stage", required=true)
       private final String stage;
 
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
 

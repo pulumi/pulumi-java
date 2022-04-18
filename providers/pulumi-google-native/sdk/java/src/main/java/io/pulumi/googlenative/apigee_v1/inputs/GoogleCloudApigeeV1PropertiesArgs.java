@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
     @Import(name="property")
       private final @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
-    public Output<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {
+    public Output<List<GoogleCloudApigeeV1PropertyArgs>> property() {
         return this.property == null ? Codegen.empty() : this.property;
     }
 

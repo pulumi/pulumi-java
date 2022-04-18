@@ -64,7 +64,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return HTTP strong entity tag value. This is ignored if submitted.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -78,7 +78,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -92,7 +92,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Custom task properties
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -106,7 +106,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

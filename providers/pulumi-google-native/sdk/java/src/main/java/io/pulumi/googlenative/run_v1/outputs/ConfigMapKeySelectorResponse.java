@@ -48,28 +48,28 @@ public final class ConfigMapKeySelectorResponse {
      * The key to select.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
     */
-    public LocalObjectReferenceResponse getLocalObjectReference() {
+    public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
     }
     /**
      * The ConfigMap to select from.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * (Optional) Specify whether the ConfigMap or its key must be defined
      * 
     */
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 

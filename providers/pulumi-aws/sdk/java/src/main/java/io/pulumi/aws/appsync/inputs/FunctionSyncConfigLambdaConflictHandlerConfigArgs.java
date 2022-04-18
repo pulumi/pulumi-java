@@ -22,7 +22,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigArgs extends io.
     @Import(name="lambdaConflictHandlerArn")
       private final @Nullable Output<String> lambdaConflictHandlerArn;
 
-    public Output<String> getLambdaConflictHandlerArn() {
+    public Output<String> lambdaConflictHandlerArn() {
         return this.lambdaConflictHandlerArn == null ? Codegen.empty() : this.lambdaConflictHandlerArn;
     }
 

@@ -19,7 +19,7 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="typeArn", required=true)
       private final String typeArn;
 
-    public String getTypeArn() {
+    public String typeArn() {
         return this.typeArn;
     }
 

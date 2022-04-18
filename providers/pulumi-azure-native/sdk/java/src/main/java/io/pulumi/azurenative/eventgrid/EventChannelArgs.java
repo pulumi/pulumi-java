@@ -25,7 +25,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination")
       private final @Nullable Output<EventChannelDestinationArgs> destination;
 
-    public Output<EventChannelDestinationArgs> getDestination() {
+    public Output<EventChannelDestinationArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -36,7 +36,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventChannelName")
       private final @Nullable Output<String> eventChannelName;
 
-    public Output<String> getEventChannelName() {
+    public Output<String> eventChannelName() {
         return this.eventChannelName == null ? Codegen.empty() : this.eventChannelName;
     }
 
@@ -48,7 +48,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeIfNotActivatedUtc")
       private final @Nullable Output<String> expirationTimeIfNotActivatedUtc;
 
-    public Output<String> getExpirationTimeIfNotActivatedUtc() {
+    public Output<String> expirationTimeIfNotActivatedUtc() {
         return this.expirationTimeIfNotActivatedUtc == null ? Codegen.empty() : this.expirationTimeIfNotActivatedUtc;
     }
 
@@ -59,7 +59,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<EventChannelFilterArgs> filter;
 
-    public Output<EventChannelFilterArgs> getFilter() {
+    public Output<EventChannelFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -70,7 +70,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerNamespaceName", required=true)
       private final Output<String> partnerNamespaceName;
 
-    public Output<String> getPartnerNamespaceName() {
+    public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
 
@@ -82,7 +82,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerTopicFriendlyDescription")
       private final @Nullable Output<String> partnerTopicFriendlyDescription;
 
-    public Output<String> getPartnerTopicFriendlyDescription() {
+    public Output<String> partnerTopicFriendlyDescription() {
         return this.partnerTopicFriendlyDescription == null ? Codegen.empty() : this.partnerTopicFriendlyDescription;
     }
 
@@ -93,7 +93,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<EventChannelSourceArgs> source;
 
-    public Output<EventChannelSourceArgs> getSource() {
+    public Output<EventChannelSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

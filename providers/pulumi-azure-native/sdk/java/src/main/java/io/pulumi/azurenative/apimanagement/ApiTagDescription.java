@@ -42,7 +42,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Description of the Tag.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Tag name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Description of the external resources describing the tag.
      * 
      */
-    public Output</* @Nullable */ String> getExternalDocsDescription() {
+    public Output</* @Nullable */ String> externalDocsDescription() {
         return this.externalDocsDescription;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Absolute URL of external resources describing the tag.
      * 
      */
-    public Output</* @Nullable */ String> getExternalDocsUrl() {
+    public Output</* @Nullable */ String> externalDocsUrl() {
         return this.externalDocsUrl;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Identifier of the tag in the form of /tags/{tagId}
      * 
      */
-    public Output</* @Nullable */ String> getTagId() {
+    public Output</* @Nullable */ String> tagId() {
         return this.tagId;
     }
     /**
@@ -126,7 +126,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

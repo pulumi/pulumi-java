@@ -49,14 +49,14 @@ public final class MiSqlConnectionInfoResponse {
      * Resource id for Azure SQL database Managed instance
      * 
     */
-    public String getManagedInstanceResourceId() {
+    public String managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
     /**
      * Password credential.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -64,14 +64,14 @@ public final class MiSqlConnectionInfoResponse {
      * Expected value is 'MiSqlConnectionInfo'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User name
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

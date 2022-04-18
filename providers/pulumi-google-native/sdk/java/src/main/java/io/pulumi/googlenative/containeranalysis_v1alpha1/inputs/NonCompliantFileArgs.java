@@ -26,7 +26,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayCommand")
       private final @Nullable Output<String> displayCommand;
 
-    public Output<String> getDisplayCommand() {
+    public Output<String> displayCommand() {
         return this.displayCommand == null ? Codegen.empty() : this.displayCommand;
     }
 
@@ -37,7 +37,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -48,7 +48,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 

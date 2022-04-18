@@ -19,14 +19,14 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
     @Import(name="externalIpEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> getExternalIpEgressBandwidthTier() {
+    public Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier() {
         return this.externalIpEgressBandwidthTier == null ? Codegen.empty() : this.externalIpEgressBandwidthTier;
     }
 
     @Import(name="totalEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> getTotalEgressBandwidthTier() {
+    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier == null ? Codegen.empty() : this.totalEgressBandwidthTier;
     }
 

@@ -23,7 +23,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="dnsIps", required=true)
       private final Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
 
@@ -34,7 +34,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -45,7 +45,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="fileSystemAdministratorsGroup")
       private final @Nullable Output<String> fileSystemAdministratorsGroup;
 
-    public Output<String> getFileSystemAdministratorsGroup() {
+    public Output<String> fileSystemAdministratorsGroup() {
         return this.fileSystemAdministratorsGroup == null ? Codegen.empty() : this.fileSystemAdministratorsGroup;
     }
 
@@ -56,7 +56,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> getOrganizationalUnitDistinguishedName() {
+    public Output<String> organizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 
@@ -67,7 +67,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -78,7 +78,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryArgs extends io.pu
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

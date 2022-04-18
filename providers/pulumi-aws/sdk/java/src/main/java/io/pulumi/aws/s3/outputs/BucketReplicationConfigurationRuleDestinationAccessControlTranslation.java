@@ -24,7 +24,7 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
      * The override value for the owner on replicated objects. Currently only `Destination` is supported.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 

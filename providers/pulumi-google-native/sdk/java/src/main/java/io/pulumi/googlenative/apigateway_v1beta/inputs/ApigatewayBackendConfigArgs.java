@@ -26,7 +26,7 @@ public final class ApigatewayBackendConfigArgs extends io.pulumi.resources.Resou
     @Import(name="googleServiceAccount")
       private final @Nullable Output<String> googleServiceAccount;
 
-    public Output<String> getGoogleServiceAccount() {
+    public Output<String> googleServiceAccount() {
         return this.googleServiceAccount == null ? Codegen.empty() : this.googleServiceAccount;
     }
 

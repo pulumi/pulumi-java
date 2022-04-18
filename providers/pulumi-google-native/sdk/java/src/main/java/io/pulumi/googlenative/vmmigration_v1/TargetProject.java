@@ -29,7 +29,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +43,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The target project's description.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The name of the target project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The target project ID (number) or project name.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -85,7 +85,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The last time the target project resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

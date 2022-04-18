@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2betaPromotionArgs extends io.pulumi.resour
     @Import(name="promotionId")
       private final @Nullable Output<String> promotionId;
 
-    public Output<String> getPromotionId() {
+    public Output<String> promotionId() {
         return this.promotionId == null ? Codegen.empty() : this.promotionId;
     }
 

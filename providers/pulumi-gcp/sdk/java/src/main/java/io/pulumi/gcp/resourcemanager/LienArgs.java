@@ -24,7 +24,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origin", required=true)
       private final Output<String> origin;
 
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin;
     }
 
@@ -38,7 +38,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -50,7 +50,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -65,7 +65,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictions", required=true)
       private final Output<List<String>> restrictions;
 
-    public Output<List<String>> getRestrictions() {
+    public Output<List<String>> restrictions() {
         return this.restrictions;
     }
 

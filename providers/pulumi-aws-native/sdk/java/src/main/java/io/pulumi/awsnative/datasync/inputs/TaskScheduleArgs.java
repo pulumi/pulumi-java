@@ -25,7 +25,7 @@ public final class TaskScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 

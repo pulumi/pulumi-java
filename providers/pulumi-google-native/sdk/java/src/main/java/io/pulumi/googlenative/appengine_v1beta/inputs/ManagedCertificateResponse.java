@@ -23,7 +23,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
     @Import(name="lastRenewalTime", required=true)
       private final String lastRenewalTime;
 
-    public String getLastRenewalTime() {
+    public String lastRenewalTime() {
         return this.lastRenewalTime;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

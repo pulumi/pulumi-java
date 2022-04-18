@@ -122,63 +122,63 @@ public final class GetMetadataActivityResponse {
      * GetMetadata activity dataset reference.
      * 
     */
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fields of metadata to get from dataset.
      * 
     */
-    public List<Object> getFieldList() {
+    public List<Object> fieldList() {
         return this.fieldList == null ? List.of() : this.fieldList;
     }
     /**
      * GetMetadata activity format settings.
      * 
     */
-    public Optional<Object> getFormatSettings() {
+    public Optional<Object> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * GetMetadata activity store settings.
      * 
     */
-    public Optional<Object> getStoreSettings() {
+    public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
     /**
@@ -186,14 +186,14 @@ public final class GetMetadataActivityResponse {
      * Expected value is 'GetMetadata'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

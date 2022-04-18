@@ -22,7 +22,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -33,7 +33,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType", required=true)
       private final Output<UsagePlanKeyKeyType> keyType;
 
-    public Output<UsagePlanKeyKeyType> getKeyType() {
+    public Output<UsagePlanKeyKeyType> keyType() {
         return this.keyType;
     }
 
@@ -44,7 +44,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanId", required=true)
       private final Output<String> usagePlanId;
 
-    public Output<String> getUsagePlanId() {
+    public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
 

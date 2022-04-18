@@ -40,21 +40,21 @@ public final class AllocationSpecificSKUReservationResponse {
      * Specifies the number of resources that are allocated.
      * 
     */
-    public String getCount() {
+    public String count() {
         return this.count;
     }
     /**
      * Indicates how many instances are in use.
      * 
     */
-    public String getInUseCount() {
+    public String inUseCount() {
         return this.inUseCount;
     }
     /**
      * The instance properties for the reservation.
      * 
     */
-    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
+    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
 

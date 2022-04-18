@@ -56,7 +56,7 @@ public final class GuestPoliciesPackageRepository {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesPackageRepositoryApt> getApt() {
+    public Optional<GuestPoliciesPackageRepositoryApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
@@ -64,7 +64,7 @@ public final class GuestPoliciesPackageRepository {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesPackageRepositoryGoo> getGoo() {
+    public Optional<GuestPoliciesPackageRepositoryGoo> goo() {
         return Optional.ofNullable(this.goo);
     }
     /**
@@ -72,7 +72,7 @@ public final class GuestPoliciesPackageRepository {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesPackageRepositoryYum> getYum() {
+    public Optional<GuestPoliciesPackageRepositoryYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
@@ -80,7 +80,7 @@ public final class GuestPoliciesPackageRepository {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesPackageRepositoryZypper> getZypper() {
+    public Optional<GuestPoliciesPackageRepositoryZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }
 

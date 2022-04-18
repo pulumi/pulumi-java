@@ -28,7 +28,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> getAutomaticRestart() {
+    public Output<Boolean> automaticRestart() {
         return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> getMinNodeCpus() {
+    public Output<Integer> minNodeCpus() {
         return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
@@ -54,7 +54,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<InstanceSchedulingNodeAffinityArgs>> getNodeAffinities() {
+    public Output<List<InstanceSchedulingNodeAffinityArgs>> nodeAffinities() {
         return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
@@ -67,7 +67,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> getOnHostMaintenance() {
+    public Output<String> onHostMaintenance() {
         return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceSchedulingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 

@@ -31,7 +31,7 @@ public final class PolicyAlternativeNameServerConfig {
      * Structure is documented below.
      * 
     */
-    public List<PolicyAlternativeNameServerConfigTargetNameServer> getTargetNameServers() {
+    public List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers() {
         return this.targetNameServers;
     }
 

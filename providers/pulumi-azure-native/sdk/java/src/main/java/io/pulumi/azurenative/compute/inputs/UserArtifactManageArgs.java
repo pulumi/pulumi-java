@@ -22,7 +22,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="install", required=true)
       private final Output<String> install;
 
-    public Output<String> getInstall() {
+    public Output<String> install() {
         return this.install;
     }
 
@@ -33,7 +33,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="remove", required=true)
       private final Output<String> remove;
 
-    public Output<String> getRemove() {
+    public Output<String> remove() {
         return this.remove;
     }
 
@@ -44,7 +44,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="update")
       private final @Nullable Output<String> update;
 
-    public Output<String> getUpdate() {
+    public Output<String> update() {
         return this.update == null ? Codegen.empty() : this.update;
     }
 

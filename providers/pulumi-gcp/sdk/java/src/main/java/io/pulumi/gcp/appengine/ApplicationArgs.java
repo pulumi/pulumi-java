@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
-    public Output<String> getAuthDomain() {
+    public Output<String> authDomain() {
         return this.authDomain == null ? Codegen.empty() : this.authDomain;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<String> databaseType;
 
-    public Output<String> getDatabaseType() {
+    public Output<String> databaseType() {
         return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureSettings")
       private final @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
 
-    public Output<ApplicationFeatureSettingsArgs> getFeatureSettings() {
+    public Output<ApplicationFeatureSettingsArgs> featureSettings() {
         return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iap")
       private final @Nullable Output<ApplicationIapArgs> iap;
 
-    public Output<ApplicationIapArgs> getIap() {
+    public Output<ApplicationIapArgs> iap() {
         return this.iap == null ? Codegen.empty() : this.iap;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationId", required=true)
       private final Output<String> locationId;
 
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
-    public Output<String> getServingStatus() {
+    public Output<String> servingStatus() {
         return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 

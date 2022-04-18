@@ -65,7 +65,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The ARN for this account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -79,7 +79,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -93,19 +93,19 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
      * 
      */
-    public Output</* @Nullable */ String> getIamUserAccessToBilling() {
+    public Output</* @Nullable */ String> iamUserAccessToBilling() {
         return this.iamUserAccessToBilling;
     }
     @Export(name="joinedMethod", type=String.class, parameters={})
     private Output<String> joinedMethod;
 
-    public Output<String> getJoinedMethod() {
+    public Output<String> joinedMethod() {
         return this.joinedMethod;
     }
     @Export(name="joinedTimestamp", type=String.class, parameters={})
     private Output<String> joinedTimestamp;
 
-    public Output<String> getJoinedTimestamp() {
+    public Output<String> joinedTimestamp() {
         return this.joinedTimestamp;
     }
     /**
@@ -119,7 +119,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the member account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
      * 
      */
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
     /**
@@ -147,13 +147,13 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -167,7 +167,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -181,7 +181,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

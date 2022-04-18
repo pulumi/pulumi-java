@@ -43,7 +43,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return Address Prefix.
      * 
      */
-    public Output</* @Nullable */ String> getAddressPrefix() {
+    public Output</* @Nullable */ String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -57,7 +57,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return Name of the virtual appliance site.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return Office 365 Policy.
      * 
      */
-    public Output</* @Nullable */ Office365PolicyPropertiesResponse> getO365Policy() {
+    public Output</* @Nullable */ Office365PolicyPropertiesResponse> o365Policy() {
         return this.o365Policy;
     }
     /**
@@ -99,7 +99,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * @return Site type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

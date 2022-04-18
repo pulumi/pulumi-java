@@ -24,7 +24,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allow")
       private final @Nullable Output<RuleGroupRuleActionAllowArgs> allow;
 
-    public Output<RuleGroupRuleActionAllowArgs> getAllow() {
+    public Output<RuleGroupRuleActionAllowArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="block")
       private final @Nullable Output<RuleGroupRuleActionBlockArgs> block;
 
-    public Output<RuleGroupRuleActionBlockArgs> getBlock() {
+    public Output<RuleGroupRuleActionBlockArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="count")
       private final @Nullable Output<RuleGroupRuleActionCountArgs> count;
 
-    public Output<RuleGroupRuleActionCountArgs> getCount() {
+    public Output<RuleGroupRuleActionCountArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

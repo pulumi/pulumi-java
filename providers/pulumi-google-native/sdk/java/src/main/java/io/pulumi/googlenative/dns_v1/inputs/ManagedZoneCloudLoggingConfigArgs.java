@@ -27,14 +27,14 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

@@ -16,7 +16,7 @@ public final class GetClusterAddonsConfigNetworkPolicyConfig {
         this.disabled = disabled;
     }
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

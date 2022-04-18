@@ -22,7 +22,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -75,7 +75,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
     @Import(name="urlMap", required=true)
       private final Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap;
     }
 

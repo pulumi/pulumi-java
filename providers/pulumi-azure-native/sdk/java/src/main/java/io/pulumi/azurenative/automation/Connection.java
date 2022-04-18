@@ -44,7 +44,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the connectionType of the connection.
      * 
      */
-    public Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> getConnectionType() {
+    public Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> connectionType() {
         return this.connectionType;
     }
     /**
@@ -58,7 +58,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Gets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -72,7 +72,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -86,7 +86,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Gets the field definition values of the connection.
      * 
      */
-    public Output<Map<String,String>> getFieldDefinitionValues() {
+    public Output<Map<String,String>> fieldDefinitionValues() {
         return this.fieldDefinitionValues;
     }
     /**
@@ -100,7 +100,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Gets the last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -114,7 +114,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

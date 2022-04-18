@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> getBooleanValue() {
+    public Output<Boolean> booleanValue() {
         return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="dateValue")
       private final @Nullable Output<GoogleTypeDateArgs> dateValue;
 
-    public Output<GoogleTypeDateArgs> getDateValue() {
+    public Output<GoogleTypeDateArgs> dateValue() {
         return this.dateValue == null ? Codegen.empty() : this.dateValue;
     }
 
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="dayOfWeekValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
-    public Output<GooglePrivacyDlpV2ValueDayOfWeekValue> getDayOfWeekValue() {
+    public Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue() {
         return this.dayOfWeekValue == null ? Codegen.empty() : this.dayOfWeekValue;
     }
 
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
+    public Output<Double> floatValue() {
         return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
-    public Output<String> getIntegerValue() {
+    public Output<String> integerValue() {
         return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
@@ -86,7 +86,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
@@ -97,7 +97,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="timeValue")
       private final @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
 
-    public Output<GoogleTypeTimeOfDayArgs> getTimeValue() {
+    public Output<GoogleTypeTimeOfDayArgs> timeValue() {
         return this.timeValue == null ? Codegen.empty() : this.timeValue;
     }
 
@@ -108,7 +108,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
+    public Output<String> timestampValue() {
         return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 

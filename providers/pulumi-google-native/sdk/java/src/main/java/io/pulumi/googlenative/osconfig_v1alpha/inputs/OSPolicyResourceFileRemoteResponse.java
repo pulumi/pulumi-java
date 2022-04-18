@@ -23,7 +23,7 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
     @Import(name="sha256Checksum", required=true)
       private final String sha256Checksum;
 
-    public String getSha256Checksum() {
+    public String sha256Checksum() {
         return this.sha256Checksum;
     }
 
@@ -34,7 +34,7 @@ public final class OSPolicyResourceFileRemoteResponse extends io.pulumi.resource
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

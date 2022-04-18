@@ -26,7 +26,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -37,7 +37,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -48,7 +48,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="nestingSeparator")
       private final @Nullable Object nestingSeparator;
 
-    public Optional<Object> getNestingSeparator() {
+    public Optional<Object> nestingSeparator() {
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
     }
 
@@ -59,7 +59,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -70,7 +70,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -82,7 +82,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -93,7 +93,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -104,7 +104,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
@@ -115,7 +115,7 @@ public final class DocumentDbCollectionSinkResponse extends io.pulumi.resources.
     @Import(name="writeBehavior")
       private final @Nullable Object writeBehavior;
 
-    public Optional<Object> getWriteBehavior() {
+    public Optional<Object> writeBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
     }
 

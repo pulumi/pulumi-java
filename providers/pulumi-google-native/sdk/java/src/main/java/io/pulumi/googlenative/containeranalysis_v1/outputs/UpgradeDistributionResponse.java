@@ -47,28 +47,28 @@ public final class UpgradeDistributionResponse {
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
      * 
     */
-    public String getClassification() {
+    public String classification() {
         return this.classification;
     }
     /**
      * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
      * 
     */
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
     /**
      * The cve tied to this Upgrade.
      * 
     */
-    public List<String> getCve() {
+    public List<String> cve() {
         return this.cve;
     }
     /**
      * The severity as specified by the upstream operating system.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 

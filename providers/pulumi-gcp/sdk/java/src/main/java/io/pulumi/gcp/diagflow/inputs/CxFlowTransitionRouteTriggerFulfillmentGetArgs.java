@@ -26,7 +26,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentGetArgs extends io.pul
     @Import(name="messages")
       private final @Nullable Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs>> messages;
 
-    public Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs>> getMessages() {
+    public Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs>> messages() {
         return this.messages == null ? Codegen.empty() : this.messages;
     }
 
@@ -37,7 +37,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentGetArgs extends io.pul
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
+    public Output<Boolean> returnPartialResponses() {
         return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
@@ -48,7 +48,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentGetArgs extends io.pul
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -59,7 +59,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentGetArgs extends io.pul
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
+    public Output<String> webhook() {
         return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 

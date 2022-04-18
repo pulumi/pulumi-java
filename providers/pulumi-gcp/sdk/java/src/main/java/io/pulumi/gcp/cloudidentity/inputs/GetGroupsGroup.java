@@ -18,49 +18,49 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
     @Import(name="groupKeys", required=true)
       private final List<GetGroupsGroupGroupKey> groupKeys;
 
-    public List<GetGroupsGroupGroupKey> getGroupKeys() {
+    public List<GetGroupsGroupGroupKey> groupKeys() {
         return this.groupKeys;
     }
 
     @Import(name="initialGroupConfig", required=true)
       private final String initialGroupConfig;
 
-    public String getInitialGroupConfig() {
+    public String initialGroupConfig() {
         return this.initialGroupConfig;
     }
 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -71,14 +71,14 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
     @Import(name="parent", required=true)
       private final String parent;
 
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
 
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

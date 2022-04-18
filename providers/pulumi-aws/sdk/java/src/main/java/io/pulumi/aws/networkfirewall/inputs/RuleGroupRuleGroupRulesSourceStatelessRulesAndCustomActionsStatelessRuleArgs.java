@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="ruleDefinition", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> getRuleDefinition() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition() {
         return this.ruleDefinition;
     }
 

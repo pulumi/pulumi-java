@@ -23,7 +23,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="azureSubscriptionId", required=true)
       private final String azureSubscriptionId;
 
-    public String getAzureSubscriptionId() {
+    public String azureSubscriptionId() {
         return this.azureSubscriptionId;
     }
 
@@ -34,7 +34,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
 
@@ -45,7 +45,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="elasticsearchRegion", required=true)
       private final String elasticsearchRegion;
 
-    public String getElasticsearchRegion() {
+    public String elasticsearchRegion() {
         return this.elasticsearchRegion;
     }
 
@@ -56,7 +56,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="elasticsearchServiceUrl", required=true)
       private final String elasticsearchServiceUrl;
 
-    public String getElasticsearchServiceUrl() {
+    public String elasticsearchServiceUrl() {
         return this.elasticsearchServiceUrl;
     }
 
@@ -67,7 +67,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="kibanaServiceUrl", required=true)
       private final String kibanaServiceUrl;
 
-    public String getKibanaServiceUrl() {
+    public String kibanaServiceUrl() {
         return this.kibanaServiceUrl;
     }
 
@@ -78,7 +78,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="kibanaSsoUrl", required=true)
       private final String kibanaSsoUrl;
 
-    public String getKibanaSsoUrl() {
+    public String kibanaSsoUrl() {
         return this.kibanaSsoUrl;
     }
 
@@ -89,7 +89,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

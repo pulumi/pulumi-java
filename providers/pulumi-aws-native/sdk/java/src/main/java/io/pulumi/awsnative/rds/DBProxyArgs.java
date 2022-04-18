@@ -28,7 +28,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth", required=true)
       private final Output<List<DBProxyAuthFormatArgs>> auth;
 
-    public Output<List<DBProxyAuthFormatArgs>> getAuth() {
+    public Output<List<DBProxyAuthFormatArgs>> auth() {
         return this.auth;
     }
 
@@ -39,7 +39,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dBProxyName")
       private final @Nullable Output<String> dBProxyName;
 
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName == null ? Codegen.empty() : this.dBProxyName;
     }
 
@@ -50,7 +50,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
 
-    public Output<Boolean> getDebugLogging() {
+    public Output<Boolean> debugLogging() {
         return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
     }
 
@@ -61,7 +61,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineFamily", required=true)
       private final Output<DBProxyEngineFamily> engineFamily;
 
-    public Output<DBProxyEngineFamily> getEngineFamily() {
+    public Output<DBProxyEngineFamily> engineFamily() {
         return this.engineFamily;
     }
 
@@ -72,7 +72,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
 
-    public Output<Integer> getIdleClientTimeout() {
+    public Output<Integer> idleClientTimeout() {
         return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
     }
 
@@ -83,7 +83,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireTLS")
       private final @Nullable Output<Boolean> requireTLS;
 
-    public Output<Boolean> getRequireTLS() {
+    public Output<Boolean> requireTLS() {
         return this.requireTLS == null ? Codegen.empty() : this.requireTLS;
     }
 
@@ -94,7 +94,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -105,7 +105,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DBProxyTagFormatArgs>> tags;
 
-    public Output<List<DBProxyTagFormatArgs>> getTags() {
+    public Output<List<DBProxyTagFormatArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -116,7 +116,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -127,7 +127,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

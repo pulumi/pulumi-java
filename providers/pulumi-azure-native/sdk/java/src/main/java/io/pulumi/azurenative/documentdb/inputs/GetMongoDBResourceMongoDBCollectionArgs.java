@@ -19,7 +19,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends io.pulumi.res
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends io.pulumi.res
     @Import(name="collectionName", required=true)
       private final String collectionName;
 
-    public String getCollectionName() {
+    public String collectionName() {
         return this.collectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends io.pulumi.res
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -52,7 +52,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -112,91 +112,91 @@ public final class SnapshotClusterConfiguration {
      * Description for the cluster.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Version number of the Redis engine used by the cluster.
      * 
     */
-    public Optional<String> getEngineVersion() {
+    public Optional<String> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
     /**
      * The weekly time range during which maintenance on the cluster is performed.
      * 
     */
-    public Optional<String> getMaintenanceWindow() {
+    public Optional<String> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Name of the cluster.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Compute and memory capacity of the nodes in the cluster.
      * 
     */
-    public Optional<String> getNodeType() {
+    public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
      * Number of shards in the cluster.
      * 
     */
-    public Optional<Integer> getNumShards() {
+    public Optional<Integer> numShards() {
         return Optional.ofNullable(this.numShards);
     }
     /**
      * Name of the parameter group associated with the cluster.
      * 
     */
-    public Optional<String> getParameterGroupName() {
+    public Optional<String> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
     /**
      * Port number on which the cluster accepts connections.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Number of days for which MemoryDB retains automatic snapshots before deleting them.
      * 
     */
-    public Optional<Integer> getSnapshotRetentionLimit() {
+    public Optional<Integer> snapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
     /**
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
      * 
     */
-    public Optional<String> getSnapshotWindow() {
+    public Optional<String> snapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
     /**
      * Name of the subnet group used by the cluster.
      * 
     */
-    public Optional<String> getSubnetGroupName() {
+    public Optional<String> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
     /**
      * ARN of the SNS topic to which cluster notifications are sent.
      * 
     */
-    public Optional<String> getTopicArn() {
+    public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
     /**
      * The VPC in which the cluster exists.
      * 
     */
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

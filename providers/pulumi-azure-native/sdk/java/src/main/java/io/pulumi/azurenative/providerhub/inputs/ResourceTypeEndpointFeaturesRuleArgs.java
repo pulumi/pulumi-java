@@ -19,7 +19,7 @@ public final class ResourceTypeEndpointFeaturesRuleArgs extends io.pulumi.resour
     @Import(name="requiredFeaturesPolicy", required=true)
       private final Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
-    public Output<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
+    public Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 

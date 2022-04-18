@@ -51,28 +51,28 @@ public final class RouteSpecHttp2Route {
      * The action to take if a match is determined.
      * 
     */
-    public RouteSpecHttp2RouteAction getAction() {
+    public RouteSpecHttp2RouteAction action() {
         return this.action;
     }
     /**
      * The criteria for determining an gRPC request match.
      * 
     */
-    public RouteSpecHttp2RouteMatch getMatch() {
+    public RouteSpecHttp2RouteMatch match() {
         return this.match;
     }
     /**
      * The retry policy.
      * 
     */
-    public Optional<RouteSpecHttp2RouteRetryPolicy> getRetryPolicy() {
+    public Optional<RouteSpecHttp2RouteRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * The types of timeouts.
      * 
     */
-    public Optional<RouteSpecHttp2RouteTimeout> getTimeout() {
+    public Optional<RouteSpecHttp2RouteTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

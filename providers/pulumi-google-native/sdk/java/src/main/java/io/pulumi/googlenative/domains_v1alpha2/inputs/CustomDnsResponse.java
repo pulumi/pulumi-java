@@ -25,7 +25,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dsRecords", required=true)
       private final List<DsRecordResponse> dsRecords;
 
-    public List<DsRecordResponse> getDsRecords() {
+    public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
     }
 
@@ -36,7 +36,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nameServers", required=true)
       private final List<String> nameServers;
 
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
 

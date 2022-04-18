@@ -58,7 +58,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAnnotations() {
+    public Output</* @Nullable */ Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -72,7 +72,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    public Output<AwsClusterAuthorization> getAuthorization() {
+    public Output<AwsClusterAuthorization> authorization() {
         return this.authorization;
     }
     /**
@@ -86,7 +86,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
-    public Output<String> getAwsRegion() {
+    public Output<String> awsRegion() {
         return this.awsRegion;
     }
     /**
@@ -100,7 +100,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Configuration related to the cluster control plane.
      * 
      */
-    public Output<AwsClusterControlPlane> getControlPlane() {
+    public Output<AwsClusterControlPlane> controlPlane() {
         return this.controlPlane;
     }
     /**
@@ -114,7 +114,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this cluster was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -128,7 +128,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -142,7 +142,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The endpoint of the cluster's API server.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -158,7 +158,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -172,7 +172,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Fleet configuration.
      * 
      */
-    public Output<AwsClusterFleet> getFleet() {
+    public Output<AwsClusterFleet> fleet() {
         return this.fleet;
     }
     /**
@@ -186,7 +186,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -200,7 +200,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return The name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -214,7 +214,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Cluster-wide networking configuration.
      * 
      */
-    public Output<AwsClusterNetworking> getNetworking() {
+    public Output<AwsClusterNetworking> networking() {
         return this.networking;
     }
     /**
@@ -228,7 +228,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -242,7 +242,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. If set, there are currently changes in flight to the cluster.
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -258,7 +258,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -272,7 +272,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. A globally unique identifier for the cluster.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -286,7 +286,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this cluster was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -300,7 +300,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. Workload Identity settings.
      * 
      */
-    public Output<List<AwsClusterWorkloadIdentityConfig>> getWorkloadIdentityConfigs() {
+    public Output<List<AwsClusterWorkloadIdentityConfig>> workloadIdentityConfigs() {
         return this.workloadIdentityConfigs;
     }
 

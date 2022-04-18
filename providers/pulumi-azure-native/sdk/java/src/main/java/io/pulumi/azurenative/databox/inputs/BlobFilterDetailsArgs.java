@@ -27,7 +27,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="blobPathList")
       private final @Nullable Output<List<String>> blobPathList;
 
-    public Output<List<String>> getBlobPathList() {
+    public Output<List<String>> blobPathList() {
         return this.blobPathList == null ? Codegen.empty() : this.blobPathList;
     }
 
@@ -38,7 +38,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="blobPrefixList")
       private final @Nullable Output<List<String>> blobPrefixList;
 
-    public Output<List<String>> getBlobPrefixList() {
+    public Output<List<String>> blobPrefixList() {
         return this.blobPrefixList == null ? Codegen.empty() : this.blobPrefixList;
     }
 
@@ -49,7 +49,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="containerList")
       private final @Nullable Output<List<String>> containerList;
 
-    public Output<List<String>> getContainerList() {
+    public Output<List<String>> containerList() {
         return this.containerList == null ? Codegen.empty() : this.containerList;
     }
 

@@ -45,7 +45,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    public Output</* @Nullable */ String> getApiServerEndpoint() {
+    public Output</* @Nullable */ String> apiServerEndpoint() {
         return this.apiServerEndpoint;
     }
     /**
@@ -59,7 +59,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return RootCA certificate of kubernetes cluster base64 encoded
      * 
      */
-    public Output</* @Nullable */ String> getClusterRootCA() {
+    public Output</* @Nullable */ String> clusterRootCA() {
         return this.clusterRootCA;
     }
     /**
@@ -73,7 +73,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return Properties of the controller.
      * 
      */
-    public Output<ControllerDetailsResponse> getControllerDetails() {
+    public Output<ControllerDetailsResponse> controllerDetails() {
         return this.controllerDetails;
     }
     /**
@@ -87,7 +87,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The identity of the orchestrator
      * 
      */
-    public Output</* @Nullable */ OrchestratorIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ OrchestratorIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -101,7 +101,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The kind of workbook. Choices are user and shared.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -115,7 +115,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return Location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -129,7 +129,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return AAD ID used with apiserver
      * 
      */
-    public Output</* @Nullable */ String> getOrchestratorAppId() {
+    public Output</* @Nullable */ String> orchestratorAppId() {
         return this.orchestratorAppId;
     }
     /**
@@ -157,7 +157,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return TenantID of server App ID
      * 
      */
-    public Output</* @Nullable */ String> getOrchestratorTenantId() {
+    public Output</* @Nullable */ String> orchestratorTenantId() {
         return this.orchestratorTenantId;
     }
     /**
@@ -171,7 +171,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkResourceId() {
+    public Output</* @Nullable */ String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
@@ -185,7 +185,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The current state of orchestratorInstance resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -199,7 +199,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return Resource guid.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -213,7 +213,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -227,7 +227,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * @return The type of resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

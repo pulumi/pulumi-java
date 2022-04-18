@@ -28,7 +28,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     @Import(name="channels", required=true)
       private final List<ContactProfileLinkChannelResponse> channels;
 
-    public List<ContactProfileLinkChannelResponse> getChannels() {
+    public List<ContactProfileLinkChannelResponse> channels() {
         return this.channels;
     }
 
@@ -39,7 +39,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -50,7 +50,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     @Import(name="eirpdBW")
       private final @Nullable Double eirpdBW;
 
-    public Optional<Double> getEirpdBW() {
+    public Optional<Double> eirpdBW() {
         return this.eirpdBW == null ? Optional.empty() : Optional.ofNullable(this.eirpdBW);
     }
 
@@ -61,7 +61,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     @Import(name="gainOverTemperature")
       private final @Nullable Double gainOverTemperature;
 
-    public Optional<Double> getGainOverTemperature() {
+    public Optional<Double> gainOverTemperature() {
         return this.gainOverTemperature == null ? Optional.empty() : Optional.ofNullable(this.gainOverTemperature);
     }
 
@@ -72,7 +72,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     @Import(name="polarization", required=true)
       private final String polarization;
 
-    public String getPolarization() {
+    public String polarization() {
         return this.polarization;
     }
 

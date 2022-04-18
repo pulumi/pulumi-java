@@ -44,7 +44,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -58,7 +58,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @return The generated uuid presented in string format.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
 

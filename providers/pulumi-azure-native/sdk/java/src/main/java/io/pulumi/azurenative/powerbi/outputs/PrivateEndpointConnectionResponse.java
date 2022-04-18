@@ -72,49 +72,49 @@ public final class PrivateEndpointConnectionResponse {
      * Specifies the id of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the private endpoint.
      * 
     */
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Specifies the connection state.
      * 
     */
-    public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<ConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Specifies the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class GetRepositoryAssociationResult {
      * The Amazon Resource Name (ARN) of the repository association.
      * 
     */
-    public Optional<String> getAssociationArn() {
+    public Optional<String> associationArn() {
         return Optional.ofNullable(this.associationArn);
     }
 

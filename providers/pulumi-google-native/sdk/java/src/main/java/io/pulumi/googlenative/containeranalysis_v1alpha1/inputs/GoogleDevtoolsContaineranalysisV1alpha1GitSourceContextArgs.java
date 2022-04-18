@@ -26,7 +26,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -22,10 +22,10 @@ public final class LoadBalancerPolicyPolicyAttribute {
         this.value = value;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

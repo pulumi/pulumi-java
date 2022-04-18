@@ -74,7 +74,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * network endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultPort() {
+    public Output</* @Nullable */ Integer> defaultPort() {
         return this.defaultPort;
     }
     /**
@@ -90,7 +90,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -116,7 +116,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +132,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Uses "default" project network if unspecified.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -150,7 +150,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Possible values are `GCE_VM_IP_PORT`.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkEndpointType() {
+    public Output</* @Nullable */ String> networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
@@ -166,7 +166,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -180,7 +180,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -194,7 +194,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * @return Number of network endpoints in the network endpoint group.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -208,7 +208,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * @return Optional subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetwork() {
+    public Output</* @Nullable */ String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -222,7 +222,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * @return Zone where the network endpoint group is located.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

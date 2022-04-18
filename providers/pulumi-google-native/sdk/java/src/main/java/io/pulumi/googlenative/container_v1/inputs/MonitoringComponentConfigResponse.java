@@ -24,7 +24,7 @@ public final class MonitoringComponentConfigResponse extends io.pulumi.resources
     @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;
 
-    public List<String> getEnableComponents() {
+    public List<String> enableComponents() {
         return this.enableComponents;
     }
 

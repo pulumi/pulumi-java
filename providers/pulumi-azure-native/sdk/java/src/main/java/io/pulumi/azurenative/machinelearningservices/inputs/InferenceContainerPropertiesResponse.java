@@ -21,7 +21,7 @@ public final class InferenceContainerPropertiesResponse extends io.pulumi.resour
     @Import(name="livenessRoute")
       private final @Nullable RouteResponse livenessRoute;
 
-    public Optional<RouteResponse> getLivenessRoute() {
+    public Optional<RouteResponse> livenessRoute() {
         return this.livenessRoute == null ? Optional.empty() : Optional.ofNullable(this.livenessRoute);
     }
 
@@ -32,7 +32,7 @@ public final class InferenceContainerPropertiesResponse extends io.pulumi.resour
     @Import(name="readinessRoute")
       private final @Nullable RouteResponse readinessRoute;
 
-    public Optional<RouteResponse> getReadinessRoute() {
+    public Optional<RouteResponse> readinessRoute() {
         return this.readinessRoute == null ? Optional.empty() : Optional.ofNullable(this.readinessRoute);
     }
 
@@ -43,7 +43,7 @@ public final class InferenceContainerPropertiesResponse extends io.pulumi.resour
     @Import(name="scoringRoute")
       private final @Nullable RouteResponse scoringRoute;
 
-    public Optional<RouteResponse> getScoringRoute() {
+    public Optional<RouteResponse> scoringRoute() {
         return this.scoringRoute == null ? Optional.empty() : Optional.ofNullable(this.scoringRoute);
     }
 

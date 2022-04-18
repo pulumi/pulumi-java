@@ -55,35 +55,35 @@ public final class VMwareV2FabricSpecificDetailsResponse {
      * Expected value is 'VMwareV2'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The Migration solution ARM Id.
      * 
     */
-    public String getMigrationSolutionId() {
+    public String migrationSolutionId() {
         return this.migrationSolutionId;
     }
     /**
      * The service endpoint.
      * 
     */
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * The service resource Id.
      * 
     */
-    public String getServiceResourceId() {
+    public String serviceResourceId() {
         return this.serviceResourceId;
     }
     /**
      * The ARM Id of the VMware site.
      * 
     */
-    public String getVmwareSiteId() {
+    public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 

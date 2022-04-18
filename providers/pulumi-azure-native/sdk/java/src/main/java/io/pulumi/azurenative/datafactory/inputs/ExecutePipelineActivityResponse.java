@@ -32,7 +32,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -43,7 +43,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -54,7 +54,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -65,7 +65,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -76,7 +76,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="pipeline", required=true)
       private final PipelineReferenceResponse pipeline;
 
-    public PipelineReferenceResponse getPipeline() {
+    public PipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
 
@@ -88,7 +88,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -99,7 +99,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
@@ -110,7 +110,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     @Import(name="waitOnCompletion")
       private final @Nullable Boolean waitOnCompletion;
 
-    public Optional<Boolean> getWaitOnCompletion() {
+    public Optional<Boolean> waitOnCompletion() {
         return this.waitOnCompletion == null ? Optional.empty() : Optional.ofNullable(this.waitOnCompletion);
     }
 

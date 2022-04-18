@@ -112,91 +112,91 @@ public final class GetProjectResult {
      * The immutable id of the team account which contains this project.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The creation date of the project in ISO8601 format.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The description of this project.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The friendly name for this project.
      * 
     */
-    public String getFriendlyName() {
+    public String friendlyName() {
         return this.friendlyName;
     }
     /**
      * The reference to git repo for this project.
      * 
     */
-    public Optional<String> getGitrepo() {
+    public Optional<String> gitrepo() {
         return Optional.ofNullable(this.gitrepo);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The immutable id of this project.
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
     /**
      * The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The immutable id of the workspace which contains this project.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

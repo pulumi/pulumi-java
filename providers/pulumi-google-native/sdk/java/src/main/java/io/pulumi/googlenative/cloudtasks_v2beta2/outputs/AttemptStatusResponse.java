@@ -47,28 +47,28 @@ public final class AttemptStatusResponse {
      * The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
      * 
     */
-    public String getDispatchTime() {
+    public String dispatchTime() {
         return this.dispatchTime;
     }
     /**
      * The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.
      * 
     */
-    public StatusResponse getResponseStatus() {
+    public StatusResponse responseStatus() {
         return this.responseStatus;
     }
     /**
      * The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
      * 
     */
-    public String getResponseTime() {
+    public String responseTime() {
         return this.responseTime;
     }
     /**
      * The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
      * 
     */
-    public String getScheduleTime() {
+    public String scheduleTime() {
         return this.scheduleTime;
     }
 

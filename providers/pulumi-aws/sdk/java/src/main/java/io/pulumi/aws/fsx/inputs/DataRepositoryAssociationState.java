@@ -26,14 +26,14 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="associationId")
       private final @Nullable Output<String> associationId;
 
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId == null ? Codegen.empty() : this.associationId;
     }
 
@@ -44,7 +44,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="batchImportMetaDataOnCreate")
       private final @Nullable Output<Boolean> batchImportMetaDataOnCreate;
 
-    public Output<Boolean> getBatchImportMetaDataOnCreate() {
+    public Output<Boolean> batchImportMetaDataOnCreate() {
         return this.batchImportMetaDataOnCreate == null ? Codegen.empty() : this.batchImportMetaDataOnCreate;
     }
 
@@ -55,7 +55,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="dataRepositoryPath")
       private final @Nullable Output<String> dataRepositoryPath;
 
-    public Output<String> getDataRepositoryPath() {
+    public Output<String> dataRepositoryPath() {
         return this.dataRepositoryPath == null ? Codegen.empty() : this.dataRepositoryPath;
     }
 
@@ -66,7 +66,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="deleteDataInFilesystem")
       private final @Nullable Output<Boolean> deleteDataInFilesystem;
 
-    public Output<Boolean> getDeleteDataInFilesystem() {
+    public Output<Boolean> deleteDataInFilesystem() {
         return this.deleteDataInFilesystem == null ? Codegen.empty() : this.deleteDataInFilesystem;
     }
 
@@ -77,7 +77,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -88,7 +88,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="fileSystemPath")
       private final @Nullable Output<String> fileSystemPath;
 
-    public Output<String> getFileSystemPath() {
+    public Output<String> fileSystemPath() {
         return this.fileSystemPath == null ? Codegen.empty() : this.fileSystemPath;
     }
 
@@ -99,7 +99,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="importedFileChunkSize")
       private final @Nullable Output<Integer> importedFileChunkSize;
 
-    public Output<Integer> getImportedFileChunkSize() {
+    public Output<Integer> importedFileChunkSize() {
         return this.importedFileChunkSize == null ? Codegen.empty() : this.importedFileChunkSize;
     }
 
@@ -111,7 +111,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="s3")
       private final @Nullable Output<DataRepositoryAssociationS3GetArgs> s3;
 
-    public Output<DataRepositoryAssociationS3GetArgs> getS3() {
+    public Output<DataRepositoryAssociationS3GetArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
@@ -122,7 +122,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -133,7 +133,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

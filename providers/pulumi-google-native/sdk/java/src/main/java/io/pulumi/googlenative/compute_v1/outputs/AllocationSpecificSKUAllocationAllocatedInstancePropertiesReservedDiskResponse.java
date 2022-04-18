@@ -32,14 +32,14 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * Specifies the size of the disk in base-2 GB.
      * 
     */
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
     */
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 

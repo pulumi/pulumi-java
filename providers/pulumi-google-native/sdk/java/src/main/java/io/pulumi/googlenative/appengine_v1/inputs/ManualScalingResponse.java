@@ -23,7 +23,7 @@ public final class ManualScalingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="instances", required=true)
       private final Integer instances;
 
-    public Integer getInstances() {
+    public Integer instances() {
         return this.instances;
     }
 

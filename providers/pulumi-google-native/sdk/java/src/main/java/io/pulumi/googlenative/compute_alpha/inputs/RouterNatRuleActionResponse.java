@@ -20,7 +20,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNatActiveIps", required=true)
       private final List<String> sourceNatActiveIps;
 
-    public List<String> getSourceNatActiveIps() {
+    public List<String> sourceNatActiveIps() {
         return this.sourceNatActiveIps;
     }
 
@@ -31,7 +31,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNatActiveRanges", required=true)
       private final List<String> sourceNatActiveRanges;
 
-    public List<String> getSourceNatActiveRanges() {
+    public List<String> sourceNatActiveRanges() {
         return this.sourceNatActiveRanges;
     }
 
@@ -42,7 +42,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNatDrainIps", required=true)
       private final List<String> sourceNatDrainIps;
 
-    public List<String> getSourceNatDrainIps() {
+    public List<String> sourceNatDrainIps() {
         return this.sourceNatDrainIps;
     }
 
@@ -53,7 +53,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNatDrainRanges", required=true)
       private final List<String> sourceNatDrainRanges;
 
-    public List<String> getSourceNatDrainRanges() {
+    public List<String> sourceNatDrainRanges() {
         return this.sourceNatDrainRanges;
     }
 

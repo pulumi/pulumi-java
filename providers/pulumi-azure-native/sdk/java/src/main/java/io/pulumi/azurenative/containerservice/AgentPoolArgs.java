@@ -40,7 +40,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
@@ -51,7 +51,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -62,7 +62,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -73,7 +73,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoScaling")
       private final @Nullable Output<Boolean> enableAutoScaling;
 
-    public Output<Boolean> getEnableAutoScaling() {
+    public Output<Boolean> enableAutoScaling() {
         return this.enableAutoScaling == null ? Codegen.empty() : this.enableAutoScaling;
     }
 
@@ -84,7 +84,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableEncryptionAtHost")
       private final @Nullable Output<Boolean> enableEncryptionAtHost;
 
-    public Output<Boolean> getEnableEncryptionAtHost() {
+    public Output<Boolean> enableEncryptionAtHost() {
         return this.enableEncryptionAtHost == null ? Codegen.empty() : this.enableEncryptionAtHost;
     }
 
@@ -95,7 +95,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFIPS")
       private final @Nullable Output<Boolean> enableFIPS;
 
-    public Output<Boolean> getEnableFIPS() {
+    public Output<Boolean> enableFIPS() {
         return this.enableFIPS == null ? Codegen.empty() : this.enableFIPS;
     }
 
@@ -106,7 +106,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableNodePublicIP")
       private final @Nullable Output<Boolean> enableNodePublicIP;
 
-    public Output<Boolean> getEnableNodePublicIP() {
+    public Output<Boolean> enableNodePublicIP() {
         return this.enableNodePublicIP == null ? Codegen.empty() : this.enableNodePublicIP;
     }
 
@@ -117,7 +117,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gpuInstanceProfile")
       private final @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
 
-    public Output<Either<String,GPUInstanceProfile>> getGpuInstanceProfile() {
+    public Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile() {
         return this.gpuInstanceProfile == null ? Codegen.empty() : this.gpuInstanceProfile;
     }
 
@@ -128,7 +128,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeletConfig")
       private final @Nullable Output<KubeletConfigArgs> kubeletConfig;
 
-    public Output<KubeletConfigArgs> getKubeletConfig() {
+    public Output<KubeletConfigArgs> kubeletConfig() {
         return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
     }
 
@@ -139,7 +139,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeletDiskType")
       private final @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
 
-    public Output<Either<String,KubeletDiskType>> getKubeletDiskType() {
+    public Output<Either<String,KubeletDiskType>> kubeletDiskType() {
         return this.kubeletDiskType == null ? Codegen.empty() : this.kubeletDiskType;
     }
 
@@ -150,7 +150,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxOSConfig")
       private final @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
 
-    public Output<LinuxOSConfigArgs> getLinuxOSConfig() {
+    public Output<LinuxOSConfigArgs> linuxOSConfig() {
         return this.linuxOSConfig == null ? Codegen.empty() : this.linuxOSConfig;
     }
 
@@ -161,7 +161,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
+    public Output<Integer> maxCount() {
         return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
@@ -172,7 +172,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPods")
       private final @Nullable Output<Integer> maxPods;
 
-    public Output<Integer> getMaxPods() {
+    public Output<Integer> maxPods() {
         return this.maxPods == null ? Codegen.empty() : this.maxPods;
     }
 
@@ -183,7 +183,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minCount")
       private final @Nullable Output<Integer> minCount;
 
-    public Output<Integer> getMinCount() {
+    public Output<Integer> minCount() {
         return this.minCount == null ? Codegen.empty() : this.minCount;
     }
 
@@ -194,7 +194,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,AgentPoolMode>> mode;
 
-    public Output<Either<String,AgentPoolMode>> getMode() {
+    public Output<Either<String,AgentPoolMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -205,7 +205,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeLabels")
       private final @Nullable Output<Map<String,String>> nodeLabels;
 
-    public Output<Map<String,String>> getNodeLabels() {
+    public Output<Map<String,String>> nodeLabels() {
         return this.nodeLabels == null ? Codegen.empty() : this.nodeLabels;
     }
 
@@ -216,7 +216,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodePublicIPPrefixID")
       private final @Nullable Output<String> nodePublicIPPrefixID;
 
-    public Output<String> getNodePublicIPPrefixID() {
+    public Output<String> nodePublicIPPrefixID() {
         return this.nodePublicIPPrefixID == null ? Codegen.empty() : this.nodePublicIPPrefixID;
     }
 
@@ -227,7 +227,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTaints")
       private final @Nullable Output<List<String>> nodeTaints;
 
-    public Output<List<String>> getNodeTaints() {
+    public Output<List<String>> nodeTaints() {
         return this.nodeTaints == null ? Codegen.empty() : this.nodeTaints;
     }
 
@@ -238,7 +238,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orchestratorVersion")
       private final @Nullable Output<String> orchestratorVersion;
 
-    public Output<String> getOrchestratorVersion() {
+    public Output<String> orchestratorVersion() {
         return this.orchestratorVersion == null ? Codegen.empty() : this.orchestratorVersion;
     }
 
@@ -249,7 +249,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osDiskSizeGB")
       private final @Nullable Output<Integer> osDiskSizeGB;
 
-    public Output<Integer> getOsDiskSizeGB() {
+    public Output<Integer> osDiskSizeGB() {
         return this.osDiskSizeGB == null ? Codegen.empty() : this.osDiskSizeGB;
     }
 
@@ -260,7 +260,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osDiskType")
       private final @Nullable Output<Either<String,OSDiskType>> osDiskType;
 
-    public Output<Either<String,OSDiskType>> getOsDiskType() {
+    public Output<Either<String,OSDiskType>> osDiskType() {
         return this.osDiskType == null ? Codegen.empty() : this.osDiskType;
     }
 
@@ -271,7 +271,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osSKU")
       private final @Nullable Output<Either<String,OSSKU>> osSKU;
 
-    public Output<Either<String,OSSKU>> getOsSKU() {
+    public Output<Either<String,OSSKU>> osSKU() {
         return this.osSKU == null ? Codegen.empty() : this.osSKU;
     }
 
@@ -282,7 +282,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<Either<String,OSType>> osType;
 
-    public Output<Either<String,OSType>> getOsType() {
+    public Output<Either<String,OSType>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -293,7 +293,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podSubnetID")
       private final @Nullable Output<String> podSubnetID;
 
-    public Output<String> getPodSubnetID() {
+    public Output<String> podSubnetID() {
         return this.podSubnetID == null ? Codegen.empty() : this.podSubnetID;
     }
 
@@ -304,7 +304,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proximityPlacementGroupID")
       private final @Nullable Output<String> proximityPlacementGroupID;
 
-    public Output<String> getProximityPlacementGroupID() {
+    public Output<String> proximityPlacementGroupID() {
         return this.proximityPlacementGroupID == null ? Codegen.empty() : this.proximityPlacementGroupID;
     }
 
@@ -315,7 +315,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -326,7 +326,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -337,7 +337,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleSetEvictionPolicy")
       private final @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
 
-    public Output<Either<String,ScaleSetEvictionPolicy>> getScaleSetEvictionPolicy() {
+    public Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy() {
         return this.scaleSetEvictionPolicy == null ? Codegen.empty() : this.scaleSetEvictionPolicy;
     }
 
@@ -348,7 +348,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleSetPriority")
       private final @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
 
-    public Output<Either<String,ScaleSetPriority>> getScaleSetPriority() {
+    public Output<Either<String,ScaleSetPriority>> scaleSetPriority() {
         return this.scaleSetPriority == null ? Codegen.empty() : this.scaleSetPriority;
     }
 
@@ -359,7 +359,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spotMaxPrice")
       private final @Nullable Output<Double> spotMaxPrice;
 
-    public Output<Double> getSpotMaxPrice() {
+    public Output<Double> spotMaxPrice() {
         return this.spotMaxPrice == null ? Codegen.empty() : this.spotMaxPrice;
     }
 
@@ -370,7 +370,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -381,7 +381,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,AgentPoolType>> type;
 
-    public Output<Either<String,AgentPoolType>> getType() {
+    public Output<Either<String,AgentPoolType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -392,7 +392,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeSettings")
       private final @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Output<AgentPoolUpgradeSettingsArgs> getUpgradeSettings() {
+    public Output<AgentPoolUpgradeSettingsArgs> upgradeSettings() {
         return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 
@@ -403,7 +403,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
@@ -414,7 +414,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetSubnetID")
       private final @Nullable Output<String> vnetSubnetID;
 
-    public Output<String> getVnetSubnetID() {
+    public Output<String> vnetSubnetID() {
         return this.vnetSubnetID == null ? Codegen.empty() : this.vnetSubnetID;
     }
 

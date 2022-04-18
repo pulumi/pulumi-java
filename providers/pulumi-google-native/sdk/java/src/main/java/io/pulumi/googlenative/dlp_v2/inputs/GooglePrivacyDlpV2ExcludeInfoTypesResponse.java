@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends io.pulumi.
     @Import(name="infoTypes", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
+    public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
 

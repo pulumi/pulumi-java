@@ -28,7 +28,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     @Import(name="customErrorPageUrl")
       private final @Nullable Output<String> customErrorPageUrl;
 
-    public Output<String> getCustomErrorPageUrl() {
+    public Output<String> customErrorPageUrl() {
         return this.customErrorPageUrl == null ? Codegen.empty() : this.customErrorPageUrl;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     @Import(name="statusCode")
       private final @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
-    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> getStatusCode() {
+    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 

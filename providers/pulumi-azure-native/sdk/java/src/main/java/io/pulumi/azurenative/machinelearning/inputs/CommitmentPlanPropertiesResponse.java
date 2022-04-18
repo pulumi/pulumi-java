@@ -27,7 +27,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="chargeForOverage", required=true)
       private final Boolean chargeForOverage;
 
-    public Boolean getChargeForOverage() {
+    public Boolean chargeForOverage() {
         return this.chargeForOverage;
     }
 
@@ -38,7 +38,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="chargeForPlan", required=true)
       private final Boolean chargeForPlan;
 
-    public Boolean getChargeForPlan() {
+    public Boolean chargeForPlan() {
         return this.chargeForPlan;
     }
 
@@ -49,7 +49,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="creationDate", required=true)
       private final String creationDate;
 
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
 
@@ -60,7 +60,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="includedQuantities", required=true)
       private final Map<String,PlanQuantityResponse> includedQuantities;
 
-    public Map<String,PlanQuantityResponse> getIncludedQuantities() {
+    public Map<String,PlanQuantityResponse> includedQuantities() {
         return this.includedQuantities;
     }
 
@@ -71,7 +71,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="maxAssociationLimit", required=true)
       private final Integer maxAssociationLimit;
 
-    public Integer getMaxAssociationLimit() {
+    public Integer maxAssociationLimit() {
         return this.maxAssociationLimit;
     }
 
@@ -82,7 +82,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="maxCapacityLimit", required=true)
       private final Integer maxCapacityLimit;
 
-    public Integer getMaxCapacityLimit() {
+    public Integer maxCapacityLimit() {
         return this.maxCapacityLimit;
     }
 
@@ -93,7 +93,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="minCapacityLimit", required=true)
       private final Integer minCapacityLimit;
 
-    public Integer getMinCapacityLimit() {
+    public Integer minCapacityLimit() {
         return this.minCapacityLimit;
     }
 
@@ -104,7 +104,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="planMeter", required=true)
       private final String planMeter;
 
-    public String getPlanMeter() {
+    public String planMeter() {
         return this.planMeter;
     }
 
@@ -115,7 +115,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="refillFrequencyInDays", required=true)
       private final Integer refillFrequencyInDays;
 
-    public Integer getRefillFrequencyInDays() {
+    public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
 
@@ -126,7 +126,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     @Import(name="suspendPlanOnOverage", required=true)
       private final Boolean suspendPlanOnOverage;
 
-    public Boolean getSuspendPlanOnOverage() {
+    public Boolean suspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }
 

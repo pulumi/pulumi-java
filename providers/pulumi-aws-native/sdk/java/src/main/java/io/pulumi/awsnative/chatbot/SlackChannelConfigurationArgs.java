@@ -24,7 +24,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -35,7 +35,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="guardrailPolicies")
       private final @Nullable Output<List<String>> guardrailPolicies;
 
-    public Output<List<String>> getGuardrailPolicies() {
+    public Output<List<String>> guardrailPolicies() {
         return this.guardrailPolicies == null ? Codegen.empty() : this.guardrailPolicies;
     }
 
@@ -46,7 +46,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -57,7 +57,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
-    public Output<String> getLoggingLevel() {
+    public Output<String> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -68,7 +68,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="slackChannelId", required=true)
       private final Output<String> slackChannelId;
 
-    public Output<String> getSlackChannelId() {
+    public Output<String> slackChannelId() {
         return this.slackChannelId;
     }
 
@@ -79,7 +79,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="slackWorkspaceId", required=true)
       private final Output<String> slackWorkspaceId;
 
-    public Output<String> getSlackWorkspaceId() {
+    public Output<String> slackWorkspaceId() {
         return this.slackWorkspaceId;
     }
 
@@ -90,7 +90,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="snsTopicArns")
       private final @Nullable Output<List<String>> snsTopicArns;
 
-    public Output<List<String>> getSnsTopicArns() {
+    public Output<List<String>> snsTopicArns() {
         return this.snsTopicArns == null ? Codegen.empty() : this.snsTopicArns;
     }
 
@@ -101,7 +101,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="userRoleRequired")
       private final @Nullable Output<Boolean> userRoleRequired;
 
-    public Output<Boolean> getUserRoleRequired() {
+    public Output<Boolean> userRoleRequired() {
         return this.userRoleRequired == null ? Codegen.empty() : this.userRoleRequired;
     }
 

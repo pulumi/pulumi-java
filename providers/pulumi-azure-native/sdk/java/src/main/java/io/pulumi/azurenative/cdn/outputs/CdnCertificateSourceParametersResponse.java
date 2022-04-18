@@ -28,10 +28,10 @@ public final class CdnCertificateSourceParametersResponse {
      * Type of certificate used
      * 
     */
-    public String getCertificateType() {
+    public String certificateType() {
         return this.certificateType;
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

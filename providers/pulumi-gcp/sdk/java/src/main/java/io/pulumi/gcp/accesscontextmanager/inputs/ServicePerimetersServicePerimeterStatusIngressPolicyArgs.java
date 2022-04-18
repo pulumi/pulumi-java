@@ -25,7 +25,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyArgs exte
     @Import(name="ingressFrom")
       private final @Nullable Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs> ingressFrom;
 
-    public Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs> getIngressFrom() {
+    public Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs> ingressFrom() {
         return this.ingressFrom == null ? Codegen.empty() : this.ingressFrom;
     }
 
@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyArgs exte
     @Import(name="ingressTo")
       private final @Nullable Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs> ingressTo;
 
-    public Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs> getIngressTo() {
+    public Output<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs> ingressTo() {
         return this.ingressTo == null ? Codegen.empty() : this.ingressTo;
     }
 

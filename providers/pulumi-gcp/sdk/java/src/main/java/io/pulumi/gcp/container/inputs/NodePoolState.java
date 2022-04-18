@@ -30,7 +30,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
       private final @Nullable Output<NodePoolAutoscalingGetArgs> autoscaling;
 
-    public Output<NodePoolAutoscalingGetArgs> getAutoscaling() {
+    public Output<NodePoolAutoscalingGetArgs> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
@@ -41,7 +41,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -58,7 +58,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> getInitialNodeCount() {
+    public Output<Integer> initialNodeCount() {
         return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
     }
 
@@ -69,7 +69,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceGroupUrls")
       private final @Nullable Output<List<String>> instanceGroupUrls;
 
-    public Output<List<String>> getInstanceGroupUrls() {
+    public Output<List<String>> instanceGroupUrls() {
         return this.instanceGroupUrls == null ? Codegen.empty() : this.instanceGroupUrls;
     }
 
@@ -80,7 +80,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -91,7 +91,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedInstanceGroupUrls")
       private final @Nullable Output<List<String>> managedInstanceGroupUrls;
 
-    public Output<List<String>> getManagedInstanceGroupUrls() {
+    public Output<List<String>> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls == null ? Codegen.empty() : this.managedInstanceGroupUrls;
     }
 
@@ -103,7 +103,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="management")
       private final @Nullable Output<NodePoolManagementGetArgs> management;
 
-    public Output<NodePoolManagementGetArgs> getManagement() {
+    public Output<NodePoolManagementGetArgs> management() {
         return this.management == null ? Codegen.empty() : this.management;
     }
 
@@ -118,7 +118,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> getMaxPodsPerNode() {
+    public Output<Integer> maxPodsPerNode() {
         return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
     }
 
@@ -130,7 +130,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -142,7 +142,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -154,7 +154,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NodePoolNetworkConfigGetArgs> networkConfig;
 
-    public Output<NodePoolNetworkConfigGetArgs> getNetworkConfig() {
+    public Output<NodePoolNetworkConfigGetArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -166,7 +166,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeConfig")
       private final @Nullable Output<NodePoolNodeConfigGetArgs> nodeConfig;
 
-    public Output<NodePoolNodeConfigGetArgs> getNodeConfig() {
+    public Output<NodePoolNodeConfigGetArgs> nodeConfig() {
         return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
     }
 
@@ -178,7 +178,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
@@ -192,14 +192,14 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeLocations")
       private final @Nullable Output<List<String>> nodeLocations;
 
-    public Output<List<String>> getNodeLocations() {
+    public Output<List<String>> nodeLocations() {
         return this.nodeLocations == null ? Codegen.empty() : this.nodeLocations;
     }
 
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 
@@ -211,7 +211,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -224,7 +224,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeSettings")
       private final @Nullable Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings;
 
-    public Output<NodePoolUpgradeSettingsGetArgs> getUpgradeSettings() {
+    public Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings() {
         return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 
@@ -240,7 +240,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

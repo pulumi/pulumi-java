@@ -26,7 +26,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="destAddressGroups", required=true)
       private final List<String> destAddressGroups;
 
-    public List<String> getDestAddressGroups() {
+    public List<String> destAddressGroups() {
         return this.destAddressGroups;
     }
 
@@ -37,7 +37,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="destFqdns", required=true)
       private final List<String> destFqdns;
 
-    public List<String> getDestFqdns() {
+    public List<String> destFqdns() {
         return this.destFqdns;
     }
 
@@ -48,7 +48,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="destIpRanges", required=true)
       private final List<String> destIpRanges;
 
-    public List<String> getDestIpRanges() {
+    public List<String> destIpRanges() {
         return this.destIpRanges;
     }
 
@@ -59,7 +59,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="destRegionCodes", required=true)
       private final List<String> destRegionCodes;
 
-    public List<String> getDestRegionCodes() {
+    public List<String> destRegionCodes() {
         return this.destRegionCodes;
     }
 
@@ -70,7 +70,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="layer4Configs", required=true)
       private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
-    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
+    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
 
@@ -81,7 +81,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="srcAddressGroups", required=true)
       private final List<String> srcAddressGroups;
 
-    public List<String> getSrcAddressGroups() {
+    public List<String> srcAddressGroups() {
         return this.srcAddressGroups;
     }
 
@@ -92,7 +92,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="srcFqdns", required=true)
       private final List<String> srcFqdns;
 
-    public List<String> getSrcFqdns() {
+    public List<String> srcFqdns() {
         return this.srcFqdns;
     }
 
@@ -103,7 +103,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;
 
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 
@@ -114,7 +114,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="srcRegionCodes", required=true)
       private final List<String> srcRegionCodes;
 
-    public List<String> getSrcRegionCodes() {
+    public List<String> srcRegionCodes() {
         return this.srcRegionCodes;
     }
 
@@ -125,7 +125,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="srcSecureTags", required=true)
       private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
-    public List<FirewallPolicyRuleSecureTagResponse> getSrcSecureTags() {
+    public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
         return this.srcSecureTags;
     }
 

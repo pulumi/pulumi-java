@@ -26,7 +26,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     @Import(name="defaultGameServerConfig", required=true)
       private final Output<String> defaultGameServerConfig;
 
-    public Output<String> getDefaultGameServerConfig() {
+    public Output<String> defaultGameServerConfig() {
         return this.defaultGameServerConfig;
     }
 
@@ -37,7 +37,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     @Import(name="deploymentId", required=true)
       private final Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
@@ -52,7 +52,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     @Import(name="gameServerConfigOverrides")
       private final @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
-    public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> getGameServerConfigOverrides() {
+    public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides() {
         return this.gameServerConfigOverrides == null ? Codegen.empty() : this.gameServerConfigOverrides;
     }
 
@@ -64,7 +64,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

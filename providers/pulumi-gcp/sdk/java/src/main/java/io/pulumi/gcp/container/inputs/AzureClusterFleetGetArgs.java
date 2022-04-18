@@ -23,7 +23,7 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     @Import(name="membership")
       private final @Nullable Output<String> membership;
 
-    public Output<String> getMembership() {
+    public Output<String> membership() {
         return this.membership == null ? Codegen.empty() : this.membership;
     }
 
@@ -34,7 +34,7 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

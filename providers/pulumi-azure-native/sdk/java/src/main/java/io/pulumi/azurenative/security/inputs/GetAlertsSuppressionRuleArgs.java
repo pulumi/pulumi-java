@@ -19,7 +19,7 @@ public final class GetAlertsSuppressionRuleArgs extends io.pulumi.resources.Invo
     @Import(name="alertsSuppressionRuleName", required=true)
       private final String alertsSuppressionRuleName;
 
-    public String getAlertsSuppressionRuleName() {
+    public String alertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName;
     }
 

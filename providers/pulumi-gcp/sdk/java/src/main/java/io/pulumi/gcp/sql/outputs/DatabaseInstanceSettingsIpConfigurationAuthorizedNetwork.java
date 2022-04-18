@@ -45,14 +45,14 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      * formatted date time string indicating when this whitelist expires.
      * 
     */
-    public Optional<String> getExpirationTime() {
+    public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
      * A name for this whitelist entry.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -61,7 +61,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      * the whitelist to become active.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

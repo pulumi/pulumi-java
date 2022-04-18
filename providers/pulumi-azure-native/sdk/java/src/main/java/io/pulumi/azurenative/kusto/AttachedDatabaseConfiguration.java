@@ -43,7 +43,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The list of databases from the clusterResourceId which are currently attached to the cluster.
      * 
      */
-    public Output<List<String>> getAttachedDatabaseNames() {
+    public Output<List<String>> attachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
@@ -57,7 +57,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The resource id of the cluster where the databases you would like to attach reside.
      * 
      */
-    public Output<String> getClusterResourceId() {
+    public Output<String> clusterResourceId() {
         return this.clusterResourceId;
     }
     /**
@@ -71,7 +71,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -85,7 +85,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The default principals modification kind
      * 
      */
-    public Output<String> getDefaultPrincipalsModificationKind() {
+    public Output<String> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
@@ -99,7 +99,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -113,7 +113,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -141,7 +141,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return Table level sharing specifications
      * 
      */
-    public Output</* @Nullable */ TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
+    public Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties() {
         return this.tableLevelSharingProperties;
     }
     /**
@@ -155,7 +155,7 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

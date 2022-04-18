@@ -25,7 +25,7 @@ public final class ListManagedClusterUserCredentialsResult {
      * Base64-encoded Kubernetes configuration file.
      * 
     */
-    public List<CredentialResultResponse> getKubeconfigs() {
+    public List<CredentialResultResponse> kubeconfigs() {
         return this.kubeconfigs;
     }
 

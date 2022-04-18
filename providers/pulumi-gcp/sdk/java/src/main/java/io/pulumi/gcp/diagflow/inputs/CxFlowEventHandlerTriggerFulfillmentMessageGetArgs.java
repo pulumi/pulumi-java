@@ -22,7 +22,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageGetArgs extends io
     @Import(name="text")
       private final @Nullable Output<CxFlowEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxFlowEventHandlerTriggerFulfillmentMessageTextGetArgs> getText() {
+    public Output<CxFlowEventHandlerTriggerFulfillmentMessageTextGetArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

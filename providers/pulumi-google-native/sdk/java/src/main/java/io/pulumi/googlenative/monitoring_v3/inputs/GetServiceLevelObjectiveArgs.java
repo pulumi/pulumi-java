@@ -17,35 +17,35 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
     @Import(name="serviceId", required=true)
       private final String serviceId;
 
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
 
     @Import(name="serviceLevelObjectiveId", required=true)
       private final String serviceLevelObjectiveId;
 
-    public String getServiceLevelObjectiveId() {
+    public String serviceLevelObjectiveId() {
         return this.serviceLevelObjectiveId;
     }
 
     @Import(name="v3Id", required=true)
       private final String v3Id;
 
-    public String getV3Id() {
+    public String v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
       private final String v3Id1;
 
-    public String getV3Id1() {
+    public String v3Id1() {
         return this.v3Id1;
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

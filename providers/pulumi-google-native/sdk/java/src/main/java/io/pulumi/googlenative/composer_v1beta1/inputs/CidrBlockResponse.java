@@ -23,7 +23,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -34,7 +34,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 

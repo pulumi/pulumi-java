@@ -26,7 +26,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
     @Import(name="policySigningCertificates")
       private final @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
-    public Output<JSONWebKeySetArgs> getPolicySigningCertificates() {
+    public Output<JSONWebKeySetArgs> policySigningCertificates() {
         return this.policySigningCertificates == null ? Codegen.empty() : this.policySigningCertificates;
     }
 

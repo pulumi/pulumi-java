@@ -27,7 +27,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageaccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
-    public Output<List<StorageAccountArgs>> getStorageaccounts() {
+    public Output<List<StorageAccountArgs>> storageaccounts() {
         return this.storageaccounts == null ? Codegen.empty() : this.storageaccounts;
     }
 

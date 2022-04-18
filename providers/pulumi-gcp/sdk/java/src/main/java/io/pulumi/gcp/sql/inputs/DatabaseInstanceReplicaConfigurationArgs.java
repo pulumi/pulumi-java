@@ -25,7 +25,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
@@ -37,7 +37,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
+    public Output<String> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
@@ -49,7 +49,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
+    public Output<String> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
@@ -61,7 +61,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="connectRetryInterval")
       private final @Nullable Output<Integer> connectRetryInterval;
 
-    public Output<Integer> getConnectRetryInterval() {
+    public Output<Integer> connectRetryInterval() {
         return this.connectRetryInterval == null ? Codegen.empty() : this.connectRetryInterval;
     }
 
@@ -73,7 +73,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
-    public Output<String> getDumpFilePath() {
+    public Output<String> dumpFilePath() {
         return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
     }
 
@@ -87,7 +87,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="failoverTarget")
       private final @Nullable Output<Boolean> failoverTarget;
 
-    public Output<Boolean> getFailoverTarget() {
+    public Output<Boolean> failoverTarget() {
         return this.failoverTarget == null ? Codegen.empty() : this.failoverTarget;
     }
 
@@ -99,7 +99,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="masterHeartbeatPeriod")
       private final @Nullable Output<Integer> masterHeartbeatPeriod;
 
-    public Output<Integer> getMasterHeartbeatPeriod() {
+    public Output<Integer> masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod == null ? Codegen.empty() : this.masterHeartbeatPeriod;
     }
 
@@ -110,14 +110,14 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="sslCipher")
       private final @Nullable Output<String> sslCipher;
 
-    public Output<String> getSslCipher() {
+    public Output<String> sslCipher() {
         return this.sslCipher == null ? Codegen.empty() : this.sslCipher;
     }
 
@@ -128,7 +128,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 
@@ -140,7 +140,7 @@ public final class DatabaseInstanceReplicaConfigurationArgs extends io.pulumi.re
     @Import(name="verifyServerCertificate")
       private final @Nullable Output<Boolean> verifyServerCertificate;
 
-    public Output<Boolean> getVerifyServerCertificate() {
+    public Output<Boolean> verifyServerCertificate() {
         return this.verifyServerCertificate == null ? Codegen.empty() : this.verifyServerCertificate;
     }
 

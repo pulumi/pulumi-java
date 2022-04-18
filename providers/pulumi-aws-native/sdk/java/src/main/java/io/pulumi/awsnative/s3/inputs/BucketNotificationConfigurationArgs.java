@@ -26,28 +26,28 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     @Import(name="eventBridgeConfiguration")
       private final @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
-    public Output<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
+    public Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration() {
         return this.eventBridgeConfiguration == null ? Codegen.empty() : this.eventBridgeConfiguration;
     }
 
     @Import(name="lambdaConfigurations")
       private final @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
-    public Output<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
+    public Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations() {
         return this.lambdaConfigurations == null ? Codegen.empty() : this.lambdaConfigurations;
     }
 
     @Import(name="queueConfigurations")
       private final @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
-    public Output<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
+    public Output<List<BucketQueueConfigurationArgs>> queueConfigurations() {
         return this.queueConfigurations == null ? Codegen.empty() : this.queueConfigurations;
     }
 
     @Import(name="topicConfigurations")
       private final @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
-    public Output<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {
+    public Output<List<BucketTopicConfigurationArgs>> topicConfigurations() {
         return this.topicConfigurations == null ? Codegen.empty() : this.topicConfigurations;
     }
 

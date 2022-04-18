@@ -21,7 +21,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accessPointId")
       private final @Nullable String accessPointId;
 
-    public Optional<String> getAccessPointId() {
+    public Optional<String> accessPointId() {
         return this.accessPointId == null ? Optional.empty() : Optional.ofNullable(this.accessPointId);
     }
 
@@ -32,7 +32,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
-    public Optional<String> getFileSystemId() {
+    public Optional<String> fileSystemId() {
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
     }
 
@@ -43,7 +43,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="mountTargetId")
       private final @Nullable String mountTargetId;
 
-    public Optional<String> getMountTargetId() {
+    public Optional<String> mountTargetId() {
         return this.mountTargetId == null ? Optional.empty() : Optional.ofNullable(this.mountTargetId);
     }
 

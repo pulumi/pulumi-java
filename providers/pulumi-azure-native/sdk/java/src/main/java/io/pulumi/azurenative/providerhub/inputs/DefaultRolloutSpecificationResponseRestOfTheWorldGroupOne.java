@@ -18,14 +18,14 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne ext
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @Import(name="waitDuration")
       private final @Nullable String waitDuration;
 
-    public Optional<String> getWaitDuration() {
+    public Optional<String> waitDuration() {
         return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
     }
 

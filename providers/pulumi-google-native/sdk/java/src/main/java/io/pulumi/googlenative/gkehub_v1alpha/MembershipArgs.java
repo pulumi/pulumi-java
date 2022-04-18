@@ -25,7 +25,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authority")
       private final @Nullable Output<AuthorityArgs> authority;
 
-    public Output<AuthorityArgs> getAuthority() {
+    public Output<AuthorityArgs> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -36,7 +36,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<MembershipEndpointArgs> endpoint;
 
-    public Output<MembershipEndpointArgs> getEndpoint() {
+    public Output<MembershipEndpointArgs> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -47,7 +47,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -58,35 +58,35 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="membershipId", required=true)
       private final Output<String> membershipId;
 
-    public Output<String> getMembershipId() {
+    public Output<String> membershipId() {
         return this.membershipId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

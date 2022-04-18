@@ -158,63 +158,63 @@ public final class ActiveSecurityUserRuleResponse {
      * Deployment time string.
      * 
     */
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
     /**
      * A description of the security user configuration.
      * 
     */
-    public Optional<String> getConfigurationDescription() {
+    public Optional<String> configurationDescription() {
         return Optional.ofNullable(this.configurationDescription);
     }
     /**
      * A display name of the security user configuration.
      * 
     */
-    public Optional<String> getConfigurationDisplayName() {
+    public Optional<String> configurationDisplayName() {
         return Optional.ofNullable(this.configurationDisplayName);
     }
     /**
      * A description for this rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The destination port ranges.
      * 
     */
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -222,70 +222,70 @@ public final class ActiveSecurityUserRuleResponse {
      * Expected value is 'Custom'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Network protocol this rule applies to.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the security configuration user rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Deployment region.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * Groups for rule collection
      * 
     */
-    public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
+    public List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
     /**
      * A description of the rule collection.
      * 
     */
-    public Optional<String> getRuleCollectionDescription() {
+    public Optional<String> ruleCollectionDescription() {
         return Optional.ofNullable(this.ruleCollectionDescription);
     }
     /**
      * A display name of the rule collection.
      * 
     */
-    public Optional<String> getRuleCollectionDisplayName() {
+    public Optional<String> ruleCollectionDisplayName() {
         return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
     /**
      * Effective configuration groups.
      * 
     */
-    public List<ConfigurationGroupResponse> getRuleGroups() {
+    public List<ConfigurationGroupResponse> ruleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
     /**
      * The source port ranges.
      * 
     */
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
 

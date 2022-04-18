@@ -24,7 +24,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnFamilies")
       private final @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
 
-    public Output<List<TableColumnFamilyArgs>> getColumnFamilies() {
+    public Output<List<TableColumnFamilyArgs>> columnFamilies() {
         return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
@@ -35,7 +35,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -46,7 +46,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,7 +71,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="splitKeys")
       private final @Nullable Output<List<String>> splitKeys;
 
-    public Output<List<String>> getSplitKeys() {
+    public Output<List<String>> splitKeys() {
         return this.splitKeys == null ? Codegen.empty() : this.splitKeys;
     }
 

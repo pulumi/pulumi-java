@@ -42,21 +42,21 @@ public final class TaskDefinitionProxyConfiguration {
      * Name of the container that will serve as the App Mesh proxy.
      * 
     */
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
     /**
      * Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

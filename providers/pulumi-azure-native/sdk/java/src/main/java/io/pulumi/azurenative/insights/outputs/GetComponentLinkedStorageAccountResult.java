@@ -48,28 +48,28 @@ public final class GetComponentLinkedStorageAccountResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Linked storage account resource ID
      * 
     */
-    public Optional<String> getLinkedStorageAccount() {
+    public Optional<String> linkedStorageAccount() {
         return Optional.ofNullable(this.linkedStorageAccount);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

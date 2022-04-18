@@ -35,14 +35,14 @@ public final class SecretEnvSource {
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify whether the Secret must be defined
      * 
     */
-    public Optional<Boolean> getOptional() {
+    public Optional<Boolean> optional() {
         return Optional.ofNullable(this.optional);
     }
 

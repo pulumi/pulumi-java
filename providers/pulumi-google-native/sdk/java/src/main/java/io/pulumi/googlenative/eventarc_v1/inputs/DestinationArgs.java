@@ -28,7 +28,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
@@ -39,7 +39,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudRun")
       private final @Nullable Output<CloudRunArgs> cloudRun;
 
-    public Output<CloudRunArgs> getCloudRun() {
+    public Output<CloudRunArgs> cloudRun() {
         return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
     }
 
@@ -50,7 +50,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gke")
       private final @Nullable Output<GKEArgs> gke;
 
-    public Output<GKEArgs> getGke() {
+    public Output<GKEArgs> gke() {
         return this.gke == null ? Codegen.empty() : this.gke;
     }
 

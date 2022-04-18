@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
     @Import(name="tableSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec;
 
-    public Output<GoogleCloudDatacatalogV1TableSpecArgs> getTableSpec() {
+    public Output<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec() {
         return this.tableSpec == null ? Codegen.empty() : this.tableSpec;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
     @Import(name="viewSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec;
 
-    public Output<GoogleCloudDatacatalogV1ViewSpecArgs> getViewSpec() {
+    public Output<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec() {
         return this.viewSpec == null ? Codegen.empty() : this.viewSpec;
     }
 

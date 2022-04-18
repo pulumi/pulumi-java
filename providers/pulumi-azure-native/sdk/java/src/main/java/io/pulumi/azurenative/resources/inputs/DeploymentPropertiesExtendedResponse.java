@@ -33,7 +33,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="correlationId", required=true)
       private final String correlationId;
 
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
 
@@ -44,7 +44,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="debugSetting", required=true)
       private final DebugSettingResponse debugSetting;
 
-    public DebugSettingResponse getDebugSetting() {
+    public DebugSettingResponse debugSetting() {
         return this.debugSetting;
     }
 
@@ -55,7 +55,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="dependencies", required=true)
       private final List<DependencyResponse> dependencies;
 
-    public List<DependencyResponse> getDependencies() {
+    public List<DependencyResponse> dependencies() {
         return this.dependencies;
     }
 
@@ -66,7 +66,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -77,7 +77,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="error", required=true)
       private final ErrorResponseResponse error;
 
-    public ErrorResponseResponse getError() {
+    public ErrorResponseResponse error() {
         return this.error;
     }
 
@@ -88,7 +88,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -99,7 +99,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="onErrorDeployment", required=true)
       private final OnErrorDeploymentExtendedResponse onErrorDeployment;
 
-    public OnErrorDeploymentExtendedResponse getOnErrorDeployment() {
+    public OnErrorDeploymentExtendedResponse onErrorDeployment() {
         return this.onErrorDeployment;
     }
 
@@ -110,7 +110,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="outputResources", required=true)
       private final List<ResourceReferenceResponse> outputResources;
 
-    public List<ResourceReferenceResponse> getOutputResources() {
+    public List<ResourceReferenceResponse> outputResources() {
         return this.outputResources;
     }
 
@@ -121,7 +121,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="outputs", required=true)
       private final Object outputs;
 
-    public Object getOutputs() {
+    public Object outputs() {
         return this.outputs;
     }
 
@@ -132,7 +132,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="parameters", required=true)
       private final Object parameters;
 
-    public Object getParameters() {
+    public Object parameters() {
         return this.parameters;
     }
 
@@ -143,7 +143,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="parametersLink", required=true)
       private final ParametersLinkResponse parametersLink;
 
-    public ParametersLinkResponse getParametersLink() {
+    public ParametersLinkResponse parametersLink() {
         return this.parametersLink;
     }
 
@@ -154,7 +154,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="providers", required=true)
       private final List<ProviderResponse> providers;
 
-    public List<ProviderResponse> getProviders() {
+    public List<ProviderResponse> providers() {
         return this.providers;
     }
 
@@ -165,7 +165,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -176,7 +176,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="templateHash", required=true)
       private final String templateHash;
 
-    public String getTemplateHash() {
+    public String templateHash() {
         return this.templateHash;
     }
 
@@ -187,7 +187,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="templateLink", required=true)
       private final TemplateLinkResponse templateLink;
 
-    public TemplateLinkResponse getTemplateLink() {
+    public TemplateLinkResponse templateLink() {
         return this.templateLink;
     }
 
@@ -198,7 +198,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 
@@ -209,7 +209,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     @Import(name="validatedResources", required=true)
       private final List<ResourceReferenceResponse> validatedResources;
 
-    public List<ResourceReferenceResponse> getValidatedResources() {
+    public List<ResourceReferenceResponse> validatedResources() {
         return this.validatedResources;
     }
 

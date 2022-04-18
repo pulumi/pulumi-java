@@ -32,14 +32,14 @@ public final class Int64RangeMatchResponse {
      * The end of the range (exclusive) in signed long integer format.
      * 
     */
-    public String getRangeEnd() {
+    public String rangeEnd() {
         return this.rangeEnd;
     }
     /**
      * The start of the range (inclusive) in signed long integer format.
      * 
     */
-    public String getRangeStart() {
+    public String rangeStart() {
         return this.rangeStart;
     }
 

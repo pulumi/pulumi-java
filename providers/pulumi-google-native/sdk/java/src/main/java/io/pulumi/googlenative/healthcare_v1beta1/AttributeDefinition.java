@@ -30,7 +30,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
      * 
      */
-    public Output<List<String>> getAllowedValues() {
+    public Output<List<String>> allowedValues() {
         return this.allowedValues;
     }
     /**
@@ -44,7 +44,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return The category of the attribute. The value of this field cannot be changed after creation.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -58,7 +58,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
      * 
      */
-    public Output<List<String>> getConsentDefaultValues() {
+    public Output<List<String>> consentDefaultValues() {
         return this.consentDefaultValues;
     }
     /**
@@ -72,7 +72,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
      * 
      */
-    public Output<String> getDataMappingDefaultValue() {
+    public Output<String> dataMappingDefaultValue() {
         return this.dataMappingDefaultValue;
     }
     /**
@@ -86,7 +86,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return Optional. A description of the attribute.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -100,7 +100,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

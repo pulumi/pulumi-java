@@ -25,7 +25,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="height")
       private final @Nullable String height;
 
-    public Optional<String> getHeight() {
+    public Optional<String> height() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
     }
 
@@ -36,7 +36,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -48,7 +48,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -59,7 +59,7 @@ public final class PngLayerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="width")
       private final @Nullable String width;
 
-    public Optional<String> getWidth() {
+    public Optional<String> width() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
     }
 

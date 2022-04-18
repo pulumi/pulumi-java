@@ -34,14 +34,14 @@ public final class NonResourceRule {
      * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
      * 
     */
-    public List<String> getNonResourceURLs() {
+    public List<String> nonResourceURLs() {
         return this.nonResourceURLs == null ? List.of() : this.nonResourceURLs;
     }
     /**
      * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
      * 
     */
-    public List<String> getVerbs() {
+    public List<String> verbs() {
         return this.verbs;
     }
 

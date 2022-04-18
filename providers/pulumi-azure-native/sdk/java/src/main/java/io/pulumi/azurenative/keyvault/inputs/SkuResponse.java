@@ -23,7 +23,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="family", required=true)
       private final String family;
 
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
 
@@ -34,7 +34,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

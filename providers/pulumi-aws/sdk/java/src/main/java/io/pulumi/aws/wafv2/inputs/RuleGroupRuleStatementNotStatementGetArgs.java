@@ -22,7 +22,7 @@ public final class RuleGroupRuleStatementNotStatementGetArgs extends io.pulumi.r
     @Import(name="statements", required=true)
       private final Output<List<RuleGroupRuleStatementNotStatementStatementGetArgs>> statements;
 
-    public Output<List<RuleGroupRuleStatementNotStatementStatementGetArgs>> getStatements() {
+    public Output<List<RuleGroupRuleStatementNotStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 

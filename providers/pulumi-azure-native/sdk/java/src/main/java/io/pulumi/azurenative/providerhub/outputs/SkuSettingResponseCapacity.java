@@ -29,16 +29,16 @@ public final class SkuSettingResponseCapacity {
         this.scaleType = scaleType;
     }
 
-    public Optional<Integer> getDefault_() {
+    public Optional<Integer> default_() {
         return Optional.ofNullable(this.default_);
     }
-    public Optional<Integer> getMaximum() {
+    public Optional<Integer> maximum() {
         return Optional.ofNullable(this.maximum);
     }
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
-    public Optional<String> getScaleType() {
+    public Optional<String> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
 

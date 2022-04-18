@@ -18,7 +18,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     @Import(name="templateUri")
       private final @Nullable Output<String> templateUri;
 
-    public Output<String> getTemplateUri() {
+    public Output<String> templateUri() {
         return this.templateUri == null ? Codegen.empty() : this.templateUri;
     }
 

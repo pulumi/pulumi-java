@@ -117,7 +117,7 @@ public final class GetDataCollectionRuleResult {
      * The specification of data flows.
      * 
     */
-    public List<DataFlowResponse> getDataFlows() {
+    public List<DataFlowResponse> dataFlows() {
         return this.dataFlows == null ? List.of() : this.dataFlows;
     }
     /**
@@ -125,84 +125,84 @@ public final class GetDataCollectionRuleResult {
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
     */
-    public Optional<DataCollectionRuleResponseDataSources> getDataSources() {
+    public Optional<DataCollectionRuleResponseDataSources> dataSources() {
         return Optional.ofNullable(this.dataSources);
     }
     /**
      * Description of the data collection rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The specification of destinations.
      * 
     */
-    public Optional<DataCollectionRuleResponseDestinations> getDestinations() {
+    public Optional<DataCollectionRuleResponseDestinations> destinations() {
         return Optional.ofNullable(this.destinations);
     }
     /**
      * Resource entity tag (ETag).
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The immutable ID of this data collection rule. This property is READ-ONLY.
      * 
     */
-    public String getImmutableId() {
+    public String immutableId() {
         return this.immutableId;
     }
     /**
      * The kind of the resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     @Import(name="divisor")
       private final @Nullable Output<String> divisor;
 
-    public Output<String> getDivisor() {
+    public Output<String> divisor() {
         return this.divisor == null ? Codegen.empty() : this.divisor;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

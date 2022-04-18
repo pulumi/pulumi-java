@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
     @Import(name="wafFeature", required=true)
       private final String wafFeature;
 
-    public String getWafFeature() {
+    public String wafFeature() {
         return this.wafFeature;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
     @Import(name="wafService", required=true)
       private final String wafService;
 
-    public String getWafService() {
+    public String wafService() {
         return this.wafService;
     }
 

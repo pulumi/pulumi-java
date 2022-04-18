@@ -25,13 +25,13 @@ public final class JobIAMMemberCondition {
         this.title = title;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

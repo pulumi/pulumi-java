@@ -40,7 +40,7 @@ public class LogService extends io.pulumi.resources.CustomResource {
      * @return The id of directory.
      * 
      */
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -54,7 +54,7 @@ public class LogService extends io.pulumi.resources.CustomResource {
      * @return Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
      * 
      */
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 

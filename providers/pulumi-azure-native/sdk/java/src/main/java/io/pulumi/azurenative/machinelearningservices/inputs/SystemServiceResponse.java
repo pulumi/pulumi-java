@@ -23,7 +23,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -34,7 +34,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="systemServiceType", required=true)
       private final String systemServiceType;
 
-    public String getSystemServiceType() {
+    public String systemServiceType() {
         return this.systemServiceType;
     }
 
@@ -45,7 +45,7 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -18,21 +18,21 @@ public final class GetBackendServiceConsistentHash extends io.pulumi.resources.I
     @Import(name="httpCookies", required=true)
       private final List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
 
-    public List<GetBackendServiceConsistentHashHttpCooky> getHttpCookies() {
+    public List<GetBackendServiceConsistentHashHttpCooky> httpCookies() {
         return this.httpCookies;
     }
 
     @Import(name="httpHeaderName", required=true)
       private final String httpHeaderName;
 
-    public String getHttpHeaderName() {
+    public String httpHeaderName() {
         return this.httpHeaderName;
     }
 
     @Import(name="minimumRingSize", required=true)
       private final Integer minimumRingSize;
 
-    public Integer getMinimumRingSize() {
+    public Integer minimumRingSize() {
         return this.minimumRingSize;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffRespo
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 

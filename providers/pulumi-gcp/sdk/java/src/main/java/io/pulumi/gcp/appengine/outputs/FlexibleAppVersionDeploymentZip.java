@@ -35,14 +35,14 @@ public final class FlexibleAppVersionDeploymentZip {
      * files count
      * 
     */
-    public Optional<Integer> getFilesCount() {
+    public Optional<Integer> filesCount() {
         return Optional.ofNullable(this.filesCount);
     }
     /**
      * Source URL
      * 
     */
-    public String getSourceUrl() {
+    public String sourceUrl() {
         return this.sourceUrl;
     }
 

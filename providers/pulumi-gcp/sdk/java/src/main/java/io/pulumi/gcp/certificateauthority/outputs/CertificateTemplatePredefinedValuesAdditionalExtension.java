@@ -43,21 +43,21 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
      * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
     */
-    public Optional<Boolean> getCritical() {
+    public Optional<Boolean> critical() {
         return Optional.ofNullable(this.critical);
     }
     /**
      * Required. The OID for this X.509 extension.
      * 
     */
-    public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId getObjectId() {
+    public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId() {
         return this.objectId;
     }
     /**
      * Required. The value of this X.509 extension.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

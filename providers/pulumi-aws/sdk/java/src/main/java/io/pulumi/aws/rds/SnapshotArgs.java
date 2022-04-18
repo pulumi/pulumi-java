@@ -23,7 +23,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbInstanceIdentifier", required=true)
       private final Output<String> dbInstanceIdentifier;
 
-    public Output<String> getDbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbSnapshotIdentifier", required=true)
       private final Output<String> dbSnapshotIdentifier;
 
-    public Output<String> getDbSnapshotIdentifier() {
+    public Output<String> dbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier;
     }
 
@@ -45,7 +45,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

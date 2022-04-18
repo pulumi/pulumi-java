@@ -48,21 +48,21 @@ public final class ClusterMaintenancePolicy {
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
     */
-    public Optional<ClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindow() {
+    public Optional<ClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindow() {
         return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
     /**
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
      * 
     */
-    public List<ClusterMaintenancePolicyMaintenanceExclusion> getMaintenanceExclusions() {
+    public List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions() {
         return this.maintenanceExclusions == null ? List.of() : this.maintenanceExclusions;
     }
     /**
      * Time window for recurring maintenance operations.
      * 
     */
-    public Optional<ClusterMaintenancePolicyRecurringWindow> getRecurringWindow() {
+    public Optional<ClusterMaintenancePolicyRecurringWindow> recurringWindow() {
         return Optional.ofNullable(this.recurringWindow);
     }
 

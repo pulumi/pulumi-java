@@ -21,7 +21,7 @@ public final class DataTransferConfigEmailPreferencesArgs extends io.pulumi.reso
     @Import(name="enableFailureEmail", required=true)
       private final Output<Boolean> enableFailureEmail;
 
-    public Output<Boolean> getEnableFailureEmail() {
+    public Output<Boolean> enableFailureEmail() {
         return this.enableFailureEmail;
     }
 

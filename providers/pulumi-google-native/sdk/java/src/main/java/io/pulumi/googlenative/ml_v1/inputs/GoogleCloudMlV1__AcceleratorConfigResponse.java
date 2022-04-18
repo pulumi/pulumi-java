@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
     @Import(name="count", required=true)
       private final String count;
 
-    public String getCount() {
+    public String count() {
         return this.count;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

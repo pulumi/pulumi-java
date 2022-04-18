@@ -92,70 +92,70 @@ public final class GetStudioResult {
      * The Amazon Resource Name (ARN) of the EMR Studio.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
      * 
     */
-    public Optional<String> getDefaultS3Location() {
+    public Optional<String> defaultS3Location() {
         return Optional.ofNullable(this.defaultS3Location);
     }
     /**
      * A detailed description of the Studio.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
     */
-    public Optional<String> getIdpAuthUrl() {
+    public Optional<String> idpAuthUrl() {
         return Optional.ofNullable(this.idpAuthUrl);
     }
     /**
      * The name of relay state parameter for external Identity Provider.
      * 
     */
-    public Optional<String> getIdpRelayStateParameterName() {
+    public Optional<String> idpRelayStateParameterName() {
         return Optional.ofNullable(this.idpRelayStateParameterName);
     }
     /**
      * A descriptive name for the Amazon EMR Studio.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ID of the EMR Studio.
      * 
     */
-    public Optional<String> getStudioId() {
+    public Optional<String> studioId() {
         return Optional.ofNullable(this.studioId);
     }
     /**
      * A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
      * A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
      * 
     */
-    public List<StudioTag> getTags() {
+    public List<StudioTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The unique Studio access URL.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

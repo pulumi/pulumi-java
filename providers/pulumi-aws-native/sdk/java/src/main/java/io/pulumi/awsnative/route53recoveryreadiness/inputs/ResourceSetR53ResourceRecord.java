@@ -25,7 +25,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
     @Import(name="domainName")
       private final @Nullable String domainName;
 
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
     @Import(name="recordSetId")
       private final @Nullable String recordSetId;
 
-    public Optional<String> getRecordSetId() {
+    public Optional<String> recordSetId() {
         return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
     }
 

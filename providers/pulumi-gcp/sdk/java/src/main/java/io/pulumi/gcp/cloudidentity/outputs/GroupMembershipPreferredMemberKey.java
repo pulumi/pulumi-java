@@ -49,7 +49,7 @@ public final class GroupMembershipPreferredMemberKey {
      * Must be unique within a namespace.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -61,7 +61,7 @@ public final class GroupMembershipPreferredMemberKey {
      * and must be in the form of `identitysources/{identity_source_id}`.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 

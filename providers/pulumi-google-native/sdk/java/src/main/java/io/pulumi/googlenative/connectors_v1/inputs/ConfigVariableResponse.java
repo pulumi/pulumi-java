@@ -25,7 +25,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="boolValue", required=true)
       private final Boolean boolValue;
 
-    public Boolean getBoolValue() {
+    public Boolean boolValue() {
         return this.boolValue;
     }
 
@@ -36,7 +36,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="intValue", required=true)
       private final String intValue;
 
-    public String getIntValue() {
+    public String intValue() {
         return this.intValue;
     }
 
@@ -47,7 +47,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -58,7 +58,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="secretValue", required=true)
       private final SecretResponse secretValue;
 
-    public SecretResponse getSecretValue() {
+    public SecretResponse secretValue() {
         return this.secretValue;
     }
 
@@ -69,7 +69,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

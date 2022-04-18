@@ -26,7 +26,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -37,7 +37,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     @Import(name="storagePolicyID")
       private final @Nullable Output<String> storagePolicyID;
 
-    public Output<String> getStoragePolicyID() {
+    public Output<String> storagePolicyID() {
         return this.storagePolicyID == null ? Codegen.empty() : this.storagePolicyID;
     }
 
@@ -48,7 +48,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     @Import(name="storagePolicyName")
       private final @Nullable Output<String> storagePolicyName;
 
-    public Output<String> getStoragePolicyName() {
+    public Output<String> storagePolicyName() {
         return this.storagePolicyName == null ? Codegen.empty() : this.storagePolicyName;
     }
 
@@ -59,7 +59,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     @Import(name="volumePath", required=true)
       private final Output<String> volumePath;
 
-    public Output<String> getVolumePath() {
+    public Output<String> volumePath() {
         return this.volumePath;
     }
 

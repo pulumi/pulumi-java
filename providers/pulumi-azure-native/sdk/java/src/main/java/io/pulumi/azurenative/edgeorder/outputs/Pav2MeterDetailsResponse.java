@@ -49,28 +49,28 @@ public final class Pav2MeterDetailsResponse {
      * Expected value is 'Pav2'.
      * 
     */
-    public String getBillingType() {
+    public String billingType() {
         return this.billingType;
     }
     /**
      * Charging type.
      * 
     */
-    public String getChargingType() {
+    public String chargingType() {
         return this.chargingType;
     }
     /**
      * Validation status of requested data center and transport.
      * 
     */
-    public String getMeterGuid() {
+    public String meterGuid() {
         return this.meterGuid;
     }
     /**
      * Billing unit applicable for Pav2 billing
      * 
     */
-    public Double getMultiplier() {
+    public Double multiplier() {
         return this.multiplier;
     }
 

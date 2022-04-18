@@ -23,7 +23,7 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="usePartitionedTables", required=true)
       private final Boolean usePartitionedTables;
 
-    public Boolean getUsePartitionedTables() {
+    public Boolean usePartitionedTables() {
         return this.usePartitionedTables;
     }
 
@@ -34,7 +34,7 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="usesTimestampColumnPartitioning", required=true)
       private final Boolean usesTimestampColumnPartitioning;
 
-    public Boolean getUsesTimestampColumnPartitioning() {
+    public Boolean usesTimestampColumnPartitioning() {
         return this.usesTimestampColumnPartitioning;
     }
 

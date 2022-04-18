@@ -27,7 +27,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disruptionBudget")
       private final @Nullable Output<FixedOrPercentArgs> disruptionBudget;
 
-    public Output<FixedOrPercentArgs> getDisruptionBudget() {
+    public Output<FixedOrPercentArgs> disruptionBudget() {
         return this.disruptionBudget == null ? Codegen.empty() : this.disruptionBudget;
     }
 
@@ -38,7 +38,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<PatchRolloutMode> mode;
 
-    public Output<PatchRolloutMode> getMode() {
+    public Output<PatchRolloutMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

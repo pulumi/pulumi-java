@@ -44,7 +44,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * @return ARN that identifies the capacity provider.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the provider for the ECS auto scaling group. Detailed below.
      * 
      */
-    public Output<CapacityProviderAutoScalingGroupProvider> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
     /**
@@ -72,7 +72,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * @return Name of the capacity provider.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,13 +86,13 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

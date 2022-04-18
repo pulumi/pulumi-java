@@ -23,7 +23,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="lastKeySync", required=true)
       private final String lastKeySync;
 
-    public String getLastKeySync() {
+    public String lastKeySync() {
         return this.lastKeySync;
     }
 
@@ -34,7 +34,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

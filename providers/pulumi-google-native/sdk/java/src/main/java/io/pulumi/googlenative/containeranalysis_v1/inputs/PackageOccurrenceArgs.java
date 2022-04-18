@@ -26,7 +26,7 @@ public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location", required=true)
       private final Output<List<LocationArgs>> location;
 
-    public Output<List<LocationArgs>> getLocation() {
+    public Output<List<LocationArgs>> location() {
         return this.location;
     }
 

@@ -18,14 +18,14 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
 
     @Import(name="featureType", required=true)
       private final Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
-    public Output<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {
+    public Output<FeatureGroupFeatureDefinitionFeatureType> featureType() {
         return this.featureType;
     }
 

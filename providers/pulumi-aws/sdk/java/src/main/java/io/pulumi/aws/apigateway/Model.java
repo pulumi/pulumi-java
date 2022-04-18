@@ -40,7 +40,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The content type of the model
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -54,7 +54,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The description of the model
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +68,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The name of the model
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +82,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -96,7 +96,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The schema of the model in a JSON form
      * 
      */
-    public Output</* @Nullable */ String> getSchema() {
+    public Output</* @Nullable */ String> schema() {
         return this.schema;
     }
 

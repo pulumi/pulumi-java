@@ -31,168 +31,168 @@ public final class NodePoolNodeConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> getBootDiskKmsKey() {
+    public Output<String> bootDiskKmsKey() {
         return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
     }
 
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     @Import(name="ephemeralStorageConfig")
       private final @Nullable Output<NodePoolNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig;
 
-    public Output<NodePoolNodeConfigEphemeralStorageConfigGetArgs> getEphemeralStorageConfig() {
+    public Output<NodePoolNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig() {
         return this.ephemeralStorageConfig == null ? Codegen.empty() : this.ephemeralStorageConfig;
     }
 
     @Import(name="gcfsConfig")
       private final @Nullable Output<NodePoolNodeConfigGcfsConfigGetArgs> gcfsConfig;
 
-    public Output<NodePoolNodeConfigGcfsConfigGetArgs> getGcfsConfig() {
+    public Output<NodePoolNodeConfigGcfsConfigGetArgs> gcfsConfig() {
         return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
     }
 
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<NodePoolNodeConfigGuestAcceleratorGetArgs>> guestAccelerators;
 
-    public Output<List<NodePoolNodeConfigGuestAcceleratorGetArgs>> getGuestAccelerators() {
+    public Output<List<NodePoolNodeConfigGuestAcceleratorGetArgs>> guestAccelerators() {
         return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
     @Import(name="kubeletConfig")
       private final @Nullable Output<NodePoolNodeConfigKubeletConfigGetArgs> kubeletConfig;
 
-    public Output<NodePoolNodeConfigKubeletConfigGetArgs> getKubeletConfig() {
+    public Output<NodePoolNodeConfigKubeletConfigGetArgs> kubeletConfig() {
         return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
     }
 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="linuxNodeConfig")
       private final @Nullable Output<NodePoolNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig;
 
-    public Output<NodePoolNodeConfigLinuxNodeConfigGetArgs> getLinuxNodeConfig() {
+    public Output<NodePoolNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig() {
         return this.linuxNodeConfig == null ? Codegen.empty() : this.linuxNodeConfig;
     }
 
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
     }
 
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     @Import(name="nodeGroup")
       private final @Nullable Output<String> nodeGroup;
 
-    public Output<String> getNodeGroup() {
+    public Output<String> nodeGroup() {
         return this.nodeGroup == null ? Codegen.empty() : this.nodeGroup;
     }
 
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
+    public Output<List<String>> oauthScopes() {
         return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
     @Import(name="sandboxConfig")
       private final @Nullable Output<NodePoolNodeConfigSandboxConfigGetArgs> sandboxConfig;
 
-    public Output<NodePoolNodeConfigSandboxConfigGetArgs> getSandboxConfig() {
+    public Output<NodePoolNodeConfigSandboxConfigGetArgs> sandboxConfig() {
         return this.sandboxConfig == null ? Codegen.empty() : this.sandboxConfig;
     }
 
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<NodePoolNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
-    public Output<NodePoolNodeConfigShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
+    public Output<NodePoolNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     @Import(name="spot")
       private final @Nullable Output<Boolean> spot;
 
-    public Output<Boolean> getSpot() {
+    public Output<Boolean> spot() {
         return this.spot == null ? Codegen.empty() : this.spot;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="taints")
       private final @Nullable Output<List<NodePoolNodeConfigTaintGetArgs>> taints;
 
-    public Output<List<NodePoolNodeConfigTaintGetArgs>> getTaints() {
+    public Output<List<NodePoolNodeConfigTaintGetArgs>> taints() {
         return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     @Import(name="workloadMetadataConfig")
       private final @Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig;
 
-    public Output<NodePoolNodeConfigWorkloadMetadataConfigGetArgs> getWorkloadMetadataConfig() {
+    public Output<NodePoolNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig() {
         return this.workloadMetadataConfig == null ? Codegen.empty() : this.workloadMetadataConfig;
     }
 

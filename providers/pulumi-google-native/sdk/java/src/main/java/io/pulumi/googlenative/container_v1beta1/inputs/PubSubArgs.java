@@ -28,7 +28,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<FilterArgs> filter;
 
-    public Output<FilterArgs> getFilter() {
+    public Output<FilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -50,7 +50,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

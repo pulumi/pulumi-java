@@ -44,7 +44,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The name or email address of the user who has claimed the environment
      * 
      */
-    public Output<String> getClaimedByUserName() {
+    public Output<String> claimedByUserName() {
         return this.claimedByUserName;
     }
     /**
@@ -58,7 +58,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The AAD object Id of the user who has claimed the environment
      * 
      */
-    public Output<String> getClaimedByUserObjectId() {
+    public Output<String> claimedByUserObjectId() {
         return this.claimedByUserObjectId;
     }
     /**
@@ -72,7 +72,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The user principal Id of the user who has claimed the environment
      * 
      */
-    public Output<String> getClaimedByUserPrincipalId() {
+    public Output<String> claimedByUserPrincipalId() {
         return this.claimedByUserPrincipalId;
     }
     /**
@@ -86,7 +86,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Is the environment claimed or not
      * 
      */
-    public Output<Boolean> getIsClaimed() {
+    public Output<Boolean> isClaimed() {
         return this.isClaimed;
     }
     /**
@@ -100,7 +100,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Last known power state of the environment
      * 
      */
-    public Output<String> getLastKnownPowerState() {
+    public Output<String> lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
@@ -114,7 +114,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -128,7 +128,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -142,7 +142,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +156,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Network details of the environment
      * 
      */
-    public Output<NetworkInterfaceResponse> getNetworkInterface() {
+    public Output<NetworkInterfaceResponse> networkInterface() {
         return this.networkInterface;
     }
     /**
@@ -170,7 +170,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return When the password was last reset on the environment.
      * 
      */
-    public Output<String> getPasswordLastReset() {
+    public Output<String> passwordLastReset() {
         return this.passwordLastReset;
     }
     /**
@@ -184,7 +184,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -198,7 +198,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The set of a VM and the setting id it was created for
      * 
      */
-    public Output</* @Nullable */ ResourceSetResponse> getResourceSets() {
+    public Output</* @Nullable */ ResourceSetResponse> resourceSets() {
         return this.resourceSets;
     }
     /**
@@ -212,7 +212,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -226,7 +226,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return How long the environment has been used by a lab user
      * 
      */
-    public Output<String> getTotalUsage() {
+    public Output<String> totalUsage() {
         return this.totalUsage;
     }
     /**
@@ -240,7 +240,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -254,7 +254,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

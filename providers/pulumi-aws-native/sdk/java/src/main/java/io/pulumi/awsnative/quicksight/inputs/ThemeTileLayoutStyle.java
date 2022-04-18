@@ -22,14 +22,14 @@ public final class ThemeTileLayoutStyle extends io.pulumi.resources.InvokeArgs {
     @Import(name="gutter")
       private final @Nullable ThemeGutterStyle gutter;
 
-    public Optional<ThemeGutterStyle> getGutter() {
+    public Optional<ThemeGutterStyle> gutter() {
         return this.gutter == null ? Optional.empty() : Optional.ofNullable(this.gutter);
     }
 
     @Import(name="margin")
       private final @Nullable ThemeMarginStyle margin;
 
-    public Optional<ThemeMarginStyle> getMargin() {
+    public Optional<ThemeMarginStyle> margin() {
         return this.margin == null ? Optional.empty() : Optional.ofNullable(this.margin);
     }
 

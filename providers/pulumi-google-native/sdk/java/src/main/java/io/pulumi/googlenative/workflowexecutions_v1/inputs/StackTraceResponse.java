@@ -24,7 +24,7 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="elements", required=true)
       private final List<StackTraceElementResponse> elements;
 
-    public List<StackTraceElementResponse> getElements() {
+    public List<StackTraceElementResponse> elements() {
         return this.elements;
     }
 

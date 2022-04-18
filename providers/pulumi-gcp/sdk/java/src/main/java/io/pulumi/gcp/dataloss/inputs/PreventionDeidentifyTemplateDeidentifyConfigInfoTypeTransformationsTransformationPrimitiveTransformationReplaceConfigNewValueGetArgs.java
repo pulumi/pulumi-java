@@ -27,7 +27,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> getBooleanValue() {
+    public Output<Boolean> booleanValue() {
         return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
@@ -39,7 +39,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="dateValue")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs> dateValue;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs> getDateValue() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs> dateValue() {
         return this.dateValue == null ? Codegen.empty() : this.dateValue;
     }
 
@@ -51,7 +51,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="dayOfWeekValue")
       private final @Nullable Output<String> dayOfWeekValue;
 
-    public Output<String> getDayOfWeekValue() {
+    public Output<String> dayOfWeekValue() {
         return this.dayOfWeekValue == null ? Codegen.empty() : this.dayOfWeekValue;
     }
 
@@ -62,7 +62,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
+    public Output<Double> floatValue() {
         return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
@@ -73,7 +73,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="integerValue")
       private final @Nullable Output<Integer> integerValue;
 
-    public Output<Integer> getIntegerValue() {
+    public Output<Integer> integerValue() {
         return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
@@ -84,7 +84,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
@@ -96,7 +96,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="timeValue")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueGetArgs> timeValue;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueGetArgs> getTimeValue() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueGetArgs> timeValue() {
         return this.timeValue == null ? Codegen.empty() : this.timeValue;
     }
 
@@ -108,7 +108,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
+    public Output<String> timestampValue() {
         return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 

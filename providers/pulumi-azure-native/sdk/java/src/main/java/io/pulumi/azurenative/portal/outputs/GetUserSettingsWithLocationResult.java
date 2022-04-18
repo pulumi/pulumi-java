@@ -24,7 +24,7 @@ public final class GetUserSettingsWithLocationResult {
      * The cloud shell user settings properties.
      * 
     */
-    public UserPropertiesResponse getProperties() {
+    public UserPropertiesResponse properties() {
         return this.properties;
     }
 

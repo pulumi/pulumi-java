@@ -58,7 +58,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * will delete and recreate all nodes in the node pool.
      * 
     */
-    public Optional<String> getImageType() {
+    public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
     }
     /**
@@ -69,7 +69,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * for more information.
      * 
     */
-    public Optional<String> getMinCpuPlatform() {
+    public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
@@ -78,7 +78,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
     */
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
     /**
@@ -86,7 +86,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      * If not specified, the "default" service account is used.
      * 
     */
-    public Optional<String> getServiceAccount() {
+    public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
 

@@ -35,14 +35,14 @@ public final class ExtensionResponse {
      * The name of the extension.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Extension Properties.
      * 
     */
-    public Optional<CloudServiceExtensionPropertiesResponse> getProperties() {
+    public Optional<CloudServiceExtensionPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
 

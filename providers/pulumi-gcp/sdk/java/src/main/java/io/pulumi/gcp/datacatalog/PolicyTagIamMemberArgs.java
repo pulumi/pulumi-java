@@ -19,14 +19,14 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
-    public Output<PolicyTagIamMemberConditionArgs> getCondition() {
+    public Output<PolicyTagIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -37,7 +37,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

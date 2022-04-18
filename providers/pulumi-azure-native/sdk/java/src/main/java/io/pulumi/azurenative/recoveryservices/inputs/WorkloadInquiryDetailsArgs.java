@@ -28,7 +28,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="inquiryValidation")
       private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
-    public Output<InquiryValidationArgs> getInquiryValidation() {
+    public Output<InquiryValidationArgs> inquiryValidation() {
         return this.inquiryValidation == null ? Codegen.empty() : this.inquiryValidation;
     }
 
@@ -39,7 +39,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="itemCount")
       private final @Nullable Output<Double> itemCount;
 
-    public Output<Double> getItemCount() {
+    public Output<Double> itemCount() {
         return this.itemCount == null ? Codegen.empty() : this.itemCount;
     }
 
@@ -50,7 +50,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

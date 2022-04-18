@@ -29,7 +29,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 
-    public Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> getUserAssignedIdentities() {
+    public Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

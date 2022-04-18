@@ -22,7 +22,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     @Import(name="perimeterName")
       private final @Nullable Output<String> perimeterName;
 
-    public Output<String> getPerimeterName() {
+    public Output<String> perimeterName() {
         return this.perimeterName == null ? Codegen.empty() : this.perimeterName;
     }
 
@@ -35,7 +35,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 

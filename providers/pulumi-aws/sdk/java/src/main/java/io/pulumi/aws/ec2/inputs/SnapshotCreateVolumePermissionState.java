@@ -22,7 +22,7 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 

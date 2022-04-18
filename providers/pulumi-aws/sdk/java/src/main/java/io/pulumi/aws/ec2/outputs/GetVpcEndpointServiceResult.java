@@ -113,89 +113,89 @@ public final class GetVpcEndpointServiceResult {
      * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
     */
-    public Boolean getAcceptanceRequired() {
+    public Boolean acceptanceRequired() {
         return this.acceptanceRequired;
     }
     /**
      * The Amazon Resource Name (ARN) of the VPC endpoint service.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The Availability Zones in which the service is available.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
     /**
      * The DNS names for the service.
      * 
     */
-    public List<String> getBaseEndpointDnsNames() {
+    public List<String> baseEndpointDnsNames() {
         return this.baseEndpointDnsNames;
     }
-    public List<GetVpcEndpointServiceFilter> getFilters() {
+    public List<GetVpcEndpointServiceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Whether or not the service manages its VPC endpoints - `true` or `false`.
      * 
     */
-    public Boolean getManagesVpcEndpoints() {
+    public Boolean managesVpcEndpoints() {
         return this.managesVpcEndpoints;
     }
     /**
      * The AWS account ID of the service owner or `amazon`.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * The private DNS name for the service.
      * 
     */
-    public String getPrivateDnsName() {
+    public String privateDnsName() {
         return this.privateDnsName;
     }
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
      * The ID of the endpoint service.
      * 
     */
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
-    public String getServiceType() {
+    public String serviceType() {
         return this.serviceType;
     }
     /**
      * A map of tags assigned to the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Whether or not the service supports endpoint policies - `true` or `false`.
      * 
     */
-    public Boolean getVpcEndpointPolicySupported() {
+    public Boolean vpcEndpointPolicySupported() {
         return this.vpcEndpointPolicySupported;
     }
 

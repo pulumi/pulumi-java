@@ -27,7 +27,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expandNestedMemberships")
       private final @Nullable Output<Boolean> expandNestedMemberships;
 
-    public Output<Boolean> getExpandNestedMemberships() {
+    public Output<Boolean> expandNestedMemberships() {
         return this.expandNestedMemberships == null ? Codegen.empty() : this.expandNestedMemberships;
     }
 
@@ -38,7 +38,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;
 
-    public Output<String> getInactiveDuration() {
+    public Output<String> inactiveDuration() {
         return this.inactiveDuration == null ? Codegen.empty() : this.inactiveDuration;
     }
 

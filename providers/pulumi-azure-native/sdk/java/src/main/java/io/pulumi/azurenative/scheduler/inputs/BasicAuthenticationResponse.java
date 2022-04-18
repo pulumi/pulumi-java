@@ -21,7 +21,7 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -33,7 +33,7 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -44,7 +44,7 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

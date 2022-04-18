@@ -19,21 +19,21 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
+    public Output<String> containerPath() {
         return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="sourceVolume")
       private final @Nullable Output<String> sourceVolume;
 
-    public Output<String> getSourceVolume() {
+    public Output<String> sourceVolume() {
         return this.sourceVolume == null ? Codegen.empty() : this.sourceVolume;
     }
 

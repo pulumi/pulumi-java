@@ -27,7 +27,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
-    public Output<String> getEndTimeOffset() {
+    public Output<String> endTimeOffset() {
         return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
@@ -38,7 +38,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<String>> inputs;
 
-    public Output<List<String>> getInputs() {
+    public Output<List<String>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -49,7 +49,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -60,7 +60,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
+    public Output<String> startTimeOffset() {
         return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 

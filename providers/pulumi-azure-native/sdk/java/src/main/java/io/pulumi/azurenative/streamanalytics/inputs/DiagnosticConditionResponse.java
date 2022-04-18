@@ -23,7 +23,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -45,7 +45,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
     @Import(name="since", required=true)
       private final String since;
 
-    public String getSince() {
+    public String since() {
         return this.since;
     }
 

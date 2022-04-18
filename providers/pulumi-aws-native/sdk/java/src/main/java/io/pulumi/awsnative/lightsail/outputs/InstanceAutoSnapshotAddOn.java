@@ -26,7 +26,7 @@ public final class InstanceAutoSnapshotAddOn {
      * The daily time when an automatic snapshot will be created.
      * 
     */
-    public Optional<String> getSnapshotTimeOfDay() {
+    public Optional<String> snapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }
 

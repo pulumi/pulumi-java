@@ -20,7 +20,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskCount", required=true)
       private final Integer diskCount;
 
-    public Integer getDiskCount() {
+    public Integer diskCount() {
         return this.diskCount;
     }
 
@@ -31,7 +31,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -42,7 +42,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 

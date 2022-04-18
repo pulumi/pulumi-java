@@ -31,7 +31,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datapathProvider")
       private final @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
 
-    public Output<NetworkConfigDatapathProvider> getDatapathProvider() {
+    public Output<NetworkConfigDatapathProvider> datapathProvider() {
         return this.datapathProvider == null ? Codegen.empty() : this.datapathProvider;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSnatStatus")
       private final @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
 
-    public Output<DefaultSnatStatusArgs> getDefaultSnatStatus() {
+    public Output<DefaultSnatStatusArgs> defaultSnatStatus() {
         return this.defaultSnatStatus == null ? Codegen.empty() : this.defaultSnatStatus;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
       private final @Nullable Output<DNSConfigArgs> dnsConfig;
 
-    public Output<DNSConfigArgs> getDnsConfig() {
+    public Output<DNSConfigArgs> dnsConfig() {
         return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
@@ -64,7 +64,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableIntraNodeVisibility")
       private final @Nullable Output<Boolean> enableIntraNodeVisibility;
 
-    public Output<Boolean> getEnableIntraNodeVisibility() {
+    public Output<Boolean> enableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility == null ? Codegen.empty() : this.enableIntraNodeVisibility;
     }
 
@@ -75,7 +75,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableL4ilbSubsetting")
       private final @Nullable Output<Boolean> enableL4ilbSubsetting;
 
-    public Output<Boolean> getEnableL4ilbSubsetting() {
+    public Output<Boolean> enableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting == null ? Codegen.empty() : this.enableL4ilbSubsetting;
     }
 
@@ -86,7 +86,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Output<NetworkConfigPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
+    public Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
@@ -97,7 +97,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceExternalIpsConfig")
       private final @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
 
-    public Output<ServiceExternalIPsConfigArgs> getServiceExternalIpsConfig() {
+    public Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig() {
         return this.serviceExternalIpsConfig == null ? Codegen.empty() : this.serviceExternalIpsConfig;
     }
 

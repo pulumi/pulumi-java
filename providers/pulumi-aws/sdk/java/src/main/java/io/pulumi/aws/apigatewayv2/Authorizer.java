@@ -45,7 +45,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -61,7 +61,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerCredentialsArn() {
+    public Output</* @Nullable */ String> authorizerCredentialsArn() {
         return this.authorizerCredentialsArn;
     }
     /**
@@ -77,7 +77,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Valid values: `1.0`, `2.0`.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerPayloadFormatVersion() {
+    public Output</* @Nullable */ String> authorizerPayloadFormatVersion() {
         return this.authorizerPayloadFormatVersion;
     }
     /**
@@ -95,7 +95,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP API Lambda authorizers.
      * 
      */
-    public Output<Integer> getAuthorizerResultTtlInSeconds() {
+    public Output<Integer> authorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds;
     }
     /**
@@ -113,7 +113,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
      * 
      */
-    public Output<String> getAuthorizerType() {
+    public Output<String> authorizerType() {
         return this.authorizerType;
     }
     /**
@@ -131,7 +131,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerUri() {
+    public Output</* @Nullable */ String> authorizerUri() {
         return this.authorizerUri;
     }
     /**
@@ -147,7 +147,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableSimpleResponses() {
+    public Output</* @Nullable */ Boolean> enableSimpleResponses() {
         return this.enableSimpleResponses;
     }
     /**
@@ -165,7 +165,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIdentitySources() {
+    public Output</* @Nullable */ List<String>> identitySources() {
         return this.identitySources;
     }
     /**
@@ -181,7 +181,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ AuthorizerJwtConfiguration> getJwtConfiguration() {
+    public Output</* @Nullable */ AuthorizerJwtConfiguration> jwtConfiguration() {
         return this.jwtConfiguration;
     }
     /**
@@ -195,7 +195,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The name of the authorizer. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

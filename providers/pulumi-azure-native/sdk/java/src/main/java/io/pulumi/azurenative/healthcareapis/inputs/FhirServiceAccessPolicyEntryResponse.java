@@ -23,7 +23,7 @@ public final class FhirServiceAccessPolicyEntryResponse extends io.pulumi.resour
     @Import(name="objectId", required=true)
       private final String objectId;
 
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
 

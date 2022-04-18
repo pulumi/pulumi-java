@@ -33,19 +33,19 @@ public final class NotificationRegistrationResponseProperties {
         this.provisioningState = provisioningState;
     }
 
-    public List<String> getIncludedEvents() {
+    public List<String> includedEvents() {
         return this.includedEvents == null ? List.of() : this.includedEvents;
     }
-    public Optional<String> getMessageScope() {
+    public Optional<String> messageScope() {
         return Optional.ofNullable(this.messageScope);
     }
-    public List<NotificationEndpointResponse> getNotificationEndpoints() {
+    public List<NotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints == null ? List.of() : this.notificationEndpoints;
     }
-    public Optional<String> getNotificationMode() {
+    public Optional<String> notificationMode() {
         return Optional.ofNullable(this.notificationMode);
     }
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
 

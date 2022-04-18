@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
     @Import(name="auxiliaryTables")
       private final @Nullable Output<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables;
 
-    public Output<List<GooglePrivacyDlpV2StatisticalTableArgs>> getAuxiliaryTables() {
+    public Output<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables() {
         return this.auxiliaryTables == null ? Codegen.empty() : this.auxiliaryTables;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
     @Import(name="quasiIds", required=true)
       private final Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2QuasiIdArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds() {
         return this.quasiIds;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
     @Import(name="regionCode")
       private final @Nullable Output<String> regionCode;
 
-    public Output<String> getRegionCode() {
+    public Output<String> regionCode() {
         return this.regionCode == null ? Codegen.empty() : this.regionCode;
     }
 

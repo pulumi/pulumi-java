@@ -34,14 +34,14 @@ public final class TaskExcludes {
      * The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
      * 
     */
-    public Optional<String> getFilterType() {
+    public Optional<String> filterType() {
         return Optional.ofNullable(this.filterType);
     }
     /**
      * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

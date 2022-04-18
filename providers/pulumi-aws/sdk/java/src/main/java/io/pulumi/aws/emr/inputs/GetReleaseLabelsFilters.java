@@ -21,7 +21,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
     @Import(name="application")
       private final @Nullable String application;
 
-    public Optional<String> getApplication() {
+    public Optional<String> application() {
         return this.application == null ? Optional.empty() : Optional.ofNullable(this.application);
     }
 
@@ -32,7 +32,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 

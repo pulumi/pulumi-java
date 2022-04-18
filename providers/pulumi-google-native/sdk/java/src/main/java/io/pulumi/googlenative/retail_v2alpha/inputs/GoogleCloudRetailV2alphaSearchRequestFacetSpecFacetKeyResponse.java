@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="contains", required=true)
       private final List<String> contains;
 
-    public List<String> getContains() {
+    public List<String> contains() {
         return this.contains;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="intervals", required=true)
       private final List<GoogleCloudRetailV2alphaIntervalResponse> intervals;
 
-    public List<GoogleCloudRetailV2alphaIntervalResponse> getIntervals() {
+    public List<GoogleCloudRetailV2alphaIntervalResponse> intervals() {
         return this.intervals;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="orderBy", required=true)
       private final String orderBy;
 
-    public String getOrderBy() {
+    public String orderBy() {
         return this.orderBy;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="prefixes", required=true)
       private final List<String> prefixes;
 
-    public List<String> getPrefixes() {
+    public List<String> prefixes() {
         return this.prefixes;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
     @Import(name="restrictedValues", required=true)
       private final List<String> restrictedValues;
 
-    public List<String> getRestrictedValues() {
+    public List<String> restrictedValues() {
         return this.restrictedValues;
     }
 

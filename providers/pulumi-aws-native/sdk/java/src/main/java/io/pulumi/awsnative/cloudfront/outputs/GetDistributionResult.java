@@ -31,16 +31,16 @@ public final class GetDistributionResult {
         this.tags = tags;
     }
 
-    public Optional<DistributionConfig> getDistributionConfig() {
+    public Optional<DistributionConfig> distributionConfig() {
         return Optional.ofNullable(this.distributionConfig);
     }
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<DistributionTag> getTags() {
+    public List<DistributionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

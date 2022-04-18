@@ -18,14 +18,14 @@ public final class SecurityServicePolicyDataProperties extends io.pulumi.resourc
     @Import(name="managedServiceData")
       private final @Nullable String managedServiceData;
 
-    public Optional<String> getManagedServiceData() {
+    public Optional<String> managedServiceData() {
         return this.managedServiceData == null ? Optional.empty() : Optional.ofNullable(this.managedServiceData);
     }
 
     @Import(name="type", required=true)
       private final PolicySecurityServicePolicyDataPropertiesType type;
 
-    public PolicySecurityServicePolicyDataPropertiesType getType() {
+    public PolicySecurityServicePolicyDataPropertiesType type() {
         return this.type;
     }
 

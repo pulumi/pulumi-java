@@ -41,7 +41,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @return Language code. Valid values are `en` (English), `jp` (Japanese), and `zh` (Chinese). Default is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -55,7 +55,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @return Self-service action definition configuration block. Detailed below.
      * 
      */
-    public Output<ServiceActionDefinition> getDefinition() {
+    public Output<ServiceActionDefinition> definition() {
         return this.definition;
     }
     /**
@@ -69,7 +69,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @return Self-service action description.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -83,7 +83,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @return Self-service action name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -23,7 +23,7 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="databaseType", required=true)
       private final String databaseType;
 
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
 
@@ -34,7 +34,7 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsUri", required=true)
       private final String gcsUri;
 
-    public String getGcsUri() {
+    public String gcsUri() {
         return this.gcsUri;
     }
 
@@ -45,7 +45,7 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceDatabase", required=true)
       private final String sourceDatabase;
 
-    public String getSourceDatabase() {
+    public String sourceDatabase() {
         return this.sourceDatabase;
     }
 
@@ -56,7 +56,7 @@ public final class DatabaseDumpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

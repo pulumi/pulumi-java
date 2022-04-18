@@ -19,7 +19,7 @@ public final class GetAuthorizationServerArgs extends io.pulumi.resources.Invoke
     @Import(name="authsid", required=true)
       private final String authsid;
 
-    public String getAuthsid() {
+    public String authsid() {
         return this.authsid;
     }
 
@@ -30,7 +30,7 @@ public final class GetAuthorizationServerArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAuthorizationServerArgs extends io.pulumi.resources.Invoke
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

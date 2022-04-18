@@ -39,21 +39,21 @@ public final class MediaServiceIdentityResponse {
      * The Principal ID of the identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The Tenant ID of the identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

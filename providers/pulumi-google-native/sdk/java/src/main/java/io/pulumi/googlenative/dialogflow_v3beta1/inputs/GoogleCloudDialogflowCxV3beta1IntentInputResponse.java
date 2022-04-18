@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse extends io.
     @Import(name="intent", required=true)
       private final String intent;
 
-    public String getIntent() {
+    public String intent() {
         return this.intent;
     }
 

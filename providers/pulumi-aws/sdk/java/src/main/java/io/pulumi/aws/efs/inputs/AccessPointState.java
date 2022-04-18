@@ -25,7 +25,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemArn")
       private final @Nullable Output<String> fileSystemArn;
 
-    public Output<String> getFileSystemArn() {
+    public Output<String> fileSystemArn() {
         return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
     }
 
@@ -47,14 +47,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -65,7 +65,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixUser")
       private final @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
 
-    public Output<AccessPointPosixUserGetArgs> getPosixUser() {
+    public Output<AccessPointPosixUserGetArgs> posixUser() {
         return this.posixUser == null ? Codegen.empty() : this.posixUser;
     }
 
@@ -76,7 +76,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootDirectory")
       private final @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
 
-    public Output<AccessPointRootDirectoryGetArgs> getRootDirectory() {
+    public Output<AccessPointRootDirectoryGetArgs> rootDirectory() {
         return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
@@ -87,14 +87,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

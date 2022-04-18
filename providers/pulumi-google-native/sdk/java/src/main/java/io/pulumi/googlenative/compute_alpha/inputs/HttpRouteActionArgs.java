@@ -29,7 +29,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="corsPolicy")
       private final @Nullable Output<CorsPolicyArgs> corsPolicy;
 
-    public Output<CorsPolicyArgs> getCorsPolicy() {
+    public Output<CorsPolicyArgs> corsPolicy() {
         return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
     }
 
@@ -40,7 +40,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="faultInjectionPolicy")
       private final @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
 
-    public Output<HttpFaultInjectionArgs> getFaultInjectionPolicy() {
+    public Output<HttpFaultInjectionArgs> faultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Codegen.empty() : this.faultInjectionPolicy;
     }
 
@@ -51,7 +51,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxStreamDuration")
       private final @Nullable Output<DurationArgs> maxStreamDuration;
 
-    public Output<DurationArgs> getMaxStreamDuration() {
+    public Output<DurationArgs> maxStreamDuration() {
         return this.maxStreamDuration == null ? Codegen.empty() : this.maxStreamDuration;
     }
 
@@ -62,7 +62,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="requestMirrorPolicy")
       private final @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
 
-    public Output<RequestMirrorPolicyArgs> getRequestMirrorPolicy() {
+    public Output<RequestMirrorPolicyArgs> requestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Codegen.empty() : this.requestMirrorPolicy;
     }
 
@@ -73,7 +73,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="retryPolicy")
       private final @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
 
-    public Output<HttpRetryPolicyArgs> getRetryPolicy() {
+    public Output<HttpRetryPolicyArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -84,7 +84,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<DurationArgs> timeout;
 
-    public Output<DurationArgs> getTimeout() {
+    public Output<DurationArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -95,7 +95,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="urlRewrite")
       private final @Nullable Output<UrlRewriteArgs> urlRewrite;
 
-    public Output<UrlRewriteArgs> getUrlRewrite() {
+    public Output<UrlRewriteArgs> urlRewrite() {
         return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
     }
 
@@ -106,7 +106,7 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="weightedBackendServices")
       private final @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
-    public Output<List<WeightedBackendServiceArgs>> getWeightedBackendServices() {
+    public Output<List<WeightedBackendServiceArgs>> weightedBackendServices() {
         return this.weightedBackendServices == null ? Codegen.empty() : this.weightedBackendServices;
     }
 

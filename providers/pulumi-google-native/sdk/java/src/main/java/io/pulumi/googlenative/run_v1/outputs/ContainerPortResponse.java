@@ -40,21 +40,21 @@ public final class ContainerPortResponse {
      * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
      * 
     */
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
     /**
      * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

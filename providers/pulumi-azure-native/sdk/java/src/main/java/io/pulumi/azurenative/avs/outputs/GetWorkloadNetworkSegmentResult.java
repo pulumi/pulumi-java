@@ -94,70 +94,70 @@ public final class GetWorkloadNetworkSegmentResult {
      * Gateway which to connect segment to.
      * 
     */
-    public Optional<String> getConnectedGateway() {
+    public Optional<String> connectedGateway() {
         return Optional.ofNullable(this.connectedGateway);
     }
     /**
      * Display name of the segment.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Port Vif which segment is associated with.
      * 
     */
-    public List<WorkloadNetworkSegmentPortVifResponse> getPortVif() {
+    public List<WorkloadNetworkSegmentPortVifResponse> portVif() {
         return this.portVif;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
     */
-    public Optional<Double> getRevision() {
+    public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Segment status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Subnet which to connect segment to.
      * 
     */
-    public Optional<WorkloadNetworkSegmentSubnetResponse> getSubnet() {
+    public Optional<WorkloadNetworkSegmentSubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

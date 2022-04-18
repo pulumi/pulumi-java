@@ -125,14 +125,14 @@ public final class AutoscalarAutoscalingPolicyMetric {
      * will sum their respective values to obtain its scaling value.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -152,7 +152,7 @@ public final class AutoscalarAutoscalingPolicyMetric {
      * instead.
      * 
     */
-    public Optional<Double> getSingleInstanceAssignment() {
+    public Optional<Double> singleInstanceAssignment() {
         return Optional.ofNullable(this.singleInstanceAssignment);
     }
     /**
@@ -161,7 +161,7 @@ public final class AutoscalarAutoscalingPolicyMetric {
      * be a positive float value. If not defined, the default is 0.8.
      * 
     */
-    public Optional<Double> getTarget() {
+    public Optional<Double> target() {
         return Optional.ofNullable(this.target);
     }
     /**
@@ -170,7 +170,7 @@ public final class AutoscalarAutoscalingPolicyMetric {
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

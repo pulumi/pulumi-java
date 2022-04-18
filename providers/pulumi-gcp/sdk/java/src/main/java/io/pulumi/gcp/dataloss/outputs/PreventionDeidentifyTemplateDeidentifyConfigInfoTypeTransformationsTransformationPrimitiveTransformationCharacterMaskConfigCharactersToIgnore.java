@@ -35,7 +35,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Characters to not transform when masking.
      * 
     */
-    public Optional<String> getCharactersToSkip() {
+    public Optional<String> charactersToSkip() {
         return Optional.ofNullable(this.charactersToSkip);
     }
     /**
@@ -43,7 +43,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
      * 
     */
-    public Optional<String> getCommonCharactersToIgnore() {
+    public Optional<String> commonCharactersToIgnore() {
         return Optional.ofNullable(this.commonCharactersToIgnore);
     }
 

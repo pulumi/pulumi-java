@@ -43,21 +43,21 @@ public final class LogAnalyticsDestinationResponse {
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Customer ID of the Log Analytics workspace.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * The resource ID of the Log Analytics workspace.
      * 
     */
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
 

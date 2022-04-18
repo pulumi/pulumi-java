@@ -25,7 +25,7 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analysisKind", required=true)
       private final Output<DiscoveryNoteAnalysisKind> analysisKind;
 
-    public Output<DiscoveryNoteAnalysisKind> getAnalysisKind() {
+    public Output<DiscoveryNoteAnalysisKind> analysisKind() {
         return this.analysisKind;
     }
 

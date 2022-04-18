@@ -26,7 +26,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="controllerId", required=true)
       private final String controllerId;
 
-    public String getControllerId() {
+    public String controllerId() {
         return this.controllerId;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="independenceMode", required=true)
       private final String independenceMode;
 
-    public String getIndependenceMode() {
+    public String independenceMode() {
         return this.independenceMode;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="totalSize", required=true)
       private final Integer totalSize;
 
-    public Integer getTotalSize() {
+    public Integer totalSize() {
         return this.totalSize;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualDiskId")
       private final @Nullable String virtualDiskId;
 
-    public Optional<String> getVirtualDiskId() {
+    public Optional<String> virtualDiskId() {
         return this.virtualDiskId == null ? Optional.empty() : Optional.ofNullable(this.virtualDiskId);
     }
 
@@ -70,7 +70,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualDiskName", required=true)
       private final String virtualDiskName;
 
-    public String getVirtualDiskName() {
+    public String virtualDiskName() {
         return this.virtualDiskName;
     }
 

@@ -23,7 +23,7 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="attributePayload")
       private final @Nullable Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
 
-    public Output<ThingGroupPropertiesAttributePayloadArgs> getAttributePayload() {
+    public Output<ThingGroupPropertiesAttributePayloadArgs> attributePayload() {
         return this.attributePayload == null ? Codegen.empty() : this.attributePayload;
     }
 
@@ -34,7 +34,7 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

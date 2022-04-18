@@ -19,7 +19,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="customDomainName", required=true)
       private final String customDomainName;
 
-    public String getCustomDomainName() {
+    public String customDomainName() {
         return this.customDomainName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAFDCustomDomainArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

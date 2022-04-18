@@ -20,7 +20,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -31,14 +31,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="rrdatas", required=true)
       private final List<String> rrdatas;
 
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
 
@@ -49,7 +49,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
     @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
 
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
 

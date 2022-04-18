@@ -25,7 +25,7 @@ public final class ContextResponse {
      * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
     */
-    public List<ContextRuleResponse> getRules() {
+    public List<ContextRuleResponse> rules() {
         return this.rules;
     }
 

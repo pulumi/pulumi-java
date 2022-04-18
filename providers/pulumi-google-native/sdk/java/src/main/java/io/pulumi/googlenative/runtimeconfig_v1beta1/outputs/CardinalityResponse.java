@@ -33,14 +33,14 @@ public final class CardinalityResponse {
      * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
      * 
     */
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
     /**
      * The root of the variable subtree to monitor. For example, `/foo`.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

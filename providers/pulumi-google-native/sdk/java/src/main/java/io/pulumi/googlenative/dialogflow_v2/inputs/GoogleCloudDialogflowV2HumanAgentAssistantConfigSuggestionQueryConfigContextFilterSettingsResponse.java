@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropHandoffMessages", required=true)
       private final Boolean dropHandoffMessages;
 
-    public Boolean getDropHandoffMessages() {
+    public Boolean dropHandoffMessages() {
         return this.dropHandoffMessages;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropIvrMessages", required=true)
       private final Boolean dropIvrMessages;
 
-    public Boolean getDropIvrMessages() {
+    public Boolean dropIvrMessages() {
         return this.dropIvrMessages;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dropVirtualAgentMessages", required=true)
       private final Boolean dropVirtualAgentMessages;
 
-    public Boolean getDropVirtualAgentMessages() {
+    public Boolean dropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
     }
 

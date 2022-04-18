@@ -27,7 +27,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime", required=true)
       private final Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
+    public Output<String> lastTransitionTime() {
         return this.lastTransitionTime;
     }
 
@@ -38,7 +38,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -49,7 +49,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -60,7 +60,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -71,7 +71,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -82,7 +82,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

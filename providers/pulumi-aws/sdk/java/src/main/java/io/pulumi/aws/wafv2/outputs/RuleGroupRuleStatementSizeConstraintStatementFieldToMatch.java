@@ -75,49 +75,49 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatch {
      * Inspect all query arguments.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchAllQueryArguments> getAllQueryArguments() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * Inspect the request body, which immediately follows the request headers.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBody> getBody() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethod> getMethod() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryString> getQueryString() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * Inspect a single header. See Single Header below for details.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader> getSingleHeader() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument> getSingleQueryArgument() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
     */
-    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPath> getUriPath() {
+    public Optional<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
 

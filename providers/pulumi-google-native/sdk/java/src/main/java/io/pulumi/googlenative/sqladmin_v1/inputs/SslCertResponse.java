@@ -23,7 +23,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cert", required=true)
       private final String cert;
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
 
@@ -34,7 +34,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certSerialNumber", required=true)
       private final String certSerialNumber;
 
-    public String getCertSerialNumber() {
+    public String certSerialNumber() {
         return this.certSerialNumber;
     }
 
@@ -45,7 +45,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="commonName", required=true)
       private final String commonName;
 
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
 
@@ -56,7 +56,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -67,7 +67,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -78,7 +78,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
       private final String instance;
 
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 
@@ -89,7 +89,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -100,7 +100,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
@@ -111,7 +111,7 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

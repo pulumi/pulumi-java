@@ -22,7 +22,7 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

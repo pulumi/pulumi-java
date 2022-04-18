@@ -24,7 +24,7 @@ public final class PatchDeploymentPatchConfigGoo {
      * goo update settings. Use this setting to override the default goo patch rules.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

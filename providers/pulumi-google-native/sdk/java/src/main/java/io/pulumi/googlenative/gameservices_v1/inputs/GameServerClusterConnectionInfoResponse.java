@@ -24,7 +24,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
     @Import(name="gkeClusterReference", required=true)
       private final GkeClusterReferenceResponse gkeClusterReference;
 
-    public GkeClusterReferenceResponse getGkeClusterReference() {
+    public GkeClusterReferenceResponse gkeClusterReference() {
         return this.gkeClusterReference;
     }
 
@@ -35,7 +35,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

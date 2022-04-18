@@ -17,7 +17,7 @@ public final class AssetModelAttribute extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 

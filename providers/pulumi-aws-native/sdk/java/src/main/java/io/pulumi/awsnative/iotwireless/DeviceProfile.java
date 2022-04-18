@@ -32,7 +32,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * @return Service profile Arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * @return LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
      * 
      */
-    public Output</* @Nullable */ DeviceProfileLoRaWANDeviceProfile> getLoRaWAN() {
+    public Output</* @Nullable */ DeviceProfileLoRaWANDeviceProfile> loRaWAN() {
         return this.loRaWAN;
     }
     /**
@@ -60,7 +60,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * @return Name of service profile
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the device profile.
      * 
      */
-    public Output</* @Nullable */ List<DeviceProfileTag>> getTags() {
+    public Output</* @Nullable */ List<DeviceProfileTag>> tags() {
         return this.tags;
     }
 

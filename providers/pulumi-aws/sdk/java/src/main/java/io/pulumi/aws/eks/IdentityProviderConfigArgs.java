@@ -24,7 +24,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,7 +35,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="oidc", required=true)
       private final Output<IdentityProviderConfigOidcArgs> oidc;
 
-    public Output<IdentityProviderConfigOidcArgs> getOidc() {
+    public Output<IdentityProviderConfigOidcArgs> oidc() {
         return this.oidc;
     }
 
@@ -46,7 +46,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

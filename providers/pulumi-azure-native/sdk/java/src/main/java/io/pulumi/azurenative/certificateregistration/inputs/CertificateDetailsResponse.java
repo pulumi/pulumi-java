@@ -24,7 +24,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="notAfter", required=true)
       private final String notAfter;
 
-    public String getNotAfter() {
+    public String notAfter() {
         return this.notAfter;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="notBefore", required=true)
       private final String notBefore;
 
-    public String getNotBefore() {
+    public String notBefore() {
         return this.notBefore;
     }
 
@@ -57,7 +57,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="rawData", required=true)
       private final String rawData;
 
-    public String getRawData() {
+    public String rawData() {
         return this.rawData;
     }
 
@@ -68,7 +68,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -79,7 +79,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
@@ -90,7 +90,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -101,7 +101,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 
@@ -112,7 +112,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="version", required=true)
       private final Integer version;
 
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

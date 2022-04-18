@@ -41,21 +41,21 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
      * The ID of the launch template. Conflicts with `launch_template_name`.
      * 
     */
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
      * The name of the launch template. Conflicts with `launch_template_id`.
      * 
     */
-    public Optional<String> getLaunchTemplateName() {
+    public Optional<String> launchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
     /**
      * Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

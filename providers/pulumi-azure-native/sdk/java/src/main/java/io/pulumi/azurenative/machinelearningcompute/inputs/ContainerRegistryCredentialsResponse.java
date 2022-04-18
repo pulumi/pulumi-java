@@ -23,7 +23,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
     @Import(name="loginServer", required=true)
       private final String loginServer;
 
-    public String getLoginServer() {
+    public String loginServer() {
         return this.loginServer;
     }
 
@@ -34,7 +34,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -45,7 +45,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
     @Import(name="password2", required=true)
       private final String password2;
 
-    public String getPassword2() {
+    public String password2() {
         return this.password2;
     }
 
@@ -56,7 +56,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

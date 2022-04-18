@@ -55,37 +55,37 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
         this.username = username;
     }
 
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public String getClusterJDBCURL() {
+    public String clusterJDBCURL() {
         return this.clusterJDBCURL;
     }
-    public DeliveryStreamCopyCommand getCopyCommand() {
+    public DeliveryStreamCopyCommand copyCommand() {
         return this.copyCommand;
     }
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
-    public Optional<DeliveryStreamRedshiftRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamRedshiftRetryOptions> retryOptions() {
         return Optional.ofNullable(this.retryOptions);
     }
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
-    public Optional<DeliveryStreamS3DestinationConfiguration> getS3BackupConfiguration() {
+    public Optional<DeliveryStreamS3DestinationConfiguration> s3BackupConfiguration() {
         return Optional.ofNullable(this.s3BackupConfiguration);
     }
-    public Optional<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Optional<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

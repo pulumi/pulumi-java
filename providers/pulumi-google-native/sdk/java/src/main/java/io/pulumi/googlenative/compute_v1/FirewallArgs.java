@@ -29,7 +29,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowed")
       private final @Nullable Output<List<FirewallAllowedItemArgs>> allowed;
 
-    public Output<List<FirewallAllowedItemArgs>> getAllowed() {
+    public Output<List<FirewallAllowedItemArgs>> allowed() {
         return this.allowed == null ? Codegen.empty() : this.allowed;
     }
 
@@ -40,7 +40,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="denied")
       private final @Nullable Output<List<FirewallDeniedItemArgs>> denied;
 
-    public Output<List<FirewallDeniedItemArgs>> getDenied() {
+    public Output<List<FirewallDeniedItemArgs>> denied() {
         return this.denied == null ? Codegen.empty() : this.denied;
     }
 
@@ -51,7 +51,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationRanges")
       private final @Nullable Output<List<String>> destinationRanges;
 
-    public Output<List<String>> getDestinationRanges() {
+    public Output<List<String>> destinationRanges() {
         return this.destinationRanges == null ? Codegen.empty() : this.destinationRanges;
     }
 
@@ -73,7 +73,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="direction")
       private final @Nullable Output<FirewallDirection> direction;
 
-    public Output<FirewallDirection> getDirection() {
+    public Output<FirewallDirection> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -84,7 +84,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -95,7 +95,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<FirewallLogConfigArgs> logConfig;
 
-    public Output<FirewallLogConfigArgs> getLogConfig() {
+    public Output<FirewallLogConfigArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -106,7 +106,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -117,7 +117,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -128,21 +128,21 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -153,7 +153,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRanges")
       private final @Nullable Output<List<String>> sourceRanges;
 
-    public Output<List<String>> getSourceRanges() {
+    public Output<List<String>> sourceRanges() {
         return this.sourceRanges == null ? Codegen.empty() : this.sourceRanges;
     }
 
@@ -164,7 +164,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceServiceAccounts")
       private final @Nullable Output<List<String>> sourceServiceAccounts;
 
-    public Output<List<String>> getSourceServiceAccounts() {
+    public Output<List<String>> sourceServiceAccounts() {
         return this.sourceServiceAccounts == null ? Codegen.empty() : this.sourceServiceAccounts;
     }
 
@@ -175,7 +175,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceTags")
       private final @Nullable Output<List<String>> sourceTags;
 
-    public Output<List<String>> getSourceTags() {
+    public Output<List<String>> sourceTags() {
         return this.sourceTags == null ? Codegen.empty() : this.sourceTags;
     }
 
@@ -186,7 +186,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> getTargetServiceAccounts() {
+    public Output<List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 
@@ -197,7 +197,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetTags")
       private final @Nullable Output<List<String>> targetTags;
 
-    public Output<List<String>> getTargetTags() {
+    public Output<List<String>> targetTags() {
         return this.targetTags == null ? Codegen.empty() : this.targetTags;
     }
 

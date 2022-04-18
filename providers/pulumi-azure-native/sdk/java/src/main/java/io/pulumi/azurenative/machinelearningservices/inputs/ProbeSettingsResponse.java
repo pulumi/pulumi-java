@@ -26,7 +26,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
@@ -37,7 +37,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="initialDelay")
       private final @Nullable String initialDelay;
 
-    public Optional<String> getInitialDelay() {
+    public Optional<String> initialDelay() {
         return this.initialDelay == null ? Optional.empty() : Optional.ofNullable(this.initialDelay);
     }
 
@@ -48,7 +48,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="period")
       private final @Nullable String period;
 
-    public Optional<String> getPeriod() {
+    public Optional<String> period() {
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
     }
 
@@ -59,7 +59,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
@@ -70,7 +70,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

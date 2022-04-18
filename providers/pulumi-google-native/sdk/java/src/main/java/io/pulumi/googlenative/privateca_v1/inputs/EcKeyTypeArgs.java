@@ -26,7 +26,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
-    public Output<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {
+    public Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm() {
         return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
     }
 

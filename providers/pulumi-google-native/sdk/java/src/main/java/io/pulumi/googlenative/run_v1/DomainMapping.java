@@ -33,7 +33,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The API version for this call such as "domains.cloudrun.com/v1".
      * 
      */
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -47,7 +47,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The kind of resource, in this case "DomainMapping".
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -61,7 +61,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return Metadata associated with this BuildTemplate.
      * 
      */
-    public Output<ObjectMetaResponse> getMetadata() {
+    public Output<ObjectMetaResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -75,7 +75,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The spec for this DomainMapping.
      * 
      */
-    public Output<DomainMappingSpecResponse> getSpec() {
+    public Output<DomainMappingSpecResponse> spec() {
         return this.spec;
     }
     /**
@@ -89,7 +89,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The current status of the DomainMapping.
      * 
      */
-    public Output<DomainMappingStatusResponse> getStatus() {
+    public Output<DomainMappingStatusResponse> status() {
         return this.status;
     }
 

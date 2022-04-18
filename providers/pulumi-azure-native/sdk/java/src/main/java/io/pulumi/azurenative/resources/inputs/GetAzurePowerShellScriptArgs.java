@@ -19,7 +19,7 @@ public final class GetAzurePowerShellScriptArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAzurePowerShellScriptArgs extends io.pulumi.resources.Invo
     @Import(name="scriptName", required=true)
       private final String scriptName;
 
-    public String getScriptName() {
+    public String scriptName() {
         return this.scriptName;
     }
 

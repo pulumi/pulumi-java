@@ -29,7 +29,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
-    public Output<String> getClientCertificateId() {
+    public Output<String> clientCertificateId() {
         return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
@@ -40,7 +40,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="clientCertificatethumbprint")
       private final @Nullable Output<String> clientCertificatethumbprint;
 
-    public Output<String> getClientCertificatethumbprint() {
+    public Output<String> clientCertificatethumbprint() {
         return this.clientCertificatethumbprint == null ? Codegen.empty() : this.clientCertificatethumbprint;
     }
 
@@ -51,7 +51,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="managementEndpoints", required=true)
       private final Output<List<String>> managementEndpoints;
 
-    public Output<List<String>> getManagementEndpoints() {
+    public Output<List<String>> managementEndpoints() {
         return this.managementEndpoints;
     }
 
@@ -62,7 +62,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="maxPartitionResolutionRetries")
       private final @Nullable Output<Integer> maxPartitionResolutionRetries;
 
-    public Output<Integer> getMaxPartitionResolutionRetries() {
+    public Output<Integer> maxPartitionResolutionRetries() {
         return this.maxPartitionResolutionRetries == null ? Codegen.empty() : this.maxPartitionResolutionRetries;
     }
 
@@ -73,7 +73,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="serverCertificateThumbprints")
       private final @Nullable Output<List<String>> serverCertificateThumbprints;
 
-    public Output<List<String>> getServerCertificateThumbprints() {
+    public Output<List<String>> serverCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? Codegen.empty() : this.serverCertificateThumbprints;
     }
 
@@ -84,7 +84,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     @Import(name="serverX509Names")
       private final @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;
 
-    public Output<List<X509CertificateNameArgs>> getServerX509Names() {
+    public Output<List<X509CertificateNameArgs>> serverX509Names() {
         return this.serverX509Names == null ? Codegen.empty() : this.serverX509Names;
     }
 

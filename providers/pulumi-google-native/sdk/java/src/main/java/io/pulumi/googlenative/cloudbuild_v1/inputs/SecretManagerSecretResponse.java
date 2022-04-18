@@ -23,7 +23,7 @@ public final class SecretManagerSecretResponse extends io.pulumi.resources.Invok
     @Import(name="env", required=true)
       private final String env;
 
-    public String getEnv() {
+    public String env() {
         return this.env;
     }
 
@@ -34,7 +34,7 @@ public final class SecretManagerSecretResponse extends io.pulumi.resources.Invok
     @Import(name="versionName", required=true)
       private final String versionName;
 
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

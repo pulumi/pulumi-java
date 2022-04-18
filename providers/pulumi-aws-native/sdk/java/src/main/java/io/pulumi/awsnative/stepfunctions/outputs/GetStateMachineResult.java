@@ -45,28 +45,28 @@ public final class GetStateMachineResult {
         this.tracingConfiguration = tracingConfiguration;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDefinitionString() {
+    public Optional<String> definitionString() {
         return Optional.ofNullable(this.definitionString);
     }
-    public Optional<StateMachineLoggingConfiguration> getLoggingConfiguration() {
+    public Optional<StateMachineLoggingConfiguration> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public Optional<StateMachineType> getStateMachineType() {
+    public Optional<StateMachineType> stateMachineType() {
         return Optional.ofNullable(this.stateMachineType);
     }
-    public List<StateMachineTagsEntry> getTags() {
+    public List<StateMachineTagsEntry> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<StateMachineTracingConfiguration> getTracingConfiguration() {
+    public Optional<StateMachineTracingConfiguration> tracingConfiguration() {
         return Optional.ofNullable(this.tracingConfiguration);
     }
 

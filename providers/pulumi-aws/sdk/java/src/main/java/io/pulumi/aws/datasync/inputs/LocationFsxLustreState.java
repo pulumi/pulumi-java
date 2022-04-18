@@ -24,7 +24,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -46,7 +46,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="fsxFilesystemArn")
       private final @Nullable Output<String> fsxFilesystemArn;
 
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn == null ? Codegen.empty() : this.fsxFilesystemArn;
     }
 
@@ -57,7 +57,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
@@ -68,7 +68,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -79,7 +79,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -101,7 +101,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

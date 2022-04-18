@@ -21,7 +21,7 @@ public final class ClusterNotificationConfigArgs extends io.pulumi.resources.Res
     @Import(name="pubsub", required=true)
       private final Output<ClusterNotificationConfigPubsubArgs> pubsub;
 
-    public Output<ClusterNotificationConfigPubsubArgs> getPubsub() {
+    public Output<ClusterNotificationConfigPubsubArgs> pubsub() {
         return this.pubsub;
     }
 

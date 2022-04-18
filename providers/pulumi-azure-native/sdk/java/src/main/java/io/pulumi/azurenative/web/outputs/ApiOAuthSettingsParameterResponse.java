@@ -42,21 +42,21 @@ public final class ApiOAuthSettingsParameterResponse {
      * Options available to this parameter
      * 
     */
-    public Optional<Object> getOptions() {
+    public Optional<Object> options() {
         return Optional.ofNullable(this.options);
     }
     /**
      * UI definitions per culture as caller can specify the culture
      * 
     */
-    public Optional<Object> getUiDefinition() {
+    public Optional<Object> uiDefinition() {
         return Optional.ofNullable(this.uiDefinition);
     }
     /**
      * Value of the setting
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

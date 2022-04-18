@@ -24,21 +24,21 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invalidFallbackBehavior")
       private final @Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
-    public Output<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
+    public Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Codegen.empty() : this.invalidFallbackBehavior;
     }
 
     @Import(name="matchPattern", required=true)
       private final Output<WebACLJsonMatchPatternArgs> matchPattern;
 
-    public Output<WebACLJsonMatchPatternArgs> getMatchPattern() {
+    public Output<WebACLJsonMatchPatternArgs> matchPattern() {
         return this.matchPattern;
     }
 
     @Import(name="matchScope", required=true)
       private final Output<WebACLJsonMatchScope> matchScope;
 
-    public Output<WebACLJsonMatchScope> getMatchScope() {
+    public Output<WebACLJsonMatchScope> matchScope() {
         return this.matchScope;
     }
 

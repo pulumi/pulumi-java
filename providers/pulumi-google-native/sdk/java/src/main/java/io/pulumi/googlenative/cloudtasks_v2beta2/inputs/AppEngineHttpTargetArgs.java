@@ -26,7 +26,7 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
     @Import(name="appEngineRoutingOverride")
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
-    public Output<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
+    public Output<AppEngineRoutingArgs> appEngineRoutingOverride() {
         return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
     }
 

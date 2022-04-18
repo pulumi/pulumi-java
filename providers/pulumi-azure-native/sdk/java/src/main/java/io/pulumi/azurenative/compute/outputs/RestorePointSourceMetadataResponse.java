@@ -81,56 +81,56 @@ public final class RestorePointSourceMetadataResponse {
      * Gets the diagnostics profile.
      * 
     */
-    public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
+    public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
     /**
      * Gets the hardware profile.
      * 
     */
-    public Optional<HardwareProfileResponse> getHardwareProfile() {
+    public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * Gets the license type, which is for bring your own license scenario.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * Location of the VM from which the restore point was created.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the OS profile.
      * 
     */
-    public Optional<OSProfileResponse> getOsProfile() {
+    public Optional<OSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * Gets the security profile.
      * 
     */
-    public Optional<SecurityProfileResponse> getSecurityProfile() {
+    public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
      * Gets the storage profile.
      * 
     */
-    public Optional<RestorePointSourceVMStorageProfileResponse> getStorageProfile() {
+    public Optional<RestorePointSourceVMStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Gets the virtual machine unique id.
      * 
     */
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
 

@@ -70,49 +70,49 @@ public final class NodeResponse {
      * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
      * 
     */
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
     /**
      * User defined parameters currently applied to the node.
      * 
     */
-    public MemcacheParametersResponse getParameters() {
+    public MemcacheParametersResponse parameters() {
         return this.parameters;
     }
     /**
      * The port number of the Memcached server on this node.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Current state of the Memcached node.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Returns true if there is an update waiting to be applied
      * 
     */
-    public Boolean getUpdateAvailable() {
+    public Boolean updateAvailable() {
         return this.updateAvailable;
     }
     /**
      * Location (GCP Zone) for the Memcached node.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

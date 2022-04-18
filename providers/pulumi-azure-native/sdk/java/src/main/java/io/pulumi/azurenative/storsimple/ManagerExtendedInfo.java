@@ -42,7 +42,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
      */
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm;
     }
     /**
@@ -56,7 +56,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return Represents the CEK of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionKey() {
+    public Output</* @Nullable */ String> encryptionKey() {
         return this.encryptionKey;
     }
     /**
@@ -70,7 +70,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionKeyThumbprint() {
+    public Output</* @Nullable */ String> encryptionKeyThumbprint() {
         return this.encryptionKeyThumbprint;
     }
     /**
@@ -84,7 +84,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return The etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -98,7 +98,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return Represents the CIK of the resource.
      * 
      */
-    public Output<String> getIntegrityKey() {
+    public Output<String> integrityKey() {
         return this.integrityKey;
     }
     /**
@@ -112,7 +112,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -126,7 +126,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +140,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
      */
-    public Output</* @Nullable */ String> getPortalCertificateThumbprint() {
+    public Output</* @Nullable */ String> portalCertificateThumbprint() {
         return this.portalCertificateThumbprint;
     }
     /**
@@ -154,7 +154,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -168,7 +168,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * @return The version of the extended info being persisted.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

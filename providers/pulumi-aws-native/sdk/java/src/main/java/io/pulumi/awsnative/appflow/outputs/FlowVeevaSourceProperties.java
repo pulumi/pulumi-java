@@ -32,19 +32,19 @@ public final class FlowVeevaSourceProperties {
         this.object = object;
     }
 
-    public Optional<String> getDocumentType() {
+    public Optional<String> documentType() {
         return Optional.ofNullable(this.documentType);
     }
-    public Optional<Boolean> getIncludeAllVersions() {
+    public Optional<Boolean> includeAllVersions() {
         return Optional.ofNullable(this.includeAllVersions);
     }
-    public Optional<Boolean> getIncludeRenditions() {
+    public Optional<Boolean> includeRenditions() {
         return Optional.ofNullable(this.includeRenditions);
     }
-    public Optional<Boolean> getIncludeSourceFiles() {
+    public Optional<Boolean> includeSourceFiles() {
         return Optional.ofNullable(this.includeSourceFiles);
     }
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

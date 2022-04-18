@@ -17,21 +17,21 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
 
     @Import(name="generation", required=true)
       private final Integer generation;
 
-    public Integer getGeneration() {
+    public Integer generation() {
         return this.generation;
     }
 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -42,35 +42,35 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
     @Import(name="resourceVersion", required=true)
       private final String resourceVersion;
 
-    public String getResourceVersion() {
+    public String resourceVersion() {
         return this.resourceVersion;
     }
 
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

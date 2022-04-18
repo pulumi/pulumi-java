@@ -18,14 +18,14 @@ public final class SubscriptionStateRuleResponse extends io.pulumi.resources.Inv
     @Import(name="allowedActions")
       private final @Nullable List<String> allowedActions;
 
-    public List<String> getAllowedActions() {
+    public List<String> allowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
 
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

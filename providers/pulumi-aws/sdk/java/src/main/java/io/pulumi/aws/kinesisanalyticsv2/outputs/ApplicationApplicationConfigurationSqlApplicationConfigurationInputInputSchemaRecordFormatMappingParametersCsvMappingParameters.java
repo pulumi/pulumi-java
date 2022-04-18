@@ -32,14 +32,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
      * 
     */
-    public String getRecordColumnDelimiter() {
+    public String recordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
     /**
      * The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
      * 
     */
-    public String getRecordRowDelimiter() {
+    public String recordRowDelimiter() {
         return this.recordRowDelimiter;
     }
 

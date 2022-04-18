@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="annotationEndBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
 
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationEndBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary() {
         return this.annotationEndBoundary;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="annotationStartBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
 
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationStartBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary() {
         return this.annotationStartBoundary;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="channelTag", required=true)
       private final Integer channelTag;
 
-    public Integer getChannelTag() {
+    public Integer channelTag() {
         return this.channelTag;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="entityMentionData", required=true)
       private final GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
 
-    public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse getEntityMentionData() {
+    public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData() {
         return this.entityMentionData;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="holdData", required=true)
       private final GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
 
-    public GoogleCloudContactcenterinsightsV1HoldDataResponse getHoldData() {
+    public GoogleCloudContactcenterinsightsV1HoldDataResponse holdData() {
         return this.holdData;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="intentMatchData", required=true)
       private final GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
 
-    public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse getIntentMatchData() {
+    public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData() {
         return this.intentMatchData;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="interruptionData", required=true)
       private final GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
 
-    public GoogleCloudContactcenterinsightsV1InterruptionDataResponse getInterruptionData() {
+    public GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData() {
         return this.interruptionData;
     }
 
@@ -108,7 +108,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="phraseMatchData", required=true)
       private final GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse getPhraseMatchData() {
+    public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData() {
         return this.phraseMatchData;
     }
 
@@ -119,7 +119,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="sentimentData", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
 
@@ -130,7 +130,7 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     @Import(name="silenceData", required=true)
       private final GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 
-    public GoogleCloudContactcenterinsightsV1SilenceDataResponse getSilenceData() {
+    public GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData() {
         return this.silenceData;
     }
 

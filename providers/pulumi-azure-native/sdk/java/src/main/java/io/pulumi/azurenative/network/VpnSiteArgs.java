@@ -31,7 +31,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
-    public Output<AddressSpaceArgs> getAddressSpace() {
+    public Output<AddressSpaceArgs> addressSpace() {
         return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 
@@ -42,7 +42,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpProperties")
       private final @Nullable Output<BgpSettingsArgs> bgpProperties;
 
-    public Output<BgpSettingsArgs> getBgpProperties() {
+    public Output<BgpSettingsArgs> bgpProperties() {
         return this.bgpProperties == null ? Codegen.empty() : this.bgpProperties;
     }
 
@@ -53,7 +53,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceProperties")
       private final @Nullable Output<DevicePropertiesArgs> deviceProperties;
 
-    public Output<DevicePropertiesArgs> getDeviceProperties() {
+    public Output<DevicePropertiesArgs> deviceProperties() {
         return this.deviceProperties == null ? Codegen.empty() : this.deviceProperties;
     }
 
@@ -64,7 +64,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -75,7 +75,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -86,7 +86,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSecuritySite")
       private final @Nullable Output<Boolean> isSecuritySite;
 
-    public Output<Boolean> getIsSecuritySite() {
+    public Output<Boolean> isSecuritySite() {
         return this.isSecuritySite == null ? Codegen.empty() : this.isSecuritySite;
     }
 
@@ -97,7 +97,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -108,7 +108,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="o365Policy")
       private final @Nullable Output<O365PolicyPropertiesArgs> o365Policy;
 
-    public Output<O365PolicyPropertiesArgs> getO365Policy() {
+    public Output<O365PolicyPropertiesArgs> o365Policy() {
         return this.o365Policy == null ? Codegen.empty() : this.o365Policy;
     }
 
@@ -119,7 +119,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -130,7 +130,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteKey")
       private final @Nullable Output<String> siteKey;
 
-    public Output<String> getSiteKey() {
+    public Output<String> siteKey() {
         return this.siteKey == null ? Codegen.empty() : this.siteKey;
     }
 
@@ -141,7 +141,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -152,7 +152,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualWan")
       private final @Nullable Output<SubResourceArgs> virtualWan;
 
-    public Output<SubResourceArgs> getVirtualWan() {
+    public Output<SubResourceArgs> virtualWan() {
         return this.virtualWan == null ? Codegen.empty() : this.virtualWan;
     }
 
@@ -163,7 +163,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnSiteLinks")
       private final @Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
-    public Output<List<VpnSiteLinkArgs>> getVpnSiteLinks() {
+    public Output<List<VpnSiteLinkArgs>> vpnSiteLinks() {
         return this.vpnSiteLinks == null ? Codegen.empty() : this.vpnSiteLinks;
     }
 
@@ -174,7 +174,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnSiteName")
       private final @Nullable Output<String> vpnSiteName;
 
-    public Output<String> getVpnSiteName() {
+    public Output<String> vpnSiteName() {
         return this.vpnSiteName == null ? Codegen.empty() : this.vpnSiteName;
     }
 

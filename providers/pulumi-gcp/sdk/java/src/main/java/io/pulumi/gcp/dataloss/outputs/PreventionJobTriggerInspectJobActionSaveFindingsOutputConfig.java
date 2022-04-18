@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      * Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
      * 
     */
-    public Optional<String> getOutputSchema() {
+    public Optional<String> outputSchema() {
         return Optional.ofNullable(this.outputSchema);
     }
     /**
@@ -58,7 +58,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      * Structure is documented below.
      * 
     */
-    public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable getTable() {
+    public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table() {
         return this.table;
     }
 

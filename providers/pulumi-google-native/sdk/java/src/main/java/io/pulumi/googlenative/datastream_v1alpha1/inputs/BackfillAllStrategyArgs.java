@@ -27,7 +27,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     @Import(name="mysqlExcludedObjects")
       private final @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
-    public Output<MysqlRdbmsArgs> getMysqlExcludedObjects() {
+    public Output<MysqlRdbmsArgs> mysqlExcludedObjects() {
         return this.mysqlExcludedObjects == null ? Codegen.empty() : this.mysqlExcludedObjects;
     }
 
@@ -38,7 +38,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     @Import(name="oracleExcludedObjects")
       private final @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
-    public Output<OracleRdbmsArgs> getOracleExcludedObjects() {
+    public Output<OracleRdbmsArgs> oracleExcludedObjects() {
         return this.oracleExcludedObjects == null ? Codegen.empty() : this.oracleExcludedObjects;
     }
 

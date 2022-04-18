@@ -17,14 +17,14 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
     @Import(name="queryCapacityUnits", required=true)
       private final Output<Integer> queryCapacityUnits;
 
-    public Output<Integer> getQueryCapacityUnits() {
+    public Output<Integer> queryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
     @Import(name="storageCapacityUnits", required=true)
       private final Output<Integer> storageCapacityUnits;
 
-    public Output<Integer> getStorageCapacityUnits() {
+    public Output<Integer> storageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 

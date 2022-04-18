@@ -22,7 +22,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
     @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
@@ -33,7 +33,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -44,7 +44,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

@@ -31,7 +31,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="extensionName", required=true)
       private final Output<String> extensionName;
 
-    public Output<String> getExtensionName() {
+    public Output<String> extensionName() {
         return this.extensionName;
     }
 
@@ -42,7 +42,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="extensionSettings")
       private final @Nullable Output<Object> extensionSettings;
 
-    public Output<Object> getExtensionSettings() {
+    public Output<Object> extensionSettings() {
         return this.extensionSettings == null ? Codegen.empty() : this.extensionSettings;
     }
 
@@ -53,7 +53,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="inputDataSources")
       private final @Nullable Output<List<String>> inputDataSources;
 
-    public Output<List<String>> getInputDataSources() {
+    public Output<List<String>> inputDataSources() {
         return this.inputDataSources == null ? Codegen.empty() : this.inputDataSources;
     }
 
@@ -65,7 +65,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
-    public Output<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {
+    public Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams() {
         return this.streams == null ? Codegen.empty() : this.streams;
     }
 

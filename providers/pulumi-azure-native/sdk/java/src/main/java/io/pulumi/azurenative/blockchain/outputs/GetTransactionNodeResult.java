@@ -92,70 +92,70 @@ public final class GetTransactionNodeResult {
      * Gets or sets the transaction node dns endpoint.
      * 
     */
-    public String getDns() {
+    public String dns() {
         return this.dns;
     }
     /**
      * Gets or sets the firewall rules.
      * 
     */
-    public List<FirewallRuleResponse> getFirewallRules() {
+    public List<FirewallRuleResponse> firewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
      * Fully qualified resource Id of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the transaction node location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Sets the transaction node dns endpoint basic auth password.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Gets or sets the blockchain member provision state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the transaction node public key.
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
     /**
      * The type of the service - e.g. "Microsoft.Blockchain"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets the transaction node dns endpoint basic auth user name.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

@@ -27,7 +27,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hiveMetastoreConfig")
       private final @Nullable Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigArgs> getHiveMetastoreConfig() {
+    public Output<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig() {
         return this.hiveMetastoreConfig == null ? Codegen.empty() : this.hiveMetastoreConfig;
     }
 
@@ -38,7 +38,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -50,7 +50,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -63,7 +63,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MetastoreServiceMaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -75,7 +75,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -86,7 +86,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -98,7 +98,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -123,7 +123,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

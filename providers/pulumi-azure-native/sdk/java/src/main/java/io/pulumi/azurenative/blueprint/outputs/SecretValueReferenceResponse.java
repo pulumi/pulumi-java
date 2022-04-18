@@ -42,21 +42,21 @@ public final class SecretValueReferenceResponse {
      * Specifies the reference to a given Azure Key Vault.
      * 
     */
-    public KeyVaultReferenceResponse getKeyVault() {
+    public KeyVaultReferenceResponse keyVault() {
         return this.keyVault;
     }
     /**
      * Name of the secret.
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
     /**
      * The version of the secret to use. If left blank, the latest version of the secret is used.
      * 
     */
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
 

@@ -25,7 +25,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
-    public Output<Integer> getCpu() {
+    public Output<Integer> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="diskGb")
       private final @Nullable Output<Integer> diskGb;
 
-    public Output<Integer> getDiskGb() {
+    public Output<Integer> diskGb() {
         return this.diskGb == null ? Codegen.empty() : this.diskGb;
     }
 
@@ -47,7 +47,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
+    public Output<Double> memoryGb() {
         return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
@@ -59,7 +59,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="volumes")
       private final @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
-    public Output<List<FlexibleAppVersionResourcesVolumeArgs>> getVolumes() {
+    public Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

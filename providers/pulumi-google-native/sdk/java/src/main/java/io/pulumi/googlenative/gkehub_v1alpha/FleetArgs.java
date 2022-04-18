@@ -22,7 +22,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -33,21 +33,21 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetName")
       private final @Nullable Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName == null ? Codegen.empty() : this.fleetName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

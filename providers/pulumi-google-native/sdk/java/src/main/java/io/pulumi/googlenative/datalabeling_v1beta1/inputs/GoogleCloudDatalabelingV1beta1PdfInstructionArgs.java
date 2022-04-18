@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     @Import(name="gcsFileUri")
       private final @Nullable Output<String> gcsFileUri;
 
-    public Output<String> getGcsFileUri() {
+    public Output<String> gcsFileUri() {
         return this.gcsFileUri == null ? Codegen.empty() : this.gcsFileUri;
     }
 

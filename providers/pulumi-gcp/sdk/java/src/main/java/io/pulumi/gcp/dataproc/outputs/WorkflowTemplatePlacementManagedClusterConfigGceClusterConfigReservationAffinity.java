@@ -42,21 +42,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
      * 
     */
-    public Optional<String> getConsumeReservationType() {
+    public Optional<String> consumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
     /**
      * Optional. Corresponds to the label key of reservation resource.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Optional. Corresponds to the label values of reservation resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

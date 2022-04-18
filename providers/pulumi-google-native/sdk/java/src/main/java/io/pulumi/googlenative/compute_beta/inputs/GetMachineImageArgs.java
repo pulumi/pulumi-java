@@ -17,14 +17,14 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineImage", required=true)
       private final String machineImage;
 
-    public String getMachineImage() {
+    public String machineImage() {
         return this.machineImage;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

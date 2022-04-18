@@ -117,91 +117,91 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
      * KRM-style annotations for the resource.
      * 
     */
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
     /**
      * Enables Confidential Cloud Run in Revisions created using this template.
      * 
     */
-    public Boolean getConfidential() {
+    public Boolean confidential() {
         return this.confidential;
     }
     /**
      * Sets the maximum number of requests that each serving instance can receive.
      * 
     */
-    public Integer getContainerConcurrency() {
+    public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
     /**
      * Holds the single container that defines the unit of execution for this Revision.
      * 
     */
-    public List<GoogleCloudRunOpV2ContainerResponse> getContainers() {
+    public List<GoogleCloudRunOpV2ContainerResponse> containers() {
         return this.containers;
     }
     /**
      * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
      * 
     */
-    public String getEncryptionKey() {
+    public String encryptionKey() {
         return this.encryptionKey;
     }
     /**
      * The sandbox environment to host this Revision.
      * 
     */
-    public String getExecutionEnvironment() {
+    public String executionEnvironment() {
         return this.executionEnvironment;
     }
     /**
      * KRM-style labels for the resource.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
      * 
     */
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
     /**
      * Scaling settings for this Revision.
      * 
     */
-    public GoogleCloudRunOpV2RevisionScalingResponse getScaling() {
+    public GoogleCloudRunOpV2RevisionScalingResponse scaling() {
         return this.scaling;
     }
     /**
      * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * Max allowed time for an instance to respond to a request.
      * 
     */
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
     /**
      * A list of Volumes to make available to containers.
      * 
     */
-    public List<GoogleCloudRunOpV2VolumeResponse> getVolumes() {
+    public List<GoogleCloudRunOpV2VolumeResponse> volumes() {
         return this.volumes;
     }
     /**
      * VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
      * 
     */
-    public GoogleCloudRunOpV2VpcAccessResponse getVpcAccess() {
+    public GoogleCloudRunOpV2VpcAccessResponse vpcAccess() {
         return this.vpcAccess;
     }
 

@@ -94,74 +94,74 @@ public final class GetBrokerResult {
         this.users = users;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getAuthenticationStrategy() {
+    public String authenticationStrategy() {
         return this.authenticationStrategy;
     }
-    public Boolean getAutoMinorVersionUpgrade() {
+    public Boolean autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
-    public String getBrokerId() {
+    public String brokerId() {
         return this.brokerId;
     }
-    public String getBrokerName() {
+    public String brokerName() {
         return this.brokerName;
     }
-    public GetBrokerConfiguration getConfiguration() {
+    public GetBrokerConfiguration configuration() {
         return this.configuration;
     }
-    public String getDeploymentMode() {
+    public String deploymentMode() {
         return this.deploymentMode;
     }
-    public List<GetBrokerEncryptionOption> getEncryptionOptions() {
+    public List<GetBrokerEncryptionOption> encryptionOptions() {
         return this.encryptionOptions;
     }
-    public String getEngineType() {
+    public String engineType() {
         return this.engineType;
     }
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
-    public String getHostInstanceType() {
+    public String hostInstanceType() {
         return this.hostInstanceType;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetBrokerInstance> getInstances() {
+    public List<GetBrokerInstance> instances() {
         return this.instances;
     }
-    public List<GetBrokerLdapServerMetadata> getLdapServerMetadatas() {
+    public List<GetBrokerLdapServerMetadata> ldapServerMetadatas() {
         return this.ldapServerMetadatas;
     }
-    public GetBrokerLogs getLogs() {
+    public GetBrokerLogs logs() {
         return this.logs;
     }
-    public GetBrokerMaintenanceWindowStartTime getMaintenanceWindowStartTime() {
+    public GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime() {
         return this.maintenanceWindowStartTime;
     }
-    public Boolean getPubliclyAccessible() {
+    public Boolean publiclyAccessible() {
         return this.publiclyAccessible;
     }
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public List<GetBrokerUser> getUsers() {
+    public List<GetBrokerUser> users() {
         return this.users;
     }
 

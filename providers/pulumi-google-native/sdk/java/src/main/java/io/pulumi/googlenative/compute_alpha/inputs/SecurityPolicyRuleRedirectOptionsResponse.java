@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

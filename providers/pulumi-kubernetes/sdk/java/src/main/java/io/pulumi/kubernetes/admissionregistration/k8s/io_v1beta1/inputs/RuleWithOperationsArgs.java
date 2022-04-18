@@ -27,7 +27,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiGroups")
       private final @Nullable Output<List<String>> apiGroups;
 
-    public Output<List<String>> getApiGroups() {
+    public Output<List<String>> apiGroups() {
         return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
     }
 
@@ -38,7 +38,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
-    public Output<List<String>> getApiVersions() {
+    public Output<List<String>> apiVersions() {
         return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
@@ -49,7 +49,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="operations")
       private final @Nullable Output<List<String>> operations;
 
-    public Output<List<String>> getOperations() {
+    public Output<List<String>> operations() {
         return this.operations == null ? Codegen.empty() : this.operations;
     }
 
@@ -66,7 +66,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -77,7 +77,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

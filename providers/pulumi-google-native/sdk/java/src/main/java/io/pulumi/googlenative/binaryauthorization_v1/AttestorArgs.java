@@ -19,7 +19,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestorId", required=true)
       private final Output<String> attestorId;
 
-    public Output<String> getAttestorId() {
+    public Output<String> attestorId() {
         return this.attestorId;
     }
 
@@ -30,7 +30,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,14 +41,14 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -59,7 +59,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userOwnedGrafeasNote")
       private final @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote;
 
-    public Output<UserOwnedGrafeasNoteArgs> getUserOwnedGrafeasNote() {
+    public Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote() {
         return this.userOwnedGrafeasNote == null ? Codegen.empty() : this.userOwnedGrafeasNote;
     }
 

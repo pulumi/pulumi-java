@@ -23,7 +23,7 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> getAudiences() {
+    public Output<List<String>> audiences() {
         return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
@@ -34,7 +34,7 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 

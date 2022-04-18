@@ -41,7 +41,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort> getAbort() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort> abort() {
         return Optional.ofNullable(this.abort);
     }
     /**
@@ -50,7 +50,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay> getDelay() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay> delay() {
         return Optional.ofNullable(this.delay);
     }
 

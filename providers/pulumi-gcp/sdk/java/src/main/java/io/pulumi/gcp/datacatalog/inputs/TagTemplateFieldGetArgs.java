@@ -25,7 +25,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="fieldId", required=true)
       private final Output<String> fieldId;
 
-    public Output<String> getFieldId() {
+    public Output<String> fieldId() {
         return this.fieldId;
     }
 
@@ -58,7 +58,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="isRequired")
       private final @Nullable Output<Boolean> isRequired;
 
-    public Output<Boolean> getIsRequired() {
+    public Output<Boolean> isRequired() {
         return this.isRequired == null ? Codegen.empty() : this.isRequired;
     }
 
@@ -70,7 +70,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -95,7 +95,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<TagTemplateFieldTypeGetArgs> type;
 
-    public Output<TagTemplateFieldTypeGetArgs> getType() {
+    public Output<TagTemplateFieldTypeGetArgs> type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class TimeZoneResponse {
      * Optional. IANA Time Zone Database version number, e.g. "2019a".
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

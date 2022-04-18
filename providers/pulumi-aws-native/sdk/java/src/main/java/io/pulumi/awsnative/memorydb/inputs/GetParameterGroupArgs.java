@@ -19,7 +19,7 @@ public final class GetParameterGroupArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="parameterGroupName", required=true)
       private final String parameterGroupName;
 
-    public String getParameterGroupName() {
+    public String parameterGroupName() {
         return this.parameterGroupName;
     }
 

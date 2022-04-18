@@ -26,7 +26,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable String defaultCustomBlockResponseBody;
 
-    public Optional<String> getDefaultCustomBlockResponseBody() {
+    public Optional<String> defaultCustomBlockResponseBody() {
         return this.defaultCustomBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
 
@@ -37,7 +37,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Integer defaultCustomBlockResponseStatusCode;
 
-    public Optional<Integer> getDefaultCustomBlockResponseStatusCode() {
+    public Optional<Integer> defaultCustomBlockResponseStatusCode() {
         return this.defaultCustomBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
 
@@ -48,7 +48,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="defaultRedirectUrl")
       private final @Nullable String defaultRedirectUrl;
 
-    public Optional<String> getDefaultRedirectUrl() {
+    public Optional<String> defaultRedirectUrl() {
         return this.defaultRedirectUrl == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectUrl);
     }
 
@@ -59,7 +59,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -70,7 +70,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

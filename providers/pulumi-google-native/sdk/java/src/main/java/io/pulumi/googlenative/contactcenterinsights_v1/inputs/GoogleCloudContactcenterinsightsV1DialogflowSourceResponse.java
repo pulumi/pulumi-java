@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
     @Import(name="audioUri", required=true)
       private final String audioUri;
 
-    public String getAudioUri() {
+    public String audioUri() {
         return this.audioUri;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
     @Import(name="dialogflowConversation", required=true)
       private final String dialogflowConversation;
 
-    public String getDialogflowConversation() {
+    public String dialogflowConversation() {
         return this.dialogflowConversation;
     }
 

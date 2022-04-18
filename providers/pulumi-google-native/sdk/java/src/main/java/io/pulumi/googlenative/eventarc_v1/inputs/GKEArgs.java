@@ -26,7 +26,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -37,7 +37,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -48,7 +48,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -59,7 +59,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -70,7 +70,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

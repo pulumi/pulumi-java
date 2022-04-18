@@ -26,7 +26,7 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<GuestOsFeatureType> type;
 
-    public Output<GuestOsFeatureType> getType() {
+    public Output<GuestOsFeatureType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -23,10 +23,10 @@ public final class GetClusterCapacityProviderAssociationsResult {
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
     }
 
-    public List<String> getCapacityProviders() {
+    public List<String> capacityProviders() {
         return this.capacityProviders == null ? List.of() : this.capacityProviders;
     }
-    public List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> getDefaultCapacityProviderStrategy() {
+    public List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy == null ? List.of() : this.defaultCapacityProviderStrategy;
     }
 

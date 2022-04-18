@@ -15,21 +15,21 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
     @Import(name="cpus", required=true)
       private final String cpus;
 
-    public String getCpus() {
+    public String cpus() {
         return this.cpus;
     }
 
     @Import(name="localSsd", required=true)
       private final String localSsd;
 
-    public String getLocalSsd() {
+    public String localSsd() {
         return this.localSsd;
     }
 
     @Import(name="memory", required=true)
       private final String memory;
 
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

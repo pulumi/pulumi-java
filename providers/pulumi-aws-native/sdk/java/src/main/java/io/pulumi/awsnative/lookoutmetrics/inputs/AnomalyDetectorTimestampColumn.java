@@ -21,14 +21,14 @@ public final class AnomalyDetectorTimestampColumn extends io.pulumi.resources.In
     @Import(name="columnFormat")
       private final @Nullable String columnFormat;
 
-    public Optional<String> getColumnFormat() {
+    public Optional<String> columnFormat() {
         return this.columnFormat == null ? Optional.empty() : Optional.ofNullable(this.columnFormat);
     }
 
     @Import(name="columnName")
       private final @Nullable String columnName;
 
-    public Optional<String> getColumnName() {
+    public Optional<String> columnName() {
         return this.columnName == null ? Optional.empty() : Optional.ofNullable(this.columnName);
     }
 

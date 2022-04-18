@@ -33,13 +33,13 @@ public final class JobStatusError {
      * The geographic location of the job. The default value is US.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
 

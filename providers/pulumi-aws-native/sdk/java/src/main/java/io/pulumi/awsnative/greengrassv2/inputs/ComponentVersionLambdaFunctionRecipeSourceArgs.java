@@ -22,42 +22,42 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
     @Import(name="componentDependencies")
       private final @Nullable Output<Object> componentDependencies;
 
-    public Output<Object> getComponentDependencies() {
+    public Output<Object> componentDependencies() {
         return this.componentDependencies == null ? Codegen.empty() : this.componentDependencies;
     }
 
     @Import(name="componentLambdaParameters")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters;
 
-    public Output<ComponentVersionLambdaExecutionParametersArgs> getComponentLambdaParameters() {
+    public Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters() {
         return this.componentLambdaParameters == null ? Codegen.empty() : this.componentLambdaParameters;
     }
 
     @Import(name="componentName")
       private final @Nullable Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
     @Import(name="componentPlatforms")
       private final @Nullable Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms;
 
-    public Output<List<ComponentVersionComponentPlatformArgs>> getComponentPlatforms() {
+    public Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms() {
         return this.componentPlatforms == null ? Codegen.empty() : this.componentPlatforms;
     }
 
     @Import(name="componentVersion")
       private final @Nullable Output<String> componentVersion;
 
-    public Output<String> getComponentVersion() {
+    public Output<String> componentVersion() {
         return this.componentVersion == null ? Codegen.empty() : this.componentVersion;
     }
 
     @Import(name="lambdaArn")
       private final @Nullable Output<String> lambdaArn;
 
-    public Output<String> getLambdaArn() {
+    public Output<String> lambdaArn() {
         return this.lambdaArn == null ? Codegen.empty() : this.lambdaArn;
     }
 

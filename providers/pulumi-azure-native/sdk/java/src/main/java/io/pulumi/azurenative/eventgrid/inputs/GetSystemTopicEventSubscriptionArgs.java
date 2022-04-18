@@ -19,7 +19,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
     @Import(name="eventSubscriptionName", required=true)
       private final String eventSubscriptionName;
 
-    public String getEventSubscriptionName() {
+    public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
     @Import(name="systemTopicName", required=true)
       private final String systemTopicName;
 
-    public String getSystemTopicName() {
+    public String systemTopicName() {
         return this.systemTopicName;
     }
 

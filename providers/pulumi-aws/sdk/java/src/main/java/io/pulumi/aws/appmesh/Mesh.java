@@ -42,7 +42,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The ARN of the service mesh.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The creation date of the service mesh.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -70,7 +70,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The last update date of the service mesh.
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -84,7 +84,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the service mesh's owner.
      * 
      */
-    public Output<String> getMeshOwner() {
+    public Output<String> meshOwner() {
         return this.meshOwner;
     }
     /**
@@ -98,7 +98,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The name to use for the service mesh. Must be between 1 and 255 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The resource owner's AWS account ID.
      * 
      */
-    public Output<String> getResourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner;
     }
     /**
@@ -126,7 +126,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return The service mesh specification to apply.
      * 
      */
-    public Output</* @Nullable */ MeshSpec> getSpec() {
+    public Output</* @Nullable */ MeshSpec> spec() {
         return this.spec;
     }
     /**
@@ -140,7 +140,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +154,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

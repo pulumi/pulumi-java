@@ -28,7 +28,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="azureQueue")
       private final @Nullable QueueScaleRuleResponse azureQueue;
 
-    public Optional<QueueScaleRuleResponse> getAzureQueue() {
+    public Optional<QueueScaleRuleResponse> azureQueue() {
         return this.azureQueue == null ? Optional.empty() : Optional.ofNullable(this.azureQueue);
     }
 
@@ -39,7 +39,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="custom")
       private final @Nullable CustomScaleRuleResponse custom;
 
-    public Optional<CustomScaleRuleResponse> getCustom() {
+    public Optional<CustomScaleRuleResponse> custom() {
         return this.custom == null ? Optional.empty() : Optional.ofNullable(this.custom);
     }
 
@@ -50,7 +50,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="http")
       private final @Nullable HttpScaleRuleResponse http;
 
-    public Optional<HttpScaleRuleResponse> getHttp() {
+    public Optional<HttpScaleRuleResponse> http() {
         return this.http == null ? Optional.empty() : Optional.ofNullable(this.http);
     }
 
@@ -61,7 +61,7 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

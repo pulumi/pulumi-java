@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
     @Import(name="parameterId", required=true)
       private final String parameterId;
 
-    public String getParameterId() {
+    public String parameterId() {
         return this.parameterId;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

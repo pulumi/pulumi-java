@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
     @Import(name="ipSets")
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
 
-    public Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> getIpSets() {
+    public Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets() {
         return this.ipSets == null ? Codegen.empty() : this.ipSets;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
     @Import(name="portSets")
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
 
-    public Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> getPortSets() {
+    public Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets() {
         return this.portSets == null ? Codegen.empty() : this.portSets;
     }
 

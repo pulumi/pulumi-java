@@ -28,7 +28,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="creationTime")
       private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Output<TimestampArgs> getCreationTime() {
+    public Output<TimestampArgs> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -39,7 +39,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="output")
       private final @Nullable Output<FileReferenceArgs> output;
 
-    public Output<FileReferenceArgs> getOutput() {
+    public Output<FileReferenceArgs> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -50,7 +50,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="testCase")
       private final @Nullable Output<TestCaseReferenceArgs> testCase;
 
-    public Output<TestCaseReferenceArgs> getTestCase() {
+    public Output<TestCaseReferenceArgs> testCase() {
         return this.testCase == null ? Codegen.empty() : this.testCase;
     }
 

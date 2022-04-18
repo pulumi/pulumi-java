@@ -23,25 +23,25 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
     @Export(name="botId", type=String.class, parameters={})
     private Output<String> botId;
 
-    public Output<String> getBotId() {
+    public Output<String> botId() {
         return this.botId;
     }
     @Export(name="botVersion", type=String.class, parameters={})
     private Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion;
     }
     @Export(name="botVersionLocaleSpecification", type=List.class, parameters={BotVersionLocaleSpecification.class})
     private Output<List<BotVersionLocaleSpecification>> botVersionLocaleSpecification;
 
-    public Output<List<BotVersionLocaleSpecification>> getBotVersionLocaleSpecification() {
+    public Output<List<BotVersionLocaleSpecification>> botVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
 

@@ -18,14 +18,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -36,14 +36,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime", required=true)
       private final Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -54,14 +54,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,7 +72,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceTable", required=true)
       private final Output<String> sourceTable;
 
-    public Output<String> getSourceTable() {
+    public Output<String> sourceTable() {
         return this.sourceTable;
     }
 

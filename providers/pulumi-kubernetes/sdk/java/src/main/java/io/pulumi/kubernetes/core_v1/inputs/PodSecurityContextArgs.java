@@ -37,7 +37,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fsGroup")
       private final @Nullable Output<Integer> fsGroup;
 
-    public Output<Integer> getFsGroup() {
+    public Output<Integer> fsGroup() {
         return this.fsGroup == null ? Codegen.empty() : this.fsGroup;
     }
 
@@ -48,7 +48,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fsGroupChangePolicy")
       private final @Nullable Output<String> fsGroupChangePolicy;
 
-    public Output<String> getFsGroupChangePolicy() {
+    public Output<String> fsGroupChangePolicy() {
         return this.fsGroupChangePolicy == null ? Codegen.empty() : this.fsGroupChangePolicy;
     }
 
@@ -59,7 +59,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="runAsGroup")
       private final @Nullable Output<Integer> runAsGroup;
 
-    public Output<Integer> getRunAsGroup() {
+    public Output<Integer> runAsGroup() {
         return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
     }
 
@@ -70,7 +70,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="runAsNonRoot")
       private final @Nullable Output<Boolean> runAsNonRoot;
 
-    public Output<Boolean> getRunAsNonRoot() {
+    public Output<Boolean> runAsNonRoot() {
         return this.runAsNonRoot == null ? Codegen.empty() : this.runAsNonRoot;
     }
 
@@ -81,7 +81,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="runAsUser")
       private final @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> getRunAsUser() {
+    public Output<Integer> runAsUser() {
         return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
@@ -92,7 +92,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+    public Output<SELinuxOptionsArgs> seLinuxOptions() {
         return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
     }
 
@@ -103,7 +103,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="seccompProfile")
       private final @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Output<SeccompProfileArgs> getSeccompProfile() {
+    public Output<SeccompProfileArgs> seccompProfile() {
         return this.seccompProfile == null ? Codegen.empty() : this.seccompProfile;
     }
 
@@ -114,7 +114,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="supplementalGroups")
       private final @Nullable Output<List<Integer>> supplementalGroups;
 
-    public Output<List<Integer>> getSupplementalGroups() {
+    public Output<List<Integer>> supplementalGroups() {
         return this.supplementalGroups == null ? Codegen.empty() : this.supplementalGroups;
     }
 
@@ -125,7 +125,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sysctls")
       private final @Nullable Output<List<SysctlArgs>> sysctls;
 
-    public Output<List<SysctlArgs>> getSysctls() {
+    public Output<List<SysctlArgs>> sysctls() {
         return this.sysctls == null ? Codegen.empty() : this.sysctls;
     }
 
@@ -136,7 +136,7 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     @Import(name="windowsOptions")
       private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Output<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
+    public Output<WindowsSecurityContextOptionsArgs> windowsOptions() {
         return this.windowsOptions == null ? Codegen.empty() : this.windowsOptions;
     }
 

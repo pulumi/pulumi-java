@@ -19,7 +19,7 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationFabricArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

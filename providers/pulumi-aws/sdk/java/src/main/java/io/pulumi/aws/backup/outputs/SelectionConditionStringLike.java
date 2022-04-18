@@ -32,14 +32,14 @@ public final class SelectionConditionStringLike {
      * The key in a key-value pair.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value in a key-value pair.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

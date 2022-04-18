@@ -25,7 +25,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily == null ? Codegen.empty() : this.addressFamily;
     }
 
@@ -36,14 +36,14 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
     @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
-    public Output<String> getAmazonSideAsn() {
+    public Output<String> amazonSideAsn() {
         return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
@@ -54,7 +54,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -65,7 +65,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
@@ -76,7 +76,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn == null ? Codegen.empty() : this.bgpAsn;
     }
 
@@ -87,7 +87,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
@@ -98,7 +98,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -109,7 +109,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
@@ -120,7 +120,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -131,7 +131,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="routeFilterPrefixes")
       private final @Nullable Output<List<String>> routeFilterPrefixes;
 
-    public Output<List<String>> getRouteFilterPrefixes() {
+    public Output<List<String>> routeFilterPrefixes() {
         return this.routeFilterPrefixes == null ? Codegen.empty() : this.routeFilterPrefixes;
     }
 
@@ -142,7 +142,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -153,7 +153,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -164,7 +164,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
     @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 

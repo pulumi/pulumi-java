@@ -35,7 +35,7 @@ public final class CopyAudioResponse {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
@@ -43,7 +43,7 @@ public final class CopyAudioResponse {
      * Expected value is '#Microsoft.Media.CopyAudio'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

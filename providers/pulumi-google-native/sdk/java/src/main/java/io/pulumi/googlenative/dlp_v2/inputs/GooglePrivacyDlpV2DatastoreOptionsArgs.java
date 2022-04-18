@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
     @Import(name="kind")
       private final @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
 
-    public Output<GooglePrivacyDlpV2KindExpressionArgs> getKind() {
+    public Output<GooglePrivacyDlpV2KindExpressionArgs> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
     @Import(name="partitionId")
       private final @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
 
-    public Output<GooglePrivacyDlpV2PartitionIdArgs> getPartitionId() {
+    public Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId() {
         return this.partitionId == null ? Codegen.empty() : this.partitionId;
     }
 

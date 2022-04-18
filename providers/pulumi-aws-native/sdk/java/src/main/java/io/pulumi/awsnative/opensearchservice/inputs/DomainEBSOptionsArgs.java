@@ -20,28 +20,28 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eBSEnabled")
       private final @Nullable Output<Boolean> eBSEnabled;
 
-    public Output<Boolean> getEBSEnabled() {
+    public Output<Boolean> eBSEnabled() {
         return this.eBSEnabled == null ? Codegen.empty() : this.eBSEnabled;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

@@ -26,7 +26,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     @Import(name="authorizationType", required=true)
       private final Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType;
     }
 
@@ -37,7 +37,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

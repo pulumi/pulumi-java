@@ -34,14 +34,14 @@ public final class PrivateIPAddressResponse {
      * Private IP address bound to the availability group listener.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Subnet used to include private IP.
      * 
     */
-    public Optional<String> getSubnetResourceId() {
+    public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
 

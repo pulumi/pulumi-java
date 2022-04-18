@@ -22,7 +22,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="insightsEnabled")
       private final @Nullable Output<Boolean> insightsEnabled;
 
-    public Output<Boolean> getInsightsEnabled() {
+    public Output<Boolean> insightsEnabled() {
         return this.insightsEnabled == null ? Codegen.empty() : this.insightsEnabled;
     }
 
@@ -33,7 +33,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="notificationsEnabled")
       private final @Nullable Output<Boolean> notificationsEnabled;
 
-    public Output<Boolean> getNotificationsEnabled() {
+    public Output<Boolean> notificationsEnabled() {
         return this.notificationsEnabled == null ? Codegen.empty() : this.notificationsEnabled;
     }
 

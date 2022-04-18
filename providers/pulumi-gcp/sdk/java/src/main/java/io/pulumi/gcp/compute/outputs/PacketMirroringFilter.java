@@ -47,7 +47,7 @@ public final class PacketMirroringFilter {
      * destination (egress) IP in the IP header. Only IPv4 is supported.
      * 
     */
-    public List<String> getCidrRanges() {
+    public List<String> cidrRanges() {
         return this.cidrRanges == null ? List.of() : this.cidrRanges;
     }
     /**
@@ -56,7 +56,7 @@ public final class PacketMirroringFilter {
      * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
      * 
     */
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
@@ -64,7 +64,7 @@ public final class PacketMirroringFilter {
      * Each value may be one of `tcp`, `udp`, and `icmp`.
      * 
     */
-    public List<String> getIpProtocols() {
+    public List<String> ipProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
 

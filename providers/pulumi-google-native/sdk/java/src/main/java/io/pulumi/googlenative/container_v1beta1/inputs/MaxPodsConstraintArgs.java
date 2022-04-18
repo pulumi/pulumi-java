@@ -26,7 +26,7 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxPodsPerNode")
       private final @Nullable Output<String> maxPodsPerNode;
 
-    public Output<String> getMaxPodsPerNode() {
+    public Output<String> maxPodsPerNode() {
         return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
     }
 

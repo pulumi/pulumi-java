@@ -42,21 +42,21 @@ public final class NetworkInterfaceReferenceResponse {
      * Specify what happens to the network interface when the VM is deleted
      * 
     */
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
     /**
      * Resource Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
     */
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
 

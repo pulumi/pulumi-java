@@ -29,7 +29,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
     @Import(name="accessLevel")
       private final @Nullable Output<String> accessLevel;
 
-    public Output<String> getAccessLevel() {
+    public Output<String> accessLevel() {
         return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
     }
 
@@ -45,7 +45,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 

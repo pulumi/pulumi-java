@@ -56,35 +56,35 @@ public final class InventoryDestinationBucket {
      * The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The Amazon S3 bucket ARN of the destination.
      * 
     */
-    public String getBucketArn() {
+    public String bucketArn() {
         return this.bucketArn;
     }
     /**
      * Contains the type of server-side encryption to use to encrypt the inventory (documented below).
      * 
     */
-    public Optional<InventoryDestinationBucketEncryption> getEncryption() {
+    public Optional<InventoryDestinationBucketEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * The prefix that is prepended to all inventory results.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

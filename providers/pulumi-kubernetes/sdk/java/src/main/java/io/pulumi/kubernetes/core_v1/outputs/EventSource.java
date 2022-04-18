@@ -34,14 +34,14 @@ public final class EventSource {
      * Component from which the event is generated.
      * 
     */
-    public Optional<String> getComponent() {
+    public Optional<String> component() {
         return Optional.ofNullable(this.component);
     }
     /**
      * Node name on which the event is generated.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
 

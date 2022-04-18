@@ -26,7 +26,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

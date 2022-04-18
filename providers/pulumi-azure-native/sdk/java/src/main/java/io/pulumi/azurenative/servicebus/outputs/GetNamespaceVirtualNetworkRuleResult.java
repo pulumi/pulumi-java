@@ -48,28 +48,28 @@ public final class GetNamespaceVirtualNetworkRuleResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Resource ID of Virtual Network Subnet
      * 
     */
-    public Optional<String> getVirtualNetworkSubnetId() {
+    public Optional<String> virtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }
 

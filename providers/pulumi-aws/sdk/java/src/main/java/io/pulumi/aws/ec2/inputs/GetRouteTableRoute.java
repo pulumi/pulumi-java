@@ -19,7 +19,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="carrierGatewayId", required=true)
       private final String carrierGatewayId;
 
-    public String getCarrierGatewayId() {
+    public String carrierGatewayId() {
         return this.carrierGatewayId;
     }
 
@@ -30,7 +30,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -41,7 +41,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="destinationPrefixListId", required=true)
       private final String destinationPrefixListId;
 
-    public String getDestinationPrefixListId() {
+    public String destinationPrefixListId() {
         return this.destinationPrefixListId;
     }
 
@@ -52,7 +52,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="egressOnlyGatewayId", required=true)
       private final String egressOnlyGatewayId;
 
-    public String getEgressOnlyGatewayId() {
+    public String egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
 
@@ -63,7 +63,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
 
@@ -74,7 +74,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -85,7 +85,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv6CidrBlock", required=true)
       private final String ipv6CidrBlock;
 
-    public String getIpv6CidrBlock() {
+    public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
 
@@ -96,7 +96,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="localGatewayId", required=true)
       private final String localGatewayId;
 
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
 
@@ -107,7 +107,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="natGatewayId", required=true)
       private final String natGatewayId;
 
-    public String getNatGatewayId() {
+    public String natGatewayId() {
         return this.natGatewayId;
     }
 
@@ -118,7 +118,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -129,7 +129,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="transitGatewayId", required=true)
       private final String transitGatewayId;
 
-    public String getTransitGatewayId() {
+    public String transitGatewayId() {
         return this.transitGatewayId;
     }
 
@@ -140,7 +140,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcEndpointId", required=true)
       private final String vpcEndpointId;
 
-    public String getVpcEndpointId() {
+    public String vpcEndpointId() {
         return this.vpcEndpointId;
     }
 
@@ -151,7 +151,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcPeeringConnectionId", required=true)
       private final String vpcPeeringConnectionId;
 
-    public String getVpcPeeringConnectionId() {
+    public String vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 

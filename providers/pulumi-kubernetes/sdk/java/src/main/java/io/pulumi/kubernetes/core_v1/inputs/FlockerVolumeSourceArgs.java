@@ -26,7 +26,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
@@ -37,7 +37,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="datasetUUID")
       private final @Nullable Output<String> datasetUUID;
 
-    public Output<String> getDatasetUUID() {
+    public Output<String> datasetUUID() {
         return this.datasetUUID == null ? Codegen.empty() : this.datasetUUID;
     }
 

@@ -27,7 +27,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="claimType", required=true)
       private final String claimType;
 
-    public String getClaimType() {
+    public String claimType() {
         return this.claimType;
     }
 
@@ -38,7 +38,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="claimValue", required=true)
       private final String claimValue;
 
-    public String getClaimValue() {
+    public String claimValue() {
         return this.claimValue;
     }
 
@@ -49,7 +49,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -60,7 +60,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -71,7 +71,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
 
@@ -82,7 +82,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="primaryKey", required=true)
       private final String primaryKey;
 
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
 
@@ -93,7 +93,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="revision", required=true)
       private final Integer revision;
 
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
 
@@ -104,7 +104,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="rights")
       private final @Nullable List<String> rights;
 
-    public List<String> getRights() {
+    public List<String> rights() {
         return this.rights == null ? List.of() : this.rights;
     }
 
@@ -115,7 +115,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
     @Import(name="secondaryKey", required=true)
       private final String secondaryKey;
 
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

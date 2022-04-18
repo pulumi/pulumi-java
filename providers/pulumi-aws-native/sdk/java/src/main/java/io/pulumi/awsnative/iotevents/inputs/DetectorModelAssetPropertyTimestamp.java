@@ -25,7 +25,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
     @Import(name="offsetInNanos")
       private final @Nullable String offsetInNanos;
 
-    public Optional<String> getOffsetInNanos() {
+    public Optional<String> offsetInNanos() {
         return this.offsetInNanos == null ? Optional.empty() : Optional.ofNullable(this.offsetInNanos);
     }
 
@@ -36,7 +36,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
     @Import(name="timeInSeconds", required=true)
       private final String timeInSeconds;
 
-    public String getTimeInSeconds() {
+    public String timeInSeconds() {
         return this.timeInSeconds;
     }
 

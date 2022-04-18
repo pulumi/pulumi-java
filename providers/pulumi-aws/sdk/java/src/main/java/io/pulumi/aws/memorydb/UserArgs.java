@@ -24,7 +24,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
 
@@ -35,7 +35,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMode", required=true)
       private final Output<UserAuthenticationModeArgs> authenticationMode;
 
-    public Output<UserAuthenticationModeArgs> getAuthenticationMode() {
+    public Output<UserAuthenticationModeArgs> authenticationMode() {
         return this.authenticationMode;
     }
 
@@ -46,7 +46,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -68,7 +68,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -21,7 +21,7 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplicationArgs extend
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

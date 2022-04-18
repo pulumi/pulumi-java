@@ -22,7 +22,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
+    public Output<String> pgpKey() {
         return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
@@ -33,7 +33,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -44,7 +44,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

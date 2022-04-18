@@ -63,42 +63,42 @@ public final class ExecutionConfigResponse {
      * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
      * 
     */
-    public String getArtifactStorage() {
+    public String artifactStorage() {
         return this.artifactStorage;
     }
     /**
      * Optional. Use default Cloud Build pool.
      * 
     */
-    public DefaultPoolResponse getDefaultPool() {
+    public DefaultPoolResponse defaultPool() {
         return this.defaultPool;
     }
     /**
      * Optional. Use private Cloud Build pool.
      * 
     */
-    public PrivatePoolResponse getPrivatePool() {
+    public PrivatePoolResponse privatePool() {
         return this.privatePool;
     }
     /**
      * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * Usages when this configuration should be applied.
      * 
     */
-    public List<String> getUsages() {
+    public List<String> usages() {
         return this.usages;
     }
     /**
      * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
      * 
     */
-    public String getWorkerPool() {
+    public String workerPool() {
         return this.workerPool;
     }
 

@@ -19,7 +19,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="intentObjectName", required=true)
       private final String intentObjectName;
 
-    public String getIntentObjectName() {
+    public String intentObjectName() {
         return this.intentObjectName;
     }
 
@@ -41,7 +41,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

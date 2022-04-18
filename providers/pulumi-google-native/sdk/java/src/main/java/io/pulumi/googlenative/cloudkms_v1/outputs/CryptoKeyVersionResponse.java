@@ -119,98 +119,98 @@ public final class CryptoKeyVersionResponse {
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protection_level HSM.
      * 
     */
-    public KeyOperationAttestationResponse getAttestation() {
+    public KeyOperationAttestationResponse attestation() {
         return this.attestation;
     }
     /**
      * The time at which this CryptoKeyVersion was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
      * 
     */
-    public String getDestroyEventTime() {
+    public String destroyEventTime() {
         return this.destroyEventTime;
     }
     /**
      * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
     */
-    public String getDestroyTime() {
+    public String destroyTime() {
         return this.destroyTime;
     }
     /**
      * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
      * 
     */
-    public ExternalProtectionLevelOptionsResponse getExternalProtectionLevelOptions() {
+    public ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions;
     }
     /**
      * The time this CryptoKeyVersion's key material was generated.
      * 
     */
-    public String getGenerateTime() {
+    public String generateTime() {
         return this.generateTime;
     }
     /**
      * The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
      * 
     */
-    public String getImportFailureReason() {
+    public String importFailureReason() {
         return this.importFailureReason;
     }
     /**
      * The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
      * 
     */
-    public String getImportJob() {
+    public String importJob() {
         return this.importJob;
     }
     /**
      * The time at which this CryptoKeyVersion's key material was most recently imported.
      * 
     */
-    public String getImportTime() {
+    public String importTime() {
         return this.importTime;
     }
     /**
      * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
      * 
     */
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
     /**
      * Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
      * 
     */
-    public Boolean getReimportEligible() {
+    public Boolean reimportEligible() {
         return this.reimportEligible;
     }
     /**
      * The current state of the CryptoKeyVersion.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

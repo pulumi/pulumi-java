@@ -15,14 +15,14 @@ public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="sharedflowId", required=true)
       private final String sharedflowId;
 
-    public String getSharedflowId() {
+    public String sharedflowId() {
         return this.sharedflowId;
     }
 

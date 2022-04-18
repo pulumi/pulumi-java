@@ -25,7 +25,7 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
     @Import(name="cpu")
       private final @Nullable String cpu;
 
-    public Optional<String> getCpu() {
+    public Optional<String> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
@@ -36,7 +36,7 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
     @Import(name="memory")
       private final @Nullable String memory;
 
-    public Optional<String> getMemory() {
+    public Optional<String> memory() {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
     }
 

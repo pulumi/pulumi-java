@@ -25,7 +25,7 @@ public final class AdditionalCapabilitiesResponse extends io.pulumi.resources.In
     @Import(name="ultraSSDEnabled")
       private final @Nullable Boolean ultraSSDEnabled;
 
-    public Optional<Boolean> getUltraSSDEnabled() {
+    public Optional<Boolean> ultraSSDEnabled() {
         return this.ultraSSDEnabled == null ? Optional.empty() : Optional.ofNullable(this.ultraSSDEnabled);
     }
 

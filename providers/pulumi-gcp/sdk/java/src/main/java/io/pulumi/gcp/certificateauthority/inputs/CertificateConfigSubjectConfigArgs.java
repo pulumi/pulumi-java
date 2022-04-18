@@ -24,7 +24,7 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
     @Import(name="subject", required=true)
       private final Output<CertificateConfigSubjectConfigSubjectArgs> subject;
 
-    public Output<CertificateConfigSubjectConfigSubjectArgs> getSubject() {
+    public Output<CertificateConfigSubjectConfigSubjectArgs> subject() {
         return this.subject;
     }
 
@@ -36,7 +36,7 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
     @Import(name="subjectAltName")
       private final @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
-    public Output<CertificateConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
+    public Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName() {
         return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 

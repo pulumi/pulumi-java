@@ -24,7 +24,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     @Import(name="action", required=true)
       private final Output<RuleGroupActivatedRuleActionGetArgs> action;
 
-    public Output<RuleGroupActivatedRuleActionGetArgs> getAction() {
+    public Output<RuleGroupActivatedRuleActionGetArgs> action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -57,7 +57,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

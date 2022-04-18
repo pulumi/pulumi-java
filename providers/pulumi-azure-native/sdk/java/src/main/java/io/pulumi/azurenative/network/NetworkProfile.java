@@ -45,7 +45,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return List of chid container network interface configurations.
      * 
      */
-    public Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> getContainerNetworkInterfaceConfigurations() {
+    public Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> containerNetworkInterfaceConfigurations() {
         return this.containerNetworkInterfaceConfigurations;
     }
     /**
@@ -59,7 +59,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return List of child container network interfaces.
      * 
      */
-    public Output<List<ContainerNetworkInterfaceResponse>> getContainerNetworkInterfaces() {
+    public Output<List<ContainerNetworkInterfaceResponse>> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces;
     }
     /**
@@ -73,7 +73,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +87,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -101,7 +101,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the network profile resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the network profile resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -143,7 +143,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

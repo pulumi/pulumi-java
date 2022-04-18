@@ -67,45 +67,45 @@ public final class GetAddonResult {
         this.tags = tags;
     }
 
-    public String getAddonName() {
+    public String addonName() {
         return this.addonName;
     }
     /**
      * The version of EKS add-on.
      * 
     */
-    public String getAddonVersion() {
+    public String addonVersion() {
         return this.addonVersion;
     }
     /**
      * Amazon Resource Name (ARN) of the EKS add-on.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
     /**
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
      * 
     */
-    public String getModifiedAt() {
+    public String modifiedAt() {
         return this.modifiedAt;
     }
     /**
@@ -113,10 +113,10 @@ public final class GetAddonResult {
      * then add-on uses the IAM role assigned to the EKS Cluster node.
      * 
     */
-    public String getServiceAccountRoleArn() {
+    public String serviceAccountRoleArn() {
         return this.serviceAccountRoleArn;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

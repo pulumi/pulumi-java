@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="integrationServiceEnvironmentName")
       private final @Nullable Output<String> integrationServiceEnvironmentName;
 
-    public Output<String> getIntegrationServiceEnvironmentName() {
+    public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName == null ? Codegen.empty() : this.integrationServiceEnvironmentName;
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="properties")
       private final @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
-    public Output<IntegrationServiceEnvironmentPropertiesArgs> getProperties() {
+    public Output<IntegrationServiceEnvironmentPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -70,7 +70,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -81,7 +81,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="sku")
       private final @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
 
-    public Output<IntegrationServiceEnvironmentSkuArgs> getSku() {
+    public Output<IntegrationServiceEnvironmentSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -92,7 +92,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

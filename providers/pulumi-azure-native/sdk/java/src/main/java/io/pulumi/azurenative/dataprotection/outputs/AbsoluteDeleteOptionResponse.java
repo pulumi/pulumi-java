@@ -33,7 +33,7 @@ public final class AbsoluteDeleteOptionResponse {
      * Duration of deletion after given timespan
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
@@ -41,7 +41,7 @@ public final class AbsoluteDeleteOptionResponse {
      * Expected value is 'AbsoluteDeleteOption'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

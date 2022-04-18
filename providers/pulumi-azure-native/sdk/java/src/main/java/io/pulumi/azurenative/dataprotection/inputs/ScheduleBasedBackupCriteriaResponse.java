@@ -28,7 +28,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="absoluteCriteria")
       private final @Nullable List<String> absoluteCriteria;
 
-    public List<String> getAbsoluteCriteria() {
+    public List<String> absoluteCriteria() {
         return this.absoluteCriteria == null ? List.of() : this.absoluteCriteria;
     }
 
@@ -39,7 +39,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="daysOfMonth")
       private final @Nullable List<DayResponse> daysOfMonth;
 
-    public List<DayResponse> getDaysOfMonth() {
+    public List<DayResponse> daysOfMonth() {
         return this.daysOfMonth == null ? List.of() : this.daysOfMonth;
     }
 
@@ -50,7 +50,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="daysOfTheWeek")
       private final @Nullable List<String> daysOfTheWeek;
 
-    public List<String> getDaysOfTheWeek() {
+    public List<String> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
 
@@ -61,7 +61,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="monthsOfYear")
       private final @Nullable List<String> monthsOfYear;
 
-    public List<String> getMonthsOfYear() {
+    public List<String> monthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
 
@@ -73,7 +73,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -84,7 +84,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="scheduleTimes")
       private final @Nullable List<String> scheduleTimes;
 
-    public List<String> getScheduleTimes() {
+    public List<String> scheduleTimes() {
         return this.scheduleTimes == null ? List.of() : this.scheduleTimes;
     }
 
@@ -95,7 +95,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends io.pulumi.resourc
     @Import(name="weeksOfTheMonth")
       private final @Nullable List<String> weeksOfTheMonth;
 
-    public List<String> getWeeksOfTheMonth() {
+    public List<String> weeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }
 

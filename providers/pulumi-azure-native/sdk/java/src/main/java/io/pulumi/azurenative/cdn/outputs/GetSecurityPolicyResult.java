@@ -63,49 +63,49 @@ public final class GetSecurityPolicyResult {
         this.type = type;
     }
 
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * object which contains security policy parameters
      * 
     */
-    public Optional<SecurityPolicyWebApplicationFirewallParametersResponse> getParameters() {
+    public Optional<SecurityPolicyWebApplicationFirewallParametersResponse> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

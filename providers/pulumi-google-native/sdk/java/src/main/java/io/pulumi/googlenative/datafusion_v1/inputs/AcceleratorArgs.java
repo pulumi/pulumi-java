@@ -27,7 +27,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType")
       private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
-    public Output<AcceleratorAcceleratorType> getAcceleratorType() {
+    public Output<AcceleratorAcceleratorType> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
@@ -38,7 +38,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<AcceleratorState> state;
 
-    public Output<AcceleratorState> getState() {
+    public Output<AcceleratorState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

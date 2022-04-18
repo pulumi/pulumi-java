@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="cost", required=true)
       private final Double cost;
 
-    public Double getCost() {
+    public Double cost() {
         return this.cost;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="currencyCode", required=true)
       private final String currencyCode;
 
-    public String getCurrencyCode() {
+    public String currencyCode() {
         return this.currencyCode;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="originalPrice", required=true)
       private final Double originalPrice;
 
-    public Double getOriginalPrice() {
+    public Double originalPrice() {
         return this.originalPrice;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="price", required=true)
       private final Double price;
 
-    public Double getPrice() {
+    public Double price() {
         return this.price;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="priceEffectiveTime", required=true)
       private final String priceEffectiveTime;
 
-    public String getPriceEffectiveTime() {
+    public String priceEffectiveTime() {
         return this.priceEffectiveTime;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="priceExpireTime", required=true)
       private final String priceExpireTime;
 
-    public String getPriceExpireTime() {
+    public String priceExpireTime() {
         return this.priceExpireTime;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
     @Import(name="priceRange", required=true)
       private final GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange;
 
-    public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse getPriceRange() {
+    public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange() {
         return this.priceRange;
     }
 

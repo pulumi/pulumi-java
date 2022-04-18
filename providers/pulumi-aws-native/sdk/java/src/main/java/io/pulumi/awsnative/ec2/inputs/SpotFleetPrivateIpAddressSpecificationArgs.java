@@ -19,14 +19,14 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
       private final Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
 

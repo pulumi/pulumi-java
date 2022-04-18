@@ -26,7 +26,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="domainNameLabel")
       private final @Nullable Output<String> domainNameLabel;
 
-    public Output<String> getDomainNameLabel() {
+    public Output<String> domainNameLabel() {
         return this.domainNameLabel == null ? Codegen.empty() : this.domainNameLabel;
     }
 
@@ -37,7 +37,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -48,7 +48,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="publicIpAllocationMethod")
       private final @Nullable Output<String> publicIpAllocationMethod;
 
-    public Output<String> getPublicIpAllocationMethod() {
+    public Output<String> publicIpAllocationMethod() {
         return this.publicIpAllocationMethod == null ? Codegen.empty() : this.publicIpAllocationMethod;
     }
 
@@ -60,7 +60,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -71,7 +71,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -82,7 +82,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -93,7 +93,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="zones")
       private final @Nullable Output<String> zones;
 
-    public Output<String> getZones() {
+    public Output<String> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="billingProfile")
       private final @Nullable Output<BillingProfileArgs> billingProfile;
 
-    public Output<BillingProfileArgs> getBillingProfile() {
+    public Output<BillingProfileArgs> billingProfile() {
         return this.billingProfile == null ? Codegen.empty() : this.billingProfile;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
+    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
         return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="evictionPolicy")
       private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
-    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
+    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy() {
         return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
     }
 
@@ -70,7 +70,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="extensionProfile")
       private final @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
-    public Output<VirtualMachineScaleSetExtensionProfileArgs> getExtensionProfile() {
+    public Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile() {
         return this.extensionProfile == null ? Codegen.empty() : this.extensionProfile;
     }
 
@@ -81,7 +81,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -92,7 +92,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="networkProfile")
       private final @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
-    public Output<VirtualMachineScaleSetNetworkProfileArgs> getNetworkProfile() {
+    public Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -103,7 +103,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="osProfile")
       private final @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
-    public Output<VirtualMachineScaleSetOSProfileArgs> getOsProfile() {
+    public Output<VirtualMachineScaleSetOSProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -114,7 +114,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="priority")
       private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
-    public Output<Either<String,VirtualMachinePriorityTypes>> getPriority() {
+    public Output<Either<String,VirtualMachinePriorityTypes>> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -125,7 +125,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="scheduledEventsProfile")
       private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
-    public Output<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
+    public Output<ScheduledEventsProfileArgs> scheduledEventsProfile() {
         return this.scheduledEventsProfile == null ? Codegen.empty() : this.scheduledEventsProfile;
     }
 
@@ -136,7 +136,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> getSecurityProfile() {
+    public Output<SecurityProfileArgs> securityProfile() {
         return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
@@ -147,7 +147,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="storageProfile")
       private final @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
-    public Output<VirtualMachineScaleSetStorageProfileArgs> getStorageProfile() {
+    public Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -158,7 +158,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 

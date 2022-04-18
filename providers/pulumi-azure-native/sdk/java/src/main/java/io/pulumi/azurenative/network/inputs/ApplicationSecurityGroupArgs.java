@@ -27,7 +27,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

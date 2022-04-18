@@ -24,7 +24,7 @@ public final class IosTestLoopResponse {
      * Bundle ID of the app.
      * 
     */
-    public String getBundleId() {
+    public String bundleId() {
         return this.bundleId;
     }
 

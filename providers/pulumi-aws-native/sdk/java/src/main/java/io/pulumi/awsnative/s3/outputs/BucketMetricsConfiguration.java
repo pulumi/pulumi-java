@@ -30,16 +30,16 @@ public final class BucketMetricsConfiguration {
         this.tagFilters = tagFilters;
     }
 
-    public Optional<String> getAccessPointArn() {
+    public Optional<String> accessPointArn() {
         return Optional.ofNullable(this.accessPointArn);
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

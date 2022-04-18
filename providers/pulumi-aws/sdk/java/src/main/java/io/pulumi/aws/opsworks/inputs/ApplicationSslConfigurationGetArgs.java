@@ -22,7 +22,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="chain")
       private final @Nullable Output<String> chain;
 
-    public Output<String> getChain() {
+    public Output<String> chain() {
         return this.chain == null ? Codegen.empty() : this.chain;
     }
 
@@ -44,7 +44,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 

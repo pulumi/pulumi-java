@@ -15,7 +15,7 @@ public final class GetLaunchTemplateCreditSpecification extends io.pulumi.resour
     @Import(name="cpuCredits", required=true)
       private final String cpuCredits;
 
-    public String getCpuCredits() {
+    public String cpuCredits() {
         return this.cpuCredits;
     }
 

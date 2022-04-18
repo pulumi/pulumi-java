@@ -21,7 +21,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="registryId")
       private final @Nullable String registryId;
 
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
     }
 

@@ -44,7 +44,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The Managed Identity type of the app resource
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedIdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -58,7 +58,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The GEO location of the application, always the same with its parent resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Properties of the App resource
      * 
      */
-    public Output<AppResourcePropertiesResponse> getProperties() {
+    public Output<AppResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +100,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

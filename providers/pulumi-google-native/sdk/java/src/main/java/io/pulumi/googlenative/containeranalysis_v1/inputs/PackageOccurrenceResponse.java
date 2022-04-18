@@ -25,7 +25,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="location", required=true)
       private final List<LocationResponse> location;
 
-    public List<LocationResponse> getLocation() {
+    public List<LocationResponse> location() {
         return this.location;
     }
 
@@ -36,7 +36,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

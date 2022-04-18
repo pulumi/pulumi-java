@@ -31,7 +31,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalVariables")
       private final @Nullable Output<List<ConfigVariableArgs>> additionalVariables;
 
-    public Output<List<ConfigVariableArgs>> getAdditionalVariables() {
+    public Output<List<ConfigVariableArgs>> additionalVariables() {
         return this.additionalVariables == null ? Codegen.empty() : this.additionalVariables;
     }
 
@@ -42,7 +42,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authType")
       private final @Nullable Output<AuthConfigAuthType> authType;
 
-    public Output<AuthConfigAuthType> getAuthType() {
+    public Output<AuthConfigAuthType> authType() {
         return this.authType == null ? Codegen.empty() : this.authType;
     }
 
@@ -53,7 +53,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oauth2ClientCredentials")
       private final @Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
-    public Output<Oauth2ClientCredentialsArgs> getOauth2ClientCredentials() {
+    public Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials() {
         return this.oauth2ClientCredentials == null ? Codegen.empty() : this.oauth2ClientCredentials;
     }
 
@@ -64,7 +64,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oauth2JwtBearer")
       private final @Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
-    public Output<Oauth2JwtBearerArgs> getOauth2JwtBearer() {
+    public Output<Oauth2JwtBearerArgs> oauth2JwtBearer() {
         return this.oauth2JwtBearer == null ? Codegen.empty() : this.oauth2JwtBearer;
     }
 
@@ -75,7 +75,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userPassword")
       private final @Nullable Output<UserPasswordArgs> userPassword;
 
-    public Output<UserPasswordArgs> getUserPassword() {
+    public Output<UserPasswordArgs> userPassword() {
         return this.userPassword == null ? Codegen.empty() : this.userPassword;
     }
 

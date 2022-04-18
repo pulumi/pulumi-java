@@ -48,28 +48,28 @@ public final class OSProfileResponse {
      * Specifies the host OS name of the HANA instance.
      * 
     */
-    public Optional<String> getComputerName() {
+    public Optional<String> computerName() {
         return Optional.ofNullable(this.computerName);
     }
     /**
      * This property allows you to specify the type of the OS.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * Specifies the SSH public key used to access the operating system.
      * 
     */
-    public Optional<String> getSshPublicKey() {
+    public Optional<String> sshPublicKey() {
         return Optional.ofNullable(this.sshPublicKey);
     }
     /**
      * Specifies version of operating system.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

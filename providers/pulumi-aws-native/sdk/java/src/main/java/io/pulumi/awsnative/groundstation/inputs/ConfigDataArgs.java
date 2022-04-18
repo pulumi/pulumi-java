@@ -24,49 +24,49 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="antennaDownlinkConfig")
       private final @Nullable Output<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig;
 
-    public Output<ConfigAntennaDownlinkConfigArgs> getAntennaDownlinkConfig() {
+    public Output<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig() {
         return this.antennaDownlinkConfig == null ? Codegen.empty() : this.antennaDownlinkConfig;
     }
 
     @Import(name="antennaDownlinkDemodDecodeConfig")
       private final @Nullable Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig;
 
-    public Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> getAntennaDownlinkDemodDecodeConfig() {
+    public Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig() {
         return this.antennaDownlinkDemodDecodeConfig == null ? Codegen.empty() : this.antennaDownlinkDemodDecodeConfig;
     }
 
     @Import(name="antennaUplinkConfig")
       private final @Nullable Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig;
 
-    public Output<ConfigAntennaUplinkConfigArgs> getAntennaUplinkConfig() {
+    public Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig() {
         return this.antennaUplinkConfig == null ? Codegen.empty() : this.antennaUplinkConfig;
     }
 
     @Import(name="dataflowEndpointConfig")
       private final @Nullable Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig;
 
-    public Output<ConfigDataflowEndpointConfigArgs> getDataflowEndpointConfig() {
+    public Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig() {
         return this.dataflowEndpointConfig == null ? Codegen.empty() : this.dataflowEndpointConfig;
     }
 
     @Import(name="s3RecordingConfig")
       private final @Nullable Output<ConfigS3RecordingConfigArgs> s3RecordingConfig;
 
-    public Output<ConfigS3RecordingConfigArgs> getS3RecordingConfig() {
+    public Output<ConfigS3RecordingConfigArgs> s3RecordingConfig() {
         return this.s3RecordingConfig == null ? Codegen.empty() : this.s3RecordingConfig;
     }
 
     @Import(name="trackingConfig")
       private final @Nullable Output<ConfigTrackingConfigArgs> trackingConfig;
 
-    public Output<ConfigTrackingConfigArgs> getTrackingConfig() {
+    public Output<ConfigTrackingConfigArgs> trackingConfig() {
         return this.trackingConfig == null ? Codegen.empty() : this.trackingConfig;
     }
 
     @Import(name="uplinkEchoConfig")
       private final @Nullable Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig;
 
-    public Output<ConfigUplinkEchoConfigArgs> getUplinkEchoConfig() {
+    public Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig() {
         return this.uplinkEchoConfig == null ? Codegen.empty() : this.uplinkEchoConfig;
     }
 

@@ -23,7 +23,7 @@ public final class AllowedIpRangeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class AllowedIpRangeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

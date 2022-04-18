@@ -28,7 +28,7 @@ class DeserializerTests {
                 typeShape,
                 ImmutableSet.of());
         GetAmiResult response = responseOutput.getValueOptional().get();
-        assertThat(response.getKernelId()).isNull();
+        assertThat(response.kernelId()).isNull();
     }
 
     private Value parseJsonValue(String jsonText) {

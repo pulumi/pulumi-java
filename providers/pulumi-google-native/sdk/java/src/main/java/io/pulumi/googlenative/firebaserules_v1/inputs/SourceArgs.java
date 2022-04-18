@@ -26,7 +26,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files", required=true)
       private final Output<List<FileArgs>> files;
 
-    public Output<List<FileArgs>> getFiles() {
+    public Output<List<FileArgs>> files() {
         return this.files;
     }
 

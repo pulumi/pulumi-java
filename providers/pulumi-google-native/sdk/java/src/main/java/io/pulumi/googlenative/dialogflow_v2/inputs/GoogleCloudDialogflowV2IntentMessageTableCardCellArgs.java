@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellArgs extends
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 

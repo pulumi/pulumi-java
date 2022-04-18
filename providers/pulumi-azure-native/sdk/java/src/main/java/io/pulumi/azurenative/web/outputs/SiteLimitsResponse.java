@@ -41,21 +41,21 @@ public final class SiteLimitsResponse {
      * Maximum allowed disk size usage in MB.
      * 
     */
-    public Optional<Double> getMaxDiskSizeInMb() {
+    public Optional<Double> maxDiskSizeInMb() {
         return Optional.ofNullable(this.maxDiskSizeInMb);
     }
     /**
      * Maximum allowed memory usage in MB.
      * 
     */
-    public Optional<Double> getMaxMemoryInMb() {
+    public Optional<Double> maxMemoryInMb() {
         return Optional.ofNullable(this.maxMemoryInMb);
     }
     /**
      * Maximum allowed CPU usage percentage.
      * 
     */
-    public Optional<Double> getMaxPercentageCpu() {
+    public Optional<Double> maxPercentageCpu() {
         return Optional.ofNullable(this.maxPercentageCpu);
     }
 

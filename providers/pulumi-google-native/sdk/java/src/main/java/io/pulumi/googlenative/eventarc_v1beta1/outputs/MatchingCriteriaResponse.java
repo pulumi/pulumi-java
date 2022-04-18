@@ -32,14 +32,14 @@ public final class MatchingCriteriaResponse {
      * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
      * 
     */
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
     /**
      * The value for the attribute.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

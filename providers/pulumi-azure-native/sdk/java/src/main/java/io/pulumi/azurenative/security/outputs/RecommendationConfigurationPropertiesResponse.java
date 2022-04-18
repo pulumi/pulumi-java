@@ -31,21 +31,21 @@ public final class RecommendationConfigurationPropertiesResponse {
         this.status = status;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of IoT Security recommendation.
      * 
     */
-    public String getRecommendationType() {
+    public String recommendationType() {
         return this.recommendationType;
     }
     /**
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -25,7 +25,7 @@ public final class StackTraceResponse {
      * An array of stack elements.
      * 
     */
-    public List<StackTraceElementResponse> getElements() {
+    public List<StackTraceElementResponse> elements() {
         return this.elements;
     }
 

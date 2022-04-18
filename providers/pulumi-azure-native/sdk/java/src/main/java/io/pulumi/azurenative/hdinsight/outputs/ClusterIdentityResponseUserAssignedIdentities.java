@@ -41,21 +41,21 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
      * The client id of user assigned identity.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant id of user assigned identity.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

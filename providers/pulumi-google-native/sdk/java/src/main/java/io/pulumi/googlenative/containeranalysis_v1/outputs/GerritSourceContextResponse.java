@@ -47,28 +47,28 @@ public final class GerritSourceContextResponse {
      * An alias, which may be a branch or tag.
      * 
     */
-    public AliasContextResponse getAliasContext() {
+    public AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
     /**
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
      * 
     */
-    public String getGerritProject() {
+    public String gerritProject() {
         return this.gerritProject;
     }
     /**
      * The URI of a running Gerrit instance.
      * 
     */
-    public String getHostUri() {
+    public String hostUri() {
         return this.hostUri;
     }
     /**
      * A revision (commit) ID.
      * 
     */
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

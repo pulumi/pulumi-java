@@ -18,7 +18,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     @Import(name="resourceStatement")
       private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
-    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
+    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement() {
         return this.resourceStatement == null ? Codegen.empty() : this.resourceStatement;
     }
 

@@ -54,34 +54,34 @@ public final class GetClusterAddonsConfig {
         this.networkPolicyConfigs = networkPolicyConfigs;
     }
 
-    public List<GetClusterAddonsConfigCloudrunConfig> getCloudrunConfigs() {
+    public List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs() {
         return this.cloudrunConfigs;
     }
-    public List<GetClusterAddonsConfigConfigConnectorConfig> getConfigConnectorConfigs() {
+    public List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs() {
         return this.configConnectorConfigs;
     }
-    public List<GetClusterAddonsConfigDnsCacheConfig> getDnsCacheConfigs() {
+    public List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs() {
         return this.dnsCacheConfigs;
     }
-    public List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> getGcePersistentDiskCsiDriverConfigs() {
+    public List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs() {
         return this.gcePersistentDiskCsiDriverConfigs;
     }
-    public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> getGcpFilestoreCsiDriverConfigs() {
+    public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs() {
         return this.gcpFilestoreCsiDriverConfigs;
     }
-    public List<GetClusterAddonsConfigHorizontalPodAutoscaling> getHorizontalPodAutoscalings() {
+    public List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings() {
         return this.horizontalPodAutoscalings;
     }
-    public List<GetClusterAddonsConfigHttpLoadBalancing> getHttpLoadBalancings() {
+    public List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings() {
         return this.httpLoadBalancings;
     }
-    public List<GetClusterAddonsConfigIstioConfig> getIstioConfigs() {
+    public List<GetClusterAddonsConfigIstioConfig> istioConfigs() {
         return this.istioConfigs;
     }
-    public List<GetClusterAddonsConfigKalmConfig> getKalmConfigs() {
+    public List<GetClusterAddonsConfigKalmConfig> kalmConfigs() {
         return this.kalmConfigs;
     }
-    public List<GetClusterAddonsConfigNetworkPolicyConfig> getNetworkPolicyConfigs() {
+    public List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs() {
         return this.networkPolicyConfigs;
     }
 

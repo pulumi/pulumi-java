@@ -19,14 +19,14 @@ public final class GetOrganizationRootPolicyType extends io.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

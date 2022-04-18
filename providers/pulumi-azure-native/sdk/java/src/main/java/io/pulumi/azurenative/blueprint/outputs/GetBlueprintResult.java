@@ -102,77 +102,77 @@ public final class GetBlueprintResult {
      * Multi-line explain this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Layout view of the blueprint definition for UI reference.
      * 
     */
-    public Object getLayout() {
+    public Object layout() {
         return this.layout;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameters required by this blueprint definition.
      * 
     */
-    public Map<String,ParameterDefinitionResponse> getParameters() {
+    public Map<String,ParameterDefinitionResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
      * 
     */
-    public Map<String,ResourceGroupDefinitionResponse> getResourceGroups() {
+    public Map<String,ResourceGroupDefinitionResponse> resourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
     /**
      * Status of the blueprint. This field is readonly.
      * 
     */
-    public BlueprintStatusResponse getStatus() {
+    public BlueprintStatusResponse status() {
         return this.status;
     }
     /**
      * The scope where this blueprint definition can be assigned.
      * 
     */
-    public String getTargetScope() {
+    public String targetScope() {
         return this.targetScope;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Published versions of this blueprint definition.
      * 
     */
-    public Optional<Object> getVersions() {
+    public Optional<Object> versions() {
         return Optional.ofNullable(this.versions);
     }
 

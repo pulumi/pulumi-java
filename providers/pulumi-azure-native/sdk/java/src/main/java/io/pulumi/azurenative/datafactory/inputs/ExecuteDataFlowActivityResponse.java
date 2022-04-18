@@ -35,7 +35,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="compute")
       private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
-    public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
+    public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
         return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
     }
 
@@ -46,7 +46,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="continueOnError")
       private final @Nullable Object continueOnError;
 
-    public Optional<Object> getContinueOnError() {
+    public Optional<Object> continueOnError() {
         return this.continueOnError == null ? Optional.empty() : Optional.ofNullable(this.continueOnError);
     }
 
@@ -57,7 +57,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="dataFlow", required=true)
       private final DataFlowReferenceResponse dataFlow;
 
-    public DataFlowReferenceResponse getDataFlow() {
+    public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
     }
 
@@ -68,7 +68,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -79,7 +79,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -90,7 +90,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="integrationRuntime")
       private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
+    public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
         return this.integrationRuntime == null ? Optional.empty() : Optional.ofNullable(this.integrationRuntime);
     }
 
@@ -101,7 +101,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -112,7 +112,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -123,7 +123,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -134,7 +134,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="runConcurrently")
       private final @Nullable Object runConcurrently;
 
-    public Optional<Object> getRunConcurrently() {
+    public Optional<Object> runConcurrently() {
         return this.runConcurrently == null ? Optional.empty() : Optional.ofNullable(this.runConcurrently);
     }
 
@@ -145,7 +145,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="staging")
       private final @Nullable DataFlowStagingInfoResponse staging;
 
-    public Optional<DataFlowStagingInfoResponse> getStaging() {
+    public Optional<DataFlowStagingInfoResponse> staging() {
         return this.staging == null ? Optional.empty() : Optional.ofNullable(this.staging);
     }
 
@@ -156,7 +156,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="traceLevel")
       private final @Nullable Object traceLevel;
 
-    public Optional<Object> getTraceLevel() {
+    public Optional<Object> traceLevel() {
         return this.traceLevel == null ? Optional.empty() : Optional.ofNullable(this.traceLevel);
     }
 
@@ -168,7 +168,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -179,7 +179,7 @@ public final class ExecuteDataFlowActivityResponse extends io.pulumi.resources.I
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

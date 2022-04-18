@@ -26,7 +26,7 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="principals", required=true)
       private final Output<List<String>> principals;
 
-    public Output<List<String>> getPrincipals() {
+    public Output<List<String>> principals() {
         return this.principals;
     }
 

@@ -48,28 +48,28 @@ public final class ScopeResponse {
      * The collection of management groups covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getManagementGroups() {
+    public List<ResourceIdResponse> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
     /**
      * The collection of  subnets covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getSubnets() {
+    public List<ResourceIdResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * The collection of subscriptions covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getSubscriptions() {
+    public List<ResourceIdResponse> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
     /**
      * The collection of virtual nets covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getVirtualNetworks() {
+    public List<ResourceIdResponse> virtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }
 

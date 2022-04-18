@@ -18,21 +18,21 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     @Import(name="artifact")
       private final @Nullable Output<String> artifact;
 
-    public Output<String> getArtifact() {
+    public Output<String> artifact() {
         return this.artifact == null ? Codegen.empty() : this.artifact;
     }
 
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

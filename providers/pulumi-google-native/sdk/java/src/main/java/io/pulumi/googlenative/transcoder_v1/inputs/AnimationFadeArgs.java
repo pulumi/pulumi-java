@@ -28,7 +28,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
-    public Output<String> getEndTimeOffset() {
+    public Output<String> endTimeOffset() {
         return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
@@ -39,7 +39,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fadeType", required=true)
       private final Output<AnimationFadeFadeType> fadeType;
 
-    public Output<AnimationFadeFadeType> getFadeType() {
+    public Output<AnimationFadeFadeType> fadeType() {
         return this.fadeType;
     }
 
@@ -50,7 +50,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
+    public Output<String> startTimeOffset() {
         return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 
@@ -61,7 +61,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xy")
       private final @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Output<NormalizedCoordinateArgs> getXy() {
+    public Output<NormalizedCoordinateArgs> xy() {
         return this.xy == null ? Codegen.empty() : this.xy;
     }
 

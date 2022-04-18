@@ -23,7 +23,7 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linuxExecStepConfig", required=true)
       private final ExecStepConfigResponse linuxExecStepConfig;
 
-    public ExecStepConfigResponse getLinuxExecStepConfig() {
+    public ExecStepConfigResponse linuxExecStepConfig() {
         return this.linuxExecStepConfig;
     }
 
@@ -34,7 +34,7 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="windowsExecStepConfig", required=true)
       private final ExecStepConfigResponse windowsExecStepConfig;
 
-    public ExecStepConfigResponse getWindowsExecStepConfig() {
+    public ExecStepConfigResponse windowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }
 

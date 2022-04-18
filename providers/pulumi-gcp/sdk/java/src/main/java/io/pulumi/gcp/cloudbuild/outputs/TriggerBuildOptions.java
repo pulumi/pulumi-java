@@ -137,7 +137,7 @@ public final class TriggerBuildOptions {
      * is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
     */
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
@@ -145,7 +145,7 @@ public final class TriggerBuildOptions {
      * NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
      * 
     */
-    public Optional<Boolean> getDynamicSubstitutions() {
+    public Optional<Boolean> dynamicSubstitutions() {
         return Optional.ofNullable(this.dynamicSubstitutions);
     }
     /**
@@ -155,7 +155,7 @@ public final class TriggerBuildOptions {
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
     */
-    public List<String> getEnvs() {
+    public List<String> envs() {
         return this.envs == null ? List.of() : this.envs;
     }
     /**
@@ -163,7 +163,7 @@ public final class TriggerBuildOptions {
      * Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
      * 
     */
-    public Optional<String> getLogStreamingOption() {
+    public Optional<String> logStreamingOption() {
         return Optional.ofNullable(this.logStreamingOption);
     }
     /**
@@ -171,7 +171,7 @@ public final class TriggerBuildOptions {
      * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
      * 
     */
-    public Optional<String> getLogging() {
+    public Optional<String> logging() {
         return Optional.ofNullable(this.logging);
     }
     /**
@@ -179,7 +179,7 @@ public final class TriggerBuildOptions {
      * Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
      * 
     */
-    public Optional<String> getMachineType() {
+    public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
@@ -187,7 +187,7 @@ public final class TriggerBuildOptions {
      * Possible values are `NOT_VERIFIED` and `VERIFIED`.
      * 
     */
-    public Optional<String> getRequestedVerifyOption() {
+    public Optional<String> requestedVerifyOption() {
         return Optional.ofNullable(this.requestedVerifyOption);
     }
     /**
@@ -196,7 +196,7 @@ public final class TriggerBuildOptions {
      * will be available to all build steps in this build.
      * 
     */
-    public List<String> getSecretEnvs() {
+    public List<String> secretEnvs() {
         return this.secretEnvs == null ? List.of() : this.secretEnvs;
     }
     /**
@@ -204,7 +204,7 @@ public final class TriggerBuildOptions {
      * Each value may be one of `NONE`, `SHA256`, and `MD5`.
      * 
     */
-    public List<String> getSourceProvenanceHashes() {
+    public List<String> sourceProvenanceHashes() {
         return this.sourceProvenanceHashes == null ? List.of() : this.sourceProvenanceHashes;
     }
     /**
@@ -214,7 +214,7 @@ public final class TriggerBuildOptions {
      * Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
      * 
     */
-    public Optional<String> getSubstitutionOption() {
+    public Optional<String> substitutionOption() {
         return Optional.ofNullable(this.substitutionOption);
     }
     /**
@@ -227,7 +227,7 @@ public final class TriggerBuildOptions {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildOptionsVolume> getVolumes() {
+    public List<TriggerBuildOptionsVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
     /**
@@ -235,7 +235,7 @@ public final class TriggerBuildOptions {
      * This field is experimental.
      * 
     */
-    public Optional<String> getWorkerPool() {
+    public Optional<String> workerPool() {
         return Optional.ofNullable(this.workerPool);
     }
 

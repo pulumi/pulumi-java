@@ -17,14 +17,14 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxFailuresPerHour", required=true)
       private final Output<Integer> maxFailuresPerHour;
 
-    public Output<Integer> getMaxFailuresPerHour() {
+    public Output<Integer> maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
     @Import(name="maxFailuresTotal", required=true)
       private final Output<Integer> maxFailuresTotal;
 
-    public Output<Integer> getMaxFailuresTotal() {
+    public Output<Integer> maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 

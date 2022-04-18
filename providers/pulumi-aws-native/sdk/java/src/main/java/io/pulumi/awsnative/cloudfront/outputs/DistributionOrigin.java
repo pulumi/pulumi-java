@@ -49,31 +49,31 @@ public final class DistributionOrigin {
         this.s3OriginConfig = s3OriginConfig;
     }
 
-    public Optional<Integer> getConnectionAttempts() {
+    public Optional<Integer> connectionAttempts() {
         return Optional.ofNullable(this.connectionAttempts);
     }
-    public Optional<Integer> getConnectionTimeout() {
+    public Optional<Integer> connectionTimeout() {
         return Optional.ofNullable(this.connectionTimeout);
     }
-    public Optional<DistributionCustomOriginConfig> getCustomOriginConfig() {
+    public Optional<DistributionCustomOriginConfig> customOriginConfig() {
         return Optional.ofNullable(this.customOriginConfig);
     }
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<DistributionOriginCustomHeader> getOriginCustomHeaders() {
+    public List<DistributionOriginCustomHeader> originCustomHeaders() {
         return this.originCustomHeaders == null ? List.of() : this.originCustomHeaders;
     }
-    public Optional<String> getOriginPath() {
+    public Optional<String> originPath() {
         return Optional.ofNullable(this.originPath);
     }
-    public Optional<DistributionOriginShield> getOriginShield() {
+    public Optional<DistributionOriginShield> originShield() {
         return Optional.ofNullable(this.originShield);
     }
-    public Optional<DistributionS3OriginConfig> getS3OriginConfig() {
+    public Optional<DistributionS3OriginConfig> s3OriginConfig() {
         return Optional.ofNullable(this.s3OriginConfig);
     }
 

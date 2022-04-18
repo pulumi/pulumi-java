@@ -19,14 +19,14 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     @Import(name="containerParams")
       private final @Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams;
 
-    public Output<ComponentVersionLambdaContainerParamsArgs> getContainerParams() {
+    public Output<ComponentVersionLambdaContainerParamsArgs> containerParams() {
         return this.containerParams == null ? Codegen.empty() : this.containerParams;
     }
 
     @Import(name="isolationMode")
       private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
 
-    public Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
+    public Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode() {
         return this.isolationMode == null ? Codegen.empty() : this.isolationMode;
     }
 

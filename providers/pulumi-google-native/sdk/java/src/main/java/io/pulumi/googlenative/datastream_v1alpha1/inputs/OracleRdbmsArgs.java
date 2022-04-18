@@ -27,7 +27,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oracleSchemas")
       private final @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
-    public Output<List<OracleSchemaArgs>> getOracleSchemas() {
+    public Output<List<OracleSchemaArgs>> oracleSchemas() {
         return this.oracleSchemas == null ? Codegen.empty() : this.oracleSchemas;
     }
 

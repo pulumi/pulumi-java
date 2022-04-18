@@ -27,7 +27,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="charactersToIgnores")
       private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> charactersToIgnores;
 
-    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> getCharactersToIgnores() {
+    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs>> charactersToIgnores() {
         return this.charactersToIgnores == null ? Codegen.empty() : this.charactersToIgnores;
     }
 
@@ -40,7 +40,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="maskingCharacter")
       private final @Nullable Output<String> maskingCharacter;
 
-    public Output<String> getMaskingCharacter() {
+    public Output<String> maskingCharacter() {
         return this.maskingCharacter == null ? Codegen.empty() : this.maskingCharacter;
     }
 
@@ -51,7 +51,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="numberToMask")
       private final @Nullable Output<Integer> numberToMask;
 
-    public Output<Integer> getNumberToMask() {
+    public Output<Integer> numberToMask() {
         return this.numberToMask == null ? Codegen.empty() : this.numberToMask;
     }
 
@@ -63,7 +63,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="reverseOrder")
       private final @Nullable Output<Boolean> reverseOrder;
 
-    public Output<Boolean> getReverseOrder() {
+    public Output<Boolean> reverseOrder() {
         return this.reverseOrder == null ? Codegen.empty() : this.reverseOrder;
     }
 

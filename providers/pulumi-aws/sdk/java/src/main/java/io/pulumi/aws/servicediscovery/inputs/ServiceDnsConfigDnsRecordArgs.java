@@ -22,7 +22,7 @@ public final class ServiceDnsConfigDnsRecordArgs extends io.pulumi.resources.Res
     @Import(name="ttl", required=true)
       private final Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceDnsConfigDnsRecordArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
      * The location of the Zendesk resource
      * 
     */
-    public String getInstanceUrl() {
+    public String instanceUrl() {
         return this.instanceUrl;
     }
 

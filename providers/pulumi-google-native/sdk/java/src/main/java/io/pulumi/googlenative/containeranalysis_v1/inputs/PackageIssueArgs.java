@@ -27,7 +27,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedCpeUri", required=true)
       private final Output<String> affectedCpeUri;
 
-    public Output<String> getAffectedCpeUri() {
+    public Output<String> affectedCpeUri() {
         return this.affectedCpeUri;
     }
 
@@ -38,7 +38,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedPackage", required=true)
       private final Output<String> affectedPackage;
 
-    public Output<String> getAffectedPackage() {
+    public Output<String> affectedPackage() {
         return this.affectedPackage;
     }
 
@@ -49,7 +49,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedVersion", required=true)
       private final Output<VersionArgs> affectedVersion;
 
-    public Output<VersionArgs> getAffectedVersion() {
+    public Output<VersionArgs> affectedVersion() {
         return this.affectedVersion;
     }
 
@@ -60,7 +60,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedCpeUri")
       private final @Nullable Output<String> fixedCpeUri;
 
-    public Output<String> getFixedCpeUri() {
+    public Output<String> fixedCpeUri() {
         return this.fixedCpeUri == null ? Codegen.empty() : this.fixedCpeUri;
     }
 
@@ -71,7 +71,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedPackage")
       private final @Nullable Output<String> fixedPackage;
 
-    public Output<String> getFixedPackage() {
+    public Output<String> fixedPackage() {
         return this.fixedPackage == null ? Codegen.empty() : this.fixedPackage;
     }
 
@@ -82,7 +82,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedVersion", required=true)
       private final Output<VersionArgs> fixedVersion;
 
-    public Output<VersionArgs> getFixedVersion() {
+    public Output<VersionArgs> fixedVersion() {
         return this.fixedVersion;
     }
 
@@ -93,7 +93,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 

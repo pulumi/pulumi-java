@@ -26,7 +26,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -37,14 +37,14 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     @Import(name="policyStatus")
       private final @Nullable Output<PolicyStatusPropertiesArgs> policyStatus;
 
-    public Output<PolicyStatusPropertiesArgs> getPolicyStatus() {
+    public Output<PolicyStatusPropertiesArgs> policyStatus() {
         return this.policyStatus == null ? Codegen.empty() : this.policyStatus;
     }
 
@@ -55,7 +55,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
+    public Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
     }
 
@@ -66,7 +66,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

@@ -27,7 +27,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType")
       private final @Nullable Output<List<FilterEventTypeItem>> eventType;
 
-    public Output<List<FilterEventTypeItem>> getEventType() {
+    public Output<List<FilterEventTypeItem>> eventType() {
         return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 

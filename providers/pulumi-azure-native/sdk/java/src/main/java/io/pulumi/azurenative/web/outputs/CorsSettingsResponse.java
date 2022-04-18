@@ -40,7 +40,7 @@ public final class CorsSettingsResponse {
      * calls (for example: http://example.com:12345). Use "*" to allow all.
      * 
     */
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
     /**
@@ -49,7 +49,7 @@ public final class CorsSettingsResponse {
      * for more details.
      * 
     */
-    public Optional<Boolean> getSupportCredentials() {
+    public Optional<Boolean> supportCredentials() {
         return Optional.ofNullable(this.supportCredentials);
     }
 

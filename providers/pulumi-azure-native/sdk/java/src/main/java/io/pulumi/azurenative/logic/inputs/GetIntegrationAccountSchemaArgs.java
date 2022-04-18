@@ -19,7 +19,7 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationAccountSchemaArgs extends io.pulumi.resources.I
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 

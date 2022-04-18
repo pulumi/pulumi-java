@@ -33,7 +33,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
      */
-    public Output<List<String>> getActivatedPolicyTypes() {
+    public Output<List<String>> activatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
@@ -47,7 +47,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Number of policy tags contained in this taxonomy.
      * 
      */
-    public Output<Integer> getPolicyTagCount() {
+    public Output<Integer> policyTagCount() {
         return this.policyTagCount;
     }
     /**
@@ -103,7 +103,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Timestamps about this taxonomy. Only create_time and update_time are used.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> getTaxonomyTimestamps() {
+    public Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> taxonomyTimestamps() {
         return this.taxonomyTimestamps;
     }
 

@@ -36,14 +36,14 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
      * The Azure VM input endpoints.
      * 
     */
-    public List<InputEndpointResponse> getInputEndpoints() {
+    public List<InputEndpointResponse> inputEndpoints() {
         return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
     }
     /**
      * The Azure VM tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

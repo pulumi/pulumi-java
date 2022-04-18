@@ -29,7 +29,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     @Import(name="logRules")
       private final @Nullable Output<LogRulesArgs> logRules;
 
-    public Output<LogRulesArgs> getLogRules() {
+    public Output<LogRulesArgs> logRules() {
         return this.logRules == null ? Codegen.empty() : this.logRules;
     }
 
@@ -40,7 +40,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 

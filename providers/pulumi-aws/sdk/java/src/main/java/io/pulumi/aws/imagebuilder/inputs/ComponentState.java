@@ -25,7 +25,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="changeDescription")
       private final @Nullable Output<String> changeDescription;
 
-    public Output<String> getChangeDescription() {
+    public Output<String> changeDescription() {
         return this.changeDescription == null ? Codegen.empty() : this.changeDescription;
     }
 
@@ -47,7 +47,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -58,7 +58,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
@@ -69,7 +69,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -80,7 +80,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -91,7 +91,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -102,7 +102,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -113,7 +113,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -124,7 +124,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -135,7 +135,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportedOsVersions")
       private final @Nullable Output<List<String>> supportedOsVersions;
 
-    public Output<List<String>> getSupportedOsVersions() {
+    public Output<List<String>> supportedOsVersions() {
         return this.supportedOsVersions == null ? Codegen.empty() : this.supportedOsVersions;
     }
 
@@ -146,7 +146,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -157,7 +157,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -168,7 +168,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -179,7 +179,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -190,7 +190,7 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

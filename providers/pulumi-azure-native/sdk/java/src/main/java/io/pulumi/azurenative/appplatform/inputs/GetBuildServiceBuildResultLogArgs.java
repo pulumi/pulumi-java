@@ -19,7 +19,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
     @Import(name="buildName", required=true)
       private final String buildName;
 
-    public String getBuildName() {
+    public String buildName() {
         return this.buildName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
     @Import(name="buildResultName", required=true)
       private final String buildResultName;
 
-    public String getBuildResultName() {
+    public String buildResultName() {
         return this.buildResultName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
     @Import(name="buildServiceName", required=true)
       private final String buildServiceName;
 
-    public String getBuildServiceName() {
+    public String buildServiceName() {
         return this.buildServiceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

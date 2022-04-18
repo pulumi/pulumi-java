@@ -42,7 +42,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * User readable description of the volume.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -50,14 +50,14 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * Expected value is 'ServiceFabricVolumeDisk'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Volume size
      * 
     */
-    public String getSizeDisk() {
+    public String sizeDisk() {
         return this.sizeDisk;
     }
 

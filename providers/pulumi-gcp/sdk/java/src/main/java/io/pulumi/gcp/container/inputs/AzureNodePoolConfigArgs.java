@@ -25,7 +25,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="rootVolume")
       private final @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
 
-    public Output<AzureNodePoolConfigRootVolumeArgs> getRootVolume() {
+    public Output<AzureNodePoolConfigRootVolumeArgs> rootVolume() {
         return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
@@ -36,7 +36,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="sshConfig", required=true)
       private final Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
 
-    public Output<AzureNodePoolConfigSshConfigArgs> getSshConfig() {
+    public Output<AzureNodePoolConfigSshConfigArgs> sshConfig() {
         return this.sshConfig;
     }
 
@@ -47,7 +47,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -58,7 +58,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

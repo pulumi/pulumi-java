@@ -30,7 +30,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="executionRole")
       private final @Nullable Output<String> executionRole;
 
-    public Output<String> getExecutionRole() {
+    public Output<String> executionRole() {
         return this.executionRole == null ? Codegen.empty() : this.executionRole;
     }
 
@@ -41,7 +41,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Output<UserProfileJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
+    public Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
     }
 
@@ -52,7 +52,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Output<UserProfileKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
+    public Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
     }
 
@@ -63,7 +63,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -74,7 +74,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="sharingSettings")
       private final @Nullable Output<UserProfileSharingSettingsArgs> sharingSettings;
 
-    public Output<UserProfileSharingSettingsArgs> getSharingSettings() {
+    public Output<UserProfileSharingSettingsArgs> sharingSettings() {
         return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
     }
 

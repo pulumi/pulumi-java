@@ -29,7 +29,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="decisions")
       private final @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
 
-    public Output<List<Either<String,AccessReviewResult>>> getDecisions() {
+    public Output<List<Either<String,AccessReviewResult>>> decisions() {
         return this.decisions == null ? Codegen.empty() : this.decisions;
     }
 
@@ -40,7 +40,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -62,7 +62,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="historyDefinitionId")
       private final @Nullable Output<String> historyDefinitionId;
 
-    public Output<String> getHistoryDefinitionId() {
+    public Output<String> historyDefinitionId() {
         return this.historyDefinitionId == null ? Codegen.empty() : this.historyDefinitionId;
     }
 
@@ -73,7 +73,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="instances")
       private final @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
 
-    public Output<List<AccessReviewHistoryInstanceArgs>> getInstances() {
+    public Output<List<AccessReviewHistoryInstanceArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -84,7 +84,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -95,7 +95,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="numberOfOccurrences")
       private final @Nullable Output<Integer> numberOfOccurrences;
 
-    public Output<Integer> getNumberOfOccurrences() {
+    public Output<Integer> numberOfOccurrences() {
         return this.numberOfOccurrences == null ? Codegen.empty() : this.numberOfOccurrences;
     }
 
@@ -106,7 +106,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="scopes")
       private final @Nullable Output<List<AccessReviewScopeArgs>> scopes;
 
-    public Output<List<AccessReviewScopeArgs>> getScopes() {
+    public Output<List<AccessReviewScopeArgs>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
@@ -117,7 +117,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
@@ -128,7 +128,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
+    public Output<Either<String,AccessReviewRecurrenceRangeType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

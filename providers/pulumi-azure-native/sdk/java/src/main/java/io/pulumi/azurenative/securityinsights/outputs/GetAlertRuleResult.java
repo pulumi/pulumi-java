@@ -55,35 +55,35 @@ public final class GetAlertRuleResult {
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The alert rule kind
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

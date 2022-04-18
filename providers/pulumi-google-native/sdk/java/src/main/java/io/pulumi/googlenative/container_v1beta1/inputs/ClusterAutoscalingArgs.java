@@ -31,7 +31,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoprovisioningLocations")
       private final @Nullable Output<List<String>> autoprovisioningLocations;
 
-    public Output<List<String>> getAutoprovisioningLocations() {
+    public Output<List<String>> autoprovisioningLocations() {
         return this.autoprovisioningLocations == null ? Codegen.empty() : this.autoprovisioningLocations;
     }
 
@@ -42,7 +42,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoprovisioningNodePoolDefaults")
       private final @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
-    public Output<AutoprovisioningNodePoolDefaultsArgs> getAutoprovisioningNodePoolDefaults() {
+    public Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults == null ? Codegen.empty() : this.autoprovisioningNodePoolDefaults;
     }
 
@@ -53,7 +53,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoscalingProfile")
       private final @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
-    public Output<ClusterAutoscalingAutoscalingProfile> getAutoscalingProfile() {
+    public Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile() {
         return this.autoscalingProfile == null ? Codegen.empty() : this.autoscalingProfile;
     }
 
@@ -64,7 +64,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableNodeAutoprovisioning")
       private final @Nullable Output<Boolean> enableNodeAutoprovisioning;
 
-    public Output<Boolean> getEnableNodeAutoprovisioning() {
+    public Output<Boolean> enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning == null ? Codegen.empty() : this.enableNodeAutoprovisioning;
     }
 
@@ -75,7 +75,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceLimits")
       private final @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
 
-    public Output<List<ResourceLimitArgs>> getResourceLimits() {
+    public Output<List<ResourceLimitArgs>> resourceLimits() {
         return this.resourceLimits == null ? Codegen.empty() : this.resourceLimits;
     }
 

@@ -19,14 +19,14 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesArgs exten
     @Import(name="discreteResourcesSpecs")
       private final @Nullable Output<List<String>> discreteResourcesSpecs;
 
-    public Output<List<String>> getDiscreteResourcesSpecs() {
+    public Output<List<String>> discreteResourcesSpecs() {
         return this.discreteResourcesSpecs == null ? Codegen.empty() : this.discreteResourcesSpecs;
     }
 
     @Import(name="namedResourcesSpecs")
       private final @Nullable Output<List<String>> namedResourcesSpecs;
 
-    public Output<List<String>> getNamedResourcesSpecs() {
+    public Output<List<String>> namedResourcesSpecs() {
         return this.namedResourcesSpecs == null ? Codegen.empty() : this.namedResourcesSpecs;
     }
 

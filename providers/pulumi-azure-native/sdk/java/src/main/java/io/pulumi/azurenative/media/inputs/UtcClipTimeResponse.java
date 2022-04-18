@@ -24,7 +24,7 @@ public final class UtcClipTimeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -35,7 +35,7 @@ public final class UtcClipTimeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

@@ -21,7 +21,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -32,7 +32,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
     @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
-    public Output<String> getFileKey() {
+    public Output<String> fileKey() {
         return this.fileKey;
     }
 
@@ -43,7 +43,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

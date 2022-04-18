@@ -19,14 +19,14 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

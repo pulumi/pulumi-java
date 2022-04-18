@@ -42,21 +42,21 @@ public final class TransferJobTransferSpecAwsS3DataSource {
      * AWS credentials block.
      * 
     */
-    public Optional<TransferJobTransferSpecAwsS3DataSourceAwsAccessKey> getAwsAccessKey() {
+    public Optional<TransferJobTransferSpecAwsS3DataSourceAwsAccessKey> awsAccessKey() {
         return Optional.ofNullable(this.awsAccessKey);
     }
     /**
      * S3 Bucket name.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The Amazon Resource Name (ARN) of the role to support temporary credentials via 'AssumeRoleWithWebIdentity'. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a 'AssumeRoleWithWebIdentity' call for the provided role using the [GoogleServiceAccount][] for this project.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

@@ -28,7 +28,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
     @Import(name="colSpan", required=true)
       private final Integer colSpan;
 
-    public Integer getColSpan() {
+    public Integer colSpan() {
         return this.colSpan;
     }
 
@@ -39,7 +39,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
     @Import(name="metadata")
       private final @Nullable Map<String,Object> metadata;
 
-    public Map<String,Object> getMetadata() {
+    public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
@@ -50,7 +50,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
     @Import(name="rowSpan", required=true)
       private final Integer rowSpan;
 
-    public Integer getRowSpan() {
+    public Integer rowSpan() {
         return this.rowSpan;
     }
 
@@ -61,7 +61,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
     @Import(name="x", required=true)
       private final Integer x;
 
-    public Integer getX() {
+    public Integer x() {
         return this.x;
     }
 
@@ -72,7 +72,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
     @Import(name="y", required=true)
       private final Integer y;
 
-    public Integer getY() {
+    public Integer y() {
         return this.y;
     }
 

@@ -45,24 +45,24 @@ public final class TaskContainerSettingsResponse {
      * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
      * 
     */
-    public Optional<String> getContainerRunOptions() {
+    public Optional<String> containerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
     /**
      * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * This setting can be omitted if was already provided at pool creation.
      * 
     */
-    public Optional<ContainerRegistryResponse> getRegistry() {
+    public Optional<ContainerRegistryResponse> registry() {
         return Optional.ofNullable(this.registry);
     }
-    public Optional<String> getWorkingDirectory() {
+    public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
 

@@ -21,7 +21,7 @@ public final class StandardAppVersionEntrypointArgs extends io.pulumi.resources.
     @Import(name="shell", required=true)
       private final Output<String> shell;
 
-    public Output<String> getShell() {
+    public Output<String> shell() {
         return this.shell;
     }
 

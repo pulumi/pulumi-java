@@ -24,7 +24,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -36,7 +36,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata", required=true)
       private final Output<DomainMappingMetadataArgs> metadata;
 
-    public Output<DomainMappingMetadataArgs> getMetadata() {
+    public Output<DomainMappingMetadataArgs> metadata() {
         return this.metadata;
     }
 
@@ -47,7 +47,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,7 +71,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec", required=true)
       private final Output<DomainMappingSpecArgs> spec;
 
-    public Output<DomainMappingSpecArgs> getSpec() {
+    public Output<DomainMappingSpecArgs> spec() {
         return this.spec;
     }
 

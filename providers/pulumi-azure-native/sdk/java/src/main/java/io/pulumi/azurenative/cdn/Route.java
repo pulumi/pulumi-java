@@ -45,7 +45,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return compression settings.
      * 
      */
-    public Output</* @Nullable */ CompressionSettingsResponse> getCompressionSettings() {
+    public Output</* @Nullable */ CompressionSettingsResponse> compressionSettings() {
         return this.compressionSettings;
     }
     /**
@@ -59,13 +59,13 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Domains referenced by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<ResourceReferenceResponse>> getCustomDomains() {
+    public Output</* @Nullable */ List<ResourceReferenceResponse>> customDomains() {
         return this.customDomains;
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -79,7 +79,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getEnabledState() {
+    public Output</* @Nullable */ String> enabledState() {
         return this.enabledState;
     }
     /**
@@ -93,7 +93,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Protocol this rule will use when forwarding traffic to backends.
      * 
      */
-    public Output</* @Nullable */ String> getForwardingProtocol() {
+    public Output</* @Nullable */ String> forwardingProtocol() {
         return this.forwardingProtocol;
     }
     /**
@@ -107,7 +107,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
      */
-    public Output</* @Nullable */ String> getHttpsRedirect() {
+    public Output</* @Nullable */ String> httpsRedirect() {
         return this.httpsRedirect;
     }
     /**
@@ -121,7 +121,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return whether this route will be linked to the default endpoint domain.
      * 
      */
-    public Output</* @Nullable */ String> getLinkToDefaultDomain() {
+    public Output</* @Nullable */ String> linkToDefaultDomain() {
         return this.linkToDefaultDomain;
     }
     /**
@@ -135,7 +135,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +149,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return A reference to the origin group.
      * 
      */
-    public Output<ResourceReferenceResponse> getOriginGroup() {
+    public Output<ResourceReferenceResponse> originGroup() {
         return this.originGroup;
     }
     /**
@@ -163,7 +163,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    public Output</* @Nullable */ String> getOriginPath() {
+    public Output</* @Nullable */ String> originPath() {
         return this.originPath;
     }
     /**
@@ -177,7 +177,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The route patterns of the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPatternsToMatch() {
+    public Output</* @Nullable */ List<String>> patternsToMatch() {
         return this.patternsToMatch;
     }
     /**
@@ -191,7 +191,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -205,7 +205,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    public Output</* @Nullable */ String> getQueryStringCachingBehavior() {
+    public Output</* @Nullable */ String> queryStringCachingBehavior() {
         return this.queryStringCachingBehavior;
     }
     /**
@@ -219,7 +219,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return rule sets referenced by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<ResourceReferenceResponse>> getRuleSets() {
+    public Output</* @Nullable */ List<ResourceReferenceResponse>> ruleSets() {
         return this.ruleSets;
     }
     /**
@@ -233,7 +233,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return List of supported protocols for this route.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSupportedProtocols() {
+    public Output</* @Nullable */ List<String>> supportedProtocols() {
         return this.supportedProtocols;
     }
     /**
@@ -247,7 +247,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -261,7 +261,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

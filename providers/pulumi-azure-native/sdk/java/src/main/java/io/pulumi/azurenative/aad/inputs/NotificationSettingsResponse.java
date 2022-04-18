@@ -26,7 +26,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="additionalRecipients")
       private final @Nullable List<String> additionalRecipients;
 
-    public List<String> getAdditionalRecipients() {
+    public List<String> additionalRecipients() {
         return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
     }
 
@@ -37,7 +37,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="notifyDcAdmins")
       private final @Nullable String notifyDcAdmins;
 
-    public Optional<String> getNotifyDcAdmins() {
+    public Optional<String> notifyDcAdmins() {
         return this.notifyDcAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyDcAdmins);
     }
 
@@ -48,7 +48,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="notifyGlobalAdmins")
       private final @Nullable String notifyGlobalAdmins;
 
-    public Optional<String> getNotifyGlobalAdmins() {
+    public Optional<String> notifyGlobalAdmins() {
         return this.notifyGlobalAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyGlobalAdmins);
     }
 

@@ -53,7 +53,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by Android apps.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyAndroidSettings> getAndroidSettings() {
+    public Output</* @Nullable */ EnterpriseKeyAndroidSettings> androidSettings() {
         return this.androidSettings;
     }
     /**
@@ -67,7 +67,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return The timestamp corresponding to the creation of this Key.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -81,7 +81,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return Human-readable display name of this key. Modifiable by user.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -95,7 +95,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by iOS apps.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyIosSettings> getIosSettings() {
+    public Output</* @Nullable */ EnterpriseKeyIosSettings> iosSettings() {
         return this.iosSettings;
     }
     /**
@@ -109,7 +109,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -123,7 +123,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +137,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -151,7 +151,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return Options for user acceptance testing.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyTestingOptions> getTestingOptions() {
+    public Output</* @Nullable */ EnterpriseKeyTestingOptions> testingOptions() {
         return this.testingOptions;
     }
     /**
@@ -165,7 +165,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by websites.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyWebSettings> getWebSettings() {
+    public Output</* @Nullable */ EnterpriseKeyWebSettings> webSettings() {
         return this.webSettings;
     }
 

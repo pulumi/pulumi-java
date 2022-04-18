@@ -44,7 +44,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * @return saas properties
      * 
      */
-    public Output<SaasResourceResponseProperties> getProperties() {
+    public Output<SaasResourceResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * @return the resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -86,7 +86,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

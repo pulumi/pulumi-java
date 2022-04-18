@@ -26,7 +26,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcRoute")
       private final @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute;
 
-    public Output<RouteSpecGrpcRouteGetArgs> getGrpcRoute() {
+    public Output<RouteSpecGrpcRouteGetArgs> grpcRoute() {
         return this.grpcRoute == null ? Codegen.empty() : this.grpcRoute;
     }
 
@@ -37,7 +37,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http2Route")
       private final @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route;
 
-    public Output<RouteSpecHttp2RouteGetArgs> getHttp2Route() {
+    public Output<RouteSpecHttp2RouteGetArgs> http2Route() {
         return this.http2Route == null ? Codegen.empty() : this.http2Route;
     }
 
@@ -48,7 +48,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpRoute")
       private final @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute;
 
-    public Output<RouteSpecHttpRouteGetArgs> getHttpRoute() {
+    public Output<RouteSpecHttpRouteGetArgs> httpRoute() {
         return this.httpRoute == null ? Codegen.empty() : this.httpRoute;
     }
 
@@ -60,7 +60,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -71,7 +71,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpRoute")
       private final @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute;
 
-    public Output<RouteSpecTcpRouteGetArgs> getTcpRoute() {
+    public Output<RouteSpecTcpRouteGetArgs> tcpRoute() {
         return this.tcpRoute == null ? Codegen.empty() : this.tcpRoute;
     }
 

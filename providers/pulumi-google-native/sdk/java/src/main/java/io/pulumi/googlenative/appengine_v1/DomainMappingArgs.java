@@ -19,7 +19,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -30,14 +30,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
-    public Output<String> getOverrideStrategy() {
+    public Output<String> overrideStrategy() {
         return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
     }
 
@@ -48,7 +48,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslSettings")
       private final @Nullable Output<SslSettingsArgs> sslSettings;
 
-    public Output<SslSettingsArgs> getSslSettings() {
+    public Output<SslSettingsArgs> sslSettings() {
         return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
     }
 

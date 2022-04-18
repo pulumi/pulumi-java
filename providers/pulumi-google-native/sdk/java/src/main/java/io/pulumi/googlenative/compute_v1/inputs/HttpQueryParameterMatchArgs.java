@@ -27,7 +27,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
+    public Output<String> exactMatch() {
         return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
@@ -38,7 +38,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
+    public Output<Boolean> presentMatch() {
         return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
@@ -60,7 +60,7 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 

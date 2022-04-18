@@ -34,14 +34,14 @@ public final class ListStorageAccountSasTokensResult {
      * The link (url) to the next page of results.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * The results of the list operation.
      * 
     */
-    public List<SasTokenInformationResponse> getValue() {
+    public List<SasTokenInformationResponse> value() {
         return this.value;
     }
 

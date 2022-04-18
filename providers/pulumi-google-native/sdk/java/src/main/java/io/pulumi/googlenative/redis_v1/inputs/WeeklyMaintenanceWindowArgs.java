@@ -26,7 +26,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
     @Import(name="day", required=true)
       private final Output<WeeklyMaintenanceWindowDay> day;
 
-    public Output<WeeklyMaintenanceWindowDay> getDay() {
+    public Output<WeeklyMaintenanceWindowDay> day() {
         return this.day;
     }
 
@@ -37,7 +37,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
     @Import(name="startTime", required=true)
       private final Output<TimeOfDayArgs> startTime;
 
-    public Output<TimeOfDayArgs> getStartTime() {
+    public Output<TimeOfDayArgs> startTime() {
         return this.startTime;
     }
 

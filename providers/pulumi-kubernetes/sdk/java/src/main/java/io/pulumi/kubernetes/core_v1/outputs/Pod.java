@@ -58,35 +58,35 @@ public final class Pod {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
-    public Optional<ObjectMeta> getMetadata() {
+    public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
     */
-    public Optional<PodSpec> getSpec() {
+    public Optional<PodSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
      * Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
     */
-    public Optional<PodStatus> getStatus() {
+    public Optional<PodStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

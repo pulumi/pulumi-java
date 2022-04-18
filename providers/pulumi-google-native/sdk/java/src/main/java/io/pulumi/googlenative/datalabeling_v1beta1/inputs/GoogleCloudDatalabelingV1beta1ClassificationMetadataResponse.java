@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
     @Import(name="isMultiLabel", required=true)
       private final Boolean isMultiLabel;
 
-    public Boolean getIsMultiLabel() {
+    public Boolean isMultiLabel() {
         return this.isMultiLabel;
     }
 

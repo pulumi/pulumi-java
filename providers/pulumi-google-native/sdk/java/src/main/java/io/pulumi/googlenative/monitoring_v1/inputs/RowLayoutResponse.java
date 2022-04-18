@@ -24,7 +24,7 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rows", required=true)
       private final List<RowResponse> rows;
 
-    public List<RowResponse> getRows() {
+    public List<RowResponse> rows() {
         return this.rows;
     }
 

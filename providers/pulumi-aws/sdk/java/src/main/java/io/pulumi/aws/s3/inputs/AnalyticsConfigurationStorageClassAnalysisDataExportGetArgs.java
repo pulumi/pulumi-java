@@ -23,7 +23,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     @Import(name="destination", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> getDestination() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination() {
         return this.destination;
     }
 
@@ -34,7 +34,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     @Import(name="outputSchemaVersion")
       private final @Nullable Output<String> outputSchemaVersion;
 
-    public Output<String> getOutputSchemaVersion() {
+    public Output<String> outputSchemaVersion() {
         return this.outputSchemaVersion == null ? Codegen.empty() : this.outputSchemaVersion;
     }
 

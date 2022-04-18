@@ -38,7 +38,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * @return The time at which the job definition was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -52,49 +52,49 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    public Output<String> getJobDefinitionArn() {
+    public Output<String> jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> getJobDefinitionName() {
+    public Output</* @Nullable */ String> jobDefinitionName() {
         return this.jobDefinitionName;
     }
     @Export(name="jobResources", type=ModelQualityJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelQualityJobDefinitionMonitoringResources> jobResources;
 
-    public Output<ModelQualityJobDefinitionMonitoringResources> getJobResources() {
+    public Output<ModelQualityJobDefinitionMonitoringResources> jobResources() {
         return this.jobResources;
     }
     @Export(name="modelQualityAppSpecification", type=ModelQualityJobDefinitionModelQualityAppSpecification.class, parameters={})
     private Output<ModelQualityJobDefinitionModelQualityAppSpecification> modelQualityAppSpecification;
 
-    public Output<ModelQualityJobDefinitionModelQualityAppSpecification> getModelQualityAppSpecification() {
+    public Output<ModelQualityJobDefinitionModelQualityAppSpecification> modelQualityAppSpecification() {
         return this.modelQualityAppSpecification;
     }
     @Export(name="modelQualityBaselineConfig", type=ModelQualityJobDefinitionModelQualityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionModelQualityBaselineConfig> modelQualityBaselineConfig;
 
-    public Output</* @Nullable */ ModelQualityJobDefinitionModelQualityBaselineConfig> getModelQualityBaselineConfig() {
+    public Output</* @Nullable */ ModelQualityJobDefinitionModelQualityBaselineConfig> modelQualityBaselineConfig() {
         return this.modelQualityBaselineConfig;
     }
     @Export(name="modelQualityJobInput", type=ModelQualityJobDefinitionModelQualityJobInput.class, parameters={})
     private Output<ModelQualityJobDefinitionModelQualityJobInput> modelQualityJobInput;
 
-    public Output<ModelQualityJobDefinitionModelQualityJobInput> getModelQualityJobInput() {
+    public Output<ModelQualityJobDefinitionModelQualityJobInput> modelQualityJobInput() {
         return this.modelQualityJobInput;
     }
     @Export(name="modelQualityJobOutputConfig", type=ModelQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<ModelQualityJobDefinitionMonitoringOutputConfig> modelQualityJobOutputConfig;
 
-    public Output<ModelQualityJobDefinitionMonitoringOutputConfig> getModelQualityJobOutputConfig() {
+    public Output<ModelQualityJobDefinitionMonitoringOutputConfig> modelQualityJobOutputConfig() {
         return this.modelQualityJobOutputConfig;
     }
     @Export(name="networkConfig", type=ModelQualityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ ModelQualityJobDefinitionNetworkConfig> getNetworkConfig() {
+    public Output</* @Nullable */ ModelQualityJobDefinitionNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -108,13 +108,13 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stoppingCondition", type=ModelQualityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ ModelQualityJobDefinitionStoppingCondition> getStoppingCondition() {
+    public Output</* @Nullable */ ModelQualityJobDefinitionStoppingCondition> stoppingCondition() {
         return this.stoppingCondition;
     }
     /**
@@ -128,7 +128,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelQualityJobDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<ModelQualityJobDefinitionTag>> tags() {
         return this.tags;
     }
 

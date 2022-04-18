@@ -20,7 +20,7 @@ public final class ClusteringResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
       private final List<String> fields;
 
-    public List<String> getFields() {
+    public List<String> fields() {
         return this.fields;
     }
 

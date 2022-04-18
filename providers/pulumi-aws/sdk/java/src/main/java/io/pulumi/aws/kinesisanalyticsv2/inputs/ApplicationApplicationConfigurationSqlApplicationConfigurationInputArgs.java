@@ -25,14 +25,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inAppStreamNames")
       private final @Nullable Output<List<String>> inAppStreamNames;
 
-    public Output<List<String>> getInAppStreamNames() {
+    public Output<List<String>> inAppStreamNames() {
         return this.inAppStreamNames == null ? Codegen.empty() : this.inAppStreamNames;
     }
 
     @Import(name="inputId")
       private final @Nullable Output<String> inputId;
 
-    public Output<String> getInputId() {
+    public Output<String> inputId() {
         return this.inputId == null ? Codegen.empty() : this.inputId;
     }
 
@@ -43,7 +43,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputParallelism")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> getInputParallelism() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism() {
         return this.inputParallelism == null ? Codegen.empty() : this.inputParallelism;
     }
 
@@ -55,7 +55,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputProcessingConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> getInputProcessingConfiguration() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration() {
         return this.inputProcessingConfiguration == null ? Codegen.empty() : this.inputProcessingConfiguration;
     }
 
@@ -66,7 +66,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> getInputSchema() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema() {
         return this.inputSchema;
     }
 
@@ -77,7 +77,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputStartingPositionConfigurations")
       private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> getInputStartingPositionConfigurations() {
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations() {
         return this.inputStartingPositionConfigurations == null ? Codegen.empty() : this.inputStartingPositionConfigurations;
     }
 
@@ -88,7 +88,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisFirehoseInput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> getKinesisFirehoseInput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput() {
         return this.kinesisFirehoseInput == null ? Codegen.empty() : this.kinesisFirehoseInput;
     }
 
@@ -99,7 +99,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisStreamsInput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> getKinesisStreamsInput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput() {
         return this.kinesisStreamsInput == null ? Codegen.empty() : this.kinesisStreamsInput;
     }
 
@@ -110,7 +110,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="namePrefix", required=true)
       private final Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
 

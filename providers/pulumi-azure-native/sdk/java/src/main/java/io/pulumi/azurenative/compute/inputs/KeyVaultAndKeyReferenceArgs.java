@@ -26,7 +26,7 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     @Import(name="keyUrl", required=true)
       private final Output<String> keyUrl;
 
-    public Output<String> getKeyUrl() {
+    public Output<String> keyUrl() {
         return this.keyUrl;
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     @Import(name="sourceVault", required=true)
       private final Output<SourceVaultArgs> sourceVault;
 
-    public Output<SourceVaultArgs> getSourceVault() {
+    public Output<SourceVaultArgs> sourceVault() {
         return this.sourceVault;
     }
 

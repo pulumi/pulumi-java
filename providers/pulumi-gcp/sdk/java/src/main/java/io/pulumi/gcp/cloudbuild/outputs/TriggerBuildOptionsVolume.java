@@ -40,7 +40,7 @@ public final class TriggerBuildOptionsVolume {
      * Each named volume must be used by at least two build steps.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -49,7 +49,7 @@ public final class TriggerBuildOptionsVolume {
      * build step or with certain reserved volume paths.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
 

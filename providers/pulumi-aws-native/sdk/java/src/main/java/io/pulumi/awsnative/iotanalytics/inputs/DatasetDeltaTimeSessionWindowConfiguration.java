@@ -15,7 +15,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration extends io.pulumi.
     @Import(name="timeoutInMinutes", required=true)
       private final Integer timeoutInMinutes;
 
-    public Integer getTimeoutInMinutes() {
+    public Integer timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 

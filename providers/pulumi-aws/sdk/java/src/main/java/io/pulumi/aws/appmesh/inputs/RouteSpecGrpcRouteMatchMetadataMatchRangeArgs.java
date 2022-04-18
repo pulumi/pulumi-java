@@ -21,7 +21,7 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRangeArgs extends io.pulu
     @Import(name="end", required=true)
       private final Output<Integer> end;
 
-    public Output<Integer> getEnd() {
+    public Output<Integer> end() {
         return this.end;
     }
 
@@ -32,7 +32,7 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRangeArgs extends io.pulu
     @Import(name="start", required=true)
       private final Output<Integer> start;
 
-    public Output<Integer> getStart() {
+    public Output<Integer> start() {
         return this.start;
     }
 

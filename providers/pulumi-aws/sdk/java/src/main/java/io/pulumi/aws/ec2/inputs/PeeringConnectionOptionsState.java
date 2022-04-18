@@ -26,7 +26,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
     @Import(name="accepter")
       private final @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
 
-    public Output<PeeringConnectionOptionsAccepterGetArgs> getAccepter() {
+    public Output<PeeringConnectionOptionsAccepterGetArgs> accepter() {
         return this.accepter == null ? Codegen.empty() : this.accepter;
     }
 
@@ -39,7 +39,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
     @Import(name="requester")
       private final @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
 
-    public Output<PeeringConnectionOptionsRequesterGetArgs> getRequester() {
+    public Output<PeeringConnectionOptionsRequesterGetArgs> requester() {
         return this.requester == null ? Codegen.empty() : this.requester;
     }
 
@@ -50,7 +50,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
     @Import(name="vpcPeeringConnectionId")
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
     }
 

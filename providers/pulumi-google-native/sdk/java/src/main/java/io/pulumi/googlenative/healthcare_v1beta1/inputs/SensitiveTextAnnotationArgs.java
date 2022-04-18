@@ -27,7 +27,7 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
     @Import(name="details")
       private final @Nullable Output<Map<String,String>> details;
 
-    public Output<Map<String,String>> getDetails() {
+    public Output<Map<String,String>> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 

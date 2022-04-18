@@ -29,7 +29,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
     @Import(name="family")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
 
-    public Output<Either<String,ExpressRouteCircuitSkuFamily>> getFamily() {
+    public Output<Either<String,ExpressRouteCircuitSkuFamily>> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -40,7 +40,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
     @Import(name="tier")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
 
-    public Output<Either<String,ExpressRouteCircuitSkuTier>> getTier() {
+    public Output<Either<String,ExpressRouteCircuitSkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

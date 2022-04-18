@@ -25,7 +25,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="clientRdpAccess")
       private final @Nullable String clientRdpAccess;
 
-    public Optional<String> getClientRdpAccess() {
+    public Optional<String> clientRdpAccess() {
         return this.clientRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.clientRdpAccess);
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="clientSshAccess")
       private final @Nullable String clientSshAccess;
 
-    public Optional<String> getClientSshAccess() {
+    public Optional<String> clientSshAccess() {
         return this.clientSshAccess == null ? Optional.empty() : Optional.ofNullable(this.clientSshAccess);
     }
 
@@ -47,7 +47,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="webRdpAccess")
       private final @Nullable String webRdpAccess;
 
-    public Optional<String> getWebRdpAccess() {
+    public Optional<String> webRdpAccess() {
         return this.webRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.webRdpAccess);
     }
 
@@ -58,7 +58,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="webSshAccess")
       private final @Nullable String webSshAccess;
 
-    public Optional<String> getWebSshAccess() {
+    public Optional<String> webSshAccess() {
         return this.webSshAccess == null ? Optional.empty() : Optional.ofNullable(this.webSshAccess);
     }
 

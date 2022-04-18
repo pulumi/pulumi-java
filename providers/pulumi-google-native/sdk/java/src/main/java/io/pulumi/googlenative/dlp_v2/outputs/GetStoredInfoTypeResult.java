@@ -41,21 +41,21 @@ public final class GetStoredInfoTypeResult {
      * Current version of the stored info type.
      * 
     */
-    public GooglePrivacyDlpV2StoredInfoTypeVersionResponse getCurrentVersion() {
+    public GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion() {
         return this.currentVersion;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Pending versions of the stored info type. Empty if no versions are pending.
      * 
     */
-    public List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> getPendingVersions() {
+    public List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions() {
         return this.pendingVersions;
     }
 

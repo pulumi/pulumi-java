@@ -34,14 +34,14 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * A list of case content.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
+    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent() {
         return this.caseContent;
     }
     /**
      * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
     */
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
 

@@ -43,7 +43,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the replica key. The key ARNs of related multi-Region keys differ only in the Region value.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +63,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;
     }
     /**
@@ -79,7 +79,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> getDeletionWindowInDays() {
+    public Output</* @Nullable */ Integer> deletionWindowInDays() {
         return this.deletionWindowInDays;
     }
     /**
@@ -93,7 +93,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return A description of the KMS key.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -107,7 +107,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -121,7 +121,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return The key ID of the replica key. Related multi-Region keys have the same key ID.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -135,7 +135,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return A Boolean value that specifies whether key rotation is enabled. This is a shared property of multi-Region keys.
      * 
      */
-    public Output<Boolean> getKeyRotationEnabled() {
+    public Output<Boolean> keyRotationEnabled() {
         return this.keyRotationEnabled;
     }
     /**
@@ -149,7 +149,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return The type of key material in the KMS key. This is a shared property of multi-Region keys.
      * 
      */
-    public Output<String> getKeySpec() {
+    public Output<String> keySpec() {
         return this.keySpec;
     }
     /**
@@ -163,13 +163,13 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return The [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the KMS key. This is a shared property of multi-Region keys.
      * 
      */
-    public Output<String> getKeyUsage() {
+    public Output<String> keyUsage() {
         return this.keyUsage;
     }
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -183,7 +183,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
      * 
      */
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
     /**
@@ -197,7 +197,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -211,7 +211,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

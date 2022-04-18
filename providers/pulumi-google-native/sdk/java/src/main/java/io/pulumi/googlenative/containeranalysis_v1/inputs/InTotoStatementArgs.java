@@ -30,28 +30,28 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="predicateType")
       private final @Nullable Output<String> predicateType;
 
-    public Output<String> getPredicateType() {
+    public Output<String> predicateType() {
         return this.predicateType == null ? Codegen.empty() : this.predicateType;
     }
 
     @Import(name="provenance")
       private final @Nullable Output<InTotoProvenanceArgs> provenance;
 
-    public Output<InTotoProvenanceArgs> getProvenance() {
+    public Output<InTotoProvenanceArgs> provenance() {
         return this.provenance == null ? Codegen.empty() : this.provenance;
     }
 
     @Import(name="slsaProvenance")
       private final @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
 
-    public Output<SlsaProvenanceArgs> getSlsaProvenance() {
+    public Output<SlsaProvenanceArgs> slsaProvenance() {
         return this.slsaProvenance == null ? Codegen.empty() : this.slsaProvenance;
     }
 
     @Import(name="subject")
       private final @Nullable Output<List<SubjectArgs>> subject;
 
-    public Output<List<SubjectArgs>> getSubject() {
+    public Output<List<SubjectArgs>> subject() {
         return this.subject == null ? Codegen.empty() : this.subject;
     }
 
@@ -62,7 +62,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -22,7 +22,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -44,7 +44,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 

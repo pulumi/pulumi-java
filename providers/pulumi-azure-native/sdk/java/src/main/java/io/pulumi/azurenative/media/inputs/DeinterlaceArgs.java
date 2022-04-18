@@ -29,7 +29,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,DeinterlaceMode>> mode;
 
-    public Output<Either<String,DeinterlaceMode>> getMode() {
+    public Output<Either<String,DeinterlaceMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -40,7 +40,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parity")
       private final @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
-    public Output<Either<String,DeinterlaceParity>> getParity() {
+    public Output<Either<String,DeinterlaceParity>> parity() {
         return this.parity == null ? Codegen.empty() : this.parity;
     }
 

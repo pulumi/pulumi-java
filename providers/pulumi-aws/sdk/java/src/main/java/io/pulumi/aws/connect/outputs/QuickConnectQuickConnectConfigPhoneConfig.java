@@ -24,7 +24,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfig {
      * Specifies the phone number in in E.164 format.
      * 
     */
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
 

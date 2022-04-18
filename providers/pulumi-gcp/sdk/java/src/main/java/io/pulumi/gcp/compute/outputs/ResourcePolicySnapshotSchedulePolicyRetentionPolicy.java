@@ -38,7 +38,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
      * Maximum age of the snapshot that is allowed to be kept.
      * 
     */
-    public Integer getMaxRetentionDays() {
+    public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
     /**
@@ -48,7 +48,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
      * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
      * 
     */
-    public Optional<String> getOnSourceDiskDelete() {
+    public Optional<String> onSourceDiskDelete() {
         return Optional.ofNullable(this.onSourceDiskDelete);
     }
 

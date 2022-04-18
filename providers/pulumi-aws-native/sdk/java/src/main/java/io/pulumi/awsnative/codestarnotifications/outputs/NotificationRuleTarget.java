@@ -20,10 +20,10 @@ public final class NotificationRuleTarget {
         this.targetType = targetType;
     }
 
-    public String getTargetAddress() {
+    public String targetAddress() {
         return this.targetAddress;
     }
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
 

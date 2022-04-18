@@ -19,7 +19,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     @Import(name="forwardingPath", required=true)
       private final String forwardingPath;
 
-    public String getForwardingPath() {
+    public String forwardingPath() {
         return this.forwardingPath;
     }
 
@@ -30,7 +30,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     @Import(name="ipv4Address", required=true)
       private final String ipv4Address;
 
-    public String getIpv4Address() {
+    public String ipv4Address() {
         return this.ipv4Address;
     }
 
@@ -41,14 +41,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     @Import(name="ipv6Address", required=true)
       private final String ipv6Address;
 
-    public String getIpv6Address() {
+    public String ipv6Address() {
         return this.ipv6Address;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

@@ -25,7 +25,7 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="animations", required=true)
       private final List<AnimationResponse> animations;
 
-    public List<AnimationResponse> getAnimations() {
+    public List<AnimationResponse> animations() {
         return this.animations;
     }
 
@@ -36,7 +36,7 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
       private final ImageResponse image;
 
-    public ImageResponse getImage() {
+    public ImageResponse image() {
         return this.image;
     }
 

@@ -22,7 +22,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
     @Import(name="text")
       private final @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageEntryFulfillmentMessageTextGetArgs> getText() {
+    public Output<CxPageEntryFulfillmentMessageTextGetArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

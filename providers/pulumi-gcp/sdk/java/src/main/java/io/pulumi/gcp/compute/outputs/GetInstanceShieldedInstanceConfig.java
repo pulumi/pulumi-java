@@ -23,13 +23,13 @@ public final class GetInstanceShieldedInstanceConfig {
         this.enableVtpm = enableVtpm;
     }
 
-    public Boolean getEnableIntegrityMonitoring() {
+    public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
-    public Boolean getEnableSecureBoot() {
+    public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
-    public Boolean getEnableVtpm() {
+    public Boolean enableVtpm() {
         return this.enableVtpm;
     }
 

@@ -25,7 +25,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="galleryImageName", required=true)
       private final Output<String> galleryImageName;
 
-    public Output<String> getGalleryImageName() {
+    public Output<String> galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -36,7 +36,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="galleryImageVersionName")
       private final @Nullable Output<String> galleryImageVersionName;
 
-    public Output<String> getGalleryImageVersionName() {
+    public Output<String> galleryImageVersionName() {
         return this.galleryImageVersionName == null ? Codegen.empty() : this.galleryImageVersionName;
     }
 
@@ -47,7 +47,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
-    public Output<String> getGalleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -58,7 +58,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="publishingProfile")
       private final @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
 
-    public Output<GalleryImageVersionPublishingProfileArgs> getPublishingProfile() {
+    public Output<GalleryImageVersionPublishingProfileArgs> publishingProfile() {
         return this.publishingProfile == null ? Codegen.empty() : this.publishingProfile;
     }
 
@@ -80,7 +80,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="storageProfile", required=true)
       private final Output<GalleryImageVersionStorageProfileArgs> storageProfile;
 
-    public Output<GalleryImageVersionStorageProfileArgs> getStorageProfile() {
+    public Output<GalleryImageVersionStorageProfileArgs> storageProfile() {
         return this.storageProfile;
     }
 
@@ -102,7 +102,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

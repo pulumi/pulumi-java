@@ -20,7 +20,7 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
     @Import(name="cidrRanges", required=true)
       private final List<String> cidrRanges;
 
-    public List<String> getCidrRanges() {
+    public List<String> cidrRanges() {
         return this.cidrRanges;
     }
 
@@ -31,7 +31,7 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -42,7 +42,7 @@ public final class PacketMirroringFilterResponse extends io.pulumi.resources.Inv
     @Import(name="ipProtocols", required=true)
       private final List<String> ipProtocols;
 
-    public List<String> getIpProtocols() {
+    public List<String> ipProtocols() {
         return this.ipProtocols;
     }
 

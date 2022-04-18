@@ -28,7 +28,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
+    public Output<List<String>> jarFileUris() {
         return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
@@ -39,7 +39,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri", required=true)
       private final Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
+    public Output<String> queryFileUri() {
         return this.queryFileUri;
     }
 
@@ -50,7 +50,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryVariables")
       private final @Nullable Output<Map<String,String>> queryVariables;
 
-    public Output<Map<String,String>> getQueryVariables() {
+    public Output<Map<String,String>> queryVariables() {
         return this.queryVariables == null ? Codegen.empty() : this.queryVariables;
     }
 

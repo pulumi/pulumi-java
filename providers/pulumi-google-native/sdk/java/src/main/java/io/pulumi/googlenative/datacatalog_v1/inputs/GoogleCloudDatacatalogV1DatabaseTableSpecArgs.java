@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
-    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> getType() {
+    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

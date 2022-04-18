@@ -28,7 +28,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="destinationPorts")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs>> destinationPorts;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs>> getDestinationPorts() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="destinations")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs>> destinations;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs>> getDestinations() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="protocols")
       private final @Nullable Output<List<Integer>> protocols;
 
-    public Output<List<Integer>> getProtocols() {
+    public Output<List<Integer>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="sourcePorts")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs>> sourcePorts;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs>> getSourcePorts() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs>> sourcePorts() {
         return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="sources")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs>> sources;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs>> getSources() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="tcpFlags")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs>> tcpFlags;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs>> getTcpFlags() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs>> tcpFlags() {
         return this.tcpFlags == null ? Codegen.empty() : this.tcpFlags;
     }
 

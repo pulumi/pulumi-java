@@ -32,7 +32,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autogenerateRevisionName")
       private final @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Output<Boolean> getAutogenerateRevisionName() {
+    public Output<Boolean> autogenerateRevisionName() {
         return this.autogenerateRevisionName == null ? Codegen.empty() : this.autogenerateRevisionName;
     }
 
@@ -43,7 +43,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ServiceMetadataGetArgs> metadata;
 
-    public Output<ServiceMetadataGetArgs> getMetadata() {
+    public Output<ServiceMetadataGetArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -90,7 +90,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
       private final @Nullable Output<List<ServiceStatusGetArgs>> statuses;
 
-    public Output<List<ServiceStatusGetArgs>> getStatuses() {
+    public Output<List<ServiceStatusGetArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -110,7 +110,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<ServiceTemplateGetArgs> template;
 
-    public Output<ServiceTemplateGetArgs> getTemplate() {
+    public Output<ServiceTemplateGetArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 
@@ -123,7 +123,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffics")
       private final @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
 
-    public Output<List<ServiceTrafficGetArgs>> getTraffics() {
+    public Output<List<ServiceTrafficGetArgs>> traffics() {
         return this.traffics == null ? Codegen.empty() : this.traffics;
     }
 

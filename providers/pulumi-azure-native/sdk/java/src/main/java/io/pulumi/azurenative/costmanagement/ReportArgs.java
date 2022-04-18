@@ -27,7 +27,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<ReportDefinitionArgs> definition;
 
-    public Output<ReportDefinitionArgs> getDefinition() {
+    public Output<ReportDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -38,7 +38,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo", required=true)
       private final Output<ReportDeliveryInfoArgs> deliveryInfo;
 
-    public Output<ReportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ReportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -49,7 +49,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Output<Either<String,FormatType>> getFormat() {
+    public Output<Either<String,FormatType>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -60,7 +60,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportName")
       private final @Nullable Output<String> reportName;
 
-    public Output<String> getReportName() {
+    public Output<String> reportName() {
         return this.reportName == null ? Codegen.empty() : this.reportName;
     }
 
@@ -71,7 +71,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ReportScheduleArgs> schedule;
 
-    public Output<ReportScheduleArgs> getSchedule() {
+    public Output<ReportScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 

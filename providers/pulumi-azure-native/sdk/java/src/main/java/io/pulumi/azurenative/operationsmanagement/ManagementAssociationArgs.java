@@ -23,7 +23,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="managementAssociationName")
       private final @Nullable Output<String> managementAssociationName;
 
-    public Output<String> getManagementAssociationName() {
+    public Output<String> managementAssociationName() {
         return this.managementAssociationName == null ? Codegen.empty() : this.managementAssociationName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
-    public Output<ManagementAssociationPropertiesArgs> getProperties() {
+    public Output<ManagementAssociationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -67,7 +67,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,7 +89,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 

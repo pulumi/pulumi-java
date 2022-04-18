@@ -17,7 +17,7 @@ public final class EnvironmentResponse {
         this.customValues = customValues;
     }
 
-    public Map<String,String> getCustomValues() {
+    public Map<String,String> customValues() {
         return this.customValues;
     }
 

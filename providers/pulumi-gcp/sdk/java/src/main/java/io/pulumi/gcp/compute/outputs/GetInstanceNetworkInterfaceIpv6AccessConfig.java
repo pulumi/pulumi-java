@@ -34,24 +34,24 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
-    public String getExternalIpv6() {
+    public String externalIpv6() {
         return this.externalIpv6;
     }
-    public String getExternalIpv6PrefixLength() {
+    public String externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
     }
     /**
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
     */
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
     /**
      * The DNS domain name for the public PTR record.
      * 
     */
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

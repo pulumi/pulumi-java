@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends io.pulumi
     @Import(name="ignoreTerms")
       private final @Nullable Output<List<String>> ignoreTerms;
 
-    public Output<List<String>> getIgnoreTerms() {
+    public Output<List<String>> ignoreTerms() {
         return this.ignoreTerms == null ? Codegen.empty() : this.ignoreTerms;
     }
 

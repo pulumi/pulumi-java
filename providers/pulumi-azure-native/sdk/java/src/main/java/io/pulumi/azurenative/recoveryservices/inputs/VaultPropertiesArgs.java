@@ -26,7 +26,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryption")
       private final @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
-    public Output<VaultPropertiesEncryptionArgs> getEncryption() {
+    public Output<VaultPropertiesEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 

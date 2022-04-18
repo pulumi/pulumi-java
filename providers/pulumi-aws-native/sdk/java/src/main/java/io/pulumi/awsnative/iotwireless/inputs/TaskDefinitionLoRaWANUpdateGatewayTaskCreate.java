@@ -19,28 +19,28 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate extends io.pulum
     @Import(name="currentVersion")
       private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
 
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> currentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="sigKeyCrc")
       private final @Nullable Integer sigKeyCrc;
 
-    public Optional<Integer> getSigKeyCrc() {
+    public Optional<Integer> sigKeyCrc() {
         return this.sigKeyCrc == null ? Optional.empty() : Optional.ofNullable(this.sigKeyCrc);
     }
 
     @Import(name="updateSignature")
       private final @Nullable String updateSignature;
 
-    public Optional<String> getUpdateSignature() {
+    public Optional<String> updateSignature() {
         return this.updateSignature == null ? Optional.empty() : Optional.ofNullable(this.updateSignature);
     }
 
     @Import(name="updateVersion")
       private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> updateVersion() {
         return this.updateVersion == null ? Optional.empty() : Optional.ofNullable(this.updateVersion);
     }
 

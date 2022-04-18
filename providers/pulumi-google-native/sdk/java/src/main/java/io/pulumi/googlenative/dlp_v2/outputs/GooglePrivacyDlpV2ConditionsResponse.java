@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
      * A collection of conditions.
      * 
     */
-    public List<GooglePrivacyDlpV2ConditionResponse> getConditions() {
+    public List<GooglePrivacyDlpV2ConditionResponse> conditions() {
         return this.conditions;
     }
 

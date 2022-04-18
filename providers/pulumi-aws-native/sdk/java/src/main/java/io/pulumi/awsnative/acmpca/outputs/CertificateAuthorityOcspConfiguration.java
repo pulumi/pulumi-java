@@ -23,10 +23,10 @@ public final class CertificateAuthorityOcspConfiguration {
         this.ocspCustomCname = ocspCustomCname;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getOcspCustomCname() {
+    public Optional<String> ocspCustomCname() {
         return Optional.ofNullable(this.ocspCustomCname);
     }
 

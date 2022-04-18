@@ -30,7 +30,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Time the export job was created.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -44,7 +44,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Name of the datastore that is the destination of the export job [datastore]
      * 
      */
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName;
     }
     /**
@@ -58,7 +58,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Description of the export job.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Error is set when export fails
      * 
      */
-    public Output<String> getError() {
+    public Output<String> error() {
         return this.error;
     }
     /**
@@ -86,7 +86,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Execution time for this export job. If the job is still in progress, it will be set to the amount of time that has elapsed since`created`, in seconds. Else, it will set to (`updated` - `created`), in seconds.
      * 
      */
-    public Output<String> getExecutionTime() {
+    public Output<String> executionTime() {
         return this.executionTime;
     }
     /**
@@ -100,7 +100,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Display name of the export job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Self link of the export job. A URI that can be used to retrieve the status of an export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
      */
-    public Output<String> getSelf() {
+    public Output<String> self() {
         return this.self;
     }
     /**
@@ -128,7 +128,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Status of the export job. Valid values include `enqueued`, `running`, `completed`, and `failed`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -142,7 +142,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Time the export job was last updated.
      * 
      */
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated;
     }
 

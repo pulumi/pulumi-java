@@ -101,77 +101,77 @@ public final class GetHealthAlertResult {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
     */
-    public List<HealthAlertActionResponse> getActions() {
+    public List<HealthAlertActionResponse> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * defines the specific alert criteria information.
      * 
     */
-    public HealthAlertCriteriaResponse getCriteria() {
+    public HealthAlertCriteriaResponse criteria() {
         return this.criteria;
     }
     /**
      * the description of the health alert that will be included in the alert email.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * the flag that indicates whether the health alert is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the list of resource id's that this health alert is scoped to.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

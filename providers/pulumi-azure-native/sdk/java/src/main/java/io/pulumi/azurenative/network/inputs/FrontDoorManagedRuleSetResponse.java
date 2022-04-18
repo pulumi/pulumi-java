@@ -28,7 +28,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
     @Import(name="exclusions")
       private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
-    public List<ManagedRuleExclusionResponse> getExclusions() {
+    public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
 
@@ -39,7 +39,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
     @Import(name="ruleGroupOverrides")
       private final @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
-    public List<FrontDoorManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
+    public List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
 
@@ -50,7 +50,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
     @Import(name="ruleSetAction")
       private final @Nullable String ruleSetAction;
 
-    public Optional<String> getRuleSetAction() {
+    public Optional<String> ruleSetAction() {
         return this.ruleSetAction == null ? Optional.empty() : Optional.ofNullable(this.ruleSetAction);
     }
 
@@ -61,7 +61,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
     @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
 
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
 
@@ -72,7 +72,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
     @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;
 
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

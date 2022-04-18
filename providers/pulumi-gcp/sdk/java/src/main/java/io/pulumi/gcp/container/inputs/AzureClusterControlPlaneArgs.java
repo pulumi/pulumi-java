@@ -30,7 +30,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="databaseEncryption")
       private final @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
-    public Output<AzureClusterControlPlaneDatabaseEncryptionArgs> getDatabaseEncryption() {
+    public Output<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption() {
         return this.databaseEncryption == null ? Codegen.empty() : this.databaseEncryption;
     }
 
@@ -41,7 +41,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="mainVolume")
       private final @Nullable Output<AzureClusterControlPlaneMainVolumeArgs> mainVolume;
 
-    public Output<AzureClusterControlPlaneMainVolumeArgs> getMainVolume() {
+    public Output<AzureClusterControlPlaneMainVolumeArgs> mainVolume() {
         return this.mainVolume == null ? Codegen.empty() : this.mainVolume;
     }
 
@@ -52,7 +52,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="proxyConfig")
       private final @Nullable Output<AzureClusterControlPlaneProxyConfigArgs> proxyConfig;
 
-    public Output<AzureClusterControlPlaneProxyConfigArgs> getProxyConfig() {
+    public Output<AzureClusterControlPlaneProxyConfigArgs> proxyConfig() {
         return this.proxyConfig == null ? Codegen.empty() : this.proxyConfig;
     }
 
@@ -63,7 +63,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="replicaPlacements")
       private final @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements;
 
-    public Output<List<AzureClusterControlPlaneReplicaPlacementArgs>> getReplicaPlacements() {
+    public Output<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements() {
         return this.replicaPlacements == null ? Codegen.empty() : this.replicaPlacements;
     }
 
@@ -74,7 +74,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="rootVolume")
       private final @Nullable Output<AzureClusterControlPlaneRootVolumeArgs> rootVolume;
 
-    public Output<AzureClusterControlPlaneRootVolumeArgs> getRootVolume() {
+    public Output<AzureClusterControlPlaneRootVolumeArgs> rootVolume() {
         return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
@@ -85,7 +85,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="sshConfig", required=true)
       private final Output<AzureClusterControlPlaneSshConfigArgs> sshConfig;
 
-    public Output<AzureClusterControlPlaneSshConfigArgs> getSshConfig() {
+    public Output<AzureClusterControlPlaneSshConfigArgs> sshConfig() {
         return this.sshConfig;
     }
 
@@ -96,7 +96,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -107,7 +107,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -118,7 +118,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -129,7 +129,7 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

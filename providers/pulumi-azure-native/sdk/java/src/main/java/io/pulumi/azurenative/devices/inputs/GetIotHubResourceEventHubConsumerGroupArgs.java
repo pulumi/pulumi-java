@@ -19,7 +19,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
     @Import(name="eventHubEndpointName", required=true)
       private final String eventHubEndpointName;
 
-    public String getEventHubEndpointName() {
+    public String eventHubEndpointName() {
         return this.eventHubEndpointName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

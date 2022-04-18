@@ -23,7 +23,7 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
     @Import(name="installation", required=true)
       private final InstallationResponse installation;
 
-    public InstallationResponse getInstallation() {
+    public InstallationResponse installation() {
         return this.installation;
     }
 

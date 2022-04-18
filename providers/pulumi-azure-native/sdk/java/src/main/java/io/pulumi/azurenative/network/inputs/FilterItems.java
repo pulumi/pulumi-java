@@ -26,7 +26,7 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
     @Import(name="field")
       private final @Nullable String field;
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
@@ -37,7 +37,7 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

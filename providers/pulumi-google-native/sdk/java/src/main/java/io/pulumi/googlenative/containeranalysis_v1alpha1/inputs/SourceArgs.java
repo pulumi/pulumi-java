@@ -31,7 +31,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalContexts")
       private final @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
 
-    public Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> getAdditionalContexts() {
+    public Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts() {
         return this.additionalContexts == null ? Codegen.empty() : this.additionalContexts;
     }
 
@@ -42,7 +42,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactStorageSource")
       private final @Nullable Output<StorageSourceArgs> artifactStorageSource;
 
-    public Output<StorageSourceArgs> getArtifactStorageSource() {
+    public Output<StorageSourceArgs> artifactStorageSource() {
         return this.artifactStorageSource == null ? Codegen.empty() : this.artifactStorageSource;
     }
 
@@ -53,7 +53,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> getContext() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -64,7 +64,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileHashes")
       private final @Nullable Output<Map<String,String>> fileHashes;
 
-    public Output<Map<String,String>> getFileHashes() {
+    public Output<Map<String,String>> fileHashes() {
         return this.fileHashes == null ? Codegen.empty() : this.fileHashes;
     }
 
@@ -75,7 +75,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoSource")
       private final @Nullable Output<RepoSourceArgs> repoSource;
 
-    public Output<RepoSourceArgs> getRepoSource() {
+    public Output<RepoSourceArgs> repoSource() {
         return this.repoSource == null ? Codegen.empty() : this.repoSource;
     }
 
@@ -86,7 +86,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSource")
       private final @Nullable Output<StorageSourceArgs> storageSource;
 
-    public Output<StorageSourceArgs> getStorageSource() {
+    public Output<StorageSourceArgs> storageSource() {
         return this.storageSource == null ? Codegen.empty() : this.storageSource;
     }
 

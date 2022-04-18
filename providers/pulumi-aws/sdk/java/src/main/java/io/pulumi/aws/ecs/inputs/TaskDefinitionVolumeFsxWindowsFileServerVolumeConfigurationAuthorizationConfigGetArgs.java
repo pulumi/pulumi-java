@@ -21,7 +21,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     @Import(name="credentialsParameter", required=true)
       private final Output<String> credentialsParameter;
 
-    public Output<String> getCredentialsParameter() {
+    public Output<String> credentialsParameter() {
         return this.credentialsParameter;
     }
 
@@ -32,7 +32,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 

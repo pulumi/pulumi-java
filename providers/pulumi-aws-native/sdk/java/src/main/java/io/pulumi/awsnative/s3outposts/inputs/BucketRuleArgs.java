@@ -30,7 +30,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
+    public Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
@@ -41,7 +41,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -52,7 +52,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
-    public Output<Integer> getExpirationInDays() {
+    public Output<Integer> expirationInDays() {
         return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
     }
 
@@ -63,7 +63,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
 
-    public Output<BucketRuleFilterPropertiesArgs> getFilter() {
+    public Output<BucketRuleFilterPropertiesArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -74,14 +74,14 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="status")
       private final @Nullable Output<BucketRuleStatus> status;
 
-    public Output<BucketRuleStatus> getStatus() {
+    public Output<BucketRuleStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

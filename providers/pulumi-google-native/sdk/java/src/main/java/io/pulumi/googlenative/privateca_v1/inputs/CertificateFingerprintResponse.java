@@ -23,7 +23,7 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
     @Import(name="sha256Hash", required=true)
       private final String sha256Hash;
 
-    public String getSha256Hash() {
+    public String sha256Hash() {
         return this.sha256Hash;
     }
 

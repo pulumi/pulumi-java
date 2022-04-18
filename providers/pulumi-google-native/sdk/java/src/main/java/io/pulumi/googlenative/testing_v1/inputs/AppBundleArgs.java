@@ -26,7 +26,7 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleLocation")
       private final @Nullable Output<FileReferenceArgs> bundleLocation;
 
-    public Output<FileReferenceArgs> getBundleLocation() {
+    public Output<FileReferenceArgs> bundleLocation() {
         return this.bundleLocation == null ? Codegen.empty() : this.bundleLocation;
     }
 

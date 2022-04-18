@@ -26,7 +26,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 

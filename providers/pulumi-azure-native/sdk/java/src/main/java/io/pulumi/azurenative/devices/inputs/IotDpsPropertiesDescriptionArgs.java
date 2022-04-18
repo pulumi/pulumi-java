@@ -35,7 +35,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="allocationPolicy")
       private final @Nullable Output<Either<String,AllocationPolicy>> allocationPolicy;
 
-    public Output<Either<String,AllocationPolicy>> getAllocationPolicy() {
+    public Output<Either<String,AllocationPolicy>> allocationPolicy() {
         return this.allocationPolicy == null ? Codegen.empty() : this.allocationPolicy;
     }
 
@@ -46,7 +46,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="authorizationPolicies")
       private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
 
-    public Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> getAuthorizationPolicies() {
+    public Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies() {
         return this.authorizationPolicies == null ? Codegen.empty() : this.authorizationPolicies;
     }
 
@@ -57,7 +57,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs;
 
-    public Output<List<IotHubDefinitionDescriptionArgs>> getIotHubs() {
+    public Output<List<IotHubDefinitionDescriptionArgs>> iotHubs() {
         return this.iotHubs == null ? Codegen.empty() : this.iotHubs;
     }
 
@@ -68,7 +68,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="ipFilterRules")
       private final @Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules;
 
-    public Output<List<TargetIpFilterRuleArgs>> getIpFilterRules() {
+    public Output<List<TargetIpFilterRuleArgs>> ipFilterRules() {
         return this.ipFilterRules == null ? Codegen.empty() : this.ipFilterRules;
     }
 
@@ -79,7 +79,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
@@ -90,7 +90,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -101,7 +101,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -112,7 +112,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
+    public Output<Either<String,State>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

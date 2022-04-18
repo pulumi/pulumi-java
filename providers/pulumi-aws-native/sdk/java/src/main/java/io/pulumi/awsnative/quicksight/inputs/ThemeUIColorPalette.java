@@ -29,7 +29,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="accent")
       private final @Nullable String accent;
 
-    public Optional<String> getAccent() {
+    public Optional<String> accent() {
         return this.accent == null ? Optional.empty() : Optional.ofNullable(this.accent);
     }
 
@@ -41,7 +41,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="accentForeground")
       private final @Nullable String accentForeground;
 
-    public Optional<String> getAccentForeground() {
+    public Optional<String> accentForeground() {
         return this.accentForeground == null ? Optional.empty() : Optional.ofNullable(this.accentForeground);
     }
 
@@ -52,7 +52,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="danger")
       private final @Nullable String danger;
 
-    public Optional<String> getDanger() {
+    public Optional<String> danger() {
         return this.danger == null ? Optional.empty() : Optional.ofNullable(this.danger);
     }
 
@@ -64,7 +64,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="dangerForeground")
       private final @Nullable String dangerForeground;
 
-    public Optional<String> getDangerForeground() {
+    public Optional<String> dangerForeground() {
         return this.dangerForeground == null ? Optional.empty() : Optional.ofNullable(this.dangerForeground);
     }
 
@@ -76,7 +76,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="dimension")
       private final @Nullable String dimension;
 
-    public Optional<String> getDimension() {
+    public Optional<String> dimension() {
         return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
     }
 
@@ -88,7 +88,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="dimensionForeground")
       private final @Nullable String dimensionForeground;
 
-    public Optional<String> getDimensionForeground() {
+    public Optional<String> dimensionForeground() {
         return this.dimensionForeground == null ? Optional.empty() : Optional.ofNullable(this.dimensionForeground);
     }
 
@@ -99,7 +99,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="measure")
       private final @Nullable String measure;
 
-    public Optional<String> getMeasure() {
+    public Optional<String> measure() {
         return this.measure == null ? Optional.empty() : Optional.ofNullable(this.measure);
     }
 
@@ -111,7 +111,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="measureForeground")
       private final @Nullable String measureForeground;
 
-    public Optional<String> getMeasureForeground() {
+    public Optional<String> measureForeground() {
         return this.measureForeground == null ? Optional.empty() : Optional.ofNullable(this.measureForeground);
     }
 
@@ -122,7 +122,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="primaryBackground")
       private final @Nullable String primaryBackground;
 
-    public Optional<String> getPrimaryBackground() {
+    public Optional<String> primaryBackground() {
         return this.primaryBackground == null ? Optional.empty() : Optional.ofNullable(this.primaryBackground);
     }
 
@@ -134,7 +134,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="primaryForeground")
       private final @Nullable String primaryForeground;
 
-    public Optional<String> getPrimaryForeground() {
+    public Optional<String> primaryForeground() {
         return this.primaryForeground == null ? Optional.empty() : Optional.ofNullable(this.primaryForeground);
     }
 
@@ -145,7 +145,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="secondaryBackground")
       private final @Nullable String secondaryBackground;
 
-    public Optional<String> getSecondaryBackground() {
+    public Optional<String> secondaryBackground() {
         return this.secondaryBackground == null ? Optional.empty() : Optional.ofNullable(this.secondaryBackground);
     }
 
@@ -157,7 +157,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="secondaryForeground")
       private final @Nullable String secondaryForeground;
 
-    public Optional<String> getSecondaryForeground() {
+    public Optional<String> secondaryForeground() {
         return this.secondaryForeground == null ? Optional.empty() : Optional.ofNullable(this.secondaryForeground);
     }
 
@@ -169,7 +169,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="success")
       private final @Nullable String success;
 
-    public Optional<String> getSuccess() {
+    public Optional<String> success() {
         return this.success == null ? Optional.empty() : Optional.ofNullable(this.success);
     }
 
@@ -181,7 +181,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="successForeground")
       private final @Nullable String successForeground;
 
-    public Optional<String> getSuccessForeground() {
+    public Optional<String> successForeground() {
         return this.successForeground == null ? Optional.empty() : Optional.ofNullable(this.successForeground);
     }
 
@@ -192,7 +192,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="warning")
       private final @Nullable String warning;
 
-    public Optional<String> getWarning() {
+    public Optional<String> warning() {
         return this.warning == null ? Optional.empty() : Optional.ofNullable(this.warning);
     }
 
@@ -204,7 +204,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     @Import(name="warningForeground")
       private final @Nullable String warningForeground;
 
-    public Optional<String> getWarningForeground() {
+    public Optional<String> warningForeground() {
         return this.warningForeground == null ? Optional.empty() : Optional.ofNullable(this.warningForeground);
     }
 

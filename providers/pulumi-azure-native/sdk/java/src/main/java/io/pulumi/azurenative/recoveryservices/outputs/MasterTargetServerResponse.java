@@ -152,126 +152,126 @@ public final class MasterTargetServerResponse {
      * Agent expiry date.
      * 
     */
-    public Optional<String> getAgentExpiryDate() {
+    public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * The version of the scout component on the server.
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Agent version details.
      * 
     */
-    public Optional<VersionDetailsResponse> getAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
      * The list of data stores in the fabric.
      * 
     */
-    public List<DataStoreResponse> getDataStores() {
+    public List<DataStoreResponse> dataStores() {
         return this.dataStores == null ? List.of() : this.dataStores;
     }
     /**
      * Disk count of the master target.
      * 
     */
-    public Optional<Integer> getDiskCount() {
+    public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
     /**
      * Health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The server Id.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IP address of the server.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The last heartbeat received from the server.
      * 
     */
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * MARS agent expiry date.
      * 
     */
-    public Optional<String> getMarsAgentExpiryDate() {
+    public Optional<String> marsAgentExpiryDate() {
         return Optional.ofNullable(this.marsAgentExpiryDate);
     }
     /**
      * MARS agent version.
      * 
     */
-    public Optional<String> getMarsAgentVersion() {
+    public Optional<String> marsAgentVersion() {
         return Optional.ofNullable(this.marsAgentVersion);
     }
     /**
      * Mars agent version details.
      * 
     */
-    public Optional<VersionDetailsResponse> getMarsAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> marsAgentVersionDetails() {
         return Optional.ofNullable(this.marsAgentVersionDetails);
     }
     /**
      * The server name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The OS type of the server.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * OS Version of the master target.
      * 
     */
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
      * The retention volumes of Master target Server.
      * 
     */
-    public List<RetentionVolumeResponse> getRetentionVolumes() {
+    public List<RetentionVolumeResponse> retentionVolumes() {
         return this.retentionVolumes == null ? List.of() : this.retentionVolumes;
     }
     /**
      * Validation errors.
      * 
     */
-    public List<HealthErrorResponse> getValidationErrors() {
+    public List<HealthErrorResponse> validationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
     /**
      * Version status
      * 
     */
-    public Optional<String> getVersionStatus() {
+    public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
 

@@ -80,58 +80,58 @@ public final class GetEngineVersionsResult {
      * Version of Kubernetes the service deploys by default.
      * 
     */
-    public String getDefaultClusterVersion() {
+    public String defaultClusterVersion() {
         return this.defaultClusterVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The latest version available in the given zone for use with master instances.
      * 
     */
-    public String getLatestMasterVersion() {
+    public String latestMasterVersion() {
         return this.latestMasterVersion;
     }
     /**
      * The latest version available in the given zone for use with node instances.
      * 
     */
-    public String getLatestNodeVersion() {
+    public String latestNodeVersion() {
         return this.latestNodeVersion;
     }
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * A map from a release channel name to the channel's default version.
      * 
     */
-    public Map<String,String> getReleaseChannelDefaultVersion() {
+    public Map<String,String> releaseChannelDefaultVersion() {
         return this.releaseChannelDefaultVersion;
     }
     /**
      * A list of versions available in the given zone for use with master instances.
      * 
     */
-    public List<String> getValidMasterVersions() {
+    public List<String> validMasterVersions() {
         return this.validMasterVersions;
     }
     /**
      * A list of versions available in the given zone for use with node instances.
      * 
     */
-    public List<String> getValidNodeVersions() {
+    public List<String> validNodeVersions() {
         return this.validNodeVersions;
     }
-    public Optional<String> getVersionPrefix() {
+    public Optional<String> versionPrefix() {
         return Optional.ofNullable(this.versionPrefix);
     }
 

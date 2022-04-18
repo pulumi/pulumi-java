@@ -26,7 +26,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalInfo")
       private final @Nullable Map<String,String> additionalInfo;
 
-    public Map<String,String> getAdditionalInfo() {
+    public Map<String,String> additionalInfo() {
         return this.additionalInfo == null ? Map.of() : this.additionalInfo;
     }
 
@@ -37,7 +37,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -48,7 +48,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="embeddedInnerError")
       private final @Nullable InnerErrorResponse embeddedInnerError;
 
-    public Optional<InnerErrorResponse> getEmbeddedInnerError() {
+    public Optional<InnerErrorResponse> embeddedInnerError() {
         return this.embeddedInnerError == null ? Optional.empty() : Optional.ofNullable(this.embeddedInnerError);
     }
 

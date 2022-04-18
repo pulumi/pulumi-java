@@ -114,97 +114,97 @@ public final class FilterCriteria {
         this.vulnerablePackages = vulnerablePackages;
     }
 
-    public List<FilterStringFilter> getAwsAccountId() {
+    public List<FilterStringFilter> awsAccountId() {
         return this.awsAccountId == null ? List.of() : this.awsAccountId;
     }
-    public List<FilterStringFilter> getComponentId() {
+    public List<FilterStringFilter> componentId() {
         return this.componentId == null ? List.of() : this.componentId;
     }
-    public List<FilterStringFilter> getComponentType() {
+    public List<FilterStringFilter> componentType() {
         return this.componentType == null ? List.of() : this.componentType;
     }
-    public List<FilterStringFilter> getEc2InstanceImageId() {
+    public List<FilterStringFilter> ec2InstanceImageId() {
         return this.ec2InstanceImageId == null ? List.of() : this.ec2InstanceImageId;
     }
-    public List<FilterStringFilter> getEc2InstanceSubnetId() {
+    public List<FilterStringFilter> ec2InstanceSubnetId() {
         return this.ec2InstanceSubnetId == null ? List.of() : this.ec2InstanceSubnetId;
     }
-    public List<FilterStringFilter> getEc2InstanceVpcId() {
+    public List<FilterStringFilter> ec2InstanceVpcId() {
         return this.ec2InstanceVpcId == null ? List.of() : this.ec2InstanceVpcId;
     }
-    public List<FilterStringFilter> getEcrImageArchitecture() {
+    public List<FilterStringFilter> ecrImageArchitecture() {
         return this.ecrImageArchitecture == null ? List.of() : this.ecrImageArchitecture;
     }
-    public List<FilterStringFilter> getEcrImageHash() {
+    public List<FilterStringFilter> ecrImageHash() {
         return this.ecrImageHash == null ? List.of() : this.ecrImageHash;
     }
-    public List<FilterDateFilter> getEcrImagePushedAt() {
+    public List<FilterDateFilter> ecrImagePushedAt() {
         return this.ecrImagePushedAt == null ? List.of() : this.ecrImagePushedAt;
     }
-    public List<FilterStringFilter> getEcrImageRegistry() {
+    public List<FilterStringFilter> ecrImageRegistry() {
         return this.ecrImageRegistry == null ? List.of() : this.ecrImageRegistry;
     }
-    public List<FilterStringFilter> getEcrImageRepositoryName() {
+    public List<FilterStringFilter> ecrImageRepositoryName() {
         return this.ecrImageRepositoryName == null ? List.of() : this.ecrImageRepositoryName;
     }
-    public List<FilterStringFilter> getEcrImageTags() {
+    public List<FilterStringFilter> ecrImageTags() {
         return this.ecrImageTags == null ? List.of() : this.ecrImageTags;
     }
-    public List<FilterStringFilter> getFindingArn() {
+    public List<FilterStringFilter> findingArn() {
         return this.findingArn == null ? List.of() : this.findingArn;
     }
-    public List<FilterStringFilter> getFindingStatus() {
+    public List<FilterStringFilter> findingStatus() {
         return this.findingStatus == null ? List.of() : this.findingStatus;
     }
-    public List<FilterStringFilter> getFindingType() {
+    public List<FilterStringFilter> findingType() {
         return this.findingType == null ? List.of() : this.findingType;
     }
-    public List<FilterDateFilter> getFirstObservedAt() {
+    public List<FilterDateFilter> firstObservedAt() {
         return this.firstObservedAt == null ? List.of() : this.firstObservedAt;
     }
-    public List<FilterNumberFilter> getInspectorScore() {
+    public List<FilterNumberFilter> inspectorScore() {
         return this.inspectorScore == null ? List.of() : this.inspectorScore;
     }
-    public List<FilterDateFilter> getLastObservedAt() {
+    public List<FilterDateFilter> lastObservedAt() {
         return this.lastObservedAt == null ? List.of() : this.lastObservedAt;
     }
-    public List<FilterStringFilter> getNetworkProtocol() {
+    public List<FilterStringFilter> networkProtocol() {
         return this.networkProtocol == null ? List.of() : this.networkProtocol;
     }
-    public List<FilterPortRangeFilter> getPortRange() {
+    public List<FilterPortRangeFilter> portRange() {
         return this.portRange == null ? List.of() : this.portRange;
     }
-    public List<FilterStringFilter> getRelatedVulnerabilities() {
+    public List<FilterStringFilter> relatedVulnerabilities() {
         return this.relatedVulnerabilities == null ? List.of() : this.relatedVulnerabilities;
     }
-    public List<FilterStringFilter> getResourceId() {
+    public List<FilterStringFilter> resourceId() {
         return this.resourceId == null ? List.of() : this.resourceId;
     }
-    public List<FilterMapFilter> getResourceTags() {
+    public List<FilterMapFilter> resourceTags() {
         return this.resourceTags == null ? List.of() : this.resourceTags;
     }
-    public List<FilterStringFilter> getPropResourceType() {
+    public List<FilterStringFilter> resourceType() {
         return this.resourceType == null ? List.of() : this.resourceType;
     }
-    public List<FilterStringFilter> getSeverity() {
+    public List<FilterStringFilter> severity() {
         return this.severity == null ? List.of() : this.severity;
     }
-    public List<FilterStringFilter> getTitle() {
+    public List<FilterStringFilter> title() {
         return this.title == null ? List.of() : this.title;
     }
-    public List<FilterDateFilter> getUpdatedAt() {
+    public List<FilterDateFilter> updatedAt() {
         return this.updatedAt == null ? List.of() : this.updatedAt;
     }
-    public List<FilterStringFilter> getVendorSeverity() {
+    public List<FilterStringFilter> vendorSeverity() {
         return this.vendorSeverity == null ? List.of() : this.vendorSeverity;
     }
-    public List<FilterStringFilter> getVulnerabilityId() {
+    public List<FilterStringFilter> vulnerabilityId() {
         return this.vulnerabilityId == null ? List.of() : this.vulnerabilityId;
     }
-    public List<FilterStringFilter> getVulnerabilitySource() {
+    public List<FilterStringFilter> vulnerabilitySource() {
         return this.vulnerabilitySource == null ? List.of() : this.vulnerabilitySource;
     }
-    public List<FilterPackageFilter> getVulnerablePackages() {
+    public List<FilterPackageFilter> vulnerablePackages() {
         return this.vulnerablePackages == null ? List.of() : this.vulnerablePackages;
     }
 

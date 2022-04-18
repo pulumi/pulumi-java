@@ -37,7 +37,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return The name of the Autoscaling Group to apply the tag to.
      * 
      */
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
     /**
@@ -51,7 +51,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return The tag to create. The `tag` block is documented below.
      * 
      */
-    public Output<TagTag> getTag() {
+    public Output<TagTag> tag() {
         return this.tag;
     }
 

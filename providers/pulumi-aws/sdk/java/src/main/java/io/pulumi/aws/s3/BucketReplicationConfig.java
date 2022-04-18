@@ -56,7 +56,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @return The name of the source S3 bucket you want Amazon S3 to monitor.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -70,7 +70,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @return The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -84,7 +84,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @return Set of configuration blocks describing the rules managing the replication documented below.
      * 
      */
-    public Output<List<BucketReplicationConfigRule>> getRules() {
+    public Output<List<BucketReplicationConfigRule>> rules() {
         return this.rules;
     }
 

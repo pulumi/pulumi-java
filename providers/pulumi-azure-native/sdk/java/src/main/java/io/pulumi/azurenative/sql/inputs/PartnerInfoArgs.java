@@ -25,7 +25,7 @@ public final class PartnerInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

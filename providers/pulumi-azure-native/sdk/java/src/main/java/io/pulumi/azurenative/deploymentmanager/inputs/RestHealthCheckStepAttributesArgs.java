@@ -28,7 +28,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="healthChecks", required=true)
       private final Output<List<RestHealthCheckArgs>> healthChecks;
 
-    public Output<List<RestHealthCheckArgs>> getHealthChecks() {
+    public Output<List<RestHealthCheckArgs>> healthChecks() {
         return this.healthChecks;
     }
 
@@ -39,7 +39,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="healthyStateDuration", required=true)
       private final Output<String> healthyStateDuration;
 
-    public Output<String> getHealthyStateDuration() {
+    public Output<String> healthyStateDuration() {
         return this.healthyStateDuration;
     }
 
@@ -50,7 +50,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="maxElasticDuration")
       private final @Nullable Output<String> maxElasticDuration;
 
-    public Output<String> getMaxElasticDuration() {
+    public Output<String> maxElasticDuration() {
         return this.maxElasticDuration == null ? Codegen.empty() : this.maxElasticDuration;
     }
 
@@ -62,7 +62,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -73,7 +73,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
-    public Output<String> getWaitDuration() {
+    public Output<String> waitDuration() {
         return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 

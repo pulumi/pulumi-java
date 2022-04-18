@@ -21,7 +21,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
     @Import(name="digest")
       private final @Nullable String digest;
 
-    public Optional<String> getDigest() {
+    public Optional<String> digest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
@@ -32,7 +32,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

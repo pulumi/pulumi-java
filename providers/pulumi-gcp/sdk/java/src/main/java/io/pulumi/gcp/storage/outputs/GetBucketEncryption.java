@@ -16,7 +16,7 @@ public final class GetBucketEncryption {
         this.defaultKmsKeyName = defaultKmsKeyName;
     }
 
-    public String getDefaultKmsKeyName() {
+    public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 

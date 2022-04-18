@@ -23,7 +23,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bundleId", required=true)
       private final String bundleId;
 
-    public String getBundleId() {
+    public String bundleId() {
         return this.bundleId;
     }
 
@@ -34,7 +34,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xcodeVersion", required=true)
       private final String xcodeVersion;
 
-    public String getXcodeVersion() {
+    public String xcodeVersion() {
         return this.xcodeVersion;
     }
 

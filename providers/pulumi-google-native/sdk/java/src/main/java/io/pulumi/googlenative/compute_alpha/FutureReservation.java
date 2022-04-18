@@ -33,7 +33,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp for this future reservation in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -47,13 +47,13 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the future reservation.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -67,7 +67,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +81,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -95,7 +95,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return Server-defined fully-qualified URL for this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -109,7 +109,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -123,7 +123,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return List of Projects/Folders to share with.
      * 
      */
-    public Output<ShareSettingsResponse> getShareSettings() {
+    public Output<ShareSettingsResponse> shareSettings() {
         return this.shareSettings;
     }
     /**
@@ -137,7 +137,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return Future Reservation configuration to indicate instance properties and total count.
      * 
      */
-    public Output<FutureReservationSpecificSKUPropertiesResponse> getSpecificSkuProperties() {
+    public Output<FutureReservationSpecificSKUPropertiesResponse> specificSkuProperties() {
         return this.specificSkuProperties;
     }
     /**
@@ -151,7 +151,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return [Output only] Status of the Future Reservation
      * 
      */
-    public Output<FutureReservationStatusResponse> getStatus() {
+    public Output<FutureReservationStatusResponse> status() {
         return this.status;
     }
     /**
@@ -165,7 +165,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return Time window for this Future Reservation.
      * 
      */
-    public Output<FutureReservationTimeWindowResponse> getTimeWindow() {
+    public Output<FutureReservationTimeWindowResponse> timeWindow() {
         return this.timeWindow;
     }
     /**
@@ -179,7 +179,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * @return URL of the Zone where this future reservation resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

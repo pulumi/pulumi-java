@@ -21,7 +21,7 @@ public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="childDirected", required=true)
       private final Output<Boolean> childDirected;
 
-    public Output<Boolean> getChildDirected() {
+    public Output<Boolean> childDirected() {
         return this.childDirected;
     }
 

@@ -36,25 +36,25 @@ public final class GetHealthCheckHttpsHealthCheck {
         this.response = response;
     }
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
-    public String getRequestPath() {
+    public String requestPath() {
         return this.requestPath;
     }
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 

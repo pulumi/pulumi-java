@@ -26,7 +26,7 @@ public final class ConnectionMonitorSuccessThresholdResponse extends io.pulumi.r
     @Import(name="checksFailedPercent")
       private final @Nullable Integer checksFailedPercent;
 
-    public Optional<Integer> getChecksFailedPercent() {
+    public Optional<Integer> checksFailedPercent() {
         return this.checksFailedPercent == null ? Optional.empty() : Optional.ofNullable(this.checksFailedPercent);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionMonitorSuccessThresholdResponse extends io.pulumi.r
     @Import(name="roundTripTimeMs")
       private final @Nullable Double roundTripTimeMs;
 
-    public Optional<Double> getRoundTripTimeMs() {
+    public Optional<Double> roundTripTimeMs() {
         return this.roundTripTimeMs == null ? Optional.empty() : Optional.ofNullable(this.roundTripTimeMs);
     }
 

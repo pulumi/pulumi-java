@@ -17,14 +17,14 @@ public final class ClusterLoggingProperties extends io.pulumi.resources.InvokeAr
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="s3KeyPrefix")
       private final @Nullable String s3KeyPrefix;
 
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
     }
 

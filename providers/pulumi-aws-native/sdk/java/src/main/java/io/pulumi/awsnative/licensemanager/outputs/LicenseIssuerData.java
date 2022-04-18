@@ -22,10 +22,10 @@ public final class LicenseIssuerData {
         this.signKey = signKey;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getSignKey() {
+    public Optional<String> signKey() {
         return Optional.ofNullable(this.signKey);
     }
 

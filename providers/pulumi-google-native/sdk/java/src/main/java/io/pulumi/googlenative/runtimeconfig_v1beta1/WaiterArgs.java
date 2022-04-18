@@ -19,7 +19,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -30,7 +30,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failure")
       private final @Nullable Output<EndConditionArgs> failure;
 
-    public Output<EndConditionArgs> getFailure() {
+    public Output<EndConditionArgs> failure() {
         return this.failure == null ? Codegen.empty() : this.failure;
     }
 
@@ -41,21 +41,21 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -66,7 +66,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="success")
       private final @Nullable Output<EndConditionArgs> success;
 
-    public Output<EndConditionArgs> getSuccess() {
+    public Output<EndConditionArgs> success() {
         return this.success == null ? Codegen.empty() : this.success;
     }
 
@@ -77,7 +77,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

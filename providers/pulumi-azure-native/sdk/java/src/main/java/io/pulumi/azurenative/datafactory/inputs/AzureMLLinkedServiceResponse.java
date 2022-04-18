@@ -33,7 +33,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="apiKey", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getApiKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey() {
         return this.apiKey;
     }
 
@@ -55,7 +55,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="authentication")
       private final @Nullable Object authentication;
 
-    public Optional<Object> getAuthentication() {
+    public Optional<Object> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -66,7 +66,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -77,7 +77,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -88,7 +88,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -99,7 +99,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="mlEndpoint", required=true)
       private final Object mlEndpoint;
 
-    public Object getMlEndpoint() {
+    public Object mlEndpoint() {
         return this.mlEndpoint;
     }
 
@@ -110,7 +110,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -121,7 +121,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -132,7 +132,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
@@ -143,7 +143,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="tenant")
       private final @Nullable Object tenant;
 
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
@@ -155,7 +155,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -166,7 +166,7 @@ public final class AzureMLLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="updateResourceEndpoint")
       private final @Nullable Object updateResourceEndpoint;
 
-    public Optional<Object> getUpdateResourceEndpoint() {
+    public Optional<Object> updateResourceEndpoint() {
         return this.updateResourceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.updateResourceEndpoint);
     }
 

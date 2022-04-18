@@ -139,112 +139,112 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
     */
-    public Optional<Boolean> getAsyncExecution() {
+    public Optional<Boolean> asyncExecution() {
         return Optional.ofNullable(this.asyncExecution);
     }
     /**
      * Specifies the Azure storage blob where script error stream will be uploaded.
      * 
     */
-    public Optional<String> getErrorBlobUri() {
+    public Optional<String> errorBlobUri() {
         return Optional.ofNullable(this.errorBlobUri);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The virtual machine run command instance view.
      * 
     */
-    public VirtualMachineRunCommandInstanceViewResponse getInstanceView() {
+    public VirtualMachineRunCommandInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the Azure storage blob where script output stream will be uploaded.
      * 
     */
-    public Optional<String> getOutputBlobUri() {
+    public Optional<String> outputBlobUri() {
         return Optional.ofNullable(this.outputBlobUri);
     }
     /**
      * The parameters used by the script.
      * 
     */
-    public List<RunCommandInputParameterResponse> getParameters() {
+    public List<RunCommandInputParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The parameters used by the script.
      * 
     */
-    public List<RunCommandInputParameterResponse> getProtectedParameters() {
+    public List<RunCommandInputParameterResponse> protectedParameters() {
         return this.protectedParameters == null ? List.of() : this.protectedParameters;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Specifies the user account password on the VM when executing the run command.
      * 
     */
-    public Optional<String> getRunAsPassword() {
+    public Optional<String> runAsPassword() {
         return Optional.ofNullable(this.runAsPassword);
     }
     /**
      * Specifies the user account on the VM when executing the run command.
      * 
     */
-    public Optional<String> getRunAsUser() {
+    public Optional<String> runAsUser() {
         return Optional.ofNullable(this.runAsUser);
     }
     /**
      * The source of the run command script.
      * 
     */
-    public Optional<VirtualMachineRunCommandScriptSourceResponse> getSource() {
+    public Optional<VirtualMachineRunCommandScriptSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The timeout in seconds to execute the run command.
      * 
     */
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

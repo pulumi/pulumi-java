@@ -27,13 +27,13 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
         this.throughResources = throughResources;
     }
 
-    public Optional<NetworkInsightsAccessScopePathStatementRequest> getDestination() {
+    public Optional<NetworkInsightsAccessScopePathStatementRequest> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<NetworkInsightsAccessScopePathStatementRequest> getSource() {
+    public Optional<NetworkInsightsAccessScopePathStatementRequest> source() {
         return Optional.ofNullable(this.source);
     }
-    public List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> getThroughResources() {
+    public List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources() {
         return this.throughResources == null ? List.of() : this.throughResources;
     }
 

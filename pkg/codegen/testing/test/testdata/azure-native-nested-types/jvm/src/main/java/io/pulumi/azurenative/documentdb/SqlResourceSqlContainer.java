@@ -32,7 +32,7 @@ public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource 
     @Export(name="resource", type=SqlContainerGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> getResource() {
+    public Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource() {
         return this.resource;
     }
 

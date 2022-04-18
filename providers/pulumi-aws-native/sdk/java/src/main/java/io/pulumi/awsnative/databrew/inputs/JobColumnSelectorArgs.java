@@ -18,14 +18,14 @@ public final class JobColumnSelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="regex")
       private final @Nullable Output<String> regex;
 
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

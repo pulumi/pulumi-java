@@ -26,7 +26,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -38,7 +38,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<DomainMappingMetadataGetArgs> metadata;
 
-    public Output<DomainMappingMetadataGetArgs> getMetadata() {
+    public Output<DomainMappingMetadataGetArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -49,7 +49,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecGetArgs> spec;
 
-    public Output<DomainMappingSpecGetArgs> getSpec() {
+    public Output<DomainMappingSpecGetArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -84,7 +84,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
       private final @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
 
-    public Output<List<DomainMappingStatusGetArgs>> getStatuses() {
+    public Output<List<DomainMappingStatusGetArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 

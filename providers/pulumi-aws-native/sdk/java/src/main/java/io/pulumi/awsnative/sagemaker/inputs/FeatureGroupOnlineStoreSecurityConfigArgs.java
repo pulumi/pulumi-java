@@ -18,7 +18,7 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 

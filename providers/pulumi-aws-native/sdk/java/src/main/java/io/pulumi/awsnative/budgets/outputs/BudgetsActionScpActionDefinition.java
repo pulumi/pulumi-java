@@ -21,10 +21,10 @@ public final class BudgetsActionScpActionDefinition {
         this.targetIds = targetIds;
     }
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
-    public List<String> getTargetIds() {
+    public List<String> targetIds() {
         return this.targetIds;
     }
 

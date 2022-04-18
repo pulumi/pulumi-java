@@ -19,14 +19,14 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     @Import(name="keyARN")
       private final @Nullable Output<String> keyARN;
 
-    public Output<String> getKeyARN() {
+    public Output<String> keyARN() {
         return this.keyARN == null ? Codegen.empty() : this.keyARN;
     }
 
     @Import(name="keyType", required=true)
       private final Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
 
-    public Output<DeliveryStreamEncryptionConfigurationInputKeyType> getKeyType() {
+    public Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType() {
         return this.keyType;
     }
 

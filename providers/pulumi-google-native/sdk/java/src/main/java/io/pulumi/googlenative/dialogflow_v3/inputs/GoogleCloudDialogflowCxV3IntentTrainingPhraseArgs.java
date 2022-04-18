@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
     @Import(name="parts", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
     @Import(name="repeatCount")
       private final @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> getRepeatCount() {
+    public Output<Integer> repeatCount() {
         return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
     }
 

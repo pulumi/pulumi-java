@@ -36,14 +36,14 @@ public final class ApplicationDeltaHealthPolicyResponse {
      * The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
      * 
     */
-    public Optional<ServiceTypeDeltaHealthPolicyResponse> getDefaultServiceTypeDeltaHealthPolicy() {
+    public Optional<ServiceTypeDeltaHealthPolicyResponse> defaultServiceTypeDeltaHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
     /**
      * The map with service type delta health policy per service type name. The map is empty by default.
      * 
     */
-    public Map<String,ServiceTypeDeltaHealthPolicyResponse> getServiceTypeDeltaHealthPolicies() {
+    public Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;
     }
 

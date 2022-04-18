@@ -30,7 +30,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="color")
       private final @Nullable Output<ThresholdColor> color;
 
-    public Output<ThresholdColor> getColor() {
+    public Output<ThresholdColor> color() {
         return this.color == null ? Codegen.empty() : this.color;
     }
 
@@ -41,7 +41,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="direction")
       private final @Nullable Output<ThresholdDirection> direction;
 
-    public Output<ThresholdDirection> getDirection() {
+    public Output<ThresholdDirection> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -52,7 +52,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -63,7 +63,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetAxis")
       private final @Nullable Output<ThresholdTargetAxis> targetAxis;
 
-    public Output<ThresholdTargetAxis> getTargetAxis() {
+    public Output<ThresholdTargetAxis> targetAxis() {
         return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
     }
 
@@ -74,7 +74,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

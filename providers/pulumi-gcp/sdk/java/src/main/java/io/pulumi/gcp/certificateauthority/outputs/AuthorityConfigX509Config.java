@@ -65,7 +65,7 @@ public final class AuthorityConfigX509Config {
      * Structure is documented below.
      * 
     */
-    public List<AuthorityConfigX509ConfigAdditionalExtension> getAdditionalExtensions() {
+    public List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
@@ -73,7 +73,7 @@ public final class AuthorityConfigX509Config {
      * "Authority Information Access" extension in the certificate.
      * 
     */
-    public List<String> getAiaOcspServers() {
+    public List<String> aiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
     /**
@@ -81,7 +81,7 @@ public final class AuthorityConfigX509Config {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigX509ConfigCaOptions getCaOptions() {
+    public AuthorityConfigX509ConfigCaOptions caOptions() {
         return this.caOptions;
     }
     /**
@@ -89,7 +89,7 @@ public final class AuthorityConfigX509Config {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigX509ConfigKeyUsage getKeyUsage() {
+    public AuthorityConfigX509ConfigKeyUsage keyUsage() {
         return this.keyUsage;
     }
     /**
@@ -97,7 +97,7 @@ public final class AuthorityConfigX509Config {
      * Structure is documented below.
      * 
     */
-    public List<AuthorityConfigX509ConfigPolicyId> getPolicyIds() {
+    public List<AuthorityConfigX509ConfigPolicyId> policyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
 

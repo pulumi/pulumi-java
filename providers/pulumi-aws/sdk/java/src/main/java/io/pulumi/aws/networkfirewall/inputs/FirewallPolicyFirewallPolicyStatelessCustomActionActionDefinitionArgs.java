@@ -21,7 +21,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     @Import(name="publishMetricAction", required=true)
       private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
 
-    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> getPublishMetricAction() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction() {
         return this.publishMetricAction;
     }
 

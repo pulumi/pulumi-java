@@ -24,7 +24,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     @Import(name="passwordCount")
       private final @Nullable Output<Integer> passwordCount;
 
-    public Output<Integer> getPasswordCount() {
+    public Output<Integer> passwordCount() {
         return this.passwordCount == null ? Codegen.empty() : this.passwordCount;
     }
 
@@ -35,7 +35,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     @Import(name="passwords", required=true)
       private final Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
+    public Output<List<String>> passwords() {
         return this.passwords;
     }
 
@@ -46,7 +46,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

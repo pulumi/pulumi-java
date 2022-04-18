@@ -26,7 +26,7 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

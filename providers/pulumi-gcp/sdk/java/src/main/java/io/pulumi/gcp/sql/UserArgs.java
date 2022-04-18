@@ -24,7 +24,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
-    public Output<String> getDeletionPolicy() {
+    public Output<String> deletionPolicy() {
         return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -49,7 +49,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -61,7 +61,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -85,7 +85,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

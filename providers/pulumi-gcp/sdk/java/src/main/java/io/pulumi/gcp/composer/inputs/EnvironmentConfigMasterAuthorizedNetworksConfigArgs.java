@@ -20,14 +20,14 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
-    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
+    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks() {
         return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

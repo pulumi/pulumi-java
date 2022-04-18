@@ -25,7 +25,7 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -36,7 +36,7 @@ public final class ContentPathMapResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

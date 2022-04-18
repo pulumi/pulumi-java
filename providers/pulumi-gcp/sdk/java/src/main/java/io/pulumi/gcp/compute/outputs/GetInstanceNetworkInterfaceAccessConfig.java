@@ -41,21 +41,21 @@ public final class GetInstanceNetworkInterfaceAccessConfig {
      * network ip.
      * 
     */
-    public String getNatIp() {
+    public String natIp() {
         return this.natIp;
     }
     /**
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
     */
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
     /**
      * The DNS domain name for the public PTR record.
      * 
     */
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

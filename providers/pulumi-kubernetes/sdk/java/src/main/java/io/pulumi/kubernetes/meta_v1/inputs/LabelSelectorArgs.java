@@ -29,7 +29,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchExpressions")
       private final @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<LabelSelectorRequirementArgs>> getMatchExpressions() {
+    public Output<List<LabelSelectorRequirementArgs>> matchExpressions() {
         return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
     }
 
@@ -40,7 +40,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchLabels")
       private final @Nullable Output<Map<String,String>> matchLabels;
 
-    public Output<Map<String,String>> getMatchLabels() {
+    public Output<Map<String,String>> matchLabels() {
         return this.matchLabels == null ? Codegen.empty() : this.matchLabels;
     }
 

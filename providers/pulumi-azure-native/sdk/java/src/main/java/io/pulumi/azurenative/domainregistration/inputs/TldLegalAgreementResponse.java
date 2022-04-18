@@ -25,7 +25,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
     @Import(name="agreementKey", required=true)
       private final String agreementKey;
 
-    public String getAgreementKey() {
+    public String agreementKey() {
         return this.agreementKey;
     }
 
@@ -36,7 +36,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -47,7 +47,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -58,7 +58,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

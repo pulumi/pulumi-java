@@ -31,43 +31,43 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the server certificate
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
-    public Output</* @Nullable */ String> getCertificateBody() {
+    public Output</* @Nullable */ String> certificateBody() {
         return this.certificateBody;
     }
     @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
     @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
-    public Output</* @Nullable */ String> getPrivateKey() {
+    public Output</* @Nullable */ String> privateKey() {
         return this.privateKey;
     }
     @Export(name="serverCertificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverCertificateName;
 
-    public Output</* @Nullable */ String> getServerCertificateName() {
+    public Output</* @Nullable */ String> serverCertificateName() {
         return this.serverCertificateName;
     }
     @Export(name="tags", type=List.class, parameters={ServerCertificateTag.class})
     private Output</* @Nullable */ List<ServerCertificateTag>> tags;
 
-    public Output</* @Nullable */ List<ServerCertificateTag>> getTags() {
+    public Output</* @Nullable */ List<ServerCertificateTag>> tags() {
         return this.tags;
     }
 

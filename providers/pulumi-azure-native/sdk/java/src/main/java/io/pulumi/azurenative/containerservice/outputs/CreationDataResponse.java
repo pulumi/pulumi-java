@@ -26,7 +26,7 @@ public final class CreationDataResponse {
      * This is the ARM ID of the source object to be used to create the target object.
      * 
     */
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
 

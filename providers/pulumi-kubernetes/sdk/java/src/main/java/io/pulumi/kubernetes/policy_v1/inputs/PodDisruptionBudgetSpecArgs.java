@@ -29,7 +29,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
     @Import(name="maxUnavailable")
       private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> getMaxUnavailable() {
+    public Output<Either<Integer,String>> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
@@ -40,7 +40,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
     @Import(name="minAvailable")
       private final @Nullable Output<Either<Integer,String>> minAvailable;
 
-    public Output<Either<Integer,String>> getMinAvailable() {
+    public Output<Either<Integer,String>> minAvailable() {
         return this.minAvailable == null ? Codegen.empty() : this.minAvailable;
     }
 
@@ -51,7 +51,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

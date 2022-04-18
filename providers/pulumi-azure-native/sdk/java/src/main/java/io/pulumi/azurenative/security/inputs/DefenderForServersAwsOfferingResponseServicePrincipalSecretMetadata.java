@@ -25,7 +25,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="expiryDate")
       private final @Nullable String expiryDate;
 
-    public Optional<String> getExpiryDate() {
+    public Optional<String> expiryDate() {
         return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
     }
 
@@ -36,7 +36,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="parameterNameInStore")
       private final @Nullable String parameterNameInStore;
 
-    public Optional<String> getParameterNameInStore() {
+    public Optional<String> parameterNameInStore() {
         return this.parameterNameInStore == null ? Optional.empty() : Optional.ofNullable(this.parameterNameInStore);
     }
 
@@ -47,7 +47,7 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="parameterStoreRegion")
       private final @Nullable String parameterStoreRegion;
 
-    public Optional<String> getParameterStoreRegion() {
+    public Optional<String> parameterStoreRegion() {
         return this.parameterStoreRegion == null ? Optional.empty() : Optional.ofNullable(this.parameterStoreRegion);
     }
 

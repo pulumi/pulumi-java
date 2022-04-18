@@ -44,7 +44,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @return The resource of private end point.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @return The provisioning state of the private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -22,7 +22,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     @Import(name="authType")
       private final @Nullable Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType == null ? Codegen.empty() : this.authType;
     }
 
@@ -44,7 +44,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     @Import(name="serverType")
       private final @Nullable Output<String> serverType;
 
-    public Output<String> getServerType() {
+    public Output<String> serverType() {
         return this.serverType == null ? Codegen.empty() : this.serverType;
     }
 
@@ -55,7 +55,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token == null ? Codegen.empty() : this.token;
     }
 
@@ -66,7 +66,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

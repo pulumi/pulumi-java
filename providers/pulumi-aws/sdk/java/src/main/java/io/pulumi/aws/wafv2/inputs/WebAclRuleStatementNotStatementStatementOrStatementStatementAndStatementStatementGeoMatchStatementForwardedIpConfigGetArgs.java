@@ -21,7 +21,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
     @Import(name="fallbackBehavior", required=true)
       private final Output<String> fallbackBehavior;
 
-    public Output<String> getFallbackBehavior() {
+    public Output<String> fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
@@ -32,7 +32,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 

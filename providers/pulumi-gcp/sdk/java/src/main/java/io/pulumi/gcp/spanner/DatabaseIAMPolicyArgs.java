@@ -22,7 +22,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -33,7 +33,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -45,7 +45,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -57,7 +57,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -40,7 +40,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Security Hub custom action target.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * @return The name of the custom action target.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -68,7 +68,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * @return The ID for the custom action target.
      * 
      */
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
     /**
@@ -82,7 +82,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * @return The description for the custom action target.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

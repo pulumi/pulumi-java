@@ -29,7 +29,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -40,14 +40,14 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -58,7 +58,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     @Import(name="spec")
       private final @Nullable Output<CertificateSigningRequestSpecArgs> spec;
 
-    public Output<CertificateSigningRequestSpecArgs> getSpec() {
+    public Output<CertificateSigningRequestSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -69,7 +69,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<CertificateSigningRequestStatusArgs> status;
 
-    public Output<CertificateSigningRequestStatusArgs> getStatus() {
+    public Output<CertificateSigningRequestStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

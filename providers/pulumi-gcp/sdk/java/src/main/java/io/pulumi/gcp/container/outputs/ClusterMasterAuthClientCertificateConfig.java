@@ -16,7 +16,7 @@ public final class ClusterMasterAuthClientCertificateConfig {
         this.issueClientCertificate = issueClientCertificate;
     }
 
-    public Boolean getIssueClientCertificate() {
+    public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
 

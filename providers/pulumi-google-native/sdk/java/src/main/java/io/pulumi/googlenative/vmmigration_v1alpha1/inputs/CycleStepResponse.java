@@ -26,7 +26,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -37,7 +37,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="initializingReplication", required=true)
       private final InitializingReplicationStepResponse initializingReplication;
 
-    public InitializingReplicationStepResponse getInitializingReplication() {
+    public InitializingReplicationStepResponse initializingReplication() {
         return this.initializingReplication;
     }
 
@@ -48,7 +48,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="postProcessing", required=true)
       private final PostProcessingStepResponse postProcessing;
 
-    public PostProcessingStepResponse getPostProcessing() {
+    public PostProcessingStepResponse postProcessing() {
         return this.postProcessing;
     }
 
@@ -59,7 +59,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="replicating", required=true)
       private final ReplicatingStepResponse replicating;
 
-    public ReplicatingStepResponse getReplicating() {
+    public ReplicatingStepResponse replicating() {
         return this.replicating;
     }
 
@@ -70,7 +70,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

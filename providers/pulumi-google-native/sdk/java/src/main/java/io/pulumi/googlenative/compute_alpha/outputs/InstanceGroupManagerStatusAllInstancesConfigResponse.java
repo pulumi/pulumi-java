@@ -33,14 +33,14 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
      * Current instances' config revision. This value is in RFC3339 text format.
      * 
     */
-    public String getCurrentRevision() {
+    public String currentRevision() {
         return this.currentRevision;
     }
     /**
      * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
      * 
     */
-    public Boolean getEffective() {
+    public Boolean effective() {
         return this.effective;
     }
 

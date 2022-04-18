@@ -41,21 +41,21 @@ public final class SubscriptionReceiverValueResponse {
      * The role of the notification receiver.
      * 
     */
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
      * The subscription id of the notification receiver.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The subscription name of the notification receiver.
      * 
     */
-    public Optional<String> getSubscriptionName() {
+    public Optional<String> subscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }
 

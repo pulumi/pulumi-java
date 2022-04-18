@@ -17,14 +17,14 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

@@ -24,7 +24,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="apiVersion", required=true)
       private final String apiVersion;
 
-    public String getApiVersion() {
+    public String apiVersion() {
         return this.apiVersion;
     }
 
@@ -35,7 +35,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="blockOwnerDeletion", required=true)
       private final Boolean blockOwnerDeletion;
 
-    public Boolean getBlockOwnerDeletion() {
+    public Boolean blockOwnerDeletion() {
         return this.blockOwnerDeletion;
     }
 
@@ -46,7 +46,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="controller", required=true)
       private final Boolean controller;
 
-    public Boolean getController() {
+    public Boolean controller() {
         return this.controller;
     }
 
@@ -57,7 +57,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -68,7 +68,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class OwnerReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

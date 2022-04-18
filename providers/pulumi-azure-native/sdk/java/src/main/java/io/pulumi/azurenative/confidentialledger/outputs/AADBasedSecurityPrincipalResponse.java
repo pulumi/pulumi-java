@@ -41,21 +41,21 @@ public final class AADBasedSecurityPrincipalResponse {
      * LedgerRole associated with the Security Principal of Ledger
      * 
     */
-    public Optional<String> getLedgerRoleName() {
+    public Optional<String> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
     /**
      * UUID/GUID based Principal Id of the Security Principal
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * UUID/GUID based Tenant Id of the Security Principal
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

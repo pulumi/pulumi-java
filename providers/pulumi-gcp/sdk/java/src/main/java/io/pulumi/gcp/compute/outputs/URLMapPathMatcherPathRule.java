@@ -66,7 +66,7 @@ public final class URLMapPathMatcherPathRule {
      * allowed here.
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
     /**
@@ -79,14 +79,14 @@ public final class URLMapPathMatcherPathRule {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteAction> getRouteAction() {
+    public Optional<URLMapPathMatcherPathRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * The backend service or backend bucket link that should be matched by this test.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -96,7 +96,7 @@ public final class URLMapPathMatcherPathRule {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleUrlRedirect> getUrlRedirect() {
+    public Optional<URLMapPathMatcherPathRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
 

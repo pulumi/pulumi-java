@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
     @Import(name="mediaObjects", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects() {
         return this.mediaObjects;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
     @Import(name="mediaType")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {
+    public Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType() {
         return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 

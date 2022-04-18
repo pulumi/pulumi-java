@@ -26,7 +26,7 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
 
@@ -37,7 +37,7 @@ public final class MonitoredResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -19,14 +19,14 @@ public final class UpcomingMaintenanceTimeWindowResponse extends io.pulumi.resou
     @Import(name="earliest", required=true)
       private final String earliest;
 
-    public String getEarliest() {
+    public String earliest() {
         return this.earliest;
     }
 
     @Import(name="latest", required=true)
       private final String latest;
 
-    public String getLatest() {
+    public String latest() {
         return this.latest;
     }
 

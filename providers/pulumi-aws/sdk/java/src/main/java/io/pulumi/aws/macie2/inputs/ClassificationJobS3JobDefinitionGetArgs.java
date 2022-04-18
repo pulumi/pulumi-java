@@ -24,7 +24,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
     @Import(name="bucketDefinitions")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
 
-    public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> getBucketDefinitions() {
+    public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions() {
         return this.bucketDefinitions == null ? Codegen.empty() : this.bucketDefinitions;
     }
 
@@ -35,7 +35,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
     @Import(name="scoping")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
 
-    public Output<ClassificationJobS3JobDefinitionScopingGetArgs> getScoping() {
+    public Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping() {
         return this.scoping == null ? Codegen.empty() : this.scoping;
     }
 

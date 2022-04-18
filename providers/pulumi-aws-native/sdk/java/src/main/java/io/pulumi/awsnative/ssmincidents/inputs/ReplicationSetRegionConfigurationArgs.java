@@ -21,7 +21,7 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     @Import(name="sseKmsKeyId", required=true)
       private final Output<String> sseKmsKeyId;
 
-    public Output<String> getSseKmsKeyId() {
+    public Output<String> sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 

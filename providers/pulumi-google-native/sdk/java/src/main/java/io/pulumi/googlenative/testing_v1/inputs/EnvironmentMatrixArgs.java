@@ -28,7 +28,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidDeviceList")
       private final @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
 
-    public Output<AndroidDeviceListArgs> getAndroidDeviceList() {
+    public Output<AndroidDeviceListArgs> androidDeviceList() {
         return this.androidDeviceList == null ? Codegen.empty() : this.androidDeviceList;
     }
 
@@ -39,7 +39,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidMatrix")
       private final @Nullable Output<AndroidMatrixArgs> androidMatrix;
 
-    public Output<AndroidMatrixArgs> getAndroidMatrix() {
+    public Output<AndroidMatrixArgs> androidMatrix() {
         return this.androidMatrix == null ? Codegen.empty() : this.androidMatrix;
     }
 
@@ -50,7 +50,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iosDeviceList")
       private final @Nullable Output<IosDeviceListArgs> iosDeviceList;
 
-    public Output<IosDeviceListArgs> getIosDeviceList() {
+    public Output<IosDeviceListArgs> iosDeviceList() {
         return this.iosDeviceList == null ? Codegen.empty() : this.iosDeviceList;
     }
 

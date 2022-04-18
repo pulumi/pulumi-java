@@ -27,7 +27,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="analyzed", required=true)
       private final Boolean analyzed;
 
-    public Boolean getAnalyzed() {
+    public Boolean analyzed() {
         return this.analyzed;
     }
 
@@ -38,7 +38,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="attribution", required=true)
       private final String attribution;
 
-    public String getAttribution() {
+    public String attribution() {
         return this.attribution;
     }
 
@@ -49,7 +49,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="checksum", required=true)
       private final String checksum;
 
-    public String getChecksum() {
+    public String checksum() {
         return this.checksum;
     }
 
@@ -60,7 +60,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="copyright", required=true)
       private final String copyright;
 
-    public String getCopyright() {
+    public String copyright() {
         return this.copyright;
     }
 
@@ -71,7 +71,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="detailedDescription", required=true)
       private final String detailedDescription;
 
-    public String getDetailedDescription() {
+    public String detailedDescription() {
         return this.detailedDescription;
     }
 
@@ -82,7 +82,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="downloadLocation", required=true)
       private final String downloadLocation;
 
-    public String getDownloadLocation() {
+    public String downloadLocation() {
         return this.downloadLocation;
     }
 
@@ -93,7 +93,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="externalRefs", required=true)
       private final List<ExternalRefResponse> externalRefs;
 
-    public List<ExternalRefResponse> getExternalRefs() {
+    public List<ExternalRefResponse> externalRefs() {
         return this.externalRefs;
     }
 
@@ -104,7 +104,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="filesLicenseInfo", required=true)
       private final List<String> filesLicenseInfo;
 
-    public List<String> getFilesLicenseInfo() {
+    public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
     }
 
@@ -115,7 +115,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="homePage", required=true)
       private final String homePage;
 
-    public String getHomePage() {
+    public String homePage() {
         return this.homePage;
     }
 
@@ -126,7 +126,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="licenseDeclared", required=true)
       private final LicenseResponse licenseDeclared;
 
-    public LicenseResponse getLicenseDeclared() {
+    public LicenseResponse licenseDeclared() {
         return this.licenseDeclared;
     }
 
@@ -137,7 +137,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="originator", required=true)
       private final String originator;
 
-    public String getOriginator() {
+    public String originator() {
         return this.originator;
     }
 
@@ -148,7 +148,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="packageType", required=true)
       private final String packageType;
 
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
 
@@ -159,7 +159,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="summaryDescription", required=true)
       private final String summaryDescription;
 
-    public String getSummaryDescription() {
+    public String summaryDescription() {
         return this.summaryDescription;
     }
 
@@ -170,7 +170,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="supplier", required=true)
       private final String supplier;
 
-    public String getSupplier() {
+    public String supplier() {
         return this.supplier;
     }
 
@@ -181,7 +181,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -192,7 +192,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="verificationCode", required=true)
       private final String verificationCode;
 
-    public String getVerificationCode() {
+    public String verificationCode() {
         return this.verificationCode;
     }
 
@@ -203,7 +203,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

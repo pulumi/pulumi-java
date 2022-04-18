@@ -25,7 +25,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
     @Import(name="monthDay")
       private final @Nullable Output<Integer> monthDay;
 
-    public Output<Integer> getMonthDay() {
+    public Output<Integer> monthDay() {
         return this.monthDay == null ? Codegen.empty() : this.monthDay;
     }
 
@@ -37,7 +37,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyGetArgs extends io.pul
     @Import(name="weekDayOfMonth")
       private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth;
 
-    public Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> getWeekDayOfMonth() {
+    public Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs> weekDayOfMonth() {
         return this.weekDayOfMonth == null ? Codegen.empty() : this.weekDayOfMonth;
     }
 

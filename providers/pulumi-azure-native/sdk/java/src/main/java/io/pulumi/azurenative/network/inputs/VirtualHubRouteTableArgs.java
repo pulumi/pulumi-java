@@ -27,7 +27,7 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
-    public Output<List<VirtualHubRouteArgs>> getRoutes() {
+    public Output<List<VirtualHubRouteArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 

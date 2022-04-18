@@ -26,7 +26,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="labSubnetName")
       private final @Nullable String labSubnetName;
 
-    public Optional<String> getLabSubnetName() {
+    public Optional<String> labSubnetName() {
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
     }
 
@@ -37,7 +37,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -48,7 +48,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
-    public Optional<SubnetSharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
+    public Optional<SubnetSharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
@@ -59,7 +59,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="useInVmCreationPermission")
       private final @Nullable String useInVmCreationPermission;
 
-    public Optional<String> getUseInVmCreationPermission() {
+    public Optional<String> useInVmCreationPermission() {
         return this.useInVmCreationPermission == null ? Optional.empty() : Optional.ofNullable(this.useInVmCreationPermission);
     }
 
@@ -70,7 +70,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="usePublicIpAddressPermission")
       private final @Nullable String usePublicIpAddressPermission;
 
-    public Optional<String> getUsePublicIpAddressPermission() {
+    public Optional<String> usePublicIpAddressPermission() {
         return this.usePublicIpAddressPermission == null ? Optional.empty() : Optional.ofNullable(this.usePublicIpAddressPermission);
     }
 
@@ -81,7 +81,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="virtualNetworkPoolName")
       private final @Nullable String virtualNetworkPoolName;
 
-    public Optional<String> getVirtualNetworkPoolName() {
+    public Optional<String> virtualNetworkPoolName() {
         return this.virtualNetworkPoolName == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkPoolName);
     }
 

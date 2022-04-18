@@ -18,21 +18,21 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="billingAccountId")
       private final @Nullable Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

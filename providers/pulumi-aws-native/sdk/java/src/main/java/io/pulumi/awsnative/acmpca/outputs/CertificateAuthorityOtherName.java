@@ -20,10 +20,10 @@ public final class CertificateAuthorityOtherName {
         this.value = value;
     }
 
-    public String getTypeId() {
+    public String typeId() {
         return this.typeId;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -23,7 +23,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="isPrimaryNic", required=true)
       private final String isPrimaryNic;
 
-    public String getIsPrimaryNic() {
+    public String isPrimaryNic() {
         return this.isPrimaryNic;
     }
 
@@ -34,7 +34,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="isSelectedForFailover", required=true)
       private final String isSelectedForFailover;
 
-    public String getIsSelectedForFailover() {
+    public String isSelectedForFailover() {
         return this.isSelectedForFailover;
     }
 
@@ -45,7 +45,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="nicId", required=true)
       private final String nicId;
 
-    public String getNicId() {
+    public String nicId() {
         return this.nicId;
     }
 
@@ -56,7 +56,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceIPAddress", required=true)
       private final String sourceIPAddress;
 
-    public String getSourceIPAddress() {
+    public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
 
@@ -67,7 +67,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceIPAddressType", required=true)
       private final String sourceIPAddressType;
 
-    public String getSourceIPAddressType() {
+    public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
 
@@ -78,7 +78,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNetworkId", required=true)
       private final String sourceNetworkId;
 
-    public String getSourceNetworkId() {
+    public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
 
@@ -89,7 +89,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceSubnetName", required=true)
       private final String sourceSubnetName;
 
-    public String getSourceSubnetName() {
+    public String sourceSubnetName() {
         return this.sourceSubnetName;
     }
 
@@ -100,7 +100,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetIPAddress", required=true)
       private final String targetIPAddress;
 
-    public String getTargetIPAddress() {
+    public String targetIPAddress() {
         return this.targetIPAddress;
     }
 
@@ -111,7 +111,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetIPAddressType", required=true)
       private final String targetIPAddressType;
 
-    public String getTargetIPAddressType() {
+    public String targetIPAddressType() {
         return this.targetIPAddressType;
     }
 
@@ -122,7 +122,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetSubnetName", required=true)
       private final String targetSubnetName;
 
-    public String getTargetSubnetName() {
+    public String targetSubnetName() {
         return this.targetSubnetName;
     }
 
@@ -133,7 +133,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="testIPAddress", required=true)
       private final String testIPAddress;
 
-    public String getTestIPAddress() {
+    public String testIPAddress() {
         return this.testIPAddress;
     }
 
@@ -144,7 +144,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="testIPAddressType", required=true)
       private final String testIPAddressType;
 
-    public String getTestIPAddressType() {
+    public String testIPAddressType() {
         return this.testIPAddressType;
     }
 
@@ -155,7 +155,7 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="testSubnetName", required=true)
       private final String testSubnetName;
 
-    public String getTestSubnetName() {
+    public String testSubnetName() {
         return this.testSubnetName;
     }
 

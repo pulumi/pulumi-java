@@ -23,7 +23,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="blob")
       private final @Nullable Output<String> blob;
 
-    public Output<String> getBlob() {
+    public Output<String> blob() {
         return this.blob == null ? Codegen.empty() : this.blob;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="publicCertificateLocation")
       private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
 
-    public Output<PublicCertificateLocation> getPublicCertificateLocation() {
+    public Output<PublicCertificateLocation> publicCertificateLocation() {
         return this.publicCertificateLocation == null ? Codegen.empty() : this.publicCertificateLocation;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="publicCertificateName")
       private final @Nullable Output<String> publicCertificateName;
 
-    public Output<String> getPublicCertificateName() {
+    public Output<String> publicCertificateName() {
         return this.publicCertificateName == null ? Codegen.empty() : this.publicCertificateName;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

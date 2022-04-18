@@ -43,7 +43,7 @@ public class ManagedInstanceAzureADOnlyAuthentication extends io.pulumi.resource
      * @return Azure Active Directory only Authentication enabled.
      * 
      */
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagedInstanceAzureADOnlyAuthentication extends io.pulumi.resource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagedInstanceAzureADOnlyAuthentication extends io.pulumi.resource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

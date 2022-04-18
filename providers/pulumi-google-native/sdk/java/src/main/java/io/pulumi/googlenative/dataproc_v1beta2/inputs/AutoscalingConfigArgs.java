@@ -26,7 +26,7 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyUri")
       private final @Nullable Output<String> policyUri;
 
-    public Output<String> getPolicyUri() {
+    public Output<String> policyUri() {
         return this.policyUri == null ? Codegen.empty() : this.policyUri;
     }
 

@@ -25,7 +25,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
     @Import(name="creationScript")
       private final @Nullable ScriptReferenceResponse creationScript;
 
-    public Optional<ScriptReferenceResponse> getCreationScript() {
+    public Optional<ScriptReferenceResponse> creationScript() {
         return this.creationScript == null ? Optional.empty() : Optional.ofNullable(this.creationScript);
     }
 
@@ -36,7 +36,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startupScript")
       private final @Nullable ScriptReferenceResponse startupScript;
 
-    public Optional<ScriptReferenceResponse> getStartupScript() {
+    public Optional<ScriptReferenceResponse> startupScript() {
         return this.startupScript == null ? Optional.empty() : Optional.ofNullable(this.startupScript);
     }
 

@@ -33,7 +33,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return The create time of the resource.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +61,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return In case of error, the details of the error in a user-friendly format.
      * 
      */
-    public Output<ErrorResponse> getError() {
+    public Output<ErrorResponse> error() {
         return this.error;
     }
     /**
@@ -75,7 +75,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return Labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -89,7 +89,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return The resource's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return The state of the Private Connection.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -117,7 +117,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return The update time of the resource.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -131,7 +131,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * @return VPC Peering Config.
      * 
      */
-    public Output<VpcPeeringConfigResponse> getVpcPeeringConfig() {
+    public Output<VpcPeeringConfigResponse> vpcPeeringConfig() {
         return this.vpcPeeringConfig;
     }
 

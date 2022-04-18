@@ -31,7 +31,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="audio")
       private final @Nullable Output<AudioArgs> audio;
 
-    public Output<AudioArgs> getAudio() {
+    public Output<AudioArgs> audio() {
         return this.audio == null ? Codegen.empty() : this.audio;
     }
 
@@ -42,7 +42,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="color")
       private final @Nullable Output<ColorArgs> color;
 
-    public Output<ColorArgs> getColor() {
+    public Output<ColorArgs> color() {
         return this.color == null ? Codegen.empty() : this.color;
     }
 
@@ -53,7 +53,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="crop")
       private final @Nullable Output<CropArgs> crop;
 
-    public Output<CropArgs> getCrop() {
+    public Output<CropArgs> crop() {
         return this.crop == null ? Codegen.empty() : this.crop;
     }
 
@@ -64,7 +64,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="deblock")
       private final @Nullable Output<DeblockArgs> deblock;
 
-    public Output<DeblockArgs> getDeblock() {
+    public Output<DeblockArgs> deblock() {
         return this.deblock == null ? Codegen.empty() : this.deblock;
     }
 
@@ -75,7 +75,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="denoise")
       private final @Nullable Output<DenoiseArgs> denoise;
 
-    public Output<DenoiseArgs> getDenoise() {
+    public Output<DenoiseArgs> denoise() {
         return this.denoise == null ? Codegen.empty() : this.denoise;
     }
 
@@ -86,7 +86,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="pad")
       private final @Nullable Output<PadArgs> pad;
 
-    public Output<PadArgs> getPad() {
+    public Output<PadArgs> pad() {
         return this.pad == null ? Codegen.empty() : this.pad;
     }
 

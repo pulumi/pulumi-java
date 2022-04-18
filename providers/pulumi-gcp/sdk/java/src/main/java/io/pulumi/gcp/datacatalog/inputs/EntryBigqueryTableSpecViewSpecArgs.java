@@ -18,7 +18,7 @@ public final class EntryBigqueryTableSpecViewSpecArgs extends io.pulumi.resource
     @Import(name="viewQuery")
       private final @Nullable Output<String> viewQuery;
 
-    public Output<String> getViewQuery() {
+    public Output<String> viewQuery() {
         return this.viewQuery == null ? Codegen.empty() : this.viewQuery;
     }
 

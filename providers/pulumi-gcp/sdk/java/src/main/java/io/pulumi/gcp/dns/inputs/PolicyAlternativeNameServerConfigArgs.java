@@ -25,7 +25,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     @Import(name="targetNameServers", required=true)
       private final Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
-    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
+    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers() {
         return this.targetNameServers;
     }
 

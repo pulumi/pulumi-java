@@ -23,7 +23,7 @@ public final class NotificationRateLimitResponse extends io.pulumi.resources.Inv
     @Import(name="period", required=true)
       private final String period;
 
-    public String getPeriod() {
+    public String period() {
         return this.period;
     }
 

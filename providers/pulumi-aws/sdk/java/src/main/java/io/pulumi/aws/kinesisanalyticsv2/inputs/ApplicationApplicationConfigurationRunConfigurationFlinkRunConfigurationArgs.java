@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     @Import(name="allowNonRestoredState")
       private final @Nullable Output<Boolean> allowNonRestoredState;
 
-    public Output<Boolean> getAllowNonRestoredState() {
+    public Output<Boolean> allowNonRestoredState() {
         return this.allowNonRestoredState == null ? Codegen.empty() : this.allowNonRestoredState;
     }
 

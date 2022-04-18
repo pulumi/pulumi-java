@@ -25,7 +25,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
 
-    public Output<String> getConfigurationId() {
+    public Output<String> configurationId() {
         return this.configurationId == null ? Codegen.empty() : this.configurationId;
     }
 
@@ -36,7 +36,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> getCustomEmails() {
+    public Output<List<String>> customEmails() {
         return this.customEmails == null ? Codegen.empty() : this.customEmails;
     }
 
@@ -47,7 +47,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -58,7 +58,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
@@ -69,7 +69,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -102,7 +102,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="ruleDefinitions")
       private final @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
-    public Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> getRuleDefinitions() {
+    public Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions() {
         return this.ruleDefinitions == null ? Codegen.empty() : this.ruleDefinitions;
     }
 
@@ -113,7 +113,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     @Import(name="sendEmailsToSubscriptionOwners")
       private final @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
 
-    public Output<Boolean> getSendEmailsToSubscriptionOwners() {
+    public Output<Boolean> sendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners == null ? Codegen.empty() : this.sendEmailsToSubscriptionOwners;
     }
 

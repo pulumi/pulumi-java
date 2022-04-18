@@ -62,7 +62,7 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=InstanceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ InstanceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ InstanceIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -76,7 +76,7 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -104,13 +104,13 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -126,7 +126,7 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -144,7 +144,7 @@ public class InstanceIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

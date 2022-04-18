@@ -35,14 +35,14 @@ public final class JobTemplateSpec {
      * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
-    public Optional<ObjectMeta> getMetadata() {
+    public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
     */
-    public Optional<JobSpec> getSpec() {
+    public Optional<JobSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
 

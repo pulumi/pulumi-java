@@ -27,7 +27,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
 
-    public Output<List<String>> getAdditionalExperiments() {
+    public Output<List<String>> additionalExperiments() {
         return this.additionalExperiments == null ? Codegen.empty() : this.additionalExperiments;
     }
 
@@ -38,7 +38,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
-    public Output<Boolean> getEnableStreamingEngine() {
+    public Output<Boolean> enableStreamingEngine() {
         return this.enableStreamingEngine == null ? Codegen.empty() : this.enableStreamingEngine;
     }
 
@@ -49,7 +49,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipConfiguration")
       private final @Nullable Output<String> ipConfiguration;
 
-    public Output<String> getIpConfiguration() {
+    public Output<String> ipConfiguration() {
         return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
@@ -60,7 +60,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
@@ -71,7 +71,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -86,7 +86,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
-    public Output<Map<String,Object>> getLabels() {
+    public Output<Map<String,Object>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -97,7 +97,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -108,7 +108,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> getMaxWorkers() {
+    public Output<Integer> maxWorkers() {
         return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
@@ -119,7 +119,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -130,7 +130,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -141,7 +141,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="onDelete")
       private final @Nullable Output<String> onDelete;
 
-    public Output<String> getOnDelete() {
+    public Output<String> onDelete() {
         return this.onDelete == null ? Codegen.empty() : this.onDelete;
     }
 
@@ -152,7 +152,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -163,7 +163,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -174,7 +174,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -185,7 +185,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -196,7 +196,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -207,7 +207,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -218,7 +218,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempGcsLocation")
       private final @Nullable Output<String> tempGcsLocation;
 
-    public Output<String> getTempGcsLocation() {
+    public Output<String> tempGcsLocation() {
         return this.tempGcsLocation == null ? Codegen.empty() : this.tempGcsLocation;
     }
 
@@ -229,7 +229,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateGcsPath")
       private final @Nullable Output<String> templateGcsPath;
 
-    public Output<String> getTemplateGcsPath() {
+    public Output<String> templateGcsPath() {
         return this.templateGcsPath == null ? Codegen.empty() : this.templateGcsPath;
     }
 
@@ -241,7 +241,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,Object>> transformNameMapping;
 
-    public Output<Map<String,Object>> getTransformNameMapping() {
+    public Output<Map<String,Object>> transformNameMapping() {
         return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
     }
 
@@ -252,7 +252,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -263,7 +263,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

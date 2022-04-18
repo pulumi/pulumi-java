@@ -43,7 +43,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressTo {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimeterStatusIngressPolicyIngressToOperation> getOperations() {
+    public List<ServicePerimeterStatusIngressPolicyIngressToOperation> operations() {
         return this.operations == null ? List.of() : this.operations;
     }
     /**
@@ -54,7 +54,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressTo {
      * the perimeter.
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 

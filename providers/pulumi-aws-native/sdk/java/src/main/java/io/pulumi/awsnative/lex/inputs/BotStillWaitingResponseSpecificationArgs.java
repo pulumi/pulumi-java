@@ -29,28 +29,28 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> getAllowInterrupt() {
+    public Output<Boolean> allowInterrupt() {
         return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     @Import(name="frequencyInSeconds", required=true)
       private final Output<Integer> frequencyInSeconds;
 
-    public Output<Integer> getFrequencyInSeconds() {
+    public Output<Integer> frequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
     @Import(name="messageGroupsList", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
-    public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
+    public Output<List<BotMessageGroupArgs>> messageGroupsList() {
         return this.messageGroupsList;
     }
 
     @Import(name="timeoutInSeconds", required=true)
       private final Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 

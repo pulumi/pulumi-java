@@ -23,10 +23,10 @@ public final class SigningProfileSignatureValidityPeriod {
         this.value = value;
     }
 
-    public Optional<SigningProfileSignatureValidityPeriodType> getType() {
+    public Optional<SigningProfileSignatureValidityPeriodType> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<Integer> getValue() {
+    public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }
 

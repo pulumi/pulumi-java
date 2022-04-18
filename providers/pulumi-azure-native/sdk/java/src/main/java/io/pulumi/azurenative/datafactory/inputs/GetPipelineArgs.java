@@ -19,7 +19,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="pipelineName", required=true)
       private final String pipelineName;
 
-    public String getPipelineName() {
+    public String pipelineName() {
         return this.pipelineName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

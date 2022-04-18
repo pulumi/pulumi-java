@@ -26,7 +26,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bitrate")
       private final @Nullable Integer bitrate;
 
-    public Optional<Integer> getBitrate() {
+    public Optional<Integer> bitrate() {
         return this.bitrate == null ? Optional.empty() : Optional.ofNullable(this.bitrate);
     }
 
@@ -37,7 +37,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="channels")
       private final @Nullable Integer channels;
 
-    public Optional<Integer> getChannels() {
+    public Optional<Integer> channels() {
         return this.channels == null ? Optional.empty() : Optional.ofNullable(this.channels);
     }
 
@@ -48,7 +48,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -60,7 +60,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -71,7 +71,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="profile")
       private final @Nullable String profile;
 
-    public Optional<String> getProfile() {
+    public Optional<String> profile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
@@ -82,7 +82,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="samplingRate")
       private final @Nullable Integer samplingRate;
 
-    public Optional<Integer> getSamplingRate() {
+    public Optional<Integer> samplingRate() {
         return this.samplingRate == null ? Optional.empty() : Optional.ofNullable(this.samplingRate);
     }
 

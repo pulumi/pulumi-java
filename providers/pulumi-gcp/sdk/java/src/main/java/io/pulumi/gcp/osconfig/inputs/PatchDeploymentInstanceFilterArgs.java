@@ -25,7 +25,7 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
-    public Output<Boolean> getAll() {
+    public Output<Boolean> all() {
         return this.all == null ? Codegen.empty() : this.all;
     }
 
@@ -37,7 +37,7 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     @Import(name="groupLabels")
       private final @Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelArgs>> groupLabels;
 
-    public Output<List<PatchDeploymentInstanceFilterGroupLabelArgs>> getGroupLabels() {
+    public Output<List<PatchDeploymentInstanceFilterGroupLabelArgs>> groupLabels() {
         return this.groupLabels == null ? Codegen.empty() : this.groupLabels;
     }
 
@@ -49,7 +49,7 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
-    public Output<List<String>> getInstanceNamePrefixes() {
+    public Output<List<String>> instanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? Codegen.empty() : this.instanceNamePrefixes;
     }
 
@@ -62,7 +62,7 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -73,7 +73,7 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

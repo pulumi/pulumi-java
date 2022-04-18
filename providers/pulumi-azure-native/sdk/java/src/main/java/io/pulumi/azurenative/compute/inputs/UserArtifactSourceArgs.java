@@ -26,7 +26,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="defaultConfigurationLink")
       private final @Nullable Output<String> defaultConfigurationLink;
 
-    public Output<String> getDefaultConfigurationLink() {
+    public Output<String> defaultConfigurationLink() {
         return this.defaultConfigurationLink == null ? Codegen.empty() : this.defaultConfigurationLink;
     }
 
@@ -37,7 +37,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="mediaLink", required=true)
       private final Output<String> mediaLink;
 
-    public Output<String> getMediaLink() {
+    public Output<String> mediaLink() {
         return this.mediaLink;
     }
 

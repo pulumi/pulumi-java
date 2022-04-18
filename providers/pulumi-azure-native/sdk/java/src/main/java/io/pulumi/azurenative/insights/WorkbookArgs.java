@@ -26,7 +26,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
       private final Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
 
@@ -37,7 +37,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -59,7 +59,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<WorkbookManagedIdentityArgs> identity;
 
-    public Output<WorkbookManagedIdentityArgs> getIdentity() {
+    public Output<WorkbookManagedIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -70,7 +70,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -81,7 +81,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -125,7 +125,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serializedData", required=true)
       private final Output<String> serializedData;
 
-    public Output<String> getSerializedData() {
+    public Output<String> serializedData() {
         return this.serializedData;
     }
 
@@ -136,7 +136,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
@@ -147,7 +147,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
 
-    public Output<String> getStorageUri() {
+    public Output<String> storageUri() {
         return this.storageUri == null ? Codegen.empty() : this.storageUri;
     }
 
@@ -158,7 +158,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -169,7 +169,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -180,7 +180,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

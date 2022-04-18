@@ -84,63 +84,63 @@ public final class GetGroupResult {
      * The time when the `Group` was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the `Group`.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Optional. Dynamic group metadata like queries and status.
      * 
     */
-    public DynamicGroupMetadataResponse getDynamicGroupMetadata() {
+    public DynamicGroupMetadataResponse dynamicGroupMetadata() {
         return this.dynamicGroupMetadata;
     }
     /**
      * The `EntityKey` of the `Group`.
      * 
     */
-    public EntityKeyResponse getGroupKey() {
+    public EntityKeyResponse groupKey() {
         return this.groupKey;
     }
     /**
      * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`. Shall be of the form `groups/{group}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
      * 
     */
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
     /**
      * The time when the `Group` was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

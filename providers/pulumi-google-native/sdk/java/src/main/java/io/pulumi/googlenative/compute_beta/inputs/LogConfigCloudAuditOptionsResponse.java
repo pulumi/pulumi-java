@@ -24,7 +24,7 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
     @Import(name="authorizationLoggingOptions", required=true)
       private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
-    public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
+    public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
 
@@ -35,7 +35,7 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
     @Import(name="logName", required=true)
       private final String logName;
 
-    public String getLogName() {
+    public String logName() {
         return this.logName;
     }
 

@@ -40,7 +40,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -54,7 +54,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +68,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name of deployment artifacts.
      * 
      */
-    public Output<String> getDeploymentArtifacts() {
+    public Output<String> deploymentArtifacts() {
         return this.deploymentArtifacts;
     }
     /**
@@ -82,7 +82,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name for the backend environment.
      * 
      */
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
     /**
@@ -96,7 +96,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The AWS CloudFormation stack name of a backend environment.
      * 
      */
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 

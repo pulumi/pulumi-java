@@ -39,21 +39,21 @@ public final class LabelDescriptorResponse {
      * A human-readable description for the label.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The label key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The type of data that can be assigned to the label.
      * 
     */
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

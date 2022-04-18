@@ -23,7 +23,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
@@ -34,7 +34,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
+    public Output<Integer> minInstances() {
         return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
@@ -45,7 +45,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
     @Import(name="targetCpuUtilization")
       private final @Nullable Output<Double> targetCpuUtilization;
 
-    public Output<Double> getTargetCpuUtilization() {
+    public Output<Double> targetCpuUtilization() {
         return this.targetCpuUtilization == null ? Codegen.empty() : this.targetCpuUtilization;
     }
 
@@ -56,7 +56,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsGe
     @Import(name="targetThroughputUtilization")
       private final @Nullable Output<Double> targetThroughputUtilization;
 
-    public Output<Double> getTargetThroughputUtilization() {
+    public Output<Double> targetThroughputUtilization() {
         return this.targetThroughputUtilization == null ? Codegen.empty() : this.targetThroughputUtilization;
     }
 

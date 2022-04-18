@@ -22,7 +22,7 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskId")
       private final @Nullable Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId == null ? Codegen.empty() : this.diskId;
     }
 
@@ -33,7 +33,7 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
     }
 

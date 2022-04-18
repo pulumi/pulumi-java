@@ -43,7 +43,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The connector mapping name
      * 
      */
-    public Output<String> getConnectorMappingName() {
+    public Output<String> connectorMappingName() {
         return this.connectorMappingName;
     }
     /**
@@ -57,7 +57,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The connector name.
      * 
      */
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName;
     }
     /**
@@ -71,7 +71,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return Type of connector.
      * 
      */
-    public Output</* @Nullable */ String> getConnectorType() {
+    public Output</* @Nullable */ String> connectorType() {
         return this.connectorType;
     }
     /**
@@ -85,7 +85,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The created time.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -99,7 +99,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The DataFormat ID.
      * 
      */
-    public Output<String> getDataFormatId() {
+    public Output<String> dataFormatId() {
         return this.dataFormatId;
     }
     /**
@@ -113,7 +113,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The description of the connector mapping.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -127,7 +127,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return Display name for the connector mapping.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -141,7 +141,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return Defines which entity type the file should map to.
      * 
      */
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
     /**
@@ -155,7 +155,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The mapping entity name.
      * 
      */
-    public Output<String> getEntityTypeName() {
+    public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
     /**
@@ -169,7 +169,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The last modified time.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -183,7 +183,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The properties of the mapping.
      * 
      */
-    public Output<ConnectorMappingPropertiesResponse> getMappingProperties() {
+    public Output<ConnectorMappingPropertiesResponse> mappingProperties() {
         return this.mappingProperties;
     }
     /**
@@ -197,7 +197,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -211,7 +211,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The next run time based on customer's settings.
      * 
      */
-    public Output<String> getNextRunTime() {
+    public Output<String> nextRunTime() {
         return this.nextRunTime;
     }
     /**
@@ -225,7 +225,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The RunId.
      * 
      */
-    public Output<String> getRunId() {
+    public Output<String> runId() {
         return this.runId;
     }
     /**
@@ -239,7 +239,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return State of connector mapping.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -253,7 +253,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -267,7 +267,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

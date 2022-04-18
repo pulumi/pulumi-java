@@ -19,7 +19,7 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="pipelineTopologyName", required=true)
       private final String pipelineTopologyName;
 
-    public String getPipelineTopologyName() {
+    public String pipelineTopologyName() {
         return this.pipelineTopologyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

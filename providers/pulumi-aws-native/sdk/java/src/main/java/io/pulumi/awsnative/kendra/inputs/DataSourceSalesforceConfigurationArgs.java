@@ -24,63 +24,63 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
     @Import(name="chatterFeedConfiguration")
       private final @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
 
-    public Output<DataSourceSalesforceChatterFeedConfigurationArgs> getChatterFeedConfiguration() {
+    public Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration() {
         return this.chatterFeedConfiguration == null ? Codegen.empty() : this.chatterFeedConfiguration;
     }
 
     @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
-    public Output<Boolean> getCrawlAttachments() {
+    public Output<Boolean> crawlAttachments() {
         return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 
     @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
-    public Output<List<String>> getExcludeAttachmentFilePatterns() {
+    public Output<List<String>> excludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? Codegen.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @Import(name="includeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
-    public Output<List<String>> getIncludeAttachmentFilePatterns() {
+    public Output<List<String>> includeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? Codegen.empty() : this.includeAttachmentFilePatterns;
     }
 
     @Import(name="knowledgeArticleConfiguration")
       private final @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
-    public Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
+    public Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Codegen.empty() : this.knowledgeArticleConfiguration;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
       private final Output<String> serverUrl;
 
-    public Output<String> getServerUrl() {
+    public Output<String> serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="standardObjectAttachmentConfiguration")
       private final @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
 
-    public Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> getStandardObjectAttachmentConfiguration() {
+    public Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration() {
         return this.standardObjectAttachmentConfiguration == null ? Codegen.empty() : this.standardObjectAttachmentConfiguration;
     }
 
     @Import(name="standardObjectConfigurations")
       private final @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
 
-    public Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> getStandardObjectConfigurations() {
+    public Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations() {
         return this.standardObjectConfigurations == null ? Codegen.empty() : this.standardObjectConfigurations;
     }
 

@@ -43,21 +43,21 @@ public final class ServiceSourceConfigurationCodeRepository {
      * Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
      * 
     */
-    public Optional<ServiceSourceConfigurationCodeRepositoryCodeConfiguration> getCodeConfiguration() {
+    public Optional<ServiceSourceConfigurationCodeRepositoryCodeConfiguration> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * The location of the repository that contains the source code.
      * 
     */
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * The version that should be used within the source code repository. See Source Code Version below for more details.
      * 
     */
-    public ServiceSourceConfigurationCodeRepositorySourceCodeVersion getSourceCodeVersion() {
+    public ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 

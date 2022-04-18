@@ -21,7 +21,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
     @Import(name="creationInfos", required=true)
       private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
 
-    public List<GetAccessPointRootDirectoryCreationInfo> getCreationInfos() {
+    public List<GetAccessPointRootDirectoryCreationInfo> creationInfos() {
         return this.creationInfos;
     }
 
@@ -32,7 +32,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

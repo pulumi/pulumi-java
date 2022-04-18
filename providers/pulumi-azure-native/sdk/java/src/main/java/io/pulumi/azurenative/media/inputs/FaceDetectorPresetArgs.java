@@ -31,7 +31,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="blurType")
       private final @Nullable Output<Either<String,BlurType>> blurType;
 
-    public Output<Either<String,BlurType>> getBlurType() {
+    public Output<Either<String,BlurType>> blurType() {
         return this.blurType == null ? Codegen.empty() : this.blurType;
     }
 
@@ -42,7 +42,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="experimentalOptions")
       private final @Nullable Output<Map<String,String>> experimentalOptions;
 
-    public Output<Map<String,String>> getExperimentalOptions() {
+    public Output<Map<String,String>> experimentalOptions() {
         return this.experimentalOptions == null ? Codegen.empty() : this.experimentalOptions;
     }
 
@@ -53,7 +53,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="mode")
       private final @Nullable Output<Either<String,FaceRedactorMode>> mode;
 
-    public Output<Either<String,FaceRedactorMode>> getMode() {
+    public Output<Either<String,FaceRedactorMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -65,7 +65,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -76,7 +76,7 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resolution")
       private final @Nullable Output<Either<String,AnalysisResolution>> resolution;
 
-    public Output<Either<String,AnalysisResolution>> getResolution() {
+    public Output<Either<String,AnalysisResolution>> resolution() {
         return this.resolution == null ? Codegen.empty() : this.resolution;
     }
 

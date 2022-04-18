@@ -25,7 +25,7 @@ public final class RunCommandInputParameterArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class RunCommandInputParameterArgs extends io.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

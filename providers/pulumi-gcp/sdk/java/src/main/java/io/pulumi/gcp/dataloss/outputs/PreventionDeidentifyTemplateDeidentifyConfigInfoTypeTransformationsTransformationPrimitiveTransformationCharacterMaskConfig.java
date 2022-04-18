@@ -57,7 +57,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> getCharactersToIgnores() {
+    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores() {
         return this.charactersToIgnores == null ? List.of() : this.charactersToIgnores;
     }
     /**
@@ -66,14 +66,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * strings, and 0 for digits.
      * 
     */
-    public Optional<String> getMaskingCharacter() {
+    public Optional<String> maskingCharacter() {
         return Optional.ofNullable(this.maskingCharacter);
     }
     /**
      * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
     */
-    public Optional<Integer> getNumberToMask() {
+    public Optional<Integer> numberToMask() {
         return Optional.ofNullable(this.numberToMask);
     }
     /**
@@ -81,7 +81,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
      * 
     */
-    public Optional<Boolean> getReverseOrder() {
+    public Optional<Boolean> reverseOrder() {
         return Optional.ofNullable(this.reverseOrder);
     }
 

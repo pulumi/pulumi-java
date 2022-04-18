@@ -24,7 +24,7 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSequences", required=true)
       private final VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
 
-    public VideoSequenceAbsoluteTimeMarkersResponse getTimeSequences() {
+    public VideoSequenceAbsoluteTimeMarkersResponse timeSequences() {
         return this.timeSequences;
     }
 
@@ -47,7 +47,7 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -58,7 +58,7 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="videoName", required=true)
       private final String videoName;
 
-    public String getVideoName() {
+    public String videoName() {
         return this.videoName;
     }
 

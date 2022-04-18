@@ -23,7 +23,7 @@ public final class EdgeCacheServiceLogConfigArgs extends io.pulumi.resources.Res
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceLogConfigArgs extends io.pulumi.resources.Res
     @Import(name="sampleRate")
       private final @Nullable Output<Double> sampleRate;
 
-    public Output<Double> getSampleRate() {
+    public Output<Double> sampleRate() {
         return this.sampleRate == null ? Codegen.empty() : this.sampleRate;
     }
 

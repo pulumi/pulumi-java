@@ -43,31 +43,31 @@ public final class GetBucketLifecycleRuleCondition {
         this.withState = withState;
     }
 
-    public Integer getAge() {
+    public Integer age() {
         return this.age;
     }
-    public String getCreatedBefore() {
+    public String createdBefore() {
         return this.createdBefore;
     }
-    public String getCustomTimeBefore() {
+    public String customTimeBefore() {
         return this.customTimeBefore;
     }
-    public Integer getDaysSinceCustomTime() {
+    public Integer daysSinceCustomTime() {
         return this.daysSinceCustomTime;
     }
-    public Integer getDaysSinceNoncurrentTime() {
+    public Integer daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
     }
-    public List<String> getMatchesStorageClasses() {
+    public List<String> matchesStorageClasses() {
         return this.matchesStorageClasses;
     }
-    public String getNoncurrentTimeBefore() {
+    public String noncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
     }
-    public Integer getNumNewerVersions() {
+    public Integer numNewerVersions() {
         return this.numNewerVersions;
     }
-    public String getWithState() {
+    public String withState() {
         return this.withState;
     }
 

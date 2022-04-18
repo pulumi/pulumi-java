@@ -24,7 +24,7 @@ public final class BasicScalingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="idleTimeout", required=true)
       private final String idleTimeout;
 
-    public String getIdleTimeout() {
+    public String idleTimeout() {
         return this.idleTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class BasicScalingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxInstances", required=true)
       private final Integer maxInstances;
 
-    public Integer getMaxInstances() {
+    public Integer maxInstances() {
         return this.maxInstances;
     }
 

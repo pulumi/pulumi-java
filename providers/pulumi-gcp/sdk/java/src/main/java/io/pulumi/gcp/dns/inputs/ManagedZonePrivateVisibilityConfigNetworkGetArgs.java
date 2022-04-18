@@ -23,7 +23,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkGetArgs extends io.p
     @Import(name="networkUrl", required=true)
       private final Output<String> networkUrl;
 
-    public Output<String> getNetworkUrl() {
+    public Output<String> networkUrl() {
         return this.networkUrl;
     }
 

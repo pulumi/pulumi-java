@@ -21,14 +21,14 @@ public final class RRSetRoutingPolicyWrrPolicyResponse extends io.pulumi.resourc
     @Import(name="items", required=true)
       private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
 
-    public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> getItems() {
+    public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items() {
         return this.items;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

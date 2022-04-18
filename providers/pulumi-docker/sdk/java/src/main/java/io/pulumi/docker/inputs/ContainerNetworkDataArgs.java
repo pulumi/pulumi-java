@@ -26,21 +26,21 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     @Import(name="globalIpv6Address")
       private final @Nullable Output<String> globalIpv6Address;
 
-    public Output<String> getGlobalIpv6Address() {
+    public Output<String> globalIpv6Address() {
         return this.globalIpv6Address == null ? Codegen.empty() : this.globalIpv6Address;
     }
 
     @Import(name="globalIpv6PrefixLength")
       private final @Nullable Output<Integer> globalIpv6PrefixLength;
 
-    public Output<Integer> getGlobalIpv6PrefixLength() {
+    public Output<Integer> globalIpv6PrefixLength() {
         return this.globalIpv6PrefixLength == null ? Codegen.empty() : this.globalIpv6PrefixLength;
     }
 
@@ -54,7 +54,7 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -68,21 +68,21 @@ public final class ContainerNetworkDataArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Output<Integer> getIpPrefixLength() {
+    public Output<Integer> ipPrefixLength() {
         return this.ipPrefixLength == null ? Codegen.empty() : this.ipPrefixLength;
     }
 
     @Import(name="ipv6Gateway")
       private final @Nullable Output<String> ipv6Gateway;
 
-    public Output<String> getIpv6Gateway() {
+    public Output<String> ipv6Gateway() {
         return this.ipv6Gateway == null ? Codegen.empty() : this.ipv6Gateway;
     }
 
     @Import(name="networkName")
       private final @Nullable Output<String> networkName;
 
-    public Output<String> getNetworkName() {
+    public Output<String> networkName() {
         return this.networkName == null ? Codegen.empty() : this.networkName;
     }
 

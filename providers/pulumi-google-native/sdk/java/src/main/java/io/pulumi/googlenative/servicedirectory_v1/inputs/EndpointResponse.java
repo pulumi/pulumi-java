@@ -25,7 +25,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
 
@@ -47,7 +47,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -69,7 +69,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

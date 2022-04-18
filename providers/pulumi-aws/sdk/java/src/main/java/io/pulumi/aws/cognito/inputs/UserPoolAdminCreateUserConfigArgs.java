@@ -23,7 +23,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     @Import(name="allowAdminCreateUserOnly")
       private final @Nullable Output<Boolean> allowAdminCreateUserOnly;
 
-    public Output<Boolean> getAllowAdminCreateUserOnly() {
+    public Output<Boolean> allowAdminCreateUserOnly() {
         return this.allowAdminCreateUserOnly == null ? Codegen.empty() : this.allowAdminCreateUserOnly;
     }
 
@@ -34,7 +34,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     @Import(name="inviteMessageTemplate")
       private final @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
 
-    public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> getInviteMessageTemplate() {
+    public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate() {
         return this.inviteMessageTemplate == null ? Codegen.empty() : this.inviteMessageTemplate;
     }
 

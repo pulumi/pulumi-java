@@ -47,7 +47,7 @@ public final class ClusterResourceUsageExportConfig {
      * Parameters for using BigQuery as the destination of resource usage export.
      * 
     */
-    public ClusterResourceUsageExportConfigBigqueryDestination getBigqueryDestination() {
+    public ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination() {
         return this.bigqueryDestination;
     }
     /**
@@ -55,7 +55,7 @@ public final class ClusterResourceUsageExportConfig {
      * in the cluster to meter network egress traffic.
      * 
     */
-    public Optional<Boolean> getEnableNetworkEgressMetering() {
+    public Optional<Boolean> enableNetworkEgressMetering() {
         return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
     /**
@@ -66,7 +66,7 @@ public final class ClusterResourceUsageExportConfig {
      * billing export. Defaults to `true`.
      * 
     */
-    public Optional<Boolean> getEnableResourceConsumptionMetering() {
+    public Optional<Boolean> enableResourceConsumptionMetering() {
         return Optional.ofNullable(this.enableResourceConsumptionMetering);
     }
 

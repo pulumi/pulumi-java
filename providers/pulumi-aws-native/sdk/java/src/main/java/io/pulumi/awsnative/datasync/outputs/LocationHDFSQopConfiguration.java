@@ -35,14 +35,14 @@ public final class LocationHDFSQopConfiguration {
      * Configuration for Data Transfer Protection.
      * 
     */
-    public Optional<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
+    public Optional<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
     /**
      * Configuration for RPC Protection.
      * 
     */
-    public Optional<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
+    public Optional<LocationHDFSQopConfigurationRpcProtection> rpcProtection() {
         return Optional.ofNullable(this.rpcProtection);
     }
 

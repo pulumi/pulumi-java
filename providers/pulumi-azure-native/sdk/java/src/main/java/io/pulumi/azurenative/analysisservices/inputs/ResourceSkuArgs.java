@@ -29,7 +29,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;
 
-    public Output<Either<String,SkuTier>> getTier() {
+    public Output<Either<String,SkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

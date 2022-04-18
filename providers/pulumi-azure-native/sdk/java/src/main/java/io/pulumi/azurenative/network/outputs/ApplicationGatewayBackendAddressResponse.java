@@ -34,14 +34,14 @@ public final class ApplicationGatewayBackendAddressResponse {
      * Fully qualified domain name (FQDN).
      * 
     */
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * IP address.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

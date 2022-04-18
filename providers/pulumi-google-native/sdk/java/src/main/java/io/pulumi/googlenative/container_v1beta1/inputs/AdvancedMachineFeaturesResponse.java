@@ -23,7 +23,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
     @Import(name="threadsPerCore", required=true)
       private final String threadsPerCore;
 
-    public String getThreadsPerCore() {
+    public String threadsPerCore() {
         return this.threadsPerCore;
     }
 

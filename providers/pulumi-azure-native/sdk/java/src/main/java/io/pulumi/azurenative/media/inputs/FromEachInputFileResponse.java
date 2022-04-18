@@ -33,7 +33,7 @@ public final class FromEachInputFileResponse extends io.pulumi.resources.InvokeA
     @Import(name="includedTracks")
       private final @Nullable List<Object> includedTracks;
 
-    public List<Object> getIncludedTracks() {
+    public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
 
@@ -45,7 +45,7 @@ public final class FromEachInputFileResponse extends io.pulumi.resources.InvokeA
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -20,7 +20,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -31,7 +31,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
     @Import(name="requirePartitionFilter", required=true)
       private final Boolean requirePartitionFilter;
 
-    public Boolean getRequirePartitionFilter() {
+    public Boolean requirePartitionFilter() {
         return this.requirePartitionFilter;
     }
 
@@ -42,7 +42,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
     @Import(name="sourceUriPrefix", required=true)
       private final String sourceUriPrefix;
 
-    public String getSourceUriPrefix() {
+    public String sourceUriPrefix() {
         return this.sourceUriPrefix;
     }
 

@@ -22,7 +22,7 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     @Import(name="serverNameToVerify")
       private final @Nullable Output<String> serverNameToVerify;
 
-    public Output<String> getServerNameToVerify() {
+    public Output<String> serverNameToVerify() {
         return this.serverNameToVerify == null ? Codegen.empty() : this.serverNameToVerify;
     }
 

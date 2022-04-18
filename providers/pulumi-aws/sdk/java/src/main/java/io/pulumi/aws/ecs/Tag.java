@@ -36,7 +36,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Tag name.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -50,7 +50,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the ECS resource to tag.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -64,7 +64,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Tag value.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

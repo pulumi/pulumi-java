@@ -41,7 +41,7 @@ public final class StandardAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public List<StandardAppVersionDeploymentFile> getFiles() {
+    public List<StandardAppVersionDeploymentFile> files() {
         return this.files == null ? List.of() : this.files;
     }
     /**
@@ -49,7 +49,7 @@ public final class StandardAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public Optional<StandardAppVersionDeploymentZip> getZip() {
+    public Optional<StandardAppVersionDeploymentZip> zip() {
         return Optional.ofNullable(this.zip);
     }
 

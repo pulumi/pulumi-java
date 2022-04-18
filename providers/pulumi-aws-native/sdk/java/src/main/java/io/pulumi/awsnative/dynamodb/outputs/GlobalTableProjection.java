@@ -23,10 +23,10 @@ public final class GlobalTableProjection {
         this.projectionType = projectionType;
     }
 
-    public List<String> getNonKeyAttributes() {
+    public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
-    public Optional<String> getProjectionType() {
+    public Optional<String> projectionType() {
         return Optional.ofNullable(this.projectionType);
     }
 

@@ -21,7 +21,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -32,7 +32,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 

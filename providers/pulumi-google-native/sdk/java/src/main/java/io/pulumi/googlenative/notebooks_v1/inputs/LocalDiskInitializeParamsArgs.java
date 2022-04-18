@@ -28,7 +28,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
@@ -50,7 +50,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -61,7 +61,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     @Import(name="diskType")
       private final @Nullable Output<LocalDiskInitializeParamsDiskType> diskType;
 
-    public Output<LocalDiskInitializeParamsDiskType> getDiskType() {
+    public Output<LocalDiskInitializeParamsDiskType> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -72,7 +72,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
     @Import(name="artifactId", required=true)
       private final String artifactId;
 
-    public String getArtifactId() {
+    public String artifactId() {
         return this.artifactId;
     }
 
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

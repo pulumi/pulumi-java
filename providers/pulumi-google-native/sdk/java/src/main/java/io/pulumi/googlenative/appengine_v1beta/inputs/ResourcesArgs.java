@@ -29,7 +29,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -40,7 +40,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskGb")
       private final @Nullable Output<Double> diskGb;
 
-    public Output<Double> getDiskGb() {
+    public Output<Double> diskGb() {
         return this.diskGb == null ? Codegen.empty() : this.diskGb;
     }
 
@@ -51,7 +51,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyReference")
       private final @Nullable Output<String> kmsKeyReference;
 
-    public Output<String> getKmsKeyReference() {
+    public Output<String> kmsKeyReference() {
         return this.kmsKeyReference == null ? Codegen.empty() : this.kmsKeyReference;
     }
 
@@ -62,7 +62,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
+    public Output<Double> memoryGb() {
         return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
@@ -73,7 +73,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

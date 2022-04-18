@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
      * The Amazon Resource Name (ARN) for the certificate.
      * 
     */
-    public String getCertificateArn() {
+    public String certificateArn() {
         return this.certificateArn;
     }
 

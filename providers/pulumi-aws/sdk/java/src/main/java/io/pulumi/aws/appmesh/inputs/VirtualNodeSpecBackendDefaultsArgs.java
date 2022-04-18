@@ -22,7 +22,7 @@ public final class VirtualNodeSpecBackendDefaultsArgs extends io.pulumi.resource
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> getClientPolicy() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy() {
         return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 

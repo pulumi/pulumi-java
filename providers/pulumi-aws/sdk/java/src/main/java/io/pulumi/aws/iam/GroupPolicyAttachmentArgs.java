@@ -21,7 +21,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -32,7 +32,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 

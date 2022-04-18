@@ -21,7 +21,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -34,7 +34,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -46,7 +46,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

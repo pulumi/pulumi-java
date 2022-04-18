@@ -19,7 +19,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="states")
       private final @Nullable Output<List<FeatureStateStateArgs>> states;
 
-    public Output<List<FeatureStateStateArgs>> getStates() {
+    public Output<List<FeatureStateStateArgs>> states() {
         return this.states == null ? Codegen.empty() : this.states;
     }
 

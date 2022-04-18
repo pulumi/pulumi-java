@@ -29,7 +29,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rejectSampleValue")
       private final @Nullable Output<Object> rejectSampleValue;
 
-    public Output<Object> getRejectSampleValue() {
+    public Output<Object> rejectSampleValue() {
         return this.rejectSampleValue == null ? Codegen.empty() : this.rejectSampleValue;
     }
 
@@ -40,7 +40,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rejectType")
       private final @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
 
-    public Output<Either<String,PolybaseSettingsRejectType>> getRejectType() {
+    public Output<Either<String,PolybaseSettingsRejectType>> rejectType() {
         return this.rejectType == null ? Codegen.empty() : this.rejectType;
     }
 
@@ -51,7 +51,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rejectValue")
       private final @Nullable Output<Object> rejectValue;
 
-    public Output<Object> getRejectValue() {
+    public Output<Object> rejectValue() {
         return this.rejectValue == null ? Codegen.empty() : this.rejectValue;
     }
 
@@ -62,7 +62,7 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useTypeDefault")
       private final @Nullable Output<Object> useTypeDefault;
 
-    public Output<Object> getUseTypeDefault() {
+    public Output<Object> useTypeDefault() {
         return this.useTypeDefault == null ? Codegen.empty() : this.useTypeDefault;
     }
 

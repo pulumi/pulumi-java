@@ -23,7 +23,7 @@ public final class ReportGroupingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ReportGroupingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

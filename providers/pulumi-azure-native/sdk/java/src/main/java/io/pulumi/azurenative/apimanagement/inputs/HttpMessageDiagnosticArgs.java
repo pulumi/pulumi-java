@@ -29,7 +29,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="body")
       private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
-    public Output<BodyDiagnosticSettingsArgs> getBody() {
+    public Output<BodyDiagnosticSettingsArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -40,7 +40,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="dataMasking")
       private final @Nullable Output<DataMaskingArgs> dataMasking;
 
-    public Output<DataMaskingArgs> getDataMasking() {
+    public Output<DataMaskingArgs> dataMasking() {
         return this.dataMasking == null ? Codegen.empty() : this.dataMasking;
     }
 
@@ -51,7 +51,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 

@@ -21,7 +21,7 @@ public final class GetDefaultServiceAccountArgs extends io.pulumi.resources.Invo
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

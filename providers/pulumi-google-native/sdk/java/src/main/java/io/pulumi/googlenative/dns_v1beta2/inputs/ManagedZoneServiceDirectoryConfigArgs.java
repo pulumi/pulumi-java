@@ -23,7 +23,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     @Import(name="namespace")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
-    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
+    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

@@ -29,7 +29,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="containerID")
       private final @Nullable Output<String> containerID;
 
-    public Output<String> getContainerID() {
+    public Output<String> containerID() {
         return this.containerID == null ? Codegen.empty() : this.containerID;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="imageID", required=true)
       private final Output<String> imageID;
 
-    public Output<String> getImageID() {
+    public Output<String> imageID() {
         return this.imageID;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="lastState")
       private final @Nullable Output<ContainerStateArgs> lastState;
 
-    public Output<ContainerStateArgs> getLastState() {
+    public Output<ContainerStateArgs> lastState() {
         return this.lastState == null ? Codegen.empty() : this.lastState;
     }
 
@@ -73,7 +73,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ready", required=true)
       private final Output<Boolean> ready;
 
-    public Output<Boolean> getReady() {
+    public Output<Boolean> ready() {
         return this.ready;
     }
 
@@ -95,7 +95,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restartCount", required=true)
       private final Output<Integer> restartCount;
 
-    public Output<Integer> getRestartCount() {
+    public Output<Integer> restartCount() {
         return this.restartCount;
     }
 
@@ -106,7 +106,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="started")
       private final @Nullable Output<Boolean> started;
 
-    public Output<Boolean> getStarted() {
+    public Output<Boolean> started() {
         return this.started == null ? Codegen.empty() : this.started;
     }
 
@@ -117,7 +117,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<ContainerStateArgs> state;
 
-    public Output<ContainerStateArgs> getState() {
+    public Output<ContainerStateArgs> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

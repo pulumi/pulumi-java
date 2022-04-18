@@ -19,7 +19,7 @@ public final class GetScheduledAuditArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="scheduledAuditName", required=true)
       private final String scheduledAuditName;
 
-    public String getScheduledAuditName() {
+    public String scheduledAuditName() {
         return this.scheduledAuditName;
     }
 

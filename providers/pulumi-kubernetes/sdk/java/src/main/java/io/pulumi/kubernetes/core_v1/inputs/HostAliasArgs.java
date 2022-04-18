@@ -27,7 +27,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnames")
       private final @Nullable Output<List<String>> hostnames;
 
-    public Output<List<String>> getHostnames() {
+    public Output<List<String>> hostnames() {
         return this.hostnames == null ? Codegen.empty() : this.hostnames;
     }
 
@@ -38,7 +38,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 

@@ -27,7 +27,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -38,7 +38,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -49,7 +49,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -60,7 +60,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -71,7 +71,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

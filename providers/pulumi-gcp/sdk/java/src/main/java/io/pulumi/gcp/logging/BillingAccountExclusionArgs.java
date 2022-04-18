@@ -23,7 +23,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
 
@@ -34,7 +34,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -59,7 +59,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -70,7 +70,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

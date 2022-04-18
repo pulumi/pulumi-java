@@ -25,7 +25,7 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numShards", required=true)
       private final Output<Integer> numShards;
 
-    public Output<Integer> getNumShards() {
+    public Output<Integer> numShards() {
         return this.numShards;
     }
 

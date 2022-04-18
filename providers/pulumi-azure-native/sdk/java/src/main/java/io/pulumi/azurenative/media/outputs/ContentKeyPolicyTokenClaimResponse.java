@@ -34,14 +34,14 @@ public final class ContentKeyPolicyTokenClaimResponse {
      * Token claim type.
      * 
     */
-    public Optional<String> getClaimType() {
+    public Optional<String> claimType() {
         return Optional.ofNullable(this.claimType);
     }
     /**
      * Token claim value.
      * 
     */
-    public Optional<String> getClaimValue() {
+    public Optional<String> claimValue() {
         return Optional.ofNullable(this.claimValue);
     }
 

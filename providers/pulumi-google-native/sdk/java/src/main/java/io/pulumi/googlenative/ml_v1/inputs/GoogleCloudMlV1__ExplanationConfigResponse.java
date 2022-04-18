@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
     @Import(name="integratedGradientsAttribution", required=true)
       private final GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
 
-    public GoogleCloudMlV1__IntegratedGradientsAttributionResponse getIntegratedGradientsAttribution() {
+    public GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution() {
         return this.integratedGradientsAttribution;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
     @Import(name="sampledShapleyAttribution", required=true)
       private final GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
 
-    public GoogleCloudMlV1__SampledShapleyAttributionResponse getSampledShapleyAttribution() {
+    public GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution() {
         return this.sampledShapleyAttribution;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
     @Import(name="xraiAttribution", required=true)
       private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
 
-    public GoogleCloudMlV1__XraiAttributionResponse getXraiAttribution() {
+    public GoogleCloudMlV1__XraiAttributionResponse xraiAttribution() {
         return this.xraiAttribution;
     }
 

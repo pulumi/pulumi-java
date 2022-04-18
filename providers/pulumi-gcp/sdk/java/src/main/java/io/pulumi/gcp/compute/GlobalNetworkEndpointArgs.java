@@ -24,7 +24,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -35,7 +35,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="globalNetworkEndpointGroup", required=true)
       private final Output<String> globalNetworkEndpointGroup;
 
-    public Output<String> getGlobalNetworkEndpointGroup() {
+    public Output<String> globalNetworkEndpointGroup() {
         return this.globalNetworkEndpointGroup;
     }
 
@@ -46,7 +46,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -57,7 +57,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -69,7 +69,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

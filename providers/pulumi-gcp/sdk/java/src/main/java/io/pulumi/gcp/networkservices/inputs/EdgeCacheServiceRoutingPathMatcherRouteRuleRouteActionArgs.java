@@ -25,7 +25,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
     @Import(name="cdnPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs> cdnPolicy;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs> getCdnPolicy() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs> cdnPolicy() {
         return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
     @Import(name="corsPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> getCorsPolicy() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy() {
         return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
     }
 
@@ -49,7 +49,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
     @Import(name="urlRewrite")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> getUrlRewrite() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite() {
         return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
     }
 

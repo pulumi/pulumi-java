@@ -55,7 +55,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the parameter, unique within the form.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +71,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxPageEntryFulfillment> getEntryFulfillment() {
+    public Output</* @Nullable */ CxPageEntryFulfillment> entryFulfillment() {
         return this.entryFulfillment;
     }
     /**
@@ -87,7 +87,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxPageEventHandler>> getEventHandlers() {
+    public Output</* @Nullable */ List<CxPageEventHandler>> eventHandlers() {
         return this.eventHandlers;
     }
     /**
@@ -103,7 +103,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxPageForm> getForm() {
+    public Output</* @Nullable */ CxPageForm> form() {
         return this.form;
     }
     /**
@@ -139,7 +139,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> getLanguageCode() {
+    public Output</* @Nullable */ String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -155,7 +155,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * The unique identifier of this event handler.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +171,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -191,7 +191,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTransitionRouteGroups() {
+    public Output</* @Nullable */ List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
     /**
@@ -221,7 +221,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxPageTransitionRoute>> getTransitionRoutes() {
+    public Output</* @Nullable */ List<CxPageTransitionRoute>> transitionRoutes() {
         return this.transitionRoutes;
     }
 

@@ -25,7 +25,7 @@ public final class DeliveryRuleRequestBodyConditionResponse extends io.pulumi.re
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleRequestBodyConditionResponse extends io.pulumi.re
     @Import(name="parameters", required=true)
       private final RequestBodyMatchConditionParametersResponse parameters;
 
-    public RequestBodyMatchConditionParametersResponse getParameters() {
+    public RequestBodyMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

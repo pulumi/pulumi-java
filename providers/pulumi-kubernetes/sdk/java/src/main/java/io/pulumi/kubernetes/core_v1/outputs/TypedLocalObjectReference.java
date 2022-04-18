@@ -41,21 +41,21 @@ public final class TypedLocalObjectReference {
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
     */
-    public Optional<String> getApiGroup() {
+    public Optional<String> apiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
     /**
      * Kind is the type of resource being referenced
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name is the name of resource being referenced
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

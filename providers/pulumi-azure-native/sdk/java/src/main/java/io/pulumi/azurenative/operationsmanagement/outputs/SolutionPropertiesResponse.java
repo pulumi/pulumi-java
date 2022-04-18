@@ -48,28 +48,28 @@ public final class SolutionPropertiesResponse {
      * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
      * 
     */
-    public List<String> getContainedResources() {
+    public List<String> containedResources() {
         return this.containedResources == null ? List.of() : this.containedResources;
     }
     /**
      * The provisioning state for the solution.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
      * 
     */
-    public List<String> getReferencedResources() {
+    public List<String> referencedResources() {
         return this.referencedResources == null ? List.of() : this.referencedResources;
     }
     /**
      * The azure resourceId for the workspace where the solution will be deployed/enabled.
      * 
     */
-    public String getWorkspaceResourceId() {
+    public String workspaceResourceId() {
         return this.workspaceResourceId;
     }
 

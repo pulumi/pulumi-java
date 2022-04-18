@@ -85,14 +85,14 @@ public final class TriggerTriggerTemplate {
      * described at https://github.com/google/re2/wiki/Syntax
      * 
     */
-    public Optional<String> getBranchName() {
+    public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
     */
-    public Optional<String> getCommitSha() {
+    public Optional<String> commitSha() {
         return Optional.ofNullable(this.commitSha);
     }
     /**
@@ -107,14 +107,14 @@ public final class TriggerTriggerTemplate {
      * for the step's execution.
      * 
     */
-    public Optional<String> getDir() {
+    public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
     */
-    public Optional<Boolean> getInvertRegex() {
+    public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
     /**
@@ -122,14 +122,14 @@ public final class TriggerTriggerTemplate {
      * If omitted, the project ID requesting the build is assumed.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
      * Name of the Cloud Source Repository.
      * 
     */
-    public Optional<String> getRepoName() {
+    public Optional<String> repoName() {
         return Optional.ofNullable(this.repoName);
     }
     /**
@@ -138,7 +138,7 @@ public final class TriggerTriggerTemplate {
      * described at https://github.com/google/re2/wiki/Syntax
      * 
     */
-    public Optional<String> getTagName() {
+    public Optional<String> tagName() {
         return Optional.ofNullable(this.tagName);
     }
 

@@ -16,7 +16,7 @@ public final class SinkConfigurationResponse {
         this.kind = kind;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

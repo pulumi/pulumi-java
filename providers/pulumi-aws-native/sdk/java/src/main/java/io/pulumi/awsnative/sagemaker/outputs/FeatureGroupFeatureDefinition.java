@@ -21,10 +21,10 @@ public final class FeatureGroupFeatureDefinition {
         this.featureType = featureType;
     }
 
-    public String getFeatureName() {
+    public String featureName() {
         return this.featureName;
     }
-    public FeatureGroupFeatureDefinitionFeatureType getFeatureType() {
+    public FeatureGroupFeatureDefinitionFeatureType featureType() {
         return this.featureType;
     }
 

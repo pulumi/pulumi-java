@@ -19,7 +19,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

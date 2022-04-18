@@ -27,7 +27,7 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -38,7 +38,7 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="format")
       private final @Nullable Output<PublicKeyCertificateFormat> format;
 
-    public Output<PublicKeyCertificateFormat> getFormat() {
+    public Output<PublicKeyCertificateFormat> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 

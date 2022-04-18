@@ -22,10 +22,10 @@ public final class CertificateRevocationDetail {
         this.revocationTime = revocationTime;
     }
 
-    public Optional<String> getRevocationState() {
+    public Optional<String> revocationState() {
         return Optional.ofNullable(this.revocationState);
     }
-    public Optional<String> getRevocationTime() {
+    public Optional<String> revocationTime() {
         return Optional.ofNullable(this.revocationTime);
     }
 

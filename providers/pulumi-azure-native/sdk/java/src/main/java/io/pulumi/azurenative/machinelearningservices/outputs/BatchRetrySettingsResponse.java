@@ -35,14 +35,14 @@ public final class BatchRetrySettingsResponse {
      * Maximum retry count for a mini-batch
      * 
     */
-    public Optional<Integer> getMaxRetries() {
+    public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
      * Invocation timeout for a mini-batch, in ISO 8601 format.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

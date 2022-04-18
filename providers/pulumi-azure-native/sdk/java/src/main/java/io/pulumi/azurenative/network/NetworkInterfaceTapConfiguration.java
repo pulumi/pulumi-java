@@ -43,7 +43,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * @return The provisioning state of the network interface tap configuration resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -85,7 +85,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * @return Sub Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -99,7 +99,7 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
      * @return The reference to the Virtual Network Tap resource.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkTapResponse> getVirtualNetworkTap() {
+    public Output</* @Nullable */ VirtualNetworkTapResponse> virtualNetworkTap() {
         return this.virtualNetworkTap;
     }
 

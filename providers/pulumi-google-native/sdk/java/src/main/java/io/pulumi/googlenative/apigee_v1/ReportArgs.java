@@ -25,7 +25,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chartType")
       private final @Nullable Output<String> chartType;
 
-    public Output<String> getChartType() {
+    public Output<String> chartType() {
         return this.chartType == null ? Codegen.empty() : this.chartType;
     }
 
@@ -36,7 +36,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comments")
       private final @Nullable Output<List<String>> comments;
 
-    public Output<List<String>> getComments() {
+    public Output<List<String>> comments() {
         return this.comments == null ? Codegen.empty() : this.comments;
     }
 
@@ -47,7 +47,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
 
-    public Output<List<String>> getDimensions() {
+    public Output<List<String>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -58,7 +58,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -80,7 +80,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fromTime")
       private final @Nullable Output<String> fromTime;
 
-    public Output<String> getFromTime() {
+    public Output<String> fromTime() {
         return this.fromTime == null ? Codegen.empty() : this.fromTime;
     }
 
@@ -91,7 +91,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 
@@ -102,7 +102,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics", required=true)
       private final Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics() {
         return this.metrics;
     }
 
@@ -113,7 +113,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -124,14 +124,14 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offset")
       private final @Nullable Output<String> offset;
 
-    public Output<String> getOffset() {
+    public Output<String> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -142,7 +142,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
-    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> getProperties() {
+    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -153,7 +153,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortByCols")
       private final @Nullable Output<List<String>> sortByCols;
 
-    public Output<List<String>> getSortByCols() {
+    public Output<List<String>> sortByCols() {
         return this.sortByCols == null ? Codegen.empty() : this.sortByCols;
     }
 
@@ -164,7 +164,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
       private final @Nullable Output<String> sortOrder;
 
-    public Output<String> getSortOrder() {
+    public Output<String> sortOrder() {
         return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
     }
 
@@ -175,7 +175,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -186,7 +186,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 
@@ -197,7 +197,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toTime")
       private final @Nullable Output<String> toTime;
 
-    public Output<String> getToTime() {
+    public Output<String> toTime() {
         return this.toTime == null ? Codegen.empty() : this.toTime;
     }
 
@@ -208,7 +208,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topk")
       private final @Nullable Output<String> topk;
 
-    public Output<String> getTopk() {
+    public Output<String> topk() {
         return this.topk == null ? Codegen.empty() : this.topk;
     }
 

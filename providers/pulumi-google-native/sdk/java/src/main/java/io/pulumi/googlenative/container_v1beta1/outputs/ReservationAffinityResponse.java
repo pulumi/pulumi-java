@@ -40,21 +40,21 @@ public final class ReservationAffinityResponse {
      * Corresponds to the type of reservation consumption.
      * 
     */
-    public String getConsumeReservationType() {
+    public String consumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Corresponds to the label value(s) of reservation resource(s).
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

@@ -23,7 +23,7 @@ public final class PosixFilesystemResponse extends io.pulumi.resources.InvokeArg
     @Import(name="rootDirectory", required=true)
       private final String rootDirectory;
 
-    public String getRootDirectory() {
+    public String rootDirectory() {
         return this.rootDirectory;
     }
 

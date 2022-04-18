@@ -32,19 +32,19 @@ public final class GetServiceStatus {
         this.url = url;
     }
 
-    public List<GetServiceStatusCondition> getConditions() {
+    public List<GetServiceStatusCondition> conditions() {
         return this.conditions;
     }
-    public String getLatestCreatedRevisionName() {
+    public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
-    public String getLatestReadyRevisionName() {
+    public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
-    public Integer getObservedGeneration() {
+    public Integer observedGeneration() {
         return this.observedGeneration;
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

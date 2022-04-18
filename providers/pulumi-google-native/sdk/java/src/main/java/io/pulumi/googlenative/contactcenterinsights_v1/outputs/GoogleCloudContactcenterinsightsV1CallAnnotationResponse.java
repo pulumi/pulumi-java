@@ -96,70 +96,70 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
      * The boundary in the conversation where the annotation ends, inclusive.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationEndBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary() {
         return this.annotationEndBoundary;
     }
     /**
      * The boundary in the conversation where the annotation starts, inclusive.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getAnnotationStartBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary() {
         return this.annotationStartBoundary;
     }
     /**
      * The channel of the audio where the annotation occurs. For single-channel audio, this field is not populated.
      * 
     */
-    public Integer getChannelTag() {
+    public Integer channelTag() {
         return this.channelTag;
     }
     /**
      * Data specifying an entity mention.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse getEntityMentionData() {
+    public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData() {
         return this.entityMentionData;
     }
     /**
      * Data specifying a hold.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1HoldDataResponse getHoldData() {
+    public GoogleCloudContactcenterinsightsV1HoldDataResponse holdData() {
         return this.holdData;
     }
     /**
      * Data specifying an intent match.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse getIntentMatchData() {
+    public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData() {
         return this.intentMatchData;
     }
     /**
      * Data specifying an interruption.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1InterruptionDataResponse getInterruptionData() {
+    public GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData() {
         return this.interruptionData;
     }
     /**
      * Data specifying a phrase match.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse getPhraseMatchData() {
+    public GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData() {
         return this.phraseMatchData;
     }
     /**
      * Data specifying sentiment.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
     /**
      * Data specifying silence.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1SilenceDataResponse getSilenceData() {
+    public GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData() {
         return this.silenceData;
     }
 

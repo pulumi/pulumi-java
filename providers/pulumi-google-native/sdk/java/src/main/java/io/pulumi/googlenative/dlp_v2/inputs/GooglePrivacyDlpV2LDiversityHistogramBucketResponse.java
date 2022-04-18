@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
 
-    public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     @Import(name="sensitiveValueFrequencyLowerBound", required=true)
       private final String sensitiveValueFrequencyLowerBound;
 
-    public String getSensitiveValueFrequencyLowerBound() {
+    public String sensitiveValueFrequencyLowerBound() {
         return this.sensitiveValueFrequencyLowerBound;
     }
 
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     @Import(name="sensitiveValueFrequencyUpperBound", required=true)
       private final String sensitiveValueFrequencyUpperBound;
 
-    public String getSensitiveValueFrequencyUpperBound() {
+    public String sensitiveValueFrequencyUpperBound() {
         return this.sensitiveValueFrequencyUpperBound;
     }
 

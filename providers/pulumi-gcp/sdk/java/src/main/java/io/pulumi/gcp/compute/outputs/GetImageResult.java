@@ -159,45 +159,45 @@ public final class GetImageResult {
      * The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
      * 
     */
-    public Integer getArchiveSizeBytes() {
+    public Integer archiveSizeBytes() {
         return this.archiveSizeBytes;
     }
     /**
      * The creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this image.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The size of the image when restored onto a persistent disk in gigabytes.
      * 
     */
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * The family name of the image.
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -206,59 +206,59 @@ public final class GetImageResult {
      * that protects this image.
      * 
     */
-    public String getImageEncryptionKeySha256() {
+    public String imageEncryptionKeySha256() {
         return this.imageEncryptionKeySha256;
     }
     /**
      * The unique identifier for the image.
      * 
     */
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
     /**
      * A fingerprint for the labels being applied to this image.
      * 
     */
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
      * A map of labels applied to this image.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * A list of applicable license URI.
      * 
     */
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
     /**
      * The name of the image.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The URI of the image.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The URL of the source disk used to create this image.
      * 
     */
-    public String getSourceDisk() {
+    public String sourceDisk() {
         return this.sourceDisk;
     }
     /**
@@ -267,28 +267,28 @@ public final class GetImageResult {
      * that protects this image.
      * 
     */
-    public String getSourceDiskEncryptionKeySha256() {
+    public String sourceDiskEncryptionKeySha256() {
         return this.sourceDiskEncryptionKeySha256;
     }
     /**
      * The ID value of the disk used to create this image.
      * 
     */
-    public String getSourceDiskId() {
+    public String sourceDiskId() {
         return this.sourceDiskId;
     }
     /**
      * The ID value of the image used to create this image.
      * 
     */
-    public String getSourceImageId() {
+    public String sourceImageId() {
         return this.sourceImageId;
     }
     /**
      * The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

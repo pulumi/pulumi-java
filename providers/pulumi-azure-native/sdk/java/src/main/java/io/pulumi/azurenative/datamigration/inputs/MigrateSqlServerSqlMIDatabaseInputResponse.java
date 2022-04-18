@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
     @Import(name="backupFilePaths")
       private final @Nullable List<String> backupFilePaths;
 
-    public List<String> getBackupFilePaths() {
+    public List<String> backupFilePaths() {
         return this.backupFilePaths == null ? List.of() : this.backupFilePaths;
     }
 
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
     @Import(name="backupFileShare")
       private final @Nullable FileShareResponse backupFileShare;
 
-    public Optional<FileShareResponse> getBackupFileShare() {
+    public Optional<FileShareResponse> backupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
     }
 
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends io.pulumi.
     @Import(name="restoreDatabaseName", required=true)
       private final String restoreDatabaseName;
 
-    public String getRestoreDatabaseName() {
+    public String restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
 

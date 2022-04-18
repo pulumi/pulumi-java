@@ -26,13 +26,13 @@ public final class RuleGroupStatefulRule {
         this.ruleOptions = ruleOptions;
     }
 
-    public RuleGroupStatefulRuleAction getAction() {
+    public RuleGroupStatefulRuleAction action() {
         return this.action;
     }
-    public RuleGroupHeader getHeader() {
+    public RuleGroupHeader header() {
         return this.header;
     }
-    public List<RuleGroupRuleOption> getRuleOptions() {
+    public List<RuleGroupRuleOption> ruleOptions() {
         return this.ruleOptions;
     }
 

@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse extends io.pulum
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse extends io.pulum
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

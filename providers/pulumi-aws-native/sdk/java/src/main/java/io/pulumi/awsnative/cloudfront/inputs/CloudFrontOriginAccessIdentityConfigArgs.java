@@ -17,7 +17,7 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     @Import(name="comment", required=true)
       private final Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment;
     }
 

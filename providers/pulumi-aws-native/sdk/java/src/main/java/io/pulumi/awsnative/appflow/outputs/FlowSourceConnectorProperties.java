@@ -75,49 +75,49 @@ public final class FlowSourceConnectorProperties {
         this.zendesk = zendesk;
     }
 
-    public Optional<FlowAmplitudeSourceProperties> getAmplitude() {
+    public Optional<FlowAmplitudeSourceProperties> amplitude() {
         return Optional.ofNullable(this.amplitude);
     }
-    public Optional<FlowDatadogSourceProperties> getDatadog() {
+    public Optional<FlowDatadogSourceProperties> datadog() {
         return Optional.ofNullable(this.datadog);
     }
-    public Optional<FlowDynatraceSourceProperties> getDynatrace() {
+    public Optional<FlowDynatraceSourceProperties> dynatrace() {
         return Optional.ofNullable(this.dynatrace);
     }
-    public Optional<FlowGoogleAnalyticsSourceProperties> getGoogleAnalytics() {
+    public Optional<FlowGoogleAnalyticsSourceProperties> googleAnalytics() {
         return Optional.ofNullable(this.googleAnalytics);
     }
-    public Optional<FlowInforNexusSourceProperties> getInforNexus() {
+    public Optional<FlowInforNexusSourceProperties> inforNexus() {
         return Optional.ofNullable(this.inforNexus);
     }
-    public Optional<FlowMarketoSourceProperties> getMarketo() {
+    public Optional<FlowMarketoSourceProperties> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<FlowS3SourceProperties> getS3() {
+    public Optional<FlowS3SourceProperties> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<FlowSAPODataSourceProperties> getSAPOData() {
+    public Optional<FlowSAPODataSourceProperties> sAPOData() {
         return Optional.ofNullable(this.sAPOData);
     }
-    public Optional<FlowSalesforceSourceProperties> getSalesforce() {
+    public Optional<FlowSalesforceSourceProperties> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<FlowServiceNowSourceProperties> getServiceNow() {
+    public Optional<FlowServiceNowSourceProperties> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<FlowSingularSourceProperties> getSingular() {
+    public Optional<FlowSingularSourceProperties> singular() {
         return Optional.ofNullable(this.singular);
     }
-    public Optional<FlowSlackSourceProperties> getSlack() {
+    public Optional<FlowSlackSourceProperties> slack() {
         return Optional.ofNullable(this.slack);
     }
-    public Optional<FlowTrendmicroSourceProperties> getTrendmicro() {
+    public Optional<FlowTrendmicroSourceProperties> trendmicro() {
         return Optional.ofNullable(this.trendmicro);
     }
-    public Optional<FlowVeevaSourceProperties> getVeeva() {
+    public Optional<FlowVeevaSourceProperties> veeva() {
         return Optional.ofNullable(this.veeva);
     }
-    public Optional<FlowZendeskSourceProperties> getZendesk() {
+    public Optional<FlowZendeskSourceProperties> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

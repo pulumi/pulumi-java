@@ -30,7 +30,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="appEngine")
       private final @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
 
-    public Output<NetworkEndpointGroupAppEngineArgs> getAppEngine() {
+    public Output<NetworkEndpointGroupAppEngineArgs> appEngine() {
         return this.appEngine == null ? Codegen.empty() : this.appEngine;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="cloudFunction")
       private final @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
-    public Output<NetworkEndpointGroupCloudFunctionArgs> getCloudFunction() {
+    public Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction() {
         return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
@@ -63,7 +63,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="cloudRun")
       private final @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
 
-    public Output<NetworkEndpointGroupCloudRunArgs> getCloudRun() {
+    public Output<NetworkEndpointGroupCloudRunArgs> cloudRun() {
         return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
     }
 
@@ -74,7 +74,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="defaultPort")
       private final @Nullable Output<Integer> defaultPort;
 
-    public Output<Integer> getDefaultPort() {
+    public Output<Integer> defaultPort() {
         return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
     }
 
@@ -85,7 +85,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -96,7 +96,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -118,14 +118,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="networkEndpointType")
       private final @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
-    public Output<NetworkEndpointGroupNetworkEndpointType> getNetworkEndpointType() {
+    public Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType() {
         return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -136,14 +136,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="pscTargetService")
       private final @Nullable Output<String> pscTargetService;
 
-    public Output<String> getPscTargetService() {
+    public Output<String> pscTargetService() {
         return this.pscTargetService == null ? Codegen.empty() : this.pscTargetService;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -154,7 +154,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="serverlessDeployment")
       private final @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
 
-    public Output<NetworkEndpointGroupServerlessDeploymentArgs> getServerlessDeployment() {
+    public Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment() {
         return this.serverlessDeployment == null ? Codegen.empty() : this.serverlessDeployment;
     }
 
@@ -165,7 +165,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -176,14 +176,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<NetworkEndpointGroupType> type;
 
-    public Output<NetworkEndpointGroupType> getType() {
+    public Output<NetworkEndpointGroupType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

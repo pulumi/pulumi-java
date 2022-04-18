@@ -38,7 +38,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the SSO Instance.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -52,7 +52,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
     /**
@@ -66,7 +66,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, `f81d4fae-7dec-11d0-a765-00a0c91e6bf6`).
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -80,7 +80,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return The entity type for which the assignment will be created. Valid values: `USER`, `GROUP`.
      * 
      */
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
     /**
@@ -94,7 +94,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return An AWS account identifier, typically a 10-12 digit string.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -108,7 +108,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @return The entity type for which the assignment will be created. Valid values: `AWS_ACCOUNT`.
      * 
      */
-    public Output</* @Nullable */ String> getTargetType() {
+    public Output</* @Nullable */ String> targetType() {
         return this.targetType;
     }
 

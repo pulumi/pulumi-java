@@ -25,7 +25,7 @@ public final class ServiceProviderParameterResponseMetadata extends io.pulumi.re
     @Import(name="constraints")
       private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
-    public Optional<ServiceProviderParameterResponseConstraints> getConstraints() {
+    public Optional<ServiceProviderParameterResponseConstraints> constraints() {
         return this.constraints == null ? Optional.empty() : Optional.ofNullable(this.constraints);
     }
 

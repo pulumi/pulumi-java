@@ -26,7 +26,7 @@ public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resourc
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

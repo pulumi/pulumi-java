@@ -24,7 +24,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
     @Import(name="pullDeps", required=true)
       private final Boolean pullDeps;
 
-    public Boolean getPullDeps() {
+    public Boolean pullDeps() {
         return this.pullDeps;
     }
 
@@ -35,7 +35,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends io.pulumi.
     @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;
 
-    public OSPolicyResourceFileResponse getSource() {
+    public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 

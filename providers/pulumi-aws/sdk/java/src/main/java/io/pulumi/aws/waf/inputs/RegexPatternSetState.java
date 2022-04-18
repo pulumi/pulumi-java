@@ -23,7 +23,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="regexPatternStrings")
       private final @Nullable Output<List<String>> regexPatternStrings;
 
-    public Output<List<String>> getRegexPatternStrings() {
+    public Output<List<String>> regexPatternStrings() {
         return this.regexPatternStrings == null ? Codegen.empty() : this.regexPatternStrings;
     }
 

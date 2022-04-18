@@ -23,7 +23,7 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
     @Import(name="certificate", required=true)
       private final String certificate;
 
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
 
@@ -34,7 +34,7 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends io.pu
     @Import(name="privateKey", required=true)
       private final String privateKey;
 
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
 

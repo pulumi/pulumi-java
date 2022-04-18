@@ -31,7 +31,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="artifacts")
       private final @Nullable List<String> artifacts;
 
-    public List<String> getArtifacts() {
+    public List<String> artifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
 
@@ -42,7 +42,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="catalogDigest")
       private final @Nullable String catalogDigest;
 
-    public Optional<String> getCatalogDigest() {
+    public Optional<String> catalogDigest() {
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
     }
 
@@ -53,7 +53,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="pipelineResourceId")
       private final @Nullable String pipelineResourceId;
 
-    public Optional<String> getPipelineResourceId() {
+    public Optional<String> pipelineResourceId() {
         return this.pipelineResourceId == null ? Optional.empty() : Optional.ofNullable(this.pipelineResourceId);
     }
 
@@ -64,7 +64,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="source")
       private final @Nullable PipelineRunSourcePropertiesResponse source;
 
-    public Optional<PipelineRunSourcePropertiesResponse> getSource() {
+    public Optional<PipelineRunSourcePropertiesResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -75,7 +75,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="target")
       private final @Nullable PipelineRunTargetPropertiesResponse target;
 
-    public Optional<PipelineRunTargetPropertiesResponse> getTarget() {
+    public Optional<PipelineRunTargetPropertiesResponse> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

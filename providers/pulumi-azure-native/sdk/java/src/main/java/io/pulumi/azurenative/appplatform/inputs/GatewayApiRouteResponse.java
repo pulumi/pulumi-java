@@ -28,7 +28,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="filters")
       private final @Nullable List<String> filters;
 
-    public List<String> getFilters() {
+    public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -50,7 +50,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="order")
       private final @Nullable Integer order;
 
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
@@ -61,7 +61,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="predicates")
       private final @Nullable List<String> predicates;
 
-    public List<String> getPredicates() {
+    public List<String> predicates() {
         return this.predicates == null ? List.of() : this.predicates;
     }
 
@@ -72,7 +72,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ssoEnabled")
       private final @Nullable Boolean ssoEnabled;
 
-    public Optional<Boolean> getSsoEnabled() {
+    public Optional<Boolean> ssoEnabled() {
         return this.ssoEnabled == null ? Optional.empty() : Optional.ofNullable(this.ssoEnabled);
     }
 
@@ -83,7 +83,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tags")
       private final @Nullable List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 
@@ -94,7 +94,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
@@ -105,7 +105,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tokenRelay")
       private final @Nullable Boolean tokenRelay;
 
-    public Optional<Boolean> getTokenRelay() {
+    public Optional<Boolean> tokenRelay() {
         return this.tokenRelay == null ? Optional.empty() : Optional.ofNullable(this.tokenRelay);
     }
 
@@ -116,7 +116,7 @@ public final class GatewayApiRouteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

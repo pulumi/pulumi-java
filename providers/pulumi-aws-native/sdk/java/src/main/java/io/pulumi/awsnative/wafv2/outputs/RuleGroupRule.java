@@ -48,29 +48,29 @@ public final class RuleGroupRule {
         this.visibilityConfig = visibilityConfig;
     }
 
-    public Optional<RuleGroupRuleAction> getAction() {
+    public Optional<RuleGroupRuleAction> action() {
         return Optional.ofNullable(this.action);
     }
-    public Optional<RuleGroupCaptchaConfig> getCaptchaConfig() {
+    public Optional<RuleGroupCaptchaConfig> captchaConfig() {
         return Optional.ofNullable(this.captchaConfig);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * Collection of Rule Labels.
      * 
     */
-    public List<RuleGroupLabel> getRuleLabels() {
+    public List<RuleGroupLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
-    public RuleGroupStatement getStatement() {
+    public RuleGroupStatement statement() {
         return this.statement;
     }
-    public RuleGroupVisibilityConfig getVisibilityConfig() {
+    public RuleGroupVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }
 

@@ -146,119 +146,119 @@ public final class GetWorkspaceResult {
      * The workspace provider authorizations.
      * 
     */
-    public List<WorkspaceProviderAuthorizationResponse> getAuthorizations() {
+    public List<WorkspaceProviderAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
     */
-    public Optional<CreatedByResponse> getCreatedBy() {
+    public Optional<CreatedByResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * Specifies the date and time when the workspace is created.
      * 
     */
-    public String getCreatedDateTime() {
+    public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The managed resource group Id.
      * 
     */
-    public String getManagedResourceGroupId() {
+    public String managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The workspace's custom parameters.
      * 
     */
-    public Optional<WorkspaceCustomParametersResponse> getParameters() {
+    public Optional<WorkspaceCustomParametersResponse> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * The workspace provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the resource.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The details of Managed Identity of Storage Account
      * 
     */
-    public Optional<ManagedIdentityConfigurationResponse> getStorageAccountIdentity() {
+    public Optional<ManagedIdentityConfigurationResponse> storageAccountIdentity() {
         return Optional.ofNullable(this.storageAccountIdentity);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The blob URI where the UI definition file is located.
      * 
     */
-    public Optional<String> getUiDefinitionUri() {
+    public Optional<String> uiDefinitionUri() {
         return Optional.ofNullable(this.uiDefinitionUri);
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
     */
-    public Optional<CreatedByResponse> getUpdatedBy() {
+    public Optional<CreatedByResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The unique identifier of the databricks workspace in databricks control plane.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
      * 
     */
-    public String getWorkspaceUrl() {
+    public String workspaceUrl() {
         return this.workspaceUrl;
     }
 

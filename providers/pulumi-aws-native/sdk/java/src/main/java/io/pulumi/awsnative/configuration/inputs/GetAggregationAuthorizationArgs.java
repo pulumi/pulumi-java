@@ -19,7 +19,7 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
     @Import(name="aggregationAuthorizationArn", required=true)
       private final String aggregationAuthorizationArn;
 
-    public String getAggregationAuthorizationArn() {
+    public String aggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
 

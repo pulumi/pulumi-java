@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi
     @Import(name="condition", required=true)
       private final GooglePrivacyDlpV2RecordConditionResponse condition;
 
-    public GooglePrivacyDlpV2RecordConditionResponse getCondition() {
+    public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
     }
 

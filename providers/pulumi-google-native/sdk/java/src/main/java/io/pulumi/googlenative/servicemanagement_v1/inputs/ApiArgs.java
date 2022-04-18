@@ -32,7 +32,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methods")
       private final @Nullable Output<List<MethodArgs>> methods;
 
-    public Output<List<MethodArgs>> getMethods() {
+    public Output<List<MethodArgs>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
@@ -43,7 +43,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mixins")
       private final @Nullable Output<List<MixinArgs>> mixins;
 
-    public Output<List<MixinArgs>> getMixins() {
+    public Output<List<MixinArgs>> mixins() {
         return this.mixins == null ? Codegen.empty() : this.mixins;
     }
 
@@ -54,7 +54,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
+    public Output<List<OptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -76,7 +76,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> getSourceContext() {
+    public Output<SourceContextArgs> sourceContext() {
         return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
     }
 
@@ -87,7 +87,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
       private final @Nullable Output<ApiSyntax> syntax;
 
-    public Output<ApiSyntax> getSyntax() {
+    public Output<ApiSyntax> syntax() {
         return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
@@ -98,7 +98,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

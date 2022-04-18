@@ -26,7 +26,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiEndpoint", required=true)
       private final ApiEndpointHandlerResponse apiEndpoint;
 
-    public ApiEndpointHandlerResponse getApiEndpoint() {
+    public ApiEndpointHandlerResponse apiEndpoint() {
         return this.apiEndpoint;
     }
 
@@ -37,7 +37,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authFailAction", required=true)
       private final String authFailAction;
 
-    public String getAuthFailAction() {
+    public String authFailAction() {
         return this.authFailAction;
     }
 
@@ -48,7 +48,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="login", required=true)
       private final String login;
 
-    public String getLogin() {
+    public String login() {
         return this.login;
     }
 
@@ -59,7 +59,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="redirectHttpResponseCode", required=true)
       private final String redirectHttpResponseCode;
 
-    public String getRedirectHttpResponseCode() {
+    public String redirectHttpResponseCode() {
         return this.redirectHttpResponseCode;
     }
 
@@ -70,7 +70,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="script", required=true)
       private final ScriptHandlerResponse script;
 
-    public ScriptHandlerResponse getScript() {
+    public ScriptHandlerResponse script() {
         return this.script;
     }
 
@@ -81,7 +81,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="securityLevel", required=true)
       private final String securityLevel;
 
-    public String getSecurityLevel() {
+    public String securityLevel() {
         return this.securityLevel;
     }
 
@@ -92,7 +92,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="staticFiles", required=true)
       private final StaticFilesHandlerResponse staticFiles;
 
-    public StaticFilesHandlerResponse getStaticFiles() {
+    public StaticFilesHandlerResponse staticFiles() {
         return this.staticFiles;
     }
 
@@ -103,7 +103,7 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="urlRegex", required=true)
       private final String urlRegex;
 
-    public String getUrlRegex() {
+    public String urlRegex() {
         return this.urlRegex;
     }
 

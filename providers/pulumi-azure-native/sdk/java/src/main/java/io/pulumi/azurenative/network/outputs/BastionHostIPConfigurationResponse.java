@@ -77,56 +77,56 @@ public final class BastionHostIPConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Private IP allocation method.
      * 
     */
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the bastion host IP configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference of the PublicIP resource.
      * 
     */
-    public SubResourceResponse getPublicIPAddress() {
+    public SubResourceResponse publicIPAddress() {
         return this.publicIPAddress;
     }
     /**
      * Reference of the subnet resource.
      * 
     */
-    public SubResourceResponse getSubnet() {
+    public SubResourceResponse subnet() {
         return this.subnet;
     }
     /**
      * Ip configuration type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

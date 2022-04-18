@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     @Import(name="requiredFindingLabelKeys")
       private final @Nullable Output<List<String>> requiredFindingLabelKeys;
 
-    public Output<List<String>> getRequiredFindingLabelKeys() {
+    public Output<List<String>> requiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys == null ? Codegen.empty() : this.requiredFindingLabelKeys;
     }
 
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     @Import(name="tableOptions")
       private final @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
-    public Output<GooglePrivacyDlpV2TableOptionsArgs> getTableOptions() {
+    public Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions() {
         return this.tableOptions == null ? Codegen.empty() : this.tableOptions;
     }
 

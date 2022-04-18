@@ -28,7 +28,7 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -39,7 +39,7 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
     @Import(name="monitoringOutputs", required=true)
       private final Output<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs;
 
-    public Output<List<MonitoringScheduleMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 

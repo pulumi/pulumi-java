@@ -24,13 +24,13 @@ public final class GetAcceleratorAttribute {
         this.flowLogsS3Prefix = flowLogsS3Prefix;
     }
 
-    public Boolean getFlowLogsEnabled() {
+    public Boolean flowLogsEnabled() {
         return this.flowLogsEnabled;
     }
-    public String getFlowLogsS3Bucket() {
+    public String flowLogsS3Bucket() {
         return this.flowLogsS3Bucket;
     }
-    public String getFlowLogsS3Prefix() {
+    public String flowLogsS3Prefix() {
         return this.flowLogsS3Prefix;
     }
 

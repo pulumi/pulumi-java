@@ -23,7 +23,7 @@ public final class InstanceContainerImageGetArgs extends io.pulumi.resources.Res
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceContainerImageGetArgs extends io.pulumi.resources.Res
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

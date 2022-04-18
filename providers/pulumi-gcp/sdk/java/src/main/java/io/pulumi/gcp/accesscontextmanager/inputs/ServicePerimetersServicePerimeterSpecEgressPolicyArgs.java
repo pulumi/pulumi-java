@@ -24,7 +24,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyArgs extends
     @Import(name="egressFrom")
       private final @Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromArgs> egressFrom;
 
-    public Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromArgs> getEgressFrom() {
+    public Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromArgs> egressFrom() {
         return this.egressFrom == null ? Codegen.empty() : this.egressFrom;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyArgs extends
     @Import(name="egressTo")
       private final @Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToArgs> egressTo;
 
-    public Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToArgs> getEgressTo() {
+    public Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToArgs> egressTo() {
         return this.egressTo == null ? Codegen.empty() : this.egressTo;
     }
 

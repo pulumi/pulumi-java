@@ -194,161 +194,161 @@ public final class GetSubnetResult {
      * The address prefix for the subnet.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * List of address prefixes for the subnet.
      * 
     */
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
      * Application gateway IP configurations of virtual network resource.
      * 
     */
-    public List<ApplicationGatewayIPConfigurationResponse> getApplicationGatewayIpConfigurations() {
+    public List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations == null ? List.of() : this.applicationGatewayIpConfigurations;
     }
     /**
      * An array of references to the delegations on the subnet.
      * 
     */
-    public List<DelegationResponse> getDelegations() {
+    public List<DelegationResponse> delegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Array of IpAllocation which reference this subnet.
      * 
     */
-    public List<SubResourceResponse> getIpAllocations() {
+    public List<SubResourceResponse> ipAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
     /**
      * Array of IP configuration profiles which reference this subnet.
      * 
     */
-    public List<IPConfigurationProfileResponse> getIpConfigurationProfiles() {
+    public List<IPConfigurationProfileResponse> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
     /**
      * An array of references to the network interface IP configurations using subnet.
      * 
     */
-    public List<IPConfigurationResponse> getIpConfigurations() {
+    public List<IPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Nat gateway associated with this subnet.
      * 
     */
-    public Optional<SubResourceResponse> getNatGateway() {
+    public Optional<SubResourceResponse> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
      * The reference to the NetworkSecurityGroup resource.
      * 
     */
-    public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
+    public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
      * 
     */
-    public Optional<String> getPrivateEndpointNetworkPolicies() {
+    public Optional<String> privateEndpointNetworkPolicies() {
         return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
     /**
      * An array of references to private endpoints.
      * 
     */
-    public List<PrivateEndpointResponse> getPrivateEndpoints() {
+    public List<PrivateEndpointResponse> privateEndpoints() {
         return this.privateEndpoints;
     }
     /**
      * Enable or Disable apply network policies on private link service in the subnet.
      * 
     */
-    public Optional<String> getPrivateLinkServiceNetworkPolicies() {
+    public Optional<String> privateLinkServiceNetworkPolicies() {
         return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
     /**
      * The provisioning state of the subnet resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
      * 
     */
-    public String getPurpose() {
+    public String purpose() {
         return this.purpose;
     }
     /**
      * An array of references to the external resources using subnet.
      * 
     */
-    public List<ResourceNavigationLinkResponse> getResourceNavigationLinks() {
+    public List<ResourceNavigationLinkResponse> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
     /**
      * The reference to the RouteTable resource.
      * 
     */
-    public Optional<RouteTableResponse> getRouteTable() {
+    public Optional<RouteTableResponse> routeTable() {
         return Optional.ofNullable(this.routeTable);
     }
     /**
      * An array of references to services injecting into this subnet.
      * 
     */
-    public List<ServiceAssociationLinkResponse> getServiceAssociationLinks() {
+    public List<ServiceAssociationLinkResponse> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
     /**
      * An array of service endpoint policies.
      * 
     */
-    public List<ServiceEndpointPolicyResponse> getServiceEndpointPolicies() {
+    public List<ServiceEndpointPolicyResponse> serviceEndpointPolicies() {
         return this.serviceEndpointPolicies == null ? List.of() : this.serviceEndpointPolicies;
     }
     /**
      * An array of service endpoints.
      * 
     */
-    public List<ServiceEndpointPropertiesFormatResponse> getServiceEndpoints() {
+    public List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints() {
         return this.serviceEndpoints == null ? List.of() : this.serviceEndpoints;
     }
     /**
      * Resource type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

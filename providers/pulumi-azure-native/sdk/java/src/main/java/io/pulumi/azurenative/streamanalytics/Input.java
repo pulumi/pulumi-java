@@ -45,7 +45,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public Output<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> getProperties() {
+    public Output<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties() {
         return this.properties;
     }
     /**
@@ -73,7 +73,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

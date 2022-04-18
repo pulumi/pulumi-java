@@ -19,14 +19,14 @@ public final class InstanceFromTemplateAdvancedMachineFeaturesArgs extends io.pu
     @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Output<Boolean> getEnableNestedVirtualization() {
+    public Output<Boolean> enableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
     }
 
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> getThreadsPerCore() {
+    public Output<Integer> threadsPerCore() {
         return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 

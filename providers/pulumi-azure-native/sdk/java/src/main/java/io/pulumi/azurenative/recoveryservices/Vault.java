@@ -47,7 +47,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Optional ETag.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +61,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityDataResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityDataResponse> identity() {
         return this.identity;
     }
     /**
@@ -75,7 +75,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -89,7 +89,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Resource name associated with the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Properties of the vault.
      * 
      */
-    public Output<VaultPropertiesResponse> getProperties() {
+    public Output<VaultPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -117,7 +117,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Identifies the unique system identifier for each Azure resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -131,7 +131,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -145,7 +145,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +159,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

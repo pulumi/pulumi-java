@@ -80,56 +80,56 @@ public final class GetLoggerResult {
      * Instrumentation key for applicationInsights logger.
      * 
     */
-    public Map<String,String> getCredentials() {
+    public Map<String,String> credentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
      * Logger description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Whether records are buffered in the logger before publishing. Default is assumed to be true.
      * 
     */
-    public Optional<Boolean> getIsBuffered() {
+    public Optional<Boolean> isBuffered() {
         return Optional.ofNullable(this.isBuffered);
     }
     /**
      * Logger type.
      * 
     */
-    public String getLoggerType() {
+    public String loggerType() {
         return this.loggerType;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class VertexAIParametersResponse extends io.pulumi.resources.Invoke
     @Import(name="env", required=true)
       private final Map<String,String> env;
 
-    public Map<String,String> getEnv() {
+    public Map<String,String> env() {
         return this.env;
     }
 
@@ -35,7 +35,7 @@ public final class VertexAIParametersResponse extends io.pulumi.resources.Invoke
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 

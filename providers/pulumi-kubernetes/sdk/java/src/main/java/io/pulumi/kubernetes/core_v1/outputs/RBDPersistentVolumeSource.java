@@ -79,56 +79,56 @@ public final class RBDPersistentVolumeSource {
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public Optional<String> getKeyring() {
+    public Optional<String> keyring() {
         return Optional.ofNullable(this.keyring);
     }
     /**
      * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public List<String> getMonitors() {
+    public List<String> monitors() {
         return this.monitors;
     }
     /**
      * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public Optional<String> getPool() {
+    public Optional<String> pool() {
         return Optional.ofNullable(this.pool);
     }
     /**
      * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public Optional<SecretReference> getSecretRef() {
+    public Optional<SecretReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
     */
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
 

@@ -24,7 +24,7 @@ public final class ExpressRouteConnectionIdResponse {
      * The ID of the ExpressRouteConnection.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

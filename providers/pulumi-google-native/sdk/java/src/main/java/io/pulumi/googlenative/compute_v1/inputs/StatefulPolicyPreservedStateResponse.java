@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
     @Import(name="disks", required=true)
       private final Map<String,String> disks;
 
-    public Map<String,String> getDisks() {
+    public Map<String,String> disks() {
         return this.disks;
     }
 

@@ -32,7 +32,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The Bandwidth for the link.
      * 
      */
-    public Output<LinkBandwidth> getBandwidth() {
+    public Output<LinkBandwidth> bandwidth() {
         return this.bandwidth;
     }
     /**
@@ -46,7 +46,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The description of the link.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -74,7 +74,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the link.
      * 
      */
-    public Output<String> getLinkArn() {
+    public Output<String> linkArn() {
         return this.linkArn;
     }
     /**
@@ -88,7 +88,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The ID of the link.
      * 
      */
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
     /**
@@ -102,7 +102,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The provider of the link.
      * 
      */
-    public Output</* @Nullable */ String> getProvider() {
+    public Output</* @Nullable */ String> provider() {
         return this.provider;
     }
     /**
@@ -116,7 +116,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The ID of the site
      * 
      */
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
     /**
@@ -130,7 +130,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The tags for the link.
      * 
      */
-    public Output</* @Nullable */ List<LinkTag>> getTags() {
+    public Output</* @Nullable */ List<LinkTag>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * @return The type of the link.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

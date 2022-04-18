@@ -80,56 +80,56 @@ public final class GetReportByResourceGroupNameResult {
      * Has definition for the report.
      * 
     */
-    public ReportDefinitionResponse getDefinition() {
+    public ReportDefinitionResponse definition() {
         return this.definition;
     }
     /**
      * Has delivery information for the report.
      * 
     */
-    public ReportDeliveryInfoResponse getDeliveryInfo() {
+    public ReportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * The format of the report being delivered.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Has schedule information for the report.
      * 
     */
-    public Optional<ReportScheduleResponse> getSchedule() {
+    public Optional<ReportScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

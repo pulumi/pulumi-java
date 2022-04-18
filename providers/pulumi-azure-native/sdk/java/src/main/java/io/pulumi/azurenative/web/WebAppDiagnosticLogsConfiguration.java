@@ -42,7 +42,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Application logs configuration.
      * 
      */
-    public Output</* @Nullable */ ApplicationLogsConfigResponse> getApplicationLogs() {
+    public Output</* @Nullable */ ApplicationLogsConfigResponse> applicationLogs() {
         return this.applicationLogs;
     }
     /**
@@ -56,7 +56,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Detailed error messages configuration.
      * 
      */
-    public Output</* @Nullable */ EnabledConfigResponse> getDetailedErrorMessages() {
+    public Output</* @Nullable */ EnabledConfigResponse> detailedErrorMessages() {
         return this.detailedErrorMessages;
     }
     /**
@@ -70,7 +70,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Failed requests tracing configuration.
      * 
      */
-    public Output</* @Nullable */ EnabledConfigResponse> getFailedRequestsTracing() {
+    public Output</* @Nullable */ EnabledConfigResponse> failedRequestsTracing() {
         return this.failedRequestsTracing;
     }
     /**
@@ -84,7 +84,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return HTTP logs configuration.
      * 
      */
-    public Output</* @Nullable */ HttpLogsConfigResponse> getHttpLogs() {
+    public Output</* @Nullable */ HttpLogsConfigResponse> httpLogs() {
         return this.httpLogs;
     }
     /**
@@ -98,7 +98,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -112,7 +112,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

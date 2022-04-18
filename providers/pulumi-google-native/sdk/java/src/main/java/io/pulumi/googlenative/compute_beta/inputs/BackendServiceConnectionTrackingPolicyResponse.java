@@ -25,7 +25,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
     @Import(name="connectionPersistenceOnUnhealthyBackends", required=true)
       private final String connectionPersistenceOnUnhealthyBackends;
 
-    public String getConnectionPersistenceOnUnhealthyBackends() {
+    public String connectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends;
     }
 
@@ -36,7 +36,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
     @Import(name="enableStrongAffinity", required=true)
       private final Boolean enableStrongAffinity;
 
-    public Boolean getEnableStrongAffinity() {
+    public Boolean enableStrongAffinity() {
         return this.enableStrongAffinity;
     }
 
@@ -47,7 +47,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
     @Import(name="idleTimeoutSec", required=true)
       private final Integer idleTimeoutSec;
 
-    public Integer getIdleTimeoutSec() {
+    public Integer idleTimeoutSec() {
         return this.idleTimeoutSec;
     }
 
@@ -58,7 +58,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
     @Import(name="trackingMode", required=true)
       private final String trackingMode;
 
-    public String getTrackingMode() {
+    public String trackingMode() {
         return this.trackingMode;
     }
 

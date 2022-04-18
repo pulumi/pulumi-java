@@ -28,7 +28,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
     @Import(name="recommendationType", required=true)
       private final Output<Either<String,RecommendationType>> recommendationType;
 
-    public Output<Either<String,RecommendationType>> getRecommendationType() {
+    public Output<Either<String,RecommendationType>> recommendationType() {
         return this.recommendationType;
     }
 
@@ -39,7 +39,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
     @Import(name="status", required=true)
       private final Output<Either<String,RecommendationConfigStatus>> status;
 
-    public Output<Either<String,RecommendationConfigStatus>> getStatus() {
+    public Output<Either<String,RecommendationConfigStatus>> status() {
         return this.status;
     }
 

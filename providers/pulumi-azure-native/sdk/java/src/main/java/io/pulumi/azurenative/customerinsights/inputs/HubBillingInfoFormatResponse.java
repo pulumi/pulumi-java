@@ -26,7 +26,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
     @Import(name="maxUnits")
       private final @Nullable Integer maxUnits;
 
-    public Optional<Integer> getMaxUnits() {
+    public Optional<Integer> maxUnits() {
         return this.maxUnits == null ? Optional.empty() : Optional.ofNullable(this.maxUnits);
     }
 
@@ -37,7 +37,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
     @Import(name="minUnits")
       private final @Nullable Integer minUnits;
 
-    public Optional<Integer> getMinUnits() {
+    public Optional<Integer> minUnits() {
         return this.minUnits == null ? Optional.empty() : Optional.ofNullable(this.minUnits);
     }
 
@@ -48,7 +48,7 @@ public final class HubBillingInfoFormatResponse extends io.pulumi.resources.Invo
     @Import(name="skuName")
       private final @Nullable String skuName;
 
-    public Optional<String> getSkuName() {
+    public Optional<String> skuName() {
         return this.skuName == null ? Optional.empty() : Optional.ofNullable(this.skuName);
     }
 

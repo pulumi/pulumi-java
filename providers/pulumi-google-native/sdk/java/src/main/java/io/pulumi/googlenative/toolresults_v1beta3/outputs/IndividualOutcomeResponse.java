@@ -40,20 +40,20 @@ public final class IndividualOutcomeResponse {
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
     */
-    public Integer getMultistepNumber() {
+    public Integer multistepNumber() {
         return this.multistepNumber;
     }
-    public String getOutcomeSummary() {
+    public String outcomeSummary() {
         return this.outcomeSummary;
     }
     /**
      * How long it took for this step to run.
      * 
     */
-    public DurationResponse getRunDuration() {
+    public DurationResponse runDuration() {
         return this.runDuration;
     }
-    public String getStepId() {
+    public String stepId() {
         return this.stepId;
     }
 

@@ -20,10 +20,10 @@ public final class GetBucketWebsite {
         this.notFoundPage = notFoundPage;
     }
 
-    public String getMainPageSuffix() {
+    public String mainPageSuffix() {
         return this.mainPageSuffix;
     }
-    public String getNotFoundPage() {
+    public String notFoundPage() {
         return this.notFoundPage;
     }
 

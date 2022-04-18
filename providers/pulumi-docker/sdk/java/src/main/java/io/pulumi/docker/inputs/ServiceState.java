@@ -31,7 +31,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<ServiceAuthGetArgs> auth;
 
-    public Output<ServiceAuthGetArgs> getAuth() {
+    public Output<ServiceAuthGetArgs> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="convergeConfig")
       private final @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
 
-    public Output<ServiceConvergeConfigGetArgs> getConvergeConfig() {
+    public Output<ServiceConvergeConfigGetArgs> convergeConfig() {
         return this.convergeConfig == null ? Codegen.empty() : this.convergeConfig;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointSpec")
       private final @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
 
-    public Output<ServiceEndpointSpecGetArgs> getEndpointSpec() {
+    public Output<ServiceEndpointSpecGetArgs> endpointSpec() {
         return this.endpointSpec == null ? Codegen.empty() : this.endpointSpec;
     }
 
@@ -64,7 +64,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<ServiceLabelGetArgs>> labels;
 
-    public Output<List<ServiceLabelGetArgs>> getLabels() {
+    public Output<List<ServiceLabelGetArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<ServiceModeGetArgs> mode;
 
-    public Output<ServiceModeGetArgs> getMode() {
+    public Output<ServiceModeGetArgs> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -97,7 +97,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rollbackConfig")
       private final @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
 
-    public Output<ServiceRollbackConfigGetArgs> getRollbackConfig() {
+    public Output<ServiceRollbackConfigGetArgs> rollbackConfig() {
         return this.rollbackConfig == null ? Codegen.empty() : this.rollbackConfig;
     }
 
@@ -108,7 +108,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskSpec")
       private final @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
 
-    public Output<ServiceTaskSpecGetArgs> getTaskSpec() {
+    public Output<ServiceTaskSpecGetArgs> taskSpec() {
         return this.taskSpec == null ? Codegen.empty() : this.taskSpec;
     }
 
@@ -119,7 +119,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateConfig")
       private final @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
 
-    public Output<ServiceUpdateConfigGetArgs> getUpdateConfig() {
+    public Output<ServiceUpdateConfigGetArgs> updateConfig() {
         return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
     }
 

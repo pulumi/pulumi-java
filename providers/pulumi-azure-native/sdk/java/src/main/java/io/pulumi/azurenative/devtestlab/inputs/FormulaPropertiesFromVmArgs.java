@@ -26,7 +26,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
     @Import(name="labVmId")
       private final @Nullable Output<String> labVmId;
 
-    public Output<String> getLabVmId() {
+    public Output<String> labVmId() {
         return this.labVmId == null ? Codegen.empty() : this.labVmId;
     }
 

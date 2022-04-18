@@ -26,7 +26,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
     @Import(name="structConfig")
       private final @Nullable Output<String> structConfig;
 
-    public Output<String> getStructConfig() {
+    public Output<String> structConfig() {
         return this.structConfig == null ? Codegen.empty() : this.structConfig;
     }
 

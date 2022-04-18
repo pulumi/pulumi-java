@@ -46,28 +46,28 @@ public final class TransferJobScheduleStartTimeOfDay {
      * Hours of day in 24 hour format. Should be from 0 to 23
      * 
     */
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
     /**
      * Minutes of hour of day. Must be from 0 to 59.
      * 
     */
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
     /**
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
     */
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
     /**
      * Seconds of minutes of the time. Must normally be from 0 to 59.
      * 
     */
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

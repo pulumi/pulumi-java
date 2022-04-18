@@ -50,28 +50,28 @@ public final class GetDigitalTwinsEndpointResult {
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Extension resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * DigitalTwinsInstance endpoint resource properties.
      * 
     */
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

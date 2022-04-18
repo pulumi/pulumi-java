@@ -55,7 +55,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
      * 
      */
-    public Output<String> getDatabaseVersion() {
+    public Output<String> databaseVersion() {
         return this.databaseVersion;
     }
     /**
@@ -69,7 +69,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * @return The externally accessible IPv4 address for the source database server.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -83,7 +83,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * @return The name of the source representation instance. Use any valid Cloud SQL instance name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * Defaults to 3306.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -115,7 +115,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -131,7 +131,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

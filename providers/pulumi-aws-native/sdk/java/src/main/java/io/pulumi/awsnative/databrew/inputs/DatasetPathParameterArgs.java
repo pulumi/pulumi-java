@@ -22,14 +22,14 @@ public final class DatasetPathParameterArgs extends io.pulumi.resources.Resource
     @Import(name="datasetParameter", required=true)
       private final Output<DatasetParameterArgs> datasetParameter;
 
-    public Output<DatasetParameterArgs> getDatasetParameter() {
+    public Output<DatasetParameterArgs> datasetParameter() {
         return this.datasetParameter;
     }
 
     @Import(name="pathParameterName", required=true)
       private final Output<String> pathParameterName;
 
-    public Output<String> getPathParameterName() {
+    public Output<String> pathParameterName() {
         return this.pathParameterName;
     }
 

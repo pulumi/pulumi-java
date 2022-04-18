@@ -22,7 +22,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -44,7 +44,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
+    public Output<String> dataSetMappingName() {
         return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
@@ -55,7 +55,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
 
-    public Output<String> getFileSystem() {
+    public Output<String> fileSystem() {
         return this.fileSystem;
     }
 
@@ -67,7 +67,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -78,7 +78,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -89,7 +89,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -111,7 +111,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -122,7 +122,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 

@@ -37,7 +37,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
@@ -48,7 +48,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> getAddressPrefixes() {
+    public Output<List<String>> addressPrefixes() {
         return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
@@ -59,7 +59,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationGatewayIpConfigurations")
       private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
 
-    public Output<List<ApplicationGatewayIPConfigurationArgs>> getApplicationGatewayIpConfigurations() {
+    public Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations == null ? Codegen.empty() : this.applicationGatewayIpConfigurations;
     }
 
@@ -70,7 +70,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegations")
       private final @Nullable Output<List<DelegationArgs>> delegations;
 
-    public Output<List<DelegationArgs>> getDelegations() {
+    public Output<List<DelegationArgs>> delegations() {
         return this.delegations == null ? Codegen.empty() : this.delegations;
     }
 
@@ -81,7 +81,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -92,7 +92,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocations")
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Output<List<SubResourceArgs>> getIpAllocations() {
+    public Output<List<SubResourceArgs>> ipAllocations() {
         return this.ipAllocations == null ? Codegen.empty() : this.ipAllocations;
     }
 
@@ -103,7 +103,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -114,7 +114,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natGateway")
       private final @Nullable Output<SubResourceArgs> natGateway;
 
-    public Output<SubResourceArgs> getNatGateway() {
+    public Output<SubResourceArgs> natGateway() {
         return this.natGateway == null ? Codegen.empty() : this.natGateway;
     }
 
@@ -125,7 +125,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
+    public Output<NetworkSecurityGroupArgs> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 
@@ -136,7 +136,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateEndpointNetworkPolicies")
       private final @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
 
-    public Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> getPrivateEndpointNetworkPolicies() {
+    public Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies() {
         return this.privateEndpointNetworkPolicies == null ? Codegen.empty() : this.privateEndpointNetworkPolicies;
     }
 
@@ -147,7 +147,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkServiceNetworkPolicies")
       private final @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
 
-    public Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> getPrivateLinkServiceNetworkPolicies() {
+    public Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies() {
         return this.privateLinkServiceNetworkPolicies == null ? Codegen.empty() : this.privateLinkServiceNetworkPolicies;
     }
 
@@ -158,7 +158,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeTable")
       private final @Nullable Output<RouteTableArgs> routeTable;
 
-    public Output<RouteTableArgs> getRouteTable() {
+    public Output<RouteTableArgs> routeTable() {
         return this.routeTable == null ? Codegen.empty() : this.routeTable;
     }
 
@@ -169,7 +169,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceEndpointPolicies")
       private final @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
 
-    public Output<List<ServiceEndpointPolicyArgs>> getServiceEndpointPolicies() {
+    public Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies() {
         return this.serviceEndpointPolicies == null ? Codegen.empty() : this.serviceEndpointPolicies;
     }
 
@@ -180,7 +180,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceEndpoints")
       private final @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
 
-    public Output<List<ServiceEndpointPropertiesFormatArgs>> getServiceEndpoints() {
+    public Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints() {
         return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
     }
 
@@ -191,7 +191,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

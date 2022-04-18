@@ -41,20 +41,20 @@ public final class GetRegionsResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of regions available in the given project
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

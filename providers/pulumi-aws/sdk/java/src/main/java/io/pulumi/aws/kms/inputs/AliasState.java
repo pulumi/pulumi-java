@@ -22,7 +22,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -56,7 +56,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetKeyArn")
       private final @Nullable Output<String> targetKeyArn;
 
-    public Output<String> getTargetKeyArn() {
+    public Output<String> targetKeyArn() {
         return this.targetKeyArn == null ? Codegen.empty() : this.targetKeyArn;
     }
 
@@ -67,7 +67,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetKeyId")
       private final @Nullable Output<String> targetKeyId;
 
-    public Output<String> getTargetKeyId() {
+    public Output<String> targetKeyId() {
         return this.targetKeyId == null ? Codegen.empty() : this.targetKeyId;
     }
 

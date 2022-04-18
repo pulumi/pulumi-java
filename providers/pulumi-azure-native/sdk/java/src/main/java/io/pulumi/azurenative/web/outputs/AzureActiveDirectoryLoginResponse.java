@@ -37,7 +37,7 @@ public final class AzureActiveDirectoryLoginResponse {
      * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getDisableWWWAuthenticate() {
+    public Optional<Boolean> disableWWWAuthenticate() {
         return Optional.ofNullable(this.disableWWWAuthenticate);
     }
     /**
@@ -45,7 +45,7 @@ public final class AzureActiveDirectoryLoginResponse {
      * a user logs in. Each parameter must be in the form "key=value".
      * 
     */
-    public List<String> getLoginParameters() {
+    public List<String> loginParameters() {
         return this.loginParameters == null ? List.of() : this.loginParameters;
     }
 

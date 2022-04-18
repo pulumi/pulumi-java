@@ -24,7 +24,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="config")
       private final @Nullable Output<ConfigFileArgs> config;
 
-    public Output<ConfigFileArgs> getConfig() {
+    public Output<ConfigFileArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -35,7 +35,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="imports")
       private final @Nullable Output<List<ImportFileArgs>> imports;
 
-    public Output<List<ImportFileArgs>> getImports() {
+    public Output<List<ImportFileArgs>> imports() {
         return this.imports == null ? Codegen.empty() : this.imports;
     }
 

@@ -25,7 +25,7 @@ public final class IdentityPoolRoleAttachmentState extends io.pulumi.resources.R
     @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
     }
 
@@ -36,7 +36,7 @@ public final class IdentityPoolRoleAttachmentState extends io.pulumi.resources.R
     @Import(name="roleMappings")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> getRoleMappings() {
+    public Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings() {
         return this.roleMappings == null ? Codegen.empty() : this.roleMappings;
     }
 
@@ -47,7 +47,7 @@ public final class IdentityPoolRoleAttachmentState extends io.pulumi.resources.R
     @Import(name="roles")
       private final @Nullable Output<Map<String,String>> roles;
 
-    public Output<Map<String,String>> getRoles() {
+    public Output<Map<String,String>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 

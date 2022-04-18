@@ -27,7 +27,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     @Import(name="azureKeyVaultUrl")
       private final @Nullable Output<String> azureKeyVaultUrl;
 
-    public Output<String> getAzureKeyVaultUrl() {
+    public Output<String> azureKeyVaultUrl() {
         return this.azureKeyVaultUrl == null ? Codegen.empty() : this.azureKeyVaultUrl;
     }
 
@@ -38,7 +38,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
-    public Output<String> getCredentialName() {
+    public Output<String> credentialName() {
         return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
@@ -49,7 +49,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -60,7 +60,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     @Import(name="servicePrincipalName")
       private final @Nullable Output<String> servicePrincipalName;
 
-    public Output<String> getServicePrincipalName() {
+    public Output<String> servicePrincipalName() {
         return this.servicePrincipalName == null ? Codegen.empty() : this.servicePrincipalName;
     }
 
@@ -71,7 +71,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     @Import(name="servicePrincipalSecret")
       private final @Nullable Output<String> servicePrincipalSecret;
 
-    public Output<String> getServicePrincipalSecret() {
+    public Output<String> servicePrincipalSecret() {
         return this.servicePrincipalSecret == null ? Codegen.empty() : this.servicePrincipalSecret;
     }
 

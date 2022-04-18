@@ -27,7 +27,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -38,7 +38,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="draftContentLink")
       private final @Nullable Output<ContentLinkArgs> draftContentLink;
 
-    public Output<ContentLinkArgs> getDraftContentLink() {
+    public Output<ContentLinkArgs> draftContentLink() {
         return this.draftContentLink == null ? Codegen.empty() : this.draftContentLink;
     }
 
@@ -49,7 +49,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inEdit")
       private final @Nullable Output<Boolean> inEdit;
 
-    public Output<Boolean> getInEdit() {
+    public Output<Boolean> inEdit() {
         return this.inEdit == null ? Codegen.empty() : this.inEdit;
     }
 
@@ -60,7 +60,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
     }
 
@@ -71,7 +71,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputTypes")
       private final @Nullable Output<List<String>> outputTypes;
 
-    public Output<List<String>> getOutputTypes() {
+    public Output<List<String>> outputTypes() {
         return this.outputTypes == null ? Codegen.empty() : this.outputTypes;
     }
 
@@ -82,7 +82,7 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
 
-    public Output<Map<String,RunbookParameterArgs>> getParameters() {
+    public Output<Map<String,RunbookParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

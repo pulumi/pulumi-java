@@ -34,14 +34,14 @@ public final class ComplianceOccurrenceResponse {
      * The reason for non compliance of these files.
      * 
     */
-    public String getNonComplianceReason() {
+    public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
     /**
      * A list of files which are violating compliance checks.
      * 
     */
-    public List<NonCompliantFileResponse> getNonCompliantFiles() {
+    public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }
 

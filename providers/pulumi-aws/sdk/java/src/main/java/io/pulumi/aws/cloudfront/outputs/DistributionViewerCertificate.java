@@ -73,7 +73,7 @@ public final class DistributionViewerCertificate {
      * certificate must be in  US-EAST-1.
      * 
     */
-    public Optional<String> getAcmCertificateArn() {
+    public Optional<String> acmCertificateArn() {
         return Optional.ofNullable(this.acmCertificateArn);
     }
     /**
@@ -82,7 +82,7 @@ public final class DistributionViewerCertificate {
      * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
      * 
     */
-    public Optional<Boolean> getCloudfrontDefaultCertificate() {
+    public Optional<Boolean> cloudfrontDefaultCertificate() {
         return Optional.ofNullable(this.cloudfrontDefaultCertificate);
     }
     /**
@@ -91,7 +91,7 @@ public final class DistributionViewerCertificate {
      * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
      * 
     */
-    public Optional<String> getIamCertificateId() {
+    public Optional<String> iamCertificateId() {
         return Optional.ofNullable(this.iamCertificateId);
     }
     /**
@@ -109,10 +109,10 @@ public final class DistributionViewerCertificate {
      * must be specified.
      * 
     */
-    public Optional<String> getMinimumProtocolVersion() {
+    public Optional<String> minimumProtocolVersion() {
         return Optional.ofNullable(this.minimumProtocolVersion);
     }
-    public Optional<String> getSslSupportMethod() {
+    public Optional<String> sslSupportMethod() {
         return Optional.ofNullable(this.sslSupportMethod);
     }
 

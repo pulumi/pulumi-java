@@ -39,21 +39,21 @@ public final class CompletenessResponse {
      * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
      * 
     */
-    public Boolean getArguments() {
+    public Boolean arguments() {
         return this.arguments;
     }
     /**
      * If true, the builder claims that recipe.environment is claimed to be complete.
      * 
     */
-    public Boolean getEnvironment() {
+    public Boolean environment() {
         return this.environment;
     }
     /**
      * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
      * 
     */
-    public Boolean getMaterials() {
+    public Boolean materials() {
         return this.materials;
     }
 

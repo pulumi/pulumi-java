@@ -34,7 +34,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="accessLevels")
       private final @Nullable Output<List<String>> accessLevels;
 
-    public Output<List<String>> getAccessLevels() {
+    public Output<List<String>> accessLevels() {
         return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
@@ -49,7 +49,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="egressPolicies")
       private final @Nullable Output<List<ServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies;
 
-    public Output<List<ServicePerimeterSpecEgressPolicyGetArgs>> getEgressPolicies() {
+    public Output<List<ServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies() {
         return this.egressPolicies == null ? Codegen.empty() : this.egressPolicies;
     }
 
@@ -64,7 +64,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="ingressPolicies")
       private final @Nullable Output<List<ServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies;
 
-    public Output<List<ServicePerimeterSpecIngressPolicyGetArgs>> getIngressPolicies() {
+    public Output<List<ServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies() {
         return this.ingressPolicies == null ? Codegen.empty() : this.ingressPolicies;
     }
 
@@ -79,7 +79,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -94,7 +94,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="restrictedServices")
       private final @Nullable Output<List<String>> restrictedServices;
 
-    public Output<List<String>> getRestrictedServices() {
+    public Output<List<String>> restrictedServices() {
         return this.restrictedServices == null ? Codegen.empty() : this.restrictedServices;
     }
 
@@ -107,7 +107,7 @@ public final class ServicePerimeterSpecGetArgs extends io.pulumi.resources.Resou
     @Import(name="vpcAccessibleServices")
       private final @Nullable Output<ServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
-    public Output<ServicePerimeterSpecVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {
+    public Output<ServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices() {
         return this.vpcAccessibleServices == null ? Codegen.empty() : this.vpcAccessibleServices;
     }
 

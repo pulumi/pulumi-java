@@ -39,21 +39,21 @@ public final class RuleGroupCustomResponseBody {
      * The payload of the custom response.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The type of content in the payload that you are defining in the `content` argument. Valid values are `TEXT_PLAIN`, `TEXT_HTML`, or `APPLICATION_JSON`.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * A unique key identifying the custom response body. This is referenced by the `custom_response_body_key` argument in the Custom Response block.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

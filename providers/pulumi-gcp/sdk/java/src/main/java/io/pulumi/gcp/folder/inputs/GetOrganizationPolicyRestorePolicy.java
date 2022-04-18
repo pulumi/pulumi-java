@@ -15,7 +15,7 @@ public final class GetOrganizationPolicyRestorePolicy extends io.pulumi.resource
     @Import(name="default", required=true)
       private final Boolean default_;
 
-    public Boolean getDefault_() {
+    public Boolean default_() {
         return this.default_;
     }
 

@@ -29,7 +29,7 @@ public final class ClusterNodeConfigLinuxNodeConfig {
      * `net.core.wmem_max`, to a string value.
      * 
     */
-    public Map<String,String> getSysctls() {
+    public Map<String,String> sysctls() {
         return this.sysctls;
     }
 

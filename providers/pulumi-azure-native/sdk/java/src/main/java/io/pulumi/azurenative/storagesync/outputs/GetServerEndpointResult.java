@@ -171,147 +171,147 @@ public final class GetServerEndpointResult {
      * Cloud Tiering.
      * 
     */
-    public Optional<String> getCloudTiering() {
+    public Optional<String> cloudTiering() {
         return Optional.ofNullable(this.cloudTiering);
     }
     /**
      * Cloud tiering status. Only populated if cloud tiering is enabled.
      * 
     */
-    public ServerEndpointCloudTieringStatusResponse getCloudTieringStatus() {
+    public ServerEndpointCloudTieringStatusResponse cloudTieringStatus() {
         return this.cloudTieringStatus;
     }
     /**
      * Friendly Name
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Policy for how namespace and files are recalled during FastDr.
      * 
     */
-    public Optional<String> getInitialDownloadPolicy() {
+    public Optional<String> initialDownloadPolicy() {
         return Optional.ofNullable(this.initialDownloadPolicy);
     }
     /**
      * Resource Last Operation Name
      * 
     */
-    public String getLastOperationName() {
+    public String lastOperationName() {
         return this.lastOperationName;
     }
     /**
      * ServerEndpoint lastWorkflowId
      * 
     */
-    public String getLastWorkflowId() {
+    public String lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
     */
-    public Optional<String> getLocalCacheMode() {
+    public Optional<String> localCacheMode() {
         return Optional.ofNullable(this.localCacheMode);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Offline data transfer
      * 
     */
-    public Optional<String> getOfflineDataTransfer() {
+    public Optional<String> offlineDataTransfer() {
         return Optional.ofNullable(this.offlineDataTransfer);
     }
     /**
      * Offline data transfer share name
      * 
     */
-    public Optional<String> getOfflineDataTransferShareName() {
+    public Optional<String> offlineDataTransferShareName() {
         return Optional.ofNullable(this.offlineDataTransferShareName);
     }
     /**
      * Offline data transfer storage account resource ID
      * 
     */
-    public String getOfflineDataTransferStorageAccountResourceId() {
+    public String offlineDataTransferStorageAccountResourceId() {
         return this.offlineDataTransferStorageAccountResourceId;
     }
     /**
      * Offline data transfer storage account tenant ID
      * 
     */
-    public String getOfflineDataTransferStorageAccountTenantId() {
+    public String offlineDataTransferStorageAccountTenantId() {
         return this.offlineDataTransferStorageAccountTenantId;
     }
     /**
      * ServerEndpoint Provisioning State
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Recall status. Only populated if cloud tiering is enabled.
      * 
     */
-    public ServerEndpointRecallStatusResponse getRecallStatus() {
+    public ServerEndpointRecallStatusResponse recallStatus() {
         return this.recallStatus;
     }
     /**
      * Server Local path.
      * 
     */
-    public Optional<String> getServerLocalPath() {
+    public Optional<String> serverLocalPath() {
         return Optional.ofNullable(this.serverLocalPath);
     }
     /**
      * Server Resource Id.
      * 
     */
-    public Optional<String> getServerResourceId() {
+    public Optional<String> serverResourceId() {
         return Optional.ofNullable(this.serverResourceId);
     }
     /**
      * Server Endpoint sync status
      * 
     */
-    public ServerEndpointSyncStatusResponse getSyncStatus() {
+    public ServerEndpointSyncStatusResponse syncStatus() {
         return this.syncStatus;
     }
     /**
      * Tier files older than days.
      * 
     */
-    public Optional<Integer> getTierFilesOlderThanDays() {
+    public Optional<Integer> tierFilesOlderThanDays() {
         return Optional.ofNullable(this.tierFilesOlderThanDays);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
     */
-    public Optional<Integer> getVolumeFreeSpacePercent() {
+    public Optional<Integer> volumeFreeSpacePercent() {
         return Optional.ofNullable(this.volumeFreeSpacePercent);
     }
 

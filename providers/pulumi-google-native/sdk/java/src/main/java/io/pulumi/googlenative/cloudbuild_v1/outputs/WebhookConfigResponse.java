@@ -32,14 +32,14 @@ public final class WebhookConfigResponse {
      * Resource name for the secret required as a URL parameter.
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

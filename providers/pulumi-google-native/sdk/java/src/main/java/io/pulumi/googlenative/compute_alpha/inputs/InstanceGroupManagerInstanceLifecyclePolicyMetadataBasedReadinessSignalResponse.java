@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     @Import(name="timeoutSec", required=true)
       private final Integer timeoutSec;
 
-    public Integer getTimeoutSec() {
+    public Integer timeoutSec() {
         return this.timeoutSec;
     }
 

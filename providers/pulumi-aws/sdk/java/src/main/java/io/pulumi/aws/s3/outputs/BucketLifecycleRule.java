@@ -91,63 +91,63 @@ public final class BucketLifecycleRule {
      * Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
      * 
     */
-    public Optional<Integer> getAbortIncompleteMultipartUploadDays() {
+    public Optional<Integer> abortIncompleteMultipartUploadDays() {
         return Optional.ofNullable(this.abortIncompleteMultipartUploadDays);
     }
     /**
      * Specifies lifecycle rule status.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Specifies a period in the object's expire (documented below).
      * 
     */
-    public Optional<BucketLifecycleRuleExpiration> getExpiration() {
+    public Optional<BucketLifecycleRuleExpiration> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Specifies when noncurrent object versions expire (documented below).
      * 
     */
-    public Optional<BucketLifecycleRuleNoncurrentVersionExpiration> getNoncurrentVersionExpiration() {
+    public Optional<BucketLifecycleRuleNoncurrentVersionExpiration> noncurrentVersionExpiration() {
         return Optional.ofNullable(this.noncurrentVersionExpiration);
     }
     /**
      * Specifies when noncurrent object versions transitions (documented below).
      * 
     */
-    public List<BucketLifecycleRuleNoncurrentVersionTransition> getNoncurrentVersionTransitions() {
+    public List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? List.of() : this.noncurrentVersionTransitions;
     }
     /**
      * Object key prefix identifying one or more objects to which the rule applies.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies object tags key and value.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies a period in the object's transitions (documented below).
      * 
     */
-    public List<BucketLifecycleRuleTransition> getTransitions() {
+    public List<BucketLifecycleRuleTransition> transitions() {
         return this.transitions == null ? List.of() : this.transitions;
     }
 

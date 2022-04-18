@@ -15,7 +15,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="functionARN", required=true)
       private final String functionARN;
 
-    public String getFunctionARN() {
+    public String functionARN() {
         return this.functionARN;
     }
 

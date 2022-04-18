@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="detectionRules")
       private final @Nullable Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
 
-    public Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> getDetectionRules() {
+    public Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules() {
         return this.detectionRules == null ? Codegen.empty() : this.detectionRules;
     }
 
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
+    public Output<GooglePrivacyDlpV2DictionaryArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="exclusionType")
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
 
-    public Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> getExclusionType() {
+    public Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType() {
         return this.exclusionType == null ? Codegen.empty() : this.exclusionType;
     }
 
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="infoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
         return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="likelihood")
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
 
-    public Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> getLikelihood() {
+    public Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood() {
         return this.likelihood == null ? Codegen.empty() : this.likelihood;
     }
 
@@ -89,7 +89,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
+    public Output<GooglePrivacyDlpV2RegexArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -100,7 +100,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="storedType")
       private final @Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType;
 
-    public Output<GooglePrivacyDlpV2StoredTypeArgs> getStoredType() {
+    public Output<GooglePrivacyDlpV2StoredTypeArgs> storedType() {
         return this.storedType == null ? Codegen.empty() : this.storedType;
     }
 
@@ -111,7 +111,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     @Import(name="surrogateType")
       private final @Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
 
-    public Output<GooglePrivacyDlpV2SurrogateTypeArgs> getSurrogateType() {
+    public Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType() {
         return this.surrogateType == null ? Codegen.empty() : this.surrogateType;
     }
 

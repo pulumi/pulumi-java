@@ -16,7 +16,7 @@ public final class ServiceLambdaEndpointInput {
         this.arn = arn;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

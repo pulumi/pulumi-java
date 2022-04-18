@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="exec")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> getExec() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec() {
         return this.exec == null ? Codegen.empty() : this.exec;
     }
 
@@ -37,7 +37,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="file")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> getFile() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -48,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -59,7 +59,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="pkg")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> getPkg() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg() {
         return this.pkg == null ? Codegen.empty() : this.pkg;
     }
 
@@ -70,7 +70,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     @Import(name="repository")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> getRepository() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 

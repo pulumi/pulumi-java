@@ -25,7 +25,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
     @Import(name="disableDefaultIamRecipients", required=true)
       private final Boolean disableDefaultIamRecipients;
 
-    public Boolean getDisableDefaultIamRecipients() {
+    public Boolean disableDefaultIamRecipients() {
         return this.disableDefaultIamRecipients;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
     @Import(name="monitoringNotificationChannels", required=true)
       private final List<String> monitoringNotificationChannels;
 
-    public List<String> getMonitoringNotificationChannels() {
+    public List<String> monitoringNotificationChannels() {
         return this.monitoringNotificationChannels;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
     @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;
 
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
     @Import(name="schemaVersion", required=true)
       private final String schemaVersion;
 
-    public String getSchemaVersion() {
+    public String schemaVersion() {
         return this.schemaVersion;
     }
 

@@ -21,7 +21,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -32,7 +32,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
     @Import(name="portfolioId", required=true)
       private final String portfolioId;
 
-    public String getPortfolioId() {
+    public String portfolioId() {
         return this.portfolioId;
     }
 
@@ -43,7 +43,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
     @Import(name="productId")
       private final @Nullable String productId;
 
-    public Optional<String> getProductId() {
+    public Optional<String> productId() {
         return this.productId == null ? Optional.empty() : Optional.ofNullable(this.productId);
     }
 

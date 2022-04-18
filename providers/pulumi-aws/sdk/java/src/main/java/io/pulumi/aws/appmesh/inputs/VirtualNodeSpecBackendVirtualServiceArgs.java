@@ -23,7 +23,7 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> getClientPolicy() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy() {
         return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
-    public Output<String> getVirtualServiceName() {
+    public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 

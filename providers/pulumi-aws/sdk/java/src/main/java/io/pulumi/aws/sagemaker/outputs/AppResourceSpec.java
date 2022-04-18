@@ -48,28 +48,28 @@ public final class AppResourceSpec {
      * The instance type that the image version runs on. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
      * 
     */
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * 
     */
-    public Optional<String> getLifecycleConfigArn() {
+    public Optional<String> lifecycleConfigArn() {
         return Optional.ofNullable(this.lifecycleConfigArn);
     }
     /**
      * The ARN of the SageMaker image that the image version belongs to.
      * 
     */
-    public Optional<String> getSagemakerImageArn() {
+    public Optional<String> sagemakerImageArn() {
         return Optional.ofNullable(this.sagemakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
     */
-    public Optional<String> getSagemakerImageVersionArn() {
+    public Optional<String> sagemakerImageVersionArn() {
         return Optional.ofNullable(this.sagemakerImageVersionArn);
     }
 

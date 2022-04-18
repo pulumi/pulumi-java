@@ -26,7 +26,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @return Used internally, see __Notes__ below
      * 
      */
-    public Output<String> getOriginalRouteTableId() {
+    public Output<String> originalRouteTableId() {
         return this.originalRouteTableId;
     }
     /**
@@ -42,7 +42,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * main route table for the target VPC
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -56,7 +56,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @return The ID of the VPC whose main route table should be set
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

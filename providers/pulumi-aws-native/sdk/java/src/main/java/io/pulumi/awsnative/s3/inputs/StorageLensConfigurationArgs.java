@@ -27,42 +27,42 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="accountLevel", required=true)
       private final Output<StorageLensAccountLevelArgs> accountLevel;
 
-    public Output<StorageLensAccountLevelArgs> getAccountLevel() {
+    public Output<StorageLensAccountLevelArgs> accountLevel() {
         return this.accountLevel;
     }
 
     @Import(name="awsOrg")
       private final @Nullable Output<StorageLensAwsOrgArgs> awsOrg;
 
-    public Output<StorageLensAwsOrgArgs> getAwsOrg() {
+    public Output<StorageLensAwsOrgArgs> awsOrg() {
         return this.awsOrg == null ? Codegen.empty() : this.awsOrg;
     }
 
     @Import(name="dataExport")
       private final @Nullable Output<StorageLensDataExportArgs> dataExport;
 
-    public Output<StorageLensDataExportArgs> getDataExport() {
+    public Output<StorageLensDataExportArgs> dataExport() {
         return this.dataExport == null ? Codegen.empty() : this.dataExport;
     }
 
     @Import(name="exclude")
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude;
 
-    public Output<StorageLensBucketsAndRegionsArgs> getExclude() {
+    public Output<StorageLensBucketsAndRegionsArgs> exclude() {
         return this.exclude == null ? Codegen.empty() : this.exclude;
     }
 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="include")
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> include;
 
-    public Output<StorageLensBucketsAndRegionsArgs> getInclude() {
+    public Output<StorageLensBucketsAndRegionsArgs> include() {
         return this.include == null ? Codegen.empty() : this.include;
     }
 
@@ -73,7 +73,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -84,7 +84,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="storageLensArn")
       private final @Nullable Output<String> storageLensArn;
 
-    public Output<String> getStorageLensArn() {
+    public Output<String> storageLensArn() {
         return this.storageLensArn == null ? Codegen.empty() : this.storageLensArn;
     }
 

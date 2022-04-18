@@ -31,7 +31,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
 
-    public Output<List<X509ExtensionArgs>> getAdditionalExtensions() {
+    public Output<List<X509ExtensionArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -42,7 +42,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
+    public Output<List<String>> aiaOcspServers() {
         return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
@@ -53,7 +53,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     @Import(name="caOptions")
       private final @Nullable Output<CaOptionsArgs> caOptions;
 
-    public Output<CaOptionsArgs> getCaOptions() {
+    public Output<CaOptionsArgs> caOptions() {
         return this.caOptions == null ? Codegen.empty() : this.caOptions;
     }
 
@@ -64,7 +64,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     @Import(name="keyUsage")
       private final @Nullable Output<KeyUsageArgs> keyUsage;
 
-    public Output<KeyUsageArgs> getKeyUsage() {
+    public Output<KeyUsageArgs> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
@@ -75,7 +75,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     @Import(name="policyIds")
       private final @Nullable Output<List<ObjectIdArgs>> policyIds;
 
-    public Output<List<ObjectIdArgs>> getPolicyIds() {
+    public Output<List<ObjectIdArgs>> policyIds() {
         return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 

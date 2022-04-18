@@ -22,7 +22,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     @Import(name="predefinedLoadMetricType", required=true)
       private final Output<String> predefinedLoadMetricType;
 
-    public Output<String> getPredefinedLoadMetricType() {
+    public Output<String> predefinedLoadMetricType() {
         return this.predefinedLoadMetricType;
     }
 
@@ -33,7 +33,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
-    public Output<String> getResourceLabel() {
+    public Output<String> resourceLabel() {
         return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
     }
 

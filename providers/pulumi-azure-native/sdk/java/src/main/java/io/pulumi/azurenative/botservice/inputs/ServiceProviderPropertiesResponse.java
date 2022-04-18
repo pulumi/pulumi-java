@@ -27,7 +27,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="devPortalUrl", required=true)
       private final String devPortalUrl;
 
-    public String getDevPortalUrl() {
+    public String devPortalUrl() {
         return this.devPortalUrl;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="iconUrl", required=true)
       private final String iconUrl;
 
-    public String getIconUrl() {
+    public String iconUrl() {
         return this.iconUrl;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -71,7 +71,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="parameters")
       private final @Nullable List<ServiceProviderParameterResponse> parameters;
 
-    public List<ServiceProviderParameterResponse> getParameters() {
+    public List<ServiceProviderParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
@@ -82,7 +82,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
     @Import(name="serviceProviderName", required=true)
       private final String serviceProviderName;
 
-    public String getServiceProviderName() {
+    public String serviceProviderName() {
         return this.serviceProviderName;
     }
 

@@ -27,7 +27,7 @@ public final class OpenAuthenticationAccessPoliciesResponse extends io.pulumi.re
     @Import(name="policies")
       private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
-    public Map<String,OpenAuthenticationAccessPolicyResponse> getPolicies() {
+    public Map<String,OpenAuthenticationAccessPolicyResponse> policies() {
         return this.policies == null ? Map.of() : this.policies;
     }
 

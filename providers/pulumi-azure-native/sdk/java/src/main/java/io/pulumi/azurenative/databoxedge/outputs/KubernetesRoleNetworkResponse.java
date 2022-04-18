@@ -33,14 +33,14 @@ public final class KubernetesRoleNetworkResponse {
      * Cni configuration
      * 
     */
-    public CniConfigResponse getCniConfig() {
+    public CniConfigResponse cniConfig() {
         return this.cniConfig;
     }
     /**
      * Load balancer configuration
      * 
     */
-    public LoadBalancerConfigResponse getLoadBalancerConfig() {
+    public LoadBalancerConfigResponse loadBalancerConfig() {
         return this.loadBalancerConfig;
     }
 

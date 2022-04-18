@@ -20,14 +20,14 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<PolicyTagIamBindingConditionArgs> condition;
 
-    public Output<PolicyTagIamBindingConditionArgs> getCondition() {
+    public Output<PolicyTagIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag;
     }
 
@@ -51,7 +51,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

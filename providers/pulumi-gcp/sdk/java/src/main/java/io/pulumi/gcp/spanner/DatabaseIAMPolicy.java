@@ -71,7 +71,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner database.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -85,7 +85,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the database's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +99,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner instance the database belongs to.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -115,7 +115,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -131,7 +131,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

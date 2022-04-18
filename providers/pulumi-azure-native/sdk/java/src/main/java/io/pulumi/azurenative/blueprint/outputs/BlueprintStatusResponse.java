@@ -32,14 +32,14 @@ public final class BlueprintStatusResponse {
      * Last modified time of this blueprint definition.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * Creation time of this blueprint definition.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
 

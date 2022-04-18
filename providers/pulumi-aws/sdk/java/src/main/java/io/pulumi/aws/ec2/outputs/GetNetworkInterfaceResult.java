@@ -152,128 +152,128 @@ public final class GetNetworkInterfaceResult {
      * The ARN of the network interface.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
      * 
     */
-    public List<GetNetworkInterfaceAssociation> getAssociations() {
+    public List<GetNetworkInterfaceAssociation> associations() {
         return this.associations;
     }
-    public List<GetNetworkInterfaceAttachment> getAttachments() {
+    public List<GetNetworkInterfaceAttachment> attachments() {
         return this.attachments;
     }
     /**
      * The Availability Zone.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Description of the network interface.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetNetworkInterfaceFilter> getFilters() {
+    public List<GetNetworkInterfaceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The type of interface.
      * 
     */
-    public String getInterfaceType() {
+    public String interfaceType() {
         return this.interfaceType;
     }
     /**
      * List of IPv6 addresses to assign to the ENI.
      * 
     */
-    public List<String> getIpv6Addresses() {
+    public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
      * The MAC address.
      * 
     */
-    public String getMacAddress() {
+    public String macAddress() {
         return this.macAddress;
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
     */
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
     /**
      * The AWS account ID of the owner of the network interface.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * The private DNS name.
      * 
     */
-    public String getPrivateDnsName() {
+    public String privateDnsName() {
         return this.privateDnsName;
     }
     /**
      * The private IPv4 address of the network interface within the subnet.
      * 
     */
-    public String getPrivateIp() {
+    public String privateIp() {
         return this.privateIp;
     }
     /**
      * The private IPv4 addresses associated with the network interface.
      * 
     */
-    public List<String> getPrivateIps() {
+    public List<String> privateIps() {
         return this.privateIps;
     }
     /**
      * The ID of the entity that launched the instance on your behalf.
      * 
     */
-    public String getRequesterId() {
+    public String requesterId() {
         return this.requesterId;
     }
     /**
      * The list of security groups for the network interface.
      * 
     */
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
     /**
      * The ID of the subnet.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
     /**
      * Any tags assigned to the network interface.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The ID of the VPC.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

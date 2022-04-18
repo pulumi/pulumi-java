@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpGetArgs extends io.pu
     @Import(name="maxConnections", required=true)
       private final Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections;
     }
 

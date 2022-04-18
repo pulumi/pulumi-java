@@ -26,7 +26,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
      * A list of public IP resources.
      * 
     */
-    public List<ResourceReferenceResponse> getPublicIPs() {
+    public List<ResourceReferenceResponse> publicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }
 

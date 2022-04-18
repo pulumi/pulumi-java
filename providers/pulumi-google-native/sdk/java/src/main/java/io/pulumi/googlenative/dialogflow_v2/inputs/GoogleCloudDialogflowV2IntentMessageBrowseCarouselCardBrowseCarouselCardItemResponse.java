@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="footer", required=true)
       private final String footer;
 
-    public String getFooter() {
+    public String footer() {
         return this.footer;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="openUriAction", required=true)
       private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
 
-    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse getOpenUriAction() {
+    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction() {
         return this.openUriAction;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

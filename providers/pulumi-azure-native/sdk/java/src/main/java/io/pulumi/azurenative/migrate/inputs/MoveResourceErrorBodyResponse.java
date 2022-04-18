@@ -24,7 +24,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -35,7 +35,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
     @Import(name="details", required=true)
       private final List<MoveResourceErrorBodyResponse> details;
 
-    public List<MoveResourceErrorBodyResponse> getDetails() {
+    public List<MoveResourceErrorBodyResponse> details() {
         return this.details;
     }
 
@@ -46,7 +46,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -57,7 +57,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

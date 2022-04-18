@@ -25,7 +25,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -37,7 +37,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -48,7 +48,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectiveAuthentication")
       private final @Nullable Output<Boolean> selectiveAuthentication;
 
-    public Output<Boolean> getSelectiveAuthentication() {
+    public Output<Boolean> selectiveAuthentication() {
         return this.selectiveAuthentication == null ? Codegen.empty() : this.selectiveAuthentication;
     }
 
@@ -59,7 +59,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetDnsIpAddresses")
       private final @Nullable Output<List<String>> targetDnsIpAddresses;
 
-    public Output<List<String>> getTargetDnsIpAddresses() {
+    public Output<List<String>> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses == null ? Codegen.empty() : this.targetDnsIpAddresses;
     }
 
@@ -70,7 +70,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetDomainName")
       private final @Nullable Output<String> targetDomainName;
 
-    public Output<String> getTargetDomainName() {
+    public Output<String> targetDomainName() {
         return this.targetDomainName == null ? Codegen.empty() : this.targetDomainName;
     }
 
@@ -82,7 +82,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustDirection")
       private final @Nullable Output<String> trustDirection;
 
-    public Output<String> getTrustDirection() {
+    public Output<String> trustDirection() {
         return this.trustDirection == null ? Codegen.empty() : this.trustDirection;
     }
 
@@ -94,7 +94,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustHandshakeSecret")
       private final @Nullable Output<String> trustHandshakeSecret;
 
-    public Output<String> getTrustHandshakeSecret() {
+    public Output<String> trustHandshakeSecret() {
         return this.trustHandshakeSecret == null ? Codegen.empty() : this.trustHandshakeSecret;
     }
 
@@ -106,7 +106,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustType")
       private final @Nullable Output<String> trustType;
 
-    public Output<String> getTrustType() {
+    public Output<String> trustType() {
         return this.trustType == null ? Codegen.empty() : this.trustType;
     }
 

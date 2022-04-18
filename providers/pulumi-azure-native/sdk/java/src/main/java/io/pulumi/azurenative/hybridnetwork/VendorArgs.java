@@ -22,7 +22,7 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vendorName")
       private final @Nullable Output<String> vendorName;
 
-    public Output<String> getVendorName() {
+    public Output<String> vendorName() {
         return this.vendorName == null ? Codegen.empty() : this.vendorName;
     }
 

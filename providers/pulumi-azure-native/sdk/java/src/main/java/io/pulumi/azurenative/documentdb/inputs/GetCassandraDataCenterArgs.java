@@ -19,7 +19,7 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
     @Import(name="dataCenterName", required=true)
       private final String dataCenterName;
 
-    public String getDataCenterName() {
+    public String dataCenterName() {
         return this.dataCenterName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCassandraDataCenterArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -68,14 +68,14 @@ public final class ResourceSkuResponse {
      *     Standard: 1,2,5,10,20,50,100
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Not used. Retained for future use.
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
     /**
@@ -84,14 +84,14 @@ public final class ResourceSkuResponse {
      * Allowed values: Standard_S1, Free_F1
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Not used. Retained for future use.
      * 
     */
-    public String getSize() {
+    public String size() {
         return this.size;
     }
     /**
@@ -100,7 +100,7 @@ public final class ResourceSkuResponse {
      * `Basic` is deprecated, use `Standard` instead.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

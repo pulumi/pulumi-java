@@ -66,7 +66,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `ALL_ANCESTORS`.
      * 
      */
-    public Output</* @Nullable */ String> getAncestor() {
+    public Output</* @Nullable */ String> ancestor() {
         return this.ancestor;
     }
     /**
@@ -80,7 +80,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @return The index id.
      * 
      */
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
     /**
@@ -94,7 +94,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @return The entity kind which the index applies to.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -110,7 +110,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -126,7 +126,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DataStoreIndexProperty>> getProperties() {
+    public Output</* @Nullable */ List<DataStoreIndexProperty>> properties() {
         return this.properties;
     }
 

@@ -40,22 +40,22 @@ public final class GetDatastoreResult {
         this.tags = tags;
     }
 
-    public Optional<DatastorePartitions> getDatastorePartitions() {
+    public Optional<DatastorePartitions> datastorePartitions() {
         return Optional.ofNullable(this.datastorePartitions);
     }
-    public Optional<DatastoreStorage> getDatastoreStorage() {
+    public Optional<DatastoreStorage> datastoreStorage() {
         return Optional.ofNullable(this.datastoreStorage);
     }
-    public Optional<DatastoreFileFormatConfiguration> getFileFormatConfiguration() {
+    public Optional<DatastoreFileFormatConfiguration> fileFormatConfiguration() {
         return Optional.ofNullable(this.fileFormatConfiguration);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<DatastoreRetentionPeriod> getRetentionPeriod() {
+    public Optional<DatastoreRetentionPeriod> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
-    public List<DatastoreTag> getTags() {
+    public List<DatastoreTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

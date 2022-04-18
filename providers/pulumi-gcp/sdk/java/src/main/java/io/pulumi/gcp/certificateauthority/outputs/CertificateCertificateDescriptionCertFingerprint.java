@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionCertFingerprint {
         this.sha256Hash = sha256Hash;
     }
 
-    public Optional<String> getSha256Hash() {
+    public Optional<String> sha256Hash() {
         return Optional.ofNullable(this.sha256Hash);
     }
 

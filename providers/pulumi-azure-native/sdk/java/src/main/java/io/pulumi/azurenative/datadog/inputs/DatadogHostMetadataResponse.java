@@ -23,21 +23,21 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
     @Import(name="installMethod")
       private final @Nullable DatadogInstallMethodResponse installMethod;
 
-    public Optional<DatadogInstallMethodResponse> getInstallMethod() {
+    public Optional<DatadogInstallMethodResponse> installMethod() {
         return this.installMethod == null ? Optional.empty() : Optional.ofNullable(this.installMethod);
     }
 
     @Import(name="logsAgent")
       private final @Nullable DatadogLogsAgentResponse logsAgent;
 
-    public Optional<DatadogLogsAgentResponse> getLogsAgent() {
+    public Optional<DatadogLogsAgentResponse> logsAgent() {
         return this.logsAgent == null ? Optional.empty() : Optional.ofNullable(this.logsAgent);
     }
 

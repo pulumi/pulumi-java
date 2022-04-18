@@ -21,7 +21,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
     @Import(name="address", required=true)
       private final Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
 
@@ -32,7 +32,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
     @Import(name="subscriptionType", required=true)
       private final Output<String> subscriptionType;
 
-    public Output<String> getSubscriptionType() {
+    public Output<String> subscriptionType() {
         return this.subscriptionType;
     }
 

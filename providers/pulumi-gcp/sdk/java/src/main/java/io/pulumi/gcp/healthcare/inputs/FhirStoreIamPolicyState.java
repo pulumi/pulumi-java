@@ -22,7 +22,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -36,7 +36,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
     }
 
@@ -48,7 +48,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

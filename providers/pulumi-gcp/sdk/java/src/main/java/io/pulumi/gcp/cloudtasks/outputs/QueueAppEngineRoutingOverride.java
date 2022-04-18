@@ -53,7 +53,7 @@ public final class QueueAppEngineRoutingOverride {
      * The host that the task is sent to.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
@@ -61,7 +61,7 @@ public final class QueueAppEngineRoutingOverride {
      * By default, the task is sent to an instance which is available when the task is attempted.
      * 
     */
-    public Optional<String> getInstance() {
+    public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
     /**
@@ -69,7 +69,7 @@ public final class QueueAppEngineRoutingOverride {
      * By default, the task is sent to the service which is the default service when the task is attempted.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -77,7 +77,7 @@ public final class QueueAppEngineRoutingOverride {
      * By default, the task is sent to the version which is the default version when the task is attempted.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

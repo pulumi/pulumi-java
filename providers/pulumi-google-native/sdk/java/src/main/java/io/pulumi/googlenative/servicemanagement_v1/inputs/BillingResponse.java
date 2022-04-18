@@ -24,7 +24,7 @@ public final class BillingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="consumerDestinations", required=true)
       private final List<BillingDestinationResponse> consumerDestinations;
 
-    public List<BillingDestinationResponse> getConsumerDestinations() {
+    public List<BillingDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
 

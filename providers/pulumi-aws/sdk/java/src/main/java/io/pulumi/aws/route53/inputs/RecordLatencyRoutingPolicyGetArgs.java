@@ -21,7 +21,7 @@ public final class RecordLatencyRoutingPolicyGetArgs extends io.pulumi.resources
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

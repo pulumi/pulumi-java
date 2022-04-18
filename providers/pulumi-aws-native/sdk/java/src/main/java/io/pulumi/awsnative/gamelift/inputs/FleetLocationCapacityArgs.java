@@ -25,7 +25,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="desiredEC2Instances", required=true)
       private final Output<Integer> desiredEC2Instances;
 
-    public Output<Integer> getDesiredEC2Instances() {
+    public Output<Integer> desiredEC2Instances() {
         return this.desiredEC2Instances;
     }
 
@@ -36,7 +36,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize;
     }
 
@@ -47,7 +47,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize;
     }
 

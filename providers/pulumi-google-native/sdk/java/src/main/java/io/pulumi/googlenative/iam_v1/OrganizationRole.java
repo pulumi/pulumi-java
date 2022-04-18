@@ -31,7 +31,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
      * 
      */
-    public Output<Boolean> getDeleted() {
+    public Output<Boolean> deleted() {
         return this.deleted;
     }
     /**
@@ -45,7 +45,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return Optional. A human-readable description for the role.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return Used to perform a consistent read-modify-write.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -73,7 +73,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return The names of the permissions this role grants when bound in an IAM policy.
      * 
      */
-    public Output<List<String>> getIncludedPermissions() {
+    public Output<List<String>> includedPermissions() {
         return this.includedPermissions;
     }
     /**
@@ -87,7 +87,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
      * 
      */
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
     /**
@@ -115,7 +115,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * @return Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

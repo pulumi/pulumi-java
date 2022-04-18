@@ -18,35 +18,35 @@ public final class FunctionIamPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

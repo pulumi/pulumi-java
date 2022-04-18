@@ -91,70 +91,70 @@ public final class SkypeChannelPropertiesResponse {
      * Calling web hook for Skype channel
      * 
     */
-    public Optional<String> getCallingWebHook() {
+    public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
      * Enable calling for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableCalling() {
+    public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
      * Enable groups for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableGroups() {
+    public Optional<Boolean> enableGroups() {
         return Optional.ofNullable(this.enableGroups);
     }
     /**
      * Enable media cards for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableMediaCards() {
+    public Optional<Boolean> enableMediaCards() {
         return Optional.ofNullable(this.enableMediaCards);
     }
     /**
      * Enable messaging for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableMessaging() {
+    public Optional<Boolean> enableMessaging() {
         return Optional.ofNullable(this.enableMessaging);
     }
     /**
      * Enable screen sharing for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableScreenSharing() {
+    public Optional<Boolean> enableScreenSharing() {
         return Optional.ofNullable(this.enableScreenSharing);
     }
     /**
      * Enable video for Skype channel
      * 
     */
-    public Optional<Boolean> getEnableVideo() {
+    public Optional<Boolean> enableVideo() {
         return Optional.ofNullable(this.enableVideo);
     }
     /**
      * Group mode for Skype channel
      * 
     */
-    public Optional<String> getGroupsMode() {
+    public Optional<String> groupsMode() {
         return Optional.ofNullable(this.groupsMode);
     }
     /**
      * Incoming call route for Skype channel
      * 
     */
-    public Optional<String> getIncomingCallRoute() {
+    public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 

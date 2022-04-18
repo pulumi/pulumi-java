@@ -32,14 +32,14 @@ public final class BotButton {
      * The text that appears on the button.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
     /**
      * The value returned to Amazon Lex when the user chooses this button.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -22,7 +22,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs extends
     @Import(name="text")
       private final @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> getText() {
+    public Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

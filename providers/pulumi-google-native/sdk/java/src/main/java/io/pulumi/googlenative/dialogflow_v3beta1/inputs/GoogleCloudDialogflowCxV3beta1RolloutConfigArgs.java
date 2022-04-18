@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
     @Import(name="failureCondition")
       private final @Nullable Output<String> failureCondition;
 
-    public Output<String> getFailureCondition() {
+    public Output<String> failureCondition() {
         return this.failureCondition == null ? Codegen.empty() : this.failureCondition;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
     @Import(name="rolloutCondition")
       private final @Nullable Output<String> rolloutCondition;
 
-    public Output<String> getRolloutCondition() {
+    public Output<String> rolloutCondition() {
         return this.rolloutCondition == null ? Codegen.empty() : this.rolloutCondition;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
     @Import(name="rolloutSteps")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> getRolloutSteps() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps() {
         return this.rolloutSteps == null ? Codegen.empty() : this.rolloutSteps;
     }
 

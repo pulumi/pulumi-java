@@ -28,7 +28,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminUserEnabled")
       private final @Nullable Output<Boolean> adminUserEnabled;
 
-    public Output<Boolean> getAdminUserEnabled() {
+    public Output<Boolean> adminUserEnabled() {
         return this.adminUserEnabled == null ? Codegen.empty() : this.adminUserEnabled;
     }
 
@@ -39,7 +39,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -50,7 +50,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
+    public Output<NetworkRuleSetArgs> networkRuleSet() {
         return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
     }
 
@@ -61,7 +61,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policies")
       private final @Nullable Output<PoliciesArgs> policies;
 
-    public Output<PoliciesArgs> getPolicies() {
+    public Output<PoliciesArgs> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 
@@ -72,7 +72,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName == null ? Codegen.empty() : this.registryName;
     }
 
@@ -83,7 +83,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -105,7 +105,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
+    public Output<StorageAccountPropertiesArgs> storageAccount() {
         return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
@@ -116,7 +116,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

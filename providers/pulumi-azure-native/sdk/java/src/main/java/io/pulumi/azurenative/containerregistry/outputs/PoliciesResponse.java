@@ -43,21 +43,21 @@ public final class PoliciesResponse {
      * The quarantine policy for a container registry.
      * 
     */
-    public Optional<QuarantinePolicyResponse> getQuarantinePolicy() {
+    public Optional<QuarantinePolicyResponse> quarantinePolicy() {
         return Optional.ofNullable(this.quarantinePolicy);
     }
     /**
      * The retention policy for a container registry.
      * 
     */
-    public Optional<RetentionPolicyResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * The content trust policy for a container registry.
      * 
     */
-    public Optional<TrustPolicyResponse> getTrustPolicy() {
+    public Optional<TrustPolicyResponse> trustPolicy() {
         return Optional.ofNullable(this.trustPolicy);
     }
 

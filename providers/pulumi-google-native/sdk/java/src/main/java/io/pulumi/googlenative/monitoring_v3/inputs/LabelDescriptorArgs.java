@@ -27,7 +27,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -49,7 +49,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="valueType")
       private final @Nullable Output<LabelDescriptorValueType> valueType;
 
-    public Output<LabelDescriptorValueType> getValueType() {
+    public Output<LabelDescriptorValueType> valueType() {
         return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 

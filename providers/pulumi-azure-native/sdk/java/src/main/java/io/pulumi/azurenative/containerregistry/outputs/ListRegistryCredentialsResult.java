@@ -36,14 +36,14 @@ public final class ListRegistryCredentialsResult {
      * The list of passwords for a container registry.
      * 
     */
-    public List<RegistryPasswordResponse> getPasswords() {
+    public List<RegistryPasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
      * The username for a container registry.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

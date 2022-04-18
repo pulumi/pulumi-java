@@ -28,7 +28,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="automatedAgentConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> getAutomatedAgentConfig() {
+    public Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig() {
         return this.automatedAgentConfig == null ? Codegen.empty() : this.automatedAgentConfig;
     }
 
@@ -39,7 +39,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,7 +50,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="humanAgentAssistantConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> getHumanAgentAssistantConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig() {
         return this.humanAgentAssistantConfig == null ? Codegen.empty() : this.humanAgentAssistantConfig;
     }
 
@@ -61,7 +61,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="humanAgentHandoffConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> getHumanAgentHandoffConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig() {
         return this.humanAgentHandoffConfig == null ? Codegen.empty() : this.humanAgentHandoffConfig;
     }
 
@@ -72,14 +72,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -90,7 +90,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="loggingConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> getLoggingConfig() {
+    public Output<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -101,7 +101,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="newMessageEventNotificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNewMessageEventNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig() {
         return this.newMessageEventNotificationConfig == null ? Codegen.empty() : this.newMessageEventNotificationConfig;
     }
 
@@ -123,14 +123,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -141,7 +141,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="securitySettings")
       private final @Nullable Output<String> securitySettings;
 
-    public Output<String> getSecuritySettings() {
+    public Output<String> securitySettings() {
         return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
     }
 
@@ -152,7 +152,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="sttConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> getSttConfig() {
+    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig() {
         return this.sttConfig == null ? Codegen.empty() : this.sttConfig;
     }
 
@@ -163,7 +163,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

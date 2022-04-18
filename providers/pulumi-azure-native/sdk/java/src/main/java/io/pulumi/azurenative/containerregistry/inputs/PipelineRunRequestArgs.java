@@ -32,7 +32,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="artifacts")
       private final @Nullable Output<List<String>> artifacts;
 
-    public Output<List<String>> getArtifacts() {
+    public Output<List<String>> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -43,7 +43,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="catalogDigest")
       private final @Nullable Output<String> catalogDigest;
 
-    public Output<String> getCatalogDigest() {
+    public Output<String> catalogDigest() {
         return this.catalogDigest == null ? Codegen.empty() : this.catalogDigest;
     }
 
@@ -54,7 +54,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pipelineResourceId")
       private final @Nullable Output<String> pipelineResourceId;
 
-    public Output<String> getPipelineResourceId() {
+    public Output<String> pipelineResourceId() {
         return this.pipelineResourceId == null ? Codegen.empty() : this.pipelineResourceId;
     }
 
@@ -65,7 +65,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source")
       private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
 
-    public Output<PipelineRunSourcePropertiesArgs> getSource() {
+    public Output<PipelineRunSourcePropertiesArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -76,7 +76,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="target")
       private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
-    public Output<PipelineRunTargetPropertiesArgs> getTarget() {
+    public Output<PipelineRunTargetPropertiesArgs> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

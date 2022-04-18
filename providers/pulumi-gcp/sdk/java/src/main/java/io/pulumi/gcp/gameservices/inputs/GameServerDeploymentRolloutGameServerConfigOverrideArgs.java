@@ -23,7 +23,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
     @Import(name="configVersion")
       private final @Nullable Output<String> configVersion;
 
-    public Output<String> getConfigVersion() {
+    public Output<String> configVersion() {
         return this.configVersion == null ? Codegen.empty() : this.configVersion;
     }
 
@@ -35,7 +35,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
     @Import(name="realmsSelector")
       private final @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
 
-    public Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> getRealmsSelector() {
+    public Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector() {
         return this.realmsSelector == null ? Codegen.empty() : this.realmsSelector;
     }
 

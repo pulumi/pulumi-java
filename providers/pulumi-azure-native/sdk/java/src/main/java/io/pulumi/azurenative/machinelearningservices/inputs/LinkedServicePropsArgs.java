@@ -27,7 +27,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -38,7 +38,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkType")
       private final @Nullable Output<LinkedServiceLinkType> linkType;
 
-    public Output<LinkedServiceLinkType> getLinkType() {
+    public Output<LinkedServiceLinkType> linkType() {
         return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
@@ -49,7 +49,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkedServiceResourceId", required=true)
       private final Output<String> linkedServiceResourceId;
 
-    public Output<String> getLinkedServiceResourceId() {
+    public Output<String> linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
 
@@ -60,7 +60,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="modifiedTime")
       private final @Nullable Output<String> modifiedTime;
 
-    public Output<String> getModifiedTime() {
+    public Output<String> modifiedTime() {
         return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
     }
 

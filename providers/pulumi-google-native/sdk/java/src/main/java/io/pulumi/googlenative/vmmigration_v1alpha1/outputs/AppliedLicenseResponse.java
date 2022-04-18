@@ -32,14 +32,14 @@ public final class AppliedLicenseResponse {
      * The OS license returned from the adaptation module's report.
      * 
     */
-    public String getOsLicense() {
+    public String osLicense() {
         return this.osLicense;
     }
     /**
      * The license type that was used in OS adaptation.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

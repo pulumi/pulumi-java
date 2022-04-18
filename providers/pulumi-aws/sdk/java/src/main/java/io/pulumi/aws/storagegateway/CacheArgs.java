@@ -21,7 +21,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
 
@@ -32,7 +32,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 

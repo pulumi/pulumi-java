@@ -30,7 +30,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gaugeView")
       private final @Nullable Output<GaugeViewArgs> gaugeView;
 
-    public Output<GaugeViewArgs> getGaugeView() {
+    public Output<GaugeViewArgs> gaugeView() {
         return this.gaugeView == null ? Codegen.empty() : this.gaugeView;
     }
 
@@ -41,7 +41,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkChartView")
       private final @Nullable Output<SparkChartViewArgs> sparkChartView;
 
-    public Output<SparkChartViewArgs> getSparkChartView() {
+    public Output<SparkChartViewArgs> sparkChartView() {
         return this.sparkChartView == null ? Codegen.empty() : this.sparkChartView;
     }
 
@@ -52,7 +52,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholds")
       private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Output<List<ThresholdArgs>> getThresholds() {
+    public Output<List<ThresholdArgs>> thresholds() {
         return this.thresholds == null ? Codegen.empty() : this.thresholds;
     }
 
@@ -63,7 +63,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

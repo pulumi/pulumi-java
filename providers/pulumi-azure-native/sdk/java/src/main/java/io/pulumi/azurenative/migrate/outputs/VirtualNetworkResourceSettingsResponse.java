@@ -68,7 +68,7 @@ public final class VirtualNetworkResourceSettingsResponse {
      * Gets or sets the address prefixes for the virtual network.
      * 
     */
-    public List<String> getAddressSpace() {
+    public List<String> addressSpace() {
         return this.addressSpace == null ? List.of() : this.addressSpace;
     }
     /**
@@ -76,7 +76,7 @@ public final class VirtualNetworkResourceSettingsResponse {
      * deployed in the virtual network.
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
@@ -84,7 +84,7 @@ public final class VirtualNetworkResourceSettingsResponse {
      * DDOS protection should be switched on.
      * 
     */
-    public Optional<Boolean> getEnableDdosProtection() {
+    public Optional<Boolean> enableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
     /**
@@ -92,21 +92,21 @@ public final class VirtualNetworkResourceSettingsResponse {
      * Expected value is 'Microsoft.Network/virtualNetworks'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets List of subnets in a VirtualNetwork.
      * 
     */
-    public List<SubnetResourceSettingsResponse> getSubnets() {
+    public List<SubnetResourceSettingsResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

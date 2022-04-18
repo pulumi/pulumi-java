@@ -42,7 +42,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @return The name of the Code Repository (must be unique).
      * 
      */
-    public Output<String> getCodeRepositoryName() {
+    public Output<String> codeRepositoryName() {
         return this.codeRepositoryName;
     }
     /**
@@ -70,7 +70,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @return Specifies details about the repository. see Git Config details below.
      * 
      */
-    public Output<CodeRepositoryGitConfig> getGitConfig() {
+    public Output<CodeRepositoryGitConfig> gitConfig() {
         return this.gitConfig;
     }
     /**
@@ -84,7 +84,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

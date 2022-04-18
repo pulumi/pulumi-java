@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
     @Import(name="genericWebService", required=true)
       private final GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
 
-    public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse getGenericWebService() {
+    public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

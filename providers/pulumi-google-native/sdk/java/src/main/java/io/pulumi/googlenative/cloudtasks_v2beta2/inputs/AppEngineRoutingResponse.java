@@ -23,7 +23,7 @@ public final class AppEngineRoutingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -34,7 +34,7 @@ public final class AppEngineRoutingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="instance", required=true)
       private final String instance;
 
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 
@@ -45,7 +45,7 @@ public final class AppEngineRoutingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -56,7 +56,7 @@ public final class AppEngineRoutingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

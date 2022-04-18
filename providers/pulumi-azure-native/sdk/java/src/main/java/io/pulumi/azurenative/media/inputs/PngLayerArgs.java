@@ -26,7 +26,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
+    public Output<String> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -37,7 +37,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -49,7 +49,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -60,7 +60,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
+    public Output<String> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

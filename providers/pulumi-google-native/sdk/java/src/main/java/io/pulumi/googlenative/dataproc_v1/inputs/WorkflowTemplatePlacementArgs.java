@@ -27,7 +27,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
     @Import(name="clusterSelector")
       private final @Nullable Output<ClusterSelectorArgs> clusterSelector;
 
-    public Output<ClusterSelectorArgs> getClusterSelector() {
+    public Output<ClusterSelectorArgs> clusterSelector() {
         return this.clusterSelector == null ? Codegen.empty() : this.clusterSelector;
     }
 
@@ -38,7 +38,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
     @Import(name="managedCluster")
       private final @Nullable Output<ManagedClusterArgs> managedCluster;
 
-    public Output<ManagedClusterArgs> getManagedCluster() {
+    public Output<ManagedClusterArgs> managedCluster() {
         return this.managedCluster == null ? Codegen.empty() : this.managedCluster;
     }
 

@@ -29,7 +29,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fontSize")
       private final @Nullable Output<Either<String,FontSize>> fontSize;
 
-    public Output<Either<String,FontSize>> getFontSize() {
+    public Output<Either<String,FontSize>> fontSize() {
         return this.fontSize == null ? Codegen.empty() : this.fontSize;
     }
 
@@ -40,7 +40,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fontStyle")
       private final @Nullable Output<Either<String,FontStyle>> fontStyle;
 
-    public Output<Either<String,FontStyle>> getFontStyle() {
+    public Output<Either<String,FontStyle>> fontStyle() {
         return this.fontStyle == null ? Codegen.empty() : this.fontStyle;
     }
 

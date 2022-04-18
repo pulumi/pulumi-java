@@ -27,13 +27,13 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
         this.statisticsResource = statisticsResource;
     }
 
-    public Optional<String> getBaseliningJobName() {
+    public Optional<String> baseliningJobName() {
         return Optional.ofNullable(this.baseliningJobName);
     }
-    public Optional<DataQualityJobDefinitionConstraintsResource> getConstraintsResource() {
+    public Optional<DataQualityJobDefinitionConstraintsResource> constraintsResource() {
         return Optional.ofNullable(this.constraintsResource);
     }
-    public Optional<DataQualityJobDefinitionStatisticsResource> getStatisticsResource() {
+    public Optional<DataQualityJobDefinitionStatisticsResource> statisticsResource() {
         return Optional.ofNullable(this.statisticsResource);
     }
 

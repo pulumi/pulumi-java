@@ -32,7 +32,7 @@ public class CertificateAuthorityCertificate extends io.pulumi.resources.CustomR
      * @return The PEM-encoded certificate for the Certificate Authority.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -46,7 +46,7 @@ public class CertificateAuthorityCertificate extends io.pulumi.resources.CustomR
      * @return Amazon Resource Name (ARN) of the Certificate Authority.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -60,7 +60,7 @@ public class CertificateAuthorityCertificate extends io.pulumi.resources.CustomR
      * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
 

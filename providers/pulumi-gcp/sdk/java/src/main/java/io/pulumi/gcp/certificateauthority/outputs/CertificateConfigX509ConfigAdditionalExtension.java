@@ -44,7 +44,7 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
      * handle this extension, the client should consider this to be an error).
      * 
     */
-    public Boolean getCritical() {
+    public Boolean critical() {
         return this.critical;
     }
     /**
@@ -52,14 +52,14 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigX509ConfigAdditionalExtensionObjectId getObjectId() {
+    public CertificateConfigX509ConfigAdditionalExtensionObjectId objectId() {
         return this.objectId;
     }
     /**
      * The value of this X.509 extension. A base64-encoded string.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

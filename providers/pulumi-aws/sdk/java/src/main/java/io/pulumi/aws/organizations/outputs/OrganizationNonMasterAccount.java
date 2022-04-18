@@ -55,35 +55,35 @@ public final class OrganizationNonMasterAccount {
      * ARN of the root
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Email of the account
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Identifier of the root
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the policy type
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The status of the policy type as it relates to the associated root
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

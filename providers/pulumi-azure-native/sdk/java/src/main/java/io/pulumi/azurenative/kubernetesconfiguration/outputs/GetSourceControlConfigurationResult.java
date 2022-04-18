@@ -144,119 +144,119 @@ public final class GetSourceControlConfigurationResult {
      * Compliance Status of the Configuration
      * 
     */
-    public ComplianceStatusResponse getComplianceStatus() {
+    public ComplianceStatusResponse complianceStatus() {
         return this.complianceStatus;
     }
     /**
      * Name-value pairs of protected configuration settings for the configuration
      * 
     */
-    public Map<String,String> getConfigurationProtectedSettings() {
+    public Map<String,String> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
      * Option to enable Helm Operator for this git configuration.
      * 
     */
-    public Optional<Boolean> getEnableHelmOperator() {
+    public Optional<Boolean> enableHelmOperator() {
         return Optional.ofNullable(this.enableHelmOperator);
     }
     /**
      * Properties for Helm operator.
      * 
     */
-    public Optional<HelmOperatorPropertiesResponse> getHelmOperatorProperties() {
+    public Optional<HelmOperatorPropertiesResponse> helmOperatorProperties() {
         return Optional.ofNullable(this.helmOperatorProperties);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Instance name of the operator - identifying the specific configuration.
      * 
     */
-    public Optional<String> getOperatorInstanceName() {
+    public Optional<String> operatorInstanceName() {
         return Optional.ofNullable(this.operatorInstanceName);
     }
     /**
      * The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
     */
-    public Optional<String> getOperatorNamespace() {
+    public Optional<String> operatorNamespace() {
         return Optional.ofNullable(this.operatorNamespace);
     }
     /**
      * Any Parameters for the Operator instance in string format.
      * 
     */
-    public Optional<String> getOperatorParams() {
+    public Optional<String> operatorParams() {
         return Optional.ofNullable(this.operatorParams);
     }
     /**
      * Scope at which the operator will be installed.
      * 
     */
-    public Optional<String> getOperatorScope() {
+    public Optional<String> operatorScope() {
         return Optional.ofNullable(this.operatorScope);
     }
     /**
      * Type of the operator
      * 
     */
-    public Optional<String> getOperatorType() {
+    public Optional<String> operatorType() {
         return Optional.ofNullable(this.operatorType);
     }
     /**
      * The provisioning state of the resource provider.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
      * 
     */
-    public String getRepositoryPublicKey() {
+    public String repositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
      * Url of the SourceControl Repository.
      * 
     */
-    public Optional<String> getRepositoryUrl() {
+    public Optional<String> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
     /**
      * Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
      * 
     */
-    public Optional<String> getSshKnownHostsContents() {
+    public Optional<String> sshKnownHostsContents() {
         return Optional.ofNullable(this.sshKnownHostsContents);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

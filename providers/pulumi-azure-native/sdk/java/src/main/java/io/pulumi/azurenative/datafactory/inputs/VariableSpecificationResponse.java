@@ -26,7 +26,7 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -37,7 +37,7 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

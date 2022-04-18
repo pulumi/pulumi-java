@@ -56,7 +56,7 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerInspectJobStorageConfigBigQueryOptions> getBigQueryOptions() {
+    public Optional<PreventionJobTriggerInspectJobStorageConfigBigQueryOptions> bigQueryOptions() {
         return Optional.ofNullable(this.bigQueryOptions);
     }
     /**
@@ -64,7 +64,7 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions> getCloudStorageOptions() {
+    public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions> cloudStorageOptions() {
         return Optional.ofNullable(this.cloudStorageOptions);
     }
     /**
@@ -72,7 +72,7 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerInspectJobStorageConfigDatastoreOptions> getDatastoreOptions() {
+    public Optional<PreventionJobTriggerInspectJobStorageConfigDatastoreOptions> datastoreOptions() {
         return Optional.ofNullable(this.datastoreOptions);
     }
     /**
@@ -80,7 +80,7 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerInspectJobStorageConfigTimespanConfig> getTimespanConfig() {
+    public Optional<PreventionJobTriggerInspectJobStorageConfigTimespanConfig> timespanConfig() {
         return Optional.ofNullable(this.timespanConfig);
     }
 

@@ -23,7 +23,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     @Import(name="queryStringBehavior", required=true)
       private final Output<String> queryStringBehavior;
 
-    public Output<String> getQueryStringBehavior() {
+    public Output<String> queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
@@ -34,7 +34,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     @Import(name="queryStrings")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> queryStrings;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> getQueryStrings() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> queryStrings() {
         return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 

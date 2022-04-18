@@ -26,7 +26,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
     @Import(name="baseKeyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage() {
         return this.baseKeyUsage;
     }
 
@@ -38,7 +38,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
     @Import(name="extendedKeyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
 
@@ -50,7 +50,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
+    public Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 

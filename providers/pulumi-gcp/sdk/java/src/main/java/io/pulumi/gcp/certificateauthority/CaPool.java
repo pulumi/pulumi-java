@@ -55,7 +55,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CaPoolIssuancePolicy> getIssuancePolicy() {
+    public Output</* @Nullable */ CaPoolIssuancePolicy> issuancePolicy() {
         return this.issuancePolicy;
     }
     /**
@@ -73,7 +73,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -87,7 +87,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * @return String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -101,7 +101,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * @return The name for this CaPool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -133,7 +133,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CaPoolPublishingOptions> getPublishingOptions() {
+    public Output</* @Nullable */ CaPoolPublishingOptions> publishingOptions() {
         return this.publishingOptions;
     }
     /**
@@ -149,7 +149,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Possible values are `ENTERPRISE` and `DEVOPS`.
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
 

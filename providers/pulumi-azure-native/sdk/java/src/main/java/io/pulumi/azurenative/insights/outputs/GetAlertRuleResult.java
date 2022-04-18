@@ -114,84 +114,84 @@ public final class GetAlertRuleResult {
      * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
     */
-    public Optional<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getAction() {
+    public Optional<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
     */
-    public List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getActions() {
+    public List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * the condition that results in the alert rule being activated.
      * 
     */
-    public Object getCondition() {
+    public Object condition() {
         return this.condition;
     }
     /**
      * the description of the alert rule that will be included in the alert email.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * the flag that indicates whether the alert rule is enabled.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the provisioning state.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

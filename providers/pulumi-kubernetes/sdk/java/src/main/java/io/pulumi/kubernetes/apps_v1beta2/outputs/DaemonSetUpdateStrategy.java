@@ -35,14 +35,14 @@ public final class DaemonSetUpdateStrategy {
      * Rolling update config params. Present only if type = "RollingUpdate".
      * 
     */
-    public Optional<RollingUpdateDaemonSet> getRollingUpdate() {
+    public Optional<RollingUpdateDaemonSet> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
      * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

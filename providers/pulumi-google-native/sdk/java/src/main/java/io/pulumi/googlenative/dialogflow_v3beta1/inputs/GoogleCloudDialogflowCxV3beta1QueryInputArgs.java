@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="audio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AudioInputArgs> audio;
 
-    public Output<GoogleCloudDialogflowCxV3beta1AudioInputArgs> getAudio() {
+    public Output<GoogleCloudDialogflowCxV3beta1AudioInputArgs> audio() {
         return this.audio == null ? Codegen.empty() : this.audio;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="dtmf")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1DtmfInputArgs> dtmf;
 
-    public Output<GoogleCloudDialogflowCxV3beta1DtmfInputArgs> getDtmf() {
+    public Output<GoogleCloudDialogflowCxV3beta1DtmfInputArgs> dtmf() {
         return this.dtmf == null ? Codegen.empty() : this.dtmf;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="event")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1EventInputArgs> event;
 
-    public Output<GoogleCloudDialogflowCxV3beta1EventInputArgs> getEvent() {
+    public Output<GoogleCloudDialogflowCxV3beta1EventInputArgs> event() {
         return this.event == null ? Codegen.empty() : this.event;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="intent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1IntentInputArgs> intent;
 
-    public Output<GoogleCloudDialogflowCxV3beta1IntentInputArgs> getIntent() {
+    public Output<GoogleCloudDialogflowCxV3beta1IntentInputArgs> intent() {
         return this.intent == null ? Codegen.empty() : this.intent;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="languageCode", required=true)
       private final Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
     @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1TextInputArgs> text;
 
-    public Output<GoogleCloudDialogflowCxV3beta1TextInputArgs> getText() {
+    public Output<GoogleCloudDialogflowCxV3beta1TextInputArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

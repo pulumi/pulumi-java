@@ -20,21 +20,21 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
     @Import(name="spectrumConfig")
       private final @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigUplinkSpectrumConfigArgs> getSpectrumConfig() {
+    public Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig() {
         return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 
     @Import(name="targetEirp")
       private final @Nullable Output<ConfigEirpArgs> targetEirp;
 
-    public Output<ConfigEirpArgs> getTargetEirp() {
+    public Output<ConfigEirpArgs> targetEirp() {
         return this.targetEirp == null ? Codegen.empty() : this.targetEirp;
     }
 
     @Import(name="transmitDisabled")
       private final @Nullable Output<Boolean> transmitDisabled;
 
-    public Output<Boolean> getTransmitDisabled() {
+    public Output<Boolean> transmitDisabled() {
         return this.transmitDisabled == null ? Codegen.empty() : this.transmitDisabled;
     }
 

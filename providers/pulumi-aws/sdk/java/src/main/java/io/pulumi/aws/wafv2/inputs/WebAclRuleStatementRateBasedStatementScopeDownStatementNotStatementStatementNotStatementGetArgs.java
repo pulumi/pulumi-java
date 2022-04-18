@@ -22,7 +22,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementGetArgs>> statements;
 
-    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementGetArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 

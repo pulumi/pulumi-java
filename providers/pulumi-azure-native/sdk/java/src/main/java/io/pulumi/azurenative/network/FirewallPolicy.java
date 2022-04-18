@@ -52,7 +52,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The parent firewall policy from which rules are inherited.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getBasePolicy() {
+    public Output</* @Nullable */ SubResourceResponse> basePolicy() {
         return this.basePolicy;
     }
     /**
@@ -66,7 +66,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return List of references to Child Firewall Policies.
      * 
      */
-    public Output<List<SubResourceResponse>> getChildPolicies() {
+    public Output<List<SubResourceResponse>> childPolicies() {
         return this.childPolicies;
     }
     /**
@@ -80,7 +80,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return DNS Proxy Settings definition.
      * 
      */
-    public Output</* @Nullable */ DnsSettingsResponse> getDnsSettings() {
+    public Output</* @Nullable */ DnsSettingsResponse> dnsSettings() {
         return this.dnsSettings;
     }
     /**
@@ -94,7 +94,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -108,7 +108,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return List of references to Azure Firewalls that this Firewall Policy is associated with.
      * 
      */
-    public Output<List<SubResourceResponse>> getFirewalls() {
+    public Output<List<SubResourceResponse>> firewalls() {
         return this.firewalls;
     }
     /**
@@ -122,7 +122,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The identity of the firewall policy.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -136,7 +136,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Insights on Firewall Policy.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyInsightsResponse> getInsights() {
+    public Output</* @Nullable */ FirewallPolicyInsightsResponse> insights() {
         return this.insights;
     }
     /**
@@ -150,7 +150,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The configuration for Intrusion detection.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> getIntrusionDetection() {
+    public Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> intrusionDetection() {
         return this.intrusionDetection;
     }
     /**
@@ -164,7 +164,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -178,7 +178,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -192,7 +192,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the firewall policy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -206,7 +206,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return List of references to FirewallPolicyRuleCollectionGroups.
      * 
      */
-    public Output<List<SubResourceResponse>> getRuleCollectionGroups() {
+    public Output<List<SubResourceResponse>> ruleCollectionGroups() {
         return this.ruleCollectionGroups;
     }
     /**
@@ -220,7 +220,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The Firewall Policy SKU.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicySkuResponse> getSku() {
+    public Output</* @Nullable */ FirewallPolicySkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -234,7 +234,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The private IP addresses/IP ranges to which traffic will not be SNAT.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicySNATResponse> getSnat() {
+    public Output</* @Nullable */ FirewallPolicySNATResponse> snat() {
         return this.snat;
     }
     /**
@@ -248,7 +248,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -262,7 +262,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The operation mode for Threat Intelligence.
      * 
      */
-    public Output</* @Nullable */ String> getThreatIntelMode() {
+    public Output</* @Nullable */ String> threatIntelMode() {
         return this.threatIntelMode;
     }
     /**
@@ -276,7 +276,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return ThreatIntel Whitelist for Firewall Policy.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> getThreatIntelWhitelist() {
+    public Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> threatIntelWhitelist() {
         return this.threatIntelWhitelist;
     }
     /**
@@ -290,7 +290,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return TLS Configuration definition.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> getTransportSecurity() {
+    public Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> transportSecurity() {
         return this.transportSecurity;
     }
     /**
@@ -304,7 +304,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

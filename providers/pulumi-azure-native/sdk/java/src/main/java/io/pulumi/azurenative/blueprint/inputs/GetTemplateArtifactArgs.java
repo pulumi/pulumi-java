@@ -19,7 +19,7 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
     @Import(name="artifactName", required=true)
       private final String artifactName;
 
-    public String getArtifactName() {
+    public String artifactName() {
         return this.artifactName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
     @Import(name="blueprintName", required=true)
       private final String blueprintName;
 
-    public String getBlueprintName() {
+    public String blueprintName() {
         return this.blueprintName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceScope", required=true)
       private final String resourceScope;
 
-    public String getResourceScope() {
+    public String resourceScope() {
         return this.resourceScope;
     }
 

@@ -26,7 +26,7 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
     @Import(name="disableArchive")
       private final @Nullable Output<String> disableArchive;
 
-    public Output<String> getDisableArchive() {
+    public Output<String> disableArchive() {
         return this.disableArchive == null ? Codegen.empty() : this.disableArchive;
     }
 
@@ -37,7 +37,7 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
     @Import(name="disableRtspPublishing")
       private final @Nullable Output<String> disableRtspPublishing;
 
-    public Output<String> getDisableRtspPublishing() {
+    public Output<String> disableRtspPublishing() {
         return this.disableRtspPublishing == null ? Codegen.empty() : this.disableRtspPublishing;
     }
 

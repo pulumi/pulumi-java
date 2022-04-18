@@ -281,245 +281,245 @@ public final class GetDatabaseAccountResult {
      * API specific properties.
      * 
     */
-    public Optional<ApiPropertiesResponse> getApiProperties() {
+    public Optional<ApiPropertiesResponse> apiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
     /**
      * The object representing the policy for taking backups on an account.
      * 
     */
-    public Optional<Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> getBackupPolicy() {
+    public Optional<Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> backupPolicy() {
         return Optional.ofNullable(this.backupPolicy);
     }
     /**
      * List of Cosmos DB capabilities for the account
      * 
     */
-    public List<CapabilityResponse> getCapabilities() {
+    public List<CapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * The cassandra connector offer type for the Cosmos DB database C* account.
      * 
     */
-    public Optional<String> getConnectorOffer() {
+    public Optional<String> connectorOffer() {
         return Optional.ofNullable(this.connectorOffer);
     }
     /**
      * The consistency policy for the Cosmos DB database account.
      * 
     */
-    public Optional<ConsistencyPolicyResponse> getConsistencyPolicy() {
+    public Optional<ConsistencyPolicyResponse> consistencyPolicy() {
         return Optional.ofNullable(this.consistencyPolicy);
     }
     /**
      * The CORS policy for the Cosmos DB database account.
      * 
     */
-    public List<CorsPolicyResponse> getCors() {
+    public List<CorsPolicyResponse> cors() {
         return this.cors == null ? List.of() : this.cors;
     }
     /**
      * The offer type for the Cosmos DB database account. Default value: Standard.
      * 
     */
-    public String getDatabaseAccountOfferType() {
+    public String databaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
     /**
      * The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
      * 
     */
-    public Optional<String> getDefaultIdentity() {
+    public Optional<String> defaultIdentity() {
         return Optional.ofNullable(this.defaultIdentity);
     }
     /**
      * Disable write operations on metadata resources (databases, containers, throughput) via account keys
      * 
     */
-    public Optional<Boolean> getDisableKeyBasedMetadataWriteAccess() {
+    public Optional<Boolean> disableKeyBasedMetadataWriteAccess() {
         return Optional.ofNullable(this.disableKeyBasedMetadataWriteAccess);
     }
     /**
      * The connection endpoint for the Cosmos DB database account.
      * 
     */
-    public String getDocumentEndpoint() {
+    public String documentEndpoint() {
         return this.documentEndpoint;
     }
     /**
      * Flag to indicate whether to enable storage analytics.
      * 
     */
-    public Optional<Boolean> getEnableAnalyticalStorage() {
+    public Optional<Boolean> enableAnalyticalStorage() {
         return Optional.ofNullable(this.enableAnalyticalStorage);
     }
     /**
      * Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
      * 
     */
-    public Optional<Boolean> getEnableAutomaticFailover() {
+    public Optional<Boolean> enableAutomaticFailover() {
         return Optional.ofNullable(this.enableAutomaticFailover);
     }
     /**
      * Enables the cassandra connector on the Cosmos DB C* account
      * 
     */
-    public Optional<Boolean> getEnableCassandraConnector() {
+    public Optional<Boolean> enableCassandraConnector() {
         return Optional.ofNullable(this.enableCassandraConnector);
     }
     /**
      * Flag to indicate whether Free Tier is enabled.
      * 
     */
-    public Optional<Boolean> getEnableFreeTier() {
+    public Optional<Boolean> enableFreeTier() {
         return Optional.ofNullable(this.enableFreeTier);
     }
     /**
      * Enables the account to write in multiple locations
      * 
     */
-    public Optional<Boolean> getEnableMultipleWriteLocations() {
+    public Optional<Boolean> enableMultipleWriteLocations() {
         return Optional.ofNullable(this.enableMultipleWriteLocations);
     }
     /**
      * An array that contains the regions ordered by their failover priorities.
      * 
     */
-    public List<FailoverPolicyResponse> getFailoverPolicies() {
+    public List<FailoverPolicyResponse> failoverPolicies() {
         return this.failoverPolicies;
     }
     /**
      * The unique resource identifier of the ARM resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * List of IpRules.
      * 
     */
-    public List<IpAddressOrRangeResponse> getIpRules() {
+    public List<IpAddressOrRangeResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * Flag to indicate whether to enable/disable Virtual Network ACL rules.
      * 
     */
-    public Optional<Boolean> getIsVirtualNetworkFilterEnabled() {
+    public Optional<Boolean> isVirtualNetworkFilterEnabled() {
         return Optional.ofNullable(this.isVirtualNetworkFilterEnabled);
     }
     /**
      * The URI of the key vault
      * 
     */
-    public Optional<String> getKeyVaultKeyUri() {
+    public Optional<String> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
     /**
      * Indicates the type of database account. This can only be set at database account creation.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The location of the resource group to which the resource belongs.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * An array that contains all of the locations enabled for the Cosmos DB account.
      * 
     */
-    public List<LocationResponse> getLocations() {
+    public List<LocationResponse> locations() {
         return this.locations;
     }
     /**
      * The name of the ARM resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Indicates what services are allowed to bypass firewall checks.
      * 
     */
-    public Optional<String> getNetworkAclBypass() {
+    public Optional<String> networkAclBypass() {
         return Optional.ofNullable(this.networkAclBypass);
     }
     /**
      * An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
      * 
     */
-    public List<String> getNetworkAclBypassResourceIds() {
+    public List<String> networkAclBypassResourceIds() {
         return this.networkAclBypassResourceIds == null ? List.of() : this.networkAclBypassResourceIds;
     }
     /**
      * List of Private Endpoint Connections configured for the Cosmos DB account.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether requests from Public Network are allowed
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * An array that contains of the read locations enabled for the Cosmos DB account.
      * 
     */
-    public List<LocationResponse> getReadLocations() {
+    public List<LocationResponse> readLocations() {
         return this.readLocations;
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of Azure resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List of Virtual Network ACL rules configured for the Cosmos DB account.
      * 
     */
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
     /**
      * An array that contains the write location for the Cosmos DB account.
      * 
     */
-    public List<LocationResponse> getWriteLocations() {
+    public List<LocationResponse> writeLocations() {
         return this.writeLocations;
     }
 

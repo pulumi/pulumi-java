@@ -31,16 +31,16 @@ public final class GetDataflowEndpointGroupResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<DataflowEndpointGroupEndpointDetails> getEndpointDetails() {
+    public List<DataflowEndpointGroupEndpointDetails> endpointDetails() {
         return this.endpointDetails == null ? List.of() : this.endpointDetails;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<DataflowEndpointGroupTag> getTags() {
+    public List<DataflowEndpointGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

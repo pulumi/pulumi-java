@@ -23,7 +23,7 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subjectConfig", required=true)
       private final Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
 
-    public Output<AuthorityConfigSubjectConfigGetArgs> getSubjectConfig() {
+    public Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -35,7 +35,7 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="x509Config", required=true)
       private final Output<AuthorityConfigX509ConfigGetArgs> x509Config;
 
-    public Output<AuthorityConfigX509ConfigGetArgs> getX509Config() {
+    public Output<AuthorityConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
 

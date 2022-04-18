@@ -25,7 +25,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<MachineImageIamBindingConditionGetArgs> condition;
 
-    public Output<MachineImageIamBindingConditionGetArgs> getCondition() {
+    public Output<MachineImageIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -36,7 +36,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -47,14 +47,14 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
     @Import(name="machineImage")
       private final @Nullable Output<String> machineImage;
 
-    public Output<String> getMachineImage() {
+    public Output<String> machineImage() {
         return this.machineImage == null ? Codegen.empty() : this.machineImage;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -66,7 +66,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -79,7 +79,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

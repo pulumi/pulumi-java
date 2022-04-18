@@ -17,14 +17,14 @@ public final class GetBucketLifecycleRule extends io.pulumi.resources.InvokeArgs
     @Import(name="actions", required=true)
       private final List<GetBucketLifecycleRuleAction> actions;
 
-    public List<GetBucketLifecycleRuleAction> getActions() {
+    public List<GetBucketLifecycleRuleAction> actions() {
         return this.actions;
     }
 
     @Import(name="conditions", required=true)
       private final List<GetBucketLifecycleRuleCondition> conditions;
 
-    public List<GetBucketLifecycleRuleCondition> getConditions() {
+    public List<GetBucketLifecycleRuleCondition> conditions() {
         return this.conditions;
     }
 

@@ -24,7 +24,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -35,7 +35,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 
@@ -46,7 +46,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<VpcConnectorTagArgs>> tags;
 
-    public Output<List<VpcConnectorTagArgs>> getTags() {
+    public Output<List<VpcConnectorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectorName")
       private final @Nullable Output<String> vpcConnectorName;
 
-    public Output<String> getVpcConnectorName() {
+    public Output<String> vpcConnectorName() {
         return this.vpcConnectorName == null ? Codegen.empty() : this.vpcConnectorName;
     }
 

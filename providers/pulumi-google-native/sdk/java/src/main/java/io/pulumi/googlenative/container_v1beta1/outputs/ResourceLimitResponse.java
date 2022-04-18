@@ -39,21 +39,21 @@ public final class ResourceLimitResponse {
      * Maximum amount of the resource in the cluster.
      * 
     */
-    public String getMaximum() {
+    public String maximum() {
         return this.maximum;
     }
     /**
      * Minimum amount of the resource in the cluster.
      * 
     */
-    public String getMinimum() {
+    public String minimum() {
         return this.minimum;
     }
     /**
      * Resource name "cpu", "memory" or gpu-specific string.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

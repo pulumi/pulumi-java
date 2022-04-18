@@ -26,7 +26,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advancedSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> getAdvancedSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings() {
         return this.advancedSettings == null ? Codegen.empty() : this.advancedSettings;
     }
 
@@ -37,7 +37,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="avatarUri")
       private final @Nullable Output<String> avatarUri;
 
-    public Output<String> getAvatarUri() {
+    public Output<String> avatarUri() {
         return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
     }
 
@@ -48,7 +48,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultLanguageCode", required=true)
       private final Output<String> defaultLanguageCode;
 
-    public Output<String> getDefaultLanguageCode() {
+    public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
     }
 
@@ -59,7 +59,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -70,7 +70,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -81,7 +81,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableSpellCorrection")
       private final @Nullable Output<Boolean> enableSpellCorrection;
 
-    public Output<Boolean> getEnableSpellCorrection() {
+    public Output<Boolean> enableSpellCorrection() {
         return this.enableSpellCorrection == null ? Codegen.empty() : this.enableSpellCorrection;
     }
 
@@ -92,14 +92,14 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> getEnableStackdriverLogging() {
+    public Output<Boolean> enableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -110,14 +110,14 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -128,7 +128,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securitySettings")
       private final @Nullable Output<String> securitySettings;
 
-    public Output<String> getSecuritySettings() {
+    public Output<String> securitySettings() {
         return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
     }
 
@@ -139,7 +139,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="speechToTextSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> getSpeechToTextSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings() {
         return this.speechToTextSettings == null ? Codegen.empty() : this.speechToTextSettings;
     }
 
@@ -150,7 +150,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startFlow")
       private final @Nullable Output<String> startFlow;
 
-    public Output<String> getStartFlow() {
+    public Output<String> startFlow() {
         return this.startFlow == null ? Codegen.empty() : this.startFlow;
     }
 
@@ -161,7 +161,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportedLanguageCodes")
       private final @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Output<List<String>> getSupportedLanguageCodes() {
+    public Output<List<String>> supportedLanguageCodes() {
         return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
     }
 
@@ -172,7 +172,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

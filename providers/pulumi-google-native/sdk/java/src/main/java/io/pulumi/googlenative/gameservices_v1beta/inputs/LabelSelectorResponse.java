@@ -24,7 +24,7 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

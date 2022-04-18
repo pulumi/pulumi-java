@@ -24,14 +24,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId")
       private final @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
     }
 
@@ -42,14 +42,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
+    public Output<NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -82,7 +82,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfigs")
       private final @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
-    public Output<List<Hl7V2NotificationConfigArgs>> getNotificationConfigs() {
+    public Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs() {
         return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
     }
 
@@ -93,14 +93,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parserConfig")
       private final @Nullable Output<ParserConfigArgs> parserConfig;
 
-    public Output<ParserConfigArgs> getParserConfig() {
+    public Output<ParserConfigArgs> parserConfig() {
         return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rejectDuplicateMessage")
       private final @Nullable Output<Boolean> rejectDuplicateMessage;
 
-    public Output<Boolean> getRejectDuplicateMessage() {
+    public Output<Boolean> rejectDuplicateMessage() {
         return this.rejectDuplicateMessage == null ? Codegen.empty() : this.rejectDuplicateMessage;
     }
 

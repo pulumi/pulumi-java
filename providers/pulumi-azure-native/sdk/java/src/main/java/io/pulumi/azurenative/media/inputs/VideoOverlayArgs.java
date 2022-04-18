@@ -28,7 +28,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audioGainLevel")
       private final @Nullable Output<Double> audioGainLevel;
 
-    public Output<Double> getAudioGainLevel() {
+    public Output<Double> audioGainLevel() {
         return this.audioGainLevel == null ? Codegen.empty() : this.audioGainLevel;
     }
 
@@ -39,7 +39,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cropRectangle")
       private final @Nullable Output<RectangleArgs> cropRectangle;
 
-    public Output<RectangleArgs> getCropRectangle() {
+    public Output<RectangleArgs> cropRectangle() {
         return this.cropRectangle == null ? Codegen.empty() : this.cropRectangle;
     }
 
@@ -50,7 +50,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -61,7 +61,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fadeInDuration")
       private final @Nullable Output<String> fadeInDuration;
 
-    public Output<String> getFadeInDuration() {
+    public Output<String> fadeInDuration() {
         return this.fadeInDuration == null ? Codegen.empty() : this.fadeInDuration;
     }
 
@@ -72,7 +72,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fadeOutDuration")
       private final @Nullable Output<String> fadeOutDuration;
 
-    public Output<String> getFadeOutDuration() {
+    public Output<String> fadeOutDuration() {
         return this.fadeOutDuration == null ? Codegen.empty() : this.fadeOutDuration;
     }
 
@@ -83,7 +83,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputLabel", required=true)
       private final Output<String> inputLabel;
 
-    public Output<String> getInputLabel() {
+    public Output<String> inputLabel() {
         return this.inputLabel;
     }
 
@@ -95,7 +95,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -106,7 +106,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="opacity")
       private final @Nullable Output<Double> opacity;
 
-    public Output<Double> getOpacity() {
+    public Output<Double> opacity() {
         return this.opacity == null ? Codegen.empty() : this.opacity;
     }
 
@@ -117,7 +117,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="position")
       private final @Nullable Output<RectangleArgs> position;
 
-    public Output<RectangleArgs> getPosition() {
+    public Output<RectangleArgs> position() {
         return this.position == null ? Codegen.empty() : this.position;
     }
 
@@ -128,7 +128,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

@@ -27,7 +27,7 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
     @Import(name="extensions")
       private final @Nullable Output<List<ExtensionArgs>> extensions;
 
-    public Output<List<ExtensionArgs>> getExtensions() {
+    public Output<List<ExtensionArgs>> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 

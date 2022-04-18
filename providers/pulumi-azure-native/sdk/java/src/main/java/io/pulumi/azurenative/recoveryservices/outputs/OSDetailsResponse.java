@@ -62,42 +62,42 @@ public final class OSDetailsResponse {
      * The OS Major Version.
      * 
     */
-    public Optional<String> getOSMajorVersion() {
+    public Optional<String> oSMajorVersion() {
         return Optional.ofNullable(this.oSMajorVersion);
     }
     /**
      * The OS Minor Version.
      * 
     */
-    public Optional<String> getOSMinorVersion() {
+    public Optional<String> oSMinorVersion() {
         return Optional.ofNullable(this.oSMinorVersion);
     }
     /**
      * The OS Version.
      * 
     */
-    public Optional<String> getOSVersion() {
+    public Optional<String> oSVersion() {
         return Optional.ofNullable(this.oSVersion);
     }
     /**
      * The OSEdition.
      * 
     */
-    public Optional<String> getOsEdition() {
+    public Optional<String> osEdition() {
         return Optional.ofNullable(this.osEdition);
     }
     /**
      * VM Disk details.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Product type.
      * 
     */
-    public Optional<String> getProductType() {
+    public Optional<String> productType() {
         return Optional.ofNullable(this.productType);
     }
 

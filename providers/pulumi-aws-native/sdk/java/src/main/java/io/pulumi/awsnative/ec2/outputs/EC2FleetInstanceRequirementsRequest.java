@@ -99,67 +99,67 @@ public final class EC2FleetInstanceRequirementsRequest {
         this.vCpuCount = vCpuCount;
     }
 
-    public Optional<EC2FleetAcceleratorCountRequest> getAcceleratorCount() {
+    public Optional<EC2FleetAcceleratorCountRequest> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
-    public List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> getAcceleratorManufacturers() {
+    public List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers() {
         return this.acceleratorManufacturers == null ? List.of() : this.acceleratorManufacturers;
     }
-    public List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> getAcceleratorNames() {
+    public List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames() {
         return this.acceleratorNames == null ? List.of() : this.acceleratorNames;
     }
-    public Optional<EC2FleetAcceleratorTotalMemoryMiBRequest> getAcceleratorTotalMemoryMiB() {
+    public Optional<EC2FleetAcceleratorTotalMemoryMiBRequest> acceleratorTotalMemoryMiB() {
         return Optional.ofNullable(this.acceleratorTotalMemoryMiB);
     }
-    public List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> getAcceleratorTypes() {
+    public List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes() {
         return this.acceleratorTypes == null ? List.of() : this.acceleratorTypes;
     }
-    public Optional<EC2FleetInstanceRequirementsRequestBareMetal> getBareMetal() {
+    public Optional<EC2FleetInstanceRequirementsRequestBareMetal> bareMetal() {
         return Optional.ofNullable(this.bareMetal);
     }
-    public Optional<EC2FleetBaselineEbsBandwidthMbpsRequest> getBaselineEbsBandwidthMbps() {
+    public Optional<EC2FleetBaselineEbsBandwidthMbpsRequest> baselineEbsBandwidthMbps() {
         return Optional.ofNullable(this.baselineEbsBandwidthMbps);
     }
-    public Optional<EC2FleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
+    public Optional<EC2FleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance() {
         return Optional.ofNullable(this.burstablePerformance);
     }
-    public List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> getCpuManufacturers() {
+    public List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers() {
         return this.cpuManufacturers == null ? List.of() : this.cpuManufacturers;
     }
-    public List<String> getExcludedInstanceTypes() {
+    public List<String> excludedInstanceTypes() {
         return this.excludedInstanceTypes == null ? List.of() : this.excludedInstanceTypes;
     }
-    public List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> getInstanceGenerations() {
+    public List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations() {
         return this.instanceGenerations == null ? List.of() : this.instanceGenerations;
     }
-    public Optional<EC2FleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
+    public Optional<EC2FleetInstanceRequirementsRequestLocalStorage> localStorage() {
         return Optional.ofNullable(this.localStorage);
     }
-    public List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> getLocalStorageTypes() {
+    public List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes() {
         return this.localStorageTypes == null ? List.of() : this.localStorageTypes;
     }
-    public Optional<EC2FleetMemoryGiBPerVCpuRequest> getMemoryGiBPerVCpu() {
+    public Optional<EC2FleetMemoryGiBPerVCpuRequest> memoryGiBPerVCpu() {
         return Optional.ofNullable(this.memoryGiBPerVCpu);
     }
-    public Optional<EC2FleetMemoryMiBRequest> getMemoryMiB() {
+    public Optional<EC2FleetMemoryMiBRequest> memoryMiB() {
         return Optional.ofNullable(this.memoryMiB);
     }
-    public Optional<EC2FleetNetworkInterfaceCountRequest> getNetworkInterfaceCount() {
+    public Optional<EC2FleetNetworkInterfaceCountRequest> networkInterfaceCount() {
         return Optional.ofNullable(this.networkInterfaceCount);
     }
-    public Optional<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> onDemandMaxPricePercentageOverLowestPrice() {
         return Optional.ofNullable(this.onDemandMaxPricePercentageOverLowestPrice);
     }
-    public Optional<Boolean> getRequireHibernateSupport() {
+    public Optional<Boolean> requireHibernateSupport() {
         return Optional.ofNullable(this.requireHibernateSupport);
     }
-    public Optional<Integer> getSpotMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> spotMaxPricePercentageOverLowestPrice() {
         return Optional.ofNullable(this.spotMaxPricePercentageOverLowestPrice);
     }
-    public Optional<EC2FleetTotalLocalStorageGBRequest> getTotalLocalStorageGB() {
+    public Optional<EC2FleetTotalLocalStorageGBRequest> totalLocalStorageGB() {
         return Optional.ofNullable(this.totalLocalStorageGB);
     }
-    public Optional<EC2FleetVCpuCountRangeRequest> getVCpuCount() {
+    public Optional<EC2FleetVCpuCountRangeRequest> vCpuCount() {
         return Optional.ofNullable(this.vCpuCount);
     }
 

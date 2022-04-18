@@ -98,56 +98,56 @@ public final class DatabricksSparkPythonActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
     */
-    public List<Map<String,Object>> getLibraries() {
+    public List<Map<String,Object>> libraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Command line parameters that will be passed to the Python file.
      * 
     */
-    public List<Object> getParameters() {
+    public List<Object> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getPythonFile() {
+    public Object pythonFile() {
         return this.pythonFile;
     }
     /**
@@ -155,14 +155,14 @@ public final class DatabricksSparkPythonActivityResponse {
      * Expected value is 'DatabricksSparkPython'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

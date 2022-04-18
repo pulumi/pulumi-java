@@ -47,7 +47,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Standard error output stream from the powershell execution
      * 
      */
-    public Output<List<String>> getErrors() {
+    public Output<List<String>> errors() {
         return this.errors;
     }
     /**
@@ -61,7 +61,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
      */
-    public Output</* @Nullable */ String> getFailureReason() {
+    public Output</* @Nullable */ String> failureReason() {
         return this.failureReason;
     }
     /**
@@ -75,7 +75,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Time the script execution was finished
      * 
      */
-    public Output<String> getFinishedAt() {
+    public Output<String> finishedAt() {
         return this.finishedAt;
     }
     /**
@@ -89,7 +89,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
      */
-    public Output</* @Nullable */ List<Object>> getHiddenParameters() {
+    public Output</* @Nullable */ List<Object>> hiddenParameters() {
         return this.hiddenParameters;
     }
     /**
@@ -103,7 +103,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Standard information out stream from the powershell execution
      * 
      */
-    public Output<List<String>> getInformation() {
+    public Output<List<String>> information() {
         return this.information;
     }
     /**
@@ -117,7 +117,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return User-defined dictionary.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getNamedOutputs() {
+    public Output</* @Nullable */ Map<String,Object>> namedOutputs() {
         return this.namedOutputs;
     }
     /**
@@ -145,7 +145,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Standard output stream from the powershell execution
      * 
      */
-    public Output</* @Nullable */ List<String>> getOutput() {
+    public Output</* @Nullable */ List<String>> output() {
         return this.output;
     }
     /**
@@ -159,7 +159,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Parameters the script will accept
      * 
      */
-    public Output</* @Nullable */ List<Object>> getParameters() {
+    public Output</* @Nullable */ List<Object>> parameters() {
         return this.parameters;
     }
     /**
@@ -173,7 +173,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return The state of the script execution resource
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -187,7 +187,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Time to live for the resource. If not provided, will be available for 60 days
      * 
      */
-    public Output</* @Nullable */ String> getRetention() {
+    public Output</* @Nullable */ String> retention() {
         return this.retention;
     }
     /**
@@ -201,7 +201,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return A reference to the script cmdlet resource if user is running a AVS script
      * 
      */
-    public Output</* @Nullable */ String> getScriptCmdletId() {
+    public Output</* @Nullable */ String> scriptCmdletId() {
         return this.scriptCmdletId;
     }
     /**
@@ -215,7 +215,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Time the script execution was started
      * 
      */
-    public Output<String> getStartedAt() {
+    public Output<String> startedAt() {
         return this.startedAt;
     }
     /**
@@ -229,7 +229,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Time the script execution was submitted
      * 
      */
-    public Output<String> getSubmittedAt() {
+    public Output<String> submittedAt() {
         return this.submittedAt;
     }
     /**
@@ -243,7 +243,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Time limit for execution
      * 
      */
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
     /**
@@ -257,7 +257,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -271,7 +271,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * @return Standard warning out stream from the powershell execution
      * 
      */
-    public Output<List<String>> getWarnings() {
+    public Output<List<String>> warnings() {
         return this.warnings;
     }
 

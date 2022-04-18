@@ -112,91 +112,91 @@ public final class GetAppResult {
      * List of API products associated with the developer app.
      * 
     */
-    public List<String> getApiProducts() {
+    public List<String> apiProducts() {
         return this.apiProducts;
     }
     /**
      * Developer app family.
      * 
     */
-    public String getAppFamily() {
+    public String appFamily() {
         return this.appFamily;
     }
     /**
      * ID of the developer app.
      * 
     */
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
     /**
      * List of attributes for the developer app.
      * 
     */
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
      * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
      * 
     */
-    public String getCallbackUrl() {
+    public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
      * Time the developer app was created in milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
      * 
     */
-    public List<GoogleCloudApigeeV1CredentialResponse> getCredentials() {
+    public List<GoogleCloudApigeeV1CredentialResponse> credentials() {
         return this.credentials;
     }
     /**
      * ID of the developer.
      * 
     */
-    public String getDeveloperId() {
+    public String developerId() {
         return this.developerId;
     }
     /**
      * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
      * 
     */
-    public String getKeyExpiresIn() {
+    public String keyExpiresIn() {
         return this.keyExpiresIn;
     }
     /**
      * Time the developer app was modified in milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the developer app.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
     /**
      * Status of the credential. Valid values include `approved` or `revoked`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

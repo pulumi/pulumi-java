@@ -26,7 +26,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
-    public Output<String> getSuffix() {
+    public Output<String> suffix() {
         return this.suffix == null ? Codegen.empty() : this.suffix;
     }
 

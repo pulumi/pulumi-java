@@ -21,7 +21,7 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -32,7 +32,7 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 

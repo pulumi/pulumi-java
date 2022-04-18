@@ -25,7 +25,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="max", required=true)
       private final Output<Double> max;
 
-    public Output<Double> getMax() {
+    public Output<Double> max() {
         return this.max;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="min", required=true)
       private final Output<Double> min;
 
-    public Output<Double> getMin() {
+    public Output<Double> min() {
         return this.min;
     }
 

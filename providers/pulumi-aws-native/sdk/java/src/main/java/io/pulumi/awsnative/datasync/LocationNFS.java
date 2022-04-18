@@ -35,7 +35,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the NFS location.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -49,19 +49,19 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @return The URL of the NFS location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     @Export(name="mountOptions", type=LocationNFSMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationNFSMountOptions> mountOptions;
 
-    public Output</* @Nullable */ LocationNFSMountOptions> getMountOptions() {
+    public Output</* @Nullable */ LocationNFSMountOptions> mountOptions() {
         return this.mountOptions;
     }
     @Export(name="onPremConfig", type=LocationNFSOnPremConfig.class, parameters={})
     private Output<LocationNFSOnPremConfig> onPremConfig;
 
-    public Output<LocationNFSOnPremConfig> getOnPremConfig() {
+    public Output<LocationNFSOnPremConfig> onPremConfig() {
         return this.onPremConfig;
     }
     /**
@@ -75,7 +75,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @return The name of the NFS server. This value is the IP address or DNS name of the NFS server.
      * 
      */
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
     /**
@@ -89,7 +89,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @return The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -103,7 +103,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationNFSTag>> getTags() {
+    public Output</* @Nullable */ List<LocationNFSTag>> tags() {
         return this.tags;
     }
 

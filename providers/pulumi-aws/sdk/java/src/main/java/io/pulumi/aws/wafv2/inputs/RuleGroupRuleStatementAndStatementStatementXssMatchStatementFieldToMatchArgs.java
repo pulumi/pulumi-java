@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchBodyArgs> body;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchBodyArgs> getBody() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchMethodArgs> method;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementAndStatementStatementXssMatchStatementF
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

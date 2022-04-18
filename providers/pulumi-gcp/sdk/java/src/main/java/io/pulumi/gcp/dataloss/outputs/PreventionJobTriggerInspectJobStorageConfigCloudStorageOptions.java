@@ -75,7 +75,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * then the rest of the bytes are omitted.
      * 
     */
-    public Optional<Integer> getBytesLimitPerFile() {
+    public Optional<Integer> bytesLimitPerFile() {
         return Optional.ofNullable(this.bytesLimitPerFile);
     }
     /**
@@ -83,7 +83,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
      * 
     */
-    public Optional<Integer> getBytesLimitPerFilePercent() {
+    public Optional<Integer> bytesLimitPerFilePercent() {
         return Optional.ofNullable(this.bytesLimitPerFilePercent);
     }
     /**
@@ -91,7 +91,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Structure is documented below.
      * 
     */
-    public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet getFileSet() {
+    public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet() {
         return this.fileSet;
     }
     /**
@@ -101,7 +101,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
      * 
     */
-    public List<String> getFileTypes() {
+    public List<String> fileTypes() {
         return this.fileTypes == null ? List.of() : this.fileTypes;
     }
     /**
@@ -109,7 +109,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
      * 
     */
-    public Optional<Integer> getFilesLimitPercent() {
+    public Optional<Integer> filesLimitPercent() {
         return Optional.ofNullable(this.filesLimitPercent);
     }
     /**
@@ -118,7 +118,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Possible values are `TOP` and `RANDOM_START`.
      * 
     */
-    public Optional<String> getSampleMethod() {
+    public Optional<String> sampleMethod() {
         return Optional.ofNullable(this.sampleMethod);
     }
 

@@ -26,7 +26,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     @Import(name="clientAccessPolicy")
       private final @Nullable Output<String> clientAccessPolicy;
 
-    public Output<String> getClientAccessPolicy() {
+    public Output<String> clientAccessPolicy() {
         return this.clientAccessPolicy == null ? Codegen.empty() : this.clientAccessPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     @Import(name="crossDomainPolicy")
       private final @Nullable Output<String> crossDomainPolicy;
 
-    public Output<String> getCrossDomainPolicy() {
+    public Output<String> crossDomainPolicy() {
         return this.crossDomainPolicy == null ? Codegen.empty() : this.crossDomainPolicy;
     }
 

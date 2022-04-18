@@ -23,7 +23,7 @@ public final class LogConfigDataAccessOptionsResponse extends io.pulumi.resource
     @Import(name="logMode", required=true)
       private final String logMode;
 
-    public String getLogMode() {
+    public String logMode() {
         return this.logMode;
     }
 

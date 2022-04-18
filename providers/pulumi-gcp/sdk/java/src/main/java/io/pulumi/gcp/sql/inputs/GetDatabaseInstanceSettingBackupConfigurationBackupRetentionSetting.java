@@ -16,14 +16,14 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     @Import(name="retainedBackups", required=true)
       private final Integer retainedBackups;
 
-    public Integer getRetainedBackups() {
+    public Integer retainedBackups() {
         return this.retainedBackups;
     }
 
     @Import(name="retentionUnit", required=true)
       private final String retentionUnit;
 
-    public String getRetentionUnit() {
+    public String retentionUnit() {
         return this.retentionUnit;
     }
 

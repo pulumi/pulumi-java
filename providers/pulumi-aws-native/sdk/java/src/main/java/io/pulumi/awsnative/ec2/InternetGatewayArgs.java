@@ -23,7 +23,7 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
-    public Output<List<InternetGatewayTagArgs>> getTags() {
+    public Output<List<InternetGatewayTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

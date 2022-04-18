@@ -23,7 +23,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="clientCredentialsArn")
       private final @Nullable Output<String> clientCredentialsArn;
 
-    public Output<String> getClientCredentialsArn() {
+    public Output<String> clientCredentialsArn() {
         return this.clientCredentialsArn == null ? Codegen.empty() : this.clientCredentialsArn;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 

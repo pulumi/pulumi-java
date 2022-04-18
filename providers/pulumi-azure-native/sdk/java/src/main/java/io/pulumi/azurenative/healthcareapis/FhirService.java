@@ -50,7 +50,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Fhir Service access policies.
      * 
      */
-    public Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> getAccessPolicies() {
+    public Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> accessPolicies() {
         return this.accessPolicies;
     }
     /**
@@ -64,7 +64,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Fhir Service Azure container registry configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceAcrConfigurationResponse> getAcrConfiguration() {
+    public Output</* @Nullable */ FhirServiceAcrConfigurationResponse> acrConfiguration() {
         return this.acrConfiguration;
     }
     /**
@@ -78,7 +78,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Fhir Service authentication configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
+    public Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> authenticationConfiguration() {
         return this.authenticationConfiguration;
     }
     /**
@@ -92,7 +92,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Fhir Service Cors configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceCorsConfigurationResponse> getCorsConfiguration() {
+    public Output</* @Nullable */ FhirServiceCorsConfigurationResponse> corsConfiguration() {
         return this.corsConfiguration;
     }
     /**
@@ -106,7 +106,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -120,7 +120,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Fhir Service export configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceExportConfigurationResponse> getExportConfiguration() {
+    public Output</* @Nullable */ FhirServiceExportConfigurationResponse> exportConfiguration() {
         return this.exportConfiguration;
     }
     /**
@@ -134,7 +134,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -148,7 +148,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return The kind of the service.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -162,7 +162,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -176,7 +176,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +190,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -204,7 +204,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -218,7 +218,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -232,7 +232,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

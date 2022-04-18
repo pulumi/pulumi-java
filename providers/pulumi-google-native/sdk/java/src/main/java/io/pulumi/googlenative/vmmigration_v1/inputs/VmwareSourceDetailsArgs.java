@@ -26,7 +26,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -37,7 +37,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
@@ -48,7 +48,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 
@@ -59,7 +59,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="vcenterIp")
       private final @Nullable Output<String> vcenterIp;
 
-    public Output<String> getVcenterIp() {
+    public Output<String> vcenterIp() {
         return this.vcenterIp == null ? Codegen.empty() : this.vcenterIp;
     }
 

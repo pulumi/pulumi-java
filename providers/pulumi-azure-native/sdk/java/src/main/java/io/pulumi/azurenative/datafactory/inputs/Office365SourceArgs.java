@@ -27,7 +27,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="allowedGroups")
       private final @Nullable Output<Object> allowedGroups;
 
-    public Output<Object> getAllowedGroups() {
+    public Output<Object> allowedGroups() {
         return this.allowedGroups == null ? Codegen.empty() : this.allowedGroups;
     }
 
@@ -38,7 +38,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dateFilterColumn")
       private final @Nullable Output<Object> dateFilterColumn;
 
-    public Output<Object> getDateFilterColumn() {
+    public Output<Object> dateFilterColumn() {
         return this.dateFilterColumn == null ? Codegen.empty() : this.dateFilterColumn;
     }
 
@@ -49,7 +49,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -60,7 +60,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endTime")
       private final @Nullable Output<Object> endTime;
 
-    public Output<Object> getEndTime() {
+    public Output<Object> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -71,7 +71,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -82,7 +82,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="outputColumns")
       private final @Nullable Output<Object> outputColumns;
 
-    public Output<Object> getOutputColumns() {
+    public Output<Object> outputColumns() {
         return this.outputColumns == null ? Codegen.empty() : this.outputColumns;
     }
 
@@ -93,7 +93,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
+    public Output<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
@@ -104,7 +104,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
+    public Output<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
@@ -115,7 +115,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="startTime")
       private final @Nullable Output<Object> startTime;
 
-    public Output<Object> getStartTime() {
+    public Output<Object> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -127,7 +127,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +138,7 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userScopeFilterUri")
       private final @Nullable Output<Object> userScopeFilterUri;
 
-    public Output<Object> getUserScopeFilterUri() {
+    public Output<Object> userScopeFilterUri() {
         return this.userScopeFilterUri == null ? Codegen.empty() : this.userScopeFilterUri;
     }
 

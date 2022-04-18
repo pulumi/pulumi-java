@@ -17,63 +17,63 @@ public final class GetBucketLifecycleRuleCondition extends io.pulumi.resources.I
     @Import(name="age", required=true)
       private final Integer age;
 
-    public Integer getAge() {
+    public Integer age() {
         return this.age;
     }
 
     @Import(name="createdBefore", required=true)
       private final String createdBefore;
 
-    public String getCreatedBefore() {
+    public String createdBefore() {
         return this.createdBefore;
     }
 
     @Import(name="customTimeBefore", required=true)
       private final String customTimeBefore;
 
-    public String getCustomTimeBefore() {
+    public String customTimeBefore() {
         return this.customTimeBefore;
     }
 
     @Import(name="daysSinceCustomTime", required=true)
       private final Integer daysSinceCustomTime;
 
-    public Integer getDaysSinceCustomTime() {
+    public Integer daysSinceCustomTime() {
         return this.daysSinceCustomTime;
     }
 
     @Import(name="daysSinceNoncurrentTime", required=true)
       private final Integer daysSinceNoncurrentTime;
 
-    public Integer getDaysSinceNoncurrentTime() {
+    public Integer daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
     }
 
     @Import(name="matchesStorageClasses", required=true)
       private final List<String> matchesStorageClasses;
 
-    public List<String> getMatchesStorageClasses() {
+    public List<String> matchesStorageClasses() {
         return this.matchesStorageClasses;
     }
 
     @Import(name="noncurrentTimeBefore", required=true)
       private final String noncurrentTimeBefore;
 
-    public String getNoncurrentTimeBefore() {
+    public String noncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
     }
 
     @Import(name="numNewerVersions", required=true)
       private final Integer numNewerVersions;
 
-    public Integer getNumNewerVersions() {
+    public Integer numNewerVersions() {
         return this.numNewerVersions;
     }
 
     @Import(name="withState", required=true)
       private final String withState;
 
-    public String getWithState() {
+    public String withState() {
         return this.withState;
     }
 

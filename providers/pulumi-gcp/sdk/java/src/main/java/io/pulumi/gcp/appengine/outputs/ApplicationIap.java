@@ -52,14 +52,14 @@ public final class ApplicationIap {
      * (default is false)
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * OAuth2 client ID to use for the authentication flow.
      * 
     */
-    public String getOauth2ClientId() {
+    public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
@@ -67,14 +67,14 @@ public final class ApplicationIap {
      * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
      * 
     */
-    public String getOauth2ClientSecret() {
+    public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
     /**
      * Hex-encoded SHA-256 hash of the client secret.
      * 
     */
-    public Optional<String> getOauth2ClientSecretSha256() {
+    public Optional<String> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }
 

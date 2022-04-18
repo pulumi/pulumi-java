@@ -16,7 +16,7 @@ public final class ModelBiasJobDefinitionMonitoringResources {
         this.clusterConfig = clusterConfig;
     }
 
-    public ModelBiasJobDefinitionClusterConfig getClusterConfig() {
+    public ModelBiasJobDefinitionClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

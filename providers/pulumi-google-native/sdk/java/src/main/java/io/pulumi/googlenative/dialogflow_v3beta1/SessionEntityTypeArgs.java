@@ -21,7 +21,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -32,7 +32,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities() {
         return this.entities;
     }
 
@@ -43,21 +43,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
-    public Output<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
+    public Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode() {
         return this.entityOverrideMode;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -68,21 +68,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 

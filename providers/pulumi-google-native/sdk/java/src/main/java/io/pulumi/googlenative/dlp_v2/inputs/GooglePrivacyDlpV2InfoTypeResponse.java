@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

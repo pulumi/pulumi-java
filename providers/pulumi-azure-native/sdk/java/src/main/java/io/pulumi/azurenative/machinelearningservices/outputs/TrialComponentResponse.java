@@ -84,49 +84,49 @@ public final class TrialComponentResponse {
      * ARM resource ID of the code asset.
      * 
     */
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
      * The command to execute on startup of the job. eg. "python train.py"
      * 
     */
-    public String getCommand() {
+    public String command() {
         return this.command;
     }
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
     */
-    public Optional<Object> getDistribution() {
+    public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
      * The ARM resource ID of the Environment specification for the job.
      * 
     */
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables included in the job.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * Mapping of input data bindings used in the job.
      * 
     */
-    public Map<String,InputDataBindingResponse> getInputDataBindings() {
+    public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
     /**
      * Mapping of output data bindings used in the job.
      * 
     */
-    public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
+    public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
     /**
@@ -134,7 +134,7 @@ public final class TrialComponentResponse {
      * Only supports duration with precision as low as Seconds.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

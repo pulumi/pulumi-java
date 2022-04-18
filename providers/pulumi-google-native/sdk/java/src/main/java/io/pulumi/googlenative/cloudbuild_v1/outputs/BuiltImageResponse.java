@@ -40,21 +40,21 @@ public final class BuiltImageResponse {
      * Docker Registry 2.0 digest.
      * 
     */
-    public String getDigest() {
+    public String digest() {
         return this.digest;
     }
     /**
      * Name used to push the container image to Google Container Registry, as presented to `docker push`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Stores timing information for pushing the specified image.
      * 
     */
-    public TimeSpanResponse getPushTiming() {
+    public TimeSpanResponse pushTiming() {
         return this.pushTiming;
     }
 

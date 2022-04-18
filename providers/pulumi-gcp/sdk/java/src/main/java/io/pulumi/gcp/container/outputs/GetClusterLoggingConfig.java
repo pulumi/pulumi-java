@@ -17,7 +17,7 @@ public final class GetClusterLoggingConfig {
         this.enableComponents = enableComponents;
     }
 
-    public List<String> getEnableComponents() {
+    public List<String> enableComponents() {
         return this.enableComponents;
     }
 

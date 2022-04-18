@@ -26,7 +26,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
     @Import(name="bounds")
       private final @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
-    public Output<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
+    public Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds() {
         return this.bounds == null ? Codegen.empty() : this.bounds;
     }
 

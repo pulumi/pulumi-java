@@ -23,7 +23,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextRotationTime")
       private final @Nullable Output<String> nextRotationTime;
 
-    public Output<String> getNextRotationTime() {
+    public Output<String> nextRotationTime() {
         return this.nextRotationTime == null ? Codegen.empty() : this.nextRotationTime;
     }
 
@@ -35,7 +35,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
     }
 

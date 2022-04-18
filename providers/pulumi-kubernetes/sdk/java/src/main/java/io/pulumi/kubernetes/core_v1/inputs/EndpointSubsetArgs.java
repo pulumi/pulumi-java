@@ -35,7 +35,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
       private final @Nullable Output<List<EndpointAddressArgs>> addresses;
 
-    public Output<List<EndpointAddressArgs>> getAddresses() {
+    public Output<List<EndpointAddressArgs>> addresses() {
         return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notReadyAddresses")
       private final @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
 
-    public Output<List<EndpointAddressArgs>> getNotReadyAddresses() {
+    public Output<List<EndpointAddressArgs>> notReadyAddresses() {
         return this.notReadyAddresses == null ? Codegen.empty() : this.notReadyAddresses;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Output<List<EndpointPortArgs>> getPorts() {
+    public Output<List<EndpointPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

@@ -27,7 +27,7 @@ public final class RouteSpecHttp2RouteAction {
      * You can specify one or more targets and their relative weights with which to distribute traffic.
      * 
     */
-    public List<RouteSpecHttp2RouteActionWeightedTarget> getWeightedTargets() {
+    public List<RouteSpecHttp2RouteActionWeightedTarget> weightedTargets() {
         return this.weightedTargets;
     }
 

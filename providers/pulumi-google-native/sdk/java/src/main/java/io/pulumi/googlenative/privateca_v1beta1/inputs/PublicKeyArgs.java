@@ -27,7 +27,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -38,7 +38,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<PublicKeyType> type;
 
-    public Output<PublicKeyType> getType() {
+    public Output<PublicKeyType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -24,7 +24,7 @@ public final class ManagedPrometheusConfigResponse {
      * Enable Managed Collection.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

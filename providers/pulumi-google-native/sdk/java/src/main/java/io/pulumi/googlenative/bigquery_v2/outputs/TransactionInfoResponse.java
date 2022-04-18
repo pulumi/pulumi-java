@@ -24,7 +24,7 @@ public final class TransactionInfoResponse {
      * // [Alpha] Id of the transaction.
      * 
     */
-    public String getTransactionId() {
+    public String transactionId() {
         return this.transactionId;
     }
 

@@ -23,7 +23,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     @Import(name="backupVaultArn")
       private final @Nullable Output<String> backupVaultArn;
 
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
     }
 
@@ -34,7 +34,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     @Import(name="backupVaultEvents")
       private final @Nullable Output<List<String>> backupVaultEvents;
 
-    public Output<List<String>> getBackupVaultEvents() {
+    public Output<List<String>> backupVaultEvents() {
         return this.backupVaultEvents == null ? Codegen.empty() : this.backupVaultEvents;
     }
 
@@ -45,7 +45,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
@@ -56,7 +56,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 

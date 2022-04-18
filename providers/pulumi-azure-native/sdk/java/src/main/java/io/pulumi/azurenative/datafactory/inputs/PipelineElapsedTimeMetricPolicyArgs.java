@@ -26,7 +26,7 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends io.pulumi.resourc
     @Import(name="duration")
       private final @Nullable Output<Object> duration;
 
-    public Output<Object> getDuration() {
+    public Output<Object> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 

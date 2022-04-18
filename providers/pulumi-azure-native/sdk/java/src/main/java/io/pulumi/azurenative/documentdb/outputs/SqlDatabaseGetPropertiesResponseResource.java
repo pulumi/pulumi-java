@@ -63,42 +63,42 @@ public final class SqlDatabaseGetPropertiesResponseResource {
      * A system generated property that specified the addressable path of the collections resource.
      * 
     */
-    public Optional<String> getColls() {
+    public Optional<String> colls() {
         return Optional.ofNullable(this.colls);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL database
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
     /**
      * A system generated property that specifies the addressable path of the users resource.
      * 
     */
-    public Optional<String> getUsers() {
+    public Optional<String> users() {
         return Optional.ofNullable(this.users);
     }
 

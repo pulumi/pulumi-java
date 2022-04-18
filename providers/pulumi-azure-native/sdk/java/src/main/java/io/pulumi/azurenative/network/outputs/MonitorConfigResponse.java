@@ -87,63 +87,63 @@ public final class MonitorConfigResponse {
      * List of custom headers.
      * 
     */
-    public List<MonitorConfigResponseCustomHeaders> getCustomHeaders() {
+    public List<MonitorConfigResponseCustomHeaders> customHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
     /**
      * List of expected status code ranges.
      * 
     */
-    public List<MonitorConfigResponseExpectedStatusCodeRanges> getExpectedStatusCodeRanges() {
+    public List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges() {
         return this.expectedStatusCodeRanges == null ? List.of() : this.expectedStatusCodeRanges;
     }
     /**
      * The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
      * 
     */
-    public Optional<Double> getIntervalInSeconds() {
+    public Optional<Double> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
      * The path relative to the endpoint domain name used to probe for endpoint health.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The TCP port used to probe for endpoint health.
      * 
     */
-    public Optional<Double> getPort() {
+    public Optional<Double> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The profile-level monitoring status of the Traffic Manager profile.
      * 
     */
-    public Optional<String> getProfileMonitorStatus() {
+    public Optional<String> profileMonitorStatus() {
         return Optional.ofNullable(this.profileMonitorStatus);
     }
     /**
      * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
      * 
     */
-    public Optional<Double> getTimeoutInSeconds() {
+    public Optional<Double> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
      * 
     */
-    public Optional<Double> getToleratedNumberOfFailures() {
+    public Optional<Double> toleratedNumberOfFailures() {
         return Optional.ofNullable(this.toleratedNumberOfFailures);
     }
 

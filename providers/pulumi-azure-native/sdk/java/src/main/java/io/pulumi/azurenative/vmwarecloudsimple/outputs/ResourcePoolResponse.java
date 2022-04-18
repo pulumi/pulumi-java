@@ -60,42 +60,42 @@ public final class ResourcePoolResponse {
      * Hierarchical resource pool name
      * 
     */
-    public String getFullName() {
+    public String fullName() {
         return this.fullName;
     }
     /**
      * resource pool id (privateCloudId:vsphereId)
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure region
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * {ResourcePoolName}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Private Cloud Id
      * 
     */
-    public String getPrivateCloudId() {
+    public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

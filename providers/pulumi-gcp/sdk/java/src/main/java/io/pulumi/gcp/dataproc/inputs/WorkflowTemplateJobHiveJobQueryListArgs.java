@@ -22,7 +22,7 @@ public final class WorkflowTemplateJobHiveJobQueryListArgs extends io.pulumi.res
     @Import(name="queries", required=true)
       private final Output<List<String>> queries;
 
-    public Output<List<String>> getQueries() {
+    public Output<List<String>> queries() {
         return this.queries;
     }
 

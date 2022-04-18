@@ -26,7 +26,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ready")
       private final @Nullable Output<Boolean> ready;
 
-    public Output<Boolean> getReady() {
+    public Output<Boolean> ready() {
         return this.ready == null ? Codegen.empty() : this.ready;
     }
 
@@ -37,7 +37,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serving")
       private final @Nullable Output<Boolean> serving;
 
-    public Output<Boolean> getServing() {
+    public Output<Boolean> serving() {
         return this.serving == null ? Codegen.empty() : this.serving;
     }
 
@@ -48,7 +48,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="terminating")
       private final @Nullable Output<Boolean> terminating;
 
-    public Output<Boolean> getTerminating() {
+    public Output<Boolean> terminating() {
         return this.terminating == null ? Codegen.empty() : this.terminating;
     }
 

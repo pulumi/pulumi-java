@@ -21,7 +21,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     @Import(name="sns")
       private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
 
-    public Optional<AccountAuditConfigurationAuditNotificationTarget> getSns() {
+    public Optional<AccountAuditConfigurationAuditNotificationTarget> sns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
     }
 

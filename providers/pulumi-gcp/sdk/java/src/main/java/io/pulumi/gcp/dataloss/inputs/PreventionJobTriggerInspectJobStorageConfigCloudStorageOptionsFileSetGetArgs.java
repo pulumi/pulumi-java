@@ -24,7 +24,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="regexFileSet")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs> regexFileSet;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs> getRegexFileSet() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs> regexFileSet() {
         return this.regexFileSet == null ? Codegen.empty() : this.regexFileSet;
     }
 
@@ -39,7 +39,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

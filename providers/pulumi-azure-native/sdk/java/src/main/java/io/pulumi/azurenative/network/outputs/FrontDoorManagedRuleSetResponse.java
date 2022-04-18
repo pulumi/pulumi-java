@@ -58,35 +58,35 @@ public final class FrontDoorManagedRuleSetResponse {
      * Describes the exclusions that are applied to all rules in the set.
      * 
     */
-    public List<ManagedRuleExclusionResponse> getExclusions() {
+    public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Defines the rule group overrides to apply to the rule set.
      * 
     */
-    public List<FrontDoorManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
+    public List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
      * Defines the action to take when a managed rule set score threshold is met.
      * 
     */
-    public Optional<String> getRuleSetAction() {
+    public Optional<String> ruleSetAction() {
         return Optional.ofNullable(this.ruleSetAction);
     }
     /**
      * Defines the rule set type to use.
      * 
     */
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
     /**
      * Defines the version of the rule set to use.
      * 
     */
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

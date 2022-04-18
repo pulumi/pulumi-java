@@ -24,7 +24,7 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="replicas", required=true)
       private final List<ReplicaResponse> replicas;
 
-    public List<ReplicaResponse> getReplicas() {
+    public List<ReplicaResponse> replicas() {
         return this.replicas;
     }
 

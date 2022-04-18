@@ -26,7 +26,7 @@ public final class ExpressRouteCircuitPeeringIdArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 

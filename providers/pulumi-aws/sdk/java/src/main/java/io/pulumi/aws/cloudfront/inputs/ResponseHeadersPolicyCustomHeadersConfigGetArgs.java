@@ -19,7 +19,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     @Import(name="items")
       private final @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
 
-    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> getItems() {
+    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

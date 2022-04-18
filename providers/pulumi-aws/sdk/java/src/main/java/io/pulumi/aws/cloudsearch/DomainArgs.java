@@ -27,7 +27,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointOptions")
       private final @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
-    public Output<DomainEndpointOptionsArgs> getEndpointOptions() {
+    public Output<DomainEndpointOptionsArgs> endpointOptions() {
         return this.endpointOptions == null ? Codegen.empty() : this.endpointOptions;
     }
 
@@ -38,7 +38,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexFields")
       private final @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
-    public Output<List<DomainIndexFieldArgs>> getIndexFields() {
+    public Output<List<DomainIndexFieldArgs>> indexFields() {
         return this.indexFields == null ? Codegen.empty() : this.indexFields;
     }
 
@@ -49,7 +49,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> getMultiAz() {
+    public Output<Boolean> multiAz() {
         return this.multiAz == null ? Codegen.empty() : this.multiAz;
     }
 
@@ -60,7 +60,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingParameters")
       private final @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
-    public Output<DomainScalingParametersArgs> getScalingParameters() {
+    public Output<DomainScalingParametersArgs> scalingParameters() {
         return this.scalingParameters == null ? Codegen.empty() : this.scalingParameters;
     }
 

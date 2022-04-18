@@ -24,7 +24,7 @@ public final class GetInstanceNetworkPerformanceConfig {
      * The egress bandwidth tier for the instance.
      * 
     */
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

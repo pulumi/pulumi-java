@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
     @Import(name="allowConfigBasedIssuance", required=true)
       private final Output<Boolean> allowConfigBasedIssuance;
 
-    public Output<Boolean> getAllowConfigBasedIssuance() {
+    public Output<Boolean> allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
 
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
     @Import(name="allowCsrBasedIssuance", required=true)
       private final Output<Boolean> allowCsrBasedIssuance;
 
-    public Output<Boolean> getAllowCsrBasedIssuance() {
+    public Output<Boolean> allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 

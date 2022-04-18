@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -32,14 +32,14 @@ public final class ServicePrincipalPropertiesResponse {
      * The service principal client ID
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

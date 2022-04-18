@@ -43,31 +43,31 @@ public final class GetKMSSecretAsymmetricResult {
         this.plaintext = plaintext;
     }
 
-    public String getCiphertext() {
+    public String ciphertext() {
         return this.ciphertext;
     }
     /**
      * Contains the crc32 checksum of the provided ciphertext.
      * 
     */
-    public Optional<String> getCrc32() {
+    public Optional<String> crc32() {
         return Optional.ofNullable(this.crc32);
     }
-    public String getCryptoKeyVersion() {
+    public String cryptoKeyVersion() {
         return this.cryptoKeyVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Contains the result of decrypting the provided ciphertext.
      * 
     */
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

@@ -23,7 +23,7 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
     @Import(name="replicas", required=true)
       private final Output<List<SecretReplicationUserManagedReplicaArgs>> replicas;
 
-    public Output<List<SecretReplicationUserManagedReplicaArgs>> getReplicas() {
+    public Output<List<SecretReplicationUserManagedReplicaArgs>> replicas() {
         return this.replicas;
     }
 

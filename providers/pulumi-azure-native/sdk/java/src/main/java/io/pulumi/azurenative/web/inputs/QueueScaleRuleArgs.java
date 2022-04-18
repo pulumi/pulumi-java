@@ -29,7 +29,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Output<List<ScaleRuleAuthArgs>> getAuth() {
+    public Output<List<ScaleRuleAuthArgs>> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -40,7 +40,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueLength")
       private final @Nullable Output<Integer> queueLength;
 
-    public Output<Integer> getQueueLength() {
+    public Output<Integer> queueLength() {
         return this.queueLength == null ? Codegen.empty() : this.queueLength;
     }
 
@@ -51,7 +51,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 

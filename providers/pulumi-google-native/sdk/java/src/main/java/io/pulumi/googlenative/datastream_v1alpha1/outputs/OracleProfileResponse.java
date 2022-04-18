@@ -62,42 +62,42 @@ public final class OracleProfileResponse {
      * Connection string attributes
      * 
     */
-    public Map<String,String> getConnectionAttributes() {
+    public Map<String,String> connectionAttributes() {
         return this.connectionAttributes;
     }
     /**
      * Database for the Oracle connection.
      * 
     */
-    public String getDatabaseService() {
+    public String databaseService() {
         return this.databaseService;
     }
     /**
      * Hostname for the Oracle connection.
      * 
     */
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
     /**
      * Password for the Oracle connection.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Port for the Oracle connection, default value is 1521.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Username for the Oracle connection.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

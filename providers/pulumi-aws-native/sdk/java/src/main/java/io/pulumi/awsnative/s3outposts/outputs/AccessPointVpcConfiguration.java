@@ -26,7 +26,7 @@ public final class AccessPointVpcConfiguration {
      * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
      * 
     */
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

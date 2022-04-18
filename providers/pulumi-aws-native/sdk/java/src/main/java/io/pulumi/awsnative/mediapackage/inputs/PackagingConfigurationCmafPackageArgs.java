@@ -26,7 +26,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
+    public Output<PackagingConfigurationCmafEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -37,7 +37,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
-    public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
+    public Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests;
     }
 
@@ -48,14 +48,14 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
-    public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
+    public Output<Boolean> includeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Codegen.empty() : this.includeEncoderConfigurationInSegments;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
+    public Output<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 

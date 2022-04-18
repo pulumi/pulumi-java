@@ -49,7 +49,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Structure is documented below.
      * 
     */
-    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex getHotwordRegex() {
+    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex() {
         return this.hotwordRegex;
     }
     /**
@@ -57,7 +57,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Structure is documented below.
      * 
     */
-    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment getLikelihoodAdjustment() {
+    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
     /**
@@ -69,7 +69,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Structure is documented below.
      * 
     */
-    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity getProximity() {
+    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity() {
         return this.proximity;
     }
 

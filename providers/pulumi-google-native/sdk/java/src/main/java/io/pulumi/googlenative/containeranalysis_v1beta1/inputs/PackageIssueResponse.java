@@ -24,7 +24,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="affectedLocation", required=true)
       private final VulnerabilityLocationResponse affectedLocation;
 
-    public VulnerabilityLocationResponse getAffectedLocation() {
+    public VulnerabilityLocationResponse affectedLocation() {
         return this.affectedLocation;
     }
 
@@ -35,7 +35,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="effectiveSeverity", required=true)
       private final String effectiveSeverity;
 
-    public String getEffectiveSeverity() {
+    public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
 
@@ -46,7 +46,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixedLocation", required=true)
       private final VulnerabilityLocationResponse fixedLocation;
 
-    public VulnerabilityLocationResponse getFixedLocation() {
+    public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
 
@@ -57,7 +57,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packageType", required=true)
       private final String packageType;
 
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
 

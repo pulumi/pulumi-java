@@ -26,7 +26,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverSideEncryptionConfiguration", required=true)
       private final Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
-    public Output<List<BucketServerSideEncryptionRuleArgs>> getServerSideEncryptionConfiguration() {
+    public Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
 

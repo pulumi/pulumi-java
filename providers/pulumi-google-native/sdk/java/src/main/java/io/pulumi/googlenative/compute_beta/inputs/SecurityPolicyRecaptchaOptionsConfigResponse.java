@@ -19,7 +19,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse extends io.pulum
     @Import(name="redirectSiteKey", required=true)
       private final String redirectSiteKey;
 
-    public String getRedirectSiteKey() {
+    public String redirectSiteKey() {
         return this.redirectSiteKey;
     }
 

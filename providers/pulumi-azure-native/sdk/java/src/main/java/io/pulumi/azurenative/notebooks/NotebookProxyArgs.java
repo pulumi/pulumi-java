@@ -23,7 +23,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -34,7 +34,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns == null ? Codegen.empty() : this.publicDns;
     }
 
@@ -45,7 +45,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
+    public Output<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -56,7 +56,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -67,7 +67,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -89,7 +89,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryAppId")
       private final @Nullable Output<String> secondaryAppId;
 
-    public Output<String> getSecondaryAppId() {
+    public Output<String> secondaryAppId() {
         return this.secondaryAppId == null ? Codegen.empty() : this.secondaryAppId;
     }
 
@@ -100,7 +100,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemData")
       private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
-    public Output<NotebookResourceSystemDataArgs> getSystemData() {
+    public Output<NotebookResourceSystemDataArgs> systemData() {
         return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 

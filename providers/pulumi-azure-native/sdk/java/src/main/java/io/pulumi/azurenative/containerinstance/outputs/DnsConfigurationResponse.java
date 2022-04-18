@@ -42,21 +42,21 @@ public final class DnsConfigurationResponse {
      * The DNS servers for the container group.
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
     /**
      * The DNS options for the container group.
      * 
     */
-    public Optional<String> getOptions() {
+    public Optional<String> options() {
         return Optional.ofNullable(this.options);
     }
     /**
      * The DNS search domains for hostname lookup in the container group.
      * 
     */
-    public Optional<String> getSearchDomains() {
+    public Optional<String> searchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }
 

@@ -27,7 +27,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -38,7 +38,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
-    public Output<String> getLaunchTemplateId() {
+    public Output<String> launchTemplateId() {
         return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
     }
 
@@ -49,7 +49,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="setDefaultVersion")
       private final @Nullable Output<Boolean> setDefaultVersion;
 
-    public Output<Boolean> getSetDefaultVersion() {
+    public Output<Boolean> setDefaultVersion() {
         return this.setDefaultVersion == null ? Codegen.empty() : this.setDefaultVersion;
     }
 

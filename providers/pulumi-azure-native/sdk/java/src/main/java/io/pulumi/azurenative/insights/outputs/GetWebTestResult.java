@@ -145,119 +145,119 @@ public final class GetWebTestResult {
      * An XML configuration specification for a WebTest.
      * 
     */
-    public Optional<WebTestPropertiesResponseConfiguration> getConfiguration() {
+    public Optional<WebTestPropertiesResponseConfiguration> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Purpose/user defined descriptive test for this WebTest.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Is the test actively being monitored.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
     */
-    public Optional<Integer> getFrequency() {
+    public Optional<Integer> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * A list of where to physically run the tests from to give global coverage for accessibility of your application.
      * 
     */
-    public List<WebTestGeolocationResponse> getLocations() {
+    public List<WebTestGeolocationResponse> locations() {
         return this.locations;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Allow for retries should this WebTest fail.
      * 
     */
-    public Optional<Boolean> getRetryEnabled() {
+    public Optional<Boolean> retryEnabled() {
         return Optional.ofNullable(this.retryEnabled);
     }
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
     */
-    public String getSyntheticMonitorId() {
+    public String syntheticMonitorId() {
         return this.syntheticMonitorId;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The kind of web test this is, valid choices are ping and multistep.
      * 
     */
-    public String getWebTestKind() {
+    public String webTestKind() {
         return this.webTestKind;
     }
     /**
      * User defined name if this WebTest.
      * 
     */
-    public String getWebTestName() {
+    public String webTestName() {
         return this.webTestName;
     }
 

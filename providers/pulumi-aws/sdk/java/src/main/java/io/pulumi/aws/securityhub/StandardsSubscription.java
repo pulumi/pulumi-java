@@ -44,7 +44,7 @@ public class StandardsSubscription extends io.pulumi.resources.CustomResource {
      * @return The ARN of a standard - see below.
      * 
      */
-    public Output<String> getStandardsArn() {
+    public Output<String> standardsArn() {
         return this.standardsArn;
     }
 

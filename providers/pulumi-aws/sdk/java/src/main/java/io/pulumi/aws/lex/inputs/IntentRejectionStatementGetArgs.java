@@ -26,7 +26,7 @@ public final class IntentRejectionStatementGetArgs extends io.pulumi.resources.R
     @Import(name="messages", required=true)
       private final Output<List<IntentRejectionStatementMessageGetArgs>> messages;
 
-    public Output<List<IntentRejectionStatementMessageGetArgs>> getMessages() {
+    public Output<List<IntentRejectionStatementMessageGetArgs>> messages() {
         return this.messages;
     }
 
@@ -39,7 +39,7 @@ public final class IntentRejectionStatementGetArgs extends io.pulumi.resources.R
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

@@ -25,7 +25,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -36,7 +36,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final FilterResponse filter;
 
-    public FilterResponse getFilter() {
+    public FilterResponse filter() {
         return this.filter;
     }
 
@@ -47,7 +47,7 @@ public final class PubSubResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

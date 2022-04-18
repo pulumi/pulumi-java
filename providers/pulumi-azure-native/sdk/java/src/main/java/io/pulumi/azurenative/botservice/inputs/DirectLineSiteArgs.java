@@ -28,7 +28,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isBlockUserUploadEnabled")
       private final @Nullable Output<Boolean> isBlockUserUploadEnabled;
 
-    public Output<Boolean> getIsBlockUserUploadEnabled() {
+    public Output<Boolean> isBlockUserUploadEnabled() {
         return this.isBlockUserUploadEnabled == null ? Codegen.empty() : this.isBlockUserUploadEnabled;
     }
 
@@ -39,7 +39,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSecureSiteEnabled")
       private final @Nullable Output<Boolean> isSecureSiteEnabled;
 
-    public Output<Boolean> getIsSecureSiteEnabled() {
+    public Output<Boolean> isSecureSiteEnabled() {
         return this.isSecureSiteEnabled == null ? Codegen.empty() : this.isSecureSiteEnabled;
     }
 
@@ -61,7 +61,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isV1Enabled", required=true)
       private final Output<Boolean> isV1Enabled;
 
-    public Output<Boolean> getIsV1Enabled() {
+    public Output<Boolean> isV1Enabled() {
         return this.isV1Enabled;
     }
 
@@ -72,7 +72,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isV3Enabled", required=true)
       private final Output<Boolean> isV3Enabled;
 
-    public Output<Boolean> getIsV3Enabled() {
+    public Output<Boolean> isV3Enabled() {
         return this.isV3Enabled;
     }
 
@@ -83,7 +83,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -94,7 +94,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedOrigins")
       private final @Nullable Output<List<String>> trustedOrigins;
 
-    public Output<List<String>> getTrustedOrigins() {
+    public Output<List<String>> trustedOrigins() {
         return this.trustedOrigins == null ? Codegen.empty() : this.trustedOrigins;
     }
 

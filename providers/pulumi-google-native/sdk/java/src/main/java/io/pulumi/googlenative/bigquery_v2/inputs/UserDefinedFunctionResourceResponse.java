@@ -23,7 +23,7 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
     @Import(name="inlineCode", required=true)
       private final String inlineCode;
 
-    public String getInlineCode() {
+    public String inlineCode() {
         return this.inlineCode;
     }
 
@@ -34,7 +34,7 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

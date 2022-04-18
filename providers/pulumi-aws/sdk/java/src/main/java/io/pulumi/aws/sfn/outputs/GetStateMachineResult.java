@@ -63,45 +63,45 @@ public final class GetStateMachineResult {
      * Set to the arn of the state function.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The date the state machine was created.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * Set to the state machine definition.
      * 
     */
-    public String getDefinition() {
+    public String definition() {
         return this.definition;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Set to the role_arn used by the state function.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * Set to the current status of the state machine.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

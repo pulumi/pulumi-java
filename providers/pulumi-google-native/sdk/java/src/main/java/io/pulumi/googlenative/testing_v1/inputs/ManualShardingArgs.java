@@ -26,7 +26,7 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTargetsForShard", required=true)
       private final Output<List<TestTargetsForShardArgs>> testTargetsForShard;
 
-    public Output<List<TestTargetsForShardArgs>> getTestTargetsForShard() {
+    public Output<List<TestTargetsForShardArgs>> testTargetsForShard() {
         return this.testTargetsForShard;
     }
 

@@ -23,7 +23,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="frequency")
       private final @Nullable Output<RecurrenceFrequency> frequency;
 
-    public Output<RecurrenceFrequency> getFrequency() {
+    public Output<RecurrenceFrequency> frequency() {
         return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
@@ -34,7 +34,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 

@@ -22,7 +22,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,7 +45,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

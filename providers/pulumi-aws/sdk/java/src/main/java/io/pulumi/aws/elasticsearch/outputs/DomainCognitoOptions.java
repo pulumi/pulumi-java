@@ -49,28 +49,28 @@ public final class DomainCognitoOptions {
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * ID of the Cognito Identity Pool to use.
      * 
     */
-    public String getIdentityPoolId() {
+    public String identityPoolId() {
         return this.identityPoolId;
     }
     /**
      * ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * ID of the Cognito User Pool to use.
      * 
     */
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

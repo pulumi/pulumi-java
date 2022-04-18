@@ -27,7 +27,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -40,7 +40,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressType")
       private final @Nullable Output<String> addressType;
 
-    public Output<String> getAddressType() {
+    public Output<String> addressType() {
         return this.addressType == null ? Codegen.empty() : this.addressType;
     }
 
@@ -51,7 +51,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -78,7 +78,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -104,7 +104,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkTier")
       private final @Nullable Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
@@ -115,7 +115,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> getPrefixLength() {
+    public Output<Integer> prefixLength() {
         return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
     }
 
@@ -127,7 +127,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -150,7 +150,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
@@ -162,7 +162,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -176,7 +176,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 

@@ -42,21 +42,21 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeader {
      * Specified whether the value is secret.
      * 
     */
-    public Optional<Boolean> getIsValueSecret() {
+    public Optional<Boolean> isValueSecret() {
         return Optional.ofNullable(this.isValueSecret);
     }
     /**
      * Header Name.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Header Value. Created and stored in AWS Secrets Manager.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

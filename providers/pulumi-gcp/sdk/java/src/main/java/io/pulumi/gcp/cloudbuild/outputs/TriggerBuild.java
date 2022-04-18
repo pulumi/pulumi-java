@@ -130,7 +130,7 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildArtifacts> getArtifacts() {
+    public Optional<TriggerBuildArtifacts> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
     /**
@@ -138,7 +138,7 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildAvailableSecrets> getAvailableSecrets() {
+    public Optional<TriggerBuildAvailableSecrets> availableSecrets() {
         return Optional.ofNullable(this.availableSecrets);
     }
     /**
@@ -148,7 +148,7 @@ public final class TriggerBuild {
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
     */
-    public List<String> getImages() {
+    public List<String> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
@@ -156,7 +156,7 @@ public final class TriggerBuild {
      * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
      * 
     */
-    public Optional<String> getLogsBucket() {
+    public Optional<String> logsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
     /**
@@ -164,7 +164,7 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildOptions> getOptions() {
+    public Optional<TriggerBuildOptions> options() {
         return Optional.ofNullable(this.options);
     }
     /**
@@ -174,7 +174,7 @@ public final class TriggerBuild {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getQueueTtl() {
+    public Optional<String> queueTtl() {
         return Optional.ofNullable(this.queueTtl);
     }
     /**
@@ -182,7 +182,7 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildSecret> getSecrets() {
+    public List<TriggerBuildSecret> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
     /**
@@ -191,7 +191,7 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildSource> getSource() {
+    public Optional<TriggerBuildSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
@@ -199,21 +199,21 @@ public final class TriggerBuild {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildStep> getSteps() {
+    public List<TriggerBuildStep> steps() {
         return this.steps;
     }
     /**
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
     */
-    public Map<String,String> getSubstitutions() {
+    public Map<String,String> substitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
     /**
      * Tags for annotation of a Build. These are not docker tags.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
@@ -223,7 +223,7 @@ public final class TriggerBuild {
      * completes or the build itself times out.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

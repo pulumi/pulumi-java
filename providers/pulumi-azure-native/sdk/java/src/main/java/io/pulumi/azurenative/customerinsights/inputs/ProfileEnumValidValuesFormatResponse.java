@@ -27,7 +27,7 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
     @Import(name="localizedValueNames")
       private final @Nullable Map<String,String> localizedValueNames;
 
-    public Map<String,String> getLocalizedValueNames() {
+    public Map<String,String> localizedValueNames() {
         return this.localizedValueNames == null ? Map.of() : this.localizedValueNames;
     }
 
@@ -38,7 +38,7 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
     @Import(name="value")
       private final @Nullable Integer value;
 
-    public Optional<Integer> getValue() {
+    public Optional<Integer> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

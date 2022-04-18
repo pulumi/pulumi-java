@@ -23,14 +23,14 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
-    public Output<String> getContentHash() {
+    public Output<String> contentHash() {
         return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
@@ -41,7 +41,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename == null ? Codegen.empty() : this.filename;
     }
 
@@ -63,7 +63,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -74,7 +74,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -96,7 +96,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

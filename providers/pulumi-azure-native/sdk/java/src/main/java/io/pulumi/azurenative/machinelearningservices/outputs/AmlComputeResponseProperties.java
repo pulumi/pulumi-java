@@ -141,112 +141,112 @@ public final class AmlComputeResponseProperties {
      * Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
      * 
     */
-    public String getAllocationState() {
+    public String allocationState() {
         return this.allocationState;
     }
     /**
      * The time at which the compute entered its current allocation state.
      * 
     */
-    public String getAllocationStateTransitionTime() {
+    public String allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
     /**
      * The number of compute nodes currently assigned to the compute.
      * 
     */
-    public Integer getCurrentNodeCount() {
+    public Integer currentNodeCount() {
         return this.currentNodeCount;
     }
     /**
      * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
      * 
     */
-    public Optional<Boolean> getEnableNodePublicIp() {
+    public Optional<Boolean> enableNodePublicIp() {
         return Optional.ofNullable(this.enableNodePublicIp);
     }
     /**
      * Collection of errors encountered by various compute nodes during node setup.
      * 
     */
-    public List<MachineLearningServiceErrorResponse> getErrors() {
+    public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Network is isolated or not
      * 
     */
-    public Optional<Boolean> getIsolatedNetwork() {
+    public Optional<Boolean> isolatedNetwork() {
         return Optional.ofNullable(this.isolatedNetwork);
     }
     /**
      * Counts of various node states on the compute.
      * 
     */
-    public NodeStateCountsResponse getNodeStateCounts() {
+    public NodeStateCountsResponse nodeStateCounts() {
         return this.nodeStateCounts;
     }
     /**
      * Compute OS Type
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
      * 
     */
-    public Optional<String> getRemoteLoginPortPublicAccess() {
+    public Optional<String> remoteLoginPortPublicAccess() {
         return Optional.ofNullable(this.remoteLoginPortPublicAccess);
     }
     /**
      * Scale settings for AML Compute
      * 
     */
-    public Optional<ScaleSettingsResponse> getScaleSettings() {
+    public Optional<ScaleSettingsResponse> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
     /**
      * Virtual network subnet resource ID the compute nodes belong to.
      * 
     */
-    public Optional<ResourceIdResponse> getSubnet() {
+    public Optional<ResourceIdResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
      * 
     */
-    public Integer getTargetNodeCount() {
+    public Integer targetNodeCount() {
         return this.targetNodeCount;
     }
     /**
      * Credentials for an administrator user account that will be created on each compute node.
      * 
     */
-    public Optional<UserAccountCredentialsResponse> getUserAccountCredentials() {
+    public Optional<UserAccountCredentialsResponse> userAccountCredentials() {
         return Optional.ofNullable(this.userAccountCredentials);
     }
     /**
      * Virtual Machine image for AML Compute - windows only
      * 
     */
-    public Optional<VirtualMachineImageResponse> getVirtualMachineImage() {
+    public Optional<VirtualMachineImageResponse> virtualMachineImage() {
         return Optional.ofNullable(this.virtualMachineImage);
     }
     /**
      * Virtual Machine priority
      * 
     */
-    public Optional<String> getVmPriority() {
+    public Optional<String> vmPriority() {
         return Optional.ofNullable(this.vmPriority);
     }
     /**
      * Virtual Machine Size
      * 
     */
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
 

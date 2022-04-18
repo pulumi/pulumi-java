@@ -50,28 +50,28 @@ public final class DeploymentResponse {
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
      * 
     */
-    public CloudBuildOptionsResponse getCloudBuildOptions() {
+    public CloudBuildOptionsResponse cloudBuildOptions() {
         return this.cloudBuildOptions;
     }
     /**
      * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
      * 
     */
-    public ContainerInfoResponse getContainer() {
+    public ContainerInfoResponse container() {
         return this.container;
     }
     /**
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
      * 
     */
-    public Map<String,String> getFiles() {
+    public Map<String,String> files() {
         return this.files;
     }
     /**
      * The zip file for this deployment, if this is a zip deployment.
      * 
     */
-    public ZipInfoResponse getZip() {
+    public ZipInfoResponse zip() {
         return this.zip;
     }
 

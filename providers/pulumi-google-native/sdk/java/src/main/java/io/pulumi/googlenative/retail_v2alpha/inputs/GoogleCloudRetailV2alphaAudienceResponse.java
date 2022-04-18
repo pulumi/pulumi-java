@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaAudienceResponse extends io.pulumi.re
     @Import(name="ageGroups", required=true)
       private final List<String> ageGroups;
 
-    public List<String> getAgeGroups() {
+    public List<String> ageGroups() {
         return this.ageGroups;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaAudienceResponse extends io.pulumi.re
     @Import(name="genders", required=true)
       private final List<String> genders;
 
-    public List<String> getGenders() {
+    public List<String> genders() {
         return this.genders;
     }
 

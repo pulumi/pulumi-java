@@ -39,7 +39,7 @@ public final class ReservationShareSettings {
      * Structure is documented below.
      * 
     */
-    public List<ReservationShareSettingsProjectMap> getProjectMaps() {
+    public List<ReservationShareSettingsProjectMap> projectMaps() {
         return this.projectMaps == null ? List.of() : this.projectMaps;
     }
     /**
@@ -47,7 +47,7 @@ public final class ReservationShareSettings {
      * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
      * 
     */
-    public Optional<String> getShareType() {
+    public Optional<String> shareType() {
         return Optional.ofNullable(this.shareType);
     }
 

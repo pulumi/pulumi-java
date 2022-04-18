@@ -22,7 +22,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
     @Import(name="expirationMs")
       private final @Nullable Output<String> expirationMs;
 
-    public Output<String> getExpirationMs() {
+    public Output<String> expirationMs() {
         return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
     }
 
@@ -35,7 +35,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -47,7 +47,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

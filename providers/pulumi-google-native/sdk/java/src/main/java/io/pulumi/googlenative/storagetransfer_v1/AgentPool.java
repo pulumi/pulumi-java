@@ -30,7 +30,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
      * 
      */
-    public Output<BandwidthLimitResponse> getBandwidthLimit() {
+    public Output<BandwidthLimitResponse> bandwidthLimit() {
         return this.bandwidthLimit;
     }
     /**
@@ -44,7 +44,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the client-specified AgentPool description.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -58,7 +58,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the state of the AgentPool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

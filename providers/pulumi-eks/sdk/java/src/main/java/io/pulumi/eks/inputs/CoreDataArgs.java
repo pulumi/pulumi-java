@@ -36,140 +36,140 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsProvider")
       private final @Nullable Output<Provider> awsProvider;
 
-    public Output<Provider> getAwsProvider() {
+    public Output<Provider> awsProvider() {
         return this.awsProvider == null ? Codegen.empty() : this.awsProvider;
     }
 
     @Import(name="cluster", required=true)
       private final Output<Cluster> cluster;
 
-    public Output<Cluster> getCluster() {
+    public Output<Cluster> cluster() {
         return this.cluster;
     }
 
     @Import(name="clusterSecurityGroup", required=true)
       private final Output<SecurityGroup> clusterSecurityGroup;
 
-    public Output<SecurityGroup> getClusterSecurityGroup() {
+    public Output<SecurityGroup> clusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
 
     @Import(name="eksNodeAccess")
       private final @Nullable Output<ConfigMap> eksNodeAccess;
 
-    public Output<ConfigMap> getEksNodeAccess() {
+    public Output<ConfigMap> eksNodeAccess() {
         return this.eksNodeAccess == null ? Codegen.empty() : this.eksNodeAccess;
     }
 
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
 
-    public Output<ClusterEncryptionConfigArgs> getEncryptionConfig() {
+    public Output<ClusterEncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
     @Import(name="fargateProfile")
       private final @Nullable Output<FargateProfile> fargateProfile;
 
-    public Output<FargateProfile> getFargateProfile() {
+    public Output<FargateProfile> fargateProfile() {
         return this.fargateProfile == null ? Codegen.empty() : this.fargateProfile;
     }
 
     @Import(name="instanceRoles", required=true)
       private final Output<List<Role>> instanceRoles;
 
-    public Output<List<Role>> getInstanceRoles() {
+    public Output<List<Role>> instanceRoles() {
         return this.instanceRoles;
     }
 
     @Import(name="kubeconfig")
       private final @Nullable Output<Object> kubeconfig;
 
-    public Output<Object> getKubeconfig() {
+    public Output<Object> kubeconfig() {
         return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
     }
 
     @Import(name="nodeGroupOptions", required=true)
       private final Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
 
-    public Output<ClusterNodeGroupOptionsArgs> getNodeGroupOptions() {
+    public Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions() {
         return this.nodeGroupOptions;
     }
 
     @Import(name="nodeSecurityGroupTags")
       private final @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
 
-    public Output<Map<String,String>> getNodeSecurityGroupTags() {
+    public Output<Map<String,String>> nodeSecurityGroupTags() {
         return this.nodeSecurityGroupTags == null ? Codegen.empty() : this.nodeSecurityGroupTags;
     }
 
     @Import(name="oidcProvider")
       private final @Nullable Output<OpenIdConnectProvider> oidcProvider;
 
-    public Output<OpenIdConnectProvider> getOidcProvider() {
+    public Output<OpenIdConnectProvider> oidcProvider() {
         return this.oidcProvider == null ? Codegen.empty() : this.oidcProvider;
     }
 
     @Import(name="privateSubnetIds")
       private final @Nullable Output<List<String>> privateSubnetIds;
 
-    public Output<List<String>> getPrivateSubnetIds() {
+    public Output<List<String>> privateSubnetIds() {
         return this.privateSubnetIds == null ? Codegen.empty() : this.privateSubnetIds;
     }
 
     @Import(name="provider", required=true)
       private final Output<io.pulumi.kubernetes.Provider> provider;
 
-    public Output<io.pulumi.kubernetes.Provider> getProvider() {
+    public Output<io.pulumi.kubernetes.Provider> provider() {
         return this.provider;
     }
 
     @Import(name="publicSubnetIds")
       private final @Nullable Output<List<String>> publicSubnetIds;
 
-    public Output<List<String>> getPublicSubnetIds() {
+    public Output<List<String>> publicSubnetIds() {
         return this.publicSubnetIds == null ? Codegen.empty() : this.publicSubnetIds;
     }
 
     @Import(name="storageClasses")
       private final @Nullable Output<Map<String,StorageClass>> storageClasses;
 
-    public Output<Map<String,StorageClass>> getStorageClasses() {
+    public Output<Map<String,StorageClass>> storageClasses() {
         return this.storageClasses == null ? Codegen.empty() : this.storageClasses;
     }
 
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcCni")
       private final @Nullable Output<VpcCni> vpcCni;
 
-    public Output<VpcCni> getVpcCni() {
+    public Output<VpcCni> vpcCni() {
         return this.vpcCni == null ? Codegen.empty() : this.vpcCni;
     }
 
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

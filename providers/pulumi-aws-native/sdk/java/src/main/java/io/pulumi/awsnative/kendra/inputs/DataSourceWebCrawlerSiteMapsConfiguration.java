@@ -16,7 +16,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration extends io.pulumi.r
     @Import(name="siteMaps", required=true)
       private final List<String> siteMaps;
 
-    public List<String> getSiteMaps() {
+    public List<String> siteMaps() {
         return this.siteMaps;
     }
 

@@ -23,7 +23,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="networkSecurityPerimeterName")
       private final @Nullable Output<String> networkSecurityPerimeterName;
 
-    public Output<String> getNetworkSecurityPerimeterName() {
+    public Output<String> networkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName == null ? Codegen.empty() : this.networkSecurityPerimeterName;
     }
 
@@ -89,7 +89,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

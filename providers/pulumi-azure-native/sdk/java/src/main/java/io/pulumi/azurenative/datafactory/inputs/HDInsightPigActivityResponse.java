@@ -32,7 +32,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="arguments")
       private final @Nullable Object arguments;
 
-    public Optional<Object> getArguments() {
+    public Optional<Object> arguments() {
         return this.arguments == null ? Optional.empty() : Optional.ofNullable(this.arguments);
     }
 
@@ -43,7 +43,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
 
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
 
@@ -54,7 +54,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -65,7 +65,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -76,7 +76,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
@@ -87,7 +87,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -98,7 +98,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -109,7 +109,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -120,7 +120,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="scriptLinkedService")
       private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> scriptLinkedService() {
         return this.scriptLinkedService == null ? Optional.empty() : Optional.ofNullable(this.scriptLinkedService);
     }
 
@@ -131,7 +131,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="scriptPath")
       private final @Nullable Object scriptPath;
 
-    public Optional<Object> getScriptPath() {
+    public Optional<Object> scriptPath() {
         return this.scriptPath == null ? Optional.empty() : Optional.ofNullable(this.scriptPath);
     }
 
@@ -142,7 +142,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
@@ -154,7 +154,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -165,7 +165,7 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

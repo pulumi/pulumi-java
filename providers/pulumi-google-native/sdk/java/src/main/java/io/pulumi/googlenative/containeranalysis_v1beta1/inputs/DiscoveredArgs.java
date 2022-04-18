@@ -28,7 +28,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
-    public Output<DiscoveredAnalysisStatus> getAnalysisStatus() {
+    public Output<DiscoveredAnalysisStatus> analysisStatus() {
         return this.analysisStatus == null ? Codegen.empty() : this.analysisStatus;
     }
 
@@ -39,7 +39,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Output<StatusArgs> getAnalysisStatusError() {
+    public Output<StatusArgs> analysisStatusError() {
         return this.analysisStatusError == null ? Codegen.empty() : this.analysisStatusError;
     }
 
@@ -50,7 +50,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
-    public Output<DiscoveredContinuousAnalysis> getContinuousAnalysis() {
+    public Output<DiscoveredContinuousAnalysis> continuousAnalysis() {
         return this.continuousAnalysis == null ? Codegen.empty() : this.continuousAnalysis;
     }
 

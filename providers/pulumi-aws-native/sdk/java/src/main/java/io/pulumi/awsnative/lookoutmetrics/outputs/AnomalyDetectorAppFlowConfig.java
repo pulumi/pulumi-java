@@ -20,10 +20,10 @@ public final class AnomalyDetectorAppFlowConfig {
         this.roleArn = roleArn;
     }
 
-    public String getFlowName() {
+    public String flowName() {
         return this.flowName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

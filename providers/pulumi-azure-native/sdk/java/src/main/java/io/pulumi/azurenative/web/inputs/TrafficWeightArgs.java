@@ -28,7 +28,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> getLatestRevision() {
+    public Output<Boolean> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -39,7 +39,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
-    public Output<String> getRevisionName() {
+    public Output<String> revisionName() {
         return this.revisionName == null ? Codegen.empty() : this.revisionName;
     }
 
@@ -50,7 +50,7 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

@@ -42,24 +42,24 @@ public final class GetDetectorResult {
      * The frequency of notifications sent about subsequent finding occurrences.
      * 
     */
-    public String getFindingPublishingFrequency() {
+    public String findingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The service-linked role that grants GuardDuty access to the resources in the AWS account.
      * 
     */
-    public String getServiceRoleArn() {
+    public String serviceRoleArn() {
         return this.serviceRoleArn;
     }
     /**
      * The current status of the detector.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

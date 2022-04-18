@@ -21,7 +21,7 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
     @Import(name="status", required=true)
       private final Output<BucketReplicaModificationsStatus> status;
 
-    public Output<BucketReplicaModificationsStatus> getStatus() {
+    public Output<BucketReplicaModificationsStatus> status() {
         return this.status;
     }
 

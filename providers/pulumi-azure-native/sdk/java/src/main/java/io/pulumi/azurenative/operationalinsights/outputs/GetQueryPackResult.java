@@ -83,63 +83,63 @@ public final class GetQueryPackResult {
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique ID of your application. This field cannot be changed.
      * 
     */
-    public String getQueryPackId() {
+    public String queryPackId() {
         return this.queryPackId;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
     */
-    public String getTimeModified() {
+    public String timeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

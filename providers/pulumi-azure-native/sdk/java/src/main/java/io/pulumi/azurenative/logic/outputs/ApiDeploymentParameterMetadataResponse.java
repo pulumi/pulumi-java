@@ -56,35 +56,35 @@ public final class ApiDeploymentParameterMetadataResponse {
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Indicates whether its required.
      * 
     */
-    public Optional<Boolean> getIsRequired() {
+    public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
      * The type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The visibility.
      * 
     */
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
 

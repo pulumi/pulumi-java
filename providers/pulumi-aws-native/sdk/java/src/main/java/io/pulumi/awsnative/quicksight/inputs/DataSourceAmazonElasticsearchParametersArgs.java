@@ -25,7 +25,7 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends io.pulumi
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 

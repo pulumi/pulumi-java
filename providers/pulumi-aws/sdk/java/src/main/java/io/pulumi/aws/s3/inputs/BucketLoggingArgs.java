@@ -22,7 +22,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetBucket", required=true)
       private final Output<String> targetBucket;
 
-    public Output<String> getTargetBucket() {
+    public Output<String> targetBucket() {
         return this.targetBucket;
     }
 
@@ -33,7 +33,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetPrefix")
       private final @Nullable Output<String> targetPrefix;
 
-    public Output<String> getTargetPrefix() {
+    public Output<String> targetPrefix() {
         return this.targetPrefix == null ? Codegen.empty() : this.targetPrefix;
     }
 

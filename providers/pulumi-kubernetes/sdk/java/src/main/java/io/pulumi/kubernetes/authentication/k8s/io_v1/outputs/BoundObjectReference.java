@@ -48,28 +48,28 @@ public final class BoundObjectReference {
      * API version of the referent.
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Name of the referent.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * UID of the referent.
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
 

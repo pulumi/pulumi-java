@@ -31,10 +31,10 @@ public final class StudioEncryptionConfiguration {
      * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
      * 
     */
-    public Optional<String> getKeyArn() {
+    public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
-    public StudioEncryptionConfigurationKeyType getKeyType() {
+    public StudioEncryptionConfigurationKeyType keyType() {
         return this.keyType;
     }
 

@@ -21,7 +21,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
     @Import(name="end", required=true)
       private final Output<Integer> end;
 
-    public Output<Integer> getEnd() {
+    public Output<Integer> end() {
         return this.end;
     }
 
@@ -32,7 +32,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -43,7 +43,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
     @Import(name="start", required=true)
       private final Output<Integer> start;
 
-    public Output<Integer> getStart() {
+    public Output<Integer> start() {
         return this.start;
     }
 

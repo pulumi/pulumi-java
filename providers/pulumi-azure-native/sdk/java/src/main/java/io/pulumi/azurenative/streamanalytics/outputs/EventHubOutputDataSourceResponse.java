@@ -63,35 +63,35 @@ public final class EventHubOutputDataSourceResponse {
      * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getEventHubName() {
+    public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * The key/column that is used to determine to which partition to send event data.
      * 
     */
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getServiceBusNamespace() {
+    public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyKey() {
+    public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyName() {
+    public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
@@ -99,7 +99,7 @@ public final class EventHubOutputDataSourceResponse {
      * Expected value is 'Microsoft.ServiceBus/EventHub'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

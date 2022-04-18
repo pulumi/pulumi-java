@@ -23,7 +23,7 @@ public final class IngressSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="accessLevel", required=true)
       private final String accessLevel;
 
-    public String getAccessLevel() {
+    public String accessLevel() {
         return this.accessLevel;
     }
 
@@ -34,7 +34,7 @@ public final class IngressSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

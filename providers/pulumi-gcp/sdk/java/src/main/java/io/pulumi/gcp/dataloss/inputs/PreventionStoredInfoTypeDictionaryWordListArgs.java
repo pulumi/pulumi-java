@@ -23,7 +23,7 @@ public final class PreventionStoredInfoTypeDictionaryWordListArgs extends io.pul
     @Import(name="words", required=true)
       private final Output<List<String>> words;
 
-    public Output<List<String>> getWords() {
+    public Output<List<String>> words() {
         return this.words;
     }
 

@@ -29,7 +29,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
     @Import(name="apt")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
 
-    public Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> getApt() {
+    public Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -40,7 +40,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
     @Import(name="goo")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
 
-    public Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> getGoo() {
+    public Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo() {
         return this.goo == null ? Codegen.empty() : this.goo;
     }
 
@@ -51,7 +51,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
     @Import(name="yum")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
 
-    public Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> getYum() {
+    public Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -62,7 +62,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
     @Import(name="zypper")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
 
-    public Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> getZypper() {
+    public Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

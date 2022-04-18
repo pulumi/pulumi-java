@@ -26,14 +26,14 @@ public final class ClusterClusterConfigEndpointConfigGetArgs extends io.pulumi.r
     @Import(name="enableHttpPortAccess", required=true)
       private final Output<Boolean> enableHttpPortAccess;
 
-    public Output<Boolean> getEnableHttpPortAccess() {
+    public Output<Boolean> enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
     @Import(name="httpPorts")
       private final @Nullable Output<Map<String,Object>> httpPorts;
 
-    public Output<Map<String,Object>> getHttpPorts() {
+    public Output<Map<String,Object>> httpPorts() {
         return this.httpPorts == null ? Codegen.empty() : this.httpPorts;
     }
 

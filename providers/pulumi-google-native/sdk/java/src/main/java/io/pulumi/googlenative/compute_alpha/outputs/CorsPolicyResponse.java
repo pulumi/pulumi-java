@@ -77,56 +77,56 @@ public final class CorsPolicyResponse {
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
      * 
     */
-    public Boolean getAllowCredentials() {
+    public Boolean allowCredentials() {
         return this.allowCredentials;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
     */
-    public List<String> getAllowHeaders() {
+    public List<String> allowHeaders() {
         return this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
     */
-    public List<String> getAllowMethods() {
+    public List<String> allowMethods() {
         return this.allowMethods;
     }
     /**
      * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
     */
-    public List<String> getAllowOriginRegexes() {
+    public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes;
     }
     /**
      * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
     */
-    public List<String> getAllowOrigins() {
+    public List<String> allowOrigins() {
         return this.allowOrigins;
     }
     /**
      * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
     /**
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
     */
-    public List<String> getExposeHeaders() {
+    public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
     /**
      * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
      * 
     */
-    public Integer getMaxAge() {
+    public Integer maxAge() {
         return this.maxAge;
     }
 

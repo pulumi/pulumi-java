@@ -27,13 +27,13 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         this.provisioningState = provisioningState;
     }
 
-    public ResourceIdResponse getPrivateEndpoint() {
+    public ResourceIdResponse privateEndpoint() {
         return this.privateEndpoint;
     }
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

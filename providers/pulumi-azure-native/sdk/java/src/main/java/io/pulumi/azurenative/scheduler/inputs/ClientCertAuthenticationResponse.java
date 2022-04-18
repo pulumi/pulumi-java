@@ -21,7 +21,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="certificateExpirationDate")
       private final @Nullable String certificateExpirationDate;
 
-    public Optional<String> getCertificateExpirationDate() {
+    public Optional<String> certificateExpirationDate() {
         return this.certificateExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.certificateExpirationDate);
     }
 
@@ -32,7 +32,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="certificateSubjectName")
       private final @Nullable String certificateSubjectName;
 
-    public Optional<String> getCertificateSubjectName() {
+    public Optional<String> certificateSubjectName() {
         return this.certificateSubjectName == null ? Optional.empty() : Optional.ofNullable(this.certificateSubjectName);
     }
 
@@ -43,7 +43,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="certificateThumbprint")
       private final @Nullable String certificateThumbprint;
 
-    public Optional<String> getCertificateThumbprint() {
+    public Optional<String> certificateThumbprint() {
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
     }
 
@@ -54,7 +54,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -65,7 +65,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="pfx")
       private final @Nullable String pfx;
 
-    public Optional<String> getPfx() {
+    public Optional<String> pfx() {
         return this.pfx == null ? Optional.empty() : Optional.ofNullable(this.pfx);
     }
 
@@ -77,7 +77,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

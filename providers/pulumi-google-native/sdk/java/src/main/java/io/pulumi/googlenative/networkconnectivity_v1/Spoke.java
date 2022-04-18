@@ -33,7 +33,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The time the spoke was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return An optional description of the spoke.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of the hub that this spoke is attached to.
      * 
      */
-    public Output<String> getHub() {
+    public Output<String> hub() {
         return this.hub;
     }
     /**
@@ -75,7 +75,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -89,7 +89,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return VLAN attachments that are associated with the spoke.
      * 
      */
-    public Output<LinkedInterconnectAttachmentsResponse> getLinkedInterconnectAttachments() {
+    public Output<LinkedInterconnectAttachmentsResponse> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
@@ -103,7 +103,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Router appliance instances that are associated with the spoke.
      * 
      */
-    public Output<LinkedRouterApplianceInstancesResponse> getLinkedRouterApplianceInstances() {
+    public Output<LinkedRouterApplianceInstancesResponse> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
@@ -117,7 +117,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return VPN tunnels that are associated with the spoke.
      * 
      */
-    public Output<LinkedVpnTunnelsResponse> getLinkedVpnTunnels() {
+    public Output<LinkedVpnTunnelsResponse> linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
@@ -131,7 +131,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The current lifecycle state of this spoke.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -159,7 +159,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -173,7 +173,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The time the spoke was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

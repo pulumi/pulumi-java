@@ -21,7 +21,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetName", required=true)
       private final String subnetName;
 
-    public String getSubnetName() {
+    public String subnetName() {
         return this.subnetName;
     }
 
@@ -54,7 +54,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;
 
-    public String getVirtualNetworkName() {
+    public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
 

@@ -15,7 +15,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
     @Import(name="deployedUrl", required=true)
       private final String deployedUrl;
 
-    public String getDeployedUrl() {
+    public String deployedUrl() {
         return this.deployedUrl;
     }
 
@@ -26,7 +26,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

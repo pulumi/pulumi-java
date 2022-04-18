@@ -22,7 +22,7 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
     @Import(name="s3Logs")
       private final @Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs;
 
-    public Output<DetectorDatasourcesS3LogsArgs> getS3Logs() {
+    public Output<DetectorDatasourcesS3LogsArgs> s3Logs() {
         return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
     }
 

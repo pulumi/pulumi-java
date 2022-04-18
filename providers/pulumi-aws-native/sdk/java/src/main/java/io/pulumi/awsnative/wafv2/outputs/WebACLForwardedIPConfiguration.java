@@ -21,10 +21,10 @@ public final class WebACLForwardedIPConfiguration {
         this.headerName = headerName;
     }
 
-    public WebACLForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 

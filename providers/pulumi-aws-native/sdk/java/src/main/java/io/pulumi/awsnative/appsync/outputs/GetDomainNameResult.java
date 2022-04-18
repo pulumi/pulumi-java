@@ -25,13 +25,13 @@ public final class GetDomainNameResult {
         this.hostedZoneId = hostedZoneId;
     }
 
-    public Optional<String> getAppSyncDomainName() {
+    public Optional<String> appSyncDomainName() {
         return Optional.ofNullable(this.appSyncDomainName);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getHostedZoneId() {
+    public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
 

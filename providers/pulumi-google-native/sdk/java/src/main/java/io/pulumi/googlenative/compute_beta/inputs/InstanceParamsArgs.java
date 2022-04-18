@@ -27,7 +27,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceManagerTags")
       private final @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Output<Map<String,String>> getResourceManagerTags() {
+    public Output<Map<String,String>> resourceManagerTags() {
         return this.resourceManagerTags == null ? Codegen.empty() : this.resourceManagerTags;
     }
 

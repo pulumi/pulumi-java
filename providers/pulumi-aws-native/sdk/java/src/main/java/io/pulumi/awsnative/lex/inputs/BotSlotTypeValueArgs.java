@@ -23,14 +23,14 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sampleValue", required=true)
       private final Output<BotSampleValueArgs> sampleValue;
 
-    public Output<BotSampleValueArgs> getSampleValue() {
+    public Output<BotSampleValueArgs> sampleValue() {
         return this.sampleValue;
     }
 
     @Import(name="synonyms")
       private final @Nullable Output<List<BotSampleValueArgs>> synonyms;
 
-    public Output<List<BotSampleValueArgs>> getSynonyms() {
+    public Output<List<BotSampleValueArgs>> synonyms() {
         return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 

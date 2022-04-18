@@ -25,7 +25,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="enabled")
       private final @Nullable String enabled;
 
-    public Optional<String> getEnabled() {
+    public Optional<String> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -36,7 +36,7 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="markdown")
       private final @Nullable String markdown;
 
-    public Optional<String> getMarkdown() {
+    public Optional<String> markdown() {
         return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
     }
 

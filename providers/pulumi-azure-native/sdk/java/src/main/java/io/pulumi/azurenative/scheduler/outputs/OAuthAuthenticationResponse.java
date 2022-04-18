@@ -56,28 +56,28 @@ public final class OAuthAuthenticationResponse {
      * Gets or sets the audience.
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Gets or sets the client identifier.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Gets or sets the secret, return value will always be empty.
      * 
     */
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Gets or sets the tenant.
      * 
     */
-    public Optional<String> getTenant() {
+    public Optional<String> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
@@ -85,7 +85,7 @@ public final class OAuthAuthenticationResponse {
      * Expected value is 'ActiveDirectoryOAuth'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

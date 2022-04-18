@@ -27,7 +27,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
-    public Output<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
     }
 
@@ -38,7 +38,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Output<ShippingAddressArgs> getShippingAddress() {
+    public Output<ShippingAddressArgs> shippingAddress() {
         return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 

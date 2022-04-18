@@ -42,21 +42,21 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
      * The extension handler status.
      * 
     */
-    public Optional<InstanceViewStatusResponse> getStatus() {
+    public Optional<InstanceViewStatusResponse> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Specifies the version of the script handler.
      * 
     */
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
 

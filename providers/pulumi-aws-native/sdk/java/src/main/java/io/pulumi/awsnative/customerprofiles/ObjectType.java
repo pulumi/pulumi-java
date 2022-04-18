@@ -37,7 +37,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether a profile should be created when data is received.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowProfileCreation() {
+    public Output</* @Nullable */ Boolean> allowProfileCreation() {
         return this.allowProfileCreation;
     }
     /**
@@ -51,7 +51,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -65,7 +65,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return Description of the profile object type.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -79,7 +79,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The unique name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -93,7 +93,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The default encryption key
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionKey() {
+    public Output</* @Nullable */ String> encryptionKey() {
         return this.encryptionKey;
     }
     /**
@@ -107,7 +107,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The default number of days until the data within the domain expires.
      * 
      */
-    public Output</* @Nullable */ Integer> getExpirationDays() {
+    public Output</* @Nullable */ Integer> expirationDays() {
         return this.expirationDays;
     }
     /**
@@ -121,7 +121,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return A list of the name and ObjectType field.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeFieldMap>> getFields() {
+    public Output</* @Nullable */ List<ObjectTypeFieldMap>> fields() {
         return this.fields;
     }
     /**
@@ -135,7 +135,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return A list of unique keys that can be used to map data to the profile.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeKeyMap>> getKeys() {
+    public Output</* @Nullable */ List<ObjectTypeKeyMap>> keys() {
         return this.keys;
     }
     /**
@@ -149,7 +149,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got last updated at.
      * 
      */
-    public Output<String> getLastUpdatedAt() {
+    public Output<String> lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
@@ -163,7 +163,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The name of the profile object type.
      * 
      */
-    public Output</* @Nullable */ String> getObjectTypeName() {
+    public Output</* @Nullable */ String> objectTypeName() {
         return this.objectTypeName;
     }
     /**
@@ -177,7 +177,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the integration.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeTag>> getTags() {
+    public Output</* @Nullable */ List<ObjectTypeTag>> tags() {
         return this.tags;
     }
     /**
@@ -191,7 +191,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the object template.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateId() {
+    public Output</* @Nullable */ String> templateId() {
         return this.templateId;
     }
 

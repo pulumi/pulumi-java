@@ -26,7 +26,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -37,7 +37,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="progress", required=true)
       private final Integer progress;
 
-    public Integer getProgress() {
+    public Integer progress() {
         return this.progress;
     }
 
@@ -48,7 +48,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
-    public Integer getProgressPercent() {
+    public Integer progressPercent() {
         return this.progressPercent;
     }
 
@@ -59,7 +59,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -70,7 +70,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="steps", required=true)
       private final List<CycleStepResponse> steps;
 
-    public List<CycleStepResponse> getSteps() {
+    public List<CycleStepResponse> steps() {
         return this.steps;
     }
 
@@ -81,7 +81,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="totalPauseDuration", required=true)
       private final String totalPauseDuration;
 
-    public String getTotalPauseDuration() {
+    public String totalPauseDuration() {
         return this.totalPauseDuration;
     }
 

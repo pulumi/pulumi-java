@@ -238,35 +238,35 @@ public final class AKSServiceResponseResponse {
      * Whether or not AAD authentication is enabled.
      * 
     */
-    public Optional<Boolean> getAadAuthEnabled() {
+    public Optional<Boolean> aadAuthEnabled() {
         return Optional.ofNullable(this.aadAuthEnabled);
     }
     /**
      * Whether or not Application Insights is enabled.
      * 
     */
-    public Optional<Boolean> getAppInsightsEnabled() {
+    public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Whether or not authentication is enabled.
      * 
     */
-    public Optional<Boolean> getAuthEnabled() {
+    public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
     /**
      * The auto scaler properties.
      * 
     */
-    public Optional<AKSServiceResponseResponseAutoScaler> getAutoScaler() {
+    public Optional<AKSServiceResponseResponseAutoScaler> autoScaler() {
         return Optional.ofNullable(this.autoScaler);
     }
     /**
      * The name of the compute resource.
      * 
     */
-    public Optional<String> getComputeName() {
+    public Optional<String> computeName() {
         return Optional.ofNullable(this.computeName);
     }
     /**
@@ -274,168 +274,168 @@ public final class AKSServiceResponseResponse {
      * Expected value is 'AKS'.
      * 
     */
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
     /**
      * The container resource requirements.
      * 
     */
-    public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
      * Details of the data collection options specified.
      * 
     */
-    public Optional<AKSServiceResponseResponseDataCollection> getDataCollection() {
+    public Optional<AKSServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
     /**
      * The deployment status.
      * 
     */
-    public AKSServiceResponseResponseDeploymentStatus getDeploymentStatus() {
+    public AKSServiceResponseResponseDeploymentStatus deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * The deployment type for the service.
      * 
     */
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * The service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Environment, models and assets used for inferencing.
      * 
     */
-    public Optional<AKSServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
+    public Optional<AKSServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
     /**
      * The error details.
      * 
     */
-    public ServiceResponseBaseResponseError getError() {
+    public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
      * Is this the default variant.
      * 
     */
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * The service tag dictionary. Tags are mutable.
      * 
     */
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The liveness probe requirements.
      * 
     */
-    public Optional<AKSServiceResponseResponseLivenessProbeRequirements> getLivenessProbeRequirements() {
+    public Optional<AKSServiceResponseResponseLivenessProbeRequirements> livenessProbeRequirements() {
         return Optional.ofNullable(this.livenessProbeRequirements);
     }
     /**
      * The maximum number of concurrent requests per container.
      * 
     */
-    public Optional<Integer> getMaxConcurrentRequestsPerContainer() {
+    public Optional<Integer> maxConcurrentRequestsPerContainer() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
     /**
      * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
      * 
     */
-    public Optional<Integer> getMaxQueueWaitMs() {
+    public Optional<Integer> maxQueueWaitMs() {
         return Optional.ofNullable(this.maxQueueWaitMs);
     }
     /**
      * Details on the models and configurations.
      * 
     */
-    public Map<String,Object> getModelConfigMap() {
+    public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
     /**
      * The list of models.
      * 
     */
-    public List<ModelResponse> getModels() {
+    public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
     /**
      * The Kubernetes namespace of the deployment.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * The number of replicas on the cluster.
      * 
     */
-    public Optional<Integer> getNumReplicas() {
+    public Optional<Integer> numReplicas() {
         return Optional.ofNullable(this.numReplicas);
     }
     /**
      * The service property dictionary. Properties are immutable.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The scoring timeout in milliseconds.
      * 
     */
-    public Optional<Integer> getScoringTimeoutMs() {
+    public Optional<Integer> scoringTimeoutMs() {
         return Optional.ofNullable(this.scoringTimeoutMs);
     }
     /**
      * The Uri for sending scoring requests.
      * 
     */
-    public String getScoringUri() {
+    public String scoringUri() {
         return this.scoringUri;
     }
     /**
      * The current state of the service.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The Uri for sending swagger requests.
      * 
     */
-    public String getSwaggerUri() {
+    public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
      * The amount of traffic variant receives.
      * 
     */
-    public Optional<Double> getTrafficPercentile() {
+    public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
     /**
      * The type of the variant.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

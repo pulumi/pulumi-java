@@ -15,14 +15,14 @@ public final class GetTopicSchemaSetting extends io.pulumi.resources.InvokeArgs 
     @Import(name="encoding", required=true)
       private final String encoding;
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
 
     @Import(name="schema", required=true)
       private final String schema;
 
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 

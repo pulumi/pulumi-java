@@ -84,63 +84,63 @@ public final class GetManagedPrivateEndpointResult {
      * The groupId in which the managed private endpoint is created.
      * 
     */
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
     */
-    public String getPrivateLinkResourceId() {
+    public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * The region of the resource to which the managed private endpoint is created.
      * 
     */
-    public Optional<String> getPrivateLinkResourceRegion() {
+    public Optional<String> privateLinkResourceRegion() {
         return Optional.ofNullable(this.privateLinkResourceRegion);
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The user request message.
      * 
     */
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

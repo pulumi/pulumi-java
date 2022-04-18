@@ -23,7 +23,7 @@ public final class ConnectionDrainingResponse extends io.pulumi.resources.Invoke
     @Import(name="drainingTimeoutSec", required=true)
       private final Integer drainingTimeoutSec;
 
-    public Integer getDrainingTimeoutSec() {
+    public Integer drainingTimeoutSec() {
         return this.drainingTimeoutSec;
     }
 

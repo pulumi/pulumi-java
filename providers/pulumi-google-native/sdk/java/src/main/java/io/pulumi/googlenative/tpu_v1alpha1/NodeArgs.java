@@ -26,7 +26,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -37,7 +37,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -48,7 +48,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="health")
       private final @Nullable Output<NodeHealth> health;
 
-    public Output<NodeHealth> getHealth() {
+    public Output<NodeHealth> health() {
         return this.health == null ? Codegen.empty() : this.health;
     }
 
@@ -70,14 +70,14 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -88,28 +88,28 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
-    public Output<String> getNodeId() {
+    public Output<String> nodeId() {
         return this.nodeId == null ? Codegen.empty() : this.nodeId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -120,7 +120,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingConfig")
       private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
-    public Output<SchedulingConfigArgs> getSchedulingConfig() {
+    public Output<SchedulingConfigArgs> schedulingConfig() {
         return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
     }
 
@@ -131,7 +131,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tensorflowVersion", required=true)
       private final Output<String> tensorflowVersion;
 
-    public Output<String> getTensorflowVersion() {
+    public Output<String> tensorflowVersion() {
         return this.tensorflowVersion;
     }
 
@@ -142,7 +142,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useServiceNetworking")
       private final @Nullable Output<Boolean> useServiceNetworking;
 
-    public Output<Boolean> getUseServiceNetworking() {
+    public Output<Boolean> useServiceNetworking() {
         return this.useServiceNetworking == null ? Codegen.empty() : this.useServiceNetworking;
     }
 

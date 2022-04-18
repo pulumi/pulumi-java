@@ -27,7 +27,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="level", required=true)
       private final Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stages")
       private final @Nullable Output<List<String>> stages;
 
-    public Output<List<String>> getStages() {
+    public Output<List<String>> stages() {
         return this.stages == null ? Codegen.empty() : this.stages;
     }
 

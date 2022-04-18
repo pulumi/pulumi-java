@@ -42,21 +42,21 @@ public final class ManagementPolicyFilterResponse {
      * An array of blob index tag based filters, there can be at most 10 tag filters
      * 
     */
-    public List<TagFilterResponse> getBlobIndexMatch() {
+    public List<TagFilterResponse> blobIndexMatch() {
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
     }
     /**
      * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
      * 
     */
-    public List<String> getBlobTypes() {
+    public List<String> blobTypes() {
         return this.blobTypes;
     }
     /**
      * An array of strings for prefixes to be match.
      * 
     */
-    public List<String> getPrefixMatch() {
+    public List<String> prefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }
 

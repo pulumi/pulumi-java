@@ -43,7 +43,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @return The custom data.
      * 
      */
-    public Output<PolicyPropertiesResponse> getProperties() {
+    public Output<PolicyPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

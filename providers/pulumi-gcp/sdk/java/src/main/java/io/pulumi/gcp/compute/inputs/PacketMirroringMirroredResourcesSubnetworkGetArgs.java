@@ -21,7 +21,7 @@ public final class PacketMirroringMirroredResourcesSubnetworkGetArgs extends io.
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

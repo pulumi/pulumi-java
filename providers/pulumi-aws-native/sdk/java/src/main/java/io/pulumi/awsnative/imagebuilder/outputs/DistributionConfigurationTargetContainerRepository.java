@@ -35,14 +35,14 @@ public final class DistributionConfigurationTargetContainerRepository {
      * The repository name of target container repository.
      * 
     */
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * The service of target container repository.
      * 
     */
-    public Optional<DistributionConfigurationTargetContainerRepositoryService> getService() {
+    public Optional<DistributionConfigurationTargetContainerRepositoryService> service() {
         return Optional.ofNullable(this.service);
     }
 

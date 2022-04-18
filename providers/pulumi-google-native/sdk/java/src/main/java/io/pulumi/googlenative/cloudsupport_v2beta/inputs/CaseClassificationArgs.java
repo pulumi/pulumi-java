@@ -26,7 +26,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -37,7 +37,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 

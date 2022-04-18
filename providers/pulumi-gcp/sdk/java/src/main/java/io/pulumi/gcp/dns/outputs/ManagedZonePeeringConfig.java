@@ -26,7 +26,7 @@ public final class ManagedZonePeeringConfig {
      * Structure is documented below.
      * 
     */
-    public ManagedZonePeeringConfigTargetNetwork getTargetNetwork() {
+    public ManagedZonePeeringConfigTargetNetwork targetNetwork() {
         return this.targetNetwork;
     }
 

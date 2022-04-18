@@ -29,7 +29,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
-    public Output<String> getElasticPoolName() {
+    public Output<String> elasticPoolName() {
         return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
     }
 
@@ -40,7 +40,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
 
-    public Output<Either<String,ElasticPoolLicenseType>> getLicenseType() {
+    public Output<Either<String,ElasticPoolLicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -51,7 +51,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> getMaintenanceConfigurationId() {
+    public Output<String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
     }
 
@@ -73,7 +73,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
-    public Output<Double> getMaxSizeBytes() {
+    public Output<Double> maxSizeBytes() {
         return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
     }
 
@@ -84,7 +84,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="perDatabaseSettings")
       private final @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
-    public Output<ElasticPoolPerDatabaseSettingsArgs> getPerDatabaseSettings() {
+    public Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings() {
         return this.perDatabaseSettings == null ? Codegen.empty() : this.perDatabaseSettings;
     }
 
@@ -95,7 +95,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -106,7 +106,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -119,7 +119,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -130,7 +130,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -141,7 +141,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> getZoneRedundant() {
+    public Output<Boolean> zoneRedundant() {
         return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
     }
 

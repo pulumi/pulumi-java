@@ -24,7 +24,7 @@ public final class ConfigFileResponse {
      * The contents of the file.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 

@@ -60,42 +60,42 @@ public final class CloudSQLInstanceInfoResponse {
      * Name of a Cloud SQL instance.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * External IP address of a Cloud SQL instance.
      * 
     */
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
     /**
      * Internal IP address of a Cloud SQL instance.
      * 
     */
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
     /**
      * URI of a Cloud SQL instance network or empty string if the instance does not have one.
      * 
     */
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
     /**
      * Region in which the Cloud SQL instance is running.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * URI of a Cloud SQL instance.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

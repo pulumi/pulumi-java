@@ -29,16 +29,16 @@ public final class FlowSnowflakeDestinationProperties {
         this.object = object;
     }
 
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
-    public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
+    public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
         return Optional.ofNullable(this.errorHandlingConfig);
     }
-    public String getIntermediateBucketName() {
+    public String intermediateBucketName() {
         return this.intermediateBucketName;
     }
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

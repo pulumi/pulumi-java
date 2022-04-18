@@ -25,7 +25,7 @@ public final class RegionOperationIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
@@ -36,28 +36,28 @@ public final class RegionOperationIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="operationId", required=true)
       private final Output<String> operationId;
 
-    public Output<String> getOperationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="regionId", required=true)
       private final Output<String> regionId;
 
-    public Output<String> getRegionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -68,7 +68,7 @@ public final class RegionOperationIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

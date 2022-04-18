@@ -23,7 +23,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardJson")
       private final @Nullable Output<String> dashboardJson;
 
-    public Output<String> getDashboardJson() {
+    public Output<String> dashboardJson() {
         return this.dashboardJson == null ? Codegen.empty() : this.dashboardJson;
     }
 
@@ -35,7 +35,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

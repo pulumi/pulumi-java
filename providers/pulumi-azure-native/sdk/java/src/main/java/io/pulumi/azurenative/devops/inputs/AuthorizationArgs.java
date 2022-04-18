@@ -29,7 +29,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType", required=true)
       private final Output<Either<String,AuthorizationType>> authorizationType;
 
-    public Output<Either<String,AuthorizationType>> getAuthorizationType() {
+    public Output<Either<String,AuthorizationType>> authorizationType() {
         return this.authorizationType;
     }
 
@@ -40,7 +40,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

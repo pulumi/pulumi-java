@@ -30,7 +30,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
       private final @Nullable Output<AwsClusterAuthorizationGetArgs> authorization;
 
-    public Output<AwsClusterAuthorizationGetArgs> getAuthorization() {
+    public Output<AwsClusterAuthorizationGetArgs> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -52,7 +52,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
+    public Output<String> awsRegion() {
         return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
@@ -63,7 +63,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPlane")
       private final @Nullable Output<AwsClusterControlPlaneGetArgs> controlPlane;
 
-    public Output<AwsClusterControlPlaneGetArgs> getControlPlane() {
+    public Output<AwsClusterControlPlaneGetArgs> controlPlane() {
         return this.controlPlane == null ? Codegen.empty() : this.controlPlane;
     }
 
@@ -74,7 +74,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -85,7 +85,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -96,7 +96,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -108,7 +108,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -119,7 +119,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet")
       private final @Nullable Output<AwsClusterFleetGetArgs> fleet;
 
-    public Output<AwsClusterFleetGetArgs> getFleet() {
+    public Output<AwsClusterFleetGetArgs> fleet() {
         return this.fleet == null ? Codegen.empty() : this.fleet;
     }
 
@@ -130,7 +130,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -141,7 +141,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -152,7 +152,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networking")
       private final @Nullable Output<AwsClusterNetworkingGetArgs> networking;
 
-    public Output<AwsClusterNetworkingGetArgs> getNetworking() {
+    public Output<AwsClusterNetworkingGetArgs> networking() {
         return this.networking == null ? Codegen.empty() : this.networking;
     }
 
@@ -163,7 +163,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -174,7 +174,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling == null ? Codegen.empty() : this.reconciling;
     }
 
@@ -186,7 +186,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -197,7 +197,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -208,7 +208,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -219,7 +219,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="workloadIdentityConfigs")
       private final @Nullable Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
 
-    public Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> getWorkloadIdentityConfigs() {
+    public Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs() {
         return this.workloadIdentityConfigs == null ? Codegen.empty() : this.workloadIdentityConfigs;
     }
 

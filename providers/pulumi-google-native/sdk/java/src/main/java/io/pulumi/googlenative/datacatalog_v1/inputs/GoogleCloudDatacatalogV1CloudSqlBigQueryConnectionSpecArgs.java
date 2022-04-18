@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
-    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> getType() {
+    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

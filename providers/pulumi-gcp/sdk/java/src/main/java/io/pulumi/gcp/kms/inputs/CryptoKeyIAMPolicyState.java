@@ -25,7 +25,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="cryptoKeyId")
       private final @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId == null ? Codegen.empty() : this.cryptoKeyId;
     }
 
@@ -36,7 +36,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

@@ -90,63 +90,63 @@ public final class ConfigurationResponse {
      * Availability information of the product system.
      * 
     */
-    public AvailabilityInformationResponse getAvailabilityInformation() {
+    public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
     */
-    public CostInformationResponse getCostInformation() {
+    public CostInformationResponse costInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
     */
-    public DescriptionResponse getDescription() {
+    public DescriptionResponse description() {
         return this.description;
     }
     /**
      * Dimensions of the configuration
      * 
     */
-    public DimensionsResponse getDimensions() {
+    public DimensionsResponse dimensions() {
         return this.dimensions;
     }
     /**
      * Display Name for the product system.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
     */
-    public List<FilterablePropertyResponse> getFilterableProperties() {
+    public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
     */
-    public HierarchyInformationResponse getHierarchyInformation() {
+    public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
     */
-    public List<ImageInformationResponse> getImageInformation() {
+    public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
     }
     /**
      * Specifications of the configuration
      * 
     */
-    public List<SpecificationResponse> getSpecifications() {
+    public List<SpecificationResponse> specifications() {
         return this.specifications;
     }
 

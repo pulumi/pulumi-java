@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="allowNoResourceGroupMatch")
       private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
-    public Output<Boolean> getAllowNoResourceGroupMatch() {
+    public Output<Boolean> allowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch == null ? Codegen.empty() : this.allowNoResourceGroupMatch;
     }
 
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 
@@ -69,7 +69,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="resourceGroups", required=true)
       private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 
-    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> getResourceGroups() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups() {
         return this.resourceGroups;
     }
 

@@ -26,7 +26,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<String> autoscalingPolicy;
 
-    public Output<String> getAutoscalingPolicy() {
+    public Output<String> autoscalingPolicy() {
         return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
+    public Output<String> bidPrice() {
         return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -59,7 +59,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationsJson")
       private final @Nullable Output<String> configurationsJson;
 
-    public Output<String> getConfigurationsJson() {
+    public Output<String> configurationsJson() {
         return this.configurationsJson == null ? Codegen.empty() : this.configurationsJson;
     }
 
@@ -70,7 +70,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
-    public Output<List<InstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
+    public Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs() {
         return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
@@ -81,7 +81,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
@@ -92,7 +92,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
@@ -103,7 +103,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -114,21 +114,21 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="runningInstanceCount")
       private final @Nullable Output<Integer> runningInstanceCount;
 
-    public Output<Integer> getRunningInstanceCount() {
+    public Output<Integer> runningInstanceCount() {
         return this.runningInstanceCount == null ? Codegen.empty() : this.runningInstanceCount;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

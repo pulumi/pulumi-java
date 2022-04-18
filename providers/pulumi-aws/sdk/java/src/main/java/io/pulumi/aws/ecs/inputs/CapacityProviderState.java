@@ -24,7 +24,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="autoScalingGroupProvider")
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider;
 
-    public Output<CapacityProviderAutoScalingGroupProviderGetArgs> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider() {
         return this.autoScalingGroupProvider == null ? Codegen.empty() : this.autoScalingGroupProvider;
     }
 
@@ -46,7 +46,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,14 +57,14 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

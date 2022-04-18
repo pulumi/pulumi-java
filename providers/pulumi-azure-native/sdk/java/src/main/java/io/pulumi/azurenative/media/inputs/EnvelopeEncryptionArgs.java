@@ -30,7 +30,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
-    public Output<List<TrackSelectionArgs>> getClearTracks() {
+    public Output<List<TrackSelectionArgs>> clearTracks() {
         return this.clearTracks == null ? Codegen.empty() : this.clearTracks;
     }
 
@@ -41,7 +41,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
-    public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
+    public Output<StreamingPolicyContentKeysArgs> contentKeys() {
         return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
     }
 
@@ -52,7 +52,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="customKeyAcquisitionUrlTemplate")
       private final @Nullable Output<String> customKeyAcquisitionUrlTemplate;
 
-    public Output<String> getCustomKeyAcquisitionUrlTemplate() {
+    public Output<String> customKeyAcquisitionUrlTemplate() {
         return this.customKeyAcquisitionUrlTemplate == null ? Codegen.empty() : this.customKeyAcquisitionUrlTemplate;
     }
 
@@ -63,7 +63,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
+    public Output<EnabledProtocolsArgs> enabledProtocols() {
         return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 

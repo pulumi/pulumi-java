@@ -122,98 +122,98 @@ public final class GetConversationProfileResult {
      * Configuration for an automated agent to use with this profile.
      * 
     */
-    public GoogleCloudDialogflowV2AutomatedAgentConfigResponse getAutomatedAgentConfig() {
+    public GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig() {
         return this.automatedAgentConfig;
     }
     /**
      * Create time of the conversation profile.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Human readable name for this profile. Max length 1024 bytes.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Configuration for agent assistance to use with this profile.
      * 
     */
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse getHumanAgentAssistantConfig() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig() {
         return this.humanAgentAssistantConfig;
     }
     /**
      * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
      * 
     */
-    public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse getHumanAgentHandoffConfig() {
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig() {
         return this.humanAgentHandoffConfig;
     }
     /**
      * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
     */
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
     /**
      * Configuration for logging conversation lifecycle events.
      * 
     */
-    public GoogleCloudDialogflowV2LoggingConfigResponse getLoggingConfig() {
+    public GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
      * 
     */
-    public GoogleCloudDialogflowV2NotificationConfigResponse getNewMessageEventNotificationConfig() {
+    public GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig() {
         return this.newMessageEventNotificationConfig;
     }
     /**
      * Configuration for publishing conversation lifecycle events.
      * 
     */
-    public GoogleCloudDialogflowV2NotificationConfigResponse getNotificationConfig() {
+    public GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
     /**
      * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
     */
-    public String getSecuritySettings() {
+    public String securitySettings() {
         return this.securitySettings;
     }
     /**
      * Settings for speech transcription.
      * 
     */
-    public GoogleCloudDialogflowV2SpeechToTextConfigResponse getSttConfig() {
+    public GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig() {
         return this.sttConfig;
     }
     /**
      * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
      * 
     */
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
     /**
      * Update time of the conversation profile.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

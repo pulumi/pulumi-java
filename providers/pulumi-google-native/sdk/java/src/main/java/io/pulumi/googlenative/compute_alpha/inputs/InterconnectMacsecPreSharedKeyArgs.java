@@ -26,7 +26,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

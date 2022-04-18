@@ -26,7 +26,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -48,7 +48,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versionHeaderName")
       private final @Nullable Output<String> versionHeaderName;
 
-    public Output<String> getVersionHeaderName() {
+    public Output<String> versionHeaderName() {
         return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
     }
 
@@ -70,7 +70,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versionQueryName")
       private final @Nullable Output<String> versionQueryName;
 
-    public Output<String> getVersionQueryName() {
+    public Output<String> versionQueryName() {
         return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
     }
 
@@ -81,7 +81,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versioningScheme")
       private final @Nullable Output<String> versioningScheme;
 
-    public Output<String> getVersioningScheme() {
+    public Output<String> versioningScheme() {
         return this.versioningScheme == null ? Codegen.empty() : this.versioningScheme;
     }
 

@@ -24,7 +24,7 @@ public final class PrivateEndpointResponse {
      * The ARM identifier for Private Endpoint
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

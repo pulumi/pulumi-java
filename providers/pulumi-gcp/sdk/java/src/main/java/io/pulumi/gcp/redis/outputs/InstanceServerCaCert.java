@@ -38,7 +38,7 @@ public final class InstanceServerCaCert {
         this.sha1Fingerprint = sha1Fingerprint;
     }
 
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
     /**
@@ -48,16 +48,16 @@ public final class InstanceServerCaCert {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
-    public Optional<String> getExpireTime() {
+    public Optional<String> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
-    public Optional<String> getSerialNumber() {
+    public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
-    public Optional<String> getSha1Fingerprint() {
+    public Optional<String> sha1Fingerprint() {
         return Optional.ofNullable(this.sha1Fingerprint);
     }
 

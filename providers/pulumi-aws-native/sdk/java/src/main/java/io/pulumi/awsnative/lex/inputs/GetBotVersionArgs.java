@@ -15,14 +15,14 @@ public final class GetBotVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="botId", required=true)
       private final String botId;
 
-    public String getBotId() {
+    public String botId() {
         return this.botId;
     }
 
     @Import(name="botVersion", required=true)
       private final String botVersion;
 
-    public String getBotVersion() {
+    public String botVersion() {
         return this.botVersion;
     }
 

@@ -27,7 +27,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flags")
       private final @Nullable Output<Integer> flags;
 
-    public Output<Integer> getFlags() {
+    public Output<Integer> flags() {
         return this.flags == null ? Codegen.empty() : this.flags;
     }
 
@@ -38,7 +38,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -49,7 +49,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -62,7 +62,7 @@ public final class PatchDeploymentInstanceFilter {
      * Target all VM instances in the project. If true, no other criteria is permitted.
      * 
     */
-    public Optional<Boolean> getAll() {
+    public Optional<Boolean> all() {
         return Optional.ofNullable(this.all);
     }
     /**
@@ -70,7 +70,7 @@ public final class PatchDeploymentInstanceFilter {
      * Structure is documented below.
      * 
     */
-    public List<PatchDeploymentInstanceFilterGroupLabel> getGroupLabels() {
+    public List<PatchDeploymentInstanceFilterGroupLabel> groupLabels() {
         return this.groupLabels == null ? List.of() : this.groupLabels;
     }
     /**
@@ -78,7 +78,7 @@ public final class PatchDeploymentInstanceFilter {
      * VMs when targeting configs, for example prefix="prod-".
      * 
     */
-    public List<String> getInstanceNamePrefixes() {
+    public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? List.of() : this.instanceNamePrefixes;
     }
     /**
@@ -87,14 +87,14 @@ public final class PatchDeploymentInstanceFilter {
      * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
      * 
     */
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

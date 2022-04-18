@@ -40,21 +40,21 @@ public final class StartActivityIntentResponse {
      * Action name. Required for START_ACTIVITY.
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * Intent categories to set on the intent.
      * 
     */
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
     /**
      * URI for the action.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

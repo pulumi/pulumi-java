@@ -33,14 +33,14 @@ public final class ServiceAccountResponse {
      * Email address of the service account.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The list of scopes to be made available for this service account.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 

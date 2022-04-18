@@ -63,42 +63,42 @@ public final class SkuResponse {
      * The SKU capacity.
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The SKU family.
      * 
     */
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The SKU model.
      * 
     */
-    public Optional<String> getModel() {
+    public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
     /**
      * The SKU name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SKU size.
      * 
     */
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The SKU tier.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

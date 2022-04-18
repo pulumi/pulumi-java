@@ -28,7 +28,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
@@ -39,7 +39,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -50,7 +50,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
-    public Output<String> getClusterResourceName() {
+    public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -61,7 +61,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
-    public Output<String> getClusterRp() {
+    public Output<String> clusterRp() {
         return this.clusterRp;
     }
 
@@ -72,7 +72,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> getConfigurationProtectedSettings() {
+    public Output<Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
@@ -83,7 +83,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationSettings")
       private final @Nullable Output<Map<String,String>> configurationSettings;
 
-    public Output<Map<String,String>> getConfigurationSettings() {
+    public Output<Map<String,String>> configurationSettings() {
         return this.configurationSettings == null ? Codegen.empty() : this.configurationSettings;
     }
 
@@ -94,7 +94,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensionInstanceName")
       private final @Nullable Output<String> extensionInstanceName;
 
-    public Output<String> getExtensionInstanceName() {
+    public Output<String> extensionInstanceName() {
         return this.extensionInstanceName == null ? Codegen.empty() : this.extensionInstanceName;
     }
 
@@ -105,7 +105,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensionType")
       private final @Nullable Output<String> extensionType;
 
-    public Output<String> getExtensionType() {
+    public Output<String> extensionType() {
         return this.extensionType == null ? Codegen.empty() : this.extensionType;
     }
 
@@ -116,7 +116,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ConfigurationIdentityArgs> identity;
 
-    public Output<ConfigurationIdentityArgs> getIdentity() {
+    public Output<ConfigurationIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -127,7 +127,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="releaseTrain")
       private final @Nullable Output<String> releaseTrain;
 
-    public Output<String> getReleaseTrain() {
+    public Output<String> releaseTrain() {
         return this.releaseTrain == null ? Codegen.empty() : this.releaseTrain;
     }
 
@@ -138,7 +138,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -149,7 +149,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> getScope() {
+    public Output<ScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -160,7 +160,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
       private final @Nullable Output<List<ExtensionStatusArgs>> statuses;
 
-    public Output<List<ExtensionStatusArgs>> getStatuses() {
+    public Output<List<ExtensionStatusArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -171,7 +171,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

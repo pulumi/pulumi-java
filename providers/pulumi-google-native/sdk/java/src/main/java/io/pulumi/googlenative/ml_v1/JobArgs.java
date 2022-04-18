@@ -27,7 +27,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -49,7 +49,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -60,7 +60,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predictionInput")
       private final @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
-    public Output<GoogleCloudMlV1__PredictionInputArgs> getPredictionInput() {
+    public Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput() {
         return this.predictionInput == null ? Codegen.empty() : this.predictionInput;
     }
 
@@ -71,14 +71,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predictionOutput")
       private final @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
-    public Output<GoogleCloudMlV1__PredictionOutputArgs> getPredictionOutput() {
+    public Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput() {
         return this.predictionOutput == null ? Codegen.empty() : this.predictionOutput;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -89,7 +89,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trainingInput")
       private final @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
-    public Output<GoogleCloudMlV1__TrainingInputArgs> getTrainingInput() {
+    public Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput() {
         return this.trainingInput == null ? Codegen.empty() : this.trainingInput;
     }
 
@@ -100,7 +100,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trainingOutput")
       private final @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 
-    public Output<GoogleCloudMlV1__TrainingOutputArgs> getTrainingOutput() {
+    public Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput() {
         return this.trainingOutput == null ? Codegen.empty() : this.trainingOutput;
     }
 

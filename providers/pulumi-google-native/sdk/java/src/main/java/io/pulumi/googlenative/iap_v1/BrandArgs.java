@@ -22,14 +22,14 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -40,7 +40,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 

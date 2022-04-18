@@ -39,21 +39,21 @@ public final class SdkVersionResponse {
      * The support status for this SDK version.
      * 
     */
-    public String getSdkSupportStatus() {
+    public String sdkSupportStatus() {
         return this.sdkSupportStatus;
     }
     /**
      * The version of the SDK used to run the job.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * A readable string describing the version of the SDK.
      * 
     */
-    public String getVersionDisplayName() {
+    public String versionDisplayName() {
         return this.versionDisplayName;
     }
 

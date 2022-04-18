@@ -22,7 +22,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
     @Import(name="s3Bucket")
       private final @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
-    public Output<BotAliasS3BucketLogDestinationArgs> getS3Bucket() {
+    public Output<BotAliasS3BucketLogDestinationArgs> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 

@@ -23,7 +23,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageFamily", required=true)
       private final String imageFamily;
 
-    public String getImageFamily() {
+    public String imageFamily() {
         return this.imageFamily;
     }
 
@@ -34,7 +34,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageName", required=true)
       private final String imageName;
 
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
 
@@ -45,7 +45,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

@@ -38,22 +38,22 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
         this.lambdaArn = lambdaArn;
     }
 
-    public Optional<Object> getComponentDependencies() {
+    public Optional<Object> componentDependencies() {
         return Optional.ofNullable(this.componentDependencies);
     }
-    public Optional<ComponentVersionLambdaExecutionParameters> getComponentLambdaParameters() {
+    public Optional<ComponentVersionLambdaExecutionParameters> componentLambdaParameters() {
         return Optional.ofNullable(this.componentLambdaParameters);
     }
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
-    public List<ComponentVersionComponentPlatform> getComponentPlatforms() {
+    public List<ComponentVersionComponentPlatform> componentPlatforms() {
         return this.componentPlatforms == null ? List.of() : this.componentPlatforms;
     }
-    public Optional<String> getComponentVersion() {
+    public Optional<String> componentVersion() {
         return Optional.ofNullable(this.componentVersion);
     }
-    public Optional<String> getLambdaArn() {
+    public Optional<String> lambdaArn() {
         return Optional.ofNullable(this.lambdaArn);
     }
 

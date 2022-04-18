@@ -26,7 +26,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="managedNetworkGroupName")
       private final @Nullable Output<String> managedNetworkGroupName;
 
-    public Output<String> getManagedNetworkGroupName() {
+    public Output<String> managedNetworkGroupName() {
         return this.managedNetworkGroupName == null ? Codegen.empty() : this.managedNetworkGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
 
-    public Output<String> getManagedNetworkName() {
+    public Output<String> managedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -70,7 +70,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="managementGroups")
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
-    public Output<List<ResourceIdArgs>> getManagementGroups() {
+    public Output<List<ResourceIdArgs>> managementGroups() {
         return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
     }
 
@@ -81,7 +81,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="subnets")
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
-    public Output<List<ResourceIdArgs>> getSubnets() {
+    public Output<List<ResourceIdArgs>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -103,7 +103,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="subscriptions")
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
-    public Output<List<ResourceIdArgs>> getSubscriptions() {
+    public Output<List<ResourceIdArgs>> subscriptions() {
         return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 
@@ -114,7 +114,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="virtualNetworks")
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
-    public Output<List<ResourceIdArgs>> getVirtualNetworks() {
+    public Output<List<ResourceIdArgs>> virtualNetworks() {
         return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
     }
 

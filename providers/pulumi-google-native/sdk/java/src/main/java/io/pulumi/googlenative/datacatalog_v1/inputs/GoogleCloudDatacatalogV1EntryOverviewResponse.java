@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
     @Import(name="overview", required=true)
       private final String overview;
 
-    public String getOverview() {
+    public String overview() {
         return this.overview;
     }
 

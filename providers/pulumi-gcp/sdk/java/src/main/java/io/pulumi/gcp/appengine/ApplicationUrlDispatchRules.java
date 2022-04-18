@@ -48,7 +48,7 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output<List<ApplicationUrlDispatchRulesDispatchRule>> getDispatchRules() {
+    public Output<List<ApplicationUrlDispatchRulesDispatchRule>> dispatchRules() {
         return this.dispatchRules;
     }
     /**
@@ -64,7 +64,7 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

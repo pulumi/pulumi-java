@@ -54,7 +54,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The location for the Dataset.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -68,7 +68,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The resource name for the Dataset.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -98,7 +98,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this dataset
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -116,7 +116,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * (e.g., HL7 messages) where no explicit timezone is specified.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

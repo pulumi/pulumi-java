@@ -25,14 +25,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngineHttpRequest")
       private final @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
-    public Output<AppEngineHttpRequestArgs> getAppEngineHttpRequest() {
+    public Output<AppEngineHttpRequestArgs> appEngineHttpRequest() {
         return this.appEngineHttpRequest == null ? Codegen.empty() : this.appEngineHttpRequest;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -43,14 +43,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -61,14 +61,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullMessage")
       private final @Nullable Output<PullMessageArgs> pullMessage;
 
-    public Output<PullMessageArgs> getPullMessage() {
+    public Output<PullMessageArgs> pullMessage() {
         return this.pullMessage == null ? Codegen.empty() : this.pullMessage;
     }
 
     @Import(name="queueId", required=true)
       private final Output<String> queueId;
 
-    public Output<String> getQueueId() {
+    public Output<String> queueId() {
         return this.queueId;
     }
 
@@ -79,7 +79,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseView")
       private final @Nullable Output<TaskResponseView> responseView;
 
-    public Output<TaskResponseView> getResponseView() {
+    public Output<TaskResponseView> responseView() {
         return this.responseView == null ? Codegen.empty() : this.responseView;
     }
 
@@ -90,7 +90,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleTime")
       private final @Nullable Output<String> scheduleTime;
 
-    public Output<String> getScheduleTime() {
+    public Output<String> scheduleTime() {
         return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
     }
 

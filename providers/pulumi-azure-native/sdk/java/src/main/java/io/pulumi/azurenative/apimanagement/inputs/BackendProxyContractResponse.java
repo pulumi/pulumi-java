@@ -25,7 +25,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -36,7 +36,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -47,7 +47,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

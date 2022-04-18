@@ -23,7 +23,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
     @Import(name="connectionLimit")
       private final @Nullable Output<Integer> connectionLimit;
 
-    public Output<Integer> getConnectionLimit() {
+    public Output<Integer> connectionLimit() {
         return this.connectionLimit == null ? Codegen.empty() : this.connectionLimit;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
     @Import(name="projectIdOrNum")
       private final @Nullable Output<String> projectIdOrNum;
 
-    public Output<String> getProjectIdOrNum() {
+    public Output<String> projectIdOrNum() {
         return this.projectIdOrNum == null ? Codegen.empty() : this.projectIdOrNum;
     }
 

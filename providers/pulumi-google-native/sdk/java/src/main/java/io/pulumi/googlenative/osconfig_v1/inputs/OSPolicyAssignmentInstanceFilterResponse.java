@@ -26,7 +26,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
     @Import(name="all", required=true)
       private final Boolean all;
 
-    public Boolean getAll() {
+    public Boolean all() {
         return this.all;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
     @Import(name="exclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
 
-    public List<OSPolicyAssignmentLabelSetResponse> getExclusionLabels() {
+    public List<OSPolicyAssignmentLabelSetResponse> exclusionLabels() {
         return this.exclusionLabels;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
     @Import(name="inclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
 
-    public List<OSPolicyAssignmentLabelSetResponse> getInclusionLabels() {
+    public List<OSPolicyAssignmentLabelSetResponse> inclusionLabels() {
         return this.inclusionLabels;
     }
 
@@ -59,7 +59,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
     @Import(name="inventories", required=true)
       private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
-    public List<OSPolicyAssignmentInstanceFilterInventoryResponse> getInventories() {
+    public List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories() {
         return this.inventories;
     }
 

@@ -25,14 +25,14 @@ public final class ManagedZonePeeringConfigResponse {
         this.targetNetwork = targetNetwork;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The network with which to peer.
      * 
     */
-    public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {
+    public ManagedZonePeeringConfigTargetNetworkResponse targetNetwork() {
         return this.targetNetwork;
     }
 

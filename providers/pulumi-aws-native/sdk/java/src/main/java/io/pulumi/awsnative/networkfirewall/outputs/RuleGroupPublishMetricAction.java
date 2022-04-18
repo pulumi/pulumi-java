@@ -17,7 +17,7 @@ public final class RuleGroupPublishMetricAction {
         this.dimensions = dimensions;
     }
 
-    public List<RuleGroupDimension> getDimensions() {
+    public List<RuleGroupDimension> dimensions() {
         return this.dimensions;
     }
 

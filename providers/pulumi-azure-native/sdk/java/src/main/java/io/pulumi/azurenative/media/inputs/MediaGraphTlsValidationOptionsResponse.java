@@ -23,7 +23,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
     @Import(name="ignoreHostname", required=true)
       private final Boolean ignoreHostname;
 
-    public Boolean getIgnoreHostname() {
+    public Boolean ignoreHostname() {
         return this.ignoreHostname;
     }
 
@@ -34,7 +34,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
     @Import(name="ignoreSignature", required=true)
       private final Boolean ignoreSignature;
 
-    public Boolean getIgnoreSignature() {
+    public Boolean ignoreSignature() {
         return this.ignoreSignature;
     }
 

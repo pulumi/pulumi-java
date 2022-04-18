@@ -22,7 +22,7 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 

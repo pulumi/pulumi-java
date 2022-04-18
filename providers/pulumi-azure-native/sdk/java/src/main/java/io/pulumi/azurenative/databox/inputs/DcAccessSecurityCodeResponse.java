@@ -25,7 +25,7 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
     @Import(name="forwardDCAccessCode")
       private final @Nullable String forwardDCAccessCode;
 
-    public Optional<String> getForwardDCAccessCode() {
+    public Optional<String> forwardDCAccessCode() {
         return this.forwardDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.forwardDCAccessCode);
     }
 
@@ -36,7 +36,7 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
     @Import(name="reverseDCAccessCode")
       private final @Nullable String reverseDCAccessCode;
 
-    public Optional<String> getReverseDCAccessCode() {
+    public Optional<String> reverseDCAccessCode() {
         return this.reverseDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.reverseDCAccessCode);
     }
 

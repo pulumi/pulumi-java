@@ -24,7 +24,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="geoMatchConstraints")
       private final @Nullable Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
 
-    public Output<List<GeoMatchSetGeoMatchConstraintArgs>> getGeoMatchConstraints() {
+    public Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints() {
         return this.geoMatchConstraints == null ? Codegen.empty() : this.geoMatchConstraints;
     }
 
@@ -35,7 +35,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

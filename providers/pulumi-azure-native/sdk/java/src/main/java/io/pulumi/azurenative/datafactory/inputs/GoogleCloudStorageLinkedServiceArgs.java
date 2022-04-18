@@ -34,7 +34,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="accessKeyId")
       private final @Nullable Output<Object> accessKeyId;
 
-    public Output<Object> getAccessKeyId() {
+    public Output<Object> accessKeyId() {
         return this.accessKeyId == null ? Codegen.empty() : this.accessKeyId;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -89,7 +89,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -100,7 +100,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="secretAccessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretAccessKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey() {
         return this.secretAccessKey == null ? Codegen.empty() : this.secretAccessKey;
     }
 
@@ -111,7 +111,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="serviceUrl")
       private final @Nullable Output<Object> serviceUrl;
 
-    public Output<Object> getServiceUrl() {
+    public Output<Object> serviceUrl() {
         return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 
@@ -123,7 +123,7 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

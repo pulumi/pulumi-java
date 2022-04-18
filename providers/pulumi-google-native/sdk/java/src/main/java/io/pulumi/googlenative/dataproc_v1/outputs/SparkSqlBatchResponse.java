@@ -41,21 +41,21 @@ public final class SparkSqlBatchResponse {
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
     /**
      * The HCFS URI of the script that contains Spark SQL queries to execute.
      * 
     */
-    public String getQueryFileUri() {
+    public String queryFileUri() {
         return this.queryFileUri;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
     */
-    public Map<String,String> getQueryVariables() {
+    public Map<String,String> queryVariables() {
         return this.queryVariables;
     }
 

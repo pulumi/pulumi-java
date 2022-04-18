@@ -34,14 +34,14 @@ public final class EventTargetRetryPolicy {
      * The age in seconds to continue to make retry attempts.
      * 
     */
-    public Optional<Integer> getMaximumEventAgeInSeconds() {
+    public Optional<Integer> maximumEventAgeInSeconds() {
         return Optional.ofNullable(this.maximumEventAgeInSeconds);
     }
     /**
      * maximum number of retry attempts to make before the request fails
      * 
     */
-    public Optional<Integer> getMaximumRetryAttempts() {
+    public Optional<Integer> maximumRetryAttempts() {
         return Optional.ofNullable(this.maximumRetryAttempts);
     }
 

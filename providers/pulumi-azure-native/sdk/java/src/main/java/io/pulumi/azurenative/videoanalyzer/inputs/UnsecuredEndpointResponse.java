@@ -27,7 +27,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
     @Import(name="credentials", required=true)
       private final UsernamePasswordCredentialsResponse credentials;
 
-    public UsernamePasswordCredentialsResponse getCredentials() {
+    public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
 
@@ -38,7 +38,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
     @Import(name="tunnel")
       private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
-    public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
+    public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
     }
 
@@ -50,7 +50,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -61,7 +61,7 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

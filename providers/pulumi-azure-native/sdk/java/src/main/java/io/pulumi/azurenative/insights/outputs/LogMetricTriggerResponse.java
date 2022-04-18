@@ -49,28 +49,28 @@ public final class LogMetricTriggerResponse {
      * Evaluation of metric on a particular column
      * 
     */
-    public Optional<String> getMetricColumn() {
+    public Optional<String> metricColumn() {
         return Optional.ofNullable(this.metricColumn);
     }
     /**
      * Metric Trigger Type - 'Consecutive' or 'Total'
      * 
     */
-    public Optional<String> getMetricTriggerType() {
+    public Optional<String> metricTriggerType() {
         return Optional.ofNullable(this.metricTriggerType);
     }
     /**
      * The threshold of the metric trigger.
      * 
     */
-    public Optional<Double> getThreshold() {
+    public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
      * 
     */
-    public Optional<String> getThresholdOperator() {
+    public Optional<String> thresholdOperator() {
         return Optional.ofNullable(this.thresholdOperator);
     }
 

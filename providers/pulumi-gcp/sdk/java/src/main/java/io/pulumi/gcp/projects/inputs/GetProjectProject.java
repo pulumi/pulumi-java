@@ -16,42 +16,42 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="lifecycleState", required=true)
       private final String lifecycleState;
 
-    public String getLifecycleState() {
+    public String lifecycleState() {
         return this.lifecycleState;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="number", required=true)
       private final String number;
 
-    public String getNumber() {
+    public String number() {
         return this.number;
     }
 
     @Import(name="parent", required=true)
       private final Map<String,String> parent;
 
-    public Map<String,String> getParent() {
+    public Map<String,String> parent() {
         return this.parent;
     }
 
@@ -62,7 +62,7 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
     @Import(name="projectId", required=true)
       private final String projectId;
 
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
 

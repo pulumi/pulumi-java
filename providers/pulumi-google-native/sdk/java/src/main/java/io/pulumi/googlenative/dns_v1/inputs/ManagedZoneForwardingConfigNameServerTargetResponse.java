@@ -19,7 +19,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse extends i
     @Import(name="forwardingPath", required=true)
       private final String forwardingPath;
 
-    public String getForwardingPath() {
+    public String forwardingPath() {
         return this.forwardingPath;
     }
 
@@ -30,14 +30,14 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse extends i
     @Import(name="ipv4Address", required=true)
       private final String ipv4Address;
 
-    public String getIpv4Address() {
+    public String ipv4Address() {
         return this.ipv4Address;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

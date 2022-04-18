@@ -45,7 +45,7 @@ public final class InstanceShieldedInstanceConfig {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
     */
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
@@ -53,7 +53,7 @@ public final class InstanceShieldedInstanceConfig {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
     */
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
@@ -61,7 +61,7 @@ public final class InstanceShieldedInstanceConfig {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
     */
-    public Optional<Boolean> getEnableVtpm() {
+    public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
 

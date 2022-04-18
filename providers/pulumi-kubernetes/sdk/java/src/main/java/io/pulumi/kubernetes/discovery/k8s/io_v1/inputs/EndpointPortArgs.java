@@ -27,7 +27,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appProtocol")
       private final @Nullable Output<String> appProtocol;
 
-    public Output<String> getAppProtocol() {
+    public Output<String> appProtocol() {
         return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

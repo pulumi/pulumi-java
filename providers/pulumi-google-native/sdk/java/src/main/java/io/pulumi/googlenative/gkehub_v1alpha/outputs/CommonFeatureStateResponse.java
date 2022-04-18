@@ -41,21 +41,21 @@ public final class CommonFeatureStateResponse {
      * Appdevexperience specific state.
      * 
     */
-    public AppDevExperienceFeatureStateResponse getAppdevexperience() {
+    public AppDevExperienceFeatureStateResponse appdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Service Mesh-specific state.
      * 
     */
-    public ServiceMeshFeatureStateResponse getServicemesh() {
+    public ServiceMeshFeatureStateResponse servicemesh() {
         return this.servicemesh;
     }
     /**
      * The "running state" of the Feature in this Hub.
      * 
     */
-    public FeatureStateResponse getState() {
+    public FeatureStateResponse state() {
         return this.state;
     }
 

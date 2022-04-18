@@ -27,7 +27,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="ask", required=true)
       private final String ask;
 
-    public String getAsk() {
+    public String ask() {
         return this.ask;
     }
 
@@ -38,7 +38,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="fairPlayPfx", required=true)
       private final String fairPlayPfx;
 
-    public String getFairPlayPfx() {
+    public String fairPlayPfx() {
         return this.fairPlayPfx;
     }
 
@@ -49,7 +49,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="fairPlayPfxPassword", required=true)
       private final String fairPlayPfxPassword;
 
-    public String getFairPlayPfxPassword() {
+    public String fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
 
@@ -61,7 +61,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -72,7 +72,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="offlineRentalConfiguration")
       private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
 
-    public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> getOfflineRentalConfiguration() {
+    public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> offlineRentalConfiguration() {
         return this.offlineRentalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.offlineRentalConfiguration);
     }
 
@@ -83,7 +83,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="rentalAndLeaseKeyType", required=true)
       private final String rentalAndLeaseKeyType;
 
-    public String getRentalAndLeaseKeyType() {
+    public String rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
 
@@ -94,7 +94,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     @Import(name="rentalDuration", required=true)
       private final Double rentalDuration;
 
-    public Double getRentalDuration() {
+    public Double rentalDuration() {
         return this.rentalDuration;
     }
 

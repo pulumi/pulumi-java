@@ -18,21 +18,21 @@ public final class DeliveryStreamCloudWatchLoggingOptions extends io.pulumi.reso
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="logGroupName")
       private final @Nullable String logGroupName;
 
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
     }
 
     @Import(name="logStreamName")
       private final @Nullable String logStreamName;
 
-    public Optional<String> getLogStreamName() {
+    public Optional<String> logStreamName() {
         return this.logStreamName == null ? Optional.empty() : Optional.ofNullable(this.logStreamName);
     }
 

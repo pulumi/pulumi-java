@@ -16,28 +16,28 @@ public final class GetNetworkInterfaceAttachment extends io.pulumi.resources.Inv
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
-    public String getAttachmentId() {
+    public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="deviceIndex", required=true)
       private final Integer deviceIndex;
 
-    public Integer getDeviceIndex() {
+    public Integer deviceIndex() {
         return this.deviceIndex;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="instanceOwnerId", required=true)
       private final String instanceOwnerId;
 
-    public String getInstanceOwnerId() {
+    public String instanceOwnerId() {
         return this.instanceOwnerId;
     }
 

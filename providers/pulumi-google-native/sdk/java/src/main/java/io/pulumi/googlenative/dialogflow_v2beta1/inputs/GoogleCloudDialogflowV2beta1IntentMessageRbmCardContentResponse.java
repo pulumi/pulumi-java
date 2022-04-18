@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="media", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse getMedia() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media() {
         return this.media;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="suggestions", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getSuggestions() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions() {
         return this.suggestions;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

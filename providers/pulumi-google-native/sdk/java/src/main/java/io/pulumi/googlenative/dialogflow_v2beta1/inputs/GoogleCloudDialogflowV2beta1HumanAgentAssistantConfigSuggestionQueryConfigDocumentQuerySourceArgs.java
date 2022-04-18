@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="documents", required=true)
       private final Output<List<String>> documents;
 
-    public Output<List<String>> getDocuments() {
+    public Output<List<String>> documents() {
         return this.documents;
     }
 

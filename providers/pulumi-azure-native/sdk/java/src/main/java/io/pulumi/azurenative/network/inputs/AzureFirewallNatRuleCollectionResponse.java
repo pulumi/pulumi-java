@@ -29,7 +29,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="action")
       private final @Nullable AzureFirewallNatRCActionResponse action;
 
-    public Optional<AzureFirewallNatRCActionResponse> getAction() {
+    public Optional<AzureFirewallNatRCActionResponse> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -40,7 +40,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -51,7 +51,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -62,7 +62,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -73,7 +73,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -84,7 +84,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -95,7 +95,7 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
     @Import(name="rules")
       private final @Nullable List<AzureFirewallNatRuleResponse> rules;
 
-    public List<AzureFirewallNatRuleResponse> getRules() {
+    public List<AzureFirewallNatRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

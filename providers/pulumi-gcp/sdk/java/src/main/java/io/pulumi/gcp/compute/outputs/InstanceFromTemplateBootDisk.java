@@ -42,28 +42,28 @@ public final class InstanceFromTemplateBootDisk {
         this.source = source;
     }
 
-    public Optional<Boolean> getAutoDelete() {
+    public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
-    public Optional<String> getDiskEncryptionKeyRaw() {
+    public Optional<String> diskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
-    public Optional<String> getDiskEncryptionKeySha256() {
+    public Optional<String> diskEncryptionKeySha256() {
         return Optional.ofNullable(this.diskEncryptionKeySha256);
     }
-    public Optional<InstanceFromTemplateBootDiskInitializeParams> getInitializeParams() {
+    public Optional<InstanceFromTemplateBootDiskInitializeParams> initializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
-    public Optional<String> getKmsKeySelfLink() {
+    public Optional<String> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 

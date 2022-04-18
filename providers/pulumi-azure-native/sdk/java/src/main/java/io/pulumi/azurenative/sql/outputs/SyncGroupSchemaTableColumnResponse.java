@@ -41,21 +41,21 @@ public final class SyncGroupSchemaTableColumnResponse {
      * Data size of the column.
      * 
     */
-    public Optional<String> getDataSize() {
+    public Optional<String> dataSize() {
         return Optional.ofNullable(this.dataSize);
     }
     /**
      * Data type of the column.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Quoted name of sync group table column.
      * 
     */
-    public Optional<String> getQuotedName() {
+    public Optional<String> quotedName() {
         return Optional.ofNullable(this.quotedName);
     }
 

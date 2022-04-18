@@ -24,84 +24,84 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteAllPolicyResources")
       private final @Nullable Output<Boolean> deleteAllPolicyResources;
 
-    public Output<Boolean> getDeleteAllPolicyResources() {
+    public Output<Boolean> deleteAllPolicyResources() {
         return this.deleteAllPolicyResources == null ? Codegen.empty() : this.deleteAllPolicyResources;
     }
 
     @Import(name="excludeMap")
       private final @Nullable Output<PolicyIEMapArgs> excludeMap;
 
-    public Output<PolicyIEMapArgs> getExcludeMap() {
+    public Output<PolicyIEMapArgs> excludeMap() {
         return this.excludeMap == null ? Codegen.empty() : this.excludeMap;
     }
 
     @Import(name="excludeResourceTags", required=true)
       private final Output<Boolean> excludeResourceTags;
 
-    public Output<Boolean> getExcludeResourceTags() {
+    public Output<Boolean> excludeResourceTags() {
         return this.excludeResourceTags;
     }
 
     @Import(name="includeMap")
       private final @Nullable Output<PolicyIEMapArgs> includeMap;
 
-    public Output<PolicyIEMapArgs> getIncludeMap() {
+    public Output<PolicyIEMapArgs> includeMap() {
         return this.includeMap == null ? Codegen.empty() : this.includeMap;
     }
 
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     @Import(name="remediationEnabled", required=true)
       private final Output<Boolean> remediationEnabled;
 
-    public Output<Boolean> getRemediationEnabled() {
+    public Output<Boolean> remediationEnabled() {
         return this.remediationEnabled;
     }
 
     @Import(name="resourceTags")
       private final @Nullable Output<List<PolicyResourceTagArgs>> resourceTags;
 
-    public Output<List<PolicyResourceTagArgs>> getResourceTags() {
+    public Output<List<PolicyResourceTagArgs>> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
     @Import(name="resourceTypeList")
       private final @Nullable Output<List<String>> resourceTypeList;
 
-    public Output<List<String>> getResourceTypeList() {
+    public Output<List<String>> resourceTypeList() {
         return this.resourceTypeList == null ? Codegen.empty() : this.resourceTypeList;
     }
 
     @Import(name="resourcesCleanUp")
       private final @Nullable Output<Boolean> resourcesCleanUp;
 
-    public Output<Boolean> getResourcesCleanUp() {
+    public Output<Boolean> resourcesCleanUp() {
         return this.resourcesCleanUp == null ? Codegen.empty() : this.resourcesCleanUp;
     }
 
     @Import(name="securityServicePolicyData", required=true)
       private final Output<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData;
 
-    public Output<SecurityServicePolicyDataPropertiesArgs> getSecurityServicePolicyData() {
+    public Output<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData() {
         return this.securityServicePolicyData;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PolicyTagArgs>> tags;
 
-    public Output<List<PolicyTagArgs>> getTags() {
+    public Output<List<PolicyTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -19,21 +19,21 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
     @Import(name="genericResources")
       private final @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
 
-    public Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> getGenericResources() {
+    public Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources() {
         return this.genericResources == null ? Codegen.empty() : this.genericResources;
     }
 
     @Import(name="memoryBytes")
       private final @Nullable Output<Integer> memoryBytes;
 
-    public Output<Integer> getMemoryBytes() {
+    public Output<Integer> memoryBytes() {
         return this.memoryBytes == null ? Codegen.empty() : this.memoryBytes;
     }
 
     @Import(name="nanoCpus")
       private final @Nullable Output<Integer> nanoCpus;
 
-    public Output<Integer> getNanoCpus() {
+    public Output<Integer> nanoCpus() {
         return this.nanoCpus == null ? Codegen.empty() : this.nanoCpus;
     }
 

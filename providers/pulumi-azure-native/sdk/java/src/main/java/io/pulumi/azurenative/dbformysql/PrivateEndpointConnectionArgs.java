@@ -24,14 +24,14 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
 
-    public Output<PrivateEndpointPropertyArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointPropertyArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,7 +64,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

@@ -26,7 +26,7 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hour")
       private final @Nullable Integer hour;
 
-    public Optional<Integer> getHour() {
+    public Optional<Integer> hour() {
         return this.hour == null ? Optional.empty() : Optional.ofNullable(this.hour);
     }
 
@@ -37,7 +37,7 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="minute")
       private final @Nullable Integer minute;
 
-    public Optional<Integer> getMinute() {
+    public Optional<Integer> minute() {
         return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
     }
 
@@ -48,7 +48,7 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="snapshotsToKeep")
       private final @Nullable Integer snapshotsToKeep;
 
-    public Optional<Integer> getSnapshotsToKeep() {
+    public Optional<Integer> snapshotsToKeep() {
         return this.snapshotsToKeep == null ? Optional.empty() : Optional.ofNullable(this.snapshotsToKeep);
     }
 
@@ -59,7 +59,7 @@ public final class DailyScheduleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="usedBytes")
       private final @Nullable Double usedBytes;
 
-    public Optional<Double> getUsedBytes() {
+    public Optional<Double> usedBytes() {
         return this.usedBytes == null ? Optional.empty() : Optional.ofNullable(this.usedBytes);
     }
 

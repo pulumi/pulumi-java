@@ -26,7 +26,7 @@ public final class NoEncryptionResponse {
      * Representing supported protocols
      * 
     */
-    public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
+    public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
 

@@ -24,7 +24,7 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lakeResources", required=true)
       private final Map<String,String> lakeResources;
 
-    public Map<String,String> getLakeResources() {
+    public Map<String,String> lakeResources() {
         return this.lakeResources;
     }
 

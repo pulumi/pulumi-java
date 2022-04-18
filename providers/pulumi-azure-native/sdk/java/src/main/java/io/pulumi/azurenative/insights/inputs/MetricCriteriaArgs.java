@@ -34,7 +34,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="criterionType", required=true)
       private final Output<String> criterionType;
 
-    public Output<String> getCriterionType() {
+    public Output<String> criterionType() {
         return this.criterionType;
     }
 
@@ -45,7 +45,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Output<List<MetricDimensionArgs>> getDimensions() {
+    public Output<List<MetricDimensionArgs>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -56,7 +56,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -67,7 +67,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
@@ -78,7 +78,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> operator() {
         return this.operator;
     }
 
@@ -100,7 +100,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipMetricValidation")
       private final @Nullable Output<Boolean> skipMetricValidation;
 
-    public Output<Boolean> getSkipMetricValidation() {
+    public Output<Boolean> skipMetricValidation() {
         return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
     }
 
@@ -111,7 +111,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -122,7 +122,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeAggregation", required=true)
       private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
-    public Output<Either<String,AggregationTypeEnum>> getTimeAggregation() {
+    public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
 

@@ -22,10 +22,10 @@ public final class NetworkInsightsAnalysisPortRange {
         this.to = to;
     }
 
-    public Optional<Integer> getFrom() {
+    public Optional<Integer> from() {
         return Optional.ofNullable(this.from);
     }
-    public Optional<Integer> getTo() {
+    public Optional<Integer> to() {
         return Optional.ofNullable(this.to);
     }
 

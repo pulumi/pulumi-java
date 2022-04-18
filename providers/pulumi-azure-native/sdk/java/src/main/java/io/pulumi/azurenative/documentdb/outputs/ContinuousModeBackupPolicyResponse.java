@@ -26,7 +26,7 @@ public final class ContinuousModeBackupPolicyResponse {
      * Expected value is 'Continuous'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

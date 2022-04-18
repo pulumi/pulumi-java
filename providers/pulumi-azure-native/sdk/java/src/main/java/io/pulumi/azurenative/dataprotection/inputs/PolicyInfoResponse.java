@@ -22,7 +22,7 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="policyId", required=true)
       private final String policyId;
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
 
@@ -33,14 +33,14 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="policyParameters")
       private final @Nullable PolicyParametersResponse policyParameters;
 
-    public Optional<PolicyParametersResponse> getPolicyParameters() {
+    public Optional<PolicyParametersResponse> policyParameters() {
         return this.policyParameters == null ? Optional.empty() : Optional.ofNullable(this.policyParameters);
     }
 
     @Import(name="policyVersion", required=true)
       private final String policyVersion;
 
-    public String getPolicyVersion() {
+    public String policyVersion() {
         return this.policyVersion;
     }
 

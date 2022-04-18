@@ -24,7 +24,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
     @Import(name="baseUrl", required=true)
       private final String baseUrl;
 
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
 
@@ -35,7 +35,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse exten
     @Import(name="gpgKeys", required=true)
       private final List<String> gpgKeys;
 
-    public List<String> getGpgKeys() {
+    public List<String> gpgKeys() {
         return this.gpgKeys;
     }
 

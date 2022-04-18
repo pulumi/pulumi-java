@@ -27,14 +27,14 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateConfig")
       private final @Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig;
 
-    public Output<ClientCertificateConfigArgs> getClientCertificateConfig() {
+    public Output<ClientCertificateConfigArgs> clientCertificateConfig() {
         return this.clientCertificateConfig == null ? Codegen.empty() : this.clientCertificateConfig;
     }
 
     @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
-    public Output<String> getClusterCaCertificate() {
+    public Output<String> clusterCaCertificate() {
         return this.clusterCaCertificate == null ? Codegen.empty() : this.clusterCaCertificate;
     }
 
@@ -45,7 +45,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -56,7 +56,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

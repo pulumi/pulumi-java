@@ -57,7 +57,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AlertPolicyAlertStrategy> getAlertStrategy() {
+    public Output</* @Nullable */ AlertPolicyAlertStrategy> alertStrategy() {
         return this.alertStrategy;
     }
     /**
@@ -75,7 +75,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
      * 
      */
-    public Output<String> getCombiner() {
+    public Output<String> combiner() {
         return this.combiner;
     }
     /**
@@ -97,7 +97,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<AlertPolicyCondition>> getConditions() {
+    public Output<List<AlertPolicyCondition>> conditions() {
         return this.conditions;
     }
     /**
@@ -113,7 +113,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * ignored.
      * 
      */
-    public Output<List<AlertPolicyCreationRecord>> getCreationRecords() {
+    public Output<List<AlertPolicyCreationRecord>> creationRecords() {
         return this.creationRecords;
     }
     /**
@@ -135,7 +135,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * policy.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -159,7 +159,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AlertPolicyDocumentation> getDocumentation() {
+    public Output</* @Nullable */ AlertPolicyDocumentation> documentation() {
         return this.documentation;
     }
     /**
@@ -173,7 +173,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether or not the policy is enabled. The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -199,7 +199,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -225,7 +225,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
      * 
      */
-    public Output</* @Nullable */ List<String>> getNotificationChannels() {
+    public Output</* @Nullable */ List<String>> notificationChannels() {
         return this.notificationChannels;
     }
     /**
@@ -241,7 +241,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -263,7 +263,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * must begin with a letter.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getUserLabels() {
+    public Output</* @Nullable */ Map<String,String>> userLabels() {
         return this.userLabels;
     }
 

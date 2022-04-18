@@ -24,7 +24,7 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
     @Import(name="serializedPayload", required=true)
       private final Output<String> serializedPayload;
 
-    public Output<String> getSerializedPayload() {
+    public Output<String> serializedPayload() {
         return this.serializedPayload;
     }
 
@@ -40,7 +40,7 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
     @Import(name="signatures", required=true)
       private final Output<List<OccurenceAttestationSignatureGetArgs>> signatures;
 
-    public Output<List<OccurenceAttestationSignatureGetArgs>> getSignatures() {
+    public Output<List<OccurenceAttestationSignatureGetArgs>> signatures() {
         return this.signatures;
     }
 

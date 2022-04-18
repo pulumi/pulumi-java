@@ -39,21 +39,21 @@ public final class ConnectedClusterIdentityResponse {
      * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class PolicyParametersResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dataStoreParametersList")
       private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
-    public List<AzureOperationalStoreParametersResponse> getDataStoreParametersList() {
+    public List<AzureOperationalStoreParametersResponse> dataStoreParametersList() {
         return this.dataStoreParametersList == null ? List.of() : this.dataStoreParametersList;
     }
 

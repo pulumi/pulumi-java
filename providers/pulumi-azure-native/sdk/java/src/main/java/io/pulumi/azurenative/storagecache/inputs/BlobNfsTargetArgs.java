@@ -26,7 +26,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -37,7 +37,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageModel")
       private final @Nullable Output<String> usageModel;
 
-    public Output<String> getUsageModel() {
+    public Output<String> usageModel() {
         return this.usageModel == null ? Codegen.empty() : this.usageModel;
     }
 

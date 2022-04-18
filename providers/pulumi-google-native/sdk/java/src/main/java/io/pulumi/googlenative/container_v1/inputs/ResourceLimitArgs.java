@@ -26,7 +26,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximum")
       private final @Nullable Output<String> maximum;
 
-    public Output<String> getMaximum() {
+    public Output<String> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimum")
       private final @Nullable Output<String> minimum;
 
-    public Output<String> getMinimum() {
+    public Output<String> minimum() {
         return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

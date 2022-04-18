@@ -23,7 +23,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="gcePdKmsKeyName", required=true)
       private final String gcePdKmsKeyName;
 
-    public String getGcePdKmsKeyName() {
+    public String gcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
     }
 

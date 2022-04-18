@@ -36,7 +36,7 @@ public final class AlertPolicyConditionConditionThresholdAggregationGetArgs exte
     @Import(name="alignmentPeriod")
       private final @Nullable Output<String> alignmentPeriod;
 
-    public Output<String> getAlignmentPeriod() {
+    public Output<String> alignmentPeriod() {
         return this.alignmentPeriod == null ? Codegen.empty() : this.alignmentPeriod;
     }
 
@@ -64,7 +64,7 @@ public final class AlertPolicyConditionConditionThresholdAggregationGetArgs exte
     @Import(name="crossSeriesReducer")
       private final @Nullable Output<String> crossSeriesReducer;
 
-    public Output<String> getCrossSeriesReducer() {
+    public Output<String> crossSeriesReducer() {
         return this.crossSeriesReducer == null ? Codegen.empty() : this.crossSeriesReducer;
     }
 
@@ -99,7 +99,7 @@ public final class AlertPolicyConditionConditionThresholdAggregationGetArgs exte
     @Import(name="groupByFields")
       private final @Nullable Output<List<String>> groupByFields;
 
-    public Output<List<String>> getGroupByFields() {
+    public Output<List<String>> groupByFields() {
         return this.groupByFields == null ? Codegen.empty() : this.groupByFields;
     }
 
@@ -127,7 +127,7 @@ public final class AlertPolicyConditionConditionThresholdAggregationGetArgs exte
     @Import(name="perSeriesAligner")
       private final @Nullable Output<String> perSeriesAligner;
 
-    public Output<String> getPerSeriesAligner() {
+    public Output<String> perSeriesAligner() {
         return this.perSeriesAligner == null ? Codegen.empty() : this.perSeriesAligner;
     }
 

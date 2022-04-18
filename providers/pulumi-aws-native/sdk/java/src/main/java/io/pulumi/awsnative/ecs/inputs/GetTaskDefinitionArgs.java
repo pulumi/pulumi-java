@@ -19,7 +19,7 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="taskDefinitionArn", required=true)
       private final String taskDefinitionArn;
 
-    public String getTaskDefinitionArn() {
+    public String taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 

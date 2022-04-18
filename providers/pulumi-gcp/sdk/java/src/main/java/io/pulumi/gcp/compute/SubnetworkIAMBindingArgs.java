@@ -25,14 +25,14 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
 
-    public Output<SubnetworkIAMBindingConditionArgs> getCondition() {
+    public Output<SubnetworkIAMBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -44,7 +44,7 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -71,7 +71,7 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -82,7 +82,7 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     @Import(name="subnetwork", required=true)
       private final Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
 

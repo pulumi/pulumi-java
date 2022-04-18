@@ -24,7 +24,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical == null ? Codegen.empty() : this.critical;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="objectId", required=true)
       private final Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId;
 
-    public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> getObjectId() {
+    public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId() {
         return this.objectId;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

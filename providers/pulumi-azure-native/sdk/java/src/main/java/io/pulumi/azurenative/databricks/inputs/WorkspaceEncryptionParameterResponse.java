@@ -26,7 +26,7 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -37,7 +37,7 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
     @Import(name="value")
       private final @Nullable EncryptionResponse value;
 
-    public Optional<EncryptionResponse> getValue() {
+    public Optional<EncryptionResponse> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

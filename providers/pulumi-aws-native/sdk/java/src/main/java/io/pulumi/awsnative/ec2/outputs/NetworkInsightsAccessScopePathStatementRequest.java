@@ -23,10 +23,10 @@ public final class NetworkInsightsAccessScopePathStatementRequest {
         this.resourceStatement = resourceStatement;
     }
 
-    public Optional<NetworkInsightsAccessScopePacketHeaderStatementRequest> getPacketHeaderStatement() {
+    public Optional<NetworkInsightsAccessScopePacketHeaderStatementRequest> packetHeaderStatement() {
         return Optional.ofNullable(this.packetHeaderStatement);
     }
-    public Optional<NetworkInsightsAccessScopeResourceStatementRequest> getResourceStatement() {
+    public Optional<NetworkInsightsAccessScopeResourceStatementRequest> resourceStatement() {
         return Optional.ofNullable(this.resourceStatement);
     }
 

@@ -26,7 +26,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpEnabledState")
       private final @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
-    public Output<HttpConfigHttpEnabledState> getHttpEnabledState() {
+    public Output<HttpConfigHttpEnabledState> httpEnabledState() {
         return this.httpEnabledState == null ? Codegen.empty() : this.httpEnabledState;
     }
 

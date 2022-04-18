@@ -26,7 +26,7 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
-    public Output<String> getResourceLink() {
+    public Output<String> resourceLink() {
         return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
     }
 

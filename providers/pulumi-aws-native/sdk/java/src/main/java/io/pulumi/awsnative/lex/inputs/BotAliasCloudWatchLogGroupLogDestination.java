@@ -19,7 +19,7 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
     @Import(name="cloudWatchLogGroupArn", required=true)
       private final String cloudWatchLogGroupArn;
 
-    public String getCloudWatchLogGroupArn() {
+    public String cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
 
@@ -30,7 +30,7 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends io.pulumi.re
     @Import(name="logPrefix", required=true)
       private final String logPrefix;
 
-    public String getLogPrefix() {
+    public String logPrefix() {
         return this.logPrefix;
     }
 

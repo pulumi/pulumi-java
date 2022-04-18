@@ -21,14 +21,14 @@ public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.reso
     @Import(name="contactFlowArn", required=true)
       private final Output<String> contactFlowArn;
 
-    public Output<String> getContactFlowArn() {
+    public Output<String> contactFlowArn() {
         return this.contactFlowArn;
     }
 
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 

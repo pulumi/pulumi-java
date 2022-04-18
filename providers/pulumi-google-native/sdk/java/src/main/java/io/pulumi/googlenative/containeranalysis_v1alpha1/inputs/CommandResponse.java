@@ -24,7 +24,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -35,7 +35,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dir", required=true)
       private final String dir;
 
-    public String getDir() {
+    public String dir() {
         return this.dir;
     }
 
@@ -46,7 +46,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="env", required=true)
       private final List<String> env;
 
-    public List<String> getEnv() {
+    public List<String> env() {
         return this.env;
     }
 
@@ -57,7 +57,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,7 +68,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="waitFor", required=true)
       private final List<String> waitFor;
 
-    public List<String> getWaitFor() {
+    public List<String> waitFor() {
         return this.waitFor;
     }
 

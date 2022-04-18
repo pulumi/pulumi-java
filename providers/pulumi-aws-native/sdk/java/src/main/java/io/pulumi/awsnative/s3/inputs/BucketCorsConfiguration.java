@@ -16,7 +16,7 @@ public final class BucketCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="corsRules", required=true)
       private final List<BucketCorsRule> corsRules;
 
-    public List<BucketCorsRule> getCorsRules() {
+    public List<BucketCorsRule> corsRules() {
         return this.corsRules;
     }
 

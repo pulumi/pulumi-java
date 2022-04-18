@@ -25,7 +25,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
     @Import(name="operationName")
       private final @Nullable String operationName;
 
-    public Optional<String> getOperationName() {
+    public Optional<String> operationName() {
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
     }
 
@@ -36,7 +36,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
     @Import(name="operationStatus")
       private final @Nullable String operationStatus;
 
-    public Optional<String> getOperationStatus() {
+    public Optional<String> operationStatus() {
         return this.operationStatus == null ? Optional.empty() : Optional.ofNullable(this.operationStatus);
     }
 
@@ -47,7 +47,7 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
     @Import(name="operationTime")
       private final @Nullable String operationTime;
 
-    public Optional<String> getOperationTime() {
+    public Optional<String> operationTime() {
         return this.operationTime == null ? Optional.empty() : Optional.ofNullable(this.operationTime);
     }
 

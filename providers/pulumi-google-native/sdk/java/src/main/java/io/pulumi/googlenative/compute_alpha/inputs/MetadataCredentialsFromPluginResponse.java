@@ -23,7 +23,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
     @Import(name="structConfig", required=true)
       private final String structConfig;
 
-    public String getStructConfig() {
+    public String structConfig() {
         return this.structConfig;
     }
 

@@ -29,7 +29,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="allowedCommonNames", required=true)
       private final List<String> allowedCommonNames;
 
-    public List<String> getAllowedCommonNames() {
+    public List<String> allowedCommonNames() {
         return this.allowedCommonNames;
     }
 
@@ -40,7 +40,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="allowedConfigList", required=true)
       private final AllowedConfigListResponse allowedConfigList;
 
-    public AllowedConfigListResponse getAllowedConfigList() {
+    public AllowedConfigListResponse allowedConfigList() {
         return this.allowedConfigList;
     }
 
@@ -51,7 +51,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="allowedIssuanceModes", required=true)
       private final IssuanceModesResponse allowedIssuanceModes;
 
-    public IssuanceModesResponse getAllowedIssuanceModes() {
+    public IssuanceModesResponse allowedIssuanceModes() {
         return this.allowedIssuanceModes;
     }
 
@@ -62,7 +62,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="allowedLocationsAndOrganizations", required=true)
       private final List<SubjectResponse> allowedLocationsAndOrganizations;
 
-    public List<SubjectResponse> getAllowedLocationsAndOrganizations() {
+    public List<SubjectResponse> allowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations;
     }
 
@@ -73,7 +73,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="allowedSans", required=true)
       private final AllowedSubjectAltNamesResponse allowedSans;
 
-    public AllowedSubjectAltNamesResponse getAllowedSans() {
+    public AllowedSubjectAltNamesResponse allowedSans() {
         return this.allowedSans;
     }
 
@@ -84,7 +84,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="maximumLifetime", required=true)
       private final String maximumLifetime;
 
-    public String getMaximumLifetime() {
+    public String maximumLifetime() {
         return this.maximumLifetime;
     }
 
@@ -95,7 +95,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     @Import(name="overwriteConfigValues", required=true)
       private final ReusableConfigWrapperResponse overwriteConfigValues;
 
-    public ReusableConfigWrapperResponse getOverwriteConfigValues() {
+    public ReusableConfigWrapperResponse overwriteConfigValues() {
         return this.overwriteConfigValues;
     }
 

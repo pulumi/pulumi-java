@@ -230,196 +230,196 @@ public final class JobStatistics2Response {
      * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
      * 
     */
-    public BiEngineStatisticsResponse getBiEngineStatistics() {
+    public BiEngineStatisticsResponse biEngineStatistics() {
         return this.biEngineStatistics;
     }
     /**
      * Billing tier for the job.
      * 
     */
-    public Integer getBillingTier() {
+    public Integer billingTier() {
         return this.billingTier;
     }
     /**
      * Whether the query result was fetched from the query cache.
      * 
     */
-    public Boolean getCacheHit() {
+    public Boolean cacheHit() {
         return this.cacheHit;
     }
     /**
      * [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
      * 
     */
-    public String getDdlAffectedRowAccessPolicyCount() {
+    public String ddlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
     }
     /**
      * The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
      * 
     */
-    public TableReferenceResponse getDdlDestinationTable() {
+    public TableReferenceResponse ddlDestinationTable() {
         return this.ddlDestinationTable;
     }
     /**
      * The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): "CREATE": The query created the DDL target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE": The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. "DROP": The query deleted the DDL target.
      * 
     */
-    public String getDdlOperationPerformed() {
+    public String ddlOperationPerformed() {
         return this.ddlOperationPerformed;
     }
     /**
      * The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
      * 
     */
-    public DatasetReferenceResponse getDdlTargetDataset() {
+    public DatasetReferenceResponse ddlTargetDataset() {
         return this.ddlTargetDataset;
     }
     /**
      * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
      * 
     */
-    public RoutineReferenceResponse getDdlTargetRoutine() {
+    public RoutineReferenceResponse ddlTargetRoutine() {
         return this.ddlTargetRoutine;
     }
     /**
      * [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
      * 
     */
-    public RowAccessPolicyReferenceResponse getDdlTargetRowAccessPolicy() {
+    public RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
     }
     /**
      * The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
      * 
     */
-    public TableReferenceResponse getDdlTargetTable() {
+    public TableReferenceResponse ddlTargetTable() {
         return this.ddlTargetTable;
     }
     /**
      * Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
      * 
     */
-    public DmlStatisticsResponse getDmlStats() {
+    public DmlStatisticsResponse dmlStats() {
         return this.dmlStats;
     }
     /**
      * The original estimate of bytes processed for the job.
      * 
     */
-    public String getEstimatedBytesProcessed() {
+    public String estimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
     }
     /**
      * Statistics of a BigQuery ML training job.
      * 
     */
-    public MlStatisticsResponse getMlStatistics() {
+    public MlStatisticsResponse mlStatistics() {
         return this.mlStatistics;
     }
     /**
      * [Output-only, Beta] Information about create model query job progress.
      * 
     */
-    public BigQueryModelTrainingResponse getModelTraining() {
+    public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
     }
     /**
      * The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
      * 
     */
-    public String getNumDmlAffectedRows() {
+    public String numDmlAffectedRows() {
         return this.numDmlAffectedRows;
     }
     /**
      * Describes execution plan for the query.
      * 
     */
-    public List<ExplainQueryStageResponse> getQueryPlan() {
+    public List<ExplainQueryStageResponse> queryPlan() {
         return this.queryPlan;
     }
     /**
      * Referenced routines (persistent user-defined functions and stored procedures) for the job.
      * 
     */
-    public List<RoutineReferenceResponse> getReferencedRoutines() {
+    public List<RoutineReferenceResponse> referencedRoutines() {
         return this.referencedRoutines;
     }
     /**
      * Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
      * 
     */
-    public List<TableReferenceResponse> getReferencedTables() {
+    public List<TableReferenceResponse> referencedTables() {
         return this.referencedTables;
     }
     /**
      * Job resource usage breakdown by reservation.
      * 
     */
-    public List<JobStatistics2ReservationUsageItemResponse> getReservationUsage() {
+    public List<JobStatistics2ReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
     /**
      * The schema of the results. Present only for successful dry run of non-legacy SQL queries.
      * 
     */
-    public TableSchemaResponse getSchema() {
+    public TableSchemaResponse schema() {
         return this.schema;
     }
     /**
      * The type of query statement, if valid. Possible values (new values might be added in the future): "SELECT": SELECT query. "INSERT": INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "DELETE": DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query. "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
      * 
     */
-    public String getStatementType() {
+    public String statementType() {
         return this.statementType;
     }
     /**
      * [Beta] Describes a timeline of job execution.
      * 
     */
-    public List<QueryTimelineSampleResponse> getTimeline() {
+    public List<QueryTimelineSampleResponse> timeline() {
         return this.timeline;
     }
     /**
      * Total bytes billed for the job.
      * 
     */
-    public String getTotalBytesBilled() {
+    public String totalBytesBilled() {
         return this.totalBytesBilled;
     }
     /**
      * Total bytes processed for the job.
      * 
     */
-    public String getTotalBytesProcessed() {
+    public String totalBytesProcessed() {
         return this.totalBytesProcessed;
     }
     /**
      * For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
      * 
     */
-    public String getTotalBytesProcessedAccuracy() {
+    public String totalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
     }
     /**
      * Total number of partitions processed from all partitioned tables referenced in the job.
      * 
     */
-    public String getTotalPartitionsProcessed() {
+    public String totalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
     }
     /**
      * Slot-milliseconds for the job.
      * 
     */
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
     /**
      * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
      * 
     */
-    public List<QueryParameterResponse> getUndeclaredQueryParameters() {
+    public List<QueryParameterResponse> undeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }
 

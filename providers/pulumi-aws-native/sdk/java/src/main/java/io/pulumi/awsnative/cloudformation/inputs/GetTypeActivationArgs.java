@@ -19,7 +19,7 @@ public final class GetTypeActivationArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

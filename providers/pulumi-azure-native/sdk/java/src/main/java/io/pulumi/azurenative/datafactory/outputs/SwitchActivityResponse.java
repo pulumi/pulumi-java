@@ -120,42 +120,42 @@ public final class SwitchActivityResponse {
      * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
     */
-    public List<SwitchCaseResponse> getCases() {
+    public List<SwitchCaseResponse> cases() {
         return this.cases == null ? List.of() : this.cases;
     }
     /**
      * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
      * 
     */
-    public List<Object> getDefaultActivities() {
+    public List<Object> defaultActivities() {
         return this.defaultActivities == null ? List.of() : this.defaultActivities;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
      * 
     */
-    public ExpressionResponse getOn() {
+    public ExpressionResponse on() {
         return this.on;
     }
     /**
@@ -163,14 +163,14 @@ public final class SwitchActivityResponse {
      * Expected value is 'Switch'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

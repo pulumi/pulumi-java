@@ -25,7 +25,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
     @Import(name="appEngineRouting", required=true)
       private final AppEngineRoutingResponse appEngineRouting;
 
-    public AppEngineRoutingResponse getAppEngineRouting() {
+    public AppEngineRoutingResponse appEngineRouting() {
         return this.appEngineRouting;
     }
 
@@ -36,7 +36,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
     @Import(name="headers", required=true)
       private final Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers;
     }
 
@@ -47,7 +47,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
     @Import(name="httpMethod", required=true)
       private final String httpMethod;
 
-    public String getHttpMethod() {
+    public String httpMethod() {
         return this.httpMethod;
     }
 
@@ -58,7 +58,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
     @Import(name="payload", required=true)
       private final String payload;
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 
@@ -69,7 +69,7 @@ public final class AppEngineHttpRequestResponse extends io.pulumi.resources.Invo
     @Import(name="relativeUrl", required=true)
       private final String relativeUrl;
 
-    public String getRelativeUrl() {
+    public String relativeUrl() {
         return this.relativeUrl;
     }
 

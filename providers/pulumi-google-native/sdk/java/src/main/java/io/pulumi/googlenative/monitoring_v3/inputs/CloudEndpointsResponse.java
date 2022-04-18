@@ -23,7 +23,7 @@ public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

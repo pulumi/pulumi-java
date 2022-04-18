@@ -25,7 +25,7 @@ public final class DataLakeSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="admins")
       private final @Nullable Output<List<String>> admins;
 
-    public Output<List<String>> getAdmins() {
+    public Output<List<String>> admins() {
         return this.admins == null ? Codegen.empty() : this.admins;
     }
 
@@ -36,7 +36,7 @@ public final class DataLakeSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -47,7 +47,7 @@ public final class DataLakeSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="createDatabaseDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>> createDatabaseDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>> getCreateDatabaseDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionArgs>> createDatabaseDefaultPermissions() {
         return this.createDatabaseDefaultPermissions == null ? Codegen.empty() : this.createDatabaseDefaultPermissions;
     }
 
@@ -58,7 +58,7 @@ public final class DataLakeSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="createTableDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>> createTableDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>> getCreateTableDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateTableDefaultPermissionArgs>> createTableDefaultPermissions() {
         return this.createTableDefaultPermissions == null ? Codegen.empty() : this.createTableDefaultPermissions;
     }
 
@@ -69,7 +69,7 @@ public final class DataLakeSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="trustedResourceOwners")
       private final @Nullable Output<List<String>> trustedResourceOwners;
 
-    public Output<List<String>> getTrustedResourceOwners() {
+    public Output<List<String>> trustedResourceOwners() {
         return this.trustedResourceOwners == null ? Codegen.empty() : this.trustedResourceOwners;
     }
 

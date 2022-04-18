@@ -46,28 +46,28 @@ public final class ScheduleResponse {
      * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
      * 
     */
-    public String getCronJobDuration() {
+    public String cronJobDuration() {
         return this.cronJobDuration;
     }
     /**
      * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
      * 
     */
-    public String getCronSpec() {
+    public String cronSpec() {
         return this.cronSpec;
     }
     /**
      * The end time of the event.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The start time of the event.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

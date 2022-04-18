@@ -16,7 +16,7 @@ public final class DistributionOriginGroupFailoverCriteria {
         this.statusCodes = statusCodes;
     }
 
-    public DistributionStatusCodes getStatusCodes() {
+    public DistributionStatusCodes statusCodes() {
         return this.statusCodes;
     }
 

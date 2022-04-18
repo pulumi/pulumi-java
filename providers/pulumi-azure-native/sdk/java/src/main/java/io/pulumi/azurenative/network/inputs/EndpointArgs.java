@@ -33,7 +33,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customHeaders")
       private final @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
 
-    public Output<List<EndpointPropertiesCustomHeadersArgs>> getCustomHeaders() {
+    public Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders() {
         return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
@@ -44,7 +44,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointLocation")
       private final @Nullable Output<String> endpointLocation;
 
-    public Output<String> getEndpointLocation() {
+    public Output<String> endpointLocation() {
         return this.endpointLocation == null ? Codegen.empty() : this.endpointLocation;
     }
 
@@ -55,7 +55,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointMonitorStatus")
       private final @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
 
-    public Output<Either<String,EndpointMonitorStatus>> getEndpointMonitorStatus() {
+    public Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus() {
         return this.endpointMonitorStatus == null ? Codegen.empty() : this.endpointMonitorStatus;
     }
 
@@ -66,7 +66,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointStatus")
       private final @Nullable Output<Either<String,EndpointStatus>> endpointStatus;
 
-    public Output<Either<String,EndpointStatus>> getEndpointStatus() {
+    public Output<Either<String,EndpointStatus>> endpointStatus() {
         return this.endpointStatus == null ? Codegen.empty() : this.endpointStatus;
     }
 
@@ -77,7 +77,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="geoMapping")
       private final @Nullable Output<List<String>> geoMapping;
 
-    public Output<List<String>> getGeoMapping() {
+    public Output<List<String>> geoMapping() {
         return this.geoMapping == null ? Codegen.empty() : this.geoMapping;
     }
 
@@ -88,7 +88,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -99,7 +99,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minChildEndpoints")
       private final @Nullable Output<Double> minChildEndpoints;
 
-    public Output<Double> getMinChildEndpoints() {
+    public Output<Double> minChildEndpoints() {
         return this.minChildEndpoints == null ? Codegen.empty() : this.minChildEndpoints;
     }
 
@@ -110,7 +110,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minChildEndpointsIPv4")
       private final @Nullable Output<Double> minChildEndpointsIPv4;
 
-    public Output<Double> getMinChildEndpointsIPv4() {
+    public Output<Double> minChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4 == null ? Codegen.empty() : this.minChildEndpointsIPv4;
     }
 
@@ -121,7 +121,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minChildEndpointsIPv6")
       private final @Nullable Output<Double> minChildEndpointsIPv6;
 
-    public Output<Double> getMinChildEndpointsIPv6() {
+    public Output<Double> minChildEndpointsIPv6() {
         return this.minChildEndpointsIPv6 == null ? Codegen.empty() : this.minChildEndpointsIPv6;
     }
 
@@ -132,7 +132,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -143,7 +143,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
-    public Output<Double> getPriority() {
+    public Output<Double> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -154,7 +154,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnets")
       private final @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets;
 
-    public Output<List<EndpointPropertiesSubnetsArgs>> getSubnets() {
+    public Output<List<EndpointPropertiesSubnetsArgs>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -165,7 +165,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -176,7 +176,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
-    public Output<String> getTargetResourceId() {
+    public Output<String> targetResourceId() {
         return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
@@ -187,7 +187,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -198,7 +198,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
-    public Output<Double> getWeight() {
+    public Output<Double> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

@@ -22,7 +22,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
     @Import(name="appYamlPath", required=true)
       private final Output<String> appYamlPath;
 
-    public Output<String> getAppYamlPath() {
+    public Output<String> appYamlPath() {
         return this.appYamlPath;
     }
 
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
     @Import(name="cloudBuildTimeout")
       private final @Nullable Output<String> cloudBuildTimeout;
 
-    public Output<String> getCloudBuildTimeout() {
+    public Output<String> cloudBuildTimeout() {
         return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
     }
 

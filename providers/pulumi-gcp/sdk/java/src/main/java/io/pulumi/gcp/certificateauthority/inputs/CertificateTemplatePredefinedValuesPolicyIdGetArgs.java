@@ -22,7 +22,7 @@ public final class CertificateTemplatePredefinedValuesPolicyIdGetArgs extends io
     @Import(name="objectIdPaths", required=true)
       private final Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> getObjectIdPaths() {
+    public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 

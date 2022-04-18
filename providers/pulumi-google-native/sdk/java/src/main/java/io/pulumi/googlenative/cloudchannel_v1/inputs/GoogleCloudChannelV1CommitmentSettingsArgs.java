@@ -26,7 +26,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
     @Import(name="renewalSettings")
       private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
-    public Output<GoogleCloudChannelV1RenewalSettingsArgs> getRenewalSettings() {
+    public Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings() {
         return this.renewalSettings == null ? Codegen.empty() : this.renewalSettings;
     }
 

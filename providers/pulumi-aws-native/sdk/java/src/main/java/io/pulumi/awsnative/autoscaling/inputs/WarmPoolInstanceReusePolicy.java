@@ -17,7 +17,7 @@ public final class WarmPoolInstanceReusePolicy extends io.pulumi.resources.Invok
     @Import(name="reuseOnScaleIn")
       private final @Nullable Boolean reuseOnScaleIn;
 
-    public Optional<Boolean> getReuseOnScaleIn() {
+    public Optional<Boolean> reuseOnScaleIn() {
         return this.reuseOnScaleIn == null ? Optional.empty() : Optional.ofNullable(this.reuseOnScaleIn);
     }
 

@@ -21,42 +21,42 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="excludeAppPackagesFromCleanup")
       private final @Nullable Output<List<String>> excludeAppPackagesFromCleanup;
 
-    public Output<List<String>> getExcludeAppPackagesFromCleanup() {
+    public Output<List<String>> excludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup == null ? Codegen.empty() : this.excludeAppPackagesFromCleanup;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="packageCleanup")
       private final @Nullable Output<Boolean> packageCleanup;
 
-    public Output<Boolean> getPackageCleanup() {
+    public Output<Boolean> packageCleanup() {
         return this.packageCleanup == null ? Codegen.empty() : this.packageCleanup;
     }
 
     @Import(name="rebootAfterUse")
       private final @Nullable Output<Boolean> rebootAfterUse;
 
-    public Output<Boolean> getRebootAfterUse() {
+    public Output<Boolean> rebootAfterUse() {
         return this.rebootAfterUse == null ? Codegen.empty() : this.rebootAfterUse;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<InstanceProfileTagArgs>> tags;
 
-    public Output<List<InstanceProfileTagArgs>> getTags() {
+    public Output<List<InstanceProfileTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

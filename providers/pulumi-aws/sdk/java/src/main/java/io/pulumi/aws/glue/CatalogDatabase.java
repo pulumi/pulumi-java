@@ -42,7 +42,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return ARN of the Glue Catalog Database.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return ID of the Data Catalog in which the database resides.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -70,7 +70,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return Description of the database.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +84,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return Location of the database (for example, an HDFS path).
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -98,7 +98,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return List of key-value pairs that define parameters and properties of the database.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -126,7 +126,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * @return Configuration block for a target database for resource linking. See `target_database` below.
      * 
      */
-    public Output</* @Nullable */ CatalogDatabaseTargetDatabase> getTargetDatabase() {
+    public Output</* @Nullable */ CatalogDatabaseTargetDatabase> targetDatabase() {
         return this.targetDatabase;
     }
 

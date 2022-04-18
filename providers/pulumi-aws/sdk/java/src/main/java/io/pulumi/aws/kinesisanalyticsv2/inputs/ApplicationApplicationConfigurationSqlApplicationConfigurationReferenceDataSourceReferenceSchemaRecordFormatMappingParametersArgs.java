@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="csvMappingParameters")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs> csvMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs> getCsvMappingParameters() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs> csvMappingParameters() {
         return this.csvMappingParameters == null ? Codegen.empty() : this.csvMappingParameters;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="jsonMappingParameters")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs> jsonMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs> getJsonMappingParameters() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs> jsonMappingParameters() {
         return this.jsonMappingParameters == null ? Codegen.empty() : this.jsonMappingParameters;
     }
 

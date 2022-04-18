@@ -34,19 +34,19 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
         this.queryStringsConfig = queryStringsConfig;
     }
 
-    public CachePolicyCookiesConfig getCookiesConfig() {
+    public CachePolicyCookiesConfig cookiesConfig() {
         return this.cookiesConfig;
     }
-    public Optional<Boolean> getEnableAcceptEncodingBrotli() {
+    public Optional<Boolean> enableAcceptEncodingBrotli() {
         return Optional.ofNullable(this.enableAcceptEncodingBrotli);
     }
-    public Boolean getEnableAcceptEncodingGzip() {
+    public Boolean enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
-    public CachePolicyHeadersConfig getHeadersConfig() {
+    public CachePolicyHeadersConfig headersConfig() {
         return this.headersConfig;
     }
-    public CachePolicyQueryStringsConfig getQueryStringsConfig() {
+    public CachePolicyQueryStringsConfig queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

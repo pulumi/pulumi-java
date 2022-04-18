@@ -21,7 +21,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="apiId", required=true)
       private final String apiId;
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
 
@@ -32,7 +32,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -43,7 +43,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="operationId", required=true)
       private final String operationId;
 
-    public String getOperationId() {
+    public String operationId() {
         return this.operationId;
     }
 
@@ -54,7 +54,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="policyId", required=true)
       private final String policyId;
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
 
@@ -65,7 +65,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +76,7 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

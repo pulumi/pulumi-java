@@ -41,21 +41,21 @@ public final class BucketIamConfigurationResponse {
      * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
      * 
     */
-    public BucketIamConfigurationBucketPolicyOnlyResponse getBucketPolicyOnly() {
+    public BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly() {
         return this.bucketPolicyOnly;
     }
     /**
      * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
      * 
     */
-    public String getPublicAccessPrevention() {
+    public String publicAccessPrevention() {
         return this.publicAccessPrevention;
     }
     /**
      * The bucket's uniform bucket-level access configuration.
      * 
     */
-    public BucketIamConfigurationUniformBucketLevelAccessResponse getUniformBucketLevelAccess() {
+    public BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
 

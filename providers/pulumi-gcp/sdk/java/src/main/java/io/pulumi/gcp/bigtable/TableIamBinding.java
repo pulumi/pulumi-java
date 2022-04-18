@@ -58,7 +58,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TableIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TableIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TableIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ TableIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -72,7 +72,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the tables's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -86,13 +86,13 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the instance that owns the table.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -108,7 +108,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * is not provided, this provider will use the provider default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -126,7 +126,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -140,7 +140,7 @@ public class TableIamBinding extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the table to manage IAM policies for.
      * 
      */
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table;
     }
 

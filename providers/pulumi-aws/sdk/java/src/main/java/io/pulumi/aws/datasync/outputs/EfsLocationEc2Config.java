@@ -33,14 +33,14 @@ public final class EfsLocationEc2Config {
      * List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
      * 
     */
-    public List<String> getSecurityGroupArns() {
+    public List<String> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
      * Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
      * 
     */
-    public String getSubnetArn() {
+    public String subnetArn() {
         return this.subnetArn;
     }
 

@@ -22,7 +22,7 @@ public final class DistributionOriginS3OriginConfigGetArgs extends io.pulumi.res
     @Import(name="originAccessIdentity", required=true)
       private final Output<String> originAccessIdentity;
 
-    public Output<String> getOriginAccessIdentity() {
+    public Output<String> originAccessIdentity() {
         return this.originAccessIdentity;
     }
 

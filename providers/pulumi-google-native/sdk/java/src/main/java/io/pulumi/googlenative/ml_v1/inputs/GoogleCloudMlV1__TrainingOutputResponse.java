@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="builtInAlgorithmOutput", required=true)
       private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
-    public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
+    public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="completedTrialCount", required=true)
       private final String completedTrialCount;
 
-    public String getCompletedTrialCount() {
+    public String completedTrialCount() {
         return this.completedTrialCount;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="consumedMLUnits", required=true)
       private final Double consumedMLUnits;
 
-    public Double getConsumedMLUnits() {
+    public Double consumedMLUnits() {
         return this.consumedMLUnits;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="hyperparameterMetricTag", required=true)
       private final String hyperparameterMetricTag;
 
-    public String getHyperparameterMetricTag() {
+    public String hyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="isBuiltInAlgorithmJob", required=true)
       private final Boolean isBuiltInAlgorithmJob;
 
-    public Boolean getIsBuiltInAlgorithmJob() {
+    public Boolean isBuiltInAlgorithmJob() {
         return this.isBuiltInAlgorithmJob;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="isHyperparameterTuningJob", required=true)
       private final Boolean isHyperparameterTuningJob;
 
-    public Boolean getIsHyperparameterTuningJob() {
+    public Boolean isHyperparameterTuningJob() {
         return this.isHyperparameterTuningJob;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="trials", required=true)
       private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
 
-    public List<GoogleCloudMlV1__HyperparameterOutputResponse> getTrials() {
+    public List<GoogleCloudMlV1__HyperparameterOutputResponse> trials() {
         return this.trials;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     @Import(name="webAccessUris", required=true)
       private final Map<String,String> webAccessUris;
 
-    public Map<String,String> getWebAccessUris() {
+    public Map<String,String> webAccessUris() {
         return this.webAccessUris;
     }
 

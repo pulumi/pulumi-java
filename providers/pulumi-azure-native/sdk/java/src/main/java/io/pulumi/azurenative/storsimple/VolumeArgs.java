@@ -28,7 +28,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessControlRecordIds", required=true)
       private final Output<List<String>> accessControlRecordIds;
 
-    public Output<List<String>> getAccessControlRecordIds() {
+    public Output<List<String>> accessControlRecordIds() {
         return this.accessControlRecordIds;
     }
 
@@ -39,7 +39,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -50,7 +50,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -61,7 +61,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -72,7 +72,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoringStatus", required=true)
       private final Output<MonitoringStatus> monitoringStatus;
 
-    public Output<MonitoringStatus> getMonitoringStatus() {
+    public Output<MonitoringStatus> monitoringStatus() {
         return this.monitoringStatus;
     }
 
@@ -83,7 +83,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInBytes", required=true)
       private final Output<Double> sizeInBytes;
 
-    public Output<Double> getSizeInBytes() {
+    public Output<Double> sizeInBytes() {
         return this.sizeInBytes;
     }
 
@@ -105,7 +105,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeContainerName", required=true)
       private final Output<String> volumeContainerName;
 
-    public Output<String> getVolumeContainerName() {
+    public Output<String> volumeContainerName() {
         return this.volumeContainerName;
     }
 
@@ -116,7 +116,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
@@ -127,7 +127,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeStatus", required=true)
       private final Output<VolumeStatus> volumeStatus;
 
-    public Output<VolumeStatus> getVolumeStatus() {
+    public Output<VolumeStatus> volumeStatus() {
         return this.volumeStatus;
     }
 
@@ -138,7 +138,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeType", required=true)
       private final Output<VolumeType> volumeType;
 
-    public Output<VolumeType> getVolumeType() {
+    public Output<VolumeType> volumeType() {
         return this.volumeType;
     }
 

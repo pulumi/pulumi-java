@@ -39,14 +39,14 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
      * 
     */
-    public Optional<Integer> getTerminationWaitTimeInMinutes() {
+    public Optional<Integer> terminationWaitTimeInMinutes() {
         return Optional.ofNullable(this.terminationWaitTimeInMinutes);
     }
 

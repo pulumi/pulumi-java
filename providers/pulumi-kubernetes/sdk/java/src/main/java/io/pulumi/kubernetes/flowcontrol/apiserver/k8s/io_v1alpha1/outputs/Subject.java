@@ -35,20 +35,20 @@ public final class Subject {
         this.user = user;
     }
 
-    public Optional<GroupSubject> getGroup() {
+    public Optional<GroupSubject> group() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Required
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
-    public Optional<ServiceAccountSubject> getServiceAccount() {
+    public Optional<ServiceAccountSubject> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
-    public Optional<UserSubject> getUser() {
+    public Optional<UserSubject> user() {
         return Optional.ofNullable(this.user);
     }
 

@@ -26,7 +26,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFileParameters")
       private final @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
 
-    public Output<VolumeProviderParametersAzureFileArgs> getAzureFileParameters() {
+    public Output<VolumeProviderParametersAzureFileArgs> azureFileParameters() {
         return this.azureFileParameters == null ? Codegen.empty() : this.azureFileParameters;
     }
 
@@ -37,7 +37,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provider", required=true)
       private final Output<Either<String,VolumeProvider>> provider;
 
-    public Output<Either<String,VolumeProvider>> getProvider() {
+    public Output<Either<String,VolumeProvider>> provider() {
         return this.provider;
     }
 
@@ -70,7 +70,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeResourceName")
       private final @Nullable Output<String> volumeResourceName;
 
-    public Output<String> getVolumeResourceName() {
+    public Output<String> volumeResourceName() {
         return this.volumeResourceName == null ? Codegen.empty() : this.volumeResourceName;
     }
 

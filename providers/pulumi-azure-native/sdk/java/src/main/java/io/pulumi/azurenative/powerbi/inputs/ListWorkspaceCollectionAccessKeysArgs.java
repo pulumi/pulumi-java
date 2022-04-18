@@ -19,7 +19,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
     @Import(name="workspaceCollectionName", required=true)
       private final String workspaceCollectionName;
 
-    public String getWorkspaceCollectionName() {
+    public String workspaceCollectionName() {
         return this.workspaceCollectionName;
     }
 

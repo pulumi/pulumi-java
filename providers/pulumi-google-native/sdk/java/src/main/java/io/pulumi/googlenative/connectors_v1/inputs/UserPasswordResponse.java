@@ -24,7 +24,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
       private final SecretResponse password;
 
-    public SecretResponse getPassword() {
+    public SecretResponse password() {
         return this.password;
     }
 
@@ -35,7 +35,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

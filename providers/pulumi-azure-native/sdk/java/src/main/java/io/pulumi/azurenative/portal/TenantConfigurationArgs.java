@@ -23,7 +23,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
@@ -34,7 +34,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="enforcePrivateMarkdownStorage")
       private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
-    public Output<Boolean> getEnforcePrivateMarkdownStorage() {
+    public Output<Boolean> enforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage == null ? Codegen.empty() : this.enforcePrivateMarkdownStorage;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
     @Import(name="annotationSpecSet", required=true)
       private final String annotationSpecSet;
 
-    public String getAnnotationSpecSet() {
+    public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
     @Import(name="instructionMessage", required=true)
       private final String instructionMessage;
 
-    public String getInstructionMessage() {
+    public String instructionMessage() {
         return this.instructionMessage;
     }
 

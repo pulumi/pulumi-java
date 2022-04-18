@@ -32,14 +32,14 @@ public final class JsonFileFormatResponse {
      * Compression of the loaded JSON file.
      * 
     */
-    public String getCompression() {
+    public String compression() {
         return this.compression;
     }
     /**
      * The schema file format along JSON data files.
      * 
     */
-    public String getSchemaFileFormat() {
+    public String schemaFileFormat() {
         return this.schemaFileFormat;
     }
 

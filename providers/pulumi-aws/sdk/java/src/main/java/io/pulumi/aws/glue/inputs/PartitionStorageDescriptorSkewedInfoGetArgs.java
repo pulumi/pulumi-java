@@ -24,7 +24,7 @@ public final class PartitionStorageDescriptorSkewedInfoGetArgs extends io.pulumi
     @Import(name="skewedColumnNames")
       private final @Nullable Output<List<String>> skewedColumnNames;
 
-    public Output<List<String>> getSkewedColumnNames() {
+    public Output<List<String>> skewedColumnNames() {
         return this.skewedColumnNames == null ? Codegen.empty() : this.skewedColumnNames;
     }
 
@@ -35,7 +35,7 @@ public final class PartitionStorageDescriptorSkewedInfoGetArgs extends io.pulumi
     @Import(name="skewedColumnValueLocationMaps")
       private final @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps;
 
-    public Output<Map<String,String>> getSkewedColumnValueLocationMaps() {
+    public Output<Map<String,String>> skewedColumnValueLocationMaps() {
         return this.skewedColumnValueLocationMaps == null ? Codegen.empty() : this.skewedColumnValueLocationMaps;
     }
 
@@ -46,7 +46,7 @@ public final class PartitionStorageDescriptorSkewedInfoGetArgs extends io.pulumi
     @Import(name="skewedColumnValues")
       private final @Nullable Output<List<String>> skewedColumnValues;
 
-    public Output<List<String>> getSkewedColumnValues() {
+    public Output<List<String>> skewedColumnValues() {
         return this.skewedColumnValues == null ? Codegen.empty() : this.skewedColumnValues;
     }
 

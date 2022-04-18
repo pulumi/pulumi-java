@@ -42,203 +42,203 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
     @Import(name="allowedUnauthorizedActions")
       private final @Nullable Output<List<String>> allowedUnauthorizedActions;
 
-    public Output<List<String>> getAllowedUnauthorizedActions() {
+    public Output<List<String>> allowedUnauthorizedActions() {
         return this.allowedUnauthorizedActions == null ? Codegen.empty() : this.allowedUnauthorizedActions;
     }
 
     @Import(name="authorizationActionMappings")
       private final @Nullable Output<List<AuthorizationActionMappingArgs>> authorizationActionMappings;
 
-    public Output<List<AuthorizationActionMappingArgs>> getAuthorizationActionMappings() {
+    public Output<List<AuthorizationActionMappingArgs>> authorizationActionMappings() {
         return this.authorizationActionMappings == null ? Codegen.empty() : this.authorizationActionMappings;
     }
 
     @Import(name="checkNameAvailabilitySpecifications")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications;
 
-    public Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> getCheckNameAvailabilitySpecifications() {
+    public Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications() {
         return this.checkNameAvailabilitySpecifications == null ? Codegen.empty() : this.checkNameAvailabilitySpecifications;
     }
 
     @Import(name="defaultApiVersion")
       private final @Nullable Output<String> defaultApiVersion;
 
-    public Output<String> getDefaultApiVersion() {
+    public Output<String> defaultApiVersion() {
         return this.defaultApiVersion == null ? Codegen.empty() : this.defaultApiVersion;
     }
 
     @Import(name="disallowedActionVerbs")
       private final @Nullable Output<List<String>> disallowedActionVerbs;
 
-    public Output<List<String>> getDisallowedActionVerbs() {
+    public Output<List<String>> disallowedActionVerbs() {
         return this.disallowedActionVerbs == null ? Codegen.empty() : this.disallowedActionVerbs;
     }
 
     @Import(name="enableAsyncOperation")
       private final @Nullable Output<Boolean> enableAsyncOperation;
 
-    public Output<Boolean> getEnableAsyncOperation() {
+    public Output<Boolean> enableAsyncOperation() {
         return this.enableAsyncOperation == null ? Codegen.empty() : this.enableAsyncOperation;
     }
 
     @Import(name="enableThirdPartyS2S")
       private final @Nullable Output<Boolean> enableThirdPartyS2S;
 
-    public Output<Boolean> getEnableThirdPartyS2S() {
+    public Output<Boolean> enableThirdPartyS2S() {
         return this.enableThirdPartyS2S == null ? Codegen.empty() : this.enableThirdPartyS2S;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<ResourceTypeEndpointArgs>> endpoints;
 
-    public Output<List<ResourceTypeEndpointArgs>> getEndpoints() {
+    public Output<List<ResourceTypeEndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     @Import(name="extendedLocations")
       private final @Nullable Output<List<ExtendedLocationOptionsArgs>> extendedLocations;
 
-    public Output<List<ExtendedLocationOptionsArgs>> getExtendedLocations() {
+    public Output<List<ExtendedLocationOptionsArgs>> extendedLocations() {
         return this.extendedLocations == null ? Codegen.empty() : this.extendedLocations;
     }
 
     @Import(name="extensionOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> getExtensionOptions() {
+    public Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions() {
         return this.extensionOptions == null ? Codegen.empty() : this.extensionOptions;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule;
 
-    public Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> getFeaturesRule() {
+    public Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule() {
         return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="identityManagement")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement;
 
-    public Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> getIdentityManagement() {
+    public Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement() {
         return this.identityManagement == null ? Codegen.empty() : this.identityManagement;
     }
 
     @Import(name="isPureProxy")
       private final @Nullable Output<Boolean> isPureProxy;
 
-    public Output<Boolean> getIsPureProxy() {
+    public Output<Boolean> isPureProxy() {
         return this.isPureProxy == null ? Codegen.empty() : this.isPureProxy;
     }
 
     @Import(name="linkedAccessChecks")
       private final @Nullable Output<List<LinkedAccessCheckArgs>> linkedAccessChecks;
 
-    public Output<List<LinkedAccessCheckArgs>> getLinkedAccessChecks() {
+    public Output<List<LinkedAccessCheckArgs>> linkedAccessChecks() {
         return this.linkedAccessChecks == null ? Codegen.empty() : this.linkedAccessChecks;
     }
 
     @Import(name="loggingRules")
       private final @Nullable Output<List<LoggingRuleArgs>> loggingRules;
 
-    public Output<List<LoggingRuleArgs>> getLoggingRules() {
+    public Output<List<LoggingRuleArgs>> loggingRules() {
         return this.loggingRules == null ? Codegen.empty() : this.loggingRules;
     }
 
     @Import(name="marketplaceType")
       private final @Nullable Output<String> marketplaceType;
 
-    public Output<String> getMarketplaceType() {
+    public Output<String> marketplaceType() {
         return this.marketplaceType == null ? Codegen.empty() : this.marketplaceType;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="regionality")
       private final @Nullable Output<Either<String,Regionality>> regionality;
 
-    public Output<Either<String,Regionality>> getRegionality() {
+    public Output<Either<String,Regionality>> regionality() {
         return this.regionality == null ? Codegen.empty() : this.regionality;
     }
 
     @Import(name="requestHeaderOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
+    public Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions() {
         return this.requestHeaderOptions == null ? Codegen.empty() : this.requestHeaderOptions;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="resourceDeletionPolicy")
       private final @Nullable Output<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy;
 
-    public Output<Either<String,ResourceDeletionPolicy>> getResourceDeletionPolicy() {
+    public Output<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy() {
         return this.resourceDeletionPolicy == null ? Codegen.empty() : this.resourceDeletionPolicy;
     }
 
     @Import(name="resourceMovePolicy")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy;
 
-    public Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> getResourceMovePolicy() {
+    public Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy() {
         return this.resourceMovePolicy == null ? Codegen.empty() : this.resourceMovePolicy;
     }
 
     @Import(name="routingType")
       private final @Nullable Output<Either<String,RoutingType>> routingType;
 
-    public Output<Either<String,RoutingType>> getRoutingType() {
+    public Output<Either<String,RoutingType>> routingType() {
         return this.routingType == null ? Codegen.empty() : this.routingType;
     }
 
     @Import(name="serviceTreeInfos")
       private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
-    public Output<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
+    public Output<List<ServiceTreeInfoArgs>> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? Codegen.empty() : this.serviceTreeInfos;
     }
 
     @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
-    public Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
+    public Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Codegen.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @Import(name="subscriptionStateRules")
       private final @Nullable Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules;
 
-    public Output<List<SubscriptionStateRuleArgs>> getSubscriptionStateRules() {
+    public Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules() {
         return this.subscriptionStateRules == null ? Codegen.empty() : this.subscriptionStateRules;
     }
 
     @Import(name="swaggerSpecifications")
       private final @Nullable Output<List<SwaggerSpecificationArgs>> swaggerSpecifications;
 
-    public Output<List<SwaggerSpecificationArgs>> getSwaggerSpecifications() {
+    public Output<List<SwaggerSpecificationArgs>> swaggerSpecifications() {
         return this.swaggerSpecifications == null ? Codegen.empty() : this.swaggerSpecifications;
     }
 
     @Import(name="templateDeploymentOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
+    public Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions() {
         return this.templateDeploymentOptions == null ? Codegen.empty() : this.templateDeploymentOptions;
     }
 
     @Import(name="throttlingRules")
       private final @Nullable Output<List<ThrottlingRuleArgs>> throttlingRules;
 
-    public Output<List<ThrottlingRuleArgs>> getThrottlingRules() {
+    public Output<List<ThrottlingRuleArgs>> throttlingRules() {
         return this.throttlingRules == null ? Codegen.empty() : this.throttlingRules;
     }
 

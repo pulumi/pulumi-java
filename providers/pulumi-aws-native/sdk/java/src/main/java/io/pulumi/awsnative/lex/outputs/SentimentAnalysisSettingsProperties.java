@@ -24,7 +24,7 @@ public final class SentimentAnalysisSettingsProperties {
      * Enable to call Amazon Comprehend for Sentiment natively within Lex
      * 
     */
-    public Boolean getDetectSentiment() {
+    public Boolean detectSentiment() {
         return this.detectSentiment;
     }
 

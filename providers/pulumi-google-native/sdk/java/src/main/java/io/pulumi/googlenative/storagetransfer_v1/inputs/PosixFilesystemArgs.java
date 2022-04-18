@@ -26,7 +26,7 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
+    public Output<String> rootDirectory() {
         return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 

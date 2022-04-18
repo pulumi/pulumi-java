@@ -34,7 +34,7 @@ public class Recipe extends io.pulumi.resources.CustomResource {
      * @return Description of the recipe
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -48,19 +48,19 @@ public class Recipe extends io.pulumi.resources.CustomResource {
      * @return Recipe name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="steps", type=List.class, parameters={RecipeStep.class})
     private Output<List<RecipeStep>> steps;
 
-    public Output<List<RecipeStep>> getSteps() {
+    public Output<List<RecipeStep>> steps() {
         return this.steps;
     }
     @Export(name="tags", type=List.class, parameters={RecipeTag.class})
     private Output</* @Nullable */ List<RecipeTag>> tags;
 
-    public Output</* @Nullable */ List<RecipeTag>> getTags() {
+    public Output</* @Nullable */ List<RecipeTag>> tags() {
         return this.tags;
     }
 

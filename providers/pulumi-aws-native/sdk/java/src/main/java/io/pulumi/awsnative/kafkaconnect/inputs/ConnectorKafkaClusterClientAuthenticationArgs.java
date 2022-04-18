@@ -21,7 +21,7 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     @Import(name="authenticationType", required=true)
       private final Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
 
-    public Output<ConnectorKafkaClusterClientAuthenticationType> getAuthenticationType() {
+    public Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType() {
         return this.authenticationType;
     }
 

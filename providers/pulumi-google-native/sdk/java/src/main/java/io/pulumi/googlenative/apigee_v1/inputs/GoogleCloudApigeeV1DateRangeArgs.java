@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     @Import(name="end", required=true)
       private final Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 

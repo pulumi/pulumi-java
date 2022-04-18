@@ -24,7 +24,7 @@ public final class GetGroupMembershipsMembershipRole {
      * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

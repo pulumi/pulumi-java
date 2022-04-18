@@ -29,7 +29,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="allowCookies")
       private final @Nullable Boolean allowCookies;
 
-    public Optional<Boolean> getAllowCookies() {
+    public Optional<Boolean> allowCookies() {
         return this.allowCookies == null ? Optional.empty() : Optional.ofNullable(this.allowCookies);
     }
 
@@ -40,7 +40,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="enableXRay")
       private final @Nullable Boolean enableXRay;
 
-    public Optional<Boolean> getEnableXRay() {
+    public Optional<Boolean> enableXRay() {
         return this.enableXRay == null ? Optional.empty() : Optional.ofNullable(this.enableXRay);
     }
 
@@ -51,7 +51,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="excludedPages")
       private final @Nullable List<String> excludedPages;
 
-    public List<String> getExcludedPages() {
+    public List<String> excludedPages() {
         return this.excludedPages == null ? List.of() : this.excludedPages;
     }
 
@@ -62,7 +62,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="favoritePages")
       private final @Nullable List<String> favoritePages;
 
-    public List<String> getFavoritePages() {
+    public List<String> favoritePages() {
         return this.favoritePages == null ? List.of() : this.favoritePages;
     }
 
@@ -73,7 +73,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="guestRoleArn")
       private final @Nullable String guestRoleArn;
 
-    public Optional<String> getGuestRoleArn() {
+    public Optional<String> guestRoleArn() {
         return this.guestRoleArn == null ? Optional.empty() : Optional.ofNullable(this.guestRoleArn);
     }
 
@@ -84,7 +84,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="identityPoolId")
       private final @Nullable String identityPoolId;
 
-    public Optional<String> getIdentityPoolId() {
+    public Optional<String> identityPoolId() {
         return this.identityPoolId == null ? Optional.empty() : Optional.ofNullable(this.identityPoolId);
     }
 
@@ -95,7 +95,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="includedPages")
       private final @Nullable List<String> includedPages;
 
-    public List<String> getIncludedPages() {
+    public List<String> includedPages() {
         return this.includedPages == null ? List.of() : this.includedPages;
     }
 
@@ -106,7 +106,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="sessionSampleRate")
       private final @Nullable Double sessionSampleRate;
 
-    public Optional<Double> getSessionSampleRate() {
+    public Optional<Double> sessionSampleRate() {
         return this.sessionSampleRate == null ? Optional.empty() : Optional.ofNullable(this.sessionSampleRate);
     }
 
@@ -117,7 +117,7 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="telemetries")
       private final @Nullable List<AppMonitorTelemetry> telemetries;
 
-    public List<AppMonitorTelemetry> getTelemetries() {
+    public List<AppMonitorTelemetry> telemetries() {
         return this.telemetries == null ? List.of() : this.telemetries;
     }
 

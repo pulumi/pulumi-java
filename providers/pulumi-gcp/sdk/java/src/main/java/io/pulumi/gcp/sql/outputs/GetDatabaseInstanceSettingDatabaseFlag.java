@@ -28,10 +28,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
      * The name of the instance.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

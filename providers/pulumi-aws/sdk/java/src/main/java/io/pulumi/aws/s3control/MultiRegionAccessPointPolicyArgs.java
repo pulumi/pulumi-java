@@ -19,7 +19,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -30,7 +30,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     @Import(name="details", required=true)
       private final Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
-    public Output<MultiRegionAccessPointPolicyDetailsArgs> getDetails() {
+    public Output<MultiRegionAccessPointPolicyDetailsArgs> details() {
         return this.details;
     }
 

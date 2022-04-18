@@ -27,84 +27,84 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
-    public Output<EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
     @Import(name="launchTemplateConfigs", required=true)
       private final Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs;
 
-    public Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> getLaunchTemplateConfigs() {
+    public Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
 
     @Import(name="onDemandOptions")
       private final @Nullable Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions;
 
-    public Output<EC2FleetOnDemandOptionsRequestArgs> getOnDemandOptions() {
+    public Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions() {
         return this.onDemandOptions == null ? Codegen.empty() : this.onDemandOptions;
     }
 
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> getReplaceUnhealthyInstances() {
+    public Output<Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
     @Import(name="spotOptions")
       private final @Nullable Output<EC2FleetSpotOptionsRequestArgs> spotOptions;
 
-    public Output<EC2FleetSpotOptionsRequestArgs> getSpotOptions() {
+    public Output<EC2FleetSpotOptionsRequestArgs> spotOptions() {
         return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<EC2FleetTagSpecificationArgs>> getTagSpecifications() {
+    public Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications() {
         return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="targetCapacitySpecification", required=true)
       private final Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification;
 
-    public Output<EC2FleetTargetCapacitySpecificationRequestArgs> getTargetCapacitySpecification() {
+    public Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
 
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> getTerminateInstancesWithExpiration() {
+    public Output<Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
     @Import(name="type")
       private final @Nullable Output<EC2FleetType> type;
 
-    public Output<EC2FleetType> getType() {
+    public Output<EC2FleetType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
-    public Output<String> getValidFrom() {
+    public Output<String> validFrom() {
         return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
+    public Output<String> validUntil() {
         return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 

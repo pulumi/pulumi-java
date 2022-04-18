@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="configStoreName", required=true)
       private final Output<String> configStoreName;
 
-    public Output<String> getConfigStoreName() {
+    public Output<String> configStoreName() {
         return this.configStoreName;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
@@ -68,7 +68,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

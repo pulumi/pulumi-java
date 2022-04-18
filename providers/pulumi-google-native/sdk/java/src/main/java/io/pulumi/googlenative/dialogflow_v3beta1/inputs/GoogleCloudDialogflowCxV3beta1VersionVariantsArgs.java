@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsArgs extends io.
     @Import(name="variants")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> variants;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> getVariants() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> variants() {
         return this.variants == null ? Codegen.empty() : this.variants;
     }
 

@@ -24,7 +24,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 
@@ -46,7 +46,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     @Import(name="singleInstanceAssignment", required=true)
       private final Double singleInstanceAssignment;
 
-    public Double getSingleInstanceAssignment() {
+    public Double singleInstanceAssignment() {
         return this.singleInstanceAssignment;
     }
 
@@ -57,7 +57,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     @Import(name="utilizationTarget", required=true)
       private final Double utilizationTarget;
 
-    public Double getUtilizationTarget() {
+    public Double utilizationTarget() {
         return this.utilizationTarget;
     }
 
@@ -68,7 +68,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     @Import(name="utilizationTargetType", required=true)
       private final String utilizationTargetType;
 
-    public String getUtilizationTargetType() {
+    public String utilizationTargetType() {
         return this.utilizationTargetType;
     }
 

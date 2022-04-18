@@ -30,7 +30,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -41,7 +41,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endpointNames", required=true)
       private final Output<List<String>> endpointNames;
 
-    public Output<List<String>> getEndpointNames() {
+    public Output<List<String>> endpointNames() {
         return this.endpointNames;
     }
 
@@ -52,7 +52,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -63,7 +63,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,7 +74,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="source", required=true)
       private final Output<Either<String,RoutingSource>> source;
 
-    public Output<Either<String,RoutingSource>> getSource() {
+    public Output<Either<String,RoutingSource>> source() {
         return this.source;
     }
 

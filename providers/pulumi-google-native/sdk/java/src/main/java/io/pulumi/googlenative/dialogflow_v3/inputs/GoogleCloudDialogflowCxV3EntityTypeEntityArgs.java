@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityArgs extends io.pulu
     @Import(name="synonyms", required=true)
       private final Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeEntityArgs extends io.pulu
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

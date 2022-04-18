@@ -29,7 +29,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
-    public Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
+    public Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

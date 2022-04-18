@@ -34,14 +34,14 @@ public final class ColumnResponse {
      * Name of the Cosmos DB Cassandra table column
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of the Cosmos DB Cassandra table column
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

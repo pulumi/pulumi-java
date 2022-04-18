@@ -17,14 +17,14 @@ public final class GetConnectivityTestArgs extends io.pulumi.resources.InvokeArg
     @Import(name="connectivityTestId", required=true)
       private final String connectivityTestId;
 
-    public String getConnectivityTestId() {
+    public String connectivityTestId() {
         return this.connectivityTestId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

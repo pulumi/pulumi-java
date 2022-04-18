@@ -26,7 +26,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     @Import(name="header")
       private final @Nullable Output<String> header;
 
-    public Output<String> getHeader() {
+    public Output<String> header() {
         return this.header == null ? Codegen.empty() : this.header;
     }
 
@@ -37,7 +37,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

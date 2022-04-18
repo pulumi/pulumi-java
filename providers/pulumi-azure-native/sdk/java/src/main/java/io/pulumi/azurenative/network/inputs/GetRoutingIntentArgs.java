@@ -19,7 +19,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="routingIntentName", required=true)
       private final String routingIntentName;
 
-    public String getRoutingIntentName() {
+    public String routingIntentName() {
         return this.routingIntentName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;
 
-    public String getVirtualHubName() {
+    public String virtualHubName() {
         return this.virtualHubName;
     }
 

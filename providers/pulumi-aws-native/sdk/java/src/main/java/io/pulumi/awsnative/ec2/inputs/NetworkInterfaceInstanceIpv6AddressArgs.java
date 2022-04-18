@@ -17,7 +17,7 @@ public final class NetworkInterfaceInstanceIpv6AddressArgs extends io.pulumi.res
     @Import(name="ipv6Address", required=true)
       private final Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address;
     }
 

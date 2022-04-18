@@ -44,7 +44,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group importance level.
      * 
      */
-    public Output</* @Nullable */ String> getImportance() {
+    public Output</* @Nullable */ String> importance() {
         return this.importance;
     }
     /**
@@ -58,7 +58,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group cap percentage resource.
      * 
      */
-    public Output<Integer> getMaxResourcePercent() {
+    public Output<Integer> maxResourcePercent() {
         return this.maxResourcePercent;
     }
     /**
@@ -72,7 +72,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group request maximum grant percentage.
      * 
      */
-    public Output</* @Nullable */ Double> getMaxResourcePercentPerRequest() {
+    public Output</* @Nullable */ Double> maxResourcePercentPerRequest() {
         return this.maxResourcePercentPerRequest;
     }
     /**
@@ -86,7 +86,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group minimum percentage resource.
      * 
      */
-    public Output<Integer> getMinResourcePercent() {
+    public Output<Integer> minResourcePercent() {
         return this.minResourcePercent;
     }
     /**
@@ -100,7 +100,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group request minimum grant percentage.
      * 
      */
-    public Output<Double> getMinResourcePercentPerRequest() {
+    public Output<Double> minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
     /**
@@ -114,7 +114,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return The workload group query execution timeout.
      * 
      */
-    public Output</* @Nullable */ Integer> getQueryExecutionTimeout() {
+    public Output</* @Nullable */ Integer> queryExecutionTimeout() {
         return this.queryExecutionTimeout;
     }
     /**
@@ -142,7 +142,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

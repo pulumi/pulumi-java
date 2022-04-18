@@ -23,7 +23,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -34,7 +34,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<EventPermissionConditionGetArgs> condition;
 
-    public Output<EventPermissionConditionGetArgs> getCondition() {
+    public Output<EventPermissionConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -45,7 +45,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
-    public Output<String> getEventBusName() {
+    public Output<String> eventBusName() {
         return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
@@ -56,7 +56,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -67,7 +67,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 

@@ -25,7 +25,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
       private final Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters;
     }
 
@@ -47,7 +47,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

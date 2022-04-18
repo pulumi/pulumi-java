@@ -71,7 +71,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAttach() {
+    public Output</* @Nullable */ Boolean> attach() {
         return this.attach;
     }
     /**
@@ -85,7 +85,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The network bridge of the container as read from its NetworkSettings.
      * 
      */
-    public Output<String> getBridge() {
+    public Output<String> bridge() {
         return this.bridge;
     }
     /**
@@ -99,7 +99,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Add or drop certrain linux capabilities.
      * 
      */
-    public Output</* @Nullable */ ContainerCapabilities> getCapabilities() {
+    public Output</* @Nullable */ ContainerCapabilities> capabilities() {
         return this.capabilities;
     }
     /**
@@ -115,7 +115,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `["/usr/bin/myprogram","-","baz.con"]`.
      * 
      */
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command;
     }
     /**
@@ -129,7 +129,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The logs of the container if its execution is done (`attach` must be disabled).
      * 
      */
-    public Output<String> getContainerLogs() {
+    public Output<String> containerLogs() {
         return this.containerLogs;
     }
     /**
@@ -143,7 +143,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
      * 
      */
-    public Output</* @Nullable */ String> getCpuSet() {
+    public Output</* @Nullable */ String> cpuSet() {
         return this.cpuSet;
     }
     /**
@@ -157,7 +157,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return CPU shares (relative weight) for the container.
      * 
      */
-    public Output</* @Nullable */ Integer> getCpuShares() {
+    public Output</* @Nullable */ Integer> cpuShares() {
         return this.cpuShares;
     }
     /**
@@ -173,7 +173,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * successful stop.
      * 
      */
-    public Output</* @Nullable */ Integer> getDestroyGraceSeconds() {
+    public Output</* @Nullable */ Integer> destroyGraceSeconds() {
         return this.destroyGraceSeconds;
     }
     /**
@@ -187,7 +187,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Bind devices to the container.
      * 
      */
-    public Output</* @Nullable */ List<ContainerDevice>> getDevices() {
+    public Output</* @Nullable */ List<ContainerDevice>> devices() {
         return this.devices;
     }
     /**
@@ -201,7 +201,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return DNS servers to use.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDns() {
+    public Output</* @Nullable */ List<String>> dns() {
         return this.dns;
     }
     /**
@@ -215,7 +215,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDnsOpts() {
+    public Output</* @Nullable */ List<String>> dnsOpts() {
         return this.dnsOpts;
     }
     /**
@@ -229,7 +229,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return DNS search domains that are used when bare unqualified hostnames are used inside of the container.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDnsSearches() {
+    public Output</* @Nullable */ List<String>> dnsSearches() {
         return this.dnsSearches;
     }
     /**
@@ -243,7 +243,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Domain name of the container.
      * 
      */
-    public Output</* @Nullable */ String> getDomainname() {
+    public Output</* @Nullable */ String> domainname() {
         return this.domainname;
     }
     /**
@@ -261,7 +261,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `"/usr/bin/myprogra"]`.
      * 
      */
-    public Output<List<String>> getEntrypoints() {
+    public Output<List<String>> entrypoints() {
         return this.entrypoints;
     }
     /**
@@ -275,7 +275,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
      * 
      */
-    public Output<List<String>> getEnvs() {
+    public Output<List<String>> envs() {
         return this.envs;
     }
     /**
@@ -289,7 +289,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The exit code of the container if its execution is done (`must_run` must be disabled).
      * 
      */
-    public Output<Integer> getExitCode() {
+    public Output<Integer> exitCode() {
         return this.exitCode;
     }
     /**
@@ -307,7 +307,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The network gateway of the container.
      * 
      */
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway;
     }
     /**
@@ -321,7 +321,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Additional groups for the container user
      * 
      */
-    public Output</* @Nullable */ List<String>> getGroupAdds() {
+    public Output</* @Nullable */ List<String>> groupAdds() {
         return this.groupAdds;
     }
     /**
@@ -335,7 +335,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return A test to perform to check that the container is healthy
      * 
      */
-    public Output<ContainerHealthcheck> getHealthcheck() {
+    public Output<ContainerHealthcheck> healthcheck() {
         return this.healthcheck;
     }
     /**
@@ -349,7 +349,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Hostname of the container.
      * 
      */
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
     /**
@@ -363,7 +363,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Additional hosts to add to the container.
      * 
      */
-    public Output</* @Nullable */ List<ContainerHost>> getHosts() {
+    public Output</* @Nullable */ List<ContainerHost>> hosts() {
         return this.hosts;
     }
     /**
@@ -379,7 +379,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * is shown in the example.
      * 
      */
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
     /**
@@ -395,7 +395,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * defaults.
      * 
      */
-    public Output<Boolean> getInit() {
+    public Output<Boolean> init() {
         return this.init;
     }
     /**
@@ -413,7 +413,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The IP address of the container.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -431,7 +431,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The IP prefix length of the container.
      * 
      */
-    public Output<Integer> getIpPrefixLength() {
+    public Output<Integer> ipPrefixLength() {
         return this.ipPrefixLength;
     }
     /**
@@ -447,7 +447,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `host`.
      * 
      */
-    public Output<String> getIpcMode() {
+    public Output<String> ipcMode() {
         return this.ipcMode;
     }
     /**
@@ -461,7 +461,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output<List<ContainerLabel>> getLabels() {
+    public Output<List<ContainerLabel>> labels() {
         return this.labels;
     }
     /**
@@ -479,7 +479,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Set of links for link based connectivity between containers that are running on the same host.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLinks() {
+    public Output</* @Nullable */ List<String>> links() {
         return this.links;
     }
     /**
@@ -493,7 +493,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The logging driver to use for the container. Defaults to `json-file`.
      * 
      */
-    public Output</* @Nullable */ String> getLogDriver() {
+    public Output</* @Nullable */ String> logDriver() {
         return this.logDriver;
     }
     /**
@@ -507,7 +507,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Key/value pairs to use as options for the logging driver.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getLogOpts() {
+    public Output</* @Nullable */ Map<String,Object>> logOpts() {
         return this.logOpts;
     }
     /**
@@ -521,7 +521,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Save the container logs (`attach` must be enabled). Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLogs() {
+    public Output</* @Nullable */ Boolean> logs() {
         return this.logs;
     }
     /**
@@ -535,7 +535,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxRetryCount() {
+    public Output</* @Nullable */ Integer> maxRetryCount() {
         return this.maxRetryCount;
     }
     /**
@@ -549,7 +549,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The memory limit for the container in MBs.
      * 
      */
-    public Output</* @Nullable */ Integer> getMemory() {
+    public Output</* @Nullable */ Integer> memory() {
         return this.memory;
     }
     /**
@@ -565,7 +565,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
-    public Output</* @Nullable */ Integer> getMemorySwap() {
+    public Output</* @Nullable */ Integer> memorySwap() {
         return this.memorySwap;
     }
     /**
@@ -579,7 +579,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Specification for mounts to be added to containers created as part of the service.
      * 
      */
-    public Output</* @Nullable */ List<ContainerMount>> getMounts() {
+    public Output</* @Nullable */ List<ContainerMount>> mounts() {
         return this.mounts;
     }
     /**
@@ -595,7 +595,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * assumes it is successful. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMustRun() {
+    public Output</* @Nullable */ Boolean> mustRun() {
         return this.mustRun;
     }
     /**
@@ -609,7 +609,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The name of the container.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -627,7 +627,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Set an alias for the container in all specified networks
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetworkAliases() {
+    public Output</* @Nullable */ List<String>> networkAliases() {
         return this.networkAliases;
     }
     /**
@@ -641,7 +641,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The data of the networks the container is connected to.
      * 
      */
-    public Output<List<ContainerNetworkData>> getNetworkDatas() {
+    public Output<List<ContainerNetworkData>> networkDatas() {
         return this.networkDatas;
     }
     /**
@@ -655,7 +655,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Network mode of the container.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkMode() {
+    public Output</* @Nullable */ String> networkMode() {
         return this.networkMode;
     }
     /**
@@ -673,7 +673,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return ID of the networks in which the container is.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetworks() {
+    public Output</* @Nullable */ List<String>> networks() {
         return this.networks;
     }
     /**
@@ -687,7 +687,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The networks the container is attached to
      * 
      */
-    public Output</* @Nullable */ List<ContainerNetworksAdvanced>> getNetworksAdvanced() {
+    public Output</* @Nullable */ List<ContainerNetworksAdvanced>> networksAdvanced() {
         return this.networksAdvanced;
     }
     /**
@@ -701,7 +701,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
      * 
      */
-    public Output</* @Nullable */ String> getPidMode() {
+    public Output</* @Nullable */ String> pidMode() {
         return this.pidMode;
     }
     /**
@@ -715,7 +715,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Publish a container's port(s) to the host.
      * 
      */
-    public Output</* @Nullable */ List<ContainerPort>> getPorts() {
+    public Output</* @Nullable */ List<ContainerPort>> ports() {
         return this.ports;
     }
     /**
@@ -729,7 +729,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true`, the container runs in privileged mode.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPrivileged() {
+    public Output</* @Nullable */ Boolean> privileged() {
         return this.privileged;
     }
     /**
@@ -743,7 +743,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Publish all ports of the container.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPublishAllPorts() {
+    public Output</* @Nullable */ Boolean> publishAllPorts() {
         return this.publishAllPorts;
     }
     /**
@@ -757,7 +757,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true`, the container will be started as readonly. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReadOnly() {
+    public Output</* @Nullable */ Boolean> readOnly() {
         return this.readOnly;
     }
     /**
@@ -771,7 +771,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRemoveVolumes() {
+    public Output</* @Nullable */ Boolean> removeVolumes() {
         return this.removeVolumes;
     }
     /**
@@ -785,7 +785,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
      * 
      */
-    public Output</* @Nullable */ String> getRestart() {
+    public Output</* @Nullable */ String> restart() {
         return this.restart;
     }
     /**
@@ -801,7 +801,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * after creation. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRm() {
+    public Output</* @Nullable */ Boolean> rm() {
         return this.rm;
     }
     /**
@@ -817,7 +817,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * https://docs.docker.com/engine/reference/run/#security-configuration.
      * 
      */
-    public Output<List<String>> getSecurityOpts() {
+    public Output<List<String>> securityOpts() {
         return this.securityOpts;
     }
     /**
@@ -831,7 +831,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Size of `/dev/shm` in MBs.
      * 
      */
-    public Output<Integer> getShmSize() {
+    public Output<Integer> shmSize() {
         return this.shmSize;
     }
     /**
@@ -847,7 +847,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStart() {
+    public Output</* @Nullable */ Boolean> start() {
         return this.start;
     }
     /**
@@ -861,7 +861,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStdinOpen() {
+    public Output</* @Nullable */ Boolean> stdinOpen() {
         return this.stdinOpen;
     }
     /**
@@ -875,7 +875,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Key/value pairs for the storage driver options, e.g. `size`: `120G`
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getStorageOpts() {
+    public Output</* @Nullable */ Map<String,Object>> storageOpts() {
         return this.storageOpts;
     }
     /**
@@ -889,7 +889,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return A map of kernel parameters (sysctls) to set in the container.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getSysctls() {
+    public Output</* @Nullable */ Map<String,Object>> sysctls() {
         return this.sysctls;
     }
     /**
@@ -903,7 +903,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getTmpfs() {
+    public Output</* @Nullable */ Map<String,Object>> tmpfs() {
         return this.tmpfs;
     }
     /**
@@ -917,7 +917,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTty() {
+    public Output</* @Nullable */ Boolean> tty() {
         return this.tty;
     }
     /**
@@ -931,7 +931,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Ulimit options to add.
      * 
      */
-    public Output</* @Nullable */ List<ContainerUlimit>> getUlimits() {
+    public Output</* @Nullable */ List<ContainerUlimit>> ulimits() {
         return this.ulimits;
     }
     /**
@@ -947,7 +947,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * at least one of them has to be set.
      * 
      */
-    public Output</* @Nullable */ List<ContainerUpload>> getUploads() {
+    public Output</* @Nullable */ List<ContainerUpload>> uploads() {
         return this.uploads;
     }
     /**
@@ -963,7 +963,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * name.
      * 
      */
-    public Output</* @Nullable */ String> getUser() {
+    public Output</* @Nullable */ String> user() {
         return this.user;
     }
     /**
@@ -977,7 +977,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
      * 
      */
-    public Output</* @Nullable */ String> getUsernsMode() {
+    public Output</* @Nullable */ String> usernsMode() {
         return this.usernsMode;
     }
     /**
@@ -991,7 +991,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return Spec for mounting volumes in the container.
      * 
      */
-    public Output</* @Nullable */ List<ContainerVolume>> getVolumes() {
+    public Output</* @Nullable */ List<ContainerVolume>> volumes() {
         return this.volumes;
     }
     /**
@@ -1005,7 +1005,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @return The working directory for commands to run in.
      * 
      */
-    public Output</* @Nullable */ String> getWorkingDir() {
+    public Output</* @Nullable */ String> workingDir() {
         return this.workingDir;
     }
 

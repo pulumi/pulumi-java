@@ -25,7 +25,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type;
     }
 

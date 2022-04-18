@@ -24,7 +24,7 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
     @Import(name="perPartitionBytes", required=true)
       private final Output<String> perPartitionBytes;
 
-    public Output<String> getPerPartitionBytes() {
+    public Output<String> perPartitionBytes() {
         return this.perPartitionBytes;
     }
 
@@ -38,7 +38,7 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 

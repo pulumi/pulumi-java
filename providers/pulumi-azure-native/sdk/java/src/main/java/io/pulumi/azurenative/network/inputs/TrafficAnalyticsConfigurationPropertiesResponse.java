@@ -27,7 +27,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -38,7 +38,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     @Import(name="trafficAnalyticsInterval")
       private final @Nullable Integer trafficAnalyticsInterval;
 
-    public Optional<Integer> getTrafficAnalyticsInterval() {
+    public Optional<Integer> trafficAnalyticsInterval() {
         return this.trafficAnalyticsInterval == null ? Optional.empty() : Optional.ofNullable(this.trafficAnalyticsInterval);
     }
 
@@ -49,7 +49,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 
@@ -60,7 +60,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     @Import(name="workspaceRegion")
       private final @Nullable String workspaceRegion;
 
-    public Optional<String> getWorkspaceRegion() {
+    public Optional<String> workspaceRegion() {
         return this.workspaceRegion == null ? Optional.empty() : Optional.ofNullable(this.workspaceRegion);
     }
 
@@ -71,7 +71,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

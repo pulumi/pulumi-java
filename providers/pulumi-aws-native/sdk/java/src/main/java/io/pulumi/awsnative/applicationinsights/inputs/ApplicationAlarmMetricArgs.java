@@ -25,7 +25,7 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
     @Import(name="alarmMetricName", required=true)
       private final Output<String> alarmMetricName;
 
-    public Output<String> getAlarmMetricName() {
+    public Output<String> alarmMetricName() {
         return this.alarmMetricName;
     }
 

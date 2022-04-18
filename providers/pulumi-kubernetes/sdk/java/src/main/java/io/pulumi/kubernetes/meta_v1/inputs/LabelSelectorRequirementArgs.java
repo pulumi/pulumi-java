@@ -27,7 +27,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -38,7 +38,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 
@@ -49,7 +49,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

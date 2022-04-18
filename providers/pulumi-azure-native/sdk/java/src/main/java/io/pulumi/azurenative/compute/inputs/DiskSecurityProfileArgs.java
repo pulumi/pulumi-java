@@ -28,7 +28,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="securityType")
       private final @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
-    public Output<Either<String,DiskSecurityTypes>> getSecurityType() {
+    public Output<Either<String,DiskSecurityTypes>> securityType() {
         return this.securityType == null ? Codegen.empty() : this.securityType;
     }
 

@@ -34,14 +34,14 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
      * Max status code.
      * 
     */
-    public Optional<Integer> getMax() {
+    public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
     /**
      * Min status code.
      * 
     */
-    public Optional<Integer> getMin() {
+    public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
 

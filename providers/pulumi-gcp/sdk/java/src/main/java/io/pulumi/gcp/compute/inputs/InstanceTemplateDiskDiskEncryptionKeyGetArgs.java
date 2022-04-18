@@ -21,7 +21,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyGetArgs extends io.pulum
     @Import(name="kmsKeySelfLink", required=true)
       private final Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
+    public Output<String> kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 

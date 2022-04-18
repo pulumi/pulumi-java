@@ -24,7 +24,7 @@ public final class SloRequestBasedSliDistributionCutRangeArgs extends io.pulumi.
     @Import(name="max")
       private final @Nullable Output<Double> max;
 
-    public Output<Double> getMax() {
+    public Output<Double> max() {
         return this.max == null ? Codegen.empty() : this.max;
     }
 
@@ -37,7 +37,7 @@ public final class SloRequestBasedSliDistributionCutRangeArgs extends io.pulumi.
     @Import(name="min")
       private final @Nullable Output<Double> min;
 
-    public Output<Double> getMin() {
+    public Output<Double> min() {
         return this.min == null ? Codegen.empty() : this.min;
     }
 

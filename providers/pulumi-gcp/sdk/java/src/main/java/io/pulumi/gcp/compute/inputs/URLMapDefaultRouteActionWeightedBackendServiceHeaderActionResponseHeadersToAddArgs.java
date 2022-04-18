@@ -23,7 +23,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
@@ -34,7 +34,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="headerValue")
       private final @Nullable Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
+    public Output<String> headerValue() {
         return this.headerValue == null ? Codegen.empty() : this.headerValue;
     }
 
@@ -46,7 +46,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> getReplace() {
+    public Output<Boolean> replace() {
         return this.replace == null ? Codegen.empty() : this.replace;
     }
 

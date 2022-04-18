@@ -27,7 +27,7 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="datasetParameters")
       private final @Nullable Object datasetParameters;
 
-    public Optional<Object> getDatasetParameters() {
+    public Optional<Object> datasetParameters() {
         return this.datasetParameters == null ? Optional.empty() : Optional.ofNullable(this.datasetParameters);
     }
 
@@ -38,7 +38,7 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -49,7 +49,7 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="referenceName", required=true)
       private final String referenceName;
 
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
 
@@ -60,7 +60,7 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

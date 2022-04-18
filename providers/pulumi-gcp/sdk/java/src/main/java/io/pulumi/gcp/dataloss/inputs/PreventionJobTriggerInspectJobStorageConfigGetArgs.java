@@ -26,7 +26,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
     @Import(name="bigQueryOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> bigQueryOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> getBigQueryOptions() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> bigQueryOptions() {
         return this.bigQueryOptions == null ? Codegen.empty() : this.bigQueryOptions;
     }
 
@@ -38,7 +38,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
     @Import(name="cloudStorageOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> getCloudStorageOptions() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions() {
         return this.cloudStorageOptions == null ? Codegen.empty() : this.cloudStorageOptions;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
     @Import(name="datastoreOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> getDatastoreOptions() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions() {
         return this.datastoreOptions == null ? Codegen.empty() : this.datastoreOptions;
     }
 
@@ -62,7 +62,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
     @Import(name="timespanConfig")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> getTimespanConfig() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig() {
         return this.timespanConfig == null ? Codegen.empty() : this.timespanConfig;
     }
 

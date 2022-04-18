@@ -15,7 +15,7 @@ public final class GetClusterKubernetesNetworkConfig extends io.pulumi.resources
     @Import(name="ipFamily", required=true)
       private final String ipFamily;
 
-    public String getIpFamily() {
+    public String ipFamily() {
         return this.ipFamily;
     }
 
@@ -26,7 +26,7 @@ public final class GetClusterKubernetesNetworkConfig extends io.pulumi.resources
     @Import(name="serviceIpv4Cidr", required=true)
       private final String serviceIpv4Cidr;
 
-    public String getServiceIpv4Cidr() {
+    public String serviceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }
 

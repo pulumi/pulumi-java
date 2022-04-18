@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> getQueryTerms() {
+    public Output<List<String>> queryTerms() {
         return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     @Import(name="replacementTerm")
       private final @Nullable Output<String> replacementTerm;
 
-    public Output<String> getReplacementTerm() {
+    public Output<String> replacementTerm() {
         return this.replacementTerm == null ? Codegen.empty() : this.replacementTerm;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     @Import(name="term")
       private final @Nullable Output<String> term;
 
-    public Output<String> getTerm() {
+    public Output<String> term() {
         return this.term == null ? Codegen.empty() : this.term;
     }
 

@@ -54,35 +54,35 @@ public final class AndroidRoboTestResponse {
      * The initial activity that should be used to start the app. Optional
      * 
     */
-    public String getAppInitialActivity() {
+    public String appInitialActivity() {
         return this.appInitialActivity;
     }
     /**
      * The java package for the bootstrap. Optional
      * 
     */
-    public String getBootstrapPackageId() {
+    public String bootstrapPackageId() {
         return this.bootstrapPackageId;
     }
     /**
      * The runner class for the bootstrap. Optional
      * 
     */
-    public String getBootstrapRunnerClass() {
+    public String bootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
     }
     /**
      * The max depth of the traversal stack Robo can explore. Optional
      * 
     */
-    public Integer getMaxDepth() {
+    public Integer maxDepth() {
         return this.maxDepth;
     }
     /**
      * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
      * 
     */
-    public Integer getMaxSteps() {
+    public Integer maxSteps() {
         return this.maxSteps;
     }
 

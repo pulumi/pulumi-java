@@ -114,21 +114,21 @@ public final class GetObjectAccessControlResult {
      * The name of the bucket.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The domain associated with the entity, if any.
      * 
     */
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
     /**
      * The email address associated with the entity, if any.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
@@ -146,63 +146,63 @@ public final class GetObjectAccessControlResult {
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
     */
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
     /**
      * The ID for the entity, if any.
      * 
     */
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
     /**
      * HTTP 1.1 Entity tag for the access-control entry.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The content generation of the object, if applied to an object.
      * 
     */
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
     /**
      * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the object, if applied to an object.
      * 
     */
-    public String getObject() {
+    public String object() {
         return this.object;
     }
     /**
      * The project team associated with the entity, if any.
      * 
     */
-    public ObjectAccessControlProjectTeamResponse getProjectTeam() {
+    public ObjectAccessControlProjectTeamResponse projectTeam() {
         return this.projectTeam;
     }
     /**
      * The access permission for the entity.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The link to this access-control entry.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

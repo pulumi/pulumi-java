@@ -22,13 +22,13 @@ public class Account extends io.pulumi.resources.CustomResource {
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     @Export(name="expiryEventsConfiguration", type=AccountExpiryEventsConfiguration.class, parameters={})
     private Output<AccountExpiryEventsConfiguration> expiryEventsConfiguration;
 
-    public Output<AccountExpiryEventsConfiguration> getExpiryEventsConfiguration() {
+    public Output<AccountExpiryEventsConfiguration> expiryEventsConfiguration() {
         return this.expiryEventsConfiguration;
     }
 

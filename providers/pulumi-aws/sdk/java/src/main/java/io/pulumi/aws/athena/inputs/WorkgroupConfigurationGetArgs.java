@@ -25,7 +25,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
-    public Output<Integer> getBytesScannedCutoffPerQuery() {
+    public Output<Integer> bytesScannedCutoffPerQuery() {
         return this.bytesScannedCutoffPerQuery == null ? Codegen.empty() : this.bytesScannedCutoffPerQuery;
     }
 
@@ -36,7 +36,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="enforceWorkgroupConfiguration")
       private final @Nullable Output<Boolean> enforceWorkgroupConfiguration;
 
-    public Output<Boolean> getEnforceWorkgroupConfiguration() {
+    public Output<Boolean> enforceWorkgroupConfiguration() {
         return this.enforceWorkgroupConfiguration == null ? Codegen.empty() : this.enforceWorkgroupConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="engineVersion")
       private final @Nullable Output<WorkgroupConfigurationEngineVersionGetArgs> engineVersion;
 
-    public Output<WorkgroupConfigurationEngineVersionGetArgs> getEngineVersion() {
+    public Output<WorkgroupConfigurationEngineVersionGetArgs> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -58,7 +58,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="publishCloudwatchMetricsEnabled")
       private final @Nullable Output<Boolean> publishCloudwatchMetricsEnabled;
 
-    public Output<Boolean> getPublishCloudwatchMetricsEnabled() {
+    public Output<Boolean> publishCloudwatchMetricsEnabled() {
         return this.publishCloudwatchMetricsEnabled == null ? Codegen.empty() : this.publishCloudwatchMetricsEnabled;
     }
 
@@ -69,7 +69,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="requesterPaysEnabled")
       private final @Nullable Output<Boolean> requesterPaysEnabled;
 
-    public Output<Boolean> getRequesterPaysEnabled() {
+    public Output<Boolean> requesterPaysEnabled() {
         return this.requesterPaysEnabled == null ? Codegen.empty() : this.requesterPaysEnabled;
     }
 
@@ -80,7 +80,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     @Import(name="resultConfiguration")
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration;
 
-    public Output<WorkgroupConfigurationResultConfigurationGetArgs> getResultConfiguration() {
+    public Output<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration() {
         return this.resultConfiguration == null ? Codegen.empty() : this.resultConfiguration;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
     @Import(name="model", required=true)
       private final String model;
 
-    public String getModel() {
+    public String model() {
         return this.model;
     }
 

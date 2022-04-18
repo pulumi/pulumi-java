@@ -54,35 +54,35 @@ public final class GetDomainTopicResult {
      * Fully qualified identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the domain topic.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata relating to Domain Topic resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

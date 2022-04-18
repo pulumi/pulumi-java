@@ -43,7 +43,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The ARN that uniquely identifies this table.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the Timestream database.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -71,7 +71,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
      * 
      */
-    public Output<TableMagneticStoreWriteProperties> getMagneticStoreWriteProperties() {
+    public Output<TableMagneticStoreWriteProperties> magneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties;
     }
     /**
@@ -85,7 +85,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
      * 
      */
-    public Output<TableRetentionProperties> getRetentionProperties() {
+    public Output<TableRetentionProperties> retentionProperties() {
         return this.retentionProperties;
     }
     /**
@@ -99,7 +99,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the Timestream table.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
     /**
@@ -113,7 +113,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +127,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

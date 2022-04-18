@@ -19,28 +19,28 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 

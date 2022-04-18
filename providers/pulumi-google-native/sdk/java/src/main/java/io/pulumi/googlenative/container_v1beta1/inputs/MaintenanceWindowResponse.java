@@ -26,7 +26,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="dailyMaintenanceWindow", required=true)
       private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
 
-    public DailyMaintenanceWindowResponse getDailyMaintenanceWindow() {
+    public DailyMaintenanceWindowResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
 
@@ -37,7 +37,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="maintenanceExclusions", required=true)
       private final Map<String,String> maintenanceExclusions;
 
-    public Map<String,String> getMaintenanceExclusions() {
+    public Map<String,String> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
 
@@ -48,7 +48,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="recurringWindow", required=true)
       private final RecurringTimeWindowResponse recurringWindow;
 
-    public RecurringTimeWindowResponse getRecurringWindow() {
+    public RecurringTimeWindowResponse recurringWindow() {
         return this.recurringWindow;
     }
 

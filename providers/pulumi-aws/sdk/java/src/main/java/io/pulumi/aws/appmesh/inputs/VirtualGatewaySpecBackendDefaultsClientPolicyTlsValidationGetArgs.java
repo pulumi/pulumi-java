@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationGet
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationGet
     @Import(name="trust", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
 

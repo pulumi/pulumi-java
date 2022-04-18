@@ -23,7 +23,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="delimiter")
       private final @Nullable String delimiter;
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
@@ -45,7 +45,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="encodingType")
       private final @Nullable String encodingType;
 
-    public Optional<String> getEncodingType() {
+    public Optional<String> encodingType() {
         return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
     }
 
@@ -56,7 +56,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="fetchOwner")
       private final @Nullable Boolean fetchOwner;
 
-    public Optional<Boolean> getFetchOwner() {
+    public Optional<Boolean> fetchOwner() {
         return this.fetchOwner == null ? Optional.empty() : Optional.ofNullable(this.fetchOwner);
     }
 
@@ -67,7 +67,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxKeys")
       private final @Nullable Integer maxKeys;
 
-    public Optional<Integer> getMaxKeys() {
+    public Optional<Integer> maxKeys() {
         return this.maxKeys == null ? Optional.empty() : Optional.ofNullable(this.maxKeys);
     }
 
@@ -78,7 +78,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
@@ -89,7 +89,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="startAfter")
       private final @Nullable String startAfter;
 
-    public Optional<String> getStartAfter() {
+    public Optional<String> startAfter() {
         return this.startAfter == null ? Optional.empty() : Optional.ofNullable(this.startAfter);
     }
 

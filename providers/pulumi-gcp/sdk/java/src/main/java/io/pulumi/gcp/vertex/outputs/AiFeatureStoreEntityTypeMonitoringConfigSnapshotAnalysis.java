@@ -36,7 +36,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
      * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
      * 
     */
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
@@ -44,7 +44,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMonitoringInterval() {
+    public Optional<String> monitoringInterval() {
         return Optional.ofNullable(this.monitoringInterval);
     }
 

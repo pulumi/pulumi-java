@@ -44,7 +44,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The type of backup which needs to be taken.
      * 
      */
-    public Output<String> getBackupType() {
+    public Output<String> backupType() {
         return this.backupType;
     }
     /**
@@ -58,7 +58,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +72,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The last successful backup run which was triggered for the schedule.
      * 
      */
-    public Output<String> getLastSuccessfulRun() {
+    public Output<String> lastSuccessfulRun() {
         return this.lastSuccessfulRun;
     }
     /**
@@ -86,7 +86,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The number of backups to be retained.
      * 
      */
-    public Output<Double> getRetentionCount() {
+    public Output<Double> retentionCount() {
         return this.retentionCount;
     }
     /**
@@ -114,7 +114,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The schedule recurrence.
      * 
      */
-    public Output<ScheduleRecurrenceResponse> getScheduleRecurrence() {
+    public Output<ScheduleRecurrenceResponse> scheduleRecurrence() {
         return this.scheduleRecurrence;
     }
     /**
@@ -128,7 +128,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The schedule status.
      * 
      */
-    public Output<String> getScheduleStatus() {
+    public Output<String> scheduleStatus() {
         return this.scheduleStatus;
     }
     /**
@@ -142,7 +142,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The start time of the schedule.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -156,7 +156,7 @@ public class BackupSchedule extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

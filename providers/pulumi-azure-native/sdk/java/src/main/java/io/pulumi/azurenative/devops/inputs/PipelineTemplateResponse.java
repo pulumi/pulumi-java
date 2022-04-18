@@ -26,7 +26,7 @@ public final class PipelineTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 

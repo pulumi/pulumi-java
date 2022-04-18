@@ -25,7 +25,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -36,7 +36,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="max", required=true)
       private final Output<Integer> max;
 
-    public Output<Integer> getMax() {
+    public Output<Integer> max() {
         return this.max;
     }
 
@@ -47,7 +47,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="min", required=true)
       private final Output<Integer> min;
 
-    public Output<Integer> getMin() {
+    public Output<Integer> min() {
         return this.min;
     }
 
@@ -58,7 +58,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="seed")
       private final @Nullable Output<String> seed;
 
-    public Output<String> getSeed() {
+    public Output<String> seed() {
         return this.seed == null ? Codegen.empty() : this.seed;
     }
 

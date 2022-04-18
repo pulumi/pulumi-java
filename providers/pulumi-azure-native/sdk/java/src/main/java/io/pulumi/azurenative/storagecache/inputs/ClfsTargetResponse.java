@@ -25,7 +25,7 @@ public final class ClfsTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

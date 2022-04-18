@@ -27,7 +27,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
     @Import(name="lastPeriodAmount")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> getLastPeriodAmount() {
+    public Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount() {
         return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
     @Import(name="specifiedAmount")
       private final @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
-    public Output<GoogleTypeMoneyArgs> getSpecifiedAmount() {
+    public Output<GoogleTypeMoneyArgs> specifiedAmount() {
         return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
     }
 

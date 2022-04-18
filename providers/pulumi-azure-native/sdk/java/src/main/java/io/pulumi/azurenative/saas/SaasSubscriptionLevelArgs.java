@@ -24,7 +24,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<SaasCreationPropertiesArgs> properties;
 
-    public Output<SaasCreationPropertiesArgs> getProperties() {
+    public Output<SaasCreationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -79,7 +79,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

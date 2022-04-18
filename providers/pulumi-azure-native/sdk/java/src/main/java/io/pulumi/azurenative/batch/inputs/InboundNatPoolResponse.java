@@ -24,7 +24,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="backendPort", required=true)
       private final Integer backendPort;
 
-    public Integer getBackendPort() {
+    public Integer backendPort() {
         return this.backendPort;
     }
 
@@ -35,7 +35,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="frontendPortRangeEnd", required=true)
       private final Integer frontendPortRangeEnd;
 
-    public Integer getFrontendPortRangeEnd() {
+    public Integer frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -46,7 +46,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="frontendPortRangeStart", required=true)
       private final Integer frontendPortRangeStart;
 
-    public Integer getFrontendPortRangeStart() {
+    public Integer frontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -57,7 +57,7 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,14 +68,14 @@ public final class InboundNatPoolResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="networkSecurityGroupRules")
       private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
 
-    public List<NetworkSecurityGroupRuleResponse> getNetworkSecurityGroupRules() {
+    public List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? List.of() : this.networkSecurityGroupRules;
     }
 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

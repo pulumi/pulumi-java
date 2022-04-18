@@ -17,42 +17,42 @@ public final class GetContextArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="contextId", required=true)
       private final String contextId;
 
-    public String getContextId() {
+    public String contextId() {
         return this.contextId;
     }
 
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="sessionId", required=true)
       private final String sessionId;
 
-    public String getSessionId() {
+    public String sessionId() {
         return this.sessionId;
     }
 
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

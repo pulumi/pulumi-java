@@ -20,7 +20,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseId")
       private final @Nullable Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId == null ? Codegen.empty() : this.databaseId;
     }
 
@@ -31,14 +31,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseUrl")
       private final @Nullable Output<String> databaseUrl;
 
-    public Output<String> getDatabaseUrl() {
+    public Output<String> databaseUrl() {
         return this.databaseUrl == null ? Codegen.empty() : this.databaseUrl;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<InstanceState> state;
 
-    public Output<InstanceState> getState() {
+    public Output<InstanceState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -82,14 +82,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<InstanceType> type;
 
-    public Output<InstanceType> getType() {
+    public Output<InstanceType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

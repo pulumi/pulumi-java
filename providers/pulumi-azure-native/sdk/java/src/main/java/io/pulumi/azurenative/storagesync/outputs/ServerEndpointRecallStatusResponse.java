@@ -42,21 +42,21 @@ public final class ServerEndpointRecallStatusResponse {
      * Last updated timestamp
      * 
     */
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Array of recall errors
      * 
     */
-    public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
+    public List<ServerEndpointRecallErrorResponse> recallErrors() {
         return this.recallErrors;
     }
     /**
      * Total count of recall errors.
      * 
     */
-    public Double getTotalRecallErrorsCount() {
+    public Double totalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }
 

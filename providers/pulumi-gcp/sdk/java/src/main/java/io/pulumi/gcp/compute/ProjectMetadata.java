@@ -49,7 +49,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * @return A series of key value pairs.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -65,7 +65,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

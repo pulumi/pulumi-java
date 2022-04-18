@@ -30,7 +30,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     @Import(name="claims")
       private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
-    public Output<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
+    public Output<List<OpenAuthenticationPolicyClaimArgs>> claims() {
         return this.claims == null ? Codegen.empty() : this.claims;
     }
 
@@ -41,7 +41,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
-    public Output<Either<String,OpenAuthenticationProviderType>> getType() {
+    public Output<Either<String,OpenAuthenticationProviderType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

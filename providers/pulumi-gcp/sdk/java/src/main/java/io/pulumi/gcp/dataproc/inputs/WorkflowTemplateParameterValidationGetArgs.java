@@ -23,7 +23,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
     @Import(name="regex")
       private final @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
-    public Output<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
+    public Output<WorkflowTemplateParameterValidationRegexGetArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -34,7 +34,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
     @Import(name="values")
       private final @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
-    public Output<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
+    public Output<WorkflowTemplateParameterValidationValuesGetArgs> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

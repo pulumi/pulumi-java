@@ -19,7 +19,7 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactName", required=true)
       private final String contactName;
 
-    public String getContactName() {
+    public String contactName() {
         return this.contactName;
     }
 
@@ -30,7 +30,7 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="spacecraftName", required=true)
       private final String spacecraftName;
 
-    public String getSpacecraftName() {
+    public String spacecraftName() {
         return this.spacecraftName;
     }
 

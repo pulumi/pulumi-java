@@ -28,7 +28,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
     @Import(name="consumeReservationType")
       private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
-    public Output<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
+    public Output<ReservationAffinityConsumeReservationType> consumeReservationType() {
         return this.consumeReservationType == null ? Codegen.empty() : this.consumeReservationType;
     }
 
@@ -39,7 +39,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -50,7 +50,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

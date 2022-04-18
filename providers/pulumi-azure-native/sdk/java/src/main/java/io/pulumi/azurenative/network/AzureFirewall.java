@@ -51,7 +51,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The additional properties used to further config this azure firewall.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAdditionalProperties() {
+    public Output</* @Nullable */ Map<String,String>> additionalProperties() {
         return this.additionalProperties;
     }
     /**
@@ -65,7 +65,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Collection of application rule collections used by Azure Firewall.
      * 
      */
-    public Output</* @Nullable */ List<AzureFirewallApplicationRuleCollectionResponse>> getApplicationRuleCollections() {
+    public Output</* @Nullable */ List<AzureFirewallApplicationRuleCollectionResponse>> applicationRuleCollections() {
         return this.applicationRuleCollections;
     }
     /**
@@ -79,7 +79,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -93,7 +93,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The firewallPolicy associated with this azure firewall.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getFirewallPolicy() {
+    public Output</* @Nullable */ SubResourceResponse> firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
@@ -107,7 +107,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return IP addresses associated with AzureFirewall.
      * 
      */
-    public Output</* @Nullable */ HubIPAddressesResponse> getHubIPAddresses() {
+    public Output</* @Nullable */ HubIPAddressesResponse> hubIPAddresses() {
         return this.hubIPAddresses;
     }
     /**
@@ -121,7 +121,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return IP configuration of the Azure Firewall resource.
      * 
      */
-    public Output</* @Nullable */ List<AzureFirewallIPConfigurationResponse>> getIpConfigurations() {
+    public Output</* @Nullable */ List<AzureFirewallIPConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -135,7 +135,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return IpGroups associated with AzureFirewall.
      * 
      */
-    public Output<List<AzureFirewallIpGroupsResponse>> getIpGroups() {
+    public Output<List<AzureFirewallIpGroupsResponse>> ipGroups() {
         return this.ipGroups;
     }
     /**
@@ -149,7 +149,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -163,7 +163,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return IP configuration of the Azure Firewall used for management traffic.
      * 
      */
-    public Output</* @Nullable */ AzureFirewallIPConfigurationResponse> getManagementIpConfiguration() {
+    public Output</* @Nullable */ AzureFirewallIPConfigurationResponse> managementIpConfiguration() {
         return this.managementIpConfiguration;
     }
     /**
@@ -177,7 +177,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +191,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Collection of NAT rule collections used by Azure Firewall.
      * 
      */
-    public Output</* @Nullable */ List<AzureFirewallNatRuleCollectionResponse>> getNatRuleCollections() {
+    public Output</* @Nullable */ List<AzureFirewallNatRuleCollectionResponse>> natRuleCollections() {
         return this.natRuleCollections;
     }
     /**
@@ -205,7 +205,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Collection of network rule collections used by Azure Firewall.
      * 
      */
-    public Output</* @Nullable */ List<AzureFirewallNetworkRuleCollectionResponse>> getNetworkRuleCollections() {
+    public Output</* @Nullable */ List<AzureFirewallNetworkRuleCollectionResponse>> networkRuleCollections() {
         return this.networkRuleCollections;
     }
     /**
@@ -219,7 +219,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the Azure firewall resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -233,7 +233,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The Azure Firewall Resource SKU.
      * 
      */
-    public Output</* @Nullable */ AzureFirewallSkuResponse> getSku() {
+    public Output</* @Nullable */ AzureFirewallSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -247,7 +247,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -261,7 +261,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The operation mode for Threat Intelligence.
      * 
      */
-    public Output</* @Nullable */ String> getThreatIntelMode() {
+    public Output</* @Nullable */ String> threatIntelMode() {
         return this.threatIntelMode;
     }
     /**
@@ -275,7 +275,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -289,7 +289,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return The virtualHub to which the firewall belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
+    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
         return this.virtualHub;
     }
     /**
@@ -303,7 +303,7 @@ public class AzureFirewall extends io.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

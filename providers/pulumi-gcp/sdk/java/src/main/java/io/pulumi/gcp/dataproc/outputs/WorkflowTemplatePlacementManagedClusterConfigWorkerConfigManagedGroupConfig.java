@@ -22,10 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
         this.instanceTemplateName = instanceTemplateName;
     }
 
-    public Optional<String> getInstanceGroupManagerName() {
+    public Optional<String> instanceGroupManagerName() {
         return Optional.ofNullable(this.instanceGroupManagerName);
     }
-    public Optional<String> getInstanceTemplateName() {
+    public Optional<String> instanceTemplateName() {
         return Optional.ofNullable(this.instanceTemplateName);
     }
 

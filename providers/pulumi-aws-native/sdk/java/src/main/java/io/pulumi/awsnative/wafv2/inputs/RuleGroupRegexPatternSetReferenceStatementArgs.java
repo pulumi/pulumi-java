@@ -20,21 +20,21 @@ public final class RuleGroupRegexPatternSetReferenceStatementArgs extends io.pul
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

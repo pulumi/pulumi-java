@@ -116,91 +116,91 @@ public final class GetJitRequestResult {
      * The parent application id.
      * 
     */
-    public String getApplicationResourceId() {
+    public String applicationResourceId() {
         return this.applicationResourceId;
     }
     /**
      * The client entity that created the JIT request.
      * 
     */
-    public ApplicationClientDetailsResponse getCreatedBy() {
+    public ApplicationClientDetailsResponse createdBy() {
         return this.createdBy;
     }
     /**
      * Resource ID
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The JIT authorization policies.
      * 
     */
-    public List<JitAuthorizationPoliciesResponse> getJitAuthorizationPolicies() {
+    public List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
     /**
      * The JIT request state.
      * 
     */
-    public String getJitRequestState() {
+    public String jitRequestState() {
         return this.jitRequestState;
     }
     /**
      * The JIT request properties.
      * 
     */
-    public JitSchedulingPolicyResponse getJitSchedulingPolicy() {
+    public JitSchedulingPolicyResponse jitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The JIT request provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The publisher tenant id.
      * 
     */
-    public String getPublisherTenantId() {
+    public String publisherTenantId() {
         return this.publisherTenantId;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The client entity that last updated the JIT request.
      * 
     */
-    public ApplicationClientDetailsResponse getUpdatedBy() {
+    public ApplicationClientDetailsResponse updatedBy() {
         return this.updatedBy;
     }
 

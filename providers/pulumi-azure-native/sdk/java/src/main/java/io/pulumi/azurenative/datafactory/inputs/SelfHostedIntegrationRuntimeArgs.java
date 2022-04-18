@@ -29,7 +29,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     @Import(name="linkedInfo")
       private final @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
-    public Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> getLinkedInfo() {
+    public Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo() {
         return this.linkedInfo == null ? Codegen.empty() : this.linkedInfo;
     }
 
@@ -52,7 +52,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

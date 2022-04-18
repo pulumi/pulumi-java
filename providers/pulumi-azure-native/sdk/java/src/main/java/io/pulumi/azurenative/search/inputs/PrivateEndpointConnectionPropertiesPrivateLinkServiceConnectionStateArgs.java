@@ -27,7 +27,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
-    public Output<String> getActionsRequired() {
+    public Output<String> actionsRequired() {
         return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     @Import(name="status")
       private final @Nullable Output<PrivateLinkServiceConnectionStatus> status;
 
-    public Output<PrivateLinkServiceConnectionStatus> getStatus() {
+    public Output<PrivateLinkServiceConnectionStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -25,7 +25,7 @@ public final class ServicePerimeterSpecVpcAccessibleServicesGetArgs extends io.p
     @Import(name="allowedServices")
       private final @Nullable Output<List<String>> allowedServices;
 
-    public Output<List<String>> getAllowedServices() {
+    public Output<List<String>> allowedServices() {
         return this.allowedServices == null ? Codegen.empty() : this.allowedServices;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePerimeterSpecVpcAccessibleServicesGetArgs extends io.p
     @Import(name="enableRestriction")
       private final @Nullable Output<Boolean> enableRestriction;
 
-    public Output<Boolean> getEnableRestriction() {
+    public Output<Boolean> enableRestriction() {
         return this.enableRestriction == null ? Codegen.empty() : this.enableRestriction;
     }
 

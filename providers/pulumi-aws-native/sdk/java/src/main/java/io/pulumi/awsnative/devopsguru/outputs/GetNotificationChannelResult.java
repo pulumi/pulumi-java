@@ -26,7 +26,7 @@ public final class GetNotificationChannelResult {
      * The ID of a notification channel.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

@@ -23,7 +23,7 @@ public final class WorkloadCertificatesResponse extends io.pulumi.resources.Invo
     @Import(name="enableCertificates", required=true)
       private final Boolean enableCertificates;
 
-    public Boolean getEnableCertificates() {
+    public Boolean enableCertificates() {
         return this.enableCertificates;
     }
 

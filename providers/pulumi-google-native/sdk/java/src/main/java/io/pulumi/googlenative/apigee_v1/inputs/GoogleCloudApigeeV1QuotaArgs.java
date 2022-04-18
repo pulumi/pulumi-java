@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="interval", required=true)
       private final Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="limit", required=true)
       private final Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 

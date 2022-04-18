@@ -19,7 +19,7 @@ public final class GetDisasterRecoveryConfigurationArgs extends io.pulumi.resour
     @Import(name="disasterRecoveryConfigurationName", required=true)
       private final String disasterRecoveryConfigurationName;
 
-    public String getDisasterRecoveryConfigurationName() {
+    public String disasterRecoveryConfigurationName() {
         return this.disasterRecoveryConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDisasterRecoveryConfigurationArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDisasterRecoveryConfigurationArgs extends io.pulumi.resour
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

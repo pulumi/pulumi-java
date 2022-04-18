@@ -27,7 +27,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="byproducts", required=true)
       private final ByProductsResponse byproducts;
 
-    public ByProductsResponse getByproducts() {
+    public ByProductsResponse byproducts() {
         return this.byproducts;
     }
 
@@ -38,7 +38,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="command", required=true)
       private final List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command;
     }
 
@@ -49,7 +49,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environment", required=true)
       private final EnvironmentResponse environment;
 
-    public EnvironmentResponse getEnvironment() {
+    public EnvironmentResponse environment() {
         return this.environment;
     }
 
@@ -60,7 +60,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="materials", required=true)
       private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
 
-    public List<GrafeasV1beta1IntotoArtifactResponse> getMaterials() {
+    public List<GrafeasV1beta1IntotoArtifactResponse> materials() {
         return this.materials;
     }
 
@@ -71,7 +71,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="products", required=true)
       private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
-    public List<GrafeasV1beta1IntotoArtifactResponse> getProducts() {
+    public List<GrafeasV1beta1IntotoArtifactResponse> products() {
         return this.products;
     }
 

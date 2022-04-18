@@ -26,7 +26,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -37,7 +37,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling", required=true)
       private final Output<AwsNodePoolAutoscalingArgs> autoscaling;
 
-    public Output<AwsNodePoolAutoscalingArgs> getAutoscaling() {
+    public Output<AwsNodePoolAutoscalingArgs> autoscaling() {
         return this.autoscaling;
     }
 
@@ -48,7 +48,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -59,7 +59,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<AwsNodePoolConfigArgs> config;
 
-    public Output<AwsNodePoolConfigArgs> getConfig() {
+    public Output<AwsNodePoolConfigArgs> config() {
         return this.config;
     }
 
@@ -70,7 +70,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -81,7 +81,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint", required=true)
       private final Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Output<AwsNodePoolMaxPodsConstraintArgs> getMaxPodsConstraint() {
+    public Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
 
@@ -92,7 +92,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -114,7 +114,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -125,7 +125,7 @@ public final class AwsNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

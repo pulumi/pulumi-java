@@ -25,7 +25,7 @@ public final class TagTemplateFieldTypeGetArgs extends io.pulumi.resources.Resou
     @Import(name="enumType")
       private final @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
 
-    public Output<TagTemplateFieldTypeEnumTypeGetArgs> getEnumType() {
+    public Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType() {
         return this.enumType == null ? Codegen.empty() : this.enumType;
     }
 
@@ -38,7 +38,7 @@ public final class TagTemplateFieldTypeGetArgs extends io.pulumi.resources.Resou
     @Import(name="primitiveType")
       private final @Nullable Output<String> primitiveType;
 
-    public Output<String> getPrimitiveType() {
+    public Output<String> primitiveType() {
         return this.primitiveType == null ? Codegen.empty() : this.primitiveType;
     }
 

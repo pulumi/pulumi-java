@@ -25,7 +25,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     @Import(name="complexity", required=true)
       private final String complexity;
 
-    public String getComplexity() {
+    public String complexity() {
         return this.complexity;
     }
 
@@ -36,7 +36,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     @Import(name="disallowUsernameSubstring", required=true)
       private final Boolean disallowUsernameSubstring;
 
-    public Boolean getDisallowUsernameSubstring() {
+    public Boolean disallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
     }
 
@@ -47,7 +47,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     @Import(name="minLength", required=true)
       private final Integer minLength;
 
-    public Integer getMinLength() {
+    public Integer minLength() {
         return this.minLength;
     }
 
@@ -58,7 +58,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     @Import(name="passwordChangeInterval", required=true)
       private final String passwordChangeInterval;
 
-    public String getPasswordChangeInterval() {
+    public String passwordChangeInterval() {
         return this.passwordChangeInterval;
     }
 
@@ -69,7 +69,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     @Import(name="reuseInterval", required=true)
       private final Integer reuseInterval;
 
-    public Integer getReuseInterval() {
+    public Integer reuseInterval() {
         return this.reuseInterval;
     }
 

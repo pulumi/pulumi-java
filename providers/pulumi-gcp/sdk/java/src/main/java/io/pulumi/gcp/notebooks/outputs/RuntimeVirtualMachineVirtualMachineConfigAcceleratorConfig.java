@@ -37,7 +37,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      * Count of cores of this accelerator.
      * 
     */
-    public Optional<Integer> getCoreCount() {
+    public Optional<Integer> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
     /**
@@ -46,7 +46,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -23,7 +23,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bundleId", required=true)
       private final String bundleId;
 
-    public String getBundleId() {
+    public String bundleId() {
         return this.bundleId;
     }
 

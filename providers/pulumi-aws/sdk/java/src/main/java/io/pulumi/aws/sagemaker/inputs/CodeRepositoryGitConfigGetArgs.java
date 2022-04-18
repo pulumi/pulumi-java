@@ -22,7 +22,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -33,7 +33,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -44,7 +44,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 

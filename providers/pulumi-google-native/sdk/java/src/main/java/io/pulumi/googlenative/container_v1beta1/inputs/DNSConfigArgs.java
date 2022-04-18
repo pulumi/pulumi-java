@@ -28,7 +28,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterDns")
       private final @Nullable Output<DNSConfigClusterDns> clusterDns;
 
-    public Output<DNSConfigClusterDns> getClusterDns() {
+    public Output<DNSConfigClusterDns> clusterDns() {
         return this.clusterDns == null ? Codegen.empty() : this.clusterDns;
     }
 
@@ -39,7 +39,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterDnsDomain")
       private final @Nullable Output<String> clusterDnsDomain;
 
-    public Output<String> getClusterDnsDomain() {
+    public Output<String> clusterDnsDomain() {
         return this.clusterDnsDomain == null ? Codegen.empty() : this.clusterDnsDomain;
     }
 
@@ -50,7 +50,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterDnsScope")
       private final @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope;
 
-    public Output<DNSConfigClusterDnsScope> getClusterDnsScope() {
+    public Output<DNSConfigClusterDnsScope> clusterDnsScope() {
         return this.clusterDnsScope == null ? Codegen.empty() : this.clusterDnsScope;
     }
 

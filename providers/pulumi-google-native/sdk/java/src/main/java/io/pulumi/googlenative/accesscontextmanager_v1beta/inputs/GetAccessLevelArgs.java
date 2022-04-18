@@ -17,21 +17,21 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accessLevelFormat")
       private final @Nullable String accessLevelFormat;
 
-    public Optional<String> getAccessLevelFormat() {
+    public Optional<String> accessLevelFormat() {
         return this.accessLevelFormat == null ? Optional.empty() : Optional.ofNullable(this.accessLevelFormat);
     }
 
     @Import(name="accessLevelId", required=true)
       private final String accessLevelId;
 
-    public String getAccessLevelId() {
+    public String accessLevelId() {
         return this.accessLevelId;
     }
 
     @Import(name="accessPolicyId", required=true)
       private final String accessPolicyId;
 
-    public String getAccessPolicyId() {
+    public String accessPolicyId() {
         return this.accessPolicyId;
     }
 

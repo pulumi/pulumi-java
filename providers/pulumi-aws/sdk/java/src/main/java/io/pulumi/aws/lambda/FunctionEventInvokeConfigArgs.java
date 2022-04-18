@@ -24,7 +24,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
     @Import(name="destinationConfig")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigArgs> getDestinationConfig() {
+    public Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig() {
         return this.destinationConfig == null ? Codegen.empty() : this.destinationConfig;
     }
 
@@ -35,7 +35,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -46,7 +46,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
     @Import(name="maximumEventAgeInSeconds")
       private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Output<Integer> getMaximumEventAgeInSeconds() {
+    public Output<Integer> maximumEventAgeInSeconds() {
         return this.maximumEventAgeInSeconds == null ? Codegen.empty() : this.maximumEventAgeInSeconds;
     }
 
@@ -57,7 +57,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
     @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> getMaximumRetryAttempts() {
+    public Output<Integer> maximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
     }
 
@@ -68,7 +68,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 

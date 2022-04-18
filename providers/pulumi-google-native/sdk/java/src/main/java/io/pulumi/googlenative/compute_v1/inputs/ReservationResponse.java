@@ -26,7 +26,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="commitment", required=true)
       private final String commitment;
 
-    public String getCommitment() {
+    public String commitment() {
         return this.commitment;
     }
 
@@ -37,7 +37,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="creationTimestamp", required=true)
       private final String creationTimestamp;
 
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
 
@@ -48,7 +48,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -59,7 +59,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -70,7 +70,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -81,7 +81,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="satisfiesPzs", required=true)
       private final Boolean satisfiesPzs;
 
-    public Boolean getSatisfiesPzs() {
+    public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
 
@@ -92,7 +92,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
@@ -103,7 +103,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shareSettings", required=true)
       private final ShareSettingsResponse shareSettings;
 
-    public ShareSettingsResponse getShareSettings() {
+    public ShareSettingsResponse shareSettings() {
         return this.shareSettings;
     }
 
@@ -114,7 +114,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="specificReservation", required=true)
       private final AllocationSpecificSKUReservationResponse specificReservation;
 
-    public AllocationSpecificSKUReservationResponse getSpecificReservation() {
+    public AllocationSpecificSKUReservationResponse specificReservation() {
         return this.specificReservation;
     }
 
@@ -125,7 +125,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="specificReservationRequired", required=true)
       private final Boolean specificReservationRequired;
 
-    public Boolean getSpecificReservationRequired() {
+    public Boolean specificReservationRequired() {
         return this.specificReservationRequired;
     }
 
@@ -136,7 +136,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -147,7 +147,7 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

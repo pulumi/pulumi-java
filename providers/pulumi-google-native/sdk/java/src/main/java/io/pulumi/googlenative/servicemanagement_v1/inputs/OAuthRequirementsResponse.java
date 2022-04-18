@@ -23,7 +23,7 @@ public final class OAuthRequirementsResponse extends io.pulumi.resources.InvokeA
     @Import(name="canonicalScopes", required=true)
       private final String canonicalScopes;
 
-    public String getCanonicalScopes() {
+    public String canonicalScopes() {
         return this.canonicalScopes;
     }
 

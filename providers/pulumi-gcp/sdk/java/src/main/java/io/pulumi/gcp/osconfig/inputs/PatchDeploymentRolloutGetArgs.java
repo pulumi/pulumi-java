@@ -27,7 +27,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
     @Import(name="disruptionBudget", required=true)
       private final Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
-    public Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
+    public Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -39,7 +39,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 

@@ -65,7 +65,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -79,7 +79,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -93,7 +93,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return Detailed status message for the VPN tunnel.
      * 
      */
-    public Output<String> getDetailedStatus() {
+    public Output<String> detailedStatus() {
         return this.detailedStatus;
     }
     /**
@@ -111,7 +111,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * Acceptable IKE versions are 1 or 2. Default version is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getIkeVersion() {
+    public Output</* @Nullable */ Integer> ikeVersion() {
         return this.ikeVersion;
     }
     /**
@@ -125,7 +125,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -139,7 +139,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this VpnTunnel.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -159,7 +159,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    public Output<List<String>> getLocalTrafficSelectors() {
+    public Output<List<String>> localTrafficSelectors() {
         return this.localTrafficSelectors;
     }
     /**
@@ -185,7 +185,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +199,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return URL of the peer side external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    public Output</* @Nullable */ String> getPeerExternalGateway() {
+    public Output</* @Nullable */ String> peerExternalGateway() {
         return this.peerExternalGateway;
     }
     /**
@@ -213,7 +213,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The interface ID of the external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    public Output</* @Nullable */ Integer> getPeerExternalGatewayInterface() {
+    public Output</* @Nullable */ Integer> peerExternalGatewayInterface() {
         return this.peerExternalGatewayInterface;
     }
     /**
@@ -233,7 +233,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    public Output</* @Nullable */ String> getPeerGcpGateway() {
+    public Output</* @Nullable */ String> peerGcpGateway() {
         return this.peerGcpGateway;
     }
     /**
@@ -247,7 +247,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return IP address of the peer VPN gateway. Only IPv4 is supported.
      * 
      */
-    public Output<String> getPeerIp() {
+    public Output<String> peerIp() {
         return this.peerIp;
     }
     /**
@@ -263,7 +263,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -277,7 +277,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -297,7 +297,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    public Output<List<String>> getRemoteTrafficSelectors() {
+    public Output<List<String>> remoteTrafficSelectors() {
         return this.remoteTrafficSelectors;
     }
     /**
@@ -311,7 +311,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return URL of router resource to be used for dynamic routing.
      * 
      */
-    public Output</* @Nullable */ String> getRouter() {
+    public Output</* @Nullable */ String> router() {
         return this.router;
     }
     /**
@@ -325,7 +325,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -343,7 +343,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getSharedSecret() {
+    public Output<String> sharedSecret() {
         return this.sharedSecret;
     }
     /**
@@ -357,7 +357,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return Hash of the shared secret.
      * 
      */
-    public Output<String> getSharedSecretHash() {
+    public Output<String> sharedSecretHash() {
         return this.sharedSecretHash;
     }
     /**
@@ -373,7 +373,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * associated.
      * 
      */
-    public Output</* @Nullable */ String> getTargetVpnGateway() {
+    public Output</* @Nullable */ String> targetVpnGateway() {
         return this.targetVpnGateway;
     }
     /**
@@ -387,7 +387,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    public Output<String> getTunnelId() {
+    public Output<String> tunnelId() {
         return this.tunnelId;
     }
     /**
@@ -405,7 +405,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    public Output</* @Nullable */ String> getVpnGateway() {
+    public Output</* @Nullable */ String> vpnGateway() {
         return this.vpnGateway;
     }
     /**
@@ -419,7 +419,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @return The interface ID of the VPN gateway with which this VPN tunnel is associated.
      * 
      */
-    public Output</* @Nullable */ Integer> getVpnGatewayInterface() {
+    public Output</* @Nullable */ Integer> vpnGatewayInterface() {
         return this.vpnGatewayInterface;
     }
 

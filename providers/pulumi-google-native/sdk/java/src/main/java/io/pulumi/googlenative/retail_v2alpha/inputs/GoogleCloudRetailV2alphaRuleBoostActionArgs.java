@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
     @Import(name="boost")
       private final @Nullable Output<Double> boost;
 
-    public Output<Double> getBoost() {
+    public Output<Double> boost() {
         return this.boost == null ? Codegen.empty() : this.boost;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
     @Import(name="productsFilter")
       private final @Nullable Output<String> productsFilter;
 
-    public Output<String> getProductsFilter() {
+    public Output<String> productsFilter() {
         return this.productsFilter == null ? Codegen.empty() : this.productsFilter;
     }
 

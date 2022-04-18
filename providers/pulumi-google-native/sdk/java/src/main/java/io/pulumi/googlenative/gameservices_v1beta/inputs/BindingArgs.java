@@ -24,7 +24,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bindingId")
       private final @Nullable Output<String> bindingId;
 
-    public Output<String> getBindingId() {
+    public Output<String> bindingId() {
         return this.bindingId == null ? Codegen.empty() : this.bindingId;
     }
 
@@ -35,7 +35,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<ExprArgs> condition;
 
-    public Output<ExprArgs> getCondition() {
+    public Output<ExprArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -46,7 +46,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -57,7 +57,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

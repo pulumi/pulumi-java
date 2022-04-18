@@ -44,7 +44,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return The ARN of the WAF Regional Rate Based Rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -72,7 +72,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return The name or description of the rule.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return The objects to include in a rule (documented below).
      * 
      */
-    public Output</* @Nullable */ List<RateBasedRulePredicate>> getPredicates() {
+    public Output</* @Nullable */ List<RateBasedRulePredicate>> predicates() {
         return this.predicates;
     }
     /**
@@ -100,7 +100,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return Valid value is IP.
      * 
      */
-    public Output<String> getRateKey() {
+    public Output<String> rateKey() {
         return this.rateKey;
     }
     /**
@@ -114,7 +114,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.
      * 
      */
-    public Output<Integer> getRateLimit() {
+    public Output<Integer> rateLimit() {
         return this.rateLimit;
     }
     /**
@@ -128,7 +128,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

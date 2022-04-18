@@ -27,7 +27,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -38,7 +38,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     @Import(name="migrationSolutionId", required=true)
       private final Output<String> migrationSolutionId;
 
-    public Output<String> getMigrationSolutionId() {
+    public Output<String> migrationSolutionId() {
         return this.migrationSolutionId;
     }
 
@@ -49,7 +49,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     @Import(name="vmwareSiteId", required=true)
       private final Output<String> vmwareSiteId;
 
-    public Output<String> getVmwareSiteId() {
+    public Output<String> vmwareSiteId() {
         return this.vmwareSiteId;
     }
 

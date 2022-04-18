@@ -39,21 +39,21 @@ public final class TableRangePartitioningRange {
      * End of the range partitioning, exclusive.
      * 
     */
-    public Integer getEnd() {
+    public Integer end() {
         return this.end;
     }
     /**
      * The width of each range within the partition.
      * 
     */
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
     /**
      * Start of the range partitioning, inclusive.
      * 
     */
-    public Integer getStart() {
+    public Integer start() {
         return this.start;
     }
 

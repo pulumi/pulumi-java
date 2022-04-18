@@ -33,7 +33,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Time the schedule was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
      * 
      */
-    public Output<String> getCronSchedule() {
+    public Output<String> cronSchedule() {
         return this.cronSchedule;
     }
     /**
@@ -61,7 +61,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return A brief description of this environment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -89,7 +89,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Notebook Execution Template corresponding to this schedule.
      * 
      */
-    public Output<ExecutionTemplateResponse> getExecutionTemplate() {
+    public Output<ExecutionTemplateResponse> executionTemplate() {
         return this.executionTemplate;
     }
     /**
@@ -103,7 +103,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,13 +117,13 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The most recent execution names triggered from this schedule and their corresponding states.
      * 
      */
-    public Output<List<ExecutionResponse>> getRecentExecutions() {
+    public Output<List<ExecutionResponse>> recentExecutions() {
         return this.recentExecutions;
     }
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -137,7 +137,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -151,7 +151,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Time the schedule was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -23,7 +23,7 @@ public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputUri", required=true)
       private final String inputUri;
 
-    public String getInputUri() {
+    public String inputUri() {
         return this.inputUri;
     }
 

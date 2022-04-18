@@ -39,29 +39,29 @@ public final class GetPeeredDnsDomainResult {
         this.service = service;
     }
 
-    public String getDnsSuffix() {
+    public String dnsSuffix() {
         return this.dnsSuffix;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

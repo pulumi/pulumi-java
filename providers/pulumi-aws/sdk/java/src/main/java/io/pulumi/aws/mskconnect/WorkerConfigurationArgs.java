@@ -22,7 +22,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="propertiesFileContent", required=true)
       private final Output<String> propertiesFileContent;
 
-    public Output<String> getPropertiesFileContent() {
+    public Output<String> propertiesFileContent() {
         return this.propertiesFileContent;
     }
 

@@ -28,7 +28,7 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="globalParameters")
       private final @Nullable Map<String,Object> globalParameters;
 
-    public Map<String,Object> getGlobalParameters() {
+    public Map<String,Object> globalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
 
@@ -39,7 +39,7 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="inputs")
       private final @Nullable Map<String,List<List<Object>>> inputs;
 
-    public Map<String,List<List<Object>>> getInputs() {
+    public Map<String,List<List<Object>>> inputs() {
         return this.inputs == null ? Map.of() : this.inputs;
     }
 

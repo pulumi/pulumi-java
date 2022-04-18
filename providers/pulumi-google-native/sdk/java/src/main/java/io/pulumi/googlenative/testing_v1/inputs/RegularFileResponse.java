@@ -24,7 +24,7 @@ public final class RegularFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final FileReferenceResponse content;
 
-    public FileReferenceResponse getContent() {
+    public FileReferenceResponse content() {
         return this.content;
     }
 
@@ -35,7 +35,7 @@ public final class RegularFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="devicePath", required=true)
       private final String devicePath;
 
-    public String getDevicePath() {
+    public String devicePath() {
         return this.devicePath;
     }
 

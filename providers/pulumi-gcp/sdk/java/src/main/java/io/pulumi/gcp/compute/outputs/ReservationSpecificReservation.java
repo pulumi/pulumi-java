@@ -44,7 +44,7 @@ public final class ReservationSpecificReservation {
      * The number of resources that are allocated.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
@@ -52,7 +52,7 @@ public final class ReservationSpecificReservation {
      * How many instances are in use.
      * 
     */
-    public Optional<Integer> getInUseCount() {
+    public Optional<Integer> inUseCount() {
         return Optional.ofNullable(this.inUseCount);
     }
     /**
@@ -60,7 +60,7 @@ public final class ReservationSpecificReservation {
      * Structure is documented below.
      * 
     */
-    public ReservationSpecificReservationInstanceProperties getInstanceProperties() {
+    public ReservationSpecificReservationInstanceProperties instanceProperties() {
         return this.instanceProperties;
     }
 

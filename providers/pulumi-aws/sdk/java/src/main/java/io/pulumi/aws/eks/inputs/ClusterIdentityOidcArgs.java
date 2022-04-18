@@ -22,7 +22,7 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 

@@ -19,7 +19,7 @@ public final class GetImageRecipeComponent extends io.pulumi.resources.InvokeArg
     @Import(name="componentArn", required=true)
       private final String componentArn;
 
-    public String getComponentArn() {
+    public String componentArn() {
         return this.componentArn;
     }
 

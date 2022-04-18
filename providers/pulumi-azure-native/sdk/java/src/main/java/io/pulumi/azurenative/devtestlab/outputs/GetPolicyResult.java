@@ -119,98 +119,98 @@ public final class GetPolicyResult {
      * The creation date of the policy.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The description of the policy.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
      * 
     */
-    public Optional<String> getEvaluatorType() {
+    public Optional<String> evaluatorType() {
         return Optional.ofNullable(this.evaluatorType);
     }
     /**
      * The fact data of the policy.
      * 
     */
-    public Optional<String> getFactData() {
+    public Optional<String> factData() {
         return Optional.ofNullable(this.factData);
     }
     /**
      * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
      * 
     */
-    public Optional<String> getFactName() {
+    public Optional<String> factName() {
         return Optional.ofNullable(this.factName);
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the policy.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
      * 
     */
-    public Optional<String> getThreshold() {
+    public Optional<String> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

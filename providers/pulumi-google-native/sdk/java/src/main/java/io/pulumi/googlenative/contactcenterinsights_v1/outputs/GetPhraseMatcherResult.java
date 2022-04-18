@@ -98,77 +98,77 @@ public final class GetPhraseMatcherResult {
      * The most recent time at which the activation status was updated.
      * 
     */
-    public String getActivationUpdateTime() {
+    public String activationUpdateTime() {
         return this.activationUpdateTime;
     }
     /**
      * Applies the phrase matcher only when it is active.
      * 
     */
-    public Boolean getActive() {
+    public Boolean active() {
         return this.active;
     }
     /**
      * The human-readable name of the phrase matcher.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of phase match rule groups that are included in this matcher.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> getPhraseMatchRuleGroups() {
+    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups() {
         return this.phraseMatchRuleGroups;
     }
     /**
      * The timestamp of when the revision was created. It is also the create time when a new matcher is added.
      * 
     */
-    public String getRevisionCreateTime() {
+    public String revisionCreateTime() {
         return this.revisionCreateTime;
     }
     /**
      * Immutable. The revision ID of the phrase matcher. A new revision is committed whenever the matcher is changed, except when it is activated or deactivated. A server generated random ID will be used. Example: locations/global/phraseMatchers/my-first-matcher@1234567
      * 
     */
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
     /**
      * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
      * 
     */
-    public String getRoleMatch() {
+    public String roleMatch() {
         return this.roleMatch;
     }
     /**
      * The type of this phrase matcher.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The most recent time at which the phrase matcher was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
      * 
     */
-    public String getVersionTag() {
+    public String versionTag() {
         return this.versionTag;
     }
 

@@ -40,7 +40,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
@@ -49,7 +49,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

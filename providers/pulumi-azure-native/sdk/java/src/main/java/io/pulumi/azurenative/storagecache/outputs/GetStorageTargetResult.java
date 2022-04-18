@@ -111,84 +111,84 @@ public final class GetStorageTargetResult {
      * Properties when targetType is blobNfs.
      * 
     */
-    public Optional<BlobNfsTargetResponse> getBlobNfs() {
+    public Optional<BlobNfsTargetResponse> blobNfs() {
         return Optional.ofNullable(this.blobNfs);
     }
     /**
      * Properties when targetType is clfs.
      * 
     */
-    public Optional<ClfsTargetResponse> getClfs() {
+    public Optional<ClfsTargetResponse> clfs() {
         return Optional.ofNullable(this.clfs);
     }
     /**
      * Resource ID of the Storage Target.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of Cache namespace junctions to target for namespace associations.
      * 
     */
-    public List<NamespaceJunctionResponse> getJunctions() {
+    public List<NamespaceJunctionResponse> junctions() {
         return this.junctions == null ? List.of() : this.junctions;
     }
     /**
      * Region name string.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the Storage Target.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties when targetType is nfs3.
      * 
     */
-    public Optional<Nfs3TargetResponse> getNfs3() {
+    public Optional<Nfs3TargetResponse> nfs3() {
         return Optional.ofNullable(this.nfs3);
     }
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the Storage Target.
      * 
     */
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
     /**
      * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Properties when targetType is unknown.
      * 
     */
-    public Optional<UnknownTargetResponse> getUnknown() {
+    public Optional<UnknownTargetResponse> unknown() {
         return Optional.ofNullable(this.unknown);
     }
 

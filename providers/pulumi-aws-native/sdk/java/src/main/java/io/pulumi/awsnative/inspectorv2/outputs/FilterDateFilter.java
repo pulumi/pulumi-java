@@ -22,10 +22,10 @@ public final class FilterDateFilter {
         this.startInclusive = startInclusive;
     }
 
-    public Optional<Integer> getEndInclusive() {
+    public Optional<Integer> endInclusive() {
         return Optional.ofNullable(this.endInclusive);
     }
-    public Optional<Integer> getStartInclusive() {
+    public Optional<Integer> startInclusive() {
         return Optional.ofNullable(this.startInclusive);
     }
 

@@ -24,7 +24,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="columnFamilies")
       private final @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies;
 
-    public Output<List<BigtableColumnFamilyArgs>> getColumnFamilies() {
+    public Output<List<BigtableColumnFamilyArgs>> columnFamilies() {
         return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
@@ -35,7 +35,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ignoreUnspecifiedColumnFamilies")
       private final @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies;
 
-    public Output<Boolean> getIgnoreUnspecifiedColumnFamilies() {
+    public Output<Boolean> ignoreUnspecifiedColumnFamilies() {
         return this.ignoreUnspecifiedColumnFamilies == null ? Codegen.empty() : this.ignoreUnspecifiedColumnFamilies;
     }
 
@@ -46,7 +46,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readRowkeyAsString")
       private final @Nullable Output<Boolean> readRowkeyAsString;
 
-    public Output<Boolean> getReadRowkeyAsString() {
+    public Output<Boolean> readRowkeyAsString() {
         return this.readRowkeyAsString == null ? Codegen.empty() : this.readRowkeyAsString;
     }
 

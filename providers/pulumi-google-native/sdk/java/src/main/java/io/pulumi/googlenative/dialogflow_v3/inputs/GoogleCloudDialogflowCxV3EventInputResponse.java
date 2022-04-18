@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends io.pulumi
     @Import(name="event", required=true)
       private final String event;
 
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
 

@@ -37,7 +37,7 @@ public final class SubscriptionRetryPolicy {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMaximumBackoff() {
+    public Optional<String> maximumBackoff() {
         return Optional.ofNullable(this.maximumBackoff);
     }
     /**
@@ -45,7 +45,7 @@ public final class SubscriptionRetryPolicy {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMinimumBackoff() {
+    public Optional<String> minimumBackoff() {
         return Optional.ofNullable(this.minimumBackoff);
     }
 

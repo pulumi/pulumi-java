@@ -41,21 +41,21 @@ public final class ServiceLevelIndicatorResponse {
      * Basic SLI on a well-known service type.
      * 
     */
-    public BasicSliResponse getBasicSli() {
+    public BasicSliResponse basicSli() {
         return this.basicSli;
     }
     /**
      * Request-based SLIs
      * 
     */
-    public RequestBasedSliResponse getRequestBased() {
+    public RequestBasedSliResponse requestBased() {
         return this.requestBased;
     }
     /**
      * Windows-based SLIs
      * 
     */
-    public WindowsBasedSliResponse getWindowsBased() {
+    public WindowsBasedSliResponse windowsBased() {
         return this.windowsBased;
     }
 

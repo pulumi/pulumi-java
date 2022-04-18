@@ -33,14 +33,14 @@ public final class SecurityConfigResponse {
      * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
      * 
     */
-    public IdentityConfigResponse getIdentityConfig() {
+    public IdentityConfigResponse identityConfig() {
         return this.identityConfig;
     }
     /**
      * Optional. Kerberos related configuration.
      * 
     */
-    public KerberosConfigResponse getKerberosConfig() {
+    public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
 

@@ -84,59 +84,59 @@ public final class BackupInstanceResponse {
      * Specifies the current protection state of the resource
      * 
     */
-    public String getCurrentProtectionState() {
+    public String currentProtectionState() {
         return this.currentProtectionState;
     }
     /**
      * Gets or sets the data source information.
      * 
     */
-    public DatasourceResponse getDataSourceInfo() {
+    public DatasourceResponse dataSourceInfo() {
         return this.dataSourceInfo;
     }
     /**
      * Gets or sets the data source set information.
      * 
     */
-    public Optional<DatasourceSetResponse> getDataSourceSetInfo() {
+    public Optional<DatasourceSetResponse> dataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
     /**
      * Gets or sets the Backup Instance friendly name.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Gets or sets the policy information.
      * 
     */
-    public PolicyInfoResponse getPolicyInfo() {
+    public PolicyInfoResponse policyInfo() {
         return this.policyInfo;
     }
     /**
      * Specifies the protection error of the resource
      * 
     */
-    public UserFacingErrorResponse getProtectionErrorDetails() {
+    public UserFacingErrorResponse protectionErrorDetails() {
         return this.protectionErrorDetails;
     }
     /**
      * Specifies the protection status of the resource
      * 
     */
-    public ProtectionStatusDetailsResponse getProtectionStatus() {
+    public ProtectionStatusDetailsResponse protectionStatus() {
         return this.protectionStatus;
     }
     /**
      * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -23,7 +23,7 @@ public final class PublicKeyCredentialResponse extends io.pulumi.resources.Invok
     @Import(name="format", required=true)
       private final String format;
 
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 
@@ -34,7 +34,7 @@ public final class PublicKeyCredentialResponse extends io.pulumi.resources.Invok
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

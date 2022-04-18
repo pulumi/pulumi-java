@@ -27,7 +27,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientValidationCa")
       private final @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
-    public Output<List<ValidationCAArgs>> getClientValidationCa() {
+    public Output<List<ValidationCAArgs>> clientValidationCa() {
         return this.clientValidationCa == null ? Codegen.empty() : this.clientValidationCa;
     }
 

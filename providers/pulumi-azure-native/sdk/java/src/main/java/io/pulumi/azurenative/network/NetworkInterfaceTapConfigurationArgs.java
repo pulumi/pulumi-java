@@ -23,7 +23,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="networkInterfaceName", required=true)
       private final Output<String> networkInterfaceName;
 
-    public Output<String> getNetworkInterfaceName() {
+    public Output<String> networkInterfaceName() {
         return this.networkInterfaceName;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="tapConfigurationName")
       private final @Nullable Output<String> tapConfigurationName;
 
-    public Output<String> getTapConfigurationName() {
+    public Output<String> tapConfigurationName() {
         return this.tapConfigurationName == null ? Codegen.empty() : this.tapConfigurationName;
     }
 
@@ -78,7 +78,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     @Import(name="virtualNetworkTap")
       private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
-    public Output<VirtualNetworkTapArgs> getVirtualNetworkTap() {
+    public Output<VirtualNetworkTapArgs> virtualNetworkTap() {
         return this.virtualNetworkTap == null ? Codegen.empty() : this.virtualNetworkTap;
     }
 

@@ -24,7 +24,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="allSubscriptions")
       private final @Nullable Output<Boolean> allSubscriptions;
 
-    public Output<Boolean> getAllSubscriptions() {
+    public Output<Boolean> allSubscriptions() {
         return this.allSubscriptions == null ? Codegen.empty() : this.allSubscriptions;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="claim")
       private final @Nullable Output<String> claim;
 
-    public Output<String> getClaim() {
+    public Output<String> claim() {
         return this.claim == null ? Codegen.empty() : this.claim;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId == null ? Codegen.empty() : this.collectionId;
     }
 
@@ -57,7 +57,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="collectionName")
       private final @Nullable Output<String> collectionName;
 
-    public Output<String> getCollectionName() {
+    public Output<String> collectionName() {
         return this.collectionName == null ? Codegen.empty() : this.collectionName;
     }
 
@@ -68,7 +68,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -79,7 +79,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
 
-    public Output<String> getPrivateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
@@ -90,7 +90,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="subscriptionsList")
       private final @Nullable Output<List<String>> subscriptionsList;
 
-    public Output<List<String>> getSubscriptionsList() {
+    public Output<List<String>> subscriptionsList() {
         return this.subscriptionsList == null ? Codegen.empty() : this.subscriptionsList;
     }
 

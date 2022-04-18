@@ -41,7 +41,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -54,7 +54,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="oidcToken")
       private final @Nullable Output<SubscriptionPushConfigOidcTokenGetArgs> oidcToken;
 
-    public Output<SubscriptionPushConfigOidcTokenGetArgs> getOidcToken() {
+    public Output<SubscriptionPushConfigOidcTokenGetArgs> oidcToken() {
         return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
@@ -67,7 +67,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="pushEndpoint", required=true)
       private final Output<String> pushEndpoint;
 
-    public Output<String> getPushEndpoint() {
+    public Output<String> pushEndpoint() {
         return this.pushEndpoint;
     }
 

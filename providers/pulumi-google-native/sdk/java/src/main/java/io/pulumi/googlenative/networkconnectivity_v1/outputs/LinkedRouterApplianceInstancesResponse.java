@@ -34,14 +34,14 @@ public final class LinkedRouterApplianceInstancesResponse {
      * The list of router appliance instances.
      * 
     */
-    public List<RouterApplianceInstanceResponse> getInstances() {
+    public List<RouterApplianceInstanceResponse> instances() {
         return this.instances;
     }
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
     */
-    public Boolean getSiteToSiteDataTransfer() {
+    public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 

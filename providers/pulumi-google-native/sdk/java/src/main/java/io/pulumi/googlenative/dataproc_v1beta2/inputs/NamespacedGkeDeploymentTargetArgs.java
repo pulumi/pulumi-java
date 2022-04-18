@@ -26,7 +26,7 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
     @Import(name="clusterNamespace")
       private final @Nullable Output<String> clusterNamespace;
 
-    public Output<String> getClusterNamespace() {
+    public Output<String> clusterNamespace() {
         return this.clusterNamespace == null ? Codegen.empty() : this.clusterNamespace;
     }
 
@@ -37,7 +37,7 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
     @Import(name="targetGkeCluster")
       private final @Nullable Output<String> targetGkeCluster;
 
-    public Output<String> getTargetGkeCluster() {
+    public Output<String> targetGkeCluster() {
         return this.targetGkeCluster == null ? Codegen.empty() : this.targetGkeCluster;
     }
 

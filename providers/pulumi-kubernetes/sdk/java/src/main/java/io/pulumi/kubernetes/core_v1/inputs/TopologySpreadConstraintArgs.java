@@ -28,7 +28,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     @Import(name="labelSelector")
       private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Output<LabelSelectorArgs> getLabelSelector() {
+    public Output<LabelSelectorArgs> labelSelector() {
         return this.labelSelector == null ? Codegen.empty() : this.labelSelector;
     }
 
@@ -39,7 +39,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     @Import(name="maxSkew", required=true)
       private final Output<Integer> maxSkew;
 
-    public Output<Integer> getMaxSkew() {
+    public Output<Integer> maxSkew() {
         return this.maxSkew;
     }
 
@@ -50,7 +50,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     @Import(name="topologyKey", required=true)
       private final Output<String> topologyKey;
 
-    public Output<String> getTopologyKey() {
+    public Output<String> topologyKey() {
         return this.topologyKey;
     }
 
@@ -68,7 +68,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     @Import(name="whenUnsatisfiable", required=true)
       private final Output<String> whenUnsatisfiable;
 
-    public Output<String> getWhenUnsatisfiable() {
+    public Output<String> whenUnsatisfiable() {
         return this.whenUnsatisfiable;
     }
 

@@ -27,7 +27,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="maxInstanceCount")
       private final @Nullable Output<Integer> maxInstanceCount;
 
-    public Output<Integer> getMaxInstanceCount() {
+    public Output<Integer> maxInstanceCount() {
         return this.maxInstanceCount == null ? Codegen.empty() : this.maxInstanceCount;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> getMinInstanceCount() {
+    public Output<Integer> minInstanceCount() {
         return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
     }
 
@@ -49,7 +49,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 

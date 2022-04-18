@@ -30,7 +30,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
     @Import(name="identity")
       private final @Nullable String identity;
 
-    public Optional<String> getIdentity() {
+    public Optional<String> identity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
@@ -42,7 +42,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
     @Import(name="password")
       private final @Nullable SecretObjectResponse password;
 
-    public Optional<SecretObjectResponse> getPassword() {
+    public Optional<SecretObjectResponse> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -53,7 +53,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
     @Import(name="userName")
       private final @Nullable SecretObjectResponse userName;
 
-    public Optional<SecretObjectResponse> getUserName() {
+    public Optional<SecretObjectResponse> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

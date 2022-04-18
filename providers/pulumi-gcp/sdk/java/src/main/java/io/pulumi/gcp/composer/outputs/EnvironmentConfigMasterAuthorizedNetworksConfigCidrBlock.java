@@ -22,10 +22,10 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
         this.displayName = displayName;
     }
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 

@@ -24,7 +24,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="archiveType", required=true)
       private final String archiveType;
 
-    public String getArchiveType() {
+    public String archiveType() {
         return this.archiveType;
     }
 
@@ -35,7 +35,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="components", required=true)
       private final List<String> components;
 
-    public List<String> getComponents() {
+    public List<String> components() {
         return this.components;
     }
 
@@ -46,7 +46,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="distribution", required=true)
       private final String distribution;
 
-    public String getDistribution() {
+    public String distribution() {
         return this.distribution;
     }
 
@@ -57,7 +57,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gpgKey", required=true)
       private final String gpgKey;
 
-    public String getGpgKey() {
+    public String gpgKey() {
         return this.gpgKey;
     }
 
@@ -68,7 +68,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

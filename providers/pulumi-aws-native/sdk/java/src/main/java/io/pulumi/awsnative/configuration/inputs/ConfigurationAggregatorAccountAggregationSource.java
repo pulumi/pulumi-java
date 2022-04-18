@@ -19,21 +19,21 @@ public final class ConfigurationAggregatorAccountAggregationSource extends io.pu
     @Import(name="accountIds", required=true)
       private final List<String> accountIds;
 
-    public List<String> getAccountIds() {
+    public List<String> accountIds() {
         return this.accountIds;
     }
 
     @Import(name="allAwsRegions")
       private final @Nullable Boolean allAwsRegions;
 
-    public Optional<Boolean> getAllAwsRegions() {
+    public Optional<Boolean> allAwsRegions() {
         return this.allAwsRegions == null ? Optional.empty() : Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
       private final @Nullable List<String> awsRegions;
 
-    public List<String> getAwsRegions() {
+    public List<String> awsRegions() {
         return this.awsRegions == null ? List.of() : this.awsRegions;
     }
 

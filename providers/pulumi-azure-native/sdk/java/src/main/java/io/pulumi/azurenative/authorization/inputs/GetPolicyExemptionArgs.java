@@ -19,7 +19,7 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="policyExemptionName", required=true)
       private final String policyExemptionName;
 
-    public String getPolicyExemptionName() {
+    public String policyExemptionName() {
         return this.policyExemptionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

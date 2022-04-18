@@ -35,7 +35,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time when the instance was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -49,7 +49,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The description of the instance (2048 characters or less).
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -63,7 +63,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -77,7 +77,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return File system shares on the instance. For this version, only a single file share is supported.
      * 
      */
-    public Output<List<FileShareConfigResponse>> getFileShares() {
+    public Output<List<FileShareConfigResponse>> fileShares() {
         return this.fileShares;
     }
     /**
@@ -91,7 +91,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return KMS key name used for data encryption.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -105,7 +105,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -119,7 +119,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The resource name of the instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return VPC networks to which the instance is connected. For this version, only a single network is supported.
      * 
      */
-    public Output<List<NetworkConfigResponse>> getNetworks() {
+    public Output<List<NetworkConfigResponse>> networks() {
         return this.networks;
     }
     /**
@@ -147,7 +147,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -161,7 +161,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The instance state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -175,7 +175,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Additional information about the instance state, if available.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -189,7 +189,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return field indicates all the reasons the instance is in "SUSPENDED" state.
      * 
      */
-    public Output<List<String>> getSuspensionReasons() {
+    public Output<List<String>> suspensionReasons() {
         return this.suspensionReasons;
     }
     /**
@@ -203,7 +203,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The service tier of the instance.
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
 

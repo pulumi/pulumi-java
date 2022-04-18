@@ -56,35 +56,35 @@ public final class SecretAttributesResponse {
      * Creation time in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Integer getCreated() {
+    public Integer created() {
         return this.created;
     }
     /**
      * Determines whether the object is enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Optional<Integer> getExpires() {
+    public Optional<Integer> expires() {
         return Optional.ofNullable(this.expires);
     }
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Optional<Integer> getNotBefore() {
+    public Optional<Integer> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Integer getUpdated() {
+    public Integer updated() {
         return this.updated;
     }
 

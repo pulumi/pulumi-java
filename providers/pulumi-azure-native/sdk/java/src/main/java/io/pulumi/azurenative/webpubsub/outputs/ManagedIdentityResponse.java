@@ -53,7 +53,7 @@ public final class ManagedIdentityResponse {
      * Only be used in response.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
@@ -61,21 +61,21 @@ public final class ManagedIdentityResponse {
      * Only be used in response
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Represent the identity type: systemAssigned, userAssigned, None
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Get or set the user assigned identities
      * 
     */
-    public Map<String,UserAssignedIdentityPropertyResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

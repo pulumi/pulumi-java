@@ -44,7 +44,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * @return The assembly properties.
      * 
      */
-    public Output<AssemblyPropertiesResponse> getProperties() {
+    public Output<AssemblyPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

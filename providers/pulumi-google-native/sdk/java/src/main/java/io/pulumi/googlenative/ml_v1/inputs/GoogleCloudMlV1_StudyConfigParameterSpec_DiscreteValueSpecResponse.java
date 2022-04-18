@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
     @Import(name="values", required=true)
       private final List<Double> values;
 
-    public List<Double> getValues() {
+    public List<Double> values() {
         return this.values;
     }
 

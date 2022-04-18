@@ -41,21 +41,21 @@ public final class ApplicationJMXPrometheusExporter {
      * Java agent host port
      * 
     */
-    public Optional<String> getHostPort() {
+    public Optional<String> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
     /**
      * JMX service URL.
      * 
     */
-    public Optional<String> getJMXURL() {
+    public Optional<String> jMXURL() {
         return Optional.ofNullable(this.jMXURL);
     }
     /**
      * Prometheus exporter port.
      * 
     */
-    public Optional<String> getPrometheusPort() {
+    public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
 

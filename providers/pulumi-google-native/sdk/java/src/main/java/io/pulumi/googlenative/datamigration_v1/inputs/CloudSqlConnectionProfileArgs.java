@@ -26,7 +26,7 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     @Import(name="settings")
       private final @Nullable Output<CloudSqlSettingsArgs> settings;
 
-    public Output<CloudSqlSettingsArgs> getSettings() {
+    public Output<CloudSqlSettingsArgs> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 

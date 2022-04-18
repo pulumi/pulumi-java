@@ -91,70 +91,70 @@ public final class GetHybridRunbookWorkerResult {
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the assigned machine IP address.
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Last Heartbeat from the Worker
      * 
     */
-    public Optional<String> getLastSeenDateTime() {
+    public Optional<String> lastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the registration time of the worker machine.
      * 
     */
-    public Optional<String> getRegisteredDateTime() {
+    public Optional<String> registeredDateTime() {
         return Optional.ofNullable(this.registeredDateTime);
     }
     /**
      * Resource system metadata.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Azure Resource Manager Id for a virtual machine.
      * 
     */
-    public Optional<String> getVmResourceId() {
+    public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
     /**
      * Name of the HybridWorker.
      * 
     */
-    public Optional<String> getWorkerName() {
+    public Optional<String> workerName() {
         return Optional.ofNullable(this.workerName);
     }
     /**
      * Type of the HybridWorker.
      * 
     */
-    public Optional<String> getWorkerType() {
+    public Optional<String> workerType() {
         return Optional.ofNullable(this.workerType);
     }
 

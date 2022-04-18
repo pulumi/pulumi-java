@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="audio", required=true)
       private final GoogleCloudDialogflowCxV3AudioInputResponse audio;
 
-    public GoogleCloudDialogflowCxV3AudioInputResponse getAudio() {
+    public GoogleCloudDialogflowCxV3AudioInputResponse audio() {
         return this.audio;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="dtmf", required=true)
       private final GoogleCloudDialogflowCxV3DtmfInputResponse dtmf;
 
-    public GoogleCloudDialogflowCxV3DtmfInputResponse getDtmf() {
+    public GoogleCloudDialogflowCxV3DtmfInputResponse dtmf() {
         return this.dtmf;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="event", required=true)
       private final GoogleCloudDialogflowCxV3EventInputResponse event;
 
-    public GoogleCloudDialogflowCxV3EventInputResponse getEvent() {
+    public GoogleCloudDialogflowCxV3EventInputResponse event() {
         return this.event;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="intent", required=true)
       private final GoogleCloudDialogflowCxV3IntentInputResponse intent;
 
-    public GoogleCloudDialogflowCxV3IntentInputResponse getIntent() {
+    public GoogleCloudDialogflowCxV3IntentInputResponse intent() {
         return this.intent;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends io.pulumi
     @Import(name="text", required=true)
       private final GoogleCloudDialogflowCxV3TextInputResponse text;
 
-    public GoogleCloudDialogflowCxV3TextInputResponse getText() {
+    public GoogleCloudDialogflowCxV3TextInputResponse text() {
         return this.text;
     }
 

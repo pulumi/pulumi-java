@@ -28,7 +28,7 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
      * The x509 certificate
      * 
     */
-    public Optional<String> getX509Certificate() {
+    public Optional<String> x509Certificate() {
         return Optional.ofNullable(this.x509Certificate);
     }
 

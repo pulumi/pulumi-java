@@ -34,14 +34,14 @@ public final class RulesetColumnSelector {
      * The name of a column from a dataset
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A regular expression for selecting a column from a dataset
      * 
     */
-    public Optional<String> getRegex() {
+    public Optional<String> regex() {
         return Optional.ofNullable(this.regex);
     }
 

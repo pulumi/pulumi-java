@@ -30,16 +30,16 @@ public final class DomainEBSOptions {
         this.volumeType = volumeType;
     }
 
-    public Optional<Boolean> getEBSEnabled() {
+    public Optional<Boolean> eBSEnabled() {
         return Optional.ofNullable(this.eBSEnabled);
     }
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

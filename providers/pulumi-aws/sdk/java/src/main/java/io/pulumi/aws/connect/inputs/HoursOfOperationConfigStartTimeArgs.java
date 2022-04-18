@@ -21,7 +21,7 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
-    public Output<Integer> getHours() {
+    public Output<Integer> hours() {
         return this.hours;
     }
 
@@ -32,7 +32,7 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 

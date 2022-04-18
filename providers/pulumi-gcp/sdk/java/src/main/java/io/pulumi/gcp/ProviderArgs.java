@@ -22,770 +22,770 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessApprovalCustomEndpoint")
       private final @Nullable Output<String> accessApprovalCustomEndpoint;
 
-    public Output<String> getAccessApprovalCustomEndpoint() {
+    public Output<String> accessApprovalCustomEndpoint() {
         return this.accessApprovalCustomEndpoint == null ? Codegen.empty() : this.accessApprovalCustomEndpoint;
     }
 
     @Import(name="accessContextManagerCustomEndpoint")
       private final @Nullable Output<String> accessContextManagerCustomEndpoint;
 
-    public Output<String> getAccessContextManagerCustomEndpoint() {
+    public Output<String> accessContextManagerCustomEndpoint() {
         return this.accessContextManagerCustomEndpoint == null ? Codegen.empty() : this.accessContextManagerCustomEndpoint;
     }
 
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     @Import(name="activeDirectoryCustomEndpoint")
       private final @Nullable Output<String> activeDirectoryCustomEndpoint;
 
-    public Output<String> getActiveDirectoryCustomEndpoint() {
+    public Output<String> activeDirectoryCustomEndpoint() {
         return this.activeDirectoryCustomEndpoint == null ? Codegen.empty() : this.activeDirectoryCustomEndpoint;
     }
 
     @Import(name="apiGatewayCustomEndpoint")
       private final @Nullable Output<String> apiGatewayCustomEndpoint;
 
-    public Output<String> getApiGatewayCustomEndpoint() {
+    public Output<String> apiGatewayCustomEndpoint() {
         return this.apiGatewayCustomEndpoint == null ? Codegen.empty() : this.apiGatewayCustomEndpoint;
     }
 
     @Import(name="apigeeCustomEndpoint")
       private final @Nullable Output<String> apigeeCustomEndpoint;
 
-    public Output<String> getApigeeCustomEndpoint() {
+    public Output<String> apigeeCustomEndpoint() {
         return this.apigeeCustomEndpoint == null ? Codegen.empty() : this.apigeeCustomEndpoint;
     }
 
     @Import(name="appEngineCustomEndpoint")
       private final @Nullable Output<String> appEngineCustomEndpoint;
 
-    public Output<String> getAppEngineCustomEndpoint() {
+    public Output<String> appEngineCustomEndpoint() {
         return this.appEngineCustomEndpoint == null ? Codegen.empty() : this.appEngineCustomEndpoint;
     }
 
     @Import(name="artifactRegistryCustomEndpoint")
       private final @Nullable Output<String> artifactRegistryCustomEndpoint;
 
-    public Output<String> getArtifactRegistryCustomEndpoint() {
+    public Output<String> artifactRegistryCustomEndpoint() {
         return this.artifactRegistryCustomEndpoint == null ? Codegen.empty() : this.artifactRegistryCustomEndpoint;
     }
 
     @Import(name="assuredWorkloadsCustomEndpoint")
       private final @Nullable Output<String> assuredWorkloadsCustomEndpoint;
 
-    public Output<String> getAssuredWorkloadsCustomEndpoint() {
+    public Output<String> assuredWorkloadsCustomEndpoint() {
         return this.assuredWorkloadsCustomEndpoint == null ? Codegen.empty() : this.assuredWorkloadsCustomEndpoint;
     }
 
     @Import(name="batching", json=true)
       private final @Nullable Output<ProviderBatchingArgs> batching;
 
-    public Output<ProviderBatchingArgs> getBatching() {
+    public Output<ProviderBatchingArgs> batching() {
         return this.batching == null ? Codegen.empty() : this.batching;
     }
 
     @Import(name="bigQueryCustomEndpoint")
       private final @Nullable Output<String> bigQueryCustomEndpoint;
 
-    public Output<String> getBigQueryCustomEndpoint() {
+    public Output<String> bigQueryCustomEndpoint() {
         return this.bigQueryCustomEndpoint == null ? Codegen.empty() : this.bigQueryCustomEndpoint;
     }
 
     @Import(name="bigqueryConnectionCustomEndpoint")
       private final @Nullable Output<String> bigqueryConnectionCustomEndpoint;
 
-    public Output<String> getBigqueryConnectionCustomEndpoint() {
+    public Output<String> bigqueryConnectionCustomEndpoint() {
         return this.bigqueryConnectionCustomEndpoint == null ? Codegen.empty() : this.bigqueryConnectionCustomEndpoint;
     }
 
     @Import(name="bigqueryDataTransferCustomEndpoint")
       private final @Nullable Output<String> bigqueryDataTransferCustomEndpoint;
 
-    public Output<String> getBigqueryDataTransferCustomEndpoint() {
+    public Output<String> bigqueryDataTransferCustomEndpoint() {
         return this.bigqueryDataTransferCustomEndpoint == null ? Codegen.empty() : this.bigqueryDataTransferCustomEndpoint;
     }
 
     @Import(name="bigqueryReservationCustomEndpoint")
       private final @Nullable Output<String> bigqueryReservationCustomEndpoint;
 
-    public Output<String> getBigqueryReservationCustomEndpoint() {
+    public Output<String> bigqueryReservationCustomEndpoint() {
         return this.bigqueryReservationCustomEndpoint == null ? Codegen.empty() : this.bigqueryReservationCustomEndpoint;
     }
 
     @Import(name="bigtableCustomEndpoint")
       private final @Nullable Output<String> bigtableCustomEndpoint;
 
-    public Output<String> getBigtableCustomEndpoint() {
+    public Output<String> bigtableCustomEndpoint() {
         return this.bigtableCustomEndpoint == null ? Codegen.empty() : this.bigtableCustomEndpoint;
     }
 
     @Import(name="billingCustomEndpoint")
       private final @Nullable Output<String> billingCustomEndpoint;
 
-    public Output<String> getBillingCustomEndpoint() {
+    public Output<String> billingCustomEndpoint() {
         return this.billingCustomEndpoint == null ? Codegen.empty() : this.billingCustomEndpoint;
     }
 
     @Import(name="billingProject")
       private final @Nullable Output<String> billingProject;
 
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject == null ? Codegen.empty() : this.billingProject;
     }
 
     @Import(name="binaryAuthorizationCustomEndpoint")
       private final @Nullable Output<String> binaryAuthorizationCustomEndpoint;
 
-    public Output<String> getBinaryAuthorizationCustomEndpoint() {
+    public Output<String> binaryAuthorizationCustomEndpoint() {
         return this.binaryAuthorizationCustomEndpoint == null ? Codegen.empty() : this.binaryAuthorizationCustomEndpoint;
     }
 
     @Import(name="cloudAssetCustomEndpoint")
       private final @Nullable Output<String> cloudAssetCustomEndpoint;
 
-    public Output<String> getCloudAssetCustomEndpoint() {
+    public Output<String> cloudAssetCustomEndpoint() {
         return this.cloudAssetCustomEndpoint == null ? Codegen.empty() : this.cloudAssetCustomEndpoint;
     }
 
     @Import(name="cloudBillingCustomEndpoint")
       private final @Nullable Output<String> cloudBillingCustomEndpoint;
 
-    public Output<String> getCloudBillingCustomEndpoint() {
+    public Output<String> cloudBillingCustomEndpoint() {
         return this.cloudBillingCustomEndpoint == null ? Codegen.empty() : this.cloudBillingCustomEndpoint;
     }
 
     @Import(name="cloudBuildCustomEndpoint")
       private final @Nullable Output<String> cloudBuildCustomEndpoint;
 
-    public Output<String> getCloudBuildCustomEndpoint() {
+    public Output<String> cloudBuildCustomEndpoint() {
         return this.cloudBuildCustomEndpoint == null ? Codegen.empty() : this.cloudBuildCustomEndpoint;
     }
 
     @Import(name="cloudBuildWorkerPoolCustomEndpoint")
       private final @Nullable Output<String> cloudBuildWorkerPoolCustomEndpoint;
 
-    public Output<String> getCloudBuildWorkerPoolCustomEndpoint() {
+    public Output<String> cloudBuildWorkerPoolCustomEndpoint() {
         return this.cloudBuildWorkerPoolCustomEndpoint == null ? Codegen.empty() : this.cloudBuildWorkerPoolCustomEndpoint;
     }
 
     @Import(name="cloudFunctionsCustomEndpoint")
       private final @Nullable Output<String> cloudFunctionsCustomEndpoint;
 
-    public Output<String> getCloudFunctionsCustomEndpoint() {
+    public Output<String> cloudFunctionsCustomEndpoint() {
         return this.cloudFunctionsCustomEndpoint == null ? Codegen.empty() : this.cloudFunctionsCustomEndpoint;
     }
 
     @Import(name="cloudIdentityCustomEndpoint")
       private final @Nullable Output<String> cloudIdentityCustomEndpoint;
 
-    public Output<String> getCloudIdentityCustomEndpoint() {
+    public Output<String> cloudIdentityCustomEndpoint() {
         return this.cloudIdentityCustomEndpoint == null ? Codegen.empty() : this.cloudIdentityCustomEndpoint;
     }
 
     @Import(name="cloudIotCustomEndpoint")
       private final @Nullable Output<String> cloudIotCustomEndpoint;
 
-    public Output<String> getCloudIotCustomEndpoint() {
+    public Output<String> cloudIotCustomEndpoint() {
         return this.cloudIotCustomEndpoint == null ? Codegen.empty() : this.cloudIotCustomEndpoint;
     }
 
     @Import(name="cloudResourceManagerCustomEndpoint")
       private final @Nullable Output<String> cloudResourceManagerCustomEndpoint;
 
-    public Output<String> getCloudResourceManagerCustomEndpoint() {
+    public Output<String> cloudResourceManagerCustomEndpoint() {
         return this.cloudResourceManagerCustomEndpoint == null ? Codegen.empty() : this.cloudResourceManagerCustomEndpoint;
     }
 
     @Import(name="cloudRunCustomEndpoint")
       private final @Nullable Output<String> cloudRunCustomEndpoint;
 
-    public Output<String> getCloudRunCustomEndpoint() {
+    public Output<String> cloudRunCustomEndpoint() {
         return this.cloudRunCustomEndpoint == null ? Codegen.empty() : this.cloudRunCustomEndpoint;
     }
 
     @Import(name="cloudSchedulerCustomEndpoint")
       private final @Nullable Output<String> cloudSchedulerCustomEndpoint;
 
-    public Output<String> getCloudSchedulerCustomEndpoint() {
+    public Output<String> cloudSchedulerCustomEndpoint() {
         return this.cloudSchedulerCustomEndpoint == null ? Codegen.empty() : this.cloudSchedulerCustomEndpoint;
     }
 
     @Import(name="cloudTasksCustomEndpoint")
       private final @Nullable Output<String> cloudTasksCustomEndpoint;
 
-    public Output<String> getCloudTasksCustomEndpoint() {
+    public Output<String> cloudTasksCustomEndpoint() {
         return this.cloudTasksCustomEndpoint == null ? Codegen.empty() : this.cloudTasksCustomEndpoint;
     }
 
     @Import(name="composerCustomEndpoint")
       private final @Nullable Output<String> composerCustomEndpoint;
 
-    public Output<String> getComposerCustomEndpoint() {
+    public Output<String> composerCustomEndpoint() {
         return this.composerCustomEndpoint == null ? Codegen.empty() : this.composerCustomEndpoint;
     }
 
     @Import(name="computeCustomEndpoint")
       private final @Nullable Output<String> computeCustomEndpoint;
 
-    public Output<String> getComputeCustomEndpoint() {
+    public Output<String> computeCustomEndpoint() {
         return this.computeCustomEndpoint == null ? Codegen.empty() : this.computeCustomEndpoint;
     }
 
     @Import(name="containerAnalysisCustomEndpoint")
       private final @Nullable Output<String> containerAnalysisCustomEndpoint;
 
-    public Output<String> getContainerAnalysisCustomEndpoint() {
+    public Output<String> containerAnalysisCustomEndpoint() {
         return this.containerAnalysisCustomEndpoint == null ? Codegen.empty() : this.containerAnalysisCustomEndpoint;
     }
 
     @Import(name="containerAwsCustomEndpoint")
       private final @Nullable Output<String> containerAwsCustomEndpoint;
 
-    public Output<String> getContainerAwsCustomEndpoint() {
+    public Output<String> containerAwsCustomEndpoint() {
         return this.containerAwsCustomEndpoint == null ? Codegen.empty() : this.containerAwsCustomEndpoint;
     }
 
     @Import(name="containerAzureCustomEndpoint")
       private final @Nullable Output<String> containerAzureCustomEndpoint;
 
-    public Output<String> getContainerAzureCustomEndpoint() {
+    public Output<String> containerAzureCustomEndpoint() {
         return this.containerAzureCustomEndpoint == null ? Codegen.empty() : this.containerAzureCustomEndpoint;
     }
 
     @Import(name="containerCustomEndpoint")
       private final @Nullable Output<String> containerCustomEndpoint;
 
-    public Output<String> getContainerCustomEndpoint() {
+    public Output<String> containerCustomEndpoint() {
         return this.containerCustomEndpoint == null ? Codegen.empty() : this.containerCustomEndpoint;
     }
 
     @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
-    public Output<String> getCredentials() {
+    public Output<String> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     @Import(name="dataCatalogCustomEndpoint")
       private final @Nullable Output<String> dataCatalogCustomEndpoint;
 
-    public Output<String> getDataCatalogCustomEndpoint() {
+    public Output<String> dataCatalogCustomEndpoint() {
         return this.dataCatalogCustomEndpoint == null ? Codegen.empty() : this.dataCatalogCustomEndpoint;
     }
 
     @Import(name="dataFusionCustomEndpoint")
       private final @Nullable Output<String> dataFusionCustomEndpoint;
 
-    public Output<String> getDataFusionCustomEndpoint() {
+    public Output<String> dataFusionCustomEndpoint() {
         return this.dataFusionCustomEndpoint == null ? Codegen.empty() : this.dataFusionCustomEndpoint;
     }
 
     @Import(name="dataLossPreventionCustomEndpoint")
       private final @Nullable Output<String> dataLossPreventionCustomEndpoint;
 
-    public Output<String> getDataLossPreventionCustomEndpoint() {
+    public Output<String> dataLossPreventionCustomEndpoint() {
         return this.dataLossPreventionCustomEndpoint == null ? Codegen.empty() : this.dataLossPreventionCustomEndpoint;
     }
 
     @Import(name="dataflowCustomEndpoint")
       private final @Nullable Output<String> dataflowCustomEndpoint;
 
-    public Output<String> getDataflowCustomEndpoint() {
+    public Output<String> dataflowCustomEndpoint() {
         return this.dataflowCustomEndpoint == null ? Codegen.empty() : this.dataflowCustomEndpoint;
     }
 
     @Import(name="dataprocCustomEndpoint")
       private final @Nullable Output<String> dataprocCustomEndpoint;
 
-    public Output<String> getDataprocCustomEndpoint() {
+    public Output<String> dataprocCustomEndpoint() {
         return this.dataprocCustomEndpoint == null ? Codegen.empty() : this.dataprocCustomEndpoint;
     }
 
     @Import(name="dataprocMetastoreCustomEndpoint")
       private final @Nullable Output<String> dataprocMetastoreCustomEndpoint;
 
-    public Output<String> getDataprocMetastoreCustomEndpoint() {
+    public Output<String> dataprocMetastoreCustomEndpoint() {
         return this.dataprocMetastoreCustomEndpoint == null ? Codegen.empty() : this.dataprocMetastoreCustomEndpoint;
     }
 
     @Import(name="datastoreCustomEndpoint")
       private final @Nullable Output<String> datastoreCustomEndpoint;
 
-    public Output<String> getDatastoreCustomEndpoint() {
+    public Output<String> datastoreCustomEndpoint() {
         return this.datastoreCustomEndpoint == null ? Codegen.empty() : this.datastoreCustomEndpoint;
     }
 
     @Import(name="deploymentManagerCustomEndpoint")
       private final @Nullable Output<String> deploymentManagerCustomEndpoint;
 
-    public Output<String> getDeploymentManagerCustomEndpoint() {
+    public Output<String> deploymentManagerCustomEndpoint() {
         return this.deploymentManagerCustomEndpoint == null ? Codegen.empty() : this.deploymentManagerCustomEndpoint;
     }
 
     @Import(name="dialogflowCustomEndpoint")
       private final @Nullable Output<String> dialogflowCustomEndpoint;
 
-    public Output<String> getDialogflowCustomEndpoint() {
+    public Output<String> dialogflowCustomEndpoint() {
         return this.dialogflowCustomEndpoint == null ? Codegen.empty() : this.dialogflowCustomEndpoint;
     }
 
     @Import(name="dialogflowCxCustomEndpoint")
       private final @Nullable Output<String> dialogflowCxCustomEndpoint;
 
-    public Output<String> getDialogflowCxCustomEndpoint() {
+    public Output<String> dialogflowCxCustomEndpoint() {
         return this.dialogflowCxCustomEndpoint == null ? Codegen.empty() : this.dialogflowCxCustomEndpoint;
     }
 
     @Import(name="disableGooglePartnerName", json=true)
       private final @Nullable Output<Boolean> disableGooglePartnerName;
 
-    public Output<Boolean> getDisableGooglePartnerName() {
+    public Output<Boolean> disableGooglePartnerName() {
         return this.disableGooglePartnerName == null ? Codegen.empty() : this.disableGooglePartnerName;
     }
 
     @Import(name="dnsCustomEndpoint")
       private final @Nullable Output<String> dnsCustomEndpoint;
 
-    public Output<String> getDnsCustomEndpoint() {
+    public Output<String> dnsCustomEndpoint() {
         return this.dnsCustomEndpoint == null ? Codegen.empty() : this.dnsCustomEndpoint;
     }
 
     @Import(name="essentialContactsCustomEndpoint")
       private final @Nullable Output<String> essentialContactsCustomEndpoint;
 
-    public Output<String> getEssentialContactsCustomEndpoint() {
+    public Output<String> essentialContactsCustomEndpoint() {
         return this.essentialContactsCustomEndpoint == null ? Codegen.empty() : this.essentialContactsCustomEndpoint;
     }
 
     @Import(name="eventarcCustomEndpoint")
       private final @Nullable Output<String> eventarcCustomEndpoint;
 
-    public Output<String> getEventarcCustomEndpoint() {
+    public Output<String> eventarcCustomEndpoint() {
         return this.eventarcCustomEndpoint == null ? Codegen.empty() : this.eventarcCustomEndpoint;
     }
 
     @Import(name="filestoreCustomEndpoint")
       private final @Nullable Output<String> filestoreCustomEndpoint;
 
-    public Output<String> getFilestoreCustomEndpoint() {
+    public Output<String> filestoreCustomEndpoint() {
         return this.filestoreCustomEndpoint == null ? Codegen.empty() : this.filestoreCustomEndpoint;
     }
 
     @Import(name="firebaseCustomEndpoint")
       private final @Nullable Output<String> firebaseCustomEndpoint;
 
-    public Output<String> getFirebaseCustomEndpoint() {
+    public Output<String> firebaseCustomEndpoint() {
         return this.firebaseCustomEndpoint == null ? Codegen.empty() : this.firebaseCustomEndpoint;
     }
 
     @Import(name="firestoreCustomEndpoint")
       private final @Nullable Output<String> firestoreCustomEndpoint;
 
-    public Output<String> getFirestoreCustomEndpoint() {
+    public Output<String> firestoreCustomEndpoint() {
         return this.firestoreCustomEndpoint == null ? Codegen.empty() : this.firestoreCustomEndpoint;
     }
 
     @Import(name="gameServicesCustomEndpoint")
       private final @Nullable Output<String> gameServicesCustomEndpoint;
 
-    public Output<String> getGameServicesCustomEndpoint() {
+    public Output<String> gameServicesCustomEndpoint() {
         return this.gameServicesCustomEndpoint == null ? Codegen.empty() : this.gameServicesCustomEndpoint;
     }
 
     @Import(name="gkeHubCustomEndpoint")
       private final @Nullable Output<String> gkeHubCustomEndpoint;
 
-    public Output<String> getGkeHubCustomEndpoint() {
+    public Output<String> gkeHubCustomEndpoint() {
         return this.gkeHubCustomEndpoint == null ? Codegen.empty() : this.gkeHubCustomEndpoint;
     }
 
     @Import(name="gkehubFeatureCustomEndpoint")
       private final @Nullable Output<String> gkehubFeatureCustomEndpoint;
 
-    public Output<String> getGkehubFeatureCustomEndpoint() {
+    public Output<String> gkehubFeatureCustomEndpoint() {
         return this.gkehubFeatureCustomEndpoint == null ? Codegen.empty() : this.gkehubFeatureCustomEndpoint;
     }
 
     @Import(name="googlePartnerName")
       private final @Nullable Output<String> googlePartnerName;
 
-    public Output<String> getGooglePartnerName() {
+    public Output<String> googlePartnerName() {
         return this.googlePartnerName == null ? Codegen.empty() : this.googlePartnerName;
     }
 
     @Import(name="healthcareCustomEndpoint")
       private final @Nullable Output<String> healthcareCustomEndpoint;
 
-    public Output<String> getHealthcareCustomEndpoint() {
+    public Output<String> healthcareCustomEndpoint() {
         return this.healthcareCustomEndpoint == null ? Codegen.empty() : this.healthcareCustomEndpoint;
     }
 
     @Import(name="iamBetaCustomEndpoint")
       private final @Nullable Output<String> iamBetaCustomEndpoint;
 
-    public Output<String> getIamBetaCustomEndpoint() {
+    public Output<String> iamBetaCustomEndpoint() {
         return this.iamBetaCustomEndpoint == null ? Codegen.empty() : this.iamBetaCustomEndpoint;
     }
 
     @Import(name="iamCredentialsCustomEndpoint")
       private final @Nullable Output<String> iamCredentialsCustomEndpoint;
 
-    public Output<String> getIamCredentialsCustomEndpoint() {
+    public Output<String> iamCredentialsCustomEndpoint() {
         return this.iamCredentialsCustomEndpoint == null ? Codegen.empty() : this.iamCredentialsCustomEndpoint;
     }
 
     @Import(name="iamCustomEndpoint")
       private final @Nullable Output<String> iamCustomEndpoint;
 
-    public Output<String> getIamCustomEndpoint() {
+    public Output<String> iamCustomEndpoint() {
         return this.iamCustomEndpoint == null ? Codegen.empty() : this.iamCustomEndpoint;
     }
 
     @Import(name="iapCustomEndpoint")
       private final @Nullable Output<String> iapCustomEndpoint;
 
-    public Output<String> getIapCustomEndpoint() {
+    public Output<String> iapCustomEndpoint() {
         return this.iapCustomEndpoint == null ? Codegen.empty() : this.iapCustomEndpoint;
     }
 
     @Import(name="identityPlatformCustomEndpoint")
       private final @Nullable Output<String> identityPlatformCustomEndpoint;
 
-    public Output<String> getIdentityPlatformCustomEndpoint() {
+    public Output<String> identityPlatformCustomEndpoint() {
         return this.identityPlatformCustomEndpoint == null ? Codegen.empty() : this.identityPlatformCustomEndpoint;
     }
 
     @Import(name="impersonateServiceAccount")
       private final @Nullable Output<String> impersonateServiceAccount;
 
-    public Output<String> getImpersonateServiceAccount() {
+    public Output<String> impersonateServiceAccount() {
         return this.impersonateServiceAccount == null ? Codegen.empty() : this.impersonateServiceAccount;
     }
 
     @Import(name="impersonateServiceAccountDelegates", json=true)
       private final @Nullable Output<List<String>> impersonateServiceAccountDelegates;
 
-    public Output<List<String>> getImpersonateServiceAccountDelegates() {
+    public Output<List<String>> impersonateServiceAccountDelegates() {
         return this.impersonateServiceAccountDelegates == null ? Codegen.empty() : this.impersonateServiceAccountDelegates;
     }
 
     @Import(name="kmsCustomEndpoint")
       private final @Nullable Output<String> kmsCustomEndpoint;
 
-    public Output<String> getKmsCustomEndpoint() {
+    public Output<String> kmsCustomEndpoint() {
         return this.kmsCustomEndpoint == null ? Codegen.empty() : this.kmsCustomEndpoint;
     }
 
     @Import(name="loggingCustomEndpoint")
       private final @Nullable Output<String> loggingCustomEndpoint;
 
-    public Output<String> getLoggingCustomEndpoint() {
+    public Output<String> loggingCustomEndpoint() {
         return this.loggingCustomEndpoint == null ? Codegen.empty() : this.loggingCustomEndpoint;
     }
 
     @Import(name="memcacheCustomEndpoint")
       private final @Nullable Output<String> memcacheCustomEndpoint;
 
-    public Output<String> getMemcacheCustomEndpoint() {
+    public Output<String> memcacheCustomEndpoint() {
         return this.memcacheCustomEndpoint == null ? Codegen.empty() : this.memcacheCustomEndpoint;
     }
 
     @Import(name="mlEngineCustomEndpoint")
       private final @Nullable Output<String> mlEngineCustomEndpoint;
 
-    public Output<String> getMlEngineCustomEndpoint() {
+    public Output<String> mlEngineCustomEndpoint() {
         return this.mlEngineCustomEndpoint == null ? Codegen.empty() : this.mlEngineCustomEndpoint;
     }
 
     @Import(name="monitoringCustomEndpoint")
       private final @Nullable Output<String> monitoringCustomEndpoint;
 
-    public Output<String> getMonitoringCustomEndpoint() {
+    public Output<String> monitoringCustomEndpoint() {
         return this.monitoringCustomEndpoint == null ? Codegen.empty() : this.monitoringCustomEndpoint;
     }
 
     @Import(name="networkConnectivityCustomEndpoint")
       private final @Nullable Output<String> networkConnectivityCustomEndpoint;
 
-    public Output<String> getNetworkConnectivityCustomEndpoint() {
+    public Output<String> networkConnectivityCustomEndpoint() {
         return this.networkConnectivityCustomEndpoint == null ? Codegen.empty() : this.networkConnectivityCustomEndpoint;
     }
 
     @Import(name="networkManagementCustomEndpoint")
       private final @Nullable Output<String> networkManagementCustomEndpoint;
 
-    public Output<String> getNetworkManagementCustomEndpoint() {
+    public Output<String> networkManagementCustomEndpoint() {
         return this.networkManagementCustomEndpoint == null ? Codegen.empty() : this.networkManagementCustomEndpoint;
     }
 
     @Import(name="networkServicesCustomEndpoint")
       private final @Nullable Output<String> networkServicesCustomEndpoint;
 
-    public Output<String> getNetworkServicesCustomEndpoint() {
+    public Output<String> networkServicesCustomEndpoint() {
         return this.networkServicesCustomEndpoint == null ? Codegen.empty() : this.networkServicesCustomEndpoint;
     }
 
     @Import(name="notebooksCustomEndpoint")
       private final @Nullable Output<String> notebooksCustomEndpoint;
 
-    public Output<String> getNotebooksCustomEndpoint() {
+    public Output<String> notebooksCustomEndpoint() {
         return this.notebooksCustomEndpoint == null ? Codegen.empty() : this.notebooksCustomEndpoint;
     }
 
     @Import(name="orgPolicyCustomEndpoint")
       private final @Nullable Output<String> orgPolicyCustomEndpoint;
 
-    public Output<String> getOrgPolicyCustomEndpoint() {
+    public Output<String> orgPolicyCustomEndpoint() {
         return this.orgPolicyCustomEndpoint == null ? Codegen.empty() : this.orgPolicyCustomEndpoint;
     }
 
     @Import(name="osConfigCustomEndpoint")
       private final @Nullable Output<String> osConfigCustomEndpoint;
 
-    public Output<String> getOsConfigCustomEndpoint() {
+    public Output<String> osConfigCustomEndpoint() {
         return this.osConfigCustomEndpoint == null ? Codegen.empty() : this.osConfigCustomEndpoint;
     }
 
     @Import(name="osLoginCustomEndpoint")
       private final @Nullable Output<String> osLoginCustomEndpoint;
 
-    public Output<String> getOsLoginCustomEndpoint() {
+    public Output<String> osLoginCustomEndpoint() {
         return this.osLoginCustomEndpoint == null ? Codegen.empty() : this.osLoginCustomEndpoint;
     }
 
     @Import(name="privatecaCustomEndpoint")
       private final @Nullable Output<String> privatecaCustomEndpoint;
 
-    public Output<String> getPrivatecaCustomEndpoint() {
+    public Output<String> privatecaCustomEndpoint() {
         return this.privatecaCustomEndpoint == null ? Codegen.empty() : this.privatecaCustomEndpoint;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="pubsubCustomEndpoint")
       private final @Nullable Output<String> pubsubCustomEndpoint;
 
-    public Output<String> getPubsubCustomEndpoint() {
+    public Output<String> pubsubCustomEndpoint() {
         return this.pubsubCustomEndpoint == null ? Codegen.empty() : this.pubsubCustomEndpoint;
     }
 
     @Import(name="pubsubLiteCustomEndpoint")
       private final @Nullable Output<String> pubsubLiteCustomEndpoint;
 
-    public Output<String> getPubsubLiteCustomEndpoint() {
+    public Output<String> pubsubLiteCustomEndpoint() {
         return this.pubsubLiteCustomEndpoint == null ? Codegen.empty() : this.pubsubLiteCustomEndpoint;
     }
 
     @Import(name="recaptchaEnterpriseCustomEndpoint")
       private final @Nullable Output<String> recaptchaEnterpriseCustomEndpoint;
 
-    public Output<String> getRecaptchaEnterpriseCustomEndpoint() {
+    public Output<String> recaptchaEnterpriseCustomEndpoint() {
         return this.recaptchaEnterpriseCustomEndpoint == null ? Codegen.empty() : this.recaptchaEnterpriseCustomEndpoint;
     }
 
     @Import(name="redisCustomEndpoint")
       private final @Nullable Output<String> redisCustomEndpoint;
 
-    public Output<String> getRedisCustomEndpoint() {
+    public Output<String> redisCustomEndpoint() {
         return this.redisCustomEndpoint == null ? Codegen.empty() : this.redisCustomEndpoint;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
     @Import(name="requestReason")
       private final @Nullable Output<String> requestReason;
 
-    public Output<String> getRequestReason() {
+    public Output<String> requestReason() {
         return this.requestReason == null ? Codegen.empty() : this.requestReason;
     }
 
     @Import(name="requestTimeout")
       private final @Nullable Output<String> requestTimeout;
 
-    public Output<String> getRequestTimeout() {
+    public Output<String> requestTimeout() {
         return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
     }
 
     @Import(name="resourceManagerCustomEndpoint")
       private final @Nullable Output<String> resourceManagerCustomEndpoint;
 
-    public Output<String> getResourceManagerCustomEndpoint() {
+    public Output<String> resourceManagerCustomEndpoint() {
         return this.resourceManagerCustomEndpoint == null ? Codegen.empty() : this.resourceManagerCustomEndpoint;
     }
 
     @Import(name="resourceManagerV2CustomEndpoint")
       private final @Nullable Output<String> resourceManagerV2CustomEndpoint;
 
-    public Output<String> getResourceManagerV2CustomEndpoint() {
+    public Output<String> resourceManagerV2CustomEndpoint() {
         return this.resourceManagerV2CustomEndpoint == null ? Codegen.empty() : this.resourceManagerV2CustomEndpoint;
     }
 
     @Import(name="runtimeConfigCustomEndpoint")
       private final @Nullable Output<String> runtimeConfigCustomEndpoint;
 
-    public Output<String> getRuntimeConfigCustomEndpoint() {
+    public Output<String> runtimeConfigCustomEndpoint() {
         return this.runtimeConfigCustomEndpoint == null ? Codegen.empty() : this.runtimeConfigCustomEndpoint;
     }
 
     @Import(name="runtimeconfigCustomEndpoint")
       private final @Nullable Output<String> runtimeconfigCustomEndpoint;
 
-    public Output<String> getRuntimeconfigCustomEndpoint() {
+    public Output<String> runtimeconfigCustomEndpoint() {
         return this.runtimeconfigCustomEndpoint == null ? Codegen.empty() : this.runtimeconfigCustomEndpoint;
     }
 
     @Import(name="scopes", json=true)
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     @Import(name="secretManagerCustomEndpoint")
       private final @Nullable Output<String> secretManagerCustomEndpoint;
 
-    public Output<String> getSecretManagerCustomEndpoint() {
+    public Output<String> secretManagerCustomEndpoint() {
         return this.secretManagerCustomEndpoint == null ? Codegen.empty() : this.secretManagerCustomEndpoint;
     }
 
     @Import(name="securityCenterCustomEndpoint")
       private final @Nullable Output<String> securityCenterCustomEndpoint;
 
-    public Output<String> getSecurityCenterCustomEndpoint() {
+    public Output<String> securityCenterCustomEndpoint() {
         return this.securityCenterCustomEndpoint == null ? Codegen.empty() : this.securityCenterCustomEndpoint;
     }
 
     @Import(name="securityScannerCustomEndpoint")
       private final @Nullable Output<String> securityScannerCustomEndpoint;
 
-    public Output<String> getSecurityScannerCustomEndpoint() {
+    public Output<String> securityScannerCustomEndpoint() {
         return this.securityScannerCustomEndpoint == null ? Codegen.empty() : this.securityScannerCustomEndpoint;
     }
 
     @Import(name="serviceDirectoryCustomEndpoint")
       private final @Nullable Output<String> serviceDirectoryCustomEndpoint;
 
-    public Output<String> getServiceDirectoryCustomEndpoint() {
+    public Output<String> serviceDirectoryCustomEndpoint() {
         return this.serviceDirectoryCustomEndpoint == null ? Codegen.empty() : this.serviceDirectoryCustomEndpoint;
     }
 
     @Import(name="serviceManagementCustomEndpoint")
       private final @Nullable Output<String> serviceManagementCustomEndpoint;
 
-    public Output<String> getServiceManagementCustomEndpoint() {
+    public Output<String> serviceManagementCustomEndpoint() {
         return this.serviceManagementCustomEndpoint == null ? Codegen.empty() : this.serviceManagementCustomEndpoint;
     }
 
     @Import(name="serviceNetworkingCustomEndpoint")
       private final @Nullable Output<String> serviceNetworkingCustomEndpoint;
 
-    public Output<String> getServiceNetworkingCustomEndpoint() {
+    public Output<String> serviceNetworkingCustomEndpoint() {
         return this.serviceNetworkingCustomEndpoint == null ? Codegen.empty() : this.serviceNetworkingCustomEndpoint;
     }
 
     @Import(name="serviceUsageCustomEndpoint")
       private final @Nullable Output<String> serviceUsageCustomEndpoint;
 
-    public Output<String> getServiceUsageCustomEndpoint() {
+    public Output<String> serviceUsageCustomEndpoint() {
         return this.serviceUsageCustomEndpoint == null ? Codegen.empty() : this.serviceUsageCustomEndpoint;
     }
 
     @Import(name="sourceRepoCustomEndpoint")
       private final @Nullable Output<String> sourceRepoCustomEndpoint;
 
-    public Output<String> getSourceRepoCustomEndpoint() {
+    public Output<String> sourceRepoCustomEndpoint() {
         return this.sourceRepoCustomEndpoint == null ? Codegen.empty() : this.sourceRepoCustomEndpoint;
     }
 
     @Import(name="spannerCustomEndpoint")
       private final @Nullable Output<String> spannerCustomEndpoint;
 
-    public Output<String> getSpannerCustomEndpoint() {
+    public Output<String> spannerCustomEndpoint() {
         return this.spannerCustomEndpoint == null ? Codegen.empty() : this.spannerCustomEndpoint;
     }
 
     @Import(name="sqlCustomEndpoint")
       private final @Nullable Output<String> sqlCustomEndpoint;
 
-    public Output<String> getSqlCustomEndpoint() {
+    public Output<String> sqlCustomEndpoint() {
         return this.sqlCustomEndpoint == null ? Codegen.empty() : this.sqlCustomEndpoint;
     }
 
     @Import(name="storageCustomEndpoint")
       private final @Nullable Output<String> storageCustomEndpoint;
 
-    public Output<String> getStorageCustomEndpoint() {
+    public Output<String> storageCustomEndpoint() {
         return this.storageCustomEndpoint == null ? Codegen.empty() : this.storageCustomEndpoint;
     }
 
     @Import(name="storageTransferCustomEndpoint")
       private final @Nullable Output<String> storageTransferCustomEndpoint;
 
-    public Output<String> getStorageTransferCustomEndpoint() {
+    public Output<String> storageTransferCustomEndpoint() {
         return this.storageTransferCustomEndpoint == null ? Codegen.empty() : this.storageTransferCustomEndpoint;
     }
 
     @Import(name="tagsCustomEndpoint")
       private final @Nullable Output<String> tagsCustomEndpoint;
 
-    public Output<String> getTagsCustomEndpoint() {
+    public Output<String> tagsCustomEndpoint() {
         return this.tagsCustomEndpoint == null ? Codegen.empty() : this.tagsCustomEndpoint;
     }
 
     @Import(name="tpuCustomEndpoint")
       private final @Nullable Output<String> tpuCustomEndpoint;
 
-    public Output<String> getTpuCustomEndpoint() {
+    public Output<String> tpuCustomEndpoint() {
         return this.tpuCustomEndpoint == null ? Codegen.empty() : this.tpuCustomEndpoint;
     }
 
     @Import(name="userProjectOverride", json=true)
       private final @Nullable Output<Boolean> userProjectOverride;
 
-    public Output<Boolean> getUserProjectOverride() {
+    public Output<Boolean> userProjectOverride() {
         return this.userProjectOverride == null ? Codegen.empty() : this.userProjectOverride;
     }
 
     @Import(name="vertexAiCustomEndpoint")
       private final @Nullable Output<String> vertexAiCustomEndpoint;
 
-    public Output<String> getVertexAiCustomEndpoint() {
+    public Output<String> vertexAiCustomEndpoint() {
         return this.vertexAiCustomEndpoint == null ? Codegen.empty() : this.vertexAiCustomEndpoint;
     }
 
     @Import(name="vpcAccessCustomEndpoint")
       private final @Nullable Output<String> vpcAccessCustomEndpoint;
 
-    public Output<String> getVpcAccessCustomEndpoint() {
+    public Output<String> vpcAccessCustomEndpoint() {
         return this.vpcAccessCustomEndpoint == null ? Codegen.empty() : this.vpcAccessCustomEndpoint;
     }
 
     @Import(name="workflowsCustomEndpoint")
       private final @Nullable Output<String> workflowsCustomEndpoint;
 
-    public Output<String> getWorkflowsCustomEndpoint() {
+    public Output<String> workflowsCustomEndpoint() {
         return this.workflowsCustomEndpoint == null ? Codegen.empty() : this.workflowsCustomEndpoint;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

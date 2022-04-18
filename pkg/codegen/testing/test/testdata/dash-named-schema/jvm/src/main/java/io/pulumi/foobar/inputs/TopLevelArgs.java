@@ -18,7 +18,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buzz")
       private final @Nullable Output<String> buzz;
 
-    public Output<String> getBuzz() {
+    public Output<String> buzz() {
         return this.buzz == null ? Codegen.empty() : this.buzz;
     }
 

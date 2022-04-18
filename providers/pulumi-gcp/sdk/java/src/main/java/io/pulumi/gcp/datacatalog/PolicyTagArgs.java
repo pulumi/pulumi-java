@@ -25,7 +25,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentPolicyTag")
       private final @Nullable Output<String> parentPolicyTag;
 
-    public Output<String> getParentPolicyTag() {
+    public Output<String> parentPolicyTag() {
         return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
     }
 
@@ -62,7 +62,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taxonomy", required=true)
       private final Output<String> taxonomy;
 
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy;
     }
 

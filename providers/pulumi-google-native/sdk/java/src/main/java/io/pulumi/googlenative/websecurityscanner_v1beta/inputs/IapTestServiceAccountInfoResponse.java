@@ -23,7 +23,7 @@ public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources
     @Import(name="targetAudienceClientId", required=true)
       private final String targetAudienceClientId;
 
-    public String getTargetAudienceClientId() {
+    public String targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 

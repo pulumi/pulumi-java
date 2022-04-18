@@ -26,7 +26,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuancePolicy")
       private final @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
 
-    public Output<CaPoolIssuancePolicyGetArgs> getIssuancePolicy() {
+    public Output<CaPoolIssuancePolicyGetArgs> issuancePolicy() {
         return this.issuancePolicy == null ? Codegen.empty() : this.issuancePolicy;
     }
 
@@ -39,7 +39,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -50,7 +50,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -85,7 +85,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishingOptions")
       private final @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
 
-    public Output<CaPoolPublishingOptionsGetArgs> getPublishingOptions() {
+    public Output<CaPoolPublishingOptionsGetArgs> publishingOptions() {
         return this.publishingOptions == null ? Codegen.empty() : this.publishingOptions;
     }
 
@@ -97,7 +97,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

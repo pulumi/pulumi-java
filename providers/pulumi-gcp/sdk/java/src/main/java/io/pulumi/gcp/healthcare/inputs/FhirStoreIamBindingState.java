@@ -20,7 +20,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<FhirStoreIamBindingConditionGetArgs> condition;
 
-    public Output<FhirStoreIamBindingConditionGetArgs> getCondition() {
+    public Output<FhirStoreIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,7 +31,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,14 +45,14 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
     @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -65,7 +65,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

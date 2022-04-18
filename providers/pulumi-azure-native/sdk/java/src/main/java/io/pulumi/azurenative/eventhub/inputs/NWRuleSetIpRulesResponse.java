@@ -25,7 +25,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -36,7 +36,7 @@ public final class NWRuleSetIpRulesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipMask")
       private final @Nullable String ipMask;
 
-    public Optional<String> getIpMask() {
+    public Optional<String> ipMask() {
         return this.ipMask == null ? Optional.empty() : Optional.ofNullable(this.ipMask);
     }
 

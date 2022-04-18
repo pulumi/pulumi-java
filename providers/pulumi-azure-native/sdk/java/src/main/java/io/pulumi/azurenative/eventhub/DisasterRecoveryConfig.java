@@ -43,7 +43,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return Alternate name specified when alias and namespace names are same.
      * 
      */
-    public Output</* @Nullable */ String> getAlternateName() {
+    public Output</* @Nullable */ String> alternateName() {
         return this.alternateName;
     }
     /**
@@ -57,7 +57,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
      */
-    public Output</* @Nullable */ String> getPartnerNamespace() {
+    public Output</* @Nullable */ String> partnerNamespace() {
         return this.partnerNamespace;
     }
     /**
@@ -85,7 +85,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return Number of entities pending to be replicated.
      * 
      */
-    public Output<Double> getPendingReplicationOperationsCount() {
+    public Output<Double> pendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
@@ -99,7 +99,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -127,7 +127,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

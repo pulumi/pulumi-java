@@ -25,7 +25,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="email")
       private final @Nullable String email;
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -36,7 +36,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="phone")
       private final @Nullable String phone;
 
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
     }
 
@@ -47,7 +47,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="role")
       private final @Nullable String role;
 
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 

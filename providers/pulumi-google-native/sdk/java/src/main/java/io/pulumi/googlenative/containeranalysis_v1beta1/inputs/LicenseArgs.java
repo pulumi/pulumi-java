@@ -26,7 +26,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comments")
       private final @Nullable Output<String> comments;
 
-    public Output<String> getComments() {
+    public Output<String> comments() {
         return this.comments == null ? Codegen.empty() : this.comments;
     }
 
@@ -37,7 +37,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression == null ? Codegen.empty() : this.expression;
     }
 

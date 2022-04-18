@@ -26,7 +26,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
@@ -37,7 +37,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

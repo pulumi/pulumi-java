@@ -22,7 +22,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -33,7 +33,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -44,7 +44,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -55,7 +55,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

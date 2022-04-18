@@ -30,7 +30,7 @@ public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customRegistries")
       private final @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
 
-    public Map<String,CustomRegistryCredentialsResponse> getCustomRegistries() {
+    public Map<String,CustomRegistryCredentialsResponse> customRegistries() {
         return this.customRegistries == null ? Map.of() : this.customRegistries;
     }
 
@@ -41,7 +41,7 @@ public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceRegistry")
       private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
-    public Optional<SourceRegistryCredentialsResponse> getSourceRegistry() {
+    public Optional<SourceRegistryCredentialsResponse> sourceRegistry() {
         return this.sourceRegistry == null ? Optional.empty() : Optional.ofNullable(this.sourceRegistry);
     }
 

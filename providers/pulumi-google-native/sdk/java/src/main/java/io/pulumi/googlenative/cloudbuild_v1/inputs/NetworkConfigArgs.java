@@ -27,7 +27,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="egressOption")
       private final @Nullable Output<NetworkConfigEgressOption> egressOption;
 
-    public Output<NetworkConfigEgressOption> getEgressOption() {
+    public Output<NetworkConfigEgressOption> egressOption() {
         return this.egressOption == null ? Codegen.empty() : this.egressOption;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeredNetwork", required=true)
       private final Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 

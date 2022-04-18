@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
     @Import(name="breakglassJustification", required=true)
       private final String breakglassJustification;
 
-    public String getBreakglassJustification() {
+    public String breakglassJustification() {
         return this.breakglassJustification;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
     @Import(name="useDefault", required=true)
       private final Boolean useDefault;
 
-    public Boolean getUseDefault() {
+    public Boolean useDefault() {
         return this.useDefault;
     }
 

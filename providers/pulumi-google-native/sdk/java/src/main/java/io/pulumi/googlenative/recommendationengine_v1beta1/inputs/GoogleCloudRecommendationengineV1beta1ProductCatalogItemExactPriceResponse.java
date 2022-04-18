@@ -23,7 +23,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="displayPrice", required=true)
       private final Double displayPrice;
 
-    public Double getDisplayPrice() {
+    public Double displayPrice() {
         return this.displayPrice;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="originalPrice", required=true)
       private final Double originalPrice;
 
-    public Double getOriginalPrice() {
+    public Double originalPrice() {
         return this.originalPrice;
     }
 

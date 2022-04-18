@@ -139,14 +139,14 @@ public final class GetInstanceTemplateDisk {
      * This defaults to true.
      * 
     */
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
      * Indicates that this is a boot disk.
      * 
     */
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
     /**
@@ -155,14 +155,14 @@ public final class GetInstanceTemplateDisk {
      * specified, the server chooses a default device name to apply to this disk.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
     */
-    public List<GetInstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKeys() {
+    public List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys() {
         return this.diskEncryptionKeys;
     }
     /**
@@ -170,7 +170,7 @@ public final class GetInstanceTemplateDisk {
      * to the name of the instance.
      * 
     */
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
     /**
@@ -179,7 +179,7 @@ public final class GetInstanceTemplateDisk {
      * the size must be exactly 375GB.
      * 
     */
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
@@ -187,7 +187,7 @@ public final class GetInstanceTemplateDisk {
      * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
      * 
     */
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
     /**
@@ -197,7 +197,7 @@ public final class GetInstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
     */
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
     /**
@@ -205,7 +205,7 @@ public final class GetInstanceTemplateDisk {
      * this template
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
@@ -214,10 +214,10 @@ public final class GetInstanceTemplateDisk {
      * read-write mode.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
-    public List<String> getResourcePolicies() {
+    public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
@@ -226,7 +226,7 @@ public final class GetInstanceTemplateDisk {
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
@@ -239,14 +239,14 @@ public final class GetInstanceTemplateDisk {
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
     */
-    public String getSourceImage() {
+    public String sourceImage() {
         return this.sourceImage;
     }
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

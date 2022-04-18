@@ -24,7 +24,7 @@ public final class RuleGroupRuleStatementXssMatchStatementArgs extends io.pulumi
     @Import(name="fieldToMatch")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleStatementXssMatchStatementArgs extends io.pulumi
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupRuleStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupRuleStatementXssMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementXssMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

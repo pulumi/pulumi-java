@@ -75,49 +75,49 @@ public final class RuleGroupRuleStatementOrStatementStatementXssMatchStatementFi
      * Inspect all query arguments.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArguments> getAllQueryArguments() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * Inspect the request body, which immediately follows the request headers.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchBody> getBody() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchMethod> getMethod() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchQueryString> getQueryString() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * Inspect a single header. See Single Header below for details.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader> getSingleHeader() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument> getSingleQueryArgument() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
     */
-    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchUriPath> getUriPath() {
+    public Optional<RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
 

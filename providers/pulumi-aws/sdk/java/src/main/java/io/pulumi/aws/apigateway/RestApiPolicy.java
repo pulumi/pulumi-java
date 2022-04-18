@@ -42,7 +42,7 @@ public class RestApiPolicy extends io.pulumi.resources.CustomResource {
      * @return JSON formatted policy document that controls access to the API Gateway.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -56,7 +56,7 @@ public class RestApiPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the REST API.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 

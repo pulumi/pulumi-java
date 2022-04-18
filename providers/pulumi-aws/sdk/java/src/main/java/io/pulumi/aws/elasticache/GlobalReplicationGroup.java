@@ -45,7 +45,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
      * 
      */
-    public Output<String> getActualEngineVersion() {
+    public Output<String> actualEngineVersion() {
         return this.actualEngineVersion;
     }
     /**
@@ -59,7 +59,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the ElastiCache Global Replication Group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -73,7 +73,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return A flag that indicate whether the encryption at rest is enabled.
      * 
      */
-    public Output<Boolean> getAtRestEncryptionEnabled() {
+    public Output<Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled;
     }
     /**
@@ -87,7 +87,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return A flag that indicate whether AuthToken (password) is enabled.
      * 
      */
-    public Output<Boolean> getAuthTokenEnabled() {
+    public Output<Boolean> authTokenEnabled() {
         return this.authTokenEnabled;
     }
     /**
@@ -101,7 +101,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
      * 
      */
-    public Output<String> getCacheNodeType() {
+    public Output<String> cacheNodeType() {
         return this.cacheNodeType;
     }
     /**
@@ -115,7 +115,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the Global Datastore is cluster enabled.
      * 
      */
-    public Output<Boolean> getClusterEnabled() {
+    public Output<Boolean> clusterEnabled() {
         return this.clusterEnabled;
     }
     /**
@@ -129,7 +129,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the cache engine to be used for the clusters in this global replication group.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -143,7 +143,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The full version number of the cache engine running on the members of this global replication group.
      * 
      */
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual;
     }
     /**
@@ -157,7 +157,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return A user-created description for the global replication group.
      * 
      */
-    public Output</* @Nullable */ String> getGlobalReplicationGroupDescription() {
+    public Output</* @Nullable */ String> globalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription;
     }
     /**
@@ -171,7 +171,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The full ID of the global replication group.
      * 
      */
-    public Output<String> getGlobalReplicationGroupId() {
+    public Output<String> globalReplicationGroupId() {
         return this.globalReplicationGroupId;
     }
     /**
@@ -185,7 +185,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
      * 
      */
-    public Output<String> getGlobalReplicationGroupIdSuffix() {
+    public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
     }
     /**
@@ -199,7 +199,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
      * 
      */
-    public Output<String> getPrimaryReplicationGroupId() {
+    public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId;
     }
     /**
@@ -213,7 +213,7 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
      * @return A flag that indicates whether the encryption in transit is enabled.
      * 
      */
-    public Output<Boolean> getTransitEncryptionEnabled() {
+    public Output<Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled;
     }
 

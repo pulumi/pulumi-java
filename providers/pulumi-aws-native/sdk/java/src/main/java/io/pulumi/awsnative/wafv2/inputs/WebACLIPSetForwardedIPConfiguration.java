@@ -17,21 +17,21 @@ public final class WebACLIPSetForwardedIPConfiguration extends io.pulumi.resourc
     @Import(name="fallbackBehavior", required=true)
       private final WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
-    public WebACLIPSetForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
     @Import(name="position", required=true)
       private final WebACLIPSetForwardedIPConfigurationPosition position;
 
-    public WebACLIPSetForwardedIPConfigurationPosition getPosition() {
+    public WebACLIPSetForwardedIPConfigurationPosition position() {
         return this.position;
     }
 

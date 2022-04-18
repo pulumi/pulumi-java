@@ -16,7 +16,7 @@ public final class SpotFleetGroupIdentifier {
         this.groupId = groupId;
     }
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 

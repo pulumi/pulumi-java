@@ -25,7 +25,7 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
     @Import(name="header")
       private final @Nullable String header;
 
-    public Optional<String> getHeader() {
+    public Optional<String> header() {
         return this.header == null ? Optional.empty() : Optional.ofNullable(this.header);
     }
 
@@ -36,7 +36,7 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
     @Import(name="query")
       private final @Nullable String query;
 
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 

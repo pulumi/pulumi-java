@@ -24,14 +24,14 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IAMMemberConditionArgs> condition;
 
-    public Output<IAMMemberConditionArgs> getCondition() {
+    public Output<IAMMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -44,7 +44,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -55,7 +55,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 

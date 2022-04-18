@@ -68,53 +68,53 @@ public final class GetGlobalForwardingRuleResult {
         this.target = target;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
-    public String getIpProtocol() {
+    public String ipProtocol() {
         return this.ipProtocol;
     }
-    public String getIpVersion() {
+    public String ipVersion() {
         return this.ipVersion;
     }
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getLoadBalancingScheme() {
+    public String loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
-    public List<GetGlobalForwardingRuleMetadataFilter> getMetadataFilters() {
+    public List<GetGlobalForwardingRuleMetadataFilter> metadataFilters() {
         return this.metadataFilters;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public String getPortRange() {
+    public String portRange() {
         return this.portRange;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

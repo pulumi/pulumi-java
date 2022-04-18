@@ -23,7 +23,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="completeLock")
       private final @Nullable Output<Boolean> completeLock;
 
-    public Output<Boolean> getCompleteLock() {
+    public Output<Boolean> completeLock() {
         return this.completeLock == null ? Codegen.empty() : this.completeLock;
     }
 
@@ -34,7 +34,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreDeletionError")
       private final @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Output<Boolean> getIgnoreDeletionError() {
+    public Output<Boolean> ignoreDeletionError() {
         return this.ignoreDeletionError == null ? Codegen.empty() : this.ignoreDeletionError;
     }
 
@@ -45,7 +45,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -56,7 +56,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName == null ? Codegen.empty() : this.vaultName;
     }
 

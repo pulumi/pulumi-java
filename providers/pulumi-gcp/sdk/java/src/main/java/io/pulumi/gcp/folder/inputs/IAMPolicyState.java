@@ -18,21 +18,21 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

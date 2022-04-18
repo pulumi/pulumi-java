@@ -19,14 +19,14 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
     @Import(name="numberOfDays")
       private final @Nullable Output<Integer> numberOfDays;
 
-    public Output<Integer> getNumberOfDays() {
+    public Output<Integer> numberOfDays() {
         return this.numberOfDays == null ? Codegen.empty() : this.numberOfDays;
     }
 
     @Import(name="unlimited")
       private final @Nullable Output<Boolean> unlimited;
 
-    public Output<Boolean> getUnlimited() {
+    public Output<Boolean> unlimited() {
         return this.unlimited == null ? Codegen.empty() : this.unlimited;
     }
 

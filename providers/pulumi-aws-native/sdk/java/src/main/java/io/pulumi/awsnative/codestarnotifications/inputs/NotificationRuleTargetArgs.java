@@ -17,14 +17,14 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     @Import(name="targetAddress", required=true)
       private final Output<String> targetAddress;
 
-    public Output<String> getTargetAddress() {
+    public Output<String> targetAddress() {
         return this.targetAddress;
     }
 
     @Import(name="targetType", required=true)
       private final Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType;
     }
 

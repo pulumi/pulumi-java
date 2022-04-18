@@ -49,28 +49,28 @@ public final class GetTopicResult {
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The settings for this topic's partitions.
      * 
     */
-    public PartitionConfigResponse getPartitionConfig() {
+    public PartitionConfigResponse partitionConfig() {
         return this.partitionConfig;
     }
     /**
      * The settings for this topic's Reservation usage.
      * 
     */
-    public ReservationConfigResponse getReservationConfig() {
+    public ReservationConfigResponse reservationConfig() {
         return this.reservationConfig;
     }
     /**
      * The settings for this topic's message retention.
      * 
     */
-    public RetentionConfigResponse getRetentionConfig() {
+    public RetentionConfigResponse retentionConfig() {
         return this.retentionConfig;
     }
 

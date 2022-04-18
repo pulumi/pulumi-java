@@ -24,7 +24,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
@@ -35,7 +35,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="maxCount", required=true)
       private final Integer maxCount;
 
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
 
@@ -46,7 +46,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
 
@@ -57,7 +57,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="minCount", required=true)
       private final Integer minCount;
 
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
 
@@ -68,7 +68,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="storageGb", required=true)
       private final Double storageGb;
 
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

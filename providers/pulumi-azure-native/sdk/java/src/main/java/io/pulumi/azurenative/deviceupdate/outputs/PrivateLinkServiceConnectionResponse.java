@@ -42,21 +42,21 @@ public final class PrivateLinkServiceConnectionResponse {
      * List of group IDs.
      * 
     */
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * Private link service connection name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Request message.
      * 
     */
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
 

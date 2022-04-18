@@ -25,14 +25,14 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     @Import(name="errors")
       private final @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
 
-    public Output<List<EnvironmentLastUpdatedErrorGetArgs>> getErrors() {
+    public Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors() {
         return this.errors == null ? Codegen.empty() : this.errors;
     }
 
@@ -43,7 +43,7 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

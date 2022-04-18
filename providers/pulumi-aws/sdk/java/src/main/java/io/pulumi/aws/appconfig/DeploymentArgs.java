@@ -23,7 +23,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationProfileId", required=true)
       private final Output<String> configurationProfileId;
 
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationVersion", required=true)
       private final Output<String> configurationVersion;
 
-    public Output<String> getConfigurationVersion() {
+    public Output<String> configurationVersion() {
         return this.configurationVersion;
     }
 
@@ -56,7 +56,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentStrategyId", required=true)
       private final Output<String> deploymentStrategyId;
 
-    public Output<String> getDeploymentStrategyId() {
+    public Output<String> deploymentStrategyId() {
         return this.deploymentStrategyId;
     }
 
@@ -67,7 +67,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -89,7 +89,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -28,7 +28,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterLabels")
       private final @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
-    public Output<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
+    public Output<List<MetadataFilterLabelMatchArgs>> filterLabels() {
         return this.filterLabels == null ? Codegen.empty() : this.filterLabels;
     }
 
@@ -39,7 +39,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterMatchCriteria")
       private final @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
-    public Output<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {
+    public Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria() {
         return this.filterMatchCriteria == null ? Codegen.empty() : this.filterMatchCriteria;
     }
 

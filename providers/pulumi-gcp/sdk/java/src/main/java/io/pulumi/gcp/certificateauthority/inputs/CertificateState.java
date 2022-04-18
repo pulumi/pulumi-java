@@ -27,7 +27,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
 
-    public Output<String> getCertificateAuthority() {
+    public Output<String> certificateAuthority() {
         return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
@@ -39,7 +39,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateDescriptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
 
-    public Output<List<CertificateCertificateDescriptionGetArgs>> getCertificateDescriptions() {
+    public Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions() {
         return this.certificateDescriptions == null ? Codegen.empty() : this.certificateDescriptions;
     }
 
@@ -54,7 +54,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
 
-    public Output<String> getCertificateTemplate() {
+    public Output<String> certificateTemplate() {
         return this.certificateTemplate == null ? Codegen.empty() : this.certificateTemplate;
     }
 
@@ -66,7 +66,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<CertificateConfigGetArgs> config;
 
-    public Output<CertificateConfigGetArgs> getConfig() {
+    public Output<CertificateConfigGetArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -77,7 +77,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -88,7 +88,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -101,7 +101,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
@@ -113,7 +113,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -124,7 +124,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -135,7 +135,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCertificate")
       private final @Nullable Output<String> pemCertificate;
 
-    public Output<String> getPemCertificate() {
+    public Output<String> pemCertificate() {
         return this.pemCertificate == null ? Codegen.empty() : this.pemCertificate;
     }
 
@@ -146,7 +146,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCertificates")
       private final @Nullable Output<List<String>> pemCertificates;
 
-    public Output<List<String>> getPemCertificates() {
+    public Output<List<String>> pemCertificates() {
         return this.pemCertificates == null ? Codegen.empty() : this.pemCertificates;
     }
 
@@ -157,7 +157,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
-    public Output<String> getPemCsr() {
+    public Output<String> pemCsr() {
         return this.pemCsr == null ? Codegen.empty() : this.pemCsr;
     }
 
@@ -168,7 +168,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool")
       private final @Nullable Output<String> pool;
 
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool == null ? Codegen.empty() : this.pool;
     }
 
@@ -180,7 +180,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -192,7 +192,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="revocationDetails")
       private final @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails;
 
-    public Output<List<CertificateRevocationDetailGetArgs>> getRevocationDetails() {
+    public Output<List<CertificateRevocationDetailGetArgs>> revocationDetails() {
         return this.revocationDetails == null ? Codegen.empty() : this.revocationDetails;
     }
 
@@ -203,7 +203,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

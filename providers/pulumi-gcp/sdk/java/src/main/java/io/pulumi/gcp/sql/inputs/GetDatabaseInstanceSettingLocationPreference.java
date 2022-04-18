@@ -15,14 +15,14 @@ public final class GetDatabaseInstanceSettingLocationPreference extends io.pulum
     @Import(name="followGaeApplication", required=true)
       private final String followGaeApplication;
 
-    public String getFollowGaeApplication() {
+    public String followGaeApplication() {
         return this.followGaeApplication;
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

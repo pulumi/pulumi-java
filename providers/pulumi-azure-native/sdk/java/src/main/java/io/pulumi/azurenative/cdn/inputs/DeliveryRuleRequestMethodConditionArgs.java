@@ -27,7 +27,7 @@ public final class DeliveryRuleRequestMethodConditionArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleRequestMethodConditionArgs extends io.pulumi.reso
     @Import(name="parameters", required=true)
       private final Output<RequestMethodMatchConditionParametersArgs> parameters;
 
-    public Output<RequestMethodMatchConditionParametersArgs> getParameters() {
+    public Output<RequestMethodMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

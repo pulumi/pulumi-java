@@ -26,56 +26,56 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<DatasetActionArgs>> actions;
 
-    public Output<List<DatasetActionArgs>> getActions() {
+    public Output<List<DatasetActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="contentDeliveryRules")
       private final @Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
 
-    public Output<List<DatasetContentDeliveryRuleArgs>> getContentDeliveryRules() {
+    public Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules() {
         return this.contentDeliveryRules == null ? Codegen.empty() : this.contentDeliveryRules;
     }
 
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     @Import(name="lateDataRules")
       private final @Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules;
 
-    public Output<List<DatasetLateDataRuleArgs>> getLateDataRules() {
+    public Output<List<DatasetLateDataRuleArgs>> lateDataRules() {
         return this.lateDataRules == null ? Codegen.empty() : this.lateDataRules;
     }
 
     @Import(name="retentionPeriod")
       private final @Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod;
 
-    public Output<DatasetRetentionPeriodArgs> getRetentionPeriod() {
+    public Output<DatasetRetentionPeriodArgs> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DatasetTagArgs>> tags;
 
-    public Output<List<DatasetTagArgs>> getTags() {
+    public Output<List<DatasetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<List<DatasetTriggerArgs>> triggers;
 
-    public Output<List<DatasetTriggerArgs>> getTriggers() {
+    public Output<List<DatasetTriggerArgs>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     @Import(name="versioningConfiguration")
       private final @Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration;
 
-    public Output<DatasetVersioningConfigurationArgs> getVersioningConfiguration() {
+    public Output<DatasetVersioningConfigurationArgs> versioningConfiguration() {
         return this.versioningConfiguration == null ? Codegen.empty() : this.versioningConfiguration;
     }
 

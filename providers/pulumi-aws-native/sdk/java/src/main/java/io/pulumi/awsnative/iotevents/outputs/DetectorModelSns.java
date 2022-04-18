@@ -27,14 +27,14 @@ public final class DetectorModelSns {
         this.targetArn = targetArn;
     }
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
      * The ARN of the Amazon SNS target where the message is sent.
      * 
     */
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

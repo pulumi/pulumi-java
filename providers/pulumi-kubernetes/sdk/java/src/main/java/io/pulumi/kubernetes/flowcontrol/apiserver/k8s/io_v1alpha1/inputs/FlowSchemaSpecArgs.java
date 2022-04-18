@@ -30,7 +30,7 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distinguisherMethod")
       private final @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
 
-    public Output<FlowDistinguisherMethodArgs> getDistinguisherMethod() {
+    public Output<FlowDistinguisherMethodArgs> distinguisherMethod() {
         return this.distinguisherMethod == null ? Codegen.empty() : this.distinguisherMethod;
     }
 
@@ -41,7 +41,7 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchingPrecedence")
       private final @Nullable Output<Integer> matchingPrecedence;
 
-    public Output<Integer> getMatchingPrecedence() {
+    public Output<Integer> matchingPrecedence() {
         return this.matchingPrecedence == null ? Codegen.empty() : this.matchingPrecedence;
     }
 
@@ -52,7 +52,7 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priorityLevelConfiguration", required=true)
       private final Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
 
-    public Output<PriorityLevelConfigurationReferenceArgs> getPriorityLevelConfiguration() {
+    public Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration() {
         return this.priorityLevelConfiguration;
     }
 
@@ -63,7 +63,7 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
 
-    public Output<List<PolicyRulesWithSubjectsArgs>> getRules() {
+    public Output<List<PolicyRulesWithSubjectsArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

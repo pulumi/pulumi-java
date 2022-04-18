@@ -24,7 +24,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="ambiguousRoleResolution")
       private final @Nullable Output<String> ambiguousRoleResolution;
 
-    public Output<String> getAmbiguousRoleResolution() {
+    public Output<String> ambiguousRoleResolution() {
         return this.ambiguousRoleResolution == null ? Codegen.empty() : this.ambiguousRoleResolution;
     }
 
@@ -35,7 +35,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="identityProvider", required=true)
       private final Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
+    public Output<String> identityProvider() {
         return this.identityProvider;
     }
 
@@ -46,7 +46,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="mappingRules")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> getMappingRules() {
+    public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules() {
         return this.mappingRules == null ? Codegen.empty() : this.mappingRules;
     }
 
@@ -57,7 +57,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

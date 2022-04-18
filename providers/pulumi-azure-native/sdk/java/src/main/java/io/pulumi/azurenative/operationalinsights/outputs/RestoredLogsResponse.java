@@ -41,21 +41,21 @@ public final class RestoredLogsResponse {
      * The timestamp to end the restore by (UTC).
      * 
     */
-    public Optional<String> getEndRestoreTime() {
+    public Optional<String> endRestoreTime() {
         return Optional.ofNullable(this.endRestoreTime);
     }
     /**
      * The table to restore data from.
      * 
     */
-    public String getSourceTable() {
+    public String sourceTable() {
         return this.sourceTable;
     }
     /**
      * The timestamp to start the restore from (UTC).
      * 
     */
-    public Optional<String> getStartRestoreTime() {
+    public Optional<String> startRestoreTime() {
         return Optional.ofNullable(this.startRestoreTime);
     }
 

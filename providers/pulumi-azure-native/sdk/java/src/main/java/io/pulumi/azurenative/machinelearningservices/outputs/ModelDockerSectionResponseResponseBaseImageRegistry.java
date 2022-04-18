@@ -18,7 +18,7 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry {
         this.address = address;
     }
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
 

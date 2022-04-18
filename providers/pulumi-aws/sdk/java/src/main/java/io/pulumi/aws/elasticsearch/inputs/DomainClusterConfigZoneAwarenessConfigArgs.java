@@ -22,7 +22,7 @@ public final class DomainClusterConfigZoneAwarenessConfigArgs extends io.pulumi.
     @Import(name="availabilityZoneCount")
       private final @Nullable Output<Integer> availabilityZoneCount;
 
-    public Output<Integer> getAvailabilityZoneCount() {
+    public Output<Integer> availabilityZoneCount() {
         return this.availabilityZoneCount == null ? Codegen.empty() : this.availabilityZoneCount;
     }
 

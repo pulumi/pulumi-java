@@ -26,7 +26,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     @Import(name="categories", required=true)
       private final Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories;
     }
 

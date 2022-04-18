@@ -56,35 +56,35 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
      * The runtime environment for the job.
      * 
     */
-    public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse getEnvironment() {
+    public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment() {
         return this.environment;
     }
     /**
      * The job name to use for the created job.
      * 
     */
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
     /**
      * The runtime parameters to pass to the job.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
      * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
      * 
     */
-    public Map<String,String> getTransformNameMapping() {
+    public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
     }
     /**
      * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
      * 
     */
-    public Boolean getUpdate() {
+    public Boolean update() {
         return this.update;
     }
 

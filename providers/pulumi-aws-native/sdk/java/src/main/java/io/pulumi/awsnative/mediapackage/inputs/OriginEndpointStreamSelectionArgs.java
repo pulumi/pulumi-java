@@ -27,7 +27,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     @Import(name="maxVideoBitsPerSecond")
       private final @Nullable Output<Integer> maxVideoBitsPerSecond;
 
-    public Output<Integer> getMaxVideoBitsPerSecond() {
+    public Output<Integer> maxVideoBitsPerSecond() {
         return this.maxVideoBitsPerSecond == null ? Codegen.empty() : this.maxVideoBitsPerSecond;
     }
 
@@ -38,7 +38,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     @Import(name="minVideoBitsPerSecond")
       private final @Nullable Output<Integer> minVideoBitsPerSecond;
 
-    public Output<Integer> getMinVideoBitsPerSecond() {
+    public Output<Integer> minVideoBitsPerSecond() {
         return this.minVideoBitsPerSecond == null ? Codegen.empty() : this.minVideoBitsPerSecond;
     }
 
@@ -49,7 +49,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     @Import(name="streamOrder")
       private final @Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder;
 
-    public Output<OriginEndpointStreamSelectionStreamOrder> getStreamOrder() {
+    public Output<OriginEndpointStreamSelectionStreamOrder> streamOrder() {
         return this.streamOrder == null ? Codegen.empty() : this.streamOrder;
     }
 

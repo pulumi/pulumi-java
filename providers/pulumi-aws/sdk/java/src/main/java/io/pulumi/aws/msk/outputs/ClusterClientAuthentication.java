@@ -35,14 +35,14 @@ public final class ClusterClientAuthentication {
      * Configuration block for specifying SASL client authentication. See below.
      * 
     */
-    public Optional<ClusterClientAuthenticationSasl> getSasl() {
+    public Optional<ClusterClientAuthenticationSasl> sasl() {
         return Optional.ofNullable(this.sasl);
     }
     /**
      * Configuration block for specifying TLS client authentication. See below.
      * 
     */
-    public Optional<ClusterClientAuthenticationTls> getTls() {
+    public Optional<ClusterClientAuthenticationTls> tls() {
         return Optional.ofNullable(this.tls);
     }
 

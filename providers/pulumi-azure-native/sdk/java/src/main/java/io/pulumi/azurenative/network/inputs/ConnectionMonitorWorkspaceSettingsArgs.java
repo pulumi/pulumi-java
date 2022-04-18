@@ -26,7 +26,7 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
+    public Output<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 

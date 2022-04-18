@@ -26,7 +26,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
 
-    public Output<String> getApiGroup() {
+    public Output<String> apiGroup() {
         return this.apiGroup == null ? Codegen.empty() : this.apiGroup;
     }
 
@@ -37,7 +37,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

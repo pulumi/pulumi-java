@@ -28,7 +28,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -39,7 +39,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="boot", required=true)
       private final Boolean boot;
 
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
 
@@ -50,7 +50,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -61,7 +61,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="diskEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
-    public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
+    public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
 
@@ -72,7 +72,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -83,7 +83,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -94,7 +94,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="guestOsFeatures", required=true)
       private final List<GuestOsFeatureResponse> guestOsFeatures;
 
-    public List<GuestOsFeatureResponse> getGuestOsFeatures() {
+    public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
 
@@ -105,7 +105,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="index", required=true)
       private final Integer index;
 
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
 
@@ -116,7 +116,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 
@@ -127,7 +127,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -138,7 +138,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="licenses", required=true)
       private final List<String> licenses;
 
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
 
@@ -149,7 +149,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -160,7 +160,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -171,7 +171,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="storageBytes", required=true)
       private final String storageBytes;
 
-    public String getStorageBytes() {
+    public String storageBytes() {
         return this.storageBytes;
     }
 
@@ -182,7 +182,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="storageBytesStatus", required=true)
       private final String storageBytesStatus;
 
-    public String getStorageBytesStatus() {
+    public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
 
@@ -193,7 +193,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

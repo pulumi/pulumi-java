@@ -32,14 +32,14 @@ public final class EndpointRangeDescriptionResponse {
      * End port of a range of ports
      * 
     */
-    public Integer getEndPort() {
+    public Integer endPort() {
         return this.endPort;
     }
     /**
      * Starting port of a range of ports
      * 
     */
-    public Integer getStartPort() {
+    public Integer startPort() {
         return this.startPort;
     }
 

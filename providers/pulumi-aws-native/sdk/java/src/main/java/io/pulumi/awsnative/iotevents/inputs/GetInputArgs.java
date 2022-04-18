@@ -19,7 +19,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputName", required=true)
       private final String inputName;
 
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
 

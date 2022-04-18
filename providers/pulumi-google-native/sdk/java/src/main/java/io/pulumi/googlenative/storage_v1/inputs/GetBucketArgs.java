@@ -17,42 +17,42 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="ifMetagenerationMatch")
       private final @Nullable String ifMetagenerationMatch;
 
-    public Optional<String> getIfMetagenerationMatch() {
+    public Optional<String> ifMetagenerationMatch() {
         return this.ifMetagenerationMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
     @Import(name="ifMetagenerationNotMatch")
       private final @Nullable String ifMetagenerationNotMatch;
 
-    public Optional<String> getIfMetagenerationNotMatch() {
+    public Optional<String> ifMetagenerationNotMatch() {
         return this.ifMetagenerationNotMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
 
     @Import(name="projection")
       private final @Nullable String projection;
 
-    public Optional<String> getProjection() {
+    public Optional<String> projection() {
         return this.projection == null ? Optional.empty() : Optional.ofNullable(this.projection);
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable String provisionalUserProject;
 
-    public Optional<String> getProvisionalUserProject() {
+    public Optional<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
       private final @Nullable String userProject;
 
-    public Optional<String> getUserProject() {
+    public Optional<String> userProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
     }
 

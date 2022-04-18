@@ -24,7 +24,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> getCheckIntervalSec() {
+    public Output<Integer> checkIntervalSec() {
         return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
     }
 
@@ -35,7 +35,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -47,7 +47,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
@@ -72,7 +72,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -89,7 +89,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -113,7 +113,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -125,7 +125,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
-    public Output<String> getRequestPath() {
+    public Output<String> requestPath() {
         return this.requestPath == null ? Codegen.empty() : this.requestPath;
     }
 
@@ -136,7 +136,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -149,7 +149,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
@@ -161,7 +161,7 @@ public final class HttpsHealthCheckState extends io.pulumi.resources.ResourceArg
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 

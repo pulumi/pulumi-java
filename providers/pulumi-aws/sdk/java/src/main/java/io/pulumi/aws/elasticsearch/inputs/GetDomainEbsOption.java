@@ -21,7 +21,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="ebsEnabled", required=true)
       private final Boolean ebsEnabled;
 
-    public Boolean getEbsEnabled() {
+    public Boolean ebsEnabled() {
         return this.ebsEnabled;
     }
 
@@ -32,7 +32,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="iops", required=true)
       private final Integer iops;
 
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
 
@@ -43,7 +43,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
 
@@ -54,7 +54,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeType", required=true)
       private final String volumeType;
 
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

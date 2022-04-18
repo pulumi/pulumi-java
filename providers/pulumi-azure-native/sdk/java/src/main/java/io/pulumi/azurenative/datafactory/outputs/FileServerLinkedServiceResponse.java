@@ -92,49 +92,49 @@ public final class FileServerLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name of the server. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getHost() {
+    public Object host() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the server.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -142,14 +142,14 @@ public final class FileServerLinkedServiceResponse {
      * Expected value is 'FileServer'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User ID to logon the server. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserId() {
+    public Optional<Object> userId() {
         return Optional.ofNullable(this.userId);
     }
 

@@ -24,7 +24,7 @@ public final class SpotFleetRequestLaunchTemplateConfigArgs extends io.pulumi.re
     @Import(name="launchTemplateSpecification", required=true)
       private final Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
+    public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -35,7 +35,7 @@ public final class SpotFleetRequestLaunchTemplateConfigArgs extends io.pulumi.re
     @Import(name="overrides")
       private final @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideArgs>> overrides;
 
-    public Output<List<SpotFleetRequestLaunchTemplateConfigOverrideArgs>> getOverrides() {
+    public Output<List<SpotFleetRequestLaunchTemplateConfigOverrideArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

@@ -23,7 +23,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filters", required=true)
       private final Output<InsightFiltersArgs> filters;
 
-    public Output<InsightFiltersArgs> getFilters() {
+    public Output<InsightFiltersArgs> filters() {
         return this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupByAttribute", required=true)
       private final Output<String> groupByAttribute;
 
-    public Output<String> getGroupByAttribute() {
+    public Output<String> groupByAttribute() {
         return this.groupByAttribute;
     }
 
@@ -45,7 +45,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

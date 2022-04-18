@@ -43,21 +43,21 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm> getAcm() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm> acm() {
         return Optional.ofNullable(this.acm);
     }
     /**
      * The TLS validation context trust for a local file certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile> getFile() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSds> getSds() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSds> sds() {
         return Optional.ofNullable(this.sds);
     }
 

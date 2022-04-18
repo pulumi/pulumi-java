@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
     @Import(name="flow")
       private final @Nullable Output<String> flow;
 
-    public Output<String> getFlow() {
+    public Output<String> flow() {
         return this.flow == null ? Codegen.empty() : this.flow;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
     @Import(name="trackingParameters")
       private final @Nullable Output<List<String>> trackingParameters;
 
-    public Output<List<String>> getTrackingParameters() {
+    public Output<List<String>> trackingParameters() {
         return this.trackingParameters == null ? Codegen.empty() : this.trackingParameters;
     }
 

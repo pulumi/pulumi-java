@@ -25,7 +25,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -36,7 +36,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
-    public Output<String> getOverrideStrategy() {
+    public Output<String> overrideStrategy() {
         return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
     }
 
@@ -62,7 +62,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -74,7 +74,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceRecords")
       private final @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
 
-    public Output<List<DomainMappingResourceRecordGetArgs>> getResourceRecords() {
+    public Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords() {
         return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
     }
 
@@ -86,7 +86,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslSettings")
       private final @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
 
-    public Output<DomainMappingSslSettingsGetArgs> getSslSettings() {
+    public Output<DomainMappingSslSettingsGetArgs> sslSettings() {
         return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
     }
 

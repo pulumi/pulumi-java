@@ -23,7 +23,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customValues")
       private final @Nullable Output<Map<String,String>> customValues;
 
-    public Output<Map<String,String>> getCustomValues() {
+    public Output<Map<String,String>> customValues() {
         return this.customValues == null ? Codegen.empty() : this.customValues;
     }
 

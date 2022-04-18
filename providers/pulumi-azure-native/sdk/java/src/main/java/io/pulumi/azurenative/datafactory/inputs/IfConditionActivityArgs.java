@@ -68,7 +68,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -79,7 +79,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -90,7 +90,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="expression", required=true)
       private final Output<ExpressionArgs> expression;
 
-    public Output<ExpressionArgs> getExpression() {
+    public Output<ExpressionArgs> expression() {
         return this.expression;
     }
 
@@ -101,7 +101,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="ifFalseActivities")
       private final @Nullable Output<List<Object>> ifFalseActivities;
 
-    public Output<List<Object>> getIfFalseActivities() {
+    public Output<List<Object>> ifFalseActivities() {
         return this.ifFalseActivities == null ? Codegen.empty() : this.ifFalseActivities;
     }
 
@@ -112,7 +112,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="ifTrueActivities")
       private final @Nullable Output<List<Object>> ifTrueActivities;
 
-    public Output<List<Object>> getIfTrueActivities() {
+    public Output<List<Object>> ifTrueActivities() {
         return this.ifTrueActivities == null ? Codegen.empty() : this.ifTrueActivities;
     }
 
@@ -123,7 +123,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -135,7 +135,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -146,7 +146,7 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

@@ -111,91 +111,91 @@ public final class GetDistributedAvailabilityGroupResult {
      * The distributed availability group id
      * 
     */
-    public String getDistributedAvailabilityGroupId() {
+    public String distributedAvailabilityGroupId() {
         return this.distributedAvailabilityGroupId;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last hardened lsn
      * 
     */
-    public String getLastHardenedLsn() {
+    public String lastHardenedLsn() {
         return this.lastHardenedLsn;
     }
     /**
      * The link state
      * 
     */
-    public String getLinkState() {
+    public String linkState() {
         return this.linkState;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The primary availability group name
      * 
     */
-    public Optional<String> getPrimaryAvailabilityGroupName() {
+    public Optional<String> primaryAvailabilityGroupName() {
         return Optional.ofNullable(this.primaryAvailabilityGroupName);
     }
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
     */
-    public Optional<String> getReplicationMode() {
+    public Optional<String> replicationMode() {
         return Optional.ofNullable(this.replicationMode);
     }
     /**
      * The secondary availability group name
      * 
     */
-    public Optional<String> getSecondaryAvailabilityGroupName() {
+    public Optional<String> secondaryAvailabilityGroupName() {
         return Optional.ofNullable(this.secondaryAvailabilityGroupName);
     }
     /**
      * The source endpoint
      * 
     */
-    public Optional<String> getSourceEndpoint() {
+    public Optional<String> sourceEndpoint() {
         return Optional.ofNullable(this.sourceEndpoint);
     }
     /**
      * The source replica id
      * 
     */
-    public String getSourceReplicaId() {
+    public String sourceReplicaId() {
         return this.sourceReplicaId;
     }
     /**
      * The name of the target database
      * 
     */
-    public Optional<String> getTargetDatabase() {
+    public Optional<String> targetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
     /**
      * The target replica id
      * 
     */
-    public String getTargetReplicaId() {
+    public String targetReplicaId() {
         return this.targetReplicaId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

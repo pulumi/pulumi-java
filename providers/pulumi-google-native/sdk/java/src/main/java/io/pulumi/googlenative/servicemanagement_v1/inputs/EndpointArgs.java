@@ -27,7 +27,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowCors")
       private final @Nullable Output<Boolean> allowCors;
 
-    public Output<Boolean> getAllowCors() {
+    public Output<Boolean> allowCors() {
         return this.allowCors == null ? Codegen.empty() : this.allowCors;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

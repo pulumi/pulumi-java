@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
     @Import(name="phoneNumber")
       private final @Nullable Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
     }
 

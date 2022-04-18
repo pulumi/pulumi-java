@@ -25,7 +25,7 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destination", required=true)
       private final Output<ReportDeliveryDestinationArgs> destination;
 
-    public Output<ReportDeliveryDestinationArgs> getDestination() {
+    public Output<ReportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
 

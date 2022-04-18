@@ -24,7 +24,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="backendAddressPoolName")
       private final @Nullable Output<String> backendAddressPoolName;
 
-    public Output<String> getBackendAddressPoolName() {
+    public Output<String> backendAddressPoolName() {
         return this.backendAddressPoolName == null ? Codegen.empty() : this.backendAddressPoolName;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
+    public Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? Codegen.empty() : this.loadBalancerBackendAddresses;
     }
 
@@ -57,7 +57,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -68,7 +68,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
     @Import(name="sasUrlSettingName")
       private final @Nullable Output<String> sasUrlSettingName;
 
-    public Output<String> getSasUrlSettingName() {
+    public Output<String> sasUrlSettingName() {
         return this.sasUrlSettingName == null ? Codegen.empty() : this.sasUrlSettingName;
     }
 

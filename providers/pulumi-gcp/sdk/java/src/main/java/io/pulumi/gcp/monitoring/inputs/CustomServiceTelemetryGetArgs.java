@@ -24,7 +24,7 @@ public final class CustomServiceTelemetryGetArgs extends io.pulumi.resources.Res
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 

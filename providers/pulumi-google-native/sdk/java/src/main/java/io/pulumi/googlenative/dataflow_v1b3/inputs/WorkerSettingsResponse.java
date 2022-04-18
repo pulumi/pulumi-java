@@ -24,7 +24,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="baseUrl", required=true)
       private final String baseUrl;
 
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
 
@@ -35,7 +35,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="reportingEnabled", required=true)
       private final Boolean reportingEnabled;
 
-    public Boolean getReportingEnabled() {
+    public Boolean reportingEnabled() {
         return this.reportingEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="servicePath", required=true)
       private final String servicePath;
 
-    public String getServicePath() {
+    public String servicePath() {
         return this.servicePath;
     }
 
@@ -57,7 +57,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="shuffleServicePath", required=true)
       private final String shuffleServicePath;
 
-    public String getShuffleServicePath() {
+    public String shuffleServicePath() {
         return this.shuffleServicePath;
     }
 
@@ -68,7 +68,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="tempStoragePrefix", required=true)
       private final String tempStoragePrefix;
 
-    public String getTempStoragePrefix() {
+    public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
 
@@ -79,7 +79,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="workerId", required=true)
       private final String workerId;
 
-    public String getWorkerId() {
+    public String workerId() {
         return this.workerId;
     }
 

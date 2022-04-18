@@ -26,7 +26,7 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
     @Import(name="updateAutoLearnPolicy")
       private final @Nullable Output<Boolean> updateAutoLearnPolicy;
 
-    public Output<Boolean> getUpdateAutoLearnPolicy() {
+    public Output<Boolean> updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy == null ? Codegen.empty() : this.updateAutoLearnPolicy;
     }
 

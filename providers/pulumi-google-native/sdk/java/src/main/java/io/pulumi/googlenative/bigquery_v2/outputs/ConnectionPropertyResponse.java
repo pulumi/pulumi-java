@@ -32,14 +32,14 @@ public final class ConnectionPropertyResponse {
      * [Required] Name of the connection property to set.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * [Required] Value of the connection property.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

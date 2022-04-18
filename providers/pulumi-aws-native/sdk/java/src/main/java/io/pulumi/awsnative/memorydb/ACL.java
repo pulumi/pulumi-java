@@ -31,7 +31,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return The name of the acl.
      * 
      */
-    public Output<String> getACLName() {
+    public Output<String> aCLName() {
         return this.aCLName;
     }
     /**
@@ -45,7 +45,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the acl.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return Indicates acl status. Can be "creating", "active", "modifying", "deleting".
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -73,7 +73,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this cluster.
      * 
      */
-    public Output</* @Nullable */ List<ACLTag>> getTags() {
+    public Output</* @Nullable */ List<ACLTag>> tags() {
         return this.tags;
     }
     /**
@@ -87,7 +87,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return List of users associated to this acl.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserNames() {
+    public Output</* @Nullable */ List<String>> userNames() {
         return this.userNames;
     }
 

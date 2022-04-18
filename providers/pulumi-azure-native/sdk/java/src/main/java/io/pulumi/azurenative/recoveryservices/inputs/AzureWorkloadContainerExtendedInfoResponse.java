@@ -28,7 +28,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
     @Import(name="hostServerName")
       private final @Nullable String hostServerName;
 
-    public Optional<String> getHostServerName() {
+    public Optional<String> hostServerName() {
         return this.hostServerName == null ? Optional.empty() : Optional.ofNullable(this.hostServerName);
     }
 
@@ -39,7 +39,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
     @Import(name="inquiryInfo")
       private final @Nullable InquiryInfoResponse inquiryInfo;
 
-    public Optional<InquiryInfoResponse> getInquiryInfo() {
+    public Optional<InquiryInfoResponse> inquiryInfo() {
         return this.inquiryInfo == null ? Optional.empty() : Optional.ofNullable(this.inquiryInfo);
     }
 
@@ -50,7 +50,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
     @Import(name="nodesList")
       private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
-    public List<DistributedNodesInfoResponse> getNodesList() {
+    public List<DistributedNodesInfoResponse> nodesList() {
         return this.nodesList == null ? List.of() : this.nodesList;
     }
 

@@ -32,14 +32,14 @@ public final class DiskEncryptionStatusResponse {
      * This is always `sql#diskEncryptionStatus`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * KMS key version used to encrypt the Cloud SQL instance resource
      * 
     */
-    public String getKmsKeyVersionName() {
+    public String kmsKeyVersionName() {
         return this.kmsKeyVersionName;
     }
 

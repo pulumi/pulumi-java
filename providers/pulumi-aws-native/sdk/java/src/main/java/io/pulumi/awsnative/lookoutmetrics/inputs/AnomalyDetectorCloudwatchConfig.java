@@ -15,7 +15,7 @@ public final class AnomalyDetectorCloudwatchConfig extends io.pulumi.resources.I
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

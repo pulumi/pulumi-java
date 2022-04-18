@@ -22,28 +22,28 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
     @Import(name="detailLevel", required=true)
       private final Output<Either<String,LoggingDetails>> detailLevel;
 
-    public Output<Either<String,LoggingDetails>> getDetailLevel() {
+    public Output<Either<String,LoggingDetails>> detailLevel() {
         return this.detailLevel;
     }
 
     @Import(name="direction", required=true)
       private final Output<Either<String,LoggingDirections>> direction;
 
-    public Output<Either<String,LoggingDirections>> getDirection() {
+    public Output<Either<String,LoggingDirections>> direction() {
         return this.direction;
     }
 
     @Import(name="hiddenPropertyPaths")
       private final @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
-    public Output<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {
+    public Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths() {
         return this.hiddenPropertyPaths == null ? Codegen.empty() : this.hiddenPropertyPaths;
     }
 

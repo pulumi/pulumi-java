@@ -26,7 +26,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
-    public Output<String> getNodeName() {
+    public Output<String> nodeName() {
         return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
@@ -38,7 +38,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

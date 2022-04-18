@@ -54,35 +54,35 @@ public final class DiscoveryOccurrenceResponse {
      * The status of discovery for the resource.
      * 
     */
-    public String getAnalysisStatus() {
+    public String analysisStatus() {
         return this.analysisStatus;
     }
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
      * 
     */
-    public StatusResponse getAnalysisStatusError() {
+    public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
     }
     /**
      * Whether the resource is continuously analyzed.
      * 
     */
-    public String getContinuousAnalysis() {
+    public String continuousAnalysis() {
         return this.continuousAnalysis;
     }
     /**
      * The CPE of the resource being scanned.
      * 
     */
-    public String getCpe() {
+    public String cpe() {
         return this.cpe;
     }
     /**
      * The last time this resource was scanned.
      * 
     */
-    public String getLastScanTime() {
+    public String lastScanTime() {
         return this.lastScanTime;
     }
 

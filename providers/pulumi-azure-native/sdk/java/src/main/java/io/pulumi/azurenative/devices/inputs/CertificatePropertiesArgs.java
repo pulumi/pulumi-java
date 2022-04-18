@@ -26,7 +26,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 

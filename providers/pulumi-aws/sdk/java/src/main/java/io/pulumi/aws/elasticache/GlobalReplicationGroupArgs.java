@@ -22,7 +22,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> getGlobalReplicationGroupDescription() {
+    public Output<String> globalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
     }
 
@@ -33,7 +33,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="globalReplicationGroupIdSuffix", required=true)
       private final Output<String> globalReplicationGroupIdSuffix;
 
-    public Output<String> getGlobalReplicationGroupIdSuffix() {
+    public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
     }
 
@@ -44,7 +44,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="primaryReplicationGroupId", required=true)
       private final Output<String> primaryReplicationGroupId;
 
-    public Output<String> getPrimaryReplicationGroupId() {
+    public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId;
     }
 

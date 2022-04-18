@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="acceleratorConfig", required=true)
       private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
 
-    public GoogleCloudMlV1__AcceleratorConfigResponse getAcceleratorConfig() {
+    public GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="containerArgs", required=true)
       private final List<String> containerArgs;
 
-    public List<String> getContainerArgs() {
+    public List<String> containerArgs() {
         return this.containerArgs;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="containerCommand", required=true)
       private final List<String> containerCommand;
 
-    public List<String> getContainerCommand() {
+    public List<String> containerCommand() {
         return this.containerCommand;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="diskConfig", required=true)
       private final GoogleCloudMlV1__DiskConfigResponse diskConfig;
 
-    public GoogleCloudMlV1__DiskConfigResponse getDiskConfig() {
+    public GoogleCloudMlV1__DiskConfigResponse diskConfig() {
         return this.diskConfig;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="imageUri", required=true)
       private final String imageUri;
 
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends io.pulumi.reso
     @Import(name="tpuTfVersion", required=true)
       private final String tpuTfVersion;
 
-    public String getTpuTfVersion() {
+    public String tpuTfVersion() {
         return this.tpuTfVersion;
     }
 

@@ -28,7 +28,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rewrite")
       private final @Nullable Output<String> rewrite;
 
-    public Output<String> getRewrite() {
+    public Output<String> rewrite() {
         return this.rewrite == null ? Codegen.empty() : this.rewrite;
     }
 
@@ -39,7 +39,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<Either<String,PathMatchType>> type;
 
-    public Output<Either<String,PathMatchType>> getType() {
+    public Output<Either<String,PathMatchType>> type() {
         return this.type;
     }
 
@@ -50,7 +50,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

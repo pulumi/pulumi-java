@@ -20,10 +20,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
         this.startTime = startTime;
     }
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

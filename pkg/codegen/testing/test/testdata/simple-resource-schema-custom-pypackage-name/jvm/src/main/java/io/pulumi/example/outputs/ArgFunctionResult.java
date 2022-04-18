@@ -18,7 +18,7 @@ public final class ArgFunctionResult {
         this.result = result;
     }
 
-    public Optional<Resource> getResult() {
+    public Optional<Resource> result() {
         return Optional.ofNullable(this.result);
     }
 

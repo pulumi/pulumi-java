@@ -27,7 +27,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv4CidrBlock")
       private final @Nullable Output<String> ipv4CidrBlock;
 
-    public Output<String> getIpv4CidrBlock() {
+    public Output<String> ipv4CidrBlock() {
         return this.ipv4CidrBlock == null ? Codegen.empty() : this.ipv4CidrBlock;
     }
 
@@ -49,7 +49,7 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useServiceNetworking")
       private final @Nullable Output<Boolean> useServiceNetworking;
 
-    public Output<Boolean> getUseServiceNetworking() {
+    public Output<Boolean> useServiceNetworking() {
         return this.useServiceNetworking == null ? Codegen.empty() : this.useServiceNetworking;
     }
 

@@ -23,10 +23,10 @@ public final class BotIntentClosingSetting {
         this.isActive = isActive;
     }
 
-    public BotResponseSpecification getClosingResponse() {
+    public BotResponseSpecification closingResponse() {
         return this.closingResponse;
     }
-    public Optional<Boolean> getIsActive() {
+    public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 

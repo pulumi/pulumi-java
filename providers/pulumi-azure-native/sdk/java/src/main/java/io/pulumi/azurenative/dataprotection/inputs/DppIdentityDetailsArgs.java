@@ -26,7 +26,7 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

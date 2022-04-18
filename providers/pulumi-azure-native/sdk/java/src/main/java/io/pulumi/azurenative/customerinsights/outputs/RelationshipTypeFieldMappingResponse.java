@@ -32,14 +32,14 @@ public final class RelationshipTypeFieldMappingResponse {
      * Specifies the fieldName in profile.
      * 
     */
-    public String getProfileFieldName() {
+    public String profileFieldName() {
         return this.profileFieldName;
     }
     /**
      * Specifies the KeyProperty (from StrongId) of the related profile.
      * 
     */
-    public String getRelatedProfileKeyProperty() {
+    public String relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 

@@ -27,7 +27,7 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderArgs extends i
     @Import(name="certificateProviderInstance")
       private final @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
 
-    public Output<CertificateProviderInstanceArgs> getCertificateProviderInstance() {
+    public Output<CertificateProviderInstanceArgs> certificateProviderInstance() {
         return this.certificateProviderInstance == null ? Codegen.empty() : this.certificateProviderInstance;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderArgs extends i
     @Import(name="grpcEndpoint")
       private final @Nullable Output<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint;
 
-    public Output<GoogleCloudNetworksecurityV1GrpcEndpointArgs> getGrpcEndpoint() {
+    public Output<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint() {
         return this.grpcEndpoint == null ? Codegen.empty() : this.grpcEndpoint;
     }
 

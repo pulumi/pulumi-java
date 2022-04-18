@@ -23,7 +23,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
     @Import(name="infoTypes", required=true)
       private final Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
     @Import(name="rules", required=true)
       private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> getRules() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules() {
         return this.rules;
     }
 

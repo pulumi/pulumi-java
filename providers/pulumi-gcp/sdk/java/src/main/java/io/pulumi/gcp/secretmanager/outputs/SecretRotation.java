@@ -37,7 +37,7 @@ public final class SecretRotation {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getNextRotationTime() {
+    public Optional<String> nextRotationTime() {
         return Optional.ofNullable(this.nextRotationTime);
     }
     /**
@@ -45,7 +45,7 @@ public final class SecretRotation {
      * If rotationPeriod is set, `next_rotation_time` must be set. `next_rotation_time` will be advanced by this period when the service automatically sends rotation notifications.
      * 
     */
-    public Optional<String> getRotationPeriod() {
+    public Optional<String> rotationPeriod() {
         return Optional.ofNullable(this.rotationPeriod);
     }
 

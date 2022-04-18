@@ -23,7 +23,7 @@ public final class RuntimeGuestOsFeatureResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

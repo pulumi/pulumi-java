@@ -26,7 +26,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicSigningKey", required=true)
       private final Output<String> publicSigningKey;
 
-    public Output<String> getPublicSigningKey() {
+    public Output<String> publicSigningKey() {
         return this.publicSigningKey;
     }
 
@@ -48,7 +48,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="signingCertificateThumbprint")
       private final @Nullable Output<String> signingCertificateThumbprint;
 
-    public Output<String> getSigningCertificateThumbprint() {
+    public Output<String> signingCertificateThumbprint() {
         return this.signingCertificateThumbprint == null ? Codegen.empty() : this.signingCertificateThumbprint;
     }
 

@@ -22,7 +22,7 @@ public final class Hl7StoreIamPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -36,7 +36,7 @@ public final class Hl7StoreIamPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="hl7V2StoreId")
       private final @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
     }
 
@@ -48,7 +48,7 @@ public final class Hl7StoreIamPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

@@ -16,7 +16,7 @@ public final class FlowGoogleAnalyticsSourceProperties {
         this.object = object;
     }
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

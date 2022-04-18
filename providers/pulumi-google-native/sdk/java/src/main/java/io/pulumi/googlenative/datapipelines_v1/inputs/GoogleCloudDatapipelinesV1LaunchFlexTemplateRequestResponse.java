@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="launchParameter", required=true)
       private final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
 
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse getLaunchParameter() {
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter() {
         return this.launchParameter;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="validateOnly", required=true)
       private final Boolean validateOnly;
 
-    public Boolean getValidateOnly() {
+    public Boolean validateOnly() {
         return this.validateOnly;
     }
 

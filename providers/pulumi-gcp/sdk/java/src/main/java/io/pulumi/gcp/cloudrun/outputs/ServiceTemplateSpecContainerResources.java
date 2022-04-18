@@ -42,7 +42,7 @@ public final class ServiceTemplateSpecContainerResources {
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
     */
-    public Map<String,String> getLimits() {
+    public Map<String,String> limits() {
         return this.limits == null ? Map.of() : this.limits;
     }
     /**
@@ -53,7 +53,7 @@ public final class ServiceTemplateSpecContainerResources {
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
     */
-    public Map<String,String> getRequests() {
+    public Map<String,String> requests() {
         return this.requests == null ? Map.of() : this.requests;
     }
 

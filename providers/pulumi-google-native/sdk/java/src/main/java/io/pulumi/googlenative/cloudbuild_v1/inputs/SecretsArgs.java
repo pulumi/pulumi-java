@@ -28,7 +28,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inline")
       private final @Nullable Output<List<InlineSecretArgs>> inline;
 
-    public Output<List<InlineSecretArgs>> getInline() {
+    public Output<List<InlineSecretArgs>> inline() {
         return this.inline == null ? Codegen.empty() : this.inline;
     }
 
@@ -39,7 +39,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretManager")
       private final @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
 
-    public Output<List<SecretManagerSecretArgs>> getSecretManager() {
+    public Output<List<SecretManagerSecretArgs>> secretManager() {
         return this.secretManager == null ? Codegen.empty() : this.secretManager;
     }
 

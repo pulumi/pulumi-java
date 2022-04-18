@@ -102,77 +102,77 @@ public final class GetResourceResult {
      * Resource ID
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ID of the resource that manages this resource.
      * 
     */
-    public Optional<String> getManagedBy() {
+    public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The plan of the resource.
      * 
     */
-    public Optional<PlanResponse> getPlan() {
+    public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The resource properties.
      * 
     */
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
     /**
      * The SKU of the resource.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

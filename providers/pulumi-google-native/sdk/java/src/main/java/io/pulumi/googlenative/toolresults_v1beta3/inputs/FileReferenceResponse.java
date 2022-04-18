@@ -23,7 +23,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="fileUri", required=true)
       private final String fileUri;
 
-    public String getFileUri() {
+    public String fileUri() {
         return this.fileUri;
     }
 

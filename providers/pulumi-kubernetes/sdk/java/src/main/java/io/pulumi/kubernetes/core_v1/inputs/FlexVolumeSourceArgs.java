@@ -29,7 +29,7 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="driver", required=true)
       private final Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
 
@@ -40,7 +40,7 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -51,7 +51,7 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
+    public Output<Map<String,String>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -62,7 +62,7 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -73,7 +73,7 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
+    public Output<LocalObjectReferenceArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 

@@ -23,7 +23,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appUrls")
       private final @Nullable Output<List<String>> appUrls;
 
-    public Output<List<String>> getAppUrls() {
+    public Output<List<String>> appUrls() {
         return this.appUrls == null ? Codegen.empty() : this.appUrls;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

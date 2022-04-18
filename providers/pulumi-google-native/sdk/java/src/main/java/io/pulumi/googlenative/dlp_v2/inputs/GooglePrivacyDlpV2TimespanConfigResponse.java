@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends io.pulumi.re
     @Import(name="enableAutoPopulationOfTimespanConfig", required=true)
       private final Boolean enableAutoPopulationOfTimespanConfig;
 
-    public Boolean getEnableAutoPopulationOfTimespanConfig() {
+    public Boolean enableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends io.pulumi.re
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends io.pulumi.re
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends io.pulumi.re
     @Import(name="timestampField", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse timestampField;
 
-    public GooglePrivacyDlpV2FieldIdResponse getTimestampField() {
+    public GooglePrivacyDlpV2FieldIdResponse timestampField() {
         return this.timestampField;
     }
 

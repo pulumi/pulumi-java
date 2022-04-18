@@ -19,7 +19,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -30,7 +30,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     @Import(name="kmsKeyServiceAccount", required=true)
       private final String kmsKeyServiceAccount;
 
-    public String getKmsKeyServiceAccount() {
+    public String kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount;
     }
 
@@ -41,7 +41,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     @Import(name="rawKey", required=true)
       private final String rawKey;
 
-    public String getRawKey() {
+    public String rawKey() {
         return this.rawKey;
     }
 
@@ -52,7 +52,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     @Import(name="rsaEncryptedKey", required=true)
       private final String rsaEncryptedKey;
 
-    public String getRsaEncryptedKey() {
+    public String rsaEncryptedKey() {
         return this.rsaEncryptedKey;
     }
 
@@ -63,7 +63,7 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     @Import(name="sha256", required=true)
       private final String sha256;
 
-    public String getSha256() {
+    public String sha256() {
         return this.sha256;
     }
 

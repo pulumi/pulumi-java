@@ -46,7 +46,7 @@ public final class ProjectSourceAuth {
      * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
@@ -57,7 +57,7 @@ public final class ProjectSourceAuth {
      * 
     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

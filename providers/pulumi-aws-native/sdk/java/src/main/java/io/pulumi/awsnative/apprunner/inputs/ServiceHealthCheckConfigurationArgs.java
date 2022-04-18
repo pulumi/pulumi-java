@@ -28,7 +28,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -61,7 +61,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="protocol")
       private final @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol;
 
-    public Output<ServiceHealthCheckConfigurationProtocol> getProtocol() {
+    public Output<ServiceHealthCheckConfigurationProtocol> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -72,7 +72,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -83,7 +83,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 

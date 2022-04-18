@@ -81,63 +81,63 @@ public final class SslCertResponse {
      * PEM representation.
      * 
     */
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
     /**
      * Serial number, as extracted from the certificate.
      * 
     */
-    public String getCertSerialNumber() {
+    public String certSerialNumber() {
         return this.certSerialNumber;
     }
     /**
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
      * 
     */
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * Name of the database instance.
      * 
     */
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
     /**
      * This is always `sql#sslCert`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The URI of this resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Sha1 Fingerprint.
      * 
     */
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

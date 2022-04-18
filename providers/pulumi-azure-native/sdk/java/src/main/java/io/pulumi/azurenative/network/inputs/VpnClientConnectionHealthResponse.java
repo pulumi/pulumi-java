@@ -28,7 +28,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
     @Import(name="allocatedIpAddresses")
       private final @Nullable List<String> allocatedIpAddresses;
 
-    public List<String> getAllocatedIpAddresses() {
+    public List<String> allocatedIpAddresses() {
         return this.allocatedIpAddresses == null ? List.of() : this.allocatedIpAddresses;
     }
 
@@ -39,7 +39,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
     @Import(name="totalEgressBytesTransferred", required=true)
       private final Double totalEgressBytesTransferred;
 
-    public Double getTotalEgressBytesTransferred() {
+    public Double totalEgressBytesTransferred() {
         return this.totalEgressBytesTransferred;
     }
 
@@ -50,7 +50,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
     @Import(name="totalIngressBytesTransferred", required=true)
       private final Double totalIngressBytesTransferred;
 
-    public Double getTotalIngressBytesTransferred() {
+    public Double totalIngressBytesTransferred() {
         return this.totalIngressBytesTransferred;
     }
 
@@ -61,7 +61,7 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
     @Import(name="vpnClientConnectionsCount")
       private final @Nullable Integer vpnClientConnectionsCount;
 
-    public Optional<Integer> getVpnClientConnectionsCount() {
+    public Optional<Integer> vpnClientConnectionsCount() {
         return this.vpnClientConnectionsCount == null ? Optional.empty() : Optional.ofNullable(this.vpnClientConnectionsCount);
     }
 

@@ -26,7 +26,7 @@ public final class B2BPartnerContentResponse {
      * The list of partner business identities.
      * 
     */
-    public List<BusinessIdentityResponse> getBusinessIdentities() {
+    public List<BusinessIdentityResponse> businessIdentities() {
         return this.businessIdentities == null ? List.of() : this.businessIdentities;
     }
 

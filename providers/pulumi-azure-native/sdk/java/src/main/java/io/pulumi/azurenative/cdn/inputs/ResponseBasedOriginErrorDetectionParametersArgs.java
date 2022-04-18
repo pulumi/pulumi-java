@@ -29,7 +29,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
     @Import(name="httpErrorRanges")
       private final @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
 
-    public Output<List<HttpErrorRangeParametersArgs>> getHttpErrorRanges() {
+    public Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges() {
         return this.httpErrorRanges == null ? Codegen.empty() : this.httpErrorRanges;
     }
 
@@ -40,7 +40,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
     @Import(name="responseBasedDetectedErrorTypes")
       private final @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
 
-    public Output<ResponseBasedDetectedErrorTypes> getResponseBasedDetectedErrorTypes() {
+    public Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes() {
         return this.responseBasedDetectedErrorTypes == null ? Codegen.empty() : this.responseBasedDetectedErrorTypes;
     }
 
@@ -51,7 +51,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
     @Import(name="responseBasedFailoverThresholdPercentage")
       private final @Nullable Output<Integer> responseBasedFailoverThresholdPercentage;
 
-    public Output<Integer> getResponseBasedFailoverThresholdPercentage() {
+    public Output<Integer> responseBasedFailoverThresholdPercentage() {
         return this.responseBasedFailoverThresholdPercentage == null ? Codegen.empty() : this.responseBasedFailoverThresholdPercentage;
     }
 

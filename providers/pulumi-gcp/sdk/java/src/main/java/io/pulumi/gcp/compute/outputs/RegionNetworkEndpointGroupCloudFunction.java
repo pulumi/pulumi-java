@@ -43,7 +43,7 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      * Example value: "func1".
      * 
     */
-    public Optional<String> getFunction() {
+    public Optional<String> function() {
         return Optional.ofNullable(this.function);
     }
     /**
@@ -55,7 +55,7 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
     */
-    public Optional<String> getUrlMask() {
+    public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
 

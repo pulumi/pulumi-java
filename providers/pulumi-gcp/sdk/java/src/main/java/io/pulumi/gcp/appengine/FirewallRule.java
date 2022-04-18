@@ -58,7 +58,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -72,7 +72,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return An optional string description of this rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -94,7 +94,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * this rule can be modified by the user.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -110,7 +110,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -124,7 +124,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return IP address or range, defined using CIDR notation, of requests that this rule applies to.
      * 
      */
-    public Output<String> getSourceRange() {
+    public Output<String> sourceRange() {
         return this.sourceRange;
     }
 

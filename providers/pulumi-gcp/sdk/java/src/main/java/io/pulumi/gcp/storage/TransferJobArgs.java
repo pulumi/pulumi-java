@@ -24,7 +24,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -47,7 +47,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<TransferJobScheduleArgs> schedule;
 
-    public Output<TransferJobScheduleArgs> getSchedule() {
+    public Output<TransferJobScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -58,7 +58,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -69,7 +69,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferSpec", required=true)
       private final Output<TransferJobTransferSpecArgs> transferSpec;
 
-    public Output<TransferJobTransferSpecArgs> getTransferSpec() {
+    public Output<TransferJobTransferSpecArgs> transferSpec() {
         return this.transferSpec;
     }
 

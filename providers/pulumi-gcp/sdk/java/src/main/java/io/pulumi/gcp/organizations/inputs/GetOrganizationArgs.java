@@ -21,7 +21,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="domain")
       private final @Nullable String domain;
 
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
@@ -32,7 +32,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="organization")
       private final @Nullable String organization;
 
-    public Optional<String> getOrganization() {
+    public Optional<String> organization() {
         return this.organization == null ? Optional.empty() : Optional.ofNullable(this.organization);
     }
 

@@ -46,7 +46,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return ARN of the secret.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Description of the secret.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Accepts boolean value to specify whether to overwrite a secret with the same name in the destination Region.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceOverwriteReplicaSecret() {
+    public Output</* @Nullable */ Boolean> forceOverwriteReplicaSecret() {
         return this.forceOverwriteReplicaSecret;
     }
     /**
@@ -88,7 +88,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account's default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -102,7 +102,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -130,7 +130,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = ""`) _will not_ delete the policy since it could have been set by `aws.secretsmanager.SecretPolicy`. To delete the `policy`, set it to `"{}"` (an empty JSON document).
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -144,7 +144,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> getRecoveryWindowInDays() {
+    public Output</* @Nullable */ Integer> recoveryWindowInDays() {
         return this.recoveryWindowInDays;
     }
     /**
@@ -158,7 +158,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Configuration block to support secret replication. See details below.
      * 
      */
-    public Output<List<SecretReplica>> getReplicas() {
+    public Output<List<SecretReplica>> replicas() {
         return this.replicas;
     }
     /**
@@ -176,7 +176,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Whether automatic rotation is enabled for this secret.
      * 
      */
-    public Output<Boolean> getRotationEnabled() {
+    public Output<Boolean> rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
@@ -194,7 +194,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
      */
-    public Output<String> getRotationLambdaArn() {
+    public Output<String> rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
@@ -212,7 +212,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
      */
-    public Output<SecretRotationRules> getRotationRules() {
+    public Output<SecretRotationRules> rotationRules() {
         return this.rotationRules;
     }
     /**
@@ -226,7 +226,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -240,7 +240,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

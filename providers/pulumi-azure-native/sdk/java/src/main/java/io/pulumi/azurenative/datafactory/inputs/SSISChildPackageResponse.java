@@ -26,7 +26,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
     @Import(name="packageContent", required=true)
       private final Object packageContent;
 
-    public Object getPackageContent() {
+    public Object packageContent() {
         return this.packageContent;
     }
 
@@ -37,7 +37,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
     @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
 
-    public Optional<String> getPackageLastModifiedDate() {
+    public Optional<String> packageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
     }
 
@@ -48,7 +48,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
     @Import(name="packageName")
       private final @Nullable String packageName;
 
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
     }
 
@@ -59,7 +59,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
     @Import(name="packagePath", required=true)
       private final Object packagePath;
 
-    public Object getPackagePath() {
+    public Object packagePath() {
         return this.packagePath;
     }
 

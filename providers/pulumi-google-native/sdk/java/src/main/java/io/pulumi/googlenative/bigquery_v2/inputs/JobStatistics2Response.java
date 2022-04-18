@@ -35,7 +35,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="biEngineStatistics", required=true)
       private final BiEngineStatisticsResponse biEngineStatistics;
 
-    public BiEngineStatisticsResponse getBiEngineStatistics() {
+    public BiEngineStatisticsResponse biEngineStatistics() {
         return this.biEngineStatistics;
     }
 
@@ -46,7 +46,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="billingTier", required=true)
       private final Integer billingTier;
 
-    public Integer getBillingTier() {
+    public Integer billingTier() {
         return this.billingTier;
     }
 
@@ -57,7 +57,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="cacheHit", required=true)
       private final Boolean cacheHit;
 
-    public Boolean getCacheHit() {
+    public Boolean cacheHit() {
         return this.cacheHit;
     }
 
@@ -68,7 +68,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlAffectedRowAccessPolicyCount", required=true)
       private final String ddlAffectedRowAccessPolicyCount;
 
-    public String getDdlAffectedRowAccessPolicyCount() {
+    public String ddlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
     }
 
@@ -79,7 +79,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlDestinationTable", required=true)
       private final TableReferenceResponse ddlDestinationTable;
 
-    public TableReferenceResponse getDdlDestinationTable() {
+    public TableReferenceResponse ddlDestinationTable() {
         return this.ddlDestinationTable;
     }
 
@@ -90,7 +90,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlOperationPerformed", required=true)
       private final String ddlOperationPerformed;
 
-    public String getDdlOperationPerformed() {
+    public String ddlOperationPerformed() {
         return this.ddlOperationPerformed;
     }
 
@@ -101,7 +101,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlTargetDataset", required=true)
       private final DatasetReferenceResponse ddlTargetDataset;
 
-    public DatasetReferenceResponse getDdlTargetDataset() {
+    public DatasetReferenceResponse ddlTargetDataset() {
         return this.ddlTargetDataset;
     }
 
@@ -112,7 +112,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlTargetRoutine", required=true)
       private final RoutineReferenceResponse ddlTargetRoutine;
 
-    public RoutineReferenceResponse getDdlTargetRoutine() {
+    public RoutineReferenceResponse ddlTargetRoutine() {
         return this.ddlTargetRoutine;
     }
 
@@ -123,7 +123,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlTargetRowAccessPolicy", required=true)
       private final RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
 
-    public RowAccessPolicyReferenceResponse getDdlTargetRowAccessPolicy() {
+    public RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
     }
 
@@ -134,7 +134,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="ddlTargetTable", required=true)
       private final TableReferenceResponse ddlTargetTable;
 
-    public TableReferenceResponse getDdlTargetTable() {
+    public TableReferenceResponse ddlTargetTable() {
         return this.ddlTargetTable;
     }
 
@@ -145,7 +145,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="dmlStats", required=true)
       private final DmlStatisticsResponse dmlStats;
 
-    public DmlStatisticsResponse getDmlStats() {
+    public DmlStatisticsResponse dmlStats() {
         return this.dmlStats;
     }
 
@@ -156,7 +156,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="estimatedBytesProcessed", required=true)
       private final String estimatedBytesProcessed;
 
-    public String getEstimatedBytesProcessed() {
+    public String estimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
     }
 
@@ -167,7 +167,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="mlStatistics", required=true)
       private final MlStatisticsResponse mlStatistics;
 
-    public MlStatisticsResponse getMlStatistics() {
+    public MlStatisticsResponse mlStatistics() {
         return this.mlStatistics;
     }
 
@@ -178,7 +178,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="modelTraining", required=true)
       private final BigQueryModelTrainingResponse modelTraining;
 
-    public BigQueryModelTrainingResponse getModelTraining() {
+    public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
     }
 
@@ -189,7 +189,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="numDmlAffectedRows", required=true)
       private final String numDmlAffectedRows;
 
-    public String getNumDmlAffectedRows() {
+    public String numDmlAffectedRows() {
         return this.numDmlAffectedRows;
     }
 
@@ -200,7 +200,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="queryPlan", required=true)
       private final List<ExplainQueryStageResponse> queryPlan;
 
-    public List<ExplainQueryStageResponse> getQueryPlan() {
+    public List<ExplainQueryStageResponse> queryPlan() {
         return this.queryPlan;
     }
 
@@ -211,7 +211,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="referencedRoutines", required=true)
       private final List<RoutineReferenceResponse> referencedRoutines;
 
-    public List<RoutineReferenceResponse> getReferencedRoutines() {
+    public List<RoutineReferenceResponse> referencedRoutines() {
         return this.referencedRoutines;
     }
 
@@ -222,7 +222,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="referencedTables", required=true)
       private final List<TableReferenceResponse> referencedTables;
 
-    public List<TableReferenceResponse> getReferencedTables() {
+    public List<TableReferenceResponse> referencedTables() {
         return this.referencedTables;
     }
 
@@ -233,7 +233,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="reservationUsage", required=true)
       private final List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
 
-    public List<JobStatistics2ReservationUsageItemResponse> getReservationUsage() {
+    public List<JobStatistics2ReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
 
@@ -244,7 +244,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="schema", required=true)
       private final TableSchemaResponse schema;
 
-    public TableSchemaResponse getSchema() {
+    public TableSchemaResponse schema() {
         return this.schema;
     }
 
@@ -255,7 +255,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="statementType", required=true)
       private final String statementType;
 
-    public String getStatementType() {
+    public String statementType() {
         return this.statementType;
     }
 
@@ -266,7 +266,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="timeline", required=true)
       private final List<QueryTimelineSampleResponse> timeline;
 
-    public List<QueryTimelineSampleResponse> getTimeline() {
+    public List<QueryTimelineSampleResponse> timeline() {
         return this.timeline;
     }
 
@@ -277,7 +277,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="totalBytesBilled", required=true)
       private final String totalBytesBilled;
 
-    public String getTotalBytesBilled() {
+    public String totalBytesBilled() {
         return this.totalBytesBilled;
     }
 
@@ -288,7 +288,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="totalBytesProcessed", required=true)
       private final String totalBytesProcessed;
 
-    public String getTotalBytesProcessed() {
+    public String totalBytesProcessed() {
         return this.totalBytesProcessed;
     }
 
@@ -299,7 +299,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="totalBytesProcessedAccuracy", required=true)
       private final String totalBytesProcessedAccuracy;
 
-    public String getTotalBytesProcessedAccuracy() {
+    public String totalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
     }
 
@@ -310,7 +310,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="totalPartitionsProcessed", required=true)
       private final String totalPartitionsProcessed;
 
-    public String getTotalPartitionsProcessed() {
+    public String totalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
     }
 
@@ -321,7 +321,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
 
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
 
@@ -332,7 +332,7 @@ public final class JobStatistics2Response extends io.pulumi.resources.InvokeArgs
     @Import(name="undeclaredQueryParameters", required=true)
       private final List<QueryParameterResponse> undeclaredQueryParameters;
 
-    public List<QueryParameterResponse> getUndeclaredQueryParameters() {
+    public List<QueryParameterResponse> undeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }
 

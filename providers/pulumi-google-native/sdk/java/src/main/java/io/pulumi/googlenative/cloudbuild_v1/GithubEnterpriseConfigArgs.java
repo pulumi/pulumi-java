@@ -23,7 +23,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -34,14 +34,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="gheConfigId")
       private final @Nullable Output<String> gheConfigId;
 
-    public Output<String> getGheConfigId() {
+    public Output<String> gheConfigId() {
         return this.gheConfigId == null ? Codegen.empty() : this.gheConfigId;
     }
 
@@ -52,14 +52,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="hostUrl")
       private final @Nullable Output<String> hostUrl;
 
-    public Output<String> getHostUrl() {
+    public Output<String> hostUrl() {
         return this.hostUrl == null ? Codegen.empty() : this.hostUrl;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,21 +81,21 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="peeredNetwork")
       private final @Nullable Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork == null ? Codegen.empty() : this.peeredNetwork;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -106,7 +106,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="secrets")
       private final @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
 
-    public Output<GitHubEnterpriseSecretsArgs> getSecrets() {
+    public Output<GitHubEnterpriseSecretsArgs> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -117,7 +117,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="sslCa")
       private final @Nullable Output<String> sslCa;
 
-    public Output<String> getSslCa() {
+    public Output<String> sslCa() {
         return this.sslCa == null ? Codegen.empty() : this.sslCa;
     }
 
@@ -128,7 +128,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="webhookKey")
       private final @Nullable Output<String> webhookKey;
 
-    public Output<String> getWebhookKey() {
+    public Output<String> webhookKey() {
         return this.webhookKey == null ? Codegen.empty() : this.webhookKey;
     }
 

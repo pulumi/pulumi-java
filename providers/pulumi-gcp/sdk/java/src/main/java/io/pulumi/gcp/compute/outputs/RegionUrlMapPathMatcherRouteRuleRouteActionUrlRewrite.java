@@ -40,7 +40,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite {
      * 255 characters.
      * 
     */
-    public Optional<String> getHostRewrite() {
+    public Optional<String> hostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
@@ -49,7 +49,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite {
      * be between 1 and 1024 characters.
      * 
     */
-    public Optional<String> getPathPrefixRewrite() {
+    public Optional<String> pathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }
 

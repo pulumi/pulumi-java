@@ -15,14 +15,14 @@ public final class GetEnvgroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="envgroupId", required=true)
       private final String envgroupId;
 
-    public String getEnvgroupId() {
+    public String envgroupId() {
         return this.envgroupId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

@@ -24,7 +24,7 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthorityNote")
       private final @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
 
-    public Output<AttestorAttestationAuthorityNoteGetArgs> getAttestationAuthorityNote() {
+    public Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote() {
         return this.attestationAuthorityNote == null ? Codegen.empty() : this.attestationAuthorityNote;
     }
 
@@ -36,7 +36,7 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class AttestorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -90,74 +90,74 @@ public final class GetLoadBalancerResult {
         this.zoneId = zoneId;
     }
 
-    public GetLoadBalancerAccessLogs getAccessLogs() {
+    public GetLoadBalancerAccessLogs accessLogs() {
         return this.accessLogs;
     }
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getArnSuffix() {
+    public String arnSuffix() {
         return this.arnSuffix;
     }
-    public String getCustomerOwnedIpv4Pool() {
+    public String customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
-    public String getDesyncMitigationMode() {
+    public String desyncMitigationMode() {
         return this.desyncMitigationMode;
     }
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
-    public Boolean getDropInvalidHeaderFields() {
+    public Boolean dropInvalidHeaderFields() {
         return this.dropInvalidHeaderFields;
     }
-    public Boolean getEnableDeletionProtection() {
+    public Boolean enableDeletionProtection() {
         return this.enableDeletionProtection;
     }
-    public Boolean getEnableHttp2() {
+    public Boolean enableHttp2() {
         return this.enableHttp2;
     }
-    public Boolean getEnableWafFailOpen() {
+    public Boolean enableWafFailOpen() {
         return this.enableWafFailOpen;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Integer getIdleTimeout() {
+    public Integer idleTimeout() {
         return this.idleTimeout;
     }
-    public Boolean getInternal() {
+    public Boolean internal() {
         return this.internal;
     }
-    public String getIpAddressType() {
+    public String ipAddressType() {
         return this.ipAddressType;
     }
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
-    public List<GetLoadBalancerSubnetMapping> getSubnetMappings() {
+    public List<GetLoadBalancerSubnetMapping> subnetMappings() {
         return this.subnetMappings;
     }
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
-    public String getZoneId() {
+    public String zoneId() {
         return this.zoneId;
     }
 

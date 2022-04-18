@@ -25,7 +25,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logDestination", required=true)
       private final Output<Map<String,String>> logDestination;
 
-    public Output<Map<String,String>> getLogDestination() {
+    public Output<Map<String,String>> logDestination() {
         return this.logDestination;
     }
 
@@ -36,7 +36,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logDestinationType", required=true)
       private final Output<String> logDestinationType;
 
-    public Output<String> getLogDestinationType() {
+    public Output<String> logDestinationType() {
         return this.logDestinationType;
     }
 
@@ -47,7 +47,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 

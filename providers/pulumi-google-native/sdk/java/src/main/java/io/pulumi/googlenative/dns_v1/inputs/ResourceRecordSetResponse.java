@@ -22,7 +22,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="routingPolicy", required=true)
       private final RRSetRoutingPolicyResponse routingPolicy;
 
-    public RRSetRoutingPolicyResponse getRoutingPolicy() {
+    public RRSetRoutingPolicyResponse routingPolicy() {
         return this.routingPolicy;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="rrdatas", required=true)
       private final List<String> rrdatas;
 
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
 
@@ -66,7 +66,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
 
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
 
@@ -77,7 +77,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="ttl", required=true)
       private final Integer ttl;
 
-    public Integer getTtl() {
+    public Integer ttl() {
         return this.ttl;
     }
 
@@ -88,7 +88,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

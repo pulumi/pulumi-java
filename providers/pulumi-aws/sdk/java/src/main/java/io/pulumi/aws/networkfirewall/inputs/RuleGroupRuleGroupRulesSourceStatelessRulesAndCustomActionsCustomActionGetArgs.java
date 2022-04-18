@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     @Import(name="actionDefinition", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> getActionDefinition() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 

@@ -55,35 +55,35 @@ public final class IterationResultResponse {
      * Time taken to run the iteration in milliseconds.
      * 
     */
-    public String getDurationMs() {
+    public String durationMs() {
         return this.durationMs;
     }
     /**
      * Loss computed on the eval data at the end of iteration.
      * 
     */
-    public Double getEvalLoss() {
+    public Double evalLoss() {
         return this.evalLoss;
     }
     /**
      * Index of the iteration, 0 based.
      * 
     */
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
     /**
      * Learn rate used for this iteration.
      * 
     */
-    public Double getLearnRate() {
+    public Double learnRate() {
         return this.learnRate;
     }
     /**
      * Loss computed on the training data at the end of iteration.
      * 
     */
-    public Double getTrainingLoss() {
+    public Double trainingLoss() {
         return this.trainingLoss;
     }
 

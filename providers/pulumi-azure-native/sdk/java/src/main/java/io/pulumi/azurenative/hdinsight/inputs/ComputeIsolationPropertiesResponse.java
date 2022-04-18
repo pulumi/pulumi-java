@@ -26,7 +26,7 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
     @Import(name="enableComputeIsolation")
       private final @Nullable Boolean enableComputeIsolation;
 
-    public Optional<Boolean> getEnableComputeIsolation() {
+    public Optional<Boolean> enableComputeIsolation() {
         return this.enableComputeIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableComputeIsolation);
     }
 
@@ -37,7 +37,7 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
     @Import(name="hostSku")
       private final @Nullable String hostSku;
 
-    public Optional<String> getHostSku() {
+    public Optional<String> hostSku() {
         return this.hostSku == null ? Optional.empty() : Optional.ofNullable(this.hostSku);
     }
 

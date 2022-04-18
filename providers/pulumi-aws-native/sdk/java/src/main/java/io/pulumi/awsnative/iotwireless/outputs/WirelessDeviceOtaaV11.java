@@ -23,13 +23,13 @@ public final class WirelessDeviceOtaaV11 {
         this.nwkKey = nwkKey;
     }
 
-    public String getAppKey() {
+    public String appKey() {
         return this.appKey;
     }
-    public String getJoinEui() {
+    public String joinEui() {
         return this.joinEui;
     }
-    public String getNwkKey() {
+    public String nwkKey() {
         return this.nwkKey;
     }
 

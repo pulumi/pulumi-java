@@ -26,7 +26,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="agentPublicKeyCertificate", required=true)
       private final Output<String> agentPublicKeyCertificate;
 
-    public Output<String> getAgentPublicKeyCertificate() {
+    public Output<String> agentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="distribution")
       private final @Nullable Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity", required=true)
       private final Output<ConnectedClusterIdentityArgs> identity;
 
-    public Output<ConnectedClusterIdentityArgs> getIdentity() {
+    public Output<ConnectedClusterIdentityArgs> identity() {
         return this.identity;
     }
 
@@ -70,7 +70,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="infrastructure")
       private final @Nullable Output<String> infrastructure;
 
-    public Output<String> getInfrastructure() {
+    public Output<String> infrastructure() {
         return this.infrastructure == null ? Codegen.empty() : this.infrastructure;
     }
 
@@ -81,7 +81,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -103,7 +103,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

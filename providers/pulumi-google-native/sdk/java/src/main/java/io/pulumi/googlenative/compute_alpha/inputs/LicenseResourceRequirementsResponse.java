@@ -19,7 +19,7 @@ public final class LicenseResourceRequirementsResponse extends io.pulumi.resourc
     @Import(name="minGuestCpuCount", required=true)
       private final Integer minGuestCpuCount;
 
-    public Integer getMinGuestCpuCount() {
+    public Integer minGuestCpuCount() {
         return this.minGuestCpuCount;
     }
 
@@ -30,7 +30,7 @@ public final class LicenseResourceRequirementsResponse extends io.pulumi.resourc
     @Import(name="minMemoryMb", required=true)
       private final Integer minMemoryMb;
 
-    public Integer getMinMemoryMb() {
+    public Integer minMemoryMb() {
         return this.minMemoryMb;
     }
 

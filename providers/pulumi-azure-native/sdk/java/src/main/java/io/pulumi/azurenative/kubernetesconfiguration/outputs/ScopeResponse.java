@@ -35,14 +35,14 @@ public final class ScopeResponse {
      * Specifies that the scope of the extensionInstance is Cluster
      * 
     */
-    public Optional<ScopeClusterResponse> getCluster() {
+    public Optional<ScopeClusterResponse> cluster() {
         return Optional.ofNullable(this.cluster);
     }
     /**
      * Specifies that the scope of the extensionInstance is Namespace
      * 
     */
-    public Optional<ScopeNamespaceResponse> getNamespace() {
+    public Optional<ScopeNamespaceResponse> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 

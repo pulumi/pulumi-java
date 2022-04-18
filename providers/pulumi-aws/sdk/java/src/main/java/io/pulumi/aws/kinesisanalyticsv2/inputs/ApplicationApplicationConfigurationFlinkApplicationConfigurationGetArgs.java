@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="checkpointConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> getCheckpointConfiguration() {
+    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration() {
         return this.checkpointConfiguration == null ? Codegen.empty() : this.checkpointConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="monitoringConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> getMonitoringConfiguration() {
+    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration() {
         return this.monitoringConfiguration == null ? Codegen.empty() : this.monitoringConfiguration;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="parallelismConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> getParallelismConfiguration() {
+    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration() {
         return this.parallelismConfiguration == null ? Codegen.empty() : this.parallelismConfiguration;
     }
 

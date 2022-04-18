@@ -26,7 +26,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
@@ -37,7 +37,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
     }
 

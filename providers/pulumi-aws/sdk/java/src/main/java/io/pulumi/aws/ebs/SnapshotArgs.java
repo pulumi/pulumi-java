@@ -25,7 +25,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
@@ -47,7 +47,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permanentRestore")
       private final @Nullable Output<Boolean> permanentRestore;
 
-    public Output<Boolean> getPermanentRestore() {
+    public Output<Boolean> permanentRestore() {
         return this.permanentRestore == null ? Codegen.empty() : this.permanentRestore;
     }
 
@@ -58,7 +58,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageTier")
       private final @Nullable Output<String> storageTier;
 
-    public Output<String> getStorageTier() {
+    public Output<String> storageTier() {
         return this.storageTier == null ? Codegen.empty() : this.storageTier;
     }
 
@@ -69,7 +69,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="temporaryRestoreDays")
       private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Output<Integer> getTemporaryRestoreDays() {
+    public Output<Integer> temporaryRestoreDays() {
         return this.temporaryRestoreDays == null ? Codegen.empty() : this.temporaryRestoreDays;
     }
 
@@ -91,7 +91,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeId", required=true)
       private final Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 

@@ -18,14 +18,14 @@ public final class InAppTemplateOverrideButtonConfiguration extends io.pulumi.re
     @Import(name="buttonAction")
       private final @Nullable InAppTemplateButtonAction buttonAction;
 
-    public Optional<InAppTemplateButtonAction> getButtonAction() {
+    public Optional<InAppTemplateButtonAction> buttonAction() {
         return this.buttonAction == null ? Optional.empty() : Optional.ofNullable(this.buttonAction);
     }
 
     @Import(name="link")
       private final @Nullable String link;
 
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 

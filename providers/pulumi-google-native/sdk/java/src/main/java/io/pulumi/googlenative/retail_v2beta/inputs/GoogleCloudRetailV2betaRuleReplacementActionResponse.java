@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="queryTerms", required=true)
       private final List<String> queryTerms;
 
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="replacementTerm", required=true)
       private final String replacementTerm;
 
-    public String getReplacementTerm() {
+    public String replacementTerm() {
         return this.replacementTerm;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="term", required=true)
       private final String term;
 
-    public String getTerm() {
+    public String term() {
         return this.term;
     }
 

@@ -15,14 +15,14 @@ public final class RealtimeLogConfigKinesisStreamConfig extends io.pulumi.resour
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamArn", required=true)
       private final String streamArn;
 
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
 

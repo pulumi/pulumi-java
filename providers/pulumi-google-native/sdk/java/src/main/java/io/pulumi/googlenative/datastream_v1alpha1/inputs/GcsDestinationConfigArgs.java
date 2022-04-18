@@ -29,7 +29,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     @Import(name="avroFileFormat")
       private final @Nullable Output<AvroFileFormatArgs> avroFileFormat;
 
-    public Output<AvroFileFormatArgs> getAvroFileFormat() {
+    public Output<AvroFileFormatArgs> avroFileFormat() {
         return this.avroFileFormat == null ? Codegen.empty() : this.avroFileFormat;
     }
 
@@ -40,7 +40,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     @Import(name="fileRotationInterval")
       private final @Nullable Output<String> fileRotationInterval;
 
-    public Output<String> getFileRotationInterval() {
+    public Output<String> fileRotationInterval() {
         return this.fileRotationInterval == null ? Codegen.empty() : this.fileRotationInterval;
     }
 
@@ -51,7 +51,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     @Import(name="fileRotationMb")
       private final @Nullable Output<Integer> fileRotationMb;
 
-    public Output<Integer> getFileRotationMb() {
+    public Output<Integer> fileRotationMb() {
         return this.fileRotationMb == null ? Codegen.empty() : this.fileRotationMb;
     }
 
@@ -62,7 +62,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     @Import(name="jsonFileFormat")
       private final @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
 
-    public Output<JsonFileFormatArgs> getJsonFileFormat() {
+    public Output<JsonFileFormatArgs> jsonFileFormat() {
         return this.jsonFileFormat == null ? Codegen.empty() : this.jsonFileFormat;
     }
 
@@ -73,7 +73,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

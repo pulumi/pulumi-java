@@ -29,7 +29,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
 
-    public Output<List<String>> getDestinationIpGroups() {
+    public Output<List<String>> destinationIpGroups() {
         return this.destinationIpGroups == null ? Codegen.empty() : this.destinationIpGroups;
     }
 
@@ -62,7 +62,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
+    public Output<List<String>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
@@ -73,7 +73,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="protocol")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol;
 
-    public Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> getProtocol() {
+    public Output<Either<String,FirewallPolicyIntrusionDetectionProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -95,7 +95,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -106,7 +106,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsAr
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 

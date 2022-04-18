@@ -37,17 +37,17 @@ public final class NFSMountConfigurationResponse {
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
     */
-    public Optional<String> getMountOptions() {
+    public Optional<String> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
     */
-    public String getRelativeMountPath() {
+    public String relativeMountPath() {
         return this.relativeMountPath;
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

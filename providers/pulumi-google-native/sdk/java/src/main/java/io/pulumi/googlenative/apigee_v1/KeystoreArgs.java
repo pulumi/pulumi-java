@@ -18,7 +18,7 @@ public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -29,14 +29,14 @@ public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

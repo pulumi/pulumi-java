@@ -26,7 +26,7 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="root")
       private final @Nullable Output<String> root;
 
-    public Output<String> getRoot() {
+    public Output<String> root() {
         return this.root == null ? Codegen.empty() : this.root;
     }
 

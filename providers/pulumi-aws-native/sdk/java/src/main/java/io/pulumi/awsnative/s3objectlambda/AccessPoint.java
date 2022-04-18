@@ -24,7 +24,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -38,7 +38,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The date and time when the Object lambda Access Point was created.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -52,7 +52,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The name you want to assign to this Object lambda Access Point.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -66,13 +66,13 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
      * 
      */
-    public Output<AccessPointObjectLambdaConfiguration> getObjectLambdaConfiguration() {
+    public Output<AccessPointObjectLambdaConfiguration> objectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
     @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output<PolicyStatusProperties> policyStatus;
 
-    public Output<PolicyStatusProperties> getPolicyStatus() {
+    public Output<PolicyStatusProperties> policyStatus() {
         return this.policyStatus;
     }
     /**
@@ -86,7 +86,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    public Output<AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Output<AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
 

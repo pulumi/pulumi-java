@@ -24,14 +24,14 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="ami", required=true)
       private final Output<String> ami;
 
-    public Output<String> getAmi() {
+    public Output<String> ami() {
         return this.ami;
     }
 
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
@@ -42,42 +42,42 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> getEbsBlockDevices() {
+    public Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+    public Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
+    public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     @Import(name="iamInstanceProfileArn")
       private final @Nullable Output<String> iamInstanceProfileArn;
 
-    public Output<String> getIamInstanceProfileArn() {
+    public Output<String> iamInstanceProfileArn() {
         return this.iamInstanceProfileArn == null ? Codegen.empty() : this.iamInstanceProfileArn;
     }
 
@@ -88,42 +88,42 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     @Import(name="monitoring")
       private final @Nullable Output<Boolean> monitoring;
 
-    public Output<Boolean> getMonitoring() {
+    public Output<Boolean> monitoring() {
         return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
-    public Output<String> getPlacementGroup() {
+    public Output<String> placementGroup() {
         return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
     @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
-    public Output<String> getPlacementTenancy() {
+    public Output<String> placementTenancy() {
         return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
     }
 
     @Import(name="rootBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> getRootBlockDevices() {
+    public Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices() {
         return this.rootBlockDevices == null ? Codegen.empty() : this.rootBlockDevices;
     }
 
@@ -134,7 +134,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
@@ -145,7 +145,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -156,21 +156,21 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -181,7 +181,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="weightedCapacity")
       private final @Nullable Output<String> weightedCapacity;
 
-    public Output<String> getWeightedCapacity() {
+    public Output<String> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

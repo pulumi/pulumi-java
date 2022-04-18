@@ -26,7 +26,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="transferLockState")
       private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
-    public Output<ManagementSettingsTransferLockState> getTransferLockState() {
+    public Output<ManagementSettingsTransferLockState> transferLockState() {
         return this.transferLockState == null ? Codegen.empty() : this.transferLockState;
     }
 

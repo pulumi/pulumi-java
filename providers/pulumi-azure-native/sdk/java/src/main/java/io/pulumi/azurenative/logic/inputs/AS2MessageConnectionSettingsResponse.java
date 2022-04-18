@@ -23,7 +23,7 @@ public final class AS2MessageConnectionSettingsResponse extends io.pulumi.resour
     @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Boolean ignoreCertificateNameMismatch;
 
-    public Boolean getIgnoreCertificateNameMismatch() {
+    public Boolean ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
 
@@ -34,7 +34,7 @@ public final class AS2MessageConnectionSettingsResponse extends io.pulumi.resour
     @Import(name="keepHttpConnectionAlive", required=true)
       private final Boolean keepHttpConnectionAlive;
 
-    public Boolean getKeepHttpConnectionAlive() {
+    public Boolean keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
 
@@ -45,7 +45,7 @@ public final class AS2MessageConnectionSettingsResponse extends io.pulumi.resour
     @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Boolean supportHttpStatusCodeContinue;
 
-    public Boolean getSupportHttpStatusCodeContinue() {
+    public Boolean supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
 
@@ -56,7 +56,7 @@ public final class AS2MessageConnectionSettingsResponse extends io.pulumi.resour
     @Import(name="unfoldHttpHeaders", required=true)
       private final Boolean unfoldHttpHeaders;
 
-    public Boolean getUnfoldHttpHeaders() {
+    public Boolean unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 

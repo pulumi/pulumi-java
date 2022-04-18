@@ -26,7 +26,7 @@ public final class ListDatabaseAccountConnectionStringsResult {
      * An array that contains the connection strings for the Cosmos DB account.
      * 
     */
-    public List<DatabaseAccountConnectionStringResponse> getConnectionStrings() {
+    public List<DatabaseAccountConnectionStringResponse> connectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }
 

@@ -29,14 +29,14 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliverLogsPermissionArn")
       private final @Nullable Output<String> deliverLogsPermissionArn;
 
-    public Output<String> getDeliverLogsPermissionArn() {
+    public Output<String> deliverLogsPermissionArn() {
         return this.deliverLogsPermissionArn == null ? Codegen.empty() : this.deliverLogsPermissionArn;
     }
 
     @Import(name="destinationOptions")
       private final @Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions;
 
-    public Output<DestinationOptionsPropertiesArgs> getDestinationOptions() {
+    public Output<DestinationOptionsPropertiesArgs> destinationOptions() {
         return this.destinationOptions == null ? Codegen.empty() : this.destinationOptions;
     }
 
@@ -47,7 +47,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
 
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination == null ? Codegen.empty() : this.logDestination;
     }
 
@@ -58,7 +58,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logDestinationType")
       private final @Nullable Output<FlowLogLogDestinationType> logDestinationType;
 
-    public Output<FlowLogLogDestinationType> getLogDestinationType() {
+    public Output<FlowLogLogDestinationType> logDestinationType() {
         return this.logDestinationType == null ? Codegen.empty() : this.logDestinationType;
     }
 
@@ -69,7 +69,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logFormat")
       private final @Nullable Output<String> logFormat;
 
-    public Output<String> getLogFormat() {
+    public Output<String> logFormat() {
         return this.logFormat == null ? Codegen.empty() : this.logFormat;
     }
 
@@ -80,7 +80,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAggregationInterval")
       private final @Nullable Output<Integer> maxAggregationInterval;
 
-    public Output<Integer> getMaxAggregationInterval() {
+    public Output<Integer> maxAggregationInterval() {
         return this.maxAggregationInterval == null ? Codegen.empty() : this.maxAggregationInterval;
     }
 
@@ -102,7 +102,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -113,7 +113,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType", required=true)
       private final Output<FlowLogResourceType> resourceType;
 
-    public Output<FlowLogResourceType> getPropResourceType() {
+    public Output<FlowLogResourceType> resourceType() {
         return this.resourceType;
     }
 
@@ -124,7 +124,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FlowLogTagArgs>> tags;
 
-    public Output<List<FlowLogTagArgs>> getTags() {
+    public Output<List<FlowLogTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -135,7 +135,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficType", required=true)
       private final Output<FlowLogTrafficType> trafficType;
 
-    public Output<FlowLogTrafficType> getTrafficType() {
+    public Output<FlowLogTrafficType> trafficType() {
         return this.trafficType;
     }
 

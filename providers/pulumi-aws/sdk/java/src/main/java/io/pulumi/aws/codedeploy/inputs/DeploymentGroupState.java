@@ -34,7 +34,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="alarmConfiguration")
       private final @Nullable Output<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration;
 
-    public Output<DeploymentGroupAlarmConfigurationGetArgs> getAlarmConfiguration() {
+    public Output<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration() {
         return this.alarmConfiguration == null ? Codegen.empty() : this.alarmConfiguration;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="appName")
       private final @Nullable Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName == null ? Codegen.empty() : this.appName;
     }
 
@@ -56,7 +56,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -67,7 +67,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="autoRollbackConfiguration")
       private final @Nullable Output<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
 
-    public Output<DeploymentGroupAutoRollbackConfigurationGetArgs> getAutoRollbackConfiguration() {
+    public Output<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration() {
         return this.autoRollbackConfiguration == null ? Codegen.empty() : this.autoRollbackConfiguration;
     }
 
@@ -78,7 +78,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="autoscalingGroups")
       private final @Nullable Output<List<String>> autoscalingGroups;
 
-    public Output<List<String>> getAutoscalingGroups() {
+    public Output<List<String>> autoscalingGroups() {
         return this.autoscalingGroups == null ? Codegen.empty() : this.autoscalingGroups;
     }
 
@@ -89,7 +89,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="blueGreenDeploymentConfig")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> getBlueGreenDeploymentConfig() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig() {
         return this.blueGreenDeploymentConfig == null ? Codegen.empty() : this.blueGreenDeploymentConfig;
     }
 
@@ -100,7 +100,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -111,7 +111,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentConfigName")
       private final @Nullable Output<String> deploymentConfigName;
 
-    public Output<String> getDeploymentConfigName() {
+    public Output<String> deploymentConfigName() {
         return this.deploymentConfigName == null ? Codegen.empty() : this.deploymentConfigName;
     }
 
@@ -122,7 +122,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentGroupId")
       private final @Nullable Output<String> deploymentGroupId;
 
-    public Output<String> getDeploymentGroupId() {
+    public Output<String> deploymentGroupId() {
         return this.deploymentGroupId == null ? Codegen.empty() : this.deploymentGroupId;
     }
 
@@ -133,7 +133,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentGroupName")
       private final @Nullable Output<String> deploymentGroupName;
 
-    public Output<String> getDeploymentGroupName() {
+    public Output<String> deploymentGroupName() {
         return this.deploymentGroupName == null ? Codegen.empty() : this.deploymentGroupName;
     }
 
@@ -144,7 +144,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentStyle")
       private final @Nullable Output<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle;
 
-    public Output<DeploymentGroupDeploymentStyleGetArgs> getDeploymentStyle() {
+    public Output<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle() {
         return this.deploymentStyle == null ? Codegen.empty() : this.deploymentStyle;
     }
 
@@ -155,7 +155,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="ec2TagFilters")
       private final @Nullable Output<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters;
 
-    public Output<List<DeploymentGroupEc2TagFilterGetArgs>> getEc2TagFilters() {
+    public Output<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters() {
         return this.ec2TagFilters == null ? Codegen.empty() : this.ec2TagFilters;
     }
 
@@ -166,7 +166,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="ec2TagSets")
       private final @Nullable Output<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets;
 
-    public Output<List<DeploymentGroupEc2TagSetGetArgs>> getEc2TagSets() {
+    public Output<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets() {
         return this.ec2TagSets == null ? Codegen.empty() : this.ec2TagSets;
     }
 
@@ -177,7 +177,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="ecsService")
       private final @Nullable Output<DeploymentGroupEcsServiceGetArgs> ecsService;
 
-    public Output<DeploymentGroupEcsServiceGetArgs> getEcsService() {
+    public Output<DeploymentGroupEcsServiceGetArgs> ecsService() {
         return this.ecsService == null ? Codegen.empty() : this.ecsService;
     }
 
@@ -188,7 +188,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="loadBalancerInfo")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo;
 
-    public Output<DeploymentGroupLoadBalancerInfoGetArgs> getLoadBalancerInfo() {
+    public Output<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo() {
         return this.loadBalancerInfo == null ? Codegen.empty() : this.loadBalancerInfo;
     }
 
@@ -199,7 +199,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="onPremisesInstanceTagFilters")
       private final @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters;
 
-    public Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> getOnPremisesInstanceTagFilters() {
+    public Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters() {
         return this.onPremisesInstanceTagFilters == null ? Codegen.empty() : this.onPremisesInstanceTagFilters;
     }
 
@@ -210,7 +210,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -221,7 +221,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -232,7 +232,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -243,7 +243,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="triggerConfigurations")
       private final @Nullable Output<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations;
 
-    public Output<List<DeploymentGroupTriggerConfigurationGetArgs>> getTriggerConfigurations() {
+    public Output<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations() {
         return this.triggerConfigurations == null ? Codegen.empty() : this.triggerConfigurations;
     }
 

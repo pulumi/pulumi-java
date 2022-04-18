@@ -34,14 +34,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clustering")
       private final @Nullable Output<ClusteringArgs> clustering;
 
-    public Output<ClusteringArgs> getClustering() {
+    public Output<ClusteringArgs> clustering() {
         return this.clustering == null ? Codegen.empty() : this.clustering;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -52,7 +52,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<EncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<EncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -74,7 +74,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -85,7 +85,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalDataConfiguration")
       private final @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
 
-    public Output<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
+    public Output<ExternalDataConfigurationArgs> externalDataConfiguration() {
         return this.externalDataConfiguration == null ? Codegen.empty() : this.externalDataConfiguration;
     }
 
@@ -96,7 +96,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -107,7 +107,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -118,7 +118,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="materializedView")
       private final @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
 
-    public Output<MaterializedViewDefinitionArgs> getMaterializedView() {
+    public Output<MaterializedViewDefinitionArgs> materializedView() {
         return this.materializedView == null ? Codegen.empty() : this.materializedView;
     }
 
@@ -129,14 +129,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="model")
       private final @Nullable Output<ModelDefinitionArgs> model;
 
-    public Output<ModelDefinitionArgs> getModel() {
+    public Output<ModelDefinitionArgs> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -147,7 +147,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangePartitioning")
       private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
-    public Output<RangePartitioningArgs> getRangePartitioning() {
+    public Output<RangePartitioningArgs> rangePartitioning() {
         return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
     }
 
@@ -158,7 +158,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Output<Boolean> getRequirePartitionFilter() {
+    public Output<Boolean> requirePartitionFilter() {
         return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
@@ -169,7 +169,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<TableSchemaArgs> schema;
 
-    public Output<TableSchemaArgs> getSchema() {
+    public Output<TableSchemaArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -180,7 +180,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableReference")
       private final @Nullable Output<TableReferenceArgs> tableReference;
 
-    public Output<TableReferenceArgs> getTableReference() {
+    public Output<TableReferenceArgs> tableReference() {
         return this.tableReference == null ? Codegen.empty() : this.tableReference;
     }
 
@@ -191,7 +191,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timePartitioning")
       private final @Nullable Output<TimePartitioningArgs> timePartitioning;
 
-    public Output<TimePartitioningArgs> getTimePartitioning() {
+    public Output<TimePartitioningArgs> timePartitioning() {
         return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
     }
 
@@ -202,7 +202,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="view")
       private final @Nullable Output<ViewDefinitionArgs> view;
 
-    public Output<ViewDefinitionArgs> getView() {
+    public Output<ViewDefinitionArgs> view() {
         return this.view == null ? Codegen.empty() : this.view;
     }
 

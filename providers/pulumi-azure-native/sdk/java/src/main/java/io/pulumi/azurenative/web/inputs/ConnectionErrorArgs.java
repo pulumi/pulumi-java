@@ -27,7 +27,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

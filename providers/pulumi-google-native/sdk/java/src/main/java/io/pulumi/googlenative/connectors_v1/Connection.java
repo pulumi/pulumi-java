@@ -37,7 +37,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Configuration for establishing the connection's authentication with an external system.
      * 
      */
-    public Output<AuthConfigResponse> getAuthConfig() {
+    public Output<AuthConfigResponse> authConfig() {
         return this.authConfig;
     }
     /**
@@ -51,7 +51,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Configuration for configuring the connection with an external system.
      * 
      */
-    public Output<List<ConfigVariableResponse>> getConfigVariables() {
+    public Output<List<ConfigVariableResponse>> configVariables() {
         return this.configVariables;
     }
     /**
@@ -65,7 +65,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
      */
-    public Output<String> getConnectorVersion() {
+    public Output<String> connectorVersion() {
         return this.connectorVersion;
     }
     /**
@@ -79,7 +79,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Created time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -93,7 +93,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Description of the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -107,7 +107,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Outbound domains/hosts needs to be allowlisted.
      * 
      */
-    public Output<List<String>> getEgressBackends() {
+    public Output<List<String>> egressBackends() {
         return this.egressBackends;
     }
     /**
@@ -121,7 +121,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
-    public Output<String> getEnvoyImageLocation() {
+    public Output<String> envoyImageLocation() {
         return this.envoyImageLocation;
     }
     /**
@@ -135,7 +135,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
-    public Output<String> getImageLocation() {
+    public Output<String> imageLocation() {
         return this.imageLocation;
     }
     /**
@@ -149,7 +149,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -163,7 +163,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
      */
-    public Output<LockConfigResponse> getLockConfig() {
+    public Output<LockConfigResponse> lockConfig() {
         return this.lockConfig;
     }
     /**
@@ -177,7 +177,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +191,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Service account needed for runtime plane to access GCP resources.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -205,7 +205,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
      * 
      */
-    public Output<String> getServiceDirectory() {
+    public Output<String> serviceDirectory() {
         return this.serviceDirectory;
     }
     /**
@@ -219,7 +219,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Current status of the connection.
      * 
      */
-    public Output<ConnectionStatusResponse> getStatus() {
+    public Output<ConnectionStatusResponse> status() {
         return this.status;
     }
     /**
@@ -233,7 +233,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional. Suspended indicates if a user has suspended a connection or not.
      * 
      */
-    public Output<Boolean> getSuspended() {
+    public Output<Boolean> suspended() {
         return this.suspended;
     }
     /**
@@ -247,7 +247,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Updated time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

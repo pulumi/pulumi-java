@@ -22,7 +22,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -44,7 +44,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
@@ -55,7 +55,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
 
-    public Output<String> getPrivateLinkServiceName() {
+    public Output<String> privateLinkServiceName() {
         return this.privateLinkServiceName == null ? Codegen.empty() : this.privateLinkServiceName;
     }
 
@@ -66,7 +66,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -78,7 +78,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="stage", required=true)
       private final Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -89,7 +89,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="warehouse", required=true)
       private final Output<String> warehouse;
 
-    public Output<String> getWarehouse() {
+    public Output<String> warehouse() {
         return this.warehouse;
     }
 

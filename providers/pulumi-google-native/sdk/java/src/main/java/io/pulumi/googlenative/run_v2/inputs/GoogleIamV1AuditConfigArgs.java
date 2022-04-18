@@ -28,7 +28,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
     @Import(name="auditLogConfigs")
       private final @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<GoogleIamV1AuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

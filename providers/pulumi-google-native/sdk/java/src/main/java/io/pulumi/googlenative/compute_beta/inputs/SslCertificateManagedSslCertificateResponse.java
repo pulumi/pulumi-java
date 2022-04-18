@@ -25,7 +25,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
     @Import(name="domainStatus", required=true)
       private final Map<String,String> domainStatus;
 
-    public Map<String,String> getDomainStatus() {
+    public Map<String,String> domainStatus() {
         return this.domainStatus;
     }
 
@@ -36,7 +36,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
     @Import(name="domains", required=true)
       private final List<String> domains;
 
-    public List<String> getDomains() {
+    public List<String> domains() {
         return this.domains;
     }
 
@@ -47,7 +47,7 @@ public final class SslCertificateManagedSslCertificateResponse extends io.pulumi
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -46,28 +46,28 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
      * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
      * 
     */
-    public String getDataset() {
+    public String dataset() {
         return this.dataset;
     }
     /**
      * BigQuery resource name of the latest shard.
      * 
     */
-    public String getLatestShardResource() {
+    public String latestShardResource() {
         return this.latestShardResource;
     }
     /**
      * Total number of shards.
      * 
     */
-    public String getShardCount() {
+    public String shardCount() {
         return this.shardCount;
     }
     /**
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
      * 
     */
-    public String getTablePrefix() {
+    public String tablePrefix() {
         return this.tablePrefix;
     }
 

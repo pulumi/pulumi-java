@@ -26,7 +26,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="administratorType")
       private final @Nullable String administratorType;
 
-    public Optional<String> getAdministratorType() {
+    public Optional<String> administratorType() {
         return this.administratorType == null ? Optional.empty() : Optional.ofNullable(this.administratorType);
     }
 
@@ -37,7 +37,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="azureADOnlyAuthentication")
       private final @Nullable Boolean azureADOnlyAuthentication;
 
-    public Optional<Boolean> getAzureADOnlyAuthentication() {
+    public Optional<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication == null ? Optional.empty() : Optional.ofNullable(this.azureADOnlyAuthentication);
     }
 
@@ -48,7 +48,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="login")
       private final @Nullable String login;
 
-    public Optional<String> getLogin() {
+    public Optional<String> login() {
         return this.login == null ? Optional.empty() : Optional.ofNullable(this.login);
     }
 
@@ -59,7 +59,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="principalType")
       private final @Nullable String principalType;
 
-    public Optional<String> getPrincipalType() {
+    public Optional<String> principalType() {
         return this.principalType == null ? Optional.empty() : Optional.ofNullable(this.principalType);
     }
 
@@ -70,7 +70,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="sid")
       private final @Nullable String sid;
 
-    public Optional<String> getSid() {
+    public Optional<String> sid() {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
     }
 
@@ -81,7 +81,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

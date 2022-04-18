@@ -27,7 +27,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     @Import(name="name", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteName> name;
 
-    public Output<SimulationApplicationSimulationSoftwareSuiteName> getName() {
+    public Output<SimulationApplicationSimulationSoftwareSuiteName> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     @Import(name="version")
       private final @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
-    public Output<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
+    public Output<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

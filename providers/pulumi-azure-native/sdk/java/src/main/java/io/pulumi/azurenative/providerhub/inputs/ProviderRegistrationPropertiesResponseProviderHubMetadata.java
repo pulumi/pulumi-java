@@ -20,21 +20,21 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
     @Import(name="providerAuthentication")
       private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
 
-    public Optional<ProviderHubMetadataResponseProviderAuthentication> getProviderAuthentication() {
+    public Optional<ProviderHubMetadataResponseProviderAuthentication> providerAuthentication() {
         return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
     }
 
     @Import(name="providerAuthorizations")
       private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
-    public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
+    public List<ResourceProviderAuthorizationResponse> providerAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
 
     @Import(name="thirdPartyProviderAuthorization")
       private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
-    public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> getThirdPartyProviderAuthorization() {
+    public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> thirdPartyProviderAuthorization() {
         return this.thirdPartyProviderAuthorization == null ? Optional.empty() : Optional.ofNullable(this.thirdPartyProviderAuthorization);
     }
 

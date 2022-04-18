@@ -39,7 +39,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="buildTimeoutInMinutes")
       private final @Nullable Output<Integer> buildTimeoutInMinutes;
 
-    public Output<Integer> getBuildTimeoutInMinutes() {
+    public Output<Integer> buildTimeoutInMinutes() {
         return this.buildTimeoutInMinutes == null ? Codegen.empty() : this.buildTimeoutInMinutes;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="customize")
       private final @Nullable Output<List<Object>> customize;
 
-    public Output<List<Object>> getCustomize() {
+    public Output<List<Object>> customize() {
         return this.customize == null ? Codegen.empty() : this.customize;
     }
 
@@ -61,7 +61,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="distribute", required=true)
       private final Output<List<Object>> distribute;
 
-    public Output<List<Object>> getDistribute() {
+    public Output<List<Object>> distribute() {
         return this.distribute;
     }
 
@@ -72,7 +72,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="identity", required=true)
       private final Output<ImageTemplateIdentityArgs> identity;
 
-    public Output<ImageTemplateIdentityArgs> getIdentity() {
+    public Output<ImageTemplateIdentityArgs> identity() {
         return this.identity;
     }
 
@@ -83,7 +83,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="imageTemplateName")
       private final @Nullable Output<String> imageTemplateName;
 
-    public Output<String> getImageTemplateName() {
+    public Output<String> imageTemplateName() {
         return this.imageTemplateName == null ? Codegen.empty() : this.imageTemplateName;
     }
 
@@ -94,7 +94,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -105,7 +105,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,7 +116,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="source", required=true)
       private final Output<Object> source;
 
-    public Output<Object> getSource() {
+    public Output<Object> source() {
         return this.source;
     }
 
@@ -127,7 +127,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -138,7 +138,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     @Import(name="vmProfile")
       private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
-    public Output<ImageTemplateVmProfileArgs> getVmProfile() {
+    public Output<ImageTemplateVmProfileArgs> vmProfile() {
         return this.vmProfile == null ? Codegen.empty() : this.vmProfile;
     }
 

@@ -19,7 +19,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
     @Import(name="natRuleName", required=true)
       private final String natRuleName;
 
-    public String getNatRuleName() {
+    public String natRuleName() {
         return this.natRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
-    public String getVirtualNetworkGatewayName() {
+    public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 

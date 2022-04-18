@@ -44,7 +44,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Whether the service quota can be increased.
      * 
      */
-    public Output<Boolean> getAdjustable() {
+    public Output<Boolean> adjustable() {
         return this.adjustable;
     }
     /**
@@ -58,7 +58,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the service quota.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Default value of the service quota.
      * 
      */
-    public Output<Double> getDefaultValue() {
+    public Output<Double> defaultValue() {
         return this.defaultValue;
     }
     /**
@@ -86,7 +86,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
      * 
      */
-    public Output<String> getQuotaCode() {
+    public Output<String> quotaCode() {
         return this.quotaCode;
     }
     /**
@@ -100,19 +100,19 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Name of the quota.
      * 
      */
-    public Output<String> getQuotaName() {
+    public Output<String> quotaName() {
         return this.quotaName;
     }
     @Export(name="requestId", type=String.class, parameters={})
     private Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId;
     }
     @Export(name="requestStatus", type=String.class, parameters={})
     private Output<String> requestStatus;
 
-    public Output<String> getRequestStatus() {
+    public Output<String> requestStatus() {
         return this.requestStatus;
     }
     /**
@@ -126,7 +126,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    public Output<String> getServiceCode() {
+    public Output<String> serviceCode() {
         return this.serviceCode;
     }
     /**
@@ -140,7 +140,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Name of the service.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -154,7 +154,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * @return Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.
      * 
      */
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 

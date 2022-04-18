@@ -22,7 +22,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyDocument")
       private final @Nullable Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
     }
 
@@ -33,7 +33,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 

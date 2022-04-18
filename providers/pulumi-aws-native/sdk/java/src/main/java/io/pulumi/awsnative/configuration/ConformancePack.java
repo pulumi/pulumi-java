@@ -33,7 +33,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return A list of ConformancePackInputParameter objects.
      * 
      */
-    public Output</* @Nullable */ List<ConformancePackInputParameter>> getConformancePackInputParameters() {
+    public Output</* @Nullable */ List<ConformancePackInputParameter>> conformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
     /**
@@ -47,7 +47,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return Name of the conformance pack which will be assigned as the unique identifier.
      * 
      */
-    public Output<String> getConformancePackName() {
+    public Output<String> conformancePackName() {
         return this.conformancePackName;
     }
     /**
@@ -61,7 +61,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3Bucket() {
+    public Output</* @Nullable */ String> deliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
@@ -75,7 +75,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return The prefix for delivery S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
+    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
@@ -89,7 +89,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateBody() {
+    public Output</* @Nullable */ String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -103,7 +103,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * @return Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateS3Uri() {
+    public Output</* @Nullable */ String> templateS3Uri() {
         return this.templateS3Uri;
     }
 

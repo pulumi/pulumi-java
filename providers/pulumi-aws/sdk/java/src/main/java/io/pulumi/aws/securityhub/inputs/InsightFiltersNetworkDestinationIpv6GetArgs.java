@@ -21,7 +21,7 @@ public final class InsightFiltersNetworkDestinationIpv6GetArgs extends io.pulumi
     @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 

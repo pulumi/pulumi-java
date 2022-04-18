@@ -17,14 +17,14 @@ public final class DeliveryStreamProcessorParameterArgs extends io.pulumi.resour
     @Import(name="parameterName", required=true)
       private final Output<String> parameterName;
 
-    public Output<String> getParameterName() {
+    public Output<String> parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
       private final Output<String> parameterValue;
 
-    public Output<String> getParameterValue() {
+    public Output<String> parameterValue() {
         return this.parameterValue;
     }
 

@@ -93,70 +93,70 @@ public final class GetIntegrationAccountPartnerResult {
      * The changed time.
      * 
     */
-    public String getChangedTime() {
+    public String changedTime() {
         return this.changedTime;
     }
     /**
      * The partner content.
      * 
     */
-    public PartnerContentResponse getContent() {
+    public PartnerContentResponse content() {
         return this.content;
     }
     /**
      * The created time.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The partner type.
      * 
     */
-    public String getPartnerType() {
+    public String partnerType() {
         return this.partnerType;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

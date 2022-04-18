@@ -27,7 +27,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationGroupName", required=true)
       private final Output<String> applicationGroupName;
 
-    public Output<String> getApplicationGroupName() {
+    public Output<String> applicationGroupName() {
         return this.applicationGroupName;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationType")
       private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
-    public Output<Either<String,RemoteApplicationType>> getApplicationType() {
+    public Output<Either<String,RemoteApplicationType>> applicationType() {
         return this.applicationType == null ? Codegen.empty() : this.applicationType;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commandLineArguments")
       private final @Nullable Output<String> commandLineArguments;
 
-    public Output<String> getCommandLineArguments() {
+    public Output<String> commandLineArguments() {
         return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commandLineSetting", required=true)
       private final Output<Either<String,CommandLineSetting>> commandLineSetting;
 
-    public Output<Either<String,CommandLineSetting>> getCommandLineSetting() {
+    public Output<Either<String,CommandLineSetting>> commandLineSetting() {
         return this.commandLineSetting;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -115,7 +115,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iconIndex")
       private final @Nullable Output<Integer> iconIndex;
 
-    public Output<Integer> getIconIndex() {
+    public Output<Integer> iconIndex() {
         return this.iconIndex == null ? Codegen.empty() : this.iconIndex;
     }
 
@@ -126,7 +126,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iconPath")
       private final @Nullable Output<String> iconPath;
 
-    public Output<String> getIconPath() {
+    public Output<String> iconPath() {
         return this.iconPath == null ? Codegen.empty() : this.iconPath;
     }
 
@@ -137,7 +137,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageApplicationId")
       private final @Nullable Output<String> msixPackageApplicationId;
 
-    public Output<String> getMsixPackageApplicationId() {
+    public Output<String> msixPackageApplicationId() {
         return this.msixPackageApplicationId == null ? Codegen.empty() : this.msixPackageApplicationId;
     }
 
@@ -148,7 +148,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageFamilyName")
       private final @Nullable Output<String> msixPackageFamilyName;
 
-    public Output<String> getMsixPackageFamilyName() {
+    public Output<String> msixPackageFamilyName() {
         return this.msixPackageFamilyName == null ? Codegen.empty() : this.msixPackageFamilyName;
     }
 
@@ -159,7 +159,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -170,7 +170,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="showInPortal")
       private final @Nullable Output<Boolean> showInPortal;
 
-    public Output<Boolean> getShowInPortal() {
+    public Output<Boolean> showInPortal() {
         return this.showInPortal == null ? Codegen.empty() : this.showInPortal;
     }
 

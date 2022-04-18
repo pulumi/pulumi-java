@@ -24,7 +24,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="metadatas")
       private final @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
 
-    public Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> getMetadatas() {
+    public Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas() {
         return this.metadatas == null ? Codegen.empty() : this.metadatas;
     }
 
@@ -35,7 +35,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="methodName")
       private final @Nullable Output<String> methodName;
 
-    public Output<String> getMethodName() {
+    public Output<String> methodName() {
         return this.methodName == null ? Codegen.empty() : this.methodName;
     }
 
@@ -47,7 +47,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -58,7 +58,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 

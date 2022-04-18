@@ -22,7 +22,7 @@ public final class DeploymentGroupDeploymentStyleArgs extends io.pulumi.resource
     @Import(name="deploymentOption")
       private final @Nullable Output<String> deploymentOption;
 
-    public Output<String> getDeploymentOption() {
+    public Output<String> deploymentOption() {
         return this.deploymentOption == null ? Codegen.empty() : this.deploymentOption;
     }
 
@@ -33,7 +33,7 @@ public final class DeploymentGroupDeploymentStyleArgs extends io.pulumi.resource
     @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
-    public Output<String> getDeploymentType() {
+    public Output<String> deploymentType() {
         return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 

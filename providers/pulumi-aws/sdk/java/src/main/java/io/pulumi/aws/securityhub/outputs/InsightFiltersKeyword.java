@@ -24,7 +24,7 @@ public final class InsightFiltersKeyword {
      * A value for the keyword.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

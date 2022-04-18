@@ -24,7 +24,7 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
     @Import(name="subject", required=true)
       private final Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
 
-    public Output<AuthorityConfigSubjectConfigSubjectArgs> getSubject() {
+    public Output<AuthorityConfigSubjectConfigSubjectArgs> subject() {
         return this.subject;
     }
 
@@ -36,7 +36,7 @@ public final class AuthorityConfigSubjectConfigArgs extends io.pulumi.resources.
     @Import(name="subjectAltName")
       private final @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
-    public Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
+    public Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName() {
         return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 

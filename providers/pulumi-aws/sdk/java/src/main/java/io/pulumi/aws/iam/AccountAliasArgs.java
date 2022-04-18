@@ -21,7 +21,7 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountAlias", required=true)
       private final Output<String> accountAlias;
 
-    public Output<String> getAccountAlias() {
+    public Output<String> accountAlias() {
         return this.accountAlias;
     }
 

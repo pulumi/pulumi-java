@@ -26,7 +26,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowCredentials", required=true)
       private final Boolean allowCredentials;
 
-    public Boolean getAllowCredentials() {
+    public Boolean allowCredentials() {
         return this.allowCredentials;
     }
 
@@ -37,7 +37,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowHeaders", required=true)
       private final List<String> allowHeaders;
 
-    public List<String> getAllowHeaders() {
+    public List<String> allowHeaders() {
         return this.allowHeaders;
     }
 
@@ -48,7 +48,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowMethods", required=true)
       private final List<String> allowMethods;
 
-    public List<String> getAllowMethods() {
+    public List<String> allowMethods() {
         return this.allowMethods;
     }
 
@@ -59,7 +59,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowOriginRegexes", required=true)
       private final List<String> allowOriginRegexes;
 
-    public List<String> getAllowOriginRegexes() {
+    public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes;
     }
 
@@ -70,7 +70,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowOrigins", required=true)
       private final List<String> allowOrigins;
 
-    public List<String> getAllowOrigins() {
+    public List<String> allowOrigins() {
         return this.allowOrigins;
     }
 
@@ -81,7 +81,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 
@@ -92,7 +92,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="exposeHeaders", required=true)
       private final List<String> exposeHeaders;
 
-    public List<String> getExposeHeaders() {
+    public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
 
@@ -103,7 +103,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxAge", required=true)
       private final Integer maxAge;
 
-    public Integer getMaxAge() {
+    public Integer maxAge() {
         return this.maxAge;
     }
 

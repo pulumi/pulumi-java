@@ -33,14 +33,14 @@ public final class ExternalMetricStatus {
      * current contains the current value for the given metric
      * 
     */
-    public MetricValueStatus getCurrent() {
+    public MetricValueStatus current() {
         return this.current;
     }
     /**
      * metric identifies the target metric by name and selector
      * 
     */
-    public MetricIdentifier getMetric() {
+    public MetricIdentifier metric() {
         return this.metric;
     }
 

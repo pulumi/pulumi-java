@@ -40,21 +40,21 @@ public final class GetInstancesResult {
      * Set of Amazon Resource Names (ARNs) of the SSO Instances.
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of identifiers of the identity stores connected to the SSO Instances.
      * 
     */
-    public List<String> getIdentityStoreIds() {
+    public List<String> identityStoreIds() {
         return this.identityStoreIds;
     }
 

@@ -27,7 +27,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -38,7 +38,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -49,7 +49,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -60,7 +60,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -71,7 +71,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

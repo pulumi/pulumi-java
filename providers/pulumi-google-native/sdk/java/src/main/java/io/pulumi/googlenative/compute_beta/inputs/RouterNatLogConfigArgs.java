@@ -27,7 +27,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -38,7 +38,7 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="filter")
       private final @Nullable Output<RouterNatLogConfigFilter> filter;
 
-    public Output<RouterNatLogConfigFilter> getFilter() {
+    public Output<RouterNatLogConfigFilter> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 

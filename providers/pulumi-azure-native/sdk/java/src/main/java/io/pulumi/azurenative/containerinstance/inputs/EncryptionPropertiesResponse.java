@@ -23,7 +23,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -34,7 +34,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="keyVersion", required=true)
       private final String keyVersion;
 
-    public String getKeyVersion() {
+    public String keyVersion() {
         return this.keyVersion;
     }
 
@@ -45,7 +45,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="vaultBaseUrl", required=true)
       private final String vaultBaseUrl;
 
-    public String getVaultBaseUrl() {
+    public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 

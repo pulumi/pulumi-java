@@ -29,7 +29,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -62,7 +62,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
     @Import(name="spec")
       private final @Nullable Output<ReplicationControllerSpecArgs> spec;
 
-    public Output<ReplicationControllerSpecArgs> getSpec() {
+    public Output<ReplicationControllerSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -73,7 +73,7 @@ public final class ReplicationControllerArgs extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<ReplicationControllerStatusArgs> status;
 
-    public Output<ReplicationControllerStatusArgs> getStatus() {
+    public Output<ReplicationControllerStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -22,7 +22,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="dnsSuffix")
       private final @Nullable Output<String> dnsSuffix;
 
-    public Output<String> getDnsSuffix() {
+    public Output<String> dnsSuffix() {
         return this.dnsSuffix == null ? Codegen.empty() : this.dnsSuffix;
     }
 
@@ -33,7 +33,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -55,7 +55,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -66,7 +66,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -77,7 +77,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

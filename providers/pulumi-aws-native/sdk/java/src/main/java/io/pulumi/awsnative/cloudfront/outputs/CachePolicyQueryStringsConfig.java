@@ -22,10 +22,10 @@ public final class CachePolicyQueryStringsConfig {
         this.queryStrings = queryStrings;
     }
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
-    public List<String> getQueryStrings() {
+    public List<String> queryStrings() {
         return this.queryStrings == null ? List.of() : this.queryStrings;
     }
 

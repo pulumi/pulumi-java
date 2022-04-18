@@ -40,21 +40,21 @@ public final class HttpHeaderOptionResponse {
      * The name of the header.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
     */
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
     /**
      * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
      * 
     */
-    public Boolean getReplace() {
+    public Boolean replace() {
         return this.replace;
     }
 

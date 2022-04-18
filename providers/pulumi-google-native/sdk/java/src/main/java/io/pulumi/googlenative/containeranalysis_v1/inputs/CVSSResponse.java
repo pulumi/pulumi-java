@@ -20,7 +20,7 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attackComplexity", required=true)
       private final String attackComplexity;
 
-    public String getAttackComplexity() {
+    public String attackComplexity() {
         return this.attackComplexity;
     }
 
@@ -31,21 +31,21 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attackVector", required=true)
       private final String attackVector;
 
-    public String getAttackVector() {
+    public String attackVector() {
         return this.attackVector;
     }
 
     @Import(name="authentication", required=true)
       private final String authentication;
 
-    public String getAuthentication() {
+    public String authentication() {
         return this.authentication;
     }
 
     @Import(name="availabilityImpact", required=true)
       private final String availabilityImpact;
 
-    public String getAvailabilityImpact() {
+    public String availabilityImpact() {
         return this.availabilityImpact;
     }
 
@@ -56,56 +56,56 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="baseScore", required=true)
       private final Double baseScore;
 
-    public Double getBaseScore() {
+    public Double baseScore() {
         return this.baseScore;
     }
 
     @Import(name="confidentialityImpact", required=true)
       private final String confidentialityImpact;
 
-    public String getConfidentialityImpact() {
+    public String confidentialityImpact() {
         return this.confidentialityImpact;
     }
 
     @Import(name="exploitabilityScore", required=true)
       private final Double exploitabilityScore;
 
-    public Double getExploitabilityScore() {
+    public Double exploitabilityScore() {
         return this.exploitabilityScore;
     }
 
     @Import(name="impactScore", required=true)
       private final Double impactScore;
 
-    public Double getImpactScore() {
+    public Double impactScore() {
         return this.impactScore;
     }
 
     @Import(name="integrityImpact", required=true)
       private final String integrityImpact;
 
-    public String getIntegrityImpact() {
+    public String integrityImpact() {
         return this.integrityImpact;
     }
 
     @Import(name="privilegesRequired", required=true)
       private final String privilegesRequired;
 
-    public String getPrivilegesRequired() {
+    public String privilegesRequired() {
         return this.privilegesRequired;
     }
 
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
     @Import(name="userInteraction", required=true)
       private final String userInteraction;
 
-    public String getUserInteraction() {
+    public String userInteraction() {
         return this.userInteraction;
     }
 

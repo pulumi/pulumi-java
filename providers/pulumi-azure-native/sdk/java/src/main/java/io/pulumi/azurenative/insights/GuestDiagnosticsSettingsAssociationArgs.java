@@ -23,7 +23,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
-    public Output<String> getAssociationName() {
+    public Output<String> associationName() {
         return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
@@ -34,7 +34,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     @Import(name="guestDiagnosticSettingsName", required=true)
       private final Output<String> guestDiagnosticSettingsName;
 
-    public Output<String> getGuestDiagnosticSettingsName() {
+    public Output<String> guestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
     }
 
@@ -45,7 +45,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,7 +56,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -67,7 +67,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

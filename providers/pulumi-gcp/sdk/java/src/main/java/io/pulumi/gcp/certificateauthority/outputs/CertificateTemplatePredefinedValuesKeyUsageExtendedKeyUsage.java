@@ -62,42 +62,42 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
      * 
     */
-    public Optional<Boolean> getClientAuth() {
+    public Optional<Boolean> clientAuth() {
         return Optional.ofNullable(this.clientAuth);
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
      * 
     */
-    public Optional<Boolean> getCodeSigning() {
+    public Optional<Boolean> codeSigning() {
         return Optional.ofNullable(this.codeSigning);
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
      * 
     */
-    public Optional<Boolean> getEmailProtection() {
+    public Optional<Boolean> emailProtection() {
         return Optional.ofNullable(this.emailProtection);
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
      * 
     */
-    public Optional<Boolean> getOcspSigning() {
+    public Optional<Boolean> ocspSigning() {
         return Optional.ofNullable(this.ocspSigning);
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
      * 
     */
-    public Optional<Boolean> getServerAuth() {
+    public Optional<Boolean> serverAuth() {
         return Optional.ofNullable(this.serverAuth);
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
      * 
     */
-    public Optional<Boolean> getTimeStamping() {
+    public Optional<Boolean> timeStamping() {
         return Optional.ofNullable(this.timeStamping);
     }
 

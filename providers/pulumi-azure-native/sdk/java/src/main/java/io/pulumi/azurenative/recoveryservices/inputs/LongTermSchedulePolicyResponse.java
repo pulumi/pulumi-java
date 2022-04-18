@@ -24,7 +24,7 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
     @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
 
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 

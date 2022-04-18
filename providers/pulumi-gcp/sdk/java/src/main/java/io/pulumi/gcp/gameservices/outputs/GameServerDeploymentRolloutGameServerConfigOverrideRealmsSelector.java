@@ -26,7 +26,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      * List of realms to match against.
      * 
     */
-    public List<String> getRealms() {
+    public List<String> realms() {
         return this.realms == null ? List.of() : this.realms;
     }
 

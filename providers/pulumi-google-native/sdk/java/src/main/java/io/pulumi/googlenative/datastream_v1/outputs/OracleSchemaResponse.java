@@ -34,14 +34,14 @@ public final class OracleSchemaResponse {
      * Tables in the schema.
      * 
     */
-    public List<OracleTableResponse> getOracleTables() {
+    public List<OracleTableResponse> oracleTables() {
         return this.oracleTables;
     }
     /**
      * Schema name.
      * 
     */
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 

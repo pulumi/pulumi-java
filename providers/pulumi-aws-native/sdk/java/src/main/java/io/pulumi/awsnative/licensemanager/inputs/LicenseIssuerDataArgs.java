@@ -18,14 +18,14 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="signKey")
       private final @Nullable Output<String> signKey;
 
-    public Output<String> getSignKey() {
+    public Output<String> signKey() {
         return this.signKey == null ? Codegen.empty() : this.signKey;
     }
 

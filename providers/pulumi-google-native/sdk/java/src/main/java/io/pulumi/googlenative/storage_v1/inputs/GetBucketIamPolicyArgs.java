@@ -17,28 +17,28 @@ public final class GetBucketIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable String provisionalUserProject;
 
-    public Optional<String> getProvisionalUserProject() {
+    public Optional<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
       private final @Nullable String userProject;
 
-    public Optional<String> getUserProject() {
+    public Optional<String> userProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
     }
 

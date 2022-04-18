@@ -27,7 +27,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -38,7 +38,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -75,7 +75,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="match")
       private final @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
 
-    public Output<OrganizationSecurityPolicyRuleMatchGetArgs> getMatch() {
+    public Output<OrganizationSecurityPolicyRuleMatchGetArgs> match() {
         return this.match == null ? Codegen.empty() : this.match;
     }
 
@@ -86,7 +86,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -97,7 +97,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
+    public Output<Boolean> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
@@ -110,7 +110,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -124,7 +124,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> getTargetResources() {
+    public Output<List<String>> targetResources() {
         return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
@@ -136,7 +136,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> getTargetServiceAccounts() {
+    public Output<List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 

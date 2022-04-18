@@ -25,7 +25,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="abort")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort() {
         return this.abort == null ? Codegen.empty() : this.abort;
     }
 
@@ -38,7 +38,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="delay")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 

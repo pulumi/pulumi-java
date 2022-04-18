@@ -76,28 +76,28 @@ public final class TagTemplateField {
      * A description for this field.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for this template.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getFieldId() {
+    public String fieldId() {
         return this.fieldId;
     }
     /**
      * Whether this is a required field. Defaults to false.
      * 
     */
-    public Optional<Boolean> getIsRequired() {
+    public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
@@ -105,7 +105,7 @@ public final class TagTemplateField {
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -114,7 +114,7 @@ public final class TagTemplateField {
      * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
      * 
     */
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
@@ -122,7 +122,7 @@ public final class TagTemplateField {
      * Structure is documented below.
      * 
     */
-    public TagTemplateFieldType getType() {
+    public TagTemplateFieldType type() {
         return this.type;
     }
 

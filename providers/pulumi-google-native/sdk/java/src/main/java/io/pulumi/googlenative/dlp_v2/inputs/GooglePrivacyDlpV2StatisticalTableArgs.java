@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
     @Import(name="quasiIds", required=true)
       private final Output<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds() {
         return this.quasiIds;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
     @Import(name="relativeFrequency", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getRelativeFrequency() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency() {
         return this.relativeFrequency;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
     @Import(name="table", required=true)
       private final Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
         return this.table;
     }
 

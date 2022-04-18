@@ -20,10 +20,10 @@ public final class ConnectionApiKeyAuthParameters {
         this.apiKeyValue = apiKeyValue;
     }
 
-    public String getApiKeyName() {
+    public String apiKeyName() {
         return this.apiKeyName;
     }
-    public String getApiKeyValue() {
+    public String apiKeyValue() {
         return this.apiKeyValue;
     }
 

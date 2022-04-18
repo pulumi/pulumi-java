@@ -53,21 +53,21 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
      * Databases to migrate
      * 
     */
-    public List<MigrateSqlServerSqlDbDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
     */
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
      * 
     */
-    public Optional<MigrationValidationOptionsResponse> getValidationOptions() {
+    public Optional<MigrationValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
 

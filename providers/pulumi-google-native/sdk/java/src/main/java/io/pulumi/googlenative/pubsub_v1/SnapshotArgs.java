@@ -23,21 +23,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="snapshotId", required=true)
       private final Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
@@ -48,7 +48,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription;
     }
 

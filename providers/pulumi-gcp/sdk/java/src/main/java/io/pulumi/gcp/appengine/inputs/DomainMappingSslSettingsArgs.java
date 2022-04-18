@@ -27,7 +27,7 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -43,7 +43,7 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="pendingManagedCertificateId")
       private final @Nullable Output<String> pendingManagedCertificateId;
 
-    public Output<String> getPendingManagedCertificateId() {
+    public Output<String> pendingManagedCertificateId() {
         return this.pendingManagedCertificateId == null ? Codegen.empty() : this.pendingManagedCertificateId;
     }
 
@@ -56,7 +56,7 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="sslManagementType", required=true)
       private final Output<String> sslManagementType;
 
-    public Output<String> getSslManagementType() {
+    public Output<String> sslManagementType() {
         return this.sslManagementType;
     }
 

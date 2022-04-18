@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends io.pulumi.
     @Import(name="requestHeadersToAdds", required=true)
       private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
-    public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> getRequestHeadersToAdds() {
+    public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }
 

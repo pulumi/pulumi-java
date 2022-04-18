@@ -18,14 +18,14 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
       private final @Nullable Output<String> keyPrefix;
 
-    public Output<String> getKeyPrefix() {
+    public Output<String> keyPrefix() {
         return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
     }
 

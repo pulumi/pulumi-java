@@ -70,36 +70,36 @@ public final class GetResolverRuleResult {
      * The ARN (Amazon Resource Name) for the resolver rule.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public String getResolverEndpointId() {
+    public String resolverEndpointId() {
         return this.resolverEndpointId;
     }
-    public String getResolverRuleId() {
+    public String resolverRuleId() {
         return this.resolverRuleId;
     }
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
@@ -107,14 +107,14 @@ public final class GetResolverRuleResult {
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
     */
-    public String getShareStatus() {
+    public String shareStatus() {
         return this.shareStatus;
     }
     /**
      * A map of tags assigned to the resolver rule.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

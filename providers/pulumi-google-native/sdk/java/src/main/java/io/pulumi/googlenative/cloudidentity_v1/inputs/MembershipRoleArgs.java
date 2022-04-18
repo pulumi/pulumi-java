@@ -28,7 +28,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiryDetail")
       private final @Nullable Output<ExpiryDetailArgs> expiryDetail;
 
-    public Output<ExpiryDetailArgs> getExpiryDetail() {
+    public Output<ExpiryDetailArgs> expiryDetail() {
         return this.expiryDetail == null ? Codegen.empty() : this.expiryDetail;
     }
 
@@ -39,7 +39,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictionEvaluations")
       private final @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
-    public Output<RestrictionEvaluationsArgs> getRestrictionEvaluations() {
+    public Output<RestrictionEvaluationsArgs> restrictionEvaluations() {
         return this.restrictionEvaluations == null ? Codegen.empty() : this.restrictionEvaluations;
     }
 

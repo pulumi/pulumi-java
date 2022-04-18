@@ -37,7 +37,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return List of public key certificates to authenticate devices.
      * 
      */
-    public Output</* @Nullable */ List<RegistryCredential>> getCredentials() {
+    public Output</* @Nullable */ List<RegistryCredential>> credentials() {
         return this.credentials;
     }
     /**
@@ -51,7 +51,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return List of configurations for event notifications, such as PubSub topics to publish device events to.
      * 
      */
-    public Output<List<RegistryEventNotificationConfigItem>> getEventNotificationConfigs() {
+    public Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs() {
         return this.eventNotificationConfigs;
     }
     /**
@@ -65,7 +65,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Activate or deactivate HTTP.
      * 
      */
-    public Output<Map<String,Object>> getHttpConfig() {
+    public Output<Map<String,Object>> httpConfig() {
         return this.httpConfig;
     }
     /**
@@ -85,7 +85,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * "DEBUG"]
      * 
      */
-    public Output</* @Nullable */ String> getLogLevel() {
+    public Output</* @Nullable */ String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -99,7 +99,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Activate or deactivate MQTT.
      * 
      */
-    public Output<Map<String,Object>> getMqttConfig() {
+    public Output<Map<String,Object>> mqttConfig() {
         return this.mqttConfig;
     }
     /**
@@ -113,13 +113,13 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A unique name for the resource, required by device registry.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -133,7 +133,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The region in which the created registry should reside. If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -147,7 +147,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A PubSub topic to publish device state updates.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getStateNotificationConfig() {
+    public Output</* @Nullable */ Map<String,Object>> stateNotificationConfig() {
         return this.stateNotificationConfig;
     }
 

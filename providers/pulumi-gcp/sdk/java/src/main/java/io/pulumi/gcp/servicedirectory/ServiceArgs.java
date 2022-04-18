@@ -26,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 

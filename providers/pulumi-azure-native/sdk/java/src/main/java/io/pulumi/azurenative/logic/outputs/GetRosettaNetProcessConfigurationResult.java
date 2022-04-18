@@ -128,105 +128,105 @@ public final class GetRosettaNetProcessConfigurationResult {
      * The RosettaNet process configuration activity settings.
      * 
     */
-    public RosettaNetPipActivitySettingsResponse getActivitySettings() {
+    public RosettaNetPipActivitySettingsResponse activitySettings() {
         return this.activitySettings;
     }
     /**
      * The changed time.
      * 
     */
-    public String getChangedTime() {
+    public String changedTime() {
         return this.changedTime;
     }
     /**
      * The created time.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The integration account RosettaNet ProcessConfiguration properties.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The RosettaNet initiator role settings.
      * 
     */
-    public RosettaNetPipRoleSettingsResponse getInitiatorRoleSettings() {
+    public RosettaNetPipRoleSettingsResponse initiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The integration account RosettaNet process code.
      * 
     */
-    public String getProcessCode() {
+    public String processCode() {
         return this.processCode;
     }
     /**
      * The integration account RosettaNet process name.
      * 
     */
-    public String getProcessName() {
+    public String processName() {
         return this.processName;
     }
     /**
      * The integration account RosettaNet process version.
      * 
     */
-    public String getProcessVersion() {
+    public String processVersion() {
         return this.processVersion;
     }
     /**
      * The RosettaNet responder role settings.
      * 
     */
-    public RosettaNetPipRoleSettingsResponse getResponderRoleSettings() {
+    public RosettaNetPipRoleSettingsResponse responderRoleSettings() {
         return this.responderRoleSettings;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

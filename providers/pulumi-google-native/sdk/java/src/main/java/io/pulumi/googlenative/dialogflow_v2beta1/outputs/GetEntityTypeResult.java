@@ -63,42 +63,42 @@ public final class GetEntityTypeResult {
      * Optional. Indicates whether the entity type can be automatically expanded.
      * 
     */
-    public String getAutoExpansionMode() {
+    public String autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
      * The name of the entity type.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Optional. Enables fuzzy entity extraction during classification.
      * 
     */
-    public Boolean getEnableFuzzyExtraction() {
+    public Boolean enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
      * Optional. The collection of entity entries associated with the entity type.
      * 
     */
-    public List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> getEntities() {
+    public List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities() {
         return this.entities;
     }
     /**
      * Indicates the kind of entity type.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

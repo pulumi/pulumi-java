@@ -30,7 +30,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidAppInfo")
       private final @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
 
-    public Output<AndroidAppInfoArgs> getAndroidAppInfo() {
+    public Output<AndroidAppInfoArgs> androidAppInfo() {
         return this.androidAppInfo == null ? Codegen.empty() : this.androidAppInfo;
     }
 
@@ -41,7 +41,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
-    public Output<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
+    public Output<AndroidInstrumentationTestArgs> androidInstrumentationTest() {
         return this.androidInstrumentationTest == null ? Codegen.empty() : this.androidInstrumentationTest;
     }
 
@@ -52,7 +52,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
-    public Output<AndroidRoboTestArgs> getAndroidRoboTest() {
+    public Output<AndroidRoboTestArgs> androidRoboTest() {
         return this.androidRoboTest == null ? Codegen.empty() : this.androidRoboTest;
     }
 
@@ -63,7 +63,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
-    public Output<AndroidTestLoopArgs> getAndroidTestLoop() {
+    public Output<AndroidTestLoopArgs> androidTestLoop() {
         return this.androidTestLoop == null ? Codegen.empty() : this.androidTestLoop;
     }
 
@@ -74,7 +74,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> getTestTimeout() {
+    public Output<DurationArgs> testTimeout() {
         return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
     }
 

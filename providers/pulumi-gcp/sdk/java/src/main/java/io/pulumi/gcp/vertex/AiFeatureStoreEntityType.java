@@ -40,7 +40,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * nine fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -54,7 +54,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return Used to perform consistent read-modify-write updates.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -68,7 +68,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
      * 
      */
-    public Output<String> getFeaturestore() {
+    public Output<String> featurestore() {
         return this.featurestore;
     }
     /**
@@ -82,7 +82,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -100,7 +100,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> getMonitoringConfig() {
+    public Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> monitoringConfig() {
         return this.monitoringConfig;
     }
     /**
@@ -114,7 +114,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * to nine fractional digits.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

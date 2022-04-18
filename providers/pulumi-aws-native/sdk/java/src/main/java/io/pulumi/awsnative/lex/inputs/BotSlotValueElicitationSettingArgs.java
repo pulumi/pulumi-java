@@ -31,7 +31,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     @Import(name="defaultValueSpecification")
       private final @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
 
-    public Output<BotSlotDefaultValueSpecificationArgs> getDefaultValueSpecification() {
+    public Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification() {
         return this.defaultValueSpecification == null ? Codegen.empty() : this.defaultValueSpecification;
     }
 
@@ -42,7 +42,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     @Import(name="promptSpecification")
       private final @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
 
-    public Output<BotPromptSpecificationArgs> getPromptSpecification() {
+    public Output<BotPromptSpecificationArgs> promptSpecification() {
         return this.promptSpecification == null ? Codegen.empty() : this.promptSpecification;
     }
 
@@ -53,7 +53,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Output<List<BotSampleUtteranceArgs>> getSampleUtterances() {
+    public Output<List<BotSampleUtteranceArgs>> sampleUtterances() {
         return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
@@ -64,7 +64,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     @Import(name="slotConstraint", required=true)
       private final Output<BotSlotConstraint> slotConstraint;
 
-    public Output<BotSlotConstraint> getSlotConstraint() {
+    public Output<BotSlotConstraint> slotConstraint() {
         return this.slotConstraint;
     }
 
@@ -75,7 +75,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     @Import(name="waitAndContinueSpecification")
       private final @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
-    public Output<BotWaitAndContinueSpecificationArgs> getWaitAndContinueSpecification() {
+    public Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification() {
         return this.waitAndContinueSpecification == null ? Codegen.empty() : this.waitAndContinueSpecification;
     }
 

@@ -42,21 +42,21 @@ public final class BucketLambdaConfiguration {
      * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
      * 
     */
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
     /**
      * The filtering rules that determine which objects invoke the AWS Lambda function.
      * 
     */
-    public Optional<BucketNotificationFilter> getFilter() {
+    public Optional<BucketNotificationFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
      * 
     */
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
 

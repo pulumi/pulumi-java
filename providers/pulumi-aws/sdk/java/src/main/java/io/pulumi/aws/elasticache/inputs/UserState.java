@@ -25,7 +25,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString == null ? Codegen.empty() : this.accessString;
     }
 
@@ -36,7 +36,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -58,7 +58,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> getNoPasswordRequired() {
+    public Output<Boolean> noPasswordRequired() {
         return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
     }
 
@@ -69,7 +69,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
+    public Output<List<String>> passwords() {
         return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
@@ -80,14 +80,14 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -98,7 +98,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userId")
       private final @Nullable Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 
@@ -109,7 +109,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

@@ -26,7 +26,7 @@ public final class ScopeElementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 

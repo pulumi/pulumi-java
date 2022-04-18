@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
     @Import(name="bigQueryOptions", required=true)
       private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
 
-    public GooglePrivacyDlpV2BigQueryOptionsResponse getBigQueryOptions() {
+    public GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions() {
         return this.bigQueryOptions;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
     @Import(name="cloudStorageOptions", required=true)
       private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
 
-    public GooglePrivacyDlpV2CloudStorageOptionsResponse getCloudStorageOptions() {
+    public GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions() {
         return this.cloudStorageOptions;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
     @Import(name="datastoreOptions", required=true)
       private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
 
-    public GooglePrivacyDlpV2DatastoreOptionsResponse getDatastoreOptions() {
+    public GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions() {
         return this.datastoreOptions;
     }
 
@@ -60,14 +60,14 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
     @Import(name="hybridOptions", required=true)
       private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
 
-    public GooglePrivacyDlpV2HybridOptionsResponse getHybridOptions() {
+    public GooglePrivacyDlpV2HybridOptionsResponse hybridOptions() {
         return this.hybridOptions;
     }
 
     @Import(name="timespanConfig", required=true)
       private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
-    public GooglePrivacyDlpV2TimespanConfigResponse getTimespanConfig() {
+    public GooglePrivacyDlpV2TimespanConfigResponse timespanConfig() {
         return this.timespanConfig;
     }
 

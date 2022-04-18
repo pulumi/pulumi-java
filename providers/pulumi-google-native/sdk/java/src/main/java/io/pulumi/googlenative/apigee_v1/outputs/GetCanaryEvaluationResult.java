@@ -82,63 +82,63 @@ public final class GetCanaryEvaluationResult {
      * The stable version that is serving requests.
      * 
     */
-    public String getControl() {
+    public String control() {
         return this.control;
     }
     /**
      * Create time of the canary evaluation.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * End time for the evaluation's analysis.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Labels used to filter the metrics used for a canary evaluation.
      * 
     */
-    public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse getMetricLabels() {
+    public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels() {
         return this.metricLabels;
     }
     /**
      * Name of the canary evalution.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Start time for the canary evaluation's analysis.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The current state of the canary evaluation.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The newer version that is serving requests.
      * 
     */
-    public String getTreatment() {
+    public String treatment() {
         return this.treatment;
     }
     /**
      * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
     */
-    public String getVerdict() {
+    public String verdict() {
         return this.verdict;
     }
 

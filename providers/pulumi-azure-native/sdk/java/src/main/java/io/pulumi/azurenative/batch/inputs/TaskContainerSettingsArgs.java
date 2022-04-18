@@ -24,7 +24,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="containerRunOptions")
       private final @Nullable Output<String> containerRunOptions;
 
-    public Output<String> getContainerRunOptions() {
+    public Output<String> containerRunOptions() {
         return this.containerRunOptions == null ? Codegen.empty() : this.containerRunOptions;
     }
 
@@ -35,7 +35,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -46,14 +46,14 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="registry")
       private final @Nullable Output<ContainerRegistryArgs> registry;
 
-    public Output<ContainerRegistryArgs> getRegistry() {
+    public Output<ContainerRegistryArgs> registry() {
         return this.registry == null ? Codegen.empty() : this.registry;
     }
 
     @Import(name="workingDirectory")
       private final @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
-    public Output<ContainerWorkingDirectory> getWorkingDirectory() {
+    public Output<ContainerWorkingDirectory> workingDirectory() {
         return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 

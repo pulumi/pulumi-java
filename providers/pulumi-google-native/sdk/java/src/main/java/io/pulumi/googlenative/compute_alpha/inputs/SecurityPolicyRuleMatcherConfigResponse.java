@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
     @Import(name="destIpRanges", required=true)
       private final List<String> destIpRanges;
 
-    public List<String> getDestIpRanges() {
+    public List<String> destIpRanges() {
         return this.destIpRanges;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
     @Import(name="destPorts", required=true)
       private final List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
 
-    public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> getDestPorts() {
+    public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts() {
         return this.destPorts;
     }
 
@@ -44,7 +44,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
     @Import(name="layer4Configs", required=true)
       private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
 
-    public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> getLayer4Configs() {
+    public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
 
@@ -55,7 +55,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
     @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;
 
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 

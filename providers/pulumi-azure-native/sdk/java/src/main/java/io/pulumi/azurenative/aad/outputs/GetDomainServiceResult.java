@@ -184,154 +184,154 @@ public final class GetDomainServiceResult {
      * Deployment Id
      * 
     */
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
     /**
      * Domain Configuration Type
      * 
     */
-    public Optional<String> getDomainConfigurationType() {
+    public Optional<String> domainConfigurationType() {
         return Optional.ofNullable(this.domainConfigurationType);
     }
     /**
      * The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
     */
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * DomainSecurity Settings
      * 
     */
-    public Optional<DomainSecuritySettingsResponse> getDomainSecuritySettings() {
+    public Optional<DomainSecuritySettingsResponse> domainSecuritySettings() {
         return Optional.ofNullable(this.domainSecuritySettings);
     }
     /**
      * Resource etag
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Enabled or Disabled flag to turn on Group-based filtered sync
      * 
     */
-    public Optional<String> getFilteredSync() {
+    public Optional<String> filteredSync() {
         return Optional.ofNullable(this.filteredSync);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Secure LDAP Settings
      * 
     */
-    public Optional<LdapsSettingsResponse> getLdapsSettings() {
+    public Optional<LdapsSettingsResponse> ldapsSettings() {
         return Optional.ofNullable(this.ldapsSettings);
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Migration Properties
      * 
     */
-    public MigrationPropertiesResponse getMigrationProperties() {
+    public MigrationPropertiesResponse migrationProperties() {
         return this.migrationProperties;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Notification Settings
      * 
     */
-    public Optional<NotificationSettingsResponse> getNotificationSettings() {
+    public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * the current deployment or provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * List of ReplicaSets
      * 
     */
-    public List<ReplicaSetResponse> getReplicaSets() {
+    public List<ReplicaSetResponse> replicaSets() {
         return this.replicaSets == null ? List.of() : this.replicaSets;
     }
     /**
      * Resource Forest Settings
      * 
     */
-    public Optional<ResourceForestSettingsResponse> getResourceForestSettings() {
+    public Optional<ResourceForestSettingsResponse> resourceForestSettings() {
         return Optional.ofNullable(this.resourceForestSettings);
     }
     /**
      * Sku Type
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * SyncOwner ReplicaSet Id
      * 
     */
-    public String getSyncOwner() {
+    public String syncOwner() {
         return this.syncOwner;
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure Active Directory Tenant Id
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Data Model Version
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

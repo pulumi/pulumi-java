@@ -32,7 +32,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return User labels applied to this API Proxy.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -46,7 +46,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return The id of the most recently created revision for this api proxy.
      * 
      */
-    public Output<String> getLatestRevisionId() {
+    public Output<String> latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
@@ -60,7 +60,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Metadata describing the API proxy.
      * 
      */
-    public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
+    public Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData() {
         return this.metaData;
     }
     /**
@@ -74,7 +74,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Name of the API proxy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return List of revisons defined for the API proxy.
      * 
      */
-    public Output<List<String>> getRevision() {
+    public Output<List<String>> revision() {
         return this.revision;
     }
 

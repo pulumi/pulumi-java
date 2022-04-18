@@ -33,7 +33,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowVolumeExpansion")
       private final @Nullable Output<Boolean> allowVolumeExpansion;
 
-    public Output<Boolean> getAllowVolumeExpansion() {
+    public Output<Boolean> allowVolumeExpansion() {
         return this.allowVolumeExpansion == null ? Codegen.empty() : this.allowVolumeExpansion;
     }
 
@@ -44,7 +44,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedTopologies")
       private final @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
 
-    public Output<List<TopologySelectorTermArgs>> getAllowedTopologies() {
+    public Output<List<TopologySelectorTermArgs>> allowedTopologies() {
         return this.allowedTopologies == null ? Codegen.empty() : this.allowedTopologies;
     }
 
@@ -55,7 +55,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -66,7 +66,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -77,7 +77,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -88,7 +88,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> getMountOptions() {
+    public Output<List<String>> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -99,7 +99,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioner", required=true)
       private final Output<String> provisioner;
 
-    public Output<String> getProvisioner() {
+    public Output<String> provisioner() {
         return this.provisioner;
     }
 
@@ -121,7 +121,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reclaimPolicy")
       private final @Nullable Output<String> reclaimPolicy;
 
-    public Output<String> getReclaimPolicy() {
+    public Output<String> reclaimPolicy() {
         return this.reclaimPolicy == null ? Codegen.empty() : this.reclaimPolicy;
     }
 
@@ -132,7 +132,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeBindingMode")
       private final @Nullable Output<String> volumeBindingMode;
 
-    public Output<String> getVolumeBindingMode() {
+    public Output<String> volumeBindingMode() {
         return this.volumeBindingMode == null ? Codegen.empty() : this.volumeBindingMode;
     }
 

@@ -23,7 +23,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="renewalMethod", required=true)
       private final String renewalMethod;
 
-    public String getRenewalMethod() {
+    public String renewalMethod() {
         return this.renewalMethod;
     }
 
@@ -34,7 +34,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="transferLockState", required=true)
       private final String transferLockState;
 
-    public String getTransferLockState() {
+    public String transferLockState() {
         return this.transferLockState;
     }
 

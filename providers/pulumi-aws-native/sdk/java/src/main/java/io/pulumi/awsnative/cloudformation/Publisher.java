@@ -32,7 +32,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to publish public extensions to the CloudFormation registry. The terms and conditions can be found at https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf
      * 
      */
-    public Output<Boolean> getAcceptTermsAndConditions() {
+    public Output<Boolean> acceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
     }
     /**
@@ -46,7 +46,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionArn() {
+    public Output</* @Nullable */ String> connectionArn() {
         return this.connectionArn;
     }
     /**
@@ -60,7 +60,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return The type of account used as the identity provider when registering this publisher with CloudFormation.
      * 
      */
-    public Output<PublisherIdentityProvider> getIdentityProvider() {
+    public Output<PublisherIdentityProvider> identityProvider() {
         return this.identityProvider;
     }
     /**
@@ -74,7 +74,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId;
     }
     /**
@@ -88,7 +88,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return The URL to the publisher's profile with the identity provider.
      * 
      */
-    public Output<String> getPublisherProfile() {
+    public Output<String> publisherProfile() {
         return this.publisherProfile;
     }
     /**
@@ -102,7 +102,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * @return Whether the publisher is verified.
      * 
      */
-    public Output<PublisherStatus> getPublisherStatus() {
+    public Output<PublisherStatus> publisherStatus() {
         return this.publisherStatus;
     }
 

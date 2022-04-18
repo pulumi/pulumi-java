@@ -24,7 +24,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="assignPublicIp")
       private final @Nullable Output<Boolean> assignPublicIp;
 
-    public Output<Boolean> getAssignPublicIp() {
+    public Output<Boolean> assignPublicIp() {
         return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
     }
 
@@ -35,7 +35,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -46,7 +46,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 

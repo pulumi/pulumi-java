@@ -22,7 +22,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     @Import(name="dimensions", required=true)
       private final Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
 
-    public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> getDimensions() {
+    public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions() {
         return this.dimensions;
     }
 

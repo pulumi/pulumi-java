@@ -15,7 +15,7 @@ public final class GlobalTableReplicaSSESpecification extends io.pulumi.resource
     @Import(name="kMSMasterKeyId", required=true)
       private final String kMSMasterKeyId;
 
-    public String getKMSMasterKeyId() {
+    public String kMSMasterKeyId() {
         return this.kMSMasterKeyId;
     }
 

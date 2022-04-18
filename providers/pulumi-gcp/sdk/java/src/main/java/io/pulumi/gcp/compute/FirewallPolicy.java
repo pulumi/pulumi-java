@@ -49,7 +49,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -63,7 +63,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -77,7 +77,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of the resource. This field is used internally during updates of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -91,7 +91,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    public Output<String> getFirewallPolicyId() {
+    public Output<String> firewallPolicyId() {
         return this.firewallPolicyId;
     }
     /**
@@ -105,7 +105,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return The parent of the firewall policy.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -133,7 +133,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
      * 
      */
-    public Output<Integer> getRuleTupleCount() {
+    public Output<Integer> ruleTupleCount() {
         return this.ruleTupleCount;
     }
     /**
@@ -147,7 +147,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -161,7 +161,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -175,7 +175,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @return User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
 

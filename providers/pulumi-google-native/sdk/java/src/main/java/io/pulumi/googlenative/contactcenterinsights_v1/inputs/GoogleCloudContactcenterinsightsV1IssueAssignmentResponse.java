@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="issue", required=true)
       private final String issue;
 
-    public String getIssue() {
+    public String issue() {
         return this.issue;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="score", required=true)
       private final Double score;
 
-    public Double getScore() {
+    public Double score() {
         return this.score;
     }
 

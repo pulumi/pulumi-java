@@ -61,7 +61,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -75,7 +75,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -89,7 +89,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getGatewayId() {
+    public Output<Integer> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -115,7 +115,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return The network this VPN gateway is accepting traffic for.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -145,7 +145,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -159,7 +159,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return The region this gateway should sit in.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -173,7 +173,7 @@ public class VPNGateway extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

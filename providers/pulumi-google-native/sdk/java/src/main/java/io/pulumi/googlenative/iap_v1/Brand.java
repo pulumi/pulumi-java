@@ -33,7 +33,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Application name displayed on OAuth consent screen.
      * 
      */
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle;
     }
     /**
@@ -47,7 +47,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +61,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Whether the brand is only intended for usage inside the G Suite organization only.
      * 
      */
-    public Output<Boolean> getOrgInternalOnly() {
+    public Output<Boolean> orgInternalOnly() {
         return this.orgInternalOnly;
     }
     /**
@@ -75,7 +75,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Support email displayed on the OAuth consent screen.
      * 
      */
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail;
     }
 

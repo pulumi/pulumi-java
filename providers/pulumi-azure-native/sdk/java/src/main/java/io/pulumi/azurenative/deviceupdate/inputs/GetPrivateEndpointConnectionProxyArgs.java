@@ -19,7 +19,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
     @Import(name="privateEndpointConnectionProxyId", required=true)
       private final String privateEndpointConnectionProxyId;
 
-    public String getPrivateEndpointConnectionProxyId() {
+    public String privateEndpointConnectionProxyId() {
         return this.privateEndpointConnectionProxyId;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

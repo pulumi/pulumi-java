@@ -32,14 +32,14 @@ public final class CryptoKeyVersionTemplateResponse {
      * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
      * 
     */
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
 

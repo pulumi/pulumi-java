@@ -46,7 +46,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The actions that will activate when the condition is met.
      * 
      */
-    public Output<ActionListResponse> getActions() {
+    public Output<ActionListResponse> actions() {
         return this.actions;
     }
     /**
@@ -60,7 +60,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The condition that will cause this alert to activate.
      * 
      */
-    public Output<AlertRuleAllOfConditionResponse> getCondition() {
+    public Output<AlertRuleAllOfConditionResponse> condition() {
         return this.condition;
     }
     /**
@@ -74,7 +74,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return A description of this Activity Log Alert rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -102,7 +102,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
      * 
      */
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
     /**
@@ -144,7 +144,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

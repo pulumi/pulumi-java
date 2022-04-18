@@ -27,7 +27,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> getFileNamePrefix() {
+    public Output<Object> fileNamePrefix() {
         return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
     }
 
@@ -38,7 +38,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> getMaxRowsPerFile() {
+    public Output<Object> maxRowsPerFile() {
         return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
     }
 
@@ -49,7 +49,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recordName")
       private final @Nullable Output<String> recordName;
 
-    public Output<String> getRecordName() {
+    public Output<String> recordName() {
         return this.recordName == null ? Codegen.empty() : this.recordName;
     }
 
@@ -60,7 +60,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recordNamespace")
       private final @Nullable Output<String> recordNamespace;
 
-    public Output<String> getRecordNamespace() {
+    public Output<String> recordNamespace() {
         return this.recordNamespace == null ? Codegen.empty() : this.recordNamespace;
     }
 
@@ -72,7 +72,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

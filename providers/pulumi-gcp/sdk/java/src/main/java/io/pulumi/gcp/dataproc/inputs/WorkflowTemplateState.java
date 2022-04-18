@@ -28,7 +28,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -39,7 +39,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="dagTimeout")
       private final @Nullable Output<String> dagTimeout;
 
-    public Output<String> getDagTimeout() {
+    public Output<String> dagTimeout() {
         return this.dagTimeout == null ? Codegen.empty() : this.dagTimeout;
     }
 
@@ -50,7 +50,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="jobs")
       private final @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
 
-    public Output<List<WorkflowTemplateJobGetArgs>> getJobs() {
+    public Output<List<WorkflowTemplateJobGetArgs>> jobs() {
         return this.jobs == null ? Codegen.empty() : this.jobs;
     }
 
@@ -61,7 +61,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -72,7 +72,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -83,7 +83,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
 
-    public Output<List<WorkflowTemplateParameterGetArgs>> getParameters() {
+    public Output<List<WorkflowTemplateParameterGetArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -105,7 +105,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="placement")
       private final @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
 
-    public Output<WorkflowTemplatePlacementGetArgs> getPlacement() {
+    public Output<WorkflowTemplatePlacementGetArgs> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 
@@ -116,7 +116,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -127,7 +127,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -143,7 +143,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

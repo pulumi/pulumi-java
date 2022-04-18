@@ -17,21 +17,21 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="vpnGateway", required=true)
       private final String vpnGateway;
 
-    public String getVpnGateway() {
+    public String vpnGateway() {
         return this.vpnGateway;
     }
 

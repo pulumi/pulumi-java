@@ -36,14 +36,14 @@ public final class ListNetworkManagerDeploymentStatusResult {
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
     */
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
      * Gets a page of Network Manager Deployment Status
      * 
     */
-    public List<NetworkManagerDeploymentStatusResponse> getValue() {
+    public List<NetworkManagerDeploymentStatusResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

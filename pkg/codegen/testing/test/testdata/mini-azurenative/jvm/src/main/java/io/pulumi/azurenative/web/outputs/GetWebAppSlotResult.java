@@ -26,7 +26,7 @@ public final class GetWebAppSlotResult {
      * Configuration of the app.
      * 
     */
-    public Optional<SiteConfigResponse> getSiteConfig() {
+    public Optional<SiteConfigResponse> siteConfig() {
         return Optional.ofNullable(this.siteConfig);
     }
 

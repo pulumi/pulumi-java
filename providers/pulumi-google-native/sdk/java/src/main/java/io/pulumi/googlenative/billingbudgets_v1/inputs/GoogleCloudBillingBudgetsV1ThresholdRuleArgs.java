@@ -27,7 +27,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
     @Import(name="spendBasis")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis;
 
-    public Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> getSpendBasis() {
+    public Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis() {
         return this.spendBasis == null ? Codegen.empty() : this.spendBasis;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends io.pulum
     @Import(name="thresholdPercent", required=true)
       private final Output<Double> thresholdPercent;
 
-    public Output<Double> getThresholdPercent() {
+    public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
 

@@ -93,14 +93,14 @@ public final class TriggerBuildSourceRepoSource {
      * described at https://github.com/google/re2/wiki/Syntax
      * 
     */
-    public Optional<String> getBranchName() {
+    public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
     */
-    public Optional<String> getCommitSha() {
+    public Optional<String> commitSha() {
         return Optional.ofNullable(this.commitSha);
     }
     /**
@@ -115,14 +115,14 @@ public final class TriggerBuildSourceRepoSource {
      * for the step's execution.
      * 
     */
-    public Optional<String> getDir() {
+    public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
     */
-    public Optional<Boolean> getInvertRegex() {
+    public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
     /**
@@ -130,21 +130,21 @@ public final class TriggerBuildSourceRepoSource {
      * If omitted, the project ID requesting the build is assumed.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
      * Name of the Cloud Source Repository.
      * 
     */
-    public String getRepoName() {
+    public String repoName() {
         return this.repoName;
     }
     /**
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
     */
-    public Map<String,String> getSubstitutions() {
+    public Map<String,String> substitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
     /**
@@ -153,7 +153,7 @@ public final class TriggerBuildSourceRepoSource {
      * described at https://github.com/google/re2/wiki/Syntax
      * 
     */
-    public Optional<String> getTagName() {
+    public Optional<String> tagName() {
         return Optional.ofNullable(this.tagName);
     }
 

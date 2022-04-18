@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2TriggerResponse {
      * For use with hybrid jobs. Jobs must be manually created and finished.
      * 
     */
-    public GooglePrivacyDlpV2ManualResponse getManual() {
+    public GooglePrivacyDlpV2ManualResponse manual() {
         return this.manual;
     }
     /**
      * Create a job on a repeating basis based on the elapse of time.
      * 
     */
-    public GooglePrivacyDlpV2ScheduleResponse getSchedule() {
+    public GooglePrivacyDlpV2ScheduleResponse schedule() {
         return this.schedule;
     }
 

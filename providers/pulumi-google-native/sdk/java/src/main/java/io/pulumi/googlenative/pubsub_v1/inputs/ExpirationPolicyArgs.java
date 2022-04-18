@@ -26,7 +26,7 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

@@ -23,7 +23,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> getRoleEntities() {
+    public Output<List<String>> roleEntities() {
         return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
     }
 

@@ -27,7 +27,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedRequestExtensions")
       private final @Nullable Output<List<String>> allowedRequestExtensions;
 
-    public Output<List<String>> getAllowedRequestExtensions() {
+    public Output<List<String>> allowedRequestExtensions() {
         return this.allowedRequestExtensions == null ? Codegen.empty() : this.allowedRequestExtensions;
     }
 
@@ -38,7 +38,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedResponseExtensions")
       private final @Nullable Output<List<String>> allowedResponseExtensions;
 
-    public Output<List<String>> getAllowedResponseExtensions() {
+    public Output<List<String>> allowedResponseExtensions() {
         return this.allowedResponseExtensions == null ? Codegen.empty() : this.allowedResponseExtensions;
     }
 
@@ -49,7 +49,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provided")
       private final @Nullable Output<List<String>> provided;
 
-    public Output<List<String>> getProvided() {
+    public Output<List<String>> provided() {
         return this.provided == null ? Codegen.empty() : this.provided;
     }
 
@@ -60,7 +60,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requested")
       private final @Nullable Output<List<String>> requested;
 
-    public Output<List<String>> getRequested() {
+    public Output<List<String>> requested() {
         return this.requested == null ? Codegen.empty() : this.requested;
     }
 
@@ -71,7 +71,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

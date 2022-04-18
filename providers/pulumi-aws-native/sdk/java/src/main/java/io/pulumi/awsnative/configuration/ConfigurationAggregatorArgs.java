@@ -22,7 +22,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="accountAggregationSources")
       private final @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
 
-    public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> getAccountAggregationSources() {
+    public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources() {
         return this.accountAggregationSources == null ? Codegen.empty() : this.accountAggregationSources;
     }
 
@@ -33,14 +33,14 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="configurationAggregatorName")
       private final @Nullable Output<String> configurationAggregatorName;
 
-    public Output<String> getConfigurationAggregatorName() {
+    public Output<String> configurationAggregatorName() {
         return this.configurationAggregatorName == null ? Codegen.empty() : this.configurationAggregatorName;
     }
 
     @Import(name="organizationAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
-    public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> getOrganizationAggregationSource() {
+    public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource() {
         return this.organizationAggregationSource == null ? Codegen.empty() : this.organizationAggregationSource;
     }
 
@@ -51,7 +51,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
 
-    public Output<List<ConfigurationAggregatorTagArgs>> getTags() {
+    public Output<List<ConfigurationAggregatorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
      * Designated field in the BigQuery table.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
     /**
      * Source table of the field.
      * 
     */
-    public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 

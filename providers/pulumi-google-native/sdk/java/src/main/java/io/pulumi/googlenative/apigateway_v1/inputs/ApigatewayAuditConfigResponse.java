@@ -25,7 +25,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
     @Import(name="auditLogConfigs", required=true)
       private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
 
-    public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
+    public List<ApigatewayAuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -36,7 +36,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

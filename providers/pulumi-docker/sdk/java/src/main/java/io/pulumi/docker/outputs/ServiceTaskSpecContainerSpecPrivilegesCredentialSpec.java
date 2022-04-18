@@ -22,10 +22,10 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
         this.registry = registry;
     }
 
-    public Optional<String> getFile() {
+    public Optional<String> file() {
         return Optional.ofNullable(this.file);
     }
-    public Optional<String> getRegistry() {
+    public Optional<String> registry() {
         return Optional.ofNullable(this.registry);
     }
 

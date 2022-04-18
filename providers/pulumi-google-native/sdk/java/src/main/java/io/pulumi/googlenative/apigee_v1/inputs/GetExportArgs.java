@@ -15,21 +15,21 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="exportId", required=true)
       private final String exportId;
 
-    public String getExportId() {
+    public String exportId() {
         return this.exportId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

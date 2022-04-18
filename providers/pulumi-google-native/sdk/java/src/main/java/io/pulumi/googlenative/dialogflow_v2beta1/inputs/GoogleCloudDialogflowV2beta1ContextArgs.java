@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1ContextArgs extends io.pulumi.res
     @Import(name="lifespanCount")
       private final @Nullable Output<Integer> lifespanCount;
 
-    public Output<Integer> getLifespanCount() {
+    public Output<Integer> lifespanCount() {
         return this.lifespanCount == null ? Codegen.empty() : this.lifespanCount;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1ContextArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1ContextArgs extends io.pulumi.res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

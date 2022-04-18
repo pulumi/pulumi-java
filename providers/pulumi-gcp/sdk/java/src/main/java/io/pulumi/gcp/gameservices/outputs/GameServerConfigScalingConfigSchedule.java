@@ -56,7 +56,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getCronJobDuration() {
+    public Optional<String> cronJobDuration() {
         return Optional.ofNullable(this.cronJobDuration);
     }
     /**
@@ -65,7 +65,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * defined by the realm.
      * 
     */
-    public Optional<String> getCronSpec() {
+    public Optional<String> cronSpec() {
         return Optional.ofNullable(this.cronSpec);
     }
     /**
@@ -73,7 +73,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
@@ -81,7 +81,7 @@ public final class GameServerConfigScalingConfigSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

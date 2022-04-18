@@ -23,7 +23,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneConfig")
       private final @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
 
-    public Output<HostedZoneConfigArgs> getHostedZoneConfig() {
+    public Output<HostedZoneConfigArgs> hostedZoneConfig() {
         return this.hostedZoneConfig == null ? Codegen.empty() : this.hostedZoneConfig;
     }
 
@@ -36,7 +36,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneTags")
       private final @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
-    public Output<List<HostedZoneTagArgs>> getHostedZoneTags() {
+    public Output<List<HostedZoneTagArgs>> hostedZoneTags() {
         return this.hostedZoneTags == null ? Codegen.empty() : this.hostedZoneTags;
     }
 
@@ -49,14 +49,14 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="queryLoggingConfig")
       private final @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
-    public Output<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
+    public Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig() {
         return this.queryLoggingConfig == null ? Codegen.empty() : this.queryLoggingConfig;
     }
 
@@ -67,7 +67,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vPCs")
       private final @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
-    public Output<List<HostedZoneVPCArgs>> getVPCs() {
+    public Output<List<HostedZoneVPCArgs>> vPCs() {
         return this.vPCs == null ? Codegen.empty() : this.vPCs;
     }
 

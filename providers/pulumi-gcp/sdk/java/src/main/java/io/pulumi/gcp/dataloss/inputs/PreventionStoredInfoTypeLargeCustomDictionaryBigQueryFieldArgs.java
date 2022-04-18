@@ -23,7 +23,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="field", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> getField() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field() {
         return this.field;
     }
 
@@ -35,7 +35,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="table", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> getTable() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table() {
         return this.table;
     }
 

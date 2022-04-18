@@ -26,7 +26,7 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<RelationshipNoteType> type;
 
-    public Output<RelationshipNoteType> getType() {
+    public Output<RelationshipNoteType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

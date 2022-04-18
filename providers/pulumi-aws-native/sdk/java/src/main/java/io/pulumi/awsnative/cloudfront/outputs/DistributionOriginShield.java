@@ -23,10 +23,10 @@ public final class DistributionOriginShield {
         this.originShieldRegion = originShieldRegion;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getOriginShieldRegion() {
+    public Optional<String> originShieldRegion() {
         return Optional.ofNullable(this.originShieldRegion);
     }
 

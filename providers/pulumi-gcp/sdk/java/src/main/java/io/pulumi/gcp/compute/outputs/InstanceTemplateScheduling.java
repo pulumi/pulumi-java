@@ -66,10 +66,10 @@ public final class InstanceTemplateScheduling {
      * terminated by a user). This defaults to true.
      * 
     */
-    public Optional<Boolean> getAutomaticRestart() {
+    public Optional<Boolean> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
-    public Optional<Integer> getMinNodeCpus() {
+    public Optional<Integer> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
     /**
@@ -80,7 +80,7 @@ public final class InstanceTemplateScheduling {
      * Structure documented below.
      * 
     */
-    public List<InstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
+    public List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
     /**
@@ -88,7 +88,7 @@ public final class InstanceTemplateScheduling {
      * instance.
      * 
     */
-    public Optional<String> getOnHostMaintenance() {
+    public Optional<String> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
     /**
@@ -97,7 +97,7 @@ public final class InstanceTemplateScheduling {
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
     */
-    public Optional<Boolean> getPreemptible() {
+    public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
 

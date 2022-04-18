@@ -26,37 +26,37 @@ public class ExperimentTemplate extends io.pulumi.resources.CustomResource {
     @Export(name="actions", type=ExperimentTemplateActionMap.class, parameters={})
     private Output</* @Nullable */ ExperimentTemplateActionMap> actions;
 
-    public Output</* @Nullable */ ExperimentTemplateActionMap> getActions() {
+    public Output</* @Nullable */ ExperimentTemplateActionMap> actions() {
         return this.actions;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stopConditions", type=List.class, parameters={ExperimentTemplateStopCondition.class})
     private Output<List<ExperimentTemplateStopCondition>> stopConditions;
 
-    public Output<List<ExperimentTemplateStopCondition>> getStopConditions() {
+    public Output<List<ExperimentTemplateStopCondition>> stopConditions() {
         return this.stopConditions;
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags;
     }
     @Export(name="targets", type=ExperimentTemplateTargetMap.class, parameters={})
     private Output<ExperimentTemplateTargetMap> targets;
 
-    public Output<ExperimentTemplateTargetMap> getTargets() {
+    public Output<ExperimentTemplateTargetMap> targets() {
         return this.targets;
     }
 

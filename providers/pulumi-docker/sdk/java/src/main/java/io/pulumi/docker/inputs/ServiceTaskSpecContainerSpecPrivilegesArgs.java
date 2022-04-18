@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     @Import(name="credentialSpec")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> getCredentialSpec() {
+    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec() {
         return this.credentialSpec == null ? Codegen.empty() : this.credentialSpec;
     }
 
     @Import(name="seLinuxContext")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> getSeLinuxContext() {
+    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext() {
         return this.seLinuxContext == null ? Codegen.empty() : this.seLinuxContext;
     }
 

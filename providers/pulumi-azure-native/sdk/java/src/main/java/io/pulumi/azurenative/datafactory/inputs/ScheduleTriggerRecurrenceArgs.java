@@ -30,7 +30,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -41,7 +41,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="frequency")
       private final @Nullable Output<Either<String,RecurrenceFrequency>> frequency;
 
-    public Output<Either<String,RecurrenceFrequency>> getFrequency() {
+    public Output<Either<String,RecurrenceFrequency>> frequency() {
         return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
@@ -52,7 +52,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -63,7 +63,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="schedule")
       private final @Nullable Output<RecurrenceScheduleArgs> schedule;
 
-    public Output<RecurrenceScheduleArgs> getSchedule() {
+    public Output<RecurrenceScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -74,7 +74,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -85,7 +85,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

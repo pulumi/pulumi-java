@@ -29,7 +29,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -40,7 +40,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,VariableType>> type;
 
-    public Output<Either<String,VariableType>> getType() {
+    public Output<Either<String,VariableType>> type() {
         return this.type;
     }
 

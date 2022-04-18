@@ -24,7 +24,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="additionalArtifacts")
       private final @Nullable Output<List<String>> additionalArtifacts;
 
-    public Output<List<String>> getAdditionalArtifacts() {
+    public Output<List<String>> additionalArtifacts() {
         return this.additionalArtifacts == null ? Codegen.empty() : this.additionalArtifacts;
     }
 
@@ -35,7 +35,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="additionalSchemaElements", required=true)
       private final Output<List<String>> additionalSchemaElements;
 
-    public Output<List<String>> getAdditionalSchemaElements() {
+    public Output<List<String>> additionalSchemaElements() {
         return this.additionalSchemaElements;
     }
 
@@ -46,7 +46,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="compression", required=true)
       private final Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression;
     }
 
@@ -57,7 +57,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -68,7 +68,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="refreshClosedReports")
       private final @Nullable Output<Boolean> refreshClosedReports;
 
-    public Output<Boolean> getRefreshClosedReports() {
+    public Output<Boolean> refreshClosedReports() {
         return this.refreshClosedReports == null ? Codegen.empty() : this.refreshClosedReports;
     }
 
@@ -79,7 +79,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reportName", required=true)
       private final Output<String> reportName;
 
-    public Output<String> getReportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -90,7 +90,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reportVersioning")
       private final @Nullable Output<String> reportVersioning;
 
-    public Output<String> getReportVersioning() {
+    public Output<String> reportVersioning() {
         return this.reportVersioning == null ? Codegen.empty() : this.reportVersioning;
     }
 
@@ -101,7 +101,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -112,7 +112,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
-    public Output<String> getS3Prefix() {
+    public Output<String> s3Prefix() {
         return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
     }
 
@@ -123,7 +123,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3Region", required=true)
       private final Output<String> s3Region;
 
-    public Output<String> getS3Region() {
+    public Output<String> s3Region() {
         return this.s3Region;
     }
 
@@ -134,7 +134,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeUnit", required=true)
       private final Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit;
     }
 

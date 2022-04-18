@@ -24,7 +24,7 @@ public final class EndpointsApiServiceResponse extends io.pulumi.resources.Invok
     @Import(name="configId", required=true)
       private final String configId;
 
-    public String getConfigId() {
+    public String configId() {
         return this.configId;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointsApiServiceResponse extends io.pulumi.resources.Invok
     @Import(name="disableTraceSampling", required=true)
       private final Boolean disableTraceSampling;
 
-    public Boolean getDisableTraceSampling() {
+    public Boolean disableTraceSampling() {
         return this.disableTraceSampling;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointsApiServiceResponse extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointsApiServiceResponse extends io.pulumi.resources.Invok
     @Import(name="rolloutStrategy", required=true)
       private final String rolloutStrategy;
 
-    public String getRolloutStrategy() {
+    public String rolloutStrategy() {
         return this.rolloutStrategy;
     }
 

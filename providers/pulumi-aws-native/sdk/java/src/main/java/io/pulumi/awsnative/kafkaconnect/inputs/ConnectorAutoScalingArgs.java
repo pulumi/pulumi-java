@@ -27,7 +27,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="maxWorkerCount", required=true)
       private final Output<Integer> maxWorkerCount;
 
-    public Output<Integer> getMaxWorkerCount() {
+    public Output<Integer> maxWorkerCount() {
         return this.maxWorkerCount;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="mcuCount", required=true)
       private final Output<Integer> mcuCount;
 
-    public Output<Integer> getMcuCount() {
+    public Output<Integer> mcuCount() {
         return this.mcuCount;
     }
 
@@ -49,21 +49,21 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="minWorkerCount", required=true)
       private final Output<Integer> minWorkerCount;
 
-    public Output<Integer> getMinWorkerCount() {
+    public Output<Integer> minWorkerCount() {
         return this.minWorkerCount;
     }
 
     @Import(name="scaleInPolicy", required=true)
       private final Output<ConnectorScaleInPolicyArgs> scaleInPolicy;
 
-    public Output<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
+    public Output<ConnectorScaleInPolicyArgs> scaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @Import(name="scaleOutPolicy", required=true)
       private final Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
-    public Output<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {
+    public Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 

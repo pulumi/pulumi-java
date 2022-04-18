@@ -22,7 +22,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationId", required=true)
       private final Output<String> operationId;
 
-    public Output<String> getOperationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
@@ -44,7 +44,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -66,7 +66,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
-    public Output<String> getTagId() {
+    public Output<String> tagId() {
         return this.tagId == null ? Codegen.empty() : this.tagId;
     }
 

@@ -42,7 +42,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Type of the managed instance administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -56,7 +56,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Login name of the managed instance administrator.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -70,7 +70,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return SID (object ID) of the managed instance administrator.
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -98,7 +98,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Tenant ID of the managed instance administrator.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -112,7 +112,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

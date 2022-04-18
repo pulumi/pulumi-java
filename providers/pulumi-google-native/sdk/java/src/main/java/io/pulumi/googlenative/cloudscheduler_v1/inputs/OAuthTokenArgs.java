@@ -26,7 +26,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -37,7 +37,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 

@@ -24,7 +24,7 @@ public final class RestrictionEvaluationsResponse {
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
      * 
     */
-    public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
+    public MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
     }
 

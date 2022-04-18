@@ -26,7 +26,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mainPageSuffix")
       private final @Nullable Output<String> mainPageSuffix;
 
-    public Output<String> getMainPageSuffix() {
+    public Output<String> mainPageSuffix() {
         return this.mainPageSuffix == null ? Codegen.empty() : this.mainPageSuffix;
     }
 
@@ -37,7 +37,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notFoundPage")
       private final @Nullable Output<String> notFoundPage;
 
-    public Output<String> getNotFoundPage() {
+    public Output<String> notFoundPage() {
         return this.notFoundPage == null ? Codegen.empty() : this.notFoundPage;
     }
 

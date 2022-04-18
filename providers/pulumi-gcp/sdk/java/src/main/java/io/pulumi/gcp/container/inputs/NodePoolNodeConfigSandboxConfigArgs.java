@@ -17,7 +17,7 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     @Import(name="sandboxType", required=true)
       private final Output<String> sandboxType;
 
-    public Output<String> getSandboxType() {
+    public Output<String> sandboxType() {
         return this.sandboxType;
     }
 

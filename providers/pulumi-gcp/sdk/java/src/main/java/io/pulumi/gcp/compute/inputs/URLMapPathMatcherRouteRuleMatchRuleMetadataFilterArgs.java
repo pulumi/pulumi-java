@@ -26,7 +26,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs extends
     @Import(name="filterLabels", required=true)
       private final Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels() {
         return this.filterLabels;
     }
 
@@ -43,7 +43,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs extends
     @Import(name="filterMatchCriteria", required=true)
       private final Output<String> filterMatchCriteria;
 
-    public Output<String> getFilterMatchCriteria() {
+    public Output<String> filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

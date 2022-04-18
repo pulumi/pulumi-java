@@ -17,7 +17,7 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
         this.allowedAudiences = allowedAudiences;
     }
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 

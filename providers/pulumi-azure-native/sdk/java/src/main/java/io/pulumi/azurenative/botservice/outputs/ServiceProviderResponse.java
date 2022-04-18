@@ -26,7 +26,7 @@ public final class ServiceProviderResponse {
      * The Properties of a Service Provider Object
      * 
     */
-    public Optional<ServiceProviderPropertiesResponse> getProperties() {
+    public Optional<ServiceProviderPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
 

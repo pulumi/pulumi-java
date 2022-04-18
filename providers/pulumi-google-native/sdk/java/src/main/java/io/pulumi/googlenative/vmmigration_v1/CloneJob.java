@@ -33,7 +33,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return Details of the target VM in Compute Engine.
      * 
      */
-    public Output<ComputeEngineTargetDetailsResponse> getComputeEngineTargetDetails() {
+    public Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
@@ -47,7 +47,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return The time the clone job was created (as an API call, not when it was actually created in the target).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -61,7 +61,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return Provides details for the errors that led to the Clone Job's state.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -75,7 +75,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return The name of the clone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return State of the clone job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -103,7 +103,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @return The time the state was last updated.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
 

@@ -26,7 +26,7 @@ public final class PartnerRegionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 

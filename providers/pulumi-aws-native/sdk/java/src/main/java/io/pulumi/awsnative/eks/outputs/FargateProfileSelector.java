@@ -23,10 +23,10 @@ public final class FargateProfileSelector {
         this.namespace = namespace;
     }
 
-    public List<FargateProfileLabel> getLabels() {
+    public List<FargateProfileLabel> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

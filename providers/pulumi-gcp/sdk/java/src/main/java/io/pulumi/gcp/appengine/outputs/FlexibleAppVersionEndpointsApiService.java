@@ -61,21 +61,21 @@ public final class FlexibleAppVersionEndpointsApiService {
      * the configuration ID. In this case, configId must be omitted.
      * 
     */
-    public Optional<String> getConfigId() {
+    public Optional<String> configId() {
         return Optional.ofNullable(this.configId);
     }
     /**
      * Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
     */
-    public Optional<Boolean> getDisableTraceSampling() {
+    public Optional<Boolean> disableTraceSampling() {
         return Optional.ofNullable(this.disableTraceSampling);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public final class FlexibleAppVersionEndpointsApiService {
      * Possible values are `FIXED` and `MANAGED`.
      * 
     */
-    public Optional<String> getRolloutStrategy() {
+    public Optional<String> rolloutStrategy() {
         return Optional.ofNullable(this.rolloutStrategy);
     }
 

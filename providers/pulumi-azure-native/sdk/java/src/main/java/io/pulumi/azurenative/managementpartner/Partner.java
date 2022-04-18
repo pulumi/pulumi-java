@@ -43,7 +43,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the DateTime when the partner was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedTime() {
+    public Output</* @Nullable */ String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -57,7 +57,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return Type of the partner
      * 
      */
-    public Output</* @Nullable */ Integer> getEtag() {
+    public Output</* @Nullable */ Integer> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return Name of the partner
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the object id.
      * 
      */
-    public Output</* @Nullable */ String> getObjectId() {
+    public Output</* @Nullable */ String> objectId() {
         return this.objectId;
     }
     /**
@@ -99,7 +99,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the partner id
      * 
      */
-    public Output</* @Nullable */ String> getPartnerId() {
+    public Output</* @Nullable */ String> partnerId() {
         return this.partnerId;
     }
     /**
@@ -113,7 +113,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the partner name
      * 
      */
-    public Output</* @Nullable */ String> getPartnerName() {
+    public Output</* @Nullable */ String> partnerName() {
         return this.partnerName;
     }
     /**
@@ -127,7 +127,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the tenant id.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -141,7 +141,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return Type of resource. "Microsoft.ManagementPartner/partners"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +155,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the DateTime when the partner was updated.
      * 
      */
-    public Output</* @Nullable */ String> getUpdatedTime() {
+    public Output</* @Nullable */ String> updatedTime() {
         return this.updatedTime;
     }
     /**
@@ -169,7 +169,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @return This is the version.
      * 
      */
-    public Output</* @Nullable */ Integer> getVersion() {
+    public Output</* @Nullable */ Integer> version() {
         return this.version;
     }
 

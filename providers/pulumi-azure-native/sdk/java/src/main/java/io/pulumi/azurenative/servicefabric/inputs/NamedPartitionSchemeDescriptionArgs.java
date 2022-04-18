@@ -27,7 +27,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -38,7 +38,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
     @Import(name="names", required=true)
       private final Output<List<String>> names;
 
-    public Output<List<String>> getNames() {
+    public Output<List<String>> names() {
         return this.names;
     }
 
@@ -50,7 +50,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
     @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
-    public Output<String> getPartitionScheme() {
+    public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 

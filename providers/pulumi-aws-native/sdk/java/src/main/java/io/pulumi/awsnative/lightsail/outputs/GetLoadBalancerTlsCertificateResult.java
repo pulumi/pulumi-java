@@ -38,17 +38,17 @@ public final class GetLoadBalancerTlsCertificateResult {
      * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
      * 
     */
-    public Optional<Boolean> getIsAttached() {
+    public Optional<Boolean> isAttached() {
         return Optional.ofNullable(this.isAttached);
     }
-    public Optional<String> getLoadBalancerTlsCertificateArn() {
+    public Optional<String> loadBalancerTlsCertificateArn() {
         return Optional.ofNullable(this.loadBalancerTlsCertificateArn);
     }
     /**
      * The validation status of the SSL/TLS certificate.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

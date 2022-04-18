@@ -23,7 +23,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
     @Import(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
       private final String lastThirtyMinutesAverageBytesPerSecond;
 
-    public String getLastThirtyMinutesAverageBytesPerSecond() {
+    public String lastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
     @Import(name="lastTwoMinutesAverageBytesPerSecond", required=true)
       private final String lastTwoMinutesAverageBytesPerSecond;
 
-    public String getLastTwoMinutesAverageBytesPerSecond() {
+    public String lastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
     @Import(name="replicatedBytes", required=true)
       private final String replicatedBytes;
 
-    public String getReplicatedBytes() {
+    public String replicatedBytes() {
         return this.replicatedBytes;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
     @Import(name="totalBytes", required=true)
       private final String totalBytes;
 
-    public String getTotalBytes() {
+    public String totalBytes() {
         return this.totalBytes;
     }
 

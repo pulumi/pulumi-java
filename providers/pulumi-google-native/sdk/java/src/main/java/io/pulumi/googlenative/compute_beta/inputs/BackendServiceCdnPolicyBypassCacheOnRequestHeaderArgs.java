@@ -26,7 +26,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 

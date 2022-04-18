@@ -23,7 +23,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<List<DataMaskingEntityArgs>> headers;
 
-    public Output<List<DataMaskingEntityArgs>> getHeaders() {
+    public Output<List<DataMaskingEntityArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -34,7 +34,7 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryParams")
       private final @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
 
-    public Output<List<DataMaskingEntityArgs>> getQueryParams() {
+    public Output<List<DataMaskingEntityArgs>> queryParams() {
         return this.queryParams == null ? Codegen.empty() : this.queryParams;
     }
 

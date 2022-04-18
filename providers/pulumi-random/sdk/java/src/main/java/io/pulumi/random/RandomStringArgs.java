@@ -26,7 +26,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -37,7 +37,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="length", required=true)
       private final Output<Integer> length;
 
-    public Output<Integer> getLength() {
+    public Output<Integer> length() {
         return this.length;
     }
 
@@ -48,7 +48,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lower")
       private final @Nullable Output<Boolean> lower;
 
-    public Output<Boolean> getLower() {
+    public Output<Boolean> lower() {
         return this.lower == null ? Codegen.empty() : this.lower;
     }
 
@@ -59,7 +59,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minLower")
       private final @Nullable Output<Integer> minLower;
 
-    public Output<Integer> getMinLower() {
+    public Output<Integer> minLower() {
         return this.minLower == null ? Codegen.empty() : this.minLower;
     }
 
@@ -70,7 +70,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minNumeric")
       private final @Nullable Output<Integer> minNumeric;
 
-    public Output<Integer> getMinNumeric() {
+    public Output<Integer> minNumeric() {
         return this.minNumeric == null ? Codegen.empty() : this.minNumeric;
     }
 
@@ -81,7 +81,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minSpecial")
       private final @Nullable Output<Integer> minSpecial;
 
-    public Output<Integer> getMinSpecial() {
+    public Output<Integer> minSpecial() {
         return this.minSpecial == null ? Codegen.empty() : this.minSpecial;
     }
 
@@ -92,7 +92,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minUpper")
       private final @Nullable Output<Integer> minUpper;
 
-    public Output<Integer> getMinUpper() {
+    public Output<Integer> minUpper() {
         return this.minUpper == null ? Codegen.empty() : this.minUpper;
     }
 
@@ -103,7 +103,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="number")
       private final @Nullable Output<Boolean> number;
 
-    public Output<Boolean> getNumber() {
+    public Output<Boolean> number() {
         return this.number == null ? Codegen.empty() : this.number;
     }
 
@@ -114,7 +114,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideSpecial")
       private final @Nullable Output<String> overrideSpecial;
 
-    public Output<String> getOverrideSpecial() {
+    public Output<String> overrideSpecial() {
         return this.overrideSpecial == null ? Codegen.empty() : this.overrideSpecial;
     }
 
@@ -125,7 +125,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="special")
       private final @Nullable Output<Boolean> special;
 
-    public Output<Boolean> getSpecial() {
+    public Output<Boolean> special() {
         return this.special == null ? Codegen.empty() : this.special;
     }
 
@@ -136,7 +136,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upper")
       private final @Nullable Output<Boolean> upper;
 
-    public Output<Boolean> getUpper() {
+    public Output<Boolean> upper() {
         return this.upper == null ? Codegen.empty() : this.upper;
     }
 

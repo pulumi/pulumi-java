@@ -36,7 +36,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Ip Version of Prefix List.
      * 
      */
-    public Output<PrefixListAddressFamily> getAddressFamily() {
+    public Output<PrefixListAddressFamily> addressFamily() {
         return this.addressFamily;
     }
     /**
@@ -50,7 +50,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Prefix List.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Entries of Prefix List.
      * 
      */
-    public Output</* @Nullable */ List<PrefixListEntry>> getEntries() {
+    public Output</* @Nullable */ List<PrefixListEntry>> entries() {
         return this.entries;
     }
     /**
@@ -78,7 +78,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Max Entries of Prefix List.
      * 
      */
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
     /**
@@ -92,7 +92,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Owner Id of Prefix List.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -106,7 +106,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Id of Prefix List.
      * 
      */
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
     /**
@@ -120,7 +120,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Name of Prefix List.
      * 
      */
-    public Output<String> getPrefixListName() {
+    public Output<String> prefixListName() {
         return this.prefixListName;
     }
     /**
@@ -134,7 +134,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Tags for Prefix List
      * 
      */
-    public Output</* @Nullable */ List<PrefixListTag>> getTags() {
+    public Output</* @Nullable */ List<PrefixListTag>> tags() {
         return this.tags;
     }
     /**
@@ -148,7 +148,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Version of Prefix List.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

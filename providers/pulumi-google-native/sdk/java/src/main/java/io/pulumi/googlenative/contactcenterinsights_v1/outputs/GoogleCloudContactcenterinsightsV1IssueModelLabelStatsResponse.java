@@ -40,21 +40,21 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * Number of conversations the issue model has analyzed at this point in time.
      * 
     */
-    public String getAnalyzedConversationsCount() {
+    public String analyzedConversationsCount() {
         return this.analyzedConversationsCount;
     }
     /**
      * Statistics on each issue. Key is the issue's resource name.
      * 
     */
-    public Map<String,String> getIssueStats() {
+    public Map<String,String> issueStats() {
         return this.issueStats;
     }
     /**
      * Number of analyzed conversations for which no issue was applicable at this point in time.
      * 
     */
-    public String getUnclassifiedConversationsCount() {
+    public String unclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
     }
 

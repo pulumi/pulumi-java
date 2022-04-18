@@ -27,7 +27,7 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
     @Import(name="type", required=true)
       private final Output<Either<String,ServicePlacementPolicyType>> type;
 
-    public Output<Either<String,ServicePlacementPolicyType>> getType() {
+    public Output<Either<String,ServicePlacementPolicyType>> type() {
         return this.type;
     }
 

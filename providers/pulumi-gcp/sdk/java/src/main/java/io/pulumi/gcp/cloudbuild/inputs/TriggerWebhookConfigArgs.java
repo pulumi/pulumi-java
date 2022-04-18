@@ -23,7 +23,7 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -36,7 +36,7 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

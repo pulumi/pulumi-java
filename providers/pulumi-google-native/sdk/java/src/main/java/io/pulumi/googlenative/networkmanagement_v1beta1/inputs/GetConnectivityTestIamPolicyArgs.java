@@ -17,21 +17,21 @@ public final class GetConnectivityTestIamPolicyArgs extends io.pulumi.resources.
     @Import(name="connectivityTestId", required=true)
       private final String connectivityTestId;
 
-    public String getConnectivityTestId() {
+    public String connectivityTestId() {
         return this.connectivityTestId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

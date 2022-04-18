@@ -27,7 +27,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucketAccountId")
       private final @Nullable Output<String> bucketAccountId;
 
-    public Output<String> getBucketAccountId() {
+    public Output<String> bucketAccountId() {
         return this.bucketAccountId == null ? Codegen.empty() : this.bucketAccountId;
     }
 
@@ -38,7 +38,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -49,7 +49,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="format", required=true)
       private final Output<BucketDestinationFormat> format;
 
-    public Output<BucketDestinationFormat> getFormat() {
+    public Output<BucketDestinationFormat> format() {
         return this.format;
     }
 
@@ -60,7 +60,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

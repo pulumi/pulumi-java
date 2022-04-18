@@ -23,7 +23,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gsuiteDomain")
       private final @Nullable Output<Boolean> gsuiteDomain;
 
-    public Output<Boolean> getGsuiteDomain() {
+    public Output<Boolean> gsuiteDomain() {
         return this.gsuiteDomain == null ? Codegen.empty() : this.gsuiteDomain;
     }
 
@@ -34,7 +34,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gsuiteGroupEmail")
       private final @Nullable Output<String> gsuiteGroupEmail;
 
-    public Output<String> getGsuiteGroupEmail() {
+    public Output<String> gsuiteGroupEmail() {
         return this.gsuiteGroupEmail == null ? Codegen.empty() : this.gsuiteGroupEmail;
     }
 
@@ -45,7 +45,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gsuiteUserEmail")
       private final @Nullable Output<String> gsuiteUserEmail;
 
-    public Output<String> getGsuiteUserEmail() {
+    public Output<String> gsuiteUserEmail() {
         return this.gsuiteUserEmail == null ? Codegen.empty() : this.gsuiteUserEmail;
     }
 

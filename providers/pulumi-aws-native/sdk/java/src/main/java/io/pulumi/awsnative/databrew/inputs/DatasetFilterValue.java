@@ -19,7 +19,7 @@ public final class DatasetFilterValue extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -30,7 +30,7 @@ public final class DatasetFilterValue extends io.pulumi.resources.InvokeArgs {
     @Import(name="valueReference", required=true)
       private final String valueReference;
 
-    public String getValueReference() {
+    public String valueReference() {
         return this.valueReference;
     }
 

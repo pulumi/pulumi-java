@@ -19,14 +19,14 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
 
-    public Output<TaxonomyIamMemberConditionArgs> getCondition() {
+    public Output<TaxonomyIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -38,14 +38,14 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -58,7 +58,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -69,7 +69,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="taxonomy", required=true)
       private final Output<String> taxonomy;
 
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy;
     }
 

@@ -26,7 +26,7 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiPrefix")
       private final @Nullable Output<String> apiPrefix;
 
-    public Output<String> getApiPrefix() {
+    public Output<String> apiPrefix() {
         return this.apiPrefix == null ? Codegen.empty() : this.apiPrefix;
     }
 

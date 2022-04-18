@@ -15,7 +15,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse extends io.pulumi.r
     @Import(name="initialDelaySec", required=true)
       private final Integer initialDelaySec;
 
-    public Integer getInitialDelaySec() {
+    public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 

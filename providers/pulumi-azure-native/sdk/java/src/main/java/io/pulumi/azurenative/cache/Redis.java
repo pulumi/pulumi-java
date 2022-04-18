@@ -51,7 +51,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
      * 
      */
-    public Output<RedisAccessKeysResponse> getAccessKeys() {
+    public Output<RedisAccessKeysResponse> accessKeys() {
         return this.accessKeys;
     }
     /**
@@ -65,7 +65,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the non-ssl Redis server port (6379) is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableNonSslPort() {
+    public Output</* @Nullable */ Boolean> enableNonSslPort() {
         return this.enableNonSslPort;
     }
     /**
@@ -79,7 +79,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Redis host name.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -93,7 +93,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return List of the Redis instances associated with the cache
      * 
      */
-    public Output<List<RedisInstanceDetailsResponse>> getInstances() {
+    public Output<List<RedisInstanceDetailsResponse>> instances() {
         return this.instances;
     }
     /**
@@ -107,7 +107,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return List of the linked servers associated with the cache
      * 
      */
-    public Output<List<RedisLinkedServerResponse>> getLinkedServers() {
+    public Output<List<RedisLinkedServerResponse>> linkedServers() {
         return this.linkedServers;
     }
     /**
@@ -121,7 +121,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -135,7 +135,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
      * 
      */
-    public Output</* @Nullable */ String> getMinimumTlsVersion() {
+    public Output</* @Nullable */ String> minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
@@ -149,7 +149,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Redis non-SSL port.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -177,7 +177,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connection associated with the specified redis cache
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -191,7 +191,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Redis instance provisioning status.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -205,7 +205,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -219,7 +219,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
      * 
      */
-    public Output</* @Nullable */ RedisCommonPropertiesResponseRedisConfiguration> getRedisConfiguration() {
+    public Output</* @Nullable */ RedisCommonPropertiesResponseRedisConfiguration> redisConfiguration() {
         return this.redisConfiguration;
     }
     /**
@@ -233,7 +233,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Redis version.
      * 
      */
-    public Output<String> getRedisVersion() {
+    public Output<String> redisVersion() {
         return this.redisVersion;
     }
     /**
@@ -247,7 +247,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The number of replicas to be created per master.
      * 
      */
-    public Output</* @Nullable */ Integer> getReplicasPerMaster() {
+    public Output</* @Nullable */ Integer> replicasPerMaster() {
         return this.replicasPerMaster;
     }
     /**
@@ -261,7 +261,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The number of shards to be created on a Premium Cluster Cache.
      * 
      */
-    public Output</* @Nullable */ Integer> getShardCount() {
+    public Output</* @Nullable */ Integer> shardCount() {
         return this.shardCount;
     }
     /**
@@ -275,7 +275,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The SKU of the Redis cache to deploy.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -289,7 +289,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Redis SSL port.
      * 
      */
-    public Output<Integer> getSslPort() {
+    public Output<Integer> sslPort() {
         return this.sslPort;
     }
     /**
@@ -303,7 +303,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
      * 
      */
-    public Output</* @Nullable */ String> getStaticIP() {
+    public Output</* @Nullable */ String> staticIP() {
         return this.staticIP;
     }
     /**
@@ -317,7 +317,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -331,7 +331,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -345,7 +345,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return A dictionary of tenant settings
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTenantSettings() {
+    public Output</* @Nullable */ Map<String,String>> tenantSettings() {
         return this.tenantSettings;
     }
     /**
@@ -359,7 +359,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -373,7 +373,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

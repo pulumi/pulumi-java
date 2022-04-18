@@ -25,7 +25,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -36,7 +36,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag")
       private final @Nullable Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag == null ? Codegen.empty() : this.languageTag;
     }
 
@@ -47,7 +47,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,14 +58,14 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions")
       private final @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
-    public Output<List<ContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
+    public Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -76,7 +76,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateTime")
       private final @Nullable Output<String> validateTime;
 
-    public Output<String> getValidateTime() {
+    public Output<String> validateTime() {
         return this.validateTime == null ? Codegen.empty() : this.validateTime;
     }
 
@@ -87,7 +87,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationState")
       private final @Nullable Output<ContactValidationState> validationState;
 
-    public Output<ContactValidationState> getValidationState() {
+    public Output<ContactValidationState> validationState() {
         return this.validationState == null ? Codegen.empty() : this.validationState;
     }
 

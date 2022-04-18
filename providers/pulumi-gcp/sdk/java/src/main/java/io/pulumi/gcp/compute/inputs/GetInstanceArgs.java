@@ -21,7 +21,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -34,7 +34,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -45,7 +45,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink")
       private final @Nullable String selfLink;
 
-    public Optional<String> getSelfLink() {
+    public Optional<String> selfLink() {
         return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
     }
 
@@ -58,7 +58,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone")
       private final @Nullable String zone;
 
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
     }
 

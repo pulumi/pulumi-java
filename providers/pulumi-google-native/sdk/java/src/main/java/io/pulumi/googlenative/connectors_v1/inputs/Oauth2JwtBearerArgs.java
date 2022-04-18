@@ -27,7 +27,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clientKey")
       private final @Nullable Output<SecretArgs> clientKey;
 
-    public Output<SecretArgs> getClientKey() {
+    public Output<SecretArgs> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
@@ -38,7 +38,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="jwtClaims")
       private final @Nullable Output<JwtClaimsArgs> jwtClaims;
 
-    public Output<JwtClaimsArgs> getJwtClaims() {
+    public Output<JwtClaimsArgs> jwtClaims() {
         return this.jwtClaims == null ? Codegen.empty() : this.jwtClaims;
     }
 

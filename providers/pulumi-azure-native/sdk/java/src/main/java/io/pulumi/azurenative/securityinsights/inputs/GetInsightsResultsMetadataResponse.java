@@ -27,7 +27,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
     @Import(name="errors")
       private final @Nullable List<GetInsightsErrorResponse> errors;
 
-    public List<GetInsightsErrorResponse> getErrors() {
+    public List<GetInsightsErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
@@ -38,7 +38,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
     @Import(name="totalCount", required=true)
       private final Integer totalCount;
 
-    public Integer getTotalCount() {
+    public Integer totalCount() {
         return this.totalCount;
     }
 

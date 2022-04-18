@@ -20,42 +20,42 @@ public final class EnvironmentConfigSoftwareConfigGetArgs extends io.pulumi.reso
     @Import(name="airflowConfigOverrides")
       private final @Nullable Output<Map<String,String>> airflowConfigOverrides;
 
-    public Output<Map<String,String>> getAirflowConfigOverrides() {
+    public Output<Map<String,String>> airflowConfigOverrides() {
         return this.airflowConfigOverrides == null ? Codegen.empty() : this.airflowConfigOverrides;
     }
 
     @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Output<Map<String,String>> getEnvVariables() {
+    public Output<Map<String,String>> envVariables() {
         return this.envVariables == null ? Codegen.empty() : this.envVariables;
     }
 
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
+    public Output<String> imageVersion() {
         return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
     @Import(name="pypiPackages")
       private final @Nullable Output<Map<String,String>> pypiPackages;
 
-    public Output<Map<String,String>> getPypiPackages() {
+    public Output<Map<String,String>> pypiPackages() {
         return this.pypiPackages == null ? Codegen.empty() : this.pypiPackages;
     }
 
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
+    public Output<String> pythonVersion() {
         return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
     @Import(name="schedulerCount")
       private final @Nullable Output<Integer> schedulerCount;
 
-    public Output<Integer> getSchedulerCount() {
+    public Output<Integer> schedulerCount() {
         return this.schedulerCount == null ? Codegen.empty() : this.schedulerCount;
     }
 

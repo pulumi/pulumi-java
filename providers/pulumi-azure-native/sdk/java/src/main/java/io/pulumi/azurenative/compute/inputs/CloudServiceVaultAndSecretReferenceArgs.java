@@ -19,14 +19,14 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
     @Import(name="secretUrl")
       private final @Nullable Output<String> secretUrl;
 
-    public Output<String> getSecretUrl() {
+    public Output<String> secretUrl() {
         return this.secretUrl == null ? Codegen.empty() : this.secretUrl;
     }
 
     @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 

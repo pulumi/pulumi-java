@@ -48,28 +48,28 @@ public final class ListCommunicationServiceKeysResult {
      * CommunicationService connection string constructed via the primaryKey
      * 
     */
-    public Optional<String> getPrimaryConnectionString() {
+    public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * The primary access key.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * CommunicationService connection string constructed via the secondaryKey
      * 
     */
-    public Optional<String> getSecondaryConnectionString() {
+    public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * The secondary access key.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

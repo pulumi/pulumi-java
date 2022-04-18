@@ -25,7 +25,7 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
@@ -36,7 +36,7 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

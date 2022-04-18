@@ -22,7 +22,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -34,7 +34,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 

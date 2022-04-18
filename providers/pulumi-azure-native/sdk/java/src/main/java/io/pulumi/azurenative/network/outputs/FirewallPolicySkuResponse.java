@@ -26,7 +26,7 @@ public final class FirewallPolicySkuResponse {
      * Tier of Firewall Policy.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

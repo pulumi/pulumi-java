@@ -27,7 +27,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine")
       private final @Nullable Output<DatabaseTypeEngine> engine;
 
-    public Output<DatabaseTypeEngine> getEngine() {
+    public Output<DatabaseTypeEngine> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -38,7 +38,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provider")
       private final @Nullable Output<DatabaseTypeProvider> provider;
 
-    public Output<DatabaseTypeProvider> getProvider() {
+    public Output<DatabaseTypeProvider> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

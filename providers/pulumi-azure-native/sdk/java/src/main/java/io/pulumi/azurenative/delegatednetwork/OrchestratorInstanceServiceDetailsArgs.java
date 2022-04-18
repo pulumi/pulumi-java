@@ -27,7 +27,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="apiServerEndpoint")
       private final @Nullable Output<String> apiServerEndpoint;
 
-    public Output<String> getApiServerEndpoint() {
+    public Output<String> apiServerEndpoint() {
         return this.apiServerEndpoint == null ? Codegen.empty() : this.apiServerEndpoint;
     }
 
@@ -38,7 +38,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="clusterRootCA")
       private final @Nullable Output<String> clusterRootCA;
 
-    public Output<String> getClusterRootCA() {
+    public Output<String> clusterRootCA() {
         return this.clusterRootCA == null ? Codegen.empty() : this.clusterRootCA;
     }
 
@@ -49,7 +49,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="controllerDetails", required=true)
       private final Output<ControllerDetailsArgs> controllerDetails;
 
-    public Output<ControllerDetailsArgs> getControllerDetails() {
+    public Output<ControllerDetailsArgs> controllerDetails() {
         return this.controllerDetails;
     }
 
@@ -60,7 +60,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="identity")
       private final @Nullable Output<OrchestratorIdentityArgs> identity;
 
-    public Output<OrchestratorIdentityArgs> getIdentity() {
+    public Output<OrchestratorIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -71,7 +71,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="kind", required=true)
       private final Output<Either<String,OrchestratorKind>> kind;
 
-    public Output<Either<String,OrchestratorKind>> getKind() {
+    public Output<Either<String,OrchestratorKind>> kind() {
         return this.kind;
     }
 
@@ -82,7 +82,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="orchestratorAppId")
       private final @Nullable Output<String> orchestratorAppId;
 
-    public Output<String> getOrchestratorAppId() {
+    public Output<String> orchestratorAppId() {
         return this.orchestratorAppId == null ? Codegen.empty() : this.orchestratorAppId;
     }
 
@@ -104,7 +104,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="orchestratorTenantId")
       private final @Nullable Output<String> orchestratorTenantId;
 
-    public Output<String> getOrchestratorTenantId() {
+    public Output<String> orchestratorTenantId() {
         return this.orchestratorTenantId == null ? Codegen.empty() : this.orchestratorTenantId;
     }
 
@@ -115,7 +115,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
@@ -126,7 +126,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,7 +137,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -148,7 +148,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

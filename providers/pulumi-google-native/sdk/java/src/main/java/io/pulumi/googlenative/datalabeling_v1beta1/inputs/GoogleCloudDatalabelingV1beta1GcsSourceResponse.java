@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
     @Import(name="inputUri", required=true)
       private final String inputUri;
 
-    public String getInputUri() {
+    public String inputUri() {
         return this.inputUri;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
     @Import(name="mimeType", required=true)
       private final String mimeType;
 
-    public String getMimeType() {
+    public String mimeType() {
         return this.mimeType;
     }
 

@@ -34,14 +34,14 @@ public final class ClientGroupInfoResponse {
      * The AAD security group id.
      * 
     */
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The AAD security group name.
      * 
     */
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
 

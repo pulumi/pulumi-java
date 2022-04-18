@@ -29,7 +29,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -42,7 +42,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="isAutoProvisioned")
       private final @Nullable Output<Boolean> isAutoProvisioned;
 
-    public Output<Boolean> getIsAutoProvisioned() {
+    public Output<Boolean> isAutoProvisioned() {
         return this.isAutoProvisioned == null ? Codegen.empty() : this.isAutoProvisioned;
     }
 
@@ -53,7 +53,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="login")
       private final @Nullable Output<AzureActiveDirectoryLoginArgs> login;
 
-    public Output<AzureActiveDirectoryLoginArgs> getLogin() {
+    public Output<AzureActiveDirectoryLoginArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -64,7 +64,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="registration")
       private final @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
 
-    public Output<AzureActiveDirectoryRegistrationArgs> getRegistration() {
+    public Output<AzureActiveDirectoryRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 
@@ -75,7 +75,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="validation")
       private final @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
-    public Output<AzureActiveDirectoryValidationArgs> getValidation() {
+    public Output<AzureActiveDirectoryValidationArgs> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 

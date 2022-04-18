@@ -26,7 +26,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="localAddressRanges", required=true)
       private final Output<List<String>> localAddressRanges;
 
-    public Output<List<String>> getLocalAddressRanges() {
+    public Output<List<String>> localAddressRanges() {
         return this.localAddressRanges;
     }
 
@@ -37,7 +37,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="remoteAddressRanges", required=true)
       private final Output<List<String>> remoteAddressRanges;
 
-    public Output<List<String>> getRemoteAddressRanges() {
+    public Output<List<String>> remoteAddressRanges() {
         return this.remoteAddressRanges;
     }
 

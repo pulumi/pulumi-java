@@ -24,7 +24,7 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
     @Import(name="srcIpRanges", required=true)
       private final Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
+    public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges;
     }
 

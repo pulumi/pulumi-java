@@ -23,10 +23,10 @@ public final class PackagingConfigurationMssManifest {
         this.streamSelection = streamSelection;
     }
 
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
-    public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
+    public Optional<PackagingConfigurationStreamSelection> streamSelection() {
         return Optional.ofNullable(this.streamSelection);
     }
 

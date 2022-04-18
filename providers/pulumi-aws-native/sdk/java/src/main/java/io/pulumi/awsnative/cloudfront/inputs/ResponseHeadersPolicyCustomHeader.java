@@ -16,21 +16,21 @@ public final class ResponseHeadersPolicyCustomHeader extends io.pulumi.resources
     @Import(name="header", required=true)
       private final String header;
 
-    public String getHeader() {
+    public String header() {
         return this.header;
     }
 
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

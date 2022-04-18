@@ -20,7 +20,7 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<TaxonomyIamBindingConditionGetArgs> condition;
 
-    public Output<TaxonomyIamBindingConditionGetArgs> getCondition() {
+    public Output<TaxonomyIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,14 +31,14 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -50,14 +50,14 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -70,7 +70,7 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -81,7 +81,7 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="taxonomy")
       private final @Nullable Output<String> taxonomy;
 
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy == null ? Codegen.empty() : this.taxonomy;
     }
 

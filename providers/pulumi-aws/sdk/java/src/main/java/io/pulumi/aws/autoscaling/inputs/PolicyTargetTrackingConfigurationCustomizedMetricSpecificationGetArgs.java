@@ -24,7 +24,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="metricDimensions")
       private final @Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> metricDimensions;
 
-    public Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> getMetricDimensions() {
+    public Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> metricDimensions() {
         return this.metricDimensions == null ? Codegen.empty() : this.metricDimensions;
     }
 
@@ -35,7 +35,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -46,7 +46,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -57,7 +57,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
-    public Output<String> getStatistic() {
+    public Output<String> statistic() {
         return this.statistic;
     }
 
@@ -68,7 +68,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

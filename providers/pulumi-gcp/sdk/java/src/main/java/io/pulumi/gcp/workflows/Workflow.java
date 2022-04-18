@@ -45,7 +45,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +59,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Workflow.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -87,7 +87,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Name of the Workflow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * specified prefix. If this and name are unspecified, a random value is chosen for the name.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -119,7 +119,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -133,7 +133,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The region of the workflow.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -147,7 +147,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The revision of the workflow. A new one is generated if the service account or source contents is changed.
      * 
      */
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
     /**
@@ -165,7 +165,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Format: projects/{project}/serviceAccounts/{account}.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -179,7 +179,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Workflow code to be executed. The size limit is 32KB.
      * 
      */
-    public Output</* @Nullable */ String> getSourceContents() {
+    public Output</* @Nullable */ String> sourceContents() {
         return this.sourceContents;
     }
     /**
@@ -193,7 +193,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return State of the workflow deployment.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -209,7 +209,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * nine fractional digits.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

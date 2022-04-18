@@ -23,7 +23,7 @@ public final class BrokerEncryptionOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class BrokerEncryptionOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="useAwsOwnedKey")
       private final @Nullable Output<Boolean> useAwsOwnedKey;
 
-    public Output<Boolean> getUseAwsOwnedKey() {
+    public Output<Boolean> useAwsOwnedKey() {
         return this.useAwsOwnedKey == null ? Codegen.empty() : this.useAwsOwnedKey;
     }
 

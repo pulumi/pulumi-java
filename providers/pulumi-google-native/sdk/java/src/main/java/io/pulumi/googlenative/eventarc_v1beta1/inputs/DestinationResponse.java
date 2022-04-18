@@ -23,7 +23,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudRunService", required=true)
       private final CloudRunServiceResponse cloudRunService;
 
-    public CloudRunServiceResponse getCloudRunService() {
+    public CloudRunServiceResponse cloudRunService() {
         return this.cloudRunService;
     }
 

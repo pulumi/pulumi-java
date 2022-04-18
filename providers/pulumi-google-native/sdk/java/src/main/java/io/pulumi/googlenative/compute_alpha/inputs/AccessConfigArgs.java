@@ -30,7 +30,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalIpv6")
       private final @Nullable Output<String> externalIpv6;
 
-    public Output<String> getExternalIpv6() {
+    public Output<String> externalIpv6() {
         return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
     }
 
@@ -41,7 +41,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalIpv6PrefixLength")
       private final @Nullable Output<Integer> externalIpv6PrefixLength;
 
-    public Output<Integer> getExternalIpv6PrefixLength() {
+    public Output<Integer> externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
     }
 
@@ -52,7 +52,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -63,7 +63,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natIP")
       private final @Nullable Output<String> natIP;
 
-    public Output<String> getNatIP() {
+    public Output<String> natIP() {
         return this.natIP == null ? Codegen.empty() : this.natIP;
     }
 
@@ -74,7 +74,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkTier")
       private final @Nullable Output<AccessConfigNetworkTier> networkTier;
 
-    public Output<AccessConfigNetworkTier> getNetworkTier() {
+    public Output<AccessConfigNetworkTier> networkTier() {
         return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
@@ -85,7 +85,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> getPublicPtrDomainName() {
+    public Output<String> publicPtrDomainName() {
         return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
     }
 
@@ -96,7 +96,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setPublicDns")
       private final @Nullable Output<Boolean> setPublicDns;
 
-    public Output<Boolean> getSetPublicDns() {
+    public Output<Boolean> setPublicDns() {
         return this.setPublicDns == null ? Codegen.empty() : this.setPublicDns;
     }
 
@@ -107,7 +107,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setPublicPtr")
       private final @Nullable Output<Boolean> setPublicPtr;
 
-    public Output<Boolean> getSetPublicPtr() {
+    public Output<Boolean> setPublicPtr() {
         return this.setPublicPtr == null ? Codegen.empty() : this.setPublicPtr;
     }
 
@@ -118,7 +118,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<AccessConfigType> type;
 
-    public Output<AccessConfigType> getType() {
+    public Output<AccessConfigType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

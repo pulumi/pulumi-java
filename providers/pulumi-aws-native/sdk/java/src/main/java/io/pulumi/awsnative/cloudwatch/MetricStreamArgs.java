@@ -25,7 +25,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> excludeFilters;
 
-    public Output<List<MetricStreamFilterArgs>> getExcludeFilters() {
+    public Output<List<MetricStreamFilterArgs>> excludeFilters() {
         return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
     }
 
@@ -36,7 +36,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
 
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
 
@@ -47,7 +47,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> includeFilters;
 
-    public Output<List<MetricStreamFilterArgs>> getIncludeFilters() {
+    public Output<List<MetricStreamFilterArgs>> includeFilters() {
         return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
     }
 
@@ -58,7 +58,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat;
     }
 
@@ -80,7 +80,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -91,7 +91,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<MetricStreamTagArgs>> tags;
 
-    public Output<List<MetricStreamTagArgs>> getTags() {
+    public Output<List<MetricStreamTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

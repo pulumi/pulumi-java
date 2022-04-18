@@ -27,7 +27,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketOptions")
       private final @Nullable Output<MetricBucketOptionsGetArgs> bucketOptions;
 
-    public Output<MetricBucketOptionsGetArgs> getBucketOptions() {
+    public Output<MetricBucketOptionsGetArgs> bucketOptions() {
         return this.bucketOptions == null ? Codegen.empty() : this.bucketOptions;
     }
 
@@ -39,7 +39,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -65,7 +65,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelExtractors")
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> getLabelExtractors() {
+    public Output<Map<String,String>> labelExtractors() {
         return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
     }
 
@@ -77,7 +77,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricDescriptor")
       private final @Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor;
 
-    public Output<MetricMetricDescriptorGetArgs> getMetricDescriptor() {
+    public Output<MetricMetricDescriptorGetArgs> metricDescriptor() {
         return this.metricDescriptor == null ? Codegen.empty() : this.metricDescriptor;
     }
 
@@ -92,7 +92,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -121,7 +121,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="valueExtractor")
       private final @Nullable Output<String> valueExtractor;
 
-    public Output<String> getValueExtractor() {
+    public Output<String> valueExtractor() {
         return this.valueExtractor == null ? Codegen.empty() : this.valueExtractor;
     }
 

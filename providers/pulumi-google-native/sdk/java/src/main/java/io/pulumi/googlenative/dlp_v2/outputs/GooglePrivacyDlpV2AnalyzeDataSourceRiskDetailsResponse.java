@@ -89,63 +89,63 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
      * Categorical stats result
      * 
     */
-    public GooglePrivacyDlpV2CategoricalStatsResultResponse getCategoricalStatsResult() {
+    public GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult() {
         return this.categoricalStatsResult;
     }
     /**
      * Delta-presence result
      * 
     */
-    public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse getDeltaPresenceEstimationResult() {
+    public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
     /**
      * K-anonymity result
      * 
     */
-    public GooglePrivacyDlpV2KAnonymityResultResponse getKAnonymityResult() {
+    public GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult() {
         return this.kAnonymityResult;
     }
     /**
      * K-map result
      * 
     */
-    public GooglePrivacyDlpV2KMapEstimationResultResponse getKMapEstimationResult() {
+    public GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult() {
         return this.kMapEstimationResult;
     }
     /**
      * L-divesity result
      * 
     */
-    public GooglePrivacyDlpV2LDiversityResultResponse getLDiversityResult() {
+    public GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult() {
         return this.lDiversityResult;
     }
     /**
      * Numerical stats result
      * 
     */
-    public GooglePrivacyDlpV2NumericalStatsResultResponse getNumericalStatsResult() {
+    public GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult() {
         return this.numericalStatsResult;
     }
     /**
      * The configuration used for this job.
      * 
     */
-    public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse getRequestedOptions() {
+    public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
     /**
      * Privacy metric to compute.
      * 
     */
-    public GooglePrivacyDlpV2PrivacyMetricResponse getRequestedPrivacyMetric() {
+    public GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
     /**
      * Input dataset to compute metrics over.
      * 
     */
-    public GooglePrivacyDlpV2BigQueryTableResponse getRequestedSourceTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable() {
         return this.requestedSourceTable;
     }
 

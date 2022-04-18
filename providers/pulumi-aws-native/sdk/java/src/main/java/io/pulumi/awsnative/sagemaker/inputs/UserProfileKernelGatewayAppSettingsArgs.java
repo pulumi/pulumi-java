@@ -28,7 +28,7 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
     @Import(name="customImages")
       private final @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
 
-    public Output<List<UserProfileCustomImageArgs>> getCustomImages() {
+    public Output<List<UserProfileCustomImageArgs>> customImages() {
         return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
@@ -39,7 +39,7 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 

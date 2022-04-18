@@ -19,7 +19,7 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends io.pulumi.resour
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 

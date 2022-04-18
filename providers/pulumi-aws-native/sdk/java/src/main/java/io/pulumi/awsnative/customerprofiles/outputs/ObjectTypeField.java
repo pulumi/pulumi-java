@@ -42,21 +42,21 @@ public final class ObjectTypeField {
      * The content type of the field. Used for determining equality when searching.
      * 
     */
-    public Optional<ObjectTypeFieldContentType> getContentType() {
+    public Optional<ObjectTypeFieldContentType> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

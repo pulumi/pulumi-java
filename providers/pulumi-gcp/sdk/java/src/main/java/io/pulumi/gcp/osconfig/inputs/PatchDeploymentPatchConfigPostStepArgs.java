@@ -24,7 +24,7 @@ public final class PatchDeploymentPatchConfigPostStepArgs extends io.pulumi.reso
     @Import(name="linuxExecStepConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs> linuxExecStepConfig;
 
-    public Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs> getLinuxExecStepConfig() {
+    public Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs> linuxExecStepConfig() {
         return this.linuxExecStepConfig == null ? Codegen.empty() : this.linuxExecStepConfig;
     }
 
@@ -36,7 +36,7 @@ public final class PatchDeploymentPatchConfigPostStepArgs extends io.pulumi.reso
     @Import(name="windowsExecStepConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs> windowsExecStepConfig;
 
-    public Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs> getWindowsExecStepConfig() {
+    public Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs> windowsExecStepConfig() {
         return this.windowsExecStepConfig == null ? Codegen.empty() : this.windowsExecStepConfig;
     }
 

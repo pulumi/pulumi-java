@@ -24,7 +24,7 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="searchParameters", required=true)
       private final List<SearchParameterResponse> searchParameters;
 
-    public List<SearchParameterResponse> getSearchParameters() {
+    public List<SearchParameterResponse> searchParameters() {
         return this.searchParameters;
     }
 

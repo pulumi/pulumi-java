@@ -30,7 +30,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientProtocol")
       private final @Nullable Output<Either<String,Protocol>> clientProtocol;
 
-    public Output<Either<String,Protocol>> getClientProtocol() {
+    public Output<Either<String,Protocol>> clientProtocol() {
         return this.clientProtocol == null ? Codegen.empty() : this.clientProtocol;
     }
 
@@ -41,7 +41,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -52,7 +52,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusteringPolicy")
       private final @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
 
-    public Output<Either<String,ClusteringPolicy>> getClusteringPolicy() {
+    public Output<Either<String,ClusteringPolicy>> clusteringPolicy() {
         return this.clusteringPolicy == null ? Codegen.empty() : this.clusteringPolicy;
     }
 
@@ -63,7 +63,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -74,7 +74,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evictionPolicy")
       private final @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
 
-    public Output<Either<String,EvictionPolicy>> getEvictionPolicy() {
+    public Output<Either<String,EvictionPolicy>> evictionPolicy() {
         return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
     }
 
@@ -85,7 +85,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modules")
       private final @Nullable Output<List<ModuleArgs>> modules;
 
-    public Output<List<ModuleArgs>> getModules() {
+    public Output<List<ModuleArgs>> modules() {
         return this.modules == null ? Codegen.empty() : this.modules;
     }
 
@@ -96,7 +96,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="persistence")
       private final @Nullable Output<PersistenceArgs> persistence;
 
-    public Output<PersistenceArgs> getPersistence() {
+    public Output<PersistenceArgs> persistence() {
         return this.persistence == null ? Codegen.empty() : this.persistence;
     }
 
@@ -107,7 +107,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -118,7 +118,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

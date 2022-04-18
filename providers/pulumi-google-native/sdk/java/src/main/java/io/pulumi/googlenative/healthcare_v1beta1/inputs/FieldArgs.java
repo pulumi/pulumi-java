@@ -27,7 +27,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxOccurs")
       private final @Nullable Output<Integer> maxOccurs;
 
-    public Output<Integer> getMaxOccurs() {
+    public Output<Integer> maxOccurs() {
         return this.maxOccurs == null ? Codegen.empty() : this.maxOccurs;
     }
 
@@ -38,7 +38,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minOccurs")
       private final @Nullable Output<Integer> minOccurs;
 
-    public Output<Integer> getMinOccurs() {
+    public Output<Integer> minOccurs() {
         return this.minOccurs == null ? Codegen.empty() : this.minOccurs;
     }
 
@@ -49,7 +49,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -71,7 +71,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -92,70 +92,70 @@ public final class GetModelResult {
      * Lists operation ids associated with this model whose status is NOT done.
      * 
     */
-    public List<OperationResponse> getActiveOperations() {
+    public List<OperationResponse> activeOperations() {
         return this.activeOperations;
     }
     /**
      * Timestamp when this model was created in Firebase ML.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * See RFC7232 https://tools.ietf.org/html/rfc7232#section-2.3
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The model_hash will change if a new file is available for download.
      * 
     */
-    public String getModelHash() {
+    public String modelHash() {
         return this.modelHash;
     }
     /**
      * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State common to all model types. Includes publishing and validation information.
      * 
     */
-    public ModelStateResponse getState() {
+    public ModelStateResponse state() {
         return this.state;
     }
     /**
      * User defined tags which can be used to group/filter models during listing
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * A TFLite Model
      * 
     */
-    public TfLiteModelResponse getTfliteModel() {
+    public TfLiteModelResponse tfliteModel() {
         return this.tfliteModel;
     }
     /**
      * Timestamp when this model was updated in Firebase ML.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

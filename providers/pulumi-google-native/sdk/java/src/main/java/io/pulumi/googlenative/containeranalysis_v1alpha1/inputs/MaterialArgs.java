@@ -27,7 +27,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="digest")
       private final @Nullable Output<Map<String,String>> digest;
 
-    public Output<Map<String,String>> getDigest() {
+    public Output<Map<String,String>> digest() {
         return this.digest == null ? Codegen.empty() : this.digest;
     }
 
@@ -38,7 +38,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

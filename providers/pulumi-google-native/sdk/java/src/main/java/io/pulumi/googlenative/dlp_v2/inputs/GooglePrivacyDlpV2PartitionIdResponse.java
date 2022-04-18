@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends io.pulumi.resou
     @Import(name="namespaceId", required=true)
       private final String namespaceId;
 
-    public String getNamespaceId() {
+    public String namespaceId() {
         return this.namespaceId;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends io.pulumi.resou
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

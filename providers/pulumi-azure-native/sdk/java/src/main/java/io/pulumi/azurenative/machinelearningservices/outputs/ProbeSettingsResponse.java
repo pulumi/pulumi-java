@@ -56,35 +56,35 @@ public final class ProbeSettingsResponse {
      * The number of failures to allow before returning an unhealthy status.
      * 
     */
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The delay before the first probe in ISO 8601 format.
      * 
     */
-    public Optional<String> getInitialDelay() {
+    public Optional<String> initialDelay() {
         return Optional.ofNullable(this.initialDelay);
     }
     /**
      * The length of time between probes in ISO 8601 format.
      * 
     */
-    public Optional<String> getPeriod() {
+    public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }
     /**
      * The number of successful probes before returning a healthy status.
      * 
     */
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The probe timeout in ISO 8601 format.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

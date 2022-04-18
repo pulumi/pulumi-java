@@ -26,7 +26,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
       private final Output<Boolean> isWebchatPreviewEnabled;
 
-    public Output<Boolean> getIsWebchatPreviewEnabled() {
+    public Output<Boolean> isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 

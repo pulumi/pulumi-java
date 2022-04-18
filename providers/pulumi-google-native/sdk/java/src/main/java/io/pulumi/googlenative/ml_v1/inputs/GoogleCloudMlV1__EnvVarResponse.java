@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__EnvVarResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__EnvVarResponse extends io.pulumi.resources.I
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

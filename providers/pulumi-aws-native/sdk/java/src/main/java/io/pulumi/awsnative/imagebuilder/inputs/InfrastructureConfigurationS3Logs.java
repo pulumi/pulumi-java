@@ -25,7 +25,7 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
     @Import(name="s3BucketName")
       private final @Nullable String s3BucketName;
 
-    public Optional<String> getS3BucketName() {
+    public Optional<String> s3BucketName() {
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
     }
 
@@ -36,7 +36,7 @@ public final class InfrastructureConfigurationS3Logs extends io.pulumi.resources
     @Import(name="s3KeyPrefix")
       private final @Nullable String s3KeyPrefix;
 
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
     }
 

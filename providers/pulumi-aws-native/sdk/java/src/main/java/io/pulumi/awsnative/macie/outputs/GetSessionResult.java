@@ -50,28 +50,28 @@ public final class GetSessionResult {
      * AWS account ID of customer
      * 
     */
-    public Optional<String> getAwsAccountId() {
+    public Optional<String> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
      * A enumeration value that specifies how frequently finding updates are published.
      * 
     */
-    public Optional<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
+    public Optional<SessionFindingPublishingFrequency> findingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
     /**
      * Service role used by Macie
      * 
     */
-    public Optional<String> getServiceRole() {
+    public Optional<String> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
     /**
      * A enumeration value that specifies the status of the Macie Session.
      * 
     */
-    public Optional<SessionStatus> getStatus() {
+    public Optional<SessionStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

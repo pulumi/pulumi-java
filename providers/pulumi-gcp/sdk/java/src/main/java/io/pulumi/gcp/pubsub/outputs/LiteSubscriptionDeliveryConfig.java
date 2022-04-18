@@ -26,7 +26,7 @@ public final class LiteSubscriptionDeliveryConfig {
      * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
      * 
     */
-    public String getDeliveryRequirement() {
+    public String deliveryRequirement() {
         return this.deliveryRequirement;
     }
 

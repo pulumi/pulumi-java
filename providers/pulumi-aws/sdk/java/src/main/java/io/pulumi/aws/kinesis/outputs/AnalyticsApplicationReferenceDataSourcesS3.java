@@ -39,21 +39,21 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
      * The S3 Bucket ARN.
      * 
     */
-    public String getBucketArn() {
+    public String bucketArn() {
         return this.bucketArn;
     }
     /**
      * The File Key name containing reference data.
      * 
     */
-    public String getFileKey() {
+    public String fileKey() {
         return this.fileKey;
     }
     /**
      * The ARN of the IAM Role used to send application messages.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

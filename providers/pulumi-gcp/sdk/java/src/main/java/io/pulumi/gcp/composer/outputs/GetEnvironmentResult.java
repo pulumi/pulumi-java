@@ -49,26 +49,26 @@ public final class GetEnvironmentResult {
      * Configuration parameters for the environment.
      * 
     */
-    public List<GetEnvironmentConfig> getConfigs() {
+    public List<GetEnvironmentConfig> configs() {
         return this.configs;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

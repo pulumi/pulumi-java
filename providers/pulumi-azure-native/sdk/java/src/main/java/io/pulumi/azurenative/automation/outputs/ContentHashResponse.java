@@ -32,14 +32,14 @@ public final class ContentHashResponse {
      * Gets or sets the content hash algorithm used to hash the content.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * Gets or sets expected hash value of the content.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

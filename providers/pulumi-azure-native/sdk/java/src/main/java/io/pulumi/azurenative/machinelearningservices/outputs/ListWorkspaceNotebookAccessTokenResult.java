@@ -39,28 +39,28 @@ public final class ListWorkspaceNotebookAccessTokenResult {
         this.tokenType = tokenType;
     }
 
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
-    public Integer getExpiresIn() {
+    public Integer expiresIn() {
         return this.expiresIn;
     }
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
-    public String getNotebookResourceId() {
+    public String notebookResourceId() {
         return this.notebookResourceId;
     }
-    public String getPublicDns() {
+    public String publicDns() {
         return this.publicDns;
     }
-    public String getRefreshToken() {
+    public String refreshToken() {
         return this.refreshToken;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
-    public String getTokenType() {
+    public String tokenType() {
         return this.tokenType;
     }
 

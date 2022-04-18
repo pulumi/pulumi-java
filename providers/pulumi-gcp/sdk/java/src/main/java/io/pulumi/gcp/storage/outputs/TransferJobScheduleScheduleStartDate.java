@@ -39,21 +39,21 @@ public final class TransferJobScheduleScheduleStartDate {
      * Day of month. Must be from 1 to 31 and valid for the year and month.
      * 
     */
-    public Integer getDay() {
+    public Integer day() {
         return this.day;
     }
     /**
      * Month of year. Must be from 1 to 12.
      * 
     */
-    public Integer getMonth() {
+    public Integer month() {
         return this.month;
     }
     /**
      * Year of date. Must be from 1 to 9999.
      * 
     */
-    public Integer getYear() {
+    public Integer year() {
         return this.year;
     }
 

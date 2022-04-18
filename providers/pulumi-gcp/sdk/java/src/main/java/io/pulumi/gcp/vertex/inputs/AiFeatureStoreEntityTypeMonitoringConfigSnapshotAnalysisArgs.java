@@ -23,7 +23,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -35,7 +35,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     @Import(name="monitoringInterval")
       private final @Nullable Output<String> monitoringInterval;
 
-    public Output<String> getMonitoringInterval() {
+    public Output<String> monitoringInterval() {
         return this.monitoringInterval == null ? Codegen.empty() : this.monitoringInterval;
     }
 

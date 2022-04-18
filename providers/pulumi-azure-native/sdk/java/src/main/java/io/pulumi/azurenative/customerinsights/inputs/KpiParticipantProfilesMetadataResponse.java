@@ -23,7 +23,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
     @Import(name="typeName", required=true)
       private final String typeName;
 
-    public String getTypeName() {
+    public String typeName() {
         return this.typeName;
     }
 

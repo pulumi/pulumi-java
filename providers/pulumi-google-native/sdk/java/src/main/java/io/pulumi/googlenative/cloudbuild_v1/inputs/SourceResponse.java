@@ -25,7 +25,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="repoSource", required=true)
       private final RepoSourceResponse repoSource;
 
-    public RepoSourceResponse getRepoSource() {
+    public RepoSourceResponse repoSource() {
         return this.repoSource;
     }
 
@@ -36,7 +36,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageSource", required=true)
       private final StorageSourceResponse storageSource;
 
-    public StorageSourceResponse getStorageSource() {
+    public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
 
@@ -47,7 +47,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageSourceManifest", required=true)
       private final StorageSourceManifestResponse storageSourceManifest;
 
-    public StorageSourceManifestResponse getStorageSourceManifest() {
+    public StorageSourceManifestResponse storageSourceManifest() {
         return this.storageSourceManifest;
     }
 

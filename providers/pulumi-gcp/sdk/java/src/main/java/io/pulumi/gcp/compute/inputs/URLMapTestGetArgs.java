@@ -22,7 +22,7 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -44,7 +44,7 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -55,7 +55,7 @@ public final class URLMapTestGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

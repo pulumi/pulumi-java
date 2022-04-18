@@ -22,7 +22,7 @@ public final class DicomStoreStreamConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="bigqueryDestination", required=true)
       private final Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
-    public Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
+    public Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
 

@@ -23,7 +23,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
     @Import(name="historyId", required=true)
       private final String historyId;
 
-    public String getHistoryId() {
+    public String historyId() {
         return this.historyId;
     }
 
@@ -34,7 +34,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

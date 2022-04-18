@@ -26,16 +26,16 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
         this.seconds = seconds;
     }
 
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

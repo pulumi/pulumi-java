@@ -100,7 +100,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionCorsPolicy> getCorsPolicy() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionCorsPolicy> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
     /**
@@ -112,7 +112,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
     /**
@@ -122,7 +122,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
     /**
@@ -130,7 +130,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionRetryPolicy> getRetryPolicy() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
@@ -140,7 +140,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionTimeout> getTimeout() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -148,7 +148,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionUrlRewrite> getUrlRewrite() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionUrlRewrite> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
     /**
@@ -162,7 +162,7 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherPathRuleRouteActionWeightedBackendService> getWeightedBackendServices() {
+    public List<URLMapPathMatcherPathRuleRouteActionWeightedBackendService> weightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }
 

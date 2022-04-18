@@ -26,7 +26,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
     @Import(name="cookies", required=true)
       private final Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs> cookies;
 
-    public Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs> getCookies() {
+    public Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs> cookies() {
         return this.cookies;
     }
 
@@ -39,7 +39,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
     @Import(name="queryString", required=true)
       private final Output<Boolean> queryString;
 
-    public Output<Boolean> getQueryString() {
+    public Output<Boolean> queryString() {
         return this.queryString;
     }
 
@@ -65,7 +65,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesArgs extends i
     @Import(name="queryStringCacheKeys")
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
-    public Output<List<String>> getQueryStringCacheKeys() {
+    public Output<List<String>> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? Codegen.empty() : this.queryStringCacheKeys;
     }
 

@@ -43,13 +43,13 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=PrivateEndpointConnectionResponseProperties.class, parameters={})
     private Output<PrivateEndpointConnectionResponseProperties> properties;
 
-    public Output<PrivateEndpointConnectionResponseProperties> getProperties() {
+    public Output<PrivateEndpointConnectionResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -63,7 +63,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

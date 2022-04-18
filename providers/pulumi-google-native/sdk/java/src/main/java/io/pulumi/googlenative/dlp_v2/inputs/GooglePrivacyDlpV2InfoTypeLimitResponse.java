@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
     @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
+    public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
     @Import(name="maxFindings", required=true)
       private final Integer maxFindings;
 
-    public Integer getMaxFindings() {
+    public Integer maxFindings() {
         return this.maxFindings;
     }
 

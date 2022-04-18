@@ -22,7 +22,7 @@ public final class DetectorModelSns extends io.pulumi.resources.InvokeArgs {
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 
@@ -33,7 +33,7 @@ public final class DetectorModelSns extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetArn", required=true)
       private final String targetArn;
 
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

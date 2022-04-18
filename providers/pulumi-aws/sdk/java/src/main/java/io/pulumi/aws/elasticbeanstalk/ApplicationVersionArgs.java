@@ -24,7 +24,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
+    public Output<Boolean> forceDelete() {
         return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
@@ -68,7 +68,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -79,7 +79,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

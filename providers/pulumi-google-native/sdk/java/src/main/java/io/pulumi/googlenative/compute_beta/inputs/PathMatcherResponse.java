@@ -29,7 +29,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultRouteAction", required=true)
       private final HttpRouteActionResponse defaultRouteAction;
 
-    public HttpRouteActionResponse getDefaultRouteAction() {
+    public HttpRouteActionResponse defaultRouteAction() {
         return this.defaultRouteAction;
     }
 
@@ -40,7 +40,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultService", required=true)
       private final String defaultService;
 
-    public String getDefaultService() {
+    public String defaultService() {
         return this.defaultService;
     }
 
@@ -51,7 +51,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultUrlRedirect", required=true)
       private final HttpRedirectActionResponse defaultUrlRedirect;
 
-    public HttpRedirectActionResponse getDefaultUrlRedirect() {
+    public HttpRedirectActionResponse defaultUrlRedirect() {
         return this.defaultUrlRedirect;
     }
 
@@ -62,7 +62,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -73,7 +73,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headerAction", required=true)
       private final HttpHeaderActionResponse headerAction;
 
-    public HttpHeaderActionResponse getHeaderAction() {
+    public HttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
 
@@ -84,7 +84,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -95,7 +95,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pathRules", required=true)
       private final List<PathRuleResponse> pathRules;
 
-    public List<PathRuleResponse> getPathRules() {
+    public List<PathRuleResponse> pathRules() {
         return this.pathRules;
     }
 
@@ -106,7 +106,7 @@ public final class PathMatcherResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeRules", required=true)
       private final List<HttpRouteRuleResponse> routeRules;
 
-    public List<HttpRouteRuleResponse> getRouteRules() {
+    public List<HttpRouteRuleResponse> routeRules() {
         return this.routeRules;
     }
 

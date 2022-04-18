@@ -21,7 +21,7 @@ public final class CustomPluginLocationGetArgs extends io.pulumi.resources.Resou
     @Import(name="s3", required=true)
       private final Output<CustomPluginLocationS3GetArgs> s3;
 
-    public Output<CustomPluginLocationS3GetArgs> getS3() {
+    public Output<CustomPluginLocationS3GetArgs> s3() {
         return this.s3;
     }
 

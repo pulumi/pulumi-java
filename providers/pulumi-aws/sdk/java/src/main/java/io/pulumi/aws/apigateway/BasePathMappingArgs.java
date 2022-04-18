@@ -22,7 +22,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="basePath")
       private final @Nullable Output<String> basePath;
 
-    public Output<String> getBasePath() {
+    public Output<String> basePath() {
         return this.basePath == null ? Codegen.empty() : this.basePath;
     }
 
@@ -33,7 +33,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -44,7 +44,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -55,7 +55,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 

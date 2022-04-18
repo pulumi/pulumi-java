@@ -28,7 +28,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="bootDiskKmsKey", required=true)
       private final String bootDiskKmsKey;
 
-    public String getBootDiskKmsKey() {
+    public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
 
@@ -39,7 +39,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -50,7 +50,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -61,7 +61,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="imageType", required=true)
       private final String imageType;
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
 
@@ -72,7 +72,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="management", required=true)
       private final NodeManagementResponse management;
 
-    public NodeManagementResponse getManagement() {
+    public NodeManagementResponse management() {
         return this.management;
     }
 
@@ -83,7 +83,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
@@ -94,7 +94,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
@@ -105,7 +105,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -116,7 +116,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="shieldedInstanceConfig", required=true)
       private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
-    public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
 
@@ -127,7 +127,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends io.pulumi.re
     @Import(name="upgradeSettings", required=true)
       private final UpgradeSettingsResponse upgradeSettings;
 
-    public UpgradeSettingsResponse getUpgradeSettings() {
+    public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
 

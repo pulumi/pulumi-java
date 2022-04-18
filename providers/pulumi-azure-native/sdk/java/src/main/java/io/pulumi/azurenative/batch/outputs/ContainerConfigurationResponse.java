@@ -38,17 +38,17 @@ public final class ContainerConfigurationResponse {
      * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
      * 
     */
-    public List<String> getContainerImageNames() {
+    public List<String> containerImageNames() {
         return this.containerImageNames == null ? List.of() : this.containerImageNames;
     }
     /**
      * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
      * 
     */
-    public List<ContainerRegistryResponse> getContainerRegistries() {
+    public List<ContainerRegistryResponse> containerRegistries() {
         return this.containerRegistries == null ? List.of() : this.containerRegistries;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

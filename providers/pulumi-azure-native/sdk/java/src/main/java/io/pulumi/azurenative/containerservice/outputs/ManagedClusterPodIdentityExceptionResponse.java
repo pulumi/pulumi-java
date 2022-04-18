@@ -40,21 +40,21 @@ public final class ManagedClusterPodIdentityExceptionResponse {
      * Name of the pod identity exception.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Namespace of the pod identity exception.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * Pod labels to match.
      * 
     */
-    public Map<String,String> getPodLabels() {
+    public Map<String,String> podLabels() {
         return this.podLabels;
     }
 

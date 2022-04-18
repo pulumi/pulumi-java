@@ -25,7 +25,7 @@ public final class DetectorModelResetTimerArgs extends io.pulumi.resources.Resou
     @Import(name="timerName", required=true)
       private final Output<String> timerName;
 
-    public Output<String> getTimerName() {
+    public Output<String> timerName() {
         return this.timerName;
     }
 

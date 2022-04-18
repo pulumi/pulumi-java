@@ -37,7 +37,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -51,7 +51,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * @return The length (in words) of the pet name.
      * 
      */
-    public Output</* @Nullable */ Integer> getLength() {
+    public Output</* @Nullable */ Integer> length() {
         return this.length;
     }
     /**
@@ -65,7 +65,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * @return A string to prefix the name with.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
     /**
@@ -79,7 +79,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * @return The character to separate words in the pet name.
      * 
      */
-    public Output</* @Nullable */ String> getSeparator() {
+    public Output</* @Nullable */ String> separator() {
         return this.separator;
     }
 

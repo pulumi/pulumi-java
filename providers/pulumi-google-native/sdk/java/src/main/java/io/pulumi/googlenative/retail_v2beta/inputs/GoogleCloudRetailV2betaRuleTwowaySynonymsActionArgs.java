@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs extends i
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 

@@ -28,7 +28,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> getAutoDelete() {
+    public Output<Boolean> autoDelete() {
         return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
@@ -39,7 +39,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="customImage")
       private final @Nullable Output<String> customImage;
 
-    public Output<String> getCustomImage() {
+    public Output<String> customImage() {
         return this.customImage == null ? Codegen.empty() : this.customImage;
     }
 
@@ -50,7 +50,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -61,7 +61,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="instantiateFrom")
       private final @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
-    public Output<DiskInstantiationConfigInstantiateFrom> getInstantiateFrom() {
+    public Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom() {
         return this.instantiateFrom == null ? Codegen.empty() : this.instantiateFrom;
     }
 

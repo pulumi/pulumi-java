@@ -41,21 +41,21 @@ public final class RosettaNetPipActivitySettingsResponse {
      * The RosettaNet ProcessConfiguration acknowledgement settings.
      * 
     */
-    public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse getAcknowledgmentOfReceiptSettings() {
+    public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
     /**
      * The RosettaNet ProcessConfiguration activity behavior.
      * 
     */
-    public RosettaNetPipActivityBehaviorResponse getActivityBehavior() {
+    public RosettaNetPipActivityBehaviorResponse activityBehavior() {
         return this.activityBehavior;
     }
     /**
      * The RosettaNet ProcessConfiguration activity type.
      * 
     */
-    public String getActivityType() {
+    public String activityType() {
         return this.activityType;
     }
 

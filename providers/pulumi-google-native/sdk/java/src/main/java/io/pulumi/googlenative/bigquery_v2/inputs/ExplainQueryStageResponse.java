@@ -22,7 +22,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="completedParallelInputs", required=true)
       private final String completedParallelInputs;
 
-    public String getCompletedParallelInputs() {
+    public String completedParallelInputs() {
         return this.completedParallelInputs;
     }
 
@@ -33,7 +33,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="computeMsAvg", required=true)
       private final String computeMsAvg;
 
-    public String getComputeMsAvg() {
+    public String computeMsAvg() {
         return this.computeMsAvg;
     }
 
@@ -44,7 +44,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="computeMsMax", required=true)
       private final String computeMsMax;
 
-    public String getComputeMsMax() {
+    public String computeMsMax() {
         return this.computeMsMax;
     }
 
@@ -55,7 +55,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="computeRatioAvg", required=true)
       private final Double computeRatioAvg;
 
-    public Double getComputeRatioAvg() {
+    public Double computeRatioAvg() {
         return this.computeRatioAvg;
     }
 
@@ -66,7 +66,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="computeRatioMax", required=true)
       private final Double computeRatioMax;
 
-    public Double getComputeRatioMax() {
+    public Double computeRatioMax() {
         return this.computeRatioMax;
     }
 
@@ -77,7 +77,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="endMs", required=true)
       private final String endMs;
 
-    public String getEndMs() {
+    public String endMs() {
         return this.endMs;
     }
 
@@ -88,7 +88,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="inputStages", required=true)
       private final List<String> inputStages;
 
-    public List<String> getInputStages() {
+    public List<String> inputStages() {
         return this.inputStages;
     }
 
@@ -99,7 +99,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -110,7 +110,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="parallelInputs", required=true)
       private final String parallelInputs;
 
-    public String getParallelInputs() {
+    public String parallelInputs() {
         return this.parallelInputs;
     }
 
@@ -121,7 +121,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="readMsAvg", required=true)
       private final String readMsAvg;
 
-    public String getReadMsAvg() {
+    public String readMsAvg() {
         return this.readMsAvg;
     }
 
@@ -132,7 +132,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="readMsMax", required=true)
       private final String readMsMax;
 
-    public String getReadMsMax() {
+    public String readMsMax() {
         return this.readMsMax;
     }
 
@@ -143,7 +143,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="readRatioAvg", required=true)
       private final Double readRatioAvg;
 
-    public Double getReadRatioAvg() {
+    public Double readRatioAvg() {
         return this.readRatioAvg;
     }
 
@@ -154,7 +154,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="readRatioMax", required=true)
       private final Double readRatioMax;
 
-    public Double getReadRatioMax() {
+    public Double readRatioMax() {
         return this.readRatioMax;
     }
 
@@ -165,7 +165,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="recordsRead", required=true)
       private final String recordsRead;
 
-    public String getRecordsRead() {
+    public String recordsRead() {
         return this.recordsRead;
     }
 
@@ -176,7 +176,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="recordsWritten", required=true)
       private final String recordsWritten;
 
-    public String getRecordsWritten() {
+    public String recordsWritten() {
         return this.recordsWritten;
     }
 
@@ -187,7 +187,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="shuffleOutputBytes", required=true)
       private final String shuffleOutputBytes;
 
-    public String getShuffleOutputBytes() {
+    public String shuffleOutputBytes() {
         return this.shuffleOutputBytes;
     }
 
@@ -198,7 +198,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="shuffleOutputBytesSpilled", required=true)
       private final String shuffleOutputBytesSpilled;
 
-    public String getShuffleOutputBytesSpilled() {
+    public String shuffleOutputBytesSpilled() {
         return this.shuffleOutputBytesSpilled;
     }
 
@@ -209,7 +209,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="slotMs", required=true)
       private final String slotMs;
 
-    public String getSlotMs() {
+    public String slotMs() {
         return this.slotMs;
     }
 
@@ -220,7 +220,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="startMs", required=true)
       private final String startMs;
 
-    public String getStartMs() {
+    public String startMs() {
         return this.startMs;
     }
 
@@ -231,7 +231,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -242,7 +242,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="steps", required=true)
       private final List<ExplainQueryStepResponse> steps;
 
-    public List<ExplainQueryStepResponse> getSteps() {
+    public List<ExplainQueryStepResponse> steps() {
         return this.steps;
     }
 
@@ -253,7 +253,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="waitMsAvg", required=true)
       private final String waitMsAvg;
 
-    public String getWaitMsAvg() {
+    public String waitMsAvg() {
         return this.waitMsAvg;
     }
 
@@ -264,7 +264,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="waitMsMax", required=true)
       private final String waitMsMax;
 
-    public String getWaitMsMax() {
+    public String waitMsMax() {
         return this.waitMsMax;
     }
 
@@ -275,7 +275,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="waitRatioAvg", required=true)
       private final Double waitRatioAvg;
 
-    public Double getWaitRatioAvg() {
+    public Double waitRatioAvg() {
         return this.waitRatioAvg;
     }
 
@@ -286,7 +286,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="waitRatioMax", required=true)
       private final Double waitRatioMax;
 
-    public Double getWaitRatioMax() {
+    public Double waitRatioMax() {
         return this.waitRatioMax;
     }
 
@@ -297,7 +297,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="writeMsAvg", required=true)
       private final String writeMsAvg;
 
-    public String getWriteMsAvg() {
+    public String writeMsAvg() {
         return this.writeMsAvg;
     }
 
@@ -308,7 +308,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="writeMsMax", required=true)
       private final String writeMsMax;
 
-    public String getWriteMsMax() {
+    public String writeMsMax() {
         return this.writeMsMax;
     }
 
@@ -319,7 +319,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="writeRatioAvg", required=true)
       private final Double writeRatioAvg;
 
-    public Double getWriteRatioAvg() {
+    public Double writeRatioAvg() {
         return this.writeRatioAvg;
     }
 
@@ -330,7 +330,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
     @Import(name="writeRatioMax", required=true)
       private final Double writeRatioMax;
 
-    public Double getWriteRatioMax() {
+    public Double writeRatioMax() {
         return this.writeRatioMax;
     }
 

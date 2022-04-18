@@ -71,49 +71,49 @@ public final class AutoscalarAutoscalingPolicyScalingSchedule {
      * An optional description of this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
      * 
     */
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
      * 
     */
-    public Integer getDurationSec() {
+    public Integer durationSec() {
         return this.durationSec;
     }
     /**
      * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
      * 
     */
-    public Integer getMinRequiredReplicas() {
+    public Integer minRequiredReplicas() {
         return this.minRequiredReplicas;
     }
     /**
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
      * 
     */
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
     /**
      * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

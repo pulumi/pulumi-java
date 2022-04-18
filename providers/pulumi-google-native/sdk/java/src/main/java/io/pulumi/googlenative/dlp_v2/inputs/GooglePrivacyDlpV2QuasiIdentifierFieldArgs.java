@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
     @Import(name="customTag")
       private final @Nullable Output<String> customTag;
 
-    public Output<String> getCustomTag() {
+    public Output<String> customTag() {
         return this.customTag == null ? Codegen.empty() : this.customTag;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 

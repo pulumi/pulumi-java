@@ -25,7 +25,7 @@ public final class ListStorageAccountKeysResult {
      * Gets the list of storage account keys and their properties for the specified storage account.
      * 
     */
-    public List<StorageAccountKeyResponse> getKeys() {
+    public List<StorageAccountKeyResponse> keys() {
         return this.keys;
     }
 

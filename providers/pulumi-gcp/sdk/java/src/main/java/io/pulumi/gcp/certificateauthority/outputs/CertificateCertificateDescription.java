@@ -51,19 +51,19 @@ public final class CertificateCertificateDescription {
         this.subjectKeyIds = subjectKeyIds;
     }
 
-    public List<String> getAiaIssuingCertificateUrls() {
+    public List<String> aiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls == null ? List.of() : this.aiaIssuingCertificateUrls;
     }
-    public List<CertificateCertificateDescriptionAuthorityKeyId> getAuthorityKeyIds() {
+    public List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds() {
         return this.authorityKeyIds == null ? List.of() : this.authorityKeyIds;
     }
-    public List<CertificateCertificateDescriptionCertFingerprint> getCertFingerprints() {
+    public List<CertificateCertificateDescriptionCertFingerprint> certFingerprints() {
         return this.certFingerprints == null ? List.of() : this.certFingerprints;
     }
-    public List<CertificateCertificateDescriptionConfigValue> getConfigValues() {
+    public List<CertificateCertificateDescriptionConfigValue> configValues() {
         return this.configValues == null ? List.of() : this.configValues;
     }
-    public List<String> getCrlDistributionPoints() {
+    public List<String> crlDistributionPoints() {
         return this.crlDistributionPoints == null ? List.of() : this.crlDistributionPoints;
     }
     /**
@@ -71,13 +71,13 @@ public final class CertificateCertificateDescription {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionPublicKey> getPublicKeys() {
+    public List<CertificateCertificateDescriptionPublicKey> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }
-    public List<CertificateCertificateDescriptionSubjectDescription> getSubjectDescriptions() {
+    public List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions() {
         return this.subjectDescriptions == null ? List.of() : this.subjectDescriptions;
     }
-    public List<CertificateCertificateDescriptionSubjectKeyId> getSubjectKeyIds() {
+    public List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds() {
         return this.subjectKeyIds == null ? List.of() : this.subjectKeyIds;
     }
 

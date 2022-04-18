@@ -19,21 +19,21 @@ public final class GroupInitialLifecycleHookArgs extends io.pulumi.resources.Res
     @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
-    public Output<String> getDefaultResult() {
+    public Output<String> defaultResult() {
         return this.defaultResult == null ? Codegen.empty() : this.defaultResult;
     }
 
     @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
-    public Output<Integer> getHeartbeatTimeout() {
+    public Output<Integer> heartbeatTimeout() {
         return this.heartbeatTimeout == null ? Codegen.empty() : this.heartbeatTimeout;
     }
 
     @Import(name="lifecycleTransition", required=true)
       private final Output<String> lifecycleTransition;
 
-    public Output<String> getLifecycleTransition() {
+    public Output<String> lifecycleTransition() {
         return this.lifecycleTransition;
     }
 
@@ -44,28 +44,28 @@ public final class GroupInitialLifecycleHookArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
-    public Output<String> getNotificationMetadata() {
+    public Output<String> notificationMetadata() {
         return this.notificationMetadata == null ? Codegen.empty() : this.notificationMetadata;
     }
 
     @Import(name="notificationTargetArn")
       private final @Nullable Output<String> notificationTargetArn;
 
-    public Output<String> getNotificationTargetArn() {
+    public Output<String> notificationTargetArn() {
         return this.notificationTargetArn == null ? Codegen.empty() : this.notificationTargetArn;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

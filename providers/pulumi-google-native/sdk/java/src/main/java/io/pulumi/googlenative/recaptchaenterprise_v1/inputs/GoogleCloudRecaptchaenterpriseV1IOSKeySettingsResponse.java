@@ -25,7 +25,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     @Import(name="allowAllBundleIds", required=true)
       private final Boolean allowAllBundleIds;
 
-    public Boolean getAllowAllBundleIds() {
+    public Boolean allowAllBundleIds() {
         return this.allowAllBundleIds;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     @Import(name="allowedBundleIds", required=true)
       private final List<String> allowedBundleIds;
 
-    public List<String> getAllowedBundleIds() {
+    public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
 

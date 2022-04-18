@@ -24,7 +24,7 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

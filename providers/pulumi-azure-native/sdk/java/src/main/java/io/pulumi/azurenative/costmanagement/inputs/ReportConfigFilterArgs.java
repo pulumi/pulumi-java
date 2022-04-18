@@ -27,7 +27,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="and")
       private final @Nullable Output<List<ReportConfigFilterArgs>> and;
 
-    public Output<List<ReportConfigFilterArgs>> getAnd() {
+    public Output<List<ReportConfigFilterArgs>> and() {
         return this.and == null ? Codegen.empty() : this.and;
     }
 
@@ -38,7 +38,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dimensions")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
 
-    public Output<ReportConfigComparisonExpressionArgs> getDimensions() {
+    public Output<ReportConfigComparisonExpressionArgs> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -49,7 +49,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="or")
       private final @Nullable Output<List<ReportConfigFilterArgs>> or;
 
-    public Output<List<ReportConfigFilterArgs>> getOr() {
+    public Output<List<ReportConfigFilterArgs>> or() {
         return this.or == null ? Codegen.empty() : this.or;
     }
 
@@ -60,7 +60,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tagKey")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
 
-    public Output<ReportConfigComparisonExpressionArgs> getTagKey() {
+    public Output<ReportConfigComparisonExpressionArgs> tagKey() {
         return this.tagKey == null ? Codegen.empty() : this.tagKey;
     }
 
@@ -71,7 +71,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tagValue")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
 
-    public Output<ReportConfigComparisonExpressionArgs> getTagValue() {
+    public Output<ReportConfigComparisonExpressionArgs> tagValue() {
         return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 
@@ -82,7 +82,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tags;
 
-    public Output<ReportConfigComparisonExpressionArgs> getTags() {
+    public Output<ReportConfigComparisonExpressionArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

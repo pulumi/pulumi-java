@@ -27,7 +27,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="caBundle")
       private final @Nullable Output<String> caBundle;
 
-    public Output<String> getCaBundle() {
+    public Output<String> caBundle() {
         return this.caBundle == null ? Codegen.empty() : this.caBundle;
     }
 
@@ -40,7 +40,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="service")
       private final @Nullable Output<ServiceReferenceArgs> service;
 
-    public Output<ServiceReferenceArgs> getService() {
+    public Output<ServiceReferenceArgs> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -61,7 +61,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

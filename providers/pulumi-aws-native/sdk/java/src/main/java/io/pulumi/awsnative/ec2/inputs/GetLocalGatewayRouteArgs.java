@@ -19,7 +19,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
     @Import(name="destinationCidrBlock", required=true)
       private final String destinationCidrBlock;
 
-    public String getDestinationCidrBlock() {
+    public String destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -30,7 +30,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
     @Import(name="localGatewayRouteTableId", required=true)
       private final String localGatewayRouteTableId;
 
-    public String getLocalGatewayRouteTableId() {
+    public String localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
 

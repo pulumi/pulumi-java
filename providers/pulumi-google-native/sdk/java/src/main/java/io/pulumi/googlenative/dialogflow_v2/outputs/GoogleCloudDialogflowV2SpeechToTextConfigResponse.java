@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigResponse {
      * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is specified and an enhanced version of the specified model for the language does not exist, then it would emit an error.
      * 
     */
-    public String getSpeechModelVariant() {
+    public String speechModelVariant() {
         return this.speechModelVariant;
     }
 

@@ -50,28 +50,28 @@ public final class ApplicationScopedVolumeResponse {
      * Describes parameters for creating application-scoped volumes.
      * 
     */
-    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse getCreationParameters() {
+    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters() {
         return this.creationParameters;
     }
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
     */
-    public String getDestinationPath() {
+    public String destinationPath() {
         return this.destinationPath;
     }
     /**
      * Name of the volume being referenced.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
 

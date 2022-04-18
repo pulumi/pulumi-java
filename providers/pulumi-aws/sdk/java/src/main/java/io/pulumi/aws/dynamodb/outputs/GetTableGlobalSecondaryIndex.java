@@ -41,29 +41,29 @@ public final class GetTableGlobalSecondaryIndex {
         this.writeCapacity = writeCapacity;
     }
 
-    public String getHashKey() {
+    public String hashKey() {
         return this.hashKey;
     }
     /**
      * The name of the DynamoDB table.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getNonKeyAttributes() {
+    public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes;
     }
-    public String getProjectionType() {
+    public String projectionType() {
         return this.projectionType;
     }
-    public String getRangeKey() {
+    public String rangeKey() {
         return this.rangeKey;
     }
-    public Integer getReadCapacity() {
+    public Integer readCapacity() {
         return this.readCapacity;
     }
-    public Integer getWriteCapacity() {
+    public Integer writeCapacity() {
         return this.writeCapacity;
     }
 

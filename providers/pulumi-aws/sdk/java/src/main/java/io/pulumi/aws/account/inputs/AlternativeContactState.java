@@ -22,7 +22,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="alternateContactType")
       private final @Nullable Output<String> alternateContactType;
 
-    public Output<String> getAlternateContactType() {
+    public Output<String> alternateContactType() {
         return this.alternateContactType == null ? Codegen.empty() : this.alternateContactType;
     }
 
@@ -44,7 +44,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
@@ -55,7 +55,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="phoneNumber")
       private final @Nullable Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
     }
 
@@ -77,7 +77,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

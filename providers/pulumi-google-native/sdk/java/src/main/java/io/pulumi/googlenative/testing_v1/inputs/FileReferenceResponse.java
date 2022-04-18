@@ -23,7 +23,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gcsPath", required=true)
       private final String gcsPath;
 
-    public String getGcsPath() {
+    public String gcsPath() {
         return this.gcsPath;
     }
 

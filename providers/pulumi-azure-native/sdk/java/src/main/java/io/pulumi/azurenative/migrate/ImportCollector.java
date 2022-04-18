@@ -34,25 +34,25 @@ public class ImportCollector extends io.pulumi.resources.CustomResource {
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ImportCollectorPropertiesResponse.class, parameters={})
     private Output<ImportCollectorPropertiesResponse> properties;
 
-    public Output<ImportCollectorPropertiesResponse> getProperties() {
+    public Output<ImportCollectorPropertiesResponse> properties() {
         return this.properties;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

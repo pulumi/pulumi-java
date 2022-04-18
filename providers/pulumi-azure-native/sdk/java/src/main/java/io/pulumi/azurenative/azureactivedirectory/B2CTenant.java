@@ -44,7 +44,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return The billing configuration for the tenant.
      * 
      */
-    public Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> getBillingConfig() {
+    public Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> billingConfig() {
         return this.billingConfig;
     }
     /**
@@ -58,7 +58,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return The name of the B2C tenant resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
      * 
      */
-    public Output<B2CResourceSKUResponse> getSku() {
+    public Output<B2CResourceSKUResponse> sku() {
         return this.sku;
     }
     /**
@@ -100,7 +100,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return An identifier of the B2C tenant.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -128,7 +128,7 @@ public class B2CTenant extends io.pulumi.resources.CustomResource {
      * @return The type of the B2C tenant resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

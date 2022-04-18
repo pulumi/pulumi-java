@@ -27,7 +27,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clientTlsPolicy")
       private final @Nullable Output<String> clientTlsPolicy;
 
-    public Output<String> getClientTlsPolicy() {
+    public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy == null ? Codegen.empty() : this.clientTlsPolicy;
     }
 
@@ -38,7 +38,7 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subjectAltNames")
       private final @Nullable Output<List<String>> subjectAltNames;
 
-    public Output<List<String>> getSubjectAltNames() {
+    public Output<List<String>> subjectAltNames() {
         return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
     }
 

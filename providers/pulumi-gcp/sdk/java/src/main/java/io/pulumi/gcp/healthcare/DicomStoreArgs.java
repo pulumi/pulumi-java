@@ -27,7 +27,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -45,7 +45,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -57,7 +57,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
 
-    public Output<DicomStoreNotificationConfigArgs> getNotificationConfig() {
+    public Output<DicomStoreNotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -82,7 +82,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
       private final @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
-    public Output<List<DicomStoreStreamConfigArgs>> getStreamConfigs() {
+    public Output<List<DicomStoreStreamConfigArgs>> streamConfigs() {
         return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 

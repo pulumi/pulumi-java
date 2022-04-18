@@ -93,7 +93,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * check is performed will be used.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
@@ -102,7 +102,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
@@ -110,7 +110,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * port_name are defined, port takes precedence.
      * 
     */
-    public Optional<String> getPortName() {
+    public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
     /**
@@ -127,7 +127,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
     */
-    public Optional<String> getPortSpecification() {
+    public Optional<String> portSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
     /**
@@ -137,7 +137,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * Possible values are `NONE` and `PROXY_V1`.
      * 
     */
-    public Optional<String> getProxyHeader() {
+    public Optional<String> proxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
     /**
@@ -145,7 +145,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * The default value is /.
      * 
     */
-    public Optional<String> getRequestPath() {
+    public Optional<String> requestPath() {
         return Optional.ofNullable(this.requestPath);
     }
     /**
@@ -154,7 +154,7 @@ public final class RegionHealthCheckHttp2HealthCheck {
      * can only be ASCII.
      * 
     */
-    public Optional<String> getResponse() {
+    public Optional<String> response() {
         return Optional.ofNullable(this.response);
     }
 

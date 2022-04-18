@@ -22,35 +22,35 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     @Import(name="marketo")
       private final @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
 
-    public Output<IntegrationMarketoConnectorOperator> getMarketo() {
+    public Output<IntegrationMarketoConnectorOperator> marketo() {
         return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<IntegrationS3ConnectorOperator> s3;
 
-    public Output<IntegrationS3ConnectorOperator> getS3() {
+    public Output<IntegrationS3ConnectorOperator> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
 
-    public Output<IntegrationSalesforceConnectorOperator> getSalesforce() {
+    public Output<IntegrationSalesforceConnectorOperator> salesforce() {
         return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
 
-    public Output<IntegrationServiceNowConnectorOperator> getServiceNow() {
+    public Output<IntegrationServiceNowConnectorOperator> serviceNow() {
         return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
 
-    public Output<IntegrationZendeskConnectorOperator> getZendesk() {
+    public Output<IntegrationZendeskConnectorOperator> zendesk() {
         return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 

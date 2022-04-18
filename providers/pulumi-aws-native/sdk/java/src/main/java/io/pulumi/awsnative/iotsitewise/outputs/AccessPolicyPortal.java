@@ -26,7 +26,7 @@ public final class AccessPolicyPortal {
      * The ID of the portal.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

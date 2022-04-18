@@ -15,21 +15,21 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="apicategoryId", required=true)
       private final String apicategoryId;
 
-    public String getApicategoryId() {
+    public String apicategoryId() {
         return this.apicategoryId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 

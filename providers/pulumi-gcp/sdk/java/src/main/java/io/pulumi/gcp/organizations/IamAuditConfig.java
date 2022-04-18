@@ -42,7 +42,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
@@ -56,7 +56,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The etag of iam policy
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +70,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -84,7 +84,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

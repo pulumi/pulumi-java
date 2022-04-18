@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     @Import(name="estimatedProbability", required=true)
       private final Double estimatedProbability;
 
-    public Double getEstimatedProbability() {
+    public Double estimatedProbability() {
         return this.estimatedProbability;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 

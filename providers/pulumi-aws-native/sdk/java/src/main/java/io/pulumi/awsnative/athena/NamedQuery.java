@@ -31,7 +31,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The database to which the query belongs.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -45,7 +45,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The query description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The query name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The unique ID of the query.
      * 
      */
-    public Output<String> getNamedQueryId() {
+    public Output<String> namedQueryId() {
         return this.namedQueryId;
     }
     /**
@@ -87,7 +87,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The contents of the query with all query statements.
      * 
      */
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
     /**
@@ -101,7 +101,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @return The name of the workgroup that contains the named query.
      * 
      */
-    public Output</* @Nullable */ String> getWorkGroup() {
+    public Output</* @Nullable */ String> workGroup() {
         return this.workGroup;
     }
 

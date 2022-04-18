@@ -23,7 +23,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     @Import(name="blockDurationMinutes")
       private final @Nullable Output<Integer> blockDurationMinutes;
 
-    public Output<Integer> getBlockDurationMinutes() {
+    public Output<Integer> blockDurationMinutes() {
         return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
     }
 
@@ -35,7 +35,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
-    public Output<String> getInstanceInterruptionBehavior() {
+    public Output<String> instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
@@ -46,7 +46,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     @Import(name="maxPrice")
       private final @Nullable Output<String> maxPrice;
 
-    public Output<String> getMaxPrice() {
+    public Output<String> maxPrice() {
         return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
@@ -57,7 +57,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     @Import(name="spotInstanceType")
       private final @Nullable Output<String> spotInstanceType;
 
-    public Output<String> getSpotInstanceType() {
+    public Output<String> spotInstanceType() {
         return this.spotInstanceType == null ? Codegen.empty() : this.spotInstanceType;
     }
 
@@ -68,7 +68,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
+    public Output<String> validUntil() {
         return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 

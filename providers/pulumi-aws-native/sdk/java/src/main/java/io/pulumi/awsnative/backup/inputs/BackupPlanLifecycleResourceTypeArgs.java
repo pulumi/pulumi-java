@@ -18,14 +18,14 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
     @Import(name="deleteAfterDays")
       private final @Nullable Output<Double> deleteAfterDays;
 
-    public Output<Double> getDeleteAfterDays() {
+    public Output<Double> deleteAfterDays() {
         return this.deleteAfterDays == null ? Codegen.empty() : this.deleteAfterDays;
     }
 
     @Import(name="moveToColdStorageAfterDays")
       private final @Nullable Output<Double> moveToColdStorageAfterDays;
 
-    public Output<Double> getMoveToColdStorageAfterDays() {
+    public Output<Double> moveToColdStorageAfterDays() {
         return this.moveToColdStorageAfterDays == null ? Codegen.empty() : this.moveToColdStorageAfterDays;
     }
 

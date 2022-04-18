@@ -27,7 +27,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="credentials")
       private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
-    public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<MediaGraphUsernamePasswordCredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -39,7 +39,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -50,7 +50,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

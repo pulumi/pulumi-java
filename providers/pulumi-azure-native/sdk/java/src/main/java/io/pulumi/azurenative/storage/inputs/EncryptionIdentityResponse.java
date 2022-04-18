@@ -25,7 +25,7 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
     @Import(name="encryptionUserAssignedIdentity")
       private final @Nullable String encryptionUserAssignedIdentity;
 
-    public Optional<String> getEncryptionUserAssignedIdentity() {
+    public Optional<String> encryptionUserAssignedIdentity() {
         return this.encryptionUserAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
 

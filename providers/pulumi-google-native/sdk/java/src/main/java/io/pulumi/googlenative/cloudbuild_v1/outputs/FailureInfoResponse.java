@@ -32,14 +32,14 @@ public final class FailureInfoResponse {
      * Explains the failure issue in more detail using hard-coded text.
      * 
     */
-    public String getDetail() {
+    public String detail() {
         return this.detail;
     }
     /**
      * The name of the failure.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -74,7 +74,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -90,7 +90,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ BucketIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -104,7 +104,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -138,7 +138,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * * **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
      * 
      */
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -156,7 +156,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

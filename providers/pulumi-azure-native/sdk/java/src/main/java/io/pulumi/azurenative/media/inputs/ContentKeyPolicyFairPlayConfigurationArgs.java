@@ -30,7 +30,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="ask", required=true)
       private final Output<String> ask;
 
-    public Output<String> getAsk() {
+    public Output<String> ask() {
         return this.ask;
     }
 
@@ -41,7 +41,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="fairPlayPfx", required=true)
       private final Output<String> fairPlayPfx;
 
-    public Output<String> getFairPlayPfx() {
+    public Output<String> fairPlayPfx() {
         return this.fairPlayPfx;
     }
 
@@ -52,7 +52,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="fairPlayPfxPassword", required=true)
       private final Output<String> fairPlayPfxPassword;
 
-    public Output<String> getFairPlayPfxPassword() {
+    public Output<String> fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
 
@@ -64,7 +64,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -75,7 +75,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="offlineRentalConfiguration")
       private final @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
 
-    public Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> getOfflineRentalConfiguration() {
+    public Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration() {
         return this.offlineRentalConfiguration == null ? Codegen.empty() : this.offlineRentalConfiguration;
     }
 
@@ -86,7 +86,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="rentalAndLeaseKeyType", required=true)
       private final Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType;
 
-    public Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> getRentalAndLeaseKeyType() {
+    public Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
 
@@ -97,7 +97,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     @Import(name="rentalDuration", required=true)
       private final Output<Double> rentalDuration;
 
-    public Output<Double> getRentalDuration() {
+    public Output<Double> rentalDuration() {
         return this.rentalDuration;
     }
 

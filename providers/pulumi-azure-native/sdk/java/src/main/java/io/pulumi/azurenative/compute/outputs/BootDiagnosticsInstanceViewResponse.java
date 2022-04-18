@@ -40,21 +40,21 @@ public final class BootDiagnosticsInstanceViewResponse {
      * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
     */
-    public String getConsoleScreenshotBlobUri() {
+    public String consoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
     }
     /**
      * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
     */
-    public String getSerialConsoleLogBlobUri() {
+    public String serialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
     }
     /**
      * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
      * 
     */
-    public InstanceViewStatusResponse getStatus() {
+    public InstanceViewStatusResponse status() {
         return this.status;
     }
 

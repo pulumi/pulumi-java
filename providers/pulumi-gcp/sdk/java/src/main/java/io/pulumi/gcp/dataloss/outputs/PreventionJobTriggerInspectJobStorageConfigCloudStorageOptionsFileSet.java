@@ -41,7 +41,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet> getRegexFileSet() {
+    public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet> regexFileSet() {
         return Optional.ofNullable(this.regexFileSet);
     }
     /**
@@ -52,7 +52,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

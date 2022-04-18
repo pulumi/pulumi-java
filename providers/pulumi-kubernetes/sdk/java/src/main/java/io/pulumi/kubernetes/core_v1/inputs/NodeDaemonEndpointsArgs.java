@@ -26,7 +26,7 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
     @Import(name="kubeletEndpoint")
       private final @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
 
-    public Output<DaemonEndpointArgs> getKubeletEndpoint() {
+    public Output<DaemonEndpointArgs> kubeletEndpoint() {
         return this.kubeletEndpoint == null ? Codegen.empty() : this.kubeletEndpoint;
     }
 

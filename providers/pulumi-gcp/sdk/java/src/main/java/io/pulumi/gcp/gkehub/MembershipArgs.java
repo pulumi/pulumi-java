@@ -28,7 +28,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authority")
       private final @Nullable Output<MembershipAuthorityArgs> authority;
 
-    public Output<MembershipAuthorityArgs> getAuthority() {
+    public Output<MembershipAuthorityArgs> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -44,7 +44,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<MembershipEndpointArgs> endpoint;
 
-    public Output<MembershipEndpointArgs> getEndpoint() {
+    public Output<MembershipEndpointArgs> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -67,7 +67,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -78,7 +78,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membershipId", required=true)
       private final Output<String> membershipId;
 
-    public Output<String> getMembershipId() {
+    public Output<String> membershipId() {
         return this.membershipId;
     }
 
@@ -90,7 +90,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -22,10 +22,10 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
         this.realmsSelectors = realmsSelectors;
     }
 
-    public String getConfigVersion() {
+    public String configVersion() {
         return this.configVersion;
     }
-    public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> getRealmsSelectors() {
+    public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors() {
         return this.realmsSelectors;
     }
 

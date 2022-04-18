@@ -42,7 +42,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return Gets the uri of attestation service
      * 
      */
-    public Output</* @Nullable */ String> getAttestUri() {
+    public Output</* @Nullable */ String> attestUri() {
         return this.attestUri;
     }
     /**
@@ -56,7 +56,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -70,7 +70,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connections associated with the attestation provider.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -98,7 +98,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return Status of attestation service.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -112,7 +112,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -126,7 +126,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +140,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return Trust model for the attestation provider.
      * 
      */
-    public Output</* @Nullable */ String> getTrustModel() {
+    public Output</* @Nullable */ String> trustModel() {
         return this.trustModel;
     }
     /**
@@ -154,7 +154,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

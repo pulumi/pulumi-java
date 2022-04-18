@@ -19,7 +19,7 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
 
-    public Output<FhirStoreIamMemberConditionArgs> getCondition() {
+    public Output<FhirStoreIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -33,14 +33,14 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fhirStoreId", required=true)
       private final Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -53,7 +53,7 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

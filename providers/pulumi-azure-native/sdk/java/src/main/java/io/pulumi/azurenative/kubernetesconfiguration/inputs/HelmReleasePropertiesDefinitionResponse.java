@@ -22,7 +22,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     @Import(name="failureCount")
       private final @Nullable Double failureCount;
 
-    public Optional<Double> getFailureCount() {
+    public Optional<Double> failureCount() {
         return this.failureCount == null ? Optional.empty() : Optional.ofNullable(this.failureCount);
     }
 
@@ -33,7 +33,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     @Import(name="helmChartRef")
       private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
-    public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
+    public Optional<ObjectReferenceDefinitionResponse> helmChartRef() {
         return this.helmChartRef == null ? Optional.empty() : Optional.ofNullable(this.helmChartRef);
     }
 
@@ -44,7 +44,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     @Import(name="installFailureCount")
       private final @Nullable Double installFailureCount;
 
-    public Optional<Double> getInstallFailureCount() {
+    public Optional<Double> installFailureCount() {
         return this.installFailureCount == null ? Optional.empty() : Optional.ofNullable(this.installFailureCount);
     }
 
@@ -55,7 +55,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     @Import(name="lastRevisionApplied")
       private final @Nullable Double lastRevisionApplied;
 
-    public Optional<Double> getLastRevisionApplied() {
+    public Optional<Double> lastRevisionApplied() {
         return this.lastRevisionApplied == null ? Optional.empty() : Optional.ofNullable(this.lastRevisionApplied);
     }
 
@@ -66,7 +66,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     @Import(name="upgradeFailureCount")
       private final @Nullable Double upgradeFailureCount;
 
-    public Optional<Double> getUpgradeFailureCount() {
+    public Optional<Double> upgradeFailureCount() {
         return this.upgradeFailureCount == null ? Optional.empty() : Optional.ofNullable(this.upgradeFailureCount);
     }
 

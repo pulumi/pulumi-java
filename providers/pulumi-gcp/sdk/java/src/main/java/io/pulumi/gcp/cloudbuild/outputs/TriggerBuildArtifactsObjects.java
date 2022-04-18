@@ -49,14 +49,14 @@ public final class TriggerBuildArtifactsObjects {
      * this location as a prefix.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Path globs used to match files in the build's workspace.
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
@@ -65,7 +65,7 @@ public final class TriggerBuildArtifactsObjects {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildArtifactsObjectsTiming> getTimings() {
+    public List<TriggerBuildArtifactsObjectsTiming> timings() {
         return this.timings == null ? List.of() : this.timings;
     }
 

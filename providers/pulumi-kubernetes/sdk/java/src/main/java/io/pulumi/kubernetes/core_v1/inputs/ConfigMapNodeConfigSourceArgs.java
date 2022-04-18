@@ -26,7 +26,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     @Import(name="kubeletConfigKey", required=true)
       private final Output<String> kubeletConfigKey;
 
-    public Output<String> getKubeletConfigKey() {
+    public Output<String> kubeletConfigKey() {
         return this.kubeletConfigKey;
     }
 
@@ -37,7 +37,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -59,7 +59,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -70,7 +70,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

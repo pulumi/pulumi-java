@@ -28,7 +28,7 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<List<WeightedPodAffinityTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
+    public Output<List<WeightedPodAffinityTermArgs>> preferredDuringSchedulingIgnoredDuringExecution() {
         return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
     }
 
@@ -39,7 +39,7 @@ public final class PodAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<List<PodAffinityTermArgs>> getRequiredDuringSchedulingIgnoredDuringExecution() {
+    public Output<List<PodAffinityTermArgs>> requiredDuringSchedulingIgnoredDuringExecution() {
         return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
     }
 

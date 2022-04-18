@@ -28,7 +28,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="default")
       private final @Nullable Output<String> default_;
 
-    public Output<String> getDefault_() {
+    public Output<String> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -39,7 +39,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 

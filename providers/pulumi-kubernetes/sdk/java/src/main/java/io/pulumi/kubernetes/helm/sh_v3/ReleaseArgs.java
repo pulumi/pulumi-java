@@ -29,7 +29,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atomic")
       private final @Nullable Output<Boolean> atomic;
 
-    public Output<Boolean> getAtomic() {
+    public Output<Boolean> atomic() {
         return this.atomic == null ? Codegen.empty() : this.atomic;
     }
 
@@ -40,7 +40,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chart", required=true)
       private final Output<String> chart;
 
-    public Output<String> getChart() {
+    public Output<String> chart() {
         return this.chart;
     }
 
@@ -51,14 +51,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cleanupOnFail")
       private final @Nullable Output<Boolean> cleanupOnFail;
 
-    public Output<Boolean> getCleanupOnFail() {
+    public Output<Boolean> cleanupOnFail() {
         return this.cleanupOnFail == null ? Codegen.empty() : this.cleanupOnFail;
     }
 
     @Import(name="compat")
       private final @Nullable Output<String> compat;
 
-    public Output<String> getCompat() {
+    public Output<String> compat() {
         return this.compat == null ? Codegen.empty() : this.compat;
     }
 
@@ -69,7 +69,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createNamespace")
       private final @Nullable Output<Boolean> createNamespace;
 
-    public Output<Boolean> getCreateNamespace() {
+    public Output<Boolean> createNamespace() {
         return this.createNamespace == null ? Codegen.empty() : this.createNamespace;
     }
 
@@ -80,7 +80,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependencyUpdate")
       private final @Nullable Output<Boolean> dependencyUpdate;
 
-    public Output<Boolean> getDependencyUpdate() {
+    public Output<Boolean> dependencyUpdate() {
         return this.dependencyUpdate == null ? Codegen.empty() : this.dependencyUpdate;
     }
 
@@ -91,7 +91,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -102,7 +102,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="devel")
       private final @Nullable Output<Boolean> devel;
 
-    public Output<Boolean> getDevel() {
+    public Output<Boolean> devel() {
         return this.devel == null ? Codegen.empty() : this.devel;
     }
 
@@ -113,7 +113,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableCRDHooks")
       private final @Nullable Output<Boolean> disableCRDHooks;
 
-    public Output<Boolean> getDisableCRDHooks() {
+    public Output<Boolean> disableCRDHooks() {
         return this.disableCRDHooks == null ? Codegen.empty() : this.disableCRDHooks;
     }
 
@@ -124,7 +124,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableOpenapiValidation")
       private final @Nullable Output<Boolean> disableOpenapiValidation;
 
-    public Output<Boolean> getDisableOpenapiValidation() {
+    public Output<Boolean> disableOpenapiValidation() {
         return this.disableOpenapiValidation == null ? Codegen.empty() : this.disableOpenapiValidation;
     }
 
@@ -135,7 +135,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableWebhooks")
       private final @Nullable Output<Boolean> disableWebhooks;
 
-    public Output<Boolean> getDisableWebhooks() {
+    public Output<Boolean> disableWebhooks() {
         return this.disableWebhooks == null ? Codegen.empty() : this.disableWebhooks;
     }
 
@@ -146,7 +146,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdate")
       private final @Nullable Output<Boolean> forceUpdate;
 
-    public Output<Boolean> getForceUpdate() {
+    public Output<Boolean> forceUpdate() {
         return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 
@@ -157,7 +157,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyring")
       private final @Nullable Output<String> keyring;
 
-    public Output<String> getKeyring() {
+    public Output<String> keyring() {
         return this.keyring == null ? Codegen.empty() : this.keyring;
     }
 
@@ -168,7 +168,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lint")
       private final @Nullable Output<Boolean> lint;
 
-    public Output<Boolean> getLint() {
+    public Output<Boolean> lint() {
         return this.lint == null ? Codegen.empty() : this.lint;
     }
 
@@ -179,7 +179,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifest")
       private final @Nullable Output<Map<String,Object>> manifest;
 
-    public Output<Map<String,Object>> getManifest() {
+    public Output<Map<String,Object>> manifest() {
         return this.manifest == null ? Codegen.empty() : this.manifest;
     }
 
@@ -190,7 +190,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxHistory")
       private final @Nullable Output<Integer> maxHistory;
 
-    public Output<Integer> getMaxHistory() {
+    public Output<Integer> maxHistory() {
         return this.maxHistory == null ? Codegen.empty() : this.maxHistory;
     }
 
@@ -201,7 +201,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -212,7 +212,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -223,7 +223,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postrender")
       private final @Nullable Output<String> postrender;
 
-    public Output<String> getPostrender() {
+    public Output<String> postrender() {
         return this.postrender == null ? Codegen.empty() : this.postrender;
     }
 
@@ -234,7 +234,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recreatePods")
       private final @Nullable Output<Boolean> recreatePods;
 
-    public Output<Boolean> getRecreatePods() {
+    public Output<Boolean> recreatePods() {
         return this.recreatePods == null ? Codegen.empty() : this.recreatePods;
     }
 
@@ -245,7 +245,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="renderSubchartNotes")
       private final @Nullable Output<Boolean> renderSubchartNotes;
 
-    public Output<Boolean> getRenderSubchartNotes() {
+    public Output<Boolean> renderSubchartNotes() {
         return this.renderSubchartNotes == null ? Codegen.empty() : this.renderSubchartNotes;
     }
 
@@ -256,7 +256,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> getReplace() {
+    public Output<Boolean> replace() {
         return this.replace == null ? Codegen.empty() : this.replace;
     }
 
@@ -267,7 +267,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryOpts")
       private final @Nullable Output<RepositoryOptsArgs> repositoryOpts;
 
-    public Output<RepositoryOptsArgs> getRepositoryOpts() {
+    public Output<RepositoryOptsArgs> repositoryOpts() {
         return this.repositoryOpts == null ? Codegen.empty() : this.repositoryOpts;
     }
 
@@ -278,7 +278,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resetValues")
       private final @Nullable Output<Boolean> resetValues;
 
-    public Output<Boolean> getResetValues() {
+    public Output<Boolean> resetValues() {
         return this.resetValues == null ? Codegen.empty() : this.resetValues;
     }
 
@@ -289,7 +289,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
       private final @Nullable Output<Map<String,List<String>>> resourceNames;
 
-    public Output<Map<String,List<String>>> getResourceNames() {
+    public Output<Map<String,List<String>>> resourceNames() {
         return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
     }
 
@@ -300,7 +300,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reuseValues")
       private final @Nullable Output<Boolean> reuseValues;
 
-    public Output<Boolean> getReuseValues() {
+    public Output<Boolean> reuseValues() {
         return this.reuseValues == null ? Codegen.empty() : this.reuseValues;
     }
 
@@ -311,7 +311,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipAwait")
       private final @Nullable Output<Boolean> skipAwait;
 
-    public Output<Boolean> getSkipAwait() {
+    public Output<Boolean> skipAwait() {
         return this.skipAwait == null ? Codegen.empty() : this.skipAwait;
     }
 
@@ -322,7 +322,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipCrds")
       private final @Nullable Output<Boolean> skipCrds;
 
-    public Output<Boolean> getSkipCrds() {
+    public Output<Boolean> skipCrds() {
         return this.skipCrds == null ? Codegen.empty() : this.skipCrds;
     }
 
@@ -333,7 +333,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -344,7 +344,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="valueYamlFiles")
       private final @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
 
-    public Output<List<AssetOrArchive>> getValueYamlFiles() {
+    public Output<List<AssetOrArchive>> valueYamlFiles() {
         return this.valueYamlFiles == null ? Codegen.empty() : this.valueYamlFiles;
     }
 
@@ -355,7 +355,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<Map<String,Object>> values;
 
-    public Output<Map<String,Object>> getValues() {
+    public Output<Map<String,Object>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 
@@ -366,7 +366,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verify")
       private final @Nullable Output<Boolean> verify;
 
-    public Output<Boolean> getVerify() {
+    public Output<Boolean> verify() {
         return this.verify == null ? Codegen.empty() : this.verify;
     }
 
@@ -377,7 +377,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -388,7 +388,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForJobs")
       private final @Nullable Output<Boolean> waitForJobs;
 
-    public Output<Boolean> getWaitForJobs() {
+    public Output<Boolean> waitForJobs() {
         return this.waitForJobs == null ? Codegen.empty() : this.waitForJobs;
     }
 

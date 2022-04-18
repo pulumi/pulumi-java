@@ -25,7 +25,7 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationArgs extends io.pulu
     @Import(name="predictiveMethod")
       private final @Nullable Output<String> predictiveMethod;
 
-    public Output<String> getPredictiveMethod() {
+    public Output<String> predictiveMethod() {
         return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationArgs extends io.pulu
     @Import(name="target", required=true)
       private final Output<Double> target;
 
-    public Output<Double> getTarget() {
+    public Output<Double> target() {
         return this.target;
     }
 

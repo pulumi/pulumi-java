@@ -23,7 +23,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     @Import(name="day")
       private final @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
-    public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> getDay() {
+    public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -34,7 +34,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

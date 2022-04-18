@@ -24,63 +24,63 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     @Import(name="earlyStop")
       private final @Nullable Output<Boolean> earlyStop;
 
-    public Output<Boolean> getEarlyStop() {
+    public Output<Boolean> earlyStop() {
         return this.earlyStop == null ? Codegen.empty() : this.earlyStop;
     }
 
     @Import(name="l1Reg")
       private final @Nullable Output<Double> l1Reg;
 
-    public Output<Double> getL1Reg() {
+    public Output<Double> l1Reg() {
         return this.l1Reg == null ? Codegen.empty() : this.l1Reg;
     }
 
     @Import(name="l2Reg")
       private final @Nullable Output<Double> l2Reg;
 
-    public Output<Double> getL2Reg() {
+    public Output<Double> l2Reg() {
         return this.l2Reg == null ? Codegen.empty() : this.l2Reg;
     }
 
     @Import(name="learnRate")
       private final @Nullable Output<Double> learnRate;
 
-    public Output<Double> getLearnRate() {
+    public Output<Double> learnRate() {
         return this.learnRate == null ? Codegen.empty() : this.learnRate;
     }
 
     @Import(name="learnRateStrategy")
       private final @Nullable Output<String> learnRateStrategy;
 
-    public Output<String> getLearnRateStrategy() {
+    public Output<String> learnRateStrategy() {
         return this.learnRateStrategy == null ? Codegen.empty() : this.learnRateStrategy;
     }
 
     @Import(name="lineSearchInitLearnRate")
       private final @Nullable Output<Double> lineSearchInitLearnRate;
 
-    public Output<Double> getLineSearchInitLearnRate() {
+    public Output<Double> lineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate == null ? Codegen.empty() : this.lineSearchInitLearnRate;
     }
 
     @Import(name="maxIteration")
       private final @Nullable Output<String> maxIteration;
 
-    public Output<String> getMaxIteration() {
+    public Output<String> maxIteration() {
         return this.maxIteration == null ? Codegen.empty() : this.maxIteration;
     }
 
     @Import(name="minRelProgress")
       private final @Nullable Output<Double> minRelProgress;
 
-    public Output<Double> getMinRelProgress() {
+    public Output<Double> minRelProgress() {
         return this.minRelProgress == null ? Codegen.empty() : this.minRelProgress;
     }
 
     @Import(name="warmStart")
       private final @Nullable Output<Boolean> warmStart;
 
-    public Output<Boolean> getWarmStart() {
+    public Output<Boolean> warmStart() {
         return this.warmStart == null ? Codegen.empty() : this.warmStart;
     }
 

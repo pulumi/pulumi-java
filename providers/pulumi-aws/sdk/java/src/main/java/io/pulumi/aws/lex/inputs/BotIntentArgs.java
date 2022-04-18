@@ -21,7 +21,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intentName", required=true)
       private final Output<String> intentName;
 
-    public Output<String> getIntentName() {
+    public Output<String> intentName() {
         return this.intentName;
     }
 
@@ -32,7 +32,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intentVersion", required=true)
       private final Output<String> intentVersion;
 
-    public Output<String> getIntentVersion() {
+    public Output<String> intentVersion() {
         return this.intentVersion;
     }
 

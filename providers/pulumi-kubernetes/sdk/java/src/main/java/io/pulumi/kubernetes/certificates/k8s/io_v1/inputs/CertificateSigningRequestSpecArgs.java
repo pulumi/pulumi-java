@@ -42,7 +42,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> getExpirationSeconds() {
+    public Output<Integer> expirationSeconds() {
         return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
@@ -53,7 +53,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
 
-    public Output<Map<String,List<String>>> getExtra() {
+    public Output<Map<String,List<String>>> extra() {
         return this.extra == null ? Codegen.empty() : this.extra;
     }
 
@@ -64,7 +64,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
@@ -75,7 +75,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="request", required=true)
       private final Output<String> request;
 
-    public Output<String> getRequest() {
+    public Output<String> request() {
         return this.request;
     }
 
@@ -106,7 +106,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="signerName", required=true)
       private final Output<String> signerName;
 
-    public Output<String> getSignerName() {
+    public Output<String> signerName() {
         return this.signerName;
     }
 
@@ -117,7 +117,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -141,7 +141,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="usages")
       private final @Nullable Output<List<String>> usages;
 
-    public Output<List<String>> getUsages() {
+    public Output<List<String>> usages() {
         return this.usages == null ? Codegen.empty() : this.usages;
     }
 
@@ -152,7 +152,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

@@ -77,56 +77,56 @@ public final class GetObjectReplicationPolicyResult {
      * Required. Destination account name.
      * 
     */
-    public String getDestinationAccount() {
+    public String destinationAccount() {
         return this.destinationAccount;
     }
     /**
      * Indicates when the policy is enabled on the source account.
      * 
     */
-    public String getEnabledTime() {
+    public String enabledTime() {
         return this.enabledTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A unique id for object replication policy.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * The storage account object replication rules.
      * 
     */
-    public List<ObjectReplicationPolicyRuleResponse> getRules() {
+    public List<ObjectReplicationPolicyRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Required. Source account name.
      * 
     */
-    public String getSourceAccount() {
+    public String sourceAccount() {
         return this.sourceAccount;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

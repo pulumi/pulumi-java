@@ -27,7 +27,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="eventSource")
       private final @Nullable String eventSource;
 
-    public Optional<String> getEventSource() {
+    public Optional<String> eventSource() {
         return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
     }
 
@@ -38,7 +38,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ruleSets")
       private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
-    public List<AutomationRuleSetResponse> getRuleSets() {
+    public List<AutomationRuleSetResponse> ruleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
 

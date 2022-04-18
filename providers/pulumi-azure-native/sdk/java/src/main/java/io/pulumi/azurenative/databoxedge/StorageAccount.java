@@ -44,7 +44,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return BlobEndpoint of Storage Account
      * 
      */
-    public Output<String> getBlobEndpoint() {
+    public Output<String> blobEndpoint() {
         return this.blobEndpoint;
     }
     /**
@@ -58,7 +58,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
      * 
      */
-    public Output<Integer> getContainerCount() {
+    public Output<Integer> containerCount() {
         return this.containerCount;
     }
     /**
@@ -72,7 +72,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return Data policy of the storage Account.
      * 
      */
-    public Output<String> getDataPolicy() {
+    public Output<String> dataPolicy() {
         return this.dataPolicy;
     }
     /**
@@ -86,7 +86,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return Description for the storage Account.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +100,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return Storage Account Credential Id
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountCredentialId() {
+    public Output</* @Nullable */ String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
     /**
@@ -128,7 +128,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return Current status of the storage account
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountStatus() {
+    public Output</* @Nullable */ String> storageAccountStatus() {
         return this.storageAccountStatus;
     }
     /**
@@ -142,7 +142,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return StorageAccount object on ASE device
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -156,7 +156,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

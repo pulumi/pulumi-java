@@ -29,7 +29,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerConcurrency", required=true)
       private final Integer containerConcurrency;
 
-    public Integer getContainerConcurrency() {
+    public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
 
@@ -40,7 +40,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containers", required=true)
       private final List<ContainerResponse> containers;
 
-    public List<ContainerResponse> getContainers() {
+    public List<ContainerResponse> containers() {
         return this.containers;
     }
 
@@ -51,7 +51,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableServiceLinks", required=true)
       private final Boolean enableServiceLinks;
 
-    public Boolean getEnableServiceLinks() {
+    public Boolean enableServiceLinks() {
         return this.enableServiceLinks;
     }
 
@@ -62,7 +62,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imagePullSecrets", required=true)
       private final List<LocalObjectReferenceResponse> imagePullSecrets;
 
-    public List<LocalObjectReferenceResponse> getImagePullSecrets() {
+    public List<LocalObjectReferenceResponse> imagePullSecrets() {
         return this.imagePullSecrets;
     }
 
@@ -73,7 +73,7 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountName", required=true)
       private final String serviceAccountName;
 
-    public String getServiceAccountName() {
+    public String serviceAccountName() {
         return this.serviceAccountName;
     }
 
@@ -84,14 +84,14 @@ public final class RevisionSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeoutSeconds", required=true)
       private final Integer timeoutSeconds;
 
-    public Integer getTimeoutSeconds() {
+    public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;
 
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 

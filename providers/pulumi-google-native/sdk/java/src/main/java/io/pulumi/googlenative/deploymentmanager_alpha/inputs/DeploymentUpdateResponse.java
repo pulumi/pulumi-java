@@ -22,7 +22,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="credential", required=true)
       private final CredentialResponse credential;
 
-    public CredentialResponse getCredential() {
+    public CredentialResponse credential() {
         return this.credential;
     }
 
@@ -33,7 +33,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -44,7 +44,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="labels", required=true)
       private final List<DeploymentUpdateLabelEntryResponse> labels;
 
-    public List<DeploymentUpdateLabelEntryResponse> getLabels() {
+    public List<DeploymentUpdateLabelEntryResponse> labels() {
         return this.labels;
     }
 
@@ -55,7 +55,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="manifest", required=true)
       private final String manifest;
 
-    public String getManifest() {
+    public String manifest() {
         return this.manifest;
     }
 

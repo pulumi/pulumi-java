@@ -23,7 +23,7 @@ public final class AccessPosixProfileArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gid", required=true)
       private final Output<Integer> gid;
 
-    public Output<Integer> getGid() {
+    public Output<Integer> gid() {
         return this.gid;
     }
 
@@ -34,7 +34,7 @@ public final class AccessPosixProfileArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secondaryGids")
       private final @Nullable Output<List<Integer>> secondaryGids;
 
-    public Output<List<Integer>> getSecondaryGids() {
+    public Output<List<Integer>> secondaryGids() {
         return this.secondaryGids == null ? Codegen.empty() : this.secondaryGids;
     }
 
@@ -45,7 +45,7 @@ public final class AccessPosixProfileArgs extends io.pulumi.resources.ResourceAr
     @Import(name="uid", required=true)
       private final Output<Integer> uid;
 
-    public Output<Integer> getUid() {
+    public Output<Integer> uid() {
         return this.uid;
     }
 

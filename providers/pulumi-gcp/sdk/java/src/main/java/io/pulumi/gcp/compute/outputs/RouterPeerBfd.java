@@ -68,7 +68,7 @@ public final class RouterPeerBfd {
      * must be between 1000 and 30000.
      * 
     */
-    public Optional<Integer> getMinReceiveInterval() {
+    public Optional<Integer> minReceiveInterval() {
         return Optional.ofNullable(this.minReceiveInterval);
     }
     /**
@@ -79,7 +79,7 @@ public final class RouterPeerBfd {
      * this value must be between 1000 and 30000.
      * 
     */
-    public Optional<Integer> getMinTransmitInterval() {
+    public Optional<Integer> minTransmitInterval() {
         return Optional.ofNullable(this.minTransmitInterval);
     }
     /**
@@ -88,7 +88,7 @@ public final class RouterPeerBfd {
      * be a value between 5 and 16.
      * 
     */
-    public Optional<Integer> getMultiplier() {
+    public Optional<Integer> multiplier() {
         return Optional.ofNullable(this.multiplier);
     }
     /**
@@ -100,7 +100,7 @@ public final class RouterPeerBfd {
      * Possible values are `ACTIVE`, `DISABLED`, and `PASSIVE`.
      * 
     */
-    public String getSessionInitializationMode() {
+    public String sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 

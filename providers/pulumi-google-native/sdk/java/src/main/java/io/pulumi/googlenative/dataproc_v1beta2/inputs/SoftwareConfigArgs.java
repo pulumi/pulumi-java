@@ -29,7 +29,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
+    public Output<String> imageVersion() {
         return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
@@ -40,7 +40,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optionalComponents")
       private final @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
-    public Output<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
+    public Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents() {
         return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
     }
 
@@ -51,7 +51,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

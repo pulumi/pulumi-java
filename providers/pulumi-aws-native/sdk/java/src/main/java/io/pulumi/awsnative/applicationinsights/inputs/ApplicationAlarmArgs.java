@@ -27,7 +27,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="severity")
       private final @Nullable Output<ApplicationAlarmSeverity> severity;
 
-    public Output<ApplicationAlarmSeverity> getSeverity() {
+    public Output<ApplicationAlarmSeverity> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 

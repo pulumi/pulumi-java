@@ -26,7 +26,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
@@ -37,7 +37,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -48,7 +48,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -59,7 +59,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="operationTimeout")
       private final @Nullable Object operationTimeout;
 
-    public Optional<Object> getOperationTimeout() {
+    public Optional<Object> operationTimeout() {
         return this.operationTimeout == null ? Optional.empty() : Optional.ofNullable(this.operationTimeout);
     }
 
@@ -71,7 +71,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="useTempFileRename")
       private final @Nullable Object useTempFileRename;
 
-    public Optional<Object> getUseTempFileRename() {
+    public Optional<Object> useTempFileRename() {
         return this.useTempFileRename == null ? Optional.empty() : Optional.ofNullable(this.useTempFileRename);
     }
 

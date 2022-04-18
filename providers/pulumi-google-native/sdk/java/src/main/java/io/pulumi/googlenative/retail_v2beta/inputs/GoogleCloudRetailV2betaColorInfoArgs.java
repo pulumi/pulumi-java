@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
     @Import(name="colorFamilies")
       private final @Nullable Output<List<String>> colorFamilies;
 
-    public Output<List<String>> getColorFamilies() {
+    public Output<List<String>> colorFamilies() {
         return this.colorFamilies == null ? Codegen.empty() : this.colorFamilies;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2betaColorInfoArgs extends io.pulumi.resour
     @Import(name="colors")
       private final @Nullable Output<List<String>> colors;
 
-    public Output<List<String>> getColors() {
+    public Output<List<String>> colors() {
         return this.colors == null ? Codegen.empty() : this.colors;
     }
 

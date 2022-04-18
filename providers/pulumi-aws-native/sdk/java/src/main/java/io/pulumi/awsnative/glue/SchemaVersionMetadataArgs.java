@@ -21,7 +21,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +32,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
     @Import(name="schemaVersionId", required=true)
       private final Output<String> schemaVersionId;
 
-    public Output<String> getSchemaVersionId() {
+    public Output<String> schemaVersionId() {
         return this.schemaVersionId;
     }
 
@@ -43,7 +43,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

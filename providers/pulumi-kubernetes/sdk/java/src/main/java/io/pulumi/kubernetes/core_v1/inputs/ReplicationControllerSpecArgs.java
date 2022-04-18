@@ -29,7 +29,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> getMinReadySeconds() {
+    public Output<Integer> minReadySeconds() {
         return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     @Import(name="selector")
       private final @Nullable Output<Map<String,String>> selector;
 
-    public Output<Map<String,String>> getSelector() {
+    public Output<Map<String,String>> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -62,7 +62,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     @Import(name="template")
       private final @Nullable Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 

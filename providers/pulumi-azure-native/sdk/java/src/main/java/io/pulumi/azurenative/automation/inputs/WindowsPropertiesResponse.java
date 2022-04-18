@@ -26,7 +26,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="excludedKbNumbers")
       private final @Nullable List<String> excludedKbNumbers;
 
-    public List<String> getExcludedKbNumbers() {
+    public List<String> excludedKbNumbers() {
         return this.excludedKbNumbers == null ? List.of() : this.excludedKbNumbers;
     }
 
@@ -37,7 +37,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="includedKbNumbers")
       private final @Nullable List<String> includedKbNumbers;
 
-    public List<String> getIncludedKbNumbers() {
+    public List<String> includedKbNumbers() {
         return this.includedKbNumbers == null ? List.of() : this.includedKbNumbers;
     }
 
@@ -48,7 +48,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="includedUpdateClassifications")
       private final @Nullable String includedUpdateClassifications;
 
-    public Optional<String> getIncludedUpdateClassifications() {
+    public Optional<String> includedUpdateClassifications() {
         return this.includedUpdateClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedUpdateClassifications);
     }
 
@@ -59,7 +59,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="rebootSetting")
       private final @Nullable String rebootSetting;
 
-    public Optional<String> getRebootSetting() {
+    public Optional<String> rebootSetting() {
         return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
     }
 

@@ -23,7 +23,7 @@ public final class GoogleTypeExprResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleTypeExprResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleTypeExprResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleTypeExprResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

@@ -26,7 +26,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
@@ -37,7 +37,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

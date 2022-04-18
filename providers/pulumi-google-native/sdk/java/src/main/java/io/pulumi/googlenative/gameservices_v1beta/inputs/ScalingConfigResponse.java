@@ -26,7 +26,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="fleetAutoscalerSpec", required=true)
       private final String fleetAutoscalerSpec;
 
-    public String getFleetAutoscalerSpec() {
+    public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
 
@@ -37,7 +37,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="schedules", required=true)
       private final List<ScheduleResponse> schedules;
 
-    public List<ScheduleResponse> getSchedules() {
+    public List<ScheduleResponse> schedules() {
         return this.schedules;
     }
 
@@ -59,7 +59,7 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="selectors", required=true)
       private final List<LabelSelectorResponse> selectors;
 
-    public List<LabelSelectorResponse> getSelectors() {
+    public List<LabelSelectorResponse> selectors() {
         return this.selectors;
     }
 

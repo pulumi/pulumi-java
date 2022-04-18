@@ -15,7 +15,7 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

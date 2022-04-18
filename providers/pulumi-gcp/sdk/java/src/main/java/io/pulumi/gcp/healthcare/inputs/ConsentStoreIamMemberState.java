@@ -19,7 +19,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
 
-    public Output<ConsentStoreIamMemberConditionGetArgs> getCondition() {
+    public Output<ConsentStoreIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,7 +30,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     @Import(name="consentStoreId")
       private final @Nullable Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
     }
 
@@ -43,7 +43,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -54,14 +54,14 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -74,7 +74,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

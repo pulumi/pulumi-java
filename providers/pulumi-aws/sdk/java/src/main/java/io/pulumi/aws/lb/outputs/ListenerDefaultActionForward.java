@@ -36,14 +36,14 @@ public final class ListenerDefaultActionForward {
      * Configuration block for target group stickiness for the rule. Detailed below.
      * 
     */
-    public Optional<ListenerDefaultActionForwardStickiness> getStickiness() {
+    public Optional<ListenerDefaultActionForwardStickiness> stickiness() {
         return Optional.ofNullable(this.stickiness);
     }
     /**
      * Set of 1-5 target group blocks. Detailed below.
      * 
     */
-    public List<ListenerDefaultActionForwardTargetGroup> getTargetGroups() {
+    public List<ListenerDefaultActionForwardTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 

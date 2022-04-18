@@ -39,27 +39,27 @@ public final class GetKMSSecretResult {
         this.plaintext = plaintext;
     }
 
-    public Optional<String> getAdditionalAuthenticatedData() {
+    public Optional<String> additionalAuthenticatedData() {
         return Optional.ofNullable(this.additionalAuthenticatedData);
     }
-    public String getCiphertext() {
+    public String ciphertext() {
         return this.ciphertext;
     }
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Contains the result of decrypting the provided ciphertext.
      * 
     */
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

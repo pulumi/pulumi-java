@@ -51,14 +51,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
      * 
     */
-    public Optional<String> getHostRewrite() {
+    public Optional<String> hostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
      * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
      * 
     */
-    public Optional<String> getPathPrefixRewrite() {
+    public Optional<String> pathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }
     /**
@@ -75,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * specified.
      * 
     */
-    public Optional<String> getPathTemplateRewrite() {
+    public Optional<String> pathTemplateRewrite() {
         return Optional.ofNullable(this.pathTemplateRewrite);
     }
 

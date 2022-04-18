@@ -27,7 +27,7 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default")
       private final @Nullable Output<Integer> default_;
 
-    public Output<Integer> getDefault_() {
+    public Output<Integer> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -38,7 +38,7 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticMaximum")
       private final @Nullable Output<Integer> elasticMaximum;
 
-    public Output<Integer> getElasticMaximum() {
+    public Output<Integer> elasticMaximum() {
         return this.elasticMaximum == null ? Codegen.empty() : this.elasticMaximum;
     }
 
@@ -49,7 +49,7 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
 
-    public Output<Integer> getMaximum() {
+    public Output<Integer> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
@@ -60,7 +60,7 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimum")
       private final @Nullable Output<Integer> minimum;
 
-    public Output<Integer> getMinimum() {
+    public Output<Integer> minimum() {
         return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
@@ -71,7 +71,7 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleType")
       private final @Nullable Output<String> scaleType;
 
-    public Output<String> getScaleType() {
+    public Output<String> scaleType() {
         return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 

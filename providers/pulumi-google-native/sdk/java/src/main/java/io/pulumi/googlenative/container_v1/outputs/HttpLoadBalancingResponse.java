@@ -24,7 +24,7 @@ public final class HttpLoadBalancingResponse {
      * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

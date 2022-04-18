@@ -25,7 +25,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basic")
       private final @Nullable Output<AccessLevelBasicArgs> basic;
 
-    public Output<AccessLevelBasicArgs> getBasic() {
+    public Output<AccessLevelBasicArgs> basic() {
         return this.basic == null ? Codegen.empty() : this.basic;
     }
 
@@ -38,7 +38,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<AccessLevelCustomArgs> custom;
 
-    public Output<AccessLevelCustomArgs> getCustom() {
+    public Output<AccessLevelCustomArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -49,7 +49,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -74,7 +74,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -85,7 +85,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

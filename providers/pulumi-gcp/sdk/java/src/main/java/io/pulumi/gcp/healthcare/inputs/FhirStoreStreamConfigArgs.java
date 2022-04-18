@@ -29,7 +29,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="bigqueryDestination", required=true)
       private final Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
-    public Output<FhirStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {
+    public Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -42,7 +42,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
+    public Output<List<String>> resourceTypes() {
         return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 

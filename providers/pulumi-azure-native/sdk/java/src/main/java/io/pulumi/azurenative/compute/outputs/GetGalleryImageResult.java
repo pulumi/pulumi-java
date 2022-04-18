@@ -160,133 +160,133 @@ public final class GetGalleryImageResult {
      * The description of this gallery image definition resource. This property is updatable.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Describes the disallowed disk types.
      * 
     */
-    public Optional<DisallowedResponse> getDisallowed() {
+    public Optional<DisallowedResponse> disallowed() {
         return Optional.ofNullable(this.disallowed);
     }
     /**
      * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
     */
-    public Optional<String> getEndOfLifeDate() {
+    public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * The Eula agreement for the gallery image definition.
      * 
     */
-    public Optional<String> getEula() {
+    public Optional<String> eula() {
         return Optional.ofNullable(this.eula);
     }
     /**
      * A list of gallery image features.
      * 
     */
-    public List<GalleryImageFeatureResponse> getFeatures() {
+    public List<GalleryImageFeatureResponse> features() {
         return this.features == null ? List.of() : this.features;
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
     */
-    public Optional<String> getHyperVGeneration() {
+    public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * This is the gallery image definition identifier.
      * 
     */
-    public GalleryImageIdentifierResponse getIdentifier() {
+    public GalleryImageIdentifierResponse identifier() {
         return this.identifier;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
      * 
     */
-    public String getOsState() {
+    public String osState() {
         return this.osState;
     }
     /**
      * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * The privacy statement uri.
      * 
     */
-    public Optional<String> getPrivacyStatementUri() {
+    public Optional<String> privacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the gallery image definition purchase plan. This is used by marketplace images.
      * 
     */
-    public Optional<ImagePurchasePlanResponse> getPurchasePlan() {
+    public Optional<ImagePurchasePlanResponse> purchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
      * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
      * 
     */
-    public Optional<RecommendedMachineConfigurationResponse> getRecommended() {
+    public Optional<RecommendedMachineConfigurationResponse> recommended() {
         return Optional.ofNullable(this.recommended);
     }
     /**
      * The release note uri.
      * 
     */
-    public Optional<String> getReleaseNoteUri() {
+    public Optional<String> releaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

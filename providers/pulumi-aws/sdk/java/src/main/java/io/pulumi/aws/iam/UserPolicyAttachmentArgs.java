@@ -21,7 +21,7 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -32,7 +32,7 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

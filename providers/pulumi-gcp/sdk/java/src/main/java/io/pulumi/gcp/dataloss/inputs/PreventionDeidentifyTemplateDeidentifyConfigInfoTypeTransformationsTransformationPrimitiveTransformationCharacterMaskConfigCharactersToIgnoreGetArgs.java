@@ -22,7 +22,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="charactersToSkip")
       private final @Nullable Output<String> charactersToSkip;
 
-    public Output<String> getCharactersToSkip() {
+    public Output<String> charactersToSkip() {
         return this.charactersToSkip == null ? Codegen.empty() : this.charactersToSkip;
     }
 
@@ -34,7 +34,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="commonCharactersToIgnore")
       private final @Nullable Output<String> commonCharactersToIgnore;
 
-    public Output<String> getCommonCharactersToIgnore() {
+    public Output<String> commonCharactersToIgnore() {
         return this.commonCharactersToIgnore == null ? Codegen.empty() : this.commonCharactersToIgnore;
     }
 

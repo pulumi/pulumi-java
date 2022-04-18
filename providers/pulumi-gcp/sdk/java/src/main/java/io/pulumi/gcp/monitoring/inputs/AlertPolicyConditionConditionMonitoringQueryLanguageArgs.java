@@ -37,7 +37,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -48,7 +48,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -67,7 +67,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> getTrigger() {
+    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

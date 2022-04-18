@@ -43,21 +43,21 @@ public final class VpcEndpointProperties {
      * One or more network interfaces of the endpoint. Also known as an interface endpoint.
      * 
     */
-    public List<EndpointAccessNetworkInterface> getNetworkInterfaces() {
+    public List<EndpointAccessNetworkInterface> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
      * The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
      * 
     */
-    public Optional<String> getVpcEndpointId() {
+    public Optional<String> vpcEndpointId() {
         return Optional.ofNullable(this.vpcEndpointId);
     }
     /**
      * The VPC identifier that the endpoint is associated.
      * 
     */
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

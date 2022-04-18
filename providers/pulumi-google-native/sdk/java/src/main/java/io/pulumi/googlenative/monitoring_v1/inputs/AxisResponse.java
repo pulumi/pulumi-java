@@ -23,7 +23,7 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -34,7 +34,7 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scale", required=true)
       private final String scale;
 
-    public String getScale() {
+    public String scale() {
         return this.scale;
     }
 

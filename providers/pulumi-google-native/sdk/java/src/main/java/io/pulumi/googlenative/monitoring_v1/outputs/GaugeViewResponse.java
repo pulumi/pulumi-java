@@ -32,14 +32,14 @@ public final class GaugeViewResponse {
      * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
      * 
     */
-    public Double getLowerBound() {
+    public Double lowerBound() {
         return this.lowerBound;
     }
     /**
      * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
      * 
     */
-    public Double getUpperBound() {
+    public Double upperBound() {
         return this.upperBound;
     }
 

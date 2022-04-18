@@ -26,7 +26,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
@@ -37,7 +37,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
-    public Output<String> getCommitSha() {
+    public Output<String> commitSha() {
         return this.commitSha == null ? Codegen.empty() : this.commitSha;
     }
 
@@ -48,7 +48,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -59,7 +59,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoName")
       private final @Nullable Output<String> repoName;
 
-    public Output<String> getRepoName() {
+    public Output<String> repoName() {
         return this.repoName == null ? Codegen.empty() : this.repoName;
     }
 
@@ -70,7 +70,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
-    public Output<String> getTagName() {
+    public Output<String> tagName() {
         return this.tagName == null ? Codegen.empty() : this.tagName;
     }
 

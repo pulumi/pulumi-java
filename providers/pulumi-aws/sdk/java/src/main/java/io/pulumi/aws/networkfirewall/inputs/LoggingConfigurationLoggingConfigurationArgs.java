@@ -22,7 +22,7 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
     @Import(name="logDestinationConfigs", required=true)
       private final Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
-    public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
+    public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 

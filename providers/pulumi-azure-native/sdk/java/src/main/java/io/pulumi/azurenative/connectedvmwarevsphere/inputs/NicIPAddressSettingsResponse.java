@@ -23,7 +23,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="allocationMethod", required=true)
       private final String allocationMethod;
 
-    public String getAllocationMethod() {
+    public String allocationMethod() {
         return this.allocationMethod;
     }
 
@@ -34,7 +34,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -45,7 +45,7 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="subnetMask", required=true)
       private final String subnetMask;
 
-    public String getSubnetMask() {
+    public String subnetMask() {
         return this.subnetMask;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
      * Location to store findings outside of DLP.
      * 
     */
-    public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
+    public GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig() {
         return this.outputConfig;
     }
 

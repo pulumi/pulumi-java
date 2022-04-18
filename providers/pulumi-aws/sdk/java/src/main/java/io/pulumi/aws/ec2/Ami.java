@@ -52,7 +52,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    public Output</* @Nullable */ String> getArchitecture() {
+    public Output</* @Nullable */ String> architecture() {
         return this.architecture;
     }
     /**
@@ -66,7 +66,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AMI.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -80,7 +80,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return A longer, human-readable description for the AMI.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -96,7 +96,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    public Output<List<AmiEbsBlockDevice>> getEbsBlockDevices() {
+    public Output<List<AmiEbsBlockDevice>> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
@@ -110,7 +110,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnaSupport() {
+    public Output</* @Nullable */ Boolean> enaSupport() {
         return this.enaSupport;
     }
     /**
@@ -126,7 +126,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    public Output<List<AmiEphemeralBlockDevice>> getEphemeralBlockDevices() {
+    public Output<List<AmiEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
@@ -140,7 +140,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The hypervisor type of the image.
      * 
      */
-    public Output<String> getHypervisor() {
+    public Output<String> hypervisor() {
         return this.hypervisor;
     }
     /**
@@ -156,7 +156,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    public Output<String> getImageLocation() {
+    public Output<String> imageLocation() {
         return this.imageLocation;
     }
     /**
@@ -170,7 +170,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
      * 
      */
-    public Output<String> getImageOwnerAlias() {
+    public Output<String> imageOwnerAlias() {
         return this.imageOwnerAlias;
     }
     /**
@@ -184,7 +184,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The type of image.
      * 
      */
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType;
     }
     /**
@@ -200,13 +200,13 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * kernel in created instances.
      * 
      */
-    public Output</* @Nullable */ String> getKernelId() {
+    public Output</* @Nullable */ String> kernelId() {
         return this.kernelId;
     }
     @Export(name="manageEbsSnapshots", type=Boolean.class, parameters={})
     private Output<Boolean> manageEbsSnapshots;
 
-    public Output<Boolean> getManageEbsSnapshots() {
+    public Output<Boolean> manageEbsSnapshots() {
         return this.manageEbsSnapshots;
     }
     /**
@@ -220,7 +220,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return A region-unique name for the AMI.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -234,7 +234,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the image owner.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -248,7 +248,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return This value is set to windows for Windows AMIs; otherwise, it is blank.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -262,7 +262,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The platform details associated with the billing code of the AMI.
      * 
      */
-    public Output<String> getPlatformDetails() {
+    public Output<String> platformDetails() {
         return this.platformDetails;
     }
     /**
@@ -276,7 +276,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the image has public launch permissions.
      * 
      */
-    public Output<Boolean> getPublic_() {
+    public Output<Boolean> public_() {
         return this.public_;
     }
     /**
@@ -292,7 +292,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * created instances.
      * 
      */
-    public Output</* @Nullable */ String> getRamdiskId() {
+    public Output</* @Nullable */ String> ramdiskId() {
         return this.ramdiskId;
     }
     /**
@@ -306,7 +306,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    public Output</* @Nullable */ String> getRootDeviceName() {
+    public Output</* @Nullable */ String> rootDeviceName() {
         return this.rootDeviceName;
     }
     /**
@@ -320,7 +320,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The Snapshot ID for the root volume (for EBS-backed AMIs)
      * 
      */
-    public Output<String> getRootSnapshotId() {
+    public Output<String> rootSnapshotId() {
         return this.rootSnapshotId;
     }
     /**
@@ -336,7 +336,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * for created instances. No other value is supported at this time.
      * 
      */
-    public Output</* @Nullable */ String> getSriovNetSupport() {
+    public Output</* @Nullable */ String> sriovNetSupport() {
         return this.sriovNetSupport;
     }
     /**
@@ -350,7 +350,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -364,7 +364,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -378,7 +378,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * @return The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * 
      */
-    public Output<String> getUsageOperation() {
+    public Output<String> usageOperation() {
         return this.usageOperation;
     }
     /**
@@ -396,7 +396,7 @@ public class Ami extends io.pulumi.resources.CustomResource {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    public Output</* @Nullable */ String> getVirtualizationType() {
+    public Output</* @Nullable */ String> virtualizationType() {
         return this.virtualizationType;
     }
 

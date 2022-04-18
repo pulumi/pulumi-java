@@ -24,7 +24,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="arrayType")
       private final @Nullable Output<QueryParameterTypeArgs> arrayType;
 
-    public Output<QueryParameterTypeArgs> getArrayType() {
+    public Output<QueryParameterTypeArgs> arrayType() {
         return this.arrayType == null ? Codegen.empty() : this.arrayType;
     }
 
@@ -35,7 +35,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="structTypes")
       private final @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
-    public Output<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
+    public Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes() {
         return this.structTypes == null ? Codegen.empty() : this.structTypes;
     }
 
@@ -46,7 +46,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

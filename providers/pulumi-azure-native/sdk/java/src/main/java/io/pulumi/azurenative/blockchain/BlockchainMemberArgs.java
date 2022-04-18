@@ -29,7 +29,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="blockchainMemberName")
       private final @Nullable Output<String> blockchainMemberName;
 
-    public Output<String> getBlockchainMemberName() {
+    public Output<String> blockchainMemberName() {
         return this.blockchainMemberName == null ? Codegen.empty() : this.blockchainMemberName;
     }
 
@@ -40,7 +40,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consortium")
       private final @Nullable Output<String> consortium;
 
-    public Output<String> getConsortium() {
+    public Output<String> consortium() {
         return this.consortium == null ? Codegen.empty() : this.consortium;
     }
 
@@ -51,7 +51,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consortiumManagementAccountPassword")
       private final @Nullable Output<String> consortiumManagementAccountPassword;
 
-    public Output<String> getConsortiumManagementAccountPassword() {
+    public Output<String> consortiumManagementAccountPassword() {
         return this.consortiumManagementAccountPassword == null ? Codegen.empty() : this.consortiumManagementAccountPassword;
     }
 
@@ -62,7 +62,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consortiumMemberDisplayName")
       private final @Nullable Output<String> consortiumMemberDisplayName;
 
-    public Output<String> getConsortiumMemberDisplayName() {
+    public Output<String> consortiumMemberDisplayName() {
         return this.consortiumMemberDisplayName == null ? Codegen.empty() : this.consortiumMemberDisplayName;
     }
 
@@ -73,7 +73,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consortiumRole")
       private final @Nullable Output<String> consortiumRole;
 
-    public Output<String> getConsortiumRole() {
+    public Output<String> consortiumRole() {
         return this.consortiumRole == null ? Codegen.empty() : this.consortiumRole;
     }
 
@@ -84,7 +84,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleArgs>> getFirewallRules() {
+    public Output<List<FirewallRuleArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
@@ -95,7 +95,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -106,7 +106,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -117,7 +117,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="protocol")
       private final @Nullable Output<Either<String,BlockchainProtocol>> protocol;
 
-    public Output<Either<String,BlockchainProtocol>> getProtocol() {
+    public Output<Either<String,BlockchainProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -128,7 +128,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,7 +139,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -150,7 +150,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -161,7 +161,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="validatorNodesSku")
       private final @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 
-    public Output<BlockchainMemberNodesSkuArgs> getValidatorNodesSku() {
+    public Output<BlockchainMemberNodesSkuArgs> validatorNodesSku() {
         return this.validatorNodesSku == null ? Codegen.empty() : this.validatorNodesSku;
     }
 

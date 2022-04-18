@@ -19,49 +19,49 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     @Import(name="claimRegex")
       private final @Nullable Output<String> claimRegex;
 
-    public Output<String> getClaimRegex() {
+    public Output<String> claimRegex() {
         return this.claimRegex == null ? Codegen.empty() : this.claimRegex;
     }
 
     @Import(name="groupAttributeField")
       private final @Nullable Output<String> groupAttributeField;
 
-    public Output<String> getGroupAttributeField() {
+    public Output<String> groupAttributeField() {
         return this.groupAttributeField == null ? Codegen.empty() : this.groupAttributeField;
     }
 
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     @Import(name="keyLocation", required=true)
       private final Output<IndexKeyLocation> keyLocation;
 
-    public Output<IndexKeyLocation> getKeyLocation() {
+    public Output<IndexKeyLocation> keyLocation() {
         return this.keyLocation;
     }
 
     @Import(name="secretManagerArn")
       private final @Nullable Output<String> secretManagerArn;
 
-    public Output<String> getSecretManagerArn() {
+    public Output<String> secretManagerArn() {
         return this.secretManagerArn == null ? Codegen.empty() : this.secretManagerArn;
     }
 
     @Import(name="uRL")
       private final @Nullable Output<String> uRL;
 
-    public Output<String> getURL() {
+    public Output<String> uRL() {
         return this.uRL == null ? Codegen.empty() : this.uRL;
     }
 
     @Import(name="userNameAttributeField")
       private final @Nullable Output<String> userNameAttributeField;
 
-    public Output<String> getUserNameAttributeField() {
+    public Output<String> userNameAttributeField() {
         return this.userNameAttributeField == null ? Codegen.empty() : this.userNameAttributeField;
     }
 

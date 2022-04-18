@@ -25,7 +25,7 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

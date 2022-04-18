@@ -29,7 +29,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
-    public Output<Integer> getAppConsistentFrequencyInMinutes() {
+    public Output<Integer> appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Codegen.empty() : this.appConsistentFrequencyInMinutes;
     }
 
@@ -41,7 +41,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -52,7 +52,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
-    public Output<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
+    public Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus() {
         return this.multiVmSyncStatus;
     }
 
@@ -63,7 +63,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;
 
-    public Output<Integer> getRecoveryPointHistory() {
+    public Output<Integer> recoveryPointHistory() {
         return this.recoveryPointHistory == null ? Codegen.empty() : this.recoveryPointHistory;
     }
 
@@ -74,7 +74,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Output<Integer> recoveryPointThresholdInMinutes;
 
-    public Output<Integer> getRecoveryPointThresholdInMinutes() {
+    public Output<Integer> recoveryPointThresholdInMinutes() {
         return this.recoveryPointThresholdInMinutes == null ? Codegen.empty() : this.recoveryPointThresholdInMinutes;
     }
 

@@ -17,14 +17,14 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
     @Import(name="webACLArn", required=true)
       private final Output<String> webACLArn;
 
-    public Output<String> getWebACLArn() {
+    public Output<String> webACLArn() {
         return this.webACLArn;
     }
 

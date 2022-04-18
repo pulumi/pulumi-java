@@ -27,7 +27,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
     @Import(name="egressSetting")
       private final @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
 
-    public Output<VpcAccessConnectorEgressSetting> getEgressSetting() {
+    public Output<VpcAccessConnectorEgressSetting> egressSetting() {
         return this.egressSetting == null ? Codegen.empty() : this.egressSetting;
     }
 
@@ -38,7 +38,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

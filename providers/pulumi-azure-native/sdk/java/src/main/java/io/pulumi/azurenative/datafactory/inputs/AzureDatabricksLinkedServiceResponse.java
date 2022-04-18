@@ -34,7 +34,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="accessToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
         return this.accessToken == null ? null : this.accessToken;
     }
 
@@ -45,7 +45,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -56,7 +56,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="authentication")
       private final @Nullable Object authentication;
 
-    public Optional<Object> getAuthentication() {
+    public Optional<Object> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -67,7 +67,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -78,7 +78,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -89,7 +89,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -100,7 +100,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="domain", required=true)
       private final Object domain;
 
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
 
@@ -111,7 +111,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -122,7 +122,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="existingClusterId")
       private final @Nullable Object existingClusterId;
 
-    public Optional<Object> getExistingClusterId() {
+    public Optional<Object> existingClusterId() {
         return this.existingClusterId == null ? Optional.empty() : Optional.ofNullable(this.existingClusterId);
     }
 
@@ -133,7 +133,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="instancePoolId")
       private final @Nullable Object instancePoolId;
 
-    public Optional<Object> getInstancePoolId() {
+    public Optional<Object> instancePoolId() {
         return this.instancePoolId == null ? Optional.empty() : Optional.ofNullable(this.instancePoolId);
     }
 
@@ -144,7 +144,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterCustomTags")
       private final @Nullable Map<String,Object> newClusterCustomTags;
 
-    public Map<String,Object> getNewClusterCustomTags() {
+    public Map<String,Object> newClusterCustomTags() {
         return this.newClusterCustomTags == null ? Map.of() : this.newClusterCustomTags;
     }
 
@@ -155,7 +155,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterDriverNodeType")
       private final @Nullable Object newClusterDriverNodeType;
 
-    public Optional<Object> getNewClusterDriverNodeType() {
+    public Optional<Object> newClusterDriverNodeType() {
         return this.newClusterDriverNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterDriverNodeType);
     }
 
@@ -166,7 +166,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterEnableElasticDisk")
       private final @Nullable Object newClusterEnableElasticDisk;
 
-    public Optional<Object> getNewClusterEnableElasticDisk() {
+    public Optional<Object> newClusterEnableElasticDisk() {
         return this.newClusterEnableElasticDisk == null ? Optional.empty() : Optional.ofNullable(this.newClusterEnableElasticDisk);
     }
 
@@ -177,7 +177,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterInitScripts")
       private final @Nullable Object newClusterInitScripts;
 
-    public Optional<Object> getNewClusterInitScripts() {
+    public Optional<Object> newClusterInitScripts() {
         return this.newClusterInitScripts == null ? Optional.empty() : Optional.ofNullable(this.newClusterInitScripts);
     }
 
@@ -188,7 +188,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterLogDestination")
       private final @Nullable Object newClusterLogDestination;
 
-    public Optional<Object> getNewClusterLogDestination() {
+    public Optional<Object> newClusterLogDestination() {
         return this.newClusterLogDestination == null ? Optional.empty() : Optional.ofNullable(this.newClusterLogDestination);
     }
 
@@ -199,7 +199,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterNodeType")
       private final @Nullable Object newClusterNodeType;
 
-    public Optional<Object> getNewClusterNodeType() {
+    public Optional<Object> newClusterNodeType() {
         return this.newClusterNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterNodeType);
     }
 
@@ -210,7 +210,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterNumOfWorker")
       private final @Nullable Object newClusterNumOfWorker;
 
-    public Optional<Object> getNewClusterNumOfWorker() {
+    public Optional<Object> newClusterNumOfWorker() {
         return this.newClusterNumOfWorker == null ? Optional.empty() : Optional.ofNullable(this.newClusterNumOfWorker);
     }
 
@@ -221,7 +221,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterSparkConf")
       private final @Nullable Map<String,Object> newClusterSparkConf;
 
-    public Map<String,Object> getNewClusterSparkConf() {
+    public Map<String,Object> newClusterSparkConf() {
         return this.newClusterSparkConf == null ? Map.of() : this.newClusterSparkConf;
     }
 
@@ -232,7 +232,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterSparkEnvVars")
       private final @Nullable Map<String,Object> newClusterSparkEnvVars;
 
-    public Map<String,Object> getNewClusterSparkEnvVars() {
+    public Map<String,Object> newClusterSparkEnvVars() {
         return this.newClusterSparkEnvVars == null ? Map.of() : this.newClusterSparkEnvVars;
     }
 
@@ -243,7 +243,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="newClusterVersion")
       private final @Nullable Object newClusterVersion;
 
-    public Optional<Object> getNewClusterVersion() {
+    public Optional<Object> newClusterVersion() {
         return this.newClusterVersion == null ? Optional.empty() : Optional.ofNullable(this.newClusterVersion);
     }
 
@@ -254,7 +254,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -265,7 +265,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="policyId")
       private final @Nullable Object policyId;
 
-    public Optional<Object> getPolicyId() {
+    public Optional<Object> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -277,7 +277,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -288,7 +288,7 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
     @Import(name="workspaceResourceId")
       private final @Nullable Object workspaceResourceId;
 
-    public Optional<Object> getWorkspaceResourceId() {
+    public Optional<Object> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

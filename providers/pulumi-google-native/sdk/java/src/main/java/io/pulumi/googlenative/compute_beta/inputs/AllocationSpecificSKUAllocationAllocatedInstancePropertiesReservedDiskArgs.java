@@ -23,7 +23,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -34,7 +34,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="interface")
       private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;
 
-    public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> getInterface_() {
+    public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_() {
         return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 

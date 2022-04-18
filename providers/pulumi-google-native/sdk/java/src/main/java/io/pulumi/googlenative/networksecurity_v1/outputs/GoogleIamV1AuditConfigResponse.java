@@ -34,14 +34,14 @@ public final class GoogleIamV1AuditConfigResponse {
      * The configuration for logging of each type of permission.
      * 
     */
-    public List<GoogleIamV1AuditLogConfigResponse> getAuditLogConfigs() {
+    public List<GoogleIamV1AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

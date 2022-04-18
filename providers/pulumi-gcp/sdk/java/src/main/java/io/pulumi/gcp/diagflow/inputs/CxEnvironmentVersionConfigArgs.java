@@ -21,7 +21,7 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

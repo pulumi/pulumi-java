@@ -63,7 +63,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return The status of the VPC Peering Connection request.
      * 
      */
-    public Output<String> getAcceptStatus() {
+    public Output<String> acceptStatus() {
         return this.acceptStatus;
     }
     /**
@@ -79,7 +79,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<VpcPeeringConnectionAccepter> getAccepter() {
+    public Output<VpcPeeringConnectionAccepter> accepter() {
         return this.accepter;
     }
     /**
@@ -93,7 +93,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return Accept the peering (both VPCs need to be in the same AWS account and region).
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAccept() {
+    public Output</* @Nullable */ Boolean> autoAccept() {
         return this.autoAccept;
     }
     /**
@@ -109,7 +109,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    public Output<String> getPeerOwnerId() {
+    public Output<String> peerOwnerId() {
         return this.peerOwnerId;
     }
     /**
@@ -125,7 +125,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
      * 
      */
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
     /**
@@ -139,7 +139,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC with which you are creating the VPC Peering Connection.
      * 
      */
-    public Output<String> getPeerVpcId() {
+    public Output<String> peerVpcId() {
         return this.peerVpcId;
     }
     /**
@@ -155,7 +155,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<VpcPeeringConnectionRequester> getRequester() {
+    public Output<VpcPeeringConnectionRequester> requester() {
         return this.requester;
     }
     /**
@@ -169,7 +169,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +183,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -197,7 +197,7 @@ public class VpcPeeringConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the requester VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

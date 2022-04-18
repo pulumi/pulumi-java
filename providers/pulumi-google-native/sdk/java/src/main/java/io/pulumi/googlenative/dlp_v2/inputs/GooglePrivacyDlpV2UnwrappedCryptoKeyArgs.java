@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.re
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

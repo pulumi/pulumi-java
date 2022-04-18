@@ -26,7 +26,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
     @Import(name="linux")
       private final @Nullable String linux;
 
-    public Optional<String> getLinux() {
+    public Optional<String> linux() {
         return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
     }
 
@@ -37,7 +37,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
     @Import(name="windows")
       private final @Nullable String windows;
 
-    public Optional<String> getWindows() {
+    public Optional<String> windows() {
         return this.windows == null ? Optional.empty() : Optional.ofNullable(this.windows);
     }
 

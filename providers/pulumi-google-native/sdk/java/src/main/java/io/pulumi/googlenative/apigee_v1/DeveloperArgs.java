@@ -24,7 +24,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
-    public Output<String> getAccessType() {
+    public Output<String> accessType() {
         return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
@@ -35,7 +35,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
 
-    public Output<String> getAppFamily() {
+    public Output<String> appFamily() {
         return this.appFamily == null ? Codegen.empty() : this.appFamily;
     }
 
@@ -46,7 +46,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apps")
       private final @Nullable Output<List<String>> apps;
 
-    public Output<List<String>> getApps() {
+    public Output<List<String>> apps() {
         return this.apps == null ? Codegen.empty() : this.apps;
     }
 
@@ -57,7 +57,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -68,7 +68,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="companies")
       private final @Nullable Output<List<String>> companies;
 
-    public Output<List<String>> getCompanies() {
+    public Output<List<String>> companies() {
         return this.companies == null ? Codegen.empty() : this.companies;
     }
 
@@ -79,7 +79,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="developerId")
       private final @Nullable Output<String> developerId;
 
-    public Output<String> getDeveloperId() {
+    public Output<String> developerId() {
         return this.developerId == null ? Codegen.empty() : this.developerId;
     }
 
@@ -90,7 +90,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -101,7 +101,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstName", required=true)
       private final Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName;
     }
 
@@ -112,14 +112,14 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastName", required=true)
       private final Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -130,7 +130,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

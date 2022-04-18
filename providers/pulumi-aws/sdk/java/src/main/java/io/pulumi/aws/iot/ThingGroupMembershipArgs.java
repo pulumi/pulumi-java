@@ -23,7 +23,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="overrideDynamicGroup")
       private final @Nullable Output<Boolean> overrideDynamicGroup;
 
-    public Output<Boolean> getOverrideDynamicGroup() {
+    public Output<Boolean> overrideDynamicGroup() {
         return this.overrideDynamicGroup == null ? Codegen.empty() : this.overrideDynamicGroup;
     }
 
@@ -34,7 +34,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="thingGroupName", required=true)
       private final Output<String> thingGroupName;
 
-    public Output<String> getThingGroupName() {
+    public Output<String> thingGroupName() {
         return this.thingGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="thingName", required=true)
       private final Output<String> thingName;
 
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
 

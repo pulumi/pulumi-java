@@ -27,7 +27,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedClientApplications")
       private final @Nullable Output<List<String>> allowedClientApplications;
 
-    public Output<List<String>> getAllowedClientApplications() {
+    public Output<List<String>> allowedClientApplications() {
         return this.allowedClientApplications == null ? Codegen.empty() : this.allowedClientApplications;
     }
 
@@ -38,7 +38,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedGroups")
       private final @Nullable Output<List<String>> allowedGroups;
 
-    public Output<List<String>> getAllowedGroups() {
+    public Output<List<String>> allowedGroups() {
         return this.allowedGroups == null ? Codegen.empty() : this.allowedGroups;
     }
 

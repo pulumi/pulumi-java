@@ -24,7 +24,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attemptDispatchCount", required=true)
       private final Integer attemptDispatchCount;
 
-    public Integer getAttemptDispatchCount() {
+    public Integer attemptDispatchCount() {
         return this.attemptDispatchCount;
     }
 
@@ -35,7 +35,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attemptResponseCount", required=true)
       private final Integer attemptResponseCount;
 
-    public Integer getAttemptResponseCount() {
+    public Integer attemptResponseCount() {
         return this.attemptResponseCount;
     }
 
@@ -46,7 +46,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="firstAttemptStatus", required=true)
       private final AttemptStatusResponse firstAttemptStatus;
 
-    public AttemptStatusResponse getFirstAttemptStatus() {
+    public AttemptStatusResponse firstAttemptStatus() {
         return this.firstAttemptStatus;
     }
 
@@ -57,7 +57,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastAttemptStatus", required=true)
       private final AttemptStatusResponse lastAttemptStatus;
 
-    public AttemptStatusResponse getLastAttemptStatus() {
+    public AttemptStatusResponse lastAttemptStatus() {
         return this.lastAttemptStatus;
     }
 

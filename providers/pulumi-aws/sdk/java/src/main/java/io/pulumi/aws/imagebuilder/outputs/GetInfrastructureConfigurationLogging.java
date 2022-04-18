@@ -25,7 +25,7 @@ public final class GetInfrastructureConfigurationLogging {
      * Nested list of S3 logs settings.
      * 
     */
-    public List<GetInfrastructureConfigurationLoggingS3Log> getS3Logs() {
+    public List<GetInfrastructureConfigurationLoggingS3Log> s3Logs() {
         return this.s3Logs;
     }
 

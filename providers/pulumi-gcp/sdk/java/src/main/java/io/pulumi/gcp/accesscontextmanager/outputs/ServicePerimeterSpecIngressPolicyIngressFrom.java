@@ -51,7 +51,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFrom {
      * represent individual user or service account only.
      * 
     */
-    public List<String> getIdentities() {
+    public List<String> identities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
@@ -61,7 +61,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFrom {
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
     */
-    public Optional<String> getIdentityType() {
+    public Optional<String> identityType() {
         return Optional.ofNullable(this.identityType);
     }
     /**
@@ -69,7 +69,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFrom {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimeterSpecIngressPolicyIngressFromSource> getSources() {
+    public List<ServicePerimeterSpecIngressPolicyIngressFromSource> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
 

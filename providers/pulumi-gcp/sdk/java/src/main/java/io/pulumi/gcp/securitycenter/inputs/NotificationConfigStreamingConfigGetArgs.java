@@ -39,7 +39,7 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 

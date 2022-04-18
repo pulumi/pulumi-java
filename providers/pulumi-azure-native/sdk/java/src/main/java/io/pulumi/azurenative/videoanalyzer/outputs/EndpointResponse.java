@@ -34,14 +34,14 @@ public final class EndpointResponse {
      * The URL of the endpoint.
      * 
     */
-    public Optional<String> getEndpointUrl() {
+    public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
      * The type of the endpoint.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

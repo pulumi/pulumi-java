@@ -25,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatement> getStatements() {
+    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatement> statements() {
         return this.statements;
     }
 
