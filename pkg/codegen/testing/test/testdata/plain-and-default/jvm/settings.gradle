@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.foobar"
+rootProject.name = "com.pulumi.foobar"
 include("lib")

@@ -3,16 +3,16 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/aws/Config.java",
-    "src/main/java/io/pulumi/aws/Provider.java",
-    "src/main/java/io/pulumi/aws/ProviderArgs.java",
-    "src/main/java/io/pulumi/aws/Utilities.java",
-    "src/main/java/io/pulumi/aws/config_endpoints/inputs/Endpoints.java",
-    "src/main/java/io/pulumi/aws/ec2_getAmi/Ec2_getAmiFunctions.java",
-    "src/main/java/io/pulumi/aws/ec2_getAmi/inputs/GetAmiArgs.java",
-    "src/main/java/io/pulumi/aws/ec2_getAmi/outputs/GetAmiResult.java",
-    "src/main/java/io/pulumi/aws/iam_instanceProfile/InstanceProfile.java",
-    "src/main/java/io/pulumi/aws/iam_instanceProfile/InstanceProfileArgs.java",
-    "src/main/java/io/pulumi/aws/iam_instanceProfile/inputs/InstanceProfileState.java"
+    "src/main/java/com/pulumi/aws/Config.java",
+    "src/main/java/com/pulumi/aws/Provider.java",
+    "src/main/java/com/pulumi/aws/ProviderArgs.java",
+    "src/main/java/com/pulumi/aws/Utilities.java",
+    "src/main/java/com/pulumi/aws/config_endpoints/inputs/Endpoints.java",
+    "src/main/java/com/pulumi/aws/ec2_getAmi/Ec2_getAmiFunctions.java",
+    "src/main/java/com/pulumi/aws/ec2_getAmi/inputs/GetAmiArgs.java",
+    "src/main/java/com/pulumi/aws/ec2_getAmi/outputs/GetAmiResult.java",
+    "src/main/java/com/pulumi/aws/iam_instanceProfile/InstanceProfile.java",
+    "src/main/java/com/pulumi/aws/iam_instanceProfile/InstanceProfileArgs.java",
+    "src/main/java/com/pulumi/aws/iam_instanceProfile/inputs/InstanceProfileState.java"
   ]
 }

@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.azure-native"
+rootProject.name = "com.pulumi.azure-native"
 include("lib")
