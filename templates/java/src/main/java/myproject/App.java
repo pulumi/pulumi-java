@@ -1,7 +1,7 @@
 package myproject;
 
-import io.pulumi.Pulumi;
-import io.pulumi.core.Output;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
 
 public class App {
     public static void main(String[] args) {

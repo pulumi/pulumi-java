@@ -45,7 +45,7 @@ You can now reference dependencies such as:
 
 ```
 dependencies {
-    implementation 'io.pulumi:pulumi:0.0.1'
+    implementation 'com.pulumi:pulumi:0.0.1'
 }
 ```
 

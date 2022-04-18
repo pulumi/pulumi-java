@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.random"
+rootProject.name = "com.pulumi.random"
 include("lib")

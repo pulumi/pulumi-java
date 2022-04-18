@@ -6,7 +6,7 @@ var JavaLang = Ident("java").FQN().Dot("lang")
 
 var Optional = JavaUtil.Dot("Optional")
 
-var Pulumi = Ident("io").FQN().Dot("pulumi")
+var Pulumi = Ident("com").FQN().Dot("pulumi")
 
 var PulumiCore = Pulumi.Dot("core")
 

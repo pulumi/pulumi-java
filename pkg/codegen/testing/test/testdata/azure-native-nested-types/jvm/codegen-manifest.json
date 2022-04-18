@@ -3,13 +3,13 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/azurenative/Provider.java",
-    "src/main/java/io/pulumi/azurenative/ProviderArgs.java",
-    "src/main/java/io/pulumi/azurenative/Utilities.java",
-    "src/main/java/io/pulumi/azurenative/documentdb/SqlResourceSqlContainer.java",
-    "src/main/java/io/pulumi/azurenative/documentdb/SqlResourceSqlContainerArgs.java",
-    "src/main/java/io/pulumi/azurenative/documentdb/outputs/CompositePathResponse.java",
-    "src/main/java/io/pulumi/azurenative/documentdb/outputs/IndexingPolicyResponse.java",
-    "src/main/java/io/pulumi/azurenative/documentdb/outputs/SqlContainerGetPropertiesResponseResource.java"
+    "src/main/java/com/pulumi/azurenative/Provider.java",
+    "src/main/java/com/pulumi/azurenative/ProviderArgs.java",
+    "src/main/java/com/pulumi/azurenative/Utilities.java",
+    "src/main/java/com/pulumi/azurenative/documentdb/SqlResourceSqlContainer.java",
+    "src/main/java/com/pulumi/azurenative/documentdb/SqlResourceSqlContainerArgs.java",
+    "src/main/java/com/pulumi/azurenative/documentdb/outputs/CompositePathResponse.java",
+    "src/main/java/com/pulumi/azurenative/documentdb/outputs/IndexingPolicyResponse.java",
+    "src/main/java/com/pulumi/azurenative/documentdb/outputs/SqlContainerGetPropertiesResponseResource.java"
   ]
 }
