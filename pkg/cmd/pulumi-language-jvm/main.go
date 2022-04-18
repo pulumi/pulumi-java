@@ -510,7 +510,7 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
 		cmd:       cmd,
 		buildArgs: []string{"--no-transfer-progress", "compile"},
-		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
+		runArgs:   []string{"-l", ".pulumi.mvn.log", "--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
 			"--quiet", "--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
