@@ -14,6 +14,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.Reader;
+import java.util.List;
 import java.util.Optional;
 
 import static java.util.Objects.requireNonNull;
@@ -122,6 +123,20 @@ public class Config {
     }
 
     /**
+     * Loads an optional configuration value, as a number, by its key, or null if it doesn't exist.
+     * If the configuration value isn't a legal number, this function will throw an error.
+     */
+    public Optional<Double> getDouble(String key) {
+        return get(key).map(string -> {
+            try {
+                return Double.parseDouble(string);
+            } catch (NumberFormatException ex) {
+                throw new ConfigTypeException(fullKey(key), string, "Double", ex);
+            }
+        });
+    }
+
+    /**
      * Loads an optional configuration value, as a number, by its key, marking it as a secret
      * or null if it doesn't exist.
      * If the configuration value isn't a legal number, this function will throw an error.
@@ -161,6 +176,8 @@ public class Config {
      */
     public <T> Optional<T> getObject(String key, TypeShape<T> shapeOfT) {
         var v = get(key);
+        // TODO should this be using Pulumi deserializers from protobuf Struct instead of GSON?
+        // JSON can be converted to protobuf struct.
         try {
             var gson = new Gson();
             return v.map(string -> gson.fromJson(string, shapeOfT.toGSON().getType()));
@@ -268,6 +285,13 @@ public class Config {
         public ConfigMissingException(String key) {
             super(String.format("Missing required configuration variable '%s'\n", key) +
                     String.format("\tplease set a value using the command `pulumi config set %s <value>`", key));
+        }
+
+        public ConfigMissingException(String key, List<String> envVars) {
+            super(String.format("Missing required configuration variable '%s'\n", key) +
+                    String.format("\tplease set a value using the command `pulumi config set %s <value>`", key) +
+                    String.format("\tor provide it via an environment variable %s",
+                            String.join(", ", envVars)));
         }
     }
 }

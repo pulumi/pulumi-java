@@ -1,0 +1,315 @@
+// Copyright 2022, Pulumi Corporation.  All rights reserved.
+//
+// Default value and config value code-generation facilities for SDK
+// generation are kept in this separate file as they are a bit
+// intricate.
+package jvm
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi/pkg/v3/codegen"
+
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
+)
+
+// TODO would this file be a convenient place to handle
+// DefaultValue.ConstValue also?
+
+// Helper type for config getter and default value generation. Use
+// configExpr and defaultValueExpr, the rest are helper methods.
+type defaultsGen struct {
+	mod *modContext
+	ctx *classFileContext
+}
+
+// Generates code for an expression to compute the value of config
+// property. The expression assumes an environment where `config` is
+// bound to a Config instance. The type of the generated expression
+// must match targetType.
+func (dg *defaultsGen) configExpr(configProp *schema.Property, targetType TypeShape) (string, error) {
+	return dg.builderExpr(configProp, targetType, "config", "")
+}
+
+// Generates an expression that evaluates to the default value of the
+// desired type. The expression takes care of env var lookups and
+// hydrating the expected targetType.
+func (dg *defaultsGen) defaultValueExpr(prop *schema.Property, targetType TypeShape) (string, error) {
+	return dg.builderExpr(prop, targetType, "", prop.Name)
+}
+
+// Utility to generates a builder expr against the
+// Codegen.PropertyBuilder API.
+//
+// config if non-empty is an expr of type Config.
+//
+// arg if non-empty is an expr of type targetType pointing to a
+// user-provided nullable argument.
+
+func (dg *defaultsGen) builderExpr(
+	prop *schema.Property,
+	targetType TypeShape,
+	config string,
+	arg string) (string, error) {
+
+	if code, ok := dg.builderExprSpecialCase(prop, targetType, config, arg); ok {
+		return code, nil
+	}
+
+	builderTransformCode := ""
+
+	isOutput, t0 := dg.unOutputTypeShape(targetType)
+
+	if isOutput {
+		if prop.Secret {
+			builderTransformCode = ".secret()"
+		} else {
+			builderTransformCode = ".output()"
+		}
+	} else {
+		if prop.Secret {
+			return "", fmt.Errorf("Secret propety does not have Output type")
+		}
+	}
+
+	isOptional, t := dg.unOptionalTypeShape(t0)
+
+	var code string
+
+	// For Either<A,B> try to codegen A or B opportunistically.
+	if isEither, a, b := dg.unEitherTypeShape(t); isEither {
+		aV, err := dg.builderExprWithSimpleType(prop, a, config, arg,
+			fmt.Sprintf(".left(%s.class)%s",
+				dg.ctx.ref(b.Type),
+				builderTransformCode))
+		if err != nil {
+			bV, err2 := dg.builderExprWithSimpleType(prop, b, config, arg,
+				fmt.Sprintf(".right(%s.class)%s",
+					dg.ctx.ref(a.Type),
+					builderTransformCode))
+			if err2 != nil {
+				return "", fmt.Errorf("Cannot process Either"+
+					"\nLeft: %v\nRight: %w", err, err2)
+			}
+			code = bV
+		} else {
+			code = aV
+		}
+	} else {
+		c, err := dg.builderExprWithSimpleType(
+			prop, t, config, arg, builderTransformCode)
+		if err != nil {
+			return "", err
+		}
+		code = c
+	}
+
+	if isOptional {
+		return fmt.Sprintf("%s.get()", code), nil
+	}
+	if !prop.IsRequired() {
+		return fmt.Sprintf("%s.getNullable()", code), nil
+	}
+
+	return fmt.Sprintf("%s.require()", code), nil
+}
+
+// Degenerate cases can have simpler code.
+func (dg *defaultsGen) builderExprSpecialCase(
+	prop *schema.Property,
+	targetType TypeShape,
+	config string,
+	arg string) (string, bool) {
+
+	// No defaults, no null check, already have an argument of wanted type, simply pass it on.
+	if !prop.IsRequired() && arg != "" && prop.DefaultValue == nil && prop.ConstValue == nil {
+		return arg, true
+	}
+
+	// Required prop without defaults, all we need to do is a null check with a good exception.
+	if prop.IsRequired() && arg != "" && prop.DefaultValue == nil && prop.ConstValue == nil {
+		msg := fmt.Sprintf("expected parameter '%s' to be non-null", prop.Name)
+		return fmt.Sprintf("%s.requireNonNull(%s, %s)",
+			dg.ctx.ref(names.Objects),
+			arg,
+			dg.quoteJavaStringLiteral(msg)), true
+	}
+
+	return "", false
+}
+
+// Helper for simple types - not Optional, Either, or Output.
+func (dg *defaultsGen) builderExprWithSimpleType(
+	prop *schema.Property,
+	targetType TypeShape,
+	config string,
+	arg string,
+	builderTransformCode string) (string, error) {
+
+	var buf bytes.Buffer
+
+	fmt.Fprintf(&buf, dg.ctx.ref(names.Codegen))
+	propLiteral := dg.quoteJavaStringLiteral(prop.Name)
+
+	isObject := false
+	if targetType.Type.Equal(names.Boolean) {
+		fmt.Fprintf(&buf, ".booleanProp(%s)", propLiteral)
+	} else if targetType.Type.Equal(names.Integer) {
+		fmt.Fprintf(&buf, ".integerProp(%s)", propLiteral)
+	} else if targetType.Type.Equal(names.String) {
+		fmt.Fprintf(&buf, ".stringProp(%s)", propLiteral)
+	} else if targetType.Type.Equal(names.Double) {
+		fmt.Fprintf(&buf, ".doubleProp(%s)", propLiteral)
+	} else {
+		// Need to know TypeShape to deserialize at runtime
+		isObject = true
+		if len(targetType.Parameters) == 0 {
+			fmt.Fprintf(&buf, ".objectProp(%s, %s.class)",
+				propLiteral,
+				dg.ctx.ref(targetType.Type))
+		} else {
+			fmt.Fprintf(&buf, ".objectProp(%s, %s)",
+				propLiteral,
+				targetType.StringJavaTypeShape(dg.ctx.imports))
+		}
+	}
+
+	fmt.Fprintf(&buf, "%s", builderTransformCode)
+
+	if config != "" {
+		fmt.Fprintf(&buf, ".config(%s)", config)
+	}
+
+	if arg != "" {
+		fmt.Fprintf(&buf, ".arg(%s)", arg)
+	}
+
+	if prop.DefaultValue == nil {
+		return buf.String(), nil
+	}
+
+	dv := prop.DefaultValue
+
+	if len(dv.Environment) > 0 {
+		fmt.Fprintf(&buf, ".env(")
+		for i, envVarName := range dv.Environment {
+			if i != 0 {
+				fmt.Fprintf(&buf, ", ")
+			}
+			fmt.Fprintf(&buf, "%s", dg.quoteJavaStringLiteral(envVarName))
+		}
+		fmt.Fprintf(&buf, ")")
+	}
+
+	if dv.Value != nil {
+		// For enums, refer to matching Enum.CASE as a direct default value
+		enumTypes := dg.detectEnumTypes(prop)
+		if enumType, ok := enumTypes[targetType.Type.String()]; ok {
+			code, err := dg.enumReference(dg.ctx, enumType, dv)
+			if err != nil {
+				return "", err
+			}
+			fmt.Fprintf(&buf, ".def(%s)", code)
+		} else if isObject {
+			encoded, err := json.Marshal(dv.Value)
+			if err != nil {
+				return "", err
+			}
+			j := dg.quoteJavaStringLiteral(string(encoded))
+			fmt.Fprintf(&buf, ".defJson(%s)", j)
+		} else {
+			primCode, primType, err := primitiveValue(dv.Value)
+			if err != nil {
+				return "", err
+			}
+			if !primType.WithoutAnnotations().Equal(targetType.WithoutAnnotations()) {
+				return "", fmt.Errorf("Type mismatch: %v vs %v",
+					primType, targetType)
+			}
+			fmt.Fprintf(&buf, ".def(%s)", primCode)
+		}
+	}
+
+	return buf.String(), nil
+}
+
+// Helper to find any Enum types referenced in the type of a Property
+// and index them by FQN.
+func (dg *defaultsGen) detectEnumTypes(prop *schema.Property) map[string]*schema.EnumType {
+	// Index all EnumTypes present in schemaType by FQN.
+	enumTypes := map[string]*schema.EnumType{}
+	codegen.VisitTypeClosure([]*schema.Property{prop}, func(t schema.Type) {
+		switch eT := t.(type) {
+		case *schema.EnumType:
+			fqn := dg.mod.typeStringForEnumType(eT).Type
+			enumTypes[fqn.String()] = eT
+		}
+	})
+	return enumTypes
+}
+
+func (dg *defaultsGen) unEitherTypeShape(typeShape TypeShape) (bool, TypeShape, TypeShape) {
+	if typeShape.Type.Equal(names.Either) {
+		return true, typeShape.Parameters[0], typeShape.Parameters[1]
+	}
+	return false, TypeShape{}, TypeShape{}
+}
+
+func (dg *defaultsGen) unOptionalTypeShape(typeShape TypeShape) (bool, TypeShape) {
+	if typeShape.Type.Equal(names.Optional) {
+		return true, typeShape.Parameters[0]
+	}
+	return false, typeShape
+}
+
+func (dg *defaultsGen) unOutputTypeShape(typeShape TypeShape) (bool, TypeShape) {
+	if typeShape.Type.Equal(names.Output) {
+		return true, typeShape.Parameters[0]
+	}
+	return false, typeShape
+}
+
+// In cases when the default value is a known enum refernce, this will
+// be set to the code literal, such as
+// `io.pulumi.azurenative.insights.enums.WebTestKind.Ping`.
+func (dg *defaultsGen) enumReference(
+	ctx *classFileContext,
+	enumType *schema.EnumType,
+	dv *schema.DefaultValue) (string, error) {
+
+	pkg, err := parsePackageName(dg.mod.packageName)
+	if err != nil {
+		return "", err
+	}
+	enumName := tokenToName(enumType.Token)
+	enumFQN := pkg.Dot(names.Ident("enums")).Dot(names.Ident(enumName))
+	for _, e := range enumType.Elements {
+		if e.Value != dv.Value {
+			continue
+		}
+		elName := e.Name
+		if elName == "" {
+			elName = fmt.Sprintf("%v", e.Value)
+		}
+		safeName, err := names.MakeSafeEnumName(elName, enumName)
+		if err != nil {
+			return "", err
+		}
+		return fmt.Sprintf("%s.%s", ctx.ref(enumFQN), safeName), nil
+	}
+	return "", fmt.Errorf("Bad default value for enum %s: %v",
+		enumFQN.String(),
+		dv.Value)
+}
+
+func (dg *defaultsGen) quoteJavaStringLiteral(s string) string {
+	v, _, err := primitiveValue(s)
+	if err != nil {
+		panic(err)
+	}
+	return v
+}
