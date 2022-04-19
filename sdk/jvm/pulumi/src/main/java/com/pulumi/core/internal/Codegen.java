@@ -59,6 +59,7 @@ public final class Codegen {
         private final Function<String, T> readFromEnvVar;
         private final Function<String, T> parseJsonDefault;
         private final Function<Config, Optional<T>> tryReadFromConfig;
+        private final Function<R, R> finalize;
 
         private final List<String> envVars = new ArrayList<>();
         private Optional<Config> config = Optional.empty();
@@ -71,13 +72,25 @@ public final class Codegen {
                 Function<T, R> convert,
                 Function<String, T> readFromEnvVar,
                 Function<String, T> parseJsonDefault,
-                Function<Config, Optional<T>> tryReadFromConfig
+                Function<Config, Optional<T>> tryReadFromConfig,
+                Function<R, R> finalize
         ) {
             this.propertyName = propertyName;
             this.readFromEnvVar = readFromEnvVar;
             this.parseJsonDefault = parseJsonDefault;
             this.tryReadFromConfig = tryReadFromConfig;
             this.convert = convert;
+            this.finalize = finalize;
+        }
+
+        public PropertyBuilder(
+                String propertyName,
+                Function<T, R> convert,
+                Function<String, T> readFromEnvVar,
+                Function<String, T> parseJsonDefault,
+                Function<Config, Optional<T>> tryReadFromConfig
+        ) {
+            this(propertyName, convert, readFromEnvVar, parseJsonDefault, tryReadFromConfig, Function.identity());
         }
 
         /**
@@ -99,10 +112,11 @@ public final class Codegen {
         public PropertyBuilder<T, Output<R>> secret() {
             return new PropertyBuilder<>(
                     this.propertyName,
-                    x -> Output.of(this.convert.apply(x)).asSecret(),
+                    x -> Output.of(this.convert.apply(x)),
                     this.readFromEnvVar,
                     this.parseJsonDefault,
-                    this.tryReadFromConfig
+                    this.tryReadFromConfig,
+                    x -> x.asSecret()
             );
         }
 
@@ -172,6 +186,10 @@ public final class Codegen {
          * Retrieves the final value of the property after applying defaults.
          */
         public Optional<R> get() {
+            return this.getRaw().map(this.finalize);
+        }
+
+        private Optional<R> getRaw() {
             // User-provided arguments disable any defaulting logic.
             if (this.arg.isPresent()) {
                 return this.arg;
