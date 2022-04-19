@@ -132,7 +132,7 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
         this.majorEngineVersion = majorEngineVersion;
         this.name = name;
         this.namePrefix = namePrefix;
-        this.optionGroupDescription = optionGroupDescription == null ? Codegen.ofNullable("Managed by Pulumi") : optionGroupDescription;
+        this.optionGroupDescription = Codegen.stringProp("optionGroupDescription").output().arg(optionGroupDescription).def("Managed by Pulumi").getNullable();
         this.options = options;
         this.tags = tags;
         this.tagsAll = tagsAll;

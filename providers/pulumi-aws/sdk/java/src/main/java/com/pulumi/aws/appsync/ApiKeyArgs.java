@@ -53,7 +53,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         @Nullable Output<String> expires) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.expires = expires;
     }
 

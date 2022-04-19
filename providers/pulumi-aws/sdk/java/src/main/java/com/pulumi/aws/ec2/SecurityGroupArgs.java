@@ -117,7 +117,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> revokeRulesOnDelete,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> vpcId) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.egress = egress;
         this.ingress = ingress;
         this.name = name;

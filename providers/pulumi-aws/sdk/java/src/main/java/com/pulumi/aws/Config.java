@@ -3,13 +3,12 @@
 
 package com.pulumi.aws;
 
-import com.pulumi.aws.Utilities;
 import com.pulumi.aws.config.inputs.AssumeRole;
 import com.pulumi.aws.config.inputs.DefaultTags;
 import com.pulumi.aws.config.inputs.Endpoints;
 import com.pulumi.aws.config.inputs.IgnoreTags;
 import com.pulumi.core.TypeShape;
-import com.pulumi.core.internal.Optionals;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,26 +23,26 @@ public final class Config {
  * 
  */
     public Optional<String> accessKey() {
-        return config.getObject("accessKey",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("accessKey").config(config).get();
     }
     public Optional<List<String>> allowedAccountIds() {
-        return config.getObject("allowedAccountIds",TypeShape.<List<String>>builder(List.class).addParameter(String.class).build());
+        return Codegen.objectProp("allowedAccountIds", TypeShape.<List<String>>builder(List.class).addParameter(String.class).build()).config(config).get();
     }
     public Optional<AssumeRole> assumeRole() {
-        return config.getObject("assumeRole",TypeShape.<AssumeRole>builder(AssumeRole.class).build());
+        return Codegen.objectProp("assumeRole", AssumeRole.class).config(config).get();
     }
 /**
  * Configuration block with settings to default resource tags across all resources.
  * 
  */
     public Optional<DefaultTags> defaultTags() {
-        return config.getObject("defaultTags",TypeShape.<DefaultTags>builder(DefaultTags.class).build());
+        return Codegen.objectProp("defaultTags", DefaultTags.class).config(config).get();
     }
     public Optional<List<Endpoints>> endpoints() {
-        return config.getObject("endpoints",TypeShape.<List<Endpoints>>builder(List.class).addParameter(Endpoints.class).build());
+        return Codegen.objectProp("endpoints", TypeShape.<List<Endpoints>>builder(List.class).addParameter(Endpoints.class).build()).config(config).get();
     }
     public Optional<List<String>> forbiddenAccountIds() {
-        return config.getObject("forbiddenAccountIds",TypeShape.<List<String>>builder(List.class).addParameter(String.class).build());
+        return Codegen.objectProp("forbiddenAccountIds", TypeShape.<List<String>>builder(List.class).addParameter(String.class).build()).config(config).get();
     }
 /**
  * The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
@@ -51,42 +50,42 @@ public final class Config {
  * 
  */
     public Optional<String> httpProxy() {
-        return config.getObject("httpProxy",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("httpProxy").config(config).get();
     }
 /**
  * Configuration block with settings to ignore resource tags across all resources.
  * 
  */
     public Optional<IgnoreTags> ignoreTags() {
-        return config.getObject("ignoreTags",TypeShape.<IgnoreTags>builder(IgnoreTags.class).build());
+        return Codegen.objectProp("ignoreTags", IgnoreTags.class).config(config).get();
     }
 /**
  * Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
  * 
  */
     public Optional<Boolean> insecure() {
-        return config.getObject("insecure",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("insecure").config(config).get();
     }
 /**
  * The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
  * 
  */
     public Optional<Integer> maxRetries() {
-        return config.getObject("maxRetries",TypeShape.<Integer>builder(Integer.class).build());
+        return Codegen.integerProp("maxRetries").config(config).get();
     }
 /**
  * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
  * 
  */
     public Optional<String> profile() {
-        return Optionals.combine(config.getObject("profile",TypeShape.<String>builder(String.class).build()), Optional.ofNullable(Utilities.getEnv("AWS_PROFILE").orElse(null)));
+        return Codegen.stringProp("profile").config(config).env("AWS_PROFILE").get();
     }
 /**
  * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
  * 
  */
     public String region() {
-        return Optionals.combine(config.get("region"), Utilities.getEnv("AWS_REGION", "AWS_DEFAULT_REGION").orElse(null));
+        return Codegen.stringProp("region").config(config).env("AWS_REGION", "AWS_DEFAULT_REGION").require();
     }
 /**
  * Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
@@ -95,21 +94,21 @@ public final class Config {
  * 
  */
     public Optional<Boolean> s3ForcePathStyle() {
-        return config.getObject("s3ForcePathStyle",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("s3ForcePathStyle").config(config).get();
     }
 /**
  * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
  * 
  */
     public Optional<String> secretKey() {
-        return config.getObject("secretKey",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("secretKey").config(config).get();
     }
 /**
  * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
  * 
  */
     public Optional<String> sharedCredentialsFile() {
-        return config.getObject("sharedCredentialsFile",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("sharedCredentialsFile").config(config).get();
     }
 /**
  * Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS
@@ -117,17 +116,17 @@ public final class Config {
  * 
  */
     public Optional<Boolean> skipCredentialsValidation() {
-        return Optionals.combine(config.getObject("skipCredentialsValidation",TypeShape.<Boolean>builder(Boolean.class).build()), Optional.ofNullable(true));
+        return Codegen.booleanProp("skipCredentialsValidation").config(config).def(true).get();
     }
 /**
  * Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
  * 
  */
     public Optional<Boolean> skipGetEc2Platforms() {
-        return Optionals.combine(config.getObject("skipGetEc2Platforms",TypeShape.<Boolean>builder(Boolean.class).build()), Optional.ofNullable(true));
+        return Codegen.booleanProp("skipGetEc2Platforms").config(config).def(true).get();
     }
     public Optional<Boolean> skipMetadataApiCheck() {
-        return Optionals.combine(config.getObject("skipMetadataApiCheck",TypeShape.<Boolean>builder(Boolean.class).build()), Optional.ofNullable(true));
+        return Codegen.booleanProp("skipMetadataApiCheck").config(config).def(true).get();
     }
 /**
  * Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that are
@@ -135,20 +134,20 @@ public final class Config {
  * 
  */
     public Optional<Boolean> skipRegionValidation() {
-        return Optionals.combine(config.getObject("skipRegionValidation",TypeShape.<Boolean>builder(Boolean.class).build()), Optional.ofNullable(true));
+        return Codegen.booleanProp("skipRegionValidation").config(config).def(true).get();
     }
 /**
  * Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
  * 
  */
     public Optional<Boolean> skipRequestingAccountId() {
-        return config.getObject("skipRequestingAccountId",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("skipRequestingAccountId").config(config).get();
     }
 /**
  * session token. A session token is only required if you are using temporary security credentials.
  * 
  */
     public Optional<String> token() {
-        return config.getObject("token",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("token").config(config).get();
     }
 }
