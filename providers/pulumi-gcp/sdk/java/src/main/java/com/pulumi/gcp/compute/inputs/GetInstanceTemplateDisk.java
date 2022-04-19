@@ -210,7 +210,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
         this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
         this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
         this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
         this.resourcePolicies = Objects.requireNonNull(resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
