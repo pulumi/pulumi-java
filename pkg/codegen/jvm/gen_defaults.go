@@ -39,7 +39,8 @@ func (dg *defaultsGen) configExpr(configProp *schema.Property, targetType TypeSh
 // desired type. The expression takes care of env var lookups and
 // hydrating the expected targetType.
 func (dg *defaultsGen) defaultValueExpr(prop *schema.Property, targetType TypeShape) (string, error) {
-	return dg.builderExpr(prop, targetType, "", prop.Name)
+	paramName := names.Ident(prop.Name).String()
+	return dg.builderExpr(prop, targetType, "", paramName)
 }
 
 // Utility to generates a builder expr against the
