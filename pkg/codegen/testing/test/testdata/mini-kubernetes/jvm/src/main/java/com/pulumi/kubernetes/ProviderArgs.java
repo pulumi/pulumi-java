@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeClientSettings", json=true)
-      private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
+    private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
-    public Output<KubeClientSettingsArgs> kubeClientSettings() {
-        return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
+    public Optional<Output<KubeClientSettingsArgs>> kubeClientSettings() {
+        return Optional.ofNullable(this.kubeClientSettings);
     }
 
     /**
@@ -54,89 +55,79 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeconfig")
-      private final @Nullable Output<String> kubeconfig;
+    private @Nullable Output<String> kubeconfig;
 
-    public Output<String> kubeconfig() {
-        return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
+    public Optional<Output<String>> kubeconfig() {
+        return Optional.ofNullable(this.kubeconfig);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> cluster,
-        @Nullable Output<String> context,
-        @Nullable Output<KubeClientSettingsArgs> kubeClientSettings,
-        @Nullable Output<String> kubeconfig) {
-        this.cluster = cluster;
-        this.context = context;
-        this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = Codegen.stringProp("kubeconfig").output().arg(kubeconfig).env("KUBECONFIG").getNullable();
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.cluster = Codegen.empty();
-        this.context = Codegen.empty();
-        this.kubeClientSettings = Codegen.empty();
-        this.kubeconfig = Codegen.empty();
+    protected ProviderArgs(ProviderArgs $) {
+        this.cluster = $.cluster;
+        this.context = $.context;
+        this.kubeClientSettings = $.kubeClientSettings;
+        this.kubeconfig = $.kubeconfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cluster;
-        private @Nullable Output<String> context;
-        private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
-        private @Nullable Output<String> kubeconfig;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.context = defaults.context;
-    	      this.kubeClientSettings = defaults.kubeClientSettings;
-    	      this.kubeconfig = defaults.kubeconfig;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
         }
+
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
-            this.kubeClientSettings = kubeClientSettings;
+            $.kubeClientSettings = kubeClientSettings;
             return this;
         }
-        public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
-            this.kubeClientSettings = Codegen.ofNullable(kubeClientSettings);
-            return this;
+
+        public Builder kubeClientSettings(KubeClientSettingsArgs kubeClientSettings) {
+            return kubeClientSettings(Output.of(kubeClientSettings));
         }
+
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
-            this.kubeconfig = kubeconfig;
+            $.kubeconfig = kubeconfig;
             return this;
         }
-        public Builder kubeconfig(@Nullable String kubeconfig) {
-            this.kubeconfig = Codegen.ofNullable(kubeconfig);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(cluster, context, kubeClientSettings, kubeconfig);
+
+        public Builder kubeconfig(String kubeconfig) {
+            return kubeconfig(Output.of(kubeconfig));
+        }
+
+        public ProviderArgs build() {
+            $.kubeconfig = Codegen.stringProp("kubeconfig").output().arg($.kubeconfig).env("KUBECONFIG").getNullable();
+            return $;
         }
     }
+
 }
