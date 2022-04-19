@@ -17,126 +17,112 @@ public final class FooArgs extends com.pulumi.resources.ResourceArgs {
     public static final FooArgs Empty = new FooArgs();
 
     @Import(name="a", required=true)
-      private final Boolean a;
+    private Boolean a;
 
     public Boolean a() {
         return this.a;
     }
 
     @Import(name="b")
-      private final @Nullable Boolean b;
+    private @Nullable Boolean b;
 
     public Optional<Boolean> b() {
-        return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
+        return Optional.ofNullable(this.b);
     }
 
     @Import(name="c", required=true)
-      private final Integer c;
+    private Integer c;
 
     public Integer c() {
         return this.c;
     }
 
     @Import(name="d")
-      private final @Nullable Integer d;
+    private @Nullable Integer d;
 
     public Optional<Integer> d() {
-        return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
+        return Optional.ofNullable(this.d);
     }
 
     @Import(name="e", required=true)
-      private final String e;
+    private String e;
 
     public String e() {
         return this.e;
     }
 
     @Import(name="f")
-      private final @Nullable String f;
+    private @Nullable String f;
 
     public Optional<String> f() {
-        return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
+        return Optional.ofNullable(this.f);
     }
 
-    public FooArgs(
-        Boolean a,
-        @Nullable Boolean b,
-        Integer c,
-        @Nullable Integer d,
-        String e,
-        @Nullable String f) {
-        this.a = Objects.requireNonNull(a, "expected parameter 'a' to be non-null");
-        this.b = b;
-        this.c = Objects.requireNonNull(c, "expected parameter 'c' to be non-null");
-        this.d = d;
-        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
-        this.f = f;
-    }
+    private FooArgs() {}
 
-    private FooArgs() {
-        this.a = null;
-        this.b = null;
-        this.c = null;
-        this.d = null;
-        this.e = null;
-        this.f = null;
+    protected FooArgs(FooArgs $) {
+        this.a = $.a;
+        this.b = $.b;
+        this.c = $.c;
+        this.d = $.d;
+        this.e = $.e;
+        this.f = $.f;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FooArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean a;
-        private @Nullable Boolean b;
-        private Integer c;
-        private @Nullable Integer d;
-        private String e;
-        private @Nullable String f;
+        private FooArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FooArgs();
         }
 
         public Builder(FooArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.a = defaults.a;
-    	      this.b = defaults.b;
-    	      this.c = defaults.c;
-    	      this.d = defaults.d;
-    	      this.e = defaults.e;
-    	      this.f = defaults.f;
+            $ = new FooArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder a(Boolean a) {
-            this.a = Objects.requireNonNull(a);
+            $.a = a;
             return this;
         }
+
         public Builder b(@Nullable Boolean b) {
-            this.b = b;
+            $.b = b;
             return this;
         }
+
         public Builder c(Integer c) {
-            this.c = Objects.requireNonNull(c);
+            $.c = c;
             return this;
         }
+
         public Builder d(@Nullable Integer d) {
-            this.d = d;
+            $.d = d;
             return this;
         }
+
         public Builder e(String e) {
-            this.e = Objects.requireNonNull(e);
+            $.e = e;
             return this;
         }
+
         public Builder f(@Nullable String f) {
-            this.f = f;
+            $.f = f;
             return this;
-        }        public FooArgs build() {
-            return new FooArgs(a, b, c, d, e, f);
+        }
+
+        public FooArgs build() {
+            $.a = Objects.requireNonNull($.a, "expected parameter 'a' to be non-null");
+            $.c = Objects.requireNonNull($.c, "expected parameter 'c' to be non-null");
+            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            return $;
         }
     }
+
 }
