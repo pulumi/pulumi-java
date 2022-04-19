@@ -11,6 +11,7 @@ on:
       - aws-native/v*.*.*
       - aws/v*.*.*
       - azure-native/v*.*.*
+      - azuread/v*.*.*
       - docker/v*.*.*
       - eks/v*.*.*
       - gcp/v*.*.*
@@ -166,6 +167,7 @@ jobs:
         provider:
         - random
         - azure-native
+        - azuread
         - google-native
         - gcp
         - aws
