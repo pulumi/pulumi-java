@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,7 +54,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
         String resultType) {
         this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
     }
 
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse() {

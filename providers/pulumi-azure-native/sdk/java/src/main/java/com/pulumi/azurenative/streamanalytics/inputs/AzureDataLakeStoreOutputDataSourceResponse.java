@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -136,7 +137,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends com.pulumi
         this.timeFormat = timeFormat;
         this.tokenUserDisplayName = tokenUserDisplayName;
         this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private AzureDataLakeStoreOutputDataSourceResponse() {

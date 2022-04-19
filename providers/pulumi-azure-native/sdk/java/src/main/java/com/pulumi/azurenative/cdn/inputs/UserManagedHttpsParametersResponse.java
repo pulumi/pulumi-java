@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.azurenative.cdn.inputs.KeyVaultCertificateSourceParametersResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +70,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
         KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
         @Nullable String minimumTlsVersion,
         String protocolType) {
-        this.certificateSource = Objects.requireNonNull(certificateSource, "expected parameter 'certificateSource' to be non-null");
+        this.certificateSource = Codegen.stringProp("certificateSource").arg(certificateSource).require();
         this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters, "expected parameter 'certificateSourceParameters' to be non-null");
         this.minimumTlsVersion = minimumTlsVersion;
         this.protocolType = Objects.requireNonNull(protocolType, "expected parameter 'protocolType' to be non-null");

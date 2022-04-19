@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.digitaltwins.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -134,7 +135,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
         this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.topicEndpoint = Objects.requireNonNull(topicEndpoint, "expected parameter 'topicEndpoint' to be non-null");
     }

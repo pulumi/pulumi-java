@@ -47,7 +47,7 @@ public final class LogSchedulePolicyArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Integer> scheduleFrequencyInMins,
         Output<String> schedulePolicyType) {
         this.scheduleFrequencyInMins = scheduleFrequencyInMins;
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
+        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").output().arg(schedulePolicyType).require();
     }
 
     private LogSchedulePolicyArgs() {

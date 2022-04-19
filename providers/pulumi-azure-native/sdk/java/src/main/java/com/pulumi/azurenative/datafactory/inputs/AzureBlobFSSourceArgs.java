@@ -125,7 +125,7 @@ public final class AzureBlobFSSourceArgs extends com.pulumi.resources.ResourceAr
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
         this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBlobFSSourceArgs() {

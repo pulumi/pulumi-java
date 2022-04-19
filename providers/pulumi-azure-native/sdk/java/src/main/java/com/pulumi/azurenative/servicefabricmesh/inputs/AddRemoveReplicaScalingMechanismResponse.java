@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +68,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
         Integer maxCount,
         Integer minCount,
         Integer scaleIncrement) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
         this.minCount = Objects.requireNonNull(minCount, "expected parameter 'minCount' to be non-null");
         this.scaleIncrement = Objects.requireNonNull(scaleIncrement, "expected parameter 'scaleIncrement' to be non-null");

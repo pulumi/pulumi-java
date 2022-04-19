@@ -5,6 +5,7 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.azurenative.virtualmachineimages.inputs.VirtualNetworkConfigResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,8 +58,8 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
         @Nullable Integer osDiskSizeGB,
         @Nullable String vmSize,
         @Nullable VirtualNetworkConfigResponse vnetConfig) {
-        this.osDiskSizeGB = osDiskSizeGB == null ? 0 : osDiskSizeGB;
-        this.vmSize = vmSize == null ? "" : vmSize;
+        this.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").arg(osDiskSizeGB).def(0).getNullable();
+        this.vmSize = Codegen.stringProp("vmSize").arg(vmSize).def("").getNullable();
         this.vnetConfig = vnetConfig;
     }
 

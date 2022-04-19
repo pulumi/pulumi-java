@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.DatabaseFileInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -110,7 +111,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         this.databaseState = Objects.requireNonNull(databaseState, "expected parameter 'databaseState' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.sizeMB = Objects.requireNonNull(sizeMB, "expected parameter 'sizeMB' to be non-null");
     }
 

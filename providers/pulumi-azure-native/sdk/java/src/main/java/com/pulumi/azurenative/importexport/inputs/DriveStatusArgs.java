@@ -178,7 +178,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
         this.manifestHash = manifestHash;
         this.manifestUri = manifestUri;
         this.percentComplete = percentComplete;
-        this.state = state == null ? Output.ofLeft("Specified") : state;
+        this.state = Codegen.stringProp("state").left(DriveState.class).output().arg(state).def("Specified").getNullable();
         this.verboseLogUri = verboseLogUri;
     }
 

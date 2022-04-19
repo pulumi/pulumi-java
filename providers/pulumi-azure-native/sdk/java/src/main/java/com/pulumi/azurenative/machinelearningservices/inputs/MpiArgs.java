@@ -46,7 +46,7 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
     public MpiArgs(
         Output<String> distributionType,
         @Nullable Output<Integer> processCountPerInstance) {
-        this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
+        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
         this.processCountPerInstance = processCountPerInstance;
     }
 

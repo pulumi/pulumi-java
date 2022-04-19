@@ -245,7 +245,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
         this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
         this.workloadType = workloadType;

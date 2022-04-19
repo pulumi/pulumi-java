@@ -73,7 +73,7 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private VideoEncoderH264Args() {

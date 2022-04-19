@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +58,7 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
         String endpointType,
         @Nullable String resourceId) {
         this.blobContainerName = blobContainerName;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
         this.resourceId = resourceId;
     }
 

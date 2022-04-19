@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.AzureIaaSVMProtectedItemEx
 import com.pulumi.azurenative.recoveryservices.inputs.ExtendedPropertiesResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -359,7 +360,7 @@ public final class AzureIaaSComputeVMProtectedItemResponse extends com.pulumi.re
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
         this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.sourceResourceId = sourceResourceId;

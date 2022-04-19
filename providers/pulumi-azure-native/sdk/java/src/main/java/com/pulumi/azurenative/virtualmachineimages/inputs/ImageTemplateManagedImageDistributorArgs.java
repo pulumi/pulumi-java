@@ -86,7 +86,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
         this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateManagedImageDistributorArgs() {

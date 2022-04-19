@@ -117,7 +117,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;
         this.monthsOfYear = monthsOfYear;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.scheduleTimes = scheduleTimes;
         this.weeksOfTheMonth = weeksOfTheMonth;
     }

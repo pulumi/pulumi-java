@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storage.inputs.EncryptionIdentityResponse;
 import com.pulumi.azurenative.storage.inputs.EncryptionServicesResponse;
 import com.pulumi.azurenative.storage.inputs.KeyVaultPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -84,7 +85,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable Boolean requireInfrastructureEncryption,
         @Nullable EncryptionServicesResponse services) {
         this.encryptionIdentity = encryptionIdentity;
-        this.keySource = keySource == null ? "Microsoft.Storage" : Objects.requireNonNull(keySource, "expected parameter 'keySource' to be non-null");
+        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Microsoft.Storage").require();
         this.keyVaultProperties = keyVaultProperties;
         this.requireInfrastructureEncryption = requireInfrastructureEncryption;
         this.services = services;

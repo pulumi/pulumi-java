@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public final class DiskEncryptionSetResourceSettingsResponse extends com.pulumi.
     public DiskEncryptionSetResourceSettingsResponse(
         String resourceType,
         String targetResourceName) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }
 

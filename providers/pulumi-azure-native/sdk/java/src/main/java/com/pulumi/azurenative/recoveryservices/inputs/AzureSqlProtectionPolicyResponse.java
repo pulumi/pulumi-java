@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.LongTermRetentionPolicyRes
 import com.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,7 +61,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
         String backupManagementType,
         @Nullable Integer protectedItemsCount,
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
     }

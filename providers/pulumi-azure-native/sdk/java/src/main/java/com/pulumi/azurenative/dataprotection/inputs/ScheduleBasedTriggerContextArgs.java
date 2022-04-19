@@ -59,7 +59,7 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
         Output<String> objectType,
         Output<BackupScheduleArgs> schedule,
         Output<List<TaggingCriteriaArgs>> taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }

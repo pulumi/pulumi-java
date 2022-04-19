@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeErrorR
 import com.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeNodeResponse;
 import com.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeOperationResultResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
         this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
         this.otherErrors = Objects.requireNonNull(otherErrors, "expected parameter 'otherErrors' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ManagedIntegrationRuntimeStatusResponse() {

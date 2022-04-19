@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -41,7 +42,7 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
     public SasPolicyResponse(
         String expirationAction,
         String sasExpirationPeriod) {
-        this.expirationAction = expirationAction == null ? "Log" : Objects.requireNonNull(expirationAction, "expected parameter 'expirationAction' to be non-null");
+        this.expirationAction = Codegen.stringProp("expirationAction").arg(expirationAction).def("Log").require();
         this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod, "expected parameter 'sasExpirationPeriod' to be non-null");
     }
 

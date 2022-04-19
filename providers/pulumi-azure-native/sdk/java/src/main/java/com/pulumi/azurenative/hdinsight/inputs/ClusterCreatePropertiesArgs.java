@@ -199,7 +199,7 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
         this.osType = osType;
         this.securityProfile = securityProfile;
         this.storageProfile = storageProfile;
-        this.tier = tier == null ? Codegen.ofNullable(com.pulumi.azurenative.hdinsight.enums.Tier.Standard) : tier;
+        this.tier = Codegen.objectProp("tier", Tier.class).output().arg(tier).def(Tier.Standard).getNullable();
     }
 
     private ClusterCreatePropertiesArgs() {

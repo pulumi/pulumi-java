@@ -193,7 +193,7 @@ public final class AmazonRdsForSqlServerSourceArgs extends com.pulumi.resources.
         this.sqlReaderQuery = sqlReaderQuery;
         this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
         this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AmazonRdsForSqlServerSourceArgs() {

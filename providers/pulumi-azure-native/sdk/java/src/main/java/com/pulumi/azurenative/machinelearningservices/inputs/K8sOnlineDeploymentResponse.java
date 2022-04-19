@@ -14,6 +14,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetRefe
 import com.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -189,7 +190,7 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;
         this.description = description;
-        this.endpointComputeType = Objects.requireNonNull(endpointComputeType, "expected parameter 'endpointComputeType' to be non-null");
+        this.endpointComputeType = Codegen.stringProp("endpointComputeType").arg(endpointComputeType).require();
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
         this.livenessProbe = livenessProbe;

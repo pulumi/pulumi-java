@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class StringBeginsWithAdvancedFilterResponse extends com.pulumi.res
         String operatorType,
         @Nullable List<String> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
         this.values = values;
     }
 

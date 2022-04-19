@@ -189,7 +189,7 @@ public final class DpmContainerArgs extends com.pulumi.resources.ResourceArgs {
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.dpmAgentVersion = dpmAgentVersion;
         this.dpmServers = dpmServers;
         this.extendedInfo = extendedInfo;

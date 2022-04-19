@@ -226,7 +226,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
         this.identity = identity;
-        this.isSystemTask = isSystemTask == null ? Codegen.ofNullable(false) : isSystemTask;
+        this.isSystemTask = Codegen.booleanProp("isSystemTask").output().arg(isSystemTask).def(false).getNullable();
         this.location = location;
         this.logTemplate = logTemplate;
         this.platform = platform;
@@ -236,7 +236,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
         this.step = step;
         this.tags = tags;
         this.taskName = taskName;
-        this.timeout = timeout == null ? Codegen.ofNullable(3600) : timeout;
+        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(3600).getNullable();
         this.trigger = trigger;
     }
 

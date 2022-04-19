@@ -96,10 +96,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
         @Nullable Output<Integer> preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.endpointUrl = endpointUrl;
-        this.maxEventsPerBatch = maxEventsPerBatch == null ? Codegen.ofNullable(1) : maxEventsPerBatch;
-        this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes == null ? Codegen.ofNullable(64) : preferredBatchSizeInKilobytes;
+        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").output().arg(maxEventsPerBatch).def(1).getNullable();
+        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").output().arg(preferredBatchSizeInKilobytes).def(64).getNullable();
     }
 
     private WebHookEventSubscriptionDestinationArgs() {

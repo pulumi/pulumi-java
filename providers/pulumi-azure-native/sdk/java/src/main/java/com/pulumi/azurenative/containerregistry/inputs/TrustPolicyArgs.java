@@ -47,8 +47,8 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public TrustPolicyArgs(
         @Nullable Output<Either<String,PolicyStatus>> status,
         @Nullable Output<Either<String,TrustPolicyType>> type) {
-        this.status = status == null ? Output.ofLeft("disabled") : status;
-        this.type = type == null ? Output.ofLeft("Notary") : type;
+        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
+        this.type = Codegen.stringProp("type").left(TrustPolicyType.class).output().arg(type).def("Notary").getNullable();
     }
 
     private TrustPolicyArgs() {

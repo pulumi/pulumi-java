@@ -170,7 +170,7 @@ public final class BinaryDatasetArgs extends com.pulumi.resources.ResourceArgs {
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private BinaryDatasetArgs() {

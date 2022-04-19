@@ -84,7 +84,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> y) {
         this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
         this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
         this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
     }

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.hdinsight.inputs.OsProfileResponse;
 import com.pulumi.azurenative.hdinsight.inputs.ScriptActionResponse;
 import com.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -162,7 +163,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
-        this.encryptDataDisks = encryptDataDisks == null ? false : encryptDataDisks;
+        this.encryptDataDisks = Codegen.booleanProp("encryptDataDisks").arg(encryptDataDisks).def(false).getNullable();
         this.hardwareProfile = hardwareProfile;
         this.minInstanceCount = minInstanceCount;
         this.name = name;

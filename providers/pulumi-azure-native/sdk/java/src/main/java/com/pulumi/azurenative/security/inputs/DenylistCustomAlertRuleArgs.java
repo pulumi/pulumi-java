@@ -60,7 +60,7 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
         Output<String> ruleType) {
         this.denylistValues = Objects.requireNonNull(denylistValues, "expected parameter 'denylistValues' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
     }
 
     private DenylistCustomAlertRuleArgs() {

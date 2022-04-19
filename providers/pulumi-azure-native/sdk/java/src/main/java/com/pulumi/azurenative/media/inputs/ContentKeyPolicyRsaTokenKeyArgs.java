@@ -58,7 +58,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
         Output<String> odataType) {
         this.exponent = Objects.requireNonNull(exponent, "expected parameter 'exponent' to be non-null");
         this.modulus = Objects.requireNonNull(modulus, "expected parameter 'modulus' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private ContentKeyPolicyRsaTokenKeyArgs() {

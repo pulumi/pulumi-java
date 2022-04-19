@@ -87,8 +87,8 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<List<IPRuleArgs>> ipRules,
         @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules,
         @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.bypass = bypass == null ? Output.ofLeft("AzureServices") : bypass;
-        this.defaultAction = defaultAction == null ? Codegen.ofNullable(com.pulumi.azurenative.storage.enums.DefaultAction.Allow) : Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
+        this.bypass = Codegen.stringProp("bypass").left(Bypass.class).output().arg(bypass).def("AzureServices").getNullable();
+        this.defaultAction = Codegen.objectProp("defaultAction", DefaultAction.class).output().arg(defaultAction).def(DefaultAction.Allow).require();
         this.ipRules = ipRules;
         this.resourceAccessRules = resourceAccessRules;
         this.virtualNetworkRules = virtualNetworkRules;

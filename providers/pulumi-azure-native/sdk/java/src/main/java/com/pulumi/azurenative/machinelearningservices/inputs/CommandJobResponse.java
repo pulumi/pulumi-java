@@ -15,6 +15,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.PyTorchResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.TensorFlowResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -300,7 +301,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
         this.identity = identity;
         this.inputDataBindings = inputDataBindings;
         this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
+        this.jobType = Codegen.stringProp("jobType").arg(jobType).require();
         this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
         this.outputDataBindings = outputDataBindings;
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");

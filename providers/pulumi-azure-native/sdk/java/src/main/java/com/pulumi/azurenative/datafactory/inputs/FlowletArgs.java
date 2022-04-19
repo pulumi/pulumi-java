@@ -143,7 +143,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
         this.sinks = sinks;
         this.sources = sources;
         this.transformations = transformations;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private FlowletArgs() {

@@ -96,11 +96,11 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
         @Nullable Output<String> size,
         @Nullable Output<PostgresInstanceSkuTier> tier) {
         this.capacity = capacity;
-        this.dev = dev == null ? Codegen.ofNullable(true) : dev;
+        this.dev = Codegen.booleanProp("dev").output().arg(dev).def(true).getNullable();
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.size = size;
-        this.tier = tier == null ? Codegen.ofNullable(com.pulumi.azurenative.azurearcdata.enums.PostgresInstanceSkuTier.Hyperscale) : tier;
+        this.tier = Codegen.objectProp("tier", PostgresInstanceSkuTier.class).output().arg(tier).def(PostgresInstanceSkuTier.Hyperscale).getNullable();
     }
 
     private PostgresInstanceSkuArgs() {

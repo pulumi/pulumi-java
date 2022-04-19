@@ -76,7 +76,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.sourceRepository = Objects.requireNonNull(sourceRepository, "expected parameter 'sourceRepository' to be non-null");
         this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
-        this.status = status == null ? Output.ofLeft("Enabled") : status;
+        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").getNullable();
     }
 
     private SourceTriggerArgs() {

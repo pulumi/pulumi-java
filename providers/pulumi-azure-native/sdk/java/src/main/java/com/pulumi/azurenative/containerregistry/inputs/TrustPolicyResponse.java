@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,8 +44,8 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
     public TrustPolicyResponse(
         @Nullable String status,
         @Nullable String type) {
-        this.status = status == null ? "disabled" : status;
-        this.type = type == null ? "Notary" : type;
+        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
+        this.type = Codegen.stringProp("type").arg(type).def("Notary").getNullable();
     }
 
     private TrustPolicyResponse() {

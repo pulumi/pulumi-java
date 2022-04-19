@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -108,12 +109,12 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
         @Nullable String storageAccountType,
         String type) {
         this.artifactTags = artifactTags;
-        this.excludeFromLatest = excludeFromLatest == null ? false : excludeFromLatest;
+        this.excludeFromLatest = Codegen.booleanProp("excludeFromLatest").arg(excludeFromLatest).def(false).getNullable();
         this.galleryImageId = Objects.requireNonNull(galleryImageId, "expected parameter 'galleryImageId' to be non-null");
         this.replicationRegions = Objects.requireNonNull(replicationRegions, "expected parameter 'replicationRegions' to be non-null");
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
         this.storageAccountType = storageAccountType;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ImageTemplateSharedImageDistributorResponse() {

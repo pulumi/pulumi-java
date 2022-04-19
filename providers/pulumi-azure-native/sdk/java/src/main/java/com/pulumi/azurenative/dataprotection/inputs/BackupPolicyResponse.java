@@ -7,6 +7,7 @@ import com.pulumi.azurenative.dataprotection.inputs.AzureBackupRuleResponse;
 import com.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
         String objectType,
         List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
         this.datasourceTypes = Objects.requireNonNull(datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.policyRules = Objects.requireNonNull(policyRules, "expected parameter 'policyRules' to be non-null");
     }
 

@@ -91,7 +91,7 @@ public final class ApiPolicyArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> serviceName,
         Output<String> value) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.format = format == null ? Output.ofLeft("xml") : format;
+        this.format = Codegen.stringProp("format").left(PolicyContentFormat.class).output().arg(format).def("xml").getNullable();
         this.policyId = policyId;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");

@@ -80,7 +80,7 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;
-        this.scaleType = Objects.requireNonNull(scaleType, "expected parameter 'scaleType' to be non-null");
+        this.scaleType = Codegen.stringProp("scaleType").output().arg(scaleType).require();
         this.targetUtilizationPercentage = targetUtilizationPercentage;
     }
 

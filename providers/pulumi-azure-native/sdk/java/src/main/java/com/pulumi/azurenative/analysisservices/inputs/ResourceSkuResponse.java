@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.analysisservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable Integer capacity,
         String name,
         @Nullable String tier) {
-        this.capacity = capacity == null ? 1 : capacity;
+        this.capacity = Codegen.integerProp("capacity").arg(capacity).def(1).getNullable();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }

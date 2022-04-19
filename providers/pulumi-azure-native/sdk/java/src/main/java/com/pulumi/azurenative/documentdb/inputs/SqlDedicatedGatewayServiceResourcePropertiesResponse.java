@@ -5,6 +5,7 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.azurenative.documentdb.inputs.SqlDedicatedGatewayRegionalServiceResourceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -111,7 +112,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.serviceType = Objects.requireNonNull(serviceType, "expected parameter 'serviceType' to be non-null");
+        this.serviceType = Codegen.stringProp("serviceType").arg(serviceType).require();
         this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }

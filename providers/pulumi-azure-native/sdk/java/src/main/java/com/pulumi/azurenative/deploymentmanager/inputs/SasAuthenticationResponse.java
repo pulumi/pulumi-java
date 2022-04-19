@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
         String sasUri,
         String type) {
         this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private SasAuthenticationResponse() {

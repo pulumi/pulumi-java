@@ -150,7 +150,7 @@ public final class AzureWorkloadContainerArgs extends com.pulumi.resources.Resou
         @Nullable Output<String> sourceResourceId,
         @Nullable Output<Either<String,WorkloadType>> workloadType) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;

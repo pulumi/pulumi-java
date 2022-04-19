@@ -7,6 +7,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.AksNetworkingConfig
 import com.pulumi.azurenative.machinelearningservices.inputs.SslConfigurationResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.SystemServiceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -112,7 +113,7 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;
         this.clusterFqdn = clusterFqdn;
-        this.clusterPurpose = clusterPurpose == null ? "FastProd" : clusterPurpose;
+        this.clusterPurpose = Codegen.stringProp("clusterPurpose").arg(clusterPurpose).def("FastProd").getNullable();
         this.sslConfiguration = sslConfiguration;
         this.systemServices = Objects.requireNonNull(systemServices, "expected parameter 'systemServices' to be non-null");
     }

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.azurenative.apimanagement.inputs.CertificateInformationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -131,12 +132,12 @@ public final class HostnameConfigurationResponse extends com.pulumi.resources.In
         String type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
-        this.defaultSslBinding = defaultSslBinding == null ? false : defaultSslBinding;
+        this.defaultSslBinding = Codegen.booleanProp("defaultSslBinding").arg(defaultSslBinding).def(false).getNullable();
         this.encodedCertificate = encodedCertificate;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.identityClientId = identityClientId;
         this.keyVaultId = keyVaultId;
-        this.negotiateClientCertificate = negotiateClientCertificate == null ? false : negotiateClientCertificate;
+        this.negotiateClientCertificate = Codegen.booleanProp("negotiateClientCertificate").arg(negotiateClientCertificate).def(false).getNullable();
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 

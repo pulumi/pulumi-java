@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,8 +44,8 @@ public final class BackendTlsPropertiesResponse extends com.pulumi.resources.Inv
     public BackendTlsPropertiesResponse(
         @Nullable Boolean validateCertificateChain,
         @Nullable Boolean validateCertificateName) {
-        this.validateCertificateChain = validateCertificateChain == null ? true : validateCertificateChain;
-        this.validateCertificateName = validateCertificateName == null ? true : validateCertificateName;
+        this.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").arg(validateCertificateChain).def(true).getNullable();
+        this.validateCertificateName = Codegen.booleanProp("validateCertificateName").arg(validateCertificateName).def(true).getNullable();
     }
 
     private BackendTlsPropertiesResponse() {

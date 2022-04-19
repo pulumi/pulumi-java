@@ -170,7 +170,7 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
         Output<String> scope) {
         this.description = description;
         this.displayName = displayName;
-        this.enforcementMode = enforcementMode == null ? Output.ofLeft("Default") : enforcementMode;
+        this.enforcementMode = Codegen.stringProp("enforcementMode").left(EnforcementMode.class).output().arg(enforcementMode).def("Default").getNullable();
         this.identity = identity;
         this.location = location;
         this.metadata = metadata;

@@ -165,18 +165,18 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
         Output<String> resourceGroupName,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Integer> validityInYears) {
-        this.autoRenew = autoRenew == null ? Codegen.ofNullable(true) : autoRenew;
+        this.autoRenew = Codegen.booleanProp("autoRenew").output().arg(autoRenew).def(true).getNullable();
         this.certificateOrderName = certificateOrderName;
         this.certificates = certificates;
         this.csr = csr;
         this.distinguishedName = distinguishedName;
-        this.keySize = keySize == null ? Codegen.ofNullable(2048) : keySize;
+        this.keySize = Codegen.integerProp("keySize").output().arg(keySize).def(2048).getNullable();
         this.kind = kind;
         this.location = location;
         this.productType = Objects.requireNonNull(productType, "expected parameter 'productType' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
-        this.validityInYears = validityInYears == null ? Codegen.ofNullable(1) : validityInYears;
+        this.validityInYears = Codegen.integerProp("validityInYears").output().arg(validityInYears).def(1).getNullable();
     }
 
     private AppServiceCertificateOrderArgs() {

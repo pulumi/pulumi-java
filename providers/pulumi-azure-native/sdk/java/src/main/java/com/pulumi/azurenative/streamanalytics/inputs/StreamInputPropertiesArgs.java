@@ -66,7 +66,7 @@ public final class StreamInputPropertiesArgs extends com.pulumi.resources.Resour
         Output<String> type) {
         this.datasource = datasource;
         this.serialization = serialization;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private StreamInputPropertiesArgs() {

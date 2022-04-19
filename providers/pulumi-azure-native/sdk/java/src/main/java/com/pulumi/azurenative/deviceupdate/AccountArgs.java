@@ -110,7 +110,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
         this.identity = identity;
         this.location = location;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
     }

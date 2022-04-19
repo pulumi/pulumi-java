@@ -148,7 +148,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags,
         Output<Either<String,TransferType>> transferType) {
         this.deliveryInfo = deliveryInfo;
-        this.deliveryType = deliveryType == null ? Output.ofLeft("NonScheduled") : deliveryType;
+        this.deliveryType = Codegen.stringProp("deliveryType").left(JobDeliveryType.class).output().arg(deliveryType).def("NonScheduled").getNullable();
         this.details = details;
         this.identity = identity;
         this.jobName = jobName;

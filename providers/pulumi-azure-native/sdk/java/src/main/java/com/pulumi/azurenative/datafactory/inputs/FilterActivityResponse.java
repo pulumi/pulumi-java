@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import com.pulumi.azurenative.datafactory.inputs.ExpressionResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public final class FilterActivityResponse extends com.pulumi.resources.InvokeArg
         this.description = description;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

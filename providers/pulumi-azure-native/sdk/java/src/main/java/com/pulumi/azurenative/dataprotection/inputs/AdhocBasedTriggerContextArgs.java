@@ -45,7 +45,7 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
     public AdhocBasedTriggerContextArgs(
         Output<String> objectType,
         Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }
 

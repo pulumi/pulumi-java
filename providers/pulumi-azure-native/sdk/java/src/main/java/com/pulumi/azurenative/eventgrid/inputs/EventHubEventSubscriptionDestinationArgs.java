@@ -45,7 +45,7 @@ public final class EventHubEventSubscriptionDestinationArgs extends com.pulumi.r
     public EventHubEventSubscriptionDestinationArgs(
         Output<String> endpointType,
         @Nullable Output<String> resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.resourceId = resourceId;
     }
 

@@ -207,7 +207,7 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
         this.host = host;
         this.parameters = parameters;
         this.redirectUri = redirectUri;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

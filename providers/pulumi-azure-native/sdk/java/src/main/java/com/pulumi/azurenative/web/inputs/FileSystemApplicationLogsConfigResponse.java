@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class FileSystemApplicationLogsConfigResponse extends com.pulumi.re
     }
 
     public FileSystemApplicationLogsConfigResponse(@Nullable String level) {
-        this.level = level == null ? "Off" : level;
+        this.level = Codegen.stringProp("level").arg(level).def("Off").getNullable();
     }
 
     private FileSystemApplicationLogsConfigResponse() {

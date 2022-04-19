@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.GenericContainerExtendedInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -109,7 +110,7 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
         @Nullable String healthStatus,
         @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.extendedInformation = extendedInformation;
         this.fabricName = fabricName;
         this.friendlyName = friendlyName;

@@ -60,7 +60,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
         Output<String> type) {
         this.artifactTags = artifactTags;
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateVhdDistributorArgs() {

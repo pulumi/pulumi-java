@@ -197,7 +197,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId, "expected parameter 'eventHubResourceId' to be non-null");
         this.eventSystemProperties = eventSystemProperties;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.managedIdentityResourceId = managedIdentityResourceId;
         this.mappingRuleName = mappingRuleName;

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -80,11 +81,11 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
         @Nullable Integer retryAttempts,
         @Nullable Double retryIntervalBackoffMultiplier,
         @Nullable Integer timeoutSeconds) {
-        this.initialRetryIntervalSeconds = initialRetryIntervalSeconds == null ? 1 : initialRetryIntervalSeconds;
-        this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds == null ? 120 : maximumRetryIntervalSeconds;
-        this.retryAttempts = retryAttempts == null ? 10 : retryAttempts;
-        this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier == null ? 2e+00 : retryIntervalBackoffMultiplier;
-        this.timeoutSeconds = timeoutSeconds == null ? 43200 : timeoutSeconds;
+        this.initialRetryIntervalSeconds = Codegen.integerProp("initialRetryIntervalSeconds").arg(initialRetryIntervalSeconds).def(1).getNullable();
+        this.maximumRetryIntervalSeconds = Codegen.integerProp("maximumRetryIntervalSeconds").arg(maximumRetryIntervalSeconds).def(120).getNullable();
+        this.retryAttempts = Codegen.integerProp("retryAttempts").arg(retryAttempts).def(10).getNullable();
+        this.retryIntervalBackoffMultiplier = Codegen.doubleProp("retryIntervalBackoffMultiplier").arg(retryIntervalBackoffMultiplier).def(2e+00).getNullable();
+        this.timeoutSeconds = Codegen.integerProp("timeoutSeconds").arg(timeoutSeconds).def(43200).getNullable();
     }
 
     private JobStepExecutionOptionsResponse() {

@@ -21,6 +21,7 @@ import com.pulumi.azurenative.media.inputs.PngImageResponse;
 import com.pulumi.azurenative.media.inputs.TransportStreamFormatResponse;
 import com.pulumi.azurenative.media.inputs.VideoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -90,7 +91,7 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
         this.codecs = Objects.requireNonNull(codecs, "expected parameter 'codecs' to be non-null");
         this.filters = filters;
         this.formats = Objects.requireNonNull(formats, "expected parameter 'formats' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private StandardEncoderPresetResponse() {

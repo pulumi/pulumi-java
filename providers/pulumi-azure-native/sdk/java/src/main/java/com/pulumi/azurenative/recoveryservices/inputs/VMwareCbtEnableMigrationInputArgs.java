@@ -183,7 +183,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
         Output<String> vmwareMachineId) {
         this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
         this.disksToInclude = Objects.requireNonNull(disksToInclude, "expected parameter 'disksToInclude' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).require();
         this.licenseType = licenseType;
         this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId, "expected parameter 'snapshotRunAsAccountId' to be non-null");
         this.targetAvailabilitySetId = targetAvailabilitySetId;

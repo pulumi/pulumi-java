@@ -101,7 +101,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.osType = osType;
         this.role = role;
-        this.subnetCidr = subnetCidr == null ? Codegen.ofNullable("10.0.0.0/24") : subnetCidr;
+        this.subnetCidr = Codegen.stringProp("subnetCidr").output().arg(subnetCidr).def("10.0.0.0/24").getNullable();
         this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
     }
 

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -155,7 +156,7 @@ public final class DatabricksSparkPythonActivityResponse extends com.pulumi.reso
         this.parameters = parameters;
         this.policy = policy;
         this.pythonFile = Objects.requireNonNull(pythonFile, "expected parameter 'pythonFile' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

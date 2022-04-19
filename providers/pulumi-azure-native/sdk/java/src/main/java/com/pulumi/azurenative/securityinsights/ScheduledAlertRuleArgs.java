@@ -232,7 +232,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
         this.queryFrequency = Objects.requireNonNull(queryFrequency, "expected parameter 'queryFrequency' to be non-null");
         this.queryPeriod = Objects.requireNonNull(queryPeriod, "expected parameter 'queryPeriod' to be non-null");

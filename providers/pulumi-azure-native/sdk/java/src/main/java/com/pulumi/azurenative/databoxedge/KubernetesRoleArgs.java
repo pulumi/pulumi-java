@@ -120,7 +120,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
         Output<Either<String,RoleStatus>> roleStatus) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.hostPlatform = Objects.requireNonNull(hostPlatform, "expected parameter 'hostPlatform' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo, "expected parameter 'kubernetesClusterInfo' to be non-null");
         this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources, "expected parameter 'kubernetesRoleResources' to be non-null");
         this.name = name;

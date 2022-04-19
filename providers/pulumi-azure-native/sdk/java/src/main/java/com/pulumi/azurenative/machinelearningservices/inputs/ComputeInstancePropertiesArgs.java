@@ -111,8 +111,8 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
         @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings,
         @Nullable Output<ResourceIdArgs> subnet,
         @Nullable Output<String> vmSize) {
-        this.applicationSharingPolicy = applicationSharingPolicy == null ? Output.ofLeft("Shared") : applicationSharingPolicy;
-        this.computeInstanceAuthorizationType = computeInstanceAuthorizationType == null ? Output.ofLeft("personal") : computeInstanceAuthorizationType;
+        this.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").left(ApplicationSharingPolicy.class).output().arg(applicationSharingPolicy).def("Shared").getNullable();
+        this.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").left(ComputeInstanceAuthorizationType.class).output().arg(computeInstanceAuthorizationType).def("personal").getNullable();
         this.personalComputeInstanceSettings = personalComputeInstanceSettings;
         this.setupScripts = setupScripts;
         this.sshSettings = sshSettings;

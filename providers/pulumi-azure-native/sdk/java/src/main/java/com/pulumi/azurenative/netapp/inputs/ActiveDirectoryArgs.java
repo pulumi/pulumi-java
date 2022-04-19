@@ -236,7 +236,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
         this.kdcIP = kdcIP;
         this.ldapOverTLS = ldapOverTLS;
         this.ldapSigning = ldapSigning;
-        this.organizationalUnit = organizationalUnit == null ? Codegen.ofNullable("CN=Computers") : organizationalUnit;
+        this.organizationalUnit = Codegen.stringProp("organizationalUnit").output().arg(organizationalUnit).def("CN=Computers").getNullable();
         this.password = password;
         this.securityOperators = securityOperators;
         this.serverRootCACertificate = serverRootCACertificate;

@@ -184,7 +184,7 @@ public final class SybaseLinkedServiceArgs extends com.pulumi.resources.Resource
         this.password = password;
         this.schema = schema;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

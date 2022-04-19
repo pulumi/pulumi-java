@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ComputeInstanceResponseProperties;
 import com.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -121,7 +122,7 @@ public final class ComputeInstanceResponse extends com.pulumi.resources.InvokeAr
         String provisioningState,
         @Nullable String resourceId) {
         this.computeLocation = computeLocation;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
         this.description = description;
         this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute, "expected parameter 'isAttachedCompute' to be non-null");
         this.properties = properties;

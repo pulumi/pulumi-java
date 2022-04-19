@@ -72,8 +72,8 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
         @Nullable Output<String> ntpServer) {
         this.dnsSearchDomain = dnsSearchDomain;
         this.dnsServers = dnsServers;
-        this.mtu = mtu == null ? Codegen.ofNullable(1500) : mtu;
-        this.ntpServer = ntpServer == null ? Codegen.ofNullable("time.windows.com") : ntpServer;
+        this.mtu = Codegen.integerProp("mtu").output().arg(mtu).def(1500).getNullable();
+        this.ntpServer = Codegen.stringProp("ntpServer").output().arg(ntpServer).def("time.windows.com").getNullable();
     }
 
     private CacheNetworkSettingsArgs() {

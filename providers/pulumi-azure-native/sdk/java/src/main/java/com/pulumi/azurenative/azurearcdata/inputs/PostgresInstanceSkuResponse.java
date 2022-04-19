@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -94,11 +95,11 @@ public final class PostgresInstanceSkuResponse extends com.pulumi.resources.Invo
         @Nullable String size,
         @Nullable String tier) {
         this.capacity = capacity;
-        this.dev = dev == null ? true : dev;
+        this.dev = Codegen.booleanProp("dev").arg(dev).def(true).getNullable();
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.size = size;
-        this.tier = tier == null ? "Hyperscale" : tier;
+        this.tier = Codegen.stringProp("tier").arg(tier).def("Hyperscale").getNullable();
     }
 
     private PostgresInstanceSkuResponse() {

@@ -202,7 +202,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Integer> timeoutInSeconds,
         Output<String> vmScaleSetName) {
-        this.asyncExecution = asyncExecution == null ? Codegen.ofNullable(false) : asyncExecution;
+        this.asyncExecution = Codegen.booleanProp("asyncExecution").output().arg(asyncExecution).def(false).getNullable();
         this.errorBlobUri = errorBlobUri;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.location = location;

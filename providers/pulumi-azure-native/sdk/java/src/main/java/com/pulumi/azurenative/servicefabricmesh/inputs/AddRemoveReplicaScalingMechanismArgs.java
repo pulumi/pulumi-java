@@ -69,7 +69,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends com.pulumi.resou
         Output<Integer> maxCount,
         Output<Integer> minCount,
         Output<Integer> scaleIncrement) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
         this.minCount = Objects.requireNonNull(minCount, "expected parameter 'minCount' to be non-null");
         this.scaleIncrement = Objects.requireNonNull(scaleIncrement, "expected parameter 'scaleIncrement' to be non-null");

@@ -90,7 +90,7 @@ public final class CustomDataSourceLinkedServiceArgs extends com.pulumi.resource
         this.connectVia = connectVia;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CustomDataSourceLinkedServiceArgs() {

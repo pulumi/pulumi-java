@@ -85,7 +85,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
         this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
         this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl, "expected parameter 'httpTriggerUrl' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private AzureFunctionReceiverArgs() {

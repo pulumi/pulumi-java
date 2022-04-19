@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +55,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
         String odataType,
         String password,
         String username) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }

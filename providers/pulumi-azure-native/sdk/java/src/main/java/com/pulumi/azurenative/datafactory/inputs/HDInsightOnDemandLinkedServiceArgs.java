@@ -534,7 +534,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
         this.subnetName = subnetName;
         this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
         this.timeToLive = Objects.requireNonNull(timeToLive, "expected parameter 'timeToLive' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
         this.virtualNetworkId = virtualNetworkId;
         this.yarnConfiguration = yarnConfiguration;

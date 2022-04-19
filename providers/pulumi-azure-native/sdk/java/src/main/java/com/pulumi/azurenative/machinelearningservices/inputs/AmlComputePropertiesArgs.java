@@ -149,10 +149,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
         @Nullable Output<VirtualMachineImageArgs> virtualMachineImage,
         @Nullable Output<Either<String,VmPriority>> vmPriority,
         @Nullable Output<String> vmSize) {
-        this.enableNodePublicIp = enableNodePublicIp == null ? Codegen.ofNullable(true) : enableNodePublicIp;
+        this.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").output().arg(enableNodePublicIp).def(true).getNullable();
         this.isolatedNetwork = isolatedNetwork;
-        this.osType = osType == null ? Output.ofLeft("Linux") : osType;
-        this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess == null ? Output.ofLeft("NotSpecified") : remoteLoginPortPublicAccess;
+        this.osType = Codegen.stringProp("osType").left(OsType.class).output().arg(osType).def("Linux").getNullable();
+        this.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").left(RemoteLoginPortPublicAccess.class).output().arg(remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
         this.scaleSettings = scaleSettings;
         this.subnet = subnet;
         this.userAccountCredentials = userAccountCredentials;

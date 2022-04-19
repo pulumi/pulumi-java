@@ -247,8 +247,8 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ShippingInformationArgs> shippingInformation,
         @Nullable Output<String> state,
         @Nullable Output<String> storageAccountId) {
-        this.backupDriveManifest = backupDriveManifest == null ? Codegen.ofNullable(false) : backupDriveManifest;
-        this.cancelRequested = cancelRequested == null ? Codegen.ofNullable(false) : cancelRequested;
+        this.backupDriveManifest = Codegen.booleanProp("backupDriveManifest").output().arg(backupDriveManifest).def(false).getNullable();
+        this.cancelRequested = Codegen.booleanProp("cancelRequested").output().arg(cancelRequested).def(false).getNullable();
         this.deliveryPackage = deliveryPackage;
         this.diagnosticsPath = diagnosticsPath;
         this.driveList = driveList;
@@ -263,7 +263,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
         this.returnPackage = returnPackage;
         this.returnShipping = returnShipping;
         this.shippingInformation = shippingInformation;
-        this.state = state == null ? Codegen.ofNullable("Creating") : state;
+        this.state = Codegen.stringProp("state").output().arg(state).def("Creating").getNullable();
         this.storageAccountId = storageAccountId;
     }
 

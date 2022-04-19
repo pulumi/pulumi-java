@@ -138,7 +138,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
         this.lastCommitId = lastCommitId;
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
         this.rootFolder = Objects.requireNonNull(rootFolder, "expected parameter 'rootFolder' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private FactoryGitHubConfigurationArgs() {

@@ -123,8 +123,8 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
         this.localAuthRef = localAuthRef;
         this.repositoryRef = repositoryRef;
         this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Codegen.ofNullable(6e+02) : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? Codegen.ofNullable(6e+02) : timeoutInSeconds;
+        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").output().arg(syncIntervalInSeconds).def(6e+02).getNullable();
+        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").output().arg(timeoutInSeconds).def(6e+02).getNullable();
         this.url = url;
     }
 

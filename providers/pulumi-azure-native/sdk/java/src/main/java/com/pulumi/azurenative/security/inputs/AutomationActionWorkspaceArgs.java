@@ -45,7 +45,7 @@ public final class AutomationActionWorkspaceArgs extends com.pulumi.resources.Re
     public AutomationActionWorkspaceArgs(
         Output<String> actionType,
         @Nullable Output<String> workspaceResourceId) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
         this.workspaceResourceId = workspaceResourceId;
     }
 

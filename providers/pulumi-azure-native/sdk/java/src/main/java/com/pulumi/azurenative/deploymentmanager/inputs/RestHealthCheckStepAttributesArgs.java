@@ -86,7 +86,7 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
         this.healthChecks = Objects.requireNonNull(healthChecks, "expected parameter 'healthChecks' to be non-null");
         this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
         this.maxElasticDuration = maxElasticDuration;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.waitDuration = waitDuration;
     }
 

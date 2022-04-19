@@ -144,7 +144,7 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
         this.policy = policy;
         this.storedProcedureName = Objects.requireNonNull(storedProcedureName, "expected parameter 'storedProcedureName' to be non-null");
         this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

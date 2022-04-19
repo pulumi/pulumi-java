@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ManagedDiskDe
 import com.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ProtectedDiskDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -697,7 +698,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
         this.diskResized = diskResized;
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.infrastructureVmId = infrastructureVmId;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.ipAddress = ipAddress;
         this.isAgentUpdateRequired = isAgentUpdateRequired;
         this.isRebootAfterUpdateRequired = isRebootAfterUpdateRequired;

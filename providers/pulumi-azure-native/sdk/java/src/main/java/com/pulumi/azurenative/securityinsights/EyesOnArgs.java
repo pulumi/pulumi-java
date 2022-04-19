@@ -77,7 +77,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> resourceGroupName,
         @Nullable Output<String> settingsName,
         Output<String> workspaceName) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.settingsName = settingsName;

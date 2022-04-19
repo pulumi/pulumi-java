@@ -47,7 +47,7 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
         @Nullable Output<String> adminPublicKey,
         @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
         this.adminPublicKey = adminPublicKey;
-        this.sshPublicAccess = sshPublicAccess == null ? Output.ofLeft("Disabled") : sshPublicAccess;
+        this.sshPublicAccess = Codegen.stringProp("sshPublicAccess").left(SshPublicAccess.class).output().arg(sshPublicAccess).def("Disabled").getNullable();
     }
 
     private ComputeInstanceSshSettingsArgs() {

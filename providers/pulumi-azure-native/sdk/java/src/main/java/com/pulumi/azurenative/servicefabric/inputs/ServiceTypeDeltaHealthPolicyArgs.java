@@ -33,7 +33,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources
     }
 
     public ServiceTypeDeltaHealthPolicyArgs(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
-        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentDeltaUnhealthyServices;
+        this.maxPercentDeltaUnhealthyServices = Codegen.integerProp("maxPercentDeltaUnhealthyServices").output().arg(maxPercentDeltaUnhealthyServices).def(0).getNullable();
     }
 
     private ServiceTypeDeltaHealthPolicyArgs() {

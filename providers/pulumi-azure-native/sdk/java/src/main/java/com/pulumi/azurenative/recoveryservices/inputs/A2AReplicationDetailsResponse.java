@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.A2AUnprotectedDiskDetailsR
 import com.pulumi.azurenative.recoveryservices.inputs.AzureToAzureVmSyncedConfigDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -539,7 +540,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
         this.initialPrimaryZone = Objects.requireNonNull(initialPrimaryZone, "expected parameter 'initialPrimaryZone' to be non-null");
         this.initialRecoveryFabricLocation = Objects.requireNonNull(initialRecoveryFabricLocation, "expected parameter 'initialRecoveryFabricLocation' to be non-null");
         this.initialRecoveryZone = Objects.requireNonNull(initialRecoveryZone, "expected parameter 'initialRecoveryZone' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
         this.lastHeartbeat = lastHeartbeat;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;

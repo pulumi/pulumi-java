@@ -8,6 +8,7 @@ import com.pulumi.azurenative.keyvault.inputs.NetworkRuleSetResponse;
 import com.pulumi.azurenative.keyvault.inputs.PrivateEndpointConnectionItemResponse;
 import com.pulumi.azurenative.keyvault.inputs.SkuResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -208,8 +209,8 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
         @Nullable String vaultUri) {
         this.accessPolicies = accessPolicies;
         this.enablePurgeProtection = enablePurgeProtection;
-        this.enableRbacAuthorization = enableRbacAuthorization == null ? false : enableRbacAuthorization;
-        this.enableSoftDelete = enableSoftDelete == null ? true : enableSoftDelete;
+        this.enableRbacAuthorization = Codegen.booleanProp("enableRbacAuthorization").arg(enableRbacAuthorization).def(false).getNullable();
+        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg(enableSoftDelete).def(true).getNullable();
         this.enabledForDeployment = enabledForDeployment;
         this.enabledForDiskEncryption = enabledForDiskEncryption;
         this.enabledForTemplateDeployment = enabledForTemplateDeployment;
@@ -218,7 +219,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
         this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
         this.provisioningState = provisioningState;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? 90 : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg(softDeleteRetentionInDays).def(90).getNullable();
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
         this.vaultUri = vaultUri;
     }

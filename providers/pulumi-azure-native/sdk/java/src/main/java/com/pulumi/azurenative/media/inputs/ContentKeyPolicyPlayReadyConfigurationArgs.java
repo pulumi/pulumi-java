@@ -60,7 +60,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
         Output<String> odataType,
         @Nullable Output<String> responseCustomData) {
         this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.responseCustomData = responseCustomData;
     }
 

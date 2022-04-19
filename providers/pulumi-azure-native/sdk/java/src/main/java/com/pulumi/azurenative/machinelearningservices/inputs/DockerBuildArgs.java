@@ -74,7 +74,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> dockerfile,
         @Nullable Output<DockerImagePlatformArgs> platform) {
         this.context = context;
-        this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType, "expected parameter 'dockerSpecificationType' to be non-null");
+        this.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").output().arg(dockerSpecificationType).require();
         this.dockerfile = Objects.requireNonNull(dockerfile, "expected parameter 'dockerfile' to be non-null");
         this.platform = platform;
     }

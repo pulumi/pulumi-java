@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.DataFlowSinkResponse;
 import com.pulumi.azurenative.datafactory.inputs.DataFlowSourceResponse;
 import com.pulumi.azurenative.datafactory.inputs.TransformationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +143,7 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
         this.sinks = sinks;
         this.sources = sources;
         this.transformations = transformations;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private MappingDataFlowResponse() {

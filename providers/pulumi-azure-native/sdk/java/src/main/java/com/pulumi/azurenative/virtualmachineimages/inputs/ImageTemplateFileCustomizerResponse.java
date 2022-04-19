@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,9 +83,9 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
         String type) {
         this.destination = destination;
         this.name = name;
-        this.sha256Checksum = sha256Checksum == null ? "" : sha256Checksum;
+        this.sha256Checksum = Codegen.stringProp("sha256Checksum").arg(sha256Checksum).def("").getNullable();
         this.sourceUri = sourceUri;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ImageTemplateFileCustomizerResponse() {

@@ -102,7 +102,7 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
         this.description = description;
         this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
         this.runDimension = Objects.requireNonNull(runDimension, "expected parameter 'runDimension' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ChainingTriggerArgs() {

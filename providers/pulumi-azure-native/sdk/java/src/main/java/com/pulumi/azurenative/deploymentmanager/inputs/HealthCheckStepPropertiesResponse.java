@@ -5,6 +5,7 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckStepAttributesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +45,7 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
         RestHealthCheckStepAttributesResponse attributes,
         String stepType) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.stepType = Objects.requireNonNull(stepType, "expected parameter 'stepType' to be non-null");
+        this.stepType = Codegen.stringProp("stepType").arg(stepType).require();
     }
 
     private HealthCheckStepPropertiesResponse() {

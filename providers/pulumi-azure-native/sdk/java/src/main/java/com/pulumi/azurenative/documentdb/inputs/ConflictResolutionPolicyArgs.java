@@ -60,7 +60,7 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
         @Nullable Output<Either<String,ConflictResolutionMode>> mode) {
         this.conflictResolutionPath = conflictResolutionPath;
         this.conflictResolutionProcedure = conflictResolutionProcedure;
-        this.mode = mode == null ? Output.ofLeft("LastWriterWins") : mode;
+        this.mode = Codegen.stringProp("mode").left(ConflictResolutionMode.class).output().arg(mode).def("LastWriterWins").getNullable();
     }
 
     private ConflictResolutionPolicyArgs() {

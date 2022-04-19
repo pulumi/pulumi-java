@@ -88,7 +88,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
         this.affinityType = Objects.requireNonNull(affinityType, "expected parameter 'affinityType' to be non-null");
         this.displayName = displayName;
         this.state = state;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.vmMembers = Objects.requireNonNull(vmMembers, "expected parameter 'vmMembers' to be non-null");
     }
 

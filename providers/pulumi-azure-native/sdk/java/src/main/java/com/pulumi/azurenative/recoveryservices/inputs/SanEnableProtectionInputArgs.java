@@ -32,7 +32,7 @@ public final class SanEnableProtectionInputArgs extends com.pulumi.resources.Res
     }
 
     public SanEnableProtectionInputArgs(@Nullable Output<String> instanceType) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
     }
 
     private SanEnableProtectionInputArgs() {

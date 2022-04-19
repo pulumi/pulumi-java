@@ -75,7 +75,7 @@ public final class AudioAnalyzerPresetArgs extends com.pulumi.resources.Resource
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private AudioAnalyzerPresetArgs() {

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceRespo
 import com.pulumi.azurenative.insights.inputs.RuleMetricDataSourceResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +75,7 @@ public final class LocationThresholdRuleConditionResponse extends com.pulumi.res
         @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.windowSize = windowSize;
     }
 

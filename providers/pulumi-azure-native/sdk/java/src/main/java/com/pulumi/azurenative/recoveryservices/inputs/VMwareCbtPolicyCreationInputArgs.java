@@ -72,7 +72,7 @@ public final class VMwareCbtPolicyCreationInputArgs extends com.pulumi.resources
         @Nullable Output<Integer> recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
     }
 

@@ -14,6 +14,7 @@ import com.pulumi.azurenative.datafactory.inputs.SSISPackageLocationResponse;
 import com.pulumi.azurenative.datafactory.inputs.SSISPropertyOverrideResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -278,7 +279,7 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
         this.projectParameters = projectParameters;
         this.propertyOverrides = propertyOverrides;
         this.runtime = runtime;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

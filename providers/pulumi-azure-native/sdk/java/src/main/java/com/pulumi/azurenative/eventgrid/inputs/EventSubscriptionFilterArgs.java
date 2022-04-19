@@ -101,7 +101,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
         @Nullable Output<String> subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
-        this.isSubjectCaseSensitive = isSubjectCaseSensitive == null ? Codegen.ofNullable(false) : isSubjectCaseSensitive;
+        this.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").output().arg(isSubjectCaseSensitive).def(false).getNullable();
         this.subjectBeginsWith = subjectBeginsWith;
         this.subjectEndsWith = subjectEndsWith;
     }

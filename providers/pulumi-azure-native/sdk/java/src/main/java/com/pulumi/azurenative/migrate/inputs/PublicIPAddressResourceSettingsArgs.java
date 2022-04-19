@@ -108,7 +108,7 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.sku = sku;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zones = zones;

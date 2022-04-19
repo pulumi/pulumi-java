@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.AddressPrefixItemResponse;
 import com.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import com.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -287,7 +288,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.displayName = displayName;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.priority = priority;
         this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");

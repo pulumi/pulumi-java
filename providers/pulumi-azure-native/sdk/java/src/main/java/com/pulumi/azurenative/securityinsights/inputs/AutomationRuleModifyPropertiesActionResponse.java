@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyPropertiesActionResponseActionConfiguration;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class AutomationRuleModifyPropertiesActionResponse extends com.pulu
         String actionType,
         Integer order) {
         this.actionConfiguration = Objects.requireNonNull(actionConfiguration, "expected parameter 'actionConfiguration' to be non-null");
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").arg(actionType).require();
         this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
     }
 

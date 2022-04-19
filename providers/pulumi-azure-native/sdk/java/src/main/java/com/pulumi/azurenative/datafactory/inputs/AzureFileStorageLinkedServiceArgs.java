@@ -222,7 +222,7 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
         this.sasToken = sasToken;
         this.sasUri = sasUri;
         this.snapshot = snapshot;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userId = userId;
     }
 

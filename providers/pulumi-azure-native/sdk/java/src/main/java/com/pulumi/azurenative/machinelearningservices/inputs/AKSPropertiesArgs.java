@@ -101,7 +101,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;
         this.clusterFqdn = clusterFqdn;
-        this.clusterPurpose = clusterPurpose == null ? Output.ofLeft("FastProd") : clusterPurpose;
+        this.clusterPurpose = Codegen.stringProp("clusterPurpose").left(ClusterPurpose.class).output().arg(clusterPurpose).def("FastProd").getNullable();
         this.sslConfiguration = sslConfiguration;
     }
 

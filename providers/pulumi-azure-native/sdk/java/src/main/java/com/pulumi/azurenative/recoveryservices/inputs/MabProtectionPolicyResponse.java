@@ -10,6 +10,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyRespo
 import com.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -76,7 +77,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
         @Nullable Integer protectedItemsCount,
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
         @Nullable Object schedulePolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

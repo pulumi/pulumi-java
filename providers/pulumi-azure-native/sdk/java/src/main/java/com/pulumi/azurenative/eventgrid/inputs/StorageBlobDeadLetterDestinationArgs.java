@@ -58,7 +58,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
         Output<String> endpointType,
         @Nullable Output<String> resourceId) {
         this.blobContainerName = blobContainerName;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.resourceId = resourceId;
     }
 

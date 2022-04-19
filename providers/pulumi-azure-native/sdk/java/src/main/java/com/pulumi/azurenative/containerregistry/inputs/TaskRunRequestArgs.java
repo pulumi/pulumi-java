@@ -96,11 +96,11 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
         Output<String> taskId,
         Output<String> type) {
         this.agentPoolName = agentPoolName;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Codegen.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").output().arg(isArchiveEnabled).def(false).getNullable();
         this.logTemplate = logTemplate;
         this.overrideTaskStepProperties = overrideTaskStepProperties;
         this.taskId = Objects.requireNonNull(taskId, "expected parameter 'taskId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TaskRunRequestArgs() {

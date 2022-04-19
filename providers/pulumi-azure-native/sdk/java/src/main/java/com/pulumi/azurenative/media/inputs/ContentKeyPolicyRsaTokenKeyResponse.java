@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,7 +57,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
         String odataType) {
         this.exponent = Objects.requireNonNull(exponent, "expected parameter 'exponent' to be non-null");
         this.modulus = Objects.requireNonNull(modulus, "expected parameter 'modulus' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private ContentKeyPolicyRsaTokenKeyResponse() {

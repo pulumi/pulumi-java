@@ -46,7 +46,7 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
         @Nullable Output<String> key,
         Output<String> operatorType) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
     }
 
     private IsNotNullAdvancedFilterArgs() {

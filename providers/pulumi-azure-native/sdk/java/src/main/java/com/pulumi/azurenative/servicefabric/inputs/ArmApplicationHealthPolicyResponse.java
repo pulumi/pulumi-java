@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.azurenative.servicefabric.inputs.ArmServiceTypeHealthPolicyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -74,9 +75,9 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
         @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
         @Nullable Integer maxPercentUnhealthyDeployedApplications,
         @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
-        this.considerWarningAsError = considerWarningAsError == null ? false : considerWarningAsError;
+        this.considerWarningAsError = Codegen.booleanProp("considerWarningAsError").arg(considerWarningAsError).def(false).getNullable();
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications == null ? 0 : maxPercentUnhealthyDeployedApplications;
+        this.maxPercentUnhealthyDeployedApplications = Codegen.integerProp("maxPercentUnhealthyDeployedApplications").arg(maxPercentUnhealthyDeployedApplications).def(0).getNullable();
         this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
     }
 

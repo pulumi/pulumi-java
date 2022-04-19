@@ -281,7 +281,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
         this.diskType = diskType;
         this.disksToInclude = disksToInclude;
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.logStorageAccountId = logStorageAccountId;
         this.masterTargetId = masterTargetId;
         this.multiVmGroupId = multiVmGroupId;

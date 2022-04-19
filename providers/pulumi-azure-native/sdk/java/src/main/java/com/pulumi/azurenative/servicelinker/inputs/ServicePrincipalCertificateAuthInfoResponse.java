@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicelinker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,7 +67,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
         String certificate,
         String clientId,
         String principalId) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").arg(authType).require();
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");

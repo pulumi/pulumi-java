@@ -112,7 +112,7 @@ public final class SetVariableActivityArgs extends com.pulumi.resources.Resource
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
         this.value = value;
         this.variableName = variableName;

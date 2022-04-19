@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +59,7 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
         String odataType,
         String url) {
         this.credentials = credentials;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

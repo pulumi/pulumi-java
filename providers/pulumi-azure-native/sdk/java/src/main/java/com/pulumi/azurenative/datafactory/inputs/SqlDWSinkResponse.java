@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.DWCopyCommandSettingsResponse;
 import com.pulumi.azurenative.datafactory.inputs.PolybaseSettingsResponse;
 import com.pulumi.azurenative.datafactory.inputs.SqlDWUpsertSettingsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -227,7 +228,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
         this.sinkRetryWait = sinkRetryWait;
         this.sqlWriterUseTableLock = sqlWriterUseTableLock;
         this.tableOption = tableOption;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.upsertSettings = upsertSettings;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;

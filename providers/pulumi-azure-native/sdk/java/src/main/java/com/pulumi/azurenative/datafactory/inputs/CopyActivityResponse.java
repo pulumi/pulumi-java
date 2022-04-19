@@ -148,6 +148,7 @@ import com.pulumi.azurenative.datafactory.inputs.XeroSourceResponse;
 import com.pulumi.azurenative.datafactory.inputs.XmlSourceResponse;
 import com.pulumi.azurenative.datafactory.inputs.ZohoSourceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -475,7 +476,7 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
         this.stagingSettings = stagingSettings;
         this.translator = translator;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
         this.validateDataConsistency = validateDataConsistency;
     }

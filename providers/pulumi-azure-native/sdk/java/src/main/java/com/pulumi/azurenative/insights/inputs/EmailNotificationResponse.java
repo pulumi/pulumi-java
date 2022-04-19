@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -58,8 +59,8 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
         @Nullable Boolean sendToSubscriptionAdministrator,
         @Nullable Boolean sendToSubscriptionCoAdministrators) {
         this.customEmails = customEmails;
-        this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator == null ? false : sendToSubscriptionAdministrator;
-        this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators == null ? false : sendToSubscriptionCoAdministrators;
+        this.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").arg(sendToSubscriptionAdministrator).def(false).getNullable();
+        this.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").arg(sendToSubscriptionCoAdministrators).def(false).getNullable();
     }
 
     private EmailNotificationResponse() {

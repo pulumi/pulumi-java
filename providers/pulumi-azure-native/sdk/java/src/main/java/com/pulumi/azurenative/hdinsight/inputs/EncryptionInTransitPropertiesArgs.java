@@ -31,7 +31,7 @@ public final class EncryptionInTransitPropertiesArgs extends com.pulumi.resource
     }
 
     public EncryptionInTransitPropertiesArgs(@Nullable Output<Boolean> isEncryptionInTransitEnabled) {
-        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? Codegen.ofNullable(false) : isEncryptionInTransitEnabled;
+        this.isEncryptionInTransitEnabled = Codegen.booleanProp("isEncryptionInTransitEnabled").output().arg(isEncryptionInTransitEnabled).def(false).getNullable();
     }
 
     private EncryptionInTransitPropertiesArgs() {

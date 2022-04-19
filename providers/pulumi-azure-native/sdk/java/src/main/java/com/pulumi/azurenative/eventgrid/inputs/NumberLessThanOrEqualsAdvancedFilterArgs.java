@@ -59,7 +59,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
         Output<String> operatorType,
         @Nullable Output<Double> value) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
         this.value = value;
     }
 

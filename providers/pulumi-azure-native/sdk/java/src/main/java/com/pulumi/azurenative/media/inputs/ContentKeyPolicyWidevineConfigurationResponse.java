@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
     public ContentKeyPolicyWidevineConfigurationResponse(
         String odataType,
         String widevineTemplate) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.widevineTemplate = Objects.requireNonNull(widevineTemplate, "expected parameter 'widevineTemplate' to be non-null");
     }
 

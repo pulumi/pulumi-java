@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class SingletonPartitionSchemeDescriptionResponse extends com.pulum
     }
 
     public SingletonPartitionSchemeDescriptionResponse(String partitionScheme) {
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
     }
 
     private SingletonPartitionSchemeDescriptionResponse() {

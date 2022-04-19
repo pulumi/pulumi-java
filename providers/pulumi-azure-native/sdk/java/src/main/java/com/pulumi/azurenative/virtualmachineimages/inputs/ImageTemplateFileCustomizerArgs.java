@@ -83,9 +83,9 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
         Output<String> type) {
         this.destination = destination;
         this.name = name;
-        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
+        this.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg(sha256Checksum).def("").getNullable();
         this.sourceUri = sourceUri;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateFileCustomizerArgs() {

@@ -138,7 +138,7 @@ public final class DocumentDbCollectionSourceArgs extends com.pulumi.resources.R
         this.queryTimeout = queryTimeout;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DocumentDbCollectionSourceArgs() {

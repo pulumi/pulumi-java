@@ -86,7 +86,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
         @Nullable Output<Integer> recoveryPointHistory) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus, "expected parameter 'multiVmSyncStatus' to be non-null");
         this.recoveryPointHistory = recoveryPointHistory;
     }

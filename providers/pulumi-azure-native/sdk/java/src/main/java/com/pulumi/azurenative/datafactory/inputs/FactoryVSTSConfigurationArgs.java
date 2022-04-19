@@ -124,7 +124,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
         this.rootFolder = Objects.requireNonNull(rootFolder, "expected parameter 'rootFolder' to be non-null");
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private FactoryVSTSConfigurationArgs() {

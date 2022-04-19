@@ -100,7 +100,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
         this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
         this.secretVersion = secretVersion;
         this.subjectAlternativeNames = subjectAlternativeNames;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useLatestVersion = useLatestVersion;
     }
 

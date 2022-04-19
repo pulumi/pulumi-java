@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +83,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
         @Nullable String tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.secret = secret;
         this.tenantId = tenantId;
     }

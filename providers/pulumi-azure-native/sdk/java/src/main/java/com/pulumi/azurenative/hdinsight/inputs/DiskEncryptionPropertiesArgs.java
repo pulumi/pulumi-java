@@ -96,7 +96,7 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
         @Nullable Output<String> msiResourceId,
         @Nullable Output<String> vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionAtHost = encryptionAtHost == null ? Codegen.ofNullable(false) : encryptionAtHost;
+        this.encryptionAtHost = Codegen.booleanProp("encryptionAtHost").output().arg(encryptionAtHost).def(false).getNullable();
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.msiResourceId = msiResourceId;

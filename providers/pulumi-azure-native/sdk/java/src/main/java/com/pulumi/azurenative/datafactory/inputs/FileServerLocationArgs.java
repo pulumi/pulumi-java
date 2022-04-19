@@ -60,7 +60,7 @@ public final class FileServerLocationArgs extends com.pulumi.resources.ResourceA
         Output<String> type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private FileServerLocationArgs() {

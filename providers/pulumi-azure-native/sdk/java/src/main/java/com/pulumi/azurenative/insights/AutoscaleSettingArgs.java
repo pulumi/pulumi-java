@@ -142,7 +142,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<String> targetResourceLocation,
         @Nullable Output<String> targetResourceUri) {
         this.autoscaleSettingName = autoscaleSettingName;
-        this.enabled = enabled == null ? Codegen.ofNullable(true) : enabled;
+        this.enabled = Codegen.booleanProp("enabled").output().arg(enabled).def(true).getNullable();
         this.location = location;
         this.name = name;
         this.notifications = notifications;

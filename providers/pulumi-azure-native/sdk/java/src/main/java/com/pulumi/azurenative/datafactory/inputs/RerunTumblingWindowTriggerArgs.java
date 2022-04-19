@@ -114,7 +114,7 @@ public final class RerunTumblingWindowTriggerArgs extends com.pulumi.resources.R
         this.requestedEndTime = Objects.requireNonNull(requestedEndTime, "expected parameter 'requestedEndTime' to be non-null");
         this.requestedStartTime = Objects.requireNonNull(requestedStartTime, "expected parameter 'requestedStartTime' to be non-null");
         this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency, "expected parameter 'rerunConcurrency' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private RerunTumblingWindowTriggerArgs() {

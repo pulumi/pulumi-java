@@ -32,7 +32,7 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends com.pulumi.re
     }
 
     public VmmToAzureCreateNetworkMappingInputArgs(@Nullable Output<String> instanceType) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
     }
 
     private VmmToAzureCreateNetworkMappingInputArgs() {

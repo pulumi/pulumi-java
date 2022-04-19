@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,7 +69,7 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
         @Nullable String nfsExport,
         @Nullable String targetPath) {
         this.namespacePath = namespacePath;
-        this.nfsAccessPolicy = nfsAccessPolicy == null ? "default" : nfsAccessPolicy;
+        this.nfsAccessPolicy = Codegen.stringProp("nfsAccessPolicy").arg(nfsAccessPolicy).def("default").getNullable();
         this.nfsExport = nfsExport;
         this.targetPath = targetPath;
     }

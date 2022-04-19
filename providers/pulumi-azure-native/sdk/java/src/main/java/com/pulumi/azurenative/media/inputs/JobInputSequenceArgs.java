@@ -48,7 +48,7 @@ public final class JobInputSequenceArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<List<JobInputClipArgs>> inputs,
         Output<String> odataType) {
         this.inputs = inputs;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private JobInputSequenceArgs() {

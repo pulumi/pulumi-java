@@ -155,7 +155,7 @@ public final class AzureMLUpdateResourceActivityArgs extends com.pulumi.resource
         this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath, "expected parameter 'trainedModelFilePath' to be non-null");
         this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName, "expected parameter 'trainedModelLinkedServiceName' to be non-null");
         this.trainedModelName = Objects.requireNonNull(trainedModelName, "expected parameter 'trainedModelName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

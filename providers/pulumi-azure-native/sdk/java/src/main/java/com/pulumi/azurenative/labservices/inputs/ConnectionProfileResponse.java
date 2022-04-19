@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -67,10 +68,10 @@ public final class ConnectionProfileResponse extends com.pulumi.resources.Invoke
         @Nullable String clientSshAccess,
         @Nullable String webRdpAccess,
         @Nullable String webSshAccess) {
-        this.clientRdpAccess = clientRdpAccess == null ? "None" : clientRdpAccess;
-        this.clientSshAccess = clientSshAccess == null ? "None" : clientSshAccess;
-        this.webRdpAccess = webRdpAccess == null ? "None" : webRdpAccess;
-        this.webSshAccess = webSshAccess == null ? "None" : webSshAccess;
+        this.clientRdpAccess = Codegen.stringProp("clientRdpAccess").arg(clientRdpAccess).def("None").getNullable();
+        this.clientSshAccess = Codegen.stringProp("clientSshAccess").arg(clientSshAccess).def("None").getNullable();
+        this.webRdpAccess = Codegen.stringProp("webRdpAccess").arg(webRdpAccess).def("None").getNullable();
+        this.webSshAccess = Codegen.stringProp("webSshAccess").arg(webSshAccess).def("None").getNullable();
     }
 
     private ConnectionProfileResponse() {

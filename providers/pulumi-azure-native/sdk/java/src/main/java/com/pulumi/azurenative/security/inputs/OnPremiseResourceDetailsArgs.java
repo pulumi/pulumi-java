@@ -81,7 +81,7 @@ public final class OnPremiseResourceDetailsArgs extends com.pulumi.resources.Res
         Output<String> vmuuid,
         Output<String> workspaceId) {
         this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
+        this.source = Codegen.stringProp("source").output().arg(source).require();
         this.sourceComputerId = Objects.requireNonNull(sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
         this.vmuuid = Objects.requireNonNull(vmuuid, "expected parameter 'vmuuid' to be non-null");
         this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");

@@ -248,7 +248,7 @@ public final class PhoenixLinkedServiceArgs extends com.pulumi.resources.Resourc
         this.password = password;
         this.port = port;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;
     }

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -183,7 +184,7 @@ public final class AzureMLServiceLinkedServiceResponse extends com.pulumi.resour
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private AzureMLServiceLinkedServiceResponse() {

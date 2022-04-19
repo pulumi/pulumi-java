@@ -8,6 +8,7 @@ import com.pulumi.azurenative.databox.inputs.StorageAccountDetailsResponse;
 import com.pulumi.azurenative.databox.inputs.TransferConfigurationResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +61,7 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
         @Nullable String logCollectionLevel,
         TransferConfigurationResponse transferConfiguration) {
         this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-        this.logCollectionLevel = logCollectionLevel == null ? "Error" : logCollectionLevel;
+        this.logCollectionLevel = Codegen.stringProp("logCollectionLevel").arg(logCollectionLevel).def("Error").getNullable();
         this.transferConfiguration = Objects.requireNonNull(transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
     }
 

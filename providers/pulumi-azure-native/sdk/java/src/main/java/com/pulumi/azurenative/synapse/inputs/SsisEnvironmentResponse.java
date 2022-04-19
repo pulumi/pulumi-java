@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.azurenative.synapse.inputs.SsisVariableResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +100,7 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
         this.folderId = folderId;
         this.id = id;
         this.name = name;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.variables = variables;
     }
 

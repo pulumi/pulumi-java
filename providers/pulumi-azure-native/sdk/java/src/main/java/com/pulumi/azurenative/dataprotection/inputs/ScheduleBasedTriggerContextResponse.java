@@ -6,6 +6,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.BackupScheduleResponse;
 import com.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
         String objectType,
         BackupScheduleResponse schedule,
         List<TaggingCriteriaResponse> taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }

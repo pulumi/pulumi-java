@@ -110,8 +110,8 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
         this.objectId = objectId;
         this.serviceUri = Objects.requireNonNull(serviceUri, "expected parameter 'serviceUri' to be non-null");
         this.tenantId = tenantId;
-        this.useAadAuth = useAadAuth == null ? Codegen.ofNullable(false) : useAadAuth;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useAadAuth = Codegen.booleanProp("useAadAuth").output().arg(useAadAuth).def(false).getNullable();
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private WebhookReceiverArgs() {

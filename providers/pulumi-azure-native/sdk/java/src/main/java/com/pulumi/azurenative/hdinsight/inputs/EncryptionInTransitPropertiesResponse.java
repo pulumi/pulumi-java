@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class EncryptionInTransitPropertiesResponse extends com.pulumi.reso
     }
 
     public EncryptionInTransitPropertiesResponse(@Nullable Boolean isEncryptionInTransitEnabled) {
-        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? false : isEncryptionInTransitEnabled;
+        this.isEncryptionInTransitEnabled = Codegen.booleanProp("isEncryptionInTransitEnabled").arg(isEncryptionInTransitEnabled).def(false).getNullable();
     }
 
     private EncryptionInTransitPropertiesResponse() {

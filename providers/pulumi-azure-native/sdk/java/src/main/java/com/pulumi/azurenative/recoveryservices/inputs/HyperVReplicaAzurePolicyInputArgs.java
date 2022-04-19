@@ -96,7 +96,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
         @Nullable Output<Integer> replicationInterval,
         @Nullable Output<List<String>> storageAccounts) {
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.onlineReplicationStartTime = onlineReplicationStartTime;
         this.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
         this.replicationInterval = replicationInterval;

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -113,7 +114,7 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
         this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

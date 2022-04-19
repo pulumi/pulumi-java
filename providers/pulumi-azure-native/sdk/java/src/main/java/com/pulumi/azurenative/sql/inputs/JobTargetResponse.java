@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -105,7 +106,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
         String type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
-        this.membershipType = membershipType == null ? "Include" : membershipType;
+        this.membershipType = Codegen.stringProp("membershipType").arg(membershipType).def("Include").getNullable();
         this.refreshCredential = refreshCredential;
         this.serverName = serverName;
         this.shardMapName = shardMapName;

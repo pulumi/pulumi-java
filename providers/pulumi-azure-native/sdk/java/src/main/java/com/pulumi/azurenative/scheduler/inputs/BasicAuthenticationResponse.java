@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.scheduler.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -53,7 +54,7 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
         String type,
         @Nullable String username) {
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.username = username;
     }
 

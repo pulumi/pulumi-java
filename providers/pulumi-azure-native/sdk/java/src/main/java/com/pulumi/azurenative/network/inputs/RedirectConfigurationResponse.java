@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -107,7 +108,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
         this.customHost = customHost;
         this.customPath = customPath;
         this.customQueryString = customQueryString;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.redirectProtocol = redirectProtocol;
         this.redirectType = redirectType;
     }

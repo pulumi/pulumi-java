@@ -83,7 +83,7 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<List<TrafficWeightArgs>> traffic,
         @Nullable Output<Either<String,IngressTransportMethod>> transport) {
         this.allowInsecure = allowInsecure;
-        this.external = external == null ? Codegen.ofNullable(false) : external;
+        this.external = Codegen.booleanProp("external").output().arg(external).def(false).getNullable();
         this.targetPort = targetPort;
         this.traffic = traffic;
         this.transport = transport;

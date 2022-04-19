@@ -60,7 +60,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> objectType,
         Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
         this.datasourceTypes = Objects.requireNonNull(datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.policyRules = Objects.requireNonNull(policyRules, "expected parameter 'policyRules' to be non-null");
     }
 

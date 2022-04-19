@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -67,7 +68,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
         String copyLogLink,
         String copyVerboseLogLink) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType, "expected parameter 'copyLogDetailsType' to be non-null");
+        this.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg(copyLogDetailsType).require();
         this.copyLogLink = Objects.requireNonNull(copyLogLink, "expected parameter 'copyLogLink' to be non-null");
         this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink, "expected parameter 'copyVerboseLogLink' to be non-null");
     }

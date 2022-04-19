@@ -97,9 +97,9 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
         @Nullable Output<ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs> managedOutboundIPs,
         @Nullable Output<ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs> outboundIPPrefixes,
         @Nullable Output<ManagedClusterLoadBalancerProfileOutboundIPsArgs> outboundIPs) {
-        this.allocatedOutboundPorts = allocatedOutboundPorts == null ? Codegen.ofNullable(0) : allocatedOutboundPorts;
+        this.allocatedOutboundPorts = Codegen.integerProp("allocatedOutboundPorts").output().arg(allocatedOutboundPorts).def(0).getNullable();
         this.effectiveOutboundIPs = effectiveOutboundIPs;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes == null ? Codegen.ofNullable(30) : idleTimeoutInMinutes;
+        this.idleTimeoutInMinutes = Codegen.integerProp("idleTimeoutInMinutes").output().arg(idleTimeoutInMinutes).def(30).getNullable();
         this.managedOutboundIPs = managedOutboundIPs;
         this.outboundIPPrefixes = outboundIPPrefixes;
         this.outboundIPs = outboundIPs;

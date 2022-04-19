@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -272,7 +273,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
         this.policy = policy;
         this.reducer = Objects.requireNonNull(reducer, "expected parameter 'reducer' to be non-null");
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

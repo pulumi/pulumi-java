@@ -103,7 +103,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
         this.scope = scope;
         this.status = status;
         this.suppressionConfig = Objects.requireNonNull(suppressionConfig, "expected parameter 'suppressionConfig' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SuppressionArgs() {

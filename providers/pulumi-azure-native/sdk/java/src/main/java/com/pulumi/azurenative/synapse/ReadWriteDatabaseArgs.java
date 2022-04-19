@@ -115,7 +115,7 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
         Output<String> workspaceName) {
         this.databaseName = databaseName;
         this.hotCachePeriod = hotCachePeriod;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

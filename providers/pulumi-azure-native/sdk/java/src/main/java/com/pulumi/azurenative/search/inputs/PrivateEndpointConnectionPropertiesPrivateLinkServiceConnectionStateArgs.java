@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
         @Nullable Output<String> actionsRequired,
         @Nullable Output<String> description,
         @Nullable Output<PrivateLinkServiceConnectionStatus> status) {
-        this.actionsRequired = actionsRequired == null ? Codegen.ofNullable("None") : actionsRequired;
+        this.actionsRequired = Codegen.stringProp("actionsRequired").output().arg(actionsRequired).def("None").getNullable();
         this.description = description;
         this.status = status;
     }

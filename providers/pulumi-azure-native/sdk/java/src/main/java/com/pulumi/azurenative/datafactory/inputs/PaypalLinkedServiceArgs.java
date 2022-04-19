@@ -181,7 +181,7 @@ public final class PaypalLinkedServiceArgs extends com.pulumi.resources.Resource
         this.encryptedCredential = encryptedCredential;
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

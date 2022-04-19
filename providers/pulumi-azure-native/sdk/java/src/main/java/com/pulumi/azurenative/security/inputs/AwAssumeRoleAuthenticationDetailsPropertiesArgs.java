@@ -56,7 +56,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
         Output<String> authenticationType,
         Output<String> awsAssumeRoleArn,
         Output<String> awsExternalId) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn, "expected parameter 'awsAssumeRoleArn' to be non-null");
         this.awsExternalId = Objects.requireNonNull(awsExternalId, "expected parameter 'awsExternalId' to be non-null");
     }

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class CopyOnExpiryOptionResponse extends com.pulumi.resources.Invok
     }
 
     public CopyOnExpiryOptionResponse(String objectType) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
     }
 
     private CopyOnExpiryOptionResponse() {

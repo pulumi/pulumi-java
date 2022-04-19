@@ -5,6 +5,7 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.azurenative.automation.inputs.AdvancedScheduleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -197,7 +198,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
         this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
         this.frequency = frequency;
         this.interval = interval;
-        this.isEnabled = isEnabled == null ? false : isEnabled;
+        this.isEnabled = Codegen.booleanProp("isEnabled").arg(isEnabled).def(false).getNullable();
         this.lastModifiedTime = lastModifiedTime;
         this.nextRun = nextRun;
         this.nextRunOffsetMinutes = nextRunOffsetMinutes;

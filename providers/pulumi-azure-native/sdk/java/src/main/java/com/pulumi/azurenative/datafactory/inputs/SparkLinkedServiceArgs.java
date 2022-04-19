@@ -276,7 +276,7 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
         this.serverType = serverType;
         this.thriftTransportProtocol = thriftTransportProtocol;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;
     }

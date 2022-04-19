@@ -170,7 +170,7 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
         this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
         this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
         this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

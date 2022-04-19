@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
     public SelectVideoTrackByIdResponse(
         String odataType,
         Double trackId) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
     }
 

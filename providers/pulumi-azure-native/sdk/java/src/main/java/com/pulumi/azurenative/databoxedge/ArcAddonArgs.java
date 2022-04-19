@@ -115,7 +115,7 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> subscriptionId) {
         this.addonName = addonName;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceLocation = Objects.requireNonNull(resourceLocation, "expected parameter 'resourceLocation' to be non-null");
         this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");

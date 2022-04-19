@@ -70,9 +70,9 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
         @Nullable Output<Integer> maxEventsPerBatch,
         @Nullable Output<Integer> preferredBatchSizeInKilobytes,
         @Nullable Output<String> resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
-        this.maxEventsPerBatch = maxEventsPerBatch == null ? Codegen.ofNullable(1) : maxEventsPerBatch;
-        this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes == null ? Codegen.ofNullable(64) : preferredBatchSizeInKilobytes;
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
+        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").output().arg(maxEventsPerBatch).def(1).getNullable();
+        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").output().arg(preferredBatchSizeInKilobytes).def(64).getNullable();
         this.resourceId = resourceId;
     }
 

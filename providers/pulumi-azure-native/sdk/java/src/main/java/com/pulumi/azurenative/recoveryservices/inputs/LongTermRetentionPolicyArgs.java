@@ -87,7 +87,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
         @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType, "expected parameter 'retentionPolicyType' to be non-null");
+        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg(retentionPolicyType).require();
         this.weeklySchedule = weeklySchedule;
         this.yearlySchedule = yearlySchedule;
     }

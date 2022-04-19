@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.inputs.PngLayerResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.range = range;
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
         this.step = step;

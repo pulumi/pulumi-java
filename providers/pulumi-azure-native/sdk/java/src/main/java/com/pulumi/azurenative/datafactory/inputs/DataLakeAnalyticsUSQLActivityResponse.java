@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -207,7 +208,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
         this.runtimeVersion = runtimeVersion;
         this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService, "expected parameter 'scriptLinkedService' to be non-null");
         this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

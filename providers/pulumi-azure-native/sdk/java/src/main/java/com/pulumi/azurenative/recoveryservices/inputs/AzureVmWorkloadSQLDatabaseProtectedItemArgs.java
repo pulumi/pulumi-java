@@ -364,7 +364,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
         this.policyId = policyId;
         this.protectedItemDataSourceId = protectedItemDataSourceId;
         this.protectedItemHealthStatus = protectedItemHealthStatus;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.serverName = serverName;

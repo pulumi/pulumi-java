@@ -72,7 +72,7 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
         this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private LogicAppReceiverArgs() {

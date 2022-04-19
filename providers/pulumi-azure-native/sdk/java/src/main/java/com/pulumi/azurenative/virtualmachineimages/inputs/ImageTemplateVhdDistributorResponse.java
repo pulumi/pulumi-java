@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -59,7 +60,7 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
         String type) {
         this.artifactTags = artifactTags;
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ImageTemplateVhdDistributorResponse() {

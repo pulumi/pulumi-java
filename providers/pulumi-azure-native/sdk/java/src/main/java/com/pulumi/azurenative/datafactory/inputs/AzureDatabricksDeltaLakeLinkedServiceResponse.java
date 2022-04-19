@@ -10,6 +10,7 @@ import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -170,7 +171,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.workspaceResourceId = workspaceResourceId;
     }
 

@@ -63,7 +63,7 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
         Output<String> type) {
         this.compressionProperties = compressionProperties;
         this.skipLineCount = skipLineCount;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DelimitedTextReadSettingsArgs() {

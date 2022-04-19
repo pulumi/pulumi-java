@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
         String instanceType,
         @Nullable String primaryFabricLocation,
         @Nullable String recoveryFabricLocation) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.primaryFabricLocation = primaryFabricLocation;
         this.recoveryFabricLocation = recoveryFabricLocation;
     }

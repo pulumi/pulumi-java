@@ -208,7 +208,7 @@ public final class EventGridDataConnectionArgs extends com.pulumi.resources.Reso
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId, "expected parameter 'eventHubResourceId' to be non-null");
         this.ignoreFirstRecord = ignoreFirstRecord;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
         this.location = location;
         this.mappingRuleName = mappingRuleName;

@@ -98,7 +98,7 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.operationTimeout = operationTimeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useTempFileRename = useTempFileRename;
     }
 

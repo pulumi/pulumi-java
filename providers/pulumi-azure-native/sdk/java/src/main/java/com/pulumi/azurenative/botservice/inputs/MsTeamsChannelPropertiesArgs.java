@@ -93,7 +93,7 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
         @Nullable Output<Boolean> enableCalling,
         @Nullable Output<String> incomingCallRoute,
         Output<Boolean> isEnabled) {
-        this.acceptedTerms = acceptedTerms == null ? Codegen.ofNullable(true) : acceptedTerms;
+        this.acceptedTerms = Codegen.booleanProp("acceptedTerms").output().arg(acceptedTerms).def(true).getNullable();
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;
         this.enableCalling = enableCalling;

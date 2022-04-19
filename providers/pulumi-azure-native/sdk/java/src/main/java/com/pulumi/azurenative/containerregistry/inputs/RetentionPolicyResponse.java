@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,9 +57,9 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
         @Nullable Integer days,
         String lastUpdatedTime,
         @Nullable String status) {
-        this.days = days == null ? 7 : days;
+        this.days = Codegen.integerProp("days").arg(days).def(7).getNullable();
         this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime, "expected parameter 'lastUpdatedTime' to be non-null");
-        this.status = status == null ? "disabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
     }
 
     private RetentionPolicyResponse() {

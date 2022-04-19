@@ -46,7 +46,7 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
     public NotificationPreferenceArgs(
         Output<Boolean> sendNotification,
         Output<Either<String,NotificationStageName>> stageName) {
-        this.sendNotification = sendNotification == null ? Codegen.ofNullable(true) : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
+        this.sendNotification = Codegen.booleanProp("sendNotification").output().arg(sendNotification).def(true).require();
         this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
     }
 

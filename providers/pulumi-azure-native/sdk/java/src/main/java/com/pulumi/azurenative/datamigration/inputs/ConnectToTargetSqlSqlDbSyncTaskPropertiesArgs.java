@@ -47,7 +47,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends com.pul
         @Nullable Output<ConnectToTargetSqlSqlDbSyncTaskInputArgs> input,
         Output<String> taskType) {
         this.input = input;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
+        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
     }
 
     private ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs() {

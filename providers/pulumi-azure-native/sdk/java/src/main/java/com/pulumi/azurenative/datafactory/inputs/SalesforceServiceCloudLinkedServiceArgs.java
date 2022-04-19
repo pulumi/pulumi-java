@@ -183,7 +183,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends com.pulumi.re
         this.parameters = parameters;
         this.password = password;
         this.securityToken = securityToken;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

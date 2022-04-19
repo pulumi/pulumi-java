@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -107,7 +108,7 @@ public final class PublicIPAddressResourceSettingsResponse extends com.pulumi.re
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
         this.sku = sku;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zones = zones;

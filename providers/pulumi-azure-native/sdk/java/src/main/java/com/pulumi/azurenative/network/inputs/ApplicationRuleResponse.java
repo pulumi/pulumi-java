@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.inputs.FirewallPolicyRuleApplicationProtocolResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -172,7 +173,7 @@ public final class ApplicationRuleResponse extends com.pulumi.resources.InvokeAr
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

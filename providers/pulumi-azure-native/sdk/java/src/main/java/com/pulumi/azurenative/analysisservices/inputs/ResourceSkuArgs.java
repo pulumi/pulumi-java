@@ -59,7 +59,7 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> capacity,
         Output<String> name,
         @Nullable Output<Either<String,SkuTier>> tier) {
-        this.capacity = capacity == null ? Codegen.ofNullable(1) : capacity;
+        this.capacity = Codegen.integerProp("capacity").output().arg(capacity).def(1).getNullable();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }

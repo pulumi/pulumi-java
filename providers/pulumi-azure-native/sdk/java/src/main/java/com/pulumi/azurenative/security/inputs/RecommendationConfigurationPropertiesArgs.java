@@ -47,7 +47,7 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
         Output<Either<String,RecommendationType>> recommendationType,
         Output<Either<String,RecommendationConfigStatus>> status) {
         this.recommendationType = Objects.requireNonNull(recommendationType, "expected parameter 'recommendationType' to be non-null");
-        this.status = status == null ? Output.ofLeft("Enabled") : Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
+        this.status = Codegen.stringProp("status").left(RecommendationConfigStatus.class).output().arg(status).def("Enabled").require();
     }
 
     private RecommendationConfigurationPropertiesArgs() {

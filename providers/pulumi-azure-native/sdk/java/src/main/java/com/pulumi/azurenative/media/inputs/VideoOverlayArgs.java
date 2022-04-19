@@ -149,7 +149,7 @@ public final class VideoOverlayArgs extends com.pulumi.resources.ResourceArgs {
         this.fadeInDuration = fadeInDuration;
         this.fadeOutDuration = fadeOutDuration;
         this.inputLabel = Objects.requireNonNull(inputLabel, "expected parameter 'inputLabel' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.opacity = opacity;
         this.position = position;
         this.start = start;

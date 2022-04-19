@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class IdAssetReferenceResponse extends com.pulumi.resources.InvokeA
         String assetId,
         String referenceType) {
         this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
-        this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
+        this.referenceType = Codegen.stringProp("referenceType").arg(referenceType).require();
     }
 
     private IdAssetReferenceResponse() {

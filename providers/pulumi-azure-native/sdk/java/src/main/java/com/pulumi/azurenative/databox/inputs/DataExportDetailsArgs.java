@@ -62,7 +62,7 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel,
         Output<TransferConfigurationArgs> transferConfiguration) {
         this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-        this.logCollectionLevel = logCollectionLevel == null ? Output.ofLeft("Error") : logCollectionLevel;
+        this.logCollectionLevel = Codegen.stringProp("logCollectionLevel").left(LogCollectionLevel.class).output().arg(logCollectionLevel).def("Error").getNullable();
         this.transferConfiguration = Objects.requireNonNull(transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
     }
 

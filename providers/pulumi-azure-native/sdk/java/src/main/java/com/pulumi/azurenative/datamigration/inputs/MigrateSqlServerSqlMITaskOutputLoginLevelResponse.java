@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.loginName = Objects.requireNonNull(loginName, "expected parameter 'loginName' to be non-null");
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
         this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");

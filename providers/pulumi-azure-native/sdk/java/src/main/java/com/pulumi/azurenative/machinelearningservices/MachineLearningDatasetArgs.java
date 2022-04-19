@@ -111,7 +111,7 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.registration = Objects.requireNonNull(registration, "expected parameter 'registration' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipValidation = skipValidation == null ? Codegen.ofNullable(false) : skipValidation;
+        this.skipValidation = Codegen.booleanProp("skipValidation").output().arg(skipValidation).def(false).getNullable();
         this.timeSeries = timeSeries;
         this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
     }

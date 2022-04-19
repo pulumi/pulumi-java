@@ -136,11 +136,11 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = encryptConnection == null ? Codegen.ofNullable(true) : encryptConnection;
+        this.encryptConnection = Codegen.booleanProp("encryptConnection").output().arg(encryptConnection).def(true).getNullable();
         this.password = password;
         this.platform = platform;
-        this.trustServerCertificate = trustServerCertificate == null ? Codegen.ofNullable(false) : trustServerCertificate;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").output().arg(trustServerCertificate).def(false).getNullable();
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

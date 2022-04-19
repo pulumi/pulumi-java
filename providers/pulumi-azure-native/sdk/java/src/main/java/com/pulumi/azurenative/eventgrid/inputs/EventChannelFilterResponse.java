@@ -23,6 +23,7 @@ import com.pulumi.azurenative.eventgrid.inputs.StringNotContainsAdvancedFilterRe
 import com.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -65,7 +66,7 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
         @Nullable List<Object> advancedFilters,
         @Nullable Boolean enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
-        this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays == null ? false : enableAdvancedFilteringOnArrays;
+        this.enableAdvancedFilteringOnArrays = Codegen.booleanProp("enableAdvancedFilteringOnArrays").arg(enableAdvancedFilteringOnArrays).def(false).getNullable();
     }
 
     private EventChannelFilterResponse() {

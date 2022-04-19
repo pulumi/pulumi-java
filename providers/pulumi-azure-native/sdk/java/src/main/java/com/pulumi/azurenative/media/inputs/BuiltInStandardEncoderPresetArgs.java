@@ -46,7 +46,7 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
     public BuiltInStandardEncoderPresetArgs(
         Output<String> odataType,
         Output<Either<String,EncoderNamedPreset>> presetName) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.presetName = Objects.requireNonNull(presetName, "expected parameter 'presetName' to be non-null");
     }
 

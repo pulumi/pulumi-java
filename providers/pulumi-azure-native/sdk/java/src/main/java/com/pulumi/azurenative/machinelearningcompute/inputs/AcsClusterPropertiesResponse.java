@@ -6,6 +6,7 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 import com.pulumi.azurenative.machinelearningcompute.inputs.KubernetesClusterPropertiesResponse;
 import com.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -107,10 +108,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
         @Nullable KubernetesClusterPropertiesResponse orchestratorProperties,
         String orchestratorType,
         @Nullable List<SystemServiceResponse> systemServices) {
-        this.agentCount = agentCount == null ? 2 : agentCount;
-        this.agentVmSize = agentVmSize == null ? "Standard_D3_v2" : agentVmSize;
+        this.agentCount = Codegen.integerProp("agentCount").arg(agentCount).def(2).getNullable();
+        this.agentVmSize = Codegen.stringProp("agentVmSize").arg(agentVmSize).def("Standard_D3_v2").getNullable();
         this.clusterFqdn = Objects.requireNonNull(clusterFqdn, "expected parameter 'clusterFqdn' to be non-null");
-        this.masterCount = masterCount == null ? 1 : masterCount;
+        this.masterCount = Codegen.integerProp("masterCount").arg(masterCount).def(1).getNullable();
         this.orchestratorProperties = orchestratorProperties;
         this.orchestratorType = Objects.requireNonNull(orchestratorType, "expected parameter 'orchestratorType' to be non-null");
         this.systemServices = systemServices;

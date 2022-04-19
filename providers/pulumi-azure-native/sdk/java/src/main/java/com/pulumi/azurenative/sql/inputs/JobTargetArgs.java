@@ -109,7 +109,7 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
         Output<Either<String,JobTargetType>> type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
-        this.membershipType = membershipType == null ? Codegen.ofNullable(com.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType.Include) : membershipType;
+        this.membershipType = Codegen.objectProp("membershipType", JobTargetGroupMembershipType.class).output().arg(membershipType).def(JobTargetGroupMembershipType.Include).getNullable();
         this.refreshCredential = refreshCredential;
         this.serverName = serverName;
         this.shardMapName = shardMapName;

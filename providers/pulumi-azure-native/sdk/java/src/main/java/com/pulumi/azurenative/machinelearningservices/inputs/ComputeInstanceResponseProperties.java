@@ -13,6 +13,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.PersonalComputeInst
 import com.pulumi.azurenative.machinelearningservices.inputs.ResourceIdResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.SetupScriptsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -185,9 +186,9 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
         String state,
         @Nullable ResourceIdResponse subnet,
         @Nullable String vmSize) {
-        this.applicationSharingPolicy = applicationSharingPolicy == null ? "Shared" : applicationSharingPolicy;
+        this.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").arg(applicationSharingPolicy).def("Shared").getNullable();
         this.applications = Objects.requireNonNull(applications, "expected parameter 'applications' to be non-null");
-        this.computeInstanceAuthorizationType = computeInstanceAuthorizationType == null ? "personal" : computeInstanceAuthorizationType;
+        this.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").arg(computeInstanceAuthorizationType).def("personal").getNullable();
         this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints, "expected parameter 'connectivityEndpoints' to be non-null");
         this.createdBy = Objects.requireNonNull(createdBy, "expected parameter 'createdBy' to be non-null");
         this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");

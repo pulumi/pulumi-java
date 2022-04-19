@@ -45,7 +45,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends com.pulu
     public LinkedIntegrationRuntimeKeyAuthorizationArgs(
         Output<String> authorizationType,
         Output<SecureStringArgs> key) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
+        this.authorizationType = Codegen.stringProp("authorizationType").output().arg(authorizationType).require();
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 

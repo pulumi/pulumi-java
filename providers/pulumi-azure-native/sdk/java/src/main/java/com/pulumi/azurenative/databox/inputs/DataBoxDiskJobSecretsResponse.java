@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import com.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
 import com.pulumi.azurenative.databox.inputs.DiskSecretResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +100,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
         this.diskSecrets = Objects.requireNonNull(diskSecrets, "expected parameter 'diskSecrets' to be non-null");
         this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
         this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined, "expected parameter 'isPasskeyUserDefined' to be non-null");
-        this.jobSecretsType = Objects.requireNonNull(jobSecretsType, "expected parameter 'jobSecretsType' to be non-null");
+        this.jobSecretsType = Codegen.stringProp("jobSecretsType").arg(jobSecretsType).require();
         this.passKey = Objects.requireNonNull(passKey, "expected parameter 'passKey' to be non-null");
     }
 

@@ -183,7 +183,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.eventSystemProperties = eventSystemProperties;
         this.iotHubResourceId = Objects.requireNonNull(iotHubResourceId, "expected parameter 'iotHubResourceId' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.mappingRuleName = mappingRuleName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

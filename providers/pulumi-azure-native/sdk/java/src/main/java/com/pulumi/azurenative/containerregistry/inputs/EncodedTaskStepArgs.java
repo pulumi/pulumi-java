@@ -99,7 +99,7 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
         this.contextPath = contextPath;
         this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
         this.encodedValuesContent = encodedValuesContent;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.values = values;
     }
 

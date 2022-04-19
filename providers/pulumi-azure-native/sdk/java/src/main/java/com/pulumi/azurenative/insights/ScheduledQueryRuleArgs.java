@@ -157,7 +157,7 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
         Output<SourceArgs> source,
         @Nullable Output<Map<String,String>> tags) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.autoMitigate = autoMitigate == null ? Codegen.ofNullable(false) : autoMitigate;
+        this.autoMitigate = Codegen.booleanProp("autoMitigate").output().arg(autoMitigate).def(false).getNullable();
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;

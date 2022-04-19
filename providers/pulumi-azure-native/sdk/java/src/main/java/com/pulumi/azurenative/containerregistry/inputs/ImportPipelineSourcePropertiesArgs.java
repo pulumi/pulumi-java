@@ -61,7 +61,7 @@ public final class ImportPipelineSourcePropertiesArgs extends com.pulumi.resourc
         @Nullable Output<Either<String,PipelineSourceType>> type,
         @Nullable Output<String> uri) {
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = type == null ? Output.ofLeft("AzureStorageBlobContainer") : type;
+        this.type = Codegen.stringProp("type").left(PipelineSourceType.class).output().arg(type).def("AzureStorageBlobContainer").getNullable();
         this.uri = uri;
     }
 

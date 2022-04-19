@@ -243,12 +243,12 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
         @Nullable Output<String> timeout) {
         this.arguments = arguments;
         this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion, "expected parameter 'azPowerShellVersion' to be non-null");
-        this.cleanupPreference = cleanupPreference == null ? Output.ofLeft("Always") : cleanupPreference;
+        this.cleanupPreference = Codegen.stringProp("cleanupPreference").left(CleanupOptions.class).output().arg(cleanupPreference).def("Always").getNullable();
         this.containerSettings = containerSettings;
         this.environmentVariables = environmentVariables;
         this.forceUpdateTag = forceUpdateTag;
         this.identity = identity;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.primaryScriptUri = primaryScriptUri;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -258,7 +258,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
         this.storageAccountSettings = storageAccountSettings;
         this.supportingScriptUris = supportingScriptUris;
         this.tags = tags;
-        this.timeout = timeout == null ? Codegen.ofNullable("P1D") : timeout;
+        this.timeout = Codegen.stringProp("timeout").output().arg(timeout).def("P1D").getNullable();
     }
 
     private AzurePowerShellScriptArgs() {

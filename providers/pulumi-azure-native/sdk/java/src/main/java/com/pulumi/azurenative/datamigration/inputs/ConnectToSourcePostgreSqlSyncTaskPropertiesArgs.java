@@ -47,7 +47,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.p
         @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input,
         Output<String> taskType) {
         this.input = input;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
+        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
     }
 
     private ConnectToSourcePostgreSqlSyncTaskPropertiesArgs() {

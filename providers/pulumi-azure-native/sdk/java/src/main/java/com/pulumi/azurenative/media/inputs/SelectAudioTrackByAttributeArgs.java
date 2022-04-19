@@ -89,7 +89,7 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
         this.channelMapping = channelMapping;
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.filterValue = filterValue;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private SelectAudioTrackByAttributeArgs() {

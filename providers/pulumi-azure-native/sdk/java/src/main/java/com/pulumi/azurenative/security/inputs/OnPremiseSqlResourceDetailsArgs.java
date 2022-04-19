@@ -107,7 +107,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
+        this.source = Codegen.stringProp("source").output().arg(source).require();
         this.sourceComputerId = Objects.requireNonNull(sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
         this.vmuuid = Objects.requireNonNull(vmuuid, "expected parameter 'vmuuid' to be non-null");
         this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");

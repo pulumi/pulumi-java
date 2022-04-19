@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.DiskDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends com.pulumi.re
         @Nullable String vmProtectionState,
         @Nullable String vmProtectionStateDescription) {
         this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.lastReplicatedTime = lastReplicatedTime;
         this.vMDiskDetails = vMDiskDetails;
         this.vmId = vmId;

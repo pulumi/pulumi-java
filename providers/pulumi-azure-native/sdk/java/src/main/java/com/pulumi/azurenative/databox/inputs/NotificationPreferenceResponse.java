@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
     public NotificationPreferenceResponse(
         Boolean sendNotification,
         String stageName) {
-        this.sendNotification = sendNotification == null ? true : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
+        this.sendNotification = Codegen.booleanProp("sendNotification").arg(sendNotification).def(true).require();
         this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
     }
 

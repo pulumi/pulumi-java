@@ -197,7 +197,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
         this.entitiesFilter = entitiesFilter;
         this.entityQueryId = entityQueryId;
         this.inputEntityType = inputEntityType;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
         this.queryDefinitions = queryDefinitions;
         this.requiredInputFieldsSets = requiredInputFieldsSets;

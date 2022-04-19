@@ -47,7 +47,7 @@ public final class BackendPoolsSettingsArgs extends com.pulumi.resources.Resourc
     public BackendPoolsSettingsArgs(
         @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck,
         @Nullable Output<Integer> sendRecvTimeoutSeconds) {
-        this.enforceCertificateNameCheck = enforceCertificateNameCheck == null ? Output.ofLeft("Enabled") : enforceCertificateNameCheck;
+        this.enforceCertificateNameCheck = Codegen.stringProp("enforceCertificateNameCheck").left(EnforceCertificateNameCheckEnabledState.class).output().arg(enforceCertificateNameCheck).def("Enabled").getNullable();
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }
 

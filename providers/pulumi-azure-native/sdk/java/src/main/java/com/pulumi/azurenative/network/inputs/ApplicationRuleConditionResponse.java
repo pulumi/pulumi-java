@@ -5,6 +5,7 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.inputs.FirewallPolicyRuleConditionApplicationProtocolResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public final class ApplicationRuleConditionResponse extends com.pulumi.resources
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleConditionType = Objects.requireNonNull(ruleConditionType, "expected parameter 'ruleConditionType' to be non-null");
+        this.ruleConditionType = Codegen.stringProp("ruleConditionType").arg(ruleConditionType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

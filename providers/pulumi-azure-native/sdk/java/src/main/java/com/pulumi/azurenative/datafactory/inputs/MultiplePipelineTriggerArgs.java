@@ -75,7 +75,7 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
         this.annotations = annotations;
         this.description = description;
         this.pipelines = pipelines;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private MultiplePipelineTriggerArgs() {

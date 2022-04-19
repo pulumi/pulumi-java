@@ -73,8 +73,8 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
         @Nullable Output<Boolean> collectLogins,
         Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
-        this.collectAgentJobs = collectAgentJobs == null ? Codegen.ofNullable(false) : collectAgentJobs;
-        this.collectLogins = collectLogins == null ? Codegen.ofNullable(false) : collectLogins;
+        this.collectAgentJobs = Codegen.booleanProp("collectAgentJobs").output().arg(collectAgentJobs).def(false).getNullable();
+        this.collectLogins = Codegen.booleanProp("collectLogins").output().arg(collectLogins).def(false).getNullable();
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
     }
 

@@ -122,10 +122,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags) {
         this.domainName = domainName;
         this.inboundIpRules = inboundIpRules;
-        this.inputSchema = inputSchema == null ? Output.ofLeft("EventGridSchema") : inputSchema;
+        this.inputSchema = Codegen.stringProp("inputSchema").left(InputSchema.class).output().arg(inputSchema).def("EventGridSchema").getNullable();
         this.inputSchemaMapping = inputSchemaMapping;
         this.location = location;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
     }

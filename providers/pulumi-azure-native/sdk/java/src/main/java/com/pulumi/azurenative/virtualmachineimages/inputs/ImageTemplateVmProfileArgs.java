@@ -58,8 +58,8 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
         @Nullable Output<Integer> osDiskSizeGB,
         @Nullable Output<String> vmSize,
         @Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
-        this.osDiskSizeGB = osDiskSizeGB == null ? Codegen.ofNullable(0) : osDiskSizeGB;
-        this.vmSize = vmSize == null ? Codegen.ofNullable("") : vmSize;
+        this.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").output().arg(osDiskSizeGB).def(0).getNullable();
+        this.vmSize = Codegen.stringProp("vmSize").output().arg(vmSize).def("").getNullable();
         this.vnetConfig = vnetConfig;
     }
 

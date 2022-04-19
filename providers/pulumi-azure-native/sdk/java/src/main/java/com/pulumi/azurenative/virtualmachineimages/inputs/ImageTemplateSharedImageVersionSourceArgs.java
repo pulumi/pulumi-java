@@ -45,7 +45,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
         Output<String> imageVersionId,
         Output<String> type) {
         this.imageVersionId = Objects.requireNonNull(imageVersionId, "expected parameter 'imageVersionId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateSharedImageVersionSourceArgs() {

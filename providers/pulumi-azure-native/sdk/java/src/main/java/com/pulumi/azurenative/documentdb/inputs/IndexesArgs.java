@@ -60,8 +60,8 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,DataType>> dataType,
         @Nullable Output<Either<String,IndexKind>> kind,
         @Nullable Output<Integer> precision) {
-        this.dataType = dataType == null ? Output.ofLeft("String") : dataType;
-        this.kind = kind == null ? Output.ofLeft("Hash") : kind;
+        this.dataType = Codegen.stringProp("dataType").left(DataType.class).output().arg(dataType).def("String").getNullable();
+        this.kind = Codegen.stringProp("kind").left(IndexKind.class).output().arg(kind).def("Hash").getNullable();
         this.precision = precision;
     }
 

@@ -69,7 +69,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
         Output<String> resourceGroupId,
         @Nullable Output<String> sharePassword,
         Output<String> stagingStorageAccountId) {
-        this.dataAccountType = dataAccountType == null ? Codegen.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").output().arg(dataAccountType).def("StorageAccount").require();
         this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
         this.sharePassword = sharePassword;
         this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");

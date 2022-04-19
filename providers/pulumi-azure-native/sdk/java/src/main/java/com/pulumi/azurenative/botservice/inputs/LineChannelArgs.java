@@ -70,9 +70,9 @@ public final class LineChannelArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> etag,
         @Nullable Output<String> location,
         @Nullable Output<LineChannelPropertiesArgs> properties) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
+        this.channelName = Codegen.stringProp("channelName").output().arg(channelName).require();
         this.etag = etag;
-        this.location = location == null ? Codegen.ofNullable("global") : location;
+        this.location = Codegen.stringProp("location").output().arg(location).def("global").getNullable();
         this.properties = properties;
     }
 

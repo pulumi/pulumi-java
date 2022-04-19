@@ -76,7 +76,7 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
         @Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
-        this.dataAccountType = dataAccountType == null ? Output.ofLeft("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").left(DataAccountType.class).output().arg(dataAccountType).def("StorageAccount").require();
         this.filterFileDetails = filterFileDetails;
     }
 

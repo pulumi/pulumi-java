@@ -71,7 +71,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> keyVaultUri,
         @Nullable Output<String> keyVersion) {
         this.keyName = keyName;
-        this.keySource = keySource == null ? Output.ofLeft("Default") : keySource;
+        this.keySource = Codegen.stringProp("keySource").left(KeySource.class).output().arg(keySource).def("Default").getNullable();
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
     }

@@ -223,7 +223,7 @@ public final class MongoDbLinkedServiceArgs extends com.pulumi.resources.Resourc
         this.password = password;
         this.port = port;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

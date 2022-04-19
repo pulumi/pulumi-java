@@ -178,7 +178,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;
         this.description = description;
-        this.endpointComputeType = Objects.requireNonNull(endpointComputeType, "expected parameter 'endpointComputeType' to be non-null");
+        this.endpointComputeType = Codegen.stringProp("endpointComputeType").output().arg(endpointComputeType).require();
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
         this.livenessProbe = livenessProbe;

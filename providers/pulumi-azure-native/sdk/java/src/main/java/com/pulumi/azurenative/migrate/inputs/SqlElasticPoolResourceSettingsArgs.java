@@ -59,7 +59,7 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
         Output<String> resourceType,
         Output<String> targetResourceName,
         @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zoneRedundant = zoneRedundant;
     }

@@ -87,7 +87,7 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<String> healthStatus,
         @Nullable Output<String> registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.registrationStatus = registrationStatus;

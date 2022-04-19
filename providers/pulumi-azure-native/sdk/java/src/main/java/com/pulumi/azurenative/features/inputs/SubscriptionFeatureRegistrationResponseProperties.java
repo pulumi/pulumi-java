@@ -5,6 +5,7 @@ package com.pulumi.azurenative.features.inputs;
 
 import com.pulumi.azurenative.features.inputs.AuthorizationProfileResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -196,7 +197,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
         this.registrationDate = Objects.requireNonNull(registrationDate, "expected parameter 'registrationDate' to be non-null");
         this.releaseDate = Objects.requireNonNull(releaseDate, "expected parameter 'releaseDate' to be non-null");
-        this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal == null ? false : shouldFeatureDisplayInPortal;
+        this.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").arg(shouldFeatureDisplayInPortal).def(false).getNullable();
         this.state = state;
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");

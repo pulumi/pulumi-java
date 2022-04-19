@@ -156,7 +156,7 @@ public final class AzureStorageLinkedServiceArgs extends com.pulumi.resources.Re
         this.parameters = parameters;
         this.sasToken = sasToken;
         this.sasUri = sasUri;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureStorageLinkedServiceArgs() {

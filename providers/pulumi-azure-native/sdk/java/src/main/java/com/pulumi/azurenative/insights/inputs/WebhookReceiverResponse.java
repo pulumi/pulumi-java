@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -109,8 +110,8 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
         this.objectId = objectId;
         this.serviceUri = Objects.requireNonNull(serviceUri, "expected parameter 'serviceUri' to be non-null");
         this.tenantId = tenantId;
-        this.useAadAuth = useAadAuth == null ? false : useAadAuth;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? false : useCommonAlertSchema;
+        this.useAadAuth = Codegen.booleanProp("useAadAuth").arg(useAadAuth).def(false).getNullable();
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private WebhookReceiverResponse() {

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtNicDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtProtectedDiskDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -228,7 +229,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
         @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
         String vmwareMachineId) {
         this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived, "expected parameter 'lastRecoveryPointReceived' to be non-null");
         this.licenseType = licenseType;
         this.migrationRecoveryPointId = Objects.requireNonNull(migrationRecoveryPointId, "expected parameter 'migrationRecoveryPointId' to be non-null");

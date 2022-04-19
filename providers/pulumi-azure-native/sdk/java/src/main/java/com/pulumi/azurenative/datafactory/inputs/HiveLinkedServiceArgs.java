@@ -313,7 +313,7 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
         this.serviceDiscoveryMode = serviceDiscoveryMode;
         this.thriftTransportProtocol = thriftTransportProtocol;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useNativeQuery = useNativeQuery;
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;

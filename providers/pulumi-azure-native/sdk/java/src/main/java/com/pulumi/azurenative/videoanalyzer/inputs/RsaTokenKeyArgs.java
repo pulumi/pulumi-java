@@ -86,7 +86,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
         this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
         this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
         this.n = Objects.requireNonNull(n, "expected parameter 'n' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private RsaTokenKeyArgs() {

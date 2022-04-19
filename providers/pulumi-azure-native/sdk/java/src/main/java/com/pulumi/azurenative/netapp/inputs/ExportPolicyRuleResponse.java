@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -191,13 +192,13 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
         @Nullable Boolean unixReadWrite) {
         this.allowedClients = allowedClients;
         this.cifs = cifs;
-        this.hasRootAccess = hasRootAccess == null ? true : hasRootAccess;
-        this.kerberos5ReadOnly = kerberos5ReadOnly == null ? false : kerberos5ReadOnly;
-        this.kerberos5ReadWrite = kerberos5ReadWrite == null ? false : kerberos5ReadWrite;
-        this.kerberos5iReadOnly = kerberos5iReadOnly == null ? false : kerberos5iReadOnly;
-        this.kerberos5iReadWrite = kerberos5iReadWrite == null ? false : kerberos5iReadWrite;
-        this.kerberos5pReadOnly = kerberos5pReadOnly == null ? false : kerberos5pReadOnly;
-        this.kerberos5pReadWrite = kerberos5pReadWrite == null ? false : kerberos5pReadWrite;
+        this.hasRootAccess = Codegen.booleanProp("hasRootAccess").arg(hasRootAccess).def(true).getNullable();
+        this.kerberos5ReadOnly = Codegen.booleanProp("kerberos5ReadOnly").arg(kerberos5ReadOnly).def(false).getNullable();
+        this.kerberos5ReadWrite = Codegen.booleanProp("kerberos5ReadWrite").arg(kerberos5ReadWrite).def(false).getNullable();
+        this.kerberos5iReadOnly = Codegen.booleanProp("kerberos5iReadOnly").arg(kerberos5iReadOnly).def(false).getNullable();
+        this.kerberos5iReadWrite = Codegen.booleanProp("kerberos5iReadWrite").arg(kerberos5iReadWrite).def(false).getNullable();
+        this.kerberos5pReadOnly = Codegen.booleanProp("kerberos5pReadOnly").arg(kerberos5pReadOnly).def(false).getNullable();
+        this.kerberos5pReadWrite = Codegen.booleanProp("kerberos5pReadWrite").arg(kerberos5pReadWrite).def(false).getNullable();
         this.nfsv3 = nfsv3;
         this.nfsv41 = nfsv41;
         this.ruleIndex = ruleIndex;

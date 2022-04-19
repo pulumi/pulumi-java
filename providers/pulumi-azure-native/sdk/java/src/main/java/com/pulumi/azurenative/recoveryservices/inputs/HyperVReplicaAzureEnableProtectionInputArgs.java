@@ -253,7 +253,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
         this.disksToInclude = disksToInclude;
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.hvHostVmId = hvHostVmId;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.logStorageAccountId = logStorageAccountId;
         this.osType = osType;
         this.targetAvailabilitySetId = targetAvailabilitySetId;

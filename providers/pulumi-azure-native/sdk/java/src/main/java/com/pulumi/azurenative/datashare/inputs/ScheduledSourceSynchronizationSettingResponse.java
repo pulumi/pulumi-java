@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datashare.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
         String kind,
         @Nullable String recurrenceInterval,
         @Nullable String synchronizationTime) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.recurrenceInterval = recurrenceInterval;
         this.synchronizationTime = synchronizationTime;
     }

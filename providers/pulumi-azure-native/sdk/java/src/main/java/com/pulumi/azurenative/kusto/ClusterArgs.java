@@ -220,11 +220,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
         @Nullable Output<List<String>> zones) {
         this.clusterName = clusterName;
-        this.enableDiskEncryption = enableDiskEncryption == null ? Codegen.ofNullable(false) : enableDiskEncryption;
-        this.enableDoubleEncryption = enableDoubleEncryption == null ? Codegen.ofNullable(false) : enableDoubleEncryption;
-        this.enablePurge = enablePurge == null ? Codegen.ofNullable(false) : enablePurge;
-        this.enableStreamingIngest = enableStreamingIngest == null ? Codegen.ofNullable(false) : enableStreamingIngest;
-        this.engineType = engineType == null ? Output.ofLeft("V3") : engineType;
+        this.enableDiskEncryption = Codegen.booleanProp("enableDiskEncryption").output().arg(enableDiskEncryption).def(false).getNullable();
+        this.enableDoubleEncryption = Codegen.booleanProp("enableDoubleEncryption").output().arg(enableDoubleEncryption).def(false).getNullable();
+        this.enablePurge = Codegen.booleanProp("enablePurge").output().arg(enablePurge).def(false).getNullable();
+        this.enableStreamingIngest = Codegen.booleanProp("enableStreamingIngest").output().arg(enableStreamingIngest).def(false).getNullable();
+        this.engineType = Codegen.stringProp("engineType").left(EngineType.class).output().arg(engineType).def("V3").getNullable();
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
         this.location = location;

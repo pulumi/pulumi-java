@@ -5,6 +5,7 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsResponseCredentials;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -176,7 +177,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
         this.requireValidCertificate = requireValidCertificate;
         this.userFileURI = userFileURI;
         this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded, "expected parameter 'usernameDownloaded' to be non-null");
-        this.usernameSource = usernameSource == null ? "None" : usernameSource;
+        this.usernameSource = Codegen.stringProp("usernameSource").arg(usernameSource).def("None").getNullable();
     }
 
     private CacheUsernameDownloadSettingsResponse() {

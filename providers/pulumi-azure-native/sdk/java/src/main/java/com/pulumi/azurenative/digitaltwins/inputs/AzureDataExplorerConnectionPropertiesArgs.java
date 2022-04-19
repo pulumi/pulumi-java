@@ -133,7 +133,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends com.pulumi.
         this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri, "expected parameter 'adxEndpointUri' to be non-null");
         this.adxResourceId = Objects.requireNonNull(adxResourceId, "expected parameter 'adxResourceId' to be non-null");
         this.adxTableName = adxTableName;
-        this.connectionType = Objects.requireNonNull(connectionType, "expected parameter 'connectionType' to be non-null");
+        this.connectionType = Codegen.stringProp("connectionType").output().arg(connectionType).require();
         this.eventHubConsumerGroup = eventHubConsumerGroup;
         this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri, "expected parameter 'eventHubEndpointUri' to be non-null");
         this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath, "expected parameter 'eventHubEntityPath' to be non-null");

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.DataItemMigrationSummaryResultResponse;
 import com.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -226,7 +227,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted, "expected parameter 'numberOfObjectsCompleted' to be non-null");
         this.objectSummary = Objects.requireNonNull(objectSummary, "expected parameter 'objectSummary' to be non-null");
         this.resultPrefix = Objects.requireNonNull(resultPrefix, "expected parameter 'resultPrefix' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
         this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");

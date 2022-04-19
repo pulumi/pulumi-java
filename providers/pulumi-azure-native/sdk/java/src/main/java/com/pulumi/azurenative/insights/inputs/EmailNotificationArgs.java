@@ -59,8 +59,8 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Boolean> sendToSubscriptionAdministrator,
         @Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
         this.customEmails = customEmails;
-        this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator == null ? Codegen.ofNullable(false) : sendToSubscriptionAdministrator;
-        this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators == null ? Codegen.ofNullable(false) : sendToSubscriptionCoAdministrators;
+        this.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").output().arg(sendToSubscriptionAdministrator).def(false).getNullable();
+        this.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").output().arg(sendToSubscriptionCoAdministrators).def(false).getNullable();
     }
 
     private EmailNotificationArgs() {

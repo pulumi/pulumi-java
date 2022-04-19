@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
     public SecureStringResponse(
         String type,
         String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 

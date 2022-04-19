@@ -186,7 +186,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
         this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
         this.retryPolicy = retryPolicy;
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TumblingWindowTriggerArgs() {

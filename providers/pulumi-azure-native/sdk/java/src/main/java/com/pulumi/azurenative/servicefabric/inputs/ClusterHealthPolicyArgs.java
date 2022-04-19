@@ -72,8 +72,8 @@ public final class ClusterHealthPolicyArgs extends com.pulumi.resources.Resource
         @Nullable Output<Integer> maxPercentUnhealthyApplications,
         @Nullable Output<Integer> maxPercentUnhealthyNodes) {
         this.applicationHealthPolicies = applicationHealthPolicies;
-        this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications == null ? Codegen.ofNullable(0) : maxPercentUnhealthyApplications;
-        this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes == null ? Codegen.ofNullable(0) : maxPercentUnhealthyNodes;
+        this.maxPercentUnhealthyApplications = Codegen.integerProp("maxPercentUnhealthyApplications").output().arg(maxPercentUnhealthyApplications).def(0).getNullable();
+        this.maxPercentUnhealthyNodes = Codegen.integerProp("maxPercentUnhealthyNodes").output().arg(maxPercentUnhealthyNodes).def(0).getNullable();
     }
 
     private ClusterHealthPolicyArgs() {

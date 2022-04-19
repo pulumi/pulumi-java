@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -69,7 +70,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
         String webTestId) {
         this.componentId = Objects.requireNonNull(componentId, "expected parameter 'componentId' to be non-null");
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.webTestId = Objects.requireNonNull(webTestId, "expected parameter 'webTestId' to be non-null");
     }
 

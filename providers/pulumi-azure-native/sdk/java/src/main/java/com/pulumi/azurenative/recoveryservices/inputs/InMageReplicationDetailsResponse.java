@@ -10,6 +10,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsR
 import com.pulumi.azurenative.recoveryservices.inputs.OSDiskDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -495,7 +496,7 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
         this.discoveryType = discoveryType;
         this.diskResized = diskResized;
         this.infrastructureVmId = infrastructureVmId;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.ipAddress = ipAddress;
         this.lastHeartbeat = lastHeartbeat;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;

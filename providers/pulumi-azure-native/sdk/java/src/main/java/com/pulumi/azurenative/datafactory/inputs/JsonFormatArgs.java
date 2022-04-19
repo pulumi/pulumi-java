@@ -125,7 +125,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
         this.jsonPathDefinition = jsonPathDefinition;
         this.nestingSeparator = nestingSeparator;
         this.serializer = serializer;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private JsonFormatArgs() {

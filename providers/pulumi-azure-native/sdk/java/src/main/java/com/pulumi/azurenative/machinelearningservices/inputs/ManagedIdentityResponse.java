@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +70,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
         @Nullable String objectId,
         @Nullable String resourceId) {
         this.clientId = clientId;
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
+        this.identityType = Codegen.stringProp("identityType").arg(identityType).require();
         this.objectId = objectId;
         this.resourceId = resourceId;
     }

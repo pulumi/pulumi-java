@@ -158,7 +158,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
         this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
         this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
         this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId, "expected parameter 'servicePrincipalTenantId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private Office365LinkedServiceArgs() {

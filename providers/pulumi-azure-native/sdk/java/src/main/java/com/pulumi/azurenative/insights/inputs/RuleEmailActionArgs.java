@@ -60,7 +60,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
         Output<String> odataType,
         @Nullable Output<Boolean> sendToServiceOwners) {
         this.customEmails = customEmails;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.sendToServiceOwners = sendToServiceOwners;
     }
 

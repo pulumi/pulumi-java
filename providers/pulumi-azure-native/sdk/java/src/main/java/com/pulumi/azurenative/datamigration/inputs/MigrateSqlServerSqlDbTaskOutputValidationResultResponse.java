@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.MigrationValidationDatabaseSummaryResultResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -84,7 +85,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
         @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.migrationId = Objects.requireNonNull(migrationId, "expected parameter 'migrationId' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
         this.summaryResults = summaryResults;
     }

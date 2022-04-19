@@ -87,7 +87,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> requireInfrastructureEncryption,
         @Nullable Output<EncryptionServicesArgs> services) {
         this.encryptionIdentity = encryptionIdentity;
-        this.keySource = keySource == null ? Output.ofLeft("Microsoft.Storage") : Objects.requireNonNull(keySource, "expected parameter 'keySource' to be non-null");
+        this.keySource = Codegen.stringProp("keySource").left(KeySource.class).output().arg(keySource).def("Microsoft.Storage").require();
         this.keyVaultProperties = keyVaultProperties;
         this.requireInfrastructureEncryption = requireInfrastructureEncryption;
         this.services = services;

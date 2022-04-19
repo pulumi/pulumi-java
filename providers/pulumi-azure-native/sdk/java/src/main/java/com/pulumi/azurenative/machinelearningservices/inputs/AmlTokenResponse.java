@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class AmlTokenResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     public AmlTokenResponse(String identityType) {
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
+        this.identityType = Codegen.stringProp("identityType").arg(identityType).require();
     }
 
     private AmlTokenResponse() {

@@ -96,11 +96,11 @@ public final class SqlManagedInstanceSkuArgs extends com.pulumi.resources.Resour
         @Nullable Output<String> size,
         @Nullable Output<SqlManagedInstanceSkuTier> tier) {
         this.capacity = capacity;
-        this.dev = dev == null ? Codegen.ofNullable(true) : dev;
+        this.dev = Codegen.booleanProp("dev").output().arg(dev).def(true).getNullable();
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.size = size;
-        this.tier = tier == null ? Codegen.ofNullable(com.pulumi.azurenative.azurearcdata.enums.SqlManagedInstanceSkuTier.GeneralPurpose) : tier;
+        this.tier = Codegen.objectProp("tier", SqlManagedInstanceSkuTier.class).output().arg(tier).def(SqlManagedInstanceSkuTier.GeneralPurpose).getNullable();
     }
 
     private SqlManagedInstanceSkuArgs() {

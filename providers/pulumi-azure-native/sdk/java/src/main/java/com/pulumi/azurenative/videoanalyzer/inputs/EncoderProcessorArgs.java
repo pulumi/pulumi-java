@@ -76,7 +76,7 @@ public final class EncoderProcessorArgs extends com.pulumi.resources.ResourceArg
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private EncoderProcessorArgs() {

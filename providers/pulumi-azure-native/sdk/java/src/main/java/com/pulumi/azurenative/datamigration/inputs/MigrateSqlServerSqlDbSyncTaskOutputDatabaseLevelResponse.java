@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -235,7 +236,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
         this.initializationCompleted = Objects.requireNonNull(initializationCompleted, "expected parameter 'initializationCompleted' to be non-null");
         this.latency = Objects.requireNonNull(latency, "expected parameter 'latency' to be non-null");
         this.migrationState = Objects.requireNonNull(migrationState, "expected parameter 'migrationState' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
     }
 

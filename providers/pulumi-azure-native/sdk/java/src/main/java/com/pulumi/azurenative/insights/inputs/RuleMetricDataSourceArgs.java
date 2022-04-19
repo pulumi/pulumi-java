@@ -96,7 +96,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.resourceLocation = resourceLocation;
         this.resourceUri = resourceUri;
     }

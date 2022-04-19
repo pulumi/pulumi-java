@@ -61,7 +61,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
         Output<String> offeringType) {
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
     }
 
     private DefenderForServersAwsOfferingArgs() {

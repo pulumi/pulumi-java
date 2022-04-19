@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -259,7 +260,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
         this.kdcIP = kdcIP;
         this.ldapOverTLS = ldapOverTLS;
         this.ldapSigning = ldapSigning;
-        this.organizationalUnit = organizationalUnit == null ? "CN=Computers" : organizationalUnit;
+        this.organizationalUnit = Codegen.stringProp("organizationalUnit").arg(organizationalUnit).def("CN=Computers").getNullable();
         this.password = password;
         this.securityOperators = securityOperators;
         this.serverRootCACertificate = serverRootCACertificate;

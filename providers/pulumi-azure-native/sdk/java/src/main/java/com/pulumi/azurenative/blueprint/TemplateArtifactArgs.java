@@ -146,7 +146,7 @@ public final class TemplateArtifactArgs extends com.pulumi.resources.ResourceArg
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.resourceGroup = resourceGroup;
         this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");

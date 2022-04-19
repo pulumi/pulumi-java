@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -55,7 +56,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
         Double waitTimeMs,
         String waitType) {
         this.waitCount = Objects.requireNonNull(waitCount, "expected parameter 'waitCount' to be non-null");
-        this.waitTimeMs = waitTimeMs == null ? 0e+00 : Objects.requireNonNull(waitTimeMs, "expected parameter 'waitTimeMs' to be non-null");
+        this.waitTimeMs = Codegen.doubleProp("waitTimeMs").arg(waitTimeMs).def(0e+00).require();
         this.waitType = Objects.requireNonNull(waitType, "expected parameter 'waitType' to be non-null");
     }
 

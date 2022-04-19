@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.azurenative.web.enums.FrequencyUnit;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -82,10 +83,10 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
         Boolean keepAtLeastOneBackup,
         Integer retentionPeriodInDays,
         @Nullable String startTime) {
-        this.frequencyInterval = frequencyInterval == null ? 7 : Objects.requireNonNull(frequencyInterval, "expected parameter 'frequencyInterval' to be non-null");
-        this.frequencyUnit = frequencyUnit == null ? com.pulumi.azurenative.web.enums.FrequencyUnit.Day : Objects.requireNonNull(frequencyUnit, "expected parameter 'frequencyUnit' to be non-null");
-        this.keepAtLeastOneBackup = keepAtLeastOneBackup == null ? true : Objects.requireNonNull(keepAtLeastOneBackup, "expected parameter 'keepAtLeastOneBackup' to be non-null");
-        this.retentionPeriodInDays = retentionPeriodInDays == null ? 30 : Objects.requireNonNull(retentionPeriodInDays, "expected parameter 'retentionPeriodInDays' to be non-null");
+        this.frequencyInterval = Codegen.integerProp("frequencyInterval").arg(frequencyInterval).def(7).require();
+        this.frequencyUnit = Codegen.objectProp("frequencyUnit", FrequencyUnit.class).arg(frequencyUnit).def(FrequencyUnit.Day).require();
+        this.keepAtLeastOneBackup = Codegen.booleanProp("keepAtLeastOneBackup").arg(keepAtLeastOneBackup).def(true).require();
+        this.retentionPeriodInDays = Codegen.integerProp("retentionPeriodInDays").arg(retentionPeriodInDays).def(30).require();
         this.startTime = startTime;
     }
 

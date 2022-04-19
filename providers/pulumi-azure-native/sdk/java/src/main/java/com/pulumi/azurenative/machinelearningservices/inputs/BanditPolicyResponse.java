@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -83,7 +84,7 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
         @Nullable Double slackFactor) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
+        this.policyType = Codegen.stringProp("policyType").arg(policyType).require();
         this.slackAmount = slackAmount;
         this.slackFactor = slackFactor;
     }

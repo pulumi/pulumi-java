@@ -134,12 +134,12 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
         Output<Either<String,HostnameType>> type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
-        this.defaultSslBinding = defaultSslBinding == null ? Codegen.ofNullable(false) : defaultSslBinding;
+        this.defaultSslBinding = Codegen.booleanProp("defaultSslBinding").output().arg(defaultSslBinding).def(false).getNullable();
         this.encodedCertificate = encodedCertificate;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.identityClientId = identityClientId;
         this.keyVaultId = keyVaultId;
-        this.negotiateClientCertificate = negotiateClientCertificate == null ? Codegen.ofNullable(false) : negotiateClientCertificate;
+        this.negotiateClientCertificate = Codegen.booleanProp("negotiateClientCertificate").output().arg(negotiateClientCertificate).def(false).getNullable();
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 

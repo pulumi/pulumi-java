@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.azurenative.videoanalyzer.inputs.AudioEncoderAacResponse;
 import com.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Response;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,7 +60,7 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
         String type,
         @Nullable VideoEncoderH264Response videoEncoder) {
         this.audioEncoder = audioEncoder;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.videoEncoder = videoEncoder;
     }
 

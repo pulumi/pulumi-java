@@ -8,6 +8,7 @@ import com.pulumi.azurenative.documentdb.inputs.ExcludedPathResponse;
 import com.pulumi.azurenative.documentdb.inputs.IncludedPathResponse;
 import com.pulumi.azurenative.documentdb.inputs.SpatialSpecResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +102,7 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
         this.compositeIndexes = compositeIndexes;
         this.excludedPaths = excludedPaths;
         this.includedPaths = includedPaths;
-        this.indexingMode = indexingMode == null ? "consistent" : indexingMode;
+        this.indexingMode = Codegen.stringProp("indexingMode").arg(indexingMode).def("consistent").getNullable();
         this.spatialIndexes = spatialIndexes;
     }
 

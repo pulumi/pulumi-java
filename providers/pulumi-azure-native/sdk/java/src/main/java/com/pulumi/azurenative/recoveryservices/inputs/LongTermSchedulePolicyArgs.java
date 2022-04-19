@@ -31,7 +31,7 @@ public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.Resou
     }
 
     public LongTermSchedulePolicyArgs(Output<String> schedulePolicyType) {
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
+        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").output().arg(schedulePolicyType).require();
     }
 
     private LongTermSchedulePolicyArgs() {

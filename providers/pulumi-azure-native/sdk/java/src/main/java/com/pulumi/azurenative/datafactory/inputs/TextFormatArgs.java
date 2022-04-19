@@ -177,7 +177,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
         this.serializer = serializer;
         this.skipLineCount = skipLineCount;
         this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TextFormatArgs() {

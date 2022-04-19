@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -69,9 +70,9 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
         @Nullable String name,
         String type,
         @Nullable String value) {
-        this.isSecret = isSecret == null ? false : isSecret;
+        this.isSecret = Codegen.booleanProp("isSecret").arg(isSecret).def(false).getNullable();
         this.name = name;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.value = value;
     }
 

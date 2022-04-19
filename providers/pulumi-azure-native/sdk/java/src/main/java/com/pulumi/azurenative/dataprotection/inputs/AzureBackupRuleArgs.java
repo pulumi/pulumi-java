@@ -84,7 +84,7 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
         this.backupParameters = backupParameters;
         this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
     }
 
