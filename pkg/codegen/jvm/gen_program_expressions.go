@@ -286,7 +286,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
 		}
 	case "file":
-		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
+		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)), StandardCharsets.UTF_8)", expr.Args[0])
 	case "filebase64":
 		g.Fgenf(w, "Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
 	case "filebase64sha256":
@@ -339,15 +339,17 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "%.20v.split(%v)", expr.Args[1], expr.Args[0])
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
-	case "toBase64":
-		g.Fgenf(w, "Base64.getEncoder().encodeToString(%v.getBytes())", expr.Args[0])
+	case "base64encode":
+		g.Fgenf(w, "Base64.getEncoder().encodeToString(%v.getBytes(StandardCharsets.UTF_8))", expr.Args[0])
+	case "base64decode":
+		g.Fgenf(w, "new String(Base64.getDecoder().decode(%v), StandardCharsets.UTF_8)", expr.Args[0])
 	case "toJSON":
 		// Assumes SerializeJson is part of the SDK
 		g.Fgen(w, "serializeJson(")
 		g.genNewline(w)
 		g.Indented(func() {
 			g.genIndent(w)
-			g.genJson(w, expr.Args[0])
+			g.genJSON(w, expr.Args[0])
 		})
 		g.Fgen(w, ")")
 	case "sha1":
@@ -362,7 +364,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	}
 }
 
-func (g *generator) genJson(w io.Writer, expr model.Expression) {
+func (g *generator) genJSON(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
 		g.Fgen(w, "jsonObject(")
@@ -372,7 +374,7 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 
 				g.genIndent(w)
 				g.Fgenf(w, "jsonProperty(%s, ", item.Key)
-				g.genJson(w, item.Value)
+				g.genJSON(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
 					// elements
@@ -386,7 +388,7 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
 			g.Fgen(w, "jsonArray(")
-			g.genJson(w, expr.Expressions[0])
+			g.genJSON(w, expr.Expressions[0])
 			g.Fgen(w, ")")
 			return
 		}
@@ -397,10 +399,10 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 				g.genIndent(w)
 				if index == len(expr.Expressions)-1 {
 					// last element: no trailing comma
-					g.genJson(w, value)
+					g.genJSON(w, value)
 					g.genNewline(w)
 				} else {
-					g.genJson(w, value)
+					g.genJSON(w, value)
 					g.Fgen(w, ", ")
 					g.genNewline(w)
 				}
