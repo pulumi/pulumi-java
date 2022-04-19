@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
     public BackendPoolsSettingsResponse(
         @Nullable String enforceCertificateNameCheck,
         @Nullable Integer sendRecvTimeoutSeconds) {
-        this.enforceCertificateNameCheck = enforceCertificateNameCheck == null ? "Enabled" : enforceCertificateNameCheck;
+        this.enforceCertificateNameCheck = Codegen.stringProp("enforceCertificateNameCheck").arg(enforceCertificateNameCheck).def("Enabled").getNullable();
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }
 

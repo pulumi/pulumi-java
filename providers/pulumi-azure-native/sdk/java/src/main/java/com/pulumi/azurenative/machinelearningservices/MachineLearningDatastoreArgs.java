@@ -440,9 +440,9 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
         this.datastoreName = datastoreName;
         this.description = description;
         this.endpoint = endpoint;
-        this.enforceSSL = enforceSSL == null ? Codegen.ofNullable(true) : enforceSSL;
+        this.enforceSSL = Codegen.booleanProp("enforceSSL").output().arg(enforceSSL).def(true).getNullable();
         this.fileSystem = fileSystem;
-        this.includeSecret = includeSecret == null ? Codegen.ofNullable(true) : includeSecret;
+        this.includeSecret = Codegen.booleanProp("includeSecret").output().arg(includeSecret).def(true).getNullable();
         this.name = name;
         this.password = password;
         this.port = port;

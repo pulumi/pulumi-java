@@ -54,7 +54,7 @@ public final class FromEachInputFileArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<List<Object>> includedTracks,
         Output<String> odataType) {
         this.includedTracks = includedTracks;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private FromEachInputFileArgs() {

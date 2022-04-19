@@ -151,7 +151,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
         this.hourlyRecurrence = hourlyRecurrence;
         this.name = name;
         this.notificationSettings = notificationSettings;
-        this.status = status == null ? Output.ofLeft("Disabled") : status;
+        this.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg(status).def("Disabled").getNullable();
         this.tags = tags;
         this.targetResourceId = targetResourceId;
         this.taskType = taskType;

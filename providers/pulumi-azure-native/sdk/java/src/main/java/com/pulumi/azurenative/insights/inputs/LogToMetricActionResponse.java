@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.azurenative.insights.inputs.CriteriaResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
         List<CriteriaResponse> criteria,
         String odataType) {
         this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private LogToMetricActionResponse() {

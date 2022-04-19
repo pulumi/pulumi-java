@@ -36,8 +36,8 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     public VolumeArgs(
         @Nullable Output<Double> throughputMibps,
         Output<Double> usageThreshold) {
-        this.throughputMibps = throughputMibps == null ? Codegen.ofNullable(0e+00) : throughputMibps;
-        this.usageThreshold = usageThreshold == null ? Codegen.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
+        this.throughputMibps = Codegen.doubleProp("throughputMibps").output().arg(throughputMibps).def(0e+00).getNullable();
+        this.usageThreshold = Codegen.doubleProp("usageThreshold").output().arg(usageThreshold).def(1.073741824e+11).require();
     }
 
     private VolumeArgs() {

@@ -94,7 +94,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
         this.certificateThumbprint = certificateThumbprint;
         this.password = password;
         this.pfx = pfx;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ClientCertAuthenticationArgs() {

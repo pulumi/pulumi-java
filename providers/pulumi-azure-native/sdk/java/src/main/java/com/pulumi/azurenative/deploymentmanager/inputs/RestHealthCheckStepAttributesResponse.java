@@ -5,6 +5,7 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -85,7 +86,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
         this.healthChecks = Objects.requireNonNull(healthChecks, "expected parameter 'healthChecks' to be non-null");
         this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
         this.maxElasticDuration = maxElasticDuration;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.waitDuration = waitDuration;
     }
 

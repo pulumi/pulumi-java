@@ -156,7 +156,7 @@ public final class WebTableDatasetArgs extends com.pulumi.resources.ResourceArgs
         this.path = path;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private WebTableDatasetArgs() {

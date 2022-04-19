@@ -177,7 +177,7 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
         this.requestMethod = requestMethod;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private RestSourceArgs() {

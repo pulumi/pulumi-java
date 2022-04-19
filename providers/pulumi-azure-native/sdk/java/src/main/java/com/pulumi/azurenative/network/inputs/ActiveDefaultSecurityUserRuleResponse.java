@@ -7,6 +7,7 @@ import com.pulumi.azurenative.network.inputs.AddressPrefixItemResponse;
 import com.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import com.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -274,7 +275,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.flag = flag;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.region = region;

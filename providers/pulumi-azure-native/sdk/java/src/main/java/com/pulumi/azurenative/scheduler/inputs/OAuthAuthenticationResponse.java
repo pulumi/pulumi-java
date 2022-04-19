@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.scheduler.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -80,7 +81,7 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
         this.clientId = clientId;
         this.secret = secret;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private OAuthAuthenticationResponse() {

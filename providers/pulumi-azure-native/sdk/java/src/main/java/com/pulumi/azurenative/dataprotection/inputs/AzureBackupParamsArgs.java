@@ -45,7 +45,7 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
         Output<String> backupType,
         Output<String> objectType) {
         this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private AzureBackupParamsArgs() {

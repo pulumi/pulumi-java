@@ -46,7 +46,7 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
         @Nullable Output<String> description,
         Output<String> kind) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
     }
 
     private NetworkResourcePropertiesArgs() {

@@ -105,7 +105,7 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
         this.files = files;
         this.inputDefinitions = inputDefinitions;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.start = start;
     }
 

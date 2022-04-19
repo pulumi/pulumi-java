@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
         this.description = description;
         this.id = id;
         this.name = name;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private SsisFolderResponse() {

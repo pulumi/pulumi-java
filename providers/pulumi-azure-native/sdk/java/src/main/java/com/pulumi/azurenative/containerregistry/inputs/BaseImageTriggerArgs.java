@@ -86,7 +86,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
         this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType, "expected parameter 'baseImageTriggerType' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = status == null ? Output.ofLeft("Enabled") : status;
+        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").getNullable();
         this.updateTriggerEndpoint = updateTriggerEndpoint;
         this.updateTriggerPayloadType = updateTriggerPayloadType;
     }

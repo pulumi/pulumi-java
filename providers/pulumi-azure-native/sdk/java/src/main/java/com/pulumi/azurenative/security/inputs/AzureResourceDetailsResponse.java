@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
         String id,
         String source) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
+        this.source = Codegen.stringProp("source").arg(source).require();
     }
 
     private AzureResourceDetailsResponse() {

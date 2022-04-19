@@ -98,7 +98,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
         this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }

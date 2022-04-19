@@ -61,7 +61,7 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
         Output<String> type) {
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CsvSerializationArgs() {

@@ -100,7 +100,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends com.pulumi.resour
         @Nullable Output<SettingsArgs> settings,
         @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy,
         @Nullable Output<Either<String,WorkloadType>> workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;
         this.settings = settings;

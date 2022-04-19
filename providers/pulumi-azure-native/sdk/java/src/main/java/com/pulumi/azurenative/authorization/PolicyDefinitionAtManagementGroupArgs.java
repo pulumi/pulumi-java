@@ -133,7 +133,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
         this.displayName = displayName;
         this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
         this.metadata = metadata;
-        this.mode = mode == null ? Codegen.ofNullable("Indexed") : mode;
+        this.mode = Codegen.stringProp("mode").output().arg(mode).def("Indexed").getNullable();
         this.parameters = parameters;
         this.policyDefinitionName = policyDefinitionName;
         this.policyRule = policyRule;

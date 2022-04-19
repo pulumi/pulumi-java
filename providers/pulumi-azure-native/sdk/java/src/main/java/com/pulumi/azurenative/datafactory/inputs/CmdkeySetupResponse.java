@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceRes
 import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
         Object userName) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 

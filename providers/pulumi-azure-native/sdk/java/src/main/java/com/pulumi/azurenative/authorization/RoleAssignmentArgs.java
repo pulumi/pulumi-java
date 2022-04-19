@@ -131,7 +131,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
         this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
         this.description = description;
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = principalType == null ? Output.ofLeft("User") : principalType;
+        this.principalType = Codegen.stringProp("principalType").left(PrincipalType.class).output().arg(principalType).def("User").getNullable();
         this.roleAssignmentName = roleAssignmentName;
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");

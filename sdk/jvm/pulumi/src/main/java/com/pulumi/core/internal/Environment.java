@@ -14,21 +14,30 @@ import static com.pulumi.core.internal.Arrays.contains;
 
 @InternalUse
 public class Environment {
+
     private static final Logger logger = Logger.getLogger(Environment.class.getName());
 
     private Environment() {
         throw new UnsupportedOperationException("static class");
     }
 
-    public static Either<Exception, String> getEnvironmentVariable(String name) {
-        Objects.requireNonNull(name);
-        // make sure we return empty string as empty optional
-        var value = Optional.ofNullable(System.getenv(name))
+    private static Optional<String> getEnvironmentVariableOptional(String name){
+        Objects.requireNonNull(name, "Expected an environment variable name, got 'null'");
+        // make sure we return blank string as empty optional
+        return Optional.ofNullable(System.getenv(name))
                 .map(String::trim) // make sure we get rid of white spaces
                 .map(v -> v.isEmpty() ? null : v);
+    }
+
+    public static boolean hasEnvironmentVariable(String name) {
+        return getEnvironmentVariableOptional(name).isPresent();
+    }
+
+    public static Either<RuntimeException, String> getEnvironmentVariable(String name) {
+        var value = getEnvironmentVariableOptional(name);
         logger.log(Level.FINE, name + "=" + value.orElse(""));
         return value
-                .map(Either::<Exception, String>valueOf)
+                .map(Either::<RuntimeException, String>valueOf)
                 .orElse(Either.errorOf(
                         new IllegalArgumentException(String.format(
                                 "expected environment variable: '%s', got: %s", name, System.getenv().keySet()
@@ -39,7 +48,7 @@ public class Environment {
     private static final String[] trueValues = {"1", "t", "T", "true", "TRUE", "True"};
     private static final String[] falseValues = {"0", "f", "F", "false", "FALSE", "False"};
 
-    public static Either<Exception, Boolean> getBooleanEnvironmentVariable(String name) {
+    public static Either<RuntimeException, Boolean> getBooleanEnvironmentVariable(String name) {
         return getEnvironmentVariable(name)
                 .flatMap(value -> {
                     if (contains(trueValues, value, String::equalsIgnoreCase)) {
@@ -57,7 +66,7 @@ public class Environment {
                 });
     }
 
-    public static Either<Exception, Integer> getIntegerEnvironmentVariable(String name) {
+    public static Either<RuntimeException, Integer> getIntegerEnvironmentVariable(String name) {
         return getEnvironmentVariable(name)
                 .flatMap(s -> {
                     try {
@@ -70,7 +79,7 @@ public class Environment {
                 });
     }
 
-    public static Either<Exception, Double> getDoubleEnvironmentVariable(String name) {
+    public static Either<RuntimeException, Double> getDoubleEnvironmentVariable(String name) {
         return getEnvironmentVariable(name)
                 .flatMap(s -> {
                     try {

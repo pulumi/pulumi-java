@@ -46,7 +46,7 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
     public IPRuleArgs(
         @Nullable Output<Either<String,Action>> action,
         Output<String> iPAddressOrRange) {
-        this.action = action == null ? Output.ofLeft("Allow") : action;
+        this.action = Codegen.stringProp("action").left(Action.class).output().arg(action).def("Allow").getNullable();
         this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
     }
 

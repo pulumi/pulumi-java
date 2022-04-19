@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,7 +82,7 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
         @Nullable String time) {
         this.code = code;
         this.displayStatus = displayStatus;
-        this.level = level == null ? "Information" : level;
+        this.level = Codegen.stringProp("level").arg(level).def("Information").getNullable();
         this.message = message;
         this.time = time;
     }

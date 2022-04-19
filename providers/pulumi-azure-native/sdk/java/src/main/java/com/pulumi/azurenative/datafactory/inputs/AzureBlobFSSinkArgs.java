@@ -138,7 +138,7 @@ public final class AzureBlobFSSinkArgs extends com.pulumi.resources.ResourceArgs
         this.metadata = metadata;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
     }

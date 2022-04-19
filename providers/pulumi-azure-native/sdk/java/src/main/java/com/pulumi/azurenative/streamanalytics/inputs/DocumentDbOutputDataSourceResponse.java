@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
         this.database = database;
         this.documentId = documentId;
         this.partitionKey = partitionKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private DocumentDbOutputDataSourceResponse() {

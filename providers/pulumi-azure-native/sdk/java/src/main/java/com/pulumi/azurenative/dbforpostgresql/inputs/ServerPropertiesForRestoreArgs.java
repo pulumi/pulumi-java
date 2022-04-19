@@ -136,7 +136,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
         @Nullable Output<SslEnforcementEnum> sslEnforcement,
         @Nullable Output<StorageProfileArgs> storageProfile,
         @Nullable Output<Either<String,ServerVersion>> version) {
-        this.createMode = Objects.requireNonNull(createMode, "expected parameter 'createMode' to be non-null");
+        this.createMode = Codegen.stringProp("createMode").output().arg(createMode).require();
         this.infrastructureEncryption = infrastructureEncryption;
         this.minimalTlsVersion = minimalTlsVersion;
         this.publicNetworkAccess = publicNetworkAccess;

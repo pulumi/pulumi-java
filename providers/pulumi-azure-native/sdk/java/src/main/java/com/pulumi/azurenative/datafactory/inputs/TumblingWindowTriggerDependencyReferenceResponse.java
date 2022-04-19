@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.TriggerReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,7 +73,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
         this.offset = offset;
         this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
         this.size = size;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private TumblingWindowTriggerDependencyReferenceResponse() {

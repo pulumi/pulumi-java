@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +80,7 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;
-        this.scaleType = Objects.requireNonNull(scaleType, "expected parameter 'scaleType' to be non-null");
+        this.scaleType = Codegen.stringProp("scaleType").arg(scaleType).require();
         this.targetUtilizationPercentage = targetUtilizationPercentage;
     }
 

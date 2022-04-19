@@ -16,6 +16,7 @@ import com.pulumi.azurenative.databox.inputs.PackageShippingDetailsResponse;
 import com.pulumi.azurenative.databox.inputs.PreferencesResponse;
 import com.pulumi.azurenative.databox.inputs.ShippingAddressResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -236,7 +237,7 @@ public final class DataBoxJobDetailsResponse extends com.pulumi.resources.Invoke
         this.deliveryPackage = Objects.requireNonNull(deliveryPackage, "expected parameter 'deliveryPackage' to be non-null");
         this.devicePassword = devicePassword;
         this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Objects.requireNonNull(jobDetailsType, "expected parameter 'jobDetailsType' to be non-null");
+        this.jobDetailsType = Codegen.stringProp("jobDetailsType").arg(jobDetailsType).require();
         this.jobStages = Objects.requireNonNull(jobStages, "expected parameter 'jobStages' to be non-null");
         this.keyEncryptionKey = keyEncryptionKey;
         this.preferences = preferences;

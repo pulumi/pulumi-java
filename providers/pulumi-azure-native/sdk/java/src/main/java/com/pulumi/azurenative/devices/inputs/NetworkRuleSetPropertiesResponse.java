@@ -5,6 +5,7 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.azurenative.devices.inputs.NetworkRuleSetIpRuleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +60,7 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
         @Nullable String defaultAction,
         List<NetworkRuleSetIpRuleResponse> ipRules) {
         this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
-        this.defaultAction = defaultAction == null ? "Deny" : defaultAction;
+        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Deny").getNullable();
         this.ipRules = Objects.requireNonNull(ipRules, "expected parameter 'ipRules' to be non-null");
     }
 

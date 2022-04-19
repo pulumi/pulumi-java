@@ -5,6 +5,7 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 
 import com.pulumi.azurenative.hybridnetwork.inputs.LinuxConfigurationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -71,7 +72,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable LinuxConfigurationResponse linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
-        this.customDataRequired = customDataRequired == null ? true : customDataRequired;
+        this.customDataRequired = Codegen.booleanProp("customDataRequired").arg(customDataRequired).def(true).getNullable();
         this.linuxConfiguration = linuxConfiguration;
     }
 

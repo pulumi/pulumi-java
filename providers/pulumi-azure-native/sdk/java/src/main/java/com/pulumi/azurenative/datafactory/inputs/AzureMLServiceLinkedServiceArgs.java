@@ -184,7 +184,7 @@ public final class AzureMLServiceLinkedServiceArgs extends com.pulumi.resources.
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureMLServiceLinkedServiceArgs() {

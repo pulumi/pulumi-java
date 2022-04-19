@@ -100,7 +100,7 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
         @Nullable Output<TimeAggregationOperator> timeAggregation,
         @Nullable Output<String> windowSize) {
         this.dataSource = dataSource;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
         this.timeAggregation = timeAggregation;

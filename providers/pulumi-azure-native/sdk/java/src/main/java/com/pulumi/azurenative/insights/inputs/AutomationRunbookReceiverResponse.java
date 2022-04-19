@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
         this.name = name;
         this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
         this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? false : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
         this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
     }
 

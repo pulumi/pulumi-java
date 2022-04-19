@@ -91,7 +91,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
         Output<String> shareName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.kustoDatabaseResourceId = Objects.requireNonNull(kustoDatabaseResourceId, "expected parameter 'kustoDatabaseResourceId' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");

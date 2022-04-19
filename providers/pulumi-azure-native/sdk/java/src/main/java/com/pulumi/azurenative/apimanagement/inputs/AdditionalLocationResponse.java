@@ -6,6 +6,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.ApiManagementServiceSkuPropertiesResponse;
 import com.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -119,7 +120,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
         ApiManagementServiceSkuPropertiesResponse sku,
         @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
         @Nullable List<String> zones) {
-        this.disableGateway = disableGateway == null ? false : disableGateway;
+        this.disableGateway = Codegen.booleanProp("disableGateway").arg(disableGateway).def(false).getNullable();
         this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl, "expected parameter 'gatewayRegionalUrl' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses, "expected parameter 'privateIPAddresses' to be non-null");

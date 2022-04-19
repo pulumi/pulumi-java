@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicelinker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
         String authType,
         @Nullable String name,
         @Nullable String secret) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").arg(authType).require();
         this.name = name;
         this.secret = secret;
     }

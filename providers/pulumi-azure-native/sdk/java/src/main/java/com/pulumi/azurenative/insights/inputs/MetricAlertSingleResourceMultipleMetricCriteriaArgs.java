@@ -48,7 +48,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends c
         @Nullable Output<List<MetricCriteriaArgs>> allOf,
         Output<String> odataType) {
         this.allOf = allOf;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private MetricAlertSingleResourceMultipleMetricCriteriaArgs() {

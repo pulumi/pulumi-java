@@ -45,7 +45,7 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
         Output<String> sasUri,
         Output<String> type) {
         this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SasAuthenticationArgs() {

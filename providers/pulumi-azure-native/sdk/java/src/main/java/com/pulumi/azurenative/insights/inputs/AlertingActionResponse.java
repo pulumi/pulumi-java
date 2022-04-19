@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.AzNsActionGroupResponse;
 import com.pulumi.azurenative.insights.inputs.TriggerConditionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -84,7 +85,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
         @Nullable Integer throttlingInMin,
         TriggerConditionResponse trigger) {
         this.aznsAction = aznsAction;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
         this.throttlingInMin = throttlingInMin;
         this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");

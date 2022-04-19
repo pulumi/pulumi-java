@@ -83,7 +83,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
         @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone,
         Output<String> targetResourceName,
         @Nullable Output<String> targetVmSize) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");

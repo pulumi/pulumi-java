@@ -124,7 +124,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
         this.connectionStringSecondaryKey = connectionStringSecondaryKey;
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.endpointUri = endpointUri;
         this.entityPath = entityPath;
     }

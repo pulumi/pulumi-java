@@ -71,7 +71,7 @@ public final class TruncationSelectionPolicyArgs extends com.pulumi.resources.Re
         @Nullable Output<Integer> truncationPercentage) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
+        this.policyType = Codegen.stringProp("policyType").output().arg(policyType).require();
         this.truncationPercentage = truncationPercentage;
     }
 

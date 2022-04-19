@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -94,9 +95,9 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;
-        this.shutdownOnDisconnect = shutdownOnDisconnect == null ? "Disabled" : shutdownOnDisconnect;
-        this.shutdownOnIdle = shutdownOnIdle == null ? "None" : shutdownOnIdle;
-        this.shutdownWhenNotConnected = shutdownWhenNotConnected == null ? "Disabled" : shutdownWhenNotConnected;
+        this.shutdownOnDisconnect = Codegen.stringProp("shutdownOnDisconnect").arg(shutdownOnDisconnect).def("Disabled").getNullable();
+        this.shutdownOnIdle = Codegen.stringProp("shutdownOnIdle").arg(shutdownOnIdle).def("None").getNullable();
+        this.shutdownWhenNotConnected = Codegen.stringProp("shutdownWhenNotConnected").arg(shutdownWhenNotConnected).def("Disabled").getNullable();
     }
 
     private AutoShutdownProfileResponse() {

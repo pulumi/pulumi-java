@@ -116,7 +116,7 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
         this.linkedService = Objects.requireNonNull(linkedService, "expected parameter 'linkedService' to be non-null");
         this.maxConcurrency = Objects.requireNonNull(maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
         this.pipelines = pipelines;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private BlobTriggerArgs() {

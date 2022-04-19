@@ -48,7 +48,7 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
         @Nullable Output<Either<String,FlowLogFormatType>> type,
         @Nullable Output<Integer> version) {
         this.type = type;
-        this.version = version == null ? Codegen.ofNullable(0) : version;
+        this.version = Codegen.integerProp("version").output().arg(version).def(0).getNullable();
     }
 
     private FlowLogFormatParametersArgs() {

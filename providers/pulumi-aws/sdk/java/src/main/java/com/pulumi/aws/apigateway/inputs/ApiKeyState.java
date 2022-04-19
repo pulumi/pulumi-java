@@ -128,7 +128,7 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> value) {
         this.arn = arn;
         this.createdDate = createdDate;
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.enabled = enabled;
         this.lastUpdatedDate = lastUpdatedDate;
         this.name = name;

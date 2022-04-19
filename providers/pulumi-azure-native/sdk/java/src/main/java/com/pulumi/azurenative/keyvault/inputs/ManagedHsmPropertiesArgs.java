@@ -124,12 +124,12 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
         @Nullable Output<Integer> softDeleteRetentionInDays,
         @Nullable Output<String> tenantId) {
         this.createMode = createMode;
-        this.enablePurgeProtection = enablePurgeProtection == null ? Codegen.ofNullable(true) : enablePurgeProtection;
-        this.enableSoftDelete = enableSoftDelete == null ? Codegen.ofNullable(true) : enableSoftDelete;
+        this.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").output().arg(enablePurgeProtection).def(true).getNullable();
+        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").output().arg(enableSoftDelete).def(true).getNullable();
         this.initialAdminObjectIds = initialAdminObjectIds;
         this.networkAcls = networkAcls;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Codegen.ofNullable(90) : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").output().arg(softDeleteRetentionInDays).def(90).getNullable();
         this.tenantId = tenantId;
     }
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.TeradataPartitionSettingsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -151,7 +152,7 @@ public final class TeradataSourceResponse extends com.pulumi.resources.InvokeArg
         this.queryTimeout = queryTimeout;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private TeradataSourceResponse() {

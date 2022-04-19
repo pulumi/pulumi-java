@@ -129,15 +129,15 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> target,
         @Nullable Output<Integer> timeLimitInSeconds,
         @Nullable Output<Double> totalBytesPerSession) {
-        this.bytesToCapturePerPacket = bytesToCapturePerPacket == null ? Codegen.ofNullable(0e+00) : bytesToCapturePerPacket;
+        this.bytesToCapturePerPacket = Codegen.doubleProp("bytesToCapturePerPacket").output().arg(bytesToCapturePerPacket).def(0e+00).getNullable();
         this.filters = filters;
         this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
         this.packetCaptureName = packetCaptureName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.storageLocation = Objects.requireNonNull(storageLocation, "expected parameter 'storageLocation' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.timeLimitInSeconds = timeLimitInSeconds == null ? Codegen.ofNullable(18000) : timeLimitInSeconds;
-        this.totalBytesPerSession = totalBytesPerSession == null ? Codegen.ofNullable(1.073741824e+09) : totalBytesPerSession;
+        this.timeLimitInSeconds = Codegen.integerProp("timeLimitInSeconds").output().arg(timeLimitInSeconds).def(18000).getNullable();
+        this.totalBytesPerSession = Codegen.doubleProp("totalBytesPerSession").output().arg(totalBytesPerSession).def(1.073741824e+09).getNullable();
     }
 
     private PacketCaptureArgs() {

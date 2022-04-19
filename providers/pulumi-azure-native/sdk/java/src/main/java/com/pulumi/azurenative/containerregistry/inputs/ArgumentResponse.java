@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable Boolean isSecret,
         String name,
         String value) {
-        this.isSecret = isSecret == null ? false : isSecret;
+        this.isSecret = Codegen.booleanProp("isSecret").arg(isSecret).def(false).getNullable();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }

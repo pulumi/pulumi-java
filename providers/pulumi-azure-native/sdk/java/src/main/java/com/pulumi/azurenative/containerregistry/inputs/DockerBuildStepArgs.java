@@ -137,10 +137,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
         this.contextPath = contextPath;
         this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
         this.imageNames = imageNames;
-        this.isPushEnabled = isPushEnabled == null ? Codegen.ofNullable(true) : isPushEnabled;
-        this.noCache = noCache == null ? Codegen.ofNullable(false) : noCache;
+        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg(isPushEnabled).def(true).getNullable();
+        this.noCache = Codegen.booleanProp("noCache").output().arg(noCache).def(false).getNullable();
         this.target = target;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DockerBuildStepArgs() {

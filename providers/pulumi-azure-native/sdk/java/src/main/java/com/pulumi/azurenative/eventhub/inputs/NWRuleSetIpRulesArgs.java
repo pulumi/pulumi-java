@@ -46,7 +46,7 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
     public NWRuleSetIpRulesArgs(
         @Nullable Output<Either<String,NetworkRuleIPAction>> action,
         @Nullable Output<String> ipMask) {
-        this.action = action == null ? Output.ofLeft("Allow") : action;
+        this.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg(action).def("Allow").getNullable();
         this.ipMask = ipMask;
     }
 

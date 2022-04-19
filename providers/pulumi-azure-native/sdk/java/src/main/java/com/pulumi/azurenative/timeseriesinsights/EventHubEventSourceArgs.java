@@ -219,7 +219,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
         this.eventSourceName = eventSourceName;
         this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId, "expected parameter 'eventSourceResourceId' to be non-null");
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.localTimestamp = localTimestamp;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

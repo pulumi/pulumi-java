@@ -46,7 +46,7 @@ public final class CopyAudioArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> label,
         Output<String> odataType) {
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private CopyAudioArgs() {

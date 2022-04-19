@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -82,7 +83,7 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
         @Nullable String webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
-        this.status = status == null ? "Disabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
         this.timeInMinutes = timeInMinutes;
         this.webhookUrl = webhookUrl;
     }

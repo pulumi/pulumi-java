@@ -45,7 +45,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resou
         Output<String> ranges,
         Output<String> type) {
         this.ranges = Objects.requireNonNull(ranges, "expected parameter 'ranges' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private VideoSequenceAbsoluteTimeMarkersArgs() {

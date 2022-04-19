@@ -70,7 +70,7 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<String> objectId,
         @Nullable Output<String> resourceId) {
         this.clientId = clientId;
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
+        this.identityType = Codegen.stringProp("identityType").output().arg(identityType).require();
         this.objectId = objectId;
         this.resourceId = resourceId;
     }

@@ -57,7 +57,7 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
         @Nullable Output<String> instanceType,
         Output<String> migrationSolutionId,
         Output<String> vmwareSiteId) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
         this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
     }

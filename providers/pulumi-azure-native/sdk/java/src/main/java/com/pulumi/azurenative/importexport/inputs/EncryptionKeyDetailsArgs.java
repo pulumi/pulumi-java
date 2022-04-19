@@ -58,7 +58,7 @@ public final class EncryptionKeyDetailsArgs extends com.pulumi.resources.Resourc
         @Nullable Output<Either<String,EncryptionKekType>> kekType,
         @Nullable Output<String> kekUrl,
         @Nullable Output<String> kekVaultResourceID) {
-        this.kekType = kekType == null ? Output.ofLeft("MicrosoftManaged") : kekType;
+        this.kekType = Codegen.stringProp("kekType").left(EncryptionKekType.class).output().arg(kekType).def("MicrosoftManaged").getNullable();
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }

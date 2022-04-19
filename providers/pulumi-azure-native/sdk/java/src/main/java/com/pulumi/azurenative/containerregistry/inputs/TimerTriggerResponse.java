@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +58,7 @@ public final class TimerTriggerResponse extends com.pulumi.resources.InvokeArgs 
         @Nullable String status) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.status = status == null ? "Enabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
     }
 
     private TimerTriggerResponse() {

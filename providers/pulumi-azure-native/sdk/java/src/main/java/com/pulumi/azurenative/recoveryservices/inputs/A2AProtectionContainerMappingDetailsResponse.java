@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +83,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
         @Nullable String scheduleName) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.jobScheduleName = jobScheduleName;
         this.scheduleName = scheduleName;
     }

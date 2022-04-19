@@ -65,7 +65,7 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> expires,
         @Nullable Output<String> key) {
         this.apiId = apiId;
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.expires = expires;
         this.key = key;
     }

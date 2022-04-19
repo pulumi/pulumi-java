@@ -54,7 +54,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         Output<List<SecurityGroupIngressArgs>> ingress,
         @Nullable Output<String> name) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.ingress = Objects.requireNonNull(ingress, "expected parameter 'ingress' to be non-null");
         this.name = name;
     }

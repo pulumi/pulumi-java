@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -206,7 +207,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows, "expected parameter 'fullLoadTotalRows' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
         this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied, "expected parameter 'totalChangesApplied' to be non-null");

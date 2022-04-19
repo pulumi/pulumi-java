@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import com.pulumi.azurenative.databox.inputs.DataBoxHeavySecretResponse;
 import com.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,7 +74,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
         this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets, "expected parameter 'cabinetPodSecrets' to be non-null");
         this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
         this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.jobSecretsType = Objects.requireNonNull(jobSecretsType, "expected parameter 'jobSecretsType' to be non-null");
+        this.jobSecretsType = Codegen.stringProp("jobSecretsType").arg(jobSecretsType).require();
     }
 
     private DataBoxHeavyJobSecretsResponse() {

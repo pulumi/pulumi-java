@@ -3,7 +3,7 @@
 
 package com.pulumi.kubernetes;
 
-import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Optional;
@@ -16,14 +16,14 @@ public final class Config {
  * 
  */
     public Optional<String> cluster() {
-        return config.getObject("cluster",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("cluster").config(config).get();
     }
 /**
  * If present, the name of the kubeconfig context to use.
  * 
  */
     public Optional<String> context() {
-        return config.getObject("context",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("context").config(config).get();
     }
 /**
  * BETA FEATURE - If present and set to true, enable server-side diff calculations.
@@ -35,7 +35,7 @@ public final class Config {
  * 
  */
     public Optional<Boolean> enableDryRun() {
-        return config.getObject("enableDryRun",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("enableDryRun").config(config).get();
     }
 /**
  * BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
@@ -47,14 +47,14 @@ public final class Config {
  * 
  */
     public Optional<Boolean> enableReplaceCRD() {
-        return config.getObject("enableReplaceCRD",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("enableReplaceCRD").config(config).get();
     }
 /**
  * The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
  * 
  */
     public Optional<String> kubeconfig() {
-        return config.getObject("kubeconfig",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("kubeconfig").config(config).get();
     }
 /**
  * If present, the default namespace to use. This flag is ignored for cluster-scoped resources.
@@ -66,7 +66,7 @@ public final class Config {
  * 
  */
     public Optional<String> namespace() {
-        return config.getObject("namespace",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("namespace").config(config).get();
     }
 /**
  * BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
@@ -80,7 +80,7 @@ public final class Config {
  * 
  */
     public Optional<String> renderYamlToDirectory() {
-        return config.getObject("renderYamlToDirectory",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("renderYamlToDirectory").config(config).get();
     }
 /**
  * If present and set to true, suppress apiVersion deprecation warnings from the CLI.
@@ -91,7 +91,7 @@ public final class Config {
  * 
  */
     public Optional<Boolean> suppressDeprecationWarnings() {
-        return config.getObject("suppressDeprecationWarnings",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("suppressDeprecationWarnings").config(config).get();
     }
 /**
  * If present and set to true, suppress unsupported Helm hook warnings from the CLI.
@@ -102,6 +102,6 @@ public final class Config {
  * 
  */
     public Optional<Boolean> suppressHelmHookWarnings() {
-        return config.getObject("suppressHelmHookWarnings",TypeShape.<Boolean>builder(Boolean.class).build());
+        return Codegen.booleanProp("suppressHelmHookWarnings").config(config).get();
     }
 }

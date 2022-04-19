@@ -81,11 +81,11 @@ public final class JobStepExecutionOptionsArgs extends com.pulumi.resources.Reso
         @Nullable Output<Integer> retryAttempts,
         @Nullable Output<Double> retryIntervalBackoffMultiplier,
         @Nullable Output<Integer> timeoutSeconds) {
-        this.initialRetryIntervalSeconds = initialRetryIntervalSeconds == null ? Codegen.ofNullable(1) : initialRetryIntervalSeconds;
-        this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds == null ? Codegen.ofNullable(120) : maximumRetryIntervalSeconds;
-        this.retryAttempts = retryAttempts == null ? Codegen.ofNullable(10) : retryAttempts;
-        this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier == null ? Codegen.ofNullable(2e+00) : retryIntervalBackoffMultiplier;
-        this.timeoutSeconds = timeoutSeconds == null ? Codegen.ofNullable(43200) : timeoutSeconds;
+        this.initialRetryIntervalSeconds = Codegen.integerProp("initialRetryIntervalSeconds").output().arg(initialRetryIntervalSeconds).def(1).getNullable();
+        this.maximumRetryIntervalSeconds = Codegen.integerProp("maximumRetryIntervalSeconds").output().arg(maximumRetryIntervalSeconds).def(120).getNullable();
+        this.retryAttempts = Codegen.integerProp("retryAttempts").output().arg(retryAttempts).def(10).getNullable();
+        this.retryIntervalBackoffMultiplier = Codegen.doubleProp("retryIntervalBackoffMultiplier").output().arg(retryIntervalBackoffMultiplier).def(2e+00).getNullable();
+        this.timeoutSeconds = Codegen.integerProp("timeoutSeconds").output().arg(timeoutSeconds).def(43200).getNullable();
     }
 
     private JobStepExecutionOptionsArgs() {

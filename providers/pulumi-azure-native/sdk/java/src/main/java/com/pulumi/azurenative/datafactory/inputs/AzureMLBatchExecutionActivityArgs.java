@@ -155,7 +155,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
         this.linkedServiceName = linkedServiceName;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.policy = policy;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
         this.webServiceInputs = webServiceInputs;
         this.webServiceOutputs = webServiceOutputs;

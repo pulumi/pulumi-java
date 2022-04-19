@@ -112,13 +112,13 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
         @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords,
         @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords,
         @Nullable Output<Either<String,TlsV1>> tlsV1) {
-        this.kerberosArmoring = kerberosArmoring == null ? Output.ofLeft("Disabled") : kerberosArmoring;
-        this.kerberosRc4Encryption = kerberosRc4Encryption == null ? Output.ofLeft("Enabled") : kerberosRc4Encryption;
-        this.ntlmV1 = ntlmV1 == null ? Output.ofLeft("Enabled") : ntlmV1;
-        this.syncKerberosPasswords = syncKerberosPasswords == null ? Output.ofLeft("Enabled") : syncKerberosPasswords;
-        this.syncNtlmPasswords = syncNtlmPasswords == null ? Output.ofLeft("Enabled") : syncNtlmPasswords;
-        this.syncOnPremPasswords = syncOnPremPasswords == null ? Output.ofLeft("Enabled") : syncOnPremPasswords;
-        this.tlsV1 = tlsV1 == null ? Output.ofLeft("Enabled") : tlsV1;
+        this.kerberosArmoring = Codegen.stringProp("kerberosArmoring").left(KerberosArmoring.class).output().arg(kerberosArmoring).def("Disabled").getNullable();
+        this.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").left(KerberosRc4Encryption.class).output().arg(kerberosRc4Encryption).def("Enabled").getNullable();
+        this.ntlmV1 = Codegen.stringProp("ntlmV1").left(NtlmV1.class).output().arg(ntlmV1).def("Enabled").getNullable();
+        this.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").left(SyncKerberosPasswords.class).output().arg(syncKerberosPasswords).def("Enabled").getNullable();
+        this.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").left(SyncNtlmPasswords.class).output().arg(syncNtlmPasswords).def("Enabled").getNullable();
+        this.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").left(SyncOnPremPasswords.class).output().arg(syncOnPremPasswords).def("Enabled").getNullable();
+        this.tlsV1 = Codegen.stringProp("tlsV1").left(TlsV1.class).output().arg(tlsV1).def("Enabled").getNullable();
     }
 
     private DomainSecuritySettingsArgs() {

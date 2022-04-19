@@ -6,7 +6,6 @@ package com.pulumi.kubernetes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.inputs.HelmReleaseSettingsArgs;
 import com.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.Boolean;
@@ -168,15 +167,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> suppressHelmHookWarnings) {
         this.cluster = cluster;
         this.context = context;
-        this.enableDryRun = enableDryRun == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_DRY_RUN").orElse(null)) : enableDryRun;
-        this.enableReplaceCRD = enableReplaceCRD == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_ENABLE_REPLACE_CRD").orElse(null)) : enableReplaceCRD;
+        this.enableDryRun = Codegen.booleanProp("enableDryRun").output().arg(enableDryRun).env("PULUMI_K8S_ENABLE_DRY_RUN").getNullable();
+        this.enableReplaceCRD = Codegen.booleanProp("enableReplaceCRD").output().arg(enableReplaceCRD).env("PULUMI_K8S_ENABLE_REPLACE_CRD").getNullable();
         this.helmReleaseSettings = helmReleaseSettings;
         this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = kubeconfig == null ? Codegen.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
+        this.kubeconfig = Codegen.stringProp("kubeconfig").output().arg(kubeconfig).env("KUBECONFIG").getNullable();
         this.namespace = namespace;
         this.renderYamlToDirectory = renderYamlToDirectory;
-        this.suppressDeprecationWarnings = suppressDeprecationWarnings == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").orElse(null)) : suppressDeprecationWarnings;
-        this.suppressHelmHookWarnings = suppressHelmHookWarnings == null ? Codegen.ofNullable(Utilities.getEnvBoolean("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").orElse(null)) : suppressHelmHookWarnings;
+        this.suppressDeprecationWarnings = Codegen.booleanProp("suppressDeprecationWarnings").output().arg(suppressDeprecationWarnings).env("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").getNullable();
+        this.suppressHelmHookWarnings = Codegen.booleanProp("suppressHelmHookWarnings").output().arg(suppressHelmHookWarnings).env("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").getNullable();
     }
 
     private ProviderArgs() {

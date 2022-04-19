@@ -46,7 +46,7 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
         @Nullable Output<String> script,
         Output<String> type) {
         this.script = script;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private JavaScriptFunctionBindingArgs() {

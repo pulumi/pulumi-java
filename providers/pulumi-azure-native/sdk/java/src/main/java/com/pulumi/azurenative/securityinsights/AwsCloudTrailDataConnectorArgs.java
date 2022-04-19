@@ -93,7 +93,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
         this.awsRoleArn = awsRoleArn;
         this.dataConnectorId = dataConnectorId;
         this.dataTypes = dataTypes;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
     }

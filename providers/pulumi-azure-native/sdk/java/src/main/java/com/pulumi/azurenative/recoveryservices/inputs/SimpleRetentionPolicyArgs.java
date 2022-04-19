@@ -47,7 +47,7 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
         @Nullable Output<RetentionDurationArgs> retentionDuration,
         Output<String> retentionPolicyType) {
         this.retentionDuration = retentionDuration;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType, "expected parameter 'retentionPolicyType' to be non-null");
+        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg(retentionPolicyType).require();
     }
 
     private SimpleRetentionPolicyArgs() {

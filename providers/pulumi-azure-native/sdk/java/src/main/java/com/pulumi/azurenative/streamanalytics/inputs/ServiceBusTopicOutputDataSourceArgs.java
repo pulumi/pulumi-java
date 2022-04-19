@@ -99,7 +99,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
         this.topicName = topicName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ServiceBusTopicOutputDataSourceArgs() {

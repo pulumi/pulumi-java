@@ -10,6 +10,7 @@ import com.pulumi.azurenative.media.inputs.InputFileResponse;
 import com.pulumi.azurenative.media.inputs.UtcClipTimeResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -117,7 +118,7 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
         this.files = files;
         this.inputDefinitions = inputDefinitions;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.start = start;
     }
 

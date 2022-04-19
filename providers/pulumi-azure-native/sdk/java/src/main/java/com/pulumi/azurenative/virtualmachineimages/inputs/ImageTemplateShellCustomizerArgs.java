@@ -85,8 +85,8 @@ public final class ImageTemplateShellCustomizerArgs extends com.pulumi.resources
         this.inline = inline;
         this.name = name;
         this.scriptUri = scriptUri;
-        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg(sha256Checksum).def("").getNullable();
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateShellCustomizerArgs() {

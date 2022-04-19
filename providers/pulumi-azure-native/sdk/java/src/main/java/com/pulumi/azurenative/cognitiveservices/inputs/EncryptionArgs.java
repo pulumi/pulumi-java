@@ -47,7 +47,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     public EncryptionArgs(
         @Nullable Output<Either<String,KeySource>> keySource,
         @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-        this.keySource = keySource == null ? Output.ofLeft("Microsoft.KeyVault") : keySource;
+        this.keySource = Codegen.stringProp("keySource").left(KeySource.class).output().arg(keySource).def("Microsoft.KeyVault").getNullable();
         this.keyVaultProperties = keyVaultProperties;
     }
 

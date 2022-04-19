@@ -56,7 +56,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
         Output<String> type,
         Output<String> variableName,
         Output<String> variableValue) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
         this.variableValue = Objects.requireNonNull(variableValue, "expected parameter 'variableValue' to be non-null");
     }

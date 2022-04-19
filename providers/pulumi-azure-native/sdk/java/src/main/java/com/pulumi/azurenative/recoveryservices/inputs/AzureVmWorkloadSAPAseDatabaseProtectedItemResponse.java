@@ -7,6 +7,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.AzureVmWorkloadProtectedIt
 import com.pulumi.azurenative.recoveryservices.inputs.ErrorDetailResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -370,7 +371,7 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
         this.policyId = policyId;
         this.protectedItemDataSourceId = protectedItemDataSourceId;
         this.protectedItemHealthStatus = protectedItemHealthStatus;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.serverName = serverName;

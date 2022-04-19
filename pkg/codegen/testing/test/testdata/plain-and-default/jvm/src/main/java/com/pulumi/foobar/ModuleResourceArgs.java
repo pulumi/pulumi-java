@@ -156,23 +156,23 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
         Output<EnumThing> required_enum,
         Output<Double> required_number,
         Output<String> required_string) {
-        this.optional_bool = optional_bool == null ? Codegen.ofNullable(true) : optional_bool;
-        this.optional_const = optional_const == null ? Codegen.ofNullable("another") : optional_const;
-        this.optional_enum = optional_enum == null ? Codegen.ofNullable(com.pulumi.foobar.enums.EnumThing.Eight) : optional_enum;
-        this.optional_number = optional_number == null ? Codegen.ofNullable(4.2e+01) : optional_number;
-        this.optional_string = optional_string == null ? Codegen.ofNullable("buzzer") : optional_string;
-        this.plain_optional_bool = plain_optional_bool == null ? true : plain_optional_bool;
-        this.plain_optional_const = plain_optional_const == null ? "another" : plain_optional_const;
-        this.plain_optional_number = plain_optional_number == null ? 4.2e+01 : plain_optional_number;
-        this.plain_optional_string = plain_optional_string == null ? "buzzer" : plain_optional_string;
-        this.plain_required_bool = plain_required_bool == null ? true : Objects.requireNonNull(plain_required_bool, "expected parameter 'plain_required_bool' to be non-null");
-        this.plain_required_const = plain_required_const == null ? "another" : Objects.requireNonNull(plain_required_const, "expected parameter 'plain_required_const' to be non-null");
-        this.plain_required_number = plain_required_number == null ? 4.2e+01 : Objects.requireNonNull(plain_required_number, "expected parameter 'plain_required_number' to be non-null");
-        this.plain_required_string = plain_required_string == null ? "buzzer" : Objects.requireNonNull(plain_required_string, "expected parameter 'plain_required_string' to be non-null");
-        this.required_bool = required_bool == null ? Codegen.ofNullable(true) : Objects.requireNonNull(required_bool, "expected parameter 'required_bool' to be non-null");
-        this.required_enum = required_enum == null ? Codegen.ofNullable(com.pulumi.foobar.enums.EnumThing.Four) : Objects.requireNonNull(required_enum, "expected parameter 'required_enum' to be non-null");
-        this.required_number = required_number == null ? Codegen.ofNullable(4.2e+01) : Objects.requireNonNull(required_number, "expected parameter 'required_number' to be non-null");
-        this.required_string = required_string == null ? Codegen.ofNullable("buzzer") : Objects.requireNonNull(required_string, "expected parameter 'required_string' to be non-null");
+        this.optional_bool = Codegen.booleanProp("optional_bool").output().arg(optional_bool).def(true).getNullable();
+        this.optional_const = Codegen.stringProp("optional_const").output().arg(optional_const).def("another").getNullable();
+        this.optional_enum = Codegen.objectProp("optional_enum", EnumThing.class).output().arg(optional_enum).def(EnumThing.Eight).getNullable();
+        this.optional_number = Codegen.doubleProp("optional_number").output().arg(optional_number).def(4.2e+01).getNullable();
+        this.optional_string = Codegen.stringProp("optional_string").output().arg(optional_string).def("buzzer").getNullable();
+        this.plain_optional_bool = Codegen.booleanProp("plain_optional_bool").arg(plain_optional_bool).def(true).getNullable();
+        this.plain_optional_const = Codegen.stringProp("plain_optional_const").arg(plain_optional_const).def("another").getNullable();
+        this.plain_optional_number = Codegen.doubleProp("plain_optional_number").arg(plain_optional_number).def(4.2e+01).getNullable();
+        this.plain_optional_string = Codegen.stringProp("plain_optional_string").arg(plain_optional_string).def("buzzer").getNullable();
+        this.plain_required_bool = Codegen.booleanProp("plain_required_bool").arg(plain_required_bool).def(true).require();
+        this.plain_required_const = Codegen.stringProp("plain_required_const").arg(plain_required_const).def("another").require();
+        this.plain_required_number = Codegen.doubleProp("plain_required_number").arg(plain_required_number).def(4.2e+01).require();
+        this.plain_required_string = Codegen.stringProp("plain_required_string").arg(plain_required_string).def("buzzer").require();
+        this.required_bool = Codegen.booleanProp("required_bool").output().arg(required_bool).def(true).require();
+        this.required_enum = Codegen.objectProp("required_enum", EnumThing.class).output().arg(required_enum).def(EnumThing.Four).require();
+        this.required_number = Codegen.doubleProp("required_number").output().arg(required_number).def(4.2e+01).require();
+        this.required_string = Codegen.stringProp("required_string").output().arg(required_string).def("buzzer").require();
     }
 
     private ModuleResourceArgs() {

@@ -122,7 +122,7 @@ public final class CosmosDbSqlApiSinkArgs extends com.pulumi.resources.ResourceA
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
         this.writeBehavior = writeBehavior;

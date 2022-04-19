@@ -92,7 +92,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.databaseName = databaseName;
         this.hotCachePeriod = hotCachePeriod;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }

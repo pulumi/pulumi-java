@@ -350,7 +350,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.iconUrl = iconUrl;
         this.isCmekEnabled = isCmekEnabled;
-        this.isStreamingSupported = isStreamingSupported == null ? Codegen.ofNullable(false) : isStreamingSupported;
+        this.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").output().arg(isStreamingSupported).def(false).getNullable();
         this.luisAppIds = luisAppIds;
         this.luisKey = luisKey;
         this.manifestUrl = manifestUrl;
@@ -360,7 +360,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
         this.msaAppType = msaAppType;
         this.openWithHint = openWithHint;
         this.parameters = parameters;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.publishingCredentials = publishingCredentials;
         this.schemaTransformationVersion = schemaTransformationVersion;
         this.storageResourceId = storageResourceId;

@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -220,7 +221,7 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
         this.scriptLinkedService = scriptLinkedService;
         this.scriptPath = scriptPath;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
         this.variables = variables;
     }

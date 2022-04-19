@@ -59,7 +59,7 @@ public final class StringNotInAdvancedFilterArgs extends com.pulumi.resources.Re
         Output<String> operatorType,
         @Nullable Output<List<String>> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
         this.values = values;
     }
 

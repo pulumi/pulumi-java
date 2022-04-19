@@ -89,7 +89,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private VideoAnalyzerPresetArgs() {

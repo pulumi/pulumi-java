@@ -46,7 +46,7 @@ public final class MediaGraphPemCertificateListArgs extends com.pulumi.resources
         Output<List<String>> certificates,
         Output<String> odataType) {
         this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private MediaGraphPemCertificateListArgs() {

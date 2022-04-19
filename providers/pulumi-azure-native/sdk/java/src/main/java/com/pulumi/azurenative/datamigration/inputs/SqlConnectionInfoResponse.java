@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -132,11 +133,11 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = encryptConnection == null ? true : encryptConnection;
+        this.encryptConnection = Codegen.booleanProp("encryptConnection").arg(encryptConnection).def(true).getNullable();
         this.password = password;
         this.platform = platform;
-        this.trustServerCertificate = trustServerCertificate == null ? false : trustServerCertificate;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").arg(trustServerCertificate).def(false).getNullable();
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userName = userName;
     }
 

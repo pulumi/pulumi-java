@@ -58,8 +58,8 @@ public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> compatibilityLevel,
         @Nullable Output<Boolean> requiresPreprocessing,
         @Nullable Output<String> sqlExpression) {
-        this.compatibilityLevel = compatibilityLevel == null ? Codegen.ofNullable(20) : compatibilityLevel;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Codegen.ofNullable(true) : requiresPreprocessing;
+        this.compatibilityLevel = Codegen.integerProp("compatibilityLevel").output().arg(compatibilityLevel).def(20).getNullable();
+        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg(requiresPreprocessing).def(true).getNullable();
         this.sqlExpression = sqlExpression;
     }
 

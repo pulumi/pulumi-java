@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -190,7 +191,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
         this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
         this.authUri = Objects.requireNonNull(authUri, "expected parameter 'authUri' to be non-null");
         this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
         this.clientEmail = Objects.requireNonNull(clientEmail, "expected parameter 'clientEmail' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");

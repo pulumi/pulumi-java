@@ -9,6 +9,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmMobilityAgentDeta
 import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmNicDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmProtectedDiskDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -576,7 +577,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
         this.initialReplicationProcessedBytes = Objects.requireNonNull(initialReplicationProcessedBytes, "expected parameter 'initialReplicationProcessedBytes' to be non-null");
         this.initialReplicationProgressPercentage = Objects.requireNonNull(initialReplicationProgressPercentage, "expected parameter 'initialReplicationProgressPercentage' to be non-null");
         this.initialReplicationTransferredBytes = Objects.requireNonNull(initialReplicationTransferredBytes, "expected parameter 'initialReplicationTransferredBytes' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.internalIdentifier = Objects.requireNonNull(internalIdentifier, "expected parameter 'internalIdentifier' to be non-null");
         this.isLastUpgradeSuccessful = Objects.requireNonNull(isLastUpgradeSuccessful, "expected parameter 'isLastUpgradeSuccessful' to be non-null");
         this.lastAgentUpgradeErrorDetails = Objects.requireNonNull(lastAgentUpgradeErrorDetails, "expected parameter 'lastAgentUpgradeErrorDetails' to be non-null");

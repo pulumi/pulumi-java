@@ -45,7 +45,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
         Output<String> assetId,
         Output<String> referenceType) {
         this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
-        this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
+        this.referenceType = Codegen.stringProp("referenceType").output().arg(referenceType).require();
     }
 
     private IdAssetReferenceArgs() {

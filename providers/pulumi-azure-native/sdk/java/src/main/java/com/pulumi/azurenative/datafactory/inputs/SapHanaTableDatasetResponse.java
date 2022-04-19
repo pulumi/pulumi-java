@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.DatasetResponseFolder;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +143,7 @@ public final class SapHanaTableDatasetResponse extends com.pulumi.resources.Invo
         this.schema = schema;
         this.structure = structure;
         this.table = table;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private SapHanaTableDatasetResponse() {

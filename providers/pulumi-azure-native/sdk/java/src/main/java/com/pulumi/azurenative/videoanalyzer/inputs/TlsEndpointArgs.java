@@ -100,7 +100,7 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
         this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
         this.trustedCertificates = trustedCertificates;
         this.tunnel = tunnel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.validationOptions = validationOptions;
     }

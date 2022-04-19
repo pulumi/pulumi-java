@@ -195,7 +195,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
         this.host = host;
         this.parameters = parameters;
         this.privateKey = privateKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

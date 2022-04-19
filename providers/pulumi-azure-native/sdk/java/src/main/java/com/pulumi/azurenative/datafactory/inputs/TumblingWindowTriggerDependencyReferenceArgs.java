@@ -73,7 +73,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
         this.offset = offset;
         this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
         this.size = size;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TumblingWindowTriggerDependencyReferenceArgs() {

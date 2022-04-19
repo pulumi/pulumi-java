@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -199,7 +200,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
         this.label = label;
         this.level = level;
         this.maxBitrate = maxBitrate;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.profile = profile;
         this.referenceFrames = referenceFrames;
         this.slices = slices;

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +58,7 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
         @Nullable String mode) {
         this.conflictResolutionPath = conflictResolutionPath;
         this.conflictResolutionProcedure = conflictResolutionProcedure;
-        this.mode = mode == null ? "LastWriterWins" : mode;
+        this.mode = Codegen.stringProp("mode").arg(mode).def("LastWriterWins").getNullable();
     }
 
     private ConflictResolutionPolicyResponse() {

@@ -220,13 +220,13 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
         this.adminPassword = adminPassword;
         this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
         this.azureActiveDirectory = azureActiveDirectory;
-        this.clientConnectionPort = clientConnectionPort == null ? Codegen.ofNullable(19000) : clientConnectionPort;
+        this.clientConnectionPort = Codegen.integerProp("clientConnectionPort").output().arg(clientConnectionPort).def(19000).getNullable();
         this.clients = clients;
         this.clusterCodeVersion = clusterCodeVersion;
         this.clusterName = clusterName;
         this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
         this.fabricSettings = fabricSettings;
-        this.httpGatewayConnectionPort = httpGatewayConnectionPort == null ? Codegen.ofNullable(19080) : httpGatewayConnectionPort;
+        this.httpGatewayConnectionPort = Codegen.integerProp("httpGatewayConnectionPort").output().arg(httpGatewayConnectionPort).def(19080).getNullable();
         this.loadBalancingRules = loadBalancingRules;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

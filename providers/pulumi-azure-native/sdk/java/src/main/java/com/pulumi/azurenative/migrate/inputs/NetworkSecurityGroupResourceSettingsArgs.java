@@ -59,7 +59,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
         Output<String> resourceType,
         @Nullable Output<List<NsgSecurityRuleArgs>> securityRules,
         Output<String> targetResourceName) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.securityRules = securityRules;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }

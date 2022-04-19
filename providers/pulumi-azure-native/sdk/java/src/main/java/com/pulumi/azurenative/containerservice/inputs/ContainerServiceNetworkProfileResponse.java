@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancerProfileResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,16 +141,16 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
         @Nullable String outboundType,
         @Nullable String podCidr,
         @Nullable String serviceCidr) {
-        this.dnsServiceIP = dnsServiceIP == null ? "10.0.0.10" : dnsServiceIP;
-        this.dockerBridgeCidr = dockerBridgeCidr == null ? "172.17.0.1/16" : dockerBridgeCidr;
+        this.dnsServiceIP = Codegen.stringProp("dnsServiceIP").arg(dnsServiceIP).def("10.0.0.10").getNullable();
+        this.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").arg(dockerBridgeCidr).def("172.17.0.1/16").getNullable();
         this.loadBalancerProfile = loadBalancerProfile;
         this.loadBalancerSku = loadBalancerSku;
         this.networkMode = networkMode;
-        this.networkPlugin = networkPlugin == null ? "kubenet" : networkPlugin;
+        this.networkPlugin = Codegen.stringProp("networkPlugin").arg(networkPlugin).def("kubenet").getNullable();
         this.networkPolicy = networkPolicy;
-        this.outboundType = outboundType == null ? "loadBalancer" : outboundType;
-        this.podCidr = podCidr == null ? "10.244.0.0/16" : podCidr;
-        this.serviceCidr = serviceCidr == null ? "10.0.0.0/16" : serviceCidr;
+        this.outboundType = Codegen.stringProp("outboundType").arg(outboundType).def("loadBalancer").getNullable();
+        this.podCidr = Codegen.stringProp("podCidr").arg(podCidr).def("10.244.0.0/16").getNullable();
+        this.serviceCidr = Codegen.stringProp("serviceCidr").arg(serviceCidr).def("10.0.0.0/16").getNullable();
     }
 
     private ContainerServiceNetworkProfileResponse() {

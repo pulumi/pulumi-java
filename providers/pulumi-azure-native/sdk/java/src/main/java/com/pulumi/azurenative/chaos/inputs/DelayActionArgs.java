@@ -58,7 +58,7 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> type) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DelayActionArgs() {

@@ -110,7 +110,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
         @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
         @Nullable Output<Object> schedulePolicy,
         @Nullable Output<String> timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
         this.protectedItemsCount = protectedItemsCount;

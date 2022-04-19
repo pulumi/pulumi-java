@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -126,7 +127,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
         this.requestedStartTime = Objects.requireNonNull(requestedStartTime, "expected parameter 'requestedStartTime' to be non-null");
         this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency, "expected parameter 'rerunConcurrency' to be non-null");
         this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private RerunTumblingWindowTriggerResponse() {

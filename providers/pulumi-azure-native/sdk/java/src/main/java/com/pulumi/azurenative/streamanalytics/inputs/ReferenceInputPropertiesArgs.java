@@ -64,7 +64,7 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
         Output<String> type) {
         this.datasource = datasource;
         this.serialization = serialization;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ReferenceInputPropertiesArgs() {

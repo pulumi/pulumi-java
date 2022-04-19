@@ -210,8 +210,8 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
         this.bgpCommunities = bgpCommunities;
         this.ddosProtectionPlan = ddosProtectionPlan;
         this.dhcpOptions = dhcpOptions;
-        this.enableDdosProtection = enableDdosProtection == null ? Codegen.ofNullable(false) : enableDdosProtection;
-        this.enableVmProtection = enableVmProtection == null ? Codegen.ofNullable(false) : enableVmProtection;
+        this.enableDdosProtection = Codegen.booleanProp("enableDdosProtection").output().arg(enableDdosProtection).def(false).getNullable();
+        this.enableVmProtection = Codegen.booleanProp("enableVmProtection").output().arg(enableVmProtection).def(false).getNullable();
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.ipAllocations = ipAllocations;

@@ -45,7 +45,7 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
     public SelectVideoTrackByIdArgs(
         Output<String> odataType,
         Output<Double> trackId) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
     }
 

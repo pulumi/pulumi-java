@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicebus.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,8 +58,8 @@ public final class SqlFilterResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable Integer compatibilityLevel,
         @Nullable Boolean requiresPreprocessing,
         @Nullable String sqlExpression) {
-        this.compatibilityLevel = compatibilityLevel == null ? 20 : compatibilityLevel;
-        this.requiresPreprocessing = requiresPreprocessing == null ? true : requiresPreprocessing;
+        this.compatibilityLevel = Codegen.integerProp("compatibilityLevel").arg(compatibilityLevel).def(20).getNullable();
+        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg(requiresPreprocessing).def(true).getNullable();
         this.sqlExpression = sqlExpression;
     }
 

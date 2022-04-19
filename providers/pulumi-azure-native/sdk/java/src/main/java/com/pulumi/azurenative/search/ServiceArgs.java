@@ -155,13 +155,13 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> searchServiceName,
         @Nullable Output<SkuArgs> sku,
         @Nullable Output<Map<String,String>> tags) {
-        this.hostingMode = hostingMode == null ? Codegen.ofNullable(com.pulumi.azurenative.search.enums.HostingMode.Default_) : hostingMode;
+        this.hostingMode = Codegen.objectProp("hostingMode", HostingMode.class).output().arg(hostingMode).def(HostingMode.Default_).getNullable();
         this.identity = identity;
         this.location = location;
         this.networkRuleSet = networkRuleSet;
-        this.partitionCount = partitionCount == null ? Codegen.ofNullable(1) : partitionCount;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Codegen.ofNullable(com.pulumi.azurenative.search.enums.PublicNetworkAccess.Enabled) : publicNetworkAccess;
-        this.replicaCount = replicaCount == null ? Codegen.ofNullable(1) : replicaCount;
+        this.partitionCount = Codegen.integerProp("partitionCount").output().arg(partitionCount).def(1).getNullable();
+        this.publicNetworkAccess = Codegen.objectProp("publicNetworkAccess", PublicNetworkAccess.class).output().arg(publicNetworkAccess).def(PublicNetworkAccess.Enabled).getNullable();
+        this.replicaCount = Codegen.integerProp("replicaCount").output().arg(replicaCount).def(1).getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.searchServiceName = searchServiceName;
         this.sku = sku;

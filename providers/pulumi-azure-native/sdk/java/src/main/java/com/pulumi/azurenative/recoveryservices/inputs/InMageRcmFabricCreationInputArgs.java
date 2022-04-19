@@ -83,7 +83,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
         @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity,
         @Nullable Output<String> vmwareSiteId) {
         this.authCertificate = authCertificate;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.physicalSiteId = physicalSiteId;
         this.sourceAgentIdentity = sourceAgentIdentity;
         this.vmwareSiteId = vmwareSiteId;

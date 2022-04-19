@@ -88,7 +88,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;
         this.forwardingProtocol = forwardingProtocol;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private ForwardingConfigurationArgs() {

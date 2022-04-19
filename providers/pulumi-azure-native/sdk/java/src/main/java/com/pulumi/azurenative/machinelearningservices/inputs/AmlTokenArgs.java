@@ -31,7 +31,7 @@ public final class AmlTokenArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     public AmlTokenArgs(Output<String> identityType) {
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
+        this.identityType = Codegen.stringProp("identityType").output().arg(identityType).require();
     }
 
     private AmlTokenArgs() {

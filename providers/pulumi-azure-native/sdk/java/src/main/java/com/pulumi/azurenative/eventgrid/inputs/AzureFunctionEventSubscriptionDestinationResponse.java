@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -69,9 +70,9 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends com
         @Nullable Integer maxEventsPerBatch,
         @Nullable Integer preferredBatchSizeInKilobytes,
         @Nullable String resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
-        this.maxEventsPerBatch = maxEventsPerBatch == null ? 1 : maxEventsPerBatch;
-        this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes == null ? 64 : preferredBatchSizeInKilobytes;
+        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
+        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg(maxEventsPerBatch).def(1).getNullable();
+        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg(preferredBatchSizeInKilobytes).def(64).getNullable();
         this.resourceId = resourceId;
     }
 

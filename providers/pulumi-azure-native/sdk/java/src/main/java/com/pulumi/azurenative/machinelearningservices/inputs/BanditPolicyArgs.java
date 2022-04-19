@@ -84,7 +84,7 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Double> slackFactor) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
+        this.policyType = Codegen.stringProp("policyType").output().arg(policyType).require();
         this.slackAmount = slackAmount;
         this.slackFactor = slackFactor;
     }

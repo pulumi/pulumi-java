@@ -30,7 +30,7 @@ public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.Res
     }
 
     public ConnectedClusterIdentityArgs(Output<ResourceIdentityType> type) {
-        this.type = type == null ? Codegen.ofNullable(com.pulumi.azurenative.kubernetes.enums.ResourceIdentityType.SystemAssigned) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.objectProp("type", ResourceIdentityType.class).output().arg(type).def(ResourceIdentityType.SystemAssigned).require();
     }
 
     private ConnectedClusterIdentityArgs() {

@@ -360,12 +360,12 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> storageType,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> userName) {
-        this.allowClaim = allowClaim == null ? Codegen.ofNullable(false) : allowClaim;
+        this.allowClaim = Codegen.booleanProp("allowClaim").output().arg(allowClaim).def(false).getNullable();
         this.artifacts = artifacts;
         this.createdDate = createdDate;
         this.customImageId = customImageId;
         this.dataDiskParameters = dataDiskParameters;
-        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? Codegen.ofNullable(false) : disallowPublicIpAddress;
+        this.disallowPublicIpAddress = Codegen.booleanProp("disallowPublicIpAddress").output().arg(disallowPublicIpAddress).def(false).getNullable();
         this.environmentId = environmentId;
         this.expirationDate = expirationDate;
         this.galleryImageReference = galleryImageReference;
@@ -377,7 +377,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
         this.name = name;
         this.networkInterface = networkInterface;
         this.notes = notes;
-        this.ownerObjectId = ownerObjectId == null ? Codegen.ofNullable("dynamicValue") : ownerObjectId;
+        this.ownerObjectId = Codegen.stringProp("ownerObjectId").output().arg(ownerObjectId).def("dynamicValue").getNullable();
         this.ownerUserPrincipalName = ownerUserPrincipalName;
         this.password = password;
         this.planId = planId;
@@ -385,7 +385,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
         this.scheduleParameters = scheduleParameters;
         this.size = size;
         this.sshKey = sshKey;
-        this.storageType = storageType == null ? Codegen.ofNullable("labStorageType") : storageType;
+        this.storageType = Codegen.stringProp("storageType").output().arg(storageType).def("labStorageType").getNullable();
         this.tags = tags;
         this.userName = userName;
     }

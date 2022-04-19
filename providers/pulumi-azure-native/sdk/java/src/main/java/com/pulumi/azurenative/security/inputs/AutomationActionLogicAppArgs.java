@@ -57,7 +57,7 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
         Output<String> actionType,
         @Nullable Output<String> logicAppResourceId,
         @Nullable Output<String> uri) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;
     }

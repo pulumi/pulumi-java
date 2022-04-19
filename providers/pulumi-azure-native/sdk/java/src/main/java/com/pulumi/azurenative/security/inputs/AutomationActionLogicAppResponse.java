@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
         String actionType,
         @Nullable String logicAppResourceId,
         @Nullable String uri) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").arg(actionType).require();
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;
     }

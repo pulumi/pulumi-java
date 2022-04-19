@@ -31,7 +31,7 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends com.pulumi.res
     }
 
     public ContentKeyPolicyUnknownRestrictionArgs(Output<String> odataType) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private ContentKeyPolicyUnknownRestrictionArgs() {

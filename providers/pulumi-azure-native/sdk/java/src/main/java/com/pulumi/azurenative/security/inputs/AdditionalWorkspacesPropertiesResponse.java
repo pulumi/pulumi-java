@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
         @Nullable String type,
         @Nullable String workspace) {
         this.dataTypes = dataTypes;
-        this.type = type == null ? "Sentinel" : type;
+        this.type = Codegen.stringProp("type").arg(type).def("Sentinel").getNullable();
         this.workspace = workspace;
     }
 

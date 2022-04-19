@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class SiteConfigResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     public SiteConfigResponse(@Nullable String netFrameworkVersion) {
-        this.netFrameworkVersion = netFrameworkVersion == null ? "v4.6" : netFrameworkVersion;
+        this.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").arg(netFrameworkVersion).def("v4.6").getNullable();
     }
 
     private SiteConfigResponse() {

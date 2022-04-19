@@ -86,7 +86,7 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;
         this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureDataLakeStoreWriteSettingsArgs() {

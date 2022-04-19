@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
         String backupType,
         String objectType) {
         this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
     }
 
     private AzureBackupParamsResponse() {

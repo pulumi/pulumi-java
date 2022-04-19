@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.avs.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
         this.hostMembers = Objects.requireNonNull(hostMembers, "expected parameter 'hostMembers' to be non-null");
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.state = state;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.vmMembers = Objects.requireNonNull(vmMembers, "expected parameter 'vmMembers' to be non-null");
     }
 

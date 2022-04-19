@@ -5,6 +5,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.azurenative.videoanalyzer.inputs.VideoScaleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,7 +73,7 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private VideoEncoderH264Response() {

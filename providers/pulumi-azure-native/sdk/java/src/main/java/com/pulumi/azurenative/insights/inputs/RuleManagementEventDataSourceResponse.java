@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.azurenative.insights.inputs.RuleManagementEventClaimsDataSourceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -195,7 +196,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
         this.legacyResourceId = legacyResourceId;
         this.level = level;
         this.metricNamespace = metricNamespace;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.operationName = operationName;
         this.resourceGroupName = resourceGroupName;
         this.resourceLocation = resourceLocation;

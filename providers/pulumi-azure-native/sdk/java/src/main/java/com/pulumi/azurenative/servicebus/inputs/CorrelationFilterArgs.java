@@ -149,7 +149,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
         this.properties = properties;
         this.replyTo = replyTo;
         this.replyToSessionId = replyToSessionId;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Codegen.ofNullable(true) : requiresPreprocessing;
+        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg(requiresPreprocessing).def(true).getNullable();
         this.sessionId = sessionId;
         this.to = to;
     }

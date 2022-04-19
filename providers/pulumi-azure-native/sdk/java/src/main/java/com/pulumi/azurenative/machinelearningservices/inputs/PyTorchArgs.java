@@ -46,7 +46,7 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
     public PyTorchArgs(
         Output<String> distributionType,
         @Nullable Output<Integer> processCount) {
-        this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
+        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
         this.processCount = processCount;
     }
 

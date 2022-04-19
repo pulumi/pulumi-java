@@ -143,7 +143,7 @@ public final class DynamicsAXResourceDatasetArgs extends com.pulumi.resources.Re
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DynamicsAXResourceDatasetArgs() {

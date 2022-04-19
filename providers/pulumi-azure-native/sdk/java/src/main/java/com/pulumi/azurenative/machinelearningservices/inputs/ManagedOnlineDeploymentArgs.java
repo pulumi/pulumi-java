@@ -188,7 +188,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.description = description;
-        this.endpointComputeType = Objects.requireNonNull(endpointComputeType, "expected parameter 'endpointComputeType' to be non-null");
+        this.endpointComputeType = Codegen.stringProp("endpointComputeType").output().arg(endpointComputeType).require();
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
         this.instanceType = instanceType;

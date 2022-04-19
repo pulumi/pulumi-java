@@ -71,7 +71,7 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> videoName) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.timeSequences = Objects.requireNonNull(timeSequences, "expected parameter 'timeSequences' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
     }
 

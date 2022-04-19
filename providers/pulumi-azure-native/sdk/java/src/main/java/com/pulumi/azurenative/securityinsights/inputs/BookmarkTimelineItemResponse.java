@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.azurenative.securityinsights.inputs.UserInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
         this.displayName = displayName;
         this.endTimeUtc = endTimeUtc;
         this.eventTime = eventTime;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.labels = labels;
         this.notes = notes;
         this.startTimeUtc = startTimeUtc;

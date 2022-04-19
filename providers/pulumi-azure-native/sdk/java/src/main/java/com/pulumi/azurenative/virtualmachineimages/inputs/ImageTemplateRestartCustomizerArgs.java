@@ -85,7 +85,7 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;
         this.restartTimeout = restartTimeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateRestartCustomizerArgs() {

@@ -11,6 +11,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRe
 import com.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -334,7 +335,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;
         this.cname = cname;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
         this.containerResourceRequirements = containerResourceRequirements;
         this.dataCollection = dataCollection;
         this.deploymentType = deploymentType;

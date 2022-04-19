@@ -57,7 +57,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
         Output<String> endpointType,
         @Nullable Output<String> queueName,
         @Nullable Output<String> resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.queueName = queueName;
         this.resourceId = resourceId;
     }

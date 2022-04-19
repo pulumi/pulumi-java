@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.DPMContainerExtendedInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -186,7 +187,7 @@ public final class DpmContainerResponse extends com.pulumi.resources.InvokeArgs 
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.dpmAgentVersion = dpmAgentVersion;
         this.dpmServers = dpmServers;
         this.extendedInfo = extendedInfo;

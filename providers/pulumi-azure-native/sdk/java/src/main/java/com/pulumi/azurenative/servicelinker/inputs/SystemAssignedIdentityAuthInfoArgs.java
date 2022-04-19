@@ -31,7 +31,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends com.pulumi.resourc
     }
 
     public SystemAssignedIdentityAuthInfoArgs(Output<String> authType) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
     }
 
     private SystemAssignedIdentityAuthInfoArgs() {

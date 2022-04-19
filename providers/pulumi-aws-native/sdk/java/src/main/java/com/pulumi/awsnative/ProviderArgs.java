@@ -3,7 +3,6 @@
 
 package com.pulumi.awsnative;
 
-import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.inputs.ProviderAssumeRoleArgs;
 import com.pulumi.awsnative.inputs.ProviderDefaultTagsArgs;
 import com.pulumi.awsnative.inputs.ProviderEndpointArgs;
@@ -273,15 +272,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.ignoreTags = ignoreTags;
         this.insecure = insecure;
         this.maxRetries = maxRetries;
-        this.profile = profile == null ? Codegen.ofNullable(Utilities.getEnv("AWS_PROFILE").orElse(null)) : profile;
-        this.region = region == null ? Codegen.ofNullable(Utilities.getEnv("AWS_REGION", "AWS_DEFAULT_REGION").orElse(null)) : Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
+        this.profile = Codegen.stringProp("profile").output().arg(profile).env("AWS_PROFILE").getNullable();
+        this.region = Codegen.stringProp("region").output().arg(region).env("AWS_REGION", "AWS_DEFAULT_REGION").require();
         this.s3ForcePathStyle = s3ForcePathStyle;
         this.secretKey = secretKey;
-        this.sharedCredentialsFile = sharedCredentialsFile == null ? Codegen.ofNullable(Utilities.getEnv("AWS_SHARED_CREDENTIALS_FILE").orElse(null)) : sharedCredentialsFile;
-        this.skipCredentialsValidation = skipCredentialsValidation == null ? Codegen.ofNullable(true) : skipCredentialsValidation;
-        this.skipGetEc2Platforms = skipGetEc2Platforms == null ? Codegen.ofNullable(true) : skipGetEc2Platforms;
-        this.skipMetadataApiCheck = skipMetadataApiCheck == null ? Codegen.ofNullable(true) : skipMetadataApiCheck;
-        this.skipRegionValidation = skipRegionValidation == null ? Codegen.ofNullable(true) : skipRegionValidation;
+        this.sharedCredentialsFile = Codegen.stringProp("sharedCredentialsFile").output().arg(sharedCredentialsFile).env("AWS_SHARED_CREDENTIALS_FILE").getNullable();
+        this.skipCredentialsValidation = Codegen.booleanProp("skipCredentialsValidation").output().arg(skipCredentialsValidation).def(true).getNullable();
+        this.skipGetEc2Platforms = Codegen.booleanProp("skipGetEc2Platforms").output().arg(skipGetEc2Platforms).def(true).getNullable();
+        this.skipMetadataApiCheck = Codegen.booleanProp("skipMetadataApiCheck").output().arg(skipMetadataApiCheck).def(true).getNullable();
+        this.skipRegionValidation = Codegen.booleanProp("skipRegionValidation").output().arg(skipRegionValidation).def(true).getNullable();
         this.skipRequestingAccountId = skipRequestingAccountId;
         this.token = token;
     }

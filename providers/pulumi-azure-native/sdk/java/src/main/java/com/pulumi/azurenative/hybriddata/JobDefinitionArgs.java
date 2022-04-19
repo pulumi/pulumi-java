@@ -191,7 +191,7 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
         this.runLocation = runLocation;
         this.schedules = schedules;
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.userConfirmation = userConfirmation == null ? Codegen.ofNullable(com.pulumi.azurenative.hybriddata.enums.UserConfirmation.NotRequired) : userConfirmation;
+        this.userConfirmation = Codegen.objectProp("userConfirmation", UserConfirmation.class).output().arg(userConfirmation).def(UserConfirmation.NotRequired).getNullable();
     }
 
     private JobDefinitionArgs() {

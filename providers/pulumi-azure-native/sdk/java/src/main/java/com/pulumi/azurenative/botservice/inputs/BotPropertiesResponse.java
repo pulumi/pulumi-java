@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -435,7 +436,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
         this.iconUrl = iconUrl;
         this.isCmekEnabled = isCmekEnabled;
         this.isDeveloperAppInsightsApiKeySet = Objects.requireNonNull(isDeveloperAppInsightsApiKeySet, "expected parameter 'isDeveloperAppInsightsApiKeySet' to be non-null");
-        this.isStreamingSupported = isStreamingSupported == null ? false : isStreamingSupported;
+        this.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").arg(isStreamingSupported).def(false).getNullable();
         this.luisAppIds = luisAppIds;
         this.luisKey = luisKey;
         this.manifestUrl = manifestUrl;
@@ -447,7 +448,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
         this.openWithHint = openWithHint;
         this.parameters = parameters;
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess == null ? "Enabled" : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").arg(publicNetworkAccess).def("Enabled").getNullable();
         this.publishingCredentials = publishingCredentials;
         this.schemaTransformationVersion = schemaTransformationVersion;
         this.storageResourceId = storageResourceId;

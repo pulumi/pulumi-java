@@ -48,7 +48,7 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
         @Nullable Output<Either<String,ChannelMapping>> channelMapping,
         Output<String> odataType) {
         this.channelMapping = channelMapping;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private AudioTrackDescriptorArgs() {

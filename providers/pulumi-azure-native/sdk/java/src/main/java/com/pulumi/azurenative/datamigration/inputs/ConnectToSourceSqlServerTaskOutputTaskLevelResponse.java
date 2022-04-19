@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -121,7 +122,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends c
         this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.logins = Objects.requireNonNull(logins, "expected parameter 'logins' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
         this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
         this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");

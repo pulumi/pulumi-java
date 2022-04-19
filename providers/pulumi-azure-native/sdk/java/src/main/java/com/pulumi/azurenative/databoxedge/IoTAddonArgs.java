@@ -106,7 +106,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
         this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails, "expected parameter 'ioTEdgeDeviceDetails' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
     }

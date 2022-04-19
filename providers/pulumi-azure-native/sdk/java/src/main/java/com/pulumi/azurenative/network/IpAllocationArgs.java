@@ -159,7 +159,7 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
         this.ipamAllocationId = ipamAllocationId;
         this.location = location;
         this.prefix = prefix;
-        this.prefixLength = prefixLength == null ? Codegen.ofNullable(0) : prefixLength;
+        this.prefixLength = Codegen.integerProp("prefixLength").output().arg(prefixLength).def(0).getNullable();
         this.prefixType = prefixType;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;

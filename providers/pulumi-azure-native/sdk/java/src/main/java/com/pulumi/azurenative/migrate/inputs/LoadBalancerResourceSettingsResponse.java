@@ -6,6 +6,7 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.LBBackendAddressPoolResourceSettingsResponse;
 import com.pulumi.azurenative.migrate.inputs.LBFrontendIPConfigurationResourceSettingsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +99,7 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
         @Nullable String zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
         this.sku = sku;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zones = zones;

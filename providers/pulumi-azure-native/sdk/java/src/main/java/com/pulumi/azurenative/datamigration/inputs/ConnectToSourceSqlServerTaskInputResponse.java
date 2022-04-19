@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -70,8 +71,8 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
         @Nullable Boolean collectLogins,
         SqlConnectionInfoResponse sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
-        this.collectAgentJobs = collectAgentJobs == null ? false : collectAgentJobs;
-        this.collectLogins = collectLogins == null ? false : collectLogins;
+        this.collectAgentJobs = Codegen.booleanProp("collectAgentJobs").arg(collectAgentJobs).def(false).getNullable();
+        this.collectLogins = Codegen.booleanProp("collectLogins").arg(collectLogins).def(false).getNullable();
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
     }
 

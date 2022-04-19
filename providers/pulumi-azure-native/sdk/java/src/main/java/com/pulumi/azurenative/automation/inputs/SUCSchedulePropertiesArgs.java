@@ -188,7 +188,7 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
         this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
         this.frequency = frequency;
         this.interval = interval;
-        this.isEnabled = isEnabled == null ? Codegen.ofNullable(false) : isEnabled;
+        this.isEnabled = Codegen.booleanProp("isEnabled").output().arg(isEnabled).def(false).getNullable();
         this.lastModifiedTime = lastModifiedTime;
         this.nextRun = nextRun;
         this.nextRunOffsetMinutes = nextRunOffsetMinutes;

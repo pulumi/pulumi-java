@@ -53,7 +53,7 @@ public final class ScaleCapacityResponse extends com.pulumi.resources.InvokeArgs
         String default_,
         String maximum,
         String minimum) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
         this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
         this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
     }

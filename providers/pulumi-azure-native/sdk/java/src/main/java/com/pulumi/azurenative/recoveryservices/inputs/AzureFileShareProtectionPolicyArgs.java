@@ -102,7 +102,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
         @Nullable Output<Object> schedulePolicy,
         @Nullable Output<String> timeZone,
         @Nullable Output<Either<String,WorkloadType>> workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

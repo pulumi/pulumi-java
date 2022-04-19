@@ -100,7 +100,7 @@ public final class BlobOutputDataSourceArgs extends com.pulumi.resources.Resourc
         this.pathPattern = pathPattern;
         this.storageAccounts = storageAccounts;
         this.timeFormat = timeFormat;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private BlobOutputDataSourceArgs() {

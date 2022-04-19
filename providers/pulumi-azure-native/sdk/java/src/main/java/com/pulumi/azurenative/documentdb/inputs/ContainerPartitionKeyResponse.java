@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -70,7 +71,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
         @Nullable List<String> paths,
         Boolean systemKey,
         @Nullable Integer version) {
-        this.kind = kind == null ? "Hash" : kind;
+        this.kind = Codegen.stringProp("kind").arg(kind).def("Hash").getNullable();
         this.paths = paths;
         this.systemKey = Objects.requireNonNull(systemKey, "expected parameter 'systemKey' to be non-null");
         this.version = version;

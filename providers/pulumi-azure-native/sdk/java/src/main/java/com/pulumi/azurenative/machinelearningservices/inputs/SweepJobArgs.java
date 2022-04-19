@@ -234,7 +234,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
         this.earlyTermination = earlyTermination;
         this.experimentName = experimentName;
         this.identity = identity;
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
+        this.jobType = Codegen.stringProp("jobType").output().arg(jobType).require();
         this.maxConcurrentTrials = maxConcurrentTrials;
         this.maxTotalTrials = maxTotalTrials;
         this.objective = Objects.requireNonNull(objective, "expected parameter 'objective' to be non-null");

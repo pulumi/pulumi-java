@@ -158,7 +158,7 @@ public final class SqlServerLinkedServiceArgs extends com.pulumi.resources.Resou
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

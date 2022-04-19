@@ -180,7 +180,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
         this.isSequential = isSequential;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

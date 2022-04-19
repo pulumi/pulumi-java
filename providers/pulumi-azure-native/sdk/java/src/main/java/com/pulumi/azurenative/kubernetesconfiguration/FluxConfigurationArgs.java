@@ -174,11 +174,11 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
         this.fluxConfigurationName = fluxConfigurationName;
         this.gitRepository = gitRepository;
         this.kustomizations = kustomizations;
-        this.namespace = namespace == null ? Codegen.ofNullable("default") : namespace;
+        this.namespace = Codegen.stringProp("namespace").output().arg(namespace).def("default").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scope = scope;
         this.sourceKind = sourceKind;
-        this.suspend = suspend == null ? Codegen.ofNullable(false) : suspend;
+        this.suspend = Codegen.booleanProp("suspend").output().arg(suspend).def(false).getNullable();
     }
 
     private FluxConfigurationArgs() {

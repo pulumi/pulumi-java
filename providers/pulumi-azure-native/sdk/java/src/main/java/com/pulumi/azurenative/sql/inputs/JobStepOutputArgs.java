@@ -121,11 +121,11 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.resourceGroupName = resourceGroupName;
-        this.schemaName = schemaName == null ? Codegen.ofNullable("dbo") : schemaName;
+        this.schemaName = Codegen.stringProp("schemaName").output().arg(schemaName).def("dbo").getNullable();
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
         this.subscriptionId = subscriptionId;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = type == null ? Output.ofLeft("SqlDatabase") : type;
+        this.type = Codegen.stringProp("type").left(JobStepOutputType.class).output().arg(type).def("SqlDatabase").getNullable();
     }
 
     private JobStepOutputArgs() {

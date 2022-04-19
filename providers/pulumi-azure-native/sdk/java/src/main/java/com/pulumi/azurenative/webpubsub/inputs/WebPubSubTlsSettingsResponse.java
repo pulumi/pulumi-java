@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.webpubsub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class WebPubSubTlsSettingsResponse extends com.pulumi.resources.Inv
     }
 
     public WebPubSubTlsSettingsResponse(@Nullable Boolean clientCertEnabled) {
-        this.clientCertEnabled = clientCertEnabled == null ? true : clientCertEnabled;
+        this.clientCertEnabled = Codegen.booleanProp("clientCertEnabled").arg(clientCertEnabled).def(true).getNullable();
     }
 
     private WebPubSubTlsSettingsResponse() {

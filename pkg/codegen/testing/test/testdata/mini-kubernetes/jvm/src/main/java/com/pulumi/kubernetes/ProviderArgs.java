@@ -6,7 +6,6 @@ package com.pulumi.kubernetes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -69,7 +68,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.cluster = cluster;
         this.context = context;
         this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = kubeconfig == null ? Codegen.ofNullable(Utilities.getEnv("KUBECONFIG").orElse(null)) : kubeconfig;
+        this.kubeconfig = Codegen.stringProp("kubeconfig").output().arg(kubeconfig).env("KUBECONFIG").getNullable();
     }
 
     private ProviderArgs() {

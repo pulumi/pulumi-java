@@ -128,7 +128,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
         this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
         this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
         this.requiredClaims = requiredClaims;

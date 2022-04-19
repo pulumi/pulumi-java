@@ -71,7 +71,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
         Output<String> value) {
         this.in = Objects.requireNonNull(in, "expected parameter 'in' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 

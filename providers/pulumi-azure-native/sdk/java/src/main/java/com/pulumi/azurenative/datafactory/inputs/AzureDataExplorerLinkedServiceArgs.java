@@ -172,7 +172,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureDataExplorerLinkedServiceArgs() {

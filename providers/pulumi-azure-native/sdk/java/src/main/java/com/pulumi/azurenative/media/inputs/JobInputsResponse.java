@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.inputs.JobInputClipResponse;
 import com.pulumi.azurenative.media.inputs.JobInputHttpResponse;
 import com.pulumi.azurenative.media.inputs.JobInputSequenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +52,7 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable List<Object> inputs,
         String odataType) {
         this.inputs = inputs;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private JobInputsResponse() {

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyRespo
 import com.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -100,7 +101,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
         @Nullable Object schedulePolicy,
         @Nullable String timeZone,
         @Nullable String workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

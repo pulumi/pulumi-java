@@ -112,7 +112,7 @@ public final class RelationalSourceArgs extends com.pulumi.resources.ResourceArg
         this.query = query;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private RelationalSourceArgs() {

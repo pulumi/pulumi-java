@@ -31,7 +31,7 @@ public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resource
     }
 
     public RolloutIdentityAuthenticationArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private RolloutIdentityAuthenticationArgs() {

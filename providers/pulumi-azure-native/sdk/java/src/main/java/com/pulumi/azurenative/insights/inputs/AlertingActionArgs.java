@@ -87,7 +87,7 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<Integer> throttlingInMin,
         Output<TriggerConditionArgs> trigger) {
         this.aznsAction = aznsAction;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
         this.throttlingInMin = throttlingInMin;
         this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");

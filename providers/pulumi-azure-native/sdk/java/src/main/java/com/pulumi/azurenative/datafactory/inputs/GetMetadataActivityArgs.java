@@ -186,7 +186,7 @@ public final class GetMetadataActivityArgs extends com.pulumi.resources.Resource
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.policy = policy;
         this.storeSettings = storeSettings;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

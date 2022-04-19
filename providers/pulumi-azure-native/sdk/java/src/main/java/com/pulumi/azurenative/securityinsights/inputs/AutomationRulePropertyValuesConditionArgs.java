@@ -46,7 +46,7 @@ public final class AutomationRulePropertyValuesConditionArgs extends com.pulumi.
         Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties,
         Output<String> conditionType) {
         this.conditionProperties = Objects.requireNonNull(conditionProperties, "expected parameter 'conditionProperties' to be non-null");
-        this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
+        this.conditionType = Codegen.stringProp("conditionType").output().arg(conditionType).require();
     }
 
     private AutomationRulePropertyValuesConditionArgs() {

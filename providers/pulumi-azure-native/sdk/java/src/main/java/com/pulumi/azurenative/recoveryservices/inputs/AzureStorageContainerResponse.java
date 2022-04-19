@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public final class AzureStorageContainerResponse extends com.pulumi.resources.In
         @Nullable String sourceResourceId,
         @Nullable String storageAccountVersion) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.protectedItemCount = protectedItemCount;

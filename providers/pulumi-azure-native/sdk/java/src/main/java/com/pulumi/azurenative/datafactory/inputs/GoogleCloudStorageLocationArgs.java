@@ -85,7 +85,7 @@ public final class GoogleCloudStorageLocationArgs extends com.pulumi.resources.R
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.version = version;
     }
 

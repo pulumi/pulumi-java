@@ -163,7 +163,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
-        this.encryptDataDisks = encryptDataDisks == null ? Codegen.ofNullable(false) : encryptDataDisks;
+        this.encryptDataDisks = Codegen.booleanProp("encryptDataDisks").output().arg(encryptDataDisks).def(false).getNullable();
         this.hardwareProfile = hardwareProfile;
         this.minInstanceCount = minInstanceCount;
         this.name = name;

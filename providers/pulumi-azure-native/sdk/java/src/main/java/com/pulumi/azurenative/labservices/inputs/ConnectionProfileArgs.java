@@ -68,10 +68,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<ConnectionType> clientSshAccess,
         @Nullable Output<ConnectionType> webRdpAccess,
         @Nullable Output<ConnectionType> webSshAccess) {
-        this.clientRdpAccess = clientRdpAccess == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientRdpAccess;
-        this.clientSshAccess = clientSshAccess == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientSshAccess;
-        this.webRdpAccess = webRdpAccess == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.ConnectionType.None) : webRdpAccess;
-        this.webSshAccess = webSshAccess == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.ConnectionType.None) : webSshAccess;
+        this.clientRdpAccess = Codegen.objectProp("clientRdpAccess", ConnectionType.class).output().arg(clientRdpAccess).def(ConnectionType.None).getNullable();
+        this.clientSshAccess = Codegen.objectProp("clientSshAccess", ConnectionType.class).output().arg(clientSshAccess).def(ConnectionType.None).getNullable();
+        this.webRdpAccess = Codegen.objectProp("webRdpAccess", ConnectionType.class).output().arg(webRdpAccess).def(ConnectionType.None).getNullable();
+        this.webSshAccess = Codegen.objectProp("webSshAccess", ConnectionType.class).output().arg(webSshAccess).def(ConnectionType.None).getNullable();
     }
 
     private ConnectionProfileArgs() {

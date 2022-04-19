@@ -58,7 +58,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
         Output<String> storageType) {
         this.accountKey = Objects.requireNonNull(accountKey, "expected parameter 'accountKey' to be non-null");
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.storageType = Objects.requireNonNull(storageType, "expected parameter 'storageType' to be non-null");
+        this.storageType = Codegen.stringProp("storageType").output().arg(storageType).require();
     }
 
     private StorageAccountArgs() {

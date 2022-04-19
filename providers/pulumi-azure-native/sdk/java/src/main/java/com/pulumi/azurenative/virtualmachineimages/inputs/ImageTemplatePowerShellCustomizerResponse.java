@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -121,11 +122,11 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
         @Nullable List<Integer> validExitCodes) {
         this.inline = inline;
         this.name = name;
-        this.runAsSystem = runAsSystem == null ? false : runAsSystem;
-        this.runElevated = runElevated == null ? false : runElevated;
+        this.runAsSystem = Codegen.booleanProp("runAsSystem").arg(runAsSystem).def(false).getNullable();
+        this.runElevated = Codegen.booleanProp("runElevated").arg(runElevated).def(false).getNullable();
         this.scriptUri = scriptUri;
-        this.sha256Checksum = sha256Checksum == null ? "" : sha256Checksum;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.sha256Checksum = Codegen.stringProp("sha256Checksum").arg(sha256Checksum).def("").getNullable();
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.validExitCodes = validExitCodes;
     }
 

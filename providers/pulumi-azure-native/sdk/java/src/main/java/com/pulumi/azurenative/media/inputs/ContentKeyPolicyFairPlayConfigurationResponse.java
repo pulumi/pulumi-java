@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
         this.ask = Objects.requireNonNull(ask, "expected parameter 'ask' to be non-null");
         this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx, "expected parameter 'fairPlayPfx' to be non-null");
         this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword, "expected parameter 'fairPlayPfxPassword' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.offlineRentalConfiguration = offlineRentalConfiguration;
         this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType, "expected parameter 'rentalAndLeaseKeyType' to be non-null");
         this.rentalDuration = Objects.requireNonNull(rentalDuration, "expected parameter 'rentalDuration' to be non-null");

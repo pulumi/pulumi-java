@@ -197,7 +197,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = subscriptionId;
         this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureDataLakeAnalyticsLinkedServiceArgs() {

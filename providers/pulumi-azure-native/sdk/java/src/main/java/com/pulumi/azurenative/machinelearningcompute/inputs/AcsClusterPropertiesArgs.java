@@ -99,9 +99,9 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
         @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties,
         Output<Either<String,OrchestratorType>> orchestratorType,
         @Nullable Output<List<SystemServiceArgs>> systemServices) {
-        this.agentCount = agentCount == null ? Codegen.ofNullable(2) : agentCount;
-        this.agentVmSize = agentVmSize == null ? Output.ofLeft("Standard_D3_v2") : agentVmSize;
-        this.masterCount = masterCount == null ? Codegen.ofNullable(1) : masterCount;
+        this.agentCount = Codegen.integerProp("agentCount").output().arg(agentCount).def(2).getNullable();
+        this.agentVmSize = Codegen.stringProp("agentVmSize").left(AgentVMSizeTypes.class).output().arg(agentVmSize).def("Standard_D3_v2").getNullable();
+        this.masterCount = Codegen.integerProp("masterCount").output().arg(masterCount).def(1).getNullable();
         this.orchestratorProperties = orchestratorProperties;
         this.orchestratorType = Objects.requireNonNull(orchestratorType, "expected parameter 'orchestratorType' to be non-null");
         this.systemServices = systemServices;

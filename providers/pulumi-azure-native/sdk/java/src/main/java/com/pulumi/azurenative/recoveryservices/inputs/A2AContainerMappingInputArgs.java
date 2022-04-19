@@ -61,7 +61,7 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
         @Nullable Output<String> instanceType) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
     }
 
     private A2AContainerMappingInputArgs() {

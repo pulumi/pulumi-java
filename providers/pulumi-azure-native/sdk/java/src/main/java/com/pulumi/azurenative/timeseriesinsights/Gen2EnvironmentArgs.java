@@ -132,7 +132,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
         Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties,
         @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
         this.environmentName = environmentName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");

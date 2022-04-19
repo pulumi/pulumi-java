@@ -58,7 +58,7 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
         @Nullable Output<Either<String,NetworkRuleIPAction>> action,
         Output<String> filterName,
         Output<String> ipMask) {
-        this.action = action == null ? Output.ofLeft("Allow") : action;
+        this.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg(action).def("Allow").getNullable();
         this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
         this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
     }

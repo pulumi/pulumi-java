@@ -86,7 +86,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ContinuousActionArgs() {

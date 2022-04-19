@@ -156,7 +156,7 @@ public final class AzureMySqlTableDatasetArgs extends com.pulumi.resources.Resou
         this.structure = structure;
         this.table = table;
         this.tableName = tableName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureMySqlTableDatasetArgs() {

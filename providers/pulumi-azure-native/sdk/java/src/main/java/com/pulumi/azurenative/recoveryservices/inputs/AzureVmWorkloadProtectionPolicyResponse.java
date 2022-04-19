@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.SettingsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -97,7 +98,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
         @Nullable SettingsResponse settings,
         @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
         @Nullable String workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;
         this.settings = settings;

@@ -206,13 +206,13 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations,
         @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
-        this.autoStart = autoStart == null ? Codegen.ofNullable(true) : autoStart;
+        this.autoStart = Codegen.booleanProp("autoStart").output().arg(autoStart).def(true).getNullable();
         this.connectionMonitorName = connectionMonitorName;
         this.destination = destination;
         this.endpoints = endpoints;
         this.location = location;
         this.migrate = migrate;
-        this.monitoringIntervalInSeconds = monitoringIntervalInSeconds == null ? Codegen.ofNullable(60) : monitoringIntervalInSeconds;
+        this.monitoringIntervalInSeconds = Codegen.integerProp("monitoringIntervalInSeconds").output().arg(monitoringIntervalInSeconds).def(60).getNullable();
         this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
         this.notes = notes;
         this.outputs = outputs;

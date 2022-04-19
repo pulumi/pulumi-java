@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
     public PyTorchResponse(
         String distributionType,
         @Nullable Integer processCount) {
-        this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
+        this.distributionType = Codegen.stringProp("distributionType").arg(distributionType).require();
         this.processCount = processCount;
     }
 

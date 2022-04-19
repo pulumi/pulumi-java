@@ -83,7 +83,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
         @Nullable Output<String> tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.secret = secret;
         this.tenantId = tenantId;
     }

@@ -123,12 +123,12 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
         @Nullable Output<Double> timeoutInSeconds,
         @Nullable Output<Either<String,KustomizationValidationType>> validation) {
         this.dependsOn = dependsOn;
-        this.force = force == null ? Codegen.ofNullable(false) : force;
-        this.path = path == null ? Codegen.ofNullable("") : path;
-        this.prune = prune == null ? Codegen.ofNullable(false) : prune;
+        this.force = Codegen.booleanProp("force").output().arg(force).def(false).getNullable();
+        this.path = Codegen.stringProp("path").output().arg(path).def("").getNullable();
+        this.prune = Codegen.booleanProp("prune").output().arg(prune).def(false).getNullable();
         this.retryIntervalInSeconds = retryIntervalInSeconds;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Codegen.ofNullable(6e+02) : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? Codegen.ofNullable(6e+02) : timeoutInSeconds;
+        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").output().arg(syncIntervalInSeconds).def(6e+02).getNullable();
+        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").output().arg(timeoutInSeconds).def(6e+02).getNullable();
         this.validation = validation;
     }
 

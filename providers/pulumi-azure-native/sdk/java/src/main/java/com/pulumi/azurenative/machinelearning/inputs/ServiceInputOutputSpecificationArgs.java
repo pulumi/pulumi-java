@@ -73,7 +73,7 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
         this.description = description;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.title = title;
-        this.type = type == null ? Codegen.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).def("object").require();
     }
 
     private ServiceInputOutputSpecificationArgs() {

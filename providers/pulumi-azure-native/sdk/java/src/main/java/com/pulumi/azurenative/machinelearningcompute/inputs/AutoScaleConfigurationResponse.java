@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -81,10 +82,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
         @Nullable Integer refreshPeriodInSeconds,
         @Nullable String status,
         @Nullable Double targetUtilization) {
-        this.maxReplicas = maxReplicas == null ? 100 : maxReplicas;
-        this.minReplicas = minReplicas == null ? 1 : minReplicas;
+        this.maxReplicas = Codegen.integerProp("maxReplicas").arg(maxReplicas).def(100).getNullable();
+        this.minReplicas = Codegen.integerProp("minReplicas").arg(minReplicas).def(1).getNullable();
         this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.status = status == null ? "Disabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
         this.targetUtilization = targetUtilization;
     }
 

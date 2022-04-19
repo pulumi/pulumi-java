@@ -25,7 +25,7 @@ public final class RubberTreeState extends com.pulumi.resources.ResourceArgs {
     }
 
     public RubberTreeState(@Nullable Output<Either<Farm,String>> farm) {
-        this.farm = farm == null ? Output.ofRight("(unknown)") : farm;
+        this.farm = Codegen.stringProp("farm").right(Farm.class).output().arg(farm).def("(unknown)").getNullable();
     }
 
     private RubberTreeState() {

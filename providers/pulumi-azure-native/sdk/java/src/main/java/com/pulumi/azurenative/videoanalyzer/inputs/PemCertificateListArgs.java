@@ -46,7 +46,7 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
         Output<List<String>> certificates,
         Output<String> type) {
         this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private PemCertificateListArgs() {

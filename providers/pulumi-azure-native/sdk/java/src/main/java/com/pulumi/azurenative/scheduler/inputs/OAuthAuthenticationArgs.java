@@ -81,7 +81,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
         this.clientId = clientId;
         this.secret = secret;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private OAuthAuthenticationArgs() {

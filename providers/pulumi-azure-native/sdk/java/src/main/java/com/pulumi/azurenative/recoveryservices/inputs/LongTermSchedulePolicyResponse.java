@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class LongTermSchedulePolicyResponse extends com.pulumi.resources.I
     }
 
     public LongTermSchedulePolicyResponse(String schedulePolicyType) {
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
+        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg(schedulePolicyType).require();
     }
 
     private LongTermSchedulePolicyResponse() {

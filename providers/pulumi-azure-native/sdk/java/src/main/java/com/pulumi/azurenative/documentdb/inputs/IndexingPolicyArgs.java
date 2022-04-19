@@ -104,7 +104,7 @@ public final class IndexingPolicyArgs extends com.pulumi.resources.ResourceArgs 
         this.compositeIndexes = compositeIndexes;
         this.excludedPaths = excludedPaths;
         this.includedPaths = includedPaths;
-        this.indexingMode = indexingMode == null ? Output.ofLeft("consistent") : indexingMode;
+        this.indexingMode = Codegen.stringProp("indexingMode").left(IndexingMode.class).output().arg(indexingMode).def("consistent").getNullable();
         this.spatialIndexes = spatialIndexes;
     }
 

@@ -173,7 +173,7 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
         this.announcement = announcement;
         this.environmentPermission = environmentPermission;
         this.extendedProperties = extendedProperties;
-        this.labStorageType = labStorageType == null ? Output.ofLeft("Premium") : labStorageType;
+        this.labStorageType = Codegen.stringProp("labStorageType").left(StorageType.class).output().arg(labStorageType).def("Premium").getNullable();
         this.location = location;
         this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
         this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;

@@ -47,7 +47,7 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Object> filePattern,
         Output<String> type) {
         this.filePattern = filePattern;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private JsonWriteSettingsArgs() {

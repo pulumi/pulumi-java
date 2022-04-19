@@ -144,7 +144,7 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userId = userId;
     }
 

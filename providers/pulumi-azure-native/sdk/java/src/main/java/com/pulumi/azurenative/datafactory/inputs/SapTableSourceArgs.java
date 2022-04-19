@@ -230,7 +230,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
         this.sapDataColumnDelimiter = sapDataColumnDelimiter;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SapTableSourceArgs() {

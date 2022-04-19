@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -60,7 +61,7 @@ public final class SnowflakeImportCopyCommandResponse extends com.pulumi.resourc
         String type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private SnowflakeImportCopyCommandResponse() {

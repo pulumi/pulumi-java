@@ -137,7 +137,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
         this.timeFormat = timeFormat;
         this.tokenUserDisplayName = tokenUserDisplayName;
         this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureDataLakeStoreOutputDataSourceArgs() {

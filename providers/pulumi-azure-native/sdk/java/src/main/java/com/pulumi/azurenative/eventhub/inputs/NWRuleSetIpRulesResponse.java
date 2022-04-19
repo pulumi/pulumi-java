@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +44,7 @@ public final class NWRuleSetIpRulesResponse extends com.pulumi.resources.InvokeA
     public NWRuleSetIpRulesResponse(
         @Nullable String action,
         @Nullable String ipMask) {
-        this.action = action == null ? "Allow" : action;
+        this.action = Codegen.stringProp("action").arg(action).def("Allow").getNullable();
         this.ipMask = ipMask;
     }
 

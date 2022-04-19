@@ -85,7 +85,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
         @Nullable Output<String> webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
-        this.status = status == null ? Output.ofLeft("Disabled") : status;
+        this.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg(status).def("Disabled").getNullable();
         this.timeInMinutes = timeInMinutes;
         this.webhookUrl = webhookUrl;
     }

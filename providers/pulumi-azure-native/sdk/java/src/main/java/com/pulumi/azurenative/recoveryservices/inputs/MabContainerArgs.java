@@ -180,7 +180,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
         this.canReRegister = canReRegister;
         this.containerHealthState = containerHealthState;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;

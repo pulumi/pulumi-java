@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,7 +46,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends com.pulumi.re
         @Nullable String key,
         String operatorType) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
     }
 
     private IsNullOrUndefinedAdvancedFilterResponse() {

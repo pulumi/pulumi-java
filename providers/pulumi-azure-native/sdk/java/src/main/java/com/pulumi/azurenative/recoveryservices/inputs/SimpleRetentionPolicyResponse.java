@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.RetentionDurationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +47,7 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
         @Nullable RetentionDurationResponse retentionDuration,
         String retentionPolicyType) {
         this.retentionDuration = retentionDuration;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType, "expected parameter 'retentionPolicyType' to be non-null");
+        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").arg(retentionPolicyType).require();
     }
 
     private SimpleRetentionPolicyResponse() {

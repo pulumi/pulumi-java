@@ -44,8 +44,8 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
     public BackendTlsPropertiesArgs(
         @Nullable Output<Boolean> validateCertificateChain,
         @Nullable Output<Boolean> validateCertificateName) {
-        this.validateCertificateChain = validateCertificateChain == null ? Codegen.ofNullable(true) : validateCertificateChain;
-        this.validateCertificateName = validateCertificateName == null ? Codegen.ofNullable(true) : validateCertificateName;
+        this.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").output().arg(validateCertificateChain).def(true).getNullable();
+        this.validateCertificateName = Codegen.booleanProp("validateCertificateName").output().arg(validateCertificateName).def(true).getNullable();
     }
 
     private BackendTlsPropertiesArgs() {

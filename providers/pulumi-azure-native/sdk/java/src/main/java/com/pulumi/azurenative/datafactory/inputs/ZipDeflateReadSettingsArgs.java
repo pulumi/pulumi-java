@@ -47,7 +47,7 @@ public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.Resou
         @Nullable Output<Object> preserveZipFileNameAsFolder,
         Output<String> type) {
         this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ZipDeflateReadSettingsArgs() {

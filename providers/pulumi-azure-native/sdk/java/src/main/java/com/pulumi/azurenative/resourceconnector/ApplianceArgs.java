@@ -117,7 +117,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> resourceGroupName,
         @Nullable Output<String> resourceName,
         @Nullable Output<Map<String,String>> tags) {
-        this.distro = distro == null ? Output.ofLeft("AKSEdge") : distro;
+        this.distro = Codegen.stringProp("distro").left(Distro.class).output().arg(distro).def("AKSEdge").getNullable();
         this.identity = identity;
         this.infrastructureConfig = infrastructureConfig;
         this.location = location;

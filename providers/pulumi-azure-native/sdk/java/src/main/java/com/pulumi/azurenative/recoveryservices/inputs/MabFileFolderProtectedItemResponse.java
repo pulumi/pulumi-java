@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.MabFileFolderProtectedItemExtendedInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -292,7 +293,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
         this.lastBackupTime = lastBackupTime;
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
         this.workloadType = workloadType;

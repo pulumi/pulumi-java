@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.AzureDatabricksDeltaLakeExportCommandResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
         this.query = query;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private AzureDatabricksDeltaLakeSourceResponse() {

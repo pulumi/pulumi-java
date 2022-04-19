@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import com.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import com.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -214,15 +215,15 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
         this.credentials = credentials;
         this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
         this.imageNames = imageNames;
-        this.isArchiveEnabled = isArchiveEnabled == null ? false : isArchiveEnabled;
-        this.isPushEnabled = isPushEnabled == null ? true : isPushEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
+        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").arg(isPushEnabled).def(true).getNullable();
         this.logTemplate = logTemplate;
-        this.noCache = noCache == null ? false : noCache;
+        this.noCache = Codegen.booleanProp("noCache").arg(noCache).def(false).getNullable();
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.target = target;
-        this.timeout = timeout == null ? 3600 : timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.timeout = Codegen.integerProp("timeout").arg(timeout).def(3600).getNullable();
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private DockerBuildRequestResponse() {

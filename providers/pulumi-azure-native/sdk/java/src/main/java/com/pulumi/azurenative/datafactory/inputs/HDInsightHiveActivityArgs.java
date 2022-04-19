@@ -223,7 +223,7 @@ public final class HDInsightHiveActivityArgs extends com.pulumi.resources.Resour
         this.scriptLinkedService = scriptLinkedService;
         this.scriptPath = scriptPath;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
         this.variables = variables;
     }

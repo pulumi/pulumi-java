@@ -8,6 +8,7 @@ import com.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingRe
 import com.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
 import com.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesService;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +102,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
         this.kinesisToS3 = kinesisToS3;
         this.kubernetesScubaReader = kubernetesScubaReader;
         this.kubernetesService = kubernetesService;
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
     }
 
     private DefenderForContainersAwsOfferingResponse() {

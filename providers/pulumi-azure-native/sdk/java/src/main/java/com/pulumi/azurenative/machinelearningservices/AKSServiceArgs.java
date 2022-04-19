@@ -346,7 +346,7 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
         this.authEnabled = authEnabled;
         this.autoScaler = autoScaler;
         this.computeName = computeName;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
         this.containerResourceRequirements = containerResourceRequirements;
         this.dataCollection = dataCollection;
         this.description = description;

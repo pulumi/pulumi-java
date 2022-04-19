@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class FlowLogFormatParametersResponse extends com.pulumi.resources.
         @Nullable String type,
         @Nullable Integer version) {
         this.type = type;
-        this.version = version == null ? 0 : version;
+        this.version = Codegen.integerProp("version").arg(version).def(0).getNullable();
     }
 
     private FlowLogFormatParametersResponse() {

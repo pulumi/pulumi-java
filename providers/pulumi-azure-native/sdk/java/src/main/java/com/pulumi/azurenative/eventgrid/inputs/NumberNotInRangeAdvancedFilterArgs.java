@@ -60,7 +60,7 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
         Output<String> operatorType,
         @Nullable Output<List<List<Double>>> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
         this.values = values;
     }
 

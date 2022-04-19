@@ -59,7 +59,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends com.
         Output<String> type) {
         this.offset = Objects.requireNonNull(offset, "expected parameter 'offset' to be non-null");
         this.size = size;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SelfDependencyTumblingWindowTriggerReferenceArgs() {

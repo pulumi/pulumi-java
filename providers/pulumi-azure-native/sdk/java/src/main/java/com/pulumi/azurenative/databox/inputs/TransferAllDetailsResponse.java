@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
         String dataAccountType,
         @Nullable Boolean transferAllBlobs,
         @Nullable Boolean transferAllFiles) {
-        this.dataAccountType = dataAccountType == null ? "StorageAccount" : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;
     }

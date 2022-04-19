@@ -224,7 +224,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
         this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.policy = policy;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.userProperties = userProperties;
     }

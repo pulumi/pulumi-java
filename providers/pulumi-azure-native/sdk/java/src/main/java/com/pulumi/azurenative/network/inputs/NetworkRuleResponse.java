@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -148,7 +149,7 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
         this.destinationPorts = destinationPorts;
         this.ipProtocols = ipProtocols;
         this.name = name;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
     }

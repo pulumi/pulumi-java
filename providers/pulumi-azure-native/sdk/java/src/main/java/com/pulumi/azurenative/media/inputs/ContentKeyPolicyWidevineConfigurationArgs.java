@@ -44,7 +44,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
     public ContentKeyPolicyWidevineConfigurationArgs(
         Output<String> odataType,
         Output<String> widevineTemplate) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.widevineTemplate = Objects.requireNonNull(widevineTemplate, "expected parameter 'widevineTemplate' to be non-null");
     }
 

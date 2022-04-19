@@ -250,7 +250,7 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBlobStorageLinkedServiceArgs() {

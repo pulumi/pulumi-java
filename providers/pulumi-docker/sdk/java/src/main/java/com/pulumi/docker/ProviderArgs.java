@@ -6,7 +6,6 @@ package com.pulumi.docker;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.docker.Utilities;
 import com.pulumi.docker.inputs.ProviderRegistryAuthArgs;
 import java.lang.String;
 import java.util.List;
@@ -90,7 +89,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.caMaterial = caMaterial;
         this.certMaterial = certMaterial;
         this.certPath = certPath;
-        this.host = host == null ? Codegen.ofNullable(Utilities.getEnv("DOCKER_HOST").orElse(null) == null ? "unix:///var/run/docker.sock" : Utilities.getEnv("DOCKER_HOST").orElse(null)) : host;
+        this.host = Codegen.stringProp("host").output().arg(host).env("DOCKER_HOST").def("unix:///var/run/docker.sock").getNullable();
         this.keyMaterial = keyMaterial;
         this.registryAuth = registryAuth;
     }

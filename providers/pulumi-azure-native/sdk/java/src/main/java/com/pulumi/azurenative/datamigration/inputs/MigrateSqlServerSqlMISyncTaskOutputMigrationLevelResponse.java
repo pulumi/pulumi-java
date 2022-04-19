@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -175,7 +176,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
         this.databaseErrorCount = Objects.requireNonNull(databaseErrorCount, "expected parameter 'databaseErrorCount' to be non-null");
         this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
         this.sourceServerName = Objects.requireNonNull(sourceServerName, "expected parameter 'sourceServerName' to be non-null");
         this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");

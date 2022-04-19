@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -144,7 +145,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
         String state,
         @Nullable Double trafficPercentile,
         @Nullable String type) {
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
         this.deploymentType = deploymentType;
         this.description = description;
         this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");

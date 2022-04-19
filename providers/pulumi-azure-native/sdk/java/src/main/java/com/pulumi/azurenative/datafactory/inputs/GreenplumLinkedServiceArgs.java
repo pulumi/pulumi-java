@@ -130,7 +130,7 @@ public final class GreenplumLinkedServiceArgs extends com.pulumi.resources.Resou
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.pwd = pwd;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private GreenplumLinkedServiceArgs() {

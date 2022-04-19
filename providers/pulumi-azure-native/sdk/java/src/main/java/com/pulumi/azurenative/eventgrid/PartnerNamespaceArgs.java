@@ -120,12 +120,12 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
         Output<String> resourceGroupName,
         @Nullable Output<Map<String,String>> tags) {
-        this.disableLocalAuth = disableLocalAuth == null ? Codegen.ofNullable(false) : disableLocalAuth;
+        this.disableLocalAuth = Codegen.booleanProp("disableLocalAuth").output().arg(disableLocalAuth).def(false).getNullable();
         this.inboundIpRules = inboundIpRules;
         this.location = location;
         this.partnerNamespaceName = partnerNamespaceName;
         this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
     }

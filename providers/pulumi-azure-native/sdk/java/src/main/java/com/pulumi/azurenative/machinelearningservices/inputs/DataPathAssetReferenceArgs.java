@@ -59,7 +59,7 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
         Output<String> referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
-        this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
+        this.referenceType = Codegen.stringProp("referenceType").output().arg(referenceType).require();
     }
 
     private DataPathAssetReferenceArgs() {

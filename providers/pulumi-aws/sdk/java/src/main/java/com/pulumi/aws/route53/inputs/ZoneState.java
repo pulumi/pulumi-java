@@ -142,7 +142,7 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<List<ZoneVpcGetArgs>> vpcs,
         @Nullable Output<String> zoneId) {
         this.arn = arn;
-        this.comment = comment == null ? Codegen.ofNullable("Managed by Pulumi") : comment;
+        this.comment = Codegen.stringProp("comment").output().arg(comment).def("Managed by Pulumi").getNullable();
         this.delegationSetId = delegationSetId;
         this.forceDestroy = forceDestroy;
         this.name = name;

@@ -6,6 +6,7 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.PersistentDiskResponse;
 import com.pulumi.azurenative.appplatform.inputs.TemporaryDiskResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
         this.activeDeploymentName = activeDeploymentName;
         this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
         this.fqdn = fqdn;
-        this.httpsOnly = httpsOnly == null ? false : httpsOnly;
+        this.httpsOnly = Codegen.booleanProp("httpsOnly").arg(httpsOnly).def(false).getNullable();
         this.persistentDisk = persistentDisk;
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.public_ = public_;

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -87,7 +88,7 @@ public final class MultiplePipelineTriggerResponse extends com.pulumi.resources.
         this.description = description;
         this.pipelines = pipelines;
         this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private MultiplePipelineTriggerResponse() {

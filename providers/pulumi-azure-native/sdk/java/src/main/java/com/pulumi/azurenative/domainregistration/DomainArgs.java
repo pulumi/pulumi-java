@@ -210,7 +210,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<DnsType> targetDnsType) {
         this.authCode = authCode;
-        this.autoRenew = autoRenew == null ? Codegen.ofNullable(true) : autoRenew;
+        this.autoRenew = Codegen.booleanProp("autoRenew").output().arg(autoRenew).def(true).getNullable();
         this.consent = Objects.requireNonNull(consent, "expected parameter 'consent' to be non-null");
         this.contactAdmin = Objects.requireNonNull(contactAdmin, "expected parameter 'contactAdmin' to be non-null");
         this.contactBilling = Objects.requireNonNull(contactBilling, "expected parameter 'contactBilling' to be non-null");

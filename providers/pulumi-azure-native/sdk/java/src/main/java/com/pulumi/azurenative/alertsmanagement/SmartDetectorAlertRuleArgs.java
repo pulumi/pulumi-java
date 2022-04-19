@@ -173,7 +173,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
         this.description = description;
         this.detector = Objects.requireNonNull(detector, "expected parameter 'detector' to be non-null");
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.location = location == null ? Codegen.ofNullable("global") : location;
+        this.location = Codegen.stringProp("location").output().arg(location).def("global").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");

@@ -138,7 +138,7 @@ public final class NetworkRuleConditionArgs extends com.pulumi.resources.Resourc
         this.destinationPorts = destinationPorts;
         this.ipProtocols = ipProtocols;
         this.name = name;
-        this.ruleConditionType = Objects.requireNonNull(ruleConditionType, "expected parameter 'ruleConditionType' to be non-null");
+        this.ruleConditionType = Codegen.stringProp("ruleConditionType").output().arg(ruleConditionType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
     }

@@ -138,7 +138,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
         @Nullable Output<Either<String,ServerVersion>> version) {
         this.administratorLogin = Objects.requireNonNull(administratorLogin, "expected parameter 'administratorLogin' to be non-null");
         this.administratorLoginPassword = Objects.requireNonNull(administratorLoginPassword, "expected parameter 'administratorLoginPassword' to be non-null");
-        this.createMode = Objects.requireNonNull(createMode, "expected parameter 'createMode' to be non-null");
+        this.createMode = Codegen.stringProp("createMode").output().arg(createMode).require();
         this.infrastructureEncryption = infrastructureEncryption;
         this.minimalTlsVersion = minimalTlsVersion;
         this.publicNetworkAccess = publicNetworkAccess;

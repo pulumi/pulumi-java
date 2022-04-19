@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.azurenative.cdn.inputs.RequestSchemeMatchConditionParametersResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class DeliveryRuleRequestSchemeConditionResponse extends com.pulumi
     public DeliveryRuleRequestSchemeConditionResponse(
         String name,
         RequestSchemeMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
+        this.name = Codegen.stringProp("name").arg(name).require();
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 

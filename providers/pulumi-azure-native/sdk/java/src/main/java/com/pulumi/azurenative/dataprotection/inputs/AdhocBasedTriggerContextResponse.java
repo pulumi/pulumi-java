@@ -5,6 +5,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.azurenative.dataprotection.inputs.AdhocBasedTaggingCriteriaResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class AdhocBasedTriggerContextResponse extends com.pulumi.resources
     public AdhocBasedTriggerContextResponse(
         String objectType,
         AdhocBasedTaggingCriteriaResponse taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }
 

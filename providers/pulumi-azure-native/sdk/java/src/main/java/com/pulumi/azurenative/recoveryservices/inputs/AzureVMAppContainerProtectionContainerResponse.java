@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExtendedInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -145,7 +146,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends com.pu
         @Nullable String sourceResourceId,
         @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;

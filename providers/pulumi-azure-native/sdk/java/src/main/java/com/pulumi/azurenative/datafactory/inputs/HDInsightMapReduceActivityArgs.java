@@ -223,7 +223,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.policy = policy;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

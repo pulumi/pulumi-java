@@ -142,7 +142,7 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<String> streetAddress2,
         @Nullable Output<String> streetAddress3,
         @Nullable Output<String> zipExtendedCode) {
-        this.addressType = addressType == null ? Output.ofLeft("None") : addressType;
+        this.addressType = Codegen.stringProp("addressType").left(AddressType.class).output().arg(addressType).def("None").getNullable();
         this.city = city;
         this.companyName = companyName;
         this.country = Objects.requireNonNull(country, "expected parameter 'country' to be non-null");

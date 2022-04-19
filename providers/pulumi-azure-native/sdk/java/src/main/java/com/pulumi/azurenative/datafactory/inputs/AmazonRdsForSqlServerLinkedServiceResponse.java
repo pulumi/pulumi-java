@@ -10,6 +10,7 @@ import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.azurenative.datafactory.inputs.SqlAlwaysEncryptedPropertiesResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -157,7 +158,7 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userName = userName;
     }
 

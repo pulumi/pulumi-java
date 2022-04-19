@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +74,7 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
         String dockerfile,
         @Nullable DockerImagePlatformResponse platform) {
         this.context = context;
-        this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType, "expected parameter 'dockerSpecificationType' to be non-null");
+        this.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").arg(dockerSpecificationType).require();
         this.dockerfile = Objects.requireNonNull(dockerfile, "expected parameter 'dockerfile' to be non-null");
         this.platform = platform;
     }

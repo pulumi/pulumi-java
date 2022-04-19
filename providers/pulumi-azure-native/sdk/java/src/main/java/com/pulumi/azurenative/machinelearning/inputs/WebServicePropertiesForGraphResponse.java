@@ -16,6 +16,7 @@ import com.pulumi.azurenative.machinelearning.inputs.StorageAccountResponse;
 import com.pulumi.azurenative.machinelearning.inputs.WebServiceKeysResponse;
 import com.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -323,7 +324,7 @@ public final class WebServicePropertiesForGraphResponse extends com.pulumi.resou
         this.modifiedOn = Objects.requireNonNull(modifiedOn, "expected parameter 'modifiedOn' to be non-null");
         this.output = output;
         this.package_ = package_;
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
+        this.packageType = Codegen.stringProp("packageType").arg(packageType).require();
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
         this.payloadsLocation = payloadsLocation;

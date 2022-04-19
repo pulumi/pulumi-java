@@ -5,6 +5,7 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.azurenative.web.inputs.TrafficWeightResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -92,7 +93,7 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable List<TrafficWeightResponse> traffic,
         @Nullable String transport) {
         this.allowInsecure = allowInsecure;
-        this.external = external == null ? false : external;
+        this.external = Codegen.booleanProp("external").arg(external).def(false).getNullable();
         this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
         this.targetPort = targetPort;
         this.traffic = traffic;

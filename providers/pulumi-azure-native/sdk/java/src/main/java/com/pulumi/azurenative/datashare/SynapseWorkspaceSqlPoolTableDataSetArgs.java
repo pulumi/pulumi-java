@@ -91,7 +91,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends com.pulumi.re
         Output<String> synapseWorkspaceSqlPoolTableResourceId) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
         this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId, "expected parameter 'synapseWorkspaceSqlPoolTableResourceId' to be non-null");

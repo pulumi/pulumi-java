@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +59,7 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
         String referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
-        this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
+        this.referenceType = Codegen.stringProp("referenceType").arg(referenceType).require();
     }
 
     private DataPathAssetReferenceResponse() {

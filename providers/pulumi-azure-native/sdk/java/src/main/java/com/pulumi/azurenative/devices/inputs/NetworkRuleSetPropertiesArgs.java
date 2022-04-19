@@ -62,7 +62,7 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
         @Nullable Output<Either<String,DefaultAction>> defaultAction,
         Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {
         this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
-        this.defaultAction = defaultAction == null ? Output.ofLeft("Deny") : defaultAction;
+        this.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg(defaultAction).def("Deny").getNullable();
         this.ipRules = Objects.requireNonNull(ipRules, "expected parameter 'ipRules' to be non-null");
     }
 

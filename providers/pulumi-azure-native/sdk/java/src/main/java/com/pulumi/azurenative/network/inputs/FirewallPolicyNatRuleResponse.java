@@ -8,6 +8,7 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleActionResponse
 import com.pulumi.azurenative.network.inputs.NatRuleConditionResponse;
 import com.pulumi.azurenative.network.inputs.NetworkRuleConditionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -114,7 +115,7 @@ public final class FirewallPolicyNatRuleResponse extends com.pulumi.resources.In
         this.name = name;
         this.priority = priority;
         this.ruleCondition = ruleCondition;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
         this.translatedAddress = translatedAddress;
         this.translatedPort = translatedPort;
     }

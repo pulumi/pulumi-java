@@ -156,7 +156,7 @@ public final class CassandraTableDatasetArgs extends com.pulumi.resources.Resour
         this.schema = schema;
         this.structure = structure;
         this.tableName = tableName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CassandraTableDatasetArgs() {

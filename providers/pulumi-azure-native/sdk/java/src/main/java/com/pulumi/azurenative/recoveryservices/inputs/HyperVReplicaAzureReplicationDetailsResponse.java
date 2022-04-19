@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsR
 import com.pulumi.azurenative.recoveryservices.inputs.OSDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -355,7 +356,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.encryption = encryption;
         this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.lastReplicatedTime = lastReplicatedTime;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;
         this.licenseType = licenseType;

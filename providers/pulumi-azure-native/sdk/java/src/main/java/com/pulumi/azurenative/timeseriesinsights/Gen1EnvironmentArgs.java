@@ -133,7 +133,7 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<Map<String,String>> tags) {
         this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime, "expected parameter 'dataRetentionTime' to be non-null");
         this.environmentName = environmentName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.location = location;
         this.partitionKeyProperties = partitionKeyProperties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
