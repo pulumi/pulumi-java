@@ -3,3 +3,8 @@ description: ${DESCRIPTION}
 runtime: jvm
 template:
   description: A minimal AWS Java Pulumi program
+  important: true
+  config:
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1
