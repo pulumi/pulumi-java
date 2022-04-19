@@ -5,9 +5,9 @@ package com.pulumi.aws.iam_instanceProfile;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,45 +20,48 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public InstanceProfileArgs(@Nullable Output<String> role) {
-        this.role = role;
-    }
+    private InstanceProfileArgs() {}
 
-    private InstanceProfileArgs() {
-        this.role = Codegen.empty();
+    protected InstanceProfileArgs(InstanceProfileArgs $) {
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> role;
+        private InstanceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceProfileArgs();
         }
 
         public Builder(InstanceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
+            $ = new InstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public InstanceProfileArgs build() {
-            return new InstanceProfileArgs(role);
+        }
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public InstanceProfileArgs build() {
+            return $;
         }
     }
+
 }

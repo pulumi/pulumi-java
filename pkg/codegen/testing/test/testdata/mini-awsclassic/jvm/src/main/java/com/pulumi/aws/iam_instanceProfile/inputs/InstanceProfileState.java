@@ -5,9 +5,9 @@ package com.pulumi.aws.iam_instanceProfile.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,45 +20,48 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public InstanceProfileState(@Nullable Output<String> role) {
-        this.role = role;
-    }
+    private InstanceProfileState() {}
 
-    private InstanceProfileState() {
-        this.role = Codegen.empty();
+    protected InstanceProfileState(InstanceProfileState $) {
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> role;
+        private InstanceProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceProfileState();
         }
 
         public Builder(InstanceProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
+            $ = new InstanceProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public InstanceProfileState build() {
-            return new InstanceProfileState(role);
+        }
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public InstanceProfileState build() {
+            return $;
         }
     }
+
 }
