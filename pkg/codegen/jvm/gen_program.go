@@ -204,6 +204,20 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.genImport(w, "java.io.*")
 	g.genImport(w, "java.nio.*")
 	g.genImport(w, "com.pulumi.*")
+	if containsFunctionCall("toJSON", nodes) {
+		// import static functions from the Serialization class
+		g.Fgen(w, "import static com.pulumi.codegen.internal.Serialization.*;\n")
+	}
+
+	if containsRangeExpr(nodes) {
+		// import the KeyedValue<T> class
+		g.Fgen(w, "import com.pulumi.codegen.internal.KeyedValue;\n")
+	}
+
+	if containsFunctionCall("readDir", nodes) {
+		g.Fgen(w, "import static com.pulumi.codegen.internal.Files.readDir;\n")
+	}
+
 	g.genNewline(w)
 	// Emit Stack class signature
 	g.Fprint(w, "public class App {")
@@ -219,124 +233,14 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	}
 }
 
-func (g *generator) generateRangeClass(w io.Writer) {
-	g.Fgenf(w, "%sclass Range<T> {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%spublic T value;\n", g.Indent)
-		g.Fgenf(w, "%spublic String key;\n", g.Indent)
-		g.Fgenf(w, "%spublic Range(String key, T value) { this.value = value; this.key = key; }\n", g.Indent)
-		g.Fgenf(w, "%spublic static <TValue> Range<TValue> of(String key, TValue input) {\n", g.Indent)
-		g.Indented(func() {
-			g.Fgenf(w, "%sreturn new Range<TValue>(key, input);\n", g.Indent)
-		})
-		g.Fgenf(w, "%s}\n", g.Indent)
-		g.Fgenf(w, "%spublic T getValue() { return this.value; }\n", g.Indent)
-		g.Fgenf(w, "%spublic String getKey() { return this.key; }\n", g.Indent)
-		g.Fgenf(w, "%spublic static <TValue> List<Range<TValue>> of(Iterable<TValue> items) {\n", g.Indent)
-		g.Indented(func() {
-			g.Fgenf(w, "%svar results = new ArrayList<Range<TValue>>();\n", g.Indent)
-			g.Fgenf(w, "%sint counter = 0;\n", g.Indent)
-			g.Fgenf(w, "%sfor(var item : items) {\n", g.Indent)
-			g.Indented(func() {
-				g.Fgenf(w, "%sresults.add(new Range<TValue>(counter.toString(), item));\n", g.Indent)
-				g.Fgenf(w, "%scounter = counter + 1;\n", g.Indent)
-			})
-			g.Fgenf(w, "%s}\n", g.Indent)
-			g.Fgenf(w, "%sreturn results;\n", g.Indent)
-		})
-		g.Fgenf(w, "%s}\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-}
-
-func (g *generator) generateReadDirMethod(w io.Writer) {
-	g.Fgenf(w, "\n%sList<Range<String>> ReadDir(String directory) {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%svar results = new ArrayList<Range<String>>();\n", g.Indent)
-		g.Fgenf(w, "%sFile[] files = new File(directory).listFiles();\n", g.Indent)
-		g.Fgenf(w, "%sfor (File file : files) {\n", g.Indent)
-		g.Indented(func() {
-			g.Fgenf(w, "%sif (file.isFile()) {\n", g.Indent)
-			g.Indented(func() {
-				g.Fgenf(w, "%sresults.add(Range.of(file.getName(), file.getName()));\n", g.Indent)
-			})
-			g.Fgenf(w, "%s}\n", g.Indent)
-		})
-		g.Fgenf(w, "%s}\n", g.Indent)
-		g.Fgenf(w, "%sreturn results;\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-}
-
-func (g *generator) generateJsonMethods(w io.Writer) {
-	// entry point
-	g.Fgenf(w, "\n%sstatic String ToJson(Map<String, Object> map) {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%s// Bring your own JSON library here to serialize map", g.Indent)
-		g.genNewline(w)
-		g.Fgenf(w, "%sreturn \"{}\";\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-	g.genNewline(w)
-
-	g.genIndent(w)
-	g.Fgen(w, "@SafeVarargs")
-	g.Fgenf(w, "\n%sstatic Map<String, Object> JObject(java.util.Map.Entry<String, Object> ...entries) {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%svar map = new HashMap<String, Object>();\n", g.Indent)
-		g.Fgenf(w, "%sfor (var entry : entries)  {  map.put(entry.getKey(), entry.getValue()); }\n", g.Indent)
-		g.Fgenf(w, "%sreturn map;\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-	g.genNewline(w)
-
-	g.Fgenf(w, "\n%sstatic java.util.Map.Entry<String, Object> JProperty(String key, Object value) {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%sreturn java.util.Map.entry(key, value);\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-	g.genNewline(w)
-
-	g.Fgenf(w, "\n%sObject[] JArray(Object ...items) {\n", g.Indent)
-	g.Indented(func() {
-		g.Fgenf(w, "%sreturn items;\n", g.Indent)
-	})
-	g.Fgenf(w, "%s}\n", g.Indent)
-	g.genNewline(w)
-}
-
 // genPostamble closes the method and the class and declares stack output statements.
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
 		g.genIndent(w)
 		g.Fprintf(w, "%sreturn ctx.exports();\n", g.Indent)
 		g.Fprintf(w, "%s}\n", g.Indent)
-		if containsFunctionCall("readDir", nodes) {
-			// g.generateReadDirMethod(w)
-		}
-
-		if containsFunctionCall("toJSON", nodes) {
-			// g.generateJsonMethods(w)
-		}
 	})
 	g.Fprint(w, "}\n")
-
-	if containsRangeExpr(nodes) {
-		// g.Fprint(w, "\n")
-		// g.generateRangeClass(w)
-	}
-}
-
-// resourceArgsTypeName computes the Java arguments class name for the given resource.
-func resourceArgsTypeName(r *pcl.Resource) string {
-	// Compute the resource type from the Pulumi type token.
-	pkg, module, member, diags := r.DecomposeToken()
-	contract.Assert(len(diags) == 0)
-	if pkg == "pulumi" && module == "providers" {
-		pkg, module, member = member, "", "Provider"
-	}
-
-	return fmt.Sprintf("%sArgs", names.Title(member))
 }
 
 // resourceTypeName computes the Java resource class name for the given resource.
@@ -351,6 +255,11 @@ func resourceTypeName(resource *pcl.Resource) string {
 	return names.Title(member)
 }
 
+// resourceArgsTypeName computes the Java arguments class name for the given resource.
+func resourceArgsTypeName(r *pcl.Resource) string {
+	return fmt.Sprintf("%sArgs", resourceTypeName(r))
+}
+
 // Returns the expression that should be emitted for a resource's "name" parameter given its base name
 func makeResourceName(baseName string, suffix string) string {
 	if suffix == "" {
@@ -362,9 +271,9 @@ func makeResourceName(baseName string, suffix string) string {
 func (g *generator) findFunctionSchema(function string) (*schema.Function, bool) {
 	for _, pkg := range g.program.Packages() {
 		if pkg.Functions != nil {
-			for _, functionSchame := range pkg.Functions {
-				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.LowerCamelCase(function)) {
-					return functionSchame, true
+			for _, functionSchema := range pkg.Functions {
+				if functionSchema != nil && strings.HasSuffix(functionSchema.Token, names.LowerCamelCase(function)) {
+					return functionSchema, true
 				}
 			}
 		}
@@ -462,7 +371,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
 									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : Range.of(%s.get%s()) {\n", g.Indent, resultTypeName, names.Title(part))
+									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.get%s()) {\n", g.Indent, resultTypeName, names.Title(part))
 									g.Indented(func() {
 										suffix := "range.getKey()"
 										g.Fgenf(w, "%svar resource = ", g.Indent)
@@ -478,15 +387,15 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							} else {
 								// not an async function invoke
 								// wrap into range collection
-								g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
+								g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 							}
 						} else {
 							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
+							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 						}
 					}
 					// wrap into range collection
-					g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
+					g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 				default:
 					// assume function call returns a Range<T>
 					g.Fgenf(w, "%sfor (var range : %.12o) {\n", g.Indent, rangeExpr)
@@ -494,7 +403,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 
 			default:
 				// wrap into range collection
-				g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
+				g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 			}
 
 			g.Indented(func() {
