@@ -9,7 +9,6 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"math/rand"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -221,26 +220,9 @@ func (host *jvmLanguageHost) RunJvmCommand(
 	// Buffer the writes we see from build tool, from its stdout and stderr streams.
 	// We will display these ephemerally to the user. If the build does fail though, we will dump
 	// messages back to our own stdout/stderr, so they get picked up and displayed to the user.
-	streamID := rand.Int31() //nolint:gosec
 
-	infoBuffer := &bytes.Buffer{}
-	errorBuffer := &bytes.Buffer{}
-
-	infoWriter := &logWriter{
-		ctx:          ctx,
-		engineClient: engineClient,
-		streamID:     streamID,
-		buffer:       infoBuffer,
-		severity:     pulumirpc.LogSeverity_INFO,
-	}
-
-	errorWriter := &logWriter{
-		ctx:          ctx,
-		engineClient: engineClient,
-		streamID:     streamID,
-		buffer:       errorBuffer,
-		severity:     pulumirpc.LogSeverity_ERROR,
-	}
+	infoWriter := &bytes.Buffer{}
+	errorWriter := &bytes.Buffer{}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
@@ -251,8 +233,8 @@ func (host *jvmLanguageHost) RunJvmCommand(
 	if err := runCommand(cmd); err != nil {
 		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
 		// so they get displayed to the user.
-		os.Stdout.Write(infoBuffer.Bytes())
-		os.Stderr.Write(errorBuffer.Bytes())
+		os.Stdout.Write(infoWriter.Bytes())
+		os.Stderr.Write(errorWriter.Bytes())
 		return "", err
 	}
 
@@ -260,24 +242,7 @@ func (host *jvmLanguageHost) RunJvmCommand(
 		logging.V(5).Infof("'%v %v' completed successfully\n", name, commandStr)
 	}
 
-	return infoBuffer.String(), nil
-}
-
-type logWriter struct {
-	ctx          context.Context
-	engineClient pulumirpc.EngineClient
-	streamID     int32
-	severity     pulumirpc.LogSeverity
-	buffer       *bytes.Buffer
-}
-
-func (w *logWriter) Write(p []byte) (n int, err error) {
-	n, err = w.buffer.Write(p)
-	if err != nil {
-		return
-	}
-
-	return len(string(p)), nil
+	return infoWriter.String(), nil
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
