@@ -134,23 +134,8 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 
 	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
 
-	// Make a connection to the real engine that we will log messages to.
-	conn, err := grpc.Dial(
-		host.engineAddress,
-		grpc.WithInsecure(),
-		rpcutil.GrpcChannelOptions(),
-	)
-	if err != nil {
-		return nil, errors.Wrapf(err, "language host could not make connection to engine")
-	}
-
-	// Make a client around that connection.
-	// We can then make our own server that will act as a
-	// monitor for the SDK and forward to the real monitor.
-	engineClient := pulumirpc.NewEngineClient(conn)
-
 	// now, introspect the user project to see which pulumi resource packages it references.
-	pulumiPackages, err := host.DeterminePulumiPackages(ctx, engineClient)
+	pulumiPackages, err := host.determinePulumiPackages(ctx)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
 	}
@@ -182,15 +167,15 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
 }
 
-func (host *jvmLanguageHost) DeterminePulumiPackages(
-	ctx context.Context, engineClient pulumirpc.EngineClient) ([]plugin.PulumiPluginJSON, error) {
+func (host *jvmLanguageHost) determinePulumiPackages(
+	ctx context.Context) ([]plugin.PulumiPluginJSON, error) {
 
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.cmd
 	args := host.exec.pluginArgs
-	output, err := host.RunJvmCommand(ctx, engineClient, cmd, args)
+	output, err := host.runJvmCommand(ctx, cmd, args)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
 	}
@@ -209,8 +194,8 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 	return plugins, nil
 }
 
-func (host *jvmLanguageHost) RunJvmCommand(
-	ctx context.Context, engineClient pulumirpc.EngineClient, name string, args []string) (string, error) {
+func (host *jvmLanguageHost) runJvmCommand(
+	ctx context.Context, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
