@@ -5,11 +5,11 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.inputs.ObjectArgs;
 import com.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
 import com.pulumi.example.inputs.SomeOtherObjectArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class TypeUsesArgs extends com.pulumi.resources.ResourceArgs {
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 
     @Import(name="bar")
-      private final @Nullable Output<SomeOtherObjectArgs> bar;
+    private @Nullable Output<SomeOtherObjectArgs> bar;
 
-    public Output<SomeOtherObjectArgs> bar() {
-        return this.bar == null ? Codegen.empty() : this.bar;
+    public Optional<Output<SomeOtherObjectArgs>> bar() {
+        return Optional.ofNullable(this.bar);
     }
 
     @Import(name="baz")
-      private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
+    private @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
-    public Output<ObjectWithNodeOptionalInputsArgs> baz() {
-        return this.baz == null ? Codegen.empty() : this.baz;
+    public Optional<Output<ObjectWithNodeOptionalInputsArgs>> baz() {
+        return Optional.ofNullable(this.baz);
     }
 
     @Import(name="foo")
-      private final @Nullable Output<ObjectArgs> foo;
+    private @Nullable Output<ObjectArgs> foo;
 
-    public Output<ObjectArgs> foo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+    public Optional<Output<ObjectArgs>> foo() {
+        return Optional.ofNullable(this.foo);
     }
 
-    public TypeUsesArgs(
-        @Nullable Output<SomeOtherObjectArgs> bar,
-        @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz,
-        @Nullable Output<ObjectArgs> foo) {
-        this.bar = bar;
-        this.baz = baz;
-        this.foo = foo;
-    }
+    private TypeUsesArgs() {}
 
-    private TypeUsesArgs() {
-        this.bar = Codegen.empty();
-        this.baz = Codegen.empty();
-        this.foo = Codegen.empty();
+    protected TypeUsesArgs(TypeUsesArgs $) {
+        this.bar = $.bar;
+        this.baz = $.baz;
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeUsesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SomeOtherObjectArgs> bar;
-        private @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
-        private @Nullable Output<ObjectArgs> foo;
+        private TypeUsesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeUsesArgs();
         }
 
         public Builder(TypeUsesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bar = defaults.bar;
-    	      this.baz = defaults.baz;
-    	      this.foo = defaults.foo;
+            $ = new TypeUsesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bar(@Nullable Output<SomeOtherObjectArgs> bar) {
-            this.bar = bar;
+            $.bar = bar;
             return this;
         }
-        public Builder bar(@Nullable SomeOtherObjectArgs bar) {
-            this.bar = Codegen.ofNullable(bar);
-            return this;
+
+        public Builder bar(SomeOtherObjectArgs bar) {
+            return bar(Output.of(bar));
         }
+
         public Builder baz(@Nullable Output<ObjectWithNodeOptionalInputsArgs> baz) {
-            this.baz = baz;
+            $.baz = baz;
             return this;
         }
-        public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
-            this.baz = Codegen.ofNullable(baz);
-            return this;
+
+        public Builder baz(ObjectWithNodeOptionalInputsArgs baz) {
+            return baz(Output.of(baz));
         }
+
         public Builder foo(@Nullable Output<ObjectArgs> foo) {
-            this.foo = foo;
+            $.foo = foo;
             return this;
         }
-        public Builder foo(@Nullable ObjectArgs foo) {
-            this.foo = Codegen.ofNullable(foo);
-            return this;
-        }        public TypeUsesArgs build() {
-            return new TypeUsesArgs(bar, baz, foo);
+
+        public Builder foo(ObjectArgs foo) {
+            return foo(Output.of(foo));
+        }
+
+        public TypeUsesArgs build() {
+            return $;
         }
     }
+
 }
