@@ -191,7 +191,7 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.cmd
 	args := host.exec.pluginArgs
-	output, err := host.RunJvmCommand(ctx, engineClient, cmd, args, false /*logToUser*/)
+	output, err := host.RunJvmCommand(ctx, engineClient, cmd, args)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
 	}
@@ -211,7 +211,7 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 }
 
 func (host *jvmLanguageHost) RunJvmCommand(
-	ctx context.Context, engineClient pulumirpc.EngineClient, name string, args []string, logToUser bool) (string, error) {
+	ctx context.Context, engineClient pulumirpc.EngineClient, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -228,7 +228,6 @@ func (host *jvmLanguageHost) RunJvmCommand(
 
 	infoWriter := &logWriter{
 		ctx:          ctx,
-		logToUser:    logToUser,
 		engineClient: engineClient,
 		streamID:     streamID,
 		buffer:       infoBuffer,
@@ -237,7 +236,6 @@ func (host *jvmLanguageHost) RunJvmCommand(
 
 	errorWriter := &logWriter{
 		ctx:          ctx,
-		logToUser:    logToUser,
 		engineClient: engineClient,
 		streamID:     streamID,
 		buffer:       errorBuffer,
@@ -269,7 +267,6 @@ func (host *jvmLanguageHost) RunJvmCommand(
 
 type logWriter struct {
 	ctx          context.Context
-	logToUser    bool
 	engineClient pulumirpc.EngineClient
 	streamID     int32
 	severity     pulumirpc.LogSeverity
@@ -286,20 +283,6 @@ func (w *logWriter) Write(p []byte) (n int, err error) {
 }
 
 func (w *logWriter) LogToUser(val string) (int, error) {
-	if w.logToUser {
-		_, err := w.engineClient.Log(w.ctx, &pulumirpc.LogRequest{
-			Message:   strings.ToValidUTF8(val, "�"),
-			Urn:       "",
-			Ephemeral: true,
-			StreamId:  w.streamID,
-			Severity:  w.severity,
-		})
-
-		if err != nil {
-			return 0, err
-		}
-	}
-
 	return len(val), nil
 }
 
