@@ -28,7 +28,7 @@ type defaultsGen struct {
 }
 
 // Generates code for an expression to compute the value of config
-// property. The expression assumes an environment where `config` is
+// property. The expression assumes an environment where config is
 // bound to a Config instance. The type of the generated expression
 // must match targetType.
 func (dg *defaultsGen) configExpr(configProp *schema.Property, targetType TypeShape) (string, error) {
@@ -37,10 +37,12 @@ func (dg *defaultsGen) configExpr(configProp *schema.Property, targetType TypeSh
 
 // Generates an expression that evaluates to the default value of the
 // desired type. The expression takes care of env var lookups and
-// hydrating the expected targetType.
-func (dg *defaultsGen) defaultValueExpr(prop *schema.Property, targetType TypeShape) (string, error) {
-	paramName := names.Ident(prop.Name).String()
-	return dg.builderExpr(prop, targetType, "", paramName)
+// hydrating the expected targetType. Optional arg, if given, points
+// to a user-provided value that takes priority over defaults.
+func (dg *defaultsGen) defaultValueExpr(prop *schema.Property,
+	targetType TypeShape,
+	arg string) (string, error) {
+	return dg.builderExpr(prop, targetType, "", arg)
 }
 
 // Utility to generates a builder expr against the
@@ -63,7 +65,7 @@ func (dg *defaultsGen) builderExpr(
 
 	builderTransformCode := ""
 
-	isOutput, t0 := dg.unOutputTypeShape(targetType)
+	isOutput, t0 := targetType.unOutput()
 
 	if isOutput {
 		if prop.Secret {
@@ -77,7 +79,7 @@ func (dg *defaultsGen) builderExpr(
 			prop.Name)
 	}
 
-	isOptional, t := dg.unOptionalTypeShape(t0)
+	isOptional, t := t0.unOptional()
 
 	var code string
 
@@ -258,20 +260,6 @@ func (dg *defaultsGen) unEitherTypeShape(typeShape TypeShape) (bool, TypeShape, 
 		return true, typeShape.Parameters[0], typeShape.Parameters[1]
 	}
 	return false, TypeShape{}, TypeShape{}
-}
-
-func (dg *defaultsGen) unOptionalTypeShape(typeShape TypeShape) (bool, TypeShape) {
-	if typeShape.Type.Equal(names.Optional) {
-		return true, typeShape.Parameters[0]
-	}
-	return false, typeShape
-}
-
-func (dg *defaultsGen) unOutputTypeShape(typeShape TypeShape) (bool, TypeShape) {
-	if typeShape.Type.Equal(names.Output) {
-		return true, typeShape.Parameters[0]
-	}
-	return false, typeShape
 }
 
 // In cases when the default value is a known enum reference, this

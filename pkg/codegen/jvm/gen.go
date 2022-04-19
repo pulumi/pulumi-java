@@ -377,67 +377,6 @@ func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull b
 	}
 }
 
-func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nestedType string) string {
-	handleUnion := func(t *schema.UnionType, left, right string) string {
-		var m string
-		switch nestedType {
-		case codegen.UnwrapType(t.ElementTypes[0]).String():
-			m = left
-		case codegen.UnwrapType(t.ElementTypes[1]).String():
-			m = right
-		default:
-			panic(fmt.Sprintf("this should never happen: '%s' does not match either '%s' or '%s', for nested of: '%s'",
-				nestedType, t.ElementTypes[0], t.ElementTypes[1], nested,
-			))
-		}
-		return fmt.Sprintf("%s(%s)", m, nested)
-	}
-
-	switch t := t.(type) {
-	case *schema.OptionalType:
-		inner := typeInitializer(ctx, t.ElementType, nested, nestedType)
-		if ignoreOptional(t, true) {
-			return inner
-		}
-		var method string
-		switch t.ElementType.(type) {
-		case *schema.ArrayType, *schema.MapType, *schema.UnionType:
-			method = "of"
-		default:
-			method = "ofNullable"
-		}
-		return fmt.Sprintf("Optional.%s(%s)", method, inner)
-
-	case *schema.InputType:
-		switch t := t.ElementType.(type) {
-		case *schema.ArrayType:
-			return fmt.Sprintf("%s.ofList(%s)", ctx.ref(names.Output), nested)
-		case *schema.MapType:
-			return fmt.Sprintf("%s.ofMap(%s)", ctx.ref(names.Output), nested)
-		case *schema.UnionType:
-			return handleUnion(t,
-				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Output)),
-				fmt.Sprintf("%s.ofRight", ctx.ref(names.Output)))
-		default:
-			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Codegen), nested)
-		}
-
-	case *schema.ArrayType:
-		return fmt.Sprintf("%s.of(%s)", ctx.ref(names.List), nested)
-
-	case *schema.MapType:
-		return fmt.Sprintf("%s.of(%s)", ctx.ref(names.Map), nested)
-
-	case *schema.UnionType:
-		return handleUnion(t,
-			fmt.Sprintf("%s.leftOf", ctx.ref(names.Either)),
-			fmt.Sprintf("%s.rightOf", ctx.ref(names.Either)))
-
-	default:
-		return nested
-	}
-}
-
 type plainType struct {
 	mod                   *modContext
 	res                   *schema.Resource
@@ -450,24 +389,9 @@ type plainType struct {
 	state                 bool
 }
 
-func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, isFinal bool) error {
+func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, targetType TypeShape) error {
 	w := ctx.writer
-	requireInitializers := !pt.args || isInputType(prop.Type)
 	wireName := prop.Name
-	typ := prop.Type
-	if !prop.IsRequired() {
-		typ = codegen.OptionalType(prop)
-	}
-	propertyType := pt.mod.typeString(
-		ctx,
-		typ,
-		pt.propertyTypeQualifier,
-		true,                // is input
-		pt.state,            // is state
-		requireInitializers, // requires initializers
-		false,               // outer optional
-		false,               // inputless overload
-	)
 
 	// First generate the input annotation.
 	attributeArgs := ""
@@ -504,53 +428,24 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	}
 
 	propertyName := names.Ident(pt.mod.propertyName(prop))
-	propertyModifiers := make([]string, 2)
+	propertyModifiers := []string{}
 
 	propertyModifiers = append(propertyModifiers, "private")
-	if isFinal {
-		propertyModifiers = append(propertyModifiers, "final")
-	}
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.Import), wireName, attributeArgs)
-	fprintf(w, "    %s %s %s;\n\n",
-		strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
-
-	// Add getter
-	getterType := pt.mod.typeString(
-		ctx,
-		prop.Type,
-		pt.propertyTypeQualifier,
-		true,                // is input
-		pt.state,            // is state
-		requireInitializers, // FIXME: should not require initializers, make it immutable
-		true,                // outer optional
-		false,               // inputless overload
-	)
+	fprintf(w, "    %s %s %s;\n\n", strings.Join(propertyModifiers, " "),
+		targetType.ToCode(ctx.imports), propertyName)
 
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
-	returnStatement := fmt.Sprintf("this.%s", propertyName)
-	if opt, ok := prop.Type.(*schema.OptionalType); ok {
-		req := opt.ElementType
-		emptyStatement := emptyTypeInitializer(ctx, prop.Type, false)
-		switch req.(type) {
-		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
-			getterTypeNonOptional := pt.mod.typeString(
-				ctx,
-				req,
-				pt.propertyTypeQualifier,
-				true,                // is input
-				pt.state,            // is state
-				requireInitializers, // FIXME: should not require initializers, make it immutable
-				false,               // outer optional
-				false,               // inputless overload
-			)
-			getterType = getterTypeNonOptional
-			emptyStatement = emptyTypeInitializer(ctx, req, true)
-		default:
-			// nested type is only used when prop.Type is a union
-			returnStatement = typeInitializer(ctx, prop.Type, returnStatement, "")
-		}
-		returnStatement = fmt.Sprintf("this.%s == null ? %s : %s", propertyName, emptyStatement, returnStatement)
+
+	getterType, returnStatement := targetType, fmt.Sprintf("this.%s", propertyName)
+
+	// Wrap Nullable as optional when returning from the getter.
+	if isNullable, t := targetType.unNullable(); isNullable {
+		getterType = t.optional()
+		returnStatement = fmt.Sprintf("%s.ofNullable(%s)",
+			ctx.ref(names.Optional),
+			returnStatement)
 	}
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
@@ -566,226 +461,13 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 }
 
 func (pt *plainType) genInputType(ctx *classFileContext) error {
-	if len(pt.properties) > 250 {
-		return pt.genJumboInputType(ctx)
-	}
-	return pt.genNormalInputType(ctx)
-}
+	dg := defaultsGen{pt.mod, ctx}
 
-func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
-	// generates a class for Outputs where pt.properties >= 250
-	w := ctx.writer
-	fprintf(w, "\n")
-
-	props := pt.properties
-
-	// Open the class.
-	if pt.comment != "" {
-		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatBlockComment(pt.comment, ""))
-		fprintf(w, " */\n")
-	}
-
-	fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
-	fprintf(w, "\n")
-	fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
-	fprintf(w, "\n")
-
-	// Declare each input property.
-	for _, p := range props {
-		if err := pt.genInputProperty(ctx, p, false); err != nil {
-			return err
-		}
-		fprintf(w, "\n")
-		fprintf(w, "\n")
-	}
-
-	// Generate empty constructor, not that the instance created
-	// with this constructor may not be valid if there are 'required' fields.
-	if len(props) > 0 {
-		fprintf(w, "\n")
-		fprintf(w, "    private %s() {\n", pt.name)
-		for _, prop := range props {
-			fieldName := names.Ident(pt.mod.propertyName(prop))
-			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
-			fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
-		}
-		fprintf(w, "    }\n")
-	}
-
-	// Generate the builder
-	var builderFields []builderFieldTemplateContext
-	var builderSetters []builderSetterTemplateContext
-	for _, prop := range props {
+	// Determine property types
+	propTypes := make([]TypeShape, len(pt.properties))
+	for i, prop := range pt.properties {
 		requireInitializers := !pt.args || isInputType(prop.Type)
-		propertyName := names.Ident(pt.mod.propertyName(prop))
-		propertyType := pt.mod.typeString(
-			ctx,
-			prop.Type,
-			pt.propertyTypeQualifier,
-			true,                // is input
-			pt.state,            // is state
-			requireInitializers, // requires initializers
-			false,               // outer optional
-			false,               // inputless overload
-		)
 
-		// add field
-		builderFields = append(builderFields, builderFieldTemplateContext{
-			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.AsProperty().Field(),
-		})
-
-		setterName := names.Ident(prop.Name).AsProperty().Setter()
-		assignment := func(propertyName names.Ident) string {
-			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-			}
-			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			}
-			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-		}
-
-		// add main setter
-		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName,
-			PropertyType: propertyType.ToCode(ctx.imports),
-			PropertyName: propertyName.String(),
-			Assignment:   assignment(propertyName),
-			ListType:     propertyType.ListType(ctx),
-		})
-
-		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
-			var typ schema.Type = &schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)}
-			if prop.IsRequired() {
-				typ = codegen.UnwrapType(typ)
-			}
-			propertyTypeUnwrapped := pt.mod.typeString(
-				ctx,
-				typ,
-				pt.propertyTypeQualifier,
-				true,                // is input
-				pt.state,            // is state
-				requireInitializers, // requires initializers
-				false,               // outer optional
-				true,                // inputless overload
-			)
-
-			assignmentUnwrapped := func(propertyName names.Ident) string {
-				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-				}
-				if prop.IsRequired() {
-					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
-						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
-				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-			}
-
-			if !propertyTypeUnwrapped.Equal(propertyType) {
-				// add overloaded setter
-
-				builderSetters = append(builderSetters, builderSetterTemplateContext{
-					SetterName:   setterName,
-					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
-					PropertyName: propertyName.String(),
-					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     propertyTypeUnwrapped.ListType(ctx),
-				})
-			}
-		}
-	}
-
-	fprintf(w, "\n")
-	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     "    ",
-		Name:       "Builder",
-		IsFinal:    true,
-		IsJumbo:    true,
-		Fields:     builderFields,
-		Setters:    builderSetters,
-		ResultType: pt.name,
-		Objects:    ctx.ref(names.Objects),
-	}); err != nil {
-		return err
-	}
-	fprintf(w, "\n")
-
-	// Close the class.
-	fprintf(w, "}\n")
-
-	return nil
-}
-
-func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
-	w := ctx.writer
-	fprintf(w, "\n")
-
-	// TODO: proper support for large constructors
-	props := pt.properties
-
-	// Open the class.
-	if pt.comment != "" {
-		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatBlockComment(pt.comment, ""))
-		fprintf(w, " */\n")
-	}
-
-	fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
-	fprintf(w, "\n")
-	fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
-	fprintf(w, "\n")
-
-	// Declare each input property.
-	for _, p := range props {
-		if err := pt.genInputProperty(ctx, p, true); err != nil {
-			return err
-		}
-		fprintf(w, "\n")
-		fprintf(w, "\n")
-	}
-
-	// Generate the constructor.
-	fprintf(w, "    public %s(", pt.name)
-
-	// Generate the constructor parameters.
-	for i, prop := range props {
-
-		// TODO: factor this out (with similar code in genOutputType)
-		paramName := names.Ident(prop.Name)
-		paramType := pt.mod.typeString(
-			ctx,
-			prop.Type,
-			pt.propertyTypeQualifier,
-			true,
-			pt.state,
-			false, // requireInitializers
-			false, // outer optional
-			false, // inputless overload
-		).ToCode(ctx.imports)
-
-		if i == 0 && len(props) > 1 { // first param
-			fprintf(w, "\n")
-		}
-
-		terminator := ""
-		if i != len(props)-1 { // not last param
-			terminator = ",\n"
-		}
-
-		paramDef := fmt.Sprintf("%s %s%s", paramType, paramName, terminator)
-		if len(props) > 1 {
-			paramDef = fmt.Sprintf("        %s", paramDef)
-		}
-		fprintf(w, "%s", paramDef)
-	}
-
-	fprintf(w, ") {\n")
-
-	propTypes := make([]TypeShape, len(props))
-	for i, prop := range props {
-		requireInitializers := !pt.args || isInputType(prop.Type)
 		propTypes[i] = pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -798,119 +480,112 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 		)
 	}
 
-	// Generate the constructor body
-	for i, prop := range props {
-		propType := propTypes[i]
-		fieldName := names.Ident(pt.mod.propertyName(prop))
-		dv, err := (&defaultsGen{pt.mod, ctx}).defaultValueExpr(prop, propType)
-		if err != nil {
+	w := ctx.writer
+	fprintf(w, "\n")
+
+	// Open the class.
+	if pt.comment != "" {
+		fprintf(w, "/**\n")
+		fprintf(w, "%s\n", formatBlockComment(pt.comment, ""))
+		fprintf(w, " */\n")
+	}
+
+	fprintf(w, "public final class %s extends %s {\n\n", pt.name, pt.baseClass)
+	fprintf(w, "    public static final %s Empty = builder().build();\n\n", pt.name)
+
+	// Declare each input property.
+	for propIndex, p := range pt.properties {
+		propType := propTypes[propIndex]
+		if err := pt.genInputProperty(ctx, p, propType); err != nil {
 			return err
 		}
-		fprintf(w, "        this.%s = %s;\n", fieldName, dv)
+		fprintf(w, "\n\n")
 	}
+
+	if len(pt.properties) > 0 {
+		// Generate the empty constructor.
+		fprintf(w, "    private %s() {}\n\n", pt.name)
+
+		// Generate the copying constructor.
+		fprintf(w, "    protected %[1]s(%[1]s $) {\n", pt.name)
+		for _, prop := range pt.properties {
+			fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
+			fprintf(w, "        this.%[1]s = $.%[1]s;\n", fieldName)
+		}
+		fprintf(w, "    }\n\n")
+	}
+
+	// Generate builder() methods that start a Builder
+	fprintf(w, "    public static Builder builder() {\n")
+	fprintf(w, "        return new Builder();\n")
 	fprintf(w, "    }\n")
 
-	// Generate empty constructor, not that the instance created
-	// with this constructor may not be valid if there are 'required' fields.
-	if len(props) > 0 {
-		fprintf(w, "\n")
-		fprintf(w, "    private %s() {\n", pt.name)
-		for _, prop := range props {
-			fieldName := names.Ident(pt.mod.propertyName(prop))
-			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
-			fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
-		}
+	if len(pt.properties) > 0 {
+		fprintf(w, "    public static Builder builder(%s defaults) {\n", pt.name)
+		fprintf(w, "        return new Builder(defaults);\n")
 		fprintf(w, "    }\n")
 	}
 
-	// Generate the builder
-	var builderFields []builderFieldTemplateContext
-	var builderSetters []builderSetterTemplateContext
-	for propIndex, prop := range props {
-		requireInitializers := !pt.args || isInputType(prop.Type)
-		propertyName := names.Ident(pt.mod.propertyName(prop))
-		propertyType := propTypes[propIndex]
+	// Generate the Builder class
 
-		// add field
-		builderFields = append(builderFields, builderFieldTemplateContext{
-			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.AsProperty().Field(),
-		})
+	fprintf(w, `
+    public static final class Builder {
+        private %[1]s $;
+
+        public Builder() {
+            $ = new %[1]s();
+        }`+"\n", pt.name)
+
+	if len(pt.properties) > 0 {
+		fprintf(w, `
+        public Builder(%[1]s defaults) {
+            $ = new %[1]s(%[2]s.requireNonNull(defaults));
+        }`+"\n\n", pt.name, ctx.ref(names.Objects))
+	}
+
+	// Generate builder methods for every property.
+	for propIndex, prop := range pt.properties {
+		propType := propTypes[propIndex]
+		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
-		assignment := func(propertyName names.Ident) string {
-			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-			}
-			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			}
-			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-		}
 
-		// add main setter
-		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName,
-			PropertyType: propertyType.ToCode(ctx.imports),
-			PropertyName: propertyName.String(),
-			Assignment:   assignment(propertyName),
-			ListType:     propertyType.ListType(ctx),
-		})
+		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+			setterName, fieldName, propType.ToCode(ctx.imports))
+		fprintf(w, "            $.%[1]s = %[1]s;\n", fieldName)
+		fprintf(w, "            return this;\n")
+		fprintf(w, "        }\n\n")
 
-		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
-			var typ schema.Type = &schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)}
-			if prop.IsRequired() {
-				typ = codegen.UnwrapType(typ)
-			}
-			propertyTypeUnwrapped := pt.mod.typeString(
-				ctx,
-				typ,
-				pt.propertyTypeQualifier,
-				true,                // is input
-				pt.state,            // is state
-				requireInitializers, // requires initializers
-				false,               // outer optional
-				true,                // inputless overload
-			)
-
-			assignmentUnwrapped := func(propertyName names.Ident) string {
-				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-				}
-				if prop.IsRequired() {
-					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
-						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
-				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
-			}
-
-			if !propertyTypeUnwrapped.Equal(propertyType) {
-				// add overloaded setter
-				builderSetters = append(builderSetters, builderSetterTemplateContext{
-					SetterName:   setterName,
-					PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
-					PropertyName: propertyName.String(),
-					Assignment:   assignmentUnwrapped(propertyName),
-					ListType:     propertyTypeUnwrapped.ListType(ctx),
-				})
-			}
+		// Helper for when Output<T> is needed but T is provided
+		if isOutput, t := propType.unOutput(); isOutput {
+			fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+				setterName, fieldName, t.ToCode(ctx.imports))
+			fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
+				setterName, fieldName, ctx.ref(names.Output))
+			fprintf(w, "        }\n\n")
 		}
 	}
 
-	fprintf(w, "\n")
-	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     "    ",
-		Name:       "Builder",
-		IsFinal:    true,
-		Fields:     builderFields,
-		Setters:    builderSetters,
-		ResultType: pt.name,
-		Objects:    ctx.ref(names.Objects),
-	}); err != nil {
-		return err
-	}
-	fprintf(w, "\n")
+	// Generate the build() method that does default application
+	// and missing value checks for every property.
+	fprintf(w, "        public %s build() {\n", pt.name)
+	for propIndex, prop := range pt.properties {
+		propType := propTypes[propIndex]
+		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
+		propRef := fmt.Sprintf("$.%s", fieldName)
+		propInit, err := dg.defaultValueExpr(prop, propType, propRef)
+		if err != nil {
+			return err
+		}
 
+		if propRef != propInit {
+			fprintf(w, "            %s = %s;\n", propRef, propInit)
+		}
+	}
+	fprintf(w, "            return $;\n")
+	fprintf(w, "        }\n") // finish the build() method
+
+	fprintf(w, "    }\n\n") // finish the Builder class
 	// Close the class.
 	fprintf(w, "}\n")
 

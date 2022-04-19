@@ -151,3 +151,40 @@ func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	shape += ".build()"
 	return shape
 }
+
+func (ts TypeShape) unOutput() (bool, TypeShape) {
+	if ts.Type.Equal(names.Output) {
+		return true, ts.Parameters[0]
+	}
+	return false, ts
+}
+
+func (ts TypeShape) optional() TypeShape {
+	return TypeShape{
+		Type:       names.Optional,
+		Parameters: []TypeShape{ts},
+	}
+}
+
+func (ts TypeShape) unOptional() (bool, TypeShape) {
+	if ts.Type.Equal(names.Optional) {
+		return true, ts.Parameters[0]
+	}
+	return false, ts
+}
+
+func (ts TypeShape) unNullable() (bool, TypeShape) {
+	annotations := []string{}
+	isNullable := false
+	for _, a := range ts.Annotations {
+		if strings.Contains(a, "Nullable") {
+			isNullable = true
+		} else {
+			annotations = append(annotations, a)
+		}
+	}
+	if isNullable {
+		return true, TypeShape{ts.Type, ts.Parameters, annotations}
+	}
+	return false, ts
+}
