@@ -110,7 +110,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
         @Nullable Output<String> path,
         @Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
         this.enabledState = enabledState;
-        this.healthProbeMethod = healthProbeMethod == null ? Output.ofLeft("HEAD") : healthProbeMethod;
+        this.healthProbeMethod = Codegen.stringProp("healthProbeMethod").left(FrontDoorHealthProbeMethod.class).output().arg(healthProbeMethod).def("HEAD").getNullable();
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
         this.name = name;

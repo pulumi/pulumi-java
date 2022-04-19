@@ -44,7 +44,7 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
     public AzPowerShellSetupArgs(
         Output<String> type,
         Output<String> version) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 

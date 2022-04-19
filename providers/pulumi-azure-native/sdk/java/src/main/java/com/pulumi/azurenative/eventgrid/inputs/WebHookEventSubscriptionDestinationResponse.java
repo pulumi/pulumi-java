@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -108,10 +109,10 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
         this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl, "expected parameter 'endpointBaseUrl' to be non-null");
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
         this.endpointUrl = endpointUrl;
-        this.maxEventsPerBatch = maxEventsPerBatch == null ? 1 : maxEventsPerBatch;
-        this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes == null ? 64 : preferredBatchSizeInKilobytes;
+        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg(maxEventsPerBatch).def(1).getNullable();
+        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg(preferredBatchSizeInKilobytes).def(64).getNullable();
     }
 
     private WebHookEventSubscriptionDestinationResponse() {

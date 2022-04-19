@@ -60,7 +60,7 @@ public final class Mp4FormatArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> odataType,
         @Nullable Output<List<OutputFileArgs>> outputFiles) {
         this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.outputFiles = outputFiles;
     }
 

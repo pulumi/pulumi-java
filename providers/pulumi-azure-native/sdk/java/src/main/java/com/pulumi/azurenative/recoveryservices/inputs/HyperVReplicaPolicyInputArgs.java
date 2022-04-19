@@ -158,7 +158,7 @@ public final class HyperVReplicaPolicyInputArgs extends com.pulumi.resources.Res
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;
         this.initialReplicationMethod = initialReplicationMethod;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.offlineReplicationExportPath = offlineReplicationExportPath;
         this.offlineReplicationImportPath = offlineReplicationImportPath;
         this.onlineReplicationStartTime = onlineReplicationStartTime;

@@ -71,7 +71,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.re
         Output<String> webTestId) {
         this.componentId = Objects.requireNonNull(componentId, "expected parameter 'componentId' to be non-null");
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.webTestId = Objects.requireNonNull(webTestId, "expected parameter 'webTestId' to be non-null");
     }
 

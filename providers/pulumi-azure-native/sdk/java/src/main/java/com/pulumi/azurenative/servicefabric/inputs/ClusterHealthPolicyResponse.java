@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.azurenative.servicefabric.inputs.ApplicationHealthPolicyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -71,8 +72,8 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
         @Nullable Integer maxPercentUnhealthyApplications,
         @Nullable Integer maxPercentUnhealthyNodes) {
         this.applicationHealthPolicies = applicationHealthPolicies;
-        this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications == null ? 0 : maxPercentUnhealthyApplications;
-        this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes == null ? 0 : maxPercentUnhealthyNodes;
+        this.maxPercentUnhealthyApplications = Codegen.integerProp("maxPercentUnhealthyApplications").arg(maxPercentUnhealthyApplications).def(0).getNullable();
+        this.maxPercentUnhealthyNodes = Codegen.integerProp("maxPercentUnhealthyNodes").arg(maxPercentUnhealthyNodes).def(0).getNullable();
     }
 
     private ClusterHealthPolicyResponse() {

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,7 +71,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
         @Nullable String userName) {
         this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userName = userName;
     }
 

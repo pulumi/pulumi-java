@@ -102,7 +102,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
         this.description = description;
         this.scope = scope;
         this.status = status;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ActionGroupArgs() {

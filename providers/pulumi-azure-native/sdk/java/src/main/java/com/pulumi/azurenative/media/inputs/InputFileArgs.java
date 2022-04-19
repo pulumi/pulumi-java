@@ -67,7 +67,7 @@ public final class InputFileArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private InputFileArgs() {

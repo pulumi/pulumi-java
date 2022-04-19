@@ -74,7 +74,7 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
         Output<Either<String,MediaGraphRtspTransport>> transport) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.transport = Objects.requireNonNull(transport, "expected parameter 'transport' to be non-null");
     }
 

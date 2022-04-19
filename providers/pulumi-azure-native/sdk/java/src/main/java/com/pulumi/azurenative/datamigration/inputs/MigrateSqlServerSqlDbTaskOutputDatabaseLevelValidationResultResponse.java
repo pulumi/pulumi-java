@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.DataIntegrityValidationResult
 import com.pulumi.azurenative.datamigration.inputs.QueryAnalysisValidationResultResponse;
 import com.pulumi.azurenative.datamigration.inputs.SchemaComparisonValidationResultResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +159,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.migrationId = Objects.requireNonNull(migrationId, "expected parameter 'migrationId' to be non-null");
         this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult, "expected parameter 'queryAnalysisValidationResult' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
         this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult, "expected parameter 'schemaValidationResult' to be non-null");
         this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
         this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");

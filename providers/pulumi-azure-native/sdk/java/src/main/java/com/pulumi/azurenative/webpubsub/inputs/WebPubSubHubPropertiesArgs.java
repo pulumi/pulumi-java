@@ -46,7 +46,7 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
     public WebPubSubHubPropertiesArgs(
         @Nullable Output<String> anonymousConnectPolicy,
         @Nullable Output<List<EventHandlerArgs>> eventHandlers) {
-        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? Codegen.ofNullable("deny") : anonymousConnectPolicy;
+        this.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").output().arg(anonymousConnectPolicy).def("deny").getNullable();
         this.eventHandlers = eventHandlers;
     }
 

@@ -71,7 +71,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
         @Nullable Output<String> userName) {
         this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

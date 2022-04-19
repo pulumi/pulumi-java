@@ -171,7 +171,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends com.pulumi.
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.workspaceResourceId = workspaceResourceId;
     }
 

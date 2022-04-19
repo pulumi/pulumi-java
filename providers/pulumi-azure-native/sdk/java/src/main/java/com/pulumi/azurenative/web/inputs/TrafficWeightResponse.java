@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,7 +58,7 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
         @Nullable Boolean latestRevision,
         @Nullable String revisionName,
         @Nullable Integer weight) {
-        this.latestRevision = latestRevision == null ? false : latestRevision;
+        this.latestRevision = Codegen.booleanProp("latestRevision").arg(latestRevision).def(false).getNullable();
         this.revisionName = revisionName;
         this.weight = weight;
     }

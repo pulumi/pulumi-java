@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
         @Nullable Integer minNodeCount,
         @Nullable String nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = minNodeCount == null ? 0 : minNodeCount;
+        this.minNodeCount = Codegen.integerProp("minNodeCount").arg(minNodeCount).def(0).getNullable();
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
     }
 

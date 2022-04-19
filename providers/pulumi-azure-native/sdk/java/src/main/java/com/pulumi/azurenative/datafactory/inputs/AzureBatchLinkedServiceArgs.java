@@ -186,7 +186,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
         this.parameters = parameters;
         this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBatchLinkedServiceArgs() {

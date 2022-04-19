@@ -46,7 +46,7 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<String> bitrateKbps,
         Output<String> type) {
         this.bitrateKbps = bitrateKbps;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AudioEncoderAacArgs() {

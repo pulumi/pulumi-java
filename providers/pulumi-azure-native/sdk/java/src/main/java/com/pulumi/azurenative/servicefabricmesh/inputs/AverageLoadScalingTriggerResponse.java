@@ -5,6 +5,7 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -81,7 +82,7 @@ public final class AverageLoadScalingTriggerResponse extends com.pulumi.resource
         AutoScalingResourceMetricResponse metric,
         Integer scaleIntervalInSeconds,
         Double upperLoadThreshold) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold, "expected parameter 'lowerLoadThreshold' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
         this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds, "expected parameter 'scaleIntervalInSeconds' to be non-null");

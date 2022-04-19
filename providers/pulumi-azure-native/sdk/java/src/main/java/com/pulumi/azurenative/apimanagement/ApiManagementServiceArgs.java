@@ -272,8 +272,8 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
         this.apiVersionConstraint = apiVersionConstraint;
         this.certificates = certificates;
         this.customProperties = customProperties;
-        this.disableGateway = disableGateway == null ? Codegen.ofNullable(false) : disableGateway;
-        this.enableClientCertificate = enableClientCertificate == null ? Codegen.ofNullable(false) : enableClientCertificate;
+        this.disableGateway = Codegen.booleanProp("disableGateway").output().arg(disableGateway).def(false).getNullable();
+        this.enableClientCertificate = Codegen.booleanProp("enableClientCertificate").output().arg(enableClientCertificate).def(false).getNullable();
         this.hostnameConfigurations = hostnameConfigurations;
         this.identity = identity;
         this.location = location;
@@ -281,12 +281,12 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
         this.publisherEmail = Objects.requireNonNull(publisherEmail, "expected parameter 'publisherEmail' to be non-null");
         this.publisherName = Objects.requireNonNull(publisherName, "expected parameter 'publisherName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restore = restore == null ? Codegen.ofNullable(false) : restore;
+        this.restore = Codegen.booleanProp("restore").output().arg(restore).def(false).getNullable();
         this.serviceName = serviceName;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.tags = tags;
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;
-        this.virtualNetworkType = virtualNetworkType == null ? Output.ofLeft("None") : virtualNetworkType;
+        this.virtualNetworkType = Codegen.stringProp("virtualNetworkType").left(VirtualNetworkType.class).output().arg(virtualNetworkType).def("None").getNullable();
         this.zones = zones;
     }
 

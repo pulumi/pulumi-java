@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,8 +56,8 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
         @Nullable String source,
         @Nullable String type,
         String value) {
-        this.source = source == null ? "Inline" : source;
-        this.type = type == null ? "TSql" : type;
+        this.source = Codegen.stringProp("source").arg(source).def("Inline").getNullable();
+        this.type = Codegen.stringProp("type").arg(type).def("TSql").getNullable();
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 

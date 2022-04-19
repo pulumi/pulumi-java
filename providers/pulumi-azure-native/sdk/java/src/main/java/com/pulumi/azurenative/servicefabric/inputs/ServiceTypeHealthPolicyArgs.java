@@ -31,7 +31,7 @@ public final class ServiceTypeHealthPolicyArgs extends com.pulumi.resources.Reso
     }
 
     public ServiceTypeHealthPolicyArgs(@Nullable Output<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").output().arg(maxPercentUnhealthyServices).def(0).getNullable();
     }
 
     private ServiceTypeHealthPolicyArgs() {

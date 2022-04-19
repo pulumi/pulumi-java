@@ -9,6 +9,7 @@ import com.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseResponse;
 import com.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -83,7 +84,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
         this.backupParameters = backupParameters;
         this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
     }
 

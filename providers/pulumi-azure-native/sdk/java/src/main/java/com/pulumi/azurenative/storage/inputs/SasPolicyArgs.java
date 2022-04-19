@@ -45,7 +45,7 @@ public final class SasPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public SasPolicyArgs(
         Output<Either<String,ExpirationAction>> expirationAction,
         Output<String> sasExpirationPeriod) {
-        this.expirationAction = expirationAction == null ? Output.ofLeft("Log") : Objects.requireNonNull(expirationAction, "expected parameter 'expirationAction' to be non-null");
+        this.expirationAction = Codegen.stringProp("expirationAction").left(ExpirationAction.class).output().arg(expirationAction).def("Log").require();
         this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod, "expected parameter 'sasExpirationPeriod' to be non-null");
     }
 

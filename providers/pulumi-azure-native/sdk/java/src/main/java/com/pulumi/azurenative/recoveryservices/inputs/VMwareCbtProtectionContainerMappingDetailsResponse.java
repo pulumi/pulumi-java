@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -102,7 +103,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
         String storageAccountId,
         String storageAccountSasSecretName,
         String targetLocation) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.keyVaultId = Objects.requireNonNull(keyVaultId, "expected parameter 'keyVaultId' to be non-null");
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
         this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.devtestlab.inputs.GalleryImageReferenceResponse;
 import com.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesResponse;
 import com.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -352,13 +353,13 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
         @Nullable String storageType,
         @Nullable Map<String,String> tags,
         @Nullable String userName) {
-        this.allowClaim = allowClaim == null ? false : allowClaim;
+        this.allowClaim = Codegen.booleanProp("allowClaim").arg(allowClaim).def(false).getNullable();
         this.artifacts = artifacts;
         this.bulkCreationParameters = bulkCreationParameters;
         this.createdDate = createdDate;
         this.customImageId = customImageId;
         this.dataDiskParameters = dataDiskParameters;
-        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? false : disallowPublicIpAddress;
+        this.disallowPublicIpAddress = Codegen.booleanProp("disallowPublicIpAddress").arg(disallowPublicIpAddress).def(false).getNullable();
         this.environmentId = environmentId;
         this.expirationDate = expirationDate;
         this.galleryImageReference = galleryImageReference;
@@ -369,14 +370,14 @@ public final class LabVirtualMachineCreationParameterResponse extends com.pulumi
         this.name = name;
         this.networkInterface = networkInterface;
         this.notes = notes;
-        this.ownerObjectId = ownerObjectId == null ? "dynamicValue" : ownerObjectId;
+        this.ownerObjectId = Codegen.stringProp("ownerObjectId").arg(ownerObjectId).def("dynamicValue").getNullable();
         this.ownerUserPrincipalName = ownerUserPrincipalName;
         this.password = password;
         this.planId = planId;
         this.scheduleParameters = scheduleParameters;
         this.size = size;
         this.sshKey = sshKey;
-        this.storageType = storageType == null ? "labStorageType" : storageType;
+        this.storageType = Codegen.stringProp("storageType").arg(storageType).def("labStorageType").getNullable();
         this.tags = tags;
         this.userName = userName;
     }

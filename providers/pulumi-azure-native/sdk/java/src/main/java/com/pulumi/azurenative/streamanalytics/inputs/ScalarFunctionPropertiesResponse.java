@@ -9,6 +9,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.FunctionOutputResponse;
 import com.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -90,7 +91,7 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
         this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
         this.inputs = inputs;
         this.output = output;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ScalarFunctionPropertiesResponse() {

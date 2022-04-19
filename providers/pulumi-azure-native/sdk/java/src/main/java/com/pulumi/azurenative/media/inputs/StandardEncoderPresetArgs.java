@@ -91,7 +91,7 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
         this.codecs = Objects.requireNonNull(codecs, "expected parameter 'codecs' to be non-null");
         this.filters = filters;
         this.formats = Objects.requireNonNull(formats, "expected parameter 'formats' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private StandardEncoderPresetArgs() {

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -55,7 +56,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
         String type,
         String username) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 

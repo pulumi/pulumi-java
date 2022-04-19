@@ -45,8 +45,8 @@ public final class RetentionPolicyParametersArgs extends com.pulumi.resources.Re
     public RetentionPolicyParametersArgs(
         @Nullable Output<Integer> days,
         @Nullable Output<Boolean> enabled) {
-        this.days = days == null ? Codegen.ofNullable(0) : days;
-        this.enabled = enabled == null ? Codegen.ofNullable(false) : enabled;
+        this.days = Codegen.integerProp("days").output().arg(days).def(0).getNullable();
+        this.enabled = Codegen.booleanProp("enabled").output().arg(enabled).def(false).getNullable();
     }
 
     private RetentionPolicyParametersArgs() {

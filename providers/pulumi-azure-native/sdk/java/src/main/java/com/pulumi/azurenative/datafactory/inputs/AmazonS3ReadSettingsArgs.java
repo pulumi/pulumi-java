@@ -189,7 +189,7 @@ public final class AmazonS3ReadSettingsArgs extends com.pulumi.resources.Resourc
         this.partitionRootPath = partitionRootPath;
         this.prefix = prefix;
         this.recursive = recursive;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.wildcardFileName = wildcardFileName;
         this.wildcardFolderPath = wildcardFolderPath;
     }

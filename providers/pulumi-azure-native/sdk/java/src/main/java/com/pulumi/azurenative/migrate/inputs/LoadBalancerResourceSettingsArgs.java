@@ -99,7 +99,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
         @Nullable Output<String> zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.sku = sku;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.zones = zones;

@@ -7,6 +7,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.TlsEndpointResponse;
 import com.pulumi.azurenative.videoanalyzer.inputs.UnsecuredEndpointResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +75,7 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.transport = transport;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private RtspSourceResponse() {

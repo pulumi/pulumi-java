@@ -45,7 +45,7 @@ public final class AbsoluteDeleteOptionArgs extends com.pulumi.resources.Resourc
         Output<String> duration,
         Output<String> objectType) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private AbsoluteDeleteOptionArgs() {

@@ -11,6 +11,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyRespo
 import com.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -109,7 +110,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
         @Nullable Object schedulePolicy,
         @Nullable String timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
         this.protectedItemsCount = protectedItemsCount;

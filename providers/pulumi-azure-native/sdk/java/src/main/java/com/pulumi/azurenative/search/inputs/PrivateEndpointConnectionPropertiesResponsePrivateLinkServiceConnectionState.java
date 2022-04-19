@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.search.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,7 +56,7 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
         @Nullable String actionsRequired,
         @Nullable String description,
         @Nullable String status) {
-        this.actionsRequired = actionsRequired == null ? "None" : actionsRequired;
+        this.actionsRequired = Codegen.stringProp("actionsRequired").arg(actionsRequired).def("None").getNullable();
         this.description = description;
         this.status = status;
     }

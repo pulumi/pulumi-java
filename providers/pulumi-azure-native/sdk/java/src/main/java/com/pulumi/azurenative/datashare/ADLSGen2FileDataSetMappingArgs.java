@@ -168,7 +168,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends com.pulumi.resources.R
         this.dataSetMappingName = dataSetMappingName;
         this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
         this.fileSystem = Objects.requireNonNull(fileSystem, "expected parameter 'fileSystem' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.outputType = outputType;
         this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

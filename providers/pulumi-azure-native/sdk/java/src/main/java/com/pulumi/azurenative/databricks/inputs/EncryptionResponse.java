@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,7 +69,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable String keyVaultUri,
         @Nullable String keyVersion) {
         this.keyName = keyName;
-        this.keySource = keySource == null ? "Default" : keySource;
+        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Default").getNullable();
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
     }

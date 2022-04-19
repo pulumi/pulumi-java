@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,7 +71,7 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
         this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value == null ? "1" : value;
+        this.value = Codegen.stringProp("value").arg(value).def("1").getNullable();
     }
 
     private ScaleActionResponse() {

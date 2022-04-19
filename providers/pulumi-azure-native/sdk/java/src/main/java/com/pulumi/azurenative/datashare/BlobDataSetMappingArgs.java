@@ -168,7 +168,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
         this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
         this.dataSetMappingName = dataSetMappingName;
         this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.outputType = outputType;
         this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

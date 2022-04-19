@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -175,7 +176,7 @@ public final class DriveStatusResponse extends com.pulumi.resources.InvokeArgs {
         this.manifestHash = manifestHash;
         this.manifestUri = manifestUri;
         this.percentComplete = percentComplete;
-        this.state = state == null ? "Specified" : state;
+        this.state = Codegen.stringProp("state").arg(state).def("Specified").getNullable();
         this.verboseLogUri = verboseLogUri;
     }
 

@@ -190,7 +190,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Integer> timeoutInSeconds,
         Output<String> vmName) {
-        this.asyncExecution = asyncExecution == null ? Codegen.ofNullable(false) : asyncExecution;
+        this.asyncExecution = Codegen.booleanProp("asyncExecution").output().arg(asyncExecution).def(false).getNullable();
         this.errorBlobUri = errorBlobUri;
         this.location = location;
         this.outputBlobUri = outputBlobUri;

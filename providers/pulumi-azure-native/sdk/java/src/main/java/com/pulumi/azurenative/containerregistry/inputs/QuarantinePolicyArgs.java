@@ -33,7 +33,7 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
     }
 
     public QuarantinePolicyArgs(@Nullable Output<Either<String,PolicyStatus>> status) {
-        this.status = status == null ? Output.ofLeft("disabled") : status;
+        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
     }
 
     private QuarantinePolicyArgs() {

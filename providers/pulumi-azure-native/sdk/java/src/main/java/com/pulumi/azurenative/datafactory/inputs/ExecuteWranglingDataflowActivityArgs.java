@@ -226,7 +226,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends com.pulumi.resou
         this.sinks = sinks;
         this.staging = staging;
         this.traceLevel = traceLevel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

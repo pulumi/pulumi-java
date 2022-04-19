@@ -46,7 +46,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     public VirtualNetworkRuleArgs(
         @Nullable Output<Either<String,Action>> action,
         Output<String> virtualNetworkResourceId) {
-        this.action = action == null ? Output.ofLeft("Allow") : action;
+        this.action = Codegen.stringProp("action").left(Action.class).output().arg(action).def("Allow").getNullable();
         this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
     }
 

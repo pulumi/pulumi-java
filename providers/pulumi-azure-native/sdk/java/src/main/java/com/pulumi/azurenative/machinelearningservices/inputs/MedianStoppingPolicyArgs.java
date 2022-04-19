@@ -59,7 +59,7 @@ public final class MedianStoppingPolicyArgs extends com.pulumi.resources.Resourc
         Output<String> policyType) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
+        this.policyType = Codegen.stringProp("policyType").output().arg(policyType).require();
     }
 
     private MedianStoppingPolicyArgs() {

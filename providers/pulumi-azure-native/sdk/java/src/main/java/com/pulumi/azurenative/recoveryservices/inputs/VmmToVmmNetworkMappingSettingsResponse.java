@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
     }
 
     public VmmToVmmNetworkMappingSettingsResponse(String instanceType) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
     }
 
     private VmmToVmmNetworkMappingSettingsResponse() {

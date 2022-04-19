@@ -92,7 +92,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
         Output<String> workspaceName) {
         this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName, "expected parameter 'alertRuleTemplateName' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.ruleId = ruleId;
         this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");

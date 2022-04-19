@@ -202,7 +202,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
         this.label = label;
         this.level = level;
         this.maxBitrate = maxBitrate;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.profile = profile;
         this.referenceFrames = referenceFrames;
         this.slices = slices;

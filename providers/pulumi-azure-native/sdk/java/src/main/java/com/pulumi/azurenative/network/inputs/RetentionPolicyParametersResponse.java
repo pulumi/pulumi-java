@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
     public RetentionPolicyParametersResponse(
         @Nullable Integer days,
         @Nullable Boolean enabled) {
-        this.days = days == null ? 0 : days;
-        this.enabled = enabled == null ? false : enabled;
+        this.days = Codegen.integerProp("days").arg(days).def(0).getNullable();
+        this.enabled = Codegen.booleanProp("enabled").arg(enabled).def(false).getNullable();
     }
 
     private RetentionPolicyParametersResponse() {

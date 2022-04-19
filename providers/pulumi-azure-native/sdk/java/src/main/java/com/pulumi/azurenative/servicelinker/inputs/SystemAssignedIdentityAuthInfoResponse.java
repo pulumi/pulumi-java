@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicelinker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
     }
 
     public SystemAssignedIdentityAuthInfoResponse(String authType) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").arg(authType).require();
     }
 
     private SystemAssignedIdentityAuthInfoResponse() {

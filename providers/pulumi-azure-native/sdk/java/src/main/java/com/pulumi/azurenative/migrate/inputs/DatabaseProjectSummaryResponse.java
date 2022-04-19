@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -70,7 +71,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
         @Nullable String lastSummaryRefreshedTime,
         @Nullable String refreshSummaryState) {
         this.extendedSummary = extendedSummary;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.refreshSummaryState = refreshSummaryState;
     }

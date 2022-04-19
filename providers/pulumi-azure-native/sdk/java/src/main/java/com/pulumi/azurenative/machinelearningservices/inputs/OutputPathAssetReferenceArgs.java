@@ -59,7 +59,7 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
         Output<String> referenceType) {
         this.jobId = jobId;
         this.path = path;
-        this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
+        this.referenceType = Codegen.stringProp("referenceType").output().arg(referenceType).require();
     }
 
     private OutputPathAssetReferenceArgs() {

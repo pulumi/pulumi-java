@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.azurenative.containerregistry.inputs.OverrideTaskStepPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -95,11 +96,11 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
         String taskId,
         String type) {
         this.agentPoolName = agentPoolName;
-        this.isArchiveEnabled = isArchiveEnabled == null ? false : isArchiveEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
         this.logTemplate = logTemplate;
         this.overrideTaskStepProperties = overrideTaskStepProperties;
         this.taskId = Objects.requireNonNull(taskId, "expected parameter 'taskId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private TaskRunRequestResponse() {

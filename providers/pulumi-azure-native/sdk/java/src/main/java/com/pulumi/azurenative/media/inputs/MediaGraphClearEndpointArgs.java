@@ -59,7 +59,7 @@ public final class MediaGraphClearEndpointArgs extends com.pulumi.resources.Reso
         Output<String> odataType,
         Output<String> url) {
         this.credentials = credentials;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

@@ -11,6 +11,7 @@ import com.pulumi.azurenative.streamanalytics.inputs.EventHubStreamInputDataSour
 import com.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceResponse;
 import com.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -92,7 +93,7 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
         this.diagnostics = Objects.requireNonNull(diagnostics, "expected parameter 'diagnostics' to be non-null");
         this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
         this.serialization = serialization;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private StreamInputPropertiesResponse() {

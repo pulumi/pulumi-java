@@ -127,7 +127,7 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.subjectBeginsWith = subjectBeginsWith;
         this.subjectEndsWith = subjectEndsWith;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CustomEventsTriggerArgs() {

@@ -45,7 +45,7 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
     public WebAnonymousAuthenticationArgs(
         Output<String> authenticationType,
         Output<Object> url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

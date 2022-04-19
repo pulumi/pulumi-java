@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,7 +67,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
         String diskSerialNumber,
         String errorLogLink,
         String verboseLogLink) {
-        this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType, "expected parameter 'copyLogDetailsType' to be non-null");
+        this.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg(copyLogDetailsType).require();
         this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber, "expected parameter 'diskSerialNumber' to be non-null");
         this.errorLogLink = Objects.requireNonNull(errorLogLink, "expected parameter 'errorLogLink' to be non-null");
         this.verboseLogLink = Objects.requireNonNull(verboseLogLink, "expected parameter 'verboseLogLink' to be non-null");

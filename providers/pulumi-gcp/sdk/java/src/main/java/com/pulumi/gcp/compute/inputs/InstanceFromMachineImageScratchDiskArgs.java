@@ -22,7 +22,7 @@ public final class InstanceFromMachineImageScratchDiskArgs extends com.pulumi.re
     }
 
     public InstanceFromMachineImageScratchDiskArgs(Output<String> interface_) {
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
     }
 
     private InstanceFromMachineImageScratchDiskArgs() {

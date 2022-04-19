@@ -390,7 +390,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
         this.ipRules = ipRules;
         this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
         this.keyVaultKeyUri = keyVaultKeyUri;
-        this.kind = kind == null ? Output.ofLeft("GlobalDocumentDB") : kind;
+        this.kind = Codegen.stringProp("kind").left(DatabaseAccountKind.class).output().arg(kind).def("GlobalDocumentDB").getNullable();
         this.location = location;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
         this.networkAclBypass = networkAclBypass;

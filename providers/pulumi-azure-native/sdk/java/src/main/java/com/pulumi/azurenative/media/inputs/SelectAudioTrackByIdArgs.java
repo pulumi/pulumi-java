@@ -61,7 +61,7 @@ public final class SelectAudioTrackByIdArgs extends com.pulumi.resources.Resourc
         Output<String> odataType,
         Output<Double> trackId) {
         this.channelMapping = channelMapping;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
     }
 

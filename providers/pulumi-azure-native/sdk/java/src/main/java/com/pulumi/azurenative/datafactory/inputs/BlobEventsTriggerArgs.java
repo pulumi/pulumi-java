@@ -143,7 +143,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
         this.ignoreEmptyBlobs = ignoreEmptyBlobs;
         this.pipelines = pipelines;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private BlobEventsTriggerArgs() {

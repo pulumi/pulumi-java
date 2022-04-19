@@ -207,7 +207,7 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
         @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
         this.diskEncryptionInfo = diskEncryptionInfo;
         this.fabricObjectId = fabricObjectId;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.multiVmGroupName = multiVmGroupName;
         this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
         this.recoveryAvailabilityZone = recoveryAvailabilityZone;

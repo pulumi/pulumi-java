@@ -99,7 +99,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends com.pul
         this.backupManagementType = backupManagementType;
         this.itemId = itemId;
         this.policyId = policyId;
-        this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType, "expected parameter 'protectionIntentItemType' to be non-null");
+        this.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").output().arg(protectionIntentItemType).require();
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
     }

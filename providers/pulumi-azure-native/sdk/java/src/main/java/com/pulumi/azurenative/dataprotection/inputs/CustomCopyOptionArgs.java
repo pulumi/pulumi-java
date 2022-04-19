@@ -46,7 +46,7 @@ public final class CustomCopyOptionArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<String> duration,
         Output<String> objectType) {
         this.duration = duration;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private CustomCopyOptionArgs() {

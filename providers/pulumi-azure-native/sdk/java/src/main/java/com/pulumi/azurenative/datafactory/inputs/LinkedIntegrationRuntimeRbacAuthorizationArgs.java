@@ -58,7 +58,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
         Output<String> authorizationType,
         @Nullable Output<CredentialReferenceArgs> credential,
         Output<String> resourceId) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
+        this.authorizationType = Codegen.stringProp("authorizationType").output().arg(authorizationType).require();
         this.credential = credential;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }

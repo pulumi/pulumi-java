@@ -227,7 +227,7 @@ public final class AzureBlobDatasetArgs extends com.pulumi.resources.ResourceArg
         this.schema = schema;
         this.structure = structure;
         this.tableRootLocation = tableRootLocation;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBlobDatasetArgs() {

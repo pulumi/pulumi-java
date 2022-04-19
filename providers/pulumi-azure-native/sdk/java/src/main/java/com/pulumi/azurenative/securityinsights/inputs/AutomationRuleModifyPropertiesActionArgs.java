@@ -59,7 +59,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
         Output<String> actionType,
         Output<Integer> order) {
         this.actionConfiguration = Objects.requireNonNull(actionConfiguration, "expected parameter 'actionConfiguration' to be non-null");
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
         this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
     }
 

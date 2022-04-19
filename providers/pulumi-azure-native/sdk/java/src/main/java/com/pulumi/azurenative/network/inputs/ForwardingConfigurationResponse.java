@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.CacheConfigurationResponse;
 import com.pulumi.azurenative.network.inputs.SubResourceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -85,7 +86,7 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;
         this.forwardingProtocol = forwardingProtocol;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private ForwardingConfigurationResponse() {

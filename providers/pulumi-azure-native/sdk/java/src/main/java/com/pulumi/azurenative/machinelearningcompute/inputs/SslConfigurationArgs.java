@@ -73,7 +73,7 @@ public final class SslConfigurationArgs extends com.pulumi.resources.ResourceArg
         this.cert = cert;
         this.cname = cname;
         this.key = key;
-        this.status = status == null ? Output.ofLeft("Enabled") : status;
+        this.status = Codegen.stringProp("status").left(Status.class).output().arg(status).def("Enabled").getNullable();
     }
 
     private SslConfigurationArgs() {

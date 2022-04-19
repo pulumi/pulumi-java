@@ -61,7 +61,7 @@ public final class SnowflakeImportCopyCommandArgs extends com.pulumi.resources.R
         Output<String> type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SnowflakeImportCopyCommandArgs() {

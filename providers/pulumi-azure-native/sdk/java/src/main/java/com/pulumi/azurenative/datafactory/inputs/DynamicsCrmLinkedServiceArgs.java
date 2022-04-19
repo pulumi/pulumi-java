@@ -248,7 +248,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
         this.servicePrincipalCredentialType = servicePrincipalCredentialType;
         this.servicePrincipalId = servicePrincipalId;
         this.serviceUri = serviceUri;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

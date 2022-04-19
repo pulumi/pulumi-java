@@ -99,7 +99,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions) {
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.videoCreationProperties = videoCreationProperties;
         this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
         this.videoPublishingOptions = videoPublishingOptions;

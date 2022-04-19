@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.digitaltwins.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -144,7 +145,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
         this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri, "expected parameter 'adxEndpointUri' to be non-null");
         this.adxResourceId = Objects.requireNonNull(adxResourceId, "expected parameter 'adxResourceId' to be non-null");
         this.adxTableName = adxTableName;
-        this.connectionType = Objects.requireNonNull(connectionType, "expected parameter 'connectionType' to be non-null");
+        this.connectionType = Codegen.stringProp("connectionType").arg(connectionType).require();
         this.eventHubConsumerGroup = eventHubConsumerGroup;
         this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri, "expected parameter 'eventHubEndpointUri' to be non-null");
         this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath, "expected parameter 'eventHubEntityPath' to be non-null");

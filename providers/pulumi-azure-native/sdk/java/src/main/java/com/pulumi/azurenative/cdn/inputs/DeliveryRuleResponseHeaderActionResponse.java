@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.azurenative.cdn.inputs.HeaderActionParametersResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class DeliveryRuleResponseHeaderActionResponse extends com.pulumi.r
     public DeliveryRuleResponseHeaderActionResponse(
         String name,
         HeaderActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
+        this.name = Codegen.stringProp("name").arg(name).require();
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 

@@ -111,7 +111,7 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
         this.customHost = customHost;
         this.customPath = customPath;
         this.customQueryString = customQueryString;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.redirectProtocol = redirectProtocol;
         this.redirectType = redirectType;
     }

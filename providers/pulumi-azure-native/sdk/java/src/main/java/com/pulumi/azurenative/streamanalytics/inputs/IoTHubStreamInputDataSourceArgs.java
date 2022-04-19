@@ -98,7 +98,7 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
         this.iotHubNamespace = iotHubNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private IoTHubStreamInputDataSourceArgs() {

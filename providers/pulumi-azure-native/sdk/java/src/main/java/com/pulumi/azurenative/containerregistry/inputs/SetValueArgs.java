@@ -57,7 +57,7 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> isSecret,
         Output<String> name,
         Output<String> value) {
-        this.isSecret = isSecret == null ? Codegen.ofNullable(false) : isSecret;
+        this.isSecret = Codegen.booleanProp("isSecret").output().arg(isSecret).def(false).getNullable();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }

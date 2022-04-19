@@ -58,7 +58,7 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> minNodeCount,
         @Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = minNodeCount == null ? Codegen.ofNullable(0) : minNodeCount;
+        this.minNodeCount = Codegen.integerProp("minNodeCount").output().arg(minNodeCount).def(0).getNullable();
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
     }
 

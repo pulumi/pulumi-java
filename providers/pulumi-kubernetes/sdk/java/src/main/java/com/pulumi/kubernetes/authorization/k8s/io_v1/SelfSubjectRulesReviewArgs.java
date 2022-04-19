@@ -66,8 +66,8 @@ public final class SelfSubjectRulesReviewArgs extends com.pulumi.resources.Resou
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         Output<SelfSubjectRulesReviewSpecArgs> spec) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
     }

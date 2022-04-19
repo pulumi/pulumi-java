@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -91,7 +92,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
         String siteId,
         String siteName) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? false : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
+        this.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").arg(isWebchatPreviewEnabled).def(false).require();
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.key2 = Objects.requireNonNull(key2, "expected parameter 'key2' to be non-null");
         this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");

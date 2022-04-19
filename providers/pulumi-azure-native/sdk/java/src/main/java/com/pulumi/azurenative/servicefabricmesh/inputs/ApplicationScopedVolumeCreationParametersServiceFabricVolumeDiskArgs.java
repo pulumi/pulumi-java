@@ -60,7 +60,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
         Output<String> kind,
         Output<Either<String,SizeTypes>> sizeDisk) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.sizeDisk = Objects.requireNonNull(sizeDisk, "expected parameter 'sizeDisk' to be non-null");
     }
 

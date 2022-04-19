@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +97,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.osType = osType;
         this.role = role;
-        this.subnetCidr = subnetCidr == null ? "10.0.0.0/24" : subnetCidr;
+        this.subnetCidr = Codegen.stringProp("subnetCidr").arg(subnetCidr).def("10.0.0.0/24").getNullable();
         this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
     }
 

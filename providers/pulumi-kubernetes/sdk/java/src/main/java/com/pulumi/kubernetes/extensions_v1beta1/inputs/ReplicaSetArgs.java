@@ -83,8 +83,8 @@ public final class ReplicaSetArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<ReplicaSetSpecArgs> spec,
         @Nullable Output<ReplicaSetStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
         this.status = status;

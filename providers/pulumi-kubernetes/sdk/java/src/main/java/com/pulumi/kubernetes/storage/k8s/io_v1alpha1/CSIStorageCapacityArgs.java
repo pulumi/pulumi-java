@@ -110,9 +110,9 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<LabelSelectorArgs> nodeTopology,
         Output<String> storageClassName) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.capacity = capacity;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.maximumVolumeSize = maximumVolumeSize;
         this.metadata = metadata;
         this.nodeTopology = nodeTopology;

@@ -47,7 +47,7 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
         @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties,
         Output<String> type) {
         this.periodicModeProperties = periodicModeProperties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private PeriodicModeBackupPolicyArgs() {

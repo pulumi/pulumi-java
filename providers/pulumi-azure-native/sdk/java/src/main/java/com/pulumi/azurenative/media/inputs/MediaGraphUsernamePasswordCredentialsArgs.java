@@ -56,7 +56,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
         Output<String> odataType,
         Output<String> password,
         Output<String> username) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }

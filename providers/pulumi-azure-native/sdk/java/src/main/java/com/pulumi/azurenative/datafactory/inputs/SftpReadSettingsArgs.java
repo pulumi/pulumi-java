@@ -189,7 +189,7 @@ public final class SftpReadSettingsArgs extends com.pulumi.resources.ResourceArg
         this.modifiedDatetimeStart = modifiedDatetimeStart;
         this.partitionRootPath = partitionRootPath;
         this.recursive = recursive;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.wildcardFileName = wildcardFileName;
         this.wildcardFolderPath = wildcardFolderPath;
     }

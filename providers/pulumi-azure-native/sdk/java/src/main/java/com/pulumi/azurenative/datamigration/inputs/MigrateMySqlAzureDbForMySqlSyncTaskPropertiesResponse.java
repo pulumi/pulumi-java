@@ -14,6 +14,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandPro
 import com.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -109,7 +110,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
         this.input = input;
         this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
+        this.taskType = Codegen.stringProp("taskType").arg(taskType).require();
     }
 
     private MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse() {

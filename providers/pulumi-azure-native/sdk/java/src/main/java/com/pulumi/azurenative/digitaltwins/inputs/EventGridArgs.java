@@ -112,7 +112,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
         this.authenticationType = authenticationType;
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.topicEndpoint = Objects.requireNonNull(topicEndpoint, "expected parameter 'topicEndpoint' to be non-null");
     }
 

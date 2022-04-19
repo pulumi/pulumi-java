@@ -262,7 +262,7 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.userName = userName;
     }

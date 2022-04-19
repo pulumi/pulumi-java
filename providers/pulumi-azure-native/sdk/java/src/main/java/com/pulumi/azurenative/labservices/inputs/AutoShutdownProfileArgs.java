@@ -97,9 +97,9 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;
-        this.shutdownOnDisconnect = shutdownOnDisconnect == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownOnDisconnect;
-        this.shutdownOnIdle = shutdownOnIdle == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.ShutdownOnIdleMode.None) : shutdownOnIdle;
-        this.shutdownWhenNotConnected = shutdownWhenNotConnected == null ? Codegen.ofNullable(com.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownWhenNotConnected;
+        this.shutdownOnDisconnect = Codegen.objectProp("shutdownOnDisconnect", EnableState.class).output().arg(shutdownOnDisconnect).def(EnableState.Disabled).getNullable();
+        this.shutdownOnIdle = Codegen.objectProp("shutdownOnIdle", ShutdownOnIdleMode.class).output().arg(shutdownOnIdle).def(ShutdownOnIdleMode.None).getNullable();
+        this.shutdownWhenNotConnected = Codegen.objectProp("shutdownWhenNotConnected", EnableState.class).output().arg(shutdownWhenNotConnected).def(EnableState.Disabled).getNullable();
     }
 
     private AutoShutdownProfileArgs() {

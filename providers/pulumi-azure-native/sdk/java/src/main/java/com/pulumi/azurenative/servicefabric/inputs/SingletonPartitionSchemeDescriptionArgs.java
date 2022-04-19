@@ -31,7 +31,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends com.pulumi.re
     }
 
     public SingletonPartitionSchemeDescriptionArgs(Output<String> partitionScheme) {
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").output().arg(partitionScheme).require();
     }
 
     private SingletonPartitionSchemeDescriptionArgs() {

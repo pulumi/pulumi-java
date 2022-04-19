@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +59,7 @@ public final class ImportPipelineSourcePropertiesResponse extends com.pulumi.res
         @Nullable String type,
         @Nullable String uri) {
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = type == null ? "AzureStorageBlobContainer" : type;
+        this.type = Codegen.stringProp("type").arg(type).def("AzureStorageBlobContainer").getNullable();
         this.uri = uri;
     }
 

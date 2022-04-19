@@ -193,7 +193,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

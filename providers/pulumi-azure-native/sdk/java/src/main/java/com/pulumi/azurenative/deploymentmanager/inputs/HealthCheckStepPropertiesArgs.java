@@ -46,7 +46,7 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
         Output<RestHealthCheckStepAttributesArgs> attributes,
         Output<String> stepType) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.stepType = Objects.requireNonNull(stepType, "expected parameter 'stepType' to be non-null");
+        this.stepType = Codegen.stringProp("stepType").output().arg(stepType).require();
     }
 
     private HealthCheckStepPropertiesArgs() {

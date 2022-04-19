@@ -86,7 +86,7 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
         this.format = format;
         this.properties = properties;
         this.title = title;
-        this.type = type == null ? Codegen.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).def("object").require();
     }
 
     private TableSpecificationArgs() {

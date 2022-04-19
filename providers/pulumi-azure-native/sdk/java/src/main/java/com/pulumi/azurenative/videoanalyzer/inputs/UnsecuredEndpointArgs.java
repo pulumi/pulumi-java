@@ -73,7 +73,7 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
         Output<String> url) {
         this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
         this.tunnel = tunnel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

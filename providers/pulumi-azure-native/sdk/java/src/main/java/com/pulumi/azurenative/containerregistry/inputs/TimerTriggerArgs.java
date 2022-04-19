@@ -60,7 +60,7 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,TriggerStatus>> status) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.status = status == null ? Output.ofLeft("Enabled") : status;
+        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").getNullable();
     }
 
     private TimerTriggerArgs() {

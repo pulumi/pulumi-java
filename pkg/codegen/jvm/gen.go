@@ -11,7 +11,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
@@ -186,14 +185,7 @@ func (mod *modContext) typeStringRecHelper(
 		}
 
 	case *schema.EnumType:
-		// TODO: try to replace with 'qualifier'
-		pkg, err := parsePackageName(mod.tokenToPackage(t.Token, ""))
-		if err != nil {
-			panic(err)
-		}
-		return TypeShape{
-			Type: pkg.Dot("enums").Dot(names.Ident(tokenToName(t.Token))),
-		}
+		return mod.typeStringForEnumType(t)
 
 	case *schema.ArrayType:
 		listType := names.List // TODO: decide weather or not to use ImmutableList
@@ -348,6 +340,16 @@ func (mod *modContext) typeStringRecHelper(
 			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
 	}
+}
+
+func (mod *modContext) typeStringForEnumType(enumType *schema.EnumType) TypeShape {
+	// TODO: try to replace with 'qualifier'
+	pkg, err := parsePackageName(mod.tokenToPackage(enumType.Token, ""))
+	if err != nil {
+		panic(err)
+	}
+	fqn := pkg.Dot("enums").Dot(names.Ident(tokenToName(enumType.Token)))
+	return TypeShape{Type: fqn}
 }
 
 // Returns a constructor for an empty instance of type `t`.
@@ -781,26 +783,30 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 	fprintf(w, ") {\n")
 
+	propTypes := make([]TypeShape, len(props))
+	for i, prop := range props {
+		requireInitializers := !pt.args || isInputType(prop.Type)
+		propTypes[i] = pt.mod.typeString(
+			ctx,
+			prop.Type,
+			pt.propertyTypeQualifier,
+			true,                // is input
+			pt.state,            // is state
+			requireInitializers, // requires initializers
+			false,               // outer optional
+			false,               // inputless overload
+		)
+	}
+
 	// Generate the constructor body
-	for _, prop := range props {
-		paramName := names.Ident(prop.Name)
+	for i, prop := range props {
+		propType := propTypes[i]
 		fieldName := names.Ident(pt.mod.propertyName(prop))
-		// set default values or assign given values
-		var defaultValueCode string
-		if prop.DefaultValue != nil {
-			defaultValueString, defType, err := pt.mod.getDefaultValue(ctx, prop.DefaultValue, codegen.UnwrapType(prop.Type))
-			if err != nil {
-				return err
-			}
-			defaultValueInitializer := typeInitializer(ctx, unOptional(prop.Type), defaultValueString, defType)
-			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
+		dv, err := (&defaultsGen{pt.mod, ctx}).defaultValueExpr(prop, propType)
+		if err != nil {
+			return err
 		}
-		if prop.IsRequired() {
-			fprintf(w, "        this.%s = %s%s.requireNonNull(%s, \"expected parameter '%s' to be non-null\");\n",
-				fieldName, defaultValueCode, ctx.ref(names.Objects), paramName, paramName)
-		} else {
-			fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
-		}
+		fprintf(w, "        this.%s = %s;\n", fieldName, dv)
 	}
 	fprintf(w, "    }\n")
 
@@ -820,19 +826,10 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 	// Generate the builder
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
-	for _, prop := range props {
+	for propIndex, prop := range props {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 		propertyName := names.Ident(pt.mod.propertyName(prop))
-		propertyType := pt.mod.typeString(
-			ctx,
-			prop.Type,
-			pt.propertyTypeQualifier,
-			true,                // is input
-			pt.state,            // is state
-			requireInitializers, // requires initializers
-			false,               // outer optional
-			false,               // inputless overload
-		)
+		propertyType := propTypes[propIndex]
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
@@ -1354,7 +1351,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	return nil
 }
 
-func primitiveValue(value interface{}) (string, string, error) {
+func primitiveValue(value interface{}) (string, *TypeShape, error) {
 	v := reflect.ValueOf(value)
 	if v.Kind() == reflect.Interface {
 		v = v.Elem()
@@ -1363,91 +1360,20 @@ func primitiveValue(value interface{}) (string, string, error) {
 	switch v.Kind() {
 	case reflect.Bool:
 		if v.Bool() {
-			return "true", "boolean", nil
+			return "true", &TypeShape{Type: names.Boolean}, nil
 		}
-		return "false", "boolean", nil
+		return "false", &TypeShape{Type: names.Boolean}, nil
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32:
-		return strconv.FormatInt(v.Int(), 10), "integer", nil
+		return strconv.FormatInt(v.Int(), 10), &TypeShape{Type: names.Integer}, nil
 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32:
-		return strconv.FormatUint(v.Uint(), 10), "integer", nil
+		return strconv.FormatUint(v.Uint(), 10), &TypeShape{Type: names.Integer}, nil
 	case reflect.Float32, reflect.Float64:
-		return strconv.FormatFloat(v.Float(), 'e', -1, 64), "number", nil
+		return strconv.FormatFloat(v.Float(), 'e', -1, 64), &TypeShape{Type: names.Double}, nil
 	case reflect.String:
-		return fmt.Sprintf("%q", v.String()), "string", nil
+		return fmt.Sprintf("%q", v.String()), &TypeShape{Type: names.String}, nil
 	default:
-		return "", "", errors.Errorf("unsupported default value of type %T", value)
+		return "", nil, fmt.Errorf("unsupported default value of type %T", value)
 	}
-}
-
-func (mod *modContext) getDefaultValue(
-	ctx *classFileContext,
-	dv *schema.DefaultValue,
-	t schema.Type,
-) (string, string, error) {
-	var val string
-	schemaType := t.String()
-	if dv.Value != nil {
-		switch enumOrUnion := t.(type) {
-		case *schema.EnumType:
-			pkg, err := parsePackageName(mod.packageName)
-			if err != nil {
-				return "", "", err
-			}
-			enumName := tokenToName(enumOrUnion.Token)
-			for _, e := range enumOrUnion.Elements {
-				if e.Value != dv.Value {
-					continue
-				}
-
-				elName := e.Name
-				if elName == "" {
-					elName = fmt.Sprintf("%v", e.Value)
-				}
-				safeName, err := names.MakeSafeEnumName(elName, enumName)
-				if err != nil {
-					return "", "", err
-				}
-				val = pkg.Dot(names.Ident("enums")).Dot(names.Ident(enumName)).Dot(names.Ident(safeName)).String()
-				break
-			}
-			if val == "" {
-				return "", "", errors.Errorf("default value '%v' not found in enum '%s'", dv.Value, enumName)
-			}
-		default:
-			v, st, err := primitiveValue(dv.Value)
-			if err != nil {
-				return "", "", err
-			}
-			val = v
-			schemaType = st
-		}
-	}
-
-	if len(dv.Environment) != 0 {
-		getType := ""
-		switch t {
-		case schema.BoolType:
-			getType = "Boolean"
-		case schema.IntType:
-			getType = "Integer"
-		case schema.NumberType:
-			getType = "Double"
-		}
-
-		envVars := fmt.Sprintf("%q", dv.Environment[0])
-		for _, e := range dv.Environment[1:] {
-			envVars += fmt.Sprintf(", %q", e)
-		}
-
-		getEnv := fmt.Sprintf("%s.getEnv%s(%s).orElse(null)", mod.utilitiesRef(ctx), getType, envVars)
-		if val != "" {
-			val = fmt.Sprintf("%s == null ? %s : %s", getEnv, val, getEnv)
-		} else {
-			val = getEnv
-		}
-	}
-
-	return val, schemaType, nil
 }
 
 func genAlias(ctx *classFileContext, alias *schema.Alias) {
@@ -2090,63 +2016,41 @@ func (mod *modContext) genHeader() string {
 	return buf.String()
 }
 
-func (mod *modContext) getConfigProperty(
-	ctx *classFileContext,
-	schemaType schema.Type,
-	key string,
-) (TypeShape, MethodCall) {
-	typeShape := func(t schema.Type) TypeShape {
-		return mod.typeString(
-			ctx,
-			t,
-			"inputs",
-			false,
-			false,
-			true,  // requireInitializers - set to true so we preserve Optional
-			true,  // outer optional
-			false, // inputless overload
-		)
-	}
-
-	getFunc := MethodCall{
-		This: "config",
-		Args: []string{fmt.Sprintf("%q", key)},
-	}
-	switch schemaType {
-	case schema.StringType:
-		getFunc.Method = "get"
-	case schema.BoolType:
-		getFunc.Method = "getBoolean"
-	case schema.IntType:
-		getFunc.Method = "getInteger"
-	case schema.NumberType:
-		getFunc.Method = "getDouble"
-	default:
+// Computes the projected type of a Config property and the code to emit.
+func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Property) (TypeShape, string, error) {
+	// Unwrap prop.Type TokenType into UnderlyingType.
+	schemaType := prop.Type
+	for {
+		t0 := schemaType
 		switch t := schemaType.(type) {
 		case *schema.TokenType:
 			if t.UnderlyingType != nil {
-				return mod.getConfigProperty(ctx, t.UnderlyingType, key)
+				schemaType = t.UnderlyingType
 			}
 		}
-		// TODO: C# has a special case for Arrays here, should we port it?
-
-		// Calling this SDK method:
-		//
-		// public <T> Optional<T> getObject(String key, TypeShape<T> shapeOfT)
-		getFunc.Method = "getObject"
-
-		// TODO it is unclear if `getObject` can handle nested
-		// optionals (that is, GSON deserializer can read
-		// them). We do not handle that case, but we must
-		// handle outer Optional which is quite frequent. For
-		// now we simply drop it, so if the type is
-		// Optional(X) we pass X as the TypeShape to
-		// `getObject`.
-		t := unOptional(schemaType)
-		getFunc.Args = append(getFunc.Args, typeShape(t).StringJavaTypeShape(ctx.imports))
+		if schemaType == t0 {
+			break
+		}
 	}
 
-	return typeShape(schemaType), getFunc
+	projectedType := mod.typeString(
+		ctx,
+		schemaType,
+		"inputs",
+		false,
+		false,
+		true,  // requireInitializers - set to true so we preserve Optional
+		true,  // outer optional
+		false, // inputless overload
+	)
+
+	dg := &defaultsGen{mod, ctx}
+
+	code, err := dg.configExpr(prop, projectedType)
+	if err != nil {
+		return TypeShape{}, "", err
+	}
+	return projectedType, code, nil
 }
 
 func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Property) error {
@@ -2161,39 +2065,18 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 
 	// Emit an entry for all config variables.
 	for _, p := range variables {
-
-		typ := p.Type
-
-		// TODO mini-awsnative.json example seems to hit this
-		// case where a prop is required but has no default
-		// value; where should the default be coming from?
-		// Should we be generating code that throws?
-		if p.IsRequired() && p.DefaultValue == nil {
-			typ = &schema.OptionalType{ElementType: typ}
+		propertyType, returnStatement, err := mod.getConfigProperty(ctx, p)
+		if err != nil {
+			return err
 		}
 
-		propertyType, getFunc := mod.getConfigProperty(ctx, typ, p.Name)
 		getterName := names.Ident(mod.propertyName(p)).AsProperty().Getter()
-		returnStatement := getFunc.String()
-
-		if p.DefaultValue != nil {
-			defaultValueString, defType, err := mod.getDefaultValue(ctx, p.DefaultValue, typ)
-			if err != nil {
-				return err
-			}
-			defaultValueInitializer := typeInitializer(ctx, typ, defaultValueString, defType)
-			returnStatement = fmt.Sprintf("%s.combine(%s, %s)",
-				ctx.ref(names.Optionals),
-				returnStatement,
-				defaultValueInitializer)
-		}
 
 		if p.Comment != "" {
 			fprintf(w, "/**\n")
 			fprintf(w, "%s\n", formatBlockComment(p.Comment, ""))
 			fprintf(w, " */\n")
 		}
-
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          "    ",
 			GetterType:      propertyType.ToCode(ctx.imports),
@@ -2808,13 +2691,4 @@ func parsePackageName(packageName string) (names.FQN, error) {
 		result = result.Dot(names.Ident(p))
 	}
 	return result, nil
-}
-
-func unOptional(t schema.Type) schema.Type {
-	switch tt := t.(type) {
-	case *schema.OptionalType:
-		return tt.ElementType
-	default:
-		return t
-	}
 }

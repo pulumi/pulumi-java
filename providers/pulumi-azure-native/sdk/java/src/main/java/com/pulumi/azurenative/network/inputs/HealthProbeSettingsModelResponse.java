@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
         String resourceState,
         String type) {
         this.enabledState = enabledState;
-        this.healthProbeMethod = healthProbeMethod == null ? "HEAD" : healthProbeMethod;
+        this.healthProbeMethod = Codegen.stringProp("healthProbeMethod").arg(healthProbeMethod).def("HEAD").getNullable();
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
         this.name = name;

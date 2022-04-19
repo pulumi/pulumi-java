@@ -235,7 +235,7 @@ public final class ImpalaLinkedServiceArgs extends com.pulumi.resources.Resource
         this.password = password;
         this.port = port;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;
     }

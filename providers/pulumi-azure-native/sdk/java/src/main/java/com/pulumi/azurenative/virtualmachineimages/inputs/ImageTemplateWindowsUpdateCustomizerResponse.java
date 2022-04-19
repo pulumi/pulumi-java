@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -85,7 +86,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.updateLimit = updateLimit;
     }
 

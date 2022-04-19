@@ -43,7 +43,7 @@ public final class PipelineRunTargetPropertiesArgs extends com.pulumi.resources.
         @Nullable Output<String> name,
         @Nullable Output<Either<String,PipelineRunTargetType>> type) {
         this.name = name;
-        this.type = type == null ? Output.ofLeft("AzureStorageBlob") : type;
+        this.type = Codegen.stringProp("type").left(PipelineRunTargetType.class).output().arg(type).def("AzureStorageBlob").getNullable();
     }
 
     private PipelineRunTargetPropertiesArgs() {

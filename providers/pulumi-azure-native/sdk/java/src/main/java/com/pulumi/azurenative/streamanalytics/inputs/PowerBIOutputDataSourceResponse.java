@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -123,7 +124,7 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
         this.table = table;
         this.tokenUserDisplayName = tokenUserDisplayName;
         this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private PowerBIOutputDataSourceResponse() {

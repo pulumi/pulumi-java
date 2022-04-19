@@ -15,6 +15,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.TrialComponentRespo
 import com.pulumi.azurenative.machinelearningservices.inputs.TruncationSelectionPolicyResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -284,7 +285,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
         this.experimentName = experimentName;
         this.identity = identity;
         this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
+        this.jobType = Codegen.stringProp("jobType").arg(jobType).require();
         this.maxConcurrentTrials = maxConcurrentTrials;
         this.maxTotalTrials = maxTotalTrials;
         this.objective = Objects.requireNonNull(objective, "expected parameter 'objective' to be non-null");

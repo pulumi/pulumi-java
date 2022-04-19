@@ -128,7 +128,7 @@ public final class H265VideoArgs extends com.pulumi.resources.ResourceArgs {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.sceneChangeDetection = sceneChangeDetection;
         this.stretchMode = stretchMode;
         this.syncMode = syncMode;

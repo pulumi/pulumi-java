@@ -62,8 +62,8 @@ public final class CertificateSigningRequestArgs extends com.pulumi.resources.Re
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<CertificateSigningRequestSpecArgs> spec) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
     }

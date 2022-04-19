@@ -7,6 +7,7 @@ import com.pulumi.azurenative.media.inputs.MediaGraphClearEndpointResponse;
 import com.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -71,7 +72,7 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
         String transport) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.transport = Objects.requireNonNull(transport, "expected parameter 'transport' to be non-null");
     }
 

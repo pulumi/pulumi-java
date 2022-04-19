@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +60,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends com.pu
         String odataType,
         @Nullable String responseCustomData) {
         this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.responseCustomData = responseCustomData;
     }
 

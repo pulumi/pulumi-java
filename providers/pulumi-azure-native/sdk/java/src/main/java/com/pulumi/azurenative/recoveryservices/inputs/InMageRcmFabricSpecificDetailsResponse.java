@@ -11,6 +11,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.RcmProxyDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.ReplicationAgentDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.ReprotectAgentDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -210,7 +211,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
         this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri, "expected parameter 'controlPlaneUri' to be non-null");
         this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri, "expected parameter 'dataPlaneUri' to be non-null");
         this.dras = Objects.requireNonNull(dras, "expected parameter 'dras' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.physicalSiteId = Objects.requireNonNull(physicalSiteId, "expected parameter 'physicalSiteId' to be non-null");
         this.processServers = Objects.requireNonNull(processServers, "expected parameter 'processServers' to be non-null");
         this.pushInstallers = Objects.requireNonNull(pushInstallers, "expected parameter 'pushInstallers' to be non-null");

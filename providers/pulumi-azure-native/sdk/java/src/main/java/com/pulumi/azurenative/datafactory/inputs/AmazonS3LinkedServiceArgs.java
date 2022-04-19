@@ -171,7 +171,7 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
         this.secretAccessKey = secretAccessKey;
         this.serviceUrl = serviceUrl;
         this.sessionToken = sessionToken;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AmazonS3LinkedServiceArgs() {

@@ -69,7 +69,7 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<String> nfsExport,
         @Nullable Output<String> targetPath) {
         this.namespacePath = namespacePath;
-        this.nfsAccessPolicy = nfsAccessPolicy == null ? Codegen.ofNullable("default") : nfsAccessPolicy;
+        this.nfsAccessPolicy = Codegen.stringProp("nfsAccessPolicy").output().arg(nfsAccessPolicy).def("default").getNullable();
         this.nfsExport = nfsExport;
         this.targetPath = targetPath;
     }

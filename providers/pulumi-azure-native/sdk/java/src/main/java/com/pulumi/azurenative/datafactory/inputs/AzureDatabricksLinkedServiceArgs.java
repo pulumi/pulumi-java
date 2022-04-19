@@ -340,7 +340,7 @@ public final class AzureDatabricksLinkedServiceArgs extends com.pulumi.resources
         this.newClusterVersion = newClusterVersion;
         this.parameters = parameters;
         this.policyId = policyId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.workspaceResourceId = workspaceResourceId;
     }
 

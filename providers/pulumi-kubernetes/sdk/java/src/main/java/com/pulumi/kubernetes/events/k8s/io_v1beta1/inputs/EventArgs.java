@@ -230,13 +230,13 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<EventSeriesArgs> series,
         @Nullable Output<String> type) {
         this.action = action;
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.deprecatedCount = deprecatedCount;
         this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
         this.deprecatedLastTimestamp = deprecatedLastTimestamp;
         this.deprecatedSource = deprecatedSource;
         this.eventTime = Objects.requireNonNull(eventTime, "expected parameter 'eventTime' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.note = note;
         this.reason = reason;

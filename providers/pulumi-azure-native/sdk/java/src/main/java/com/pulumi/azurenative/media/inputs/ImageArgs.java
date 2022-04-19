@@ -122,7 +122,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.range = range;
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
         this.step = step;

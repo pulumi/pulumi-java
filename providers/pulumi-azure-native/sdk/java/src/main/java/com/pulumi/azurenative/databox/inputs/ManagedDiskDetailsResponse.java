@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +55,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
         String dataAccountType,
         String resourceGroupId,
         String stagingStorageAccountId) {
-        this.dataAccountType = dataAccountType == null ? "StorageAccount" : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
         this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
         this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
     }

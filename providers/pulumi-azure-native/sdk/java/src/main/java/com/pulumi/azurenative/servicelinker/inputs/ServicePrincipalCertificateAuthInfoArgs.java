@@ -68,7 +68,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
         Output<String> certificate,
         Output<String> clientId,
         Output<String> principalId) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");

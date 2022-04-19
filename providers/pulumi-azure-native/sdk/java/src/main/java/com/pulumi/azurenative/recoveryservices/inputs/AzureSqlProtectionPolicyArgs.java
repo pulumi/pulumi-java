@@ -61,7 +61,7 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
         Output<String> backupManagementType,
         @Nullable Output<Integer> protectedItemsCount,
         @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
     }

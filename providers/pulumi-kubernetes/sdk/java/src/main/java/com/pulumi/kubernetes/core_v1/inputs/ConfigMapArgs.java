@@ -95,11 +95,11 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> immutable,
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.binaryData = binaryData;
         this.data = data;
         this.immutable = immutable;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
     }
 

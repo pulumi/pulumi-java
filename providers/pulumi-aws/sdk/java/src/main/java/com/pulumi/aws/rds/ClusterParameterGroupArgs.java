@@ -91,7 +91,7 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
         @Nullable Output<String> namePrefix,
         @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters,
         @Nullable Output<Map<String,String>> tags) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = name;
         this.namePrefix = namePrefix;

@@ -57,7 +57,7 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
         Output<String> dataAccountType,
         @Nullable Output<String> sharePassword,
         Output<String> storageAccountId) {
-        this.dataAccountType = dataAccountType == null ? Codegen.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").output().arg(dataAccountType).def("StorageAccount").require();
         this.sharePassword = sharePassword;
         this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
     }

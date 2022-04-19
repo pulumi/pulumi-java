@@ -46,7 +46,7 @@ public final class TriggerDependencyReferenceArgs extends com.pulumi.resources.R
         Output<TriggerReferenceArgs> referenceTrigger,
         Output<String> type) {
         this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TriggerDependencyReferenceArgs() {

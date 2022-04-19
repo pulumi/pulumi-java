@@ -6,6 +6,7 @@ package com.pulumi.azurenative.signalrservice.inputs;
 import com.pulumi.azurenative.signalrservice.inputs.NetworkACLResponse;
 import com.pulumi.azurenative.signalrservice.inputs.PrivateEndpointACLResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class SignalRNetworkACLsResponse extends com.pulumi.resources.Invok
         @Nullable String defaultAction,
         @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
         @Nullable NetworkACLResponse publicNetwork) {
-        this.defaultAction = defaultAction == null ? "Deny" : defaultAction;
+        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Deny").getNullable();
         this.privateEndpoints = privateEndpoints;
         this.publicNetwork = publicNetwork;
     }

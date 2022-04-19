@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +58,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
         String kind,
         String sizeDisk) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.sizeDisk = Objects.requireNonNull(sizeDisk, "expected parameter 'sizeDisk' to be non-null");
     }
 

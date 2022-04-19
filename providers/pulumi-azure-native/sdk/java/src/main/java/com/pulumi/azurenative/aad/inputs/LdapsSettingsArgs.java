@@ -71,8 +71,8 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,Ldaps>> ldaps,
         @Nullable Output<String> pfxCertificate,
         @Nullable Output<String> pfxCertificatePassword) {
-        this.externalAccess = externalAccess == null ? Output.ofLeft("Disabled") : externalAccess;
-        this.ldaps = ldaps == null ? Output.ofLeft("Disabled") : ldaps;
+        this.externalAccess = Codegen.stringProp("externalAccess").left(ExternalAccess.class).output().arg(externalAccess).def("Disabled").getNullable();
+        this.ldaps = Codegen.stringProp("ldaps").left(Ldaps.class).output().arg(ldaps).def("Disabled").getNullable();
         this.pfxCertificate = pfxCertificate;
         this.pfxCertificatePassword = pfxCertificatePassword;
     }

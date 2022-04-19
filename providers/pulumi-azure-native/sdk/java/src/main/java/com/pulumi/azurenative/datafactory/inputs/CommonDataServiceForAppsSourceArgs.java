@@ -112,7 +112,7 @@ public final class CommonDataServiceForAppsSourceArgs extends com.pulumi.resourc
         this.query = query;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CommonDataServiceForAppsSourceArgs() {

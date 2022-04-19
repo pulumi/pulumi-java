@@ -101,7 +101,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.subnets = subnets;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }

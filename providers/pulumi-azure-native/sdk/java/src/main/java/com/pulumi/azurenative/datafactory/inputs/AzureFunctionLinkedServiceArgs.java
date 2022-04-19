@@ -172,7 +172,7 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
         this.functionKey = functionKey;
         this.parameters = parameters;
         this.resourceId = resourceId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureFunctionLinkedServiceArgs() {

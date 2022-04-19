@@ -209,7 +209,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         this.identity = identity;
         this.location = location;
         this.managedIdentities = managedIdentities;
-        this.maximumNodes = maximumNodes == null ? Codegen.ofNullable(0e+00) : maximumNodes;
+        this.maximumNodes = Codegen.doubleProp("maximumNodes").output().arg(maximumNodes).def(0e+00).getNullable();
         this.metrics = metrics;
         this.minimumNodes = minimumNodes;
         this.parameters = parameters;

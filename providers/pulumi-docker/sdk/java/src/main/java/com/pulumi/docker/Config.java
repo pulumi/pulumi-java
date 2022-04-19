@@ -4,8 +4,7 @@
 package com.pulumi.docker;
 
 import com.pulumi.core.TypeShape;
-import com.pulumi.core.internal.Optionals;
-import com.pulumi.docker.Utilities;
+import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.config.inputs.RegistryAuth;
 import java.lang.String;
 import java.util.List;
@@ -19,37 +18,37 @@ public final class Config {
  * 
  */
     public Optional<String> caMaterial() {
-        return config.getObject("caMaterial",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("caMaterial").config(config).get();
     }
 /**
  * PEM-encoded content of Docker client certificate
  * 
  */
     public Optional<String> certMaterial() {
-        return config.getObject("certMaterial",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("certMaterial").config(config).get();
     }
 /**
  * Path to directory with Docker TLS config
  * 
  */
     public Optional<String> certPath() {
-        return config.getObject("certPath",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("certPath").config(config).get();
     }
 /**
  * The Docker daemon address
  * 
  */
     public String host() {
-        return Optionals.combine(config.get("host"), Utilities.getEnv("DOCKER_HOST").orElse(null) == null ? "unix:///var/run/docker.sock" : Utilities.getEnv("DOCKER_HOST").orElse(null));
+        return Codegen.stringProp("host").config(config).env("DOCKER_HOST").def("unix:///var/run/docker.sock").require();
     }
 /**
  * PEM-encoded content of Docker client private key
  * 
  */
     public Optional<String> keyMaterial() {
-        return config.getObject("keyMaterial",TypeShape.<String>builder(String.class).build());
+        return Codegen.stringProp("keyMaterial").config(config).get();
     }
     public Optional<List<RegistryAuth>> registryAuth() {
-        return config.getObject("registryAuth",TypeShape.<List<RegistryAuth>>builder(List.class).addParameter(RegistryAuth.class).build());
+        return Codegen.objectProp("registryAuth", TypeShape.<List<RegistryAuth>>builder(List.class).addParameter(RegistryAuth.class).build()).config(config).get();
     }
 }

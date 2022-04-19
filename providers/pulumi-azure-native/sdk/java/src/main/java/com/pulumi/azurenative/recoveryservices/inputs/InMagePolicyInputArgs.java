@@ -85,7 +85,7 @@ public final class InMagePolicyInputArgs extends com.pulumi.resources.ResourceAr
         @Nullable Output<Integer> recoveryPointHistory,
         @Nullable Output<Integer> recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus, "expected parameter 'multiVmSyncStatus' to be non-null");
         this.recoveryPointHistory = recoveryPointHistory;
         this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;

@@ -57,7 +57,7 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
         @Nullable Output<String> instanceType,
         @Nullable Output<String> primaryZone,
         @Nullable Output<String> recoveryZone) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;
     }

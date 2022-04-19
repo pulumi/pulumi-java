@@ -31,7 +31,7 @@ public final class AzureResourceDetailsArgs extends com.pulumi.resources.Resourc
     }
 
     public AzureResourceDetailsArgs(Output<String> source) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
+        this.source = Codegen.stringProp("source").output().arg(source).require();
     }
 
     private AzureResourceDetailsArgs() {

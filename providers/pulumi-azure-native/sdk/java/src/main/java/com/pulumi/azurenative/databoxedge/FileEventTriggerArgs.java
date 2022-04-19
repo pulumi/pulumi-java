@@ -105,7 +105,7 @@ public final class FileEventTriggerArgs extends com.pulumi.resources.ResourceArg
         Output<FileSourceInfoArgs> sourceInfo) {
         this.customContextTag = customContextTag;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.name = name;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sinkInfo = Objects.requireNonNull(sinkInfo, "expected parameter 'sinkInfo' to be non-null");

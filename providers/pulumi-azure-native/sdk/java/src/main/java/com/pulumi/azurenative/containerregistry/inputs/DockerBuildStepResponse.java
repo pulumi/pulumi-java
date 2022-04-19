@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import com.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -150,10 +151,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
         this.contextPath = contextPath;
         this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
         this.imageNames = imageNames;
-        this.isPushEnabled = isPushEnabled == null ? true : isPushEnabled;
-        this.noCache = noCache == null ? false : noCache;
+        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").arg(isPushEnabled).def(true).getNullable();
+        this.noCache = Codegen.booleanProp("noCache").arg(noCache).def(false).getNullable();
         this.target = target;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private DockerBuildStepResponse() {

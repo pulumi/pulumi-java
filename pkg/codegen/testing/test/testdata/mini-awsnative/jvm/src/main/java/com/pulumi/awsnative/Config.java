@@ -4,7 +4,7 @@
 package com.pulumi.awsnative;
 
 import com.pulumi.awsnative.config.inputs.IgnoreTags;
-import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Optional;
 
@@ -16,13 +16,13 @@ public final class Config {
  * 
  */
     public Optional<IgnoreTags> ignoreTags() {
-        return config.getObject("ignoreTags",TypeShape.<IgnoreTags>builder(IgnoreTags.class).build());
+        return Codegen.objectProp("ignoreTags", IgnoreTags.class).config(config).get();
     }
 /**
  * The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
  * 
  */
-    public Optional<String> region() {
-        return config.getObject("region",TypeShape.<String>builder(String.class).build());
+    public String region() {
+        return Codegen.stringProp("region").config(config).require();
     }
 }

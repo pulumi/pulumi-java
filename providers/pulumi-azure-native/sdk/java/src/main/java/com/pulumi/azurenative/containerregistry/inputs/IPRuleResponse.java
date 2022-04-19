@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,7 +44,7 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
     public IPRuleResponse(
         @Nullable String action,
         String iPAddressOrRange) {
-        this.action = action == null ? "Allow" : action;
+        this.action = Codegen.stringProp("action").arg(action).def("Allow").getNullable();
         this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
     }
 

@@ -47,7 +47,7 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<Object> preserveCompressionFileNameAsFolder,
         Output<String> type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private TarReadSettingsArgs() {

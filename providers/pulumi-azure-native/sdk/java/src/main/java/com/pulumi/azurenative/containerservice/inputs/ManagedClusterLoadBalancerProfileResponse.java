@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancer
 import com.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancerProfileResponseOutboundIPs;
 import com.pulumi.azurenative.containerservice.inputs.ResourceReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -96,9 +97,9 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
         @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
         @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
         @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
-        this.allocatedOutboundPorts = allocatedOutboundPorts == null ? 0 : allocatedOutboundPorts;
+        this.allocatedOutboundPorts = Codegen.integerProp("allocatedOutboundPorts").arg(allocatedOutboundPorts).def(0).getNullable();
         this.effectiveOutboundIPs = effectiveOutboundIPs;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes == null ? 30 : idleTimeoutInMinutes;
+        this.idleTimeoutInMinutes = Codegen.integerProp("idleTimeoutInMinutes").arg(idleTimeoutInMinutes).def(30).getNullable();
         this.managedOutboundIPs = managedOutboundIPs;
         this.outboundIPPrefixes = outboundIPPrefixes;
         this.outboundIPs = outboundIPs;

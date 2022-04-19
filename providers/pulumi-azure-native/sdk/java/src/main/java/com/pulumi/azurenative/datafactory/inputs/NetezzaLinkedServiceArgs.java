@@ -130,7 +130,7 @@ public final class NetezzaLinkedServiceArgs extends com.pulumi.resources.Resourc
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.pwd = pwd;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private NetezzaLinkedServiceArgs() {

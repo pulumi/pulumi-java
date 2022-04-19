@@ -59,7 +59,7 @@ public final class BoolEqualsAdvancedFilterArgs extends com.pulumi.resources.Res
         Output<String> operatorType,
         @Nullable Output<Boolean> value) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
         this.value = value;
     }
 

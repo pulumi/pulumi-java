@@ -6,6 +6,7 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
 import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseDefenderForServers;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +74,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
     }
 
     private DefenderForServersAwsOfferingResponse() {

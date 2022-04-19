@@ -51,6 +51,10 @@ func (ts TypeShape) Equal(other TypeShape) bool {
 	return true
 }
 
+func (ts TypeShape) WithoutAnnotations() TypeShape {
+	return TypeShape{Type: ts.Type, Parameters: ts.Parameters}
+}
+
 // Converts to Java code, may add imports to use short names.
 func (ts TypeShape) ToCode(imports *names.Imports) string {
 	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{})

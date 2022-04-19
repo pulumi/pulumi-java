@@ -60,7 +60,7 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
         Output<String> objectType,
         @Nullable Output<String> resourceGroupId) {
         this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
         this.resourceGroupId = resourceGroupId;
     }
 

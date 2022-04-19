@@ -5,6 +5,7 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.azurenative.insights.inputs.MetricDimensionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -132,7 +133,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
         @Nullable Boolean skipMetricValidation,
         Double threshold,
         String timeAggregation) {
-        this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
+        this.criterionType = Codegen.stringProp("criterionType").arg(criterionType).require();
         this.dimensions = dimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.metricNamespace = metricNamespace;

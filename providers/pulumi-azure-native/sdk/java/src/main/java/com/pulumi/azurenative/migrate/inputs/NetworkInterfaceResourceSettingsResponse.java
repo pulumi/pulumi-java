@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -73,7 +74,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
         String targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }
 

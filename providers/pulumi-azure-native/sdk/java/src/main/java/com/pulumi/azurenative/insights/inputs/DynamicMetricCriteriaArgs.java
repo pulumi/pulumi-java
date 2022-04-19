@@ -162,7 +162,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
         @Nullable Output<Boolean> skipMetricValidation,
         Output<Either<String,AggregationTypeEnum>> timeAggregation) {
         this.alertSensitivity = Objects.requireNonNull(alertSensitivity, "expected parameter 'alertSensitivity' to be non-null");
-        this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
+        this.criterionType = Codegen.stringProp("criterionType").output().arg(criterionType).require();
         this.dimensions = dimensions;
         this.failingPeriods = Objects.requireNonNull(failingPeriods, "expected parameter 'failingPeriods' to be non-null");
         this.ignoreDataBefore = ignoreDataBefore;

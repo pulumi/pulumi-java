@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class QuarantinePolicyResponse extends com.pulumi.resources.InvokeA
     }
 
     public QuarantinePolicyResponse(@Nullable String status) {
-        this.status = status == null ? "disabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
     }
 
     private QuarantinePolicyResponse() {

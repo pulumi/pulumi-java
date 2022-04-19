@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -118,7 +119,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
         this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC, "expected parameter 'bucketStartTimeUTC' to be non-null");
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC, "expected parameter 'firstActivityTimeUTC' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC, "expected parameter 'lastActivityTimeUTC' to be non-null");
         this.queryId = Objects.requireNonNull(queryId, "expected parameter 'queryId' to be non-null");
         this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");

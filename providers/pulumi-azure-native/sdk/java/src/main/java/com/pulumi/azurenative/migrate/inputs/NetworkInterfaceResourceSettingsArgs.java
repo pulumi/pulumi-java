@@ -74,7 +74,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
         Output<String> targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }
 

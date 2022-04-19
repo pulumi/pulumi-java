@@ -6,6 +6,7 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.DynamicThresholdFailingPeriodsResponse;
 import com.pulumi.azurenative.insights.inputs.MetricDimensionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -157,7 +158,7 @@ public final class DynamicMetricCriteriaResponse extends com.pulumi.resources.In
         @Nullable Boolean skipMetricValidation,
         String timeAggregation) {
         this.alertSensitivity = Objects.requireNonNull(alertSensitivity, "expected parameter 'alertSensitivity' to be non-null");
-        this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
+        this.criterionType = Codegen.stringProp("criterionType").arg(criterionType).require();
         this.dimensions = dimensions;
         this.failingPeriods = Objects.requireNonNull(failingPeriods, "expected parameter 'failingPeriods' to be non-null");
         this.ignoreDataBefore = ignoreDataBefore;

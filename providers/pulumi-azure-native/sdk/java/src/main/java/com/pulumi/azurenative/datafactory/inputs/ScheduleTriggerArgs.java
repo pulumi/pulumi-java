@@ -89,7 +89,7 @@ public final class ScheduleTriggerArgs extends com.pulumi.resources.ResourceArgs
         this.description = description;
         this.pipelines = pipelines;
         this.recurrence = Objects.requireNonNull(recurrence, "expected parameter 'recurrence' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ScheduleTriggerArgs() {

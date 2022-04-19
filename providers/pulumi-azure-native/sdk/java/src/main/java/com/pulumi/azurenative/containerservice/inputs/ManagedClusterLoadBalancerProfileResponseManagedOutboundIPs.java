@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs e
     }
 
     public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@Nullable Integer count) {
-        this.count = count == null ? 1 : count;
+        this.count = Codegen.integerProp("count").arg(count).def(1).getNullable();
     }
 
     private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs() {

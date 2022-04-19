@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -71,7 +72,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
         this.adminPublicKey = adminPublicKey;
         this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
         this.sshPort = Objects.requireNonNull(sshPort, "expected parameter 'sshPort' to be non-null");
-        this.sshPublicAccess = sshPublicAccess == null ? "Disabled" : sshPublicAccess;
+        this.sshPublicAccess = Codegen.stringProp("sshPublicAccess").arg(sshPublicAccess).def("Disabled").getNullable();
     }
 
     private ComputeInstanceSshSettingsResponse() {

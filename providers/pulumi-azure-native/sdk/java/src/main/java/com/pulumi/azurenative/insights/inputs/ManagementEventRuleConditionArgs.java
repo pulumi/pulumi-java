@@ -63,7 +63,7 @@ public final class ManagementEventRuleConditionArgs extends com.pulumi.resources
         Output<String> odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private ManagementEventRuleConditionArgs() {

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicebus.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -148,7 +149,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
         this.properties = properties;
         this.replyTo = replyTo;
         this.replyToSessionId = replyToSessionId;
-        this.requiresPreprocessing = requiresPreprocessing == null ? true : requiresPreprocessing;
+        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg(requiresPreprocessing).def(true).getNullable();
         this.sessionId = sessionId;
         this.to = to;
     }

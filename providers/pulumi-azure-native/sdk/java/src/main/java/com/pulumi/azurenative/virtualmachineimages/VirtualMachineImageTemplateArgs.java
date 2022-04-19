@@ -153,7 +153,7 @@ public final class VirtualMachineImageTemplateArgs extends com.pulumi.resources.
         Output<Object> source,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
-        this.buildTimeoutInMinutes = buildTimeoutInMinutes == null ? Codegen.ofNullable(0) : buildTimeoutInMinutes;
+        this.buildTimeoutInMinutes = Codegen.integerProp("buildTimeoutInMinutes").output().arg(buildTimeoutInMinutes).def(0).getNullable();
         this.customize = customize;
         this.distribute = Objects.requireNonNull(distribute, "expected parameter 'distribute' to be non-null");
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");

@@ -66,8 +66,8 @@ public final class ReplicationControllerArgs extends com.pulumi.resources.Resour
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<ReplicationControllerSpecArgs> spec) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
     }

@@ -52,7 +52,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<ContainerColor,String>> color,
         @Nullable Output<String> material,
         Output<ContainerSize> size) {
-        this.brightness = brightness == null ? Codegen.ofNullable(com.pulumi.plant.enums.ContainerBrightness.One) : brightness;
+        this.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output().arg(brightness).def(ContainerBrightness.One).getNullable();
         this.color = color;
         this.material = material;
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");

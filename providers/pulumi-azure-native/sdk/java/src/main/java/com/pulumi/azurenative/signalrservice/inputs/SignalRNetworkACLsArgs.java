@@ -61,7 +61,7 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
         @Nullable Output<Either<String,ACLAction>> defaultAction,
         @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints,
         @Nullable Output<NetworkACLArgs> publicNetwork) {
-        this.defaultAction = defaultAction == null ? Output.ofLeft("Deny") : defaultAction;
+        this.defaultAction = Codegen.stringProp("defaultAction").left(ACLAction.class).output().arg(defaultAction).def("Deny").getNullable();
         this.privateEndpoints = privateEndpoints;
         this.publicNetwork = publicNetwork;
     }

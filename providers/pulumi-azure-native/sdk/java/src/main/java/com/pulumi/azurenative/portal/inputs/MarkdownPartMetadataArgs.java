@@ -62,7 +62,7 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
         Output<String> type) {
         this.inputs = inputs;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private MarkdownPartMetadataArgs() {

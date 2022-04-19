@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +60,7 @@ public final class RuleEmailActionResponse extends com.pulumi.resources.InvokeAr
         String odataType,
         @Nullable Boolean sendToServiceOwners) {
         this.customEmails = customEmails;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.sendToServiceOwners = sendToServiceOwners;
     }
 

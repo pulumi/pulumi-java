@@ -78,7 +78,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> name,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> value) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.enabled = enabled;
         this.name = name;
         this.tags = tags;

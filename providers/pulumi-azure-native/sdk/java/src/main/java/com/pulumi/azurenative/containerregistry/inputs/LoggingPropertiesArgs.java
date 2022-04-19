@@ -47,8 +47,8 @@ public final class LoggingPropertiesArgs extends com.pulumi.resources.ResourceAr
     public LoggingPropertiesArgs(
         @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus,
         @Nullable Output<Either<String,LogLevel>> logLevel) {
-        this.auditLogStatus = auditLogStatus == null ? Output.ofLeft("Disabled") : auditLogStatus;
-        this.logLevel = logLevel == null ? Output.ofLeft("Information") : logLevel;
+        this.auditLogStatus = Codegen.stringProp("auditLogStatus").left(AuditLogStatus.class).output().arg(auditLogStatus).def("Disabled").getNullable();
+        this.logLevel = Codegen.stringProp("logLevel").left(LogLevel.class).output().arg(logLevel).def("Information").getNullable();
     }
 
     private LoggingPropertiesArgs() {

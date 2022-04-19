@@ -7,6 +7,7 @@ import com.pulumi.azurenative.insights.inputs.DynamicMetricCriteriaResponse;
 import com.pulumi.azurenative.insights.inputs.MetricCriteriaResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
         @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
         String odataType) {
         this.allOf = allOf;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private MetricAlertMultipleResourceMultipleMetricCriteriaResponse() {

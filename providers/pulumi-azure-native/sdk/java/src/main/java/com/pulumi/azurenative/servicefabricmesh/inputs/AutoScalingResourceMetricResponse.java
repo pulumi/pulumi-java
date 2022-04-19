@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public final class AutoScalingResourceMetricResponse extends com.pulumi.resource
     public AutoScalingResourceMetricResponse(
         String kind,
         String name) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 

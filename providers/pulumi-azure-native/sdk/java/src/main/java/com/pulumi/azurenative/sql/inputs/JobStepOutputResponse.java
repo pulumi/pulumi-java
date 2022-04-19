@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,11 +119,11 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.resourceGroupName = resourceGroupName;
-        this.schemaName = schemaName == null ? "dbo" : schemaName;
+        this.schemaName = Codegen.stringProp("schemaName").arg(schemaName).def("dbo").getNullable();
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
         this.subscriptionId = subscriptionId;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = type == null ? "SqlDatabase" : type;
+        this.type = Codegen.stringProp("type").arg(type).def("SqlDatabase").getNullable();
     }
 
     private JobStepOutputResponse() {

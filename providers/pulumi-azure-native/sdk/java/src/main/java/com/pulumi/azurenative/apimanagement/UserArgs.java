@@ -190,7 +190,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
         this.password = password;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.state = state == null ? Output.ofLeft("active") : state;
+        this.state = Codegen.stringProp("state").left(UserState.class).output().arg(state).def("active").getNullable();
         this.userId = userId;
     }
 

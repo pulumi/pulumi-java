@@ -73,7 +73,7 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
         this.fileName = fileName;
         this.fileSystem = fileSystem;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBlobFSLocationArgs() {

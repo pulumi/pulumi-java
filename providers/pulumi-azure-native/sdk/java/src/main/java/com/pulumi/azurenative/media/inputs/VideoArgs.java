@@ -86,7 +86,7 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.stretchMode = stretchMode;
         this.syncMode = syncMode;
     }

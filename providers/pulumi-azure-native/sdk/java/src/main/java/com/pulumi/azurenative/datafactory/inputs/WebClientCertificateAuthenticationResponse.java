@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceRes
 import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -70,7 +71,7 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
         Object url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.pfx = Objects.requireNonNull(pfx, "expected parameter 'pfx' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");

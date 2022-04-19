@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.chaos.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,7 +57,7 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
         String type) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private DelayActionResponse() {

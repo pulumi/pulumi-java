@@ -193,18 +193,18 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Integer> retentionInDays,
         @Nullable Output<Double> samplingPercentage,
         @Nullable Output<Map<String,String>> tags) {
-        this.applicationType = applicationType == null ? Output.ofLeft("web") : Objects.requireNonNull(applicationType, "expected parameter 'applicationType' to be non-null");
+        this.applicationType = Codegen.stringProp("applicationType").left(ApplicationType.class).output().arg(applicationType).def("web").require();
         this.disableIpMasking = disableIpMasking;
-        this.flowType = flowType == null ? Output.ofLeft("Bluefield") : flowType;
+        this.flowType = Codegen.stringProp("flowType").left(FlowType.class).output().arg(flowType).def("Bluefield").getNullable();
         this.hockeyAppId = hockeyAppId;
         this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
-        this.ingestionMode = ingestionMode == null ? Output.ofLeft("ApplicationInsights") : ingestionMode;
+        this.ingestionMode = Codegen.stringProp("ingestionMode").left(IngestionMode.class).output().arg(ingestionMode).def("ApplicationInsights").getNullable();
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.location = location;
-        this.requestSource = requestSource == null ? Output.ofLeft("rest") : requestSource;
+        this.requestSource = Codegen.stringProp("requestSource").left(RequestSource.class).output().arg(requestSource).def("rest").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
-        this.retentionInDays = retentionInDays == null ? Codegen.ofNullable(90) : retentionInDays;
+        this.retentionInDays = Codegen.integerProp("retentionInDays").output().arg(retentionInDays).def(90).getNullable();
         this.samplingPercentage = samplingPercentage;
         this.tags = tags;
     }

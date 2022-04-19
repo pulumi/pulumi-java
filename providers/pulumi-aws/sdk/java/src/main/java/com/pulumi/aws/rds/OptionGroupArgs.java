@@ -107,7 +107,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
         this.majorEngineVersion = Objects.requireNonNull(majorEngineVersion, "expected parameter 'majorEngineVersion' to be non-null");
         this.name = name;
         this.namePrefix = namePrefix;
-        this.optionGroupDescription = optionGroupDescription == null ? Codegen.ofNullable("Managed by Pulumi") : optionGroupDescription;
+        this.optionGroupDescription = Codegen.stringProp("optionGroupDescription").output().arg(optionGroupDescription).def("Managed by Pulumi").getNullable();
         this.options = options;
         this.tags = tags;
     }

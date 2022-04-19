@@ -63,10 +63,10 @@ public final class RubberTreeArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<TreeSize> size,
         Output<RubberTreeVariety> type) {
         this.container = container;
-        this.diameter = diameter == null ? Codegen.ofNullable(com.pulumi.plant.tree_v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter, "expected parameter 'diameter' to be non-null");
-        this.farm = farm == null ? Output.ofRight("(unknown)") : farm;
-        this.size = size == null ? Codegen.ofNullable(com.pulumi.plant.tree_v1.enums.TreeSize.Medium) : size;
-        this.type = type == null ? Codegen.ofNullable(com.pulumi.plant.tree_v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.diameter = Codegen.objectProp("diameter", Diameter.class).output().arg(diameter).def(Diameter.Sixinch).require();
+        this.farm = Codegen.stringProp("farm").right(Farm.class).output().arg(farm).def("(unknown)").getNullable();
+        this.size = Codegen.objectProp("size", TreeSize.class).output().arg(size).def(TreeSize.Medium).getNullable();
+        this.type = Codegen.objectProp("type", RubberTreeVariety.class).output().arg(type).def(RubberTreeVariety.Burgundy).require();
     }
 
     private RubberTreeArgs() {

@@ -50,7 +50,7 @@ public final class JsonReadSettingsArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<Object> compressionProperties,
         Output<String> type) {
         this.compressionProperties = compressionProperties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private JsonReadSettingsArgs() {

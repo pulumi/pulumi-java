@@ -228,7 +228,7 @@ public final class SqlSinkArgs extends com.pulumi.resources.ResourceArgs {
         this.storedProcedureParameters = storedProcedureParameters;
         this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
         this.tableOption = tableOption;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.upsertSettings = upsertSettings;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;

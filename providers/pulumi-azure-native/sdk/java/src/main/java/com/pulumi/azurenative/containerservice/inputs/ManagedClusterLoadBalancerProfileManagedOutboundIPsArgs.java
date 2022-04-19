@@ -31,7 +31,7 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
     }
 
     public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(@Nullable Output<Integer> count) {
-        this.count = count == null ? Codegen.ofNullable(1) : count;
+        this.count = Codegen.integerProp("count").output().arg(count).def(1).getNullable();
     }
 
     private ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs() {

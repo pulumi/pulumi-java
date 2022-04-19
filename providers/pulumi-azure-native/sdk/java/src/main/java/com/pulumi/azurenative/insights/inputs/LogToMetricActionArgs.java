@@ -47,7 +47,7 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
         Output<List<CriteriaArgs>> criteria,
         Output<String> odataType) {
         this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private LogToMetricActionArgs() {

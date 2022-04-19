@@ -68,7 +68,7 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
-        this.scaleType = Objects.requireNonNull(scaleType, "expected parameter 'scaleType' to be non-null");
+        this.scaleType = Codegen.stringProp("scaleType").output().arg(scaleType).require();
     }
 
     private ManualScaleSettingsArgs() {

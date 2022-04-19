@@ -79,8 +79,8 @@ public final class APIServiceArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<APIServiceSpecArgs> spec,
         @Nullable Output<APIServiceStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
         this.status = status;

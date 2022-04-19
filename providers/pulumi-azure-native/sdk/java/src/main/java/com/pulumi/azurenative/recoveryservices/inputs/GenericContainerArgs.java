@@ -112,7 +112,7 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<String> healthStatus,
         @Nullable Output<String> registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.extendedInformation = extendedInformation;
         this.fabricName = fabricName;
         this.friendlyName = friendlyName;

@@ -89,7 +89,7 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
         this.blurType = blurType;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.resolution = resolution;
     }
 

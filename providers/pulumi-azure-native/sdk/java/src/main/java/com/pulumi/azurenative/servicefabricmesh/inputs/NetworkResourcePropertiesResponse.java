@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,7 +82,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
         String status,
         String statusDetails) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
         this.statusDetails = Objects.requireNonNull(statusDetails, "expected parameter 'statusDetails' to be non-null");

@@ -149,7 +149,7 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
         this.metadata = metadata;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.source = source;
-        this.type = type == null ? Codegen.ofNullable(com.pulumi.azurenative.storage.enums.BlobType.Block) : type;
+        this.type = Codegen.objectProp("type", BlobType.class).output().arg(type).def(BlobType.Block).getNullable();
     }
 
     private BlobArgs() {

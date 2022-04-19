@@ -176,13 +176,13 @@ public final class FileTaskRunRequestArgs extends com.pulumi.resources.ResourceA
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Codegen.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").output().arg(isArchiveEnabled).def(false).getNullable();
         this.logTemplate = logTemplate;
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.timeout = timeout == null ? Codegen.ofNullable(3600) : timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(3600).getNullable();
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }

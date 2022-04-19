@@ -158,7 +158,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends com.pulumi.resour
         this.parameters = parameters;
         this.secretAccessKey = secretAccessKey;
         this.serviceUrl = serviceUrl;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AmazonS3CompatibleLinkedServiceArgs() {

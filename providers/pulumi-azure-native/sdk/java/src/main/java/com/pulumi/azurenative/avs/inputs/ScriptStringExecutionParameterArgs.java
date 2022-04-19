@@ -58,7 +58,7 @@ public final class ScriptStringExecutionParameterArgs extends com.pulumi.resourc
         Output<String> type,
         @Nullable Output<String> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.value = value;
     }
 

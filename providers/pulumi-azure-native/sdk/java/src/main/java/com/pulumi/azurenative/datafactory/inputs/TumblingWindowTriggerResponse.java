@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.TriggerDependencyReferenceRespo
 import com.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.TumblingWindowTriggerDependencyReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -196,7 +197,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
         this.retryPolicy = retryPolicy;
         this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private TumblingWindowTriggerResponse() {

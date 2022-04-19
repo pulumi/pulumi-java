@@ -85,7 +85,7 @@ public final class MySqlConnectionInfoArgs extends com.pulumi.resources.Resource
         this.password = password;
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

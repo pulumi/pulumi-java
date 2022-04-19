@@ -208,7 +208,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
         this.runtimeVersion = runtimeVersion;
         this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService, "expected parameter 'scriptLinkedService' to be non-null");
         this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

@@ -99,7 +99,7 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
         @Nullable Output<String> separator,
         @Nullable Output<Either<String,SourceType>> sourceType) {
         this.header = header;
-        this.includePath = includePath == null ? Codegen.ofNullable(false) : includePath;
+        this.includePath = Codegen.booleanProp("includePath").output().arg(includePath).def(false).getNullable();
         this.partitionFormat = partitionFormat;
         this.path = path;
         this.query = query;

@@ -136,7 +136,7 @@ public final class ApplicationRuleConditionArgs extends com.pulumi.resources.Res
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleConditionType = Objects.requireNonNull(ruleConditionType, "expected parameter 'ruleConditionType' to be non-null");
+        this.ruleConditionType = Codegen.stringProp("ruleConditionType").output().arg(ruleConditionType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

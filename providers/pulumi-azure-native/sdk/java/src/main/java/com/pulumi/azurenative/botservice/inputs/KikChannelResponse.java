@@ -5,6 +5,7 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.azurenative.botservice.inputs.KikChannelPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,9 +82,9 @@ public final class KikChannelResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable String location,
         @Nullable KikChannelPropertiesResponse properties,
         String provisioningState) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
+        this.channelName = Codegen.stringProp("channelName").arg(channelName).require();
         this.etag = etag;
-        this.location = location == null ? "global" : location;
+        this.location = Codegen.stringProp("location").arg(location).def("global").getNullable();
         this.properties = properties;
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
     }

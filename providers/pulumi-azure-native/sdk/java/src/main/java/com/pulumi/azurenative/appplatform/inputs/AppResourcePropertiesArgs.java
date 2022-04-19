@@ -97,7 +97,7 @@ public final class AppResourcePropertiesArgs extends com.pulumi.resources.Resour
         @Nullable Output<TemporaryDiskArgs> temporaryDisk) {
         this.activeDeploymentName = activeDeploymentName;
         this.fqdn = fqdn;
-        this.httpsOnly = httpsOnly == null ? Codegen.ofNullable(false) : httpsOnly;
+        this.httpsOnly = Codegen.booleanProp("httpsOnly").output().arg(httpsOnly).def(false).getNullable();
         this.persistentDisk = persistentDisk;
         this.public_ = public_;
         this.temporaryDisk = temporaryDisk;

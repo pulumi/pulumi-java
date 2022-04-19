@@ -99,8 +99,8 @@ public final class StatefulSetArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<StatefulSetSpecArgs> spec,
         @Nullable Output<StatefulSetStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
         this.status = status;

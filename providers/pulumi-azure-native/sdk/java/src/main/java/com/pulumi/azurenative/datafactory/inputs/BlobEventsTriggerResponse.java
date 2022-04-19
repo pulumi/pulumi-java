@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -153,7 +154,7 @@ public final class BlobEventsTriggerResponse extends com.pulumi.resources.Invoke
         this.pipelines = pipelines;
         this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private BlobEventsTriggerResponse() {

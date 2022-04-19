@@ -103,7 +103,7 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<String> ruleName) {
         this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
         this.flag = flag;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");

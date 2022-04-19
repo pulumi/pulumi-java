@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
         String instanceType,
         @Nullable String primaryZone,
         @Nullable String recoveryZone) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;
     }

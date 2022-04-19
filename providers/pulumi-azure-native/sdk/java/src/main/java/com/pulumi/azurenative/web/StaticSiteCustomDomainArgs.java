@@ -80,7 +80,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.validationMethod = validationMethod == null ? Codegen.ofNullable("cname-delegation") : validationMethod;
+        this.validationMethod = Codegen.stringProp("validationMethod").output().arg(validationMethod).def("cname-delegation").getNullable();
     }
 
     private StaticSiteCustomDomainArgs() {

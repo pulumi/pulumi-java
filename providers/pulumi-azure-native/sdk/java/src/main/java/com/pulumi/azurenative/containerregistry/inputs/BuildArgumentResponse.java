@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -68,7 +69,7 @@ public final class BuildArgumentResponse extends com.pulumi.resources.InvokeArgs
         String name,
         String type,
         String value) {
-        this.isSecret = isSecret == null ? false : isSecret;
+        this.isSecret = Codegen.booleanProp("isSecret").arg(isSecret).def(false).getNullable();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");

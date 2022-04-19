@@ -38,7 +38,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         String diskSizeGb,
         String interface_) {
         this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
     }
 
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse() {

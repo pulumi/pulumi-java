@@ -33,7 +33,7 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
     }
 
     public EncryptionPreferencesArgs(@Nullable Output<Either<String,DoubleEncryption>> doubleEncryption) {
-        this.doubleEncryption = doubleEncryption == null ? Output.ofLeft("Disabled") : doubleEncryption;
+        this.doubleEncryption = Codegen.stringProp("doubleEncryption").left(DoubleEncryption.class).output().arg(doubleEncryption).def("Disabled").getNullable();
     }
 
     private EncryptionPreferencesArgs() {

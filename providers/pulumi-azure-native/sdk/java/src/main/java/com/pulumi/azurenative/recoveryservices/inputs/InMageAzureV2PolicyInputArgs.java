@@ -98,7 +98,7 @@ public final class InMageAzureV2PolicyInputArgs extends com.pulumi.resources.Res
         @Nullable Output<Integer> recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus, "expected parameter 'multiVmSyncStatus' to be non-null");
         this.recoveryPointHistory = recoveryPointHistory;
         this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;

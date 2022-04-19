@@ -5,6 +5,7 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingResponseNativeCloudConnection;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,7 +60,7 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
         String offeringType) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.nativeCloudConnection = nativeCloudConnection;
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
     }
 
     private CspmMonitorAwsOfferingResponse() {

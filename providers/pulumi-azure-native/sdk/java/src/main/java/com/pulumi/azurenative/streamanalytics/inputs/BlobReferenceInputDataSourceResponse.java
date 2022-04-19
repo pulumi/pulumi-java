@@ -5,6 +5,7 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.azurenative.streamanalytics.inputs.StorageAccountResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
         this.pathPattern = pathPattern;
         this.storageAccounts = storageAccounts;
         this.timeFormat = timeFormat;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private BlobReferenceInputDataSourceResponse() {

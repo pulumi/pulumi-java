@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -92,7 +93,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
         @Nullable Boolean enableCalling,
         @Nullable String incomingCallRoute,
         Boolean isEnabled) {
-        this.acceptedTerms = acceptedTerms == null ? true : acceptedTerms;
+        this.acceptedTerms = Codegen.booleanProp("acceptedTerms").arg(acceptedTerms).def(true).getNullable();
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;
         this.enableCalling = enableCalling;

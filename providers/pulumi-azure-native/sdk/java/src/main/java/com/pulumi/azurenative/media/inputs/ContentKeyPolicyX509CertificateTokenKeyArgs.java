@@ -44,7 +44,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulum
     public ContentKeyPolicyX509CertificateTokenKeyArgs(
         Output<String> odataType,
         Output<String> rawBody) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.rawBody = Objects.requireNonNull(rawBody, "expected parameter 'rawBody' to be non-null");
     }
 

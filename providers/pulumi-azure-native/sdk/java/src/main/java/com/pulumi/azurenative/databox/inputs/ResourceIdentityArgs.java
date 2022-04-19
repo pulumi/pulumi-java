@@ -46,7 +46,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public ResourceIdentityArgs(
         @Nullable Output<String> type,
         @Nullable Output<Map<String,Object>> userAssignedIdentities) {
-        this.type = type == null ? Codegen.ofNullable("None") : type;
+        this.type = Codegen.stringProp("type").output().arg(type).def("None").getNullable();
         this.userAssignedIdentities = userAssignedIdentities;
     }
 

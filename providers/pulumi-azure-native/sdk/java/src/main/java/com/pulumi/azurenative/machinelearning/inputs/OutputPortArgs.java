@@ -33,7 +33,7 @@ public final class OutputPortArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     public OutputPortArgs(@Nullable Output<Either<String,OutputPortType>> type) {
-        this.type = type == null ? Output.ofLeft("Dataset") : type;
+        this.type = Codegen.stringProp("type").left(OutputPortType.class).output().arg(type).def("Dataset").getNullable();
     }
 
     private OutputPortArgs() {

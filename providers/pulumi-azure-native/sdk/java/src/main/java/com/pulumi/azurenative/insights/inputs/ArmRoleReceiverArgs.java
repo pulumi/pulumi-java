@@ -59,7 +59,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<Boolean> useCommonAlertSchema) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private ArmRoleReceiverArgs() {

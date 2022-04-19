@@ -5,6 +5,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.azurenative.dataprotection.inputs.SourceLifeCycleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -61,7 +62,7 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
         this.isDefault = isDefault;
         this.lifecycles = Objects.requireNonNull(lifecycles, "expected parameter 'lifecycles' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
     }
 
     private AzureRetentionRuleResponse() {

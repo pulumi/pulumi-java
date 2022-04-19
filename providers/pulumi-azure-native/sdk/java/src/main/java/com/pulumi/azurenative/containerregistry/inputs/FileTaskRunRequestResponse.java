@@ -8,6 +8,7 @@ import com.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import com.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
 import com.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -175,13 +176,13 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
-        this.isArchiveEnabled = isArchiveEnabled == null ? false : isArchiveEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
         this.logTemplate = logTemplate;
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.timeout = timeout == null ? 3600 : timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.timeout = Codegen.integerProp("timeout").arg(timeout).def(3600).getNullable();
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -85,7 +86,7 @@ public final class VideoAnalyzerPresetResponse extends com.pulumi.resources.Invo
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private VideoAnalyzerPresetResponse() {

@@ -136,7 +136,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<Boolean> skipMetricValidation,
         Output<Double> threshold,
         Output<Either<String,AggregationTypeEnum>> timeAggregation) {
-        this.criterionType = Objects.requireNonNull(criterionType, "expected parameter 'criterionType' to be non-null");
+        this.criterionType = Codegen.stringProp("criterionType").output().arg(criterionType).require();
         this.dimensions = dimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.metricNamespace = metricNamespace;

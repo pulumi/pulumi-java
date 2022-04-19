@@ -85,7 +85,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
         Output<String> url,
         @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions) {
         this.credentials = credentials;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.trustedCertificates = trustedCertificates;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.validationOptions = validationOptions;

@@ -274,7 +274,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
         this.machineLearningWorkspace = machineLearningWorkspace;
         this.output = output;
         this.package_ = package_;
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
+        this.packageType = Codegen.stringProp("packageType").output().arg(packageType).require();
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
         this.payloadsLocation = payloadsLocation;

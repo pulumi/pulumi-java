@@ -45,7 +45,7 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
     public ComputeIsolationPropertiesArgs(
         @Nullable Output<Boolean> enableComputeIsolation,
         @Nullable Output<String> hostSku) {
-        this.enableComputeIsolation = enableComputeIsolation == null ? Codegen.ofNullable(false) : enableComputeIsolation;
+        this.enableComputeIsolation = Codegen.booleanProp("enableComputeIsolation").output().arg(enableComputeIsolation).def(false).getNullable();
         this.hostSku = hostSku;
     }
 

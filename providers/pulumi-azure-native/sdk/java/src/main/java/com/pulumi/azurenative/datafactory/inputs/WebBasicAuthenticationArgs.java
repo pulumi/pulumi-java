@@ -72,7 +72,7 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
         Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
         Output<Object> url,
         Output<Object> username) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");

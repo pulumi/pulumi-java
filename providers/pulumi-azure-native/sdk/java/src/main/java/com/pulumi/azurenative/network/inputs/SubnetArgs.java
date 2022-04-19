@@ -220,8 +220,8 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
         this.name = name;
         this.natGateway = natGateway;
         this.networkSecurityGroup = networkSecurityGroup;
-        this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies == null ? Output.ofLeft("Enabled") : privateEndpointNetworkPolicies;
-        this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies == null ? Output.ofLeft("Enabled") : privateLinkServiceNetworkPolicies;
+        this.privateEndpointNetworkPolicies = Codegen.stringProp("privateEndpointNetworkPolicies").left(VirtualNetworkPrivateEndpointNetworkPolicies.class).output().arg(privateEndpointNetworkPolicies).def("Enabled").getNullable();
+        this.privateLinkServiceNetworkPolicies = Codegen.stringProp("privateLinkServiceNetworkPolicies").left(VirtualNetworkPrivateLinkServiceNetworkPolicies.class).output().arg(privateLinkServiceNetworkPolicies).def("Enabled").getNullable();
         this.routeTable = routeTable;
         this.serviceEndpointPolicies = serviceEndpointPolicies;
         this.serviceEndpoints = serviceEndpoints;

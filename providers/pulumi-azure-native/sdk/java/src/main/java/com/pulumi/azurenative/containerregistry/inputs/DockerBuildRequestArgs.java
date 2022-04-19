@@ -215,15 +215,15 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
         this.credentials = credentials;
         this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
         this.imageNames = imageNames;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Codegen.ofNullable(false) : isArchiveEnabled;
-        this.isPushEnabled = isPushEnabled == null ? Codegen.ofNullable(true) : isPushEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").output().arg(isArchiveEnabled).def(false).getNullable();
+        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg(isPushEnabled).def(true).getNullable();
         this.logTemplate = logTemplate;
-        this.noCache = noCache == null ? Codegen.ofNullable(false) : noCache;
+        this.noCache = Codegen.booleanProp("noCache").output().arg(noCache).def(false).getNullable();
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.target = target;
-        this.timeout = timeout == null ? Codegen.ofNullable(3600) : timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(3600).getNullable();
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DockerBuildRequestArgs() {

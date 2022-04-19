@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -174,7 +175,7 @@ public final class FtpReadSettingsResponse extends com.pulumi.resources.InvokeAr
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.partitionRootPath = partitionRootPath;
         this.recursive = recursive;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.useBinaryTransfer = useBinaryTransfer;
         this.wildcardFileName = wildcardFileName;
         this.wildcardFolderPath = wildcardFolderPath;

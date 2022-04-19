@@ -83,7 +83,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
         Output<AutoScalingResourceMetricArgs> metric,
         Output<Integer> scaleIntervalInSeconds,
         Output<Double> upperLoadThreshold) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold, "expected parameter 'lowerLoadThreshold' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
         this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds, "expected parameter 'scaleIntervalInSeconds' to be non-null");

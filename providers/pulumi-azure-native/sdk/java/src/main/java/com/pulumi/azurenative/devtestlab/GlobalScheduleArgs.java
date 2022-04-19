@@ -173,7 +173,7 @@ public final class GlobalScheduleArgs extends com.pulumi.resources.ResourceArgs 
         this.name = name;
         this.notificationSettings = notificationSettings;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status == null ? Output.ofLeft("Disabled") : status;
+        this.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg(status).def("Disabled").getNullable();
         this.tags = tags;
         this.targetResourceId = targetResourceId;
         this.taskType = taskType;

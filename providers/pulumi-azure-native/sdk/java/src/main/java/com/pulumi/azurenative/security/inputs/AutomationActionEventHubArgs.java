@@ -57,7 +57,7 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
         Output<String> actionType,
         @Nullable Output<String> connectionString,
         @Nullable Output<String> eventHubResourceId) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
+        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;
     }

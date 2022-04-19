@@ -71,7 +71,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
         Output<String> targetResourceName,
         @Nullable Output<Integer> updateDomain) {
         this.faultDomain = faultDomain;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
         this.updateDomain = updateDomain;
     }

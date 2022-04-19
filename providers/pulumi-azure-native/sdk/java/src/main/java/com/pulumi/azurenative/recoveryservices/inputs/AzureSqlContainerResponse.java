@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,7 +85,7 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
         @Nullable String healthStatus,
         @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.registrationStatus = registrationStatus;

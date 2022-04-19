@@ -117,7 +117,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
         Output<String> synchronizationTime,
         @Nullable Output<String> triggerName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");

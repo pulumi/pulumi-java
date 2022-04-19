@@ -85,7 +85,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.maxThreshold = Objects.requireNonNull(maxThreshold, "expected parameter 'maxThreshold' to be non-null");
         this.minThreshold = Objects.requireNonNull(minThreshold, "expected parameter 'minThreshold' to be non-null");
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
         this.timeWindowSize = Objects.requireNonNull(timeWindowSize, "expected parameter 'timeWindowSize' to be non-null");
     }
 

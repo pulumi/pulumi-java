@@ -45,7 +45,7 @@ public final class DeliveryRuleRequestMethodConditionArgs extends com.pulumi.res
     public DeliveryRuleRequestMethodConditionArgs(
         Output<String> name,
         Output<RequestMethodMatchConditionParametersArgs> parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
+        this.name = Codegen.stringProp("name").output().arg(name).require();
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 

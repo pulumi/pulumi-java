@@ -12,6 +12,7 @@ import com.pulumi.azurenative.datafactory.inputs.ScriptActionResponse;
 import com.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -533,7 +534,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
         this.subnetName = subnetName;
         this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
         this.timeToLive = Objects.requireNonNull(timeToLive, "expected parameter 'timeToLive' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
         this.virtualNetworkId = virtualNetworkId;
         this.yarnConfiguration = yarnConfiguration;

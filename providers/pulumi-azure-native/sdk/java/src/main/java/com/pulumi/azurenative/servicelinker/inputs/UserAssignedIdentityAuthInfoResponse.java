@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicelinker.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +55,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
         String authType,
         String clientId,
         String subscriptionId) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").arg(authType).require();
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
     }

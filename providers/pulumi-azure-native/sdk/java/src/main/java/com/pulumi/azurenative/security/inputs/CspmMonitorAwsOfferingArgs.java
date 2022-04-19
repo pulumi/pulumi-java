@@ -47,7 +47,7 @@ public final class CspmMonitorAwsOfferingArgs extends com.pulumi.resources.Resou
         @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection,
         Output<String> offeringType) {
         this.nativeCloudConnection = nativeCloudConnection;
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
     }
 
     private CspmMonitorAwsOfferingArgs() {

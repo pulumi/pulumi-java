@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -120,12 +121,12 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
         @Nullable Double timeoutInSeconds,
         @Nullable String validation) {
         this.dependsOn = dependsOn;
-        this.force = force == null ? false : force;
-        this.path = path == null ? "" : path;
-        this.prune = prune == null ? false : prune;
+        this.force = Codegen.booleanProp("force").arg(force).def(false).getNullable();
+        this.path = Codegen.stringProp("path").arg(path).def("").getNullable();
+        this.prune = Codegen.booleanProp("prune").arg(prune).def(false).getNullable();
         this.retryIntervalInSeconds = retryIntervalInSeconds;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? 6e+02 : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? 6e+02 : timeoutInSeconds;
+        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg(syncIntervalInSeconds).def(6e+02).getNullable();
+        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg(timeoutInSeconds).def(6e+02).getNullable();
         this.validation = validation;
     }
 

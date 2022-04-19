@@ -211,7 +211,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
         this.runConcurrently = runConcurrently;
         this.staging = staging;
         this.traceLevel = traceLevel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

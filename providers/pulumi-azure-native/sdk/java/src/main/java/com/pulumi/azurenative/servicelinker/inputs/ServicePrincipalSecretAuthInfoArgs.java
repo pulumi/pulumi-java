@@ -68,7 +68,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
         Output<String> clientId,
         Output<String> principalId,
         Output<String> secret) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");

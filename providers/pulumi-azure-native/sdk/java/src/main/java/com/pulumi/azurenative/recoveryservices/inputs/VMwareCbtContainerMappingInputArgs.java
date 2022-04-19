@@ -105,7 +105,7 @@ public final class VMwareCbtContainerMappingInputArgs extends com.pulumi.resourc
         Output<String> storageAccountId,
         Output<String> storageAccountSasSecretName,
         Output<String> targetLocation) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.keyVaultId = Objects.requireNonNull(keyVaultId, "expected parameter 'keyVaultId' to be non-null");
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
         this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");

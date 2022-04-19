@@ -58,7 +58,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends com.pulumi
         @Nullable Output<String> suffix) {
         this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suffix = suffix == null ? Codegen.ofNullable("azuredatalakestore.net") : suffix;
+        this.suffix = Codegen.stringProp("suffix").output().arg(suffix).def("azuredatalakestore.net").getNullable();
     }
 
     private AddStorageAccountWithAccountParametersArgs() {

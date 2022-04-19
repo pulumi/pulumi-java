@@ -52,7 +52,7 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<List<Object>> inputs,
         Output<String> odataType) {
         this.inputs = inputs;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private JobInputsArgs() {

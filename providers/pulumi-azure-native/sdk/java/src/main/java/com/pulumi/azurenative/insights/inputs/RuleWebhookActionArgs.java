@@ -58,7 +58,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
         Output<String> odataType,
         @Nullable Output<Map<String,String>> properties,
         @Nullable Output<String> serviceUri) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.properties = properties;
         this.serviceUri = serviceUri;
     }

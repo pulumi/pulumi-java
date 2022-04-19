@@ -58,7 +58,7 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> latestRevision,
         @Nullable Output<String> revisionName,
         @Nullable Output<Integer> weight) {
-        this.latestRevision = latestRevision == null ? Codegen.ofNullable(false) : latestRevision;
+        this.latestRevision = Codegen.booleanProp("latestRevision").output().arg(latestRevision).def(false).getNullable();
         this.revisionName = revisionName;
         this.weight = weight;
     }

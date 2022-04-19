@@ -351,7 +351,7 @@ public final class AzureIaaSVMProtectedItemArgs extends com.pulumi.resources.Res
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
         this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.sourceResourceId = sourceResourceId;

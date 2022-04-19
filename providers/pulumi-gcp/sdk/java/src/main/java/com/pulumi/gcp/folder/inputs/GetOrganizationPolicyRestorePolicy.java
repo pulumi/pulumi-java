@@ -20,7 +20,7 @@ public final class GetOrganizationPolicyRestorePolicy extends com.pulumi.resourc
     }
 
     public GetOrganizationPolicyRestorePolicy(Boolean default_) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
     }
 
     private GetOrganizationPolicyRestorePolicy() {

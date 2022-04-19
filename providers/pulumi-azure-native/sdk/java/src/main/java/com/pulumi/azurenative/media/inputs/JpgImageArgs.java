@@ -150,7 +150,7 @@ public final class JpgImageArgs extends com.pulumi.resources.ResourceArgs {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.range = range;
         this.spriteColumn = spriteColumn;
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");

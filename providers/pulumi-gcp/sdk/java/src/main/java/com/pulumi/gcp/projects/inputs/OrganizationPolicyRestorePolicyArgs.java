@@ -26,7 +26,7 @@ public final class OrganizationPolicyRestorePolicyArgs extends com.pulumi.resour
     }
 
     public OrganizationPolicyRestorePolicyArgs(Output<Boolean> default_) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
     }
 
     private OrganizationPolicyRestorePolicyArgs() {

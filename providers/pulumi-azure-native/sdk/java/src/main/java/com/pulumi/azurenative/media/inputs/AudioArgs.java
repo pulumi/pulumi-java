@@ -85,7 +85,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.samplingRate = samplingRate;
     }
 

@@ -31,7 +31,7 @@ public final class FileSystemApplicationLogsConfigArgs extends com.pulumi.resour
     }
 
     public FileSystemApplicationLogsConfigArgs(@Nullable Output<LogLevel> level) {
-        this.level = level == null ? Codegen.ofNullable(com.pulumi.azurenative.web.enums.LogLevel.Off) : level;
+        this.level = Codegen.objectProp("level", LogLevel.class).output().arg(level).def(LogLevel.Off).getNullable();
     }
 
     private FileSystemApplicationLogsConfigArgs() {

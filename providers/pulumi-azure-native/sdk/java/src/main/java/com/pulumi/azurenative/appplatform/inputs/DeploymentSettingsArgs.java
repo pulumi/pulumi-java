@@ -96,12 +96,12 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
         @Nullable Output<Integer> memoryInGB,
         @Nullable Output<String> netCoreMainEntryPath,
         @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
-        this.cpu = cpu == null ? Codegen.ofNullable(1) : cpu;
+        this.cpu = Codegen.integerProp("cpu").output().arg(cpu).def(1).getNullable();
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;
-        this.memoryInGB = memoryInGB == null ? Codegen.ofNullable(1) : memoryInGB;
+        this.memoryInGB = Codegen.integerProp("memoryInGB").output().arg(memoryInGB).def(1).getNullable();
         this.netCoreMainEntryPath = netCoreMainEntryPath;
-        this.runtimeVersion = runtimeVersion == null ? Output.ofLeft("Java_8") : runtimeVersion;
+        this.runtimeVersion = Codegen.stringProp("runtimeVersion").left(RuntimeVersion.class).output().arg(runtimeVersion).def("Java_8").getNullable();
     }
 
     private DeploymentSettingsArgs() {

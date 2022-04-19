@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
     public WebAnonymousAuthenticationResponse(
         String authenticationType,
         Object url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

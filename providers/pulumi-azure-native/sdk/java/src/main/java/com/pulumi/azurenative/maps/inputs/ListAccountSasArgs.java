@@ -6,6 +6,7 @@ package com.pulumi.azurenative.maps.inputs;
 import com.pulumi.azurenative.maps.enums.SigningKey;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -117,7 +118,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
         String start) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.maxRatePerSecond = maxRatePerSecond == null ? 500 : Objects.requireNonNull(maxRatePerSecond, "expected parameter 'maxRatePerSecond' to be non-null");
+        this.maxRatePerSecond = Codegen.integerProp("maxRatePerSecond").arg(maxRatePerSecond).def(500).require();
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.regions = regions;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

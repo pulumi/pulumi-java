@@ -166,15 +166,15 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> webTestName) {
         this.description = description;
         this.enabled = enabled;
-        this.frequency = frequency == null ? Codegen.ofNullable(300) : frequency;
-        this.kind = kind == null ? Codegen.ofNullable(com.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
+        this.frequency = Codegen.integerProp("frequency").output().arg(frequency).def(300).getNullable();
+        this.kind = Codegen.objectProp("kind", WebTestKind.class).output().arg(kind).def(WebTestKind.Ping).getNullable();
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.retryEnabled = retryEnabled;
         this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
         this.tags = tags;
-        this.timeout = timeout == null ? Codegen.ofNullable(30) : timeout;
-        this.webTestKind = webTestKind == null ? Codegen.ofNullable(com.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
+        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(30).getNullable();
+        this.webTestKind = Codegen.objectProp("webTestKind", WebTestKind.class).output().arg(webTestKind).def(WebTestKind.Ping).require();
         this.webTestName = webTestName;
     }
 

@@ -28,7 +28,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends com.pulumi.resour
     }
 
     public PipelineSourceTriggerPropertiesArgs(Output<Either<String,TriggerStatus>> status) {
-        this.status = status == null ? Output.ofLeft("Enabled") : Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
+        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").require();
     }
 
     private PipelineSourceTriggerPropertiesArgs() {

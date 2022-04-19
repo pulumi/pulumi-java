@@ -173,7 +173,7 @@ public final class ApplicationRuleArgs extends com.pulumi.resources.ResourceArgs
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

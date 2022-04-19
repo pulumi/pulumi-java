@@ -158,7 +158,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
         this.isObsolete = Objects.requireNonNull(isObsolete, "expected parameter 'isObsolete' to be non-null");
         this.maxAffectedVersion = Objects.requireNonNull(maxAffectedVersion, "expected parameter 'maxAffectedVersion' to be non-null");
         this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion, "expected parameter 'minAffectedVersion' to be non-null");
-        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package' to be non-null");
         this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
         this.severityName = Objects.requireNonNull(severityName, "expected parameter 'severityName' to be non-null");
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");

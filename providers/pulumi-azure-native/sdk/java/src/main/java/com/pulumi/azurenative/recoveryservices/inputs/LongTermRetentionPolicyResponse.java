@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.MonthlyRetentionScheduleRe
 import com.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionScheduleResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.YearlyRetentionScheduleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +87,7 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
         @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType, "expected parameter 'retentionPolicyType' to be non-null");
+        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").arg(retentionPolicyType).require();
         this.weeklySchedule = weeklySchedule;
         this.yearlySchedule = yearlySchedule;
     }

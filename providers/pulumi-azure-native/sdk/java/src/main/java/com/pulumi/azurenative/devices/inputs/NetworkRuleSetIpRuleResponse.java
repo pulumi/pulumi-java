@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,7 +56,7 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
         @Nullable String action,
         String filterName,
         String ipMask) {
-        this.action = action == null ? "Allow" : action;
+        this.action = Codegen.stringProp("action").arg(action).def("Allow").getNullable();
         this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
         this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
     }

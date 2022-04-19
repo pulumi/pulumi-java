@@ -75,7 +75,7 @@ public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.filterValue = filterValue;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private SelectVideoTrackByAttributeArgs() {

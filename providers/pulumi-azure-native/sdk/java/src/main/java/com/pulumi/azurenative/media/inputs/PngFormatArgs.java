@@ -45,7 +45,7 @@ public final class PngFormatArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> filenamePattern,
         Output<String> odataType) {
         this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private PngFormatArgs() {

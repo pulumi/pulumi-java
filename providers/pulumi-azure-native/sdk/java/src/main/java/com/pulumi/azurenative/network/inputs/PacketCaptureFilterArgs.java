@@ -84,7 +84,7 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
         @Nullable Output<String> remotePort) {
         this.localIPAddress = localIPAddress;
         this.localPort = localPort;
-        this.protocol = protocol == null ? Output.ofLeft("Any") : protocol;
+        this.protocol = Codegen.stringProp("protocol").left(PcProtocol.class).output().arg(protocol).def("Any").getNullable();
         this.remoteIPAddress = remoteIPAddress;
         this.remotePort = remotePort;
     }

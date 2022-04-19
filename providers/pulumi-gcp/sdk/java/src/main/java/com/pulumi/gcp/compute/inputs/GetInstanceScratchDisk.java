@@ -24,7 +24,7 @@ public final class GetInstanceScratchDisk extends com.pulumi.resources.InvokeArg
     }
 
     public GetInstanceScratchDisk(String interface_) {
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
     }
 
     private GetInstanceScratchDisk() {

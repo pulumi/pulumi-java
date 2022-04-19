@@ -5,6 +5,7 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.azurenative.dataprotection.inputs.DayResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;
         this.monthsOfYear = monthsOfYear;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.scheduleTimes = scheduleTimes;
         this.weeksOfTheMonth = weeksOfTheMonth;
     }

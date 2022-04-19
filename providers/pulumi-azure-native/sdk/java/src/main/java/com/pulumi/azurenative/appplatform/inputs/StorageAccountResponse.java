@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
         String accountName,
         String storageType) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.storageType = Objects.requireNonNull(storageType, "expected parameter 'storageType' to be non-null");
+        this.storageType = Codegen.stringProp("storageType").arg(storageType).require();
     }
 
     private StorageAccountResponse() {

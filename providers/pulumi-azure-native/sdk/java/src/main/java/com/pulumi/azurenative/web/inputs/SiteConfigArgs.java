@@ -862,7 +862,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
         this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
         this.handlerMappings = handlerMappings;
         this.healthCheckPath = healthCheckPath;
-        this.http20Enabled = http20Enabled == null ? Codegen.ofNullable(true) : http20Enabled;
+        this.http20Enabled = Codegen.booleanProp("http20Enabled").output().arg(http20Enabled).def(true).getNullable();
         this.httpLoggingEnabled = httpLoggingEnabled;
         this.ipSecurityRestrictions = ipSecurityRestrictions;
         this.javaContainer = javaContainer;
@@ -872,13 +872,13 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
         this.limits = limits;
         this.linuxFxVersion = linuxFxVersion;
         this.loadBalancing = loadBalancing;
-        this.localMySqlEnabled = localMySqlEnabled == null ? Codegen.ofNullable(false) : localMySqlEnabled;
+        this.localMySqlEnabled = Codegen.booleanProp("localMySqlEnabled").output().arg(localMySqlEnabled).def(false).getNullable();
         this.logsDirectorySizeLimit = logsDirectorySizeLimit;
         this.managedPipelineMode = managedPipelineMode;
         this.managedServiceIdentityId = managedServiceIdentityId;
         this.minTlsVersion = minTlsVersion;
         this.minimumElasticInstanceCount = minimumElasticInstanceCount;
-        this.netFrameworkVersion = netFrameworkVersion == null ? Codegen.ofNullable("v4.6") : netFrameworkVersion;
+        this.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").output().arg(netFrameworkVersion).def("v4.6").getNullable();
         this.nodeVersion = nodeVersion;
         this.numberOfWorkers = numberOfWorkers;
         this.phpVersion = phpVersion;

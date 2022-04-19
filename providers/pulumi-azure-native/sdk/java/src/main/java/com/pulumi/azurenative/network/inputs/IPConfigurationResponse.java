@@ -6,6 +6,7 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.PublicIPAddressResponse;
 import com.pulumi.azurenative.network.inputs.SubnetResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -121,7 +122,7 @@ public final class IPConfigurationResponse extends com.pulumi.resources.InvokeAr
         this.id = id;
         this.name = name;
         this.privateIPAddress = privateIPAddress;
-        this.privateIPAllocationMethod = privateIPAllocationMethod == null ? "Dynamic" : privateIPAllocationMethod;
+        this.privateIPAllocationMethod = Codegen.stringProp("privateIPAllocationMethod").arg(privateIPAllocationMethod).def("Dynamic").getNullable();
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;

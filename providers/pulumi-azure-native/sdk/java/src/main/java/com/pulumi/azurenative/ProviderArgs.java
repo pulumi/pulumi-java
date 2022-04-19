@@ -168,12 +168,12 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.disablePulumiPartnerId = disablePulumiPartnerId;
-        this.environment = environment == null ? Codegen.ofNullable("public") : environment;
+        this.environment = Codegen.stringProp("environment").output().arg(environment).def("public").getNullable();
         this.msiEndpoint = msiEndpoint;
         this.partnerId = partnerId;
         this.subscriptionId = subscriptionId;
         this.tenantId = tenantId;
-        this.useMsi = useMsi == null ? Codegen.ofNullable(false) : useMsi;
+        this.useMsi = Codegen.booleanProp("useMsi").output().arg(useMsi).def(false).getNullable();
     }
 
     private ProviderArgs() {

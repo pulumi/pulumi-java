@@ -83,7 +83,7 @@ public final class ComputeInstanceArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<ComputeInstancePropertiesArgs> properties,
         @Nullable Output<String> resourceId) {
         this.computeLocation = computeLocation;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
         this.description = description;
         this.properties = properties;
         this.resourceId = resourceId;

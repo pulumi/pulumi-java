@@ -8,6 +8,7 @@ import com.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyResponse;
 import com.pulumi.azurenative.videoanalyzer.inputs.TokenClaimResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +90,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
         this.claims = claims;
         this.issuers = issuers;
         this.keys = keys;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private JwtAuthenticationResponse() {

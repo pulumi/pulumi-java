@@ -5,6 +5,7 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.azurenative.migrate.inputs.SubnetResourceSettingsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -100,7 +101,7 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
         this.subnets = subnets;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }

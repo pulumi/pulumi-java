@@ -61,7 +61,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
         @Nullable Output<Either<String,AdditionalWorkspaceType>> type,
         @Nullable Output<String> workspace) {
         this.dataTypes = dataTypes;
-        this.type = type == null ? Output.ofLeft("Sentinel") : type;
+        this.type = Codegen.stringProp("type").left(AdditionalWorkspaceType.class).output().arg(type).def("Sentinel").getNullable();
         this.workspace = workspace;
     }
 

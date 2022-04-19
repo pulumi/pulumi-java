@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,7 +73,7 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
         this.secretVersion = secretVersion;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private UrlSigningKeyParametersResponse() {

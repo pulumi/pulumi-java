@@ -71,7 +71,7 @@ public final class PngLayerArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> width) {
         this.height = height;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.width = width;
     }
 

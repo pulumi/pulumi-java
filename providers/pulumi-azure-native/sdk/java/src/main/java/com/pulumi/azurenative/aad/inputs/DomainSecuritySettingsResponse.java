@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.aad.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -103,13 +104,13 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
         @Nullable String syncNtlmPasswords,
         @Nullable String syncOnPremPasswords,
         @Nullable String tlsV1) {
-        this.kerberosArmoring = kerberosArmoring == null ? "Disabled" : kerberosArmoring;
-        this.kerberosRc4Encryption = kerberosRc4Encryption == null ? "Enabled" : kerberosRc4Encryption;
-        this.ntlmV1 = ntlmV1 == null ? "Enabled" : ntlmV1;
-        this.syncKerberosPasswords = syncKerberosPasswords == null ? "Enabled" : syncKerberosPasswords;
-        this.syncNtlmPasswords = syncNtlmPasswords == null ? "Enabled" : syncNtlmPasswords;
-        this.syncOnPremPasswords = syncOnPremPasswords == null ? "Enabled" : syncOnPremPasswords;
-        this.tlsV1 = tlsV1 == null ? "Enabled" : tlsV1;
+        this.kerberosArmoring = Codegen.stringProp("kerberosArmoring").arg(kerberosArmoring).def("Disabled").getNullable();
+        this.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").arg(kerberosRc4Encryption).def("Enabled").getNullable();
+        this.ntlmV1 = Codegen.stringProp("ntlmV1").arg(ntlmV1).def("Enabled").getNullable();
+        this.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").arg(syncKerberosPasswords).def("Enabled").getNullable();
+        this.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").arg(syncNtlmPasswords).def("Enabled").getNullable();
+        this.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").arg(syncOnPremPasswords).def("Enabled").getNullable();
+        this.tlsV1 = Codegen.stringProp("tlsV1").arg(tlsV1).def("Enabled").getNullable();
     }
 
     private DomainSecuritySettingsResponse() {

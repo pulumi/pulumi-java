@@ -56,7 +56,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
         Output<String> authType,
         Output<String> clientId,
         Output<String> subscriptionId) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
     }

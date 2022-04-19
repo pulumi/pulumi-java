@@ -156,7 +156,7 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
         this.parameters = parameters;
         this.policy = policy;
         this.pythonFile = Objects.requireNonNull(pythonFile, "expected parameter 'pythonFile' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

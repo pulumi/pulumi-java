@@ -83,9 +83,9 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         Output<Integer> revision) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.data = data;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
     }

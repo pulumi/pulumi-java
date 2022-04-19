@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -108,7 +109,7 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
         this.friendlyName = friendlyName;
         this.itemId = itemId;
         this.policyId = policyId;
-        this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType, "expected parameter 'protectionIntentItemType' to be non-null");
+        this.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").arg(protectionIntentItemType).require();
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
     }

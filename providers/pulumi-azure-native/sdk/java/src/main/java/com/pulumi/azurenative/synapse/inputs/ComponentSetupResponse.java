@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.azurenative.synapse.inputs.SecureStringResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -59,7 +60,7 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
         String type) {
         this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
         this.licenseKey = licenseKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ComponentSetupResponse() {

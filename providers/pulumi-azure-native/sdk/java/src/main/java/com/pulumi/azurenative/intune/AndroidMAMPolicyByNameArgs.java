@@ -204,24 +204,24 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
         @Nullable Output<Map<String,String>> tags) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
-        this.appSharingFromLevel = appSharingFromLevel == null ? Codegen.ofNullable("none") : appSharingFromLevel;
-        this.appSharingToLevel = appSharingToLevel == null ? Codegen.ofNullable("none") : appSharingToLevel;
-        this.authentication = authentication == null ? Codegen.ofNullable("required") : authentication;
-        this.clipboardSharingLevel = clipboardSharingLevel == null ? Codegen.ofNullable("blocked") : clipboardSharingLevel;
-        this.dataBackup = dataBackup == null ? Codegen.ofNullable("allow") : dataBackup;
+        this.appSharingFromLevel = Codegen.stringProp("appSharingFromLevel").output().arg(appSharingFromLevel).def("none").getNullable();
+        this.appSharingToLevel = Codegen.stringProp("appSharingToLevel").output().arg(appSharingToLevel).def("none").getNullable();
+        this.authentication = Codegen.stringProp("authentication").output().arg(authentication).def("required").getNullable();
+        this.clipboardSharingLevel = Codegen.stringProp("clipboardSharingLevel").output().arg(clipboardSharingLevel).def("blocked").getNullable();
+        this.dataBackup = Codegen.stringProp("dataBackup").output().arg(dataBackup).def("allow").getNullable();
         this.description = description;
-        this.deviceCompliance = deviceCompliance == null ? Codegen.ofNullable("enable") : deviceCompliance;
-        this.fileEncryption = fileEncryption == null ? Codegen.ofNullable("required") : fileEncryption;
-        this.fileSharingSaveAs = fileSharingSaveAs == null ? Codegen.ofNullable("allow") : fileSharingSaveAs;
+        this.deviceCompliance = Codegen.stringProp("deviceCompliance").output().arg(deviceCompliance).def("enable").getNullable();
+        this.fileEncryption = Codegen.stringProp("fileEncryption").output().arg(fileEncryption).def("required").getNullable();
+        this.fileSharingSaveAs = Codegen.stringProp("fileSharingSaveAs").output().arg(fileSharingSaveAs).def("allow").getNullable();
         this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.location = location;
-        this.managedBrowser = managedBrowser == null ? Codegen.ofNullable("required") : managedBrowser;
+        this.managedBrowser = Codegen.stringProp("managedBrowser").output().arg(managedBrowser).def("required").getNullable();
         this.offlineWipeTimeout = offlineWipeTimeout;
-        this.pin = pin == null ? Codegen.ofNullable("required") : pin;
+        this.pin = Codegen.stringProp("pin").output().arg(pin).def("required").getNullable();
         this.pinNumRetry = pinNumRetry;
         this.policyName = policyName;
-        this.screenCapture = screenCapture == null ? Codegen.ofNullable("allow") : screenCapture;
+        this.screenCapture = Codegen.stringProp("screenCapture").output().arg(screenCapture).def("allow").getNullable();
         this.tags = tags;
     }
 

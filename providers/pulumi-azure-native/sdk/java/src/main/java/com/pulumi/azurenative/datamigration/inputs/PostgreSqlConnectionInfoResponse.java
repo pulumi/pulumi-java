@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -97,7 +98,7 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
         this.password = password;
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userName = userName;
     }
 

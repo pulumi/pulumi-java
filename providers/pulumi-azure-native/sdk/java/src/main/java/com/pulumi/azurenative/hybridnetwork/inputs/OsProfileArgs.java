@@ -72,7 +72,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
-        this.customDataRequired = customDataRequired == null ? Codegen.ofNullable(true) : customDataRequired;
+        this.customDataRequired = Codegen.booleanProp("customDataRequired").output().arg(customDataRequired).def(true).getNullable();
         this.linuxConfiguration = linuxConfiguration;
     }
 

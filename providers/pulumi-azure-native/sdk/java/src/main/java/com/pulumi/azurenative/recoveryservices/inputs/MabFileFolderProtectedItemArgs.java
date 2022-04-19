@@ -297,7 +297,7 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
         this.lastBackupTime = lastBackupTime;
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
         this.workloadType = workloadType;
