@@ -48,7 +48,7 @@ public class PulumiInternal implements Pulumi {
         var outputs = new OutputContextInternal(outputFactory);
         var exports = new ExportsInternal();
 
-        var ctx = new ContextInternal(stackName, logging, config, outputs, exports);
+        var ctx = new ContextInternal(projectName, stackName, logging, config, outputs, exports);
         return new PulumiInternal(runner, ctx);
     }
 

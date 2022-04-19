@@ -57,7 +57,7 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 		Dir:    e.RootPath,
 		Config: templateCfg.config,
 		PrepareProject: func(*engine.Projinfo) error {
-			return nil
+			return nil // needed because defaultPrepareProject does not know about jvm
 		},
 	}.With(previewOnlyOptions())
 	integration.ProgramTest(t, &opts)

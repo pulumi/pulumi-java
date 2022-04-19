@@ -17,6 +17,7 @@ import static java.util.Objects.requireNonNull;
 @ParametersAreNonnullByDefault
 public class ContextInternal implements Context {
 
+    private final String projectName;
     private final String stackName;
     private final LoggingContextInternal logging;
     private final ConfigContextInternal config;
@@ -24,17 +25,24 @@ public class ContextInternal implements Context {
     private final ExportsInternal exports;
 
     public ContextInternal(
+            String projectName,
             String stackName,
             LoggingContextInternal logging,
             ConfigContextInternal config,
             OutputContextInternal outputs,
             ExportsInternal exports
     ) {
+        this.projectName = require(Strings::isNonEmptyOrNull, projectName, () -> "expected a project name, got empty string or null");
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
         this.config = requireNonNull(config);
         this.outputs = requireNonNull(outputs);
         this.exports = requireNonNull(exports);
+    }
+
+    @Override
+    public String projectName() {
+        return this.projectName;
     }
 
     @Override

@@ -11,6 +11,10 @@ import java.util.Optional;
  */
 public class StackReferenceArgs extends ResourceArgs {
 
+    public static final StackReferenceArgs Empty = new StackReferenceArgs(null) {
+        // Empty
+    };
+
     /**
      * The name of the stack to reference.
      */
