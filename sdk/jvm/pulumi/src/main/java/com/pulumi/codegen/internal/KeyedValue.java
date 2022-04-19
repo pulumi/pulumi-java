@@ -1,4 +1,4 @@
-package com.pulumi.codegen;
+package com.pulumi.codegen.internal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,10 @@ public class KeyedValue<T> {
     }
 
     /**
-     * Creates an instance of KeyedValue(T)
+     * Creates an instance of KeyedValue(U)
      * @param key the key of the value
      * @param input the value itself
-     * @return an instance of KeyedValue(T)
+     * @return an instance of KeyedValue(U)
      * @param <U> the type of the value
      */
     public static <U> KeyedValue<U> create(String key, U input) {

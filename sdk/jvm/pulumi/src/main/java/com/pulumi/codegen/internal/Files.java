@@ -1,4 +1,4 @@
-package com.pulumi.codegen;
+package com.pulumi.codegen.internal;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ public class Files {
      * the files within that directory. This function maps to the readDir(...) function
      * from PCL.
      */
-    public static List<KeyedValue<String>> ReadDir(String directoryPath) {
+    public static List<KeyedValue<String>> readDir(String directoryPath) {
         var results = new ArrayList<KeyedValue<String>>();
         var files = new File(directoryPath).listFiles();
         if (files == null) {
