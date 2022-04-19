@@ -1131,6 +1131,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var id = response.id;
                         var data = response.data;
                         var dependencies = response.dependencies;
+                        log.excessive(
+                                "Read response for resource: t=%s, name=%s, urn=%s, id=%s, remote=%s",
+                                resource.getResourceType(), resource.getResourceName(), urn, id, remote
+                        );
 
                         lazy.urn().completeOrThrow(Output.of(urn));
                         if (resource instanceof CustomResource) {

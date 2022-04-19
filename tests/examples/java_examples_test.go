@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/stretchr/testify/assert"
 
+	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
 
@@ -196,7 +196,7 @@ func getJvmBase(t *testing.T, dir string, testSpecificOptions integration.Progra
 		Dir: filepath.Join(getCwd(t), dir),
 		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 		PrepareProject: func(*engine.Projinfo) error {
-			return nil
+			return nil // needed because defaultPrepareProject does not know about jvm
 		},
 	}
 	opts = opts.With(getBaseOptions()).With(testSpecificOptions)

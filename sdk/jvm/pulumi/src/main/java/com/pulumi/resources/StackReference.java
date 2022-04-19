@@ -41,7 +41,34 @@ public class StackReference extends CustomResource {
     public Output<ImmutableList<String>> secretOutputNames;
 
     /**
-     * Create a @see {@link StackReference} resource with the given unique name, arguments, and options.
+     * Create a {@link StackReference} resource with the given unique name.
+     * <p>
+     * The name of the referenced stack will be the name of the StackReference resource.
+     * <br>
+     *
+     * @param name The unique name of the stack reference.
+     * @see StackReference#StackReference(String, StackReferenceArgs, CustomResourceOptions)
+     */
+    public StackReference(String name) {
+        this(name, StackReferenceArgs.Empty, CustomResourceOptions.Empty);
+    }
+
+    /**
+     * Create a {@link StackReference} resource with the given unique name, arguments.
+     * <p>
+     * If args is not specified, the name of the referenced stack will be the name of the StackReference resource.
+     * <br>
+     *
+     * @param name The unique name of the stack reference.
+     * @param args The arguments to use to populate this resource's properties.
+     * @see StackReference#StackReference(String, StackReferenceArgs, CustomResourceOptions)
+     */
+    public StackReference(String name, @Nullable StackReferenceArgs args) {
+        this(name, args, CustomResourceOptions.Empty);
+    }
+
+    /**
+     * Create a {@link StackReference} resource with the given unique name, arguments, and options.
      * <p>
      * If args is not specified, the name of the referenced stack will be the name of the StackReference resource.
      * <br>
@@ -80,12 +107,12 @@ public class StackReference extends CustomResource {
      * <p>
      *
      * @param name The name of the stack output to fetch.
-     * @return An @see {@link Output} containing the requested value.
+     * @return An {@link Output} containing the requested value.
      */
     public Output<Object> getOutput(Output<String> name) {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
-        // We do this dance so we can ensure that the Output we return is not needlessly tainted as a secret.
+        // We do this dance, so we can ensure that the Output we return is not needlessly tainted as a secret.
         var value = Output.tuple(name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t2, v.t1).orElse(null));
 
@@ -97,7 +124,7 @@ public class StackReference extends CustomResource {
      * <p>
      *
      * @param name The name of the stack output to fetch.
-     * @return An @see {@link Output} containing the requested value.
+     * @return An {@link Output} containing the requested value.
      */
     public Output<Object> requireOutput(Output<String> name) {
         var value = Output.tuple(name, this.name, this.outputs).applyValue(
