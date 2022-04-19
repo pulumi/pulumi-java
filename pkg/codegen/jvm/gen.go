@@ -490,8 +490,10 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, " */\n")
 	}
 
-	fprintf(w, "public final class %s extends %s {\n\n", pt.name, pt.baseClass)
-	fprintf(w, "    public static final %s Empty = builder().build();\n\n", pt.name)
+	fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
+	fprintf(w, "\n")
+	fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
+	fprintf(w, "\n")
 
 	// Declare each input property.
 	for propIndex, p := range pt.properties {
