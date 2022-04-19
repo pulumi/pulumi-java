@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Annotation used by a Pulumi Cloud Provider Package to mark complex types used for a Resource
  * output property.
- * <p/>
+ * <p>
  * A complex type must have a single constructor
  * marked with the @see {@link CustomType.Constructor} annotation.
  */
@@ -19,12 +19,12 @@ public @interface CustomType {
     /**
      * Annotation used by a Pulumi Cloud Provider Package to marks the constructor for a complex
      * property type so that it can be instantiated by the Pulumi runtime.
-     * <p/>
+     * <p>
      * <b>WARNING:</b> nested classes will have a reference to the parent class as the
      * as the first parameter of the constructor ({@code arg0}) and this type also needs to be deserializable
      * or the class needs to be made static. This is unlikely scenario, but theoretically possible.
      * The invisible fist argument needs also to be named in the annotation value.
-     * <p/>
+     * <p>
      * The constructor should take parameters annotated with {@link Parameter} that map to
      * the resultant @see {@link com.google.protobuf.Struct} returned by the engine.
      */

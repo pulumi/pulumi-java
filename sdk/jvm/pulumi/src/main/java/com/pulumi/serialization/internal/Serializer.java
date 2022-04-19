@@ -67,9 +67,9 @@ public class Serializer {
      * <li>@see {@link com.pulumi.resources.ResourceArgs}</li>
      * <li>@see {@link com.google.gson.JsonElement}</li>
      * </ul>
-     * <p/>
+     * <p>
      * Additionally, other more complex objects can be serialized as long as they are built out of serializable objects.
-     * <br/>
+     * <br>
      * These complex objects include:
      * <ul>
      * <li>@see {@link com.pulumi.core.Output}. As long as they are an Output of a serializable type.</li>
@@ -77,17 +77,17 @@ public class Serializer {
      * <li>@see {@link java.util.Map}. As long as the key of the dictionary are {@code String} and as long as the value are all serializable.</li>
      * <li>@see {@link com.pulumi.core.Either}. As long as both left and right are serializable.</li>
      * </ul>
-     * <p/>
-     * As the final complex type, an {@link Enum} is allowed, but there are special requirements as follows.<br/>
+     * <p>
+     * As the final complex type, an {@link Enum} is allowed, but there are special requirements as follows.<br>
      * It must be a standard enum (with {@code ordinal} value only) or:
      * <ul>
      *     <li>Have a constructor that takes a single parameter of {@code int}, {@code Integer}, {@code double}, {@code Double} or {@code String}. The constructor can and <b>should</b> be private.</li>
      *     <li>Have an underlying type of {@code int}, {@code Integer}, {@code double}, {@code Double} or {@code String}.</li>
      *     <li>Overriding {@code toString} isn't required, but is recommended and is what our codegen does.</li>
      * </ul>
-     * <p/>
+     * <p>
      * <b>No other forms are allowed.</b>
-     * <p/>
+     * <p>
      * <p>
      * This function will only return values of a very specific shape. Specifically, the
      * result values returned will <b>only</b> be one of:
@@ -100,7 +100,7 @@ public class Serializer {
      * <li>An {@link java.util.List} containing only these result value types.</li>
      * <li>An {@link java.util.Map} where the keys are {@code String}s and the values are only these result value types.</li>
      * </ul>
-     * <p/>
+     * <p>
      * No other result type are allowed to be returned.
      */
     public CompletableFuture</* @Nullable */ Object> serializeAsync(String ctx, @Nullable Object prop, boolean keepResources) {

@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Annotation used by a Pulumi Cloud Provider Package
  * to mark @see {@link com.pulumi.resources.Resource} input fields.
- * <p/>
+ * <p>
  * Note: this should just be placed on the field itself, not a setter or getter
  */
 @Retention(RetentionPolicy.RUNTIME)

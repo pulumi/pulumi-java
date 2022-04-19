@@ -28,47 +28,47 @@ import static com.pulumi.core.internal.OutputInternal.TupleZeroOut;
 import static java.util.Objects.requireNonNull;
 
 /**
- * {@code Output<T>} is a key part of how Pulumi tracks dependencies
+ * {@code Output}{@literal <T>} is a key part of how Pulumi tracks dependencies
  * between @see {@link com.pulumi.resources.Resource}s.
  * Because the values of outputs are not available until resources are created,
- * these are represented using the special {@code Output<T>} type,
+ * these are represented using the special {@code Output}{@literal <T>} type,
  * which internally represents two things:
  * <ol>
  *     <li>An eventually available value of the output</li>
  *     <li>The dependency on the source(s) of the output value</li>
  * </ol>
- * In fact, {@code Output<T>} is quite similar to @see {@link CompletableFuture}.
+ * In fact, {@code Output}{@literal <T>} is quite similar to @see {@link CompletableFuture}.
  * Additionally, they carry along dependency information.
- * <p/>
- * The output properties of all resource objects in Pulumi have type {@code Output<T>}.
+ * <p>
+ * The output properties of all resource objects in Pulumi have type {@code Output}{@literal <T>}.
  */
 public interface Output<T> extends Copyable<Output<T>> {
 
     /**
-     * Transforms the data of this @see {@link Output<T>} with the provided {@code func}.
-     * The result remains an @see {@link Output<T>} so that dependent resources
+     * Transforms the data of this @see {@link Output}{@literal <T>} with the provided {@code func}.
+     * The result remains an @see {@link Output}{@literal <T>} so that dependent resources
      * can be properly tracked.
-     * <p/>
+     * <p>
      * {@code func} is not allowed to make resources.
-     * <p/>
-     * {@code func} can return other @see {@link Output<T>}s.  This can be handy if
+     * <p>
+     * {@code func} can return other @see {@link Output}{@literal <T>}s.  This can be handy if
      * you have an <code>Output&lt;SomeType&gt;</code> and you want to get a transitive dependency of it.  i.e.:
-     * <br/>
+     * <br>
      * <code>
      * Output&lt;SomeType&gt; d1 = ...;
-     * Output&lt;OtherType&gt; d2 = d1.apply(v -> v.otherOutput); // getting an output off of 'v'.
+     * Output&lt;OtherType&gt; {@literal d2 = d1.apply(v -> v.otherOutput);} // getting an output off of 'v'.
      * </code>
-     * <p/>
+     * <p>
      * In this example, taking a dependency on d2 means a resource will depend on all the resources
      * of d1. It will <b>not</b> depend on the resources of v.x.y.OtherDep.
-     * <p/>
+     * <p>
      * Importantly, the Resources that d2 feels like it will depend on are the same resources
      * as d1.
-     * <p/>
-     * If you need have multiple @see {@link Output<T>}s and a single @see {@link Output<T>}
+     * <p>
+     * If you need have multiple @see {@link Output}{@literal <T>}s and a single @see {@link Output}{@literal <T>}
      * is needed that combines both set of resources, then @see {@link Output#all(Output[])}
      * or {@link Output#tuple(Output, Output, Output)} should be used instead.
-     * <p/>
+     * <p>
      * This function will only be called during execution of a <code>pulumi up</code> request.
      * It will not run during <code>pulumi preview</code>
      * (as the values of resources are of course not known then).
@@ -83,20 +83,20 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output<T>}
+     * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output}{@literal <T>}
      *
-     * @return a shallow copy of the @see {@link Output<T>}
+     * @return a shallow copy of the @see {@link Output}{@literal <T>}
      */
     Output<T> copy();
 
     /**
-     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * Returns a new @see {@link Output}{@literal <T>} which is a copy of the existing output but marked as
      * a non-secret. The original output or input is not modified in any way.
      */
     Output<T> asPlaintext();
 
     /**
-     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * Returns a new @see {@link Output}{@literal <T>} which is a copy of the existing output but marked as
      * a secret. The original output or input is not modified in any way.
      */
     Output<T> asSecret();
@@ -104,11 +104,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     // Static section -----
 
     /**
-     * Returns an {@code Output<T>} describing the given non-{@code null} value.
+     * Returns an {@code Output}{@literal <T>} describing the given non-{@code null} value.
      *
      * @param value the value to describe, which must be non-{@code null}
      * @param <T>   the type of the value
-     * @return an {@code Output<T>} with the value present
+     * @return an {@code Output}{@literal <T>} with the value present
      * @throws NullPointerException if value is {@code null}
      */
     static <T> Output<T> of(T value) {
@@ -117,11 +117,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Returns an {@code Output<T>} describing a future value.
+     * Returns an {@code Output}{@literal <T>} describing a future value.
      *
      * @param future the future to describe, which must be non-{@code null}
      * @param <T>    the type of the value
-     * @return an {@code Output<T>} with the value present
+     * @return an {@code Output}{@literal <T>} with the value present
      * @throws NullPointerException if future is {@code null}, but not the future value
      */
     static <T> Output<T> of(CompletableFuture<T> future) {
@@ -129,11 +129,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Returns an {@code Output<T>} describing the given non-{@code null} secret value.
+     * Returns an {@code Output}{@literal <T>} describing the given non-{@code null} secret value.
      *
      * @param value the secret value to describe, which must be non-{@code null}
      * @param <T>   the type of the value
-     * @return an {@code Output<T>} with the value present
+     * @return an {@code Output}{@literal <T>} with the value present
      * @throws NullPointerException if value is {@code null}
      */
     static <T> Output<T> ofSecret(T value) {
@@ -141,25 +141,25 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Returns an {@code Output<T>} describing the given value, if
-     * non-{@code null}, otherwise returns an empty {@code Output<T>}.
+     * Returns an {@code Output}{@literal <T>} describing the given value, if
+     * non-{@code null}, otherwise returns an empty {@code Output}{@literal <T>}.
      *
      * @param value the possibly-{@code null} value to describe
      * @param <T>   the type of the value
-     * @return an {@code Output<T>} with a present value if the specified value
-     * is non-{@code null}, otherwise an empty {@code Output<T>}
+     * @return an {@code Output}{@literal <T>} with a present value if the specified value
+     * is non-{@code null}, otherwise an empty {@code Output}{@literal <T>}
      */
     static <T> Output<T> ofNullable(@Nullable T value) {
         return new OutputInternal<>(value);
     }
 
     /**
-     * Combines all the @see {@link Output<T>} values in {@code outputs}
-     * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
+     * Combines all the @see {@link Output}{@literal <T>} values in {@code outputs}
+     * into a single @see {@link Output}{@literal <T>} with an @see {@link java.util.List}{@literal <T>}
      * containing all their underlying values.
-     * <p/>
-     * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
-     * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
+     * <p>
+     * If any of the @see {@link Output}{@literal <T>}s are not known, the final result will be not known.
+     * Similarly, if any of the @see {@link Output}{@literal <T>}s are secrets, then the final result will be a secret.
      */
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
     static <T> Output<List<T>> all(Output<T>... outputs) {
@@ -272,7 +272,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @param json the json value wrapped in an {@link Output<String>}
+     * @param json the json value wrapped in an {@link Output}{@literal <String>}
      * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
      * @throws com.google.gson.JsonSyntaxException – if json is not valid
      * @see #ofJson(JsonElement)
@@ -436,7 +436,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     /**
      * Helps to build an {@link Output} that wraps a {@link List}.
      *
-     * @return an {@link Output.ListBuilder<E>} instance
+     * @return an {@link Output.ListBuilder}{@literal <E>} instance
      * @see #ofList(Object)
      */
     static <E> Output.ListBuilder<E> listBuilder() {
@@ -515,9 +515,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     /**
      * Concatenates two @see {@link Map} wrapped in an @see {@link Output}.
      * Returns a new instance without modifying any of the arguments.
-     * <p/>
+     * <p>
      * If both maps contain the same key, the value from the second map takes over.
-     * <p/>
+     * <p>
      * Null values in the Output or Map layer are treated as empty maps.
      *
      * @param left  The first @see {@code Output<Map<V>>}

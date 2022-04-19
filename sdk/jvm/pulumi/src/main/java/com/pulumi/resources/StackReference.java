@@ -42,9 +42,9 @@ public class StackReference extends CustomResource {
 
     /**
      * Create a @see {@link StackReference} resource with the given unique name, arguments, and options.
-     * <p/>
+     * <p>
      * If args is not specified, the name of the referenced stack will be the name of the StackReference resource.
-     * <br/>
+     * <br>
      *
      * @param name    The unique name of the stack reference.
      * @param args    The arguments to use to populate this resource's properties.
@@ -77,7 +77,7 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or null if the stack output was not found.
-     * <p/>
+     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An @see {@link Output} containing the requested value.
@@ -94,7 +94,7 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value of the named stack output, or throws an error if the output was not found.
-     * <p/>
+     * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An @see {@link Output} containing the requested value.
@@ -110,7 +110,7 @@ public class StackReference extends CustomResource {
     /**
      * Fetches the value of the named stack output. May return null if the value is
      * not known for some reason.
-     * <p/>
+     * <p>
      * This operation is not supported (and will throw) for secret outputs.
      * </p>
      *
@@ -130,7 +130,7 @@ public class StackReference extends CustomResource {
 
     /**
      * Fetches the value promptly of the named stack output. Throws an error if the stack output is not found.
-     * <p/>
+     * <p>
      * This operation is not supported (and will throw) for secret outputs.
      * </p>
      *
