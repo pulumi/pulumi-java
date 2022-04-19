@@ -3,9 +3,9 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/azuread/Config.java",
-    "src/main/java/io/pulumi/azuread/Provider.java",
-    "src/main/java/io/pulumi/azuread/ProviderArgs.java",
-    "src/main/java/io/pulumi/azuread/Utilities.java"
+    "src/main/java/com/pulumi/azuread/Config.java",
+    "src/main/java/com/pulumi/azuread/Provider.java",
+    "src/main/java/com/pulumi/azuread/ProviderArgs.java",
+    "src/main/java/com/pulumi/azuread/Utilities.java"
   ]
 }

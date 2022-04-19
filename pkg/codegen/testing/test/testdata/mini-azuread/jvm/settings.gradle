@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.azuread"
+rootProject.name = "com.pulumi.azuread"
 include("lib")
