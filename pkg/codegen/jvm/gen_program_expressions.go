@@ -285,12 +285,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		} else {
 			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
 		}
+	case "file":
+		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
 	case "filebase64":
-		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ReadFileBase64(%v)", expr.Args[0])
+		g.Fgenf(w, "Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
 	case "filebase64sha256":
-		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
+		// Assuming the existence of the following helper method
+		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
 		fullyQualifiedName, schemaName := g.functionName(expr.Args[0])
 		functionSchema, foundFunction := g.findFunctionSchema(schemaName)
@@ -331,7 +332,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "readFile":
 		g.Fgenf(w, "Files.readString(%v)", expr.Args[0])
 	case "readDir":
-		g.Fgenf(w, "ReadDir(%.v)", expr.Args[0])
+		g.Fgenf(w, "readDir(%.v)", expr.Args[0])
 	case "secret":
 		g.Fgenf(w, "Output.ofSecret(%v)", expr.Args[0])
 	case "split":
@@ -339,10 +340,10 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
 	case "toBase64":
-		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
+		g.Fgenf(w, "Base64.getEncoder().encodeToString(%v.getBytes())", expr.Args[0])
 	case "toJSON":
 		// Assumes SerializeJson is part of the SDK
-		g.Fgen(w, "SerializeJson(")
+		g.Fgen(w, "serializeJson(")
 		g.genNewline(w)
 		g.Indented(func() {
 			g.genIndent(w)
@@ -351,13 +352,11 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgen(w, ")")
 	case "sha1":
 		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ComputeSHA1(%v)", expr.Args[0])
+		g.Fgenf(w, "computeSHA1(%v)", expr.Args[0])
 	case "stack":
-		g.Fgen(w, "Deployment.Instance.StackName")
+		g.Fgen(w, "Deployment.getInstance().getStackName()")
 	case "project":
-		g.Fgen(w, "Deployment.Instance.ProjectName")
-	case "cwd":
-		g.Fgenf(w, "Directory.GetCurrentDirectory()")
+		g.Fgen(w, "Deployment.getInstance().getProjectName()")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}
@@ -366,13 +365,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
-		g.Fgen(w, "JsonObject(")
+		g.Fgen(w, "jsonObject(")
 		g.genNewline(w)
 		g.Indented(func() {
 			for index, item := range expr.Items {
 
 				g.genIndent(w)
-				g.Fgenf(w, "JsonProperty(%s, ", item.Key)
+				g.Fgenf(w, "jsonProperty(%s, ", item.Key)
 				g.genJson(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
@@ -386,12 +385,12 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 		g.Fgenf(w, "%s)", g.Indent)
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
-			g.Fgen(w, "JsonArray(")
+			g.Fgen(w, "jsonArray(")
 			g.genJson(w, expr.Expressions[0])
 			g.Fgen(w, ")")
 			return
 		}
-		g.Fgen(w, "JsonArray(")
+		g.Fgen(w, "jsonArray(")
 		g.genNewline(w)
 		g.Indented(func() {
 			for index, value := range expr.Expressions {
