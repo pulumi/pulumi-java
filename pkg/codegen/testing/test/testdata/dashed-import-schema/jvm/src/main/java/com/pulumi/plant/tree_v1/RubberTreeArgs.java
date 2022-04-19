@@ -14,6 +14,7 @@ import com.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import com.pulumi.plant.tree_v1.enums.TreeSize;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,130 +23,120 @@ public final class RubberTreeArgs extends com.pulumi.resources.ResourceArgs {
     public static final RubberTreeArgs Empty = new RubberTreeArgs();
 
     @Import(name="container")
-      private final @Nullable Output<ContainerArgs> container;
+    private @Nullable Output<ContainerArgs> container;
 
-    public Output<ContainerArgs> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<ContainerArgs>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     @Import(name="diameter", required=true)
-      private final Output<Diameter> diameter;
+    private Output<Diameter> diameter;
 
     public Output<Diameter> diameter() {
         return this.diameter;
     }
 
     @Import(name="farm")
-      private final @Nullable Output<Either<Farm,String>> farm;
+    private @Nullable Output<Either<Farm,String>> farm;
 
-    public Output<Either<Farm,String>> farm() {
-        return this.farm == null ? Codegen.empty() : this.farm;
+    public Optional<Output<Either<Farm,String>>> farm() {
+        return Optional.ofNullable(this.farm);
     }
 
     @Import(name="size")
-      private final @Nullable Output<TreeSize> size;
+    private @Nullable Output<TreeSize> size;
 
-    public Output<TreeSize> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<TreeSize>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     @Import(name="type", required=true)
-      private final Output<RubberTreeVariety> type;
+    private Output<RubberTreeVariety> type;
 
     public Output<RubberTreeVariety> type() {
         return this.type;
     }
 
-    public RubberTreeArgs(
-        @Nullable Output<ContainerArgs> container,
-        Output<Diameter> diameter,
-        @Nullable Output<Either<Farm,String>> farm,
-        @Nullable Output<TreeSize> size,
-        Output<RubberTreeVariety> type) {
-        this.container = container;
-        this.diameter = Codegen.objectProp("diameter", Diameter.class).output().arg(diameter).def(Diameter.Sixinch).require();
-        this.farm = Codegen.stringProp("farm").right(Farm.class).output().arg(farm).def("(unknown)").getNullable();
-        this.size = Codegen.objectProp("size", TreeSize.class).output().arg(size).def(TreeSize.Medium).getNullable();
-        this.type = Codegen.objectProp("type", RubberTreeVariety.class).output().arg(type).def(RubberTreeVariety.Burgundy).require();
-    }
+    private RubberTreeArgs() {}
 
-    private RubberTreeArgs() {
-        this.container = Codegen.empty();
-        this.diameter = Codegen.empty();
-        this.farm = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    protected RubberTreeArgs(RubberTreeArgs $) {
+        this.container = $.container;
+        this.diameter = $.diameter;
+        this.farm = $.farm;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RubberTreeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerArgs> container;
-        private Output<Diameter> diameter;
-        private @Nullable Output<Either<Farm,String>> farm;
-        private @Nullable Output<TreeSize> size;
-        private Output<RubberTreeVariety> type;
+        private RubberTreeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RubberTreeArgs();
         }
 
         public Builder(RubberTreeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.diameter = defaults.diameter;
-    	      this.farm = defaults.farm;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new RubberTreeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable Output<ContainerArgs> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable ContainerArgs container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(ContainerArgs container) {
+            return container(Output.of(container));
         }
+
         public Builder diameter(Output<Diameter> diameter) {
-            this.diameter = Objects.requireNonNull(diameter);
+            $.diameter = diameter;
             return this;
         }
+
         public Builder diameter(Diameter diameter) {
-            this.diameter = Output.of(Objects.requireNonNull(diameter));
-            return this;
+            return diameter(Output.of(diameter));
         }
+
         public Builder farm(@Nullable Output<Either<Farm,String>> farm) {
-            this.farm = farm;
+            $.farm = farm;
             return this;
         }
-        public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Codegen.ofNullable(farm);
-            return this;
+
+        public Builder farm(Either<Farm,String> farm) {
+            return farm(Output.of(farm));
         }
+
         public Builder size(@Nullable Output<TreeSize> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable TreeSize size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(TreeSize size) {
+            return size(Output.of(size));
         }
+
         public Builder type(Output<RubberTreeVariety> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(RubberTreeVariety type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RubberTreeArgs build() {
-            return new RubberTreeArgs(container, diameter, farm, size, type);
+            return type(Output.of(type));
+        }
+
+        public RubberTreeArgs build() {
+            $.diameter = Codegen.objectProp("diameter", Diameter.class).output().arg($.diameter).def(Diameter.Sixinch).require();
+            $.farm = Codegen.stringProp("farm").right(Farm.class).output().arg($.farm).def("(unknown)").getNullable();
+            $.size = Codegen.objectProp("size", TreeSize.class).output().arg($.size).def(TreeSize.Medium).getNullable();
+            $.type = Codegen.objectProp("type", RubberTreeVariety.class).output().arg($.type).def(RubberTreeVariety.Burgundy).require();
+            return $;
         }
     }
+
 }
