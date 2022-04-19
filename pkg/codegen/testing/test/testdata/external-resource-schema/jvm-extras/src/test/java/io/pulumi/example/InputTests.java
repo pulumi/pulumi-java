@@ -1,0 +1,37 @@
+package com.pulumi.example;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+import com.pulumi.core.Input;
+import com.pulumi.example.inputs.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+class InputTests {
+
+    @Test
+    void testPetArgs_nullValues() {
+
+
+        var args = PetArgs.Empty;
+
+        var map = args.internalToOptionalMapAsync().join();
+
+        assertThat(map).containsKey("age");
+        assertThat(map).containsKey("name");
+        assertThat(map).containsKey("nameArray");
+        assertThat(map).containsKey("nameMap");
+        assertThat(map).containsKey("requiredName");
+        assertThat(map).containsKey("requiredNameArray");
+        assertThat(map).containsKey("requiredNameMap");
+
+        assertThat(map).containsEntry("age", Optional.empty());
+        assertThat(map).containsEntry("name", Optional.empty());
+        assertThat(map).containsEntry("nameArray", Optional.empty());
+        assertThat(map).containsEntry("nameMap", Optional.empty());
+        assertThat(map).containsEntry("requiredName", Optional.empty());
+        assertThat(map).containsEntry("requiredNameArray", Optional.empty());
+        assertThat(map).containsEntry("requiredNameMap", Optional.empty());
+    }
+}
