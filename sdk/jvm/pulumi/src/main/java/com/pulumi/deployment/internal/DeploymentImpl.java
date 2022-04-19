@@ -1301,6 +1301,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setId(id)
                                 .setParent(prepareResult.parentUrn)
                                 .setProvider(prepareResult.providerRef)
+                                .setProperties(prepareResult.serializedProps)
                                 .setVersion(options.getVersion().orElse(""))
                                 .setAcceptSecrets(true)
                                 .setAcceptResources(!DeploymentState.DisableResourceReferences);
