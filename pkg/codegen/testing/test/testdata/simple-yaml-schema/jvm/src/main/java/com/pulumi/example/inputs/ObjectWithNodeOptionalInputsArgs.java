@@ -5,10 +5,10 @@ package com.pulumi.example.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class ObjectWithNodeOptionalInputsArgs extends com.pulumi.resources
     public static final ObjectWithNodeOptionalInputsArgs Empty = new ObjectWithNodeOptionalInputsArgs();
 
     @Import(name="bar")
-      private final @Nullable Output<Integer> bar;
+    private @Nullable Output<Integer> bar;
 
-    public Output<Integer> bar() {
-        return this.bar == null ? Codegen.empty() : this.bar;
+    public Optional<Output<Integer>> bar() {
+        return Optional.ofNullable(this.bar);
     }
 
     @Import(name="foo", required=true)
-      private final Output<String> foo;
+    private Output<String> foo;
 
     public Output<String> foo() {
         return this.foo;
     }
 
-    public ObjectWithNodeOptionalInputsArgs(
-        @Nullable Output<Integer> bar,
-        Output<String> foo) {
-        this.bar = bar;
-        this.foo = Objects.requireNonNull(foo, "expected parameter 'foo' to be non-null");
-    }
+    private ObjectWithNodeOptionalInputsArgs() {}
 
-    private ObjectWithNodeOptionalInputsArgs() {
-        this.bar = Codegen.empty();
-        this.foo = Codegen.empty();
+    protected ObjectWithNodeOptionalInputsArgs(ObjectWithNodeOptionalInputsArgs $) {
+        this.bar = $.bar;
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectWithNodeOptionalInputsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bar;
-        private Output<String> foo;
+        private ObjectWithNodeOptionalInputsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectWithNodeOptionalInputsArgs();
         }
 
         public Builder(ObjectWithNodeOptionalInputsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bar = defaults.bar;
-    	      this.foo = defaults.foo;
+            $ = new ObjectWithNodeOptionalInputsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bar(@Nullable Output<Integer> bar) {
-            this.bar = bar;
+            $.bar = bar;
             return this;
         }
-        public Builder bar(@Nullable Integer bar) {
-            this.bar = Codegen.ofNullable(bar);
-            return this;
+
+        public Builder bar(Integer bar) {
+            return bar(Output.of(bar));
         }
+
         public Builder foo(Output<String> foo) {
-            this.foo = Objects.requireNonNull(foo);
+            $.foo = foo;
             return this;
         }
+
         public Builder foo(String foo) {
-            this.foo = Output.of(Objects.requireNonNull(foo));
-            return this;
-        }        public ObjectWithNodeOptionalInputsArgs build() {
-            return new ObjectWithNodeOptionalInputsArgs(bar, foo);
+            return foo(Output.of(foo));
+        }
+
+        public ObjectWithNodeOptionalInputsArgs build() {
+            $.foo = Objects.requireNonNull($.foo, "expected parameter 'foo' to be non-null");
+            return $;
         }
     }
+
 }
