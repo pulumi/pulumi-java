@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +68,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
-        this.scaleType = Objects.requireNonNull(scaleType, "expected parameter 'scaleType' to be non-null");
+        this.scaleType = Codegen.stringProp("scaleType").arg(scaleType).require();
     }
 
     private ManualScaleSettingsResponse() {

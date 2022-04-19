@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -51,7 +52,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
         String status) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.recommendationType = Objects.requireNonNull(recommendationType, "expected parameter 'recommendationType' to be non-null");
-        this.status = status == null ? "Enabled" : Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
+        this.status = Codegen.stringProp("status").arg(status).def("Enabled").require();
     }
 
     private RecommendationConfigurationPropertiesResponse() {

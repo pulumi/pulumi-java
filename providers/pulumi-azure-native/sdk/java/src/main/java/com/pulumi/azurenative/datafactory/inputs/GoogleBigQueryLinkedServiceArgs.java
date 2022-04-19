@@ -249,7 +249,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends com.pulumi.resources.
         this.refreshToken = refreshToken;
         this.requestGoogleDriveScope = requestGoogleDriveScope;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useSystemTrustStore = useSystemTrustStore;
     }
 

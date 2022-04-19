@@ -166,7 +166,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
         Output<String> type) {
         this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
         this.authUri = Objects.requireNonNull(authUri, "expected parameter 'authUri' to be non-null");
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.clientEmail = Objects.requireNonNull(clientEmail, "expected parameter 'clientEmail' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");

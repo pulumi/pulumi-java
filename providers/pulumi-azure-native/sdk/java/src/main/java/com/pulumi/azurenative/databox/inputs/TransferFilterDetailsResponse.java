@@ -7,6 +7,7 @@ import com.pulumi.azurenative.databox.inputs.AzureFileFilterDetailsResponse;
 import com.pulumi.azurenative.databox.inputs.BlobFilterDetailsResponse;
 import com.pulumi.azurenative.databox.inputs.FilterFileDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,7 +74,7 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
         @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
-        this.dataAccountType = dataAccountType == null ? "StorageAccount" : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
         this.filterFileDetails = filterFileDetails;
     }
 

@@ -110,7 +110,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
         this.name = name;
         this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
         this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
         this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
     }
 

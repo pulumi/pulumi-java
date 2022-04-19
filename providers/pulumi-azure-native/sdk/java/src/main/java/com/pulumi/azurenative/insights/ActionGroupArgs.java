@@ -227,7 +227,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
         this.azureAppPushReceivers = azureAppPushReceivers;
         this.azureFunctionReceivers = azureFunctionReceivers;
         this.emailReceivers = emailReceivers;
-        this.enabled = enabled == null ? Codegen.ofNullable(true) : Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
+        this.enabled = Codegen.booleanProp("enabled").output().arg(enabled).def(true).require();
         this.groupShortName = Objects.requireNonNull(groupShortName, "expected parameter 'groupShortName' to be non-null");
         this.itsmReceivers = itsmReceivers;
         this.location = location;

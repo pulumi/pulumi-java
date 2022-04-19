@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import com.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
         this.contextPath = contextPath;
         this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
         this.encodedValuesContent = encodedValuesContent;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.values = values;
     }
 

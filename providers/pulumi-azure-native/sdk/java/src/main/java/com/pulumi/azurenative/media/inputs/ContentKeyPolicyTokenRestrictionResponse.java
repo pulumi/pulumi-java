@@ -8,6 +8,7 @@ import com.pulumi.azurenative.media.inputs.ContentKeyPolicySymmetricTokenKeyResp
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyTokenClaimResponse;
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyX509CertificateTokenKeyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +126,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
         this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
         this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
         this.requiredClaims = requiredClaims;

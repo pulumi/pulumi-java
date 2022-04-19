@@ -60,7 +60,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> dockerSpecificationType,
         @Nullable Output<DockerImagePlatformArgs> platform) {
         this.dockerImageUri = Objects.requireNonNull(dockerImageUri, "expected parameter 'dockerImageUri' to be non-null");
-        this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType, "expected parameter 'dockerSpecificationType' to be non-null");
+        this.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").output().arg(dockerSpecificationType).require();
         this.platform = platform;
     }
 

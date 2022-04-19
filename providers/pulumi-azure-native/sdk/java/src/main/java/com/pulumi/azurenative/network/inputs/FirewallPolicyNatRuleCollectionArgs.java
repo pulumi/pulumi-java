@@ -91,7 +91,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
         this.action = action;
         this.name = name;
         this.priority = priority;
-        this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType, "expected parameter 'ruleCollectionType' to be non-null");
+        this.ruleCollectionType = Codegen.stringProp("ruleCollectionType").output().arg(ruleCollectionType).require();
         this.rules = rules;
     }
 

@@ -104,7 +104,7 @@ public final class TIDataConnectorArgs extends com.pulumi.resources.ResourceArgs
         Output<String> workspaceName) {
         this.dataConnectorId = dataConnectorId;
         this.dataTypes = dataTypes;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tenantId = tenantId;
         this.tipLookbackPeriod = tipLookbackPeriod;

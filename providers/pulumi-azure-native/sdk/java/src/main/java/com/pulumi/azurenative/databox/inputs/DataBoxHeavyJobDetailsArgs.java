@@ -142,7 +142,7 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
         this.dataImportDetails = dataImportDetails;
         this.devicePassword = devicePassword;
         this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Objects.requireNonNull(jobDetailsType, "expected parameter 'jobDetailsType' to be non-null");
+        this.jobDetailsType = Codegen.stringProp("jobDetailsType").output().arg(jobDetailsType).require();
         this.keyEncryptionKey = keyEncryptionKey;
         this.preferences = preferences;
         this.shippingAddress = shippingAddress;

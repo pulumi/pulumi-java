@@ -11,6 +11,7 @@ import com.pulumi.azurenative.containerregistry.inputs.SourceTriggerDescriptorRe
 import com.pulumi.azurenative.containerregistry.inputs.SystemDataResponse;
 import com.pulumi.azurenative.containerregistry.inputs.TimerTriggerDescriptorResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -347,7 +348,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
         this.finishTime = finishTime;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.imageUpdateTrigger = imageUpdateTrigger;
-        this.isArchiveEnabled = isArchiveEnabled == null ? false : isArchiveEnabled;
+        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
         this.lastUpdatedTime = lastUpdatedTime;
         this.logArtifact = Objects.requireNonNull(logArtifact, "expected parameter 'logArtifact' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");

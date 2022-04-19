@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
         @Nullable String vnetCidr,
         @Nullable String vnetId) {
         this.peerVnetId = peerVnetId;
-        this.vnetCidr = vnetCidr == null ? "10.0.0.0/8" : vnetCidr;
+        this.vnetCidr = Codegen.stringProp("vnetCidr").arg(vnetCidr).def("10.0.0.0/8").getNullable();
         this.vnetId = vnetId;
     }
 

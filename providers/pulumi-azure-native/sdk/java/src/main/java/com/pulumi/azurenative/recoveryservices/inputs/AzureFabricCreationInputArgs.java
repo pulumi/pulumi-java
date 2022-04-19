@@ -45,7 +45,7 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
     public AzureFabricCreationInputArgs(
         @Nullable Output<String> instanceType,
         @Nullable Output<String> location) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.location = location;
     }
 

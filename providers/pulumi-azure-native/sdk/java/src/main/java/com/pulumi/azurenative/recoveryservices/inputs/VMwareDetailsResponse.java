@@ -8,6 +8,7 @@ import com.pulumi.azurenative.recoveryservices.inputs.ProcessServerResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.RunAsAccountResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -435,7 +436,7 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
         this.databaseServerLoad = databaseServerLoad;
         this.databaseServerLoadStatus = databaseServerLoadStatus;
         this.hostName = hostName;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.ipAddress = ipAddress;
         this.lastHeartbeat = lastHeartbeat;
         this.masterTargetServers = masterTargetServers;

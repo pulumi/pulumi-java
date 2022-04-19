@@ -7,6 +7,7 @@ import com.pulumi.azurenative.storage.inputs.IPRuleResponse;
 import com.pulumi.azurenative.storage.inputs.ResourceAccessRuleResponse;
 import com.pulumi.azurenative.storage.inputs.VirtualNetworkRuleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -83,8 +84,8 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
         @Nullable List<IPRuleResponse> ipRules,
         @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
         @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.bypass = bypass == null ? "AzureServices" : bypass;
-        this.defaultAction = defaultAction == null ? "Allow" : Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
+        this.bypass = Codegen.stringProp("bypass").arg(bypass).def("AzureServices").getNullable();
+        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Allow").require();
         this.ipRules = ipRules;
         this.resourceAccessRules = resourceAccessRules;
         this.virtualNetworkRules = virtualNetworkRules;

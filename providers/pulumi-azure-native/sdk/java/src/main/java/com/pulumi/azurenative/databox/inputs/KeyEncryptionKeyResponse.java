@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.azurenative.databox.inputs.IdentityPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +70,7 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
         @Nullable String kekUrl,
         @Nullable String kekVaultResourceID) {
         this.identityProperties = identityProperties;
-        this.kekType = kekType == null ? "MicrosoftManaged" : Objects.requireNonNull(kekType, "expected parameter 'kekType' to be non-null");
+        this.kekType = Codegen.stringProp("kekType").arg(kekType).def("MicrosoftManaged").require();
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }

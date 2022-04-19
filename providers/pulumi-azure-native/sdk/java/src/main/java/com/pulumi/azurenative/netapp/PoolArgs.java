@@ -120,9 +120,9 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.location = location;
         this.poolName = poolName;
-        this.qosType = qosType == null ? Output.ofLeft("Auto") : qosType;
+        this.qosType = Codegen.stringProp("qosType").left(QosType.class).output().arg(qosType).def("Auto").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceLevel = serviceLevel == null ? Output.ofLeft("Premium") : Objects.requireNonNull(serviceLevel, "expected parameter 'serviceLevel' to be non-null");
+        this.serviceLevel = Codegen.stringProp("serviceLevel").left(ServiceLevel.class).output().arg(serviceLevel).def("Premium").require();
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
         this.tags = tags;
     }

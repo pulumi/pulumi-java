@@ -223,7 +223,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
         this.rootPath = Objects.requireNonNull(rootPath, "expected parameter 'rootPath' to be non-null");
         this.sparkConfig = sparkConfig;
         this.sparkJobLinkedService = sparkJobLinkedService;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

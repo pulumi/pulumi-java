@@ -86,7 +86,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.quoteAllText = quoteAllText;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DelimitedTextWriteSettingsArgs() {

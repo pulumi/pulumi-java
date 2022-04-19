@@ -57,7 +57,7 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
         Output<Boolean> isWebchatPreviewEnabled,
         Output<String> siteName) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Codegen.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
+        this.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").output().arg(isWebchatPreviewEnabled).def(false).require();
         this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
     }
 

@@ -121,7 +121,7 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
         this.count = count;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.groupType = groupType;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.machineGroupName = machineGroupName;
         this.machines = machines;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

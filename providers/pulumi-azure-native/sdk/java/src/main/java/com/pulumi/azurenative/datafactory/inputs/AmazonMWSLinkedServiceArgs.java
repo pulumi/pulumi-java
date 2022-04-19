@@ -220,7 +220,7 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
         this.parameters = parameters;
         this.secretKey = secretKey;
         this.sellerID = Objects.requireNonNull(sellerID, "expected parameter 'sellerID' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

@@ -60,7 +60,7 @@ public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.Res
         Output<String> ruleType) {
         this.allowlistValues = Objects.requireNonNull(allowlistValues, "expected parameter 'allowlistValues' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
     }
 
     private AllowlistCustomAlertRuleArgs() {

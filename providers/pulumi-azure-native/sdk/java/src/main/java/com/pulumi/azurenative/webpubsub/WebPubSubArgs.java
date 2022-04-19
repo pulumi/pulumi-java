@@ -168,7 +168,7 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
         this.identity = identity;
         this.location = location;
         this.networkACLs = networkACLs;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Codegen.ofNullable("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
         this.sku = sku;

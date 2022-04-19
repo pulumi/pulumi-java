@@ -6,6 +6,7 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 import com.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelResponse;
 import com.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,7 +73,7 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
         String url) {
         this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
         this.tunnel = tunnel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

@@ -84,10 +84,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
         @Nullable Output<Integer> refreshPeriodInSeconds,
         @Nullable Output<Either<String,Status>> status,
         @Nullable Output<Double> targetUtilization) {
-        this.maxReplicas = maxReplicas == null ? Codegen.ofNullable(100) : maxReplicas;
-        this.minReplicas = minReplicas == null ? Codegen.ofNullable(1) : minReplicas;
+        this.maxReplicas = Codegen.integerProp("maxReplicas").output().arg(maxReplicas).def(100).getNullable();
+        this.minReplicas = Codegen.integerProp("minReplicas").output().arg(minReplicas).def(1).getNullable();
         this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.status = status == null ? Output.ofLeft("Disabled") : status;
+        this.status = Codegen.stringProp("status").left(Status.class).output().arg(status).def("Disabled").getNullable();
         this.targetUtilization = targetUtilization;
     }
 

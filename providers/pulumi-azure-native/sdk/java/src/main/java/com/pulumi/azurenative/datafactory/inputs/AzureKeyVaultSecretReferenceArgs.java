@@ -74,7 +74,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends com.pulumi.resources
         this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
         this.secretVersion = secretVersion;
         this.store = Objects.requireNonNull(store, "expected parameter 'store' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureKeyVaultSecretReferenceArgs() {

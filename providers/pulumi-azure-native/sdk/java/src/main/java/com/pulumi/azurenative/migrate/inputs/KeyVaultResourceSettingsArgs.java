@@ -44,7 +44,7 @@ public final class KeyVaultResourceSettingsArgs extends com.pulumi.resources.Res
     public KeyVaultResourceSettingsArgs(
         Output<String> resourceType,
         Output<String> targetResourceName) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
+        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }
 

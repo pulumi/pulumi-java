@@ -12,6 +12,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.GlusterFsSectionRes
 import com.pulumi.azurenative.machinelearningservices.inputs.LinkedInfoResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.UserInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -211,7 +212,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
         this.dataStoreType = dataStoreType;
         this.description = description;
         this.glusterFsSection = glusterFsSection;
-        this.hasBeenValidated = hasBeenValidated == null ? false : hasBeenValidated;
+        this.hasBeenValidated = Codegen.booleanProp("hasBeenValidated").arg(hasBeenValidated).def(false).getNullable();
         this.linkedInfo = linkedInfo;
         this.modifiedBy = Objects.requireNonNull(modifiedBy, "expected parameter 'modifiedBy' to be non-null");
         this.modifiedTime = Objects.requireNonNull(modifiedTime, "expected parameter 'modifiedTime' to be non-null");

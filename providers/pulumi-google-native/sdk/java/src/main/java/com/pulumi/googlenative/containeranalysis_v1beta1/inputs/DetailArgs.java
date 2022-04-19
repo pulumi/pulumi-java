@@ -173,7 +173,7 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
         this.isObsolete = isObsolete;
         this.maxAffectedVersion = maxAffectedVersion;
         this.minAffectedVersion = minAffectedVersion;
-        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package' to be non-null");
         this.packageType = packageType;
         this.severityName = severityName;
         this.source = source;

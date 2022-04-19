@@ -61,7 +61,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
         Output<String> type,
         @Nullable Output<ResourceReferenceArgs> wafPolicy) {
         this.associations = associations;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.wafPolicy = wafPolicy;
     }
 

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -93,7 +94,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
         @Nullable String msiResourceId,
         @Nullable String vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionAtHost = encryptionAtHost == null ? false : encryptionAtHost;
+        this.encryptionAtHost = Codegen.booleanProp("encryptionAtHost").arg(encryptionAtHost).def(false).getNullable();
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.msiResourceId = msiResourceId;

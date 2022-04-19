@@ -5,6 +5,7 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.azurenative.machinelearning.inputs.ColumnSpecificationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -85,7 +86,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
         this.format = format;
         this.properties = properties;
         this.title = title;
-        this.type = type == null ? "object" : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).def("object").require();
     }
 
     private TableSpecificationResponse() {

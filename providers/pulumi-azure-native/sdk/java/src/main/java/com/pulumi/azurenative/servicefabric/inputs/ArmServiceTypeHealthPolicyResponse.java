@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,9 +56,9 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
         @Nullable Integer maxPercentUnhealthyPartitionsPerService,
         @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
         @Nullable Integer maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService == null ? 0 : maxPercentUnhealthyPartitionsPerService;
-        this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition == null ? 0 : maxPercentUnhealthyReplicasPerPartition;
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? 0 : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyPartitionsPerService = Codegen.integerProp("maxPercentUnhealthyPartitionsPerService").arg(maxPercentUnhealthyPartitionsPerService).def(0).getNullable();
+        this.maxPercentUnhealthyReplicasPerPartition = Codegen.integerProp("maxPercentUnhealthyReplicasPerPartition").arg(maxPercentUnhealthyReplicasPerPartition).def(0).getNullable();
+        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg(maxPercentUnhealthyServices).def(0).getNullable();
     }
 
     private ArmServiceTypeHealthPolicyResponse() {

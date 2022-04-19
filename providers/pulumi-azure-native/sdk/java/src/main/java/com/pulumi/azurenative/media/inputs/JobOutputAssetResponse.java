@@ -5,6 +5,7 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.inputs.JobErrorResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
         this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
         this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
         this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");

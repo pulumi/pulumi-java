@@ -115,7 +115,7 @@ public final class FirewallPolicyNatRuleArgs extends com.pulumi.resources.Resour
         this.name = name;
         this.priority = priority;
         this.ruleCondition = ruleCondition;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
         this.translatedAddress = translatedAddress;
         this.translatedPort = translatedPort;
     }

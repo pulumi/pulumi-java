@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionResponseConditionProperties;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +45,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
         AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
         String conditionType) {
         this.conditionProperties = Objects.requireNonNull(conditionProperties, "expected parameter 'conditionProperties' to be non-null");
-        this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
+        this.conditionType = Codegen.stringProp("conditionType").arg(conditionType).require();
     }
 
     private AutomationRulePropertyValuesConditionResponse() {

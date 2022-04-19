@@ -112,7 +112,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends com.pulumi.
         this.ask = Objects.requireNonNull(ask, "expected parameter 'ask' to be non-null");
         this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx, "expected parameter 'fairPlayPfx' to be non-null");
         this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword, "expected parameter 'fairPlayPfxPassword' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.offlineRentalConfiguration = offlineRentalConfiguration;
         this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType, "expected parameter 'rentalAndLeaseKeyType' to be non-null");
         this.rentalDuration = Objects.requireNonNull(rentalDuration, "expected parameter 'rentalDuration' to be non-null");

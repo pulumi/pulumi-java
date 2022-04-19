@@ -154,7 +154,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
         this.dataExportDetails = dataExportDetails;
         this.dataImportDetails = dataImportDetails;
         this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Objects.requireNonNull(jobDetailsType, "expected parameter 'jobDetailsType' to be non-null");
+        this.jobDetailsType = Codegen.stringProp("jobDetailsType").output().arg(jobDetailsType).require();
         this.keyEncryptionKey = keyEncryptionKey;
         this.passkey = passkey;
         this.preferences = preferences;

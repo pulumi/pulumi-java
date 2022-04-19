@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;
         this.fluentdConfigUrl = fluentdConfigUrl;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.maConfigUrl = maConfigUrl;
         this.name = name;
         this.namespace = namespace;

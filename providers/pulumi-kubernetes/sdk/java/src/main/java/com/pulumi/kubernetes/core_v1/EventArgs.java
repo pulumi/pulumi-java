@@ -226,12 +226,12 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<EventSourceArgs> source,
         @Nullable Output<String> type) {
         this.action = action;
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.count = count;
         this.eventTime = eventTime;
         this.firstTimestamp = firstTimestamp;
         this.involvedObject = Objects.requireNonNull(involvedObject, "expected parameter 'involvedObject' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.lastTimestamp = lastTimestamp;
         this.message = message;
         this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");

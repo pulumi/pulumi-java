@@ -196,7 +196,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
         this.legacyResourceId = legacyResourceId;
         this.level = level;
         this.metricNamespace = metricNamespace;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.operationName = operationName;
         this.resourceGroupName = resourceGroupName;
         this.resourceLocation = resourceLocation;

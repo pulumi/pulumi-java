@@ -122,11 +122,11 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
         @Nullable Output<List<Integer>> validExitCodes) {
         this.inline = inline;
         this.name = name;
-        this.runAsSystem = runAsSystem == null ? Codegen.ofNullable(false) : runAsSystem;
-        this.runElevated = runElevated == null ? Codegen.ofNullable(false) : runElevated;
+        this.runAsSystem = Codegen.booleanProp("runAsSystem").output().arg(runAsSystem).def(false).getNullable();
+        this.runElevated = Codegen.booleanProp("runElevated").output().arg(runElevated).def(false).getNullable();
         this.scriptUri = scriptUri;
-        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg(sha256Checksum).def("").getNullable();
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.validExitCodes = validExitCodes;
     }
 

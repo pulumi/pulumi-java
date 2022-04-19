@@ -59,7 +59,7 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
         Output<String> odataType) {
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private JobOutputAssetArgs() {

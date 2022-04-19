@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
         String keyValue,
         String odataType) {
         this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private ContentKeyPolicySymmetricTokenKeyResponse() {

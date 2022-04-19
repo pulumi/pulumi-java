@@ -31,7 +31,7 @@ public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceA
     }
 
     public CopyOnExpiryOptionArgs(Output<String> objectType) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private CopyOnExpiryOptionArgs() {

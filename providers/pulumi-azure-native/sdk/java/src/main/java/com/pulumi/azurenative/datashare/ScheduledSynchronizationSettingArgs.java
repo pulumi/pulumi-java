@@ -104,7 +104,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
         @Nullable Output<String> synchronizationSettingName,
         Output<String> synchronizationTime) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");

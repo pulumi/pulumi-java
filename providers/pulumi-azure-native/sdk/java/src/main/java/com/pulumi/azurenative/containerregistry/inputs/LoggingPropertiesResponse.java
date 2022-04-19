@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,8 +44,8 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
     public LoggingPropertiesResponse(
         @Nullable String auditLogStatus,
         @Nullable String logLevel) {
-        this.auditLogStatus = auditLogStatus == null ? "Disabled" : auditLogStatus;
-        this.logLevel = logLevel == null ? "Information" : logLevel;
+        this.auditLogStatus = Codegen.stringProp("auditLogStatus").arg(auditLogStatus).def("Disabled").getNullable();
+        this.logLevel = Codegen.stringProp("logLevel").arg(logLevel).def("Information").getNullable();
     }
 
     private LoggingPropertiesResponse() {

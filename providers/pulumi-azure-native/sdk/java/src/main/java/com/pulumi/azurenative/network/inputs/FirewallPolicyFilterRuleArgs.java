@@ -92,7 +92,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
         this.name = name;
         this.priority = priority;
         this.ruleConditions = ruleConditions;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
     }
 
     private FirewallPolicyFilterRuleArgs() {

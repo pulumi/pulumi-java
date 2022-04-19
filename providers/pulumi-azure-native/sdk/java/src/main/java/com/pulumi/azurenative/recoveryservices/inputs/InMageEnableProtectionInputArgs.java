@@ -158,7 +158,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
         this.datastoreName = datastoreName;
         this.diskExclusionInput = diskExclusionInput;
         this.disksToInclude = disksToInclude;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.masterTargetId = Objects.requireNonNull(masterTargetId, "expected parameter 'masterTargetId' to be non-null");
         this.multiVmGroupId = Objects.requireNonNull(multiVmGroupId, "expected parameter 'multiVmGroupId' to be non-null");
         this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName, "expected parameter 'multiVmGroupName' to be non-null");

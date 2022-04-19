@@ -62,7 +62,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
         Output<String> type) {
         this.description = description;
         this.linkedInfo = linkedInfo;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SelfHostedIntegrationRuntimeArgs() {

@@ -103,10 +103,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> message,
         @Nullable Output<ListMetaArgs> metadata,
         @Nullable Output<String> reason) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.code = code;
         this.details = details;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.message = message;
         this.metadata = metadata;
         this.reason = reason;

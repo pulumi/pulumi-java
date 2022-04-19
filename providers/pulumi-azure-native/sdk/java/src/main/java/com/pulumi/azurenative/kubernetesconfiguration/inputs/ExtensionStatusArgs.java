@@ -84,7 +84,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<String> time) {
         this.code = code;
         this.displayStatus = displayStatus;
-        this.level = level == null ? Output.ofLeft("Information") : level;
+        this.level = Codegen.stringProp("level").left(LevelType.class).output().arg(level).def("Information").getNullable();
         this.message = message;
         this.time = time;
     }

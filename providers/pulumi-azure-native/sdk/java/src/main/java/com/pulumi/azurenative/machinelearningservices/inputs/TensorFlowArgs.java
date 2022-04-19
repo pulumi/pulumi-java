@@ -58,7 +58,7 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> distributionType,
         @Nullable Output<Integer> parameterServerCount,
         @Nullable Output<Integer> workerCount) {
-        this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
+        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;
     }

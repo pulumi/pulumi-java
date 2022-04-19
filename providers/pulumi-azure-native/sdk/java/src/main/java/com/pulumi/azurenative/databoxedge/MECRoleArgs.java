@@ -94,7 +94,7 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
         Output<Either<String,RoleStatus>> roleStatus) {
         this.connectionString = connectionString;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.name = name;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.roleStatus = Objects.requireNonNull(roleStatus, "expected parameter 'roleStatus' to be non-null");

@@ -10,6 +10,7 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ScaleSettingsRespon
 import com.pulumi.azurenative.machinelearningservices.inputs.UserAccountCredentialsResponse;
 import com.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -223,12 +224,12 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
         this.allocationState = Objects.requireNonNull(allocationState, "expected parameter 'allocationState' to be non-null");
         this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime, "expected parameter 'allocationStateTransitionTime' to be non-null");
         this.currentNodeCount = Objects.requireNonNull(currentNodeCount, "expected parameter 'currentNodeCount' to be non-null");
-        this.enableNodePublicIp = enableNodePublicIp == null ? true : enableNodePublicIp;
+        this.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").arg(enableNodePublicIp).def(true).getNullable();
         this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
         this.isolatedNetwork = isolatedNetwork;
         this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts, "expected parameter 'nodeStateCounts' to be non-null");
-        this.osType = osType == null ? "Linux" : osType;
-        this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess == null ? "NotSpecified" : remoteLoginPortPublicAccess;
+        this.osType = Codegen.stringProp("osType").arg(osType).def("Linux").getNullable();
+        this.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").arg(remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
         this.scaleSettings = scaleSettings;
         this.subnet = subnet;
         this.targetNodeCount = Objects.requireNonNull(targetNodeCount, "expected parameter 'targetNodeCount' to be non-null");

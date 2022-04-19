@@ -100,9 +100,9 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;
-        this.configurationModeFrequencyMins = configurationModeFrequencyMins == null ? Codegen.ofNullable(1.5e+01) : configurationModeFrequencyMins;
+        this.configurationModeFrequencyMins = Codegen.doubleProp("configurationModeFrequencyMins").output().arg(configurationModeFrequencyMins).def(1.5e+01).getNullable();
         this.rebootIfNeeded = rebootIfNeeded;
-        this.refreshFrequencyMins = refreshFrequencyMins == null ? Codegen.ofNullable(3e+01) : refreshFrequencyMins;
+        this.refreshFrequencyMins = Codegen.doubleProp("refreshFrequencyMins").output().arg(refreshFrequencyMins).def(3e+01).getNullable();
     }
 
     private ConfigurationSettingArgs() {

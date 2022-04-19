@@ -476,7 +476,7 @@ public final class CopyActivityArgs extends com.pulumi.resources.ResourceArgs {
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
         this.stagingSettings = stagingSettings;
         this.translator = translator;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
         this.validateDataConsistency = validateDataConsistency;
     }

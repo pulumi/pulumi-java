@@ -116,7 +116,7 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
         String uri) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
         this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
         this.networkTags = Objects.requireNonNull(networkTags, "expected parameter 'networkTags' to be non-null");
         this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");

@@ -61,7 +61,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
         Output<Either<String,DefaultAction>> defaultAction,
         @Nullable Output<List<IPRuleArgs>> ipRules,
         @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.defaultAction = defaultAction == null ? Output.ofLeft("Allow") : Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
+        this.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg(defaultAction).def("Allow").require();
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;
     }

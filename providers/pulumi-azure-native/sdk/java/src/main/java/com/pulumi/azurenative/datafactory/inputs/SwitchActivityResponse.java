@@ -45,6 +45,7 @@ import com.pulumi.azurenative.datafactory.inputs.WaitActivityResponse;
 import com.pulumi.azurenative.datafactory.inputs.WebActivityResponse;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -165,7 +166,7 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.on = Objects.requireNonNull(on, "expected parameter 'on' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

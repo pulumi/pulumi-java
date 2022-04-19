@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.edgeorder.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -91,7 +92,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
         String productId,
         String skuId,
         String termId) {
-        this.billingType = Objects.requireNonNull(billingType, "expected parameter 'billingType' to be non-null");
+        this.billingType = Codegen.stringProp("billingType").arg(billingType).require();
         this.chargingType = Objects.requireNonNull(chargingType, "expected parameter 'chargingType' to be non-null");
         this.multiplier = Objects.requireNonNull(multiplier, "expected parameter 'multiplier' to be non-null");
         this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");

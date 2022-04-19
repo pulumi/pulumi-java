@@ -66,7 +66,7 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> name,
         Output<List<String>> subnetIds,
         @Nullable Output<Map<String,String>> tags) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.name = name;
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
         this.tags = tags;

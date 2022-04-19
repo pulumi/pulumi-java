@@ -257,7 +257,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
         this.disksDefault = disksDefault;
         this.disksToInclude = disksToInclude;
         this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.licenseType = licenseType;
         this.multiVmGroupName = multiVmGroupName;
         this.processServerId = processServerId;

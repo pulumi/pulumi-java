@@ -45,7 +45,7 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
         Output<String> id,
         Output<String> kind) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
     }
 
     private MachineReferenceWithHintsArgs() {

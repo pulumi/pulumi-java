@@ -181,7 +181,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.reportStatusOnCallBack = reportStatusOnCallBack;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.userProperties = userProperties;
     }

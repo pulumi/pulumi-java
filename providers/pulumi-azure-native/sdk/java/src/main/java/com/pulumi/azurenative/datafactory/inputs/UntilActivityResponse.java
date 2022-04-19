@@ -44,6 +44,7 @@ import com.pulumi.azurenative.datafactory.inputs.WaitActivityResponse;
 import com.pulumi.azurenative.datafactory.inputs.WebActivityResponse;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -164,7 +165,7 @@ public final class UntilActivityResponse extends com.pulumi.resources.InvokeArgs
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

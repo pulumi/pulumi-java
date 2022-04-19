@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
     public ComputeIsolationPropertiesResponse(
         @Nullable Boolean enableComputeIsolation,
         @Nullable String hostSku) {
-        this.enableComputeIsolation = enableComputeIsolation == null ? false : enableComputeIsolation;
+        this.enableComputeIsolation = Codegen.booleanProp("enableComputeIsolation").arg(enableComputeIsolation).def(false).getNullable();
         this.hostSku = hostSku;
     }
 

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.datafactory.inputs.WebAnonymousAuthenticationRespo
 import com.pulumi.azurenative.datafactory.inputs.WebBasicAuthenticationResponse;
 import com.pulumi.azurenative.datafactory.inputs.WebClientCertificateAuthenticationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -104,7 +105,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
         this.connectVia = connectVia;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.typeProperties = Objects.requireNonNull(typeProperties, "expected parameter 'typeProperties' to be non-null");
     }
 

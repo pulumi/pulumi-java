@@ -212,7 +212,7 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
         this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
         this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
         this.initializeParams = Objects.requireNonNull(initializeParams, "expected parameter 'initializeParams' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.azurenative.apimanagement.enums.KeyType;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,7 +76,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
         String serviceName,
         String userId) {
         this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.keyType = keyType == null ? com.pulumi.azurenative.apimanagement.enums.KeyType.Primary : Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
+        this.keyType = Codegen.objectProp("keyType", KeyType.class).arg(keyType).def(KeyType.Primary).require();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
         this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");

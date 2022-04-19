@@ -205,11 +205,11 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Map<String,String>> tenantSettings,
         @Nullable Output<List<String>> zones) {
-        this.enableNonSslPort = enableNonSslPort == null ? Codegen.ofNullable(false) : enableNonSslPort;
+        this.enableNonSslPort = Codegen.booleanProp("enableNonSslPort").output().arg(enableNonSslPort).def(false).getNullable();
         this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
         this.name = name;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
         this.redisConfiguration = redisConfiguration;
         this.replicasPerMaster = replicasPerMaster;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

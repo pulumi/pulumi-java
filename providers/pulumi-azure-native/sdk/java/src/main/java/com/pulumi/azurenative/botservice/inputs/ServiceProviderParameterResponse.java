@@ -102,7 +102,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
         ServiceProviderParameterResponseMetadata metadata,
         String name,
         String type) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.helpUrl = Objects.requireNonNull(helpUrl, "expected parameter 'helpUrl' to be non-null");

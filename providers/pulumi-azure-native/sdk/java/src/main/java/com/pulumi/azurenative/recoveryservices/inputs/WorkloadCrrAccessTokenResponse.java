@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -427,7 +428,7 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
         this.datasourceId = datasourceId;
         this.datasourceName = datasourceName;
         this.datasourceType = datasourceType;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.policyId = policyId;
         this.policyName = policyName;
         this.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;

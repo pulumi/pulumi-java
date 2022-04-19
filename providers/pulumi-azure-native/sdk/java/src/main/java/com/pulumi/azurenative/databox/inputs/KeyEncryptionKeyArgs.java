@@ -72,7 +72,7 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<String> kekUrl,
         @Nullable Output<String> kekVaultResourceID) {
         this.identityProperties = identityProperties;
-        this.kekType = kekType == null ? Output.ofLeft("MicrosoftManaged") : Objects.requireNonNull(kekType, "expected parameter 'kekType' to be non-null");
+        this.kekType = Codegen.stringProp("kekType").left(KekType.class).output().arg(kekType).def("MicrosoftManaged").require();
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }

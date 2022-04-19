@@ -264,14 +264,14 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> storageAccount,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> workspaceName) {
-        this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet == null ? Codegen.ofNullable(false) : allowPublicAccessWhenBehindVnet;
+        this.allowPublicAccessWhenBehindVnet = Codegen.booleanProp("allowPublicAccessWhenBehindVnet").output().arg(allowPublicAccessWhenBehindVnet).def(false).getNullable();
         this.applicationInsights = applicationInsights;
         this.containerRegistry = containerRegistry;
         this.description = description;
         this.discoveryUrl = discoveryUrl;
         this.encryption = encryption;
         this.friendlyName = friendlyName;
-        this.hbiWorkspace = hbiWorkspace == null ? Codegen.ofNullable(false) : hbiWorkspace;
+        this.hbiWorkspace = Codegen.booleanProp("hbiWorkspace").output().arg(hbiWorkspace).def(false).getNullable();
         this.identity = identity;
         this.imageBuildCompute = imageBuildCompute;
         this.keyVault = keyVault;

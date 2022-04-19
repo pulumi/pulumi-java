@@ -137,7 +137,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
         this.multipleActivationKeyName = multipleActivationKeyName;
         this.osType = osType;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.supportType = supportType == null ? Output.ofLeft("SupplementalServicing") : supportType;
+        this.supportType = Codegen.stringProp("supportType").left(SupportType.class).output().arg(supportType).def("SupplementalServicing").getNullable();
         this.tags = tags;
     }
 

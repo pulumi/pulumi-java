@@ -171,7 +171,7 @@ public final class TeradataLinkedServiceArgs extends com.pulumi.resources.Resour
         this.parameters = parameters;
         this.password = password;
         this.server = server;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

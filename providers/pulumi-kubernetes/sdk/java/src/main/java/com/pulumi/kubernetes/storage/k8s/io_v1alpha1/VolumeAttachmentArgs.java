@@ -66,8 +66,8 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         Output<VolumeAttachmentSpecArgs> spec) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
     }

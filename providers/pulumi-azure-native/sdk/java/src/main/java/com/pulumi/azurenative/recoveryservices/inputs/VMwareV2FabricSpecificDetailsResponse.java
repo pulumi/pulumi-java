@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -78,7 +79,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
         String serviceEndpoint,
         String serviceResourceId,
         String vmwareSiteId) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
         this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
         this.serviceResourceId = Objects.requireNonNull(serviceResourceId, "expected parameter 'serviceResourceId' to be non-null");

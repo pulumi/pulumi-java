@@ -16,6 +16,7 @@ import com.pulumi.azurenative.eventgrid.inputs.StringEndsWithAdvancedFilterRespo
 import com.pulumi.azurenative.eventgrid.inputs.StringInAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -100,7 +101,7 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
         @Nullable String subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
-        this.isSubjectCaseSensitive = isSubjectCaseSensitive == null ? false : isSubjectCaseSensitive;
+        this.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").arg(isSubjectCaseSensitive).def(false).getNullable();
         this.subjectBeginsWith = subjectBeginsWith;
         this.subjectEndsWith = subjectEndsWith;
     }

@@ -203,9 +203,9 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
         this.recommendationsConfiguration = recommendationsConfiguration;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.solutionName = solutionName;
-        this.status = status == null ? Output.ofLeft("Enabled") : status;
+        this.status = Codegen.stringProp("status").left(SecuritySolutionStatus.class).output().arg(status).def("Enabled").getNullable();
         this.tags = tags;
-        this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus == null ? Output.ofLeft("Disabled") : unmaskedIpLoggingStatus;
+        this.unmaskedIpLoggingStatus = Codegen.stringProp("unmaskedIpLoggingStatus").left(UnmaskedIpLoggingStatus.class).output().arg(unmaskedIpLoggingStatus).def("Disabled").getNullable();
         this.userDefinedResources = userDefinedResources;
         this.workspace = workspace;
     }

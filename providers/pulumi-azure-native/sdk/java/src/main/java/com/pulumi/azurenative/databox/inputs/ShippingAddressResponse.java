@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +140,7 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
         @Nullable String streetAddress2,
         @Nullable String streetAddress3,
         @Nullable String zipExtendedCode) {
-        this.addressType = addressType == null ? "None" : addressType;
+        this.addressType = Codegen.stringProp("addressType").arg(addressType).def("None").getNullable();
         this.city = city;
         this.companyName = companyName;
         this.country = Objects.requireNonNull(country, "expected parameter 'country' to be non-null");

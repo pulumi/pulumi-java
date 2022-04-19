@@ -26,7 +26,7 @@ public final class PolicyRestorePolicyGetArgs extends com.pulumi.resources.Resou
     }
 
     public PolicyRestorePolicyGetArgs(Output<Boolean> default_) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default_' to be non-null");
+        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
     }
 
     private PolicyRestorePolicyGetArgs() {

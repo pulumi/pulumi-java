@@ -5,6 +5,7 @@ package com.pulumi.azurenative.webpubsub.inputs;
 
 import com.pulumi.azurenative.webpubsub.inputs.EventHandlerResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
     public WebPubSubHubPropertiesResponse(
         @Nullable String anonymousConnectPolicy,
         @Nullable List<EventHandlerResponse> eventHandlers) {
-        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? "deny" : anonymousConnectPolicy;
+        this.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").arg(anonymousConnectPolicy).def("deny").getNullable();
         this.eventHandlers = eventHandlers;
     }
 

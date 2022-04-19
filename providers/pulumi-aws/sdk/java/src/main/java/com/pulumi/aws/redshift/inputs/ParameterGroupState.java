@@ -104,7 +104,7 @@ public final class ParameterGroupState extends com.pulumi.resources.ResourceArgs
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.family = family;
         this.name = name;
         this.parameters = parameters;

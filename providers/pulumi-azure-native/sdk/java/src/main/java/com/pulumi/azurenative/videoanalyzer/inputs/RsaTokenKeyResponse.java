@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -82,7 +83,7 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
         this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
         this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
         this.n = Objects.requireNonNull(n, "expected parameter 'n' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private RsaTokenKeyResponse() {

@@ -66,7 +66,7 @@ public final class EventChannelFilterArgs extends com.pulumi.resources.ResourceA
         @Nullable Output<List<Object>> advancedFilters,
         @Nullable Output<Boolean> enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
-        this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays == null ? Codegen.ofNullable(false) : enableAdvancedFilteringOnArrays;
+        this.enableAdvancedFilteringOnArrays = Codegen.booleanProp("enableAdvancedFilteringOnArrays").output().arg(enableAdvancedFilteringOnArrays).def(false).getNullable();
     }
 
     private EventChannelFilterArgs() {

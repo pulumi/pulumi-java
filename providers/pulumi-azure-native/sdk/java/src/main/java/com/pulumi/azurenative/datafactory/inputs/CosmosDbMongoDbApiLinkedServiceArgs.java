@@ -129,7 +129,7 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends com.pulumi.resour
         this.description = description;
         this.isServerVersionAbove32 = isServerVersionAbove32;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private CosmosDbMongoDbApiLinkedServiceArgs() {

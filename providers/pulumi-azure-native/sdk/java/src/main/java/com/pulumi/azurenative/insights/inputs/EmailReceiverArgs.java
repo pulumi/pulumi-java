@@ -59,7 +59,7 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> useCommonAlertSchema) {
         this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
     }
 
     private EmailReceiverArgs() {

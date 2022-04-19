@@ -45,7 +45,7 @@ public final class TemporaryDiskArgs extends com.pulumi.resources.ResourceArgs {
     public TemporaryDiskArgs(
         @Nullable Output<String> mountPath,
         @Nullable Output<Integer> sizeInGB) {
-        this.mountPath = mountPath == null ? Codegen.ofNullable("/tmp") : mountPath;
+        this.mountPath = Codegen.stringProp("mountPath").output().arg(mountPath).def("/tmp").getNullable();
         this.sizeInGB = sizeInGB;
     }
 

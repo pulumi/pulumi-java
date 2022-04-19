@@ -170,7 +170,7 @@ public final class AmazonRedshiftLinkedServiceArgs extends com.pulumi.resources.
         this.password = password;
         this.port = port;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

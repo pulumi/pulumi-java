@@ -172,10 +172,10 @@ public final class ServerDetailsArgs extends com.pulumi.resources.ResourceArgs {
         this.gatewayDetails = gatewayDetails;
         this.ipV4FirewallSettings = ipV4FirewallSettings;
         this.location = location;
-        this.managedMode = managedMode == null ? Codegen.ofNullable(1) : managedMode;
-        this.querypoolConnectionMode = querypoolConnectionMode == null ? Codegen.ofNullable(com.pulumi.azurenative.analysisservices.enums.ConnectionMode.All) : querypoolConnectionMode;
+        this.managedMode = Codegen.integerProp("managedMode").output().arg(managedMode).def(1).getNullable();
+        this.querypoolConnectionMode = Codegen.objectProp("querypoolConnectionMode", ConnectionMode.class).output().arg(querypoolConnectionMode).def(ConnectionMode.All).getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverMonitorMode = serverMonitorMode == null ? Codegen.ofNullable(1) : serverMonitorMode;
+        this.serverMonitorMode = Codegen.integerProp("serverMonitorMode").output().arg(serverMonitorMode).def(1).getNullable();
         this.serverName = serverName;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.tags = tags;

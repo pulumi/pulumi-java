@@ -180,7 +180,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
         @Nullable Output<Double> trafficPercentile,
         @Nullable Output<Either<String,VariantType>> type,
         Output<String> workspaceName) {
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
         this.description = description;
         this.environmentImageRequest = environmentImageRequest;
         this.isDefault = isDefault;

@@ -93,9 +93,9 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<OverheadArgs> overhead,
         @Nullable Output<SchedulingArgs> scheduling) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.handler = Objects.requireNonNull(handler, "expected parameter 'handler' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.overhead = overhead;
         this.scheduling = scheduling;

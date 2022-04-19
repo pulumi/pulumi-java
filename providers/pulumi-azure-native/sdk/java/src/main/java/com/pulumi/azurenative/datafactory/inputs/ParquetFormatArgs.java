@@ -60,7 +60,7 @@ public final class ParquetFormatArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> type) {
         this.deserializer = deserializer;
         this.serializer = serializer;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ParquetFormatArgs() {

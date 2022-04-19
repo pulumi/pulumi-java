@@ -58,7 +58,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
         Output<String> type) {
         this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
         this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SecureIotDeviceRemoteTunnelArgs() {

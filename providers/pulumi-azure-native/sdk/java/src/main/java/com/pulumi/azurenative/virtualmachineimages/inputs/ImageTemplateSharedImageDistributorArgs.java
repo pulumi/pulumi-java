@@ -111,12 +111,12 @@ public final class ImageTemplateSharedImageDistributorArgs extends com.pulumi.re
         @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType,
         Output<String> type) {
         this.artifactTags = artifactTags;
-        this.excludeFromLatest = excludeFromLatest == null ? Codegen.ofNullable(false) : excludeFromLatest;
+        this.excludeFromLatest = Codegen.booleanProp("excludeFromLatest").output().arg(excludeFromLatest).def(false).getNullable();
         this.galleryImageId = Objects.requireNonNull(galleryImageId, "expected parameter 'galleryImageId' to be non-null");
         this.replicationRegions = Objects.requireNonNull(replicationRegions, "expected parameter 'replicationRegions' to be non-null");
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
         this.storageAccountType = storageAccountType;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ImageTemplateSharedImageDistributorArgs() {

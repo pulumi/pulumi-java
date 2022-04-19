@@ -147,16 +147,16 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
         @Nullable Output<Either<String,OutboundType>> outboundType,
         @Nullable Output<String> podCidr,
         @Nullable Output<String> serviceCidr) {
-        this.dnsServiceIP = dnsServiceIP == null ? Codegen.ofNullable("10.0.0.10") : dnsServiceIP;
-        this.dockerBridgeCidr = dockerBridgeCidr == null ? Codegen.ofNullable("172.17.0.1/16") : dockerBridgeCidr;
+        this.dnsServiceIP = Codegen.stringProp("dnsServiceIP").output().arg(dnsServiceIP).def("10.0.0.10").getNullable();
+        this.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").output().arg(dockerBridgeCidr).def("172.17.0.1/16").getNullable();
         this.loadBalancerProfile = loadBalancerProfile;
         this.loadBalancerSku = loadBalancerSku;
         this.networkMode = networkMode;
-        this.networkPlugin = networkPlugin == null ? Output.ofLeft("kubenet") : networkPlugin;
+        this.networkPlugin = Codegen.stringProp("networkPlugin").left(NetworkPlugin.class).output().arg(networkPlugin).def("kubenet").getNullable();
         this.networkPolicy = networkPolicy;
-        this.outboundType = outboundType == null ? Output.ofLeft("loadBalancer") : outboundType;
-        this.podCidr = podCidr == null ? Codegen.ofNullable("10.244.0.0/16") : podCidr;
-        this.serviceCidr = serviceCidr == null ? Codegen.ofNullable("10.0.0.0/16") : serviceCidr;
+        this.outboundType = Codegen.stringProp("outboundType").left(OutboundType.class).output().arg(outboundType).def("loadBalancer").getNullable();
+        this.podCidr = Codegen.stringProp("podCidr").output().arg(podCidr).def("10.244.0.0/16").getNullable();
+        this.serviceCidr = Codegen.stringProp("serviceCidr").output().arg(serviceCidr).def("10.0.0.0/16").getNullable();
     }
 
     private ContainerServiceNetworkProfileArgs() {

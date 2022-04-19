@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,7 +71,7 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
         this.cert = cert;
         this.cname = cname;
         this.key = key;
-        this.status = status == null ? "Enabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
     }
 
     private SslConfigurationResponse() {

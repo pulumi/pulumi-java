@@ -6,6 +6,7 @@ package com.pulumi.azurenative.eventgrid.inputs;
 import com.pulumi.azurenative.eventgrid.inputs.JsonFieldResponse;
 import com.pulumi.azurenative.eventgrid.inputs.JsonFieldWithDefaultResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
         this.eventTime = eventTime;
         this.eventType = eventType;
         this.id = id;
-        this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType, "expected parameter 'inputSchemaMappingType' to be non-null");
+        this.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").arg(inputSchemaMappingType).require();
         this.subject = subject;
         this.topic = topic;
     }

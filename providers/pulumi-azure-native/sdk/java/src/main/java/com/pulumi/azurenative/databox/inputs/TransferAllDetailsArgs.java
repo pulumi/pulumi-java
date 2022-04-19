@@ -59,7 +59,7 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
         Output<Either<String,DataAccountType>> dataAccountType,
         @Nullable Output<Boolean> transferAllBlobs,
         @Nullable Output<Boolean> transferAllFiles) {
-        this.dataAccountType = dataAccountType == null ? Output.ofLeft("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = Codegen.stringProp("dataAccountType").left(DataAccountType.class).output().arg(dataAccountType).def("StorageAccount").require();
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;
     }

@@ -77,7 +77,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
         @Nullable Output<Integer> protectedItemsCount,
         @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
         @Nullable Output<Object> schedulePolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

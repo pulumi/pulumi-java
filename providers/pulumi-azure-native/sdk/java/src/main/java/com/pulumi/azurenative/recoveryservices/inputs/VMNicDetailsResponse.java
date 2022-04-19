@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.IPConfigResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -361,14 +362,14 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
         this.recoveryVMSubnetName = recoveryVMSubnetName;
         this.replicaNicId = replicaNicId;
         this.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
-        this.reuseExistingNic = reuseExistingNic == null ? false : reuseExistingNic;
+        this.reuseExistingNic = Codegen.booleanProp("reuseExistingNic").arg(reuseExistingNic).def(false).getNullable();
         this.selectionType = selectionType;
         this.sourceNicArmId = sourceNicArmId;
         this.tfoIPConfigs = tfoIPConfigs;
         this.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
         this.tfoRecoveryNicName = tfoRecoveryNicName;
         this.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
-        this.tfoReuseExistingNic = tfoReuseExistingNic == null ? false : tfoReuseExistingNic;
+        this.tfoReuseExistingNic = Codegen.booleanProp("tfoReuseExistingNic").arg(tfoReuseExistingNic).def(false).getNullable();
         this.tfoVMNetworkId = tfoVMNetworkId;
         this.tfoVMSubnetName = tfoVMSubnetName;
         this.vMNetworkName = vMNetworkName;

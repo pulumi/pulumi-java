@@ -6,7 +6,6 @@ package com.pulumi.kubernetes.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.kubernetes.Utilities;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -81,11 +80,11 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
         @Nullable Output<String> registryConfigPath,
         @Nullable Output<String> repositoryCache,
         @Nullable Output<String> repositoryConfigPath) {
-        this.driver = driver == null ? Codegen.ofNullable(Utilities.getEnv("PULUMI_K8S_HELM_DRIVER").orElse(null)) : driver;
-        this.pluginsPath = pluginsPath == null ? Codegen.ofNullable(Utilities.getEnv("PULUMI_K8S_HELM_PLUGINS_PATH").orElse(null)) : pluginsPath;
-        this.registryConfigPath = registryConfigPath == null ? Codegen.ofNullable(Utilities.getEnv("PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH").orElse(null)) : registryConfigPath;
-        this.repositoryCache = repositoryCache == null ? Codegen.ofNullable(Utilities.getEnv("PULUMI_K8S_HELM_REPOSITORY_CACHE").orElse(null)) : repositoryCache;
-        this.repositoryConfigPath = repositoryConfigPath == null ? Codegen.ofNullable(Utilities.getEnv("PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH").orElse(null)) : repositoryConfigPath;
+        this.driver = Codegen.stringProp("driver").output().arg(driver).env("PULUMI_K8S_HELM_DRIVER").getNullable();
+        this.pluginsPath = Codegen.stringProp("pluginsPath").output().arg(pluginsPath).env("PULUMI_K8S_HELM_PLUGINS_PATH").getNullable();
+        this.registryConfigPath = Codegen.stringProp("registryConfigPath").output().arg(registryConfigPath).env("PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH").getNullable();
+        this.repositoryCache = Codegen.stringProp("repositoryCache").output().arg(repositoryCache).env("PULUMI_K8S_HELM_REPOSITORY_CACHE").getNullable();
+        this.repositoryConfigPath = Codegen.stringProp("repositoryConfigPath").output().arg(repositoryConfigPath).env("PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH").getNullable();
     }
 
     private HelmReleaseSettingsArgs() {

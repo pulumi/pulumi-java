@@ -73,7 +73,7 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.relativeUrl = relativeUrl;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private HttpServerLocationArgs() {

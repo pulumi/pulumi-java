@@ -60,7 +60,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends com.pulumi.resour
         Output<String> partitionScheme) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").output().arg(partitionScheme).require();
     }
 
     private NamedPartitionSchemeDescriptionArgs() {

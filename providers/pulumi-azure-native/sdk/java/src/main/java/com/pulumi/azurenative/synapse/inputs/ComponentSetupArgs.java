@@ -60,7 +60,7 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
         Output<String> type) {
         this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
         this.licenseKey = licenseKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ComponentSetupArgs() {

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,8 +57,8 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable String dataType,
         @Nullable String kind,
         @Nullable Integer precision) {
-        this.dataType = dataType == null ? "String" : dataType;
-        this.kind = kind == null ? "Hash" : kind;
+        this.dataType = Codegen.stringProp("dataType").arg(dataType).def("String").getNullable();
+        this.kind = Codegen.stringProp("kind").arg(kind).def("Hash").getNullable();
         this.precision = precision;
     }
 

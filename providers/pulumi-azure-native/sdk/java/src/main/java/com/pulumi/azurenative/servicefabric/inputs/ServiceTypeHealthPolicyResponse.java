@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class ServiceTypeHealthPolicyResponse extends com.pulumi.resources.
     }
 
     public ServiceTypeHealthPolicyResponse(@Nullable Integer maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? 0 : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg(maxPercentUnhealthyServices).def(0).getNullable();
     }
 
     private ServiceTypeHealthPolicyResponse() {

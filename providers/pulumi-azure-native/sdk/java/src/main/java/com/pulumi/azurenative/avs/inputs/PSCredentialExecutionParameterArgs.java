@@ -71,7 +71,7 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
         @Nullable Output<String> username) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.password = password;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = username;
     }
 

@@ -83,10 +83,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> startTime,
         @Nullable Output<JobScheduleType> type) {
         this.enabled = enabled;
-        this.endTime = endTime == null ? Codegen.ofNullable("9999-12-31T11:59:59+00:00") : endTime;
+        this.endTime = Codegen.stringProp("endTime").output().arg(endTime).def("9999-12-31T11:59:59+00:00").getNullable();
         this.interval = interval;
-        this.startTime = startTime == null ? Codegen.ofNullable("0001-01-01T00:00:00+00:00") : startTime;
-        this.type = type == null ? Codegen.ofNullable(com.pulumi.azurenative.sql.enums.JobScheduleType.Once) : type;
+        this.startTime = Codegen.stringProp("startTime").output().arg(startTime).def("0001-01-01T00:00:00+00:00").getNullable();
+        this.type = Codegen.objectProp("type", JobScheduleType.class).output().arg(type).def(JobScheduleType.Once).getNullable();
     }
 
     private JobScheduleArgs() {

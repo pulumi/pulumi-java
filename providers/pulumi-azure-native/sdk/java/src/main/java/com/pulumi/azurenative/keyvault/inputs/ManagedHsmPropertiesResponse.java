@@ -6,6 +6,7 @@ package com.pulumi.azurenative.keyvault.inputs;
 import com.pulumi.azurenative.keyvault.inputs.MHSMNetworkRuleSetResponse;
 import com.pulumi.azurenative.keyvault.inputs.MHSMPrivateEndpointConnectionItemResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -181,8 +182,8 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
         String statusMessage,
         @Nullable String tenantId) {
         this.createMode = createMode;
-        this.enablePurgeProtection = enablePurgeProtection == null ? true : enablePurgeProtection;
-        this.enableSoftDelete = enableSoftDelete == null ? true : enableSoftDelete;
+        this.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").arg(enablePurgeProtection).def(true).getNullable();
+        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg(enableSoftDelete).def(true).getNullable();
         this.hsmUri = Objects.requireNonNull(hsmUri, "expected parameter 'hsmUri' to be non-null");
         this.initialAdminObjectIds = initialAdminObjectIds;
         this.networkAcls = networkAcls;
@@ -190,7 +191,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
         this.publicNetworkAccess = publicNetworkAccess;
         this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate, "expected parameter 'scheduledPurgeDate' to be non-null");
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? 90 : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg(softDeleteRetentionInDays).def(90).getNullable();
         this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
         this.tenantId = tenantId;
     }

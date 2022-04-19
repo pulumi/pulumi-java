@@ -144,7 +144,7 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.principalIds = Objects.requireNonNull(principalIds, "expected parameter 'principalIds' to be non-null");
         this.resourceGroup = resourceGroup;
         this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");

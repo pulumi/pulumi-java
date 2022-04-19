@@ -191,8 +191,8 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<Integer> volumeFreeSpacePercent) {
         this.cloudTiering = cloudTiering;
         this.friendlyName = friendlyName;
-        this.initialDownloadPolicy = initialDownloadPolicy == null ? Output.ofLeft("NamespaceThenModifiedFiles") : initialDownloadPolicy;
-        this.localCacheMode = localCacheMode == null ? Output.ofLeft("UpdateLocallyCachedFiles") : localCacheMode;
+        this.initialDownloadPolicy = Codegen.stringProp("initialDownloadPolicy").left(InitialDownloadPolicy.class).output().arg(initialDownloadPolicy).def("NamespaceThenModifiedFiles").getNullable();
+        this.localCacheMode = Codegen.stringProp("localCacheMode").left(LocalCacheMode.class).output().arg(localCacheMode).def("UpdateLocallyCachedFiles").getNullable();
         this.offlineDataTransfer = offlineDataTransfer;
         this.offlineDataTransferShareName = offlineDataTransferShareName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

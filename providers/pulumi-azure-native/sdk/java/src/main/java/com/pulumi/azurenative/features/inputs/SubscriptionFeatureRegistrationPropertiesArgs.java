@@ -70,7 +70,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
         @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
         this.description = description;
         this.metadata = metadata;
-        this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal == null ? Codegen.ofNullable(false) : shouldFeatureDisplayInPortal;
+        this.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").output().arg(shouldFeatureDisplayInPortal).def(false).getNullable();
         this.state = state;
     }
 

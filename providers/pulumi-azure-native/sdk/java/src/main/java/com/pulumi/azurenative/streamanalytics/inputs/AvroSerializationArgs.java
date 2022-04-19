@@ -31,7 +31,7 @@ public final class AvroSerializationArgs extends com.pulumi.resources.ResourceAr
     }
 
     public AvroSerializationArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AvroSerializationArgs() {

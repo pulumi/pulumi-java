@@ -5,6 +5,7 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.azurenative.alertsmanagement.inputs.HealthStateResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,7 +74,7 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
         this.healthStates = Objects.requireNonNull(healthStates, "expected parameter 'healthStates' to be non-null");
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
+        this.namespace = Codegen.stringProp("namespace").arg(namespace).require();
     }
 
     private VmGuestHealthAlertCriterionResponse() {

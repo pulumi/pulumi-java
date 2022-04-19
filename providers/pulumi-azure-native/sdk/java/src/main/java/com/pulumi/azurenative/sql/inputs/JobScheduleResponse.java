@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -81,10 +82,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable String startTime,
         @Nullable String type) {
         this.enabled = enabled;
-        this.endTime = endTime == null ? "9999-12-31T11:59:59+00:00" : endTime;
+        this.endTime = Codegen.stringProp("endTime").arg(endTime).def("9999-12-31T11:59:59+00:00").getNullable();
         this.interval = interval;
-        this.startTime = startTime == null ? "0001-01-01T00:00:00+00:00" : startTime;
-        this.type = type == null ? "Once" : type;
+        this.startTime = Codegen.stringProp("startTime").arg(startTime).def("0001-01-01T00:00:00+00:00").getNullable();
+        this.type = Codegen.stringProp("type").arg(type).def("Once").getNullable();
     }
 
     private JobScheduleResponse() {

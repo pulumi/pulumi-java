@@ -6,7 +6,6 @@ package com.pulumi.gcp;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.inputs.ProviderBatchingArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -978,12 +977,12 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.osConfigCustomEndpoint = osConfigCustomEndpoint;
         this.osLoginCustomEndpoint = osLoginCustomEndpoint;
         this.privatecaCustomEndpoint = privatecaCustomEndpoint;
-        this.project = project == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
+        this.project = Codegen.stringProp("project").output().arg(project).env("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").getNullable();
         this.pubsubCustomEndpoint = pubsubCustomEndpoint;
         this.pubsubLiteCustomEndpoint = pubsubLiteCustomEndpoint;
         this.recaptchaEnterpriseCustomEndpoint = recaptchaEnterpriseCustomEndpoint;
         this.redisCustomEndpoint = redisCustomEndpoint;
-        this.region = region == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
+        this.region = Codegen.stringProp("region").output().arg(region).env("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").getNullable();
         this.requestReason = requestReason;
         this.requestTimeout = requestTimeout;
         this.resourceManagerCustomEndpoint = resourceManagerCustomEndpoint;
@@ -1009,7 +1008,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.vertexAiCustomEndpoint = vertexAiCustomEndpoint;
         this.vpcAccessCustomEndpoint = vpcAccessCustomEndpoint;
         this.workflowsCustomEndpoint = workflowsCustomEndpoint;
-        this.zone = zone == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
+        this.zone = Codegen.stringProp("zone").output().arg(zone).env("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").getNullable();
     }
 
     private ProviderArgs() {

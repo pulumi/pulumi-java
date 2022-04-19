@@ -56,9 +56,9 @@ public final class ArmServiceTypeHealthPolicyArgs extends com.pulumi.resources.R
         @Nullable Output<Integer> maxPercentUnhealthyPartitionsPerService,
         @Nullable Output<Integer> maxPercentUnhealthyReplicasPerPartition,
         @Nullable Output<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService == null ? Codegen.ofNullable(0) : maxPercentUnhealthyPartitionsPerService;
-        this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition == null ? Codegen.ofNullable(0) : maxPercentUnhealthyReplicasPerPartition;
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyPartitionsPerService = Codegen.integerProp("maxPercentUnhealthyPartitionsPerService").output().arg(maxPercentUnhealthyPartitionsPerService).def(0).getNullable();
+        this.maxPercentUnhealthyReplicasPerPartition = Codegen.integerProp("maxPercentUnhealthyReplicasPerPartition").output().arg(maxPercentUnhealthyReplicasPerPartition).def(0).getNullable();
+        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").output().arg(maxPercentUnhealthyServices).def(0).getNullable();
     }
 
     private ArmServiceTypeHealthPolicyArgs() {

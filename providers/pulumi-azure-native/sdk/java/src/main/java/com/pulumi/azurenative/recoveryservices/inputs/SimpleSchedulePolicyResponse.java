@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -82,7 +83,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
         @Nullable String scheduleRunFrequency,
         @Nullable List<String> scheduleRunTimes,
         @Nullable Integer scheduleWeeklyFrequency) {
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
+        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg(schedulePolicyType).require();
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;
         this.scheduleRunTimes = scheduleRunTimes;

@@ -114,7 +114,7 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> scriptUrl,
         Output<String> scriptUrlSasToken) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.continueOnErrors = continueOnErrors == null ? Codegen.ofNullable(false) : continueOnErrors;
+        this.continueOnErrors = Codegen.booleanProp("continueOnErrors").output().arg(continueOnErrors).def(false).getNullable();
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.forceUpdateTag = forceUpdateTag;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

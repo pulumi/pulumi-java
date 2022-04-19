@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.consumption.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -125,7 +126,7 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
         this.locale = locale;
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdType = thresholdType == null ? "Actual" : thresholdType;
+        this.thresholdType = Codegen.stringProp("thresholdType").arg(thresholdType).def("Actual").getNullable();
     }
 
     private NotificationResponse() {

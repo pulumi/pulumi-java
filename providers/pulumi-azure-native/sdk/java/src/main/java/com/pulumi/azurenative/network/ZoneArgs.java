@@ -110,7 +110,7 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
         this.zoneName = zoneName;
-        this.zoneType = zoneType == null ? Codegen.ofNullable(com.pulumi.azurenative.network.enums.ZoneType.Public) : zoneType;
+        this.zoneType = Codegen.objectProp("zoneType", ZoneType.class).output().arg(zoneType).def(ZoneType.Public).getNullable();
     }
 
     private ZoneArgs() {

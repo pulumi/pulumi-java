@@ -5,6 +5,7 @@ package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.azurenative.databox.inputs.UserAssignedIdentityResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -71,7 +72,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
         @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = type == null ? "None" : type;
+        this.type = Codegen.stringProp("type").arg(type).def("None").getNullable();
         this.userAssignedIdentities = userAssignedIdentities;
     }
 

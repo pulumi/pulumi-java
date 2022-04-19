@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.SyncMigrationDatabaseErrorEventResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,7 +70,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse exte
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
     }
 
     private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse() {

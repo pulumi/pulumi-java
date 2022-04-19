@@ -8,6 +8,7 @@ import com.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -220,7 +221,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
         this.rootPath = Objects.requireNonNull(rootPath, "expected parameter 'rootPath' to be non-null");
         this.sparkConfig = sparkConfig;
         this.sparkJobLinkedService = sparkJobLinkedService;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

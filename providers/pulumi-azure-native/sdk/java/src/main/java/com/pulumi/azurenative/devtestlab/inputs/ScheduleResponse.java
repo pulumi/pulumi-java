@@ -8,6 +8,7 @@ import com.pulumi.azurenative.devtestlab.inputs.HourDetailsResponse;
 import com.pulumi.azurenative.devtestlab.inputs.NotificationSettingsResponse;
 import com.pulumi.azurenative.devtestlab.inputs.WeekDetailsResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -224,7 +225,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.notificationSettings = notificationSettings;
         this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.status = status == null ? "Disabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
         this.tags = tags;
         this.targetResourceId = targetResourceId;
         this.taskType = taskType;

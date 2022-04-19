@@ -114,7 +114,7 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
         this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

@@ -59,7 +59,7 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
         Output<String> kind) {
         this.contentType = contentType;
         this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
     }
 
     private SecretResourcePropertiesArgs() {

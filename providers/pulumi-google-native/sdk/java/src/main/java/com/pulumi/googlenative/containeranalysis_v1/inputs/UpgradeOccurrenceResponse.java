@@ -69,7 +69,7 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
         VersionResponse parsedVersion,
         WindowsUpdateResponse windowsUpdate) {
         this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
-        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package' to be non-null");
         this.parsedVersion = Objects.requireNonNull(parsedVersion, "expected parameter 'parsedVersion' to be non-null");
         this.windowsUpdate = Objects.requireNonNull(windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
     }

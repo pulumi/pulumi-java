@@ -45,7 +45,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
         Output<String> keyId,
         Output<String> odataType) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs() {

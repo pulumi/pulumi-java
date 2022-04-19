@@ -166,7 +166,7 @@ public final class CacheUsernameDownloadSettingsArgs extends com.pulumi.resource
         this.ldapServer = ldapServer;
         this.requireValidCertificate = requireValidCertificate;
         this.userFileURI = userFileURI;
-        this.usernameSource = usernameSource == null ? Output.ofLeft("None") : usernameSource;
+        this.usernameSource = Codegen.stringProp("usernameSource").left(UsernameSource.class).output().arg(usernameSource).def("None").getNullable();
     }
 
     private CacheUsernameDownloadSettingsArgs() {

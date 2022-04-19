@@ -75,9 +75,9 @@ public final class ArmApplicationHealthPolicyArgs extends com.pulumi.resources.R
         @Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy,
         @Nullable Output<Integer> maxPercentUnhealthyDeployedApplications,
         @Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
-        this.considerWarningAsError = considerWarningAsError == null ? Codegen.ofNullable(false) : considerWarningAsError;
+        this.considerWarningAsError = Codegen.booleanProp("considerWarningAsError").output().arg(considerWarningAsError).def(false).getNullable();
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications == null ? Codegen.ofNullable(0) : maxPercentUnhealthyDeployedApplications;
+        this.maxPercentUnhealthyDeployedApplications = Codegen.integerProp("maxPercentUnhealthyDeployedApplications").output().arg(maxPercentUnhealthyDeployedApplications).def(0).getNullable();
         this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
     }
 

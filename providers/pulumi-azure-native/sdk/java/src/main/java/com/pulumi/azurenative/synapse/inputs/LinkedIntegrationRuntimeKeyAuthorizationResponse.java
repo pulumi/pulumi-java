@@ -5,6 +5,7 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.azurenative.synapse.inputs.SecureStringResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,7 +44,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends com.
     public LinkedIntegrationRuntimeKeyAuthorizationResponse(
         String authorizationType,
         SecureStringResponse key) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
+        this.authorizationType = Codegen.stringProp("authorizationType").arg(authorizationType).require();
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 

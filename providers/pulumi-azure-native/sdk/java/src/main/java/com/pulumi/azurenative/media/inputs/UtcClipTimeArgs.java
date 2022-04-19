@@ -44,7 +44,7 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
     public UtcClipTimeArgs(
         Output<String> odataType,
         Output<String> time) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
     }
 

@@ -111,7 +111,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
         this.database = database;
         this.documentId = documentId;
         this.partitionKey = partitionKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private DocumentDbOutputDataSourceArgs() {

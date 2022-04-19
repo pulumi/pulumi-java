@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,7 +82,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
         @Nullable String remotePort) {
         this.localIPAddress = localIPAddress;
         this.localPort = localPort;
-        this.protocol = protocol == null ? "Any" : protocol;
+        this.protocol = Codegen.stringProp("protocol").arg(protocol).def("Any").getNullable();
         this.remoteIPAddress = remoteIPAddress;
         this.remotePort = remotePort;
     }

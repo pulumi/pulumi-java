@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,7 +33,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends com.pulumi.resou
     }
 
     public ServiceTypeDeltaHealthPolicyResponse(@Nullable Integer maxPercentDeltaUnhealthyServices) {
-        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? 0 : maxPercentDeltaUnhealthyServices;
+        this.maxPercentDeltaUnhealthyServices = Codegen.integerProp("maxPercentDeltaUnhealthyServices").arg(maxPercentDeltaUnhealthyServices).def(0).getNullable();
     }
 
     private ServiceTypeDeltaHealthPolicyResponse() {

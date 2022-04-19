@@ -83,8 +83,8 @@ public final class PodDisruptionBudgetArgs extends com.pulumi.resources.Resource
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<PodDisruptionBudgetSpecArgs> spec,
         @Nullable Output<PodDisruptionBudgetStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
         this.status = status;

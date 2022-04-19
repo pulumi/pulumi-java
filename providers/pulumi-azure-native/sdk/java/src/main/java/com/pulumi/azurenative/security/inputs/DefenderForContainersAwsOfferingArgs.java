@@ -89,7 +89,7 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
         this.kinesisToS3 = kinesisToS3;
         this.kubernetesScubaReader = kubernetesScubaReader;
         this.kubernetesService = kubernetesService;
-        this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
+        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
     }
 
     private DefenderForContainersAwsOfferingArgs() {

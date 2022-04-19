@@ -84,7 +84,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
         Output<ApiManagementServiceSkuPropertiesArgs> sku,
         @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
         @Nullable Output<List<String>> zones) {
-        this.disableGateway = disableGateway == null ? Codegen.ofNullable(false) : disableGateway;
+        this.disableGateway = Codegen.booleanProp("disableGateway").output().arg(disableGateway).def(false).getNullable();
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;

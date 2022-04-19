@@ -47,8 +47,8 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
     public RetentionPolicyArgs(
         @Nullable Output<Integer> days,
         @Nullable Output<Either<String,PolicyStatus>> status) {
-        this.days = days == null ? Codegen.ofNullable(7) : days;
-        this.status = status == null ? Output.ofLeft("disabled") : status;
+        this.days = Codegen.integerProp("days").output().arg(days).def(7).getNullable();
+        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
     }
 
     private RetentionPolicyArgs() {

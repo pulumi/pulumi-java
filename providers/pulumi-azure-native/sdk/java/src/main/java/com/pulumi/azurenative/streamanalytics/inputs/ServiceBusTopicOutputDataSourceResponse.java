@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +99,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
         this.topicName = topicName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ServiceBusTopicOutputDataSourceResponse() {

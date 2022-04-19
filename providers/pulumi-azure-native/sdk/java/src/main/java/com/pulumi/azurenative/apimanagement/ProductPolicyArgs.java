@@ -90,7 +90,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> resourceGroupName,
         Output<String> serviceName,
         Output<String> value) {
-        this.format = format == null ? Output.ofLeft("xml") : format;
+        this.format = Codegen.stringProp("format").left(PolicyContentFormat.class).output().arg(format).def("xml").getNullable();
         this.policyId = policyId;
         this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

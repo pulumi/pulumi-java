@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends com.pulumi.resour
         GooglePrivacyDlpV2TransientCryptoKeyResponse transient_,
         GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
         this.kmsWrapped = Objects.requireNonNull(kmsWrapped, "expected parameter 'kmsWrapped' to be non-null");
-        this.transient_ = Objects.requireNonNull(transient_, "expected parameter 'transient_' to be non-null");
+        this.transient_ = Objects.requireNonNull(transient_, "expected parameter 'transient' to be non-null");
         this.unwrapped = Objects.requireNonNull(unwrapped, "expected parameter 'unwrapped' to be non-null");
     }
 

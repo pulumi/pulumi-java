@@ -170,7 +170,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
         this.password = password;
         this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
         this.systemNumber = Objects.requireNonNull(systemNumber, "expected parameter 'systemNumber' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

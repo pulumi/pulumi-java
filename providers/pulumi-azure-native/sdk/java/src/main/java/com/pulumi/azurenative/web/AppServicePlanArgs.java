@@ -253,16 +253,16 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
-        this.hyperV = hyperV == null ? Codegen.ofNullable(false) : hyperV;
+        this.hyperV = Codegen.booleanProp("hyperV").output().arg(hyperV).def(false).getNullable();
         this.isSpot = isSpot;
-        this.isXenon = isXenon == null ? Codegen.ofNullable(false) : isXenon;
+        this.isXenon = Codegen.booleanProp("isXenon").output().arg(isXenon).def(false).getNullable();
         this.kind = kind;
         this.kubeEnvironmentProfile = kubeEnvironmentProfile;
         this.location = location;
         this.maximumElasticWorkerCount = maximumElasticWorkerCount;
         this.name = name;
-        this.perSiteScaling = perSiteScaling == null ? Codegen.ofNullable(false) : perSiteScaling;
-        this.reserved = reserved == null ? Codegen.ofNullable(false) : reserved;
+        this.perSiteScaling = Codegen.booleanProp("perSiteScaling").output().arg(perSiteScaling).def(false).getNullable();
+        this.reserved = Codegen.booleanProp("reserved").output().arg(reserved).def(false).getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sku = sku;
         this.spotExpirationTime = spotExpirationTime;

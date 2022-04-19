@@ -72,7 +72,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
         Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
         Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx,
         Output<Object> url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.pfx = Objects.requireNonNull(pfx, "expected parameter 'pfx' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");

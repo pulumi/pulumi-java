@@ -57,7 +57,7 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
         Output<String> type,
         Output<String> username) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 

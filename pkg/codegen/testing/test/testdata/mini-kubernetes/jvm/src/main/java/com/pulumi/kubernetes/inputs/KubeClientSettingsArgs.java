@@ -6,7 +6,6 @@ package com.pulumi.kubernetes.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.kubernetes.Utilities;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -46,8 +45,8 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
     public KubeClientSettingsArgs(
         @Nullable Output<Integer> burst,
         @Nullable Output<Double> qps) {
-        this.burst = burst == null ? Codegen.ofNullable(Utilities.getEnvInteger("PULUMI_K8S_CLIENT_BURST").orElse(null)) : burst;
-        this.qps = qps == null ? Codegen.ofNullable(Utilities.getEnvDouble("PULUMI_K8S_CLIENT_QPS").orElse(null)) : qps;
+        this.burst = Codegen.integerProp("burst").output().arg(burst).env("PULUMI_K8S_CLIENT_BURST").getNullable();
+        this.qps = Codegen.doubleProp("qps").output().arg(qps).env("PULUMI_K8S_CLIENT_QPS").getNullable();
     }
 
     private KubeClientSettingsArgs() {

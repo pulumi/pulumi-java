@@ -54,7 +54,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> description,
         @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress,
         @Nullable Output<String> name) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.ingress = ingress;
         this.name = name;
     }

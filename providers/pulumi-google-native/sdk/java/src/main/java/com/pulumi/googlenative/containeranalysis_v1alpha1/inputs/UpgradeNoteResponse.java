@@ -57,7 +57,7 @@ public final class UpgradeNoteResponse extends com.pulumi.resources.InvokeArgs {
         String package_,
         VersionResponse version) {
         this.distributions = Objects.requireNonNull(distributions, "expected parameter 'distributions' to be non-null");
-        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package_' to be non-null");
+        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package' to be non-null");
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 

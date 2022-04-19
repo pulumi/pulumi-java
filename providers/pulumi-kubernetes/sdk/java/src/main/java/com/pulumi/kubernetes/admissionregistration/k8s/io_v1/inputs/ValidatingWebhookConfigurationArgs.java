@@ -71,8 +71,8 @@ public final class ValidatingWebhookConfigurationArgs extends com.pulumi.resourc
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<List<ValidatingWebhookArgs>> webhooks) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.webhooks = webhooks;
     }

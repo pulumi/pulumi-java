@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class MedianStoppingPolicyResponse extends com.pulumi.resources.Inv
         String policyType) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
+        this.policyType = Codegen.stringProp("policyType").arg(policyType).require();
     }
 
     private MedianStoppingPolicyResponse() {

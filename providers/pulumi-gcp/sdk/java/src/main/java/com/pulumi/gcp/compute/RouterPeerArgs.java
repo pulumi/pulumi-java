@@ -223,7 +223,7 @@ public final class RouterPeerArgs extends com.pulumi.resources.ResourceArgs {
         this.advertisedRoutePriority = advertisedRoutePriority;
         this.bfd = bfd;
         this.enable = enable;
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface_' to be non-null");
+        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
         this.ipAddress = ipAddress;
         this.name = name;
         this.peerAsn = Objects.requireNonNull(peerAsn, "expected parameter 'peerAsn' to be non-null");

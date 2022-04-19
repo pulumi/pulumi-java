@@ -31,7 +31,7 @@ public final class ImmediateCopyOptionArgs extends com.pulumi.resources.Resource
     }
 
     public ImmediateCopyOptionArgs(Output<String> objectType) {
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private ImmediateCopyOptionArgs() {

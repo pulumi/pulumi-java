@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.aad.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -105,8 +106,8 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
         String publicCertificate) {
         this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter, "expected parameter 'certificateNotAfter' to be non-null");
         this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
-        this.externalAccess = externalAccess == null ? "Disabled" : externalAccess;
-        this.ldaps = ldaps == null ? "Disabled" : ldaps;
+        this.externalAccess = Codegen.stringProp("externalAccess").arg(externalAccess).def("Disabled").getNullable();
+        this.ldaps = Codegen.stringProp("ldaps").arg(ldaps).def("Disabled").getNullable();
         this.pfxCertificate = pfxCertificate;
         this.pfxCertificatePassword = pfxCertificatePassword;
         this.publicCertificate = Objects.requireNonNull(publicCertificate, "expected parameter 'publicCertificate' to be non-null");

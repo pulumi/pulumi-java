@@ -277,10 +277,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> sslKey,
         @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration,
         Output<String> workspaceName) {
-        this.appInsightsEnabled = appInsightsEnabled == null ? Codegen.ofNullable(false) : appInsightsEnabled;
-        this.authEnabled = authEnabled == null ? Codegen.ofNullable(false) : authEnabled;
+        this.appInsightsEnabled = Codegen.booleanProp("appInsightsEnabled").output().arg(appInsightsEnabled).def(false).getNullable();
+        this.authEnabled = Codegen.booleanProp("authEnabled").output().arg(authEnabled).def(false).getNullable();
         this.cname = cname;
-        this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
+        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
         this.containerResourceRequirements = containerResourceRequirements;
         this.dataCollection = dataCollection;
         this.description = description;
@@ -294,7 +294,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = serviceName;
         this.sslCertificate = sslCertificate;
-        this.sslEnabled = sslEnabled == null ? Codegen.ofNullable(false) : sslEnabled;
+        this.sslEnabled = Codegen.booleanProp("sslEnabled").output().arg(sslEnabled).def(false).getNullable();
         this.sslKey = sslKey;
         this.vnetConfiguration = vnetConfiguration;
         this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");

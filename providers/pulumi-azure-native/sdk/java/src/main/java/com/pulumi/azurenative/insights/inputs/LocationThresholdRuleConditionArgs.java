@@ -75,7 +75,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
         @Nullable Output<String> windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
         this.windowSize = windowSize;
     }
 

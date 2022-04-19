@@ -6,7 +6,6 @@ package com.pulumi.googlenative;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
-import com.pulumi.googlenative.Utilities;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -90,12 +89,12 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> project,
         @Nullable Output<String> region,
         @Nullable Output<String> zone) {
-        this.appendUserAgent = appendUserAgent == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_APPEND_USER_AGENT").orElse(null)) : appendUserAgent;
-        this.disablePartnerName = disablePartnerName == null ? Codegen.ofNullable(Utilities.getEnvBoolean("GOOGLE_DISABLE_PARTNER_NAME").orElse(null)) : disablePartnerName;
-        this.partnerName = partnerName == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_PARTNER_NAME").orElse(null)) : partnerName;
-        this.project = project == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
-        this.region = region == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
-        this.zone = zone == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
+        this.appendUserAgent = Codegen.stringProp("appendUserAgent").output().arg(appendUserAgent).env("GOOGLE_APPEND_USER_AGENT").getNullable();
+        this.disablePartnerName = Codegen.booleanProp("disablePartnerName").output().arg(disablePartnerName).env("GOOGLE_DISABLE_PARTNER_NAME").getNullable();
+        this.partnerName = Codegen.stringProp("partnerName").output().arg(partnerName).env("GOOGLE_PARTNER_NAME").getNullable();
+        this.project = Codegen.stringProp("project").output().arg(project).env("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").getNullable();
+        this.region = Codegen.stringProp("region").output().arg(region).env("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").getNullable();
+        this.zone = Codegen.stringProp("zone").output().arg(zone).env("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").getNullable();
     }
 
     private ProviderArgs() {

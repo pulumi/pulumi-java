@@ -13,6 +13,7 @@ import com.pulumi.azurenative.datafactory.inputs.PowerQuerySinkMappingResponse;
 import com.pulumi.azurenative.datafactory.inputs.PowerQuerySinkResponse;
 import com.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -225,7 +226,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
         this.sinks = sinks;
         this.staging = staging;
         this.traceLevel = traceLevel;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
         this.userProperties = userProperties;
     }
 

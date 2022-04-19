@@ -103,10 +103,10 @@ public final class PriorityClassArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<String> preemptionPolicy,
         Output<Integer> value) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.description = description;
         this.globalDefault = globalDefault;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.preemptionPolicy = preemptionPolicy;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");

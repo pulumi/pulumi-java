@@ -120,7 +120,7 @@ public final class PolicyDefinitionArgs extends com.pulumi.resources.ResourceArg
         this.description = description;
         this.displayName = displayName;
         this.metadata = metadata;
-        this.mode = mode == null ? Codegen.ofNullable("Indexed") : mode;
+        this.mode = Codegen.stringProp("mode").output().arg(mode).def("Indexed").getNullable();
         this.parameters = parameters;
         this.policyDefinitionName = policyDefinitionName;
         this.policyRule = policyRule;

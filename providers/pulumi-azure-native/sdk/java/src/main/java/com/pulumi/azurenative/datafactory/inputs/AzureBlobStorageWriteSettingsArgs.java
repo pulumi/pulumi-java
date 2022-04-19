@@ -86,7 +86,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureBlobStorageWriteSettingsArgs() {

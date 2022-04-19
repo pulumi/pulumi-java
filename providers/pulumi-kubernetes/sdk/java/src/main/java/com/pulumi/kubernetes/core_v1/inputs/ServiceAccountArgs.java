@@ -97,10 +97,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<List<ObjectReferenceArgs>> secrets) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.automountServiceAccountToken = automountServiceAccountToken;
         this.imagePullSecrets = imagePullSecrets;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.secrets = secrets;
     }

@@ -143,7 +143,7 @@ public final class SapTableResourceDatasetArgs extends com.pulumi.resources.Reso
         this.schema = schema;
         this.structure = structure;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private SapTableResourceDatasetArgs() {

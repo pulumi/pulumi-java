@@ -192,13 +192,13 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
         @Nullable Output<Boolean> unixReadWrite) {
         this.allowedClients = allowedClients;
         this.cifs = cifs;
-        this.hasRootAccess = hasRootAccess == null ? Codegen.ofNullable(true) : hasRootAccess;
-        this.kerberos5ReadOnly = kerberos5ReadOnly == null ? Codegen.ofNullable(false) : kerberos5ReadOnly;
-        this.kerberos5ReadWrite = kerberos5ReadWrite == null ? Codegen.ofNullable(false) : kerberos5ReadWrite;
-        this.kerberos5iReadOnly = kerberos5iReadOnly == null ? Codegen.ofNullable(false) : kerberos5iReadOnly;
-        this.kerberos5iReadWrite = kerberos5iReadWrite == null ? Codegen.ofNullable(false) : kerberos5iReadWrite;
-        this.kerberos5pReadOnly = kerberos5pReadOnly == null ? Codegen.ofNullable(false) : kerberos5pReadOnly;
-        this.kerberos5pReadWrite = kerberos5pReadWrite == null ? Codegen.ofNullable(false) : kerberos5pReadWrite;
+        this.hasRootAccess = Codegen.booleanProp("hasRootAccess").output().arg(hasRootAccess).def(true).getNullable();
+        this.kerberos5ReadOnly = Codegen.booleanProp("kerberos5ReadOnly").output().arg(kerberos5ReadOnly).def(false).getNullable();
+        this.kerberos5ReadWrite = Codegen.booleanProp("kerberos5ReadWrite").output().arg(kerberos5ReadWrite).def(false).getNullable();
+        this.kerberos5iReadOnly = Codegen.booleanProp("kerberos5iReadOnly").output().arg(kerberos5iReadOnly).def(false).getNullable();
+        this.kerberos5iReadWrite = Codegen.booleanProp("kerberos5iReadWrite").output().arg(kerberos5iReadWrite).def(false).getNullable();
+        this.kerberos5pReadOnly = Codegen.booleanProp("kerberos5pReadOnly").output().arg(kerberos5pReadOnly).def(false).getNullable();
+        this.kerberos5pReadWrite = Codegen.booleanProp("kerberos5pReadWrite").output().arg(kerberos5pReadWrite).def(false).getNullable();
         this.nfsv3 = nfsv3;
         this.nfsv41 = nfsv41;
         this.ruleIndex = ruleIndex;

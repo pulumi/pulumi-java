@@ -12,6 +12,7 @@ import com.pulumi.azurenative.importexport.inputs.ReturnAddressResponse;
 import com.pulumi.azurenative.importexport.inputs.ReturnShippingResponse;
 import com.pulumi.azurenative.importexport.inputs.ShippingInformationResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -246,8 +247,8 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
         @Nullable ShippingInformationResponse shippingInformation,
         @Nullable String state,
         @Nullable String storageAccountId) {
-        this.backupDriveManifest = backupDriveManifest == null ? false : backupDriveManifest;
-        this.cancelRequested = cancelRequested == null ? false : cancelRequested;
+        this.backupDriveManifest = Codegen.booleanProp("backupDriveManifest").arg(backupDriveManifest).def(false).getNullable();
+        this.cancelRequested = Codegen.booleanProp("cancelRequested").arg(cancelRequested).def(false).getNullable();
         this.deliveryPackage = deliveryPackage;
         this.diagnosticsPath = diagnosticsPath;
         this.driveList = driveList;
@@ -262,7 +263,7 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
         this.returnPackage = returnPackage;
         this.returnShipping = returnShipping;
         this.shippingInformation = shippingInformation;
-        this.state = state == null ? "Creating" : state;
+        this.state = Codegen.stringProp("state").arg(state).def("Creating").getNullable();
         this.storageAccountId = storageAccountId;
     }
 

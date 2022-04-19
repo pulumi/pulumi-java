@@ -60,7 +60,7 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
         @Nullable Output<Either<String,PartitionKind>> kind,
         @Nullable Output<List<String>> paths,
         @Nullable Output<Integer> version) {
-        this.kind = kind == null ? Output.ofLeft("Hash") : kind;
+        this.kind = Codegen.stringProp("kind").left(PartitionKind.class).output().arg(kind).def("Hash").getNullable();
         this.paths = paths;
         this.version = version;
     }

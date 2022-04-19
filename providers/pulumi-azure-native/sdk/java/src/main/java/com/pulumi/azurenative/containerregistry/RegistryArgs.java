@@ -130,7 +130,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
         Output<SkuArgs> sku,
         @Nullable Output<StorageAccountPropertiesArgs> storageAccount,
         @Nullable Output<Map<String,String>> tags) {
-        this.adminUserEnabled = adminUserEnabled == null ? Codegen.ofNullable(false) : adminUserEnabled;
+        this.adminUserEnabled = Codegen.booleanProp("adminUserEnabled").output().arg(adminUserEnabled).def(false).getNullable();
         this.location = location;
         this.networkRuleSet = networkRuleSet;
         this.policies = policies;

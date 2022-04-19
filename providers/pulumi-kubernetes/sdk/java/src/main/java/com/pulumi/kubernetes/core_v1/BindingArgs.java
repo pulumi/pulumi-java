@@ -66,8 +66,8 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         Output<ObjectReferenceArgs> target) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }

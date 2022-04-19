@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.guestconfiguration.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -96,9 +97,9 @@ public final class ConfigurationSettingResponse extends com.pulumi.resources.Inv
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;
-        this.configurationModeFrequencyMins = configurationModeFrequencyMins == null ? 1.5e+01 : configurationModeFrequencyMins;
+        this.configurationModeFrequencyMins = Codegen.doubleProp("configurationModeFrequencyMins").arg(configurationModeFrequencyMins).def(1.5e+01).getNullable();
         this.rebootIfNeeded = rebootIfNeeded;
-        this.refreshFrequencyMins = refreshFrequencyMins == null ? 3e+01 : refreshFrequencyMins;
+        this.refreshFrequencyMins = Codegen.doubleProp("refreshFrequencyMins").arg(refreshFrequencyMins).def(3e+01).getNullable();
     }
 
     private ConfigurationSettingResponse() {

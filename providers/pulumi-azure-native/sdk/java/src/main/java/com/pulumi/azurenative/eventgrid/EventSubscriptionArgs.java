@@ -140,7 +140,7 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
         Output<String> scope) {
         this.deadLetterDestination = deadLetterDestination;
         this.destination = destination;
-        this.eventDeliverySchema = eventDeliverySchema == null ? Output.ofLeft("EventGridSchema") : eventDeliverySchema;
+        this.eventDeliverySchema = Codegen.stringProp("eventDeliverySchema").left(EventDeliverySchema.class).output().arg(eventDeliverySchema).def("EventGridSchema").getNullable();
         this.eventSubscriptionName = eventSubscriptionName;
         this.expirationTimeUtc = expirationTimeUtc;
         this.filter = filter;

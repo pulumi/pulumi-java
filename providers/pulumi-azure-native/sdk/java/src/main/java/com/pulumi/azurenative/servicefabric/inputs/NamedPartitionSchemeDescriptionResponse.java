@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -58,7 +59,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
         String partitionScheme) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
     }
 
     private NamedPartitionSchemeDescriptionResponse() {

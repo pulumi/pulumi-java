@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -169,7 +170,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;
         this.initialReplicationMethod = initialReplicationMethod;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
+        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
         this.offlineReplicationExportPath = offlineReplicationExportPath;
         this.offlineReplicationImportPath = offlineReplicationImportPath;
         this.onlineReplicationStartTime = onlineReplicationStartTime;

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -92,7 +93,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
         String type) {
         this.displayNameHint = Objects.requireNonNull(displayNameHint, "expected parameter 'displayNameHint' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.osFamilyHint = Objects.requireNonNull(osFamilyHint, "expected parameter 'osFamilyHint' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");

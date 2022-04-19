@@ -89,7 +89,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         Output<String> resourceGroupName,
         @Nullable Output<JobScheduleArgs> schedule,
         Output<String> serverName) {
-        this.description = description == null ? Codegen.ofNullable("") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("").getNullable();
         this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
         this.jobName = jobName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

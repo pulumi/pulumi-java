@@ -45,7 +45,7 @@ public final class UrlSigningActionArgs extends com.pulumi.resources.ResourceArg
     public UrlSigningActionArgs(
         Output<String> name,
         Output<UrlSigningActionParametersArgs> parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
+        this.name = Codegen.stringProp("name").output().arg(name).require();
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 

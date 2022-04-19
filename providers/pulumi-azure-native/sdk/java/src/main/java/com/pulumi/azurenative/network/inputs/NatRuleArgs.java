@@ -161,7 +161,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         this.destinationPorts = destinationPorts;
         this.ipProtocols = ipProtocols;
         this.name = name;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
+        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.translatedAddress = translatedAddress;

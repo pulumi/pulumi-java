@@ -45,7 +45,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.p
     public ServiceBusQueueEventSubscriptionDestinationArgs(
         Output<String> endpointType,
         @Nullable Output<String> resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
+        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
         this.resourceId = resourceId;
     }
 

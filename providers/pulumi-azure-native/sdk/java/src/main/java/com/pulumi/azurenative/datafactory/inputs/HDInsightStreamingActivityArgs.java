@@ -275,7 +275,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
         this.policy = policy;
         this.reducer = Objects.requireNonNull(reducer, "expected parameter 'reducer' to be non-null");
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

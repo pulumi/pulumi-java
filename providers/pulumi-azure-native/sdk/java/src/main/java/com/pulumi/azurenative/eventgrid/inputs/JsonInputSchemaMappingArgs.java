@@ -111,7 +111,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
         this.eventTime = eventTime;
         this.eventType = eventType;
         this.id = id;
-        this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType, "expected parameter 'inputSchemaMappingType' to be non-null");
+        this.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").output().arg(inputSchemaMappingType).require();
         this.subject = subject;
         this.topic = topic;
     }

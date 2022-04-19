@@ -84,7 +84,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
         @Nullable Output<Integer> protectedItemsCount,
         @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy,
         @Nullable Output<String> timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;
         this.subProtectionPolicy = subProtectionPolicy;

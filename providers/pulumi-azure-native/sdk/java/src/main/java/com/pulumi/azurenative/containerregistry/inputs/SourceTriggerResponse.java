@@ -5,6 +5,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.azurenative.containerregistry.inputs.SourcePropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.sourceRepository = Objects.requireNonNull(sourceRepository, "expected parameter 'sourceRepository' to be non-null");
         this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents, "expected parameter 'sourceTriggerEvents' to be non-null");
-        this.status = status == null ? "Enabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
     }
 
     private SourceTriggerResponse() {

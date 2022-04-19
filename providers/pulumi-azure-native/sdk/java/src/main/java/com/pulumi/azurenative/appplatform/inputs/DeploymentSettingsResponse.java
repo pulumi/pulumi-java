@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -93,12 +94,12 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
         @Nullable Integer memoryInGB,
         @Nullable String netCoreMainEntryPath,
         @Nullable String runtimeVersion) {
-        this.cpu = cpu == null ? 1 : cpu;
+        this.cpu = Codegen.integerProp("cpu").arg(cpu).def(1).getNullable();
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;
-        this.memoryInGB = memoryInGB == null ? 1 : memoryInGB;
+        this.memoryInGB = Codegen.integerProp("memoryInGB").arg(memoryInGB).def(1).getNullable();
         this.netCoreMainEntryPath = netCoreMainEntryPath;
-        this.runtimeVersion = runtimeVersion == null ? "Java_8" : runtimeVersion;
+        this.runtimeVersion = Codegen.stringProp("runtimeVersion").arg(runtimeVersion).def("Java_8").getNullable();
     }
 
     private DeploymentSettingsResponse() {

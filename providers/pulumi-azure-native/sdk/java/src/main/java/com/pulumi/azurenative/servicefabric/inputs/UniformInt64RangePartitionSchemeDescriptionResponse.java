@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.highKey = Objects.requireNonNull(highKey, "expected parameter 'highKey' to be non-null");
         this.lowKey = Objects.requireNonNull(lowKey, "expected parameter 'lowKey' to be non-null");
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
     }
 
     private UniformInt64RangePartitionSchemeDescriptionResponse() {

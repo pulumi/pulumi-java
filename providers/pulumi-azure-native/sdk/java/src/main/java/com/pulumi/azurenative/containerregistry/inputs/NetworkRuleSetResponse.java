@@ -6,6 +6,7 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.IPRuleResponse;
 import com.pulumi.azurenative.containerregistry.inputs.VirtualNetworkRuleResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
         String defaultAction,
         @Nullable List<IPRuleResponse> ipRules,
         @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.defaultAction = defaultAction == null ? "Allow" : Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
+        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Allow").require();
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;
     }

@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -57,7 +58,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
         String objectType,
         @Nullable String resourceGroupId) {
         this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
         this.resourceGroupId = resourceGroupId;
     }
 

@@ -279,7 +279,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
         this.projectParameters = projectParameters;
         this.propertyOverrides = propertyOverrides;
         this.runtime = runtime;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
     }
 

@@ -66,8 +66,8 @@ public final class PriorityLevelConfigurationArgs extends com.pulumi.resources.R
         @Nullable Output<String> kind,
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<PriorityLevelConfigurationSpecArgs> spec) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
     }

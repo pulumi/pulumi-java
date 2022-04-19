@@ -224,7 +224,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = subscriptionId;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureDataLakeStoreLinkedServiceArgs() {

@@ -54,7 +54,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         @Nullable Output<Map<String,String>> tags) {
         this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.tags = tags;
     }
 

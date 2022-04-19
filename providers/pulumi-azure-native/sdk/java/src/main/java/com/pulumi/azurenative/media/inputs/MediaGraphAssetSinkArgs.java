@@ -72,7 +72,7 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private MediaGraphAssetSinkArgs() {

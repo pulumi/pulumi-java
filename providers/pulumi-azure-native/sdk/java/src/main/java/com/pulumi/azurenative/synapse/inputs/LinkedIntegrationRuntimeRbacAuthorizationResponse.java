@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -42,7 +43,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     public LinkedIntegrationRuntimeRbacAuthorizationResponse(
         String authorizationType,
         String resourceId) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
+        this.authorizationType = Codegen.stringProp("authorizationType").arg(authorizationType).require();
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 

@@ -86,7 +86,7 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
         this.maxRowsPerFile = maxRowsPerFile;
         this.recordName = recordName;
         this.recordNamespace = recordNamespace;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AvroWriteSettingsArgs() {

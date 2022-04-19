@@ -5,6 +5,7 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.azurenative.cognitiveservices.inputs.KeyVaultPropertiesResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -44,7 +45,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     public EncryptionResponse(
         @Nullable String keySource,
         @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-        this.keySource = keySource == null ? "Microsoft.KeyVault" : keySource;
+        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Microsoft.KeyVault").getNullable();
         this.keyVaultProperties = keyVaultProperties;
     }
 

@@ -59,8 +59,8 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Either<String,JobStepActionSource>> source,
         @Nullable Output<Either<String,JobStepActionType>> type,
         Output<String> value) {
-        this.source = source == null ? Output.ofLeft("Inline") : source;
-        this.type = type == null ? Output.ofLeft("TSql") : type;
+        this.source = Codegen.stringProp("source").left(JobStepActionSource.class).output().arg(source).def("Inline").getNullable();
+        this.type = Codegen.stringProp("type").left(JobStepActionType.class).output().arg(type).def("TSql").getNullable();
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 

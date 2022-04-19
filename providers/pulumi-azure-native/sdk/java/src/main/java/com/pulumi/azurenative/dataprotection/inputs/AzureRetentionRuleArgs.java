@@ -62,7 +62,7 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
         this.isDefault = isDefault;
         this.lifecycles = Objects.requireNonNull(lifecycles, "expected parameter 'lifecycles' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
+        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
     }
 
     private AzureRetentionRuleArgs() {

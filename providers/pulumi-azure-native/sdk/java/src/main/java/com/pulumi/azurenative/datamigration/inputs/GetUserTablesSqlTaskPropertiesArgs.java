@@ -47,7 +47,7 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends com.pulumi.resourc
         @Nullable Output<GetUserTablesSqlTaskInputArgs> input,
         Output<String> taskType) {
         this.input = input;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
+        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
     }
 
     private GetUserTablesSqlTaskPropertiesArgs() {

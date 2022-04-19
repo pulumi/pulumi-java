@@ -5,6 +5,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -83,7 +84,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
         @Nullable Integer protectedItemsCount,
         @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
         @Nullable String timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
+        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;
         this.subProtectionPolicy = subProtectionPolicy;

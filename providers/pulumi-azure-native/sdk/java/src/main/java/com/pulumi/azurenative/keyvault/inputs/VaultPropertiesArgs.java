@@ -200,15 +200,15 @@ public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs
         this.accessPolicies = accessPolicies;
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
-        this.enableRbacAuthorization = enableRbacAuthorization == null ? Codegen.ofNullable(false) : enableRbacAuthorization;
-        this.enableSoftDelete = enableSoftDelete == null ? Codegen.ofNullable(true) : enableSoftDelete;
+        this.enableRbacAuthorization = Codegen.booleanProp("enableRbacAuthorization").output().arg(enableRbacAuthorization).def(false).getNullable();
+        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").output().arg(enableSoftDelete).def(true).getNullable();
         this.enabledForDeployment = enabledForDeployment;
         this.enabledForDiskEncryption = enabledForDiskEncryption;
         this.enabledForTemplateDeployment = enabledForTemplateDeployment;
         this.networkAcls = networkAcls;
         this.provisioningState = provisioningState;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Codegen.ofNullable(90) : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").output().arg(softDeleteRetentionInDays).def(90).getNullable();
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
         this.vaultUri = vaultUri;
     }

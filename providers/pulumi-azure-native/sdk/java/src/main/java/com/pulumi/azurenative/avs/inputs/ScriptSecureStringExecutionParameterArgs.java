@@ -59,7 +59,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
         Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.secureValue = secureValue;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ScriptSecureStringExecutionParameterArgs() {

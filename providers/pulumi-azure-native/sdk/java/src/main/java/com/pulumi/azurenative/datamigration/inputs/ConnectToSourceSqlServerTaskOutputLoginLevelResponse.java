@@ -5,6 +5,7 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.azurenative.datamigration.inputs.MigrationEligibilityInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         this.loginType = Objects.requireNonNull(loginType, "expected parameter 'loginType' to be non-null");
         this.migrationEligibility = Objects.requireNonNull(migrationEligibility, "expected parameter 'migrationEligibility' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultType = Objects.requireNonNull(resultType, "expected parameter 'resultType' to be non-null");
+        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
     }
 
     private ConnectToSourceSqlServerTaskOutputLoginLevelResponse() {

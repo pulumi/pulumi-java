@@ -126,7 +126,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
         this.partitionKey = partitionKey;
         this.rowKey = rowKey;
         this.table = table;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private AzureTableOutputDataSourceArgs() {

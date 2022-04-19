@@ -73,7 +73,7 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
         this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value == null ? Codegen.ofNullable("1") : value;
+        this.value = Codegen.stringProp("value").output().arg(value).def("1").getNullable();
     }
 
     private ScaleActionArgs() {

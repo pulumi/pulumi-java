@@ -27,6 +27,10 @@ var javaSpecificTests []*test.SDKTest = []*test.SDKTest{
 		Directory:   "mini-kubernetes",
 		Description: "Regression tests extracted from trying to codegen kubernetes",
 	},
+	{
+		Directory:   "mini-azuread",
+		Description: "Regression tests extracted from trying to codegen azuread",
+	},
 }
 
 func adaptTest(t *test.SDKTest) *test.SDKTest {

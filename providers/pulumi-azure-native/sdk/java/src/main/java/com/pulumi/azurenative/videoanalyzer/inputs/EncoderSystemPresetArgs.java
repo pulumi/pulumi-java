@@ -47,7 +47,7 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
         Output<Either<String,EncoderSystemPresetType>> name,
         Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private EncoderSystemPresetArgs() {

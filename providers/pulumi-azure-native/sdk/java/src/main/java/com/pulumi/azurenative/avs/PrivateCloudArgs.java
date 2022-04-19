@@ -156,7 +156,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> vcenterPassword) {
         this.identitySources = identitySources;
-        this.internet = internet == null ? Output.ofLeft("Disabled") : internet;
+        this.internet = Codegen.stringProp("internet").left(InternetEnum.class).output().arg(internet).def("Disabled").getNullable();
         this.location = location;
         this.managementCluster = Objects.requireNonNull(managementCluster, "expected parameter 'managementCluster' to be non-null");
         this.networkBlock = Objects.requireNonNull(networkBlock, "expected parameter 'networkBlock' to be non-null");

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.chaos.inputs;
 
 import com.pulumi.azurenative.chaos.inputs.KeyValuePairResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,7 +85,7 @@ public final class ContinuousActionResponse extends com.pulumi.resources.InvokeA
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").arg(type).require();
     }
 
     private ContinuousActionResponse() {

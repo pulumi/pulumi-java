@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
     public TemporaryDiskResponse(
         @Nullable String mountPath,
         @Nullable Integer sizeInGB) {
-        this.mountPath = mountPath == null ? "/tmp" : mountPath;
+        this.mountPath = Codegen.stringProp("mountPath").arg(mountPath).def("/tmp").getNullable();
         this.sizeInGB = sizeInGB;
     }
 

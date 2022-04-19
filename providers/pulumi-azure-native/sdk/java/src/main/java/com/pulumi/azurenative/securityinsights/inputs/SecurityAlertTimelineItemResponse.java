@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -145,7 +146,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.endTimeUtc = Objects.requireNonNull(endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").arg(kind).require();
         this.productName = productName;
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
         this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");

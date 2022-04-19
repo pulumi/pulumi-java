@@ -78,7 +78,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
         this.binding = binding;
         this.inputs = inputs;
         this.output = output;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private ScalarFunctionPropertiesArgs() {

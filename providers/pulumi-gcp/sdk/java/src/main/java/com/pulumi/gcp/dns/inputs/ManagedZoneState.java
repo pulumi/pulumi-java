@@ -208,7 +208,7 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> reverseLookup,
         @Nullable Output<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig,
         @Nullable Output<String> visibility) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.dnsName = dnsName;
         this.dnssecConfig = dnssecConfig;
         this.forceDestroy = forceDestroy;

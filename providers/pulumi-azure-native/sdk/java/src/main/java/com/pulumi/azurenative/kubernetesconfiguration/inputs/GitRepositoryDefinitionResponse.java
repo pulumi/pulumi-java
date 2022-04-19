@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefinitionResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -122,8 +123,8 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
         this.localAuthRef = localAuthRef;
         this.repositoryRef = repositoryRef;
         this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? 6e+02 : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? 6e+02 : timeoutInSeconds;
+        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg(syncIntervalInSeconds).def(6e+02).getNullable();
+        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg(timeoutInSeconds).def(6e+02).getNullable();
         this.url = url;
     }
 

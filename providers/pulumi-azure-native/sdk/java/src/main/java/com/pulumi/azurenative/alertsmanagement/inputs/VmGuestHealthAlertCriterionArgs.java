@@ -74,7 +74,7 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
         this.healthStates = Objects.requireNonNull(healthStates, "expected parameter 'healthStates' to be non-null");
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
+        this.namespace = Codegen.stringProp("namespace").output().arg(namespace).require();
     }
 
     private VmGuestHealthAlertCriterionArgs() {

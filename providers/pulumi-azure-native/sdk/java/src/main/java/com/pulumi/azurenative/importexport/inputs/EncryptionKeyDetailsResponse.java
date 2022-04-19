@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -55,7 +56,7 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
         @Nullable String kekType,
         @Nullable String kekUrl,
         @Nullable String kekVaultResourceID) {
-        this.kekType = kekType == null ? "MicrosoftManaged" : kekType;
+        this.kekType = Codegen.stringProp("kekType").arg(kekType).def("MicrosoftManaged").getNullable();
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }

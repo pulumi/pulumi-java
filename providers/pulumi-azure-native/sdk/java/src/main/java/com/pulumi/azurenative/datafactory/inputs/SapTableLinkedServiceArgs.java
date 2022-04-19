@@ -300,7 +300,7 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
         this.sncQop = sncQop;
         this.systemId = systemId;
         this.systemNumber = systemNumber;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userName = userName;
     }
 

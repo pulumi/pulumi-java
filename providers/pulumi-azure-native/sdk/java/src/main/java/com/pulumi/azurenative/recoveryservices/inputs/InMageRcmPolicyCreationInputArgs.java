@@ -85,7 +85,7 @@ public final class InMageRcmPolicyCreationInputArgs extends com.pulumi.resources
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.enableMultiVmSync = enableMultiVmSync;
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
     }
 

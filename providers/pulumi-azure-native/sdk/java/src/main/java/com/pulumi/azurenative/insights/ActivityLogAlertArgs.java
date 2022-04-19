@@ -133,8 +133,8 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
         this.activityLogAlertName = activityLogAlertName;
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
         this.description = description;
-        this.enabled = enabled == null ? Codegen.ofNullable(true) : enabled;
-        this.location = location == null ? Codegen.ofNullable("global") : location;
+        this.enabled = Codegen.booleanProp("enabled").output().arg(enabled).def(true).getNullable();
+        this.location = Codegen.stringProp("location").output().arg(location).def("global").getNullable();
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
         this.tags = tags;

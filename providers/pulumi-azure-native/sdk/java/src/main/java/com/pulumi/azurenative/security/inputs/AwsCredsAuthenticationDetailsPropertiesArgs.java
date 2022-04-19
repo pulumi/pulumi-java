@@ -56,7 +56,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
         Output<String> authenticationType,
         Output<String> awsAccessKeyId,
         Output<String> awsSecretAccessKey) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
+        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
         this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId, "expected parameter 'awsAccessKeyId' to be non-null");
         this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey, "expected parameter 'awsSecretAccessKey' to be non-null");
     }

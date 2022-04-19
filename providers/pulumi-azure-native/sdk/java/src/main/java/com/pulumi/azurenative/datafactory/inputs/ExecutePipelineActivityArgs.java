@@ -129,7 +129,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = parameters;
         this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.userProperties = userProperties;
         this.waitOnCompletion = waitOnCompletion;
     }

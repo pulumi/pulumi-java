@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -59,7 +60,7 @@ public final class NumberInRangeAdvancedFilterResponse extends com.pulumi.resour
         String operatorType,
         @Nullable List<List<Double>> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType, "expected parameter 'operatorType' to be non-null");
+        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
         this.values = values;
     }
 

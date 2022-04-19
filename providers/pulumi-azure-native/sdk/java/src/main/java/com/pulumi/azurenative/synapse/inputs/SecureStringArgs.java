@@ -44,7 +44,7 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
     public SecureStringArgs(
         Output<String> type,
         Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 

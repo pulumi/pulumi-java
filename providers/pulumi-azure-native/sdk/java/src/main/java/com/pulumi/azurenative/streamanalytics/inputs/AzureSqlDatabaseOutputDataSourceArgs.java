@@ -97,7 +97,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends com.pulumi.resou
         this.password = password;
         this.server = server;
         this.table = table;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.user = user;
     }
 

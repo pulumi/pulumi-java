@@ -46,7 +46,7 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
     public AutoScalingResourceMetricArgs(
         Output<String> kind,
         Output<Either<String,AutoScalingResourceMetricName>> name) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 

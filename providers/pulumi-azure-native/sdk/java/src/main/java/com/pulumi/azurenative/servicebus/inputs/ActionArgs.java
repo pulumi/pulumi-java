@@ -59,7 +59,7 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> requiresPreprocessing,
         @Nullable Output<String> sqlExpression) {
         this.compatibilityLevel = compatibilityLevel;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Codegen.ofNullable(true) : requiresPreprocessing;
+        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg(requiresPreprocessing).def(true).getNullable();
         this.sqlExpression = sqlExpression;
     }
 

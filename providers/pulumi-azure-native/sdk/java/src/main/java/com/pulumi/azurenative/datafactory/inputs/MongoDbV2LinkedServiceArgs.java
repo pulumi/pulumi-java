@@ -116,7 +116,7 @@ public final class MongoDbV2LinkedServiceArgs extends com.pulumi.resources.Resou
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private MongoDbV2LinkedServiceArgs() {

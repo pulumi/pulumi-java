@@ -98,7 +98,7 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
         this.serviceBusNamespace = serviceBusNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
     }
 
     private EventHubStreamInputDataSourceArgs() {

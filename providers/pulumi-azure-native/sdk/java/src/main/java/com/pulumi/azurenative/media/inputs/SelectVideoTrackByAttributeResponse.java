@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -71,7 +72,7 @@ public final class SelectVideoTrackByAttributeResponse extends com.pulumi.resour
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.filterValue = filterValue;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private SelectVideoTrackByAttributeResponse() {

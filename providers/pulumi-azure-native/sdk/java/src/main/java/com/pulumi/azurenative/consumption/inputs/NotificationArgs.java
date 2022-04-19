@@ -130,7 +130,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
         this.locale = locale;
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdType = thresholdType == null ? Output.ofLeft("Actual") : thresholdType;
+        this.thresholdType = Codegen.stringProp("thresholdType").left(ThresholdType.class).output().arg(thresholdType).def("Actual").getNullable();
     }
 
     private NotificationArgs() {

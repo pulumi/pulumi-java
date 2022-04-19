@@ -209,7 +209,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
         this.enableHelmOperator = enableHelmOperator;
         this.helmOperatorProperties = helmOperatorProperties;
         this.operatorInstanceName = operatorInstanceName;
-        this.operatorNamespace = operatorNamespace == null ? Codegen.ofNullable("default") : operatorNamespace;
+        this.operatorNamespace = Codegen.stringProp("operatorNamespace").output().arg(operatorNamespace).def("default").getNullable();
         this.operatorParams = operatorParams;
         this.operatorScope = operatorScope;
         this.operatorType = operatorType;

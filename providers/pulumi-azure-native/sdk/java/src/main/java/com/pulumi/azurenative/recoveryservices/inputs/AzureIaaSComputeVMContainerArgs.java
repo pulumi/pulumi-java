@@ -123,7 +123,7 @@ public final class AzureIaaSComputeVMContainerArgs extends com.pulumi.resources.
         @Nullable Output<String> virtualMachineId,
         @Nullable Output<String> virtualMachineVersion) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.registrationStatus = registrationStatus;

@@ -86,7 +86,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
         @Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency,
         @Nullable Output<List<String>> scheduleRunTimes,
         @Nullable Output<Integer> scheduleWeeklyFrequency) {
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
+        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").output().arg(schedulePolicyType).require();
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;
         this.scheduleRunTimes = scheduleRunTimes;

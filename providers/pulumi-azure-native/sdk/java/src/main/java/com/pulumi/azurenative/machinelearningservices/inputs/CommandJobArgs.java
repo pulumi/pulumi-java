@@ -237,7 +237,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
         this.experimentName = experimentName;
         this.identity = identity;
         this.inputDataBindings = inputDataBindings;
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
+        this.jobType = Codegen.stringProp("jobType").output().arg(jobType).require();
         this.outputDataBindings = outputDataBindings;
         this.priority = priority;
         this.properties = properties;

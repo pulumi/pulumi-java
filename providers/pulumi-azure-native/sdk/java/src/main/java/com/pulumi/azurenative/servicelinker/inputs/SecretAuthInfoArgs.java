@@ -57,7 +57,7 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
         Output<String> authType,
         @Nullable Output<String> name,
         @Nullable Output<String> secret) {
-        this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
+        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
         this.name = name;
         this.secret = secret;
     }

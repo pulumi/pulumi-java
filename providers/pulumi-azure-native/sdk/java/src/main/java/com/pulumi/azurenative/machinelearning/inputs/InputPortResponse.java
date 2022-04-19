@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +31,7 @@ public final class InputPortResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     public InputPortResponse(@Nullable String type) {
-        this.type = type == null ? "Dataset" : type;
+        this.type = Codegen.stringProp("type").arg(type).def("Dataset").getNullable();
     }
 
     private InputPortResponse() {

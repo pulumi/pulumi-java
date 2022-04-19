@@ -83,8 +83,8 @@ public final class HorizontalPodAutoscalerArgs extends com.pulumi.resources.Reso
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<HorizontalPodAutoscalerSpecArgs> spec,
         @Nullable Output<HorizontalPodAutoscalerStatusArgs> status) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.spec = spec;
         this.status = status;

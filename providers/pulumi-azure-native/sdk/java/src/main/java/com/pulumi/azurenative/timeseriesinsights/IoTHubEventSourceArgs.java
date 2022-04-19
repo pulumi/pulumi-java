@@ -207,7 +207,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
         this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId, "expected parameter 'eventSourceResourceId' to be non-null");
         this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
+        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
         this.localTimestamp = localTimestamp;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

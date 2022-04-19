@@ -284,7 +284,7 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
         this.policyId = policyId;
         this.policyState = policyState;
         this.protectedItemId = protectedItemId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType, "expected parameter 'protectedItemType' to be non-null");
+        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
         this.protectionState = protectionState;
         this.sourceAssociations = sourceAssociations;
         this.sourceResourceId = sourceResourceId;

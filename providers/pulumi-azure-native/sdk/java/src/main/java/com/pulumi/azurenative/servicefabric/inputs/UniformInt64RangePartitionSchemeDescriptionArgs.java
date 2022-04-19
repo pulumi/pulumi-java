@@ -74,7 +74,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends com.p
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.highKey = Objects.requireNonNull(highKey, "expected parameter 'highKey' to be non-null");
         this.lowKey = Objects.requireNonNull(lowKey, "expected parameter 'lowKey' to be non-null");
-        this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
+        this.partitionScheme = Codegen.stringProp("partitionScheme").output().arg(partitionScheme).require();
     }
 
     private UniformInt64RangePartitionSchemeDescriptionArgs() {

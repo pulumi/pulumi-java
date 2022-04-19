@@ -45,7 +45,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
     public AzureToAzureCreateNetworkMappingInputArgs(
         @Nullable Output<String> instanceType,
         @Nullable Output<String> primaryNetworkId) {
-        this.instanceType = instanceType;
+        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
         this.primaryNetworkId = primaryNetworkId;
     }
 

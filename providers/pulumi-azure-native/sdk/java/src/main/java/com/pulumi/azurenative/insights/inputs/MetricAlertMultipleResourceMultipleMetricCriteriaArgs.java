@@ -50,7 +50,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
         @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf,
         Output<String> odataType) {
         this.allOf = allOf;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
     }
 
     private MetricAlertMultipleResourceMultipleMetricCriteriaArgs() {

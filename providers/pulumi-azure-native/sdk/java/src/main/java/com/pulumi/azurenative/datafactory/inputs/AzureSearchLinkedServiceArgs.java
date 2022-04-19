@@ -131,7 +131,7 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
         this.encryptedCredential = encryptedCredential;
         this.key = key;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = Codegen.stringProp("type").output().arg(type).require();
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 

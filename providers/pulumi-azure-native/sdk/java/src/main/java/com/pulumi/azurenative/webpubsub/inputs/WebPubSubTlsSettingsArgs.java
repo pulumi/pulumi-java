@@ -31,7 +31,7 @@ public final class WebPubSubTlsSettingsArgs extends com.pulumi.resources.Resourc
     }
 
     public WebPubSubTlsSettingsArgs(@Nullable Output<Boolean> clientCertEnabled) {
-        this.clientCertEnabled = clientCertEnabled == null ? Codegen.ofNullable(true) : clientCertEnabled;
+        this.clientCertEnabled = Codegen.booleanProp("clientCertEnabled").output().arg(clientCertEnabled).def(true).getNullable();
     }
 
     private WebPubSubTlsSettingsArgs() {

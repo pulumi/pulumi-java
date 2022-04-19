@@ -57,7 +57,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> vnetCidr,
         @Nullable Output<String> vnetId) {
         this.peerVnetId = peerVnetId;
-        this.vnetCidr = vnetCidr == null ? Codegen.ofNullable("10.0.0.0/8") : vnetCidr;
+        this.vnetCidr = Codegen.stringProp("vnetCidr").output().arg(vnetCidr).def("10.0.0.0/8").getNullable();
         this.vnetId = vnetId;
     }
 

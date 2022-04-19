@@ -10,6 +10,7 @@ import com.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeResponse;
 import com.pulumi.azurenative.media.inputs.SelectVideoTrackByIdResponse;
 import com.pulumi.azurenative.media.inputs.VideoTrackDescriptorResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +67,7 @@ public final class InputFileResponse extends com.pulumi.resources.InvokeArgs {
         String odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
+        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
     }
 
     private InputFileResponse() {

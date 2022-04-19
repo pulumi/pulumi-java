@@ -79,7 +79,7 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
         @Nullable Output<String> name,
         @Nullable Output<List<ParameterGroupParameterArgs>> parameters,
         @Nullable Output<Map<String,String>> tags) {
-        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
+        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = name;
         this.parameters = parameters;

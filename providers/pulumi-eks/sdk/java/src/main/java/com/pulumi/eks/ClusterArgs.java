@@ -766,12 +766,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
         this.nodeGroupOptions = nodeGroupOptions;
         this.nodePublicKey = nodePublicKey;
-        this.nodeRootVolumeDeleteOnTermination = nodeRootVolumeDeleteOnTermination == null ? Codegen.ofNullable(true) : nodeRootVolumeDeleteOnTermination;
-        this.nodeRootVolumeEncrypted = nodeRootVolumeEncrypted == null ? Codegen.ofNullable(false) : nodeRootVolumeEncrypted;
+        this.nodeRootVolumeDeleteOnTermination = Codegen.booleanProp("nodeRootVolumeDeleteOnTermination").output().arg(nodeRootVolumeDeleteOnTermination).def(true).getNullable();
+        this.nodeRootVolumeEncrypted = Codegen.booleanProp("nodeRootVolumeEncrypted").output().arg(nodeRootVolumeEncrypted).def(false).getNullable();
         this.nodeRootVolumeIops = nodeRootVolumeIops;
-        this.nodeRootVolumeSize = nodeRootVolumeSize == null ? Codegen.ofNullable(20) : nodeRootVolumeSize;
+        this.nodeRootVolumeSize = Codegen.integerProp("nodeRootVolumeSize").output().arg(nodeRootVolumeSize).def(20).getNullable();
         this.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
-        this.nodeRootVolumeType = nodeRootVolumeType == null ? Codegen.ofNullable("gp2") : nodeRootVolumeType;
+        this.nodeRootVolumeType = Codegen.stringProp("nodeRootVolumeType").output().arg(nodeRootVolumeType).def("gp2").getNullable();
         this.nodeSecurityGroupTags = nodeSecurityGroupTags;
         this.nodeSubnetIds = nodeSubnetIds;
         this.nodeUserData = nodeUserData;

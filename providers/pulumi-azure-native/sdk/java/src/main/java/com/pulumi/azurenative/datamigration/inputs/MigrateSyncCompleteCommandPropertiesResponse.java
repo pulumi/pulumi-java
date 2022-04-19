@@ -7,6 +7,7 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandInp
 import com.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandOutputResponse;
 import com.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -84,7 +85,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
         @Nullable MigrateSyncCompleteCommandInputResponse input,
         MigrateSyncCompleteCommandOutputResponse output,
         String state) {
-        this.commandType = Objects.requireNonNull(commandType, "expected parameter 'commandType' to be non-null");
+        this.commandType = Codegen.stringProp("commandType").arg(commandType).require();
         this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
         this.input = input;
         this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");

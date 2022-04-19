@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,7 +82,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
         @Nullable String updateTriggerPayloadType) {
         this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType, "expected parameter 'baseImageTriggerType' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = status == null ? "Enabled" : status;
+        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
         this.updateTriggerEndpoint = updateTriggerEndpoint;
         this.updateTriggerPayloadType = updateTriggerPayloadType;
     }

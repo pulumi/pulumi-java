@@ -6,6 +6,7 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.MABContainerHealthDetailsResponse;
 import com.pulumi.azurenative.recoveryservices.inputs.MabContainerExtendedInfoResponse;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -177,7 +178,7 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
         this.canReRegister = canReRegister;
         this.containerHealthState = containerHealthState;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
+        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
