@@ -63,12 +63,7 @@ func (g *generator) GetPrecedence(expr model.Expression) int {
 	case *model.UnaryOpExpression:
 		return 17
 	case *model.FunctionCallExpression:
-		switch expr.Name {
-		case intrinsicAwait:
-			return 17
-		default:
-			return 20
-		}
+		return 20
 	case *model.ForExpression, *model.IndexExpression, *model.RelativeTraversalExpression, *model.SplatExpression,
 		*model.TemplateJoinExpression:
 		return 20
@@ -290,15 +285,16 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		} else {
 			g.Fgenf(w, "new FileAsset(%.v)", expr.Args[0])
 		}
+	case "file":
+		g.Fgenf(w, "new String(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
 	case "filebase64":
-		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ReadFileBase64(%v)", expr.Args[0])
+		g.Fgenf(w, "Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(%v)))", expr.Args[0])
 	case "filebase64sha256":
-		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
+		// Assuming the existence of the following helper method
+		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
 		fullyQualifiedName, schemaName := g.functionName(expr.Args[0])
-		foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
+		functionSchema, foundFunction := g.findFunctionSchema(schemaName)
 		if foundFunction {
 			g.Fprintf(w, "%s(", fullyQualifiedName)
 			invokeArgumentsExpr := expr.Args[1]
@@ -309,7 +305,6 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 			}
 			g.Fprint(w, ")")
 			return
-
 		}
 		g.Fprintf(w, "%s(", fullyQualifiedName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
@@ -332,15 +327,12 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "%.20v.length()", expr.Args[0])
 	case "lookup":
 		g.Fgenf(w, "%v[%v]", expr.Args[0], expr.Args[1])
-		if len(expr.Args) == 3 {
-			g.Fgenf(w, " ?? %v", expr.Args[2])
-		}
 	case "range":
 		g.genRange(w, expr, false)
 	case "readFile":
 		g.Fgenf(w, "Files.readString(%v)", expr.Args[0])
 	case "readDir":
-		g.Fgenf(w, "ReadDir(%.v)", expr.Args[0])
+		g.Fgenf(w, "readDir(%.v)", expr.Args[0])
 	case "secret":
 		g.Fgenf(w, "Output.ofSecret(%v)", expr.Args[0])
 	case "split":
@@ -348,9 +340,10 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
 	case "toBase64":
-		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
+		g.Fgenf(w, "Base64.getEncoder().encodeToString(%v.getBytes())", expr.Args[0])
 	case "toJSON":
-		g.Fgen(w, "SerializeJson(")
+		// Assumes SerializeJson is part of the SDK
+		g.Fgen(w, "serializeJson(")
 		g.genNewline(w)
 		g.Indented(func() {
 			g.genIndent(w)
@@ -359,13 +352,11 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgen(w, ")")
 	case "sha1":
 		// Assuming the existence of the following helper method located earlier in the preamble
-		g.Fgenf(w, "ComputeSHA1(%v)", expr.Args[0])
+		g.Fgenf(w, "computeSHA1(%v)", expr.Args[0])
 	case "stack":
-		g.Fgen(w, "Deployment.Instance.StackName")
+		g.Fgen(w, "Deployment.getInstance().getStackName()")
 	case "project":
-		g.Fgen(w, "Deployment.Instance.ProjectName")
-	case "cwd":
-		g.Fgenf(w, "Directory.GetCurrentDirectory()")
+		g.Fgen(w, "Deployment.getInstance().getProjectName()")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
 	}
@@ -374,13 +365,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
-		g.Fgen(w, "JsonObject(")
+		g.Fgen(w, "jsonObject(")
 		g.genNewline(w)
 		g.Indented(func() {
 			for index, item := range expr.Items {
 
 				g.genIndent(w)
-				g.Fgenf(w, "JsonProperty(%s, ", item.Key)
+				g.Fgenf(w, "jsonProperty(%s, ", item.Key)
 				g.genJson(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
@@ -394,12 +385,12 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 		g.Fgenf(w, "%s)", g.Indent)
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
-			g.Fgen(w, "JsonArray(")
+			g.Fgen(w, "jsonArray(")
 			g.genJson(w, expr.Expressions[0])
 			g.Fgen(w, ")")
 			return
 		}
-		g.Fgen(w, "JsonArray(")
+		g.Fgen(w, "jsonArray(")
 		g.genNewline(w)
 		g.Indented(func() {
 			for index, value := range expr.Expressions {
@@ -535,9 +526,17 @@ func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 
 // Returns the name of the type
 func typeName(schemaType schema.Type) string {
-	fullyQualifiedTypeName := schemaType.String()
-	nameParts := strings.Split(fullyQualifiedTypeName, ":")
-	return names.Title(nameParts[len(nameParts)-1])
+	switch schemaType.(type) {
+	case *schema.ObjectType:
+		objectType := schemaType.(*schema.ObjectType)
+		fullyQualifiedTypeName := objectType.Token
+		nameParts := strings.Split(fullyQualifiedTypeName, ":")
+		return names.Title(nameParts[len(nameParts)-1])
+	default:
+		fullyQualifiedTypeName := schemaType.String()
+		nameParts := strings.Split(fullyQualifiedTypeName, ":")
+		return names.Title(nameParts[len(nameParts)-1])
+	}
 }
 
 // Checks whether the type is an object type
@@ -615,8 +614,8 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.Indented(func() {
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
-				key := names.MakeValidIdentifier(names.Camel(lit.Value.AsString()))
-				attributeType := objectProperties[key]
+				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
+				attributeType := objectProperties[lit.Value.AsString()]
 				g.genIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
@@ -629,6 +628,10 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 	case *schema.ArrayType:
 		// recurse into inner type
 		innerType := destType.(*schema.ArrayType).ElementType
+		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
+	case *schema.InputType:
+		// recurse into inner type
+		innerType := destType.(*schema.InputType).ElementType
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	case *schema.UnionType:
 		union := destType.(*schema.UnionType)
@@ -701,7 +704,7 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
 
 	if isFunctionInvoke {
-		lambdaArg := names.Camel(typeName(invokedFunctionSchema.Outputs))
+		lambdaArg := names.LowerCamelCase(typeName(invokedFunctionSchema.Outputs))
 		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
 		g.Fgenf(w, ".apply(%s -> %s", lambdaArg, lambdaArg)
 	}
