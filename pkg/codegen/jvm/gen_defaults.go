@@ -71,9 +71,9 @@ func (dg *defaultsGen) builderExpr(
 			builderTransformCode = ".output()"
 		}
 	} else {
-		if prop.Secret {
-			return "", fmt.Errorf("Secret propety does not have Output type")
-		}
+		// TODO this should be handled or an error
+		fmt.Printf("WARN: secret propety does not have an Output type: %v\n",
+			prop.Name)
 	}
 
 	isOptional, t := dg.unOptionalTypeShape(t0)
