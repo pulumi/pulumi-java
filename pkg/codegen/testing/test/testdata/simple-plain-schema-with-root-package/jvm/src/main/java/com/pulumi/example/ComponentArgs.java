@@ -5,7 +5,6 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.inputs.Foo;
 import com.pulumi.example.inputs.FooArgs;
 import java.lang.Boolean;
@@ -22,181 +21,159 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     public static final ComponentArgs Empty = new ComponentArgs();
 
     @Import(name="a", required=true)
-      private final Boolean a;
+    private Boolean a;
 
     public Boolean a() {
         return this.a;
     }
 
     @Import(name="b")
-      private final @Nullable Boolean b;
+    private @Nullable Boolean b;
 
     public Optional<Boolean> b() {
-        return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
+        return Optional.ofNullable(this.b);
     }
 
     @Import(name="bar")
-      private final @Nullable Foo bar;
+    private @Nullable Foo bar;
 
     public Optional<Foo> bar() {
-        return this.bar == null ? Optional.empty() : Optional.ofNullable(this.bar);
+        return Optional.ofNullable(this.bar);
     }
 
     @Import(name="baz")
-      private final @Nullable List<Foo> baz;
+    private @Nullable List<Foo> baz;
 
-    public List<Foo> baz() {
-        return this.baz == null ? List.of() : this.baz;
+    public Optional<List<Foo>> baz() {
+        return Optional.ofNullable(this.baz);
     }
 
     @Import(name="c", required=true)
-      private final Integer c;
+    private Integer c;
 
     public Integer c() {
         return this.c;
     }
 
     @Import(name="d")
-      private final @Nullable Integer d;
+    private @Nullable Integer d;
 
     public Optional<Integer> d() {
-        return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
+        return Optional.ofNullable(this.d);
     }
 
     @Import(name="e", required=true)
-      private final String e;
+    private String e;
 
     public String e() {
         return this.e;
     }
 
     @Import(name="f")
-      private final @Nullable String f;
+    private @Nullable String f;
 
     public Optional<String> f() {
-        return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
+        return Optional.ofNullable(this.f);
     }
 
     @Import(name="foo")
-      private final @Nullable Output<FooArgs> foo;
+    private @Nullable Output<FooArgs> foo;
 
-    public Output<FooArgs> foo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+    public Optional<Output<FooArgs>> foo() {
+        return Optional.ofNullable(this.foo);
     }
 
-    public ComponentArgs(
-        Boolean a,
-        @Nullable Boolean b,
-        @Nullable Foo bar,
-        @Nullable List<Foo> baz,
-        Integer c,
-        @Nullable Integer d,
-        String e,
-        @Nullable String f,
-        @Nullable Output<FooArgs> foo) {
-        this.a = Objects.requireNonNull(a, "expected parameter 'a' to be non-null");
-        this.b = b;
-        this.bar = bar;
-        this.baz = baz;
-        this.c = Objects.requireNonNull(c, "expected parameter 'c' to be non-null");
-        this.d = d;
-        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
-        this.f = f;
-        this.foo = foo;
-    }
+    private ComponentArgs() {}
 
-    private ComponentArgs() {
-        this.a = null;
-        this.b = null;
-        this.bar = null;
-        this.baz = List.of();
-        this.c = null;
-        this.d = null;
-        this.e = null;
-        this.f = null;
-        this.foo = Codegen.empty();
+    protected ComponentArgs(ComponentArgs $) {
+        this.a = $.a;
+        this.b = $.b;
+        this.bar = $.bar;
+        this.baz = $.baz;
+        this.c = $.c;
+        this.d = $.d;
+        this.e = $.e;
+        this.f = $.f;
+        this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean a;
-        private @Nullable Boolean b;
-        private @Nullable Foo bar;
-        private @Nullable List<Foo> baz;
-        private Integer c;
-        private @Nullable Integer d;
-        private String e;
-        private @Nullable String f;
-        private @Nullable Output<FooArgs> foo;
+        private ComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentArgs();
         }
 
         public Builder(ComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.a = defaults.a;
-    	      this.b = defaults.b;
-    	      this.bar = defaults.bar;
-    	      this.baz = defaults.baz;
-    	      this.c = defaults.c;
-    	      this.d = defaults.d;
-    	      this.e = defaults.e;
-    	      this.f = defaults.f;
-    	      this.foo = defaults.foo;
+            $ = new ComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder a(Boolean a) {
-            this.a = Objects.requireNonNull(a);
+            $.a = a;
             return this;
         }
+
         public Builder b(@Nullable Boolean b) {
-            this.b = b;
+            $.b = b;
             return this;
         }
+
         public Builder bar(@Nullable Foo bar) {
-            this.bar = bar;
+            $.bar = bar;
             return this;
         }
+
         public Builder baz(@Nullable List<Foo> baz) {
-            this.baz = baz;
+            $.baz = baz;
             return this;
         }
+
         public Builder baz(Foo... baz) {
             return baz(List.of(baz));
         }
+
         public Builder c(Integer c) {
-            this.c = Objects.requireNonNull(c);
+            $.c = c;
             return this;
         }
+
         public Builder d(@Nullable Integer d) {
-            this.d = d;
+            $.d = d;
             return this;
         }
+
         public Builder e(String e) {
-            this.e = Objects.requireNonNull(e);
+            $.e = e;
             return this;
         }
+
         public Builder f(@Nullable String f) {
-            this.f = f;
+            $.f = f;
             return this;
         }
+
         public Builder foo(@Nullable Output<FooArgs> foo) {
-            this.foo = foo;
+            $.foo = foo;
             return this;
         }
-        public Builder foo(@Nullable FooArgs foo) {
-            this.foo = Codegen.ofNullable(foo);
-            return this;
-        }        public ComponentArgs build() {
-            return new ComponentArgs(a, b, bar, baz, c, d, e, f, foo);
+
+        public Builder foo(FooArgs foo) {
+            return foo(Output.of(foo));
+        }
+
+        public ComponentArgs build() {
+            $.a = Objects.requireNonNull($.a, "expected parameter 'a' to be non-null");
+            $.c = Objects.requireNonNull($.c, "expected parameter 'c' to be non-null");
+            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            return $;
         }
     }
+
 }
