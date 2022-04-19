@@ -5,7 +5,6 @@ package com.pulumi.example.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.Resource;
 import com.pulumi.example.inputs.ConfigMapArgs;
 import com.pulumi.example.inputs.SomeOtherObjectArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,24 +21,24 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final ObjectArgs Empty = new ObjectArgs();
 
     @Import(name="bar")
-      private final @Nullable Output<String> bar;
+    private @Nullable Output<String> bar;
 
-    public Output<String> bar() {
-        return this.bar == null ? Codegen.empty() : this.bar;
+    public Optional<Output<String>> bar() {
+        return Optional.ofNullable(this.bar);
     }
 
     @Import(name="configs")
-      private final @Nullable Output<List<ConfigMapArgs>> configs;
+    private @Nullable Output<List<ConfigMapArgs>> configs;
 
-    public Output<List<ConfigMapArgs>> configs() {
-        return this.configs == null ? Codegen.empty() : this.configs;
+    public Optional<Output<List<ConfigMapArgs>>> configs() {
+        return Optional.ofNullable(this.configs);
     }
 
     @Import(name="foo")
-      private final @Nullable Output<Resource> foo;
+    private @Nullable Output<Resource> foo;
 
-    public Output<Resource> foo() {
-        return this.foo == null ? Codegen.empty() : this.foo;
+    public Optional<Output<Resource>> foo() {
+        return Optional.ofNullable(this.foo);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="others")
-      private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
+    private @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
-    public Output<List<List<SomeOtherObjectArgs>>> others() {
-        return this.others == null ? Codegen.empty() : this.others;
+    public Optional<Output<List<List<SomeOtherObjectArgs>>>> others() {
+        return Optional.ofNullable(this.others);
     }
 
     /**
@@ -57,105 +57,96 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stillOthers")
-      private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
+    private @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
-    public Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers() {
-        return this.stillOthers == null ? Codegen.empty() : this.stillOthers;
+    public Optional<Output<Map<String,List<SomeOtherObjectArgs>>>> stillOthers() {
+        return Optional.ofNullable(this.stillOthers);
     }
 
-    public ObjectArgs(
-        @Nullable Output<String> bar,
-        @Nullable Output<List<ConfigMapArgs>> configs,
-        @Nullable Output<Resource> foo,
-        @Nullable Output<List<List<SomeOtherObjectArgs>>> others,
-        @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
-        this.bar = bar;
-        this.configs = configs;
-        this.foo = foo;
-        this.others = others;
-        this.stillOthers = stillOthers;
-    }
+    private ObjectArgs() {}
 
-    private ObjectArgs() {
-        this.bar = Codegen.empty();
-        this.configs = Codegen.empty();
-        this.foo = Codegen.empty();
-        this.others = Codegen.empty();
-        this.stillOthers = Codegen.empty();
+    protected ObjectArgs(ObjectArgs $) {
+        this.bar = $.bar;
+        this.configs = $.configs;
+        this.foo = $.foo;
+        this.others = $.others;
+        this.stillOthers = $.stillOthers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bar;
-        private @Nullable Output<List<ConfigMapArgs>> configs;
-        private @Nullable Output<Resource> foo;
-        private @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
-        private @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
+        private ObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectArgs();
         }
 
         public Builder(ObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bar = defaults.bar;
-    	      this.configs = defaults.configs;
-    	      this.foo = defaults.foo;
-    	      this.others = defaults.others;
-    	      this.stillOthers = defaults.stillOthers;
+            $ = new ObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bar(@Nullable Output<String> bar) {
-            this.bar = bar;
+            $.bar = bar;
             return this;
         }
-        public Builder bar(@Nullable String bar) {
-            this.bar = Codegen.ofNullable(bar);
-            return this;
+
+        public Builder bar(String bar) {
+            return bar(Output.of(bar));
         }
+
         public Builder configs(@Nullable Output<List<ConfigMapArgs>> configs) {
-            this.configs = configs;
+            $.configs = configs;
             return this;
         }
-        public Builder configs(@Nullable List<ConfigMapArgs> configs) {
-            this.configs = Codegen.ofNullable(configs);
-            return this;
+
+        public Builder configs(List<ConfigMapArgs> configs) {
+            return configs(Output.of(configs));
         }
+
         public Builder configs(ConfigMapArgs... configs) {
             return configs(List.of(configs));
         }
+
         public Builder foo(@Nullable Output<Resource> foo) {
-            this.foo = foo;
+            $.foo = foo;
             return this;
         }
-        public Builder foo(@Nullable Resource foo) {
-            this.foo = Codegen.ofNullable(foo);
-            return this;
+
+        public Builder foo(Resource foo) {
+            return foo(Output.of(foo));
         }
+
         public Builder others(@Nullable Output<List<List<SomeOtherObjectArgs>>> others) {
-            this.others = others;
+            $.others = others;
             return this;
         }
-        public Builder others(@Nullable List<List<SomeOtherObjectArgs>> others) {
-            this.others = Codegen.ofNullable(others);
-            return this;
+
+        public Builder others(List<List<SomeOtherObjectArgs>> others) {
+            return others(Output.of(others));
         }
+
+        public Builder others(List<SomeOtherObjectArgs>... others) {
+            return others(List.of(others));
+        }
+
         public Builder stillOthers(@Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
-            this.stillOthers = stillOthers;
+            $.stillOthers = stillOthers;
             return this;
         }
-        public Builder stillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
-            this.stillOthers = Codegen.ofNullable(stillOthers);
-            return this;
-        }        public ObjectArgs build() {
-            return new ObjectArgs(bar, configs, foo, others, stillOthers);
+
+        public Builder stillOthers(Map<String,List<SomeOtherObjectArgs>> stillOthers) {
+            return stillOthers(Output.of(stillOthers));
+        }
+
+        public ObjectArgs build() {
+            return $;
         }
     }
+
 }
