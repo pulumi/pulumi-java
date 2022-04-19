@@ -386,11 +386,10 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 								})
 								g.Fgenf(w, "%s});\n\n", g.Indent)
 								return
-							} else {
-								// not an async function invoke
-								// wrap into range collection
-								g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 							}
+							// not an async function invoke
+							// wrap into range collection
+							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
 						} else {
 							// wrap into range collection
 							g.Fgenf(w, "%sfor (var range : KeyedValue.of(%.12o)) {\n", g.Indent, rangeExpr)
