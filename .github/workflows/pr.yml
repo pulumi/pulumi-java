@@ -80,11 +80,6 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK locally to enable codegen tests
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: publishToMavenLocal
-          build-root-directory: sdk/jvm
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-jvm
@@ -111,9 +106,12 @@ jobs:
           build-root-directory: sdk/jvm
     strategy:
       fail-fast: true
-  run_tests:
+
+  # Run Go tests, most notably codegen tests. These are in a separate
+  # job not to block other validations.
+  test_go:
     runs-on: ubuntu-latest
-    needs: providers2
+    needs: prerequisites
     timeout-minutes: 30
     strategy:
       fail-fast: false
@@ -132,21 +130,15 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
         with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-examples-${{ hashFiles('**/go.sum') }}
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
+          name: go-binaries
+          path: ~/bin
+      - name: Activate go-binaries
+        run: |
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
       - name: Download versions.txt
         uses: actions/download-artifact@v2
         with:
@@ -154,9 +146,13 @@ jobs:
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
-      - name: Configure maven
-        run: cp maven/settings.xml ~/.m2/settings.xml
-      - run: make test_go
+      - name: Publish Pulumi Java SDK locally to enable codegen tests
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: publishToMavenLocal
+          build-root-directory: sdk/jvm
+      - run: cd pkg && go test ./...
+
   providers:
     needs: prerequisites
     runs-on: ubuntu-latest
