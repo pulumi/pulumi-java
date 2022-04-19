@@ -1489,15 +1489,15 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	// Open the class.
 	className := name
 	var baseType string
-	optionsType := "io.pulumi.resources.CustomResourceOptions"
+	optionsType := "com.pulumi.resources.CustomResourceOptions"
 	switch {
 	case r.IsProvider:
-		baseType = "io.pulumi.resources.ProviderResource"
+		baseType = "com.pulumi.resources.ProviderResource"
 	case r.IsComponent:
-		baseType = "io.pulumi.resources.ComponentResource"
-		optionsType = "io.pulumi.resources.ComponentResourceOptions"
+		baseType = "com.pulumi.resources.ComponentResource"
+		optionsType = "com.pulumi.resources.ComponentResourceOptions"
 	default:
-		baseType = "io.pulumi.resources.CustomResource"
+		baseType = "com.pulumi.resources.CustomResource"
 	}
 
 	printObsoleteAttribute(ctx, r.DeprecationMessage, "")
@@ -1897,7 +1897,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 				args := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
-					baseClass:             "io.pulumi.resources.InvokeArgs",
+					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: "inputs",
 					properties:            fun.Inputs.Properties,
 				}
@@ -2072,9 +2072,9 @@ func (mod *modContext) genType(
 
 	contract.Assertf(pt.name == ctx.className.String(), "This is required by the java compiler")
 	if input {
-		pt.baseClass = "io.pulumi.resources.ResourceArgs"
+		pt.baseClass = "com.pulumi.resources.ResourceArgs"
 		if !obj.IsInputShape() {
-			pt.baseClass = "io.pulumi.resources.InvokeArgs"
+			pt.baseClass = "com.pulumi.resources.InvokeArgs"
 		}
 		return pt.genInputType(ctx)
 	}
@@ -2156,7 +2156,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 	fprintf(w, "public final class Config {\n")
 	fprintf(w, "\n")
 	// Create a config bag for the variables to pull from.
-	fprintf(w, "    private static final io.pulumi.Config config = io.pulumi.Config.of(%q);", mod.pkg.Name)
+	fprintf(w, "    private static final com.pulumi.Config config = com.pulumi.Config.of(%q);", mod.pkg.Name)
 	fprintf(w, "\n")
 
 	// Emit an entry for all config variables.
@@ -2345,7 +2345,7 @@ func (mod *modContext) gen(fs fs) error {
 				mod:                   mod,
 				res:                   r,
 				name:                  string(ctx.className),
-				baseClass:             "io.pulumi.resources.ResourceArgs",
+				baseClass:             "com.pulumi.resources.ResourceArgs",
 				propertyTypeQualifier: "inputs",
 				properties:            r.InputProperties,
 				args:                  true,
@@ -2362,7 +2362,7 @@ func (mod *modContext) gen(fs fs) error {
 					mod:                   mod,
 					res:                   r,
 					name:                  string(ctx.className),
-					baseClass:             "io.pulumi.resources.ResourceArgs",
+					baseClass:             "com.pulumi.resources.ResourceArgs",
 					propertyTypeQualifier: "inputs",
 					properties:            r.StateInputs.Properties,
 					args:                  true,

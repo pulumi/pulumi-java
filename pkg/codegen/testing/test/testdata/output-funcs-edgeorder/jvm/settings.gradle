@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.myedgeorder"
+rootProject.name = "com.pulumi.myedgeorder"
 include("lib")
