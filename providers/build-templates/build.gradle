@@ -1,6 +1,7 @@
 /* {{ .TemplateComment }} */
 
 plugins {
+    id("java")
     id("java-library")
     id("maven-publish")
 }
@@ -11,6 +12,7 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)
     }
+    withJavadocJar()
 }
 
 compileJava {
