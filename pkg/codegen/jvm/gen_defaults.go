@@ -274,8 +274,8 @@ func (dg *defaultsGen) unOutputTypeShape(typeShape TypeShape) (bool, TypeShape) 
 	return false, typeShape
 }
 
-// In cases when the default value is a known enum refernce, this will
-// be set to the code literal, such as
+// In cases when the default value is a known enum reference, this
+// will be set to the code literal, such as
 // `io.pulumi.azurenative.insights.enums.WebTestKind.Ping`.
 func (dg *defaultsGen) enumReference(
 	ctx *classFileContext,

@@ -2692,12 +2692,3 @@ func parsePackageName(packageName string) (names.FQN, error) {
 	}
 	return result, nil
 }
-
-func unOptional(t schema.Type) schema.Type {
-	switch tt := t.(type) {
-	case *schema.OptionalType:
-		return tt.ElementType
-	default:
-		return t
-	}
-}
