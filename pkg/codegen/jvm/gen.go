@@ -556,14 +556,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, "            return this;\n")
 		fprintf(w, "        }\n\n")
 
-		// Helper for when Output<T> is needed but T is provided
-		if isOutput, t := propType.unOutput(); isOutput {
-			fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
-				setterName, fieldName, t.ToCode(ctx.imports))
-			fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
-				setterName, fieldName, ctx.ref(names.Output))
-			fprintf(w, "        }\n\n")
-		}
+		pt.genBuilderHelpers(ctx, setterName, fieldName, propType)
 	}
 
 	// Generate the build() method that does default application
@@ -590,6 +583,32 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	fprintf(w, "}\n")
 
 	return nil
+}
+
+// Generates derived buidler setters that resolve to the main setter.
+// This helps to promote T to Output<T> and accept varargs for a List
+// parameter.
+func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldName string, t TypeShape) {
+	w := ctx.writer
+
+	// Helper for when Output<T> is needed but T is provided.
+	isOutput, t1 := t.unOutput()
+	if isOutput {
+		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+			setterName, fieldName, t1.ToCode(ctx.imports))
+		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
+			setterName, fieldName, ctx.ref(names.Output))
+		fprintf(w, "        }\n\n")
+	}
+
+	// Further helper for when List<T> is needed but varargs are provided.
+	if isList, t2 := t1.unList(); isList {
+		fprintf(w, "        public Builder %[1]s(%[3]s... %[2]s) {\n",
+			setterName, fieldName, t2.ToCode(ctx.imports))
+		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
+			setterName, fieldName, ctx.ref(names.List))
+		fprintf(w, "        }\n\n")
+	}
 }
 
 func (pt *plainType) genOutputType(ctx *classFileContext) error {

@@ -159,6 +159,13 @@ func (ts TypeShape) unOutput() (bool, TypeShape) {
 	return false, ts
 }
 
+func (ts TypeShape) unList() (bool, TypeShape) {
+	if ts.Type.Equal(names.List) {
+		return true, ts.Parameters[0]
+	}
+	return false, ts
+}
+
 func (ts TypeShape) optional() TypeShape {
 	return TypeShape{
 		Type:       names.Optional,
