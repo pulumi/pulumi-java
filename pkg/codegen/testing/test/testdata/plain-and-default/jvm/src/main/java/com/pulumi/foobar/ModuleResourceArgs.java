@@ -20,338 +20,305 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @Import(name="optional_bool")
-      private final @Nullable Output<Boolean> optional_bool;
+    private @Nullable Output<Boolean> optional_bool;
 
-    public Output<Boolean> optional_bool() {
-        return this.optional_bool == null ? Codegen.empty() : this.optional_bool;
+    public Optional<Output<Boolean>> optional_bool() {
+        return Optional.ofNullable(this.optional_bool);
     }
 
     @Import(name="optional_const")
-      private final @Nullable Output<String> optional_const;
+    private @Nullable Output<String> optional_const;
 
-    public Output<String> optional_const() {
-        return this.optional_const == null ? Codegen.empty() : this.optional_const;
+    public Optional<Output<String>> optional_const() {
+        return Optional.ofNullable(this.optional_const);
     }
 
     @Import(name="optional_enum")
-      private final @Nullable Output<EnumThing> optional_enum;
+    private @Nullable Output<EnumThing> optional_enum;
 
-    public Output<EnumThing> optional_enum() {
-        return this.optional_enum == null ? Codegen.empty() : this.optional_enum;
+    public Optional<Output<EnumThing>> optional_enum() {
+        return Optional.ofNullable(this.optional_enum);
     }
 
     @Import(name="optional_number")
-      private final @Nullable Output<Double> optional_number;
+    private @Nullable Output<Double> optional_number;
 
-    public Output<Double> optional_number() {
-        return this.optional_number == null ? Codegen.empty() : this.optional_number;
+    public Optional<Output<Double>> optional_number() {
+        return Optional.ofNullable(this.optional_number);
     }
 
     @Import(name="optional_string")
-      private final @Nullable Output<String> optional_string;
+    private @Nullable Output<String> optional_string;
 
-    public Output<String> optional_string() {
-        return this.optional_string == null ? Codegen.empty() : this.optional_string;
+    public Optional<Output<String>> optional_string() {
+        return Optional.ofNullable(this.optional_string);
     }
 
     @Import(name="plain_optional_bool")
-      private final @Nullable Boolean plain_optional_bool;
+    private @Nullable Boolean plain_optional_bool;
 
     public Optional<Boolean> plain_optional_bool() {
-        return this.plain_optional_bool == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_bool);
+        return Optional.ofNullable(this.plain_optional_bool);
     }
 
     @Import(name="plain_optional_const")
-      private final @Nullable String plain_optional_const;
+    private @Nullable String plain_optional_const;
 
     public Optional<String> plain_optional_const() {
-        return this.plain_optional_const == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_const);
+        return Optional.ofNullable(this.plain_optional_const);
     }
 
     @Import(name="plain_optional_number")
-      private final @Nullable Double plain_optional_number;
+    private @Nullable Double plain_optional_number;
 
     public Optional<Double> plain_optional_number() {
-        return this.plain_optional_number == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_number);
+        return Optional.ofNullable(this.plain_optional_number);
     }
 
     @Import(name="plain_optional_string")
-      private final @Nullable String plain_optional_string;
+    private @Nullable String plain_optional_string;
 
     public Optional<String> plain_optional_string() {
-        return this.plain_optional_string == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_string);
+        return Optional.ofNullable(this.plain_optional_string);
     }
 
     @Import(name="plain_required_bool", required=true)
-      private final Boolean plain_required_bool;
+    private Boolean plain_required_bool;
 
     public Boolean plain_required_bool() {
         return this.plain_required_bool;
     }
 
     @Import(name="plain_required_const", required=true)
-      private final String plain_required_const;
+    private String plain_required_const;
 
     public String plain_required_const() {
         return this.plain_required_const;
     }
 
     @Import(name="plain_required_number", required=true)
-      private final Double plain_required_number;
+    private Double plain_required_number;
 
     public Double plain_required_number() {
         return this.plain_required_number;
     }
 
     @Import(name="plain_required_string", required=true)
-      private final String plain_required_string;
+    private String plain_required_string;
 
     public String plain_required_string() {
         return this.plain_required_string;
     }
 
     @Import(name="required_bool", required=true)
-      private final Output<Boolean> required_bool;
+    private Output<Boolean> required_bool;
 
     public Output<Boolean> required_bool() {
         return this.required_bool;
     }
 
     @Import(name="required_enum", required=true)
-      private final Output<EnumThing> required_enum;
+    private Output<EnumThing> required_enum;
 
     public Output<EnumThing> required_enum() {
         return this.required_enum;
     }
 
     @Import(name="required_number", required=true)
-      private final Output<Double> required_number;
+    private Output<Double> required_number;
 
     public Output<Double> required_number() {
         return this.required_number;
     }
 
     @Import(name="required_string", required=true)
-      private final Output<String> required_string;
+    private Output<String> required_string;
 
     public Output<String> required_string() {
         return this.required_string;
     }
 
-    public ModuleResourceArgs(
-        @Nullable Output<Boolean> optional_bool,
-        @Nullable Output<String> optional_const,
-        @Nullable Output<EnumThing> optional_enum,
-        @Nullable Output<Double> optional_number,
-        @Nullable Output<String> optional_string,
-        @Nullable Boolean plain_optional_bool,
-        @Nullable String plain_optional_const,
-        @Nullable Double plain_optional_number,
-        @Nullable String plain_optional_string,
-        Boolean plain_required_bool,
-        String plain_required_const,
-        Double plain_required_number,
-        String plain_required_string,
-        Output<Boolean> required_bool,
-        Output<EnumThing> required_enum,
-        Output<Double> required_number,
-        Output<String> required_string) {
-        this.optional_bool = Codegen.booleanProp("optional_bool").output().arg(optional_bool).def(true).getNullable();
-        this.optional_const = Codegen.stringProp("optional_const").output().arg(optional_const).def("another").getNullable();
-        this.optional_enum = Codegen.objectProp("optional_enum", EnumThing.class).output().arg(optional_enum).def(EnumThing.Eight).getNullable();
-        this.optional_number = Codegen.doubleProp("optional_number").output().arg(optional_number).def(4.2e+01).getNullable();
-        this.optional_string = Codegen.stringProp("optional_string").output().arg(optional_string).def("buzzer").getNullable();
-        this.plain_optional_bool = Codegen.booleanProp("plain_optional_bool").arg(plain_optional_bool).def(true).getNullable();
-        this.plain_optional_const = Codegen.stringProp("plain_optional_const").arg(plain_optional_const).def("another").getNullable();
-        this.plain_optional_number = Codegen.doubleProp("plain_optional_number").arg(plain_optional_number).def(4.2e+01).getNullable();
-        this.plain_optional_string = Codegen.stringProp("plain_optional_string").arg(plain_optional_string).def("buzzer").getNullable();
-        this.plain_required_bool = Codegen.booleanProp("plain_required_bool").arg(plain_required_bool).def(true).require();
-        this.plain_required_const = Codegen.stringProp("plain_required_const").arg(plain_required_const).def("another").require();
-        this.plain_required_number = Codegen.doubleProp("plain_required_number").arg(plain_required_number).def(4.2e+01).require();
-        this.plain_required_string = Codegen.stringProp("plain_required_string").arg(plain_required_string).def("buzzer").require();
-        this.required_bool = Codegen.booleanProp("required_bool").output().arg(required_bool).def(true).require();
-        this.required_enum = Codegen.objectProp("required_enum", EnumThing.class).output().arg(required_enum).def(EnumThing.Four).require();
-        this.required_number = Codegen.doubleProp("required_number").output().arg(required_number).def(4.2e+01).require();
-        this.required_string = Codegen.stringProp("required_string").output().arg(required_string).def("buzzer").require();
-    }
+    private ModuleResourceArgs() {}
 
-    private ModuleResourceArgs() {
-        this.optional_bool = Codegen.empty();
-        this.optional_const = Codegen.empty();
-        this.optional_enum = Codegen.empty();
-        this.optional_number = Codegen.empty();
-        this.optional_string = Codegen.empty();
-        this.plain_optional_bool = null;
-        this.plain_optional_const = null;
-        this.plain_optional_number = null;
-        this.plain_optional_string = null;
-        this.plain_required_bool = null;
-        this.plain_required_const = null;
-        this.plain_required_number = null;
-        this.plain_required_string = null;
-        this.required_bool = Codegen.empty();
-        this.required_enum = Codegen.empty();
-        this.required_number = Codegen.empty();
-        this.required_string = Codegen.empty();
+    protected ModuleResourceArgs(ModuleResourceArgs $) {
+        this.optional_bool = $.optional_bool;
+        this.optional_const = $.optional_const;
+        this.optional_enum = $.optional_enum;
+        this.optional_number = $.optional_number;
+        this.optional_string = $.optional_string;
+        this.plain_optional_bool = $.plain_optional_bool;
+        this.plain_optional_const = $.plain_optional_const;
+        this.plain_optional_number = $.plain_optional_number;
+        this.plain_optional_string = $.plain_optional_string;
+        this.plain_required_bool = $.plain_required_bool;
+        this.plain_required_const = $.plain_required_const;
+        this.plain_required_number = $.plain_required_number;
+        this.plain_required_string = $.plain_required_string;
+        this.required_bool = $.required_bool;
+        this.required_enum = $.required_enum;
+        this.required_number = $.required_number;
+        this.required_string = $.required_string;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> optional_bool;
-        private @Nullable Output<String> optional_const;
-        private @Nullable Output<EnumThing> optional_enum;
-        private @Nullable Output<Double> optional_number;
-        private @Nullable Output<String> optional_string;
-        private @Nullable Boolean plain_optional_bool;
-        private @Nullable String plain_optional_const;
-        private @Nullable Double plain_optional_number;
-        private @Nullable String plain_optional_string;
-        private Boolean plain_required_bool;
-        private String plain_required_const;
-        private Double plain_required_number;
-        private String plain_required_string;
-        private Output<Boolean> required_bool;
-        private Output<EnumThing> required_enum;
-        private Output<Double> required_number;
-        private Output<String> required_string;
+        private ModuleResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleResourceArgs();
         }
 
         public Builder(ModuleResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optional_bool = defaults.optional_bool;
-    	      this.optional_const = defaults.optional_const;
-    	      this.optional_enum = defaults.optional_enum;
-    	      this.optional_number = defaults.optional_number;
-    	      this.optional_string = defaults.optional_string;
-    	      this.plain_optional_bool = defaults.plain_optional_bool;
-    	      this.plain_optional_const = defaults.plain_optional_const;
-    	      this.plain_optional_number = defaults.plain_optional_number;
-    	      this.plain_optional_string = defaults.plain_optional_string;
-    	      this.plain_required_bool = defaults.plain_required_bool;
-    	      this.plain_required_const = defaults.plain_required_const;
-    	      this.plain_required_number = defaults.plain_required_number;
-    	      this.plain_required_string = defaults.plain_required_string;
-    	      this.required_bool = defaults.required_bool;
-    	      this.required_enum = defaults.required_enum;
-    	      this.required_number = defaults.required_number;
-    	      this.required_string = defaults.required_string;
+            $ = new ModuleResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optional_bool(@Nullable Output<Boolean> optional_bool) {
-            this.optional_bool = optional_bool;
+            $.optional_bool = optional_bool;
             return this;
         }
-        public Builder optional_bool(@Nullable Boolean optional_bool) {
-            this.optional_bool = Codegen.ofNullable(optional_bool);
-            return this;
+
+        public Builder optional_bool(Boolean optional_bool) {
+            return optional_bool(Output.of(optional_bool));
         }
+
         public Builder optional_const(@Nullable Output<String> optional_const) {
-            this.optional_const = optional_const;
+            $.optional_const = optional_const;
             return this;
         }
-        public Builder optional_const(@Nullable String optional_const) {
-            this.optional_const = Codegen.ofNullable(optional_const);
-            return this;
+
+        public Builder optional_const(String optional_const) {
+            return optional_const(Output.of(optional_const));
         }
+
         public Builder optional_enum(@Nullable Output<EnumThing> optional_enum) {
-            this.optional_enum = optional_enum;
+            $.optional_enum = optional_enum;
             return this;
         }
-        public Builder optional_enum(@Nullable EnumThing optional_enum) {
-            this.optional_enum = Codegen.ofNullable(optional_enum);
-            return this;
+
+        public Builder optional_enum(EnumThing optional_enum) {
+            return optional_enum(Output.of(optional_enum));
         }
+
         public Builder optional_number(@Nullable Output<Double> optional_number) {
-            this.optional_number = optional_number;
+            $.optional_number = optional_number;
             return this;
         }
-        public Builder optional_number(@Nullable Double optional_number) {
-            this.optional_number = Codegen.ofNullable(optional_number);
-            return this;
+
+        public Builder optional_number(Double optional_number) {
+            return optional_number(Output.of(optional_number));
         }
+
         public Builder optional_string(@Nullable Output<String> optional_string) {
-            this.optional_string = optional_string;
+            $.optional_string = optional_string;
             return this;
         }
-        public Builder optional_string(@Nullable String optional_string) {
-            this.optional_string = Codegen.ofNullable(optional_string);
-            return this;
+
+        public Builder optional_string(String optional_string) {
+            return optional_string(Output.of(optional_string));
         }
+
         public Builder plain_optional_bool(@Nullable Boolean plain_optional_bool) {
-            this.plain_optional_bool = plain_optional_bool;
+            $.plain_optional_bool = plain_optional_bool;
             return this;
         }
+
         public Builder plain_optional_const(@Nullable String plain_optional_const) {
-            this.plain_optional_const = plain_optional_const;
+            $.plain_optional_const = plain_optional_const;
             return this;
         }
+
         public Builder plain_optional_number(@Nullable Double plain_optional_number) {
-            this.plain_optional_number = plain_optional_number;
+            $.plain_optional_number = plain_optional_number;
             return this;
         }
+
         public Builder plain_optional_string(@Nullable String plain_optional_string) {
-            this.plain_optional_string = plain_optional_string;
+            $.plain_optional_string = plain_optional_string;
             return this;
         }
+
         public Builder plain_required_bool(Boolean plain_required_bool) {
-            this.plain_required_bool = Objects.requireNonNull(plain_required_bool);
+            $.plain_required_bool = plain_required_bool;
             return this;
         }
+
         public Builder plain_required_const(String plain_required_const) {
-            this.plain_required_const = Objects.requireNonNull(plain_required_const);
+            $.plain_required_const = plain_required_const;
             return this;
         }
+
         public Builder plain_required_number(Double plain_required_number) {
-            this.plain_required_number = Objects.requireNonNull(plain_required_number);
+            $.plain_required_number = plain_required_number;
             return this;
         }
+
         public Builder plain_required_string(String plain_required_string) {
-            this.plain_required_string = Objects.requireNonNull(plain_required_string);
+            $.plain_required_string = plain_required_string;
             return this;
         }
+
         public Builder required_bool(Output<Boolean> required_bool) {
-            this.required_bool = Objects.requireNonNull(required_bool);
+            $.required_bool = required_bool;
             return this;
         }
+
         public Builder required_bool(Boolean required_bool) {
-            this.required_bool = Output.of(Objects.requireNonNull(required_bool));
-            return this;
+            return required_bool(Output.of(required_bool));
         }
+
         public Builder required_enum(Output<EnumThing> required_enum) {
-            this.required_enum = Objects.requireNonNull(required_enum);
+            $.required_enum = required_enum;
             return this;
         }
+
         public Builder required_enum(EnumThing required_enum) {
-            this.required_enum = Output.of(Objects.requireNonNull(required_enum));
-            return this;
+            return required_enum(Output.of(required_enum));
         }
+
         public Builder required_number(Output<Double> required_number) {
-            this.required_number = Objects.requireNonNull(required_number);
+            $.required_number = required_number;
             return this;
         }
+
         public Builder required_number(Double required_number) {
-            this.required_number = Output.of(Objects.requireNonNull(required_number));
-            return this;
+            return required_number(Output.of(required_number));
         }
+
         public Builder required_string(Output<String> required_string) {
-            this.required_string = Objects.requireNonNull(required_string);
+            $.required_string = required_string;
             return this;
         }
+
         public Builder required_string(String required_string) {
-            this.required_string = Output.of(Objects.requireNonNull(required_string));
-            return this;
-        }        public ModuleResourceArgs build() {
-            return new ModuleResourceArgs(optional_bool, optional_const, optional_enum, optional_number, optional_string, plain_optional_bool, plain_optional_const, plain_optional_number, plain_optional_string, plain_required_bool, plain_required_const, plain_required_number, plain_required_string, required_bool, required_enum, required_number, required_string);
+            return required_string(Output.of(required_string));
+        }
+
+        public ModuleResourceArgs build() {
+            $.optional_bool = Codegen.booleanProp("optional_bool").output().arg($.optional_bool).def(true).getNullable();
+            $.optional_const = Codegen.stringProp("optional_const").output().arg($.optional_const).def("another").getNullable();
+            $.optional_enum = Codegen.objectProp("optional_enum", EnumThing.class).output().arg($.optional_enum).def(EnumThing.Eight).getNullable();
+            $.optional_number = Codegen.doubleProp("optional_number").output().arg($.optional_number).def(4.2e+01).getNullable();
+            $.optional_string = Codegen.stringProp("optional_string").output().arg($.optional_string).def("buzzer").getNullable();
+            $.plain_optional_bool = Codegen.booleanProp("plain_optional_bool").arg($.plain_optional_bool).def(true).getNullable();
+            $.plain_optional_const = Codegen.stringProp("plain_optional_const").arg($.plain_optional_const).def("another").getNullable();
+            $.plain_optional_number = Codegen.doubleProp("plain_optional_number").arg($.plain_optional_number).def(4.2e+01).getNullable();
+            $.plain_optional_string = Codegen.stringProp("plain_optional_string").arg($.plain_optional_string).def("buzzer").getNullable();
+            $.plain_required_bool = Codegen.booleanProp("plain_required_bool").arg($.plain_required_bool).def(true).require();
+            $.plain_required_const = Codegen.stringProp("plain_required_const").arg($.plain_required_const).def("another").require();
+            $.plain_required_number = Codegen.doubleProp("plain_required_number").arg($.plain_required_number).def(4.2e+01).require();
+            $.plain_required_string = Codegen.stringProp("plain_required_string").arg($.plain_required_string).def("buzzer").require();
+            $.required_bool = Codegen.booleanProp("required_bool").output().arg($.required_bool).def(true).require();
+            $.required_enum = Codegen.objectProp("required_enum", EnumThing.class).output().arg($.required_enum).def(EnumThing.Four).require();
+            $.required_number = Codegen.doubleProp("required_number").output().arg($.required_number).def(4.2e+01).require();
+            $.required_string = Codegen.stringProp("required_string").output().arg($.required_string).def("buzzer").require();
+            return $;
         }
     }
+
 }
