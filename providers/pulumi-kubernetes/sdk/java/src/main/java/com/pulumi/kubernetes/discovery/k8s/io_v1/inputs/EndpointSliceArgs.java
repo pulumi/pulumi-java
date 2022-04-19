@@ -102,9 +102,9 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<List<EndpointPortArgs>> ports) {
         this.addressType = Objects.requireNonNull(addressType, "expected parameter 'addressType' to be non-null");
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.ports = ports;
     }

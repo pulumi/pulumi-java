@@ -149,8 +149,8 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<String> volumeBindingMode) {
         this.allowVolumeExpansion = allowVolumeExpansion;
         this.allowedTopologies = allowedTopologies;
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.mountOptions = mountOptions;
         this.parameters = parameters;

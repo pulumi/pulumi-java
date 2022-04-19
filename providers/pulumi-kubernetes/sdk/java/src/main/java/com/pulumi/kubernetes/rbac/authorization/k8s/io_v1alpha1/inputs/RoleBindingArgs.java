@@ -84,8 +84,8 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         Output<RoleRefArgs> roleRef,
         @Nullable Output<List<SubjectArgs>> subjects) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.roleRef = Objects.requireNonNull(roleRef, "expected parameter 'roleRef' to be non-null");
         this.subjects = subjects;

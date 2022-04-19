@@ -67,9 +67,9 @@ public final class PersistentVolumeListArgs extends com.pulumi.resources.Resourc
         Output<List<PersistentVolumeArgs>> items,
         @Nullable Output<String> kind,
         @Nullable Output<ListMetaArgs> metadata) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
     }
 

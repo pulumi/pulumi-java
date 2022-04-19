@@ -103,10 +103,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
         @Nullable Output<ObjectMetaArgs> metadata,
         @Nullable Output<Map<String,String>> stringData,
         @Nullable Output<String> type) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.data = data;
         this.immutable = immutable;
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
         this.stringData = stringData;
         this.type = type;

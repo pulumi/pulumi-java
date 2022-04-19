@@ -430,7 +430,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         this.atomic = atomic;
         this.chart = Objects.requireNonNull(chart, "expected parameter 'chart' to be non-null");
         this.cleanupOnFail = cleanupOnFail;
-        this.compat = compat;
+        this.compat = Codegen.stringProp("compat").output().arg(compat).getNullable();
         this.createNamespace = createNamespace;
         this.dependencyUpdate = dependencyUpdate;
         this.description = description;

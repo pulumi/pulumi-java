@@ -67,9 +67,9 @@ public final class IngressClassListArgs extends com.pulumi.resources.ResourceArg
         Output<List<IngressClassArgs>> items,
         @Nullable Output<String> kind,
         @Nullable Output<ListMetaArgs> metadata) {
-        this.apiVersion = apiVersion;
+        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = kind;
+        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
         this.metadata = metadata;
     }
 
