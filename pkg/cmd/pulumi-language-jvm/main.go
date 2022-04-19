@@ -248,11 +248,6 @@ func (host *jvmLanguageHost) RunJvmCommand(
 	cmd.Stdout = infoWriter
 	cmd.Stderr = errorWriter
 
-	_, err := infoWriter.LogToUser(fmt.Sprintf("running '%v %v'", name, commandStr))
-	if err != nil {
-		return "", err
-	}
-
 	if err := runCommand(cmd); err != nil {
 		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
 		// so they get displayed to the user.
@@ -261,8 +256,11 @@ func (host *jvmLanguageHost) RunJvmCommand(
 		return "", err
 	}
 
-	_, err = infoWriter.LogToUser(fmt.Sprintf("'%v %v' completed successfully", name, commandStr))
-	return infoBuffer.String(), err
+	if logging.V(5) {
+		logging.V(5).Infof("'%v %v' completed successfully\n", name, commandStr)
+	}
+
+	return infoBuffer.String(), nil
 }
 
 type logWriter struct {
@@ -279,11 +277,7 @@ func (w *logWriter) Write(p []byte) (n int, err error) {
 		return
 	}
 
-	return w.LogToUser(string(p))
-}
-
-func (w *logWriter) LogToUser(val string) (int, error) {
-	return len(val), nil
+	return len(string(p)), nil
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
