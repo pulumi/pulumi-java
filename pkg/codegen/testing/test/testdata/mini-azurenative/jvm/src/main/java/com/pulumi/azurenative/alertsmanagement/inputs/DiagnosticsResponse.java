@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.alertsmanagement.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticsResponse Empty = new DiagnosticsResponse();
 
-    public DiagnosticsResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DiagnosticsResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DiagnosticsResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DiagnosticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DiagnosticsResponse();
         }
         public DiagnosticsResponse build() {
-            return new DiagnosticsResponse();
+            return $;
         }
     }
+
 }

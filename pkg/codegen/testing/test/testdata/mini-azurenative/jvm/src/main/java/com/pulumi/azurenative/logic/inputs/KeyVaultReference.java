@@ -23,10 +23,10 @@ public final class KeyVaultReference extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class KeyVaultReference extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public KeyVaultReference(
-        @Nullable String id,
-        @Nullable String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private KeyVaultReference() {}
 
-    private KeyVaultReference() {
-        this.id = null;
-        this.name = null;
+    protected KeyVaultReference(KeyVaultReference $) {
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultReference defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String name;
+        private KeyVaultReference $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultReference();
         }
 
         public Builder(KeyVaultReference defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new KeyVaultReference(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public KeyVaultReference build() {
-            return new KeyVaultReference(id, name);
+        }
+
+        public KeyVaultReference build() {
+            return $;
         }
     }
+
 }

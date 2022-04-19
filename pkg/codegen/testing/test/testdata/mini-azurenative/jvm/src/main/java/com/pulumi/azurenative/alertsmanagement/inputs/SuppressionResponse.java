@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.alertsmanagement.inputs;
 
-import java.util.Objects;
+
 
 
 public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final SuppressionResponse Empty = new SuppressionResponse();
 
-    public SuppressionResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(SuppressionResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private SuppressionResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(SuppressionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new SuppressionResponse();
         }
         public SuppressionResponse build() {
-            return new SuppressionResponse();
+            return $;
         }
     }
+
 }

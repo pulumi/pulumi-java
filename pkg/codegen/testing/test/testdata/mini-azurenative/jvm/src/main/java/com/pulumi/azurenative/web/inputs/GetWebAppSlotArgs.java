@@ -17,45 +17,45 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppSlotArgs(String slot) {
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppSlotArgs() {}
 
-    private GetWebAppSlotArgs() {
-        this.slot = null;
+    protected GetWebAppSlotArgs(GetWebAppSlotArgs $) {
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String slot;
+        private GetWebAppSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppSlotArgs();
         }
 
         public Builder(GetWebAppSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppSlotArgs build() {
-            return new GetWebAppSlotArgs(slot);
+        }
+
+        public GetWebAppSlotArgs build() {
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }
