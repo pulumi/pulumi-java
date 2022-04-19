@@ -83,6 +83,18 @@ public final class Codegen {
                     this.tryReadFromConfig);
         }
 
+        /**
+         * Helper for secret Output-typed properties.
+         */
+        public PropertyBuilder<T, Output<Result>> secret() {
+            Function<T, Output<Result>> newConvert = x -> Output.of(this.convert.apply(x)).asSecret();
+            return new PropertyBuilder<T, Output<Result>>(this.propertyName,
+                    newConvert,
+                    this.readFromEnvVar,
+                    this.parseJsonDefault,
+                    this.tryReadFromConfig);
+        }
+
         public <X> PropertyBuilder<T, Either<X,Result>> right(Class<X> __) {
             return new PropertyBuilder<T, Either<X,Result>>(this.propertyName,
                     x -> Either.ofRight(this.convert.apply(x)),
