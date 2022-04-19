@@ -69,6 +69,14 @@ test_template.%: bin/pulumi-language-jvm
 test_templates: bin/pulumi-language-jvm
 	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -test.v
 
+# Test a single integration, s.g.:
+#     make test_integration.stack-reference
+test_integration.%: bin/pulumi-language-jvm
+	cd tests/integration && PATH="${PATH}:${PWD}/bin" go test -run "TestIntegrations/^$*$$" -test.v
+
+test_integrations: bin/pulumi-language-jvm
+	cd tests/integration && PATH="${PATH}:${PWD}/bin" go test -test.v
+
 codegen_tests::
 	cd ./pkg/codegen/jvm && go test ./...
 
