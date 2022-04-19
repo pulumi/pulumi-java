@@ -1,10 +1,10 @@
-package io.pulumi.example;
+package com.pulumi.example;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
-import io.pulumi.core.Input;
-import io.pulumi.example.inputs.*;
+import com.pulumi.core.Input;
+import com.pulumi.example.inputs.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,6 +12,8 @@ class InputTests {
 
     @Test
     void testPetArgs_nullValues() {
+
+
         var args = PetArgs.Empty;
 
         var map = args.internalToOptionalMapAsync().join();
