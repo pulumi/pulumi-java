@@ -55,10 +55,9 @@ public class StackReference extends CustomResource {
                 "pulumi:pulumi:StackReference",
                 name,
                 new StackReferenceArgs(ensureName(args, name)),
-                CustomResourceOptions.merge(options, CustomResourceOptions.builder().id(ensureName(args, name)).build())
+                CustomResourceOptions.merge(options, CustomResourceOptions.builder().build())
         );
     }
-
     private static Output<String> ensureName(@Nullable StackReferenceArgs args, String name) {
         return args == null ? Output.of(name) : args.getName().orElse(Output.of(name));
     }
