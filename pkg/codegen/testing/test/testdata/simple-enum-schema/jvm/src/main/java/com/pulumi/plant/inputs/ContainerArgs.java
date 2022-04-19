@@ -12,6 +12,7 @@ import com.pulumi.plant.enums.ContainerColor;
 import com.pulumi.plant.enums.ContainerSize;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,110 +21,101 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     public static final ContainerArgs Empty = new ContainerArgs();
 
     @Import(name="brightness")
-      private final @Nullable Output<ContainerBrightness> brightness;
+    private @Nullable Output<ContainerBrightness> brightness;
 
-    public Output<ContainerBrightness> brightness() {
-        return this.brightness == null ? Codegen.empty() : this.brightness;
+    public Optional<Output<ContainerBrightness>> brightness() {
+        return Optional.ofNullable(this.brightness);
     }
 
     @Import(name="color")
-      private final @Nullable Output<Either<ContainerColor,String>> color;
+    private @Nullable Output<Either<ContainerColor,String>> color;
 
-    public Output<Either<ContainerColor,String>> color() {
-        return this.color == null ? Codegen.empty() : this.color;
+    public Optional<Output<Either<ContainerColor,String>>> color() {
+        return Optional.ofNullable(this.color);
     }
 
     @Import(name="material")
-      private final @Nullable Output<String> material;
+    private @Nullable Output<String> material;
 
-    public Output<String> material() {
-        return this.material == null ? Codegen.empty() : this.material;
+    public Optional<Output<String>> material() {
+        return Optional.ofNullable(this.material);
     }
 
     @Import(name="size", required=true)
-      private final Output<ContainerSize> size;
+    private Output<ContainerSize> size;
 
     public Output<ContainerSize> size() {
         return this.size;
     }
 
-    public ContainerArgs(
-        @Nullable Output<ContainerBrightness> brightness,
-        @Nullable Output<Either<ContainerColor,String>> color,
-        @Nullable Output<String> material,
-        Output<ContainerSize> size) {
-        this.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output().arg(brightness).def(ContainerBrightness.One).getNullable();
-        this.color = color;
-        this.material = material;
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.brightness = Codegen.empty();
-        this.color = Codegen.empty();
-        this.material = Codegen.empty();
-        this.size = Codegen.empty();
+    protected ContainerArgs(ContainerArgs $) {
+        this.brightness = $.brightness;
+        this.color = $.color;
+        this.material = $.material;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerBrightness> brightness;
-        private @Nullable Output<Either<ContainerColor,String>> color;
-        private @Nullable Output<String> material;
-        private Output<ContainerSize> size;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brightness = defaults.brightness;
-    	      this.color = defaults.color;
-    	      this.material = defaults.material;
-    	      this.size = defaults.size;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brightness(@Nullable Output<ContainerBrightness> brightness) {
-            this.brightness = brightness;
+            $.brightness = brightness;
             return this;
         }
-        public Builder brightness(@Nullable ContainerBrightness brightness) {
-            this.brightness = Codegen.ofNullable(brightness);
-            return this;
+
+        public Builder brightness(ContainerBrightness brightness) {
+            return brightness(Output.of(brightness));
         }
+
         public Builder color(@Nullable Output<Either<ContainerColor,String>> color) {
-            this.color = color;
+            $.color = color;
             return this;
         }
-        public Builder color(@Nullable Either<ContainerColor,String> color) {
-            this.color = Codegen.ofNullable(color);
-            return this;
+
+        public Builder color(Either<ContainerColor,String> color) {
+            return color(Output.of(color));
         }
+
         public Builder material(@Nullable Output<String> material) {
-            this.material = material;
+            $.material = material;
             return this;
         }
-        public Builder material(@Nullable String material) {
-            this.material = Codegen.ofNullable(material);
-            return this;
+
+        public Builder material(String material) {
+            return material(Output.of(material));
         }
+
         public Builder size(Output<ContainerSize> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(ContainerSize size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
-        }        public ContainerArgs build() {
-            return new ContainerArgs(brightness, color, material, size);
+            return size(Output.of(size));
+        }
+
+        public ContainerArgs build() {
+            $.brightness = Codegen.objectProp("brightness", ContainerBrightness.class).output().arg($.brightness).def(ContainerBrightness.One).getNullable();
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            return $;
         }
     }
+
 }

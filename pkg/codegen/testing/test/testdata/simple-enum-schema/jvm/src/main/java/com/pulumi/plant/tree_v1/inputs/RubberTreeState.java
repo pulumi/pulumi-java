@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.plant.tree_v1.enums.Farm;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,49 +19,49 @@ public final class RubberTreeState extends com.pulumi.resources.ResourceArgs {
     public static final RubberTreeState Empty = new RubberTreeState();
 
     @Import(name="farm")
-      private final @Nullable Output<Either<Farm,String>> farm;
+    private @Nullable Output<Either<Farm,String>> farm;
 
-    public Output<Either<Farm,String>> farm() {
-        return this.farm == null ? Codegen.empty() : this.farm;
+    public Optional<Output<Either<Farm,String>>> farm() {
+        return Optional.ofNullable(this.farm);
     }
 
-    public RubberTreeState(@Nullable Output<Either<Farm,String>> farm) {
-        this.farm = Codegen.stringProp("farm").right(Farm.class).output().arg(farm).def("(unknown)").getNullable();
-    }
+    private RubberTreeState() {}
 
-    private RubberTreeState() {
-        this.farm = Codegen.empty();
+    protected RubberTreeState(RubberTreeState $) {
+        this.farm = $.farm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RubberTreeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<Farm,String>> farm;
+        private RubberTreeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RubberTreeState();
         }
 
         public Builder(RubberTreeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.farm = defaults.farm;
+            $ = new RubberTreeState(Objects.requireNonNull(defaults));
         }
 
         public Builder farm(@Nullable Output<Either<Farm,String>> farm) {
-            this.farm = farm;
+            $.farm = farm;
             return this;
         }
-        public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Codegen.ofNullable(farm);
-            return this;
-        }        public RubberTreeState build() {
-            return new RubberTreeState(farm);
+
+        public Builder farm(Either<Farm,String> farm) {
+            return farm(Output.of(farm));
+        }
+
+        public RubberTreeState build() {
+            $.farm = Codegen.stringProp("farm").right(Farm.class).output().arg($.farm).def("(unknown)").getNullable();
+            return $;
         }
     }
+
 }
