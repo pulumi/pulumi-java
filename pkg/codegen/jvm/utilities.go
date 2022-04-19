@@ -4,11 +4,10 @@ package jvm
 
 import (
 	"fmt"
-	"io"
-	"strings"
-
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"io"
+	"strings"
 )
 
 // The following 3 functions are copied from pkg/codegen utils with one change.
