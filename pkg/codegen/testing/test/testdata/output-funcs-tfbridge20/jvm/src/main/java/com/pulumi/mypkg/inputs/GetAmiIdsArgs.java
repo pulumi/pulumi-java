@@ -23,10 +23,10 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-      private final @Nullable List<String> executableUsers;
+    private @Nullable List<String> executableUsers;
 
-    public List<String> executableUsers() {
-        return this.executableUsers == null ? List.of() : this.executableUsers;
+    public Optional<List<String>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAmiIdsFilter> filters;
+    private @Nullable List<GetAmiIdsFilter> filters;
 
-    public List<GetAmiIdsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAmiIdsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-      private final @Nullable String nameRegex;
+    private @Nullable String nameRegex;
 
     public Optional<String> nameRegex() {
-        return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners", required=true)
-      private final List<String> owners;
+    private List<String> owners;
 
     public List<String> owners() {
         return this.owners;
@@ -73,91 +73,81 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortAscending")
-      private final @Nullable Boolean sortAscending;
+    private @Nullable Boolean sortAscending;
 
     public Optional<Boolean> sortAscending() {
-        return this.sortAscending == null ? Optional.empty() : Optional.ofNullable(this.sortAscending);
+        return Optional.ofNullable(this.sortAscending);
     }
 
-    public GetAmiIdsArgs(
-        @Nullable List<String> executableUsers,
-        @Nullable List<GetAmiIdsFilter> filters,
-        @Nullable String nameRegex,
-        List<String> owners,
-        @Nullable Boolean sortAscending) {
-        this.executableUsers = executableUsers;
-        this.filters = filters;
-        this.nameRegex = nameRegex;
-        this.owners = Objects.requireNonNull(owners, "expected parameter 'owners' to be non-null");
-        this.sortAscending = sortAscending;
-    }
+    private GetAmiIdsArgs() {}
 
-    private GetAmiIdsArgs() {
-        this.executableUsers = List.of();
-        this.filters = List.of();
-        this.nameRegex = null;
-        this.owners = List.of();
-        this.sortAscending = null;
+    protected GetAmiIdsArgs(GetAmiIdsArgs $) {
+        this.executableUsers = $.executableUsers;
+        this.filters = $.filters;
+        this.nameRegex = $.nameRegex;
+        this.owners = $.owners;
+        this.sortAscending = $.sortAscending;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiIdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> executableUsers;
-        private @Nullable List<GetAmiIdsFilter> filters;
-        private @Nullable String nameRegex;
-        private List<String> owners;
-        private @Nullable Boolean sortAscending;
+        private GetAmiIdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiIdsArgs();
         }
 
         public Builder(GetAmiIdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableUsers = defaults.executableUsers;
-    	      this.filters = defaults.filters;
-    	      this.nameRegex = defaults.nameRegex;
-    	      this.owners = defaults.owners;
-    	      this.sortAscending = defaults.sortAscending;
+            $ = new GetAmiIdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executableUsers(@Nullable List<String> executableUsers) {
-            this.executableUsers = executableUsers;
+            $.executableUsers = executableUsers;
             return this;
         }
+
         public Builder executableUsers(String... executableUsers) {
             return executableUsers(List.of(executableUsers));
         }
+
         public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAmiIdsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder nameRegex(@Nullable String nameRegex) {
-            this.nameRegex = nameRegex;
+            $.nameRegex = nameRegex;
             return this;
         }
+
         public Builder owners(List<String> owners) {
-            this.owners = Objects.requireNonNull(owners);
+            $.owners = owners;
             return this;
         }
+
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
         public Builder sortAscending(@Nullable Boolean sortAscending) {
-            this.sortAscending = sortAscending;
+            $.sortAscending = sortAscending;
             return this;
-        }        public GetAmiIdsArgs build() {
-            return new GetAmiIdsArgs(executableUsers, filters, nameRegex, owners, sortAscending);
+        }
+
+        public GetAmiIdsArgs build() {
+            $.owners = Objects.requireNonNull($.owners, "expected parameter 'owners' to be non-null");
+            return $;
         }
     }
+
 }

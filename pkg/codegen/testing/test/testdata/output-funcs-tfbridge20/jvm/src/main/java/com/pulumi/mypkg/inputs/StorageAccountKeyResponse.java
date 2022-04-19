@@ -21,7 +21,7 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="creationTime", required=true)
-      private final String creationTime;
+    private String creationTime;
 
     public String creationTime() {
         return this.creationTime;
@@ -32,7 +32,7 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -43,7 +43,7 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
@@ -54,73 +54,66 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public StorageAccountKeyResponse(
-        String creationTime,
-        String keyName,
-        String permissions,
-        String value) {
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private StorageAccountKeyResponse() {}
 
-    private StorageAccountKeyResponse() {
-        this.creationTime = null;
-        this.keyName = null;
-        this.permissions = null;
-        this.value = null;
+    protected StorageAccountKeyResponse(StorageAccountKeyResponse $) {
+        this.creationTime = $.creationTime;
+        this.keyName = $.keyName;
+        this.permissions = $.permissions;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String creationTime;
-        private String keyName;
-        private String permissions;
-        private String value;
+        private StorageAccountKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountKeyResponse();
         }
 
         public Builder(StorageAccountKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.keyName = defaults.keyName;
-    	      this.permissions = defaults.permissions;
-    	      this.value = defaults.value;
+            $ = new StorageAccountKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public StorageAccountKeyResponse build() {
-            return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
+        }
+
+        public StorageAccountKeyResponse build() {
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }
