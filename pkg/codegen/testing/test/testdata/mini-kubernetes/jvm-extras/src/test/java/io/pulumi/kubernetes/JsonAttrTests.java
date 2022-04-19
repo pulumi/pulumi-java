@@ -1,12 +1,12 @@
-package io.pulumi.kubernetes;
+package com.pulumi.kubernetes;
 
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.EngineLogger;
-import io.pulumi.kubernetes.ProviderArgs;
-import io.pulumi.serialization.internal.Serializer;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.EngineLogger;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.serialization.internal.Serializer;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
