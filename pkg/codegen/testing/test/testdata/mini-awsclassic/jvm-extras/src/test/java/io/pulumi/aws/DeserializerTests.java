@@ -1,15 +1,15 @@
-package io.pulumi.aws;
+package com.pulumi.aws;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Value;
 import com.google.protobuf.util.JsonFormat;
-import io.pulumi.Log;
-import io.pulumi.aws.ec2_getAmi.outputs.GetAmiResult;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.serialization.internal.Converter;
-import io.pulumi.serialization.internal.Deserializer;
+import com.pulumi.Log;
+import com.pulumi.aws.ec2_getAmi.outputs.GetAmiResult;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.serialization.internal.Converter;
+import com.pulumi.serialization.internal.Deserializer;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
