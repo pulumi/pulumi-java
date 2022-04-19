@@ -98,7 +98,7 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 	foundRangeCall := false
 	for _, node := range nodes {
-		node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
+		diags := node.VisitExpressions(model.IdentityVisitor, func(x model.Expression) (model.Expression, hcl.Diagnostics) {
 			// Ignore the node if it is not a call to invoke.
 			call, ok := x.(*model.FunctionCallExpression)
 			if !ok {
@@ -111,6 +111,8 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 
 			return x, nil
 		})
+
+		contract.Assert(len(diags) == 0)
 	}
 
 	return foundRangeCall
@@ -249,7 +251,7 @@ func resourceTypeName(resource *pcl.Resource) string {
 	pkg, module, member, diags := resource.DecomposeToken()
 	contract.Assert(len(diags) == 0)
 	if pkg == "pulumi" && module == "providers" {
-		pkg, module, member = member, "", "Provider"
+		member = "Provider"
 	}
 
 	return names.Title(member)
@@ -511,7 +513,10 @@ func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 
 func compilePclToJava(source []byte, schemaPath string) ([]byte, hcl.Diagnostics, error) {
 	parser := syntax.NewParser()
-	parser.ParseFile(bytes.NewReader(source), "")
+	err := parser.ParseFile(bytes.NewReader(source), "")
+	if err != nil {
+		return nil, nil, err
+	}
 	program, programDiags, err := pcl.BindProgram(parser.Files, pcl.PluginHost(utils.NewHost(schemaPath)))
 	if err != nil {
 		return nil, nil, err
