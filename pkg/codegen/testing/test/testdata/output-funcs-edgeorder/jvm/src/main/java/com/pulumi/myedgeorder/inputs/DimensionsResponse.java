@@ -22,7 +22,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="depth", required=true)
-      private final Double depth;
+    private Double depth;
 
     public Double depth() {
         return this.depth;
@@ -33,7 +33,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height", required=true)
-      private final Double height;
+    private Double height;
 
     public Double height() {
         return this.height;
@@ -44,7 +44,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="length", required=true)
-      private final Double length;
+    private Double length;
 
     public Double length() {
         return this.length;
@@ -55,7 +55,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lengthHeightUnit", required=true)
-      private final String lengthHeightUnit;
+    private String lengthHeightUnit;
 
     public String lengthHeightUnit() {
         return this.lengthHeightUnit;
@@ -66,7 +66,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weight", required=true)
-      private final Double weight;
+    private Double weight;
 
     public Double weight() {
         return this.weight;
@@ -77,7 +77,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weightUnit", required=true)
-      private final String weightUnit;
+    private String weightUnit;
 
     public String weightUnit() {
         return this.weightUnit;
@@ -88,100 +88,87 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width", required=true)
-      private final Double width;
+    private Double width;
 
     public Double width() {
         return this.width;
     }
 
-    public DimensionsResponse(
-        Double depth,
-        Double height,
-        Double length,
-        String lengthHeightUnit,
-        Double weight,
-        String weightUnit,
-        Double width) {
-        this.depth = Objects.requireNonNull(depth, "expected parameter 'depth' to be non-null");
-        this.height = Objects.requireNonNull(height, "expected parameter 'height' to be non-null");
-        this.length = Objects.requireNonNull(length, "expected parameter 'length' to be non-null");
-        this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit, "expected parameter 'lengthHeightUnit' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-        this.weightUnit = Objects.requireNonNull(weightUnit, "expected parameter 'weightUnit' to be non-null");
-        this.width = Objects.requireNonNull(width, "expected parameter 'width' to be non-null");
-    }
+    private DimensionsResponse() {}
 
-    private DimensionsResponse() {
-        this.depth = null;
-        this.height = null;
-        this.length = null;
-        this.lengthHeightUnit = null;
-        this.weight = null;
-        this.weightUnit = null;
-        this.width = null;
+    protected DimensionsResponse(DimensionsResponse $) {
+        this.depth = $.depth;
+        this.height = $.height;
+        this.length = $.length;
+        this.lengthHeightUnit = $.lengthHeightUnit;
+        this.weight = $.weight;
+        this.weightUnit = $.weightUnit;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DimensionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double depth;
-        private Double height;
-        private Double length;
-        private String lengthHeightUnit;
-        private Double weight;
-        private String weightUnit;
-        private Double width;
+        private DimensionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DimensionsResponse();
         }
 
         public Builder(DimensionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.depth = defaults.depth;
-    	      this.height = defaults.height;
-    	      this.length = defaults.length;
-    	      this.lengthHeightUnit = defaults.lengthHeightUnit;
-    	      this.weight = defaults.weight;
-    	      this.weightUnit = defaults.weightUnit;
-    	      this.width = defaults.width;
+            $ = new DimensionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder depth(Double depth) {
-            this.depth = Objects.requireNonNull(depth);
+            $.depth = depth;
             return this;
         }
+
         public Builder height(Double height) {
-            this.height = Objects.requireNonNull(height);
+            $.height = height;
             return this;
         }
+
         public Builder length(Double length) {
-            this.length = Objects.requireNonNull(length);
+            $.length = length;
             return this;
         }
+
         public Builder lengthHeightUnit(String lengthHeightUnit) {
-            this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
+            $.lengthHeightUnit = lengthHeightUnit;
             return this;
         }
+
         public Builder weight(Double weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weightUnit(String weightUnit) {
-            this.weightUnit = Objects.requireNonNull(weightUnit);
+            $.weightUnit = weightUnit;
             return this;
         }
+
         public Builder width(Double width) {
-            this.width = Objects.requireNonNull(width);
+            $.width = width;
             return this;
-        }        public DimensionsResponse build() {
-            return new DimensionsResponse(depth, height, length, lengthHeightUnit, weight, weightUnit, width);
+        }
+
+        public DimensionsResponse build() {
+            $.depth = Objects.requireNonNull($.depth, "expected parameter 'depth' to be non-null");
+            $.height = Objects.requireNonNull($.height, "expected parameter 'height' to be non-null");
+            $.length = Objects.requireNonNull($.length, "expected parameter 'length' to be non-null");
+            $.lengthHeightUnit = Objects.requireNonNull($.lengthHeightUnit, "expected parameter 'lengthHeightUnit' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            $.weightUnit = Objects.requireNonNull($.weightUnit, "expected parameter 'weightUnit' to be non-null");
+            $.width = Objects.requireNonNull($.width, "expected parameter 'width' to be non-null");
+            return $;
         }
     }
+
 }

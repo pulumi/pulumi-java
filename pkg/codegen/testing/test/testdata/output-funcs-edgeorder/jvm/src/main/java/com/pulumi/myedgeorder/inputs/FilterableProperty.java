@@ -24,7 +24,7 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="supportedValues", required=true)
-      private final List<String> supportedValues;
+    private List<String> supportedValues;
 
     public List<String> supportedValues() {
         return this.supportedValues;
@@ -35,58 +35,56 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Either<String,SupportedFilterTypes> type;
+    private Either<String,SupportedFilterTypes> type;
 
     public Either<String,SupportedFilterTypes> type() {
         return this.type;
     }
 
-    public FilterableProperty(
-        List<String> supportedValues,
-        Either<String,SupportedFilterTypes> type) {
-        this.supportedValues = Objects.requireNonNull(supportedValues, "expected parameter 'supportedValues' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FilterableProperty() {}
 
-    private FilterableProperty() {
-        this.supportedValues = List.of();
-        this.type = null;
+    protected FilterableProperty(FilterableProperty $) {
+        this.supportedValues = $.supportedValues;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterableProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> supportedValues;
-        private Either<String,SupportedFilterTypes> type;
+        private FilterableProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterableProperty();
         }
 
         public Builder(FilterableProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.supportedValues = defaults.supportedValues;
-    	      this.type = defaults.type;
+            $ = new FilterableProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder supportedValues(List<String> supportedValues) {
-            this.supportedValues = Objects.requireNonNull(supportedValues);
+            $.supportedValues = supportedValues;
             return this;
         }
+
         public Builder supportedValues(String... supportedValues) {
             return supportedValues(List.of(supportedValues));
         }
+
         public Builder type(Either<String,SupportedFilterTypes> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FilterableProperty build() {
-            return new FilterableProperty(supportedValues, type);
+        }
+
+        public FilterableProperty build() {
+            $.supportedValues = Objects.requireNonNull($.supportedValues, "expected parameter 'supportedValues' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

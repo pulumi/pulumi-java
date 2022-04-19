@@ -23,10 +23,10 @@ public final class HierarchyInformationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="configurationName")
-      private final @Nullable String configurationName;
+    private @Nullable String configurationName;
 
     public Optional<String> configurationName() {
-        return this.configurationName == null ? Optional.empty() : Optional.ofNullable(this.configurationName);
+        return Optional.ofNullable(this.configurationName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HierarchyInformationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="productFamilyName")
-      private final @Nullable String productFamilyName;
+    private @Nullable String productFamilyName;
 
     public Optional<String> productFamilyName() {
-        return this.productFamilyName == null ? Optional.empty() : Optional.ofNullable(this.productFamilyName);
+        return Optional.ofNullable(this.productFamilyName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HierarchyInformationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="productLineName")
-      private final @Nullable String productLineName;
+    private @Nullable String productLineName;
 
     public Optional<String> productLineName() {
-        return this.productLineName == null ? Optional.empty() : Optional.ofNullable(this.productLineName);
+        return Optional.ofNullable(this.productLineName);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class HierarchyInformationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="productName")
-      private final @Nullable String productName;
+    private @Nullable String productName;
 
     public Optional<String> productName() {
-        return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
+        return Optional.ofNullable(this.productName);
     }
 
-    public HierarchyInformationResponse(
-        @Nullable String configurationName,
-        @Nullable String productFamilyName,
-        @Nullable String productLineName,
-        @Nullable String productName) {
-        this.configurationName = configurationName;
-        this.productFamilyName = productFamilyName;
-        this.productLineName = productLineName;
-        this.productName = productName;
-    }
+    private HierarchyInformationResponse() {}
 
-    private HierarchyInformationResponse() {
-        this.configurationName = null;
-        this.productFamilyName = null;
-        this.productLineName = null;
-        this.productName = null;
+    protected HierarchyInformationResponse(HierarchyInformationResponse $) {
+        this.configurationName = $.configurationName;
+        this.productFamilyName = $.productFamilyName;
+        this.productLineName = $.productLineName;
+        this.productName = $.productName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HierarchyInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String configurationName;
-        private @Nullable String productFamilyName;
-        private @Nullable String productLineName;
-        private @Nullable String productName;
+        private HierarchyInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HierarchyInformationResponse();
         }
 
         public Builder(HierarchyInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.productFamilyName = defaults.productFamilyName;
-    	      this.productLineName = defaults.productLineName;
-    	      this.productName = defaults.productName;
+            $ = new HierarchyInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = configurationName;
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder productFamilyName(@Nullable String productFamilyName) {
-            this.productFamilyName = productFamilyName;
+            $.productFamilyName = productFamilyName;
             return this;
         }
+
         public Builder productLineName(@Nullable String productLineName) {
-            this.productLineName = productLineName;
+            $.productLineName = productLineName;
             return this;
         }
+
         public Builder productName(@Nullable String productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
-        }        public HierarchyInformationResponse build() {
-            return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
+        }
+
+        public HierarchyInformationResponse build() {
+            return $;
         }
     }
+
 }

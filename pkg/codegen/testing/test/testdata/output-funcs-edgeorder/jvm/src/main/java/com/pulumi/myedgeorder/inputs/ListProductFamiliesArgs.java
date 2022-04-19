@@ -23,10 +23,10 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customerSubscriptionDetails")
-      private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+    private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
-        return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
+        return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filterableProperties", required=true)
-      private final Map<String,List<FilterableProperty>> filterableProperties;
+    private Map<String,List<FilterableProperty>> filterableProperties;
 
     public Map<String,List<FilterableProperty>> filterableProperties() {
         return this.filterableProperties;
@@ -56,73 +56,63 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListProductFamiliesArgs(
-        @Nullable CustomerSubscriptionDetails customerSubscriptionDetails,
-        @Nullable String expand,
-        Map<String,List<FilterableProperty>> filterableProperties,
-        @Nullable String skipToken) {
-        this.customerSubscriptionDetails = customerSubscriptionDetails;
-        this.expand = expand;
-        this.filterableProperties = Objects.requireNonNull(filterableProperties, "expected parameter 'filterableProperties' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListProductFamiliesArgs() {}
 
-    private ListProductFamiliesArgs() {
-        this.customerSubscriptionDetails = null;
-        this.expand = null;
-        this.filterableProperties = Map.of();
-        this.skipToken = null;
+    protected ListProductFamiliesArgs(ListProductFamiliesArgs $) {
+        this.customerSubscriptionDetails = $.customerSubscriptionDetails;
+        this.expand = $.expand;
+        this.filterableProperties = $.filterableProperties;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListProductFamiliesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
-        private @Nullable String expand;
-        private Map<String,List<FilterableProperty>> filterableProperties;
-        private @Nullable String skipToken;
+        private ListProductFamiliesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListProductFamiliesArgs();
         }
 
         public Builder(ListProductFamiliesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerSubscriptionDetails = defaults.customerSubscriptionDetails;
-    	      this.expand = defaults.expand;
-    	      this.filterableProperties = defaults.filterableProperties;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListProductFamiliesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
-            this.customerSubscriptionDetails = customerSubscriptionDetails;
+            $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            $.filterableProperties = filterableProperties;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListProductFamiliesArgs build() {
-            return new ListProductFamiliesArgs(customerSubscriptionDetails, expand, filterableProperties, skipToken);
+        }
+
+        public ListProductFamiliesArgs build() {
+            $.filterableProperties = Objects.requireNonNull($.filterableProperties, "expected parameter 'filterableProperties' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="availabilityStage", required=true)
-      private final String availabilityStage;
+    private String availabilityStage;
 
     public String availabilityStage() {
         return this.availabilityStage;
@@ -32,7 +32,7 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="disabledReason", required=true)
-      private final String disabledReason;
+    private String disabledReason;
 
     public String disabledReason() {
         return this.disabledReason;
@@ -43,64 +43,59 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="disabledReasonMessage", required=true)
-      private final String disabledReasonMessage;
+    private String disabledReasonMessage;
 
     public String disabledReasonMessage() {
         return this.disabledReasonMessage;
     }
 
-    public AvailabilityInformationResponse(
-        String availabilityStage,
-        String disabledReason,
-        String disabledReasonMessage) {
-        this.availabilityStage = Objects.requireNonNull(availabilityStage, "expected parameter 'availabilityStage' to be non-null");
-        this.disabledReason = Objects.requireNonNull(disabledReason, "expected parameter 'disabledReason' to be non-null");
-        this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage, "expected parameter 'disabledReasonMessage' to be non-null");
-    }
+    private AvailabilityInformationResponse() {}
 
-    private AvailabilityInformationResponse() {
-        this.availabilityStage = null;
-        this.disabledReason = null;
-        this.disabledReasonMessage = null;
+    protected AvailabilityInformationResponse(AvailabilityInformationResponse $) {
+        this.availabilityStage = $.availabilityStage;
+        this.disabledReason = $.disabledReason;
+        this.disabledReasonMessage = $.disabledReasonMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailabilityInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String availabilityStage;
-        private String disabledReason;
-        private String disabledReasonMessage;
+        private AvailabilityInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailabilityInformationResponse();
         }
 
         public Builder(AvailabilityInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityStage = defaults.availabilityStage;
-    	      this.disabledReason = defaults.disabledReason;
-    	      this.disabledReasonMessage = defaults.disabledReasonMessage;
+            $ = new AvailabilityInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityStage(String availabilityStage) {
-            this.availabilityStage = Objects.requireNonNull(availabilityStage);
+            $.availabilityStage = availabilityStage;
             return this;
         }
+
         public Builder disabledReason(String disabledReason) {
-            this.disabledReason = Objects.requireNonNull(disabledReason);
+            $.disabledReason = disabledReason;
             return this;
         }
+
         public Builder disabledReasonMessage(String disabledReasonMessage) {
-            this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
+            $.disabledReasonMessage = disabledReasonMessage;
             return this;
-        }        public AvailabilityInformationResponse build() {
-            return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
+        }
+
+        public AvailabilityInformationResponse build() {
+            $.availabilityStage = Objects.requireNonNull($.availabilityStage, "expected parameter 'availabilityStage' to be non-null");
+            $.disabledReason = Objects.requireNonNull($.disabledReason, "expected parameter 'disabledReason' to be non-null");
+            $.disabledReasonMessage = Objects.requireNonNull($.disabledReasonMessage, "expected parameter 'disabledReasonMessage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="configurationFilters", required=true)
-      private final List<ConfigurationFilters> configurationFilters;
+    private List<ConfigurationFilters> configurationFilters;
 
     public List<ConfigurationFilters> configurationFilters() {
         return this.configurationFilters;
@@ -33,10 +33,10 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customerSubscriptionDetails")
-      private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+    private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
-        return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
+        return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
     /**
@@ -44,67 +44,61 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListConfigurationsArgs(
-        List<ConfigurationFilters> configurationFilters,
-        @Nullable CustomerSubscriptionDetails customerSubscriptionDetails,
-        @Nullable String skipToken) {
-        this.configurationFilters = Objects.requireNonNull(configurationFilters, "expected parameter 'configurationFilters' to be non-null");
-        this.customerSubscriptionDetails = customerSubscriptionDetails;
-        this.skipToken = skipToken;
-    }
+    private ListConfigurationsArgs() {}
 
-    private ListConfigurationsArgs() {
-        this.configurationFilters = List.of();
-        this.customerSubscriptionDetails = null;
-        this.skipToken = null;
+    protected ListConfigurationsArgs(ListConfigurationsArgs $) {
+        this.configurationFilters = $.configurationFilters;
+        this.customerSubscriptionDetails = $.customerSubscriptionDetails;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ConfigurationFilters> configurationFilters;
-        private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
-        private @Nullable String skipToken;
+        private ListConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConfigurationsArgs();
         }
 
         public Builder(ListConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationFilters = defaults.configurationFilters;
-    	      this.customerSubscriptionDetails = defaults.customerSubscriptionDetails;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationFilters(List<ConfigurationFilters> configurationFilters) {
-            this.configurationFilters = Objects.requireNonNull(configurationFilters);
+            $.configurationFilters = configurationFilters;
             return this;
         }
+
         public Builder configurationFilters(ConfigurationFilters... configurationFilters) {
             return configurationFilters(List.of(configurationFilters));
         }
+
         public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
-            this.customerSubscriptionDetails = customerSubscriptionDetails;
+            $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListConfigurationsArgs build() {
-            return new ListConfigurationsArgs(configurationFilters, customerSubscriptionDetails, skipToken);
+        }
+
+        public ListConfigurationsArgs build() {
+            $.configurationFilters = Objects.requireNonNull($.configurationFilters, "expected parameter 'configurationFilters' to be non-null");
+            return $;
         }
     }
+
 }

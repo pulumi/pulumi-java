@@ -22,7 +22,7 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportedValues", required=true)
-      private final List<String> supportedValues;
+    private List<String> supportedValues;
 
     public List<String> supportedValues() {
         return this.supportedValues;
@@ -33,58 +33,56 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FilterablePropertyResponse(
-        List<String> supportedValues,
-        String type) {
-        this.supportedValues = Objects.requireNonNull(supportedValues, "expected parameter 'supportedValues' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FilterablePropertyResponse() {}
 
-    private FilterablePropertyResponse() {
-        this.supportedValues = List.of();
-        this.type = null;
+    protected FilterablePropertyResponse(FilterablePropertyResponse $) {
+        this.supportedValues = $.supportedValues;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterablePropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> supportedValues;
-        private String type;
+        private FilterablePropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterablePropertyResponse();
         }
 
         public Builder(FilterablePropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.supportedValues = defaults.supportedValues;
-    	      this.type = defaults.type;
+            $ = new FilterablePropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder supportedValues(List<String> supportedValues) {
-            this.supportedValues = Objects.requireNonNull(supportedValues);
+            $.supportedValues = supportedValues;
             return this;
         }
+
         public Builder supportedValues(String... supportedValues) {
             return supportedValues(List.of(supportedValues));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FilterablePropertyResponse build() {
-            return new FilterablePropertyResponse(supportedValues, type);
+        }
+
+        public FilterablePropertyResponse build() {
+            $.supportedValues = Objects.requireNonNull($.supportedValues, "expected parameter 'supportedValues' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

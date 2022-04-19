@@ -24,7 +24,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="billingType", required=true)
-      private final String billingType;
+    private String billingType;
 
     public String billingType() {
         return this.billingType;
@@ -35,7 +35,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="chargingType", required=true)
-      private final String chargingType;
+    private String chargingType;
 
     public String chargingType() {
         return this.chargingType;
@@ -46,7 +46,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="multiplier", required=true)
-      private final Double multiplier;
+    private Double multiplier;
 
     public Double multiplier() {
         return this.multiplier;
@@ -57,7 +57,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
@@ -68,7 +68,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="skuId", required=true)
-      private final String skuId;
+    private String skuId;
 
     public String skuId() {
         return this.skuId;
@@ -79,91 +79,80 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="termId", required=true)
-      private final String termId;
+    private String termId;
 
     public String termId() {
         return this.termId;
     }
 
-    public PurchaseMeterDetailsResponse(
-        String billingType,
-        String chargingType,
-        Double multiplier,
-        String productId,
-        String skuId,
-        String termId) {
-        this.billingType = Codegen.stringProp("billingType").arg(billingType).require();
-        this.chargingType = Objects.requireNonNull(chargingType, "expected parameter 'chargingType' to be non-null");
-        this.multiplier = Objects.requireNonNull(multiplier, "expected parameter 'multiplier' to be non-null");
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.skuId = Objects.requireNonNull(skuId, "expected parameter 'skuId' to be non-null");
-        this.termId = Objects.requireNonNull(termId, "expected parameter 'termId' to be non-null");
-    }
+    private PurchaseMeterDetailsResponse() {}
 
-    private PurchaseMeterDetailsResponse() {
-        this.billingType = null;
-        this.chargingType = null;
-        this.multiplier = null;
-        this.productId = null;
-        this.skuId = null;
-        this.termId = null;
+    protected PurchaseMeterDetailsResponse(PurchaseMeterDetailsResponse $) {
+        this.billingType = $.billingType;
+        this.chargingType = $.chargingType;
+        this.multiplier = $.multiplier;
+        this.productId = $.productId;
+        this.skuId = $.skuId;
+        this.termId = $.termId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PurchaseMeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingType;
-        private String chargingType;
-        private Double multiplier;
-        private String productId;
-        private String skuId;
-        private String termId;
+        private PurchaseMeterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PurchaseMeterDetailsResponse();
         }
 
         public Builder(PurchaseMeterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingType = defaults.billingType;
-    	      this.chargingType = defaults.chargingType;
-    	      this.multiplier = defaults.multiplier;
-    	      this.productId = defaults.productId;
-    	      this.skuId = defaults.skuId;
-    	      this.termId = defaults.termId;
+            $ = new PurchaseMeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingType(String billingType) {
-            this.billingType = Objects.requireNonNull(billingType);
+            $.billingType = billingType;
             return this;
         }
+
         public Builder chargingType(String chargingType) {
-            this.chargingType = Objects.requireNonNull(chargingType);
+            $.chargingType = chargingType;
             return this;
         }
+
         public Builder multiplier(Double multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            $.multiplier = multiplier;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder skuId(String skuId) {
-            this.skuId = Objects.requireNonNull(skuId);
+            $.skuId = skuId;
             return this;
         }
+
         public Builder termId(String termId) {
-            this.termId = Objects.requireNonNull(termId);
+            $.termId = termId;
             return this;
-        }        public PurchaseMeterDetailsResponse build() {
-            return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
+        }
+
+        public PurchaseMeterDetailsResponse build() {
+            $.billingType = Codegen.stringProp("billingType").arg($.billingType).require();
+            $.chargingType = Objects.requireNonNull($.chargingType, "expected parameter 'chargingType' to be non-null");
+            $.multiplier = Objects.requireNonNull($.multiplier, "expected parameter 'multiplier' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.skuId = Objects.requireNonNull($.skuId, "expected parameter 'skuId' to be non-null");
+            $.termId = Objects.requireNonNull($.termId, "expected parameter 'termId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributes", required=true)
-      private final List<String> attributes;
+    private List<String> attributes;
 
     public List<String> attributes() {
         return this.attributes;
@@ -34,7 +34,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="descriptionType", required=true)
-      private final String descriptionType;
+    private String descriptionType;
 
     public String descriptionType() {
         return this.descriptionType;
@@ -45,7 +45,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keywords", required=true)
-      private final List<String> keywords;
+    private List<String> keywords;
 
     public List<String> keywords() {
         return this.keywords;
@@ -56,7 +56,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="links", required=true)
-      private final List<LinkResponse> links;
+    private List<LinkResponse> links;
 
     public List<LinkResponse> links() {
         return this.links;
@@ -67,7 +67,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="longDescription", required=true)
-      private final String longDescription;
+    private String longDescription;
 
     public String longDescription() {
         return this.longDescription;
@@ -78,100 +78,92 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shortDescription", required=true)
-      private final String shortDescription;
+    private String shortDescription;
 
     public String shortDescription() {
         return this.shortDescription;
     }
 
-    public DescriptionResponse(
-        List<String> attributes,
-        String descriptionType,
-        List<String> keywords,
-        List<LinkResponse> links,
-        String longDescription,
-        String shortDescription) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.descriptionType = Objects.requireNonNull(descriptionType, "expected parameter 'descriptionType' to be non-null");
-        this.keywords = Objects.requireNonNull(keywords, "expected parameter 'keywords' to be non-null");
-        this.links = Objects.requireNonNull(links, "expected parameter 'links' to be non-null");
-        this.longDescription = Objects.requireNonNull(longDescription, "expected parameter 'longDescription' to be non-null");
-        this.shortDescription = Objects.requireNonNull(shortDescription, "expected parameter 'shortDescription' to be non-null");
-    }
+    private DescriptionResponse() {}
 
-    private DescriptionResponse() {
-        this.attributes = List.of();
-        this.descriptionType = null;
-        this.keywords = List.of();
-        this.links = List.of();
-        this.longDescription = null;
-        this.shortDescription = null;
+    protected DescriptionResponse(DescriptionResponse $) {
+        this.attributes = $.attributes;
+        this.descriptionType = $.descriptionType;
+        this.keywords = $.keywords;
+        this.links = $.links;
+        this.longDescription = $.longDescription;
+        this.shortDescription = $.shortDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> attributes;
-        private String descriptionType;
-        private List<String> keywords;
-        private List<LinkResponse> links;
-        private String longDescription;
-        private String shortDescription;
+        private DescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DescriptionResponse();
         }
 
         public Builder(DescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.descriptionType = defaults.descriptionType;
-    	      this.keywords = defaults.keywords;
-    	      this.links = defaults.links;
-    	      this.longDescription = defaults.longDescription;
-    	      this.shortDescription = defaults.shortDescription;
+            $ = new DescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(List<String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder descriptionType(String descriptionType) {
-            this.descriptionType = Objects.requireNonNull(descriptionType);
+            $.descriptionType = descriptionType;
             return this;
         }
+
         public Builder keywords(List<String> keywords) {
-            this.keywords = Objects.requireNonNull(keywords);
+            $.keywords = keywords;
             return this;
         }
+
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
+
         public Builder links(List<LinkResponse> links) {
-            this.links = Objects.requireNonNull(links);
+            $.links = links;
             return this;
         }
+
         public Builder links(LinkResponse... links) {
             return links(List.of(links));
         }
+
         public Builder longDescription(String longDescription) {
-            this.longDescription = Objects.requireNonNull(longDescription);
+            $.longDescription = longDescription;
             return this;
         }
+
         public Builder shortDescription(String shortDescription) {
-            this.shortDescription = Objects.requireNonNull(shortDescription);
+            $.shortDescription = shortDescription;
             return this;
-        }        public DescriptionResponse build() {
-            return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
+        }
+
+        public DescriptionResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.descriptionType = Objects.requireNonNull($.descriptionType, "expected parameter 'descriptionType' to be non-null");
+            $.keywords = Objects.requireNonNull($.keywords, "expected parameter 'keywords' to be non-null");
+            $.links = Objects.requireNonNull($.links, "expected parameter 'links' to be non-null");
+            $.longDescription = Objects.requireNonNull($.longDescription, "expected parameter 'longDescription' to be non-null");
+            $.shortDescription = Objects.requireNonNull($.shortDescription, "expected parameter 'shortDescription' to be non-null");
+            return $;
         }
     }
+
 }

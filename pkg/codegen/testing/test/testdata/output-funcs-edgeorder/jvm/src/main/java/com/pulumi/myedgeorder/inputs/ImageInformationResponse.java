@@ -21,7 +21,7 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imageType", required=true)
-      private final String imageType;
+    private String imageType;
 
     public String imageType() {
         return this.imageType;
@@ -32,55 +32,52 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imageUrl", required=true)
-      private final String imageUrl;
+    private String imageUrl;
 
     public String imageUrl() {
         return this.imageUrl;
     }
 
-    public ImageInformationResponse(
-        String imageType,
-        String imageUrl) {
-        this.imageType = Objects.requireNonNull(imageType, "expected parameter 'imageType' to be non-null");
-        this.imageUrl = Objects.requireNonNull(imageUrl, "expected parameter 'imageUrl' to be non-null");
-    }
+    private ImageInformationResponse() {}
 
-    private ImageInformationResponse() {
-        this.imageType = null;
-        this.imageUrl = null;
+    protected ImageInformationResponse(ImageInformationResponse $) {
+        this.imageType = $.imageType;
+        this.imageUrl = $.imageUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageType;
-        private String imageUrl;
+        private ImageInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageInformationResponse();
         }
 
         public Builder(ImageInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageType = defaults.imageType;
-    	      this.imageUrl = defaults.imageUrl;
+            $ = new ImageInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            $.imageType = imageType;
             return this;
         }
+
         public Builder imageUrl(String imageUrl) {
-            this.imageUrl = Objects.requireNonNull(imageUrl);
+            $.imageUrl = imageUrl;
             return this;
-        }        public ImageInformationResponse build() {
-            return new ImageInformationResponse(imageType, imageUrl);
+        }
+
+        public ImageInformationResponse build() {
+            $.imageType = Objects.requireNonNull($.imageType, "expected parameter 'imageType' to be non-null");
+            $.imageUrl = Objects.requireNonNull($.imageUrl, "expected parameter 'imageUrl' to be non-null");
+            return $;
         }
     }
+
 }

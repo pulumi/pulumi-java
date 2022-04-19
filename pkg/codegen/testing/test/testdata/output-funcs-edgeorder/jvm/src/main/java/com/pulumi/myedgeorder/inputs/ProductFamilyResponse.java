@@ -29,7 +29,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="availabilityInformation", required=true)
-      private final AvailabilityInformationResponse availabilityInformation;
+    private AvailabilityInformationResponse availabilityInformation;
 
     public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
@@ -40,7 +40,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="costInformation", required=true)
-      private final CostInformationResponse costInformation;
+    private CostInformationResponse costInformation;
 
     public CostInformationResponse costInformation() {
         return this.costInformation;
@@ -51,7 +51,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final DescriptionResponse description;
+    private DescriptionResponse description;
 
     public DescriptionResponse description() {
         return this.description;
@@ -62,7 +62,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -73,7 +73,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filterableProperties", required=true)
-      private final List<FilterablePropertyResponse> filterableProperties;
+    private List<FilterablePropertyResponse> filterableProperties;
 
     public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
@@ -84,7 +84,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hierarchyInformation", required=true)
-      private final HierarchyInformationResponse hierarchyInformation;
+    private HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
@@ -95,7 +95,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="imageInformation", required=true)
-      private final List<ImageInformationResponse> imageInformation;
+    private List<ImageInformationResponse> imageInformation;
 
     public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
@@ -106,118 +106,106 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="productLines", required=true)
-      private final List<ProductLineResponse> productLines;
+    private List<ProductLineResponse> productLines;
 
     public List<ProductLineResponse> productLines() {
         return this.productLines;
     }
 
-    public ProductFamilyResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<ProductLineResponse> productLines) {
-        this.availabilityInformation = Objects.requireNonNull(availabilityInformation, "expected parameter 'availabilityInformation' to be non-null");
-        this.costInformation = Objects.requireNonNull(costInformation, "expected parameter 'costInformation' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.filterableProperties = Objects.requireNonNull(filterableProperties, "expected parameter 'filterableProperties' to be non-null");
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
-        this.imageInformation = Objects.requireNonNull(imageInformation, "expected parameter 'imageInformation' to be non-null");
-        this.productLines = Objects.requireNonNull(productLines, "expected parameter 'productLines' to be non-null");
-    }
+    private ProductFamilyResponse() {}
 
-    private ProductFamilyResponse() {
-        this.availabilityInformation = null;
-        this.costInformation = null;
-        this.description = null;
-        this.displayName = null;
-        this.filterableProperties = List.of();
-        this.hierarchyInformation = null;
-        this.imageInformation = List.of();
-        this.productLines = List.of();
+    protected ProductFamilyResponse(ProductFamilyResponse $) {
+        this.availabilityInformation = $.availabilityInformation;
+        this.costInformation = $.costInformation;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.filterableProperties = $.filterableProperties;
+        this.hierarchyInformation = $.hierarchyInformation;
+        this.imageInformation = $.imageInformation;
+        this.productLines = $.productLines;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductFamilyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AvailabilityInformationResponse availabilityInformation;
-        private CostInformationResponse costInformation;
-        private DescriptionResponse description;
-        private String displayName;
-        private List<FilterablePropertyResponse> filterableProperties;
-        private HierarchyInformationResponse hierarchyInformation;
-        private List<ImageInformationResponse> imageInformation;
-        private List<ProductLineResponse> productLines;
+        private ProductFamilyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductFamilyResponse();
         }
 
         public Builder(ProductFamilyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityInformation = defaults.availabilityInformation;
-    	      this.costInformation = defaults.costInformation;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.filterableProperties = defaults.filterableProperties;
-    	      this.hierarchyInformation = defaults.hierarchyInformation;
-    	      this.imageInformation = defaults.imageInformation;
-    	      this.productLines = defaults.productLines;
+            $ = new ProductFamilyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
-            this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
+            $.availabilityInformation = availabilityInformation;
             return this;
         }
+
         public Builder costInformation(CostInformationResponse costInformation) {
-            this.costInformation = Objects.requireNonNull(costInformation);
+            $.costInformation = costInformation;
             return this;
         }
+
         public Builder description(DescriptionResponse description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            $.filterableProperties = filterableProperties;
             return this;
         }
+
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
             return filterableProperties(List.of(filterableProperties));
         }
+
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            $.hierarchyInformation = hierarchyInformation;
             return this;
         }
+
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
-            this.imageInformation = Objects.requireNonNull(imageInformation);
+            $.imageInformation = imageInformation;
             return this;
         }
+
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
+
         public Builder productLines(List<ProductLineResponse> productLines) {
-            this.productLines = Objects.requireNonNull(productLines);
+            $.productLines = productLines;
             return this;
         }
+
         public Builder productLines(ProductLineResponse... productLines) {
             return productLines(List.of(productLines));
-        }        public ProductFamilyResponse build() {
-            return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines);
+        }
+
+        public ProductFamilyResponse build() {
+            $.availabilityInformation = Objects.requireNonNull($.availabilityInformation, "expected parameter 'availabilityInformation' to be non-null");
+            $.costInformation = Objects.requireNonNull($.costInformation, "expected parameter 'costInformation' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.filterableProperties = Objects.requireNonNull($.filterableProperties, "expected parameter 'filterableProperties' to be non-null");
+            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            $.imageInformation = Objects.requireNonNull($.imageInformation, "expected parameter 'imageInformation' to be non-null");
+            $.productLines = Objects.requireNonNull($.productLines, "expected parameter 'productLines' to be non-null");
+            return $;
         }
     }
+
 }

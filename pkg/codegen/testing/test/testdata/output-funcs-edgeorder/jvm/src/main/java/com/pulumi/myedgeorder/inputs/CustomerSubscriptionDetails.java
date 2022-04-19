@@ -25,10 +25,10 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="locationPlacementId")
-      private final @Nullable String locationPlacementId;
+    private @Nullable String locationPlacementId;
 
     public Optional<String> locationPlacementId() {
-        return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
+        return Optional.ofNullable(this.locationPlacementId);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="quotaId", required=true)
-      private final String quotaId;
+    private String quotaId;
 
     public String quotaId() {
         return this.quotaId;
@@ -47,67 +47,61 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="registeredFeatures")
-      private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
+    private @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 
-    public List<CustomerSubscriptionRegisteredFeatures> registeredFeatures() {
-        return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
+    public Optional<List<CustomerSubscriptionRegisteredFeatures>> registeredFeatures() {
+        return Optional.ofNullable(this.registeredFeatures);
     }
 
-    public CustomerSubscriptionDetails(
-        @Nullable String locationPlacementId,
-        String quotaId,
-        @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures) {
-        this.locationPlacementId = locationPlacementId;
-        this.quotaId = Objects.requireNonNull(quotaId, "expected parameter 'quotaId' to be non-null");
-        this.registeredFeatures = registeredFeatures;
-    }
+    private CustomerSubscriptionDetails() {}
 
-    private CustomerSubscriptionDetails() {
-        this.locationPlacementId = null;
-        this.quotaId = null;
-        this.registeredFeatures = List.of();
+    protected CustomerSubscriptionDetails(CustomerSubscriptionDetails $) {
+        this.locationPlacementId = $.locationPlacementId;
+        this.quotaId = $.quotaId;
+        this.registeredFeatures = $.registeredFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerSubscriptionDetails defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String locationPlacementId;
-        private String quotaId;
-        private @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
+        private CustomerSubscriptionDetails $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerSubscriptionDetails();
         }
 
         public Builder(CustomerSubscriptionDetails defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationPlacementId = defaults.locationPlacementId;
-    	      this.quotaId = defaults.quotaId;
-    	      this.registeredFeatures = defaults.registeredFeatures;
+            $ = new CustomerSubscriptionDetails(Objects.requireNonNull(defaults));
         }
 
         public Builder locationPlacementId(@Nullable String locationPlacementId) {
-            this.locationPlacementId = locationPlacementId;
+            $.locationPlacementId = locationPlacementId;
             return this;
         }
+
         public Builder quotaId(String quotaId) {
-            this.quotaId = Objects.requireNonNull(quotaId);
+            $.quotaId = quotaId;
             return this;
         }
+
         public Builder registeredFeatures(@Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures) {
-            this.registeredFeatures = registeredFeatures;
+            $.registeredFeatures = registeredFeatures;
             return this;
         }
+
         public Builder registeredFeatures(CustomerSubscriptionRegisteredFeatures... registeredFeatures) {
             return registeredFeatures(List.of(registeredFeatures));
-        }        public CustomerSubscriptionDetails build() {
-            return new CustomerSubscriptionDetails(locationPlacementId, quotaId, registeredFeatures);
+        }
+
+        public CustomerSubscriptionDetails build() {
+            $.quotaId = Objects.requireNonNull($.quotaId, "expected parameter 'quotaId' to be non-null");
+            return $;
         }
     }
+
 }
