@@ -1,8 +1,6 @@
 package jvm
 
 import (
-	"github.com/pulumi/pulumi/pkg/v3/codegen"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -43,22 +41,24 @@ func directoryExists(dir string) bool {
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 
-func TestGenerateProgram(t *testing.T) {
-	t.Parallel()
-
-	test.TestProgramCodegen(t,
-		test.ProgramCodegenOptions{
-			Language:   "jvm",
-			Extension:  "java",
-			OutputFile: "App.java",
-			Check: func(t *testing.T, path string, dependencies codegen.StringSet) {
-				// TODO: implement the check properly
-				// Check(t, path, dependencies, "../../../../../../../sdk")
-			},
-			GenProgram: GenerateProgram,
-			TestCases:  test.PulumiPulumiProgramTests,
-		})
-}
+// This test uses TestProgramCodegen which was means to work from main pulumi/pulumi
+// TODO: make it work for java programs
+//func TestGenerateProgram(t *testing.T) {
+//	t.Parallel()
+//
+//	test.TestProgramCodegen(t,
+//		test.ProgramCodegenOptions{
+//			Language:   "jvm",
+//			Extension:  "java",
+//			OutputFile: "App.java",
+//			Check: func(t *testing.T, path string, dependencies codegen.StringSet) {
+//				// TODO: implement the check properly
+//				// Check(t, path, dependencies, "../../../../../../../sdk")
+//			},
+//			GenProgram: GenerateProgram,
+//			TestCases:  test.PulumiPulumiProgramTests,
+//		})
+//}
 
 func TestGenerateJavaProgram(t *testing.T) {
 	pclFiles := pclTestFilePaths(testdataPath)
