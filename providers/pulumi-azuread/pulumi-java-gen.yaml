@@ -1,0 +1,8 @@
+artifactID: pulumi-azuread
+version: 5.19.0
+schema: https://raw.githubusercontent.com/pulumi/pulumi-azuread/v5.19.0/provider/cmd/pulumi-resource-azuread/schema.json
+out: sdk/java
+versionFile: src/main/resources/com/pulumi/azuread/version.txt
+pluginFile: src/main/resources/com/pulumi/azuread/plugin.json
+overlays:
+  - "../build-templates"
