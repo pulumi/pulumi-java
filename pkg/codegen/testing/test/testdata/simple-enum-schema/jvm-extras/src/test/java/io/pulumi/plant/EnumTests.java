@@ -1,8 +1,8 @@
-package io.pulumi.plant;
+package com.pulumi.plant;
 
 import org.junit.jupiter.api.Test;
 
-import io.pulumi.plant.enums.*;
+import com.pulumi.plant.enums.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

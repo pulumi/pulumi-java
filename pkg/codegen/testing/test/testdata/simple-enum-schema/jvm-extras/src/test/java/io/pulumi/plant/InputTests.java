@@ -1,18 +1,18 @@
-package io.pulumi.plant;
+package com.pulumi.plant;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.Either;
-import io.pulumi.plant.inputs.*;
-import io.pulumi.plant.enums.*;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.Internal;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.Either;
+import com.pulumi.plant.inputs.*;
+import com.pulumi.plant.enums.*;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.Internal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
