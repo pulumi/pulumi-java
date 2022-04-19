@@ -1614,8 +1614,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
             standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
 
-            Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
-                    new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
+            Function<RuntimeException, RuntimeException> startErrorSupplier =
+                    e -> new IllegalArgumentException(
+                            "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e
+                    );
 
             try {
                 var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
