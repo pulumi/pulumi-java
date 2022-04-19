@@ -9,7 +9,6 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"math/rand"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -135,23 +134,8 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 
 	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
 
-	// Make a connection to the real engine that we will log messages to.
-	conn, err := grpc.Dial(
-		host.engineAddress,
-		grpc.WithInsecure(),
-		rpcutil.GrpcChannelOptions(),
-	)
-	if err != nil {
-		return nil, errors.Wrapf(err, "language host could not make connection to engine")
-	}
-
-	// Make a client around that connection.
-	// We can then make our own server that will act as a
-	// monitor for the SDK and forward to the real monitor.
-	engineClient := pulumirpc.NewEngineClient(conn)
-
 	// now, introspect the user project to see which pulumi resource packages it references.
-	pulumiPackages, err := host.DeterminePulumiPackages(ctx, engineClient)
+	pulumiPackages, err := host.determinePulumiPackages(ctx)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host could not determine Pulumi packages")
 	}
@@ -183,15 +167,15 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
 }
 
-func (host *jvmLanguageHost) DeterminePulumiPackages(
-	ctx context.Context, engineClient pulumirpc.EngineClient) ([]plugin.PulumiPluginJSON, error) {
+func (host *jvmLanguageHost) determinePulumiPackages(
+	ctx context.Context) ([]plugin.PulumiPluginJSON, error) {
 
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.cmd
 	args := host.exec.pluginArgs
-	output, err := host.RunJvmCommand(ctx, engineClient, cmd, args, false /*logToUser*/)
+	output, err := host.runJvmCommand(ctx, cmd, args)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
 	}
@@ -210,8 +194,8 @@ func (host *jvmLanguageHost) DeterminePulumiPackages(
 	return plugins, nil
 }
 
-func (host *jvmLanguageHost) RunJvmCommand(
-	ctx context.Context, engineClient pulumirpc.EngineClient, name string, args []string, logToUser bool) (string, error) {
+func (host *jvmLanguageHost) runJvmCommand(
+	ctx context.Context, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -221,28 +205,9 @@ func (host *jvmLanguageHost) RunJvmCommand(
 	// Buffer the writes we see from build tool, from its stdout and stderr streams.
 	// We will display these ephemerally to the user. If the build does fail though, we will dump
 	// messages back to our own stdout/stderr, so they get picked up and displayed to the user.
-	streamID := rand.Int31() //nolint:gosec
 
-	infoBuffer := &bytes.Buffer{}
-	errorBuffer := &bytes.Buffer{}
-
-	infoWriter := &logWriter{
-		ctx:          ctx,
-		logToUser:    logToUser,
-		engineClient: engineClient,
-		streamID:     streamID,
-		buffer:       infoBuffer,
-		severity:     pulumirpc.LogSeverity_INFO,
-	}
-
-	errorWriter := &logWriter{
-		ctx:          ctx,
-		logToUser:    logToUser,
-		engineClient: engineClient,
-		streamID:     streamID,
-		buffer:       errorBuffer,
-		severity:     pulumirpc.LogSeverity_ERROR,
-	}
+	infoWriter := &bytes.Buffer{}
+	errorWriter := &bytes.Buffer{}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
@@ -250,57 +215,20 @@ func (host *jvmLanguageHost) RunJvmCommand(
 	cmd.Stdout = infoWriter
 	cmd.Stderr = errorWriter
 
-	_, err := infoWriter.LogToUser(fmt.Sprintf("running '%v %v'", name, commandStr))
-	if err != nil {
-		return "", err
-	}
-
 	if err := runCommand(cmd); err != nil {
-		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
-		// so they get displayed to the user.
-		os.Stdout.Write(infoBuffer.Bytes())
-		os.Stderr.Write(errorBuffer.Bytes())
+		// The command failed. Dump any data we collected to
+		// the actual stdout/stderr streams, so they get
+		// displayed to the user.
+		os.Stdout.Write(infoWriter.Bytes())
+		os.Stderr.Write(errorWriter.Bytes())
 		return "", err
 	}
 
-	_, err = infoWriter.LogToUser(fmt.Sprintf("'%v %v' completed successfully", name, commandStr))
-	return infoBuffer.String(), err
-}
-
-type logWriter struct {
-	ctx          context.Context
-	logToUser    bool
-	engineClient pulumirpc.EngineClient
-	streamID     int32
-	severity     pulumirpc.LogSeverity
-	buffer       *bytes.Buffer
-}
-
-func (w *logWriter) Write(p []byte) (n int, err error) {
-	n, err = w.buffer.Write(p)
-	if err != nil {
-		return
+	if logging.V(5) {
+		logging.V(5).Infof("'%v %v' completed successfully\n", name, commandStr)
 	}
 
-	return w.LogToUser(string(p))
-}
-
-func (w *logWriter) LogToUser(val string) (int, error) {
-	if w.logToUser {
-		_, err := w.engineClient.Log(w.ctx, &pulumirpc.LogRequest{
-			Message:   strings.ToValidUTF8(val, "�"),
-			Urn:       "",
-			Ephemeral: true,
-			StreamId:  w.streamID,
-			Severity:  w.severity,
-		})
-
-		if err != nil {
-			return 0, err
-		}
-	}
-
-	return len(val), nil
+	return infoWriter.String(), nil
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
@@ -330,10 +258,21 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+
+	var stdoutBuf bytes.Buffer
+	var stderrBuf bytes.Buffer
+
+	cmd.Stdout = &stdoutBuf
+	cmd.Stderr = &stderrBuf
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
 	if err := runCommand(cmd); err != nil {
+
+		// The command failed. Dump any data we collected to
+		// the actual stdout/stderr streams, so they get
+		// displayed to the user.
+		os.Stdout.Write(stdoutBuf.Bytes())
+		os.Stderr.Write(stderrBuf.Bytes())
+
 		errResult = err.Error()
 	}
 
