@@ -216,8 +216,9 @@ func (host *jvmLanguageHost) runJvmCommand(
 	cmd.Stderr = errorWriter
 
 	if err := runCommand(cmd); err != nil {
-		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
-		// so they get displayed to the user.
+		// The command failed. Dump any data we collected to
+		// the actual stdout/stderr streams, so they get
+		// displayed to the user.
 		os.Stdout.Write(infoWriter.Bytes())
 		os.Stderr.Write(errorWriter.Bytes())
 		return "", err
@@ -257,10 +258,21 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+
+	var stdoutBuf bytes.Buffer
+	var stderrBuf bytes.Buffer
+
+	cmd.Stdout = &stdoutBuf
+	cmd.Stderr = &stderrBuf
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
 	if err := runCommand(cmd); err != nil {
+
+		// The command failed. Dump any data we collected to
+		// the actual stdout/stderr streams, so they get
+		// displayed to the user.
+		os.Stdout.Write(stdoutBuf.Bytes())
+		os.Stderr.Write(stderrBuf.Bytes())
+
 		errResult = err.Error()
 	}
 
