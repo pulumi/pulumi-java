@@ -35,8 +35,8 @@ public class Config {
     private final DeploymentImpl.Config internalConfig;
 
     /**
-     * @see com.pulumi.context.StackContext#config()
-     * @see com.pulumi.context.StackContext#config(String)
+     * @see com.pulumi.Context#config()
+     * @see com.pulumi.Context#config(String)
      */
     @InternalUse
     public Config(DeploymentImpl.Config internalConfig, String name) {
@@ -51,9 +51,9 @@ public class Config {
 
     /**
      * For internal use by providers.
-     * @see com.pulumi.context.StackContext#config()
-     * @see com.pulumi.context.StackContext#config(String)
-     * @deprecated will be removed in the future, use {@link com.pulumi.context.StackContext#config(String)}
+     * @see com.pulumi.Context#config()
+     * @see com.pulumi.Context#config(String)
+     * @deprecated will be removed in the future, use {@link com.pulumi.Context#config(String)}
      */
     // TODO: remove after refactoring the deployment
     @InternalUse
