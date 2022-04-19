@@ -1,14 +1,14 @@
-package io.pulumi.example;
+package com.pulumi.example;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import io.pulumi.Log;
-import io.pulumi.example.inputs.*;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
+import com.pulumi.Log;
+import com.pulumi.example.inputs.*;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
