@@ -16,7 +16,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
     public static final RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs Empty = new RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs();
 
     /**
-     * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+     * A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
      * 
      */
     @Import(name="allEffective")

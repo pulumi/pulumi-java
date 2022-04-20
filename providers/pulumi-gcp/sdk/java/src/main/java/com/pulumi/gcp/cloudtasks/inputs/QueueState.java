@@ -68,9 +68,9 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Rate limits for task dispatches.
-     * The queue's actual dispatch rate is the result of:
+     * The queue&#39;s actual dispatch rate is the result of:
      * * Number of tasks in the queue
-     * * User-specified throttling: rateLimits, retryConfig, and the queue's state.
+     * * User-specified throttling: rateLimits, retryConfig, and the queue&#39;s state.
      * * System throttling due to 429 (Too Many Requests) or 503 (Service
      *   Unavailable) responses from the worker, high error rates, or to
      *   smooth sudden large traffic spikes.

@@ -50,7 +50,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:pubsub/liteSubscription:LiteSubscription")
 public class LiteSubscription extends com.pulumi.resources.CustomResource {
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * Structure is documented below.
      * 
      */
@@ -58,7 +58,7 @@ public class LiteSubscription extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ LiteSubscriptionDeliveryConfig> deliveryConfig;
 
     /**
-     * @return The settings for this subscription's message delivery.
+     * @return The settings for this subscription&#39;s message delivery.
      * Structure is documented below.
      * 
      */

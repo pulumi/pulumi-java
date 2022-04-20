@@ -23,9 +23,9 @@ import javax.annotation.Nullable;
  * service. It consists of a service-level indicator (SLI), a performance
  * goal, and a period over which the objective is to be evaluated against
  * that goal. The SLO can use SLIs defined in a number of different manners.
- * Typical SLOs might include "99% of requests in each rolling week have
- * latency below 200 milliseconds" or "99.5% of requests in each calendar
- * month return successfully."
+ * Typical SLOs might include &#34;99% of requests in each rolling week have
+ * latency below 200 milliseconds&#34; or &#34;99.5% of requests in each calendar
+ * month return successfully.&#34;
  * 
  * To get more information about Slo, see:
  * 
@@ -50,7 +50,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
     /**
      * Basic Service-Level Indicator (SLI) on a well-known service type.
      * Performance will be computed on the basis of pre-defined metrics.
-     * SLIs are used to measure and calculate the quality of the Service's
+     * SLIs are used to measure and calculate the quality of the Service&#39;s
      * performance with respect to a single aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`
@@ -63,7 +63,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
     /**
      * @return Basic Service-Level Indicator (SLI) on a well-known service type.
      * Performance will be computed on the basis of pre-defined metrics.
-     * SLIs are used to measure and calculate the quality of the Service's
+     * SLIs are used to measure and calculate the quality of the Service&#39;s
      * performance with respect to a single aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`
@@ -74,8 +74,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
         return this.basicSli;
     }
     /**
-     * A calendar period, semantically "since the start of the current
-     * <calendarPeriod>".
+     * A calendar period, semantically &#34;since the start of the current
+     * &lt;calendarPeriod&gt;&#34;.
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
@@ -83,8 +83,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> calendarPeriod;
 
     /**
-     * @return A calendar period, semantically "since the start of the current
-     * <calendarPeriod>".
+     * @return A calendar period, semantically &#34;since the start of the current
+     * &lt;calendarPeriod&gt;&#34;.
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
@@ -107,7 +107,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
     }
     /**
      * The fraction of service that must be good in order for this objective
-     * to be met. 0 < goal <= 0.999
+     * to be met. 0 &lt; goal &lt;= 0.999
      * 
      */
     @Export(name="goal", type=Double.class, parameters={})
@@ -115,7 +115,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The fraction of service that must be good in order for this objective
-     * to be met. 0 < goal <= 0.999
+     * to be met. 0 &lt; goal &lt;= 0.999
      * 
      */
     public Output<Double> goal() {
@@ -157,7 +157,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * A request-based SLI defines a SLI for which atomic units of
      * service are counted directly.
      * A SLI describes a good service.
-     * It is used to measure and calculate the quality of the Service's
+     * It is used to measure and calculate the quality of the Service&#39;s
      * performance with respect to a single aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`
@@ -171,7 +171,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * @return A request-based SLI defines a SLI for which atomic units of
      * service are counted directly.
      * A SLI describes a good service.
-     * It is used to measure and calculate the quality of the Service's
+     * It is used to measure and calculate the quality of the Service&#39;s
      * performance with respect to a single aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`
@@ -182,7 +182,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
         return this.requestBasedSli;
     }
     /**
-     * A rolling time period, semantically "in the past X days".
+     * A rolling time period, semantically &#34;in the past X days&#34;.
      * Must be between 1 to 30 days, inclusive.
      * 
      */
@@ -190,7 +190,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Integer> rollingPeriodDays;
 
     /**
-     * @return A rolling time period, semantically "in the past X days".
+     * @return A rolling time period, semantically &#34;in the past X days&#34;.
      * Must be between 1 to 30 days, inclusive.
      * 
      */
@@ -230,7 +230,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * good_service is defined based off the count of these time windows
      * for which the provided service was of good quality.
      * A SLI describes a good service. It is used to measure and calculate
-     * the quality of the Service's performance with respect to a single
+     * the quality of the Service&#39;s performance with respect to a single
      * aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`
@@ -245,7 +245,7 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * good_service is defined based off the count of these time windows
      * for which the provided service was of good quality.
      * A SLI describes a good service. It is used to measure and calculate
-     * the quality of the Service's performance with respect to a single
+     * the quality of the Service&#39;s performance with respect to a single
      * aspect of service quality.
      * Exactly one of the following must be set:
      * `basic_sli`, `request_based_sli`, `windows_based_sli`

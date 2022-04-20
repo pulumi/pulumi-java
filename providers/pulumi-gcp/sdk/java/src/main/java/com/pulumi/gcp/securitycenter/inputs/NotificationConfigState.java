@@ -40,7 +40,7 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
 
     /**
      * The resource name of this notification config, in the format
-     * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
+     * &#39;organizations/{{organization}}/notificationConfigs/{{config_id}}&#39;.
      * 
      */
     @Import(name="name")
@@ -64,7 +64,7 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
 
     /**
      * The Pub/Sub topic to send notifications to. Its format is
-     * "projects/[project_id]/topics/[topic]".
+     * &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     @Import(name="pubsubTopic")
@@ -75,7 +75,7 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     @Import(name="serviceAccount")

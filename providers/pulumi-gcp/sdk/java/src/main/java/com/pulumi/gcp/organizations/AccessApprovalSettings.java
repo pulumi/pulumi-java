@@ -77,14 +77,14 @@ public class AccessApprovalSettings extends com.pulumi.resources.CustomResource 
         return this.enrolledServices;
     }
     /**
-     * The resource name of the settings. Format is "organizations/{organization_id}/accessApprovalSettings"
+     * The resource name of the settings. Format is &#34;organizations/{organization_id}/accessApprovalSettings&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the settings. Format is "organizations/{organization_id}/accessApprovalSettings"
+     * @return The resource name of the settings. Format is &#34;organizations/{organization_id}/accessApprovalSettings&#34;
      * 
      */
     public Output<String> name() {

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class RuntimeSoftwareConfig {
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we'll automatically choose from official GPU drivers.
+     * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     private final @Nullable String customGpuDriverPath;
@@ -75,7 +75,7 @@ public final class RuntimeSoftwareConfig {
 
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we'll automatically choose from official GPU drivers.
+     * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
     */
     public Optional<String> customGpuDriverPath() {

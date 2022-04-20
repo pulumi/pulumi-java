@@ -15,7 +15,7 @@ public final class SubscriptionDeadLetterPolicy {
     /**
      * The name of the topic to which dead letter messages should be published.
      * Format is `projects/{project}/topics/{topic}`.
-     * The Cloud Pub/Sub service account associated with the enclosing subscription's
+     * The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
      * parent project (i.e.,
      * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
      * permission to Publish() to this topic.
@@ -49,7 +49,7 @@ public final class SubscriptionDeadLetterPolicy {
     /**
      * The name of the topic to which dead letter messages should be published.
      * Format is `projects/{project}/topics/{topic}`.
-     * The Cloud Pub/Sub service account associated with the enclosing subscription's
+     * The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
      * parent project (i.e.,
      * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
      * permission to Publish() to this topic.

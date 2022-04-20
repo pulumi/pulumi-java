@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * A `CryptoKey` represents a logical key that can be used for cryptographic operations.
  * 
- * > **Note:** CryptoKeys cannot be deleted from Google Cloud Platform.
+ * &gt; **Note:** CryptoKeys cannot be deleted from Google Cloud Platform.
  * Destroying a provider-managed CryptoKey will remove it from state
  * and delete all CryptoKeyVersions, rendering the key unusable, but *will
  * not delete the resource from the project.* When the provider destroys these keys,
@@ -82,7 +82,7 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
     }
     /**
      * The KeyRing that this key belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     @Export(name="keyRing", type=String.class, parameters={})
@@ -90,7 +90,7 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The KeyRing that this key belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     public Output<String> keyRing() {

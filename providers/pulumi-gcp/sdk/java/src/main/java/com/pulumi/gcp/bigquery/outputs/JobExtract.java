@@ -35,7 +35,7 @@ public final class JobExtract {
     private final List<String> destinationUris;
     /**
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
-     * Default is ','
+     * Default is &#39;,&#39;
      * 
      */
     private final @Nullable String fieldDelimiter;
@@ -108,7 +108,7 @@ public final class JobExtract {
     }
     /**
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
-     * Default is ','
+     * Default is &#39;,&#39;
      * 
     */
     public Optional<String> fieldDelimiter() {

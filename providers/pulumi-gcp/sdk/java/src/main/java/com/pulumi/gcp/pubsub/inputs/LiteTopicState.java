@@ -30,7 +30,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * Structure is documented below.
      * 
      */
@@ -65,7 +65,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * Structure is documented below.
      * 
      */
@@ -77,7 +77,7 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The settings for a topic's message retention.
+     * The settings for a topic&#39;s message retention.
      * Structure is documented below.
      * 
      */

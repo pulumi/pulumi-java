@@ -20,7 +20,7 @@ public final class FhirStoreStreamConfigArgs extends com.pulumi.resources.Resour
     /**
      * The destination BigQuery structure that contains both the dataset location and corresponding schema config.
      * The output is organized in one table per resource type. The server reuses the existing tables (if any) that
-     * are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
+     * are named after the resource types, e.g. &#34;Patient&#34;, &#34;Observation&#34;. When there is no existing table for a given
      * resource type, the server attempts to create one.
      * See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
      * Structure is documented below.
@@ -34,7 +34,7 @@ public final class FhirStoreStreamConfigArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Supply a FHIR resource type (such as "Patient" or "Observation"). See
+     * Supply a FHIR resource type (such as &#34;Patient&#34; or &#34;Observation&#34;). See
      * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
      * an empty list as an intent to stream all the supported resource types in this FHIR store.
      * 

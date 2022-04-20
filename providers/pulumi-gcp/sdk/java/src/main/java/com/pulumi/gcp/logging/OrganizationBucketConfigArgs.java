@@ -39,7 +39,7 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The location of the bucket. The supported locations are: "global" "us-central1"
+     * The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
      * 
      */
     @Import(name="location", required=true)

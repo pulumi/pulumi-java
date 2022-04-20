@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * balancing.
  * 
  * For more information, see
- * <https://cloud.google.com/compute/docs/load-balancing/http/>
+ * &lt;https://cloud.google.com/compute/docs/load-balancing/http/&gt;
  * 
  * ## Example Usage
  * 
@@ -66,11 +66,11 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * The IP address that this forwarding rule serves. When a client sends
      * traffic to this IP address, the forwarding rule directs the traffic to
      * the target that you specify in the forwarding rule. The
-     * loadBalancingScheme and the forwarding rule's target determine the
+     * loadBalancingScheme and the forwarding rule&#39;s target determine the
      * type of IP address that you can use. For detailed information, refer
      * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
      * An address can be specified either by a literal IP address or a
-     * reference to an existing Address resource. If you don't specify a
+     * reference to an existing Address resource. If you don&#39;t specify a
      * reserved IP address, an ephemeral IP address is assigned.
      * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
      * that has validateForProxyless field set to true.
@@ -85,11 +85,11 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @return The IP address that this forwarding rule serves. When a client sends
      * traffic to this IP address, the forwarding rule directs the traffic to
      * the target that you specify in the forwarding rule. The
-     * loadBalancingScheme and the forwarding rule's target determine the
+     * loadBalancingScheme and the forwarding rule&#39;s target determine the
      * type of IP address that you can use. For detailed information, refer
      * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
      * An address can be specified either by a literal IP address or a
-     * reference to an existing Address resource. If you don't specify a
+     * reference to an existing Address resource. If you don&#39;t specify a
      * reserved IP address, an ephemeral IP address is assigned.
      * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
      * that has validateForProxyless field set to true.
@@ -153,14 +153,14 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
         return this.labelFingerprint;
     }
     /**
-     * Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
-     * @return Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * @return Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {
@@ -172,10 +172,10 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * Internal Global HTTP(S) LB. The value of EXTERNAL means that this
      * will be used for External Global Load Balancing (HTTP(S) LB,
      * External TCP/UDP LB, SSL Proxy)
-     * Note: This field must be set "" if the global address is
+     * Note: This field must be set &#34;&#34; if the global address is
      * External TCP/UDP LB, SSL Proxy). The value of EXTERNAL_MANAGED means
      * that this will be used for Global external HTTP(S) load balancers.
-     * Note: This field must be set "" if the global address is
+     * Note: This field must be set &#34;&#34; if the global address is
      * configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
      * Default value is `EXTERNAL`.
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
@@ -190,10 +190,10 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * Internal Global HTTP(S) LB. The value of EXTERNAL means that this
      * will be used for External Global Load Balancing (HTTP(S) LB,
      * External TCP/UDP LB, SSL Proxy)
-     * Note: This field must be set "" if the global address is
+     * Note: This field must be set &#34;&#34; if the global address is
      * External TCP/UDP LB, SSL Proxy). The value of EXTERNAL_MANAGED means
      * that this will be used for Global external HTTP(S) load balancers.
-     * Note: This field must be set "" if the global address is
+     * Note: This field must be set &#34;&#34; if the global address is
      * configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL.
      * Default value is `EXTERNAL`.
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
@@ -362,7 +362,7 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
      * are valid.
      * For global address with a purpose of PRIVATE_SERVICE_CONNECT and
-     * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+     * addressType of INTERNAL, only &#34;all-apis&#34; and &#34;vpc-sc&#34; are valid.
      * 
      */
     @Export(name="target", type=String.class, parameters={})
@@ -374,7 +374,7 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
      * are valid.
      * For global address with a purpose of PRIVATE_SERVICE_CONNECT and
-     * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
+     * addressType of INTERNAL, only &#34;all-apis&#34; and &#34;vpc-sc&#34; are valid.
      * 
      */
     public Output<String> target() {

@@ -46,7 +46,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends com.pulumi.resources.
 
     /**
      * The whole units of the amount. For example if currencyCode
-     * is "USD", then 1 unit is one US dollar.
+     * is &#34;USD&#34;, then 1 unit is one US dollar.
      * 
      */
     @Import(name="units")

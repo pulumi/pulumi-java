@@ -104,7 +104,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Networking peering. If this is not provided, Apigee will automatically request for any
      * available /22 CIDR block from Service Networking. The customer should use this CIDR block
      * for configuring their firewall needs to allow traffic from Apigee.
-     * Input format: "a.b.c.d/22"
+     * Input format: &#34;a.b.c.d/22&#34;
      * 
      */
     @Export(name="ipRange", type=String.class, parameters={})
@@ -117,7 +117,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Networking peering. If this is not provided, Apigee will automatically request for any
      * available /22 CIDR block from Service Networking. The customer should use this CIDR block
      * for configuring their firewall needs to allow traffic from Apigee.
-     * Input format: "a.b.c.d/22"
+     * Input format: &#34;a.b.c.d/22&#34;
      * 
      */
     public Output</* @Nullable */ String> ipRange() {

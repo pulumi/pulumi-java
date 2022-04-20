@@ -51,7 +51,7 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Some other type of member that appears in the IAM Policy but isn't a user,
+     * Some other type of member that appears in the IAM Policy but isn&#39;t a user,
      * group, domain, or special group. For example: `allUsers`
      * 
      */

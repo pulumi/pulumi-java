@@ -118,7 +118,7 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases
      * Page.transition_routes.trigger_fulfillment.messages
      * Page.transition_routes.trigger_fulfillment.conditional_cases
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
@@ -136,7 +136,7 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases
      * Page.transition_routes.trigger_fulfillment.messages
      * Page.transition_routes.trigger_fulfillment.conditional_cases
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     public Output</* @Nullable */ String> languageCode() {
@@ -160,7 +160,7 @@ public class CxPage extends com.pulumi.resources.CustomResource {
     }
     /**
      * The flow to create a page for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     @Export(name="parent", type=String.class, parameters={})
@@ -168,7 +168,7 @@ public class CxPage extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The flow to create a page for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     public Output</* @Nullable */ String> parent() {
@@ -176,9 +176,9 @@ public class CxPage extends com.pulumi.resources.CustomResource {
     }
     /**
      * Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page.
-     * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route > page's transition route group > flow's transition routes.
+     * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route &gt; page&#39;s transition route group &gt; flow&#39;s transition routes.
      * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
-     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
     @Export(name="transitionRouteGroups", type=List.class, parameters={String.class})
@@ -186,9 +186,9 @@ public class CxPage extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page.
-     * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route > page's transition route group > flow's transition routes.
+     * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route &gt; page&#39;s transition route group &gt; flow&#39;s transition routes.
      * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence.
-     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
     public Output</* @Nullable */ List<String>> transitionRouteGroups() {

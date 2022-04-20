@@ -32,8 +32,8 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends com.pulumi.r
 
     /**
      * Time a static file served by this handler should be cached by web proxies and browsers.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
-     * Default is '0s'
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example &#34;3.5s&#34;.
+     * Default is &#39;0s&#39;
      * 
      */
     @Import(name="expiration")
@@ -45,7 +45,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends com.pulumi.r
 
     /**
      * HTTP headers to use for all responses from these URLs.
-     * An object containing a list of "key:value" value pairs.".
+     * An object containing a list of &#34;key:value&#34; value pairs.&#34;.
      * 
      */
     @Import(name="httpHeaders")
@@ -57,7 +57,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends com.pulumi.r
 
     /**
      * MIME type used to serve all files served by this handler.
-     * Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
      */
     @Import(name="mimeType")

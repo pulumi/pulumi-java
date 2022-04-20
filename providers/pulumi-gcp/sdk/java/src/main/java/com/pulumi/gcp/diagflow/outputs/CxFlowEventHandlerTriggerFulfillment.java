@@ -31,7 +31,7 @@ public final class CxFlowEventHandlerTriggerFulfillment {
      */
     private final @Nullable String tag;
     /**
-     * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
+     * The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
      * 
      */
     private final @Nullable String webhook;
@@ -71,7 +71,7 @@ public final class CxFlowEventHandlerTriggerFulfillment {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
+     * The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
      * 
     */
     public Optional<String> webhook() {

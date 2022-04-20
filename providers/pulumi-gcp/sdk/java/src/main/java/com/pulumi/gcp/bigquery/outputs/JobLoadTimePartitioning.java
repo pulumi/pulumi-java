@@ -17,7 +17,7 @@ public final class JobLoadTimePartitioning {
      */
     private final @Nullable String expirationMs;
     /**
-     * If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
+     * If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
      * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
      * A wrapper is used here because an empty string is an invalid value.
      * 
@@ -48,7 +48,7 @@ public final class JobLoadTimePartitioning {
         return Optional.ofNullable(this.expirationMs);
     }
     /**
-     * If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
+     * If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
      * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
      * A wrapper is used here because an empty string is an invalid value.
      * 

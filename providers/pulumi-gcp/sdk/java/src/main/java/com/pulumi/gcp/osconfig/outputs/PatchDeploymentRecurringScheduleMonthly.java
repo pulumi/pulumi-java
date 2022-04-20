@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class PatchDeploymentRecurringScheduleMonthly {
     /**
      * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
-     * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+     * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
      * will not run in February, April, June, etc.
      * 
      */
@@ -36,7 +36,7 @@ public final class PatchDeploymentRecurringScheduleMonthly {
 
     /**
      * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
-     * Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
+     * Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
      * will not run in February, April, June, etc.
      * 
     */

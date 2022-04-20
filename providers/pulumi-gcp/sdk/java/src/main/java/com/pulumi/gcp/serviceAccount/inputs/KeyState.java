@@ -123,7 +123,7 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="validAfter")
@@ -135,7 +135,7 @@ public final class KeyState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The key can be used before this timestamp.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="validBefore")

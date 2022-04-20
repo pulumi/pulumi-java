@@ -31,7 +31,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The domain to authenticate users with when using App Engine's User API.
+     * The domain to authenticate users with when using App Engine&#39;s User API.
      * 
      */
     @Import(name="authDomain")
@@ -146,8 +146,8 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The project ID to create the application under.
-     * ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
-     * you may get a "Permission denied" error.
+     * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a &#34;Permission denied&#34; error.
      * 
      */
     @Import(name="project")

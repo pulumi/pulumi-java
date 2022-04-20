@@ -43,7 +43,7 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name for the namespace in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*'.
+     * The resource name for the namespace in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*&#39;.
      * 
      */
     @Import(name="name")

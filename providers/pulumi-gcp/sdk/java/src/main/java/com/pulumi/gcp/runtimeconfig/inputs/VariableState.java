@@ -17,7 +17,7 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the variable to manage. Note that variable
-     * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+     * names can be hierarchical using slashes (e.g. &#34;prod-variables/hostname&#34;).
      * 
      */
     @Import(name="name")
@@ -66,9 +66,9 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Computed) The timestamp in RFC3339 UTC "Zulu" format,
+     * (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format,
      * accurate to nanoseconds, representing when the variable was last updated.
-     * Example: "2016-10-09T12:33:37.578138407Z".
+     * Example: &#34;2016-10-09T12:33:37.578138407Z&#34;.
      * 
      */
     @Import(name="updateTime")

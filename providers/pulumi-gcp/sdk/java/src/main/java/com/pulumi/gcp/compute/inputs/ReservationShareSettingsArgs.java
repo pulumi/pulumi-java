@@ -18,7 +18,7 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
     public static final ReservationShareSettingsArgs Empty = new ReservationShareSettingsArgs();
 
     /**
-     * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
+     * A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
      */

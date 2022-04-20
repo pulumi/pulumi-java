@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class ClusterMaintenancePolicy {
     /**
      * Time window specified for daily maintenance operations.
-     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
+     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
      */
@@ -44,7 +44,7 @@ public final class ClusterMaintenancePolicy {
 
     /**
      * Time window specified for daily maintenance operations.
-     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
+     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
     */

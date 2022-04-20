@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleMatchConfigArgs extends com.pulumi.resource
 
     /**
      * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
-     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
+     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of &#39;\*&#39; matches all IPs
      * (can be used to override the default behavior).
      * 
      */

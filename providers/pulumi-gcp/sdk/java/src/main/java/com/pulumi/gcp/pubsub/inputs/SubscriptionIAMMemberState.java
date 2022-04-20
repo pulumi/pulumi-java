@@ -24,7 +24,7 @@ public final class SubscriptionIAMMemberState extends com.pulumi.resources.Resou
     }
 
     /**
-     * (Computed) The etag of the subscription's IAM policy.
+     * (Computed) The etag of the subscription&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

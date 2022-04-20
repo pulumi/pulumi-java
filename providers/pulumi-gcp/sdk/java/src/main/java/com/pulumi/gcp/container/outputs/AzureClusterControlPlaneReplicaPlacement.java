@@ -15,7 +15,7 @@ public final class AzureClusterControlPlaneReplicaPlacement {
      */
     private final String azureAvailabilityZone;
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     private final String subnetId;
@@ -36,7 +36,7 @@ public final class AzureClusterControlPlaneReplicaPlacement {
         return this.azureAvailabilityZone;
     }
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
     */
     public String subnetId() {

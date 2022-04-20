@@ -135,7 +135,7 @@ public class Connector extends com.pulumi.resources.CustomResource {
     }
     /**
      * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
-     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -143,7 +143,7 @@ public class Connector extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
-     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
      * 
      */
     public Output<String> name() {

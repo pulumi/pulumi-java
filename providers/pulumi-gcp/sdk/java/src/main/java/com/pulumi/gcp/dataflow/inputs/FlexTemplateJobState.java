@@ -49,7 +49,7 @@ public final class FlexTemplateJobState extends com.pulumi.resources.ResourceArg
      * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
      * labels will be ignored to prevent diffs on re-apply.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated until the API supports this field
      * 
      */
@@ -74,7 +74,7 @@ public final class FlexTemplateJobState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * One of "drain" or "cancel". Specifies behavior of
+     * One of &#34;drain&#34; or &#34;cancel&#34;. Specifies behavior of
      * deletion during `pulumi destroy`.  See above note.
      * 
      */

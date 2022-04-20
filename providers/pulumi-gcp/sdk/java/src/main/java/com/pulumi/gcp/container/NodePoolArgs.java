@@ -50,8 +50,8 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
      * this will force recreation of the resource. WARNING: Resizing your node pool manually
      * may change this value in your existing cluster, which will trigger destruction
-     * and recreation on the next provider run (to rectify the discrepancy).  If you don't
-     * need this value, don't set it.  If you do need it, you can use a lifecycle block to
+     * and recreation on the next provider run (to rectify the discrepancy).  If you don&#39;t
+     * need this value, don&#39;t set it.  If you do need it, you can use a lifecycle block to
      * ignore subsqeuent changes to this field.
      * 
      */
@@ -87,7 +87,7 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of pods per node in this node pool.
-     * Note that this does not work on node pools which are "route-based" - that is, node
+     * Note that this does not work on node pools which are &#34;route-based&#34; - that is, node
      * pools belonging to clusters that do not have IP Aliasing enabled.
      * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
      * for more information.
@@ -161,9 +161,9 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The list of zones in which the node pool's nodes should be located. Nodes must
+     * The list of zones in which the node pool&#39;s nodes should be located. Nodes must
      * be in the region of their regional cluster or in the same region as their
-     * cluster's zone for zonal clusters. If unspecified, the cluster-level
+     * cluster&#39;s zone for zonal clusters. If unspecified, the cluster-level
      * `node_locations` will be used.
      * 
      */
@@ -202,9 +202,9 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The Kubernetes version for the nodes in this pool. Note that if this field
      * and `auto_upgrade` are both specified, they will fight each other for what the node version should
-     * be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
+     * be, so setting both is highly discouraged. While a fuzzy version can be specified, it&#39;s
      * recommended that you specify explicit versions as the provider will see spurious diffs
-     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
      * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
      * 
      */

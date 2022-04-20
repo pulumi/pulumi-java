@@ -16,9 +16,9 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     public static final DatabaseState Empty = new DatabaseState();
 
     /**
-     * The charset value. See MySQL's
+     * The charset value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+     * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
      * for more details and supported values. Postgres databases only support
      * a value of `UTF8` at creation time.
      * 
@@ -31,9 +31,9 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The collation value. See MySQL's
+     * The collation value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+     * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
      * for more details and supported values. Postgres databases only support
      * a value of `en_US.UTF8` at creation time.
      * 

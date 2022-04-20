@@ -36,7 +36,7 @@ public final class DatasetIamBindingState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the dataset's IAM policy.
+     * (Computed) The etag of the dataset&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

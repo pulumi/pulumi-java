@@ -76,7 +76,7 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The resource name for the Key in the format "projects/{project}/keys/{key}".
+     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
      */
     @Import(name="name")

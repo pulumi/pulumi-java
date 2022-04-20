@@ -55,7 +55,7 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
 
     /**
      * Resource name for the Access Level. The short_name component must begin
-     * with a letter and only include alphanumeric and '_'.
+     * with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */

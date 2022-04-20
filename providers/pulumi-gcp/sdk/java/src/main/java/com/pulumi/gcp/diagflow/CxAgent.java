@@ -47,14 +47,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:diagflow/cxAgent:CxAgent")
 public class CxAgent extends com.pulumi.resources.CustomResource {
     /**
-     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
+     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
      */
     @Export(name="avatarUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> avatarUri;
 
     /**
-     * @return The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
+     * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
      */
     public Output</* @Nullable */ String> avatarUri() {
@@ -134,9 +134,9 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
     }
     /**
      * The name of the location this agent is located in.
-     * > **Note:** The first time you are deploying an Agent in your project you must configure location settings.
+     * &gt; **Note:** The first time you are deploying an Agent in your project you must configure location settings.
      * This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
-     * Another options is to use global location so you don't need to manually configure location settings.
+     * Another options is to use global location so you don&#39;t need to manually configure location settings.
      * 
      */
     @Export(name="location", type=String.class, parameters={})
@@ -144,9 +144,9 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The name of the location this agent is located in.
-     * > **Note:** The first time you are deploying an Agent in your project you must configure location settings.
+     * &gt; **Note:** The first time you are deploying an Agent in your project you must configure location settings.
      * This is a one time step but at the moment you can only [configure location settings](https://cloud.google.com/dialogflow/cx/docs/concept/region#location-settings) via the Dialogflow CX console.
-     * Another options is to use global location so you don't need to manually configure location settings.
+     * Another options is to use global location so you don&#39;t need to manually configure location settings.
      * 
      */
     public Output<String> location() {
@@ -183,14 +183,14 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
+     * Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;.
      * 
      */
     @Export(name="securitySettings", type=String.class, parameters={})
     private Output</* @Nullable */ String> securitySettings;
 
     /**
-     * @return Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
+     * @return Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;.
      * 
      */
     public Output</* @Nullable */ String> securitySettings() {
@@ -214,8 +214,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
     }
     /**
      * Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only
-     * be deleted by deleting the agent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow
-     * ID>.
+     * be deleted by deleting the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow
+     * ID&gt;.
      * 
      */
     @Export(name="startFlow", type=String.class, parameters={})
@@ -223,8 +223,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only
-     * be deleted by deleting the agent. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow
-     * ID>.
+     * be deleted by deleting the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow
+     * ID&gt;.
      * 
      */
     public Output<String> startFlow() {

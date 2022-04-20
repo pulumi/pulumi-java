@@ -29,7 +29,7 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * (Computed) The etag of the project's IAM policy.
+     * (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

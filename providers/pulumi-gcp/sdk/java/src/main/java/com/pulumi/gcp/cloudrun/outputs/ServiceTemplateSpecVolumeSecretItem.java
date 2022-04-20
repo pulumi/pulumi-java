@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class ServiceTemplateSpecVolumeSecretItem {
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     private final String key;
@@ -29,8 +29,8 @@ public final class ServiceTemplateSpecVolumeSecretItem {
     /**
      * The relative path of the file to map the key to.
      * May not be an absolute path.
-     * May not contain the path element '..'.
-     * May not start with the string '..'.
+     * May not contain the path element &#39;..&#39;.
+     * May not start with the string &#39;..&#39;.
      * 
      */
     private final String path;
@@ -47,7 +47,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
 
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
     */
     public String key() {
@@ -66,8 +66,8 @@ public final class ServiceTemplateSpecVolumeSecretItem {
     /**
      * The relative path of the file to map the key to.
      * May not be an absolute path.
-     * May not contain the path element '..'.
-     * May not start with the string '..'.
+     * May not contain the path element &#39;..&#39;.
+     * May not start with the string &#39;..&#39;.
      * 
     */
     public String path() {

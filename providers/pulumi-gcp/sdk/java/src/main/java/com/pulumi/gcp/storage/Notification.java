@@ -23,21 +23,21 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/storage/docs/json_api/v1/notifications).
  * 
  * In order to enable notifications, a special Google Cloud Storage service account unique to the project
- * must exist and have the IAM permission "projects.topics.publish" for a Cloud Pub/Sub topic in the project.
+ * must exist and have the IAM permission &#34;projects.topics.publish&#34; for a Cloud Pub/Sub topic in the project.
  * This service account is not created automatically when a project is created.
  * To ensure the service account exists and obtain its email address for use in granting the correct IAM permission, use the
  * [`gcp.storage.getProjectServiceAccount`](https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html)
- * datasource's `email_address` value, and see below for an example of enabling notifications by granting the correct IAM permission.
+ * datasource&#39;s `email_address` value, and see below for an example of enabling notifications by granting the correct IAM permission.
  * See [the notifications documentation](https://cloud.google.com/storage/docs/gsutil/commands/notification) for more details.
  * 
- * > **NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+ * &gt; **NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
  * making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * Storage notifications can be imported using the notification `id` in the format `<bucket_name>/notificationConfigs/<id>` e.g.
+ * Storage notifications can be imported using the notification `id` in the format `&lt;bucket_name&gt;/notificationConfigs/&lt;id&gt;` e.g.
  * 
  * ```sh
  *  $ pulumi import gcp:storage/notification:Notification notification default_bucket/notificationConfigs/102
@@ -75,14 +75,14 @@ public class Notification extends com.pulumi.resources.CustomResource {
         return this.customAttributes;
     }
     /**
-     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
      * 
      */
     @Export(name="eventTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> eventTypes;
 
     /**
-     * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
      * 
      */
     public Output</* @Nullable */ List<String>> eventTypes() {
@@ -117,14 +117,14 @@ public class Notification extends com.pulumi.resources.CustomResource {
         return this.objectNamePrefix;
     }
     /**
-     * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
      * 
      */
     @Export(name="payloadFormat", type=String.class, parameters={})
     private Output<String> payloadFormat;
 
     /**
-     * @return The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * @return The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
      * 
      */
     public Output<String> payloadFormat() {

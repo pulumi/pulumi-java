@@ -26,7 +26,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The Organization's numeric ID, including an optional `organizations/` prefix.
+     * The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
      * 
      */
     @Import(name="organization")

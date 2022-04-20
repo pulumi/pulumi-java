@@ -17,7 +17,7 @@ public final class LiteSubscriptionState extends com.pulumi.resources.ResourceAr
     public static final LiteSubscriptionState Empty = new LiteSubscriptionState();
 
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * Structure is documented below.
      * 
      */

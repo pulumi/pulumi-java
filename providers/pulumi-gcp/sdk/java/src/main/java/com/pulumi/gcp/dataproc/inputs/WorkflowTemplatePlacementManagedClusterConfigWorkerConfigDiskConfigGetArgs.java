@@ -28,7 +28,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
     }
 
     /**
-     * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+     * Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-ssd&#34; (Persistent Disk Solid State Drive) or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive).
      * 
      */
     @Import(name="bootDiskType")

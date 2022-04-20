@@ -19,11 +19,11 @@ import javax.annotation.Nullable;
  * Allows creation and management of a single binding within IAM policy for
  * an existing Google Cloud Platform folder.
  * 
- * > **Note:** This resource _must not_ be used in conjunction with
+ * &gt; **Note:** This resource _must not_ be used in conjunction with
  *    `gcp.folder.IAMPolicy` or they will fight over what your policy
  *    should be.
  * 
- * > **Note:** On create, this resource will overwrite members of any existing roles.
+ * &gt; **Note:** On create, this resource will overwrite members of any existing roles.
  *     Use `pulumi import` and inspect the output to ensure
  *     your existing members are preserved.
  * 
@@ -36,10 +36,10 @@ import javax.annotation.Nullable;
  * These bindings can be imported using the `folder` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:folder/iAMBinding:IAMBinding viewer "folder-name roles/viewer"
+ *  $ pulumi import gcp:folder/iAMBinding:IAMBinding viewer &#34;folder-name roles/viewer&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM binding with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM binding with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -53,14 +53,14 @@ public class IAMBinding extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the folder's IAM policy.
+     * (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the folder's IAM policy.
+     * @return (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

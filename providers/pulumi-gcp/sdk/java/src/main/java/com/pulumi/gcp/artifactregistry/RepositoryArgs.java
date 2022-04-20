@@ -100,7 +100,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The last part of the repository name, for example:
-     * "repo1"
+     * &#34;repo1&#34;
      * 
      */
     @Import(name="repositoryId", required=true)

@@ -81,7 +81,7 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
      */
     @Import(name="properties")

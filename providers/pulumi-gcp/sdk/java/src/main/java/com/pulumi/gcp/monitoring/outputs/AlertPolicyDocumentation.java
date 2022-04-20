@@ -21,7 +21,7 @@ public final class AlertPolicyDocumentation {
     private final @Nullable String content;
     /**
      * The format of the content field. Presently, only the value
-     * "text/markdown" is supported.
+     * &#34;text/markdown&#34; is supported.
      * 
      */
     private final @Nullable String mimeType;
@@ -46,7 +46,7 @@ public final class AlertPolicyDocumentation {
     }
     /**
      * The format of the content field. Presently, only the value
-     * "text/markdown" is supported.
+     * &#34;text/markdown&#34; is supported.
      * 
     */
     public Optional<String> mimeType() {

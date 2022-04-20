@@ -17,7 +17,7 @@ public final class FhirStoreIamPolicyArgs extends com.pulumi.resources.ResourceA
     /**
      * The FHIR store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
-     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

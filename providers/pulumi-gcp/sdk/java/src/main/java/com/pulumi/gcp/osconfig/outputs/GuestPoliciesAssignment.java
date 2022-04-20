@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GuestPoliciesAssignment {
     /**
      * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
-     * for example "env=prod or env=staging".
+     * for example &#34;env=prod or env=staging&#34;.
      * Structure is documented below.
      * 
      */
@@ -23,7 +23,7 @@ public final class GuestPoliciesAssignment {
     /**
      * Targets VM instances whose name starts with one of these prefixes.
      * Like labels, this is another way to group VM instances when targeting configs,
-     * for example prefix="prod-".
+     * for example prefix=&#34;prod-&#34;.
      * Only supported for project-level policies.
      * 
      */
@@ -67,7 +67,7 @@ public final class GuestPoliciesAssignment {
 
     /**
      * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
-     * for example "env=prod or env=staging".
+     * for example &#34;env=prod or env=staging&#34;.
      * Structure is documented below.
      * 
     */
@@ -77,7 +77,7 @@ public final class GuestPoliciesAssignment {
     /**
      * Targets VM instances whose name starts with one of these prefixes.
      * Like labels, this is another way to group VM instances when targeting configs,
-     * for example prefix="prod-".
+     * for example prefix=&#34;prod-&#34;.
      * Only supported for project-level policies.
      * 
     */

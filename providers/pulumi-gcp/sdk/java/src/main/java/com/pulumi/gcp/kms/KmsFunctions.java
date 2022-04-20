@@ -82,7 +82,7 @@ public final class KmsFunctions {
      * For more information see
      * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
      * 
-     * > **NOTE:** Using this data provider will allow you to conceal secret data within your
+     * &gt; **NOTE:** Using this data provider will allow you to conceal secret data within your
      * resource definitions, but it does not take care of protecting that data in the
      * logging output, plan output, or state output.  Please take care to secure your secret
      * data outside of resource definitions.
@@ -101,7 +101,7 @@ public final class KmsFunctions {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretAsymmetric:getKMSSecretAsymmetric", TypeShape.of(GetKMSSecretAsymmetricResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * !> **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
+     * !&gt; **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
      * 
      * This data source allows you to encrypt data with Google Cloud KMS and use the
      * ciphertext within your resource definitions.
@@ -109,7 +109,7 @@ public final class KmsFunctions {
      * For more information see
      * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
      * 
-     * > **NOTE:** Using this data source will allow you to conceal secret data within your
+     * &gt; **NOTE:** Using this data source will allow you to conceal secret data within your
      * resource definitions, but it does not take care of protecting that data in the
      * logging output, plan output, or state output.  Please take care to secure your secret
      * data outside of resource definitions.

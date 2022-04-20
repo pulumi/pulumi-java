@@ -45,7 +45,7 @@ public final class SubscriptionPushConfig {
     /**
      * A URL locating the endpoint to which messages should be pushed.
      * For example, a Webhook endpoint might use
-     * "https://example.com/push".
+     * &#34;https://example.com/push&#34;.
      * 
      */
     private final String pushEndpoint;
@@ -96,7 +96,7 @@ public final class SubscriptionPushConfig {
     /**
      * A URL locating the endpoint to which messages should be pushed.
      * For example, a Webhook endpoint might use
-     * "https://example.com/push".
+     * &#34;https://example.com/push&#34;.
      * 
     */
     public String pushEndpoint() {

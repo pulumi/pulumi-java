@@ -16,7 +16,7 @@ public final class IAMPolicyState extends com.pulumi.resources.ResourceArgs {
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
     /**
-     * (Computed) The etag of the project's IAM policy.
+     * (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

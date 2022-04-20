@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * Storage buckets can be imported using the Transfer Job's `project` and `name` without the `transferJob/` prefix, e.g.
+ * Storage buckets can be imported using the Transfer Job&#39;s `project` and `name` without the `transferJob/` prefix, e.g.
  * 
  * ```sh
  *  $ pulumi import gcp:storage/transferJob:TransferJob nightly-backup-transfer-job my-project-1asd32/8422144862922355674

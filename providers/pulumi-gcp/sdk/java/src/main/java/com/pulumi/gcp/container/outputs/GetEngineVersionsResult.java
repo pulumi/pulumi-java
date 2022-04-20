@@ -36,7 +36,7 @@ public final class GetEngineVersionsResult {
     private final @Nullable String location;
     private final @Nullable String project;
     /**
-     * A map from a release channel name to the channel's default version.
+     * A map from a release channel name to the channel&#39;s default version.
      * 
      */
     private final Map<String,String> releaseChannelDefaultVersion;
@@ -111,7 +111,7 @@ public final class GetEngineVersionsResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * A map from a release channel name to the channel's default version.
+     * A map from a release channel name to the channel&#39;s default version.
      * 
     */
     public Map<String,String> releaseChannelDefaultVersion() {

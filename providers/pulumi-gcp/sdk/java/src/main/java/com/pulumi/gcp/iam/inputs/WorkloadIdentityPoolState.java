@@ -53,7 +53,7 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
 
     /**
      * The resource name of the pool as
-     * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
+     * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}&#39;.
      * 
      */
     @Import(name="name")

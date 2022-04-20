@@ -132,14 +132,14 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Output only. The endpoint of the cluster's API server.
+     * Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
-     * @return Output only. The endpoint of the cluster's API server.
+     * @return Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     public Output<String> endpoint() {

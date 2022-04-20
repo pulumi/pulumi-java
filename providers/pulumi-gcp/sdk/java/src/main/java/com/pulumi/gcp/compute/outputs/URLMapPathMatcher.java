@@ -62,7 +62,7 @@ public final class URLMapPathMatcher {
     private final String name;
     /**
      * The list of path rules. Use this list instead of routeRules when routing based
-     * on simple path matching is all that's required. The order by which path rules
+     * on simple path matching is all that&#39;s required. The order by which path rules
      * are specified does not matter. Matches are always done on the longest-path-first
      * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
      * irrespective of the order in which those paths appear in this list. Within a
@@ -160,7 +160,7 @@ public final class URLMapPathMatcher {
     }
     /**
      * The list of path rules. Use this list instead of routeRules when routing based
-     * on simple path matching is all that's required. The order by which path rules
+     * on simple path matching is all that&#39;s required. The order by which path rules
      * are specified does not matter. Matches are always done on the longest-path-first
      * basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
      * irrespective of the order in which those paths appear in this list. Within a

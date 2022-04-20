@@ -16,7 +16,7 @@ public final class InstanceNetworkInterfaceAccessConfigGetArgs extends com.pulum
     public static final InstanceNetworkInterfaceAccessConfigGetArgs Empty = new InstanceNetworkInterfaceAccessConfigGetArgs();
 
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */

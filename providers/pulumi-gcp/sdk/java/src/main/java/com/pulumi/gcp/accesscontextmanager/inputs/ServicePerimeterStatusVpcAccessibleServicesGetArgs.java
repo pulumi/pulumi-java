@@ -31,7 +31,7 @@ public final class ServicePerimeterStatusVpcAccessibleServicesGetArgs extends co
 
     /**
      * Whether to restrict API calls within the Service Perimeter to the
-     * list of APIs specified in 'allowedServices'.
+     * list of APIs specified in &#39;allowedServices&#39;.
      * 
      */
     @Import(name="enableRestriction")

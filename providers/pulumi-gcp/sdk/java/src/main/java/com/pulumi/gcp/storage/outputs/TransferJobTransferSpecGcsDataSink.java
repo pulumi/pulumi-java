@@ -17,7 +17,7 @@ public final class TransferJobTransferSpecGcsDataSink {
      */
     private final String bucketName;
     /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
      * 
      */
     private final @Nullable String path;
@@ -38,7 +38,7 @@ public final class TransferJobTransferSpecGcsDataSink {
         return this.bucketName;
     }
     /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
      * 
     */
     public Optional<String> path() {

@@ -51,7 +51,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-     * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+     * &#34;America/New_York&#34; or empty, which defaults to UTC. This is used for parsing times in resources
      * (e.g., HL7 messages) where no explicit timezone is specified.
      * 
      */

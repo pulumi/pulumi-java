@@ -40,7 +40,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
+     * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
      * 
      */
     @Import(name="eventTypes")
@@ -62,7 +62,7 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
+     * The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
      * 
      */
     @Import(name="payloadFormat", required=true)

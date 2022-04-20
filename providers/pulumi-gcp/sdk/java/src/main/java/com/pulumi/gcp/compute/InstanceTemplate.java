@@ -52,12 +52,12 @@ import javax.annotation.Nullable;
  * A common way to use instance templates and managed instance groups is to deploy the
  * latest image in a family, usually the latest build of your application. There are two
  * ways to do this in the provider, and they have their pros and cons. The difference ends
- * up being in how "latest" is interpreted. You can either deploy the latest image available
+ * up being in how &#34;latest&#34; is interpreted. You can either deploy the latest image available
  * when the provider runs, or you can have each instance check what the latest image is when
- * it's being created, either as part of a scaling event or being rebuilt by the instance
+ * it&#39;s being created, either as part of a scaling event or being rebuilt by the instance
  * group manager.
  * 
- * If you're not sure, we recommend deploying the latest image available when the provider runs,
+ * If you&#39;re not sure, we recommend deploying the latest image available when the provider runs,
  * because this means all the instances in your group will be based on the same image, always,
  * and means that no upgrades or changes to your instances happen outside of a `pulumi up`.
  * You can achieve this by using the `gcp.compute.Image`
@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  * the template to use that specific image:
  * 
  * To have instances update to the latest on every scaling event or instance re-creation,
- * use the family as the image for the disk, and it will use GCP's default behavior, setting
+ * use the family as the image for the disk, and it will use GCP&#39;s default behavior, setting
  * the image for the template to the family:
  * 
  * ## Import

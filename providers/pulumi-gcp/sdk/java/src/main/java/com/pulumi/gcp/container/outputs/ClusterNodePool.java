@@ -21,9 +21,9 @@ public final class ClusterNodePool {
     private final @Nullable ClusterNodePoolAutoscaling autoscaling;
     /**
      * The number of nodes to create in this
-     * cluster's default node pool. In regional or multi-zonal clusters, this is the
-     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
-     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+     * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
      * set this to a value of at least `1`, alongside setting
      * `remove_default_node_pool` to `true`.
      * 
@@ -50,17 +50,17 @@ public final class ClusterNodePool {
      * Parameters used in creating the default node pool.
      * Generally, this field should not be used at the same time as a
      * `gcp.container.NodePool` or a `node_pool` block; this configuration
-     * manages the default node pool, which isn't recommended to be used.
+     * manages the default node pool, which isn&#39;t recommended to be used.
      * Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodePoolNodeConfig nodeConfig;
     private final @Nullable Integer nodeCount;
     /**
-     * The list of zones in which the cluster's nodes
+     * The list of zones in which the cluster&#39;s nodes
      * are located. Nodes must be in the region of their regional cluster or in the
-     * same region as their cluster's zone for zonal clusters. If this is specified for
-     * a zonal cluster, omit the cluster's zone.
+     * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster&#39;s zone.
      * 
      */
     private final @Nullable List<String> nodeLocations;
@@ -104,9 +104,9 @@ public final class ClusterNodePool {
     }
     /**
      * The number of nodes to create in this
-     * cluster's default node pool. In regional or multi-zonal clusters, this is the
-     * number of nodes per zone. Must be set if `node_pool` is not set. If you're using
-     * `gcp.container.NodePool` objects with no default node pool, you'll need to
+     * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+     * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
      * set this to a value of at least `1`, alongside setting
      * `remove_default_node_pool` to `true`.
      * 
@@ -149,7 +149,7 @@ public final class ClusterNodePool {
      * Parameters used in creating the default node pool.
      * Generally, this field should not be used at the same time as a
      * `gcp.container.NodePool` or a `node_pool` block; this configuration
-     * manages the default node pool, which isn't recommended to be used.
+     * manages the default node pool, which isn&#39;t recommended to be used.
      * Structure is documented below.
      * 
     */
@@ -160,10 +160,10 @@ public final class ClusterNodePool {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
-     * The list of zones in which the cluster's nodes
+     * The list of zones in which the cluster&#39;s nodes
      * are located. Nodes must be in the region of their regional cluster or in the
-     * same region as their cluster's zone for zonal clusters. If this is specified for
-     * a zonal cluster, omit the cluster's zone.
+     * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster&#39;s zone.
      * 
     */
     public List<String> nodeLocations() {

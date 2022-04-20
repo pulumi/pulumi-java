@@ -22,7 +22,7 @@ public final class TriggerGithub {
     private final @Nullable String name;
     /**
      * Owner of the repository. For example: The owner for
-     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     private final @Nullable String owner;
@@ -62,7 +62,7 @@ public final class TriggerGithub {
     }
     /**
      * Owner of the repository. For example: The owner for
-     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
     */
     public Optional<String> owner() {

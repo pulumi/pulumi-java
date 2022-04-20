@@ -118,7 +118,7 @@ public final class DataTransferConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
+     * Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39;
      * section for each data source. For example the parameters for Cloud Storage transfers are listed here:
      * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 

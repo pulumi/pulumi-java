@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * EdgeCacheService defines the IP addresses, protocols, security policies, cache policies and routing configuration.
  * 
- * > **Warning:** These resources require allow-listing to use, and are not openly available to all Cloud customers. Engage with your Cloud account team to discuss how to onboard.
+ * &gt; **Warning:** These resources require allow-listing to use, and are not openly available to all Cloud customers. Engage with your Cloud account team to discuss how to onboard.
  * 
  * ## Example Usage
  * 
@@ -88,7 +88,7 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
     }
     /**
      * URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
-     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
      * 
      */
     @Export(name="edgeSslCertificates", type=List.class, parameters={String.class})
@@ -96,7 +96,7 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
 
     /**
      * @return URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
-     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
      * 
      */
     public Output</* @Nullable */ List<String>> edgeSslCertificates() {
@@ -226,7 +226,7 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
     }
     /**
      * URL of the SslPolicy resource that will be associated with the EdgeCacheService.
-     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
      * 
      */
     @Export(name="sslPolicy", type=String.class, parameters={})
@@ -234,7 +234,7 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
 
     /**
      * @return URL of the SslPolicy resource that will be associated with the EdgeCacheService.
-     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
      * 
      */
     public Output</* @Nullable */ String> sslPolicy() {

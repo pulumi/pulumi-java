@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketWebsite {
     /**
-     * Behaves as the bucket's directory index where
+     * Behaves as the bucket&#39;s directory index where
      * missing objects are treated as potential directories.
      * 
      */
@@ -33,7 +33,7 @@ public final class BucketWebsite {
     }
 
     /**
-     * Behaves as the bucket's directory index where
+     * Behaves as the bucket&#39;s directory index where
      * missing objects are treated as potential directories.
      * 
     */

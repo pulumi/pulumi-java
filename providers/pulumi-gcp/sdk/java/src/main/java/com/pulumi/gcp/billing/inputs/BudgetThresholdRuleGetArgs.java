@@ -32,7 +32,7 @@ public final class BudgetThresholdRuleGetArgs extends com.pulumi.resources.Resou
 
     /**
      * Send an alert when this threshold is exceeded. This is a
-     * 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
+     * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
      * 
      */
     @Import(name="thresholdPercent", required=true)

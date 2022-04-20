@@ -75,11 +75,11 @@ public final class ForwardingRuleArgs extends com.pulumi.resources.ResourceArgs 
      * The IP address that this forwarding rule serves. When a client sends
      * traffic to this IP address, the forwarding rule directs the traffic to
      * the target that you specify in the forwarding rule. The
-     * loadBalancingScheme and the forwarding rule's target determine the
+     * loadBalancingScheme and the forwarding rule&#39;s target determine the
      * type of IP address that you can use. For detailed information, refer
      * to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
      * An address can be specified either by a literal IP address or a
-     * reference to an existing Address resource. If you don't specify a
+     * reference to an existing Address resource. If you don&#39;t specify a
      * reserved IP address, an ephemeral IP address is assigned.
      * The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
      * that has validateForProxyless field set to true.
@@ -125,7 +125,7 @@ public final class ForwardingRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Labels to apply to this forwarding rule.  A list of key->value pairs.
+     * Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
      * 
      */
     @Import(name="labels")

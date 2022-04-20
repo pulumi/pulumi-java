@@ -65,7 +65,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * Structure is documented below.
      * 
      */
@@ -73,7 +73,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ LiteTopicPartitionConfig> partitionConfig;
 
     /**
-     * @return The settings for this topic's partitions.
+     * @return The settings for this topic&#39;s partitions.
      * Structure is documented below.
      * 
      */
@@ -111,7 +111,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
         return this.region;
     }
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * Structure is documented below.
      * 
      */
@@ -119,7 +119,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ LiteTopicReservationConfig> reservationConfig;
 
     /**
-     * @return The settings for this topic's Reservation usage.
+     * @return The settings for this topic&#39;s Reservation usage.
      * Structure is documented below.
      * 
      */
@@ -127,7 +127,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
         return this.reservationConfig;
     }
     /**
-     * The settings for a topic's message retention.
+     * The settings for a topic&#39;s message retention.
      * Structure is documented below.
      * 
      */
@@ -135,7 +135,7 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ LiteTopicRetentionConfig> retentionConfig;
 
     /**
-     * @return The settings for a topic's message retention.
+     * @return The settings for a topic&#39;s message retention.
      * Structure is documented below.
      * 
      */

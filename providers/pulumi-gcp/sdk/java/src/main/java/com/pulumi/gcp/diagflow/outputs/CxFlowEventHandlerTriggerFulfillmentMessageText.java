@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class CxFlowEventHandlerTriggerFulfillmentMessageText {
     /**
      * - 
-     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
      */
     private final @Nullable Boolean allowPlaybackInterruption;
@@ -35,7 +35,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageText {
 
     /**
      * - 
-     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
     */
     public Optional<Boolean> allowPlaybackInterruption() {

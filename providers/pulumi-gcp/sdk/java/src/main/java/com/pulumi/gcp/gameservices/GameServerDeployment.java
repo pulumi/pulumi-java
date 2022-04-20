@@ -104,8 +104,8 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
     }
     /**
      * The resource id of the game server deployment, eg:
-     * 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}'. For example,
-     * 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
+     * &#39;projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/gameServerDeployments/my-deployment&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -113,8 +113,8 @@ public class GameServerDeployment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The resource id of the game server deployment, eg:
-     * 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}'. For example,
-     * 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
+     * &#39;projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/gameServerDeployments/my-deployment&#39;.
      * 
      */
     public Output<String> name() {

@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * A `KeyRingImportJob` can be used to create `CryptoKeys` and `CryptoKeyVersions` using pre-existing
  * key material, generated outside of Cloud KMS. A `KeyRingImportJob` expires 3 days after it is created.
  * Once expired, Cloud KMS will no longer be able to import or unwrap any key material that
- * was wrapped with the `KeyRingImportJob`'s public key.
+ * was wrapped with the `KeyRingImportJob`&#39;s public key.
  * 
- * > **Note:** KeyRingImportJobs cannot be deleted from Google Cloud Platform.
+ * &gt; **Note:** KeyRingImportJobs cannot be deleted from Google Cloud Platform.
  * Destroying a provider-managed KeyRingImportJob will remove it from state but
  * *will not delete the resource from the project.*
  * 
@@ -109,7 +109,7 @@ public class KeyRingImportJob extends com.pulumi.resources.CustomResource {
     }
     /**
      * The KeyRing that this import job belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     @Export(name="keyRing", type=String.class, parameters={})
@@ -117,7 +117,7 @@ public class KeyRingImportJob extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The KeyRing that this import job belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     public Output<String> keyRing() {
@@ -156,14 +156,14 @@ public class KeyRingImportJob extends com.pulumi.resources.CustomResource {
         return this.protectionLevel;
     }
     /**
-     * The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
+     * The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
      * 
      */
     @Export(name="publicKeys", type=List.class, parameters={KeyRingImportJobPublicKey.class})
     private Output<List<KeyRingImportJobPublicKey>> publicKeys;
 
     /**
-     * @return The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
+     * @return The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
      * 
      */
     public Output<List<KeyRingImportJobPublicKey>> publicKeys() {

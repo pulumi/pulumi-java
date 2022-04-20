@@ -29,7 +29,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Firestore database id. Defaults to `"(default)"`.
+     * The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     @Import(name="database")
@@ -45,7 +45,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * specified as the last field, it will be added automatically with the
      * same direction as that of the last field defined. If the final field
      * in a composite index is not directional, the `__name__` will be
-     * ordered `"ASCENDING"` (unless explicitly specified otherwise).
+     * ordered `&#34;ASCENDING&#34;` (unless explicitly specified otherwise).
      * Structure is documented below.
      * 
      */

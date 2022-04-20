@@ -13,7 +13,7 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetActiveFolderArgs Empty = new GetActiveFolderArgs();
 
     /**
-     * The folder's display name.
+     * The folder&#39;s display name.
      * 
      */
     @Import(name="displayName", required=true)

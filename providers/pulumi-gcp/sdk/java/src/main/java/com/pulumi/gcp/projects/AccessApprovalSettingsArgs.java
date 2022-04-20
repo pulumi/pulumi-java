@@ -50,7 +50,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
      * (Optional, Deprecated)
      * Deprecated in favor of `project_id`
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of `project_id`
      * 
      */

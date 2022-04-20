@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameter {
      */
     private final @Nullable String description;
     /**
-     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a .sparkJob.args
+     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
      * 
      */
     private final List<String> fields;
@@ -29,7 +29,7 @@ public final class WorkflowTemplateParameter {
      */
     private final String name;
     /**
-     * Optional. Validation rules to be applied to this parameter's value.
+     * Optional. Validation rules to be applied to this parameter&#39;s value.
      * 
      */
     private final @Nullable WorkflowTemplateParameterValidation validation;
@@ -54,7 +54,7 @@ public final class WorkflowTemplateParameter {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a .sparkJob.args
+     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
      * 
     */
     public List<String> fields() {
@@ -68,7 +68,7 @@ public final class WorkflowTemplateParameter {
         return this.name;
     }
     /**
-     * Optional. Validation rules to be applied to this parameter's value.
+     * Optional. Validation rules to be applied to this parameter&#39;s value.
      * 
     */
     public Optional<WorkflowTemplateParameterValidation> validation() {

@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Resource to hold the state and status of a user's domain mapping.
+ * Resource to hold the state and status of a user&#39;s domain mapping.
  * 
  * To get more information about DomainMapping, see:
  * 

@@ -24,7 +24,7 @@ public final class IndexField {
      */
     private final @Nullable String fieldPath;
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * Only one of `order` and `arrayConfig` can be specified.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
@@ -58,7 +58,7 @@ public final class IndexField {
         return Optional.ofNullable(this.fieldPath);
     }
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * Only one of `order` and `arrayConfig` can be specified.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 

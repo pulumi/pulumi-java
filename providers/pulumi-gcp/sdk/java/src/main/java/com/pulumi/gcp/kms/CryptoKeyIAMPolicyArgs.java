@@ -18,7 +18,7 @@ public final class CryptoKeyIAMPolicyArgs extends com.pulumi.resources.ResourceA
      * The crypto key ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
      * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-     * the provider's project setting will be used as a fallback.
+     * the provider&#39;s project setting will be used as a fallback.
      * 
      */
     @Import(name="cryptoKeyId", required=true)

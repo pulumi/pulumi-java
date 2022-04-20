@@ -19,7 +19,7 @@ public final class DatabaseInstanceRestoreBackupContext {
     private final Integer backupRunId;
     /**
      * The ID of the instance that the backup was taken from. If left empty,
-     * this instance's ID will be used.
+     * this instance&#39;s ID will be used.
      * 
      */
     private final @Nullable String instanceId;
@@ -48,7 +48,7 @@ public final class DatabaseInstanceRestoreBackupContext {
     }
     /**
      * The ID of the instance that the backup was taken from. If left empty,
-     * this instance's ID will be used.
+     * this instance&#39;s ID will be used.
      * 
     */
     public Optional<String> instanceId() {

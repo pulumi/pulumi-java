@@ -17,7 +17,7 @@ public final class StandardAppVersionLibrary {
      */
     private final @Nullable String name;
     /**
-     * Version of the library to select, or "latest".
+     * Version of the library to select, or &#34;latest&#34;.
      * 
      */
     private final @Nullable String version;
@@ -38,7 +38,7 @@ public final class StandardAppVersionLibrary {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Version of the library to select, or "latest".
+     * Version of the library to select, or &#34;latest&#34;.
      * 
     */
     public Optional<String> version() {

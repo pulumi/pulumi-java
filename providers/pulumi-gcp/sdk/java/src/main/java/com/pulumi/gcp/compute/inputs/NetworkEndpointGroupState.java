@@ -59,7 +59,7 @@ public final class NetworkEndpointGroupState extends com.pulumi.resources.Resour
 
     /**
      * The network to which all network endpoints in the NEG belong.
-     * Uses "default" project network if unspecified.
+     * Uses &#34;default&#34; project network if unspecified.
      * 
      */
     @Import(name="network")

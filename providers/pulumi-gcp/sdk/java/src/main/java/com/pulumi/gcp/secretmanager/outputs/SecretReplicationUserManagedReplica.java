@@ -19,7 +19,7 @@ public final class SecretReplicationUserManagedReplica {
      */
     private final @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption;
     /**
-     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
      * 
      */
     private final String location;
@@ -41,7 +41,7 @@ public final class SecretReplicationUserManagedReplica {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
     /**
-     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
      * 
     */
     public String location() {

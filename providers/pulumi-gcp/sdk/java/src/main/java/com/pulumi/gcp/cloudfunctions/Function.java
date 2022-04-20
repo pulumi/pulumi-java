@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/functions/docs)
  * 
- * > **Warning:** As of November 1, 2019, newly created Functions are
+ * &gt; **Warning:** As of November 1, 2019, newly created Functions are
  * private-by-default and will require [appropriate IAM permissions](https://cloud.google.com/functions/docs/reference/iam/roles)
  * to be invoked. See below examples for how to set up the appropriate permissions,
  * or view the [Cloud Functions IAM resources](https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html)
@@ -247,7 +247,7 @@ public class Function extends com.pulumi.resources.CustomResource {
     }
     /**
      * The runtime in which the function is going to run.
-     * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
+     * Eg. `&#34;nodejs10&#34;`, `&#34;nodejs12&#34;`, `&#34;nodejs14&#34;`, `&#34;python37&#34;`, `&#34;python38&#34;`, `&#34;python39&#34;`, `&#34;dotnet3&#34;`, `&#34;go113&#34;`, `&#34;java11&#34;`, `&#34;ruby27&#34;`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
      * 
      */
     @Export(name="runtime", type=String.class, parameters={})
@@ -255,7 +255,7 @@ public class Function extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The runtime in which the function is going to run.
-     * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
+     * Eg. `&#34;nodejs10&#34;`, `&#34;nodejs12&#34;`, `&#34;nodejs14&#34;`, `&#34;python37&#34;`, `&#34;python38&#34;`, `&#34;python39&#34;`, `&#34;dotnet3&#34;`, `&#34;go113&#34;`, `&#34;java11&#34;`, `&#34;ruby27&#34;`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
      * 
      */
     public Output<String> runtime() {

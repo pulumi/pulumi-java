@@ -16,7 +16,7 @@ public final class QueueRetryConfig {
      * Number of attempts per task.
      * Cloud Tasks will attempt the task maxAttempts times (that is, if
      * the first attempt fails, then there will be maxAttempts - 1
-     * retries). Must be >= -1.
+     * retries). Must be &gt;= -1.
      * If unspecified when the queue is created, Cloud Tasks will pick
      * the default.
      * -1 indicates unlimited attempts.
@@ -25,14 +25,14 @@ public final class QueueRetryConfig {
     private final @Nullable Integer maxAttempts;
     /**
      * A task will be scheduled for retry between minBackoff and
-     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
      */
     private final @Nullable String maxBackoff;
     /**
      * The time between retries will double maxDoublings times.
-     * A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+     * A task&#39;s retry interval starts at minBackoff, then doubles maxDoublings times,
      * then increases linearly, and finally retries retries at intervals of maxBackoff
      * up to maxAttempts times.
      * 
@@ -50,7 +50,7 @@ public final class QueueRetryConfig {
     private final @Nullable String maxRetryDuration;
     /**
      * A task will be scheduled for retry between minBackoff and
-     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
      */
@@ -74,7 +74,7 @@ public final class QueueRetryConfig {
      * Number of attempts per task.
      * Cloud Tasks will attempt the task maxAttempts times (that is, if
      * the first attempt fails, then there will be maxAttempts - 1
-     * retries). Must be >= -1.
+     * retries). Must be &gt;= -1.
      * If unspecified when the queue is created, Cloud Tasks will pick
      * the default.
      * -1 indicates unlimited attempts.
@@ -85,7 +85,7 @@ public final class QueueRetryConfig {
     }
     /**
      * A task will be scheduled for retry between minBackoff and
-     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
     */
@@ -94,7 +94,7 @@ public final class QueueRetryConfig {
     }
     /**
      * The time between retries will double maxDoublings times.
-     * A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+     * A task&#39;s retry interval starts at minBackoff, then doubles maxDoublings times,
      * then increases linearly, and finally retries retries at intervals of maxBackoff
      * up to maxAttempts times.
      * 
@@ -116,7 +116,7 @@ public final class QueueRetryConfig {
     }
     /**
      * A task will be scheduled for retry between minBackoff and
-     * maxBackoff duration after it fails, if the queue's RetryConfig
+     * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
     */

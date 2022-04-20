@@ -31,14 +31,14 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
-     * terminated by 's'. Example: "3.5s".
+     * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String duration;
     /**
      * - 
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
      */
@@ -75,7 +75,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * Output only. Duration of the maintenance window.
      * The current window is fixed at 1 hour.
      * A duration in seconds with up to nine fractional digits,
-     * terminated by 's'. Example: "3.5s".
+     * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> duration() {
@@ -84,7 +84,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
     /**
      * - 
      * Output only. The start time of any upcoming scheduled maintenance for this instance.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
     */

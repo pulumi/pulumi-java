@@ -69,7 +69,7 @@ public final class GlobalAddressArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Labels to apply to this address.  A list of key->value pairs.
+     * Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     @Import(name="labels")

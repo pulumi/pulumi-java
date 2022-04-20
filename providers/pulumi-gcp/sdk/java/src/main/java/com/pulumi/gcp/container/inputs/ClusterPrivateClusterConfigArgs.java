@@ -18,7 +18,7 @@ public final class ClusterPrivateClusterConfigArgs extends com.pulumi.resources.
     public static final ClusterPrivateClusterConfigArgs Empty = new ClusterPrivateClusterConfigArgs();
 
     /**
-     * When `true`, the cluster's private
+     * When `true`, the cluster&#39;s private
      * endpoint is used as the cluster endpoint and access through the public endpoint
      * is disabled. When `false`, either endpoint can be used. This field only applies
      * to private clusters, when `enable_private_nodes` is `true`.
@@ -34,7 +34,7 @@ public final class ClusterPrivateClusterConfigArgs extends com.pulumi.resources.
     /**
      * Enables the private cluster feature,
      * creating a private endpoint on the cluster. In a private cluster, nodes only
-     * have RFC 1918 private addresses and communicate with the master's private
+     * have RFC 1918 private addresses and communicate with the master&#39;s private
      * endpoint via private networking.
      * 
      */
@@ -62,7 +62,7 @@ public final class ClusterPrivateClusterConfigArgs extends com.pulumi.resources.
      * The IP range in CIDR notation to use for
      * the hosted master network. This range will be used for assigning private IP
      * addresses to the cluster master(s) and the ILB VIP. This range must not overlap
-     * with any other ranges in use within the cluster's network, and it must be a /28
+     * with any other ranges in use within the cluster&#39;s network, and it must be a /28
      * subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
      * for more details. This field only applies to private clusters, when
      * `enable_private_nodes` is `true`.
@@ -87,7 +87,7 @@ public final class ClusterPrivateClusterConfigArgs extends com.pulumi.resources.
     }
 
     /**
-     * The internal IP address of this cluster's master endpoint.
+     * The internal IP address of this cluster&#39;s master endpoint.
      * 
      */
     @Import(name="privateEndpoint")
@@ -98,7 +98,7 @@ public final class ClusterPrivateClusterConfigArgs extends com.pulumi.resources.
     }
 
     /**
-     * The external IP address of this cluster's master endpoint.
+     * The external IP address of this cluster&#39;s master endpoint.
      * 
      */
     @Import(name="publicEndpoint")

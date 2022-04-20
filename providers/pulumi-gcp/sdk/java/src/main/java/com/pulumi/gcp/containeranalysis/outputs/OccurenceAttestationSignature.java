@@ -21,7 +21,7 @@ public final class OccurenceAttestationSignature {
      *   for more details on this scheme.
      * * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
      * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
-     * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
+     * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
      * 
      */
     private final String publicKeyId;
@@ -55,7 +55,7 @@ public final class OccurenceAttestationSignature {
      *   for more details on this scheme.
      * * `openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA`
      * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
-     * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
+     * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
      * 
     */
     public String publicKeyId() {

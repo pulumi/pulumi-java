@@ -14,7 +14,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * A Cloud Security Command Center's (Cloud SCC) finding source. A finding
+ * A Cloud Security Command Center&#39;s (Cloud SCC) finding source. A finding
  * source is an entity or a mechanism that can produce a finding. A source is
  * like a container of findings that come from the same scanner, logger,
  * monitor, etc.
@@ -59,7 +59,7 @@ public class Source extends com.pulumi.resources.CustomResource {
     /**
      * The source’s display name. A source’s display name must be unique
      * amongst its siblings, for example, two sources with the same parent
-     * can't share the same display name. The display name must start and end
+     * can&#39;t share the same display name. The display name must start and end
      * with a letter or digit, may contain letters, digits, spaces, hyphens,
      * and underscores, and can be no longer than 32 characters.
      * 
@@ -70,7 +70,7 @@ public class Source extends com.pulumi.resources.CustomResource {
     /**
      * @return The source’s display name. A source’s display name must be unique
      * amongst its siblings, for example, two sources with the same parent
-     * can't share the same display name. The display name must start and end
+     * can&#39;t share the same display name. The display name must start and end
      * with a letter or digit, may contain letters, digits, spaces, hyphens,
      * and underscores, and can be no longer than 32 characters.
      * 
@@ -79,14 +79,14 @@ public class Source extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
+     * The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
+     * @return The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
      * 
      */
     public Output<String> name() {

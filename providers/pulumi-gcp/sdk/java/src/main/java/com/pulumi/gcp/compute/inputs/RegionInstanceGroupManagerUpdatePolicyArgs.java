@@ -17,7 +17,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends com.pulumi
     public static final RegionInstanceGroupManagerUpdatePolicyArgs Empty = new RegionInstanceGroupManagerUpdatePolicyArgs();
 
     /**
-     * - The instance redistribution policy for regional managed instance groups. Valid values are: `"PROACTIVE"`, `"NONE"`. If `PROACTIVE` (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If `NONE`, proactive redistribution is disabled.
+     * - The instance redistribution policy for regional managed instance groups. Valid values are: `&#34;PROACTIVE&#34;`, `&#34;NONE&#34;`. If `PROACTIVE` (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If `NONE`, proactive redistribution is disabled.
      * 
      */
     @Import(name="instanceRedistributionType")
@@ -94,7 +94,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends com.pulumi
     }
 
     /**
-     * , The instance replacement method for managed instance groups. Valid values are: "RECREATE", "SUBSTITUTE". If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
+     * , The instance replacement method for managed instance groups. Valid values are: &#34;RECREATE&#34;, &#34;SUBSTITUTE&#34;. If SUBSTITUTE (default), the group replaces VM instances with new instances that have randomly generated names. If RECREATE, instance names are preserved.  You must also set max_unavailable_fixed or max_unavailable_percent to be greater than 0.
      * ***
      * 
      */

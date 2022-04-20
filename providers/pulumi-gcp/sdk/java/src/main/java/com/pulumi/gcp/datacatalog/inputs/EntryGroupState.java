@@ -27,7 +27,7 @@ public final class EntryGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A short name to identify the entry group, for example, "analytics data - jan 2011".
+     * A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;.
      * 
      */
     @Import(name="displayName")

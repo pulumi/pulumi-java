@@ -18,7 +18,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     private final String appYamlPath;
     /**
      * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String cloudBuildTimeout;
@@ -40,7 +40,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     }
     /**
      * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> cloudBuildTimeout() {

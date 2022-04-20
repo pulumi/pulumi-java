@@ -29,7 +29,7 @@ public final class WorkflowTemplateParameterGetArgs extends com.pulumi.resources
     }
 
     /**
-     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths. A field path is similar in syntax to a .sparkJob.args
+     * Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter&#39;s list of field paths. A field path is similar in syntax to a .sparkJob.args
      * 
      */
     @Import(name="fields", required=true)
@@ -51,7 +51,7 @@ public final class WorkflowTemplateParameterGetArgs extends com.pulumi.resources
     }
 
     /**
-     * Optional. Validation rules to be applied to this parameter's value.
+     * Optional. Validation rules to be applied to this parameter&#39;s value.
      * 
      */
     @Import(name="validation")

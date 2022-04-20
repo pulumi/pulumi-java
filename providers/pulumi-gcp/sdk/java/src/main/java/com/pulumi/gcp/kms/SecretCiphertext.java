@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.
  * 
- * > **NOTE:** Using this resource will allow you to conceal secret data within your
+ * &gt; **NOTE:** Using this resource will allow you to conceal secret data within your
  * resource definitions, but it does not take care of protecting that data in the
  * logging output, plan output, or state output.  Please take care to secure your secret
  * data outside of resource definitions.
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Encrypting and decrypting data with a symmetric key](https://cloud.google.com/kms/docs/encrypt-decrypt)
  * 
- * > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
+ * &gt; **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
@@ -71,7 +71,7 @@ public class SecretCiphertext extends com.pulumi.resources.CustomResource {
     }
     /**
      * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
      * 
      */
     @Export(name="cryptoKey", type=String.class, parameters={})
@@ -79,7 +79,7 @@ public class SecretCiphertext extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The full name of the CryptoKey that will be used to encrypt the provided plaintext.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
      * 
      */
     public Output<String> cryptoKey() {

@@ -14,14 +14,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerBuildArtifactsObjects {
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
      * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
      * this location as a prefix.
      * 
      */
     private final @Nullable String location;
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
      */
     private final @Nullable List<String> paths;
@@ -44,7 +44,7 @@ public final class TriggerBuildArtifactsObjects {
     }
 
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
      * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
      * this location as a prefix.
      * 
@@ -53,7 +53,7 @@ public final class TriggerBuildArtifactsObjects {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
     */
     public List<String> paths() {

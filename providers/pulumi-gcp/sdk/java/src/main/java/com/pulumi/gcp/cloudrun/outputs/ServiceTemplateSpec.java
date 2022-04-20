@@ -35,7 +35,7 @@ public final class ServiceTemplateSpec {
      * Email address of the IAM service account associated with the revision of the
      * service. The service account represents the identity of the running revision,
      * and determines what permissions the revision has. If not provided, the revision
-     * will use the project's default service account.
+     * will use the project&#39;s default service account.
      * 
      */
     private final @Nullable String serviceAccountName;
@@ -46,7 +46,7 @@ public final class ServiceTemplateSpec {
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
@@ -104,7 +104,7 @@ public final class ServiceTemplateSpec {
      * Email address of the IAM service account associated with the revision of the
      * service. The service account represents the identity of the running revision,
      * and determines what permissions the revision has. If not provided, the revision
-     * will use the project's default service account.
+     * will use the project&#39;s default service account.
      * 
     */
     public Optional<String> serviceAccountName() {
@@ -117,7 +117,7 @@ public final class ServiceTemplateSpec {
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @Deprecated
+     * @deprecated
      * Not supported by Cloud Run fully managed
      * 
     */
