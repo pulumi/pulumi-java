@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  * This resource *does* use a cryptographic random number generator.
  * 
- * Historically this resource's intended usage has been ambiguous as the original example used it in a password. For backwards compatibility it will continue to exist. For unique ids please use random_id, for sensitive random values please use random_password.
+ * Historically this resource&#39;s intended usage has been ambiguous as the original example used it in a password. For backwards compatibility it will continue to exist. For unique ids please use random_id, for sensitive random values please use random_password.
  * 
  * ## Example Usage
  * 
@@ -178,14 +178,14 @@ public class RandomString extends com.pulumi.resources.CustomResource {
         return this.result;
     }
     /**
-     * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
     @Export(name="special", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> special;
 
     /**
-     * @return Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * @return Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
     public Output</* @Nullable */ Boolean> special() {
