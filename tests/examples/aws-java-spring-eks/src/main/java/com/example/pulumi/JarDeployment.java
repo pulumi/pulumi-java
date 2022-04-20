@@ -35,6 +35,7 @@ import java.util.Map;
 
 public class JarDeployment extends ComponentResource {
     static final String TARGET_DIR = "/var/run/secrets/java";
+    public final Output<String> endpoint;
 
     public interface LambdaArgs {
          void op(JarDeploymentArgs.JarDeploymentArgsBuilder a);
@@ -48,13 +49,14 @@ public class JarDeployment extends ComponentResource {
     public Output<String> deployJar(String filepath, Output<String> jarBucket) {
         final var file = new FileAsset(filepath);
 
-        final var appJar = new BucketObject("jar", BucketObjectArgs.builder()
+        final var appJar = new BucketObject("my-jar.jar", BucketObjectArgs.builder()
                 .bucket(jarBucket)
                 .source(file)
                 .build());
+
         return Output.format("s3://%s/%s", appJar.bucket(), appJar.key());
     }
-    public void deployApp(Output<String> kubeconfig, Output<String> s3CpAssetPath) {
+    public Output<String> deployApp(Output<String> kubeconfig, Output<String> s3CpAssetPath) {
         // Create a Kubernetes provider instance that uses our cluster from above.
         final var clusterProvider = new Provider("myProvider",
                 ProviderArgs.builder()
@@ -136,7 +138,7 @@ public class JarDeployment extends ComponentResource {
                         .selector(appLabels)
                         .build())
                 .build(), clusterResourceOptions);
-        return;
+        return service.status().applyValue(data -> data.loadBalancer().get().ingress().get(0).hostname().get()).applyValue(String::valueOf);
     }
     public JarDeployment(String name, LambdaArgs applyArgs) {
         this(name, applyArgs, null);
@@ -153,7 +155,7 @@ public class JarDeployment extends ComponentResource {
 
         final var s3CpAssetPath = deployJar(args.getJarPath(), args.getBucketName());
 
-        deployApp(args.getKubeconfig(), args.getBucketName());
+        this.endpoint = deployApp(args.getKubeconfig(), s3CpAssetPath);
 
         return;
     }

@@ -54,6 +54,8 @@ public class EKSStack {
                 .instanceType("t2.micro")
                 .minSize(1)
                 .maxSize(2)
+                .build(), ComponentResourceOptions.builder()
+                .protect(true)
                 .build());
 
         var roleName = cluster.instanceRoles()

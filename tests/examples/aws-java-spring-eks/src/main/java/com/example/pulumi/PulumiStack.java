@@ -52,6 +52,8 @@ public class PulumiStack {
                 .kubeconfig(kubeconfig)
                 .jarPath(jarPath);
         });
+
+        ctx.export("endpoint", deployment.endpoint);
         return ctx.exports();
     }
 
