@@ -18,7 +18,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * <!-- Bug: Type and Name are switched -->
+ * &lt;!-- Bug: Type and Name are switched --&gt;
  * Creates and destroys a volume in Docker. This can be used alongside docker.Container to prepare volumes that can be shared across containers.
  * 
  * ## Example Usage
@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
  * 
  * - **mountpoint** (String) The mountpoint of the volume.
  * 
- * <a id="nestedblock--labels"></a>
+ * &lt;a id=&#34;nestedblock--labels&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `labels`
  * 
  * Required:
@@ -46,9 +46,9 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * ### Example Assuming you created a `volume` as follows #!/bin/bash docker volume create # prints the long ID 524b0457aa2a87dd2b75c74c3e4e53f406974249e63ab3ed9bf21e5644f9dc7d you provide the definition for the resource as follows terraform resource "docker_volume" "foo" {
+ * ### Example Assuming you created a `volume` as follows #!/bin/bash docker volume create # prints the long ID 524b0457aa2a87dd2b75c74c3e4e53f406974249e63ab3ed9bf21e5644f9dc7d you provide the definition for the resource as follows terraform resource &#34;docker_volume&#34; &#34;foo&#34; {
  * 
- *  name = "524b0457aa2a87dd2b75c74c3e4e53f406974249e63ab3ed9bf21e5644f9dc7d" } then the import command is as follows #!/bin/bash
+ *  name = &#34;524b0457aa2a87dd2b75c74c3e4e53f406974249e63ab3ed9bf21e5644f9dc7d&#34; } then the import command is as follows #!/bin/bash
  * 
  * ```sh
  *  $ pulumi import docker:index/volume:Volume foo 524b0457aa2a87dd2b75c74c3e4e53f406974249e63ab3ed9bf21e5644f9dc7d
