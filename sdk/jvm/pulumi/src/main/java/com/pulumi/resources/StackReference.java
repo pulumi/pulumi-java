@@ -55,7 +55,7 @@ public class StackReference extends CustomResource {
                 "pulumi:pulumi:StackReference",
                 name,
                 new StackReferenceArgs(ensureName(args, name)),
-                CustomResourceOptions.merge(options, CustomResourceOptions.builder().id(ensureName(args, name)).build())
+                CustomResourceOptions.merge(options, CustomResourceOptions.builder().build())
         );
     }
 

@@ -44,5 +44,5 @@ dependencies {
 application {
     mainClass = project.hasProperty("mainClass")
             ? project.getProperty("mainClass")
-            : 'com.pulumi.example.eksminimal.App'
+            : 'com.broom.example.PulumiStack'
 }
