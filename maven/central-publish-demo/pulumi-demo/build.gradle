@@ -87,6 +87,11 @@ sourceSets {
             srcDirs "build/generated/source/proto/main/java"
         }
     }
+    pub {
+        java {
+            srcDirs "src/main/java"
+        }
+    }
 }
 
 test {
@@ -110,6 +115,15 @@ test {
     systemProperty "java.util.logging.config.file", "${projectDir}/src/test/resources/logging.properties"
 }
 
+task sourcesJar(type: Jar) {
+    from sourceSets.pub.java
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
 
 var gprUser = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
 var gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
@@ -124,6 +138,8 @@ publishing {
             artifactId = "pulumi-demo"
             version = version
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
 
             pom {
                 inceptionYear = "2022"
