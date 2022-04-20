@@ -128,7 +128,7 @@ public final class SapHanaLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'SapHana'.
+     * Expected value is &#39;SapHana&#39;.
      * 
      */
     @Import(name="type", required=true)

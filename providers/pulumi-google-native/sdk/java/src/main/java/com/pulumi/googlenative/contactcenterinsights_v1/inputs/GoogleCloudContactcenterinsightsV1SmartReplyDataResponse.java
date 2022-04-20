@@ -19,7 +19,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     public static final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse Empty = new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse();
 
     /**
-     * The system's confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     @Import(name="confidenceScore", required=true)

@@ -34,7 +34,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
      * 
      */
     @Import(name="odataType", required=true)

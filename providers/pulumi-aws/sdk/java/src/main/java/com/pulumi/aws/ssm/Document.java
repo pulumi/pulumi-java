@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an SSM Document resource
  * 
- * > **NOTE on updating SSM documents:** Only documents with a schema version of 2.0
+ * &gt; **NOTE on updating SSM documents:** Only documents with a schema version of 2.0
  * or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older schema version you must recreate the resource. Not all document types support a schema version of 2.0 or greater. Refer to [SSM document schema features and examples](https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html) for information about which schema versions are supported for the respective `document_type`.
  * 
  * ## Example Usage
@@ -43,21 +43,21 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ssm/document:Document example example
  * ```
  * 
- *  The `attachments_source` argument does not have an SSM API method for reading the attachment information detail after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_ssm_document" "test" {
+ *  The `attachments_source` argument does not have an SSM API method for reading the attachment information detail after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource &#34;aws_ssm_document&#34; &#34;test&#34; {
  * 
  *  name
  * 
- * = "test_document"
+ * = &#34;test_document&#34;
  * 
- *  document_type = "Package"
+ *  document_type = &#34;Package&#34;
  * 
  *  attachments_source {
  * 
  *  key
  * 
- * = "SourceUrl"
+ * = &#34;SourceUrl&#34;
  * 
- *  values = ["s3://${aws_s3_bucket.object_bucket.bucket}/test.zip"]
+ *  values = [&#34;s3://${aws_s3_bucket.object_bucket.bucket}/test.zip&#34;]
  * 
  *  }
  * 
@@ -205,14 +205,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.hash;
     }
     /**
-     * "Sha1" "Sha256". The hashing algorithm used when hashing the content.
+     * &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
      * 
      */
     @Export(name="hashType", type=String.class, parameters={})
     private Output<String> hashType;
 
     /**
-     * @return "Sha1" "Sha256". The hashing algorithm used when hashing the content.
+     * @return &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
      * 
      */
     public Output<String> hashType() {
@@ -289,14 +289,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.permissions;
     }
     /**
-     * A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
+     * A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
      * 
      */
     @Export(name="platformTypes", type=List.class, parameters={String.class})
     private Output<List<String>> platformTypes;
 
     /**
-     * @return A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
+     * @return A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
      * 
      */
     public Output<List<String>> platformTypes() {
@@ -317,14 +317,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.schemaVersion;
     }
     /**
-     * "Creating", "Active" or "Deleting". The current status of the document.
+     * &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
      * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return "Creating", "Active" or "Deleting". The current status of the document.
+     * @return &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
      * 
      */
     public Output<String> status() {
@@ -373,14 +373,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.targetType;
     }
     /**
-     * A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
+     * A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
     @Export(name="versionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionName;
 
     /**
-     * @return A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
+     * @return A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
     public Output</* @Nullable */ String> versionName() {

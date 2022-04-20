@@ -22,12 +22,12 @@ public final class WindowsBasedSliResponse {
      */
     private final PerformanceThresholdResponse goodTotalRatioThreshold;
     /**
-     * A window is good if the metric's value is in a good range, averaged across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
      * 
      */
     private final MetricRangeResponse metricMeanInRange;
     /**
-     * A window is good if the metric's value is in a good range, summed across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, summed across returned streams.
      * 
      */
     private final MetricRangeResponse metricSumInRange;
@@ -66,14 +66,14 @@ public final class WindowsBasedSliResponse {
         return this.goodTotalRatioThreshold;
     }
     /**
-     * A window is good if the metric's value is in a good range, averaged across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
      * 
     */
     public MetricRangeResponse metricMeanInRange() {
         return this.metricMeanInRange;
     }
     /**
-     * A window is good if the metric's value is in a good range, summed across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, summed across returned streams.
      * 
     */
     public MetricRangeResponse metricSumInRange() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class StageResponse {
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
      */
     private final List<String> profiles;
@@ -30,7 +30,7 @@ public final class StageResponse {
     }
 
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
     */
     public List<String> profiles() {

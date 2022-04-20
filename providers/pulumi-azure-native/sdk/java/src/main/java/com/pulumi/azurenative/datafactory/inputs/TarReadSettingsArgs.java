@@ -33,7 +33,7 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The Compression setting type.
-     * Expected value is 'TarReadSettings'.
+     * Expected value is &#39;TarReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

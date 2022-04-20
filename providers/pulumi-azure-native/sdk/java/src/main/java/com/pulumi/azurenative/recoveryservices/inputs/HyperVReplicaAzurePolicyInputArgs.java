@@ -34,7 +34,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
 
     /**
      * The class type.
-     * Expected value is 'HyperVReplicaAzure'.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
      */
     @Import(name="instanceType")

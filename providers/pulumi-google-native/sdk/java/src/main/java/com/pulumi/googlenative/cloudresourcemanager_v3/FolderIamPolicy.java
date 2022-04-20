@@ -17,8 +17,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Sets the access control policy on a folder, replacing any existing policy. The `resource` field should be the folder's resource name, for example: "folders/1234". The caller must have `resourcemanager.folders.setIamPolicy` permission on the identified folder.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Sets the access control policy on a folder, replacing any existing policy. The `resource` field should be the folder&#39;s resource name, for example: &#34;folders/1234&#34;. The caller must have `resourcemanager.folders.setIamPolicy` permission on the identified folder.
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */

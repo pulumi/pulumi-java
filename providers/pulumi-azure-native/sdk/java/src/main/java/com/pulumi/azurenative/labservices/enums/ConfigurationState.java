@@ -9,14 +9,14 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Describes the user's progress in configuring their environment setting
+     * Describes the user&#39;s progress in configuring their environment setting
      * 
      */
     @EnumType
     public enum ConfigurationState {
         /**
-         * User either hasn't started configuring their template
-         * or they haven't started the configuration process.
+         * User either hasn&#39;t started configuring their template
+         * or they haven&#39;t started the configuration process.
          * 
          */
         NotApplicable("NotApplicable"),

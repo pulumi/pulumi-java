@@ -35,7 +35,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
 
     /**
      * The type of the Security policy to create.
-     * Expected value is 'WebApplicationFirewall'.
+     * Expected value is &#39;WebApplicationFirewall&#39;.
      * 
      */
     @Import(name="type", required=true)

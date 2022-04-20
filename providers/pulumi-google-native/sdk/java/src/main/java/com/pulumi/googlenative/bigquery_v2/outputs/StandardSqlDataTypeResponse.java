@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class StandardSqlDataTypeResponse {
     /**
-     * The type of the array's elements, if type_kind = "ARRAY".
+     * The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
      * 
      */
     private final StandardSqlDataTypeResponse arrayElementType;
     /**
-     * The fields of this struct, in order, if type_kind = "STRUCT".
+     * The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
      * 
      */
     private final StandardSqlStructTypeResponse structType;
     /**
-     * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     * The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
      * 
      */
     private final String typeKind;
@@ -37,21 +37,21 @@ public final class StandardSqlDataTypeResponse {
     }
 
     /**
-     * The type of the array's elements, if type_kind = "ARRAY".
+     * The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
      * 
     */
     public StandardSqlDataTypeResponse arrayElementType() {
         return this.arrayElementType;
     }
     /**
-     * The fields of this struct, in order, if type_kind = "STRUCT".
+     * The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
      * 
     */
     public StandardSqlStructTypeResponse structType() {
         return this.structType;
     }
     /**
-     * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     * The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
      * 
     */
     public String typeKind() {

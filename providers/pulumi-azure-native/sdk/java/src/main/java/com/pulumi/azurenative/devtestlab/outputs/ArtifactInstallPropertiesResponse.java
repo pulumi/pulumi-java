@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArtifactInstallPropertiesResponse {
     /**
-     * The artifact's identifier.
+     * The artifact&#39;s identifier.
      * 
      */
     private final @Nullable String artifactId;
     /**
-     * The artifact's title.
+     * The artifact&#39;s title.
      * 
      */
     private final @Nullable String artifactTitle;
@@ -68,14 +68,14 @@ public final class ArtifactInstallPropertiesResponse {
     }
 
     /**
-     * The artifact's identifier.
+     * The artifact&#39;s identifier.
      * 
     */
     public Optional<String> artifactId() {
         return Optional.ofNullable(this.artifactId);
     }
     /**
-     * The artifact's title.
+     * The artifact&#39;s title.
      * 
     */
     public Optional<String> artifactTitle() {

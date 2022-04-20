@@ -25,7 +25,7 @@ public final class VideoStreamingResponse extends com.pulumi.resources.InvokeArg
      *   - HLS CMAF:  /manifest(format=m3u8-cmaf)
      *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
      * 
-     * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
+     * Moreover, an ongoing video recording can be played in &#34;live mode&#34; with latencies which are approximately double of the chosen video segment length.
      * 
      */
     @Import(name="archiveBaseUrl")

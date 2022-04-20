@@ -18,7 +18,7 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
     public static final FingerprintResponse Empty = new FingerprintResponse();
 
     /**
-     * The layer-id of the final layer in the Docker image's v1 representation. This field can be used as a filter in list requests.
+     * The layer-id of the final layer in the Docker image&#39;s v1 representation. This field can be used as a filter in list requests.
      * 
      */
     @Import(name="v1Name", required=true)
@@ -40,7 +40,7 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
+     * The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
      * 
      */
     @Import(name="v2Name", required=true)

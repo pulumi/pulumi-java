@@ -66,7 +66,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'continuous'.
+     * Expected value is &#39;continuous&#39;.
      * 
      */
     @Import(name="type", required=true)

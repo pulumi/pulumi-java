@@ -61,7 +61,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name")
@@ -99,7 +99,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * be stamped out. The template references the container image, and may also
      * include labels and annotations that should be attached to the Revision.
      * To correlate a Revision, and/or to force a Revision to be created when the
-     * spec doesn't otherwise change, a nonce label may be provided in the
+     * spec doesn&#39;t otherwise change, a nonce label may be provided in the
      * template metadata. For more details, see:
      * https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
      * Cloud Run does not currently support referencing a build that is

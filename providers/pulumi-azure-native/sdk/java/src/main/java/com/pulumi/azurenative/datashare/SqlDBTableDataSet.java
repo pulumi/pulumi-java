@@ -62,7 +62,7 @@ public class SqlDBTableDataSet extends com.pulumi.resources.CustomResource {
     }
     /**
      * Kind of data set.
-     * Expected value is 'SqlDBTable'.
+     * Expected value is &#39;SqlDBTable&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class SqlDBTableDataSet extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Kind of data set.
-     * Expected value is 'SqlDBTable'.
+     * Expected value is &#39;SqlDBTable&#39;.
      * 
      */
     public Output<String> kind() {

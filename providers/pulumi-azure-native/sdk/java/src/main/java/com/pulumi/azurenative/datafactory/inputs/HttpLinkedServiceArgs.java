@@ -151,7 +151,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of linked service.
-     * Expected value is 'HttpServer'.
+     * Expected value is &#39;HttpServer&#39;.
      * 
      */
     @Import(name="type", required=true)

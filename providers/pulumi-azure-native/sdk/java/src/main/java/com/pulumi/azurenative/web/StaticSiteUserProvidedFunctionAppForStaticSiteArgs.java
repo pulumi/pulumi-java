@@ -50,7 +50,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     }
 
     /**
-     * Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>.
+     * Specify &lt;code&gt;true&lt;/code&gt; to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="isForced")

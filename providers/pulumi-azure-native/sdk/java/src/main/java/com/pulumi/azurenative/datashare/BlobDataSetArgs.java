@@ -61,7 +61,7 @@ public final class BlobDataSetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of data set.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     @Import(name="kind", required=true)

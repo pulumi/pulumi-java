@@ -51,7 +51,7 @@ public final class GetHttpsHealthCheckResult {
      */
     private final Integer port;
     /**
-     * The request path of the HTTPS health check request. The default value is "/".
+     * The request path of the HTTPS health check request. The default value is &#34;/&#34;.
      * 
      */
     private final String requestPath;
@@ -163,7 +163,7 @@ public final class GetHttpsHealthCheckResult {
         return this.port;
     }
     /**
-     * The request path of the HTTPS health check request. The default value is "/".
+     * The request path of the HTTPS health check request. The default value is &#34;/&#34;.
      * 
     */
     public String requestPath() {

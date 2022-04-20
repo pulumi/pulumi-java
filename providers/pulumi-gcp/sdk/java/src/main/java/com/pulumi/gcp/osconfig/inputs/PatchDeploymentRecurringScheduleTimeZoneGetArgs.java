@@ -16,7 +16,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends com.p
     public static final PatchDeploymentRecurringScheduleTimeZoneGetArgs Empty = new PatchDeploymentRecurringScheduleTimeZoneGetArgs();
 
     /**
-     * IANA Time Zone Database time zone, e.g. "America/New_York".
+     * IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
      * 
      */
     @Import(name="id", required=true)
@@ -27,7 +27,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends com.p
     }
 
     /**
-     * IANA Time Zone Database version number, e.g. "2019a".
+     * IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
      */
     @Import(name="version")

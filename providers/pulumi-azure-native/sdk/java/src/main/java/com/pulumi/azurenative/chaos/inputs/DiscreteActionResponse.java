@@ -54,7 +54,7 @@ public final class DiscreteActionResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'discrete'.
+     * Expected value is &#39;discrete&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -15,22 +15,22 @@ import java.util.StringJoiner;
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType {
         /**
-         * Default type that indicates this enum hasn't been specified. This is not a valid IntegrationType, one of the other types must be specified instead.
+         * Default type that indicates this enum hasn&#39;t been specified. This is not a valid IntegrationType, one of the other types must be specified instead.
          * 
          */
         IntegrationTypeUnspecified("INTEGRATION_TYPE_UNSPECIFIED"),
         /**
-         * Only used to produce scores. It doesn't display the "I'm not a robot" checkbox and never shows captcha challenges.
+         * Only used to produce scores. It doesn&#39;t display the &#34;I&#39;m not a robot&#34; checkbox and never shows captcha challenges.
          * 
          */
         Score("SCORE"),
         /**
-         * Displays the "I'm not a robot" checkbox and may show captcha challenges after it is checked.
+         * Displays the &#34;I&#39;m not a robot&#34; checkbox and may show captcha challenges after it is checked.
          * 
          */
         Checkbox("CHECKBOX"),
         /**
-         * Doesn't display the "I'm not a robot" checkbox, but may show captcha challenges after risk analysis.
+         * Doesn&#39;t display the &#34;I&#39;m not a robot&#34; checkbox, but may show captcha challenges after risk analysis.
          * 
          */
         Invisible("INVISIBLE");

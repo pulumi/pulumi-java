@@ -20,7 +20,7 @@ public final class SqlServerResourceSettingsArgs extends com.pulumi.resources.Re
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Sql/servers'.
+     * Expected value is &#39;Microsoft.Sql/servers&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

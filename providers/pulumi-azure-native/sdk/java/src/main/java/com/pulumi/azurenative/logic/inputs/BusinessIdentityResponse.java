@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The integration account partner's business identity.
+ * The integration account partner&#39;s business identity.
  * 
  */
 public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeArgs {

@@ -17,9 +17,9 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final JSONWebKeyArgs Empty = new JSONWebKeyArgs();
 
     /**
-     * The "alg" (algorithm) parameter identifies the algorithm intended for
+     * The &#34;alg&#34; (algorithm) parameter identifies the algorithm intended for
      * use with the key.  The values used should either be registered in the
-     * IANA "JSON Web Signature and Encryption Algorithms" registry
+     * IANA &#34;JSON Web Signature and Encryption Algorithms&#34; registry
      * established by [JWA] or be a value that contains a Collision-
      * Resistant Name.
      * 
@@ -32,7 +32,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "crv" (curve) parameter identifies the curve type
+     * The &#34;crv&#34; (curve) parameter identifies the curve type
      * 
      */
     @Import(name="crv")
@@ -98,14 +98,14 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "kid" (key ID) parameter is used to match a specific key.  This
+     * The &#34;kid&#34; (key ID) parameter is used to match a specific key.  This
      * is used, for instance, to choose among a set of keys within a JWK Set
-     * during key rollover.  The structure of the "kid" value is
-     * unspecified.  When "kid" values are used within a JWK Set, different
-     * keys within the JWK Set SHOULD use distinct "kid" values.  (One
-     * example in which different keys might use the same "kid" value is if
-     * they have different "kty" (key type) values but are considered to be
-     * equivalent alternatives by the application using them.)  The "kid"
+     * during key rollover.  The structure of the &#34;kid&#34; value is
+     * unspecified.  When &#34;kid&#34; values are used within a JWK Set, different
+     * keys within the JWK Set SHOULD use distinct &#34;kid&#34; values.  (One
+     * example in which different keys might use the same &#34;kid&#34; value is if
+     * they have different &#34;kty&#34; (key type) values but are considered to be
+     * equivalent alternatives by the application using them.)  The &#34;kid&#34;
      * value is a case-sensitive string.
      * 
      */
@@ -117,11 +117,11 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "kty" (key type) parameter identifies the cryptographic algorithm
-     * family used with the key, such as "RSA" or "EC". "kty" values should
-     * either be registered in the IANA "JSON Web Key Types" registry
+     * The &#34;kty&#34; (key type) parameter identifies the cryptographic algorithm
+     * family used with the key, such as &#34;RSA&#34; or &#34;EC&#34;. &#34;kty&#34; values should
+     * either be registered in the IANA &#34;JSON Web Key Types&#34; registry
      * established by [JWA] or be a value that contains a Collision-
-     * Resistant Name.  The "kty" value is a case-sensitive string.
+     * Resistant Name.  The &#34;kty&#34; value is a case-sensitive string.
      * 
      */
     @Import(name="kty", required=true)
@@ -154,7 +154,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * RSA secret prime, with p < q
+     * RSA secret prime, with p &lt; q
      * 
      */
     @Import(name="q")
@@ -176,10 +176,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Use ("public key use") identifies the intended use of
-     * the public key. The "use" parameter is employed to indicate whether
+     * Use (&#34;public key use&#34;) identifies the intended use of
+     * the public key. The &#34;use&#34; parameter is employed to indicate whether
      * a public key is used for encrypting data or verifying the signature
-     * on data. Values are commonly "sig" (signature) or "enc" (encryption).
+     * on data. Values are commonly &#34;sig&#34; (signature) or &#34;enc&#34; (encryption).
      * 
      */
     @Import(name="use")
@@ -201,7 +201,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "x5c" (X.509 certificate chain) parameter contains a chain of one
+     * The &#34;x5c&#34; (X.509 certificate chain) parameter contains a chain of one
      * or more PKIX certificates [RFC5280].  The certificate chain is
      * represented as a JSON array of certificate value strings.  Each
      * string in the array is a base64-encoded (Section 4 of [RFC4648] --

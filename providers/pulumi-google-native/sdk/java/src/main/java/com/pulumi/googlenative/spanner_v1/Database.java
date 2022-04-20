@@ -52,14 +52,14 @@ public class Database extends com.pulumi.resources.CustomResource {
         return this.databaseDialect;
     }
     /**
-     * The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+     * The read-write region which contains the database&#39;s leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
      */
     @Export(name="defaultLeader", type=String.class, parameters={})
     private Output<String> defaultLeader;
 
     /**
-     * @return The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+     * @return The read-write region which contains the database&#39;s leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
      */
     public Output<String> defaultLeader() {

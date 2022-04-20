@@ -43,7 +43,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
 
     /**
      * The authentication type.
-     * Expected value is 'ApiKey'.
+     * Expected value is &#39;ApiKey&#39;.
      * 
      */
     @Import(name="type", required=true)

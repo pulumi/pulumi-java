@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SearchResultsResponse {
     /**
-     * Search results table's Description.
+     * Search results table&#39;s Description.
      * 
      */
     private final @Nullable String description;
@@ -60,7 +60,7 @@ public final class SearchResultsResponse {
     }
 
     /**
-     * Search results table's Description.
+     * Search results table&#39;s Description.
      * 
     */
     public Optional<String> description() {

@@ -32,7 +32,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Enum to determine identity framework.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     @Import(name="identityType", required=true)

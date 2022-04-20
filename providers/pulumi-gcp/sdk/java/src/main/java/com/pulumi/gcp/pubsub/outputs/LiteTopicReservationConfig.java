@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LiteTopicReservationConfig {
     /**
-     * The Reservation to use for this topic's throughput capacity.
+     * The Reservation to use for this topic&#39;s throughput capacity.
      * 
      */
     private final @Nullable String throughputReservation;
@@ -23,7 +23,7 @@ public final class LiteTopicReservationConfig {
     }
 
     /**
-     * The Reservation to use for this topic's throughput capacity.
+     * The Reservation to use for this topic&#39;s throughput capacity.
      * 
     */
     public Optional<String> throughputReservation() {

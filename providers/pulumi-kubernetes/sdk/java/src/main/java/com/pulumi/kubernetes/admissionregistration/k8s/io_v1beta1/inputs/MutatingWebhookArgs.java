@@ -25,7 +25,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
     public static final MutatingWebhookArgs Empty = new MutatingWebhookArgs();
 
     /**
-     * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy. Default to `['v1beta1']`.
+     * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy. Default to `[&#39;v1beta1&#39;]`.
      * 
      */
     @Import(name="admissionReviewVersions")
@@ -58,13 +58,13 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * matchPolicy defines how the "rules" list is used to match incoming requests. Allowed values are "Exact" or "Equivalent".
+     * matchPolicy defines how the &#34;rules&#34; list is used to match incoming requests. Allowed values are &#34;Exact&#34; or &#34;Equivalent&#34;.
      * 
-     * - Exact: match a request only if it exactly matches a specified rule. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, but "rules" only included `apiGroups:["apps"], apiVersions:["v1"], resources: ["deployments"]`, a request to apps/v1beta1 or extensions/v1beta1 would not be sent to the webhook.
+     * - Exact: match a request only if it exactly matches a specified rule. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, but &#34;rules&#34; only included `apiGroups:[&#34;apps&#34;], apiVersions:[&#34;v1&#34;], resources: [&#34;deployments&#34;]`, a request to apps/v1beta1 or extensions/v1beta1 would not be sent to the webhook.
      * 
-     * - Equivalent: match a request if modifies a resource listed in rules, even via another API group or version. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, and "rules" only included `apiGroups:["apps"], apiVersions:["v1"], resources: ["deployments"]`, a request to apps/v1beta1 or extensions/v1beta1 would be converted to apps/v1 and sent to the webhook.
+     * - Equivalent: match a request if modifies a resource listed in rules, even via another API group or version. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, and &#34;rules&#34; only included `apiGroups:[&#34;apps&#34;], apiVersions:[&#34;v1&#34;], resources: [&#34;deployments&#34;]`, a request to apps/v1beta1 or extensions/v1beta1 would be converted to apps/v1 and sent to the webhook.
      * 
-     * Defaults to "Exact"
+     * Defaults to &#34;Exact&#34;
      * 
      */
     @Import(name="matchPolicy")
@@ -75,7 +75,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The name of the admission webhook. Name should be fully qualified, e.g., imagepolicy.kubernetes.io, where "imagepolicy" is the name of the webhook, and kubernetes.io is the name of the organization. Required.
+     * The name of the admission webhook. Name should be fully qualified, e.g., imagepolicy.kubernetes.io, where &#34;imagepolicy&#34; is the name of the webhook, and kubernetes.io is the name of the organization. Required.
      * 
      */
     @Import(name="name", required=true)
@@ -88,27 +88,27 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
     /**
      * NamespaceSelector decides whether to run the webhook on an object based on whether the namespace for that object matches the selector. If the object itself is a namespace, the matching is performed on object.metadata.labels. If the object is another cluster scoped resource, it never skips the webhook.
      * 
-     * For example, to run the webhook on any objects whose namespace is not associated with "runlevel" of "0" or "1";  you will set the selector as follows: "namespaceSelector": {
-     *   "matchExpressions": [
+     * For example, to run the webhook on any objects whose namespace is not associated with &#34;runlevel&#34; of &#34;0&#34; or &#34;1&#34;;  you will set the selector as follows: &#34;namespaceSelector&#34;: {
+     *   &#34;matchExpressions&#34;: [
      *     {
-     *       "key": "runlevel",
-     *       "operator": "NotIn",
-     *       "values": [
-     *         "0",
-     *         "1"
+     *       &#34;key&#34;: &#34;runlevel&#34;,
+     *       &#34;operator&#34;: &#34;NotIn&#34;,
+     *       &#34;values&#34;: [
+     *         &#34;0&#34;,
+     *         &#34;1&#34;
      *       ]
      *     }
      *   ]
      * }
      * 
-     * If instead you want to only run the webhook on any objects whose namespace is associated with the "environment" of "prod" or "staging"; you will set the selector as follows: "namespaceSelector": {
-     *   "matchExpressions": [
+     * If instead you want to only run the webhook on any objects whose namespace is associated with the &#34;environment&#34; of &#34;prod&#34; or &#34;staging&#34;; you will set the selector as follows: &#34;namespaceSelector&#34;: {
+     *   &#34;matchExpressions&#34;: [
      *     {
-     *       "key": "environment",
-     *       "operator": "In",
-     *       "values": [
-     *         "prod",
-     *         "staging"
+     *       &#34;key&#34;: &#34;environment&#34;,
+     *       &#34;operator&#34;: &#34;In&#34;,
+     *       &#34;values&#34;: [
+     *         &#34;prod&#34;,
+     *         &#34;staging&#34;
      *       ]
      *     }
      *   ]
@@ -138,13 +138,13 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * reinvocationPolicy indicates whether this webhook should be called multiple times as part of a single admission evaluation. Allowed values are "Never" and "IfNeeded".
+     * reinvocationPolicy indicates whether this webhook should be called multiple times as part of a single admission evaluation. Allowed values are &#34;Never&#34; and &#34;IfNeeded&#34;.
      * 
      * Never: the webhook will not be called more than once in a single admission evaluation.
      * 
      * IfNeeded: the webhook will be called at least one additional time as part of the admission evaluation if the object being admitted is modified by other admission plugins after the initial webhook call. Webhooks that specify this option *must* be idempotent, able to process objects they previously admitted. Note: * the number of additional invocations is not guaranteed to be exactly one. * if additional invocations result in further modifications to the object, webhooks are not guaranteed to be invoked again. * webhooks that use this option may be reordered to minimize the number of additional invocations. * to validate an object after all mutations are guaranteed complete, use a validating admission webhook instead.
      * 
-     * Defaults to "Never".
+     * Defaults to &#34;Never&#34;.
      * 
      */
     @Import(name="reinvocationPolicy")

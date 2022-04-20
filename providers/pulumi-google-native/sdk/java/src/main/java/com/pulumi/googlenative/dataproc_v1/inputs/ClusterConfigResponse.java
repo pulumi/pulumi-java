@@ -40,7 +40,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
+     * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
      * 
      */
     @Import(name="configBucket", required=true)
@@ -95,7 +95,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
+     * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
      * 
      */
     @Import(name="initializationActions", required=true)
@@ -117,7 +117,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. The Compute Engine config settings for the cluster's master instance.
+     * Optional. The Compute Engine config settings for the cluster&#39;s master instance.
      * 
      */
     @Import(name="masterConfig", required=true)
@@ -139,7 +139,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. The Compute Engine config settings for a cluster's secondary worker instances
+     * Optional. The Compute Engine config settings for a cluster&#39;s secondary worker instances
      * 
      */
     @Import(name="secondaryWorkerConfig", required=true)
@@ -172,7 +172,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
+     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
      * 
      */
     @Import(name="tempBucket", required=true)
@@ -183,7 +183,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Optional. The Compute Engine config settings for the cluster's worker instances.
+     * Optional. The Compute Engine config settings for the cluster&#39;s worker instances.
      * 
      */
     @Import(name="workerConfig", required=true)

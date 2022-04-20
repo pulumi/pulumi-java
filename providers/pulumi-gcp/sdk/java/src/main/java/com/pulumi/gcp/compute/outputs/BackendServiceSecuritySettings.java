@@ -19,7 +19,7 @@ public final class BackendServiceSecuritySettings {
     private final String clientTlsPolicy;
     /**
      * A list of alternate names to verify the subject identity in the certificate.
-     * If specified, the client will verify that the server certificate's subject
+     * If specified, the client will verify that the server certificate&#39;s subject
      * alt name matches one of the specified values.
      * 
      */
@@ -44,7 +44,7 @@ public final class BackendServiceSecuritySettings {
     }
     /**
      * A list of alternate names to verify the subject identity in the certificate.
-     * If specified, the client will verify that the server certificate's subject
+     * If specified, the client will verify that the server certificate&#39;s subject
      * alt name matches one of the specified values.
      * 
     */

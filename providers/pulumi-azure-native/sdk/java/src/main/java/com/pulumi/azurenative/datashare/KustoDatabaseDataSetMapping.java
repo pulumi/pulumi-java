@@ -62,7 +62,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     public Output<String> kind() {

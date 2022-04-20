@@ -17,7 +17,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse {
     /**
-     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
+     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
      * 
      */
     private final Integer channelTag;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
     /**
-     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
      */
     private final String languageCode;
@@ -85,7 +85,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     }
 
     /**
-     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
+     * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from &#39;1&#39; to &#39;N&#39;. A channel tag of 0 indicates that the audio is mono.
      * 
     */
     public Integer channelTag() {
@@ -106,7 +106,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         return this.dialogflowSegmentMetadata;
     }
     /**
-     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+     * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
     */
     public String languageCode() {

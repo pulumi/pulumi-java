@@ -19,7 +19,7 @@ public final class ClusterParameterGroupArgs extends com.pulumi.resources.Resour
     public static final ClusterParameterGroupArgs Empty = new ClusterParameterGroupArgs();
 
     /**
-     * The description of the neptune cluster parameter group. Defaults to "Managed by Pulumi".
+     * The description of the neptune cluster parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

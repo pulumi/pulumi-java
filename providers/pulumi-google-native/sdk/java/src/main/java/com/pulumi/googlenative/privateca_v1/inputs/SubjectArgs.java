@@ -20,7 +20,7 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     /**
-     * The "common name" of the subject.
+     * The &#34;common name&#34; of the subject.
      * 
      */
     @Import(name="commonName")

@@ -18,7 +18,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     public static final ClusterScalingConfigurationGetArgs Empty = new ClusterScalingConfigurationGetArgs();
 
     /**
-     * Whether to enable automatic pause. A DB cluster can be paused only when it's idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to `true`.
+     * Whether to enable automatic pause. A DB cluster can be paused only when it&#39;s idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to `true`.
      * 
      */
     @Import(name="autoPause")

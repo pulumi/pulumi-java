@@ -25,7 +25,7 @@ public final class GetHl7V2StoreResult {
      */
     private final String name;
     /**
-     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
      */
     private final List<Hl7V2NotificationConfigResponse> notificationConfigs;
@@ -69,7 +69,7 @@ public final class GetHl7V2StoreResult {
         return this.name;
     }
     /**
-     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
     */
     public List<Hl7V2NotificationConfigResponse> notificationConfigs() {

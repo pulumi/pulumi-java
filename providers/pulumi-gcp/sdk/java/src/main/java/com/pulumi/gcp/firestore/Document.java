@@ -23,10 +23,10 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/firestore/docs/manage-data/add-data)
  * 
- * > **Warning:** This resource creates a Firestore Document on a project that already has
- * Firestore enabled. If you haven't already enabled it, you can create a
+ * &gt; **Warning:** This resource creates a Firestore Document on a project that already has
+ * Firestore enabled. If you haven&#39;t already enabled it, you can create a
  * `gcp.appengine.Application` resource with `database_type` set to
- * `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
+ * `&#34;CLOUD_FIRESTORE&#34;` to do so. Your Firestore location will be the same as
  * the App Engine location specified.
  * 
  * ## Example Usage
@@ -71,14 +71,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The Firestore database id. Defaults to `"(default)"`.
+     * The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     @Export(name="database", type=String.class, parameters={})
     private Output</* @Nullable */ String> database;
 
     /**
-     * @return The Firestore database id. Defaults to `"(default)"`.
+     * @return The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     public Output</* @Nullable */ String> database() {
@@ -99,14 +99,14 @@ public class Document extends com.pulumi.resources.CustomResource {
         return this.documentId;
     }
     /**
-     * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
     @Export(name="fields", type=String.class, parameters={})
     private Output<String> fields;
 
     /**
-     * @return The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * @return The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
     public Output<String> fields() {
@@ -114,7 +114,7 @@ public class Document extends com.pulumi.resources.CustomResource {
     }
     /**
      * A server defined name for this index. Format:
-     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * &#39;projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}&#39;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -122,7 +122,7 @@ public class Document extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A server defined name for this index. Format:
-     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * &#39;projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}&#39;
      * 
      */
     public Output<String> name() {

@@ -60,7 +60,7 @@ public class DomainIdentity extends com.pulumi.resources.CustomResource {
     /**
      * A code which when added to the domain as a TXT record
      * will signal to SES that the owner of the domain has authorised SES to act on
-     * their behalf. The domain identity will be in state "verification pending"
+     * their behalf. The domain identity will be in state &#34;verification pending&#34;
      * until this is done. See below for an example of how this might be achieved
      * when the domain is hosted in Route 53 and managed by this provider.  Find out
      * more about verifying domains in Amazon SES in the [AWS SES
@@ -73,7 +73,7 @@ public class DomainIdentity extends com.pulumi.resources.CustomResource {
     /**
      * @return A code which when added to the domain as a TXT record
      * will signal to SES that the owner of the domain has authorised SES to act on
-     * their behalf. The domain identity will be in state "verification pending"
+     * their behalf. The domain identity will be in state &#34;verification pending&#34;
      * until this is done. See below for an example of how this might be achieved
      * when the domain is hosted in Route 53 and managed by this provider.  Find out
      * more about verifying domains in Amazon SES in the [AWS SES

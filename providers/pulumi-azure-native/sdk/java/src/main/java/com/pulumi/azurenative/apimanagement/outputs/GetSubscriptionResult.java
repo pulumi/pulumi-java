@@ -58,7 +58,7 @@ public final class GetSubscriptionResult {
      */
     private final @Nullable String ownerId;
     /**
-     * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     private final @Nullable String primaryKey;
@@ -68,7 +68,7 @@ public final class GetSubscriptionResult {
      */
     private final String scope;
     /**
-     * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     private final @Nullable String secondaryKey;
@@ -83,7 +83,7 @@ public final class GetSubscriptionResult {
      */
     private final String state;
     /**
-     * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
+     * Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
      */
     private final @Nullable String stateComment;
@@ -193,7 +193,7 @@ public final class GetSubscriptionResult {
         return Optional.ofNullable(this.ownerId);
     }
     /**
-     * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
     */
     public Optional<String> primaryKey() {
@@ -207,7 +207,7 @@ public final class GetSubscriptionResult {
         return this.scope;
     }
     /**
-     * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
     */
     public Optional<String> secondaryKey() {
@@ -228,7 +228,7 @@ public final class GetSubscriptionResult {
         return this.state;
     }
     /**
-     * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
+     * Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
     */
     public Optional<String> stateComment() {

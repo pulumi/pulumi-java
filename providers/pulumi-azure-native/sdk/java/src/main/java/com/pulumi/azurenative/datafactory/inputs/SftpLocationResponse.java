@@ -44,7 +44,7 @@ public final class SftpLocationResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'SftpLocation'.
+     * Expected value is &#39;SftpLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

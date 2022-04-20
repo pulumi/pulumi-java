@@ -75,7 +75,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+     * Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
      * 
      */
     @Import(name="shutdownWhenNotConnected")

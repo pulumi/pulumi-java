@@ -21,7 +21,7 @@ public final class CloudwatchFunctions {
     /**
      * Use this data source to retrieve information about an EventBridge connection.
      * 
-     * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
      * 
      * ## Example Usage
      * 
@@ -35,7 +35,7 @@ public final class CloudwatchFunctions {
     /**
      * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
      * 
-     * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
      * 
      * ## Example Usage
      * 

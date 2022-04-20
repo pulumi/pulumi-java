@@ -22,7 +22,7 @@ public final class CorsSettingsResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin
-     * calls (for example: http://example.com:12345). Use "*" to allow all.
+     * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
      * 
      */
     @Import(name="allowedOrigins")

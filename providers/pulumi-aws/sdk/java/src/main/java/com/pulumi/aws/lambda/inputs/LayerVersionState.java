@@ -31,7 +31,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+     * Path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
      * 
      */
     @Import(name="code")
@@ -119,7 +119,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+     * S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
     @Import(name="s3Bucket")
@@ -130,7 +130,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * S3 key of an object containing the function's deployment package. Conflicts with `filename`.
+     * S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename`.
      * 
      */
     @Import(name="s3Key")
@@ -141,7 +141,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Object version containing the function's deployment package. Conflicts with `filename`.
+     * Object version containing the function&#39;s deployment package. Conflicts with `filename`.
      * 
      */
     @Import(name="s3ObjectVersion")

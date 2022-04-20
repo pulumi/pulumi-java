@@ -19,7 +19,7 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
     public static final WinRMListenerResponse Empty = new WinRMListenerResponse();
 
     /**
-     * This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br> "data":"<Base64-encoded-certificate>",<br> "dataType":"pfx",<br> "password":"<pfx-file-password>"<br>} <br> To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+     * This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: &lt;br&gt;&lt;br&gt; {&lt;br&gt; &#34;data&#34;:&#34;&lt;Base64-encoded-certificate&gt;&#34;,&lt;br&gt; &#34;dataType&#34;:&#34;pfx&#34;,&lt;br&gt; &#34;password&#34;:&#34;&lt;pfx-file-password&gt;&#34;&lt;br&gt;} &lt;br&gt; To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
      * 
      */
     @Import(name="certificateUrl")
@@ -30,7 +30,7 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**
+     * Specifies the protocol of WinRM listener. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;**http** &lt;br&gt;&lt;br&gt; **https**
      * 
      */
     @Import(name="protocol")

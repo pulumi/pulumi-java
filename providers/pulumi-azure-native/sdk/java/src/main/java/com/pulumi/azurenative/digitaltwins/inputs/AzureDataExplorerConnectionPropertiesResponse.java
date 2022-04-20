@@ -65,7 +65,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
 
     /**
      * The type of time series connection resource.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
      */
     @Import(name="connectionType", required=true)

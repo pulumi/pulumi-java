@@ -33,7 +33,7 @@ public final class VirtualNetworkResourceSettingsResponse {
     private final @Nullable Boolean enableDdosProtection;
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/virtualNetworks'.
+     * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
      * 
      */
     private final String resourceType;
@@ -89,7 +89,7 @@ public final class VirtualNetworkResourceSettingsResponse {
     }
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/virtualNetworks'.
+     * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
      * 
     */
     public String resourceType() {

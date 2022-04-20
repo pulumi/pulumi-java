@@ -18,7 +18,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
     public static final KubernetesMetadataResponse Empty = new KubernetesMetadataResponse();
 
     /**
-     * Kubernetes API server version string as reported by '/version'.
+     * Kubernetes API server version string as reported by &#39;/version&#39;.
      * 
      */
     @Import(name="kubernetesApiServerVersion", required=true)

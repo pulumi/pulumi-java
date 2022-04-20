@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class AccessanalyzerFunctions {
     /**
-     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
+     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
      * 
      */
     public static CompletableFuture<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args) {

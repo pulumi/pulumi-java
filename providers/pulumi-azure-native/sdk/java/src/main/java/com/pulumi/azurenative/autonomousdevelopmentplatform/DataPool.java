@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:autonomousdevelopmentplatform:DataPool")
 public class DataPool extends com.pulumi.resources.CustomResource {
     /**
-     * The Data Pool's data-plane ID
+     * The Data Pool&#39;s data-plane ID
      * 
      */
     @Export(name="dataPoolId", type=String.class, parameters={})
     private Output<String> dataPoolId;
 
     /**
-     * @return The Data Pool's data-plane ID
+     * @return The Data Pool&#39;s data-plane ID
      * 
      */
     public Output<String> dataPoolId() {
@@ -104,14 +104,14 @@ public class DataPool extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

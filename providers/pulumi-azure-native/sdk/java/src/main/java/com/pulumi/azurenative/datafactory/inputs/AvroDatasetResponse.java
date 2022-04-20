@@ -147,7 +147,7 @@ public final class AvroDatasetResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
      */
     @Import(name="type", required=true)

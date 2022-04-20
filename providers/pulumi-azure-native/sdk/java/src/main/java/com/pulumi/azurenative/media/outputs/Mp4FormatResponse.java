@@ -19,7 +19,7 @@ public final class Mp4FormatResponse {
     private final String filenamePattern;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Mp4Format'.
+     * Expected value is &#39;#Microsoft.Media.Mp4Format&#39;.
      * 
      */
     private final String odataType;
@@ -48,7 +48,7 @@ public final class Mp4FormatResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Mp4Format'.
+     * Expected value is &#39;#Microsoft.Media.Mp4Format&#39;.
      * 
     */
     public String odataType() {

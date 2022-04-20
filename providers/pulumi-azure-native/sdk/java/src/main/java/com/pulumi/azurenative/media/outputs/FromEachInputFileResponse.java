@@ -25,7 +25,7 @@ public final class FromEachInputFileResponse {
     private final @Nullable List<Object> includedTracks;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.FromEachInputFile'.
+     * Expected value is &#39;#Microsoft.Media.FromEachInputFile&#39;.
      * 
      */
     private final String odataType;
@@ -47,7 +47,7 @@ public final class FromEachInputFileResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.FromEachInputFile'.
+     * Expected value is &#39;#Microsoft.Media.FromEachInputFile&#39;.
      * 
     */
     public String odataType() {

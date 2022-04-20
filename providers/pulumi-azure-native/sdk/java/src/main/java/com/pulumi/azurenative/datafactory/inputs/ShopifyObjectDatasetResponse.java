@@ -115,7 +115,7 @@ public final class ShopifyObjectDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'ShopifyObject'.
+     * Expected value is &#39;ShopifyObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class KubernetesConnectionDetailsResponse {
     /**
      * Gets the Instance type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     private final String instanceType;
@@ -33,7 +33,7 @@ public final class KubernetesConnectionDetailsResponse {
 
     /**
      * Gets the Instance type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
     */
     public String instanceType() {

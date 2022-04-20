@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * NetworkConfig reports the relative names of network & subnetwork.
+ * NetworkConfig reports the relative names of network &amp; subnetwork.
  * 
  */
 public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {

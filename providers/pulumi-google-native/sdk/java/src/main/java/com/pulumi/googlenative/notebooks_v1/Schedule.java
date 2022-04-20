@@ -65,14 +65,14 @@ public class Schedule extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
+     * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
+     * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
      * 
      */
     public Output<String> displayName() {
@@ -127,14 +127,14 @@ public class Schedule extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
+     * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
     @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
-     * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
+     * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
     public Output<String> timeZone() {

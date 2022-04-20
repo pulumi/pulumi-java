@@ -18,7 +18,7 @@ public final class ContainerResourcesResponse {
      */
     private final @Nullable Double cpu;
     /**
-     * Required memory, e.g. "250Mb"
+     * Required memory, e.g. &#34;250Mb&#34;
      * 
      */
     private final @Nullable String memory;
@@ -39,7 +39,7 @@ public final class ContainerResourcesResponse {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * Required memory, e.g. "250Mb"
+     * Required memory, e.g. &#34;250Mb&#34;
      * 
     */
     public Optional<String> memory() {

@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:vertex/aiDataset:AiDataset")
 public class AiDataset extends com.pulumi.resources.CustomResource {
     /**
-     * The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
      * fractional digits.
      * 
      */
@@ -42,7 +42,7 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
     private Output<String> createTime;
 
     /**
-     * @return The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * @return The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
      * fractional digits.
      * 
      */
@@ -152,7 +152,7 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
         return this.region;
     }
     /**
-     * The timestamp of when the dataset was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * The timestamp of when the dataset was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
      * 
      */
@@ -160,7 +160,7 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
     private Output<String> updateTime;
 
     /**
-     * @return The timestamp of when the dataset was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * @return The timestamp of when the dataset was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
      * 
      */

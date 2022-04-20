@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Describes a subordinate CA's issuers. This is either a resource path to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
+ * Describes a subordinate CA&#39;s issuers. This is either a resource path to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
  * 
  */
 public final class SubordinateConfigResponse extends com.pulumi.resources.InvokeArgs {

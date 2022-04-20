@@ -34,7 +34,7 @@ public final class SapHanaSourceResponse {
      */
     private final @Nullable Object packetSize;
     /**
-     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
+     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -65,7 +65,7 @@ public final class SapHanaSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapHanaSource'.
+     * Expected value is &#39;SapHanaSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SapHanaSourceResponse {
         return Optional.ofNullable(this.packetSize);
     }
     /**
-     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
+     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -168,7 +168,7 @@ public final class SapHanaSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapHanaSource'.
+     * Expected value is &#39;SapHanaSource&#39;.
      * 
     */
     public String type() {

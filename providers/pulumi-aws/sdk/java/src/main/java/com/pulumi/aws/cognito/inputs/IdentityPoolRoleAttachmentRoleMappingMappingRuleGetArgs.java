@@ -15,7 +15,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     public static final IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs Empty = new IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs();
 
     /**
-     * The claim name that must be present in the token, for example, "isAdmin" or "paid".
+     * The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
      * 
      */
     @Import(name="claim", required=true)
@@ -48,7 +48,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     }
 
     /**
-     * A brief string that the claim must match, for example, "paid" or "yes".
+     * A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
      * 
      */
     @Import(name="value", required=true)

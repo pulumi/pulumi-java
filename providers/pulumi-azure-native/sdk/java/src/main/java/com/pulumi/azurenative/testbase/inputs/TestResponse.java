@@ -33,7 +33,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Indicates if this test is active.It doesn't schedule test for not active Test.
+     * Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
      * 
      */
     @Import(name="isActive")

@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>A configuration for a streaming session.</p>
+ * &lt;p&gt;A configuration for a streaming session.&lt;/p&gt;
  * 
  */
 public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resources.ResourceArgs {
@@ -32,8 +32,8 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     }
 
     /**
-     * <p>The EC2 instance types that users can select from when launching a streaming session
-     *             with this launch profile.</p>
+     * &lt;p&gt;The EC2 instance types that users can select from when launching a streaming session
+     *             with this launch profile.&lt;/p&gt;
      * 
      */
     @Import(name="ec2InstanceTypes", required=true)
@@ -44,10 +44,10 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     }
 
     /**
-     * <p>The length of time, in minutes, that a streaming session can be active before it is
+     * &lt;p&gt;The length of time, in minutes, that a streaming session can be active before it is
      *             stopped or terminated. After this point, Nimble Studio automatically terminates or
      *             stops the session. The default length of time is 690 minutes, and the maximum length of
-     *             time is 30 days.</p>
+     *             time is 30 days.&lt;/p&gt;
      * 
      */
     @Import(name="maxSessionLengthInMinutes")
@@ -58,16 +58,16 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     }
 
     /**
-     * <p>Integer that determines if you can start and stop your sessions and how long a session
-     *             can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-     *         <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+     * &lt;p&gt;Integer that determines if you can start and stop your sessions and how long a session
+     *             can stay in the STOPPED state. The default value is 0. The maximum value is 5760.&lt;/p&gt;
+     *         &lt;p&gt;If the value is missing or set to 0, your sessions can’t be stopped. If you then call
      *             StopStreamingSession, the session fails. If the time that a session stays in the READY
      *             state exceeds the maxSessionLengthInMinutes value, the session will automatically be
-     *             terminated by AWS (instead of stopped).</p>
-     *         <p>If the value is set to a positive number, the session can be stopped. You can call
+     *             terminated by AWS (instead of stopped).&lt;/p&gt;
+     *         &lt;p&gt;If the value is set to a positive number, the session can be stopped. You can call
      *             StopStreamingSession to stop sessions in the READY state. If the time that a session
      *             stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will
-     *             automatically be stopped by AWS (instead of terminated).</p>
+     *             automatically be stopped by AWS (instead of terminated).&lt;/p&gt;
      * 
      */
     @Import(name="maxStoppedSessionLengthInMinutes")
@@ -85,8 +85,8 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     }
 
     /**
-     * <p>The streaming images that users can select from when launching a streaming session
-     *             with this launch profile.</p>
+     * &lt;p&gt;The streaming images that users can select from when launching a streaming session
+     *             with this launch profile.&lt;/p&gt;
      * 
      */
     @Import(name="streamingImageIds", required=true)

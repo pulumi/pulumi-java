@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * <p>MySQL parameters.</p>
+ * &lt;p&gt;MySQL parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceMySqlParametersArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class DataSourceMySqlParametersArgs extends com.pulumi.resources.Re
     public static final DataSourceMySqlParametersArgs Empty = new DataSourceMySqlParametersArgs();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -31,7 +31,7 @@ public final class DataSourceMySqlParametersArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -42,7 +42,7 @@ public final class DataSourceMySqlParametersArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

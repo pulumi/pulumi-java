@@ -215,7 +215,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     @Import(name="performanceInsightsRetentionPeriod")
@@ -227,7 +227,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The daily time range during which automated backups are created if automated backups are enabled.
-     * Eg: "04:00-09:00"
+     * Eg: &#34;04:00-09:00&#34;
      * 
      */
     @Import(name="preferredBackupWindow")
@@ -239,7 +239,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     @Import(name="preferredMaintenanceWindow")

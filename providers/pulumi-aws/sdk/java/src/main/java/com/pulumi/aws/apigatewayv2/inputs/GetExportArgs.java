@@ -71,7 +71,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The name of the API stage to export. If you don't specify this property, a representation of the latest API configuration is exported.
+     * The name of the API stage to export. If you don&#39;t specify this property, a representation of the latest API configuration is exported.
      * 
      */
     @Import(name="stageName")

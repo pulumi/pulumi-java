@@ -22,7 +22,7 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
     public static final ImageTemplateVmProfileResponse Empty = new ImageTemplateVmProfileResponse();
 
     /**
-     * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+     * Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
      * 
      */
     @Import(name="osDiskSizeGB")

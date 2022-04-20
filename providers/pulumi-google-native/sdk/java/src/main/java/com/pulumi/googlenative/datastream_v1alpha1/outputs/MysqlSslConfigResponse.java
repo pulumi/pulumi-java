@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class MysqlSslConfigResponse {
     /**
-     * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
      * 
      */
     private final String caCertificate;
@@ -21,7 +21,7 @@ public final class MysqlSslConfigResponse {
      */
     private final Boolean caCertificateSet;
     /**
-     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
      */
     private final String clientCertificate;
@@ -31,7 +31,7 @@ public final class MysqlSslConfigResponse {
      */
     private final Boolean clientCertificateSet;
     /**
-     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
      */
     private final String clientKey;
@@ -58,7 +58,7 @@ public final class MysqlSslConfigResponse {
     }
 
     /**
-     * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
      * 
     */
     public String caCertificate() {
@@ -72,7 +72,7 @@ public final class MysqlSslConfigResponse {
         return this.caCertificateSet;
     }
     /**
-     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
     */
     public String clientCertificate() {
@@ -86,7 +86,7 @@ public final class MysqlSslConfigResponse {
         return this.clientCertificateSet;
     }
     /**
-     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
     */
     public String clientKey() {

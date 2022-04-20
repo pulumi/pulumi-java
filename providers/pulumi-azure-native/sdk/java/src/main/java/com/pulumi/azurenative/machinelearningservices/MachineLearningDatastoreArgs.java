@@ -74,7 +74,7 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The service principal's client/application ID.
+     * The service principal&#39;s client/application ID.
      * 
      */
     @Import(name="clientId")
@@ -85,7 +85,7 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The service principal's secret.
+     * The service principal&#39;s secret.
      * 
      */
     @Import(name="clientSecret")

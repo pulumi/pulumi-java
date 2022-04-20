@@ -179,14 +179,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.statusMessage;
     }
     /**
-     * field indicates all the reasons the instance is in "SUSPENDED" state.
+     * field indicates all the reasons the instance is in &#34;SUSPENDED&#34; state.
      * 
      */
     @Export(name="suspensionReasons", type=List.class, parameters={String.class})
     private Output<List<String>> suspensionReasons;
 
     /**
-     * @return field indicates all the reasons the instance is in "SUSPENDED" state.
+     * @return field indicates all the reasons the instance is in &#34;SUSPENDED&#34; state.
      * 
      */
     public Output<List<String>> suspensionReasons() {

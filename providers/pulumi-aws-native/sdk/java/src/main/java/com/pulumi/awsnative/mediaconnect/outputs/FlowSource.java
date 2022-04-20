@@ -25,7 +25,7 @@ public final class FlowSource {
      */
     private final @Nullable String description;
     /**
-     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
      */
     private final @Nullable String entitlementArn;
@@ -139,7 +139,7 @@ public final class FlowSource {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
     */
     public Optional<String> entitlementArn() {

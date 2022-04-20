@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DailyMaintenanceWindowResponse {
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
+     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;PTnHnMnS&#34;.
      * 
      */
     private final String duration;
     /**
-     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
      */
     private final String startTime;
@@ -29,14 +29,14 @@ public final class DailyMaintenanceWindowResponse {
     }
 
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
+     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;PTnHnMnS&#34;.
      * 
     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
     */
     public String startTime() {

@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+ * This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the &#39;id&#39;, &#39;topic&#39; and &#39;eventtime&#39; properties. This represents a field in the input event schema.
  * 
  */
 public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
     public static final JsonFieldResponse Empty = new JsonFieldResponse();
 
     /**
-     * Name of a field in the input event schema that's to be used as the source of a mapping.
+     * Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
      * 
      */
     @Import(name="sourceField")

@@ -162,7 +162,7 @@ public final class AzureSqlDWLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDW'.
+     * Expected value is &#39;AzureSqlDW&#39;.
      * 
      */
     @Import(name="type", required=true)

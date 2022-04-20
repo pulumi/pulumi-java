@@ -129,7 +129,7 @@ public final class GetDeviceResult {
      */
     private final String osVersion;
     /**
-     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
      */
     private final List<String> otherAccounts;
@@ -383,7 +383,7 @@ public final class GetDeviceResult {
         return this.osVersion;
     }
     /**
-     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
     */
     public List<String> otherAccounts() {

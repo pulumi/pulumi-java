@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
     }
 
     /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
+     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
      * 
      */
     @Import(name="modelPath", required=true)

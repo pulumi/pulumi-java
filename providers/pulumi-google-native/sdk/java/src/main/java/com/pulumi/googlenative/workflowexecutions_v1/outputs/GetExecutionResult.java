@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExecutionResult {
     /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
      */
     private final String argument;
@@ -26,7 +26,7 @@ public final class GetExecutionResult {
      */
     private final String endTime;
     /**
-     * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
      * 
      */
     private final ErrorResponse error;
@@ -36,7 +36,7 @@ public final class GetExecutionResult {
      */
     private final String name;
     /**
-     * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
      * 
      */
     private final String result;
@@ -79,7 +79,7 @@ public final class GetExecutionResult {
     }
 
     /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
     */
     public String argument() {
@@ -100,7 +100,7 @@ public final class GetExecutionResult {
         return this.endTime;
     }
     /**
-     * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
      * 
     */
     public ErrorResponse error() {
@@ -114,7 +114,7 @@ public final class GetExecutionResult {
         return this.name;
     }
     /**
-     * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
      * 
     */
     public String result() {

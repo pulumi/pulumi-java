@@ -40,7 +40,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
 
     /**
      * Specifies the type of threshold criteria
-     * Expected value is 'DynamicThresholdCriterion'.
+     * Expected value is &#39;DynamicThresholdCriterion&#39;.
      * 
      */
     @Import(name="criterionType", required=true)
@@ -128,7 +128,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
      */
     @Import(name="skipMetricValidation")

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFirewallRuleResult {
     /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     private final @Nullable String endIpAddress;
@@ -27,7 +27,7 @@ public final class GetFirewallRuleResult {
      */
     private final @Nullable String name;
     /**
-     * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     private final @Nullable String startIpAddress;
@@ -52,7 +52,7 @@ public final class GetFirewallRuleResult {
     }
 
     /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
     */
     public Optional<String> endIpAddress() {
@@ -73,7 +73,7 @@ public final class GetFirewallRuleResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
     */
     public Optional<String> startIpAddress() {

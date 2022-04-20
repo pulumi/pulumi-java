@@ -40,7 +40,7 @@ public final class WindowsDetailArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb's presence is considered a fix.
+     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb&#39;s presence is considered a fix.
      * 
      */
     @Import(name="fixingKbs", required=true)

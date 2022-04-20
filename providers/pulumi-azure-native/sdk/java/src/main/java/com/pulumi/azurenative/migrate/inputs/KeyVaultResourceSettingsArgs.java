@@ -20,7 +20,7 @@ public final class KeyVaultResourceSettingsArgs extends com.pulumi.resources.Res
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.KeyVault/vaults'.
+     * Expected value is &#39;Microsoft.KeyVault/vaults&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

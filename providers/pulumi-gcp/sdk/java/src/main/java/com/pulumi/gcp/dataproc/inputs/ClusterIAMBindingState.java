@@ -36,7 +36,7 @@ public final class ClusterIAMBindingState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the clusters's IAM policy.
+     * (Computed) The etag of the clusters&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

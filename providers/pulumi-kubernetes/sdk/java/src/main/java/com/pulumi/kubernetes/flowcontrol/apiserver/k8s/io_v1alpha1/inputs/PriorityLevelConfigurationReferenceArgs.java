@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * PriorityLevelConfigurationReference contains information that points to the "request-priority" being used.
+ * PriorityLevelConfigurationReference contains information that points to the &#34;request-priority&#34; being used.
  * 
  */
 public final class PriorityLevelConfigurationReferenceArgs extends com.pulumi.resources.ResourceArgs {

@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
     private final String taskType;
@@ -106,7 +106,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
     */
     public String taskType() {

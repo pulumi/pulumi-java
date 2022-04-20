@@ -48,7 +48,7 @@ public final class MongoDbAtlasLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'MongoDbAtlas'.
+     * Expected value is &#39;MongoDbAtlas&#39;.
      * 
      */
     private final String type;
@@ -115,7 +115,7 @@ public final class MongoDbAtlasLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'MongoDbAtlas'.
+     * Expected value is &#39;MongoDbAtlas&#39;.
      * 
     */
     public String type() {

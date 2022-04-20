@@ -17,7 +17,7 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
     public static final OAuthTokenResponse Empty = new OAuthTokenResponse();
 
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
      */
     @Import(name="scope", required=true)

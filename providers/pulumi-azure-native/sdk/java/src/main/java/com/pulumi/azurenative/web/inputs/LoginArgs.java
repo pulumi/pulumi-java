@@ -39,7 +39,7 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The configuration settings of the session cookie's expiration.
+     * The configuration settings of the session cookie&#39;s expiration.
      * 
      */
     @Import(name="cookieExpiration")
@@ -61,7 +61,7 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the fragments from the request are preserved after the login request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="preserveUrlFragmentsForLogins")

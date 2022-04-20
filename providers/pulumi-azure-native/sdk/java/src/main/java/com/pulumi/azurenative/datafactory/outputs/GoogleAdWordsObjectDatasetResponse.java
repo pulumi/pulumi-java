@@ -59,7 +59,7 @@ public final class GoogleAdWordsObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'GoogleAdWordsObject'.
+     * Expected value is &#39;GoogleAdWordsObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class GoogleAdWordsObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'GoogleAdWordsObject'.
+     * Expected value is &#39;GoogleAdWordsObject&#39;.
      * 
     */
     public String type() {

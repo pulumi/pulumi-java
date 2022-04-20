@@ -52,7 +52,7 @@ public final class GetVpcIamPoolResult {
      */
     private final Boolean autoImport;
     /**
-     * Limits which service in AWS that the pool can be used in. "ec2", for example, allows users to use space for Elastic IP addresses and VPCs.
+     * Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
      * 
      */
     private final String awsService;
@@ -71,7 +71,7 @@ public final class GetVpcIamPoolResult {
     private final String ipamScopeId;
     private final String ipamScopeType;
     /**
-     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region.
+     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
      * 
      */
     private final String locale;
@@ -187,7 +187,7 @@ public final class GetVpcIamPoolResult {
         return this.autoImport;
     }
     /**
-     * Limits which service in AWS that the pool can be used in. "ec2", for example, allows users to use space for Elastic IP addresses and VPCs.
+     * Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
      * 
     */
     public String awsService() {
@@ -220,7 +220,7 @@ public final class GetVpcIamPoolResult {
         return this.ipamScopeType;
     }
     /**
-     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region.
+     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
      * 
     */
     public String locale() {

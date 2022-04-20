@@ -22,7 +22,7 @@ public final class SubjectDescriptionResponse {
      */
     private final String lifetime;
     /**
-     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
+     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
      * 
      */
     private final String notAfterTime;
@@ -73,7 +73,7 @@ public final class SubjectDescriptionResponse {
         return this.lifetime;
     }
     /**
-     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
+     * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to &#39;not_before_time&#39; + &#39;lifetime&#39; - 1 second.
      * 
     */
     public String notAfterTime() {

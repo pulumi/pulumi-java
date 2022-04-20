@@ -61,7 +61,7 @@ public final class StorageFunctions {
      * and
      * [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
      * 
-     * > **Warning:** The object content will be saved in the state, and visiable to everyone who has access to the state file.
+     * &gt; **Warning:** The object content will be saved in the state, and visiable to everyone who has access to the state file.
      * 
      * ## Example Usage
      * 
@@ -75,7 +75,7 @@ public final class StorageFunctions {
     /**
      * The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.
      * 
-     * For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
+     * For more info about signed URL&#39;s is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
      * 
      * ## Example Usage
      * ## Full Example
@@ -88,7 +88,7 @@ public final class StorageFunctions {
         return Deployment.getInstance().invokeAsync("gcp:storage/getObjectSignedUrl:getObjectSignedUrl", TypeShape.of(GetObjectSignedUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Get the email address of a project's unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
+     * Get the email address of a project&#39;s unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
      * 
      * For each Google Cloud project, Google maintains a unique service account which
      * is used as the identity for various Google Cloud Storage operations, including
@@ -103,15 +103,15 @@ public final class StorageFunctions {
      * However, as noted in [the docs](https://cloud.google.com/storage/docs/projects#service-accounts), it is only created when certain relevant actions occur which
      * presuppose its existence.
      * These actions include calling a [Cloud Storage API endpoint](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount/get) to yield the
-     * service account's identity, or performing some operations in the UI which must use the service account's identity, such as attempting to list Cloud KMS keys
+     * service account&#39;s identity, or performing some operations in the UI which must use the service account&#39;s identity, such as attempting to list Cloud KMS keys
      * on the bucket creation page.
      * 
-     * Use of this data source calls the relevant API endpoint to obtain the service account's identity and thus ensures it exists prior to any API operations
+     * Use of this data source calls the relevant API endpoint to obtain the service account&#39;s identity and thus ensures it exists prior to any API operations
      * which demand its existence, such as specifying it in Cloud IAM policy.
      * Always prefer to use this data source over interpolating the project ID into the well-known format for this service account, as the latter approach may cause
      * provider update errors in cases where the service account does not yet exist.
      * 
-     * >  When you write provider code which uses features depending on this service account *and* your provider code adds the service account in IAM policy on other resources,
+     * &gt;  When you write provider code which uses features depending on this service account *and* your provider code adds the service account in IAM policy on other resources,
      *    you must take care for race conditions between the establishment of the IAM policy and creation of the relevant Cloud Storage resource.
      *    Cloud Storage APIs will require permissions on resources such as pub/sub topics or Cloud KMS keys to exist *before* the attempt to utilise them in a
      *    bucket configuration, otherwise the API calls will fail.

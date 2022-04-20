@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamS3Configuration {
      */
     private final @Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions;
     /**
-     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, & `HADOOP_SNAPPY`.
+     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
      * 
      */
     private final @Nullable String compressionFormat;
@@ -51,12 +51,12 @@ public final class FirehoseDeliveryStreamS3Configuration {
      */
     private final @Nullable String kmsKeyArn;
     /**
-     * The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+     * The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
      */
     private final @Nullable String prefix;
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     private final String roleArn;
@@ -113,7 +113,7 @@ public final class FirehoseDeliveryStreamS3Configuration {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
-     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, & `HADOOP_SNAPPY`.
+     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
      * 
     */
     public Optional<String> compressionFormat() {
@@ -135,14 +135,14 @@ public final class FirehoseDeliveryStreamS3Configuration {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+     * The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
     */
     public String roleArn() {

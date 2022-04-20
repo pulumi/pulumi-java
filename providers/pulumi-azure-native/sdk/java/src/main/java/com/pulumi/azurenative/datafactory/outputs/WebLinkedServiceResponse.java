@@ -41,7 +41,7 @@ public final class WebLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'Web'.
+     * Expected value is &#39;Web&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class WebLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Web'.
+     * Expected value is &#39;Web&#39;.
      * 
     */
     public String type() {

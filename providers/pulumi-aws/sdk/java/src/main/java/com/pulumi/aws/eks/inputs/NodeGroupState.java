@@ -92,7 +92,7 @@ public final class NodeGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+     * List of instance types associated with the EKS Node Group. Defaults to `[&#34;t3.medium&#34;]`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
     @Import(name="instanceTypes")

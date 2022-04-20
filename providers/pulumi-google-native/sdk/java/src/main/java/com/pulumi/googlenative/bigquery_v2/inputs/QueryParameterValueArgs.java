@@ -29,7 +29,7 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * [Optional] The struct field values, in order of the struct type's declaration.
+     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
      */
     @Import(name="structValues")

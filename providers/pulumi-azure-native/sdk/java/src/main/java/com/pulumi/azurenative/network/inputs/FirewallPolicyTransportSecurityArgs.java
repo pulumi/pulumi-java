@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Configuration needed to perform TLS termination & initiation.
+ * Configuration needed to perform TLS termination &amp; initiation.
  * 
  */
 public final class FirewallPolicyTransportSecurityArgs extends com.pulumi.resources.ResourceArgs {

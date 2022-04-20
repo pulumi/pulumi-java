@@ -69,7 +69,7 @@ public final class SapOpenHubTableDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'SapOpenHubTable'.
+     * Expected value is &#39;SapOpenHubTable&#39;.
      * 
      */
     private final String type;
@@ -172,7 +172,7 @@ public final class SapOpenHubTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SapOpenHubTable'.
+     * Expected value is &#39;SapOpenHubTable&#39;.
      * 
     */
     public String type() {

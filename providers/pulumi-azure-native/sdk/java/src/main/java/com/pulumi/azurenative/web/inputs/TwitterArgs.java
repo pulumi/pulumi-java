@@ -21,7 +21,7 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
     public static final TwitterArgs Empty = new TwitterArgs();
 
     /**
-     * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the Twitter provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

@@ -53,8 +53,8 @@ public final class TenantInboundSamlConfigState extends com.pulumi.resources.Res
     }
 
     /**
-     * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
-     * hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+     * The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
+     * hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
      * alphanumeric character, and have at least 2 characters.
      * 
      */

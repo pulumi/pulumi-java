@@ -16,7 +16,7 @@ import java.util.StringJoiner;
          */
         FileTypeUnspecified("FILE_TYPE_UNSPECIFIED"),
         /**
-         * Includes all file extensions not covered by another entry. Binary scanning attempts to convert the content of the file to utf_8 to scan the file. If you wish to avoid this fall back, specify one or more of the other FileType's in your storage scan.
+         * Includes all file extensions not covered by another entry. Binary scanning attempts to convert the content of the file to utf_8 to scan the file. If you wish to avoid this fall back, specify one or more of the other FileType&#39;s in your storage scan.
          * 
          */
         BinaryFile("BINARY_FILE"),
@@ -26,17 +26,17 @@ import java.util.StringJoiner;
          */
         TextFile("TEXT_FILE"),
         /**
-         * Included file extensions: bmp, gif, jpg, jpeg, jpe, png. bytes_limit_per_file has no effect on image files. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
+         * Included file extensions: bmp, gif, jpg, jpeg, jpe, png. bytes_limit_per_file has no effect on image files. Image inspection is restricted to &#39;global&#39;, &#39;us&#39;, &#39;asia&#39;, and &#39;europe&#39;.
          * 
          */
         Image("IMAGE"),
         /**
-         * Word files >30 MB will be scanned as binary files. Included file extensions: docx, dotx, docm, dotm
+         * Word files &gt;30 MB will be scanned as binary files. Included file extensions: docx, dotx, docm, dotm
          * 
          */
         Word("WORD"),
         /**
-         * PDF files >30 MB will be scanned as binary files. Included file extensions: pdf
+         * PDF files &gt;30 MB will be scanned as binary files. Included file extensions: pdf
          * 
          */
         Pdf("PDF"),

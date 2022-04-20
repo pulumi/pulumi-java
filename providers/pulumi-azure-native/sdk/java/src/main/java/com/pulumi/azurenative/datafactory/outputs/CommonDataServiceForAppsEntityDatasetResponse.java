@@ -59,7 +59,7 @@ public final class CommonDataServiceForAppsEntityDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'CommonDataServiceForAppsEntity'.
+     * Expected value is &#39;CommonDataServiceForAppsEntity&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class CommonDataServiceForAppsEntityDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'CommonDataServiceForAppsEntity'.
+     * Expected value is &#39;CommonDataServiceForAppsEntity&#39;.
      * 
     */
     public String type() {

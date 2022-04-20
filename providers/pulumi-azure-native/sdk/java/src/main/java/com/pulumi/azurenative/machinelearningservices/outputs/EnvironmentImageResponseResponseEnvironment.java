@@ -27,7 +27,7 @@ public final class EnvironmentImageResponseResponseEnvironment {
      */
     private final @Nullable Map<String,String> environmentVariables;
     /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
      * 
      */
     private final @Nullable String inferencingStackVersion;
@@ -92,7 +92,7 @@ public final class EnvironmentImageResponseResponseEnvironment {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
      * 
     */
     public Optional<String> inferencingStackVersion() {

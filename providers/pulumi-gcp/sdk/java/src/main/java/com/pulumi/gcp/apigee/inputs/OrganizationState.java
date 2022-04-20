@@ -29,7 +29,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     /**
      * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
      * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
-     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
+     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;.
      * 
      */
     @Import(name="authorizedNetwork")
@@ -40,7 +40,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
+     * Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when &#39;RuntimeType&#39;
      * is CLOUD. A base64-encoded string.
      * 
      */

@@ -30,7 +30,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies that your pods may use subnets and security groups that are independent of your worker node's VPC configuration. By default, pods share the same subnet and security groups as the worker node's primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node's ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`
+     * Specifies that your pods may use subnets and security groups that are independent of your worker node&#39;s VPC configuration. By default, pods share the same subnet and security groups as the worker node&#39;s primary interface. Setting this variable to true causes ipamd to use the security groups and VPC subnet in a worker node&#39;s ENIConfig for elastic network interface allocation. You must create an ENIConfig custom resource for each subnet that your pods will reside in, and then annotate or label each worker node to use a specific ENIConfig (multiple worker nodes can be annotated or labelled with the same ENIConfig). Worker nodes can only be annotated with a single ENIConfig at a time, and the subnet in the ENIConfig must belong to the same Availability Zone that the worker node resides in. For more information, see CNI Custom Networking in the Amazon EKS User Guide. Default is `false`
      * 
      */
     @Import(name="cniCustomNetworkCfg")
@@ -52,7 +52,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
+     * Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster&#39;s `resourcesVpcConfig`.
      * 
      * Defaults to false.
      * 
@@ -65,7 +65,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Allows the kubelet's liveness and readiness probes to connect via TCP when pod ENI is enabled. This will slightly increase local TCP connection latency.
+     * Allows the kubelet&#39;s liveness and readiness probes to connect via TCP when pod ENI is enabled. This will slightly increase local TCP connection latency.
      * 
      */
     @Import(name="disableTcpEarlyDemux")
@@ -177,7 +177,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Specifies the file path used for logs.
      * 
-     * Defaults to "stdout" to emit Pod logs for `kubectl logs`.
+     * Defaults to &#34;stdout&#34; to emit Pod logs for `kubectl logs`.
      * 
      */
     @Import(name="logFile")
@@ -190,8 +190,8 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Specifies the log level used for logs.
      * 
-     * Defaults to "DEBUG"
-     * Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".
+     * Defaults to &#34;DEBUG&#34;
+     * Valid values: &#34;DEBUG&#34;, &#34;INFO&#34;, &#34;WARN&#34;, &#34;ERROR&#34;, or &#34;FATAL&#34;.
      * 
      */
     @Import(name="logLevel")
@@ -202,7 +202,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
+     * Specifies whether NodePort services are enabled on a worker node&#39;s primary network interface. This requires additional iptables rules and that the kernel&#39;s reverse path filter on the primary interface is set to loose.
      * 
      * Defaults to true.
      * 
@@ -230,7 +230,7 @@ public final class VpcCniArgs extends com.pulumi.resources.ResourceArgs {
      * 
      * The prefix can be at most 4 characters long.
      * 
-     * Defaults to "eni".
+     * Defaults to &#34;eni&#34;.
      * 
      */
     @Import(name="vethPrefix")

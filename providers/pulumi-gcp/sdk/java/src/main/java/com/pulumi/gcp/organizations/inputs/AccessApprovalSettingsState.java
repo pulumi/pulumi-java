@@ -45,7 +45,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The resource name of the settings. Format is "organizations/{organization_id}/accessApprovalSettings"
+     * The resource name of the settings. Format is &#34;organizations/{organization_id}/accessApprovalSettings&#34;
      * 
      */
     @Import(name="name")

@@ -77,7 +77,7 @@ public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResourc
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'policyAssignment'.
+     * Expected value is &#39;policyAssignment&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -85,7 +85,7 @@ public class PolicyAssignmentArtifact extends com.pulumi.resources.CustomResourc
 
     /**
      * @return Specifies the kind of blueprint artifact.
-     * Expected value is 'policyAssignment'.
+     * Expected value is &#39;policyAssignment&#39;.
      * 
      */
     public Output<String> kind() {

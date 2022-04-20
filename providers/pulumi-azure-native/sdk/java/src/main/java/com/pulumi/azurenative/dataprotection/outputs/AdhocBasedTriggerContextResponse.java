@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class AdhocBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AdhocBasedTriggerContext'.
+     * Expected value is &#39;AdhocBasedTriggerContext&#39;.
      * 
      */
     private final String objectType;
@@ -32,7 +32,7 @@ public final class AdhocBasedTriggerContextResponse {
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AdhocBasedTriggerContext'.
+     * Expected value is &#39;AdhocBasedTriggerContext&#39;.
      * 
     */
     public String objectType() {

@@ -16,7 +16,7 @@ public final class JobQueryScriptOptionsGetArgs extends com.pulumi.resources.Res
     public static final JobQueryScriptOptionsGetArgs Empty = new JobQueryScriptOptionsGetArgs();
 
     /**
-     * Determines which statement in the script represents the "key result",
+     * Determines which statement in the script represents the &#34;key result&#34;,
      * used to populate the schema and query results of the script job.
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 

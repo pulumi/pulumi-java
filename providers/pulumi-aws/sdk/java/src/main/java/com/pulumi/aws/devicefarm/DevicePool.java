@@ -48,14 +48,14 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The device pool's description.
+     * The device pool&#39;s description.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The device pool's description.
+     * @return The device pool&#39;s description.
      * 
      */
     public Output</* @Nullable */ String> description() {
@@ -104,14 +104,14 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
         return this.projectArn;
     }
     /**
-     * The device pool's rules. See Rule.
+     * The device pool&#39;s rules. See Rule.
      * 
      */
     @Export(name="rules", type=List.class, parameters={DevicePoolRule.class})
     private Output<List<DevicePoolRule>> rules;
 
     /**
-     * @return The device pool's rules. See Rule.
+     * @return The device pool&#39;s rules. See Rule.
      * 
      */
     public Output<List<DevicePoolRule>> rules() {

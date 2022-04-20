@@ -37,7 +37,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The assignee's identifier, user id/group id
+     * The assignee&#39;s identifier, user id/group id
      * 
      */
     @Import(name="principalId", required=true)
@@ -48,7 +48,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The assignee's type, user/group
+     * The assignee&#39;s type, user/group
      * 
      */
     @Import(name="principalType", required=true)

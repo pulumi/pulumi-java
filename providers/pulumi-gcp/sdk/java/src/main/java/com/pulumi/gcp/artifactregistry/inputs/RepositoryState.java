@@ -98,7 +98,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
+     * The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;
      * 
      */
     @Import(name="name")
@@ -122,7 +122,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The last part of the repository name, for example:
-     * "repo1"
+     * &#34;repo1&#34;
      * 
      */
     @Import(name="repositoryId")

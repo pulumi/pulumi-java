@@ -55,7 +55,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name for the endpoint in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*'.
+     * The resource name for the endpoint in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*&#39;.
      * 
      */
     @Import(name="name")

@@ -19,7 +19,7 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
     public static final CustomDnsResponse Empty = new CustomDnsResponse();
 
     /**
-     * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
      * 
      */
     @Import(name="dsRecords", required=true)

@@ -48,14 +48,14 @@ public class Model extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * @return A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
     public Output</* @Nullable */ String> name() {
@@ -76,14 +76,14 @@ public class Model extends com.pulumi.resources.CustomResource {
         return this.restApiId;
     }
     /**
-     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
      */
     @Export(name="schema", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> schema;
 
     /**
-     * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
      */
     public Output</* @Nullable */ Object> schema() {

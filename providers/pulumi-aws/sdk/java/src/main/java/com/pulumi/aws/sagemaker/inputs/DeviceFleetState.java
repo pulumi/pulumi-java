@@ -52,7 +52,7 @@ public final class DeviceFleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".
+     * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: &#34;SageMakerEdge-{DeviceFleetName}&#34;.
      * 
      */
     @Import(name="enableIotRoleAlias")

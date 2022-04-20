@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class AzureSqlProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureSql'.
+     * Expected value is &#39;AzureSql&#39;.
      * 
      */
     private final String backupManagementType;
@@ -44,7 +44,7 @@ public final class AzureSqlProtectionPolicyResponse {
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureSql'.
+     * Expected value is &#39;AzureSql&#39;.
      * 
     */
     public String backupManagementType() {

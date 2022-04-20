@@ -74,7 +74,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     @Import(name="kind", required=true)

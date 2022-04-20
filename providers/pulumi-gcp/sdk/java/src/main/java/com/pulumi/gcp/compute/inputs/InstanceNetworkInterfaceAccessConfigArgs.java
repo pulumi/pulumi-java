@@ -16,7 +16,7 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
     public static final InstanceNetworkInterfaceAccessConfigArgs Empty = new InstanceNetworkInterfaceAccessConfigArgs();
 
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */

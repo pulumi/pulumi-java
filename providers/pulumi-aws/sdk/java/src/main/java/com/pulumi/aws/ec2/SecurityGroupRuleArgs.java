@@ -43,7 +43,7 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+     * Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
      * 
      */
     @Import(name="fromPort", required=true)
@@ -120,7 +120,7 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * End port (or ICMP code if protocol is "icmp").
+     * End port (or ICMP code if protocol is &#34;icmp&#34;).
      * 
      */
     @Import(name="toPort", required=true)

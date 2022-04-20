@@ -43,7 +43,7 @@ public final class CloudServiceRoleSkuArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
+     * Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
      * 
      */
     @Import(name="tier")

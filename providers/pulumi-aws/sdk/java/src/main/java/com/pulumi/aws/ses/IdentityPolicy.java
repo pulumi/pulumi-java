@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * SES Identity Policies can be imported using the identity and policy name, separated by a pipe character (`|`), e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:ses/identityPolicy:IdentityPolicy example 'example.com|example'
+ *  $ pulumi import aws:ses/identityPolicy:IdentityPolicy example &#39;example.com|example&#39;
  * ```
  * 
  */

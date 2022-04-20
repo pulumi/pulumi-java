@@ -71,7 +71,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of resource e.g "Microsoft.Web/sites".
+     * Type of resource e.g &#34;Microsoft.Web/sites&#34;.
      * 
      */
     private final @Nullable String type;
@@ -182,7 +182,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of resource e.g "Microsoft.Web/sites".
+     * Type of resource e.g &#34;Microsoft.Web/sites&#34;.
      * 
     */
     public Optional<String> type() {

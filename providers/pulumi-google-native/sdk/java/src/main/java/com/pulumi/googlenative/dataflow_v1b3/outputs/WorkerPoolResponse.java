@@ -58,7 +58,7 @@ public final class WorkerPoolResponse {
      */
     private final String kind;
     /**
-     * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.
+     * Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
     private final String machineType;
@@ -68,7 +68,7 @@ public final class WorkerPoolResponse {
      */
     private final Map<String,String> metadata;
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
      */
     private final String network;
@@ -103,7 +103,7 @@ public final class WorkerPoolResponse {
      */
     private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
     /**
-     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".
+     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
      * 
      */
     private final String subnetwork;
@@ -113,7 +113,7 @@ public final class WorkerPoolResponse {
      */
     private final TaskRunnerSettingsResponse taskrunnerSettings;
     /**
-     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
     private final String teardownPolicy;
@@ -226,7 +226,7 @@ public final class WorkerPoolResponse {
         return this.kind;
     }
     /**
-     * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.
+     * Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
     */
     public String machineType() {
@@ -240,7 +240,7 @@ public final class WorkerPoolResponse {
         return this.metadata;
     }
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
     */
     public String network() {
@@ -289,7 +289,7 @@ public final class WorkerPoolResponse {
         return this.sdkHarnessContainerImages;
     }
     /**
-     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".
+     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
      * 
     */
     public String subnetwork() {
@@ -303,7 +303,7 @@ public final class WorkerPoolResponse {
         return this.taskrunnerSettings;
     }
     /**
-     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
      * 
     */
     public String teardownPolicy() {

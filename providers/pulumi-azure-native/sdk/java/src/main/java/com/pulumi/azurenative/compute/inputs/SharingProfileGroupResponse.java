@@ -31,7 +31,7 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+     * This property allows you to specify the type of sharing group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Subscriptions** &lt;br&gt;&lt;br&gt; **AADTenants**
      * 
      */
     @Import(name="type")

@@ -16,7 +16,7 @@ public final class CommonFeatureStateResponse {
      */
     private final AppDevExperienceFeatureStateResponse appdevexperience;
     /**
-     * The "running state" of the Feature in this Hub.
+     * The &#34;running state&#34; of the Feature in this Hub.
      * 
      */
     private final FeatureStateResponse state;
@@ -37,7 +37,7 @@ public final class CommonFeatureStateResponse {
         return this.appdevexperience;
     }
     /**
-     * The "running state" of the Feature in this Hub.
+     * The &#34;running state&#34; of the Feature in this Hub.
      * 
     */
     public FeatureStateResponse state() {

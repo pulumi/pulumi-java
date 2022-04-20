@@ -28,7 +28,7 @@ public final class SharePointOnlineListSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The OData query to filter the data in SharePoint Online list. For example, "$top=1". Type: string (or Expression with resultType string).
+     * The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
@@ -44,7 +44,7 @@ public final class SharePointOnlineListSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SharePointOnlineListSource'.
+     * Expected value is &#39;SharePointOnlineListSource&#39;.
      * 
      */
     private final String type;
@@ -89,7 +89,7 @@ public final class SharePointOnlineListSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The OData query to filter the data in SharePoint Online list. For example, "$top=1". Type: string (or Expression with resultType string).
+     * The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> query() {
@@ -111,7 +111,7 @@ public final class SharePointOnlineListSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SharePointOnlineListSource'.
+     * Expected value is &#39;SharePointOnlineListSource&#39;.
      * 
     */
     public String type() {

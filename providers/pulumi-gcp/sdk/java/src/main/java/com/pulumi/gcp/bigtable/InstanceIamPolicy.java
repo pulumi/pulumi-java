@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * * `gcp.bigtable.InstanceIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.
  * * `gcp.bigtable.InstanceIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.
  * 
- * > **Note:** `gcp.bigtable.InstanceIamPolicy` **cannot** be used in conjunction with `gcp.bigtable.InstanceIamBinding` and `gcp.bigtable.InstanceIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as `gcp.bigtable.InstanceIamPolicy` replaces the entire policy.
+ * &gt; **Note:** `gcp.bigtable.InstanceIamPolicy` **cannot** be used in conjunction with `gcp.bigtable.InstanceIamBinding` and `gcp.bigtable.InstanceIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as `gcp.bigtable.InstanceIamPolicy` replaces the entire policy.
  * 
- * > **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigtable\_instance\_iam\_policy
  * 
@@ -35,18 +35,18 @@ import javax.annotation.Nullable;
  * Instance IAM resources can be imported using the project, instance name, role and/or member.
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor "projects/{project}/instances/{instance}"
+ *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor &#34;projects/{project}/instances/{instance}&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor "projects/{project}/instances/{instance} roles/editor"
+ *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor &#34;projects/{project}/instances/{instance} roles/editor&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor "projects/{project}/instances/{instance} roles/editor user:jane@example.com"
+ *  $ pulumi import gcp:bigtable/instanceIamPolicy:InstanceIamPolicy editor &#34;projects/{project}/instances/{instance} roles/editor user:jane@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -54,14 +54,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:bigtable/instanceIamPolicy:InstanceIamPolicy")
 public class InstanceIamPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * (Computed) The etag of the instances's IAM policy.
+     * (Computed) The etag of the instances&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the instances's IAM policy.
+     * @return (Computed) The etag of the instances&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

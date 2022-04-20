@@ -144,7 +144,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: "timeRange": { "start": "2018-07-29T00:13:00Z", "end": "2018-08-01T00:18:00Z" }
+     * Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: &#34;timeRange&#34;: { &#34;start&#34;: &#34;2018-07-29T00:13:00Z&#34;, &#34;end&#34;: &#34;2018-08-01T00:18:00Z&#34; }
      * 
      */
     @Import(name="timeRange", required=true)

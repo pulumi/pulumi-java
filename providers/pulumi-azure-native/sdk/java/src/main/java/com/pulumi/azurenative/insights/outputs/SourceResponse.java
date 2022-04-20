@@ -28,7 +28,7 @@ public final class SourceResponse {
      */
     private final @Nullable String query;
     /**
-     * Set value to 'ResultCount' .
+     * Set value to &#39;ResultCount&#39; .
      * 
      */
     private final @Nullable String queryType;
@@ -67,7 +67,7 @@ public final class SourceResponse {
         return Optional.ofNullable(this.query);
     }
     /**
-     * Set value to 'ResultCount' .
+     * Set value to &#39;ResultCount&#39; .
      * 
     */
     public Optional<String> queryType() {

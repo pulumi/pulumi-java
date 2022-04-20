@@ -74,7 +74,7 @@ public final class DataBoxDiskJobDetailsResponse {
     private final @Nullable Integer expectedDataSizeInTeraBytes;
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String jobDetailsType;
@@ -224,7 +224,7 @@ public final class DataBoxDiskJobDetailsResponse {
     }
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
     */
     public String jobDetailsType() {

@@ -33,7 +33,7 @@ public final class RoutingStorageContainerPropertiesResponse {
      */
     private final String containerName;
     /**
-     * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
+     * Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
      * 
      */
     private final @Nullable String encoding;
@@ -130,7 +130,7 @@ public final class RoutingStorageContainerPropertiesResponse {
         return this.containerName;
     }
     /**
-     * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
+     * Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
      * 
     */
     public Optional<String> encoding() {

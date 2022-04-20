@@ -126,7 +126,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureDatabricksDeltaLakeDataset'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeDataset&#39;.
      * 
      */
     @Import(name="type", required=true)

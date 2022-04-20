@@ -51,7 +51,7 @@ public final class ParquetSinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'ParquetSink'.
+     * Expected value is &#39;ParquetSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class ParquetSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'ParquetSink'.
+     * Expected value is &#39;ParquetSink&#39;.
      * 
     */
     public String type() {

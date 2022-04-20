@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ObjectReplicationPolicyFilterResponse {
     /**
-     * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
+     * Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
      * 
      */
     private final @Nullable String minCreationTime;
@@ -32,7 +32,7 @@ public final class ObjectReplicationPolicyFilterResponse {
     }
 
     /**
-     * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
+     * Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
      * 
     */
     public Optional<String> minCreationTime() {

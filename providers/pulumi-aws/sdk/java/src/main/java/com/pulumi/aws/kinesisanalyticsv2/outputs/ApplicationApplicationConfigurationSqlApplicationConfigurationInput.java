@@ -27,7 +27,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism;
     /**
      * The input processing configuration for the input.
-     * An input processor transforms records as they are received from the stream, before the application's SQL code executes.
+     * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration;
@@ -42,12 +42,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations;
     /**
-     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
+     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput;
     /**
-     * If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
+     * If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput;
@@ -94,7 +94,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
     /**
      * The input processing configuration for the input.
-     * An input processor transforms records as they are received from the stream, before the application's SQL code executes.
+     * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
      * 
     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration> inputProcessingConfiguration() {
@@ -115,14 +115,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         return this.inputStartingPositionConfigurations == null ? List.of() : this.inputStartingPositionConfigurations;
     }
     /**
-     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
+     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
      * 
     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput> kinesisFirehoseInput() {
         return Optional.ofNullable(this.kinesisFirehoseInput);
     }
     /**
-     * If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
+     * If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
      * 
     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput> kinesisStreamsInput() {

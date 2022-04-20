@@ -26,9 +26,9 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     }
 
     /**
-     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
-     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
-     * fractional digits, terminated by 's'. Example: "3.5s".
+     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="lifetime")

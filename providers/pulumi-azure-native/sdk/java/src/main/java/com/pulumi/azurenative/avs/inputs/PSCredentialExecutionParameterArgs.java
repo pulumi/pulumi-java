@@ -43,7 +43,7 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
 
     /**
      * The type of execution parameter
-     * Expected value is 'Credential'.
+     * Expected value is &#39;Credential&#39;.
      * 
      */
     @Import(name="type", required=true)

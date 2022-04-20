@@ -248,7 +248,7 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends com.pu
 
     /**
      * backup item type.
-     * Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
+     * Expected value is &#39;Microsoft.ClassicCompute/virtualMachines&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

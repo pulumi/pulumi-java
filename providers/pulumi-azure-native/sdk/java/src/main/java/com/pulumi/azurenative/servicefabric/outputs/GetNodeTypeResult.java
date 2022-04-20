@@ -94,7 +94,7 @@ public final class GetNodeTypeResult {
      */
     private final @Nullable String vmImageSku;
     /**
-     * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
     private final @Nullable String vmImageVersion;
@@ -262,7 +262,7 @@ public final class GetNodeTypeResult {
         return Optional.ofNullable(this.vmImageSku);
     }
     /**
-     * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
     */
     public Optional<String> vmImageVersion() {

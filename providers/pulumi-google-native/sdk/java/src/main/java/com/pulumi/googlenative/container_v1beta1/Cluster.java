@@ -51,7 +51,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
+ * Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project&#39;s [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project&#39;s global metadata indicating which CIDR range the cluster is using.
  * 
  */
 @ResourceType(type="google-native:container/v1beta1:Cluster")
@@ -211,14 +211,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.currentMasterVersion;
     }
     /**
-     * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they're in the process of being upgraded, this reflects the minimum version of all nodes.
+     * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
      */
     @Export(name="currentNodeVersion", type=String.class, parameters={})
     private Output<String> currentNodeVersion;
 
     /**
-     * @return [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they're in the process of being upgraded, this reflects the minimum version of all nodes.
+     * @return [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
      */
     public Output<String> currentNodeVersion() {
@@ -281,14 +281,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.enableKubernetesAlpha;
     }
     /**
-     * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
+     * [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
      * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
-     * @return [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
+     * @return [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
      * 
      */
     public Output<String> endpoint() {
@@ -323,14 +323,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.identityServiceConfig;
     }
     /**
-     * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version
+     * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
      */
     @Export(name="initialClusterVersion", type=String.class, parameters={})
     private Output<String> initialClusterVersion;
 
     /**
-     * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version
+     * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
      */
     public Output<String> initialClusterVersion() {
@@ -393,14 +393,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
      * 
      */
     @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
-     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
      * 
      */
     public Output<List<String>> locations() {
@@ -463,14 +463,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.master;
     }
     /**
-     * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to "admin", a random password will be generated, and a client certificate will be issued.
+     * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
      * 
      */
     @Export(name="masterAuth", type=MasterAuthResponse.class, parameters={})
     private Output<MasterAuthResponse> masterAuth;
 
     /**
-     * @return The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to "admin", a random password will be generated, and a client certificate will be issued.
+     * @return The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
      * 
      */
     public Output<MasterAuthResponse> masterAuth() {
@@ -519,14 +519,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.monitoringConfig;
     }
     /**
-     * The monitoring service the cluster should use to write metrics. Currently available options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+     * The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
      * 
      */
     @Export(name="monitoringService", type=String.class, parameters={})
     private Output<String> monitoringService;
 
     /**
-     * @return The monitoring service the cluster should use to write metrics. Currently available options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+     * @return The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
      * 
      */
     public Output<String> monitoringService() {
@@ -617,14 +617,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.nodePoolDefaults;
     }
     /**
-     * The node pools associated with this cluster. This field should not be set if "node_config" or "initial_node_count" are specified.
+     * The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
      * 
      */
     @Export(name="nodePools", type=List.class, parameters={NodePoolResponse.class})
     private Output<List<NodePoolResponse>> nodePools;
 
     /**
-     * @return The node pools associated with this cluster. This field should not be set if "node_config" or "initial_node_count" are specified.
+     * @return The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
      * 
      */
     public Output<List<NodePoolResponse>> nodePools() {

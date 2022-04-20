@@ -41,7 +41,7 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
     }
 
     /**
-     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
      * 
      */
     @Import(name="type")

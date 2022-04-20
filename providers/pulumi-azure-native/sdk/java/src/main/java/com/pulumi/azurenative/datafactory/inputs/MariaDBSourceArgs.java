@@ -99,7 +99,7 @@ public final class MariaDBSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'MariaDBSource'.
+     * Expected value is &#39;MariaDBSource&#39;.
      * 
      */
     @Import(name="type", required=true)

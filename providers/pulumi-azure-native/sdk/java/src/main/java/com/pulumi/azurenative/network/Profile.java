@@ -177,14 +177,14 @@ public class Profile extends com.pulumi.resources.CustomResource {
         return this.trafficRoutingMethod;
     }
     /**
-     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
     @Export(name="trafficViewEnrollmentStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> trafficViewEnrollmentStatus;
 
     /**
-     * @return Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * @return Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
     public Output</* @Nullable */ String> trafficViewEnrollmentStatus() {

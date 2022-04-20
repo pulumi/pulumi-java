@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum AutomationRuleActionType {
         /**
-         * Modify an object's properties
+         * Modify an object&#39;s properties
          * 
          */
         ModifyProperties("ModifyProperties"),

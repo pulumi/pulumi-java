@@ -54,7 +54,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     }
 
     /**
-     * the alerts' displayNames on which the cases will not be generated
+     * the alerts&#39; displayNames on which the cases will not be generated
      * 
      */
     @Import(name="displayNamesExcludeFilter")
@@ -65,7 +65,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     }
 
     /**
-     * the alerts' displayNames on which the cases will be generated
+     * the alerts&#39; displayNames on which the cases will be generated
      * 
      */
     @Import(name="displayNamesFilter")
@@ -88,7 +88,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
 
     /**
      * The kind of the alert rule
-     * Expected value is 'MicrosoftSecurityIncidentCreation'.
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -99,7 +99,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     }
 
     /**
-     * The alerts' productName on which the cases will be generated
+     * The alerts&#39; productName on which the cases will be generated
      * 
      */
     @Import(name="productFilter", required=true)
@@ -110,7 +110,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -132,7 +132,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
     }
 
     /**
-     * the alerts' severities on which the cases will be generated
+     * the alerts&#39; severities on which the cases will be generated
      * 
      */
     @Import(name="severitiesFilter")

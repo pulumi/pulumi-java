@@ -20,7 +20,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     public static final SearchResultsResponse Empty = new SearchResultsResponse();
 
     /**
-     * Search results table's Description.
+     * Search results table&#39;s Description.
      * 
      */
     @Import(name="description")

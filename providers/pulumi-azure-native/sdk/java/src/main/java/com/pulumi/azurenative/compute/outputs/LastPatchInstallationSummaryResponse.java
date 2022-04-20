@@ -48,7 +48,7 @@ public final class LastPatchInstallationSummaryResponse {
      */
     private final Boolean maintenanceWindowExceeded;
     /**
-     * The number of all available patches but not going to be installed because it didn't match a classification or inclusion list entry.
+     * The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
      * 
      */
     private final Integer notSelectedPatchCount;
@@ -63,7 +63,7 @@ public final class LastPatchInstallationSummaryResponse {
      */
     private final String startTime;
     /**
-     * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
+     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
      */
     private final String status;
@@ -144,7 +144,7 @@ public final class LastPatchInstallationSummaryResponse {
         return this.maintenanceWindowExceeded;
     }
     /**
-     * The number of all available patches but not going to be installed because it didn't match a classification or inclusion list entry.
+     * The number of all available patches but not going to be installed because it didn&#39;t match a classification or inclusion list entry.
      * 
     */
     public Integer notSelectedPatchCount() {
@@ -165,7 +165,7 @@ public final class LastPatchInstallationSummaryResponse {
         return this.startTime;
     }
     /**
-     * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
+     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
     */
     public String status() {

@@ -9,13 +9,13 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The employer's company size.
+     * The employer&#39;s company size.
      * 
      */
     @EnumType
     public enum CompanySize {
         /**
-         * Default value if the size isn't specified.
+         * Default value if the size isn&#39;t specified.
          * 
          */
         CompanySizeUnspecified("COMPANY_SIZE_UNSPECIFIED"),

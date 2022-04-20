@@ -31,7 +31,7 @@ public final class PatchBaselineApprovalRule {
      */
     private final @Nullable String complianceLevel;
     /**
-     * Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
+     * Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
      * 
      */
     private final @Nullable Boolean enableNonSecurity;
@@ -77,7 +77,7 @@ public final class PatchBaselineApprovalRule {
         return Optional.ofNullable(this.complianceLevel);
     }
     /**
-     * Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
+     * Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
      * 
     */
     public Optional<Boolean> enableNonSecurity() {

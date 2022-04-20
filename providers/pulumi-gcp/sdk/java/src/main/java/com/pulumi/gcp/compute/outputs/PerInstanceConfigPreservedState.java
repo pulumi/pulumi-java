@@ -20,7 +20,7 @@ public final class PerInstanceConfigPreservedState {
      */
     private final @Nullable List<PerInstanceConfigPreservedStateDisk> disks;
     /**
-     * Preserved metadata defined for this instance. This is a list of key->value pairs.
+     * Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
      * 
      */
     private final @Nullable Map<String,String> metadata;
@@ -42,7 +42,7 @@ public final class PerInstanceConfigPreservedState {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * Preserved metadata defined for this instance. This is a list of key->value pairs.
+     * Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
      * 
     */
     public Map<String,String> metadata() {

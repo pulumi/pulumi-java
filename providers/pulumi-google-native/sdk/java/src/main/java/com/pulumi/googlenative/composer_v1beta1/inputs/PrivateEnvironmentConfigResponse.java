@@ -41,7 +41,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     }
 
     /**
-     * The IP range reserved for the tenant project's Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
     @Import(name="cloudComposerNetworkIpv4ReservedRange", required=true)
@@ -107,7 +107,7 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     }
 
     /**
-     * The IP range reserved for the tenant project's App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
     @Import(name="webServerIpv4ReservedRange", required=true)

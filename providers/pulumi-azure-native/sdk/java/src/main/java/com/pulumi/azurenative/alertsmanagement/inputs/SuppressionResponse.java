@@ -123,7 +123,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates type of action rule
-     * Expected value is 'Suppression'.
+     * Expected value is &#39;Suppression&#39;.
      * 
      */
     @Import(name="type", required=true)

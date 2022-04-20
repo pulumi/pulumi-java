@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a SQL database inside the Cloud SQL instance, hosted in
- * Google's cloud.
+ * Google&#39;s cloud.
  * 
  * ## Example Usage
  * 
@@ -47,9 +47,9 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:sql/database:Database")
 public class Database extends com.pulumi.resources.CustomResource {
     /**
-     * The charset value. See MySQL's
+     * The charset value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+     * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
      * for more details and supported values. Postgres databases only support
      * a value of `UTF8` at creation time.
      * 
@@ -58,9 +58,9 @@ public class Database extends com.pulumi.resources.CustomResource {
     private Output<String> charset;
 
     /**
-     * @return The charset value. See MySQL's
+     * @return The charset value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+     * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
      * for more details and supported values. Postgres databases only support
      * a value of `UTF8` at creation time.
      * 
@@ -69,9 +69,9 @@ public class Database extends com.pulumi.resources.CustomResource {
         return this.charset;
     }
     /**
-     * The collation value. See MySQL's
+     * The collation value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+     * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
      * for more details and supported values. Postgres databases only support
      * a value of `en_US.UTF8` at creation time.
      * 
@@ -80,9 +80,9 @@ public class Database extends com.pulumi.resources.CustomResource {
     private Output<String> collation;
 
     /**
-     * @return The collation value. See MySQL's
+     * @return The collation value. See MySQL&#39;s
      * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
-     * and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+     * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
      * for more details and supported values. Postgres databases only support
      * a value of `en_US.UTF8` at creation time.
      * 

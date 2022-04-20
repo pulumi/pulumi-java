@@ -29,7 +29,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
     }
 
     /**
-     * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
+     * If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
      * 
      */
     @Import(name="useDefault", required=true)

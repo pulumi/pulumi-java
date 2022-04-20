@@ -51,7 +51,7 @@ public final class JsonSinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'JsonSink'.
+     * Expected value is &#39;JsonSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class JsonSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'JsonSink'.
+     * Expected value is &#39;JsonSink&#39;.
      * 
     */
     public String type() {

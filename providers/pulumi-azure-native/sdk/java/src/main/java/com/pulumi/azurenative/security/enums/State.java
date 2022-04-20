@@ -15,12 +15,12 @@ import java.util.StringJoiner;
     @EnumType
     public enum State {
         /**
-         * Send notification on new alerts to the subscription's admins
+         * Send notification on new alerts to the subscription&#39;s admins
          * 
          */
         On("On"),
         /**
-         * Don't send notification on new alerts to the subscription's admins
+         * Don&#39;t send notification on new alerts to the subscription&#39;s admins
          * 
          */
         Off("Off");

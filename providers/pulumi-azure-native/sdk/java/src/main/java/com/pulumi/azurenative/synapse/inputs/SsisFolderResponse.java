@@ -55,7 +55,7 @@ public final class SsisFolderResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Folder'.
+     * Expected value is &#39;Folder&#39;.
      * 
      */
     @Import(name="type", required=true)

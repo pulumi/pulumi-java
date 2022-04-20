@@ -202,14 +202,14 @@ public class Domain extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * The domain's URL.
+     * The domain&#39;s URL.
      * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
-     * @return The domain's URL.
+     * @return The domain&#39;s URL.
      * 
      */
     public Output<String> url() {

@@ -54,7 +54,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The workspace's custom parameters.
+     * The workspace&#39;s custom parameters.
      * 
      */
     @Import(name="parameters")

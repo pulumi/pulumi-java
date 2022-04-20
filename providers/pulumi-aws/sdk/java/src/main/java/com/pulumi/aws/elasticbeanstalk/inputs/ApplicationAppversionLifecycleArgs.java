@@ -18,7 +18,7 @@ public final class ApplicationAppversionLifecycleArgs extends com.pulumi.resourc
     public static final ApplicationAppversionLifecycleArgs Empty = new ApplicationAppversionLifecycleArgs();
 
     /**
-     * Set to `true` to delete a version's source bundle from S3 when the application version is deleted.
+     * Set to `true` to delete a version&#39;s source bundle from S3 when the application version is deleted.
      * 
      */
     @Import(name="deleteSourceFromS3")
@@ -29,7 +29,7 @@ public final class ApplicationAppversionLifecycleArgs extends com.pulumi.resourc
     }
 
     /**
-     * The number of days to retain an application version ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
+     * The number of days to retain an application version (&#39;max_age_in_days&#39; and &#39;max_count&#39; cannot be enabled simultaneously.).
      * 
      */
     @Import(name="maxAgeInDays")
@@ -40,7 +40,7 @@ public final class ApplicationAppversionLifecycleArgs extends com.pulumi.resourc
     }
 
     /**
-     * The maximum number of application versions to retain ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
+     * The maximum number of application versions to retain (&#39;max_age_in_days&#39; and &#39;max_count&#39; cannot be enabled simultaneously.).
      * 
      */
     @Import(name="maxCount")

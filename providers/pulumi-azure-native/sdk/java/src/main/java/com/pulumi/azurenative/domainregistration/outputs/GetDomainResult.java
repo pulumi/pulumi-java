@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 public final class GetDomainResult {
     private final @Nullable String authCode;
     /**
-     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean autoRenew;
@@ -83,7 +83,7 @@ public final class GetDomainResult {
      */
     private final List<String> nameServers;
     /**
-     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean privacy;
@@ -93,7 +93,7 @@ public final class GetDomainResult {
      */
     private final String provisioningState;
     /**
-     * <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     * &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */
@@ -176,7 +176,7 @@ public final class GetDomainResult {
         return Optional.ofNullable(this.authCode);
     }
     /**
-     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> autoRenew() {
@@ -267,7 +267,7 @@ public final class GetDomainResult {
         return this.nameServers;
     }
     /**
-     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> privacy() {
@@ -281,7 +281,7 @@ public final class GetDomainResult {
         return this.provisioningState;
     }
     /**
-     * <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     * &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
     */

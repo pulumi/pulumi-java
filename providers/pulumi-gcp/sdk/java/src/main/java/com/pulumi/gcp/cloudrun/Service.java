@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * underlying Routes and Configurations (much as a kubernetes Deployment
  * orchestrates ReplicaSets).
  * 
- * The Service's controller will track the statuses of its owned Configuration
+ * The Service&#39;s controller will track the statuses of its owned Configuration
  * and Route, reflecting their statuses and conditions as its own.
  * 
  * See also:
@@ -40,7 +40,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/run/docs/)
  * 
- * > **Warning:** `google_cloudrun_service` creates a Managed Google Cloud Run Service. If you need to create
+ * &gt; **Warning:** `google_cloudrun_service` creates a Managed Google Cloud Run Service. If you need to create
  * a Cloud Run Service on Anthos(GKE/VMWare) then you will need to create it using the kubernetes alpha provider.
  * Have a look at the Cloud Run Anthos example below.
  * 
@@ -120,14 +120,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.metadata;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Volume's name.
+     * @return Volume&#39;s name.
      * 
      */
     public Output<String> name() {
@@ -168,7 +168,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * be stamped out. The template references the container image, and may also
      * include labels and annotations that should be attached to the Revision.
      * To correlate a Revision, and/or to force a Revision to be created when the
-     * spec doesn't otherwise change, a nonce label may be provided in the
+     * spec doesn&#39;t otherwise change, a nonce label may be provided in the
      * template metadata. For more details, see:
      * https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
      * Cloud Run does not currently support referencing a build that is
@@ -184,7 +184,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * be stamped out. The template references the container image, and may also
      * include labels and annotations that should be attached to the Revision.
      * To correlate a Revision, and/or to force a Revision to be created when the
-     * spec doesn't otherwise change, a nonce label may be provided in the
+     * spec doesn&#39;t otherwise change, a nonce label may be provided in the
      * template metadata. For more details, see:
      * https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
      * Cloud Run does not currently support referencing a build that is

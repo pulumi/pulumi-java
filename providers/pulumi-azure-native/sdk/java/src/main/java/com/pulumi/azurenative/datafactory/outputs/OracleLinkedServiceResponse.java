@@ -54,7 +54,7 @@ public final class OracleLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse password;
     /**
      * Type of linked service.
-     * Expected value is 'Oracle'.
+     * Expected value is &#39;Oracle&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class OracleLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Oracle'.
+     * Expected value is &#39;Oracle&#39;.
      * 
     */
     public String type() {

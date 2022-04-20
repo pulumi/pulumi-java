@@ -101,7 +101,7 @@ public final class ParquetSourceResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Copy source type.
-     * Expected value is 'ParquetSource'.
+     * Expected value is &#39;ParquetSource&#39;.
      * 
      */
     @Import(name="type", required=true)

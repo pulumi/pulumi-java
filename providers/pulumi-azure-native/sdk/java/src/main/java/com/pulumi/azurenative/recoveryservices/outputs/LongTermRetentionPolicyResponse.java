@@ -27,7 +27,7 @@ public final class LongTermRetentionPolicyResponse {
     private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'LongTermRetentionPolicy'.
+     * Expected value is &#39;LongTermRetentionPolicy&#39;.
      * 
      */
     private final String retentionPolicyType;
@@ -72,7 +72,7 @@ public final class LongTermRetentionPolicyResponse {
     }
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'LongTermRetentionPolicy'.
+     * Expected value is &#39;LongTermRetentionPolicy&#39;.
      * 
     */
     public String retentionPolicyType() {

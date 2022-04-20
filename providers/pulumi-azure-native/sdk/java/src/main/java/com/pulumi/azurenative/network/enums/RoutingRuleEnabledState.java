@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @EnumType

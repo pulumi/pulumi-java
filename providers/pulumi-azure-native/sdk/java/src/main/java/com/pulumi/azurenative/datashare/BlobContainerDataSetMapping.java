@@ -76,7 +76,7 @@ public class BlobContainerDataSetMapping extends com.pulumi.resources.CustomReso
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class BlobContainerDataSetMapping extends com.pulumi.resources.CustomReso
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     public Output<String> kind() {

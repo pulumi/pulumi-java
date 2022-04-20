@@ -31,7 +31,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
     @Import(name="healthCheckPath")
@@ -42,7 +42,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The instance port where you're creating your load balancer.
+     * The instance port where you&#39;re creating your load balancer.
      * 
      */
     @Import(name="instancePort", required=true)

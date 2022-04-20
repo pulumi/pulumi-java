@@ -18,13 +18,13 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Provides a resource to manage the accepter's side of a VPC Peering Connection.
+ * Provides a resource to manage the accepter&#39;s side of a VPC Peering Connection.
  * 
- * When a cross-account (requester's AWS account differs from the accepter's AWS account) or an inter-region
+ * When a cross-account (requester&#39;s AWS account differs from the accepter&#39;s AWS account) or an inter-region
  * VPC Peering Connection is created, a VPC Peering Connection resource is automatically created in the
- * accepter's account.
+ * accepter&#39;s account.
  * The requester can use the `aws.ec2.VpcPeeringConnection` resource to manage its side of the connection
- * and the accepter can use the `aws.ec2.VpcPeeringConnectionAccepter` resource to "adopt" its side of the
+ * and the accepter can use the `aws.ec2.VpcPeeringConnectionAccepter` resource to &#34;adopt&#34; its side of the
  * connection into management.
  * 
  * ## Example Usage
@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/vpcPeeringConnectionAccepter:VpcPeeringConnectionAccepter example pcx-12345678
  * ```
  * 
- *  Certain resource arguments, like `auto_accept`, do not have an EC2 API method for reading the information after peering connection creation. If the argument is set in the provider configuration on an imported resource, this provder will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_vpc_peering_connection_accepter" "example" {
+ *  Certain resource arguments, like `auto_accept`, do not have an EC2 API method for reading the information after peering connection creation. If the argument is set in the provider configuration on an imported resource, this provder will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource &#34;aws_vpc_peering_connection_accepter&#34; &#34;example&#34; {
  * 
  * # ... other configuration ...
  * 

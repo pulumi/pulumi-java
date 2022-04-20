@@ -22,7 +22,7 @@ public final class SubjectConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubjectConfigArgs Empty = new SubjectConfigArgs();
 
     /**
-     * Optional. The "common name" of the distinguished name.
+     * Optional. The &#34;common name&#34; of the distinguished name.
      * 
      */
     @Import(name="commonName")

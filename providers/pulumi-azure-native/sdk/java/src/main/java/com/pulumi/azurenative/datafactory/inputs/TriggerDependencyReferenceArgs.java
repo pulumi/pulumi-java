@@ -32,7 +32,7 @@ public final class TriggerDependencyReferenceArgs extends com.pulumi.resources.R
 
     /**
      * The type of dependency reference.
-     * Expected value is 'TriggerDependencyReference'.
+     * Expected value is &#39;TriggerDependencyReference&#39;.
      * 
      */
     @Import(name="type", required=true)

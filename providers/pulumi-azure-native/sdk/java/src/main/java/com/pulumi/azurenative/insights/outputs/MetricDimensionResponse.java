@@ -16,7 +16,7 @@ public final class MetricDimensionResponse {
      */
     private final String name;
     /**
-     * the dimension operator. Only 'Include' and 'Exclude' are supported
+     * the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
      * 
      */
     private final String operator;
@@ -44,7 +44,7 @@ public final class MetricDimensionResponse {
         return this.name;
     }
     /**
-     * the dimension operator. Only 'Include' and 'Exclude' are supported
+     * the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
      * 
     */
     public String operator() {

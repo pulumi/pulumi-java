@@ -85,7 +85,7 @@ public final class GetWebAppSiteExtensionSlotResult {
      */
     private final @Nullable String licenseUrl;
     /**
-     * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+     * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean localIsLatestVersion;
@@ -282,7 +282,7 @@ public final class GetWebAppSiteExtensionSlotResult {
         return Optional.ofNullable(this.licenseUrl);
     }
     /**
-     * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+     * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
     */
     public Optional<Boolean> localIsLatestVersion() {

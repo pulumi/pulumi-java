@@ -59,7 +59,7 @@ public final class AzureSearchIndexDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'AzureSearchIndex'.
+     * Expected value is &#39;AzureSearchIndex&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AzureSearchIndexDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureSearchIndex'.
+     * Expected value is &#39;AzureSearchIndex&#39;.
      * 
     */
     public String type() {

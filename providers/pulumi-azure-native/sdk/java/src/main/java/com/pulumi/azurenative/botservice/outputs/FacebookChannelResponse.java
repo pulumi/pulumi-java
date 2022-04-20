@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class FacebookChannelResponse {
     /**
      * The channel name
-     * Expected value is 'FacebookChannel'.
+     * Expected value is &#39;FacebookChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class FacebookChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'FacebookChannel'.
+     * Expected value is &#39;FacebookChannel&#39;.
      * 
     */
     public String channelName() {

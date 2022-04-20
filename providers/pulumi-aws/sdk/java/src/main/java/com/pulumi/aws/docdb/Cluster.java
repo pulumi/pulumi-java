@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * `apply_immediately` flag to instruct the service to apply the change immediately
  * (see documentation below).
  * 
- * > **Note:** using `apply_immediately` can result in a brief downtime as the server reboots.
+ * &gt; **Note:** using `apply_immediately` can result in a brief downtime as the server reboots.
  * 
  * ## Example Usage
  * 
@@ -189,14 +189,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.dbSubnetGroupName;
     }
     /**
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     * A value that indicates whether the DB cluster has deletion protection enabled. The database can&#39;t be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
     @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
-     * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can&#39;t be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
     public Output</* @Nullable */ Boolean> deletionProtection() {

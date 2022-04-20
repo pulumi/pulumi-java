@@ -33,7 +33,7 @@ public final class ImageTemplateManagedImageDistributorResponse {
     private final String runOutputName;
     /**
      * Type of distribution.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
      */
     private final String type;
@@ -82,7 +82,7 @@ public final class ImageTemplateManagedImageDistributorResponse {
     }
     /**
      * Type of distribution.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
     */
     public String type() {

@@ -63,7 +63,7 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
     public static final SwitchActivityArgs Empty = new SwitchActivityArgs();
 
     /**
-     * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+     * List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
      */
     @Import(name="cases")
@@ -130,7 +130,7 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Switch'.
+     * Expected value is &#39;Switch&#39;.
      * 
      */
     @Import(name="type", required=true)

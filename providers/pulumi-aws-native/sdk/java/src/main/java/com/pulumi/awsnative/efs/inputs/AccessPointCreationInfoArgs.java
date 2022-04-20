@@ -37,7 +37,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
      * 
      */
     @Import(name="permissions", required=true)

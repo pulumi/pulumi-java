@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Amazon OpenSearch Service parameters.</p>
+ * &lt;p&gt;Amazon OpenSearch Service parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceAmazonOpenSearchParameters extends com.pulumi.resources.InvokeArgs {
@@ -17,7 +17,7 @@ public final class DataSourceAmazonOpenSearchParameters extends com.pulumi.resou
     public static final DataSourceAmazonOpenSearchParameters Empty = new DataSourceAmazonOpenSearchParameters();
 
     /**
-     * <p>The Amazon OpenSearch Service domain.</p>
+     * &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
      * 
      */
     @Import(name="domain", required=true)

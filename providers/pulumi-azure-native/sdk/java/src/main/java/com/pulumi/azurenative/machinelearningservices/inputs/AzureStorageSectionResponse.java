@@ -51,7 +51,7 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+     *  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
      */
     @Import(name="blobCacheTimeout")
@@ -157,7 +157,7 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")

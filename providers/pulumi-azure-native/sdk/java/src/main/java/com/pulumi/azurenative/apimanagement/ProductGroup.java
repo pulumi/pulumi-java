@@ -75,14 +75,14 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+     * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group object id&gt;`; otherwise the value is null.
      * 
      */
     @Export(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
     /**
-     * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+     * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group object id&gt;`; otherwise the value is null.
      * 
      */
     public Output</* @Nullable */ String> externalId() {

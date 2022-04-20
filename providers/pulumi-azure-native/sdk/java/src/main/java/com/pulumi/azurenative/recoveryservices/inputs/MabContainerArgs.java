@@ -86,7 +86,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'Windows'.
+     * Expected value is &#39;Windows&#39;.
      * 
      */
     @Import(name="containerType", required=true)

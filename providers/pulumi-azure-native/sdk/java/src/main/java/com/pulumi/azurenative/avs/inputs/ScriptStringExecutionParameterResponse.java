@@ -32,7 +32,7 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
 
     /**
      * The type of execution parameter
-     * Expected value is 'Value'.
+     * Expected value is &#39;Value&#39;.
      * 
      */
     @Import(name="type", required=true)

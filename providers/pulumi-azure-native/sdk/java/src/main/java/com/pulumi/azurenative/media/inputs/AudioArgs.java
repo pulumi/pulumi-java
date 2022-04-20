@@ -55,7 +55,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Audio'.
+     * Expected value is &#39;#Microsoft.Media.Audio&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -69,14 +69,14 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
         return this.authorizerResultTtlInSeconds;
     }
     /**
-     * Specifies the authorizer's Uniform Resource Identifier (URI).
+     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
      */
     @Export(name="authorizerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerUri;
 
     /**
-     * @return Specifies the authorizer's Uniform Resource Identifier (URI).
+     * @return Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
      */
     public Output</* @Nullable */ String> authorizerUri() {

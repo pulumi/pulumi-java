@@ -21,7 +21,7 @@ public final class PackageInfoOccurrenceResponse {
      */
     private final String filename;
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
      */
     private final String homePage;
@@ -93,7 +93,7 @@ public final class PackageInfoOccurrenceResponse {
         return this.filename;
     }
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
     */
     public String homePage() {

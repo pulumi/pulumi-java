@@ -21,7 +21,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
 
     /**
      * The instance type.
-     * Expected value is 'AzureToAzure'.
+     * Expected value is &#39;AzureToAzure&#39;.
      * 
      */
     @Import(name="instanceType")

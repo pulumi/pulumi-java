@@ -18,7 +18,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
     public static final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs Empty = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs();
 
     /**
-     * Whether to perform a 'guest aware' snapshot.
+     * Whether to perform a &#39;guest aware&#39; snapshot.
      * 
      */
     @Import(name="guestFlush")

@@ -82,7 +82,7 @@ public final class GetMetadataActivityResponse {
     private final @Nullable Object storeSettings;
     /**
      * Type of activity.
-     * Expected value is 'GetMetadata'.
+     * Expected value is &#39;GetMetadata&#39;.
      * 
      */
     private final String type;
@@ -183,7 +183,7 @@ public final class GetMetadataActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'GetMetadata'.
+     * Expected value is &#39;GetMetadata&#39;.
      * 
     */
     public String type() {

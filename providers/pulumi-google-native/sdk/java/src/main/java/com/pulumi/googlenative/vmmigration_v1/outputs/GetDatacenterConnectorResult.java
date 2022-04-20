@@ -26,7 +26,7 @@ public final class GetDatacenterConnectorResult {
      */
     private final StatusResponse error;
     /**
-     * The connector's name.
+     * The connector&#39;s name.
      * 
      */
     private final String name;
@@ -107,7 +107,7 @@ public final class GetDatacenterConnectorResult {
         return this.error;
     }
     /**
-     * The connector's name.
+     * The connector&#39;s name.
      * 
     */
     public String name() {

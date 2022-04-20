@@ -79,7 +79,7 @@ public final class AvroDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
      */
     private final String type;
@@ -178,7 +178,7 @@ public final class AvroDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
     */
     public String type() {

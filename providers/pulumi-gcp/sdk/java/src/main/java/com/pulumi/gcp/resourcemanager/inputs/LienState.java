@@ -55,7 +55,7 @@ public final class LienState extends com.pulumi.resources.ResourceArgs {
      * A reference to the resource this Lien is attached to.
      * The server will validate the parent against those for which Liens are supported.
      * Since a variety of objects can have Liens against them, you must provide the type
-     * prefix (e.g. "projects/my-project-name").
+     * prefix (e.g. &#34;projects/my-project-name&#34;).
      * 
      */
     @Import(name="parent")
@@ -82,7 +82,7 @@ public final class LienState extends com.pulumi.resources.ResourceArgs {
      * Each value should correspond to an IAM permission. The server will validate
      * the permissions against those for which Liens are supported.  An empty
      * list is meaningless and will be rejected.
-     * e.g. ['resourcemanager.projects.delete']
+     * e.g. [&#39;resourcemanager.projects.delete&#39;]
      * 
      */
     @Import(name="restrictions")

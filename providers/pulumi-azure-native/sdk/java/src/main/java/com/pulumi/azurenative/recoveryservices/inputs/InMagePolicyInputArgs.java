@@ -35,7 +35,7 @@ public final class InMagePolicyInputArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The class type.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
      */
     @Import(name="instanceType")
@@ -46,7 +46,7 @@ public final class InMagePolicyInputArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
+     * A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
      * 
      */
     @Import(name="multiVmSyncStatus", required=true)

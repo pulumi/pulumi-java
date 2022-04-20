@@ -49,7 +49,7 @@ public final class GetEnvironmentResult {
      */
     private final String provisioningState;
     /**
-     * The identifier of the resource group containing the environment's resources.
+     * The identifier of the resource group containing the environment&#39;s resources.
      * 
      */
     private final String resourceGroupId;
@@ -145,7 +145,7 @@ public final class GetEnvironmentResult {
         return this.provisioningState;
     }
     /**
-     * The identifier of the resource group containing the environment's resources.
+     * The identifier of the resource group containing the environment&#39;s resources.
      * 
     */
     public String resourceGroupId() {

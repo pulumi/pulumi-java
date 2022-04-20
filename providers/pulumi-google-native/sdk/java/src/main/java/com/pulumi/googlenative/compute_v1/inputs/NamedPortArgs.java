@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The named port. For example: <"http", 80>.
+ * The named port. For example: &lt;&#34;http&#34;, 80&gt;.
  * 
  */
 public final class NamedPortArgs extends com.pulumi.resources.ResourceArgs {

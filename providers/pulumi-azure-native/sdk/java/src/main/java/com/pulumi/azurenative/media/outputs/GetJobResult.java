@@ -27,7 +27,7 @@ public final class GetJobResult {
      */
     private final @Nullable Map<String,String> correlationData;
     /**
-     * The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     private final String created;
@@ -52,7 +52,7 @@ public final class GetJobResult {
      */
     private final Object input;
     /**
-     * The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     private final String lastModified;
@@ -87,7 +87,7 @@ public final class GetJobResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class GetJobResult {
         return this.correlationData == null ? Map.of() : this.correlationData;
     }
     /**
-     * The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
     */
     public String created() {
@@ -167,7 +167,7 @@ public final class GetJobResult {
         return this.input;
     }
     /**
-     * The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
     */
     public String lastModified() {
@@ -216,7 +216,7 @@ public final class GetJobResult {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

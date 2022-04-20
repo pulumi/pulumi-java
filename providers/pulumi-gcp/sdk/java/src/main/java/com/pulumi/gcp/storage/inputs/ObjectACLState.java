@@ -39,7 +39,7 @@ public final class ObjectACLState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+     * The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
     @Import(name="predefinedAcl")

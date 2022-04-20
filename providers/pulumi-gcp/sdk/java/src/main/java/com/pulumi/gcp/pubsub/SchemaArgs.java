@@ -29,7 +29,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID to use for the schema, which will become the final component of the schema's resource name.
+     * The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
      * 
      */
     @Import(name="name")

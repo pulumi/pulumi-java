@@ -61,7 +61,7 @@ public final class BlobFolderDataSetMappingArgs extends com.pulumi.resources.Res
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
      */
     @Import(name="kind", required=true)

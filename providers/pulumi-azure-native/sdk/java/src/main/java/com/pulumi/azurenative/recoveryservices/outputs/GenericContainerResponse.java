@@ -22,7 +22,7 @@ public final class GenericContainerResponse {
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'GenericContainer'.
+     * Expected value is &#39;GenericContainer&#39;.
      * 
      */
     private final String containerType;
@@ -32,7 +32,7 @@ public final class GenericContainerResponse {
      */
     private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
     /**
-     * Name of the container's fabric
+     * Name of the container&#39;s fabric
      * 
      */
     private final @Nullable String fabricName;
@@ -82,7 +82,7 @@ public final class GenericContainerResponse {
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'GenericContainer'.
+     * Expected value is &#39;GenericContainer&#39;.
      * 
     */
     public String containerType() {
@@ -96,7 +96,7 @@ public final class GenericContainerResponse {
         return Optional.ofNullable(this.extendedInformation);
     }
     /**
-     * Name of the container's fabric
+     * Name of the container&#39;s fabric
      * 
     */
     public Optional<String> fabricName() {

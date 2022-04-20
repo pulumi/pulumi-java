@@ -51,7 +51,7 @@ public final class AzureFunctionLinkedServiceResponse {
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+     * The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
      * 
      */
     private final Object functionAppUrl;
@@ -72,7 +72,7 @@ public final class AzureFunctionLinkedServiceResponse {
     private final @Nullable Object resourceId;
     /**
      * Type of linked service.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class AzureFunctionLinkedServiceResponse {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+     * The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
      * 
     */
     public Object functionAppUrl() {
@@ -175,7 +175,7 @@ public final class AzureFunctionLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
     */
     public String type() {

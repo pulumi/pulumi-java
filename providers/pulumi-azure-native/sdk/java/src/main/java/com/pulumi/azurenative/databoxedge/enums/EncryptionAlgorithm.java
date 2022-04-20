@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The algorithm used to encrypt "Value".
+     * The algorithm used to encrypt &#34;Value&#34;.
      * 
      */
     @EnumType

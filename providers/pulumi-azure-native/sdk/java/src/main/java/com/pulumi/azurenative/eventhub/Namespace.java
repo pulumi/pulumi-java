@@ -92,14 +92,14 @@ public class Namespace extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
      * 
      */
     @Export(name="maximumThroughputUnits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumThroughputUnits;
 
     /**
-     * @return Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+     * @return Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
      * 
      */
     public Output</* @Nullable */ Integer> maximumThroughputUnits() {
@@ -190,14 +190,14 @@ public class Namespace extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

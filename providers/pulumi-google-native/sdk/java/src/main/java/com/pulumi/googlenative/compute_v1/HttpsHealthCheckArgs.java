@@ -108,7 +108,7 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The request path of the HTTPS health check request. The default value is "/".
+     * The request path of the HTTPS health check request. The default value is &#34;/&#34;.
      * 
      */
     @Import(name="requestPath")

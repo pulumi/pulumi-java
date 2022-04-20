@@ -26,7 +26,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
      * 
      */
     @Import(name="name", required=true)

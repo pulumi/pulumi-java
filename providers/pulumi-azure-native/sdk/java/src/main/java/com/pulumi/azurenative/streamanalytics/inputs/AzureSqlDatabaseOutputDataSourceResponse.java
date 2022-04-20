@@ -65,7 +65,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Sql/Server/Database'.
+     * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -42,7 +42,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don't use AQUA.
+     * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
@@ -53,7 +53,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don't use AQUA.
+     * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
@@ -117,14 +117,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.availabilityZoneRelocationStatus;
     }
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
     @Export(name="classic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> classic;
 
     /**
-     * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
     public Output</* @Nullable */ Boolean> classic() {
@@ -243,28 +243,28 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.deferMaintenance;
     }
     /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
      */
     @Export(name="deferMaintenanceDuration", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> deferMaintenanceDuration;
 
     /**
-     * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
      */
     public Output</* @Nullable */ Integer> deferMaintenanceDuration() {
         return this.deferMaintenanceDuration;
     }
     /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
      */
     @Export(name="deferMaintenanceEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> deferMaintenanceEndTime;
 
     /**
-     * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
      */
     public Output</* @Nullable */ String> deferMaintenanceEndTime() {
@@ -477,14 +477,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.masterUserPassword;
     }
     /**
-     * The user name associated with the master user account for the cluster that is being created. The user name can't be PUBLIC and first character must be a letter.
+     * The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
      * 
      */
     @Export(name="masterUsername", type=String.class, parameters={})
     private Output<String> masterUsername;
 
     /**
-     * @return The user name associated with the master user account for the cluster that is being created. The user name can't be PUBLIC and first character must be a letter.
+     * @return The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
      * 
      */
     public Output<String> masterUsername() {
@@ -673,14 +673,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.snapshotCopyRetentionPeriod;
     }
     /**
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive.
+     * The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
      * 
      */
     @Export(name="snapshotIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotIdentifier;
 
     /**
-     * @return The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive.
+     * @return The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
      * 
      */
     public Output</* @Nullable */ String> snapshotIdentifier() {

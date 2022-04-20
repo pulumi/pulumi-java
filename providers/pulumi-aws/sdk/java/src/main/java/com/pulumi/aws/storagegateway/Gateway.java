@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.
  * 
- * > **NOTE:** The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
+ * &gt; **NOTE:** The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
  * 
  * ## Example Usage
  * 
@@ -194,14 +194,14 @@ public class Gateway extends com.pulumi.resources.CustomResource {
         return this.gatewayNetworkInterfaces;
     }
     /**
-     * Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
+     * Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
      * 
      */
     @Export(name="gatewayTimezone", type=String.class, parameters={})
     private Output<String> gatewayTimezone;
 
     /**
-     * @return Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
+     * @return Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
      * 
      */
     public Output<String> gatewayTimezone() {

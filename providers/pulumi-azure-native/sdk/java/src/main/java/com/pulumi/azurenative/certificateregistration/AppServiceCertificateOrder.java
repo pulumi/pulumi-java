@@ -49,14 +49,14 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
         return this.appServiceCertificateNotRenewableReasons;
     }
     /**
-     * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
     /**
-     * @return <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> autoRenew() {
@@ -147,14 +147,14 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
         return this.intermediate;
     }
     /**
-     * <code>true</code> if private key is external; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if private key is external; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="isPrivateKeyExternal", type=Boolean.class, parameters={})
     private Output<Boolean> isPrivateKeyExternal;
 
     /**
-     * @return <code>true</code> if private key is external; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if private key is external; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output<Boolean> isPrivateKeyExternal() {

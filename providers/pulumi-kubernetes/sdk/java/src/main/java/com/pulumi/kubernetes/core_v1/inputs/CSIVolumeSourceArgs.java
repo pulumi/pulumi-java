@@ -34,7 +34,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Filesystem type to mount. Ex. "ext4", "xfs", "ntfs". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
      */
     @Import(name="fsType")
@@ -67,7 +67,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
+     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
      */
     @Import(name="volumeAttributes")

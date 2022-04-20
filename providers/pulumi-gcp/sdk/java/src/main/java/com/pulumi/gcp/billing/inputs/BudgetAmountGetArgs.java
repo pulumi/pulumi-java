@@ -18,7 +18,7 @@ public final class BudgetAmountGetArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Configures a budget amount that is automatically set to 100% of
-     * last period's spend.
+     * last period&#39;s spend.
      * Boolean. Set value to true to use. Do not set to false, instead
      * use the `specified_amount` block.
      * 

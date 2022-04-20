@@ -115,7 +115,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     }
 
     /**
-     * The type of the web application firewall rule set. Possible values are: 'OWASP'.
+     * The type of the web application firewall rule set. Possible values are: &#39;OWASP&#39;.
      * 
      */
     @Import(name="ruleSetType", required=true)

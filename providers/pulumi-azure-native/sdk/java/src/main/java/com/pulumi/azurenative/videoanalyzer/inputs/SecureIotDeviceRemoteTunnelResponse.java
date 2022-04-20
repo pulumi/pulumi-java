@@ -41,7 +41,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
      * 
      */
     @Import(name="type", required=true)

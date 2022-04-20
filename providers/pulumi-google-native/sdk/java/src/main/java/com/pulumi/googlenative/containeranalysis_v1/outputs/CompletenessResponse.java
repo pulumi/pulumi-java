@@ -20,7 +20,7 @@ public final class CompletenessResponse {
      */
     private final Boolean environment;
     /**
-     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
      * 
      */
     private final Boolean materials;
@@ -50,7 +50,7 @@ public final class CompletenessResponse {
         return this.environment;
     }
     /**
-     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
      * 
     */
     public Boolean materials() {

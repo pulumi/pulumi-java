@@ -19,7 +19,7 @@ public final class BuildOccurrenceResponse extends com.pulumi.resources.InvokeAr
     public static final BuildOccurrenceResponse Empty = new BuildOccurrenceResponse();
 
     /**
-     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
+     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
      */
     @Import(name="intotoStatement", required=true)

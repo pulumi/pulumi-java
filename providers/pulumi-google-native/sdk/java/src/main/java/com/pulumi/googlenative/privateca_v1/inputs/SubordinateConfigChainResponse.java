@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * This message describes a subordinate CA's issuer certificate chain. This wrapper exists for compatibility reasons.
+ * This message describes a subordinate CA&#39;s issuer certificate chain. This wrapper exists for compatibility reasons.
  * 
  */
 public final class SubordinateConfigChainResponse extends com.pulumi.resources.InvokeArgs {

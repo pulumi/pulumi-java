@@ -50,7 +50,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
+     * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User &lt;user@example.com&gt;`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
     @Import(name="fromAddress", required=true)
@@ -72,7 +72,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
+     * The ARN of an IAM Role used to submit events to Mobile Analytics&#39; event ingestion service.
      * 
      */
     @Import(name="roleArn")

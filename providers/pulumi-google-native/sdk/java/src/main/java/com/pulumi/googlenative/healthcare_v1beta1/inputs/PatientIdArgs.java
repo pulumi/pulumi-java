@@ -31,7 +31,7 @@ public final class PatientIdArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The patient's unique identifier.
+     * The patient&#39;s unique identifier.
      * 
      */
     @Import(name="value")

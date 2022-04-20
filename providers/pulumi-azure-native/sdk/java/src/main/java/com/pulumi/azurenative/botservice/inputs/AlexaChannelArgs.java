@@ -22,7 +22,7 @@ public final class AlexaChannelArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The channel name
-     * Expected value is 'AlexaChannel'.
+     * Expected value is &#39;AlexaChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

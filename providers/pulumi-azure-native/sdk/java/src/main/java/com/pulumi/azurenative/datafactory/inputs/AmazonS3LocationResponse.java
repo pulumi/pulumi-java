@@ -55,7 +55,7 @@ public final class AmazonS3LocationResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'AmazonS3Location'.
+     * Expected value is &#39;AmazonS3Location&#39;.
      * 
      */
     @Import(name="type", required=true)

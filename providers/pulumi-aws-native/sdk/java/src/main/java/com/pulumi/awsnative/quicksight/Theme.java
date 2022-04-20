@@ -25,14 +25,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:quicksight:Theme")
 public class Theme extends com.pulumi.resources.CustomResource {
     /**
-     * <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -45,20 +45,20 @@ public class Theme extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+     * &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
-     * 				<code>ListThemes</code> or choose <b>Themes</b> from
-     * 			within a QuickSight analysis. </p>
+     * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+     * 			within a QuickSight analysis. &lt;/p&gt;
      * 
      */
     @Export(name="baseThemeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> baseThemeId;
 
     /**
-     * @return <p>The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+     * @return &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
-     * 				<code>ListThemes</code> or choose <b>Themes</b> from
-     * 			within a QuickSight analysis. </p>
+     * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+     * 			within a QuickSight analysis. &lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> baseThemeId() {
@@ -71,74 +71,74 @@ public class Theme extends com.pulumi.resources.CustomResource {
         return this.configuration;
     }
     /**
-     * <p>The date and time that the theme was created.</p>
+     * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>The date and time that the theme was created.</p>
+     * @return &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
-     * <p>The date and time that the theme was last updated.</p>
+     * &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>The date and time that the theme was last updated.</p>
+     * @return &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * <p>A display name for the theme.</p>
+     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>A display name for the theme.</p>
+     * @return &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
-     * <p>A valid grouping of resource permissions to apply to the new theme.
-     * 			</p>
+     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={ThemeResourcePermission.class})
     private Output</* @Nullable */ List<ThemeResourcePermission>> permissions;
 
     /**
-     * @return <p>A valid grouping of resource permissions to apply to the new theme.
-     * 			</p>
+     * @return &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<ThemeResourcePermission>> permissions() {
         return this.permissions;
     }
     /**
-     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.</p>
+     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={ThemeTag.class})
     private Output</* @Nullable */ List<ThemeTag>> tags;
 
     /**
-     * @return <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.</p>
+     * @return &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<ThemeTag>> tags() {
@@ -163,20 +163,20 @@ public class Theme extends com.pulumi.resources.CustomResource {
         return this.version;
     }
     /**
-     * <p>A description of the first version of the theme that you're creating. Every time
-     * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
-     * 			theme has a description of the version in the <code>VersionDescription</code>
-     * 			field.</p>
+     * &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+     * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+     * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+     * 			field.&lt;/p&gt;
      * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
 
     /**
-     * @return <p>A description of the first version of the theme that you're creating. Every time
-     * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
-     * 			theme has a description of the version in the <code>VersionDescription</code>
-     * 			field.</p>
+     * @return &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+     * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+     * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+     * 			field.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> versionDescription() {

@@ -33,7 +33,7 @@ public final class StringNotContainsAdvancedFilterResponse extends com.pulumi.re
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotContains'.
+     * Expected value is &#39;StringNotContains&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

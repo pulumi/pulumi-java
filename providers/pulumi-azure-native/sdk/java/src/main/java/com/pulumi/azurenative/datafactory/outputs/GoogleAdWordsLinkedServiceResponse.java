@@ -96,7 +96,7 @@ public final class GoogleAdWordsLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'GoogleAdWords'.
+     * Expected value is &#39;GoogleAdWords&#39;.
      * 
      */
     private final String type;
@@ -251,7 +251,7 @@ public final class GoogleAdWordsLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'GoogleAdWords'.
+     * Expected value is &#39;GoogleAdWords&#39;.
      * 
     */
     public String type() {

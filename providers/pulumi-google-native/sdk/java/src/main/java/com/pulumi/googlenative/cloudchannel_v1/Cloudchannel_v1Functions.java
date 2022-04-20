@@ -27,7 +27,7 @@ public final class Cloudchannel_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getChannelPartnerLink", TypeShape.of(GetChannelPartnerLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer resource doesn't exist. Usually the result of an invalid name parameter. Return value: The Customer resource.
+     * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer resource doesn&#39;t exist. Usually the result of an invalid name parameter. Return value: The Customer resource.
      * 
      */
     public static CompletableFuture<GetCustomerResult> getCustomer(GetCustomerArgs args) {
@@ -37,7 +37,7 @@ public final class Cloudchannel_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getCustomer", TypeShape.of(GetCustomerResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
+     * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn&#39;t belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
      * 
      */
     public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args) {

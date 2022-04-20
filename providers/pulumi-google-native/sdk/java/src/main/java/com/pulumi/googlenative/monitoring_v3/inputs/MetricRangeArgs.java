@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min <= x <= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
+ * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min &lt;= x &lt;= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
  * 
  */
 public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
     public static final MetricRangeArgs Empty = new MetricRangeArgs();
 
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     @Import(name="range")

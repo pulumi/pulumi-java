@@ -52,7 +52,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+     * The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
     @Import(name="homeDirectoryType")
@@ -70,7 +70,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+     * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
     @Import(name="posixProfile")

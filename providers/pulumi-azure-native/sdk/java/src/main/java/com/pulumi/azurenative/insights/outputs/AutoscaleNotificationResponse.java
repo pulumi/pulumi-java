@@ -20,7 +20,7 @@ public final class AutoscaleNotificationResponse {
      */
     private final @Nullable EmailNotificationResponse email;
     /**
-     * the operation associated with the notification and its value must be "scale"
+     * the operation associated with the notification and its value must be &#34;scale&#34;
      * 
      */
     private final String operation;
@@ -48,7 +48,7 @@ public final class AutoscaleNotificationResponse {
         return Optional.ofNullable(this.email);
     }
     /**
-     * the operation associated with the notification and its value must be "scale"
+     * the operation associated with the notification and its value must be &#34;scale&#34;
      * 
     */
     public String operation() {

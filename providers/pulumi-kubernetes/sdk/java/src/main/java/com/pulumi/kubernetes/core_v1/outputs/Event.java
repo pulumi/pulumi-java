@@ -62,12 +62,12 @@ public final class Event {
      */
     private final @Nullable String message;
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     private final ObjectMeta metadata;
     /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
+     * This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
      * 
      */
     private final @Nullable String reason;
@@ -87,7 +87,7 @@ public final class Event {
      */
     private final @Nullable String reportingInstance;
     /**
-     * Data about the Event series this event represents or nil if it's a singleton Event.
+     * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     private final @Nullable EventSeries series;
@@ -204,14 +204,14 @@ public final class Event {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
     public ObjectMeta metadata() {
         return this.metadata;
     }
     /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
+     * This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
      * 
     */
     public Optional<String> reason() {
@@ -239,7 +239,7 @@ public final class Event {
         return Optional.ofNullable(this.reportingInstance);
     }
     /**
-     * Data about the Event series this event represents or nil if it's a singleton Event.
+     * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
     */
     public Optional<EventSeries> series() {

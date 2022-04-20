@@ -51,7 +51,7 @@ public final class GetWebAppVnetConnectionResult {
      */
     private final String name;
     /**
-     * <code>true</code> if a resync is required; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final Boolean resyncRequired;
@@ -66,7 +66,7 @@ public final class GetWebAppVnetConnectionResult {
      */
     private final String type;
     /**
-     * The Virtual Network's resource ID.
+     * The Virtual Network&#39;s resource ID.
      * 
      */
     private final @Nullable String vnetResourceId;
@@ -148,7 +148,7 @@ public final class GetWebAppVnetConnectionResult {
         return this.name;
     }
     /**
-     * <code>true</code> if a resync is required; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Boolean resyncRequired() {
@@ -169,7 +169,7 @@ public final class GetWebAppVnetConnectionResult {
         return this.type;
     }
     /**
-     * The Virtual Network's resource ID.
+     * The Virtual Network&#39;s resource ID.
      * 
     */
     public Optional<String> vnetResourceId() {

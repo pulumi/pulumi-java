@@ -31,7 +31,7 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
+     * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
      * 
      */
     @Import(name="cloudKmsKeyVersion", required=true)

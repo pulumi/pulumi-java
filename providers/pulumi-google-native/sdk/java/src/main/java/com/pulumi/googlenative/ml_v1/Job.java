@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * Creates a training or a batch prediction job.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -97,14 +97,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.jobId;
     }
     /**
-     * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
+     * It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
      * 
      */
     @Export(name="jobPosition", type=String.class, parameters={})
     private Output<String> jobPosition;
 
     /**
-     * @return It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
+     * @return It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
      * 
      */
     public Output<String> jobPosition() {

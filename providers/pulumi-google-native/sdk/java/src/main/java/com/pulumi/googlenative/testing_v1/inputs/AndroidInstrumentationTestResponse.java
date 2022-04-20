@@ -43,7 +43,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     }
 
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     @Import(name="appPackageId", required=true)
@@ -87,7 +87,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     }
 
     /**
-     * The java package for the test to be executed. The default value is determined by examining the application's manifest.
+     * The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     @Import(name="testPackageId", required=true)
@@ -98,7 +98,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     }
 
     /**
-     * The InstrumentationTestRunner class. The default value is determined by examining the application's manifest.
+     * The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     @Import(name="testRunnerClass", required=true)
@@ -109,7 +109,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     }
 
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
+     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
      */
     @Import(name="testTargets", required=true)

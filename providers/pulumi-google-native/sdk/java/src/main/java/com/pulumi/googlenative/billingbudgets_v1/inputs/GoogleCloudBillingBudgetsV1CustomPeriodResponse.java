@@ -17,7 +17,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends com.p
     public static final GoogleCloudBillingBudgetsV1CustomPeriodResponse Empty = new GoogleCloudBillingBudgetsV1CustomPeriodResponse();
 
     /**
-     * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.
+     * Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
      * 
      */
     @Import(name="endDate", required=true)

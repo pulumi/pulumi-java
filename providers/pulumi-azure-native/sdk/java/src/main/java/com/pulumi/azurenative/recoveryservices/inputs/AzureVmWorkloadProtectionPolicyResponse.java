@@ -26,7 +26,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureWorkload'.
+     * Expected value is &#39;AzureWorkload&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)

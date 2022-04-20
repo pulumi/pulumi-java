@@ -18,7 +18,7 @@ public final class EncryptionConfigResponse {
      */
     private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
     /**
-     * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
+     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
      */
     private final String type;
@@ -39,7 +39,7 @@ public final class EncryptionConfigResponse {
         return Optional.ofNullable(this.keyVaultMetaInfo);
     }
     /**
-     * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
+     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
     */
     public String type() {

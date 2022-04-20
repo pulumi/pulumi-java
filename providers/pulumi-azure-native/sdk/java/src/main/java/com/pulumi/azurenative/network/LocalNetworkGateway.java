@@ -35,14 +35,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:network:LocalNetworkGateway")
 public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
      */
     @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
-     * @return Local network gateway's BGP speaker settings.
+     * @return Local network gateway&#39;s BGP speaker settings.
      * 
      */
     public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {

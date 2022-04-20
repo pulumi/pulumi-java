@@ -107,7 +107,7 @@ public final class LogzFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Response for list of user's role for Logz.io account.
+     * Response for list of user&#39;s role for Logz.io account.
      * API Version: 2020-10-01.
      * 
      */

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Quantum Ledger Database (QLDB) resource
  * 
- * > **NOTE:** Deletion protection is enabled by default. To successfully delete this resource via this provider, `deletion_protection = false` must be applied before attempting deletion.
+ * &gt; **NOTE:** Deletion protection is enabled by default. To successfully delete this resource via this provider, `deletion_protection = false` must be applied before attempting deletion.
  * 
  * ## Example Usage
  * 

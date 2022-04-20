@@ -42,7 +42,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends com.pulumi.res
 
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="maxPendingLatency")
@@ -65,7 +65,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends com.pulumi.res
 
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="minPendingLatency")

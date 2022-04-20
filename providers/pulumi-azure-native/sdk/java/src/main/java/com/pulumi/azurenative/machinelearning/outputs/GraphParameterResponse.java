@@ -24,7 +24,7 @@ public final class GraphParameterResponse {
      */
     private final List<GraphParameterLinkResponse> links;
     /**
-     * Graph parameter's type.
+     * Graph parameter&#39;s type.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class GraphParameterResponse {
         return this.links;
     }
     /**
-     * Graph parameter's type.
+     * Graph parameter&#39;s type.
      * 
     */
     public String type() {

@@ -31,7 +31,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
 
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'SharedImageVersion'.
+     * Expected value is &#39;SharedImageVersion&#39;.
      * 
      */
     @Import(name="type", required=true)

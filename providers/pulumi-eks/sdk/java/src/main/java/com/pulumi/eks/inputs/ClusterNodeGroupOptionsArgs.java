@@ -46,7 +46,7 @@ public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The tags to apply to the NodeGroup's AutoScalingGroup in the CloudFormation Stack.
+     * The tags to apply to the NodeGroup&#39;s AutoScalingGroup in the CloudFormation Stack.
      * 
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
@@ -161,7 +161,7 @@ public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+     * The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
      * 
      */
     @Import(name="instanceType")
@@ -183,7 +183,7 @@ public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
+     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, &#39;--port=10251 --address=0.0.0.0&#39;. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
      * 
      */
     @Import(name="kubeletExtraArgs")
@@ -251,7 +251,7 @@ public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The size in GiB of a cluster node's root volume. Defaults to 20.
+     * The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
      * 
      */
     @Import(name="nodeRootVolumeSize")
@@ -282,7 +282,7 @@ public final class ClusterNodeGroupOptionsArgs extends com.pulumi.resources.Reso
     /**
      * The set of subnets to override and use for the worker node group.
      * 
-     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
+     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster&#39;s `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
      * 
      */
     @Import(name="nodeSubnetIds")

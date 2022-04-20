@@ -21,7 +21,7 @@ public final class MachineReferenceWithHintsResponse {
     private final String id;
     /**
      * Specifies the sub-class of the reference.
-     * Expected value is 'ref:machinewithhints'.
+     * Expected value is &#39;ref:machinewithhints&#39;.
      * 
      */
     private final String kind;
@@ -73,7 +73,7 @@ public final class MachineReferenceWithHintsResponse {
     }
     /**
      * Specifies the sub-class of the reference.
-     * Expected value is 'ref:machinewithhints'.
+     * Expected value is &#39;ref:machinewithhints&#39;.
      * 
     */
     public String kind() {

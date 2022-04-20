@@ -12,17 +12,17 @@ import java.util.Objects;
 public final class AddRemoveReplicaScalingMechanismResponse {
     /**
      * Enumerates the mechanisms for auto scaling.
-     * Expected value is 'AddRemoveReplica'.
+     * Expected value is &#39;AddRemoveReplica&#39;.
      * 
      */
     private final String kind;
     /**
-     * Maximum number of containers (scale up won't be performed above this number).
+     * Maximum number of containers (scale up won&#39;t be performed above this number).
      * 
      */
     private final Integer maxCount;
     /**
-     * Minimum number of containers (scale down won't be performed below this number).
+     * Minimum number of containers (scale down won&#39;t be performed below this number).
      * 
      */
     private final Integer minCount;
@@ -46,21 +46,21 @@ public final class AddRemoveReplicaScalingMechanismResponse {
 
     /**
      * Enumerates the mechanisms for auto scaling.
-     * Expected value is 'AddRemoveReplica'.
+     * Expected value is &#39;AddRemoveReplica&#39;.
      * 
     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Maximum number of containers (scale up won't be performed above this number).
+     * Maximum number of containers (scale up won&#39;t be performed above this number).
      * 
     */
     public Integer maxCount() {
         return this.maxCount;
     }
     /**
-     * Minimum number of containers (scale down won't be performed below this number).
+     * Minimum number of containers (scale down won&#39;t be performed below this number).
      * 
     */
     public Integer minCount() {

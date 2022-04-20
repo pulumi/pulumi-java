@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class NetworkSecurityGroupResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkSecurityGroups'.
+     * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
      * 
      */
     private final String resourceType;
@@ -41,7 +41,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkSecurityGroups'.
+     * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
      * 
     */
     public String resourceType() {

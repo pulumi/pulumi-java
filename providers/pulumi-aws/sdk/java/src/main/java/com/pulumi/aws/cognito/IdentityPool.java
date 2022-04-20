@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * Cognito Identity Pool can be imported using the name, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/identityPool:IdentityPool mypool <identity-pool-id>
+ *  $ pulumi import aws:cognito/identityPool:IdentityPool mypool &lt;identity-pool-id&gt;
  * ```
  * 
  */
@@ -90,7 +90,7 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
         return this.cognitoIdentityProviders;
     }
     /**
-     * The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
+     * The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
      * backend and the Cognito service to communicate about the developer provider.
      * 
      */
@@ -98,7 +98,7 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> developerProviderName;
 
     /**
-     * @return The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
+     * @return The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
      * backend and the Cognito service to communicate about the developer provider.
      * 
      */

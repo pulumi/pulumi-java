@@ -44,7 +44,7 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
 
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Static'.
+     * Expected value is &#39;Static&#39;.
      * 
      */
     @Import(name="type", required=true)

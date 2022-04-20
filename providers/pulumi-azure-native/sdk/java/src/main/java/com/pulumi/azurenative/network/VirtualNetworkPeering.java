@@ -162,14 +162,14 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
         return this.remoteAddressSpace;
     }
     /**
-     * The reference to the remote virtual network's Bgp Communities.
+     * The reference to the remote virtual network&#39;s Bgp Communities.
      * 
      */
     @Export(name="remoteBgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities;
 
     /**
-     * @return The reference to the remote virtual network's Bgp Communities.
+     * @return The reference to the remote virtual network&#39;s Bgp Communities.
      * 
      */
     public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {

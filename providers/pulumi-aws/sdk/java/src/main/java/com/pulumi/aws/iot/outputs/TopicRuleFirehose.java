@@ -22,7 +22,7 @@ public final class TopicRuleFirehose {
      */
     private final String roleArn;
     /**
-     * A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+     * A character separator that is used to separate records written to the Firehose stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
      * 
      */
     private final @Nullable String separator;
@@ -52,7 +52,7 @@ public final class TopicRuleFirehose {
         return this.roleArn;
     }
     /**
-     * A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+     * A character separator that is used to separate records written to the Firehose stream. Valid values are: &#39;\n&#39; (newline), &#39;\t&#39; (tab), &#39;\r\n&#39; (Windows newline), &#39;,&#39; (comma).
      * 
     */
     public Optional<String> separator() {

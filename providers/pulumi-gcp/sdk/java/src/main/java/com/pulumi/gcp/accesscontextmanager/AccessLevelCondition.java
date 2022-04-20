@@ -17,14 +17,14 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Allows configuring a single access level condition to be appended to an access level's conditions.
+ * Allows configuring a single access level condition to be appended to an access level&#39;s conditions.
  * This resource is intended to be used in cases where it is not possible to compile a full list
  * of conditions to include in a `gcp.accesscontextmanager.AccessLevel` resource,
  * to enable them to be added separately.
  * 
- * > **Note:** If this resource is used alongside a `gcp.accesscontextmanager.AccessLevel` resource,
+ * &gt; **Note:** If this resource is used alongside a `gcp.accesscontextmanager.AccessLevel` resource,
  * the access level resource must have a `lifecycle` block with `ignore_changes = [basic[0].conditions]` so
- * they don't fight over which service accounts should be included.
+ * they don&#39;t fight over which service accounts should be included.
  * 
  * To get more information about AccessLevelCondition, see:
  * 
@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the ACM API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the
@@ -87,8 +87,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Note that for a CIDR IP address block, the specified IP address
      * portion must be properly truncated (i.e. all the host bits must
      * be zero) or the input is considered malformed. For example,
-     * "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
-     * for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+     * &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly,
+     * for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34;
      * is not. The originating IP of a request must be in one of the
      * listed subnets in order for this Condition to be true.
      * If empty, all IP addresses are allowed.
@@ -103,8 +103,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Note that for a CIDR IP address block, the specified IP address
      * portion must be properly truncated (i.e. all the host bits must
      * be zero) or the input is considered malformed. For example,
-     * "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
-     * for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+     * &#34;192.0.2.0/24&#34; is accepted but &#34;192.0.2.1/24&#34; is not. Similarly,
+     * for IPv6, &#34;2001:db8::/32&#34; is accepted whereas &#34;2001:db8::1/32&#34;
      * is not. The originating IP of a request must be in one of the
      * listed subnets in order for this Condition to be true.
      * If empty, all IP addresses are allowed.

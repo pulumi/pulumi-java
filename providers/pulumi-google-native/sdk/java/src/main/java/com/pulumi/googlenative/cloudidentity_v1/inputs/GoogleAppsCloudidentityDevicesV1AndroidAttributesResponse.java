@@ -51,7 +51,7 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse ext
     }
 
     /**
-     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
+     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
      * 
      */
     @Import(name="supportsWorkProfile", required=true)

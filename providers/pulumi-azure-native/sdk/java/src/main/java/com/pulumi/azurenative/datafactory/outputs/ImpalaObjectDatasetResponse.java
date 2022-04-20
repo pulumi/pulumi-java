@@ -64,7 +64,7 @@ public final class ImpalaObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'ImpalaObject'.
+     * Expected value is &#39;ImpalaObject&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class ImpalaObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'ImpalaObject'.
+     * Expected value is &#39;ImpalaObject&#39;.
      * 
     */
     public String type() {

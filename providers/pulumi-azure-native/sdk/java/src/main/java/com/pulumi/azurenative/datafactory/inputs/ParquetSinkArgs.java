@@ -95,7 +95,7 @@ public final class ParquetSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'ParquetSink'.
+     * Expected value is &#39;ParquetSink&#39;.
      * 
      */
     @Import(name="type", required=true)

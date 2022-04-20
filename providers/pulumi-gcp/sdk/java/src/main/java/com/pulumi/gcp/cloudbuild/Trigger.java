@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
  * 
- * > **Note:** You can retrieve the email of the Cloud Build Service Account used in jobs by using the `gcp.projects.ServiceIdentity` resource.
+ * &gt; **Note:** You can retrieve the email of the Cloud Build Service Account used in jobs by using the `gcp.projects.ServiceIdentity` resource.
  * 
  * ## Example Usage
  * 
@@ -343,7 +343,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
     }
     /**
      * WebhookConfig describes the configuration of a trigger that creates
-     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
      * Structure is documented below.
      * 
@@ -353,7 +353,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
 
     /**
      * @return WebhookConfig describes the configuration of a trigger that creates
-     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
      * Structure is documented below.
      * 

@@ -23,7 +23,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     public static final ClusterArgs Empty = new ClusterArgs();
 
     /**
-     * The cluster's billing type.
+     * The cluster&#39;s billing type.
      * 
      */
     @Import(name="billingType")
@@ -56,7 +56,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
     @Import(name="isAvailabilityZonesEnabled")
@@ -67,7 +67,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
+     * Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is &#39;true&#39;
      * 
      */
     @Import(name="isDoubleEncryptionEnabled")

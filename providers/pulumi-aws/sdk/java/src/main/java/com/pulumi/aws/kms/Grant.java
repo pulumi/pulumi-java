@@ -89,14 +89,14 @@ public class Grant extends com.pulumi.resources.CustomResource {
         return this.grantToken;
     }
     /**
-     * The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
+     * The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
      * 
      */
     @Export(name="granteePrincipal", type=String.class, parameters={})
     private Output<String> granteePrincipal;
 
     /**
-     * @return The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
+     * @return The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
      * 
      */
     public Output<String> granteePrincipal() {
@@ -161,14 +161,14 @@ public class Grant extends com.pulumi.resources.CustomResource {
         return this.retireOnDelete;
     }
     /**
-     * The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
+     * The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
      * 
      */
     @Export(name="retiringPrincipal", type=String.class, parameters={})
     private Output</* @Nullable */ String> retiringPrincipal;
 
     /**
-     * @return The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
+     * @return The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
      * 
      */
     public Output</* @Nullable */ String> retiringPrincipal() {

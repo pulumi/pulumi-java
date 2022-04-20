@@ -53,7 +53,7 @@ public final class GetPartnerResult {
      */
     private final @Nullable String tenantId;
     /**
-     * Type of resource. "Microsoft.ManagementPartner/partners"
+     * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
      */
     private final String type;
@@ -151,7 +151,7 @@ public final class GetPartnerResult {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Type of resource. "Microsoft.ManagementPartner/partners"
+     * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
     */
     public String type() {

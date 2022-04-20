@@ -58,7 +58,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
     @Import(name="parameters")

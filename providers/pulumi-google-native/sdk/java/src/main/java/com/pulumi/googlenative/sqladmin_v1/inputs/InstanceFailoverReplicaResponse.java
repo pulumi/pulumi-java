@@ -29,7 +29,7 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
     }
 
     /**
-     * The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.
+     * The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn&#39;t include the project ID.
      * 
      */
     @Import(name="name", required=true)

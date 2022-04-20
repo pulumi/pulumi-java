@@ -65,7 +65,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     @Import(name="proximityPlacementGroup")
@@ -87,7 +87,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
      */
     @Import(name="sku")

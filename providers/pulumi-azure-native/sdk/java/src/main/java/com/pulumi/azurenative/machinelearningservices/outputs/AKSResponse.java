@@ -22,7 +22,7 @@ public final class AKSResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     private final String computeType;
@@ -86,7 +86,7 @@ public final class AKSResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
     */
     public String computeType() {

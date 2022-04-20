@@ -39,7 +39,7 @@ public final class FirewallPolicyNatRuleResponse {
     private final @Nullable Object ruleCondition;
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyNatRule'.
+     * Expected value is &#39;FirewallPolicyNatRule&#39;.
      * 
      */
     private final String ruleType;
@@ -102,7 +102,7 @@ public final class FirewallPolicyNatRuleResponse {
     }
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyNatRule'.
+     * Expected value is &#39;FirewallPolicyNatRule&#39;.
      * 
     */
     public String ruleType() {

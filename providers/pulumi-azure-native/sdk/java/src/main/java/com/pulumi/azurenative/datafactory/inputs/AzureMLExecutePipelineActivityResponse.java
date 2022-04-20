@@ -159,7 +159,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
 
     /**
      * Type of activity.
-     * Expected value is 'AzureMLExecutePipeline'.
+     * Expected value is &#39;AzureMLExecutePipeline&#39;.
      * 
      */
     @Import(name="type", required=true)

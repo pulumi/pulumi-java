@@ -77,7 +77,7 @@ public final class AmazonS3ReadSettingsArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -88,7 +88,7 @@ public final class AmazonS3ReadSettingsArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -133,7 +133,7 @@ public final class AmazonS3ReadSettingsArgs extends com.pulumi.resources.Resourc
 
     /**
      * The read setting type.
-     * Expected value is 'AmazonS3ReadSettings'.
+     * Expected value is &#39;AmazonS3ReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

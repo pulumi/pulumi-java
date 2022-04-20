@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a VPC Endpoint resource.
  * 
- * > **NOTE on VPC Endpoints and VPC Endpoint Associations:** This provider provides both standalone VPC Endpoint Associations for
+ * &gt; **NOTE on VPC Endpoints and VPC Endpoint Associations:** This provider provides both standalone VPC Endpoint Associations for
  * Route Tables - (an association between a VPC endpoint and a single `route_table_id`) and
  * Subnets - (an association between a VPC endpoint and a single `subnet_id`) and
  * a VPC Endpoint resource with `route_table_ids` and `subnet_ids` attributes.
@@ -211,14 +211,14 @@ public class VpcEndpoint extends com.pulumi.resources.CustomResource {
         return this.securityGroupIds;
     }
     /**
-     * The service name. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
+     * The service name. For AWS services the service name is usually in the form `com.amazonaws.&lt;region&gt;.&lt;service&gt;` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.&lt;region&gt;.notebook`).
      * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
-     * @return The service name. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
+     * @return The service name. For AWS services the service name is usually in the form `com.amazonaws.&lt;region&gt;.&lt;service&gt;` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.&lt;region&gt;.notebook`).
      * 
      */
     public Output<String> serviceName() {

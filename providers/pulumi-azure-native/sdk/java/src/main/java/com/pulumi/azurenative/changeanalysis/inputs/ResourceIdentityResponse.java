@@ -30,7 +30,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+     * The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
      * 
      */
     @Import(name="tenantId", required=true)
@@ -41,7 +41,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
      */
     @Import(name="type")

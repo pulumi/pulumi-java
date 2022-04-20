@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class AutomationActionWorkspaceResponse {
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'Workspace'.
+     * Expected value is &#39;Workspace&#39;.
      * 
      */
     private final String actionType;
@@ -33,7 +33,7 @@ public final class AutomationActionWorkspaceResponse {
 
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'Workspace'.
+     * Expected value is &#39;Workspace&#39;.
      * 
     */
     public String actionType() {

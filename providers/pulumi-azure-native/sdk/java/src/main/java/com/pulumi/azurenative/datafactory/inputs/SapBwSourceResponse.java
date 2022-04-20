@@ -99,7 +99,7 @@ public final class SapBwSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'SapBwSource'.
+     * Expected value is &#39;SapBwSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -30,7 +30,7 @@ public final class GetAnomaliesResult {
     private final Boolean isEnabled;
     /**
      * The kind of the setting
-     * Expected value is 'Anomalies'.
+     * Expected value is &#39;Anomalies&#39;.
      * 
      */
     private final String kind;
@@ -91,7 +91,7 @@ public final class GetAnomaliesResult {
     }
     /**
      * The kind of the setting
-     * Expected value is 'Anomalies'.
+     * Expected value is &#39;Anomalies&#39;.
      * 
     */
     public String kind() {

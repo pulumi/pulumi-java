@@ -165,7 +165,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+     * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service&#39;s self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
      * 
      */
     @Import(name="serverRootCACertificate")

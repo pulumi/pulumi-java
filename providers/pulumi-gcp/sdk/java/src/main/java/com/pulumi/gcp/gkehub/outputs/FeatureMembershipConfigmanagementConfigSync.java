@@ -19,7 +19,7 @@ public final class FeatureMembershipConfigmanagementConfigSync {
      */
     private final @Nullable FeatureMembershipConfigmanagementConfigSyncGit git;
     /**
-     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
      * 
      */
     private final @Nullable String sourceFormat;
@@ -41,7 +41,7 @@ public final class FeatureMembershipConfigmanagementConfigSync {
         return Optional.ofNullable(this.git);
     }
     /**
-     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
      * 
     */
     public Optional<String> sourceFormat() {

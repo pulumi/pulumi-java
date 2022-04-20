@@ -18,7 +18,7 @@ public final class WebAclRuleOverrideAction {
      */
     private final @Nullable WebAclRuleOverrideActionCount count;
     /**
-     * Don't override the rule action setting. Configured as an empty block `{}`.
+     * Don&#39;t override the rule action setting. Configured as an empty block `{}`.
      * 
      */
     private final @Nullable WebAclRuleOverrideActionNone none;
@@ -39,7 +39,7 @@ public final class WebAclRuleOverrideAction {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Don't override the rule action setting. Configured as an empty block `{}`.
+     * Don&#39;t override the rule action setting. Configured as an empty block `{}`.
      * 
     */
     public Optional<WebAclRuleOverrideActionNone> none() {

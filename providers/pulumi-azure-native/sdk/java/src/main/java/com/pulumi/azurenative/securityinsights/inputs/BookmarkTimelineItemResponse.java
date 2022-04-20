@@ -78,7 +78,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
 
     /**
      * The entity query kind
-     * Expected value is 'Bookmark'.
+     * Expected value is &#39;Bookmark&#39;.
      * 
      */
     @Import(name="kind", required=true)

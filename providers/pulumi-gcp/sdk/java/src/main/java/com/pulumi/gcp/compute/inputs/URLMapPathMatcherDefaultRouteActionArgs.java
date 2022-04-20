@@ -52,7 +52,7 @@ public final class URLMapPathMatcherDefaultRouteActionArgs extends com.pulumi.re
     }
 
     /**
-     * Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+     * Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
      * Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
      * the host / authority header is suffixed with -shadow.
      * Structure is documented below.

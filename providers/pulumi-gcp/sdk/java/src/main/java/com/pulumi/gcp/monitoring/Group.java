@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * The description of a dynamic collection of monitored resources. Each group
  * has a filter that is matched against monitored resources and their
- * associated metadata. If a group's filter matches an available monitored
+ * associated metadata. If a group&#39;s filter matches an available monitored
  * resource, then that resource is a member of that group.
  * 
  * To get more information about Group, see:
@@ -90,32 +90,32 @@ public class Group extends com.pulumi.resources.CustomResource {
         return this.isCluster;
     }
     /**
-     * A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
+     * A unique identifier for this group. The format is &#34;projects/{project_id_or_number}/groups/{group_id}&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
+     * @return A unique identifier for this group. The format is &#34;projects/{project_id_or_number}/groups/{group_id}&#34;.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The name of the group's parent, if it has one. The format is
-     * "projects/{project_id_or_number}/groups/{group_id}". For
-     * groups with no parent, parentName is the empty string, "".
+     * The name of the group&#39;s parent, if it has one. The format is
+     * &#34;projects/{project_id_or_number}/groups/{group_id}&#34;. For
+     * groups with no parent, parentName is the empty string, &#34;&#34;.
      * 
      */
     @Export(name="parentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentName;
 
     /**
-     * @return The name of the group's parent, if it has one. The format is
-     * "projects/{project_id_or_number}/groups/{group_id}". For
-     * groups with no parent, parentName is the empty string, "".
+     * @return The name of the group&#39;s parent, if it has one. The format is
+     * &#34;projects/{project_id_or_number}/groups/{group_id}&#34;. For
+     * groups with no parent, parentName is the empty string, &#34;&#34;.
      * 
      */
     public Output</* @Nullable */ String> parentName() {

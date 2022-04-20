@@ -14,7 +14,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
     private final String kind;
     private final List<String> rrdatas;
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
      */
     private final List<String> signatureRrdatas;
@@ -43,7 +43,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
         return this.rrdatas;
     }
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
     */
     public List<String> signatureRrdatas() {

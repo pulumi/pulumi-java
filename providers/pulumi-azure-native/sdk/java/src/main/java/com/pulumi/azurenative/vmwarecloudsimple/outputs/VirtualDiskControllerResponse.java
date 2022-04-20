@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualDiskControllerResponse {
     /**
-     * Controller's id
+     * Controller&#39;s id
      * 
      */
     private final String id;
@@ -43,7 +43,7 @@ public final class VirtualDiskControllerResponse {
     }
 
     /**
-     * Controller's id
+     * Controller&#39;s id
      * 
     */
     public String id() {

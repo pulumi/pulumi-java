@@ -22,7 +22,7 @@ public final class AmlComputeResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'AmlCompute'.
+     * Expected value is &#39;AmlCompute&#39;.
      * 
      */
     private final String computeType;
@@ -86,7 +86,7 @@ public final class AmlComputeResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'AmlCompute'.
+     * Expected value is &#39;AmlCompute&#39;.
      * 
     */
     public String computeType() {

@@ -42,7 +42,7 @@ public final class MECRoleArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Role type.
-     * Expected value is 'MEC'.
+     * Expected value is &#39;MEC&#39;.
      * 
      */
     @Import(name="kind", required=true)

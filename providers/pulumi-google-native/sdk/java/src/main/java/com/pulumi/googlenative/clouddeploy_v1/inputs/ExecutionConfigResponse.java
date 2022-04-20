@@ -20,7 +20,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     public static final ExecutionConfigResponse Empty = new ExecutionConfigResponse();
 
     /**
-     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
+     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
      * 
      */
     @Import(name="artifactStorage", required=true)

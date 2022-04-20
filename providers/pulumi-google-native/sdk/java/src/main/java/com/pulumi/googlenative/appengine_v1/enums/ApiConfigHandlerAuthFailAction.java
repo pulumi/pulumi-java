@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         AuthFailActionUnspecified("AUTH_FAIL_ACTION_UNSPECIFIED"),
         /**
-         * Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.
+         * Redirects user to &#34;accounts.google.com&#34;. The user is redirected back to the application URL after signing in or creating an account.
          * 
          */
         AuthFailActionRedirect("AUTH_FAIL_ACTION_REDIRECT"),

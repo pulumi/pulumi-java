@@ -19,7 +19,7 @@ public final class CosmosDbMongoDbApiSourceResponse {
      */
     private final @Nullable Object additionalColumns;
     /**
-     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object batchSize;
@@ -60,7 +60,7 @@ public final class CosmosDbMongoDbApiSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbMongoDbApiSource'.
+     * Expected value is &#39;CosmosDbMongoDbApiSource&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class CosmosDbMongoDbApiSourceResponse {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
-     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
      * 
     */
     public Optional<Object> batchSize() {
@@ -154,7 +154,7 @@ public final class CosmosDbMongoDbApiSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbMongoDbApiSource'.
+     * Expected value is &#39;CosmosDbMongoDbApiSource&#39;.
      * 
     */
     public String type() {

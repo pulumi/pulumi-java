@@ -138,14 +138,14 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * Source of the event channel. This represents a unique resource in the partner's resource model.
+     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     @Export(name="source", type=EventChannelSourceResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelSourceResponse> source;
 
     /**
-     * @return Source of the event channel. This represents a unique resource in the partner's resource model.
+     * @return Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     public Output</* @Nullable */ EventChannelSourceResponse> source() {

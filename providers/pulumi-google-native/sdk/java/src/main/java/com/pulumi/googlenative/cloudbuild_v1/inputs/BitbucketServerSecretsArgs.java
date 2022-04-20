@@ -19,7 +19,7 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     public static final BitbucketServerSecretsArgs Empty = new BitbucketServerSecretsArgs();
 
     /**
-     * The resource name for the admin access token's secret version.
+     * The resource name for the admin access token&#39;s secret version.
      * 
      */
     @Import(name="adminAccessTokenVersionName", required=true)
@@ -30,7 +30,7 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The resource name for the read access token's secret version.
+     * The resource name for the read access token&#39;s secret version.
      * 
      */
     @Import(name="readAccessTokenVersionName", required=true)
@@ -41,7 +41,7 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
     @Import(name="webhookSecretVersionName", required=true)

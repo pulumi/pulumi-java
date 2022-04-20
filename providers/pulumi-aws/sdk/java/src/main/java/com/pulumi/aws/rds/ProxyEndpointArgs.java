@@ -18,7 +18,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProxyEndpointArgs Empty = new ProxyEndpointArgs();
 
     /**
-     * The identifier for the proxy endpoint. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
+     * The identifier for the proxy endpoint. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can&#39;t end with a hyphen or contain two consecutive hyphens.
      * 
      */
     @Import(name="dbProxyEndpointName", required=true)

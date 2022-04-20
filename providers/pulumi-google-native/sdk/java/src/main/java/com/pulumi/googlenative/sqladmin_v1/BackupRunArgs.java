@@ -183,7 +183,7 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
+     * The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
      */
     @Import(name="type")

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Output column.</p>
+ * &lt;p&gt;Output column.&lt;/p&gt;
  * 
  */
 public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
@@ -20,7 +20,7 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     public static final DataSetOutputColumn Empty = new DataSetOutputColumn();
 
     /**
-     * <p>A description for a column.</p>
+     * &lt;p&gt;A description for a column.&lt;/p&gt;
      * 
      */
     @Import(name="description")
@@ -31,7 +31,7 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>A display name for the dataset.</p>
+     * &lt;p&gt;A display name for the dataset.&lt;/p&gt;
      * 
      */
     @Import(name="name")

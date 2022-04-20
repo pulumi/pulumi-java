@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateMetadataOptions {
     /**
-     * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+     * Whether the metadata service is available. Can be `&#34;enabled&#34;` or `&#34;disabled&#34;`. (Default: `&#34;enabled&#34;`).
      * 
      */
     private final @Nullable String httpEndpoint;
@@ -28,7 +28,7 @@ public final class LaunchTemplateMetadataOptions {
      */
     private final @Nullable Integer httpPutResponseHopLimit;
     /**
-     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `&#34;optional&#34;` or `&#34;required&#34;`. (Default: `&#34;optional&#34;`).
      * 
      */
     private final @Nullable String httpTokens;
@@ -53,7 +53,7 @@ public final class LaunchTemplateMetadataOptions {
     }
 
     /**
-     * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+     * Whether the metadata service is available. Can be `&#34;enabled&#34;` or `&#34;disabled&#34;`. (Default: `&#34;enabled&#34;`).
      * 
     */
     public Optional<String> httpEndpoint() {
@@ -74,7 +74,7 @@ public final class LaunchTemplateMetadataOptions {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
     /**
-     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `&#34;optional&#34;` or `&#34;required&#34;`. (Default: `&#34;optional&#34;`).
      * 
     */
     public Optional<String> httpTokens() {

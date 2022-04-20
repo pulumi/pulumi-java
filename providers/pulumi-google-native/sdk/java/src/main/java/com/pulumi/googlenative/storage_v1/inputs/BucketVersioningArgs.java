@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's versioning configuration.
+ * The bucket&#39;s versioning configuration.
  * 
  */
 public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArgs {

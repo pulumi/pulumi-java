@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * Provides an Amazon Connect instance resource. For more information see
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html)
  * 
- * !> **WARN:** There are limits to the number of Connect Instances that can be created in a specific AWS account, and those limits span the life of the account, not just active Instances. Minimize the number of times you create/delete an instance.
+ * !&gt; **WARN:** There are limits to the number of Connect Instances that can be created in a specific AWS account, and those limits span the life of the account, not just active Instances. Minimize the number of times you create/delete an instance.
  * 
  * ## Example Usage
  * 
@@ -175,7 +175,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Specifies whether outbound calls are enabled.
-     * <!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` -->
+     * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
      * 
      */
     @Export(name="outboundCallsEnabled", type=Boolean.class, parameters={})
@@ -183,7 +183,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Specifies whether outbound calls are enabled.
-     * <!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` -->
+     * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
      * 
      */
     public Output<Boolean> outboundCallsEnabled() {

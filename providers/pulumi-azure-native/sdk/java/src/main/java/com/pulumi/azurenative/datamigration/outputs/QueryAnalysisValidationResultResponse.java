@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class QueryAnalysisValidationResultResponse {
     /**
-     * List of queries executed and it's execution results in source and target
+     * List of queries executed and it&#39;s execution results in source and target
      * 
      */
     private final QueryExecutionResultResponse queryResults;
@@ -30,7 +30,7 @@ public final class QueryAnalysisValidationResultResponse {
     }
 
     /**
-     * List of queries executed and it's execution results in source and target
+     * List of queries executed and it&#39;s execution results in source and target
      * 
     */
     public QueryExecutionResultResponse queryResults() {

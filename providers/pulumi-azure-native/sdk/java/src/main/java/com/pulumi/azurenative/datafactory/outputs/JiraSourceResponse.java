@@ -49,7 +49,7 @@ public final class JiraSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'JiraSource'.
+     * Expected value is &#39;JiraSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class JiraSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'JiraSource'.
+     * Expected value is &#39;JiraSource&#39;.
      * 
     */
     public String type() {

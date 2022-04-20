@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class JobTemplateTag {
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     private final String key;
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     private final String value;
@@ -29,14 +29,14 @@ public final class JobTemplateTag {
     }
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
     */
     public String key() {
         return this.key;
     }
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
     */
     public String value() {

@@ -43,7 +43,7 @@ public final class WorkerProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The worker profile name.  Must be "worker" (immutable).
+     * The worker profile name.  Must be &#34;worker&#34; (immutable).
      * 
      */
     @Import(name="name")

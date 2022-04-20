@@ -194,7 +194,7 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
+     * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT-&gt;RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT-&gt;DONE or RUNNING-&gt;DONE.
      * 
      */
     @Import(name="state")

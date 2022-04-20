@@ -27,7 +27,7 @@ public final class StandardAppVersionLibraryGetArgs extends com.pulumi.resources
     }
 
     /**
-     * Version of the library to select, or "latest".
+     * Version of the library to select, or &#34;latest&#34;.
      * 
      */
     @Import(name="version")

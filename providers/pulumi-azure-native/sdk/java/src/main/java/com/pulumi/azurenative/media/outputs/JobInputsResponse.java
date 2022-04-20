@@ -23,7 +23,7 @@ public final class JobInputsResponse {
     private final @Nullable List<Object> inputs;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputs'.
+     * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
      * 
      */
     private final String odataType;
@@ -45,7 +45,7 @@ public final class JobInputsResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputs'.
+     * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
      * 
     */
     public String odataType() {

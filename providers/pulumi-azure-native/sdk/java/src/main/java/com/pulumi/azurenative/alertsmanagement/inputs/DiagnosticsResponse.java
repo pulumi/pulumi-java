@@ -111,7 +111,7 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates type of action rule
-     * Expected value is 'Diagnostics'.
+     * Expected value is &#39;Diagnostics&#39;.
      * 
      */
     @Import(name="type", required=true)

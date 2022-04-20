@@ -76,7 +76,7 @@ public final class CognitiveServicesAccountPropertiesResponse {
      */
     private final String provisioningState;
     /**
-     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -201,7 +201,7 @@ public final class CognitiveServicesAccountPropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> publicNetworkAccess() {

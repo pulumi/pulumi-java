@@ -64,7 +64,7 @@ public final class PhoenixObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'PhoenixObject'.
+     * Expected value is &#39;PhoenixObject&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class PhoenixObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'PhoenixObject'.
+     * Expected value is &#39;PhoenixObject&#39;.
      * 
     */
     public String type() {

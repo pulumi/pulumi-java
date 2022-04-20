@@ -40,7 +40,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Denotes the user's authentication properties. Detailed below.
+     * Denotes the user&#39;s authentication properties. Detailed below.
      * 
      */
     @Import(name="authenticationMode")

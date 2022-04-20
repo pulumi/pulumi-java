@@ -119,7 +119,7 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The unique name of the requested app profile. Values are of the form
-     * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
+     * &#39;projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;appProfileId&gt;&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -127,7 +127,7 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The unique name of the requested app profile. Values are of the form
-     * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
+     * &#39;projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;appProfileId&gt;&#39;.
      * 
      */
     public Output<String> name() {

@@ -72,7 +72,7 @@ public final class FirewallPolicyFilterRuleResponse extends com.pulumi.resources
 
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyFilterRule'.
+     * Expected value is &#39;FirewallPolicyFilterRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

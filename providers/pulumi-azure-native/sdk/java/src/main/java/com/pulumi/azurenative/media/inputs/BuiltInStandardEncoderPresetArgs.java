@@ -22,7 +22,7 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
+     * Expected value is &#39;#Microsoft.Media.BuiltInStandardEncoderPreset&#39;.
      * 
      */
     @Import(name="odataType", required=true)

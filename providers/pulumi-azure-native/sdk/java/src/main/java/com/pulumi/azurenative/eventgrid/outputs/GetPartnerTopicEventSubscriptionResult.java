@@ -27,13 +27,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPartnerTopicEventSubscriptionResult {
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
@@ -46,7 +46,7 @@ public final class GetPartnerTopicEventSubscriptionResult {
     private final @Nullable DeliveryWithResourceIdentityResponse deliveryWithResourceIdentity;
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable Object destination;
@@ -141,15 +141,15 @@ public final class GetPartnerTopicEventSubscriptionResult {
     }
 
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
     public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
@@ -166,7 +166,7 @@ public final class GetPartnerTopicEventSubscriptionResult {
     }
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
     public Optional<Object> destination() {

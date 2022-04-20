@@ -17,7 +17,7 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * - 
-     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
+     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
      * 
      */
     @Import(name="membership")

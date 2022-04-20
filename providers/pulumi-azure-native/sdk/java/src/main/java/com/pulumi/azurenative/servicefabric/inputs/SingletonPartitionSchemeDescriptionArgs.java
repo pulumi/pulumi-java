@@ -20,7 +20,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends com.pulumi.re
 
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'Singleton'.
+     * Expected value is &#39;Singleton&#39;.
      * 
      */
     @Import(name="partitionScheme", required=true)

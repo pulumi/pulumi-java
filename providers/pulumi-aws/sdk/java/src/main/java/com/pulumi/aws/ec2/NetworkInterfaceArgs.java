@@ -76,7 +76,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6_addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
+     * Number of IPv6 addresses to assign to a network interface. You can&#39;t use this option if specifying specific `ipv6_addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
      * 
      */
     @Import(name="ipv6AddressCount")
@@ -105,7 +105,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying `ipv6_address_count`.
+     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can&#39;t use this option if you&#39;re specifying `ipv6_address_count`.
      * 
      */
     @Import(name="ipv6Addresses")

@@ -99,7 +99,7 @@ public final class OracleServiceCloudSourceResponse extends com.pulumi.resources
 
     /**
      * Copy source type.
-     * Expected value is 'OracleServiceCloudSource'.
+     * Expected value is &#39;OracleServiceCloudSource&#39;.
      * 
      */
     @Import(name="type", required=true)

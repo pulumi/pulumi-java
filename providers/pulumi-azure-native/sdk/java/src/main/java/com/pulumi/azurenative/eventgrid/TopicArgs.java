@@ -68,7 +68,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
      * 
      */
     @Import(name="publicNetworkAccess")
@@ -79,7 +79,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)

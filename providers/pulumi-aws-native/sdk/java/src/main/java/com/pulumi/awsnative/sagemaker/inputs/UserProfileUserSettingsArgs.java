@@ -35,7 +35,7 @@ public final class UserProfileUserSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
      */
     @Import(name="jupyterServerAppSettings")

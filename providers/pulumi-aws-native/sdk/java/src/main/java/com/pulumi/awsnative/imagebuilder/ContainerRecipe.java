@@ -222,14 +222,14 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
         return this.targetRepository;
     }
     /**
-     * The semantic version of the container recipe (<major>.<minor>.<patch>).
+     * The semantic version of the container recipe (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
-     * @return The semantic version of the container recipe (<major>.<minor>.<patch>).
+     * @return The semantic version of the container recipe (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
      * 
      */
     public Output</* @Nullable */ String> version() {

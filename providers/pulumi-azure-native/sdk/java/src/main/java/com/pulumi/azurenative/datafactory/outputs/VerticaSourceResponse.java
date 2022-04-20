@@ -49,7 +49,7 @@ public final class VerticaSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'VerticaSource'.
+     * Expected value is &#39;VerticaSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class VerticaSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'VerticaSource'.
+     * Expected value is &#39;VerticaSource&#39;.
      * 
     */
     public String type() {

@@ -23,7 +23,7 @@ public final class ScheduleRecurrenceResponse {
      */
     private final Integer recurrenceValue;
     /**
-     * The week days list. Applicable only for schedules of recurrence type 'weekly'.
+     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
      */
     private final @Nullable List<String> weeklyDaysList;
@@ -53,7 +53,7 @@ public final class ScheduleRecurrenceResponse {
         return this.recurrenceValue;
     }
     /**
-     * The week days list. Applicable only for schedules of recurrence type 'weekly'.
+     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
     */
     public List<String> weeklyDaysList() {

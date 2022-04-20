@@ -90,7 +90,7 @@ public final class EdgeCacheOriginArgs extends com.pulumi.resources.ResourceArgs
      * A fully qualified domain name (FQDN) or IP address reachable over the public Internet, or the address of a Google Cloud Storage bucket.
      * This address will be used as the origin for cache requests - e.g. FQDN: media-backend.example.com IPv4:35.218.1.1 IPv6:[2607:f8b0:4012:809::200e] Cloud Storage: gs://bucketname
      * When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Google public DNS) and IP addresses must be publicly routable.
-     * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
+     * If a Cloud Storage bucket is provided, it must be in the canonical &#34;gs://bucketname&#34; format. Other forms, such as &#34;storage.googleapis.com&#34;, will be rejected.
      * 
      */
     @Import(name="originAddress", required=true)
@@ -125,7 +125,7 @@ public final class EdgeCacheOriginArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security & performance.
+     * The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security &amp; performance.
      * When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server.
      * Possible values are `HTTP2`, `HTTPS`, and `HTTP`.
      * 
@@ -141,7 +141,7 @@ public final class EdgeCacheOriginArgs extends com.pulumi.resources.ResourceArgs
      * Specifies one or more retry conditions for the configured origin.
      * If the failure mode during a connection attempt to the origin matches the configured retryCondition(s),
      * the origin request will be retried up to maxAttempts times. The failoverOrigin, if configured, will then be used to satisfy the request.
-     * The default retryCondition is "CONNECT_FAILURE".
+     * The default retryCondition is &#34;CONNECT_FAILURE&#34;.
      * retryConditions apply to this origin, and not subsequent failoverOrigin(s),
      * which may specify their own retryConditions and maxAttempts.
      * Valid values are:

@@ -66,7 +66,7 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * List of instances in the pool. They can be given as
-     * URLs, or in the form of "zone/name". Note that the instances need not exist
+     * URLs, or in the form of &#34;zone/name&#34;. Note that the instances need not exist
      * at the time of target pool creation, so there is no need to use the
      * interpolation to create a dependency on the instances from the
      * target pool.
@@ -116,9 +116,9 @@ public final class TargetPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * How to distribute load. Options are "NONE" (no
-     * affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
-     * "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
+     * How to distribute load. Options are &#34;NONE&#34; (no
+     * affinity). &#34;CLIENT\_IP&#34; (hash of the source/dest addresses / ports), and
+     * &#34;CLIENT\_IP\_PROTO&#34; also includes the protocol (default &#34;NONE&#34;).
      * 
      */
     @Import(name="sessionAffinity")

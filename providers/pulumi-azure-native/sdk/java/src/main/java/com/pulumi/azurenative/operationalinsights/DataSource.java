@@ -76,14 +76,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The data source properties in raw json format, each kind of data source have it's own schema.
+     * The data source properties in raw json format, each kind of data source have it&#39;s own schema.
      * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
-     * @return The data source properties in raw json format, each kind of data source have it's own schema.
+     * @return The data source properties in raw json format, each kind of data source have it&#39;s own schema.
      * 
      */
     public Output<Object> properties() {
@@ -104,14 +104,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

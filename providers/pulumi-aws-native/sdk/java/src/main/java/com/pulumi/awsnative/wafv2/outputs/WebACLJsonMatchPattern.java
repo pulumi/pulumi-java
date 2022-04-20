@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebACLJsonMatchPattern {
     /**
-     * Inspect all parts of the web request's JSON body.
+     * Inspect all parts of the web request&#39;s JSON body.
      * 
      */
     private final @Nullable Object all;
@@ -29,7 +29,7 @@ public final class WebACLJsonMatchPattern {
     }
 
     /**
-     * Inspect all parts of the web request's JSON body.
+     * Inspect all parts of the web request&#39;s JSON body.
      * 
     */
     public Optional<Object> all() {

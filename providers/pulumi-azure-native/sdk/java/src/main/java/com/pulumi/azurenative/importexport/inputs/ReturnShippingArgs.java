@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Specifies the return carrier and customer's account with the carrier.
+ * Specifies the return carrier and customer&#39;s account with the carrier.
  * 
  */
 public final class ReturnShippingArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class ReturnShippingArgs extends com.pulumi.resources.ResourceArgs 
     public static final ReturnShippingArgs Empty = new ReturnShippingArgs();
 
     /**
-     * The customer's account number with the carrier.
+     * The customer&#39;s account number with the carrier.
      * 
      */
     @Import(name="carrierAccountNumber", required=true)
@@ -30,7 +30,7 @@ public final class ReturnShippingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The carrier's name.
+     * The carrier&#39;s name.
      * 
      */
     @Import(name="carrierName", required=true)

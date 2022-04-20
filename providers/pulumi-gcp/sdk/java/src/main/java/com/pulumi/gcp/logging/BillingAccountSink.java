@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Exporting Logs](https://cloud.google.com/logging/docs/export)
  * 
- * > **Note** You must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
+ * &gt; **Note** You must have the &#34;Logs Configuration Writer&#34; IAM role (`roles/logging.configWriter`)
  * [granted on the billing account](https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy) to
  * the credentials used with this provider. [IAM roles granted on a billing account](https://cloud.google.com/billing/docs/how-to/billing-access) are separate from the
  * typical IAM roles granted on a project.

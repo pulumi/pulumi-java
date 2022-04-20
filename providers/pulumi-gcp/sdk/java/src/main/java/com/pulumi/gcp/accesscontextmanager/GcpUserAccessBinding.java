@@ -34,28 +34,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding")
 public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
     /**
-     * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+     * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
      * 
      */
     @Export(name="accessLevels", type=String.class, parameters={})
     private Output<String> accessLevels;
 
     /**
-     * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
+     * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
      * 
      */
     public Output<String> accessLevels() {
         return this.accessLevels;
     }
     /**
-     * Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+     * Required. Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the G Suite Directory API&#39;s Groups resource. If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
      * 
      */
     @Export(name="groupKey", type=String.class, parameters={})
     private Output<String> groupKey;
 
     /**
-     * @return Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
+     * @return Required. Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the G Suite Directory API&#39;s Groups resource. If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
      * 
      */
     public Output<String> groupKey() {
@@ -64,7 +64,7 @@ public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
     /**
      * Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
      * characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
-     * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     * &#34;organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -73,7 +73,7 @@ public class GcpUserAccessBinding extends com.pulumi.resources.CustomResource {
     /**
      * @return Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved
      * characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example:
-     * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     * &#34;organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N&#34;
      * 
      */
     public Output<String> name() {

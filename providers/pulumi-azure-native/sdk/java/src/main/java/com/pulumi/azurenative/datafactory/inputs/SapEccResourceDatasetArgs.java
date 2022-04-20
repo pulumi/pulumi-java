@@ -115,7 +115,7 @@ public final class SapEccResourceDatasetArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of dataset.
-     * Expected value is 'SapEccResource'.
+     * Expected value is &#39;SapEccResource&#39;.
      * 
      */
     @Import(name="type", required=true)

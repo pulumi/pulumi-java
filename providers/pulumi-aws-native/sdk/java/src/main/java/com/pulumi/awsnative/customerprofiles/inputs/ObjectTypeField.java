@@ -31,7 +31,7 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
+     * A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
      * 
      */
     @Import(name="source")

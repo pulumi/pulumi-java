@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class OnPremisesConfigurationResponse {
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     private final String caCertificate;
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     private final String clientCertificate;
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     private final String clientKey;
@@ -79,21 +79,21 @@ public final class OnPremisesConfigurationResponse {
     }
 
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
     */
     public String caCertificate() {
         return this.caCertificate;
     }
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
     */
     public String clientKey() {

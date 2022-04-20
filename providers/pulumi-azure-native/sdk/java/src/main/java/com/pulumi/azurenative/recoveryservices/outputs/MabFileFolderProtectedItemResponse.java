@@ -101,7 +101,7 @@ public final class MabFileFolderProtectedItemResponse {
     private final @Nullable String policyId;
     /**
      * backup item type.
-     * Expected value is 'MabFileFolderProtectedItem'.
+     * Expected value is &#39;MabFileFolderProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -288,7 +288,7 @@ public final class MabFileFolderProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'MabFileFolderProtectedItem'.
+     * Expected value is &#39;MabFileFolderProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

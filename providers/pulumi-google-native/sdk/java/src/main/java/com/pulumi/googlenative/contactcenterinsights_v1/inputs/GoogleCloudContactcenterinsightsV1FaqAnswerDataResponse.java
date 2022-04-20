@@ -30,7 +30,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     }
 
     /**
-     * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     @Import(name="confidenceScore", required=true)

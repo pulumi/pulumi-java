@@ -9,13 +9,13 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+     * The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
      * 
      */
     @EnumType
     public enum JobRequestedState {
         /**
-         * The job's run state isn't specified.
+         * The job&#39;s run state isn&#39;t specified.
          * 
          */
         JobStateUnknown("JOB_STATE_UNKNOWN"),
@@ -75,7 +75,7 @@ import java.util.StringJoiner;
          */
         JobStateQueued("JOB_STATE_QUEUED"),
         /**
-         * `JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job's associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.
+         * `JOB_STATE_RESOURCE_CLEANING_UP` indicates that the batch job&#39;s associated resources are currently being cleaned up after a successful run. Currently, this is an opt-in feature, please reach out to Cloud support team if you are interested.
          * 
          */
         JobStateResourceCleaningUp("JOB_STATE_RESOURCE_CLEANING_UP");

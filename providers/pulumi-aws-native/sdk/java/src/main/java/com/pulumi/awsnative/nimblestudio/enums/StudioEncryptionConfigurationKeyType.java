@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * <p>The type of KMS key that is used to encrypt studio data.</p>
+     * &lt;p&gt;The type of KMS key that is used to encrypt studio data.&lt;/p&gt;
      * 
      */
     @EnumType

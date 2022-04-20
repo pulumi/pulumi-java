@@ -41,7 +41,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends com.pulumi.re
 
     /**
      * Preconfigured versioned expression. For organization security policy rules,
-     * the only supported type is "FIREWALL".
+     * the only supported type is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 

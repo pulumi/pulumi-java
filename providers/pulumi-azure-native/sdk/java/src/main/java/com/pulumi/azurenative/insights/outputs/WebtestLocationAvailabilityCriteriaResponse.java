@@ -22,7 +22,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
     private final Double failedLocationCount;
     /**
      * specifies the type of the alert criteria.
-     * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
+     * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
      * 
      */
     private final String odataType;
@@ -60,7 +60,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
     }
     /**
      * specifies the type of the alert criteria.
-     * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
+     * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
      * 
     */
     public String odataType() {

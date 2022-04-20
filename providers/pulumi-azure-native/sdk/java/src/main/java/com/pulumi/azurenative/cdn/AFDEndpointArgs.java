@@ -20,7 +20,7 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
     public static final AFDEndpointArgs Empty = new AFDEndpointArgs();
 
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="enabledState")

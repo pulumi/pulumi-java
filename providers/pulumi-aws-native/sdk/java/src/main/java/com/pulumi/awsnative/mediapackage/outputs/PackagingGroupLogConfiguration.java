@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PackagingGroupLogConfiguration {
     /**
-     * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn't specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+     * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn&#39;t specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
      * 
      */
     private final @Nullable String logGroupName;
@@ -23,7 +23,7 @@ public final class PackagingGroupLogConfiguration {
     }
 
     /**
-     * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn't specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+     * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn&#39;t specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
      * 
     */
     public Optional<String> logGroupName() {

@@ -49,28 +49,28 @@ public class Assignment extends com.pulumi.resources.CustomResource {
         return this.permissionSetArn;
     }
     /**
-     * The assignee's identifier, user id/group id
+     * The assignee&#39;s identifier, user id/group id
      * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
-     * @return The assignee's identifier, user id/group id
+     * @return The assignee&#39;s identifier, user id/group id
      * 
      */
     public Output<String> principalId() {
         return this.principalId;
     }
     /**
-     * The assignee's type, user/group
+     * The assignee&#39;s type, user/group
      * 
      */
     @Export(name="principalType", type=AssignmentPrincipalType.class, parameters={})
     private Output<AssignmentPrincipalType> principalType;
 
     /**
-     * @return The assignee's type, user/group
+     * @return The assignee&#39;s type, user/group
      * 
      */
     public Output<AssignmentPrincipalType> principalType() {

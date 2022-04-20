@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Required. The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
+     * Required. The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
      */
     @EnumType
@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Allow("ALLOW"),
         /**
-         * Deny access. Deny rules should be avoided unless they are used to provide a default "deny all" fallback.
+         * Deny access. Deny rules should be avoided unless they are used to provide a default &#34;deny all&#34; fallback.
          * 
          */
         Deny("DENY");

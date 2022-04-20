@@ -29,7 +29,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      *     
      *     Would be represented as
      *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
      * 
      */
     @Import(name="airflowConfigurationOptions")

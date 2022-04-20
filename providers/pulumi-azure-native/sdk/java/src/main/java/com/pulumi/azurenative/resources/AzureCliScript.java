@@ -40,14 +40,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:resources:AzureCliScript")
 public class AzureCliScript extends com.pulumi.resources.CustomResource {
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
     @Export(name="arguments", type=String.class, parameters={})
     private Output</* @Nullable */ String> arguments;
 
     /**
-     * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
     public Output</* @Nullable */ String> arguments() {
@@ -68,14 +68,14 @@ public class AzureCliScript extends com.pulumi.resources.CustomResource {
         return this.azCliVersion;
     }
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     @Export(name="cleanupPreference", type=String.class, parameters={})
     private Output</* @Nullable */ String> cleanupPreference;
 
     /**
-     * @return The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * @return The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     public Output</* @Nullable */ String> cleanupPreference() {
@@ -139,7 +139,7 @@ public class AzureCliScript extends com.pulumi.resources.CustomResource {
     }
     /**
      * Type of the script.
-     * Expected value is 'AzureCLI'.
+     * Expected value is &#39;AzureCLI&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -147,7 +147,7 @@ public class AzureCliScript extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Type of the script.
-     * Expected value is 'AzureCLI'.
+     * Expected value is &#39;AzureCLI&#39;.
      * 
      */
     public Output<String> kind() {

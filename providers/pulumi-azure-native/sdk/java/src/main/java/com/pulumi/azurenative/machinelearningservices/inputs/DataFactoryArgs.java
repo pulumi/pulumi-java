@@ -32,7 +32,7 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of compute
-     * Expected value is 'DataFactory'.
+     * Expected value is &#39;DataFactory&#39;.
      * 
      */
     @Import(name="computeType", required=true)

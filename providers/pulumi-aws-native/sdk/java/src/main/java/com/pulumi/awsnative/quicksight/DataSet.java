@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:quicksight:DataSet")
 public class DataSet extends com.pulumi.resources.CustomResource {
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -52,14 +52,14 @@ public class DataSet extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
      * 
      */
     @Export(name="columnGroups", type=List.class, parameters={DataSetColumnGroup.class})
     private Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups;
 
     /**
-     * @return <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * @return &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups() {
@@ -72,30 +72,30 @@ public class DataSet extends com.pulumi.resources.CustomResource {
         return this.columnLevelPermissionRules;
     }
     /**
-     * <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
-     *             imported into SPICE.</p>
+     * &lt;p&gt;The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn&#39;t
+     *             imported into SPICE.&lt;/p&gt;
      * 
      */
     @Export(name="consumedSpiceCapacityInBytes", type=Double.class, parameters={})
     private Output<Double> consumedSpiceCapacityInBytes;
 
     /**
-     * @return <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
-     *             imported into SPICE.</p>
+     * @return &lt;p&gt;The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn&#39;t
+     *             imported into SPICE.&lt;/p&gt;
      * 
      */
     public Output<Double> consumedSpiceCapacityInBytes() {
         return this.consumedSpiceCapacityInBytes;
     }
     /**
-     * <p>The time that this dataset was created.</p>
+     * &lt;p&gt;The time that this dataset was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>The time that this dataset was created.</p>
+     * @return &lt;p&gt;The time that this dataset was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
@@ -126,14 +126,14 @@ public class DataSet extends com.pulumi.resources.CustomResource {
         return this.ingestionWaitPolicy;
     }
     /**
-     * <p>The last time that this dataset was updated.</p>
+     * &lt;p&gt;The last time that this dataset was updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>The last time that this dataset was updated.</p>
+     * @return &lt;p&gt;The last time that this dataset was updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
@@ -146,44 +146,44 @@ public class DataSet extends com.pulumi.resources.CustomResource {
         return this.logicalTableMap;
     }
     /**
-     * <p>The display name for the dataset.</p>
+     * &lt;p&gt;The display name for the dataset.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>The display name for the dataset.</p>
+     * @return &lt;p&gt;The display name for the dataset.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
-     * <p>The list of columns after all transforms. These columns are available in templates,
-     *             analyses, and dashboards.</p>
+     * &lt;p&gt;The list of columns after all transforms. These columns are available in templates,
+     *             analyses, and dashboards.&lt;/p&gt;
      * 
      */
     @Export(name="outputColumns", type=List.class, parameters={DataSetOutputColumn.class})
     private Output<List<DataSetOutputColumn>> outputColumns;
 
     /**
-     * @return <p>The list of columns after all transforms. These columns are available in templates,
-     *             analyses, and dashboards.</p>
+     * @return &lt;p&gt;The list of columns after all transforms. These columns are available in templates,
+     *             analyses, and dashboards.&lt;/p&gt;
      * 
      */
     public Output<List<DataSetOutputColumn>> outputColumns() {
         return this.outputColumns;
     }
     /**
-     * <p>A list of resource permissions on the dataset.</p>
+     * &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={DataSetResourcePermission.class})
     private Output</* @Nullable */ List<DataSetResourcePermission>> permissions;
 
     /**
-     * @return <p>A list of resource permissions on the dataset.</p>
+     * @return &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSetResourcePermission>> permissions() {
@@ -202,14 +202,14 @@ public class DataSet extends com.pulumi.resources.CustomResource {
         return this.rowLevelPermissionDataSet;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={DataSetTag.class})
     private Output</* @Nullable */ List<DataSetTag>> tags;
 
     /**
-     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSetTag>> tags() {

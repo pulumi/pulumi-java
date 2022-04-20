@@ -76,7 +76,7 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
      */
     @Import(name="location")

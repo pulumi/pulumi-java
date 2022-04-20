@@ -53,7 +53,7 @@ public final class CustomLayerCloudwatchConfigurationLogStream {
      */
     private final @Nullable String initialPosition;
     /**
-     * Specifies the destination log group. A log group is created automatically if it doesn't already exist.
+     * Specifies the destination log group. A log group is created automatically if it doesn&#39;t already exist.
      * 
      */
     private final String logGroupName;
@@ -151,7 +151,7 @@ public final class CustomLayerCloudwatchConfigurationLogStream {
         return Optional.ofNullable(this.initialPosition);
     }
     /**
-     * Specifies the destination log group. A log group is created automatically if it doesn't already exist.
+     * Specifies the destination log group. A log group is created automatically if it doesn&#39;t already exist.
      * 
     */
     public String logGroupName() {

@@ -63,7 +63,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
+     * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
      * 
      */
     @Import(name="endpoint")

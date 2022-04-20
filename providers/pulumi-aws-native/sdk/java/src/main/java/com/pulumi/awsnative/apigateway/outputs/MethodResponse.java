@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MethodResponse {
     /**
-     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
      * 
      */
     private final @Nullable Object responseModels;
@@ -23,7 +23,7 @@ public final class MethodResponse {
      */
     private final @Nullable Object responseParameters;
     /**
-     * The method response's status code, which you map to an IntegrationResponse.
+     * The method response&#39;s status code, which you map to an IntegrationResponse.
      * 
      */
     private final String statusCode;
@@ -39,7 +39,7 @@ public final class MethodResponse {
     }
 
     /**
-     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
      * 
     */
     public Optional<Object> responseModels() {
@@ -53,7 +53,7 @@ public final class MethodResponse {
         return Optional.ofNullable(this.responseParameters);
     }
     /**
-     * The method response's status code, which you map to an IntegrationResponse.
+     * The method response&#39;s status code, which you map to an IntegrationResponse.
      * 
     */
     public String statusCode() {

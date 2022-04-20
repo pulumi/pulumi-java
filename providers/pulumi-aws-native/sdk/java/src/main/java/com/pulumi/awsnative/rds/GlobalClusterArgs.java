@@ -18,7 +18,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     public static final GlobalClusterArgs Empty = new GlobalClusterArgs();
 
     /**
-     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     * The deletion protection setting for the new global database. The global database can&#39;t be deleted when deletion protection is enabled.
      * 
      */
     @Import(name="deletionProtection")
@@ -30,7 +30,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Import(name="engine")
@@ -41,7 +41,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Import(name="engineVersion")
@@ -75,7 +75,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      *  The storage encryption setting for the new global database cluster.
-     * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
+     * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
     @Import(name="storageEncrypted")

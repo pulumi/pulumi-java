@@ -96,7 +96,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The instance type for the Elasticsearch cluster's warm nodes.
+     * The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
      */
     @Import(name="warmType", required=true)

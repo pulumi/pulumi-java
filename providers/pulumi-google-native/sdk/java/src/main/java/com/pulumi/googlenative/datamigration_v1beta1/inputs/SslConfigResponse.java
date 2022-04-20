@@ -17,7 +17,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     public static final SslConfigResponse Empty = new SslConfigResponse();
 
     /**
-     * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
+     * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
      * 
      */
     @Import(name="caCertificate", required=true)
@@ -28,7 +28,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
+     * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
      * 
      */
     @Import(name="clientCertificate", required=true)
@@ -39,7 +39,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
+     * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
      * 
      */
     @Import(name="clientKey", required=true)
@@ -50,7 +50,7 @@ public final class SslConfigResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.
+     * The ssl config type according to &#39;client_key&#39;, &#39;client_certificate&#39; and &#39;ca_certificate&#39;.
      * 
      */
     @Import(name="type", required=true)

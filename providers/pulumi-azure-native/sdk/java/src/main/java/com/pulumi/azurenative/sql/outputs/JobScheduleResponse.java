@@ -23,7 +23,7 @@ public final class JobScheduleResponse {
      */
     private final @Nullable String endTime;
     /**
-     * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
      */
     private final @Nullable String interval;
@@ -67,7 +67,7 @@ public final class JobScheduleResponse {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
     */
     public Optional<String> interval() {

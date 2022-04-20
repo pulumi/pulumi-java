@@ -61,7 +61,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
 
     /**
      * The type of the rule collection.
-     * Expected value is 'FirewallPolicyFilterRuleCollection'.
+     * Expected value is &#39;FirewallPolicyFilterRuleCollection&#39;.
      * 
      */
     @Import(name="ruleCollectionType", required=true)

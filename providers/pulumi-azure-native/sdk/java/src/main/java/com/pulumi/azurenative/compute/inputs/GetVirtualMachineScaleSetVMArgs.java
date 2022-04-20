@@ -15,7 +15,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
     public static final GetVirtualMachineScaleSetVMArgs Empty = new GetVirtualMachineScaleSetVMArgs();
 
     /**
-     * The expand expression to apply on the operation. 'InstanceView' will retrieve the instance view of the virtual machine. 'UserData' will retrieve the UserData of the virtual machine.
+     * The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the instance view of the virtual machine. &#39;UserData&#39; will retrieve the UserData of the virtual machine.
      * 
      */
     @Import(name="expand")

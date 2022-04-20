@@ -15,12 +15,12 @@ import java.util.StringJoiner;
     @EnumType
     public enum InstancePrivateIpv6GoogleAccess {
         /**
-         * Bidirectional private IPv6 access to/from Google services. If specified, the subnetwork who is attached to the instance's default network interface will be assigned an internal IPv6 prefix if it doesn't have before.
+         * Bidirectional private IPv6 access to/from Google services. If specified, the subnetwork who is attached to the instance&#39;s default network interface will be assigned an internal IPv6 prefix if it doesn&#39;t have before.
          * 
          */
         EnableBidirectionalAccessToGoogle("ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE"),
         /**
-         * Outbound private IPv6 access from VMs in this subnet to Google services. If specified, the subnetwork who is attached to the instance's default network interface will be assigned an internal IPv6 prefix if it doesn't have before.
+         * Outbound private IPv6 access from VMs in this subnet to Google services. If specified, the subnetwork who is attached to the instance&#39;s default network interface will be assigned an internal IPv6 prefix if it doesn&#39;t have before.
          * 
          */
         EnableOutboundVmAccessToGoogle("ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE"),

@@ -25,7 +25,7 @@ public final class EncryptionSettingsCollectionResponse {
      */
     private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
     /**
-     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
      * 
      */
     private final @Nullable String encryptionSettingsVersion;
@@ -55,7 +55,7 @@ public final class EncryptionSettingsCollectionResponse {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
     /**
-     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
      * 
     */
     public Optional<String> encryptionSettingsVersion() {

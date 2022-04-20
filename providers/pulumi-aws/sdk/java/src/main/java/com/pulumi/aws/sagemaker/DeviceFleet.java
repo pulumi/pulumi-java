@@ -75,14 +75,14 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
         return this.deviceFleetName;
     }
     /**
-     * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".
+     * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: &#34;SageMakerEdge-{DeviceFleetName}&#34;.
      * 
      */
     @Export(name="enableIotRoleAlias", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableIotRoleAlias;
 
     /**
-     * @return Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".
+     * @return Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: &#34;SageMakerEdge-{DeviceFleetName}&#34;.
      * 
      */
     public Output</* @Nullable */ Boolean> enableIotRoleAlias() {

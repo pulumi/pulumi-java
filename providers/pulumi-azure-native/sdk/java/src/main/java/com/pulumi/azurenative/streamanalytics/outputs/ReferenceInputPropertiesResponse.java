@@ -39,7 +39,7 @@ public final class ReferenceInputPropertiesResponse {
     private final @Nullable Object serialization;
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Reference'.
+     * Expected value is &#39;Reference&#39;.
      * 
      */
     private final String type;
@@ -88,7 +88,7 @@ public final class ReferenceInputPropertiesResponse {
     }
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Reference'.
+     * Expected value is &#39;Reference&#39;.
      * 
     */
     public String type() {

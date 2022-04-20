@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VaultPropertiesResponse {
     /**
-     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
      * 
      */
     private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
@@ -34,7 +34,7 @@ public final class VaultPropertiesResponse {
      */
     private final @Nullable Boolean enableRbacAuthorization;
     /**
-     * Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
      */
     private final @Nullable Boolean enableSoftDelete;
@@ -79,7 +79,7 @@ public final class VaultPropertiesResponse {
      */
     private final SkuResponse sku;
     /**
-     * softDelete data retention days. It accepts >=7 and <=90.
+     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
      */
     private final @Nullable Integer softDeleteRetentionInDays;
@@ -129,7 +129,7 @@ public final class VaultPropertiesResponse {
     }
 
     /**
-     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
      * 
     */
     public List<AccessPolicyEntryResponse> accessPolicies() {
@@ -150,7 +150,7 @@ public final class VaultPropertiesResponse {
         return Optional.ofNullable(this.enableRbacAuthorization);
     }
     /**
-     * Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
     */
     public Optional<Boolean> enableSoftDelete() {
@@ -213,7 +213,7 @@ public final class VaultPropertiesResponse {
         return this.sku;
     }
     /**
-     * softDelete data retention days. It accepts >=7 and <=90.
+     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
     */
     public Optional<Integer> softDeleteRetentionInDays() {

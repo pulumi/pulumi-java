@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStaticSiteResult {
     /**
-     * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean allowConfigFileUpdates;
@@ -91,7 +91,7 @@ public final class GetStaticSiteResult {
      */
     private final String provider;
     /**
-     * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
      */
     private final @Nullable String repositoryToken;
@@ -180,7 +180,7 @@ public final class GetStaticSiteResult {
     }
 
     /**
-     * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> allowConfigFileUpdates() {
@@ -278,7 +278,7 @@ public final class GetStaticSiteResult {
         return this.provider;
     }
     /**
-     * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
     */
     public Optional<String> repositoryToken() {

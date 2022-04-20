@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a virtual machine scale set network profile's IP configuration.
+ * Describes a virtual machine scale set network profile&#39;s IP configuration.
  * 
  */
 public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pulumi.resources.InvokeArgs {
@@ -101,7 +101,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     }
 
     /**
-     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
      */
     @Import(name="privateIPAddressVersion")

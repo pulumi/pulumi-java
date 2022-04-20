@@ -19,7 +19,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * The "AMI copy" resource allows duplication of an Amazon Machine Image (AMI),
+ * The &#34;AMI copy&#34; resource allows duplication of an Amazon Machine Image (AMI),
  * including cross-region copies.
  * 
  * If the source AMI has associated EBS snapshots, those will also be duplicated
@@ -37,14 +37,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/amiCopy:AmiCopy")
 public class AmiCopy extends com.pulumi.resources.CustomResource {
     /**
-     * Machine architecture for created instances. Defaults to "x86_64".
+     * Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     @Export(name="architecture", type=String.class, parameters={})
     private Output<String> architecture;
 
     /**
-     * @return Machine architecture for created instances. Defaults to "x86_64".
+     * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     public Output<String> architecture() {
@@ -125,14 +125,14 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
         return this.enaSupport;
     }
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
+     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
     @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
     /**
-     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
+     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
     public Output</* @Nullable */ Boolean> encrypted() {
@@ -335,7 +335,7 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
         return this.sourceAmiRegion;
     }
     /**
-     * When set to "simple" (the default), enables enhanced networking
+     * When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -343,7 +343,7 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
     private Output<String> sriovNetSupport;
 
     /**
-     * @return When set to "simple" (the default), enables enhanced networking
+     * @return When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -378,7 +378,7 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
     }
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */
@@ -387,7 +387,7 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */

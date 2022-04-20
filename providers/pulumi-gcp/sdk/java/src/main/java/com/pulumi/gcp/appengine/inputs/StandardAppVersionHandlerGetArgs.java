@@ -55,7 +55,7 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
 
     /**
      * Executes a script to handle the requests that match this URL pattern.
-     * Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
+     * Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script:&#34; &#34;auto&#34;.
      * Structure is documented below.
      * 
      */

@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class DataSetResourcePermission {
     /**
-     * <p>The IAM action to grant or revoke permissions on.</p>
+     * &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
      * 
      */
     private final List<String> actions;
     /**
-     * <p>The Amazon Resource Name (ARN) of the principal. This can be one of the
-     *             following:</p>
-     *         <ul>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+     *             following:&lt;/p&gt;
+     *         &lt;ul&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
      *                     ARN. Use this option only to share resources (templates) across AWS accounts.
-     *                     (This is less common.) </p>
-     *             </li>
-     *          </ul>
+     *                     (This is less common.) &lt;/p&gt;
+     *             &lt;/li&gt;
+     *          &lt;/ul&gt;
      * 
      */
     private final String principal;
@@ -44,28 +44,28 @@ public final class DataSetResourcePermission {
     }
 
     /**
-     * <p>The IAM action to grant or revoke permissions on.</p>
+     * &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
      * 
     */
     public List<String> actions() {
         return this.actions;
     }
     /**
-     * <p>The Amazon Resource Name (ARN) of the principal. This can be one of the
-     *             following:</p>
-     *         <ul>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+     *             following:&lt;/p&gt;
+     *         &lt;ul&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
      *                     ARN. Use this option only to share resources (templates) across AWS accounts.
-     *                     (This is less common.) </p>
-     *             </li>
-     *          </ul>
+     *                     (This is less common.) &lt;/p&gt;
+     *             &lt;/li&gt;
+     *          &lt;/ul&gt;
      * 
     */
     public String principal() {

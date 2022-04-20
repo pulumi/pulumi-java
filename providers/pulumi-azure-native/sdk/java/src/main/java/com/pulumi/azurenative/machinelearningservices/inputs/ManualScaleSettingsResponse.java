@@ -50,7 +50,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Expected value is 'Manual'.
+     * Expected value is &#39;Manual&#39;.
      * 
      */
     @Import(name="scaleType", required=true)

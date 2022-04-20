@@ -40,7 +40,7 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     @Import(name="features")
@@ -84,9 +84,9 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enable or disable public network access. Default to "Enabled".
-     * When it's Enabled, network ACLs still apply.
-     * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
     @Import(name="publicNetworkAccess")

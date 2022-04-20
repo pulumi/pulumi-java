@@ -36,7 +36,7 @@ public final class GetPolicyAssignmentArtifactResult {
     private final String id;
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'policyAssignment'.
+     * Expected value is &#39;policyAssignment&#39;.
      * 
      */
     private final String kind;
@@ -120,7 +120,7 @@ public final class GetPolicyAssignmentArtifactResult {
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'policyAssignment'.
+     * Expected value is &#39;policyAssignment&#39;.
      * 
     */
     public String kind() {

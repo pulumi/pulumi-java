@@ -54,8 +54,8 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
 
     /**
      * The secret name which manages the HANA DB credentials e.g. {
-     *   "username": "<>",
-     *   "password": "<>"
+     *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
+     *   &#34;password&#34;: &#34;&lt;&gt;&#34;
      * }.
      * 
      */

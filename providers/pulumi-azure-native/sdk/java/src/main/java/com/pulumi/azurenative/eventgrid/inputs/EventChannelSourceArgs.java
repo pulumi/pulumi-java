@@ -20,8 +20,8 @@ public final class EventChannelSourceArgs extends com.pulumi.resources.ResourceA
     public static final EventChannelSourceArgs Empty = new EventChannelSourceArgs();
 
     /**
-     * The identifier of the resource that's the source of the events.
-     * This represents a unique resource in the partner's resource model.
+     * The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     @Import(name="source")

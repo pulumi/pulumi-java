@@ -42,7 +42,7 @@ public final class CustomResourceDefinitionConditionArgs extends com.pulumi.reso
     }
 
     /**
-     * reason is a unique, one-word, CamelCase reason for the condition's last transition.
+     * reason is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")

@@ -60,7 +60,7 @@ public final class DatabricksSparkPythonActivityResponse {
     private final Object pythonFile;
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkPython'.
+     * Expected value is &#39;DatabricksSparkPython&#39;.
      * 
      */
     private final String type;
@@ -152,7 +152,7 @@ public final class DatabricksSparkPythonActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkPython'.
+     * Expected value is &#39;DatabricksSparkPython&#39;.
      * 
     */
     public String type() {

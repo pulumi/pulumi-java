@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favor of aws.elb.SslNegotiationPolicy
  * 
  */

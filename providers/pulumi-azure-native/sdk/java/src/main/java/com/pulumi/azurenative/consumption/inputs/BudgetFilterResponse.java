@@ -21,7 +21,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     public static final BudgetFilterResponse Empty = new BudgetFilterResponse();
 
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     @Import(name="and")
@@ -43,7 +43,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
      */
     @Import(name="not")

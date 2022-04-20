@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The asset property's definition, alias, and notification state.
+ * The asset property&#39;s definition, alias, and notification state.
  * 
  */
 public final class AssetProperty extends com.pulumi.resources.InvokeArgs {

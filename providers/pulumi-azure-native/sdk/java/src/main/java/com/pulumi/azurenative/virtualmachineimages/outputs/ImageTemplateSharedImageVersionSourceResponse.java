@@ -16,7 +16,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     private final String imageVersionId;
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'SharedImageVersion'.
+     * Expected value is &#39;SharedImageVersion&#39;.
      * 
      */
     private final String type;
@@ -38,7 +38,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     }
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'SharedImageVersion'.
+     * Expected value is &#39;SharedImageVersion&#39;.
      * 
     */
     public String type() {

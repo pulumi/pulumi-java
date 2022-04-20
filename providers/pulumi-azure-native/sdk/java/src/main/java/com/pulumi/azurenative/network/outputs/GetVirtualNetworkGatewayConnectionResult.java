@@ -138,7 +138,7 @@ public final class GetVirtualNetworkGatewayConnectionResult {
      */
     private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
     /**
-     * Collection of all tunnels' connection health status.
+     * Collection of all tunnels&#39; connection health status.
      * 
      */
     private final List<TunnelConnectionHealthResponse> tunnelConnectionStatus;
@@ -392,7 +392,7 @@ public final class GetVirtualNetworkGatewayConnectionResult {
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
     }
     /**
-     * Collection of all tunnels' connection health status.
+     * Collection of all tunnels&#39; connection health status.
      * 
     */
     public List<TunnelConnectionHealthResponse> tunnelConnectionStatus() {

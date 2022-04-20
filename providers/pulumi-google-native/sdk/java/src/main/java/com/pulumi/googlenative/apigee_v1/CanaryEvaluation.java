@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Creates a new canary evaluation for an organization.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -51,14 +51,14 @@ public class CanaryEvaluation extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * End time for the evaluation's analysis.
+     * End time for the evaluation&#39;s analysis.
      * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
-     * @return End time for the evaluation's analysis.
+     * @return End time for the evaluation&#39;s analysis.
      * 
      */
     public Output<String> endTime() {
@@ -93,14 +93,14 @@ public class CanaryEvaluation extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Start time for the canary evaluation's analysis.
+     * Start time for the canary evaluation&#39;s analysis.
      * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
-     * @return Start time for the canary evaluation's analysis.
+     * @return Start time for the canary evaluation&#39;s analysis.
      * 
      */
     public Output<String> startTime() {

@@ -108,7 +108,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     @Import(name="requestTemplate")
@@ -119,7 +119,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
+     * The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
     @Import(name="responseTemplate")

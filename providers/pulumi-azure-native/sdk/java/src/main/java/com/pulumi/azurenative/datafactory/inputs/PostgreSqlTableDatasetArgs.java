@@ -126,7 +126,7 @@ public final class PostgreSqlTableDatasetArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of dataset.
-     * Expected value is 'PostgreSqlTable'.
+     * Expected value is &#39;PostgreSqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

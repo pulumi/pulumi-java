@@ -34,7 +34,7 @@ public final class VmVmPlacementPolicyPropertiesResponse {
     private final @Nullable String state;
     /**
      * placement policy type
-     * Expected value is 'VmVm'.
+     * Expected value is &#39;VmVm&#39;.
      * 
      */
     private final String type;
@@ -90,7 +90,7 @@ public final class VmVmPlacementPolicyPropertiesResponse {
     }
     /**
      * placement policy type
-     * Expected value is 'VmVm'.
+     * Expected value is &#39;VmVm&#39;.
      * 
     */
     public String type() {

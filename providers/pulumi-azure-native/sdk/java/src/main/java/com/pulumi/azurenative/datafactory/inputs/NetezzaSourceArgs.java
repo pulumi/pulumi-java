@@ -55,7 +55,7 @@ public final class NetezzaSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
+     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: &#34;None&#34;, &#34;DataSlice&#34;, &#34;DynamicRange&#34;.
      * 
      */
     @Import(name="partitionOption")
@@ -122,7 +122,7 @@ public final class NetezzaSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'NetezzaSource'.
+     * Expected value is &#39;NetezzaSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * using it. Please read this document in its entirety before using this resource.
  * 
  * The `aws.ec2.DefaultVpcDhcpOptions` behaves differently from normal resources, in that
- * this provider does not _create_ this resource, but instead "adopts" it
+ * this provider does not _create_ this resource, but instead &#34;adopts&#34; it
  * into management.
  * 
  * ## Example Usage

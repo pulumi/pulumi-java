@@ -36,7 +36,7 @@ public final class H264VideoResponse {
     private final @Nullable List<H264LayerResponse> layers;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.H264Video'.
+     * Expected value is &#39;#Microsoft.Media.H264Video&#39;.
      * 
      */
     private final String odataType;
@@ -106,7 +106,7 @@ public final class H264VideoResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.H264Video'.
+     * Expected value is &#39;#Microsoft.Media.H264Video&#39;.
      * 
     */
     public String odataType() {

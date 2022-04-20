@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:sql:FirewallRule")
 public class FirewallRule extends com.pulumi.resources.CustomResource {
     /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     @Export(name="endIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIpAddress;
 
     /**
-     * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     public Output</* @Nullable */ String> endIpAddress() {
@@ -60,14 +60,14 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     @Export(name="startIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIpAddress;
 
     /**
-     * @return The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * @return The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     public Output</* @Nullable */ String> startIpAddress() {

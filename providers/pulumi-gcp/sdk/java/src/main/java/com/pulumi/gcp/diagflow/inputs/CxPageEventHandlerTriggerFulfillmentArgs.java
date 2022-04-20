@@ -53,7 +53,7 @@ public final class CxPageEventHandlerTriggerFulfillmentArgs extends com.pulumi.r
     }
 
     /**
-     * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
+     * The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.
      * 
      */
     @Import(name="webhook")

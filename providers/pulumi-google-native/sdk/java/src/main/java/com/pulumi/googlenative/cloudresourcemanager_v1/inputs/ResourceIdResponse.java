@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a generic term for something you (a developer) may want to interact with through one of our API's. Some examples are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.
+ * A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a generic term for something you (a developer) may want to interact with through one of our API&#39;s. Some examples are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.
  * 
  */
 public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
@@ -17,7 +17,7 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
     public static final ResourceIdResponse Empty = new ResourceIdResponse();
 
     /**
-     * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
+     * The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
      * 
      */
     @Import(name="type", required=true)

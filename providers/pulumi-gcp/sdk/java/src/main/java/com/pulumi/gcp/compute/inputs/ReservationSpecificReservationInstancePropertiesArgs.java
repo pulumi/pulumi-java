@@ -56,7 +56,7 @@ public final class ReservationSpecificReservationInstancePropertiesArgs extends 
 
     /**
      * The minimum CPU platform for the reservation. For example,
-     * `"Intel Skylake"`. See
+     * `&#34;Intel Skylake&#34;`. See
      * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
      * for information on available CPU platforms.
      * 

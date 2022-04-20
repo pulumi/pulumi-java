@@ -58,7 +58,7 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
     }
 
     /**
-     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.
+     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
      * 
      */
     @Import(name="name", required=true)

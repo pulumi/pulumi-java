@@ -136,7 +136,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     @Import(name="jobDetailsType", required=true)

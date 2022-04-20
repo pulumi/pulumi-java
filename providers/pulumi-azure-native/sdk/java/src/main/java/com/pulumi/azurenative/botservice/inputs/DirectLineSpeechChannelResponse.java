@@ -22,7 +22,7 @@ public final class DirectLineSpeechChannelResponse extends com.pulumi.resources.
 
     /**
      * The channel name
-     * Expected value is 'DirectLineSpeechChannel'.
+     * Expected value is &#39;DirectLineSpeechChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

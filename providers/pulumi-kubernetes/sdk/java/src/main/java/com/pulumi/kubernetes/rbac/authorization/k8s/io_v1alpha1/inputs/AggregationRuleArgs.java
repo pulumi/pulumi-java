@@ -21,7 +21,7 @@ public final class AggregationRuleArgs extends com.pulumi.resources.ResourceArgs
     public static final AggregationRuleArgs Empty = new AggregationRuleArgs();
 
     /**
-     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
+     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
      * 
      */
     @Import(name="clusterRoleSelectors")

@@ -17,7 +17,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
      */
     private final @Nullable String address;
     /**
-     * The type of item included in the filter. Currently only 'AgentAddress' is supported.
+     * The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
      * 
      */
     private final @Nullable String type;
@@ -38,7 +38,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
         return Optional.ofNullable(this.address);
     }
     /**
-     * The type of item included in the filter. Currently only 'AgentAddress' is supported.
+     * The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
      * 
     */
     public Optional<String> type() {

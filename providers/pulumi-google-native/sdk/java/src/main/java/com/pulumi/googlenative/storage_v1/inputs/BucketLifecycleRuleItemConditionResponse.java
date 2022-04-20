@@ -31,7 +31,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
     }
 
     /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
      * 
      */
     @Import(name="createdBefore", required=true)
@@ -42,7 +42,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
     }
 
     /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.
+     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
      * 
      */
     @Import(name="customTimeBefore", required=true)
@@ -64,7 +64,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
     }
 
     /**
-     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
      * 
      */
     @Import(name="daysSinceNoncurrentTime", required=true)
@@ -86,7 +86,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
     }
 
     /**
-     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
      * 
      */
     @Import(name="matchesPattern", required=true)
@@ -108,7 +108,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
     }
 
     /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
      * 
      */
     @Import(name="noncurrentTimeBefore", required=true)

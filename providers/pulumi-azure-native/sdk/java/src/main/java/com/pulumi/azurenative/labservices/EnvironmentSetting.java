@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:labservices:EnvironmentSetting")
 public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
     /**
-     * Describes the user's progress in configuring their environment setting
+     * Describes the user&#39;s progress in configuring their environment setting
      * 
      */
     @Export(name="configurationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationState;
 
     /**
-     * @return Describes the user's progress in configuring their environment setting
+     * @return Describes the user&#39;s progress in configuring their environment setting
      * 
      */
     public Output</* @Nullable */ String> configurationState() {

@@ -20,7 +20,7 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
     public static final DedicatedHostAllocatableVMResponse Empty = new DedicatedHostAllocatableVMResponse();
 
     /**
-     * Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
+     * Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
      * 
      */
     @Import(name="count")

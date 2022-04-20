@@ -19,7 +19,7 @@ public final class JobTemplateTagArgs extends com.pulumi.resources.ResourceArgs 
     public static final JobTemplateTagArgs Empty = new JobTemplateTagArgs();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class JobTemplateTagArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

@@ -49,7 +49,7 @@ public final class AzureBlobFSSourceResponse {
     private final @Nullable Object treatEmptyAsNull;
     /**
      * Copy source type.
-     * Expected value is 'AzureBlobFSSource'.
+     * Expected value is &#39;AzureBlobFSSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzureBlobFSSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureBlobFSSource'.
+     * Expected value is &#39;AzureBlobFSSource&#39;.
      * 
     */
     public String type() {

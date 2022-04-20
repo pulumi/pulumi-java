@@ -13,9 +13,9 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Amazon Redshift parameters. The <code>ClusterId</code> field can be blank if
- *             <code>Host</code> and <code>Port</code> are both set. The <code>Host</code> and
- *             <code>Port</code> fields can be blank if the <code>ClusterId</code> field is set.</p>
+ * &lt;p&gt;Amazon Redshift parameters. The &lt;code&gt;ClusterId&lt;/code&gt; field can be blank if
+ *             &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are both set. The &lt;code&gt;Host&lt;/code&gt; and
+ *             &lt;code&gt;Port&lt;/code&gt; fields can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; field is set.&lt;/p&gt;
  * 
  */
 public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources.ResourceArgs {
@@ -23,8 +23,8 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     public static final DataSourceRedshiftParametersArgs Empty = new DataSourceRedshiftParametersArgs();
 
     /**
-     * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
-     *             provided.</p>
+     * &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+     *             provided.&lt;/p&gt;
      * 
      */
     @Import(name="clusterId")
@@ -35,7 +35,7 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     }
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -46,7 +46,7 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     }
 
     /**
-     * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
      */
     @Import(name="host")
@@ -57,7 +57,7 @@ public final class DataSourceRedshiftParametersArgs extends com.pulumi.resources
     }
 
     /**
-     * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
      */
     @Import(name="port")

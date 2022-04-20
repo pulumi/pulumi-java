@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  * when the instance is terminated either by the request being below the current spot
  * price availability or by a user.
  * 
- * > **NOTE:** Because their behavior depends on the live status of the spot
+ * &gt; **NOTE:** Because their behavior depends on the live status of the spot
  * market, Spot Instance Requests have a unique lifecycle that makes them behave
  * differently than other resources. Most importantly: there is __no
  * guarantee__ that a Spot Instance exists to fulfill the request at any given
@@ -106,7 +106,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
     /**
      * The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
      * The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-     * Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+     * Note that you can&#39;t specify an Availability Zone group or a launch group if you specify a duration.
      * 
      */
     @Export(name="blockDurationMinutes", type=Integer.class, parameters={})
@@ -115,21 +115,21 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
     /**
      * @return The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
      * The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-     * Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+     * Note that you can&#39;t specify an Availability Zone group or a launch group if you specify a duration.
      * 
      */
     public Output</* @Nullable */ Integer> blockDurationMinutes() {
         return this.blockDurationMinutes;
     }
     /**
-     * Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+     * Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
     @Export(name="capacityReservationSpecification", type=SpotInstanceRequestCapacityReservationSpecification.class, parameters={})
     private Output<SpotInstanceRequestCapacityReservationSpecification> capacityReservationSpecification;
 
     /**
-     * @return Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+     * @return Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
     public Output<SpotInstanceRequestCapacityReservationSpecification> capacityReservationSpecification() {
@@ -234,14 +234,14 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
         return this.enclaveOptions;
     }
     /**
-     * One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
+     * One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
     @Export(name="ephemeralBlockDevices", type=List.class, parameters={SpotInstanceRequestEphemeralBlockDevice.class})
     private Output<List<SpotInstanceRequestEphemeralBlockDevice>> ephemeralBlockDevices;
 
     /**
-     * @return One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
+     * @return One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
     public Output<List<SpotInstanceRequestEphemeralBlockDevice>> ephemeralBlockDevices() {
@@ -334,8 +334,8 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
     /**
      * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
      * 
-     * @Deprecated
-     * Use the parameter "instance_interruption_behavior" instead.
+     * @deprecated
+     * Use the parameter &#34;instance_interruption_behavior&#34; instead.
      * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
@@ -512,14 +512,14 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
         return this.placementGroup;
     }
     /**
-     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource&#39;s `strategy` argument is set to `&#34;partition&#34;`.
      * 
      */
     @Export(name="placementPartitionNumber", type=Integer.class, parameters={})
     private Output<Integer> placementPartitionNumber;
 
     /**
-     * @return The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+     * @return The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource&#39;s `strategy` argument is set to `&#34;partition&#34;`.
      * 
      */
     public Output<Integer> placementPartitionNumber() {
@@ -533,7 +533,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
     }
     /**
      * The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC
      * 
      */
@@ -542,7 +542,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC
      * 
      */
@@ -565,7 +565,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
     }
     /**
      * The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
      * 
      */
     @Export(name="publicDns", type=String.class, parameters={})
@@ -573,7 +573,7 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
      * 
      */
     public Output<String> publicDns() {
@@ -608,14 +608,14 @@ public class SpotInstanceRequest extends com.pulumi.resources.CustomResource {
         return this.rootBlockDevice;
     }
     /**
-     * A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+     * A list of secondary private IPv4 addresses to assign to the instance&#39;s primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
     @Export(name="secondaryPrivateIps", type=List.class, parameters={String.class})
     private Output<List<String>> secondaryPrivateIps;
 
     /**
-     * @return A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+     * @return A list of secondary private IPv4 addresses to assign to the instance&#39;s primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
     public Output<List<String>> secondaryPrivateIps() {

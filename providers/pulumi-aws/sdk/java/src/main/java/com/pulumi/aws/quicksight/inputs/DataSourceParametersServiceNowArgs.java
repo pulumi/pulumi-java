@@ -15,7 +15,7 @@ public final class DataSourceParametersServiceNowArgs extends com.pulumi.resourc
     public static final DataSourceParametersServiceNowArgs Empty = new DataSourceParametersServiceNowArgs();
 
     /**
-     * The base URL of the Jira instance's site to which to connect.
+     * The base URL of the Jira instance&#39;s site to which to connect.
      * 
      */
     @Import(name="siteBaseUrl", required=true)

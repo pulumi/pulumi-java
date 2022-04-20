@@ -33,7 +33,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
 
     /**
      * Task type.
-     * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

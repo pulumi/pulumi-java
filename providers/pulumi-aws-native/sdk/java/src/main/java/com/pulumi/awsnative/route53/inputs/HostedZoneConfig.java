@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 /**
  * A complex type that contains an optional comment.
  * 
- * If you don't want to specify a comment, omit the HostedZoneConfig and Comment elements.
+ * If you don&#39;t want to specify a comment, omit the HostedZoneConfig and Comment elements.
  * 
  */
 public final class HostedZoneConfig extends com.pulumi.resources.InvokeArgs {

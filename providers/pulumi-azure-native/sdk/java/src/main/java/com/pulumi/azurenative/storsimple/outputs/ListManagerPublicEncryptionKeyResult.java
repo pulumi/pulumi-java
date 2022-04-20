@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListManagerPublicEncryptionKeyResult {
     /**
-     * The algorithm used to encrypt the "Value".
+     * The algorithm used to encrypt the &#34;Value&#34;.
      * 
      */
     private final String encryptionAlgorithm;
@@ -22,7 +22,7 @@ public final class ListManagerPublicEncryptionKeyResult {
      */
     private final String value;
     /**
-     * The thumbprint of the cert that was used to encrypt "Value".
+     * The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
      * 
      */
     private final @Nullable String valueCertificateThumbprint;
@@ -38,7 +38,7 @@ public final class ListManagerPublicEncryptionKeyResult {
     }
 
     /**
-     * The algorithm used to encrypt the "Value".
+     * The algorithm used to encrypt the &#34;Value&#34;.
      * 
     */
     public String encryptionAlgorithm() {
@@ -52,7 +52,7 @@ public final class ListManagerPublicEncryptionKeyResult {
         return this.value;
     }
     /**
-     * The thumbprint of the cert that was used to encrypt "Value".
+     * The thumbprint of the cert that was used to encrypt &#34;Value&#34;.
      * 
     */
     public Optional<String> valueCertificateThumbprint() {

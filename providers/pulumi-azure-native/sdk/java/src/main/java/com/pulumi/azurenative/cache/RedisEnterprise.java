@@ -63,14 +63,14 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     * The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
      */
     @Export(name="minimumTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumTlsVersion;
 
     /**
-     * @return The minimum TLS version for the cluster to support, e.g. '1.2'
+     * @return The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
      */
     public Output</* @Nullable */ String> minimumTlsVersion() {
@@ -119,14 +119,14 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * Version of redis the cluster supports, e.g. '6'
+     * Version of redis the cluster supports, e.g. &#39;6&#39;
      * 
      */
     @Export(name="redisVersion", type=String.class, parameters={})
     private Output<String> redisVersion;
 
     /**
-     * @return Version of redis the cluster supports, e.g. '6'
+     * @return Version of redis the cluster supports, e.g. &#39;6&#39;
      * 
      */
     public Output<String> redisVersion() {
@@ -175,14 +175,14 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

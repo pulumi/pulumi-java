@@ -29,12 +29,12 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
      */
     private final String displayName;
     /**
-     * the alerts' displayNames on which the cases will not be generated
+     * the alerts&#39; displayNames on which the cases will not be generated
      * 
      */
     private final @Nullable List<String> displayNamesExcludeFilter;
     /**
-     * the alerts' displayNames on which the cases will be generated
+     * the alerts&#39; displayNames on which the cases will be generated
      * 
      */
     private final @Nullable List<String> displayNamesFilter;
@@ -55,7 +55,7 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     private final String id;
     /**
      * The kind of the alert rule
-     * Expected value is 'MicrosoftSecurityIncidentCreation'.
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
      * 
      */
     private final String kind;
@@ -70,12 +70,12 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
      */
     private final String name;
     /**
-     * The alerts' productName on which the cases will be generated
+     * The alerts&#39; productName on which the cases will be generated
      * 
      */
     private final String productFilter;
     /**
-     * the alerts' severities on which the cases will be generated
+     * the alerts&#39; severities on which the cases will be generated
      * 
      */
     private final @Nullable List<String> severitiesFilter;
@@ -139,14 +139,14 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
         return this.displayName;
     }
     /**
-     * the alerts' displayNames on which the cases will not be generated
+     * the alerts&#39; displayNames on which the cases will not be generated
      * 
     */
     public List<String> displayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter == null ? List.of() : this.displayNamesExcludeFilter;
     }
     /**
-     * the alerts' displayNames on which the cases will be generated
+     * the alerts&#39; displayNames on which the cases will be generated
      * 
     */
     public List<String> displayNamesFilter() {
@@ -175,7 +175,7 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'MicrosoftSecurityIncidentCreation'.
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
      * 
     */
     public String kind() {
@@ -196,14 +196,14 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
         return this.name;
     }
     /**
-     * The alerts' productName on which the cases will be generated
+     * The alerts&#39; productName on which the cases will be generated
      * 
     */
     public String productFilter() {
         return this.productFilter;
     }
     /**
-     * the alerts' severities on which the cases will be generated
+     * the alerts&#39; severities on which the cases will be generated
      * 
     */
     public List<String> severitiesFilter() {

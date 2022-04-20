@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class BackupRetentionSettingsResponse {
     /**
-     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
+     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
      * 
      */
     private final Integer retainedBackups;
     /**
-     * The unit that 'retained_backups' represents.
+     * The unit that &#39;retained_backups&#39; represents.
      * 
      */
     private final String retentionUnit;
@@ -30,14 +30,14 @@ public final class BackupRetentionSettingsResponse {
     }
 
     /**
-     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
+     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
      * 
     */
     public Integer retainedBackups() {
         return this.retainedBackups;
     }
     /**
-     * The unit that 'retained_backups' represents.
+     * The unit that &#39;retained_backups&#39; represents.
      * 
     */
     public String retentionUnit() {

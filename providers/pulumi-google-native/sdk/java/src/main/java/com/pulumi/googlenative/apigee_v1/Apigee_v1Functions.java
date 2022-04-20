@@ -175,7 +175,7 @@ public final class Apigee_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDebugSession", TypeShape.of(GetDebugSessionResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Returns the developer details, including the developer's name, email address, apps, and other information. **Note**: The response includes only the first 100 developer apps.
+     * Returns the developer details, including the developer&#39;s name, email address, apps, and other information. **Note**: The response includes only the first 100 developer apps.
      * 
      */
     public static CompletableFuture<GetDeveloperResult> getDeveloper(GetDeveloperArgs args) {
@@ -215,7 +215,7 @@ public final class Apigee_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the details and status of an analytics export job. If the export job is still in progress, its `state` is set to "running". After the export job has completed successfully, its `state` is set to "completed". If the export job fails, its `state` is set to `failed`.
+     * Gets the details and status of an analytics export job. If the export job is still in progress, its `state` is set to &#34;running&#34;. After the export job has completed successfully, its `state` is set to &#34;completed&#34;. If the export job fails, its `state` is set to `failed`.
      * 
      */
     public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
@@ -225,7 +225,7 @@ public final class Apigee_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
+     * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to &#34;running&#34; After the query has completed successfully, `state` is set to &#34;completed&#34;
      * 
      */
     public static CompletableFuture<GetHostQueryResult> getHostQuery(GetHostQueryArgs args) {
@@ -315,7 +315,7 @@ public final class Apigee_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getOverride", TypeShape.of(GetOverrideResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Get query status If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
+     * Get query status If the query is still in progress, the `state` is set to &#34;running&#34; After the query has completed successfully, `state` is set to &#34;completed&#34;
      * 
      */
     public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {

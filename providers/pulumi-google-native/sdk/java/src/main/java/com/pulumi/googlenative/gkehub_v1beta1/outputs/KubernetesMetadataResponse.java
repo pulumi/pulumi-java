@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class KubernetesMetadataResponse {
     /**
-     * Kubernetes API server version string as reported by '/version'.
+     * Kubernetes API server version string as reported by &#39;/version&#39;.
      * 
      */
     private final String kubernetesApiServerVersion;
@@ -58,7 +58,7 @@ public final class KubernetesMetadataResponse {
     }
 
     /**
-     * Kubernetes API server version string as reported by '/version'.
+     * Kubernetes API server version string as reported by &#39;/version&#39;.
      * 
     */
     public String kubernetesApiServerVersion() {

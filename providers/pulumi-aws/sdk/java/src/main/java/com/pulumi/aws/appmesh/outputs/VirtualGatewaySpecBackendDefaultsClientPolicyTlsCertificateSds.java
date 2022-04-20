@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds {
     /**
-     * The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
      */
     private final String secretName;
@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSd
     }
 
     /**
-     * The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
     */
     public String secretName() {

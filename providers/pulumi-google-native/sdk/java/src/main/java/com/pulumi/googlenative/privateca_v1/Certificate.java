@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * Create a new Certificate in a given Project, Location from a particular CaPool.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -111,14 +111,14 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
     @Export(name="lifetime", type=String.class, parameters={})
     private Output<String> lifetime;
 
     /**
-     * @return Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * @return Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
     public Output<String> lifetime() {
@@ -195,14 +195,14 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.revocationDetails;
     }
     /**
-     * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
     @Export(name="subjectMode", type=String.class, parameters={})
     private Output<String> subjectMode;
 
     /**
-     * @return Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * @return Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
     public Output<String> subjectMode() {

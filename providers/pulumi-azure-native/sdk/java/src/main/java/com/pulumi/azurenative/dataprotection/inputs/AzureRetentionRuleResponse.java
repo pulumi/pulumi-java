@@ -44,7 +44,7 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Expected value is 'AzureRetentionRule'.
+     * Expected value is &#39;AzureRetentionRule&#39;.
      * 
      */
     @Import(name="objectType", required=true)

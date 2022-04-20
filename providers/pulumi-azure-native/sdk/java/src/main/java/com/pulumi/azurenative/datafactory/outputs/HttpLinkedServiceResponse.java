@@ -76,7 +76,7 @@ public final class HttpLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'HttpServer'.
+     * Expected value is &#39;HttpServer&#39;.
      * 
      */
     private final String type;
@@ -202,7 +202,7 @@ public final class HttpLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'HttpServer'.
+     * Expected value is &#39;HttpServer&#39;.
      * 
     */
     public String type() {

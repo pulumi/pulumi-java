@@ -103,14 +103,14 @@ public class EncryptionProtector extends com.pulumi.resources.CustomResource {
         return this.serverKeyName;
     }
     /**
-     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     @Export(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
     /**
-     * @return The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     * @return The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     public Output<String> serverKeyType() {

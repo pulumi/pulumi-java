@@ -43,7 +43,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     * The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
      */
     @Import(name="minimumTlsVersion")

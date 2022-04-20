@@ -34,7 +34,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     private final @Nullable Object fluentdConfigUrl;
     /**
      * The kind of DiagnosticsSink.
-     * Expected value is 'AzureInternalMonitoringPipeline'.
+     * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
      * 
      */
     private final String kind;
@@ -104,7 +104,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     }
     /**
      * The kind of DiagnosticsSink.
-     * Expected value is 'AzureInternalMonitoringPipeline'.
+     * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
      * 
     */
     public String kind() {

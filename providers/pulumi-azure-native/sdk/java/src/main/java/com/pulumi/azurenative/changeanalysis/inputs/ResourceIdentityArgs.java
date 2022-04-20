@@ -22,7 +22,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
      */
     @Import(name="type")

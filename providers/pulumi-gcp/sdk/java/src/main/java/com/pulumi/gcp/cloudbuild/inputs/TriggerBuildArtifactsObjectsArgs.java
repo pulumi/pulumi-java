@@ -18,7 +18,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends com.pulumi.resources
     public static final TriggerBuildArtifactsObjectsArgs Empty = new TriggerBuildArtifactsObjectsArgs();
 
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.
      * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
      * this location as a prefix.
      * 
@@ -31,7 +31,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends com.pulumi.resources
     }
 
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
      */
     @Import(name="paths")

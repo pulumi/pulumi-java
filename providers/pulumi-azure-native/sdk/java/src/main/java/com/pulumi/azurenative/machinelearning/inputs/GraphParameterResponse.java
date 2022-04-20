@@ -43,7 +43,7 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Graph parameter's type.
+     * Graph parameter&#39;s type.
      * 
      */
     @Import(name="type", required=true)

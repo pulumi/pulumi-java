@@ -34,7 +34,7 @@ public final class CosmosDbSqlApiSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'CosmosDbSqlApiSink'.
+     * Expected value is &#39;CosmosDbSqlApiSink&#39;.
      * 
      */
     private final String type;
@@ -104,7 +104,7 @@ public final class CosmosDbSqlApiSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'CosmosDbSqlApiSink'.
+     * Expected value is &#39;CosmosDbSqlApiSink&#39;.
      * 
     */
     public String type() {

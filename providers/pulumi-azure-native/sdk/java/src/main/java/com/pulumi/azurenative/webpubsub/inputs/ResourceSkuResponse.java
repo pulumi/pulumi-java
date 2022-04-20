@@ -70,7 +70,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
      * 
      * `Basic` is deprecated, use `Standard` instead.
      * 

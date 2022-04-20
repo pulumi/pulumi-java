@@ -35,7 +35,7 @@ public final class GetTargetInstanceResult {
      */
     private final String name;
     /**
-     * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+     * NAT option controlling how IPs are NAT&#39;ed to the instance. Currently only NO_NAT (default value) is supported.
      * 
      */
     private final String natPolicy;
@@ -120,7 +120,7 @@ public final class GetTargetInstanceResult {
         return this.name;
     }
     /**
-     * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+     * NAT option controlling how IPs are NAT&#39;ed to the instance. Currently only NO_NAT (default value) is supported.
      * 
     */
     public String natPolicy() {

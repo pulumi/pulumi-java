@@ -44,7 +44,7 @@ public final class RelationalSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'RelationalSource'.
+     * Expected value is &#39;RelationalSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class RelationalSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'RelationalSource'.
+     * Expected value is &#39;RelationalSource&#39;.
      * 
     */
     public String type() {

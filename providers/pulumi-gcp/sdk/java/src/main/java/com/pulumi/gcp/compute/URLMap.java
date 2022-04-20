@@ -220,7 +220,7 @@ public class URLMap extends com.pulumi.resources.CustomResource {
     }
     /**
      * The name of the PathMatcher to use to match the path portion of the URL if the
-     * hostRule matches the URL's host portion.
+     * hostRule matches the URL&#39;s host portion.
      * 
      */
     @Export(name="pathMatchers", type=List.class, parameters={URLMapPathMatcher.class})
@@ -228,7 +228,7 @@ public class URLMap extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The name of the PathMatcher to use to match the path portion of the URL if the
-     * hostRule matches the URL's host portion.
+     * hostRule matches the URL&#39;s host portion.
      * 
      */
     public Output</* @Nullable */ List<URLMapPathMatcher>> pathMatchers() {

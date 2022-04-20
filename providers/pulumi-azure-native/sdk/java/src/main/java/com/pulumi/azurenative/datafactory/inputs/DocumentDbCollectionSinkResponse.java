@@ -77,7 +77,7 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
 
     /**
      * Copy sink type.
-     * Expected value is 'DocumentDbCollectionSink'.
+     * Expected value is &#39;DocumentDbCollectionSink&#39;.
      * 
      */
     @Import(name="type", required=true)

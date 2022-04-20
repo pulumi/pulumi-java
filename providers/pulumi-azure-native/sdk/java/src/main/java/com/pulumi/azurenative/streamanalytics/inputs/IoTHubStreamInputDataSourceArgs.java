@@ -76,7 +76,7 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
 
     /**
      * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Devices/IotHubs'.
+     * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
      * 
      */
     @Import(name="type", required=true)

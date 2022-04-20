@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls).
  * 
- * > Want fine-grained control over object ACLs? Use `gcp.storage.ObjectAccessControl` to control individual
+ * &gt; Want fine-grained control over object ACLs? Use `gcp.storage.ObjectAccessControl` to control individual
  * role entity pairs.
  * 
  * ## Example Usage
@@ -65,14 +65,14 @@ public class ObjectACL extends com.pulumi.resources.CustomResource {
         return this.object;
     }
     /**
-     * The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+     * The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
     @Export(name="predefinedAcl", type=String.class, parameters={})
     private Output</* @Nullable */ String> predefinedAcl;
 
     /**
-     * @return The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
+     * @return The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
     public Output</* @Nullable */ String> predefinedAcl() {

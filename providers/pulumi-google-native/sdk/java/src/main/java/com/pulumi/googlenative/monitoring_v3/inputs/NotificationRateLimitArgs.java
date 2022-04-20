@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Control over the rate of notifications sent to this alert policy's notification channels.
+ * Control over the rate of notifications sent to this alert policy&#39;s notification channels.
  * 
  */
 public final class NotificationRateLimitArgs extends com.pulumi.resources.ResourceArgs {

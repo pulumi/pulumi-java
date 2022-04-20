@@ -19,12 +19,12 @@ public final class ConsistencyPolicyResponse {
      */
     private final String defaultConsistencyLevel;
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
      */
     private final @Nullable Integer maxIntervalInSeconds;
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
      */
     private final @Nullable Double maxStalenessPrefix;
@@ -47,14 +47,14 @@ public final class ConsistencyPolicyResponse {
         return this.defaultConsistencyLevel;
     }
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
     */
     public Optional<Integer> maxIntervalInSeconds() {
         return Optional.ofNullable(this.maxIntervalInSeconds);
     }
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
     */
     public Optional<Double> maxStalenessPrefix() {

@@ -22,7 +22,7 @@ public final class VpcAccessibleServicesArgs extends com.pulumi.resources.Resour
     public static final VpcAccessibleServicesArgs Empty = new VpcAccessibleServicesArgs();
 
     /**
-     * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.
+     * The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
      * 
      */
     @Import(name="allowedServices")
@@ -33,7 +33,7 @@ public final class VpcAccessibleServicesArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.
+     * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
      * 
      */
     @Import(name="enableRestriction")

@@ -21,7 +21,7 @@ public final class LoadBalancerHealthCheck {
      */
     private final Integer interval;
     /**
-     * The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
+     * The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
      * values are:
      * * `HTTP`, `HTTPS` - PORT and PATH are required
      * * `TCP`, `SSL` - PORT is required, PATH is not supported
@@ -68,7 +68,7 @@ public final class LoadBalancerHealthCheck {
         return this.interval;
     }
     /**
-     * The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
+     * The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
      * values are:
      * * `HTTP`, `HTTPS` - PORT and PATH are required
      * * `TCP`, `SSL` - PORT is required, PATH is not supported

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetSubscriptionResult {
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * 
      */
     private final DeliveryConfigResponse deliveryConfig;
@@ -37,7 +37,7 @@ public final class GetSubscriptionResult {
     }
 
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * 
     */
     public DeliveryConfigResponse deliveryConfig() {

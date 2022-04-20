@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Dashboard source entity.</p>
+ * &lt;p&gt;Dashboard source entity.&lt;/p&gt;
  * 
  */
 public final class DashboardSourceEntityArgs extends com.pulumi.resources.ResourceArgs {

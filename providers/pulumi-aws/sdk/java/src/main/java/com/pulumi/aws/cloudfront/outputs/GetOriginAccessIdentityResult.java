@@ -27,7 +27,7 @@ public final class GetOriginAccessIdentityResult {
      */
     private final String comment;
     /**
-     * The current version of the origin access identity's information.
+     * The current version of the origin access identity&#39;s information.
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */
@@ -90,7 +90,7 @@ public final class GetOriginAccessIdentityResult {
         return this.comment;
     }
     /**
-     * The current version of the origin access identity's information.
+     * The current version of the origin access identity&#39;s information.
      * For example: `E2QWRUHAPOMQZL`.
      * 
     */

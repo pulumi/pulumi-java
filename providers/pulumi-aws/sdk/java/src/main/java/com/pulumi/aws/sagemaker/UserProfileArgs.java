@@ -29,7 +29,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     @Import(name="singleSignOnUserIdentifier")
@@ -40,7 +40,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     @Import(name="singleSignOnUserValue")

@@ -68,7 +68,7 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
+     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
      * 
      */
     @Import(name="resourceAttributes")
@@ -79,7 +79,7 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Import(name="userId", required=true)

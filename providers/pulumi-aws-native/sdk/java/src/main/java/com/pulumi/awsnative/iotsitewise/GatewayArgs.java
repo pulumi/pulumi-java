@@ -42,7 +42,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The gateway's platform. You can only specify one platform in a gateway.
+     * The gateway&#39;s platform. You can only specify one platform in a gateway.
      * 
      */
     @Import(name="gatewayPlatform", required=true)

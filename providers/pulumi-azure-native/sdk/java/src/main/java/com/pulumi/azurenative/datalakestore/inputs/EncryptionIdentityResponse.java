@@ -39,7 +39,7 @@ public final class EncryptionIdentityResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
      */
     @Import(name="type", required=true)

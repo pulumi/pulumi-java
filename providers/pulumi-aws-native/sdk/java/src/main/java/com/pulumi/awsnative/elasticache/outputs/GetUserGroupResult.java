@@ -18,7 +18,7 @@ public final class GetUserGroupResult {
      */
     private final @Nullable String arn;
     /**
-     * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
      */
     private final @Nullable String status;
@@ -46,7 +46,7 @@ public final class GetUserGroupResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
+     * Indicates user group status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
     */
     public Optional<String> status() {

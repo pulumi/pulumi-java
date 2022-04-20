@@ -17,7 +17,7 @@ public final class VmUtilizationInfoResponse {
      */
     private final VmUtilizationMetricsResponse utilization;
     /**
-     * The VM's ID in the source.
+     * The VM&#39;s ID in the source.
      * 
      */
     private final String vmId;
@@ -45,7 +45,7 @@ public final class VmUtilizationInfoResponse {
         return this.utilization;
     }
     /**
-     * The VM's ID in the source.
+     * The VM&#39;s ID in the source.
      * 
     */
     public String vmId() {

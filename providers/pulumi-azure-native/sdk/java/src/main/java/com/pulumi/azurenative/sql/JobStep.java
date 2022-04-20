@@ -106,14 +106,14 @@ public class JobStep extends com.pulumi.resources.CustomResource {
         return this.output;
     }
     /**
-     * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
     @Export(name="stepId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> stepId;
 
     /**
-     * @return The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * @return The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
     public Output</* @Nullable */ Integer> stepId() {

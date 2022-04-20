@@ -43,7 +43,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of connection info
-     * Expected value is 'MiSqlConnectionInfo'.
+     * Expected value is &#39;MiSqlConnectionInfo&#39;.
      * 
      */
     @Import(name="type", required=true)

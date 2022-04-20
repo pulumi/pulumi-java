@@ -128,7 +128,7 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'Cassandra'.
+     * Expected value is &#39;Cassandra&#39;.
      * 
      */
     @Import(name="type", required=true)

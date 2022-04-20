@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 public final class TriggerBuildArtifactsObjectsTiming {
     /**
      * End of time span.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
-     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String endTime;
     /**
      * Start of time span.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
-     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String startTime;
@@ -36,8 +36,8 @@ public final class TriggerBuildArtifactsObjectsTiming {
 
     /**
      * End of time span.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
-     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public Optional<String> endTime() {
@@ -45,8 +45,8 @@ public final class TriggerBuildArtifactsObjectsTiming {
     }
     /**
      * Start of time span.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
-     * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public Optional<String> startTime() {

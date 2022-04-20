@@ -18,7 +18,7 @@ public final class ScriptStringExecutionParameterResponse {
     private final String name;
     /**
      * The type of execution parameter
-     * Expected value is 'Value'.
+     * Expected value is &#39;Value&#39;.
      * 
      */
     private final String type;
@@ -47,7 +47,7 @@ public final class ScriptStringExecutionParameterResponse {
     }
     /**
      * The type of execution parameter
-     * Expected value is 'Value'.
+     * Expected value is &#39;Value&#39;.
      * 
     */
     public String type() {

@@ -61,7 +61,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`
      * 
      */
     @Import(name="invokeArn")
@@ -83,7 +83,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Lambda alias' route configuration settings. Fields documented below
+     * The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
     @Import(name="routingConfig")

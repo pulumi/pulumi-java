@@ -17,7 +17,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
     public static final InternalCheckerResponse Empty = new InternalCheckerResponse();
 
     /**
-     * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
     @Import(name="displayName", required=true)
@@ -50,7 +50,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
+     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
      */
     @Import(name="network", required=true)

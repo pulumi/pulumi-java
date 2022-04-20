@@ -125,7 +125,7 @@ public final class SecurityContextArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.
+     * The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.
      * 
      */
     @Import(name="seccompProfile")

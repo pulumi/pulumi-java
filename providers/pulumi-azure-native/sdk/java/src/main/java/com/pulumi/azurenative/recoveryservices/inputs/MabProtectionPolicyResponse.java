@@ -29,7 +29,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'MAB'.
+     * Expected value is &#39;MAB&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)

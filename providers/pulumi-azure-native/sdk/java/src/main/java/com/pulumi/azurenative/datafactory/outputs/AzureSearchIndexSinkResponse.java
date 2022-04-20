@@ -34,7 +34,7 @@ public final class AzureSearchIndexSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureSearchIndexSink'.
+     * Expected value is &#39;AzureSearchIndexSink&#39;.
      * 
      */
     private final String type;
@@ -104,7 +104,7 @@ public final class AzureSearchIndexSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureSearchIndexSink'.
+     * Expected value is &#39;AzureSearchIndexSink&#39;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class OriginGroupOverrideActionResponse extends com.pulumi.resource
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'OriginGroupOverride'.
+     * Expected value is &#39;OriginGroupOverride&#39;.
      * 
      */
     @Import(name="name", required=true)

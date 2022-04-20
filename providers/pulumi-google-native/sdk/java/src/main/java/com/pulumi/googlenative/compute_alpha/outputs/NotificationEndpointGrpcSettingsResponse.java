@@ -22,7 +22,7 @@ public final class NotificationEndpointGrpcSettingsResponse {
      */
     private final String endpoint;
     /**
-     * Optional. If specified, this field is used to populate the "name" field in gRPC requests.
+     * Optional. If specified, this field is used to populate the &#34;name&#34; field in gRPC requests.
      * 
      */
     private final String payloadName;
@@ -66,7 +66,7 @@ public final class NotificationEndpointGrpcSettingsResponse {
         return this.endpoint;
     }
     /**
-     * Optional. If specified, this field is used to populate the "name" field in gRPC requests.
+     * Optional. If specified, this field is used to populate the &#34;name&#34; field in gRPC requests.
      * 
     */
     public String payloadName() {

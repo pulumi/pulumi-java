@@ -85,7 +85,7 @@ public final class DPMProtectedItemResponse {
     private final @Nullable String policyId;
     /**
      * backup item type.
-     * Expected value is 'DPMProtectedItem'.
+     * Expected value is &#39;DPMProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -245,7 +245,7 @@ public final class DPMProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'DPMProtectedItem'.
+     * Expected value is &#39;DPMProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

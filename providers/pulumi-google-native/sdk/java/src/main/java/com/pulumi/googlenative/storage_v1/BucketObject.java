@@ -194,14 +194,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.etag;
     }
     /**
-     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+     * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
      */
     @Export(name="eventBasedHold", type=Boolean.class, parameters={})
     private Output<Boolean> eventBasedHold;
 
     /**
-     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
+     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
      */
     public Output<Boolean> eventBasedHold() {
@@ -334,14 +334,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.owner;
     }
     /**
-     * A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+     * A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
      */
     @Export(name="retentionExpirationTime", type=String.class, parameters={})
     private Output<String> retentionExpirationTime;
 
     /**
-     * @return A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
+     * @return A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
      */
     public Output<String> retentionExpirationTime() {
@@ -432,14 +432,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.timeDeleted;
     }
     /**
-     * The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
+     * The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
      */
     @Export(name="timeStorageClassUpdated", type=String.class, parameters={})
     private Output<String> timeStorageClassUpdated;
 
     /**
-     * @return The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
+     * @return The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
      */
     public Output<String> timeStorageClassUpdated() {

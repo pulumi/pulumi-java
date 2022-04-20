@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentSharedFileSystemConfiguration {
     /**
-     * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String endpoint;
     /**
-     * <p>The unique identifier for a file system.</p>
+     * &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
      * 
      */
     private final @Nullable String fileSystemId;
     /**
-     * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
      * 
      */
     private final @Nullable String linuxMountPoint;
     /**
-     * <p>The name of the file share.</p>
+     * &lt;p&gt;The name of the file share.&lt;/p&gt;
      * 
      */
     private final @Nullable String shareName;
     /**
-     * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
      * 
      */
     private final @Nullable String windowsMountDrive;
@@ -52,35 +52,35 @@ public final class StudioComponentSharedFileSystemConfiguration {
     }
 
     /**
-     * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
      * 
     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * <p>The unique identifier for a file system.</p>
+     * &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
      * 
     */
     public Optional<String> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
     /**
-     * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
      * 
     */
     public Optional<String> linuxMountPoint() {
         return Optional.ofNullable(this.linuxMountPoint);
     }
     /**
-     * <p>The name of the file share.</p>
+     * &lt;p&gt;The name of the file share.&lt;/p&gt;
      * 
     */
     public Optional<String> shareName() {
         return Optional.ofNullable(this.shareName);
     }
     /**
-     * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
      * 
     */
     public Optional<String> windowsMountDrive() {

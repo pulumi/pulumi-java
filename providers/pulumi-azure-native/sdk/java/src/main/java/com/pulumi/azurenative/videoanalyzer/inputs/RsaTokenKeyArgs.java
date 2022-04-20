@@ -66,7 +66,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
      * 
      */
     @Import(name="type", required=true)

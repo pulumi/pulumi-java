@@ -19,7 +19,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 
     /**
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
     @Import(name="displayName")
@@ -30,7 +30,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
     @Import(name="metricName")

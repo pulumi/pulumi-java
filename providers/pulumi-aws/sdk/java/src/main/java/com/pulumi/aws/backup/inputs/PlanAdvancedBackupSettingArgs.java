@@ -16,7 +16,7 @@ public final class PlanAdvancedBackupSettingArgs extends com.pulumi.resources.Re
     public static final PlanAdvancedBackupSettingArgs Empty = new PlanAdvancedBackupSettingArgs();
 
     /**
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = &#34;enabled&#34; }` to enable Windows VSS backup option and create a VSS Windows backup.
      * 
      */
     @Import(name="backupOptions", required=true)

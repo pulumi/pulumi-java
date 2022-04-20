@@ -143,7 +143,7 @@ public final class InstanceFromTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Desired status of the instance. Either "RUNNING" or "TERMINATED".
+     * Desired status of the instance. Either &#34;RUNNING&#34; or &#34;TERMINATED&#34;.
      * 
      */
     @Import(name="desiredStatus")

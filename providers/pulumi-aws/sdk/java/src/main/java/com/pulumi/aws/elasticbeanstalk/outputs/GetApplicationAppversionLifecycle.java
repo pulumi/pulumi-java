@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationAppversionLifecycle {
     /**
-     * Specifies whether delete a version's source bundle from S3 when the application version is deleted.
+     * Specifies whether delete a version&#39;s source bundle from S3 when the application version is deleted.
      * 
      */
     private final Boolean deleteSourceFromS3;
@@ -45,7 +45,7 @@ public final class GetApplicationAppversionLifecycle {
     }
 
     /**
-     * Specifies whether delete a version's source bundle from S3 when the application version is deleted.
+     * Specifies whether delete a version&#39;s source bundle from S3 when the application version is deleted.
      * 
     */
     public Boolean deleteSourceFromS3() {

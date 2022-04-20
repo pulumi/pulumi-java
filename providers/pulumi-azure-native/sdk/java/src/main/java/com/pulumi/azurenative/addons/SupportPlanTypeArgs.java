@@ -27,7 +27,7 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The support plan type. For now the only valid type is "canonical".
+     * The support plan type. For now the only valid type is &#34;canonical&#34;.
      * 
      */
     @Import(name="providerName", required=true)

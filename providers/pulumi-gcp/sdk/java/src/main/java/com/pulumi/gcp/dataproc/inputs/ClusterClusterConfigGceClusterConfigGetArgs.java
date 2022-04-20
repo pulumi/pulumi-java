@@ -49,7 +49,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends com.pulum
     /**
      * The name or self_link of the Google Compute Engine
      * network to the cluster will be part of. Conflicts with `subnetwork`.
-     * If neither is specified, this defaults to the "default" network.
+     * If neither is specified, this defaults to the &#34;default&#34; network.
      * 
      */
     @Import(name="network")
@@ -61,7 +61,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends com.pulum
 
     /**
      * The service account to be used by the Node VMs.
-     * If not specified, the "default" service account is used.
+     * If not specified, the &#34;default&#34; service account is used.
      * 
      */
     @Import(name="serviceAccount")
@@ -123,7 +123,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends com.pulum
 
     /**
      * The GCP zone where your data is stored and used (i.e. where
-     * the master and the worker nodes will be created in). If `region` is set to 'global' (default)
+     * the master and the worker nodes will be created in). If `region` is set to &#39;global&#39; (default)
      * then `zone` is mandatory, otherwise GCP is able to make use of [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/auto-zone)
      * to determine this automatically for you.
      * Note: This setting additionally determines and restricts

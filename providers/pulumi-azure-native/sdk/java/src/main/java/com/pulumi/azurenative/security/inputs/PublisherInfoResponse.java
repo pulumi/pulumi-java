@@ -19,7 +19,7 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     public static final PublisherInfoResponse Empty = new PublisherInfoResponse();
 
     /**
-     * The "OriginalName" field taken from the file's version resource
+     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
      */
     @Import(name="binaryName")
@@ -30,7 +30,7 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The product name taken from the file's version resource
+     * The product name taken from the file&#39;s version resource
      * 
      */
     @Import(name="productName")
@@ -52,7 +52,7 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The binary file version taken from the file's version resource
+     * The binary file version taken from the file&#39;s version resource
      * 
      */
     @Import(name="version")

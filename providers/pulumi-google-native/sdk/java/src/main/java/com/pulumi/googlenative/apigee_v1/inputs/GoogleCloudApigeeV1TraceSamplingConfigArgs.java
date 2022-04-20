@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends com.pulumi
     }
 
     /**
-     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
+     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
      * 
      */
     @Import(name="samplingRate")

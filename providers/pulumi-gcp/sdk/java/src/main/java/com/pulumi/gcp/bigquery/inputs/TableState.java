@@ -204,7 +204,7 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The number of bytes in the table that are considered "long-term storage".
+     * The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     @Import(name="numLongTermBytes")
@@ -253,8 +253,8 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn't changed.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
      * Furthermore drift for this field cannot not be detected because BigQuery
      * only uses this schema to compute the effective schema for the table, therefore
      * any changes on the configured value will force the table to be recreated.

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Atomically updates the ResourceRecordSet collection.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -87,14 +87,14 @@ public class Change extends com.pulumi.resources.CustomResource {
         return this.startTime;
     }
     /**
-     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * @return Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
     public Output<String> status() {

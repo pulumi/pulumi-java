@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The method's authorization type.
+     * The method&#39;s authorization type.
      * 
      */
     @EnumType

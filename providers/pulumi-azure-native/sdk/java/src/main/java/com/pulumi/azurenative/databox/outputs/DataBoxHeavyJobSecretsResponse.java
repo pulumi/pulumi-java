@@ -30,7 +30,7 @@ public final class DataBoxHeavyJobSecretsResponse {
     private final CloudErrorResponse error;
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
     private final String jobSecretsType;
@@ -70,7 +70,7 @@ public final class DataBoxHeavyJobSecretsResponse {
     }
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
     */
     public String jobSecretsType() {

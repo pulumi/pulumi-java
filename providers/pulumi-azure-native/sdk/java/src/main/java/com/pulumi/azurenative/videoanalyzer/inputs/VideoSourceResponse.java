@@ -42,7 +42,7 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
      * 
      */
     @Import(name="type", required=true)

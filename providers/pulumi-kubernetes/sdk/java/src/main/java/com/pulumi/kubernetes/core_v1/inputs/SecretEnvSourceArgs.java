@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 /**
  * SecretEnvSource selects a Secret to populate the environment variables with.
  * 
- * The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
+ * The contents of the target Secret&#39;s Data field will represent the key-value pairs as environment variables.
  * 
  */
 public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs {

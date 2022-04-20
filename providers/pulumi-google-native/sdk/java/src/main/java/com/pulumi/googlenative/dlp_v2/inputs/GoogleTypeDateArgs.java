@@ -20,7 +20,7 @@ public final class GoogleTypeDateArgs extends com.pulumi.resources.ResourceArgs 
     public static final GoogleTypeDateArgs Empty = new GoogleTypeDateArgs();
 
     /**
-     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
      * 
      */
     @Import(name="day")

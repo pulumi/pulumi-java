@@ -47,7 +47,7 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
 
     /**
      * The read setting type.
-     * Expected value is 'DelimitedTextReadSettings'.
+     * Expected value is &#39;DelimitedTextReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

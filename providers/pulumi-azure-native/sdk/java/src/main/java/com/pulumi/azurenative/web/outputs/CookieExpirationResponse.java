@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CookieExpirationResponse {
     /**
-     * The convention used when determining the session cookie's expiration.
+     * The convention used when determining the session cookie&#39;s expiration.
      * 
      */
     private final @Nullable String convention;
@@ -31,7 +31,7 @@ public final class CookieExpirationResponse {
     }
 
     /**
-     * The convention used when determining the session cookie's expiration.
+     * The convention used when determining the session cookie&#39;s expiration.
      * 
     */
     public Optional<String> convention() {

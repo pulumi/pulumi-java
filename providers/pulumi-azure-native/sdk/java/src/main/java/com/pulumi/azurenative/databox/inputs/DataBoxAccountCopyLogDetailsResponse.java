@@ -30,7 +30,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     @Import(name="copyLogDetailsType", required=true)

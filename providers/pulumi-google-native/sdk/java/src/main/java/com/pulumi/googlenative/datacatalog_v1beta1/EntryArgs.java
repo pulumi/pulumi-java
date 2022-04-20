@@ -54,7 +54,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
+     * Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
      * 
      */
     @Import(name="displayName")
@@ -137,7 +137,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
     @Import(name="userSpecifiedSystem")
@@ -148,7 +148,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
     @Import(name="userSpecifiedType")

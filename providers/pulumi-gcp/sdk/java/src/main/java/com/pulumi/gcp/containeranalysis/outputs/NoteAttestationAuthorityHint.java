@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class NoteAttestationAuthorityHint {
     /**
      * The human readable name of this Attestation Authority, for
-     * example "qa".
+     * example &#34;qa&#34;.
      * 
      */
     private final String humanReadableName;
@@ -23,7 +23,7 @@ public final class NoteAttestationAuthorityHint {
 
     /**
      * The human readable name of this Attestation Authority, for
-     * example "qa".
+     * example &#34;qa&#34;.
      * 
     */
     public String humanReadableName() {

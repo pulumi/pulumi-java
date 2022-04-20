@@ -39,7 +39,7 @@ public final class InformixSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'InformixSink'.
+     * Expected value is &#39;InformixSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class InformixSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'InformixSink'.
+     * Expected value is &#39;InformixSink&#39;.
      * 
     */
     public String type() {

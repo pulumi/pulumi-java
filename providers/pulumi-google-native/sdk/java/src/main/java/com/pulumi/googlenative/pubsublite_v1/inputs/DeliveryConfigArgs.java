@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The settings for a subscription's message delivery.
+ * The settings for a subscription&#39;s message delivery.
  * 
  */
 public final class DeliveryConfigArgs extends com.pulumi.resources.ResourceArgs {

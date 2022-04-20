@@ -77,7 +77,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
 
     /**
      * placement policy type
-     * Expected value is 'VmHost'.
+     * Expected value is &#39;VmHost&#39;.
      * 
      */
     @Import(name="type", required=true)

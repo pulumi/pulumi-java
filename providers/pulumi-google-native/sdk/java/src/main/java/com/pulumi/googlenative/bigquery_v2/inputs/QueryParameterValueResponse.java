@@ -26,7 +26,7 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * [Optional] The struct field values, in order of the struct type's declaration.
+     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
      */
     @Import(name="structValues", required=true)

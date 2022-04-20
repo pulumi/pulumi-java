@@ -16,7 +16,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     public static final AliasArgs Empty = new AliasArgs();
 
     /**
-     * The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
+     * The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
      * 
      */
     @Import(name="name")
@@ -28,7 +28,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Creates an unique alias beginning with the specified prefix.
-     * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
+     * The name must start with the word &#34;alias&#34; followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
     @Import(name="namePrefix")

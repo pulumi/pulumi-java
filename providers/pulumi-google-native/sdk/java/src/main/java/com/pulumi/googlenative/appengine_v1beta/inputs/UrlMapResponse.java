@@ -64,7 +64,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
+     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
      * 
      */
     @Import(name="script", required=true)

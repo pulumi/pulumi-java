@@ -46,7 +46,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
+     * The resource name of the settings. Format is &#34;projects/{project_id}/accessApprovalSettings&#34;
      * 
      */
     @Import(name="name")
@@ -74,7 +74,7 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * (Optional, Deprecated)
      * Deprecated in favor of `project_id`
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of `project_id`
      * 
      */

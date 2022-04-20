@@ -95,7 +95,7 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+     * The endpoint of the Azure Function App. URL will be in the format https://&lt;accountName&gt;.azurewebsites.net.
      * 
      */
     @Import(name="functionAppUrl", required=true)
@@ -140,7 +140,7 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
      */
     @Import(name="type", required=true)

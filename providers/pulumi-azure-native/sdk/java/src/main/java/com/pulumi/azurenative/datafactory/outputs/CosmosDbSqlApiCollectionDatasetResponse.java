@@ -59,7 +59,7 @@ public final class CosmosDbSqlApiCollectionDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'CosmosDbSqlApiCollection'.
+     * Expected value is &#39;CosmosDbSqlApiCollection&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class CosmosDbSqlApiCollectionDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'CosmosDbSqlApiCollection'.
+     * Expected value is &#39;CosmosDbSqlApiCollection&#39;.
      * 
     */
     public String type() {

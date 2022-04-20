@@ -68,7 +68,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
 
     /**
      * The type of the Secret to create.
-     * Expected value is 'CustomerCertificate'.
+     * Expected value is &#39;CustomerCertificate&#39;.
      * 
      */
     @Import(name="type", required=true)

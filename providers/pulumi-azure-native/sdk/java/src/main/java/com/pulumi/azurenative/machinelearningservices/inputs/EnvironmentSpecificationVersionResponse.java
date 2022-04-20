@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * Environment specification version details.
- * <see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
+ * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/specification.html&#34; /&gt;
  * 
  */
 public final class EnvironmentSpecificationVersionResponse extends com.pulumi.resources.InvokeArgs {
@@ -27,7 +27,7 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
 
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-     * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
      * 
      */
     @Import(name="condaFile")
@@ -61,7 +61,7 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
 
     /**
      * Environment specification is either user managed or curated by the Azure ML service
-     * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
+     * &lt;see href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments&#34; /&gt;
      * 
      */
     @Import(name="environmentSpecificationType", required=true)

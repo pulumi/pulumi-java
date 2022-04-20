@@ -24,12 +24,12 @@ public final class DomainMappingStatusResponse {
      */
     private final String mappedRouteName;
     /**
-     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
      */
     private final Integer observedGeneration;
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     private final List<ResourceRecordResponse> resourceRecords;
@@ -68,14 +68,14 @@ public final class DomainMappingStatusResponse {
         return this.mappedRouteName;
     }
     /**
-     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
     */
     public List<ResourceRecordResponse> resourceRecords() {

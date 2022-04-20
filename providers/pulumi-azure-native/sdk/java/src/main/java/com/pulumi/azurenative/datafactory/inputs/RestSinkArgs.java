@@ -121,7 +121,7 @@ public final class RestSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'RestSink'.
+     * Expected value is &#39;RestSink&#39;.
      * 
      */
     @Import(name="type", required=true)

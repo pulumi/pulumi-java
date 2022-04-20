@@ -17,7 +17,7 @@ public final class AutomationRulePropertyValuesConditionResponse {
     private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
     /**
      * The type of the automation rule condition
-     * Expected value is 'Property'.
+     * Expected value is &#39;Property&#39;.
      * 
      */
     private final String conditionType;
@@ -39,7 +39,7 @@ public final class AutomationRulePropertyValuesConditionResponse {
     }
     /**
      * The type of the automation rule condition
-     * Expected value is 'Property'.
+     * Expected value is &#39;Property&#39;.
      * 
     */
     public String conditionType() {

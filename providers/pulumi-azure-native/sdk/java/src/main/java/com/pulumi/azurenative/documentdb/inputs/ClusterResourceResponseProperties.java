@@ -24,7 +24,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     public static final ClusterResourceResponseProperties Empty = new ClusterResourceResponseProperties();
 
     /**
-     * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
+     * Which authentication method Cassandra should use to authenticate clients. &#39;None&#39; turns off authentication, so should not be used except in emergencies. &#39;Cassandra&#39; is the default password based authentication. The default is &#39;Cassandra&#39;.
      * 
      */
     @Import(name="authenticationMethod")
@@ -68,7 +68,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     }
 
     /**
-     * Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
+     * Resource id of a subnet that this cluster&#39;s management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;
      * 
      */
     @Import(name="delegatedManagementSubnetId")

@@ -195,7 +195,7 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
+     * Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
      * 
      */
     @Import(name="schemaChangePolicy")

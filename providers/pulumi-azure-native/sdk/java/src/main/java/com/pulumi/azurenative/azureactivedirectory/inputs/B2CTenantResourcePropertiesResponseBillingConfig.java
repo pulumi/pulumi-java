@@ -19,7 +19,7 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
     public static final B2CTenantResourcePropertiesResponseBillingConfig Empty = new B2CTenantResourcePropertiesResponseBillingConfig();
 
     /**
-     * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
+     * The type of billing. Will be MAU for all new customers. If &#39;Auths&#39;, it can be updated to &#39;MAU&#39;. Cannot be changed if value is &#39;MAU&#39;. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
      * 
      */
     @Import(name="billingType")

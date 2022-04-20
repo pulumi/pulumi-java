@@ -33,7 +33,7 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     /**
      * The number of partitions to create in the
      * placement group.  Can only be specified when the `strategy` is set to
-     * `"partition"`.  Valid values are 1 - 7 (default is `2`).
+     * `&#34;partition&#34;`.  Valid values are 1 - 7 (default is `2`).
      * 
      */
     @Import(name="partitionCount")
@@ -44,7 +44,7 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
+     * The placement strategy. Can be `&#34;cluster&#34;`, `&#34;partition&#34;` or `&#34;spread&#34;`.
      * 
      */
     @Import(name="strategy", required=true)

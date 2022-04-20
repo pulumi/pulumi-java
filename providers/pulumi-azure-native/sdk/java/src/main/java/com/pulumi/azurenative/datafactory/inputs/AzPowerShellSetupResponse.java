@@ -19,7 +19,7 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
 
     /**
      * The type of custom setup.
-     * Expected value is 'AzPowerShellSetup'.
+     * Expected value is &#39;AzPowerShellSetup&#39;.
      * 
      */
     @Import(name="type", required=true)

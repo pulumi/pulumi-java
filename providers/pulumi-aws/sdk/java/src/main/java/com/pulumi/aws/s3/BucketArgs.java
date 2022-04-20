@@ -118,7 +118,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
+     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket&#39;s region.
      * 
      */
     @Import(name="hostedZoneId")

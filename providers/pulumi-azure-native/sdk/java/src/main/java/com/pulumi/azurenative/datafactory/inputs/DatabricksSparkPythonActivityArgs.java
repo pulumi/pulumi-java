@@ -116,7 +116,7 @@ public final class DatabricksSparkPythonActivityArgs extends com.pulumi.resource
 
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkPython'.
+     * Expected value is &#39;DatabricksSparkPython&#39;.
      * 
      */
     @Import(name="type", required=true)

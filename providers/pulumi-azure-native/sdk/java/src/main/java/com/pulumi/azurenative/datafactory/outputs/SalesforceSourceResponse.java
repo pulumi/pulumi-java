@@ -54,7 +54,7 @@ public final class SalesforceSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SalesforceSource'.
+     * Expected value is &#39;SalesforceSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class SalesforceSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SalesforceSource'.
+     * Expected value is &#39;SalesforceSource&#39;.
      * 
     */
     public String type() {

@@ -49,7 +49,7 @@ public final class StackCustomCookbooksSourceGetArgs extends com.pulumi.resource
     }
 
     /**
-     * The type of source to use. For example, "archive".
+     * The type of source to use. For example, &#34;archive&#34;.
      * 
      */
     @Import(name="type", required=true)

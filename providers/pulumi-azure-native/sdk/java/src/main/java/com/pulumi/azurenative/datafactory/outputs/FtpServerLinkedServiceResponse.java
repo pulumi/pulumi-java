@@ -76,7 +76,7 @@ public final class FtpServerLinkedServiceResponse {
     private final @Nullable Object port;
     /**
      * Type of linked service.
-     * Expected value is 'FtpServer'.
+     * Expected value is &#39;FtpServer&#39;.
      * 
      */
     private final String type;
@@ -195,7 +195,7 @@ public final class FtpServerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'FtpServer'.
+     * Expected value is &#39;FtpServer&#39;.
      * 
     */
     public String type() {

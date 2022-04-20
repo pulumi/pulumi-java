@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * <p>MariaDB parameters.</p>
+ * &lt;p&gt;MariaDB parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceMariaDbParametersArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class DataSourceMariaDbParametersArgs extends com.pulumi.resources.
     public static final DataSourceMariaDbParametersArgs Empty = new DataSourceMariaDbParametersArgs();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -31,7 +31,7 @@ public final class DataSourceMariaDbParametersArgs extends com.pulumi.resources.
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -42,7 +42,7 @@ public final class DataSourceMariaDbParametersArgs extends com.pulumi.resources.
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

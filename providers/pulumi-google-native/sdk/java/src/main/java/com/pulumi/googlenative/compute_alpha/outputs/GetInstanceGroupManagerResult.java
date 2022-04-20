@@ -78,7 +78,7 @@ public final class GetInstanceGroupManagerResult {
      */
     private final InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy;
     /**
-     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
      * 
      */
     private final String instanceTemplate;
@@ -308,7 +308,7 @@ public final class GetInstanceGroupManagerResult {
         return this.instanceLifecyclePolicy;
     }
     /**
-     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+     * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE.
      * 
     */
     public String instanceTemplate() {

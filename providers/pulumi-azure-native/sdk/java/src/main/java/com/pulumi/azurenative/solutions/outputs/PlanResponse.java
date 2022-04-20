@@ -32,7 +32,7 @@ public final class PlanResponse {
      */
     private final String publisher;
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
      */
     private final String version;
@@ -80,7 +80,7 @@ public final class PlanResponse {
         return this.publisher;
     }
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
     */
     public String version() {

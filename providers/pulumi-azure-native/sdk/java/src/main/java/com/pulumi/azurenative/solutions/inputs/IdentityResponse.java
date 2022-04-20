@@ -54,7 +54,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     @Import(name="userAssignedIdentities")

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AsymmetricEncryptedSecretResponse {
     /**
-     * The algorithm used to encrypt "Value".
+     * The algorithm used to encrypt &#34;Value&#34;.
      * 
      */
     private final String encryptionAlgorithm;
     /**
-     * Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
+     * Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
      * 
      */
     private final @Nullable String encryptionCertThumbprint;
@@ -38,14 +38,14 @@ public final class AsymmetricEncryptedSecretResponse {
     }
 
     /**
-     * The algorithm used to encrypt "Value".
+     * The algorithm used to encrypt &#34;Value&#34;.
      * 
     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
-     * Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
+     * Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
      * 
     */
     public Optional<String> encryptionCertThumbprint() {

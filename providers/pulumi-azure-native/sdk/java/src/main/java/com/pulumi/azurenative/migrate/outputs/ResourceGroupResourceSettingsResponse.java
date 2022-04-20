@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ResourceGroupResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'resourceGroups'.
+     * Expected value is &#39;resourceGroups&#39;.
      * 
      */
     private final String resourceType;
@@ -31,7 +31,7 @@ public final class ResourceGroupResourceSettingsResponse {
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'resourceGroups'.
+     * Expected value is &#39;resourceGroups&#39;.
      * 
     */
     public String resourceType() {

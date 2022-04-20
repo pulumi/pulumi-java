@@ -22,7 +22,7 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     public static final ImageTemplateVmProfileArgs Empty = new ImageTemplateVmProfileArgs();
 
     /**
-     * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+     * Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
      * 
      */
     @Import(name="osDiskSizeGB")

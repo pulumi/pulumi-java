@@ -45,7 +45,7 @@ public final class GetProjectResult {
      */
     private final String name;
     /**
-     * The project's provisioning state
+     * The project&#39;s provisioning state
      * 
      */
     private final String provisioningState;
@@ -144,7 +144,7 @@ public final class GetProjectResult {
         return this.name;
     }
     /**
-     * The project's provisioning state
+     * The project&#39;s provisioning state
      * 
     */
     public String provisioningState() {

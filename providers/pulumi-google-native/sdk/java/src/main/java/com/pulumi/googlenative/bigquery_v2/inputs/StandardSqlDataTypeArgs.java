@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The data type of a variable such as a function argument. Examples include: * INT64: `{"typeKind": "INT64"}` * ARRAY: { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "STRING"} } * STRUCT>: { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind: "STRING"} }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typekind": "DATE"} } } ] } }
+ * The data type of a variable such as a function argument. Examples include: * INT64: `{&#34;typeKind&#34;: &#34;INT64&#34;}` * ARRAY: { &#34;typeKind&#34;: &#34;ARRAY&#34;, &#34;arrayElementType&#34;: {&#34;typeKind&#34;: &#34;STRING&#34;} } * STRUCT&gt;: { &#34;typeKind&#34;: &#34;STRUCT&#34;, &#34;structType&#34;: { &#34;fields&#34;: [ { &#34;name&#34;: &#34;x&#34;, &#34;type&#34;: {&#34;typeKind: &#34;STRING&#34;} }, { &#34;name&#34;: &#34;y&#34;, &#34;type&#34;: { &#34;typeKind&#34;: &#34;ARRAY&#34;, &#34;arrayElementType&#34;: {&#34;typekind&#34;: &#34;DATE&#34;} } } ] } }
  * 
  */
 public final class StandardSqlDataTypeArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     public static final StandardSqlDataTypeArgs Empty = new StandardSqlDataTypeArgs();
 
     /**
-     * The type of the array's elements, if type_kind = "ARRAY".
+     * The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
      * 
      */
     @Import(name="arrayElementType")
@@ -32,7 +32,7 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The fields of this struct, in order, if type_kind = "STRUCT".
+     * The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
      * 
      */
     @Import(name="structType")
@@ -43,7 +43,7 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     * The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
      * 
      */
     @Import(name="typeKind", required=true)

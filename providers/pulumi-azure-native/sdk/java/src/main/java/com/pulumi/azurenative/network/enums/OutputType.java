@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Connection monitor output destination type. Currently, only "Workspace" is supported.
+     * Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
      * 
      */
     @EnumType

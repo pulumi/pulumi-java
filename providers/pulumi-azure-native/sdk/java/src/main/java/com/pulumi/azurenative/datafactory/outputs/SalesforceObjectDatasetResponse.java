@@ -59,7 +59,7 @@ public final class SalesforceObjectDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceObject'.
+     * Expected value is &#39;SalesforceObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SalesforceObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceObject'.
+     * Expected value is &#39;SalesforceObject&#39;.
      * 
     */
     public String type() {

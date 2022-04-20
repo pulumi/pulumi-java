@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Note holding the version of the provider's builder and the signature of the provenance message in linked BuildDetails.
+ * Note holding the version of the provider&#39;s builder and the signature of the provenance message in linked BuildDetails.
  * 
  */
 public final class BuildTypeArgs extends com.pulumi.resources.ResourceArgs {

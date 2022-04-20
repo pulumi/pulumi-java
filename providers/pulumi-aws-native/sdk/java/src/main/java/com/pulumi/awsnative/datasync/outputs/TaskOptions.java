@@ -35,7 +35,7 @@ public final class TaskOptions {
      */
     private final @Nullable Integer bytesPerSecond;
     /**
-     * The group ID (GID) of the file's owners.
+     * The group ID (GID) of the file&#39;s owners.
      * 
      */
     private final @Nullable TaskOptionsGid gid;
@@ -60,7 +60,7 @@ public final class TaskOptions {
      */
     private final @Nullable TaskOptionsPosixPermissions posixPermissions;
     /**
-     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
      * 
      */
     private final @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
@@ -85,7 +85,7 @@ public final class TaskOptions {
      */
     private final @Nullable TaskOptionsTransferMode transferMode;
     /**
-     * The user ID (UID) of the file's owner.
+     * The user ID (UID) of the file&#39;s owner.
      * 
      */
     private final @Nullable TaskOptionsUid uid;
@@ -142,7 +142,7 @@ public final class TaskOptions {
         return Optional.ofNullable(this.bytesPerSecond);
     }
     /**
-     * The group ID (GID) of the file's owners.
+     * The group ID (GID) of the file&#39;s owners.
      * 
     */
     public Optional<TaskOptionsGid> gid() {
@@ -177,7 +177,7 @@ public final class TaskOptions {
         return Optional.ofNullable(this.posixPermissions);
     }
     /**
-     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
      * 
     */
     public Optional<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles() {
@@ -212,7 +212,7 @@ public final class TaskOptions {
         return Optional.ofNullable(this.transferMode);
     }
     /**
-     * The user ID (UID) of the file's owner.
+     * The user ID (UID) of the file&#39;s owner.
      * 
     */
     public Optional<TaskOptionsUid> uid() {

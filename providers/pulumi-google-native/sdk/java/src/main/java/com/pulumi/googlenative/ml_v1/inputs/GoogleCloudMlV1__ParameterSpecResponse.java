@@ -63,7 +63,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     }
 
     /**
-     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
+     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
      * 
      */
     @Import(name="parameterName", required=true)

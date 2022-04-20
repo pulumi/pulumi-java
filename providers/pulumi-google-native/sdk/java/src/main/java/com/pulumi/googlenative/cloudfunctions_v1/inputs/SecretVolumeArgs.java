@@ -33,7 +33,7 @@ public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
+     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
      */
     @Import(name="project")

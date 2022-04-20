@@ -44,7 +44,7 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgLayer'.
+     * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
      * 
      */
     @Import(name="odataType", required=true)

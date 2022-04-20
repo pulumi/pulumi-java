@@ -20,7 +20,7 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     public static final SourceContextArgs Empty = new SourceContextArgs();
 
     /**
-     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
+     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
      * 
      */
     @Import(name="fileName")

@@ -24,7 +24,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
     private final @Nullable Object timestampFormat;
     /**
      * The import setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
     }
     /**
      * The import setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
      * 
     */
     public String type() {

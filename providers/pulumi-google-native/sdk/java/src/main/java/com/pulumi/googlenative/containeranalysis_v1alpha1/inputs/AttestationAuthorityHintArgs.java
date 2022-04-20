@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * This submessage provides human-readable hints about the purpose of the AttestationAuthority. Because the name of a Note acts as its resource reference, it is important to disambiguate the canonical name of the Note (which might be a UUID for security purposes) from "readable" names more suitable for debug output. Note that these hints should NOT be used to look up AttestationAuthorities in security sensitive contexts, such as when looking up Attestations to verify.
+ * This submessage provides human-readable hints about the purpose of the AttestationAuthority. Because the name of a Note acts as its resource reference, it is important to disambiguate the canonical name of the Note (which might be a UUID for security purposes) from &#34;readable&#34; names more suitable for debug output. Note that these hints should NOT be used to look up AttestationAuthorities in security sensitive contexts, such as when looking up Attestations to verify.
  * 
  */
 public final class AttestationAuthorityHintArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class AttestationAuthorityHintArgs extends com.pulumi.resources.Res
     public static final AttestationAuthorityHintArgs Empty = new AttestationAuthorityHintArgs();
 
     /**
-     * The human readable name of this Attestation Authority, for example "qa".
+     * The human readable name of this Attestation Authority, for example &#34;qa&#34;.
      * 
      */
     @Import(name="humanReadableName")

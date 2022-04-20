@@ -113,7 +113,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
 
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

@@ -36,7 +36,7 @@ public final class DataTransferServiceResourcePropertiesResponse {
     private final List<DataTransferRegionalServiceResourceResponse> locations;
     /**
      * ServiceType for the service.
-     * Expected value is 'DataTransfer'.
+     * Expected value is &#39;DataTransfer&#39;.
      * 
      */
     private final String serviceType;
@@ -92,7 +92,7 @@ public final class DataTransferServiceResourcePropertiesResponse {
     }
     /**
      * ServiceType for the service.
-     * Expected value is 'DataTransfer'.
+     * Expected value is &#39;DataTransfer&#39;.
      * 
     */
     public String serviceType() {

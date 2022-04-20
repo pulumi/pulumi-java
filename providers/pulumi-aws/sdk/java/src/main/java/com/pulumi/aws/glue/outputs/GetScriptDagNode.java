@@ -20,7 +20,7 @@ public final class GetScriptDagNode {
      */
     private final List<GetScriptDagNodeArg> args;
     /**
-     * A node identifier that is unique within the node's graph.
+     * A node identifier that is unique within the node&#39;s graph.
      * 
      */
     private final String id;
@@ -55,7 +55,7 @@ public final class GetScriptDagNode {
         return this.args;
     }
     /**
-     * A node identifier that is unique within the node's graph.
+     * A node identifier that is unique within the node&#39;s graph.
      * 
     */
     public String id() {

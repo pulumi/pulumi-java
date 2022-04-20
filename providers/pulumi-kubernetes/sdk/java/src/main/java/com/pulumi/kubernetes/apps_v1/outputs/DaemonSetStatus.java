@@ -19,7 +19,7 @@ public final class DaemonSetStatus {
      */
     private final @Nullable Integer collisionCount;
     /**
-     * Represents the latest available observations of a DaemonSet's current state.
+     * Represents the latest available observations of a DaemonSet&#39;s current state.
      * 
      */
     private final @Nullable List<DaemonSetCondition> conditions;
@@ -96,7 +96,7 @@ public final class DaemonSetStatus {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
-     * Represents the latest available observations of a DaemonSet's current state.
+     * Represents the latest available observations of a DaemonSet&#39;s current state.
      * 
     */
     public List<DaemonSetCondition> conditions() {

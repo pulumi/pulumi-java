@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
      */
     private final Double minValue;
     /**
-     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
+     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
      * 
      */
     private final String parameterName;
@@ -94,7 +94,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
         return this.minValue;
     }
     /**
-     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
+     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
      * 
     */
     public String parameterName() {

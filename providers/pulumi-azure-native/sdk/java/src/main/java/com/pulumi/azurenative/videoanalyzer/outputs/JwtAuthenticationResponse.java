@@ -37,7 +37,7 @@ public final class JwtAuthenticationResponse {
     private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
      * 
      */
     private final String type;
@@ -86,7 +86,7 @@ public final class JwtAuthenticationResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
      * 
     */
     public String type() {

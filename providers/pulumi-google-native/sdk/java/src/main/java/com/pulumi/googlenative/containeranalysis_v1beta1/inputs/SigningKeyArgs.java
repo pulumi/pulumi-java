@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * This defines the format used to record keys used in the software supply chain. An in-toto link is attested using one or more keys defined in the in-toto layout. An example of this is: { "key_id": "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b0...", "key_type": "rsa", "public_key_value": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0B...", "key_scheme": "rsassa-pss-sha256" } The format for in-toto's key definition can be found in section 4.2 of the in-toto specification.
+ * This defines the format used to record keys used in the software supply chain. An in-toto link is attested using one or more keys defined in the in-toto layout. An example of this is: { &#34;key_id&#34;: &#34;776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b0...&#34;, &#34;key_type&#34;: &#34;rsa&#34;, &#34;public_key_value&#34;: &#34;-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0B...&#34;, &#34;key_scheme&#34;: &#34;rsassa-pss-sha256&#34; } The format for in-toto&#39;s key definition can be found in section 4.2 of the in-toto specification.
  * 
  */
 public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
@@ -31,7 +31,7 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
+     * This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
      * 
      */
     @Import(name="keyScheme")
@@ -42,7 +42,7 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
+     * This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
      * 
      */
     @Import(name="keyType")

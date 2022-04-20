@@ -33,7 +33,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends com.
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForMySql'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForMySql&#39;.
      * 
      */
     @Import(name="taskType", required=true)

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IngressEnvironmentStatusResponse {
     /**
-     * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
+     * This string represents the state of ingress operations on an environment. It can be &#34;Disabled&#34;, &#34;Ready&#34;, &#34;Running&#34;, &#34;Paused&#34; or &#34;Unknown&#34;
      * 
      */
     private final @Nullable String state;
     /**
-     * An object that contains the details about an environment's state.
+     * An object that contains the details about an environment&#39;s state.
      * 
      */
     private final EnvironmentStateDetailsResponse stateDetails;
@@ -32,14 +32,14 @@ public final class IngressEnvironmentStatusResponse {
     }
 
     /**
-     * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
+     * This string represents the state of ingress operations on an environment. It can be &#34;Disabled&#34;, &#34;Ready&#34;, &#34;Running&#34;, &#34;Paused&#34; or &#34;Unknown&#34;
      * 
     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * An object that contains the details about an environment's state.
+     * An object that contains the details about an environment&#39;s state.
      * 
     */
     public EnvironmentStateDetailsResponse stateDetails() {

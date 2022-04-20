@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFolderResult {
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String createTime;
     /**
-     * The folder's display name.
+     * The folder&#39;s display name.
      * 
      */
     private final String displayName;
@@ -30,7 +30,7 @@ public final class GetFolderResult {
      */
     private final String id;
     /**
-     * The Folder's current lifecycle state.
+     * The Folder&#39;s current lifecycle state.
      * 
      */
     private final String lifecycleState;
@@ -76,14 +76,14 @@ public final class GetFolderResult {
     }
 
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The folder's display name.
+     * The folder&#39;s display name.
      * 
     */
     public String displayName() {
@@ -103,7 +103,7 @@ public final class GetFolderResult {
         return this.id;
     }
     /**
-     * The Folder's current lifecycle state.
+     * The Folder&#39;s current lifecycle state.
      * 
     */
     public String lifecycleState() {

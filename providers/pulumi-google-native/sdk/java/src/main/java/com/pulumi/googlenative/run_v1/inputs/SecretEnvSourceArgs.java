@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Not supported by Cloud Run SecretEnvSource selects a Secret to populate the environment variables with. The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
+ * Not supported by Cloud Run SecretEnvSource selects a Secret to populate the environment variables with. The contents of the target Secret&#39;s Data field will represent the key-value pairs as environment variables.
  * 
  */
 public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,7 +22,7 @@ public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs
     public static final SecretEnvSourceArgs Empty = new SecretEnvSourceArgs();
 
     /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
      * 
      */
     @Import(name="localObjectReference")

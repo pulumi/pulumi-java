@@ -99,7 +99,7 @@ public final class HiveSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HiveSource'.
+     * Expected value is &#39;HiveSource&#39;.
      * 
      */
     @Import(name="type", required=true)

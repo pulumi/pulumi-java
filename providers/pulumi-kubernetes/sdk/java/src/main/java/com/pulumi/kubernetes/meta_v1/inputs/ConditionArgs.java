@@ -54,7 +54,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
+     * reason contains a programmatic identifier indicating the reason for the condition&#39;s last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
      * 
      */
     @Import(name="reason", required=true)

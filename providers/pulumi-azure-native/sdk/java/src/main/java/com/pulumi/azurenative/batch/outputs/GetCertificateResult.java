@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCertificateResult {
     /**
-     * This is only returned when the certificate provisioningState is 'Failed'.
+     * This is only returned when the certificate provisioningState is &#39;Failed&#39;.
      * 
      */
     private final DeleteCertificateErrorResponse deleteCertificateError;
@@ -56,7 +56,7 @@ public final class GetCertificateResult {
      */
     private final @Nullable String thumbprint;
     /**
-     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     * This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
      */
     private final @Nullable String thumbprintAlgorithm;
@@ -97,7 +97,7 @@ public final class GetCertificateResult {
     }
 
     /**
-     * This is only returned when the certificate provisioningState is 'Failed'.
+     * This is only returned when the certificate provisioningState is &#39;Failed&#39;.
      * 
     */
     public DeleteCertificateErrorResponse deleteCertificateError() {
@@ -162,7 +162,7 @@ public final class GetCertificateResult {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
-     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     * This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
     */
     public Optional<String> thumbprintAlgorithm() {

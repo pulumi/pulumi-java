@@ -99,7 +99,7 @@ public final class MySqlSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'MySqlSource'.
+     * Expected value is &#39;MySqlSource&#39;.
      * 
      */
     @Import(name="type", required=true)

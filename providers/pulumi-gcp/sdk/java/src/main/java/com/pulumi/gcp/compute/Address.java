@@ -21,9 +21,9 @@ import javax.annotation.Nullable;
  * 
  * Each virtual machine instance has an ephemeral internal IP address and,
  * optionally, an external IP address. To communicate between instances on
- * the same network, you can use an instance's internal IP address. To
+ * the same network, you can use an instance&#39;s internal IP address. To
  * communicate with the Internet and instances outside of the same network,
- * you must specify the instance's external IP address.
+ * you must specify the instance&#39;s external IP address.
  * 
  * Internal IP addresses are ephemeral and only belong to an instance for
  * the lifetime of the instance; if the instance is deleted and recreated,
@@ -144,14 +144,14 @@ public class Address extends com.pulumi.resources.CustomResource {
         return this.labelFingerprint;
     }
     /**
-     * Labels to apply to this address.  A list of key->value pairs.
+     * Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
-     * @return Labels to apply to this address.  A list of key->value pairs.
+     * @return Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {
@@ -317,7 +317,7 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * The URL of the subnetwork in which to reserve the address. If an IP
-     * address is specified, it must be within the subnetwork's IP range.
+     * address is specified, it must be within the subnetwork&#39;s IP range.
      * This field can only be used with INTERNAL type with
      * GCE_ENDPOINT/DNS_RESOLVER purposes.
      * 
@@ -327,7 +327,7 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The URL of the subnetwork in which to reserve the address. If an IP
-     * address is specified, it must be within the subnetwork's IP range.
+     * address is specified, it must be within the subnetwork&#39;s IP range.
      * This field can only be used with INTERNAL type with
      * GCE_ENDPOINT/DNS_RESOLVER purposes.
      * 

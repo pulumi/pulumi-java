@@ -28,7 +28,7 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
      */
     @Import(name="contentCommitment", required=true)

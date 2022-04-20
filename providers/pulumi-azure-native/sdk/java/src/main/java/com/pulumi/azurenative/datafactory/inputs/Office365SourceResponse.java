@@ -32,7 +32,7 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
+     * The Column to apply the &lt;paramref name=&#34;StartTime&#34;/&gt; and &lt;paramref name=&#34;EndTime&#34;/&gt;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="dateFilterColumn")
@@ -76,7 +76,7 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { &#34;name&#34;: &#34;Id&#34; }, { &#34;name&#34;: &#34;CreatedDateTime&#34; } ]
      * 
      */
     @Import(name="outputColumns")
@@ -121,7 +121,7 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy source type.
-     * Expected value is 'Office365Source'.
+     * Expected value is &#39;Office365Source&#39;.
      * 
      */
     @Import(name="type", required=true)

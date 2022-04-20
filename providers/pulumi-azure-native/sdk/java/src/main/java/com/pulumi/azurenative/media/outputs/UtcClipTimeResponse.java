@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class UtcClipTimeResponse {
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.UtcClipTime'.
+     * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
      * 
      */
     private final String odataType;
@@ -31,7 +31,7 @@ public final class UtcClipTimeResponse {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.UtcClipTime'.
+     * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
      * 
     */
     public String odataType() {

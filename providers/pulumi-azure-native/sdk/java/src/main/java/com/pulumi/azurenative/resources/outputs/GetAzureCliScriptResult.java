@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAzureCliScriptResult {
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
     private final @Nullable String arguments;
@@ -31,7 +31,7 @@ public final class GetAzureCliScriptResult {
      */
     private final String azCliVersion;
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     private final @Nullable String cleanupPreference;
@@ -62,7 +62,7 @@ public final class GetAzureCliScriptResult {
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
      * Type of the script.
-     * Expected value is 'AzureCLI'.
+     * Expected value is &#39;AzureCLI&#39;.
      * 
      */
     private final String kind;
@@ -188,7 +188,7 @@ public final class GetAzureCliScriptResult {
     }
 
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
     */
     public Optional<String> arguments() {
@@ -202,7 +202,7 @@ public final class GetAzureCliScriptResult {
         return this.azCliVersion;
     }
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
     */
     public Optional<String> cleanupPreference() {
@@ -245,7 +245,7 @@ public final class GetAzureCliScriptResult {
     }
     /**
      * Type of the script.
-     * Expected value is 'AzureCLI'.
+     * Expected value is &#39;AzureCLI&#39;.
      * 
     */
     public String kind() {

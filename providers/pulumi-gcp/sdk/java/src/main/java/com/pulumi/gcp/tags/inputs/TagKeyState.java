@@ -16,8 +16,8 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     public static final TagKeyState Empty = new TagKeyState();
 
     /**
-     * Output only. Creation time. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
-     * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * Output only. Creation time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+     * fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="createTime")
@@ -61,7 +61,7 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
+     * Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
      * 
      */
     @Import(name="parent")
@@ -84,8 +84,8 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Output only. Update time. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional
-     * digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * Output only. Update time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional
+     * digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="updateTime")

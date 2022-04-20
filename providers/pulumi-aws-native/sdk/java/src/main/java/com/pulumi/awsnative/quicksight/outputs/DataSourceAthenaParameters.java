@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceAthenaParameters {
     /**
-     * <p>The workgroup that Amazon Athena uses.</p>
+     * &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
      * 
      */
     private final @Nullable String workGroup;
@@ -23,7 +23,7 @@ public final class DataSourceAthenaParameters {
     }
 
     /**
-     * <p>The workgroup that Amazon Athena uses.</p>
+     * &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
      * 
     */
     public Optional<String> workGroup() {

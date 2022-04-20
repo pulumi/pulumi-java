@@ -36,7 +36,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends com.pulumi.re
 
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplica2012'.
+     * Expected value is &#39;HyperVReplica2012&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

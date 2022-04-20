@@ -18,27 +18,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
     /**
-     * The value spec for a 'CATEGORICAL' parameter.
+     * The value spec for a &#39;CATEGORICAL&#39; parameter.
      * 
      */
     private final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec;
     /**
-     * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     * A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
      * 
      */
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs;
     /**
-     * The value spec for a 'DISCRETE' parameter.
+     * The value spec for a &#39;DISCRETE&#39; parameter.
      * 
      */
     private final GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec;
     /**
-     * The value spec for a 'DOUBLE' parameter.
+     * The value spec for a &#39;DOUBLE&#39; parameter.
      * 
      */
     private final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec;
     /**
-     * The value spec for an 'INTEGER' parameter.
+     * The value spec for an &#39;INTEGER&#39; parameter.
      * 
      */
     private final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec;
@@ -88,35 +88,35 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
     }
 
     /**
-     * The value spec for a 'CATEGORICAL' parameter.
+     * The value spec for a &#39;CATEGORICAL&#39; parameter.
      * 
     */
     public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec() {
         return this.categoricalValueSpec;
     }
     /**
-     * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     * A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
      * 
     */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs() {
         return this.childParameterSpecs;
     }
     /**
-     * The value spec for a 'DISCRETE' parameter.
+     * The value spec for a &#39;DISCRETE&#39; parameter.
      * 
     */
     public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec() {
         return this.discreteValueSpec;
     }
     /**
-     * The value spec for a 'DOUBLE' parameter.
+     * The value spec for a &#39;DOUBLE&#39; parameter.
      * 
     */
     public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec() {
         return this.doubleValueSpec;
     }
     /**
-     * The value spec for an 'INTEGER' parameter.
+     * The value spec for an &#39;INTEGER&#39; parameter.
      * 
     */
     public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec() {

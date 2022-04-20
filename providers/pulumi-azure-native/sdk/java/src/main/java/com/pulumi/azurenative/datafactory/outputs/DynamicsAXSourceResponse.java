@@ -54,7 +54,7 @@ public final class DynamicsAXSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'DynamicsAXSource'.
+     * Expected value is &#39;DynamicsAXSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class DynamicsAXSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'DynamicsAXSource'.
+     * Expected value is &#39;DynamicsAXSource&#39;.
      * 
     */
     public String type() {

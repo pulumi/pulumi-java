@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
      */
     private final @Nullable Integer numRetries;
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
     }
 
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
     */
     public Optional<Integer> numRetries() {

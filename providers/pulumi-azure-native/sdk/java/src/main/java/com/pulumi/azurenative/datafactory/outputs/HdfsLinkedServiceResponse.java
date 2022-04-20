@@ -56,7 +56,7 @@ public final class HdfsLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'Hdfs'.
+     * Expected value is &#39;Hdfs&#39;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class HdfsLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Hdfs'.
+     * Expected value is &#39;Hdfs&#39;.
      * 
     */
     public String type() {

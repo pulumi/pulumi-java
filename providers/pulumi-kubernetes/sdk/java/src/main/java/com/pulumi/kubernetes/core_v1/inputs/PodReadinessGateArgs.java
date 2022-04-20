@@ -19,13 +19,13 @@ public final class PodReadinessGateArgs extends com.pulumi.resources.ResourceArg
     public static final PodReadinessGateArgs Empty = new PodReadinessGateArgs();
 
     /**
-     * ConditionType refers to a condition in the pod's condition list with matching type.
+     * ConditionType refers to a condition in the pod&#39;s condition list with matching type.
      * 
      * Possible enum values:
-     *  - `"ContainersReady"` indicates whether all containers in the pod are ready.
-     *  - `"Initialized"` means that all init containers in the pod have started successfully.
-     *  - `"PodScheduled"` represents status of the scheduling process for this pod.
-     *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
+     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
+     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
+     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
+     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
      */
     @Import(name="conditionType", required=true)

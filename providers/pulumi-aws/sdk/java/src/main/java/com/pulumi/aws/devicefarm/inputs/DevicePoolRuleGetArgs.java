@@ -16,7 +16,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     public static final DevicePoolRuleGetArgs Empty = new DevicePoolRuleGetArgs();
 
     /**
-     * The rule's stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
+     * The rule&#39;s stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
      * 
      */
     @Import(name="attribute")
@@ -27,7 +27,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Specifies how Device Farm compares the rule's attribute to the value. For the operators that are supported by each attribute. Valid values are: `EQUALS`, `NOT_IN`, `IN`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`, `CONTAINS`.
+     * Specifies how Device Farm compares the rule&#39;s attribute to the value. For the operators that are supported by each attribute. Valid values are: `EQUALS`, `NOT_IN`, `IN`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`, `CONTAINS`.
      * 
      */
     @Import(name="operator")
@@ -38,7 +38,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The rule's value.
+     * The rule&#39;s value.
      * 
      */
     @Import(name="value")

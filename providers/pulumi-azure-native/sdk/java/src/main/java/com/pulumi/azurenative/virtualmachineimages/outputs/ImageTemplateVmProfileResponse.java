@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplateVmProfileResponse {
     /**
-     * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+     * Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
      * 
      */
     private final @Nullable Integer osDiskSizeGB;
@@ -40,7 +40,7 @@ public final class ImageTemplateVmProfileResponse {
     }
 
     /**
-     * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+     * Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
      * 
     */
     public Optional<Integer> osDiskSizeGB() {

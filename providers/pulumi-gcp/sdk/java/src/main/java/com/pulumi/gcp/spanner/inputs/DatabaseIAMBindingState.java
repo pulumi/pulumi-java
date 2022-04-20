@@ -36,7 +36,7 @@ public final class DatabaseIAMBindingState extends com.pulumi.resources.Resource
     }
 
     /**
-     * (Computed) The etag of the database's IAM policy.
+     * (Computed) The etag of the database&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

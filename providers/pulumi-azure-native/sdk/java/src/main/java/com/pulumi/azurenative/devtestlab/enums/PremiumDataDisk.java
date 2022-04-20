@@ -10,8 +10,8 @@ import java.util.StringJoiner;
 
     /**
      * The setting to enable usage of premium data disks.
-     * When its value is 'Enabled', creation of standard or premium data disks is allowed.
-     * When its value is 'Disabled', only creation of standard data disks is allowed.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
     @EnumType

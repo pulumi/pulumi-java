@@ -264,7 +264,7 @@ public final class CopyActivityResponse {
     private final @Nullable Object translator;
     /**
      * Type of activity.
-     * Expected value is 'Copy'.
+     * Expected value is &#39;Copy&#39;.
      * 
      */
     private final String type;
@@ -480,7 +480,7 @@ public final class CopyActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Copy'.
+     * Expected value is &#39;Copy&#39;.
      * 
     */
     public String type() {

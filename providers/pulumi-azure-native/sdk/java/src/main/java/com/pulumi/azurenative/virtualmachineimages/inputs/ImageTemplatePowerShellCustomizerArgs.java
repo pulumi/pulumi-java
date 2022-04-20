@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
+ * Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of &#39;scriptUri&#39; or &#39;inline&#39; can be specified.
  * 
  */
 public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.resources.ResourceArgs {
@@ -89,8 +89,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     }
 
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'PowerShell'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;PowerShell&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -22,7 +22,7 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     public static final GitHubEventsConfigArgs Empty = new GitHubEventsConfigArgs();
 
     /**
-     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     @Import(name="enterpriseConfigResourceName")
@@ -44,7 +44,7 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
      * 
      */
     @Import(name="name")
@@ -55,7 +55,7 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     @Import(name="owner")

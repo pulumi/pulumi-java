@@ -33,7 +33,7 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.
+     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
      * 
      */
     @Import(name="key")

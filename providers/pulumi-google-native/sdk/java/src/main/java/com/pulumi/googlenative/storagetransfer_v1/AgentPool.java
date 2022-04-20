@@ -20,14 +20,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:storagetransfer/v1:AgentPool")
 public class AgentPool extends com.pulumi.resources.CustomResource {
     /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
+     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
      */
     @Export(name="bandwidthLimit", type=BandwidthLimitResponse.class, parameters={})
     private Output<BandwidthLimitResponse> bandwidthLimit;
 
     /**
-     * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
+     * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
      */
     public Output<BandwidthLimitResponse> bandwidthLimit() {

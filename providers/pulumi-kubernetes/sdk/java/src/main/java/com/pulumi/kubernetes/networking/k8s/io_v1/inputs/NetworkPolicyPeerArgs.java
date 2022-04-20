@@ -47,7 +47,7 @@ public final class NetworkPolicyPeerArgs extends com.pulumi.resources.ResourceAr
     /**
      * This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
      * 
-     * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy's own Namespace.
+     * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
      * 
      */
     @Import(name="podSelector")

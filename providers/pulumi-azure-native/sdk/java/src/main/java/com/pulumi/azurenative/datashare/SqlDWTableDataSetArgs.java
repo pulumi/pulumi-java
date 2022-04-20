@@ -50,7 +50,7 @@ public final class SqlDWTableDataSetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Kind of data set.
-     * Expected value is 'SqlDWTable'.
+     * Expected value is &#39;SqlDWTable&#39;.
      * 
      */
     @Import(name="kind", required=true)

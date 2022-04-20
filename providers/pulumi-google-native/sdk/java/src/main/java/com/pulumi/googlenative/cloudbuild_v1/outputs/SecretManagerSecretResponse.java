@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SecretManagerSecretResponse {
     /**
-     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.
+     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
      * 
      */
     private final String env;
@@ -29,7 +29,7 @@ public final class SecretManagerSecretResponse {
     }
 
     /**
-     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.
+     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
      * 
     */
     public String env() {

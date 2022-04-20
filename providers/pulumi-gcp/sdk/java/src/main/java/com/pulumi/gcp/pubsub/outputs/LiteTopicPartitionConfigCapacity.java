@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LiteTopicPartitionConfigCapacity {
     /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     private final Integer publishMibPerSec;
     /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     private final Integer subscribeMibPerSec;
@@ -29,14 +29,14 @@ public final class LiteTopicPartitionConfigCapacity {
     }
 
     /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
     */
     public Integer publishMibPerSec() {
         return this.publishMibPerSec;
     }
     /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
     */
     public Integer subscribeMibPerSec() {

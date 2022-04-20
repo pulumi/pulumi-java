@@ -140,28 +140,28 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and &#39;-&#39;, &#39;_&#39;, &#39;(&#39;, &#39;)&#39; and&#39;.&#39;. Note that the name cannot end with &#39;.&#39;
      * 
      */
     @Export(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
     /**
-     * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and &#39;-&#39;, &#39;_&#39;, &#39;(&#39;, &#39;)&#39; and&#39;.&#39;. Note that the name cannot end with &#39;.&#39;
      * 
      */
     public Output</* @Nullable */ String> managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
-     * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     * Setting this to &#39;default&#39; will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
     @Export(name="managedVirtualNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedVirtualNetwork;
 
     /**
-     * @return Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     * @return Setting this to &#39;default&#39; will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
     public Output</* @Nullable */ String> managedVirtualNetwork() {
@@ -294,14 +294,14 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

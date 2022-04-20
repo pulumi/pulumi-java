@@ -57,7 +57,7 @@ public final class ControlActivityArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Type of activity.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     @Import(name="type", required=true)

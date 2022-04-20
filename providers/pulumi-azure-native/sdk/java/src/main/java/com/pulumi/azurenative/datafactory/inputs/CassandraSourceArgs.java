@@ -34,7 +34,7 @@ public final class CassandraSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is &#39;ONE&#39;. It is case-insensitive.
      * 
      */
     @Import(name="consistencyLevel")
@@ -112,7 +112,7 @@ public final class CassandraSourceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy source type.
-     * Expected value is 'CassandraSource'.
+     * Expected value is &#39;CassandraSource&#39;.
      * 
      */
     @Import(name="type", required=true)

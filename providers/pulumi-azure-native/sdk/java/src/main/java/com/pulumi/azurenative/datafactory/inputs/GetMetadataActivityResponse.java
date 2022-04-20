@@ -144,7 +144,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of activity.
-     * Expected value is 'GetMetadata'.
+     * Expected value is &#39;GetMetadata&#39;.
      * 
      */
     @Import(name="type", required=true)

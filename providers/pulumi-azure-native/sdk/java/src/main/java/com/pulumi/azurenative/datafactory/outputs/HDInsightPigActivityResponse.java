@@ -75,7 +75,7 @@ public final class HDInsightPigActivityResponse {
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
      * Type of activity.
-     * Expected value is 'HDInsightPig'.
+     * Expected value is &#39;HDInsightPig&#39;.
      * 
      */
     private final String type;
@@ -194,7 +194,7 @@ public final class HDInsightPigActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'HDInsightPig'.
+     * Expected value is &#39;HDInsightPig&#39;.
      * 
     */
     public String type() {

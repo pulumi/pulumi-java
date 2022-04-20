@@ -25,7 +25,7 @@ public final class CommonExportPropertiesResponse {
      */
     private final ExportDeliveryInfoResponse deliveryInfo;
     /**
-     * The format of the export being delivered. Currently only 'Csv' is supported.
+     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
      */
     private final @Nullable String format;
@@ -69,7 +69,7 @@ public final class CommonExportPropertiesResponse {
         return this.deliveryInfo;
     }
     /**
-     * The format of the export being delivered. Currently only 'Csv' is supported.
+     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
     */
     public Optional<String> format() {

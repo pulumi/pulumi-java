@@ -39,7 +39,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends com.pulumi.re
 
     /**
      * Kind of data set.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     @Import(name="kind", required=true)

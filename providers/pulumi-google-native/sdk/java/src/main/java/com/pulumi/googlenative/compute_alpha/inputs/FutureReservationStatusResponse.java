@@ -29,7 +29,7 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
     }
 
     /**
-     * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+     * This count indicates the fulfilled capacity so far. This is set during &#34;PROVISIONING&#34; state. This count also includes capacity delivered as part of existing matching reservations.
      * 
      */
     @Import(name="fulfilledCount", required=true)

@@ -30,7 +30,7 @@ public final class AzureKeyVaultSecretReferenceResponse {
     private final LinkedServiceReferenceResponse store;
     /**
      * Type of the secret.
-     * Expected value is 'AzureKeyVaultSecret'.
+     * Expected value is &#39;AzureKeyVaultSecret&#39;.
      * 
      */
     private final String type;
@@ -70,7 +70,7 @@ public final class AzureKeyVaultSecretReferenceResponse {
     }
     /**
      * Type of the secret.
-     * Expected value is 'AzureKeyVaultSecret'.
+     * Expected value is &#39;AzureKeyVaultSecret&#39;.
      * 
     */
     public String type() {

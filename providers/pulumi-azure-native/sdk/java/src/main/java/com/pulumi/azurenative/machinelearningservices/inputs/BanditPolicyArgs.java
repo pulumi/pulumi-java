@@ -44,7 +44,7 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Expected value is 'Bandit'.
+     * Expected value is &#39;Bandit&#39;.
      * 
      */
     @Import(name="policyType", required=true)

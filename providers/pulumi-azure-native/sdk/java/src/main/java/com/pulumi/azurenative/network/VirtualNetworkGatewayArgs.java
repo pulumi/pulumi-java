@@ -41,7 +41,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Virtual network gateway's BGP speaker settings.
+     * Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     @Import(name="bgpSettings")

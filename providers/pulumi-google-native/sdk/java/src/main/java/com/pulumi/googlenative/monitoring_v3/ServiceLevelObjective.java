@@ -23,14 +23,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:monitoring/v3:ServiceLevelObjective")
 public class ServiceLevelObjective extends com.pulumi.resources.CustomResource {
     /**
-     * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
     @Export(name="calendarPeriod", type=String.class, parameters={})
     private Output<String> calendarPeriod;
 
     /**
-     * @return A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * @return A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
     public Output<String> calendarPeriod() {
@@ -51,14 +51,14 @@ public class ServiceLevelObjective extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
+     * The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
      * 
      */
     @Export(name="goal", type=Double.class, parameters={})
     private Output<Double> goal;
 
     /**
-     * @return The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
+     * @return The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
      * 
      */
     public Output<Double> goal() {
@@ -79,28 +79,28 @@ public class ServiceLevelObjective extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
+     * A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
     @Export(name="rollingPeriod", type=String.class, parameters={})
     private Output<String> rollingPeriod;
 
     /**
-     * @return A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
+     * @return A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
     public Output<String> rollingPeriod() {
         return this.rollingPeriod;
     }
     /**
-     * The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
+     * The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
      * 
      */
     @Export(name="serviceLevelIndicator", type=ServiceLevelIndicatorResponse.class, parameters={})
     private Output<ServiceLevelIndicatorResponse> serviceLevelIndicator;
 
     /**
-     * @return The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
+     * @return The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
      * 
      */
     public Output<ServiceLevelIndicatorResponse> serviceLevelIndicator() {

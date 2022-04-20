@@ -206,8 +206,8 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
 
     /**
      * The version of the API in the given runtime environment.
-     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
-     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
     @Import(name="runtimeApiVersion")
@@ -240,7 +240,7 @@ public final class StandardAppVersionState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     @Import(name="versionId")

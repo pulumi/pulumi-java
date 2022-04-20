@@ -39,7 +39,7 @@ public final class ScalarFunctionPropertiesResponse {
     private final @Nullable FunctionOutputResponse output;
     /**
      * Indicates the type of function.
-     * Expected value is 'Scalar'.
+     * Expected value is &#39;Scalar&#39;.
      * 
      */
     private final String type;
@@ -88,7 +88,7 @@ public final class ScalarFunctionPropertiesResponse {
     }
     /**
      * Indicates the type of function.
-     * Expected value is 'Scalar'.
+     * Expected value is &#39;Scalar&#39;.
      * 
     */
     public String type() {

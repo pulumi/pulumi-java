@@ -47,42 +47,42 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
         return this.armTemplateFolderPath;
     }
     /**
-     * The artifact source's branch reference.
+     * The artifact source&#39;s branch reference.
      * 
      */
     @Export(name="branchRef", type=String.class, parameters={})
     private Output</* @Nullable */ String> branchRef;
 
     /**
-     * @return The artifact source's branch reference.
+     * @return The artifact source&#39;s branch reference.
      * 
      */
     public Output</* @Nullable */ String> branchRef() {
         return this.branchRef;
     }
     /**
-     * The artifact source's creation date.
+     * The artifact source&#39;s creation date.
      * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
-     * @return The artifact source's creation date.
+     * @return The artifact source&#39;s creation date.
      * 
      */
     public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
-     * The artifact source's display name.
+     * The artifact source&#39;s display name.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
-     * @return The artifact source's display name.
+     * @return The artifact source&#39;s display name.
      * 
      */
     public Output</* @Nullable */ String> displayName() {
@@ -159,14 +159,14 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
         return this.securityToken;
     }
     /**
-     * The artifact source's type.
+     * The artifact source&#39;s type.
      * 
      */
     @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
-     * @return The artifact source's type.
+     * @return The artifact source&#39;s type.
      * 
      */
     public Output</* @Nullable */ String> sourceType() {
@@ -229,14 +229,14 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
         return this.uniqueIdentifier;
     }
     /**
-     * The artifact source's URI.
+     * The artifact source&#39;s URI.
      * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
-     * @return The artifact source's URI.
+     * @return The artifact source&#39;s URI.
      * 
      */
     public Output</* @Nullable */ String> uri() {

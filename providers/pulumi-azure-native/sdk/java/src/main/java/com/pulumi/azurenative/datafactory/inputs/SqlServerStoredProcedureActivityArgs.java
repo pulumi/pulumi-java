@@ -94,7 +94,7 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     }
 
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
     @Import(name="storedProcedureParameters")
@@ -106,7 +106,7 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
 
     /**
      * Type of activity.
-     * Expected value is 'SqlServerStoredProcedure'.
+     * Expected value is &#39;SqlServerStoredProcedure&#39;.
      * 
      */
     @Import(name="type", required=true)

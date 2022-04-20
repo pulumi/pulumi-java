@@ -15,7 +15,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
      */
     private final String followupIntentName;
     /**
-     * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
+     * The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
      * 
      */
     private final String parentFollowupIntentName;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
         return this.followupIntentName;
     }
     /**
-     * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
+     * The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
      * 
     */
     public String parentFollowupIntentName() {

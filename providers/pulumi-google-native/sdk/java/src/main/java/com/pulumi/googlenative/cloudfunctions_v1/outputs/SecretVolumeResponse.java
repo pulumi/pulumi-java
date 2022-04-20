@@ -17,7 +17,7 @@ public final class SecretVolumeResponse {
      */
     private final String mountPath;
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
+     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
      */
     private final String project;
@@ -52,7 +52,7 @@ public final class SecretVolumeResponse {
         return this.mountPath;
     }
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
+     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
     */
     public String project() {

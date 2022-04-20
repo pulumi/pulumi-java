@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeInstanceSshSettingsResponse {
     /**
-     * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+     * Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
      * 
      */
     private final @Nullable String adminPublicKey;
@@ -46,7 +46,7 @@ public final class ComputeInstanceSshSettingsResponse {
     }
 
     /**
-     * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+     * Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
      * 
     */
     public Optional<String> adminPublicKey() {

@@ -28,7 +28,7 @@ public final class ConsentStoreIamPolicyState extends com.pulumi.resources.Resou
 
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * Used to find the parent resource to bind the IAM policy to
      * 
      */

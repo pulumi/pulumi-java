@@ -20,7 +20,7 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     public static final ServiceLevelObjectiveArgs Empty = new ServiceLevelObjectiveArgs();
 
     /**
-     * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
     @Import(name="calendarPeriod")
@@ -42,7 +42,7 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
+     * The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
      * 
      */
     @Import(name="goal")
@@ -64,7 +64,7 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
+     * A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
     @Import(name="rollingPeriod")
@@ -82,7 +82,7 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
+     * The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
      * 
      */
     @Import(name="serviceLevelIndicator")

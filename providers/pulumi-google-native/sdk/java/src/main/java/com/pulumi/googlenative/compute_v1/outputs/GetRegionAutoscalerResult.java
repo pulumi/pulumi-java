@@ -60,7 +60,7 @@ public final class GetRegionAutoscalerResult {
      */
     private final String selfLink;
     /**
-     * The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
+     * The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn&#39;t read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
      * 
      */
     private final String status;
@@ -174,7 +174,7 @@ public final class GetRegionAutoscalerResult {
         return this.selfLink;
     }
     /**
-     * The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
+     * The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn&#39;t read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
      * 
     */
     public String status() {

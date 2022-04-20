@@ -30,7 +30,7 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The VM's ID in the source.
+     * The VM&#39;s ID in the source.
      * 
      */
     @Import(name="vmId", required=true)

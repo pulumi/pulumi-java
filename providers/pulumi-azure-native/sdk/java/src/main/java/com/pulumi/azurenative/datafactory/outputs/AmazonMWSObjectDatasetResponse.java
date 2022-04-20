@@ -59,7 +59,7 @@ public final class AmazonMWSObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AmazonMWSObject'.
+     * Expected value is &#39;AmazonMWSObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AmazonMWSObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AmazonMWSObject'.
+     * Expected value is &#39;AmazonMWSObject&#39;.
      * 
     */
     public String type() {

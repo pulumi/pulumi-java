@@ -99,7 +99,7 @@ public final class PrestoSourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'PrestoSource'.
+     * Expected value is &#39;PrestoSource&#39;.
      * 
      */
     @Import(name="type", required=true)

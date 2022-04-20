@@ -120,14 +120,14 @@ public class Notification extends com.pulumi.resources.CustomResource {
         return this.selfLink;
     }
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
+     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
      */
     @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
-     * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
+     * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
      */
     public Output<String> topic() {

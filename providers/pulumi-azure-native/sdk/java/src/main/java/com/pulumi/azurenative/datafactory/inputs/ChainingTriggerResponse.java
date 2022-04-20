@@ -91,7 +91,7 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Trigger type.
-     * Expected value is 'ChainingTrigger'.
+     * Expected value is &#39;ChainingTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -38,7 +38,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A boolean value that indicates if the cluster's disks are encrypted.
+     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
      */
     @Import(name="enableDiskEncryption")
@@ -170,7 +170,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The cluster's external tenants.
+     * The cluster&#39;s external tenants.
      * 
      */
     @Import(name="trustedExternalTenants")

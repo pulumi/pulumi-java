@@ -89,7 +89,7 @@ public final class InstanceBootDiskArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
+     * Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
      * If you have a persistent disk with data that you want to share
      * between multiple instances, detach it from any read-write instances and
      * attach it to one or more instances in read-only mode.

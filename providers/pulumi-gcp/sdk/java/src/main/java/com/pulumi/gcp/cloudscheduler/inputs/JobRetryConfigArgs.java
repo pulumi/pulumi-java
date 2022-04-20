@@ -18,7 +18,7 @@ public final class JobRetryConfigArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The maximum amount of time to wait before retrying a job after it fails.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
      * 
      */
     @Import(name="maxBackoffDuration")
@@ -30,7 +30,7 @@ public final class JobRetryConfigArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The time between retries will double maxDoublings times.
-     * A job's retry interval starts at minBackoffDuration,
+     * A job&#39;s retry interval starts at minBackoffDuration,
      * then doubles maxDoublings times, then increases linearly,
      * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
      * 
@@ -45,7 +45,7 @@ public final class JobRetryConfigArgs extends com.pulumi.resources.ResourceArgs 
     /**
      * The time limit for retrying a failed job, measured from time when an execution was first attempted.
      * If specified with retryCount, the job will be retried until both limits are reached.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
      * 
      */
     @Import(name="maxRetryDuration")
@@ -57,7 +57,7 @@ public final class JobRetryConfigArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The minimum amount of time to wait before retrying a job after it fails.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
      * 
      */
     @Import(name="minBackoffDuration")

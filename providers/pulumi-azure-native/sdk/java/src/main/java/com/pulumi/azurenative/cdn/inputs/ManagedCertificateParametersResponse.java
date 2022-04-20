@@ -19,7 +19,7 @@ public final class ManagedCertificateParametersResponse extends com.pulumi.resou
 
     /**
      * The type of the Secret to create.
-     * Expected value is 'ManagedCertificate'.
+     * Expected value is &#39;ManagedCertificate&#39;.
      * 
      */
     @Import(name="type", required=true)

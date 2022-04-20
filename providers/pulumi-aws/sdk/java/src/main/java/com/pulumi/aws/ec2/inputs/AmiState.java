@@ -21,7 +21,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     public static final AmiState Empty = new AmiState();
 
     /**
-     * Machine architecture for created instances. Defaults to "x86_64".
+     * Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     @Import(name="architecture")
@@ -242,7 +242,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When set to "simple" (the default), enables enhanced networking
+     * When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -288,7 +288,7 @@ public final class AmiState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */

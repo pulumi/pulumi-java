@@ -28,7 +28,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+     * If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
     @Import(name="deletionProtection")

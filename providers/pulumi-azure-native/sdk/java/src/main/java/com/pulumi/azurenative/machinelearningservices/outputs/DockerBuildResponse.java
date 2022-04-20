@@ -15,19 +15,19 @@ public final class DockerBuildResponse {
     /**
      * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
      * The path is relative to the asset path which must contain a single Blob URI value.
-     * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
+     * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
      * 
      */
     private final @Nullable String context;
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is 'Build'.
+     * Expected value is &#39;Build&#39;.
      * 
      */
     private final String dockerSpecificationType;
     /**
      * Docker command line instructions to assemble an image.
-     * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
+     * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */
     private final String dockerfile;
@@ -52,7 +52,7 @@ public final class DockerBuildResponse {
     /**
      * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
      * The path is relative to the asset path which must contain a single Blob URI value.
-     * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
+     * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
      * 
     */
     public Optional<String> context() {
@@ -60,7 +60,7 @@ public final class DockerBuildResponse {
     }
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is 'Build'.
+     * Expected value is &#39;Build&#39;.
      * 
     */
     public String dockerSpecificationType() {
@@ -68,7 +68,7 @@ public final class DockerBuildResponse {
     }
     /**
      * Docker command line instructions to assemble an image.
-     * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
+     * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
     */
     public String dockerfile() {

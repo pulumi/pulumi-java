@@ -18,7 +18,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
 
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully
-     * replies to a healthcheck until it is ready to serve traffic. Default: "300s"
+     * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
      * 
      */
     @Import(name="appStartTimeout")
@@ -51,7 +51,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
     }
 
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     @Import(name="host")
@@ -85,7 +85,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
     }
 
     /**
-     * Time before the check is considered failed. Default: "4s"
+     * Time before the check is considered failed. Default: &#34;4s&#34;
      * 
      */
     @Import(name="timeout")

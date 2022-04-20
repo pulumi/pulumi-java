@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentScriptParameterKeyValue {
     /**
-     * <p>A script parameter key.</p>
+     * &lt;p&gt;A script parameter key.&lt;/p&gt;
      * 
      */
     private final @Nullable String key;
     /**
-     * <p>A script parameter value.</p>
+     * &lt;p&gt;A script parameter value.&lt;/p&gt;
      * 
      */
     private final @Nullable String value;
@@ -31,14 +31,14 @@ public final class StudioComponentScriptParameterKeyValue {
     }
 
     /**
-     * <p>A script parameter key.</p>
+     * &lt;p&gt;A script parameter key.&lt;/p&gt;
      * 
     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * <p>A script parameter value.</p>
+     * &lt;p&gt;A script parameter value.&lt;/p&gt;
      * 
     */
     public Optional<String> value() {

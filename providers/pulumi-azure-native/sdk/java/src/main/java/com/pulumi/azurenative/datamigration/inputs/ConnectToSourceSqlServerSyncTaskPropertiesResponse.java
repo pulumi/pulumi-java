@@ -87,7 +87,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
 
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.SqlServer.Sync'.
+     * Expected value is &#39;ConnectToSource.SqlServer.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

@@ -35,7 +35,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
     }
 
     /**
-     * The behavior of the endpoint filter. Currently only 'Include' is supported.
+     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
      * 
      */
     @Import(name="type")

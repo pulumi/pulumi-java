@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class DeliveryRuleCookiesConditionResponse {
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'Cookies'.
+     * Expected value is &#39;Cookies&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class DeliveryRuleCookiesConditionResponse {
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'Cookies'.
+     * Expected value is &#39;Cookies&#39;.
      * 
     */
     public String name() {

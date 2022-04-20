@@ -49,7 +49,7 @@ public final class GetPrivateRecordSetResult {
      */
     private final String fqdn;
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
      */
     private final String id;
@@ -99,7 +99,7 @@ public final class GetPrivateRecordSetResult {
      */
     private final @Nullable List<TxtRecordResponse> txtRecords;
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
      */
     private final String type;
@@ -176,7 +176,7 @@ public final class GetPrivateRecordSetResult {
         return this.fqdn;
     }
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
     */
     public String id() {
@@ -246,7 +246,7 @@ public final class GetPrivateRecordSetResult {
         return this.txtRecords == null ? List.of() : this.txtRecords;
     }
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
     */
     public String type() {

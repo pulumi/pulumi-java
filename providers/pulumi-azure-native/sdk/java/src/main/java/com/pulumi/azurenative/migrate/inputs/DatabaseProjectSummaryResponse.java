@@ -33,7 +33,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
 
     /**
      * Gets the Instance type.
-     * Expected value is 'Databases'.
+     * Expected value is &#39;Databases&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

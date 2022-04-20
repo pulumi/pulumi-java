@@ -22,7 +22,7 @@ public final class GetSessionEntityTypeResult {
      */
     private final String entityOverrideMode;
     /**
-     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
+     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
      * 
      */
     private final String name;
@@ -52,7 +52,7 @@ public final class GetSessionEntityTypeResult {
         return this.entityOverrideMode;
     }
     /**
-     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
+     * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment.
      * 
     */
     public String name() {

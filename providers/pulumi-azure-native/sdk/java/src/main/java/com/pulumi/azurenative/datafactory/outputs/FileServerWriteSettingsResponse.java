@@ -29,7 +29,7 @@ public final class FileServerWriteSettingsResponse {
     private final @Nullable Object maxConcurrentConnections;
     /**
      * The write setting type.
-     * Expected value is 'FileServerWriteSettings'.
+     * Expected value is &#39;FileServerWriteSettings&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class FileServerWriteSettingsResponse {
     }
     /**
      * The write setting type.
-     * Expected value is 'FileServerWriteSettings'.
+     * Expected value is &#39;FileServerWriteSettings&#39;.
      * 
     */
     public String type() {

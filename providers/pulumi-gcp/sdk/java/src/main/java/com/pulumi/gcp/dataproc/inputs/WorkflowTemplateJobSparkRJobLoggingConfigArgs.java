@@ -17,7 +17,7 @@ public final class WorkflowTemplateJobSparkRJobLoggingConfigArgs extends com.pul
     public static final WorkflowTemplateJobSparkRJobLoggingConfigArgs Empty = new WorkflowTemplateJobSparkRJobLoggingConfigArgs();
 
     /**
-     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
      * 
      */
     @Import(name="driverLogLevels")

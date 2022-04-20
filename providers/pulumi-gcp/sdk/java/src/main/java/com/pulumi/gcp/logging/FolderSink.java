@@ -129,7 +129,7 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
         return this.filter;
     }
     /**
-     * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is
      * accepted.
      * 
      */
@@ -137,7 +137,7 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
     private Output<String> folder;
 
     /**
-     * @return The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
+     * @return The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is
      * accepted.
      * 
      */

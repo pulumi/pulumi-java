@@ -33,7 +33,7 @@ public final class PodSpec {
      */
     private final @Nullable Integer activeDeadlineSeconds;
     /**
-     * If specified, the pod's scheduling constraints
+     * If specified, the pod&#39;s scheduling constraints
      * 
      */
     private final @Nullable Affinity affinity;
@@ -53,48 +53,48 @@ public final class PodSpec {
      */
     private final @Nullable PodDNSConfig dnsConfig;
     /**
-     * Set DNS policy for the pod. Defaults to "ClusterFirst". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
+     * Set DNS policy for the pod. Defaults to &#34;ClusterFirst&#34;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;.
      * 
      * Possible enum values:
-     *  - `"ClusterFirst"` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
-     *  - `"ClusterFirstWithHostNet"` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
-     *  - `"Default"` indicates that the pod should use the default (as determined by kubelet) DNS settings.
-     *  - `"None"` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
+     *  - `&#34;ClusterFirst&#34;` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;ClusterFirstWithHostNet&#34;` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;Default&#34;` indicates that the pod should use the default (as determined by kubelet) DNS settings.
+     *  - `&#34;None&#34;` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
      * 
      */
     private final @Nullable String dnsPolicy;
     /**
-     * EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Defaults to true.
+     * EnableServiceLinks indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Optional: Defaults to true.
      * 
      */
     private final @Nullable Boolean enableServiceLinks;
     /**
-     * List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is beta-level and available on clusters that haven't disabled the EphemeralContainers feature gate.
+     * List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
      * 
      */
     private final @Nullable List<EphemeralContainer> ephemeralContainers;
     /**
-     * HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.
+     * HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
      * 
      */
     private final @Nullable List<HostAlias> hostAliases;
     /**
-     * Use the host's ipc namespace. Optional: Default to false.
+     * Use the host&#39;s ipc namespace. Optional: Default to false.
      * 
      */
     private final @Nullable Boolean hostIPC;
     /**
-     * Host networking requested for this pod. Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+     * Host networking requested for this pod. Use the host&#39;s network namespace. If this option is set, the ports that will be used must be specified. Default to false.
      * 
      */
     private final @Nullable Boolean hostNetwork;
     /**
-     * Use the host's pid namespace. Optional: Default to false.
+     * Use the host&#39;s pid namespace. Optional: Default to false.
      * 
      */
     private final @Nullable Boolean hostPID;
     /**
-     * Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value.
+     * Specifies the hostname of the Pod If not specified, the pod&#39;s hostname will be set to a system-defined value.
      * 
      */
     private final @Nullable String hostname;
@@ -114,7 +114,7 @@ public final class PodSpec {
      */
     private final @Nullable String nodeName;
     /**
-     * NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+     * NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node&#39;s labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
      * 
      */
     private final @Nullable Map<String,String> nodeSelector;
@@ -143,12 +143,12 @@ public final class PodSpec {
      */
     private final @Nullable Integer priority;
     /**
-     * If specified, indicates the pod's priority. "system-node-critical" and "system-cluster-critical" are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
+     * If specified, indicates the pod&#39;s priority. &#34;system-node-critical&#34; and &#34;system-cluster-critical&#34; are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
      * 
      */
     private final @Nullable String priorityClassName;
     /**
-     * If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+     * If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
      * 
      */
     private final @Nullable List<PodReadinessGate> readinessGates;
@@ -156,14 +156,14 @@ public final class PodSpec {
      * Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
      * 
      * Possible enum values:
-     *  - `"Always"`
-     *  - `"Never"`
-     *  - `"OnFailure"`
+     *  - `&#34;Always&#34;`
+     *  - `&#34;Never&#34;`
+     *  - `&#34;OnFailure&#34;`
      * 
      */
     private final @Nullable String restartPolicy;
     /**
-     * RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
+     * RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the &#34;legacy&#34; RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
      * 
      */
     private final @Nullable String runtimeClassName;
@@ -188,7 +188,7 @@ public final class PodSpec {
      */
     private final @Nullable String serviceAccountName;
     /**
-     * If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+     * If true the pod&#39;s hostname will be configured as the pod&#39;s FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
      * 
      */
     private final @Nullable Boolean setHostnameAsFQDN;
@@ -198,7 +198,7 @@ public final class PodSpec {
      */
     private final @Nullable Boolean shareProcessNamespace;
     /**
-     * If specified, the fully qualified Pod hostname will be "<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>". If not specified, the pod will not have a domainname at all.
+     * If specified, the fully qualified Pod hostname will be &#34;&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;&#34;. If not specified, the pod will not have a domainname at all.
      * 
      */
     private final @Nullable String subdomain;
@@ -208,7 +208,7 @@ public final class PodSpec {
      */
     private final @Nullable Integer terminationGracePeriodSeconds;
     /**
-     * If specified, the pod's tolerations.
+     * If specified, the pod&#39;s tolerations.
      * 
      */
     private final @Nullable List<Toleration> tolerations;
@@ -307,7 +307,7 @@ public final class PodSpec {
         return Optional.ofNullable(this.activeDeadlineSeconds);
     }
     /**
-     * If specified, the pod's scheduling constraints
+     * If specified, the pod&#39;s scheduling constraints
      * 
     */
     public Optional<Affinity> affinity() {
@@ -335,62 +335,62 @@ public final class PodSpec {
         return Optional.ofNullable(this.dnsConfig);
     }
     /**
-     * Set DNS policy for the pod. Defaults to "ClusterFirst". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
+     * Set DNS policy for the pod. Defaults to &#34;ClusterFirst&#34;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;.
      * 
      * Possible enum values:
-     *  - `"ClusterFirst"` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
-     *  - `"ClusterFirstWithHostNet"` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
-     *  - `"Default"` indicates that the pod should use the default (as determined by kubelet) DNS settings.
-     *  - `"None"` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
+     *  - `&#34;ClusterFirst&#34;` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;ClusterFirstWithHostNet&#34;` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.
+     *  - `&#34;Default&#34;` indicates that the pod should use the default (as determined by kubelet) DNS settings.
+     *  - `&#34;None&#34;` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
      * 
     */
     public Optional<String> dnsPolicy() {
         return Optional.ofNullable(this.dnsPolicy);
     }
     /**
-     * EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Defaults to true.
+     * EnableServiceLinks indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Optional: Defaults to true.
      * 
     */
     public Optional<Boolean> enableServiceLinks() {
         return Optional.ofNullable(this.enableServiceLinks);
     }
     /**
-     * List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is beta-level and available on clusters that haven't disabled the EphemeralContainers feature gate.
+     * List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod&#39;s ephemeralcontainers subresource. This field is beta-level and available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
      * 
     */
     public List<EphemeralContainer> ephemeralContainers() {
         return this.ephemeralContainers == null ? List.of() : this.ephemeralContainers;
     }
     /**
-     * HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.
+     * HostAliases is an optional list of hosts and IPs that will be injected into the pod&#39;s hosts file if specified. This is only valid for non-hostNetwork pods.
      * 
     */
     public List<HostAlias> hostAliases() {
         return this.hostAliases == null ? List.of() : this.hostAliases;
     }
     /**
-     * Use the host's ipc namespace. Optional: Default to false.
+     * Use the host&#39;s ipc namespace. Optional: Default to false.
      * 
     */
     public Optional<Boolean> hostIPC() {
         return Optional.ofNullable(this.hostIPC);
     }
     /**
-     * Host networking requested for this pod. Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+     * Host networking requested for this pod. Use the host&#39;s network namespace. If this option is set, the ports that will be used must be specified. Default to false.
      * 
     */
     public Optional<Boolean> hostNetwork() {
         return Optional.ofNullable(this.hostNetwork);
     }
     /**
-     * Use the host's pid namespace. Optional: Default to false.
+     * Use the host&#39;s pid namespace. Optional: Default to false.
      * 
     */
     public Optional<Boolean> hostPID() {
         return Optional.ofNullable(this.hostPID);
     }
     /**
-     * Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value.
+     * Specifies the hostname of the Pod If not specified, the pod&#39;s hostname will be set to a system-defined value.
      * 
     */
     public Optional<String> hostname() {
@@ -418,7 +418,7 @@ public final class PodSpec {
         return Optional.ofNullable(this.nodeName);
     }
     /**
-     * NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+     * NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node&#39;s labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
      * 
     */
     public Map<String,String> nodeSelector() {
@@ -457,14 +457,14 @@ public final class PodSpec {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * If specified, indicates the pod's priority. "system-node-critical" and "system-cluster-critical" are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
+     * If specified, indicates the pod&#39;s priority. &#34;system-node-critical&#34; and &#34;system-cluster-critical&#34; are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.
      * 
     */
     public Optional<String> priorityClassName() {
         return Optional.ofNullable(this.priorityClassName);
     }
     /**
-     * If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
+     * If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to &#34;True&#34; More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates
      * 
     */
     public List<PodReadinessGate> readinessGates() {
@@ -474,16 +474,16 @@ public final class PodSpec {
      * Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
      * 
      * Possible enum values:
-     *  - `"Always"`
-     *  - `"Never"`
-     *  - `"OnFailure"`
+     *  - `&#34;Always&#34;`
+     *  - `&#34;Never&#34;`
+     *  - `&#34;OnFailure&#34;`
      * 
     */
     public Optional<String> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
     /**
-     * RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
+     * RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the &#34;legacy&#34; RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.
      * 
     */
     public Optional<String> runtimeClassName() {
@@ -518,7 +518,7 @@ public final class PodSpec {
         return Optional.ofNullable(this.serviceAccountName);
     }
     /**
-     * If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+     * If true the pod&#39;s hostname will be configured as the pod&#39;s FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
      * 
     */
     public Optional<Boolean> setHostnameAsFQDN() {
@@ -532,7 +532,7 @@ public final class PodSpec {
         return Optional.ofNullable(this.shareProcessNamespace);
     }
     /**
-     * If specified, the fully qualified Pod hostname will be "<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>". If not specified, the pod will not have a domainname at all.
+     * If specified, the fully qualified Pod hostname will be &#34;&lt;hostname&gt;.&lt;subdomain&gt;.&lt;pod namespace&gt;.svc.&lt;cluster domain&gt;&#34;. If not specified, the pod will not have a domainname at all.
      * 
     */
     public Optional<String> subdomain() {
@@ -546,7 +546,7 @@ public final class PodSpec {
         return Optional.ofNullable(this.terminationGracePeriodSeconds);
     }
     /**
-     * If specified, the pod's tolerations.
+     * If specified, the pod&#39;s tolerations.
      * 
     */
     public List<Toleration> tolerations() {

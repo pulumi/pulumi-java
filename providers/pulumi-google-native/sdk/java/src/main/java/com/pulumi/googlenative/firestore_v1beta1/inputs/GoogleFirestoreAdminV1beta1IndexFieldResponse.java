@@ -28,7 +28,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
     }
 
     /**
-     * The field's mode.
+     * The field&#39;s mode.
      * 
      */
     @Import(name="mode", required=true)

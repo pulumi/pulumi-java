@@ -324,14 +324,14 @@ public class Machine extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {
@@ -352,14 +352,14 @@ public class Machine extends com.pulumi.resources.CustomResource {
         return this.vmId;
     }
     /**
-     * Specifies the Arc Machine's unique SMBIOS ID
+     * Specifies the Arc Machine&#39;s unique SMBIOS ID
      * 
      */
     @Export(name="vmUuid", type=String.class, parameters={})
     private Output<String> vmUuid;
 
     /**
-     * @return Specifies the Arc Machine's unique SMBIOS ID
+     * @return Specifies the Arc Machine&#39;s unique SMBIOS ID
      * 
      */
     public Output<String> vmUuid() {

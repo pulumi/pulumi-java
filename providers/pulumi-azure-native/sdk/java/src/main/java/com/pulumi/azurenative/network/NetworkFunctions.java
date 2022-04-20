@@ -277,7 +277,7 @@ public final class NetworkFunctions {
      * Network base admin rule.
      * API Version: 2021-02-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: AdminRule, DefaultAdminRule.
      * 
      */
@@ -1244,7 +1244,7 @@ public final class NetworkFunctions {
      * Network base rule.
      * API Version: 2021-02-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: DefaultUserRule, UserRule.
      * 
      */

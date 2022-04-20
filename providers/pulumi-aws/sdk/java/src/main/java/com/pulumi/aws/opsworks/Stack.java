@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:opsworks/stack:Stack")
 public class Stack extends com.pulumi.resources.CustomResource {
     /**
-     * If set to `"LATEST"`, OpsWorks will automatically install the latest version.
+     * If set to `&#34;LATEST&#34;`, OpsWorks will automatically install the latest version.
      * 
      */
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
     /**
-     * @return If set to `"LATEST"`, OpsWorks will automatically install the latest version.
+     * @return If set to `&#34;LATEST&#34;`, OpsWorks will automatically install the latest version.
      * 
      */
     public Output<String> agentVersion() {
@@ -68,42 +68,42 @@ public class Stack extends com.pulumi.resources.CustomResource {
         return this.berkshelfVersion;
     }
     /**
-     * Color to paint next to the stack's resources in the OpsWorks console.
+     * Color to paint next to the stack&#39;s resources in the OpsWorks console.
      * 
      */
     @Export(name="color", type=String.class, parameters={})
     private Output</* @Nullable */ String> color;
 
     /**
-     * @return Color to paint next to the stack's resources in the OpsWorks console.
+     * @return Color to paint next to the stack&#39;s resources in the OpsWorks console.
      * 
      */
     public Output</* @Nullable */ String> color() {
         return this.color;
     }
     /**
-     * Name of the configuration manager to use. Defaults to "Chef".
+     * Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
      * 
      */
     @Export(name="configurationManagerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationManagerName;
 
     /**
-     * @return Name of the configuration manager to use. Defaults to "Chef".
+     * @return Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
      * 
      */
     public Output</* @Nullable */ String> configurationManagerName() {
         return this.configurationManagerName;
     }
     /**
-     * Version of the configuration manager to use. Defaults to "11.4".
+     * Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
      * 
      */
     @Export(name="configurationManagerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationManagerVersion;
 
     /**
-     * @return Version of the configuration manager to use. Defaults to "11.4".
+     * @return Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
      * 
      */
     public Output</* @Nullable */ String> configurationManagerVersion() {
@@ -215,7 +215,7 @@ public class Stack extends com.pulumi.resources.CustomResource {
     }
     /**
      * Id of the subnet in which instances will be created by default. Mandatory
-     * if `vpc_id` is set, and forbidden if it isn't.
+     * if `vpc_id` is set, and forbidden if it isn&#39;t.
      * 
      */
     @Export(name="defaultSubnetId", type=String.class, parameters={})
@@ -223,7 +223,7 @@ public class Stack extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Id of the subnet in which instances will be created by default. Mandatory
-     * if `vpc_id` is set, and forbidden if it isn't.
+     * if `vpc_id` is set, and forbidden if it isn&#39;t.
      * 
      */
     public Output<String> defaultSubnetId() {

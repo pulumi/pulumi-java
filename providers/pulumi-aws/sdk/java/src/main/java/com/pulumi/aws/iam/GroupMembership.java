@@ -15,13 +15,13 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * > **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!
+ * &gt; **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!
  * 
  * Provides a top level resource to manage IAM Group membership for IAM Users. For
  * more information on managing IAM Groups or IAM Users, see IAM Groups or
  * IAM Users
  * 
- * > **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
+ * &gt; **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
  * `aws.iam.UserGroupMembership` resource.
  * 
  * ## Example Usage

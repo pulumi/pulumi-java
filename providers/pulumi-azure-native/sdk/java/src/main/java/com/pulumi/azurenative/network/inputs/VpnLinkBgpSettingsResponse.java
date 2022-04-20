@@ -20,7 +20,7 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
     public static final VpnLinkBgpSettingsResponse Empty = new VpnLinkBgpSettingsResponse();
 
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
      */
     @Import(name="asn")

@@ -78,14 +78,14 @@ public class AnnotationSpecSet extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * @return The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     public Output<String> name() {

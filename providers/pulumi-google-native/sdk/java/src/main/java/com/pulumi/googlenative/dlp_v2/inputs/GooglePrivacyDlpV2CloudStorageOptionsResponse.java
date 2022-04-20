@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     public static final GooglePrivacyDlpV2CloudStorageOptionsResponse Empty = new GooglePrivacyDlpV2CloudStorageOptionsResponse();
 
     /**
-     * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
+     * Max number of bytes to scan from a file. If a scanned file&#39;s size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
      * 
      */
     @Import(name="bytesLimitPerFile", required=true)
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     }
 
     /**
-     * List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
+     * List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to &#39;global&#39;, &#39;us&#39;, &#39;asia&#39;, and &#39;europe&#39;.
      * 
      */
     @Import(name="fileTypes", required=true)

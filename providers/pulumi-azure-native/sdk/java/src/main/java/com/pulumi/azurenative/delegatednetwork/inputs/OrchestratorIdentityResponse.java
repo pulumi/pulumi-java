@@ -37,7 +37,7 @@ public final class OrchestratorIdentityResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
      */
     @Import(name="type")

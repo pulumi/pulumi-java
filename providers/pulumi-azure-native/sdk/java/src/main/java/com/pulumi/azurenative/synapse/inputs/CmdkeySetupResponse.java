@@ -43,7 +43,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of custom setup.
-     * Expected value is 'CmdkeySetup'.
+     * Expected value is &#39;CmdkeySetup&#39;.
      * 
      */
     @Import(name="type", required=true)

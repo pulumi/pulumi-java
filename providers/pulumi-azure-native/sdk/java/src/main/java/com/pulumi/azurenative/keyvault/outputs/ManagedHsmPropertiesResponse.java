@@ -27,7 +27,7 @@ public final class ManagedHsmPropertiesResponse {
      */
     private final @Nullable Boolean enablePurgeProtection;
     /**
-     * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this managed HSM pool. If it&#39;s not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
      */
     private final @Nullable Boolean enableSoftDelete;
@@ -67,7 +67,7 @@ public final class ManagedHsmPropertiesResponse {
      */
     private final String scheduledPurgeDate;
     /**
-     * softDelete data retention days. It accepts >=7 and <=90.
+     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
      */
     private final @Nullable Integer softDeleteRetentionInDays;
@@ -127,7 +127,7 @@ public final class ManagedHsmPropertiesResponse {
         return Optional.ofNullable(this.enablePurgeProtection);
     }
     /**
-     * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this managed HSM pool. If it&#39;s not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
     */
     public Optional<Boolean> enableSoftDelete() {
@@ -183,7 +183,7 @@ public final class ManagedHsmPropertiesResponse {
         return this.scheduledPurgeDate;
     }
     /**
-     * softDelete data retention days. It accepts >=7 and <=90.
+     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
     */
     public Optional<Integer> softDeleteRetentionInDays() {

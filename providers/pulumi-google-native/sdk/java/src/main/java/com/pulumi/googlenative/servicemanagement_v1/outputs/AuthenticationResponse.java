@@ -17,7 +17,7 @@ public final class AuthenticationResponse {
      */
     private final List<AuthProviderResponse> providers;
     /**
-     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     private final List<AuthenticationRuleResponse> rules;
@@ -38,7 +38,7 @@ public final class AuthenticationResponse {
         return this.providers;
     }
     /**
-     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
     */
     public List<AuthenticationRuleResponse> rules() {

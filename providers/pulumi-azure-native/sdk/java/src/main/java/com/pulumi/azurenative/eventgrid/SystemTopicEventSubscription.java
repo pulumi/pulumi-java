@@ -46,23 +46,23 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:eventgrid:SystemTopicEventSubscription")
 public class SystemTopicEventSubscription extends com.pulumi.resources.CustomResource {
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     @Export(name="deadLetterDestination", type=StorageBlobDeadLetterDestinationResponse.class, parameters={})
     private Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination;
 
     /**
-     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return this.deadLetterDestination;
     }
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
@@ -70,7 +70,7 @@ public class SystemTopicEventSubscription extends com.pulumi.resources.CustomRes
     private Output</* @Nullable */ DeadLetterWithResourceIdentityResponse> deadLetterWithResourceIdentity;
 
     /**
-     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
@@ -95,7 +95,7 @@ public class SystemTopicEventSubscription extends com.pulumi.resources.CustomRes
     }
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     @Export(name="destination", type=Object.class, parameters={})
@@ -103,7 +103,7 @@ public class SystemTopicEventSubscription extends com.pulumi.resources.CustomRes
 
     /**
      * @return Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     public Output</* @Nullable */ Object> destination() {

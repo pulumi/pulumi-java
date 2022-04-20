@@ -18,7 +18,7 @@ public final class CassandraSourceResponse {
      */
     private final @Nullable Object additionalColumns;
     /**
-     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is &#39;ONE&#39;. It is case-insensitive.
      * 
      */
     private final @Nullable String consistencyLevel;
@@ -54,7 +54,7 @@ public final class CassandraSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'CassandraSource'.
+     * Expected value is &#39;CassandraSource&#39;.
      * 
      */
     private final String type;
@@ -89,7 +89,7 @@ public final class CassandraSourceResponse {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
-     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+     * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is &#39;ONE&#39;. It is case-insensitive.
      * 
     */
     public Optional<String> consistencyLevel() {
@@ -139,7 +139,7 @@ public final class CassandraSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'CassandraSource'.
+     * Expected value is &#39;CassandraSource&#39;.
      * 
     */
     public String type() {

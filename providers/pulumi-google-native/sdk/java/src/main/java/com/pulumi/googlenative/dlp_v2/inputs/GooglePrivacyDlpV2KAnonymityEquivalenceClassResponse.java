@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The set of columns' values that share the same ldiversity value
+ * The set of columns&#39; values that share the same ldiversity value
  * 
  */
 public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends com.pulumi.resources.InvokeArgs {

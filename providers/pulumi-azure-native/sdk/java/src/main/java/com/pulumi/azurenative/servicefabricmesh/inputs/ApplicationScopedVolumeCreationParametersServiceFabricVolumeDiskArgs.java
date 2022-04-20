@@ -34,7 +34,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
 
     /**
      * Specifies the application-scoped volume kind.
-     * Expected value is 'ServiceFabricVolumeDisk'.
+     * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
      * 
      */
     @Import(name="kind", required=true)

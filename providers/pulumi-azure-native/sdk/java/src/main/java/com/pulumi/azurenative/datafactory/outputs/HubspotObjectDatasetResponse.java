@@ -59,7 +59,7 @@ public final class HubspotObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'HubspotObject'.
+     * Expected value is &#39;HubspotObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class HubspotObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'HubspotObject'.
+     * Expected value is &#39;HubspotObject&#39;.
      * 
     */
     public String type() {

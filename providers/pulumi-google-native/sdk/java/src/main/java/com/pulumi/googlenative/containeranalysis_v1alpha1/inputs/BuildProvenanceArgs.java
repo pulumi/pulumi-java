@@ -80,7 +80,7 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * E-mail address of the user who initiated this build. Note that this was the user's e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+     * E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
      * 
      */
     @Import(name="creator")

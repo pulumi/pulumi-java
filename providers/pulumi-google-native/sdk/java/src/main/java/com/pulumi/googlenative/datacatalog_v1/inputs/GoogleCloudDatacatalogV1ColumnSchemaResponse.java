@@ -40,7 +40,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends com.pulu
     }
 
     /**
-     * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
+     * Optional. A column&#39;s mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
      * 
      */
     @Import(name="mode", required=true)

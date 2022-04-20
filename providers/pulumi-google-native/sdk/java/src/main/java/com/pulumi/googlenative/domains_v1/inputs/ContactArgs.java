@@ -32,7 +32,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
      */
     @Import(name="faxNumber")
@@ -43,7 +43,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
+     * Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
      * 
      */
     @Import(name="phoneNumber", required=true)

@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      */
     private final String height;
     /**
-     * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
+     * Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
      * 
      */
     private final String thumbnailUri;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
         return this.height;
     }
     /**
-     * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
+     * Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
      * 
     */
     public String thumbnailUri() {

@@ -17,12 +17,12 @@ public final class BucketCorsItemResponse {
      */
     private final Integer maxAgeSeconds;
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
      */
     private final List<String> method;
     /**
-     * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
      */
     private final List<String> origin;
@@ -52,14 +52,14 @@ public final class BucketCorsItemResponse {
         return this.maxAgeSeconds;
     }
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
     */
     public List<String> method() {
         return this.method;
     }
     /**
-     * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
     */
     public List<String> origin() {

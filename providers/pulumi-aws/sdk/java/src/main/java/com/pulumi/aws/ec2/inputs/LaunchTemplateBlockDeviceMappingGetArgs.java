@@ -39,7 +39,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
     }
 
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
      */
     @Import(name="noDevice")
@@ -52,7 +52,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
     /**
      * The [Instance Store Device
      * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-     * (e.g., `"ephemeral0"`).
+     * (e.g., `&#34;ephemeral0&#34;`).
      * 
      */
     @Import(name="virtualName")

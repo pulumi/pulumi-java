@@ -55,7 +55,7 @@ public final class VMSSExtensionResponse {
      */
     private final @Nullable Object settings;
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class VMSSExtensionResponse {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class GetBudgetResult {
      */
     private final GoogleCloudBillingBudgetsV1BudgetAmountResponse amount;
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
      */
     private final GoogleCloudBillingBudgetsV1FilterResponse budgetFilter;
@@ -76,7 +76,7 @@ public final class GetBudgetResult {
         return this.amount;
     }
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
     */
     public GoogleCloudBillingBudgetsV1FilterResponse budgetFilter() {

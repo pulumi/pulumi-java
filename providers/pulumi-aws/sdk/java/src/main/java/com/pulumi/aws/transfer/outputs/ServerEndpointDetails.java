@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServerEndpointDetails {
     /**
-     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server&#39;s endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     private final @Nullable List<String> addressAllocationIds;
     /**
-     * A list of security groups IDs that are available to attach to your server's endpoint. If no security groups are specified, the VPC's default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of security groups IDs that are available to attach to your server&#39;s endpoint. If no security groups are specified, the VPC&#39;s default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     private final @Nullable List<String> securityGroupIds;
@@ -33,7 +33,7 @@ public final class ServerEndpointDetails {
      */
     private final @Nullable String vpcEndpointId;
     /**
-     * The VPC ID of the virtual private cloud in which the SFTP server's endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
+     * The VPC ID of the virtual private cloud in which the SFTP server&#39;s endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     private final @Nullable String vpcId;
@@ -53,14 +53,14 @@ public final class ServerEndpointDetails {
     }
 
     /**
-     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server&#39;s endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
     */
     public List<String> addressAllocationIds() {
         return this.addressAllocationIds == null ? List.of() : this.addressAllocationIds;
     }
     /**
-     * A list of security groups IDs that are available to attach to your server's endpoint. If no security groups are specified, the VPC's default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of security groups IDs that are available to attach to your server&#39;s endpoint. If no security groups are specified, the VPC&#39;s default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
     */
     public List<String> securityGroupIds() {
@@ -81,7 +81,7 @@ public final class ServerEndpointDetails {
         return Optional.ofNullable(this.vpcEndpointId);
     }
     /**
-     * The VPC ID of the virtual private cloud in which the SFTP server's endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
+     * The VPC ID of the virtual private cloud in which the SFTP server&#39;s endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
     */
     public Optional<String> vpcId() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specifies the default server-side encryption to apply to new objects in the bucket. If a PUT Object request doesn't specify any server-side encryption, this default encryption will be applied.
+ * Specifies the default server-side encryption to apply to new objects in the bucket. If a PUT Object request doesn&#39;t specify any server-side encryption, this default encryption will be applied.
  * 
  */
 public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.re
     public static final BucketServerSideEncryptionByDefaultArgs Empty = new BucketServerSideEncryptionByDefaultArgs();
 
     /**
-     * "KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.
+     * &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
      * 
      */
     @Import(name="kMSMasterKeyID")

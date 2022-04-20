@@ -30,7 +30,7 @@ public final class IscsiLunArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User defined name for iSCSI LUN; example: "lun0"
+     * User defined name for iSCSI LUN; example: &#34;lun0&#34;
      * 
      */
     @Import(name="name", required=true)

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VideoPublishingOptionsResponse {
     /**
-     * When set to 'true' content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'true', then "disableRtspPublishing" must be set to 'false'.
+     * When set to &#39;true&#39; content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableRtspPublishing&#34; must be set to &#39;false&#39;.
      * 
      */
     private final @Nullable String disableArchive;
     /**
-     * When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.
+     * When set to &#39;true&#39; the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableArchive&#34; must be set to &#39;false&#39;.
      * 
      */
     private final @Nullable String disableRtspPublishing;
@@ -31,14 +31,14 @@ public final class VideoPublishingOptionsResponse {
     }
 
     /**
-     * When set to 'true' content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'true', then "disableRtspPublishing" must be set to 'false'.
+     * When set to &#39;true&#39; content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableRtspPublishing&#34; must be set to &#39;false&#39;.
      * 
     */
     public Optional<String> disableArchive() {
         return Optional.ofNullable(this.disableArchive);
     }
     /**
-     * When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.
+     * When set to &#39;true&#39; the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is &#39;false&#39;.  If set to &#39;true&#39;, then &#34;disableArchive&#34; must be set to &#39;false&#39;.
      * 
     */
     public Optional<String> disableRtspPublishing() {

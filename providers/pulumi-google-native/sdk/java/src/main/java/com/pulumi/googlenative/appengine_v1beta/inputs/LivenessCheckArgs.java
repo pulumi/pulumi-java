@@ -43,7 +43,7 @@ public final class LivenessCheckArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     @Import(name="host")

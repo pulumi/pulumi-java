@@ -29,7 +29,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource kind. Only 'vm' (the default) is supported.
+     * The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
      */
     @Import(name="kind")

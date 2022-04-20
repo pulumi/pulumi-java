@@ -36,7 +36,7 @@ public final class GetVpcCidrBlockAssociation extends com.pulumi.resources.Invok
 
     /**
      * The current state of the desired VPC.
-     * Can be either `"pending"` or `"available"`.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
      */
     @Import(name="state", required=true)

@@ -19,7 +19,7 @@ public final class EnterpriseKeyIosSettings {
      */
     private final @Nullable Boolean allowAllBundleIds;
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
      */
     private final @Nullable List<String> allowedBundleIds;
@@ -40,7 +40,7 @@ public final class EnterpriseKeyIosSettings {
         return Optional.ofNullable(this.allowAllBundleIds);
     }
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
     */
     public List<String> allowedBundleIds() {

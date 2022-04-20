@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityProfileResult {
     /**
-     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
      */
     private final @Nullable List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2;
@@ -71,7 +71,7 @@ public final class GetSecurityProfileResult {
     }
 
     /**
-     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
     */
     public List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2() {

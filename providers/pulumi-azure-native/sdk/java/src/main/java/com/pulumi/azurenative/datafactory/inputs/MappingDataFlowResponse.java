@@ -115,7 +115,7 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of data flow.
-     * Expected value is 'MappingDataFlow'.
+     * Expected value is &#39;MappingDataFlow&#39;.
      * 
      */
     @Import(name="type", required=true)

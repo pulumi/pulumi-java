@@ -25,7 +25,7 @@ public final class GetTestablePermissionsPermission extends com.pulumi.resources
     }
 
     /**
-     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
     @Import(name="customSupportLevel", required=true)

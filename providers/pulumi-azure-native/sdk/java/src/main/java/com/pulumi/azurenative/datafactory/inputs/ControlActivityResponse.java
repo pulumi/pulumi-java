@@ -57,7 +57,7 @@ public final class ControlActivityResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of activity.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     @Import(name="type", required=true)

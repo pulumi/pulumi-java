@@ -16,7 +16,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
     public static final BucketReplicationConfigRuleDestinationReplicationTimeArgs Empty = new BucketReplicationConfigRuleDestinationReplicationTimeArgs();
 
     /**
-     * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     @Import(name="status", required=true)

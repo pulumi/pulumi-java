@@ -41,7 +41,7 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
      * 
      */
     @Import(name="type", required=true)

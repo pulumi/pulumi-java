@@ -41,7 +41,7 @@ public final class AccountIdentityResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     * The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
      * 
      */
     @Import(name="type")

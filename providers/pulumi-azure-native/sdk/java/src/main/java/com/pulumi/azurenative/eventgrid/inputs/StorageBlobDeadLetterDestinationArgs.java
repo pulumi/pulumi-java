@@ -32,7 +32,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
 
     /**
      * Type of the endpoint for the dead letter destination
-     * Expected value is 'StorageBlob'.
+     * Expected value is &#39;StorageBlob&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

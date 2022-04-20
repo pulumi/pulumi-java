@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The list of Energy services resource's Data Partition Names.
+ * The list of Energy services resource&#39;s Data Partition Names.
  * 
  */
 public final class DataPartitionNamesResponse extends com.pulumi.resources.InvokeArgs {

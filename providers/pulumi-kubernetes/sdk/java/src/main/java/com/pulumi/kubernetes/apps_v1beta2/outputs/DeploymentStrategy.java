@@ -18,7 +18,7 @@ public final class DeploymentStrategy {
      */
     private final @Nullable RollingUpdateDeployment rollingUpdate;
     /**
-     * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
+     * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
      */
     private final @Nullable String type;
@@ -39,7 +39,7 @@ public final class DeploymentStrategy {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
-     * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
+     * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
     */
     public Optional<String> type() {

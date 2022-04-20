@@ -63,7 +63,7 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
     public static final SwitchActivityResponse Empty = new SwitchActivityResponse();
 
     /**
-     * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+     * List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
      */
     @Import(name="cases")
@@ -130,7 +130,7 @@ public final class SwitchActivityResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Type of activity.
-     * Expected value is 'Switch'.
+     * Expected value is &#39;Switch&#39;.
      * 
      */
     @Import(name="type", required=true)

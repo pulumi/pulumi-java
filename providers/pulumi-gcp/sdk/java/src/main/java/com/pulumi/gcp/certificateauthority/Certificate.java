@@ -21,8 +21,8 @@ import javax.annotation.Nullable;
 /**
  * A Certificate corresponds to a signed X.509 certificate issued by a Certificate.
  * 
- * > **Note:** The Certificate Authority that is referenced by this resource **must** be
- * `tier = "ENTERPRISE"`
+ * &gt; **Note:** The Certificate Authority that is referenced by this resource **must** be
+ * `tier = &#34;ENTERPRISE&#34;`
  * 
  * ## Example Usage
  * 
@@ -142,18 +142,18 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
-     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
-     * fractional digits, terminated by 's'. Example: "3.5s".
+     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Export(name="lifetime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lifetime;
 
     /**
-     * @return The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
-     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
-     * fractional digits, terminated by 's'. Example: "3.5s".
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     public Output</* @Nullable */ String> lifetime() {

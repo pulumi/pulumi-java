@@ -26,7 +26,7 @@ public final class AppMonitorConfiguration {
      */
     private final @Nullable Boolean enableXRay;
     /**
-     * A list of URLs in your website or application to exclude from RUM data collection. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
      */
     private final @Nullable List<String> excludedPages;
@@ -46,7 +46,7 @@ public final class AppMonitorConfiguration {
      */
     private final @Nullable String identityPoolId;
     /**
-     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
      */
     private final @Nullable List<String> includedPages;
@@ -98,7 +98,7 @@ public final class AppMonitorConfiguration {
         return Optional.ofNullable(this.enableXRay);
     }
     /**
-     * A list of URLs in your website or application to exclude from RUM data collection. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
     */
     public List<String> excludedPages() {
@@ -126,7 +126,7 @@ public final class AppMonitorConfiguration {
         return Optional.ofNullable(this.identityPoolId);
     }
     /**
-     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
     */
     public List<String> includedPages() {

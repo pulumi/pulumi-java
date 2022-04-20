@@ -27,7 +27,7 @@ public final class DelimitedTextReadSettingsResponse {
     private final @Nullable Object skipLineCount;
     /**
      * The read setting type.
-     * Expected value is 'DelimitedTextReadSettings'.
+     * Expected value is &#39;DelimitedTextReadSettings&#39;.
      * 
      */
     private final String type;
@@ -58,7 +58,7 @@ public final class DelimitedTextReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'DelimitedTextReadSettings'.
+     * Expected value is &#39;DelimitedTextReadSettings&#39;.
      * 
     */
     public String type() {

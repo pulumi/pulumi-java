@@ -38,7 +38,7 @@ public final class IoTHubStreamInputDataSourceResponse {
     private final @Nullable String sharedAccessPolicyName;
     /**
      * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Devices/IotHubs'.
+     * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class IoTHubStreamInputDataSourceResponse {
     }
     /**
      * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Devices/IotHubs'.
+     * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
      * 
     */
     public String type() {

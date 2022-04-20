@@ -73,7 +73,7 @@ public final class DataBoxJobDetailsResponse {
     private final @Nullable Integer expectedDataSizeInTeraBytes;
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     private final String jobDetailsType;
@@ -209,7 +209,7 @@ public final class DataBoxJobDetailsResponse {
     }
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
     */
     public String jobDetailsType() {

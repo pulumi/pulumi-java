@@ -102,7 +102,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
 
     /**
      * The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
-     * "projects/{projectNumber}/global/networks/{network_id}".
+     * &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
      * 
      */
     @Import(name="network")

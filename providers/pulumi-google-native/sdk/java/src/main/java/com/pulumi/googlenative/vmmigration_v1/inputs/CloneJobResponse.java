@@ -41,7 +41,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Provides details for the errors that led to the Clone Job's state.
+     * Provides details for the errors that led to the Clone Job&#39;s state.
      * 
      */
     @Import(name="error", required=true)

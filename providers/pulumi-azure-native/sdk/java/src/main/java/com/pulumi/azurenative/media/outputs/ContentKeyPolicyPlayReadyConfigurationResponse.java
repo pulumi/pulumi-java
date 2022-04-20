@@ -20,7 +20,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
      * 
      */
     private final String odataType;
@@ -49,7 +49,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#39;.
      * 
     */
     public String odataType() {

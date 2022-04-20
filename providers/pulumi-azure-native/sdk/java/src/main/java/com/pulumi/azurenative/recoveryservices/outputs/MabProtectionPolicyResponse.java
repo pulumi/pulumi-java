@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 public final class MabProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'MAB'.
+     * Expected value is &#39;MAB&#39;.
      * 
      */
     private final String backupManagementType;
@@ -55,7 +55,7 @@ public final class MabProtectionPolicyResponse {
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'MAB'.
+     * Expected value is &#39;MAB&#39;.
      * 
     */
     public String backupManagementType() {

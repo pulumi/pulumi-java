@@ -40,7 +40,7 @@ public final class MembershipEndpointResponse {
      */
     private final MultiCloudClusterResponse multiCloudCluster;
     /**
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
      * 
      */
     private final OnPremClusterResponse onPremCluster;
@@ -97,7 +97,7 @@ public final class MembershipEndpointResponse {
         return this.multiCloudCluster;
     }
     /**
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
      * 
     */
     public OnPremClusterResponse onPremCluster() {

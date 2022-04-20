@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * A gauge chart shows where the current value sits within a pre-defined range. The upper and lower bounds should define the possible range of values for the scorecard's query (inclusive).
+ * A gauge chart shows where the current value sits within a pre-defined range. The upper and lower bounds should define the possible range of values for the scorecard&#39;s query (inclusive).
  * 
  */
 public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {

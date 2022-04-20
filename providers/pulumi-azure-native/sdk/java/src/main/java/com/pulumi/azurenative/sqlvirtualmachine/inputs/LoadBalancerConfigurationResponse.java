@@ -66,7 +66,7 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     }
 
     /**
-     * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
+     * List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
      * 
      */
     @Import(name="sqlVirtualMachineInstances")

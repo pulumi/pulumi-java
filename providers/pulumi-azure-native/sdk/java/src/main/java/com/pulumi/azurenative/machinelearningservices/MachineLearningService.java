@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:machinelearningservices:MachineLearningService service456 subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/services/service456 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: ACIService, AKSService, EndpointVariant.
  * 
  */

@@ -14,7 +14,7 @@ public final class ProjectSourceAuth {
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
@@ -23,7 +23,7 @@ public final class ProjectSourceAuth {
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
@@ -41,7 +41,7 @@ public final class ProjectSourceAuth {
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
     */
@@ -52,7 +52,7 @@ public final class ProjectSourceAuth {
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
     */

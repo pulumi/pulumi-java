@@ -21,7 +21,7 @@ public final class IosDeviceFileResponse {
      */
     private final FileReferenceResponse content;
     /**
-     * Location of the file on the device, inside the app's sandboxed filesystem
+     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
      * 
      */
     private final String devicePath;
@@ -51,7 +51,7 @@ public final class IosDeviceFileResponse {
         return this.content;
     }
     /**
-     * Location of the file on the device, inside the app's sandboxed filesystem
+     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
      * 
     */
     public String devicePath() {

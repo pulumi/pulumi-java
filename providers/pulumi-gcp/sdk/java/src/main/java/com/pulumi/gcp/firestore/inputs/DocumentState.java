@@ -38,7 +38,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Firestore database id. Defaults to `"(default)"`.
+     * The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     @Import(name="database")
@@ -60,7 +60,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
+     * The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
     @Import(name="fields")
@@ -72,7 +72,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A server defined name for this index. Format:
-     * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
+     * &#39;projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}&#39;
      * 
      */
     @Import(name="name")

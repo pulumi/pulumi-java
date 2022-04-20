@@ -41,7 +41,7 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The target flow to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     @Import(name="targetFlow")
@@ -53,7 +53,7 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The target page to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
      * 
      */
     @Import(name="targetPage")

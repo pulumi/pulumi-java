@@ -52,28 +52,28 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
         return this.creationTime;
     }
     /**
-     * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     @Export(name="dataAccessFqdn", type=String.class, parameters={})
     private Output<String> dataAccessFqdn;
 
     /**
-     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     public Output<String> dataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
-     * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     @Export(name="dataAccessId", type=String.class, parameters={})
     private Output<String> dataAccessId;
 
     /**
-     * @return An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+     * @return An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     public Output<String> dataAccessId() {
@@ -81,7 +81,7 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the environment.
-     * Expected value is 'Gen2'.
+     * Expected value is &#39;Gen2&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -89,7 +89,7 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the environment.
-     * Expected value is 'Gen2'.
+     * Expected value is &#39;Gen2&#39;.
      * 
      */
     public Output<String> kind() {
@@ -166,14 +166,14 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+     * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
      * 
      */
     @Export(name="storageConfiguration", type=Gen2StorageConfigurationOutputResponse.class, parameters={})
     private Output<Gen2StorageConfigurationOutputResponse> storageConfiguration;
 
     /**
-     * @return The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+     * @return The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
      * 
      */
     public Output<Gen2StorageConfigurationOutputResponse> storageConfiguration() {
@@ -194,14 +194,14 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The list of event properties which will be used to define the environment's time series id.
+     * The list of event properties which will be used to define the environment&#39;s time series id.
      * 
      */
     @Export(name="timeSeriesIdProperties", type=List.class, parameters={TimeSeriesIdPropertyResponse.class})
     private Output<List<TimeSeriesIdPropertyResponse>> timeSeriesIdProperties;
 
     /**
-     * @return The list of event properties which will be used to define the environment's time series id.
+     * @return The list of event properties which will be used to define the environment&#39;s time series id.
      * 
      */
     public Output<List<TimeSeriesIdPropertyResponse>> timeSeriesIdProperties() {
@@ -222,14 +222,14 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
+     * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
      * 
      */
     @Export(name="warmStoreConfiguration", type=WarmStoreConfigurationPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> warmStoreConfiguration;
 
     /**
-     * @return The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
+     * @return The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
      * 
      */
     public Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> warmStoreConfiguration() {

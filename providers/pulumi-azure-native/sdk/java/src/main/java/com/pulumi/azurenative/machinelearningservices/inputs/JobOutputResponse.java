@@ -17,7 +17,7 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
     public static final JobOutputResponse Empty = new JobOutputResponse();
 
     /**
-     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
+     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
      * 
      */
     @Import(name="datastoreId", required=true)

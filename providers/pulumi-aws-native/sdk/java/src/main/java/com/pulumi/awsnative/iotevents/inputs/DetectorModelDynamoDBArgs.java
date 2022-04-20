@@ -38,7 +38,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
      * 
      * * `NUMBER` - The hash key is a number.
      * 
-     * If you don't specify `hashKeyType`, the default value is `STRING`.
+     * If you don&#39;t specify `hashKeyType`, the default value is `STRING`.
      * 
      */
     @Import(name="hashKeyType")
@@ -64,11 +64,11 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
      * 
      * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
      * 
-     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * If you don&#39;t specify this parameter, AWS IoT Events triggers the `INSERT` operation.
      * 
      */
     @Import(name="operation")
@@ -88,7 +88,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     /**
      * The name of the DynamoDB column that receives the action payload.
      * 
-     * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
+     * If you don&#39;t specify this parameter, the name of the DynamoDB column is `payload`.
      * 
      */
     @Import(name="payloadField")
@@ -116,7 +116,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
      * 
      * * `NUMBER` - The range key is number.
      * 
-     * If you don't specify `rangeKeyField`, the default value is `STRING`.
+     * If you don&#39;t specify `rangeKeyField`, the default value is `STRING`.
      * 
      */
     @Import(name="rangeKeyType")

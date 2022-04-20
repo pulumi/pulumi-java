@@ -28,13 +28,13 @@ import javax.annotation.Nullable;
  * The following conditions are used to determine whether the resource creation has
  * succeeded or failed:
  * 
- * 1. The value of 'spec.replicas' matches '.status.replicas', '.status.currentReplicas',
- *    and '.status.readyReplicas'.
- * 2. The value of '.status.updateRevision' matches '.status.currentRevision'.
+ * 1. The value of &#39;spec.replicas&#39; matches &#39;.status.replicas&#39;, &#39;.status.currentReplicas&#39;,
+ *    and &#39;.status.readyReplicas&#39;.
+ * 2. The value of &#39;.status.updateRevision&#39; matches &#39;.status.currentRevision&#39;.
  * 
  * If the StatefulSet has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
- * by setting the 'customTimeouts' option on the resource.
+ * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  * ## Example Usage
  * {% /examples %}}
@@ -71,14 +71,14 @@ public class StatefulSet extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {

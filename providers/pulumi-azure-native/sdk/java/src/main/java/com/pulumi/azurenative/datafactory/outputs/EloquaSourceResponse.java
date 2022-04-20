@@ -49,7 +49,7 @@ public final class EloquaSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'EloquaSource'.
+     * Expected value is &#39;EloquaSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class EloquaSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'EloquaSource'.
+     * Expected value is &#39;EloquaSource&#39;.
      * 
     */
     public String type() {

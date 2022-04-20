@@ -97,7 +97,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
      * 
      */
     @Import(name="lifetime", required=true)

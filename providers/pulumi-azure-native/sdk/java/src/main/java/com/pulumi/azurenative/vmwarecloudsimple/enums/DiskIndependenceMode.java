@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Disk's independence mode type
+     * Disk&#39;s independence mode type
      * 
      */
     @EnumType

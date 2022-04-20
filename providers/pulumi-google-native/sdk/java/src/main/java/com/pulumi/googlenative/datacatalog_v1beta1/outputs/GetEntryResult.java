@@ -31,7 +31,7 @@ public final class GetEntryResult {
      */
     private final String description;
     /**
-     * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
+     * Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
      * 
      */
     private final String displayName;
@@ -41,7 +41,7 @@ public final class GetEntryResult {
      */
     private final GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse gcsFilesetSpec;
     /**
-     * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
     private final String integratedSystem;
@@ -76,12 +76,12 @@ public final class GetEntryResult {
      */
     private final GoogleCloudDatacatalogV1beta1UsageSignalResponse usageSignal;
     /**
-     * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
     private final String userSpecifiedSystem;
     /**
-     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
     private final String userSpecifiedType;
@@ -140,7 +140,7 @@ public final class GetEntryResult {
         return this.description;
     }
     /**
-     * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
+     * Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
      * 
     */
     public String displayName() {
@@ -154,7 +154,7 @@ public final class GetEntryResult {
         return this.gcsFilesetSpec;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
     */
     public String integratedSystem() {
@@ -203,14 +203,14 @@ public final class GetEntryResult {
         return this.usageSignal;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
     */
     public String userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
-     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
     */
     public String userSpecifiedType() {

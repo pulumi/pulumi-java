@@ -21,7 +21,7 @@ public final class RuleGroupJsonMatchPattern extends com.pulumi.resources.Invoke
     public static final RuleGroupJsonMatchPattern Empty = new RuleGroupJsonMatchPattern();
 
     /**
-     * Inspect all parts of the web request's JSON body.
+     * Inspect all parts of the web request&#39;s JSON body.
      * 
      */
     @Import(name="all")

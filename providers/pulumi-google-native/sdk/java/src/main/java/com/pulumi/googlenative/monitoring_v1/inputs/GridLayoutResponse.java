@@ -19,7 +19,7 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
     public static final GridLayoutResponse Empty = new GridLayoutResponse();
 
     /**
-     * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
      */
     @Import(name="columns", required=true)

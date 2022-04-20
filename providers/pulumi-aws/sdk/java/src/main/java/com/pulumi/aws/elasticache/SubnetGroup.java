@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an ElastiCache Subnet Group resource.
  * 
- * > **NOTE:** ElastiCache Subnet Groups are only for use when working with an
+ * &gt; **NOTE:** ElastiCache Subnet Groups are only for use when working with an
  * ElastiCache cluster **inside** of a VPC. If you are on EC2 Classic, see the
  * ElastiCache Security Group resource.
  * 
@@ -42,14 +42,14 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Description for the cache subnet group. Defaults to "Managed by Pulumi".
+     * Description for the cache subnet group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return Description for the cache subnet group. Defaults to "Managed by Pulumi".
+     * @return Description for the cache subnet group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

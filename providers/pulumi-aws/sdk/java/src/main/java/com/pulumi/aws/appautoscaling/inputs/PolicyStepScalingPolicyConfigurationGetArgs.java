@@ -41,7 +41,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     }
 
     /**
-     * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
+     * The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
      * 
      */
     @Import(name="metricAggregationType")

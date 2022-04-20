@@ -19,7 +19,7 @@ public final class DimensionTagArgs extends com.pulumi.resources.ResourceArgs {
     public static final DimensionTagArgs Empty = new DimensionTagArgs();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class DimensionTagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

@@ -20,7 +20,7 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
     public static final SqlIpConfigResponse Empty = new SqlIpConfigResponse();
 
     /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
+     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
      * 
      */
     @Import(name="authorizedNetworks", required=true)

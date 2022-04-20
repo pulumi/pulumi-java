@@ -31,7 +31,7 @@ public final class CommandJobResponse {
      */
     private final @Nullable String codeId;
     /**
-     * The command to execute on startup of the job. eg. "python train.py"
+     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     private final String command;
@@ -61,7 +61,7 @@ public final class CommandJobResponse {
      */
     private final @Nullable Map<String,String> environmentVariables;
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
      */
     private final @Nullable String experimentName;
@@ -84,7 +84,7 @@ public final class CommandJobResponse {
     private final Map<String,JobEndpointResponse> interactionEndpoints;
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Command'.
+     * Expected value is &#39;Command&#39;.
      * 
      */
     private final String jobType;
@@ -189,7 +189,7 @@ public final class CommandJobResponse {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * The command to execute on startup of the job. eg. "python train.py"
+     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
     */
     public String command() {
@@ -231,7 +231,7 @@ public final class CommandJobResponse {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
     */
     public Optional<String> experimentName() {
@@ -262,7 +262,7 @@ public final class CommandJobResponse {
     }
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Command'.
+     * Expected value is &#39;Command&#39;.
      * 
     */
     public String jobType() {

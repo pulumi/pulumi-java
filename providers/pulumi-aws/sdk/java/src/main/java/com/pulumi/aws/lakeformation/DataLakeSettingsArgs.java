@@ -63,7 +63,7 @@ public final class DataLakeSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
+     * List of the resource-owning account IDs that the caller&#39;s account can use to share their user access details (user ARNs).
      * 
      */
     @Import(name="trustedResourceOwners")

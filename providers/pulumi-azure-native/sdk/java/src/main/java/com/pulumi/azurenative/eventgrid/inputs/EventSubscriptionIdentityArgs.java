@@ -22,7 +22,7 @@ public final class EventSubscriptionIdentityArgs extends com.pulumi.resources.Re
     public static final EventSubscriptionIdentityArgs Empty = new EventSubscriptionIdentityArgs();
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
      */
     @Import(name="type")

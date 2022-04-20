@@ -19,7 +19,7 @@ public final class BuildDetailsResponse extends com.pulumi.resources.InvokeArgs 
     public static final BuildDetailsResponse Empty = new BuildDetailsResponse();
 
     /**
-     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
+     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
      */
     @Import(name="intotoStatement", required=true)

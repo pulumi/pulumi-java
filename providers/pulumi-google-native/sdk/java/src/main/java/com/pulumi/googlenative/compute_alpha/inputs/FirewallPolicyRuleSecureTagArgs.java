@@ -16,7 +16,7 @@ public final class FirewallPolicyRuleSecureTagArgs extends com.pulumi.resources.
     public static final FirewallPolicyRuleSecureTagArgs Empty = new FirewallPolicyRuleSecureTagArgs();
 
     /**
-     * Name of the secure tag, created with TagManager's TagValue API.
+     * Name of the secure tag, created with TagManager&#39;s TagValue API.
      * 
      */
     @Import(name="name")

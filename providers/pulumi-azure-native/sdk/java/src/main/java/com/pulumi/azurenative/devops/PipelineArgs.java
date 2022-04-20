@@ -53,7 +53,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     @Import(name="pipelineType", required=true)

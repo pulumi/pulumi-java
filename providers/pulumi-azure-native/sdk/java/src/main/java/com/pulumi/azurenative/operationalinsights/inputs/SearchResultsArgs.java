@@ -21,7 +21,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     public static final SearchResultsArgs Empty = new SearchResultsArgs();
 
     /**
-     * Search results table's Description.
+     * Search results table&#39;s Description.
      * 
      */
     @Import(name="description")

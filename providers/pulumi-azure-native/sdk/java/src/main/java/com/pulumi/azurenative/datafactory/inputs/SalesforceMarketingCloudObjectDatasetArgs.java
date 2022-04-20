@@ -115,7 +115,7 @@ public final class SalesforceMarketingCloudObjectDatasetArgs extends com.pulumi.
 
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceMarketingCloudObject'.
+     * Expected value is &#39;SalesforceMarketingCloudObject&#39;.
      * 
      */
     @Import(name="type", required=true)

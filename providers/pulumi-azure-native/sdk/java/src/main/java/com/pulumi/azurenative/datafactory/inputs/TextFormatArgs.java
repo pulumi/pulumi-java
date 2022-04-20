@@ -143,7 +143,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset storage format.
-     * Expected value is 'TextFormat'.
+     * Expected value is &#39;TextFormat&#39;.
      * 
      */
     @Import(name="type", required=true)

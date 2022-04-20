@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Opens the user's default dialer app with the specified phone number but does not dial automatically.
+ * Opens the user&#39;s default dialer app with the specified phone number but does not dial automatically.
  * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse extends com.pulumi.resources.InvokeArgs {

@@ -39,7 +39,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+     * The authentication type to connect to Dynamics CRM server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="authenticationType", required=true)
@@ -61,7 +61,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
+     * The deployment type of the Dynamics CRM instance. &#39;Online&#39; for Dynamics CRM Online and &#39;OnPremisesWithIfd&#39; for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="deploymentType", required=true)
@@ -149,7 +149,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
     @Import(name="servicePrincipalCredential")
@@ -160,7 +160,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="servicePrincipalCredentialType")
@@ -194,7 +194,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
 
     /**
      * Type of linked service.
-     * Expected value is 'DynamicsCrm'.
+     * Expected value is &#39;DynamicsCrm&#39;.
      * 
      */
     @Import(name="type", required=true)

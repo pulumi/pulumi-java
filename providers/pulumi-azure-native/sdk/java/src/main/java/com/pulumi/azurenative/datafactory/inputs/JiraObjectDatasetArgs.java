@@ -115,7 +115,7 @@ public final class JiraObjectDatasetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset.
-     * Expected value is 'JiraObject'.
+     * Expected value is &#39;JiraObject&#39;.
      * 
      */
     @Import(name="type", required=true)

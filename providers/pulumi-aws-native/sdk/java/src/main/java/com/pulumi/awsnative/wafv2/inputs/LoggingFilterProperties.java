@@ -19,7 +19,7 @@ public final class LoggingFilterProperties extends com.pulumi.resources.InvokeAr
     public static final LoggingFilterProperties Empty = new LoggingFilterProperties();
 
     /**
-     * Default handling for logs that don't match any of the specified filtering conditions.
+     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
      */
     @Import(name="defaultBehavior", required=true)

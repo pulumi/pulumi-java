@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * Manages a Hdfs Location within AWS DataSync.
  * 
- * > **NOTE:** The DataSync Agents must be available before creating this resource.
+ * &gt; **NOTE:** The DataSync Agents must be available before creating this resource.
  * 
  * ## Example Usage
  * 
@@ -135,14 +135,14 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
         return this.kerberosPrincipal;
     }
     /**
-     * The URI of the HDFS cluster's Key Management Server (KMS).
+     * The URI of the HDFS cluster&#39;s Key Management Server (KMS).
      * 
      */
     @Export(name="kmsKeyProviderUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyProviderUri;
 
     /**
-     * @return The URI of the HDFS cluster's Key Management Server (KMS).
+     * @return The URI of the HDFS cluster&#39;s Key Management Server (KMS).
      * 
      */
     public Output</* @Nullable */ String> kmsKeyProviderUri() {
@@ -163,14 +163,14 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
         return this.nameNodes;
     }
     /**
-     * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn't specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+     * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
     @Export(name="qopConfiguration", type=LocationHdfsQopConfiguration.class, parameters={})
     private Output</* @Nullable */ LocationHdfsQopConfiguration> qopConfiguration;
 
     /**
-     * @return The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn't specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+     * @return The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
     public Output</* @Nullable */ LocationHdfsQopConfiguration> qopConfiguration() {
@@ -205,14 +205,14 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
         return this.simpleUser;
     }
     /**
-     * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn't specified, it will default to /.
+     * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
      * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
-     * @return A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn't specified, it will default to /.
+     * @return A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
      * 
      */
     public Output</* @Nullable */ String> subdirectory() {

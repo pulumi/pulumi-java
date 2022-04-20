@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -80,14 +80,14 @@ public class ImportJob extends com.pulumi.resources.CustomResource {
         return this.expireTime;
     }
     /**
-     * The time this ImportJob's key material was generated.
+     * The time this ImportJob&#39;s key material was generated.
      * 
      */
     @Export(name="generateTime", type=String.class, parameters={})
     private Output<String> generateTime;
 
     /**
-     * @return The time this ImportJob's key material was generated.
+     * @return The time this ImportJob&#39;s key material was generated.
      * 
      */
     public Output<String> generateTime() {

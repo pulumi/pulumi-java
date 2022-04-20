@@ -43,7 +43,7 @@ public final class AzureFirewallIPConfigurationResponse {
      */
     private final @Nullable SubResourceResponse publicIPAddress;
     /**
-     * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
+     * Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
      * 
      */
     private final @Nullable SubResourceResponse subnet;
@@ -116,7 +116,7 @@ public final class AzureFirewallIPConfigurationResponse {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
+     * Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
      * 
     */
     public Optional<SubResourceResponse> subnet() {

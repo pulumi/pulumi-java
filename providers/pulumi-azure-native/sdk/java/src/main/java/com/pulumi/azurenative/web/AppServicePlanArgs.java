@@ -44,7 +44,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Import(name="hyperV")
@@ -55,7 +55,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * If <code>true</code>, this App Service Plan owns spot instances.
+     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
      */
     @Import(name="isSpot")
@@ -66,7 +66,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Import(name="isXenon")
@@ -132,8 +132,8 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-     * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
+     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
     @Import(name="perSiteScaling")
@@ -144,7 +144,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Import(name="reserved")

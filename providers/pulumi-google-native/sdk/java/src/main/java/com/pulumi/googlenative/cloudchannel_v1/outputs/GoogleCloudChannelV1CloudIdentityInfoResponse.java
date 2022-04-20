@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     /**
-     * URI of Customer's Admin console dashboard.
+     * URI of Customer&#39;s Admin console dashboard.
      * 
      */
     private final String adminConsoleUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
      */
     private final GoogleCloudChannelV1EduDataResponse eduData;
     /**
-     * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+     * Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
      */
     private final Boolean isDomainVerified;
@@ -73,7 +73,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     }
 
     /**
-     * URI of Customer's Admin console dashboard.
+     * URI of Customer&#39;s Admin console dashboard.
      * 
     */
     public String adminConsoleUri() {
@@ -101,7 +101,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
         return this.eduData;
     }
     /**
-     * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+     * Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
     */
     public Boolean isDomainVerified() {

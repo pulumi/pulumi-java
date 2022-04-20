@@ -46,10 +46,10 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:compute/network:Network")
 public class Network extends com.pulumi.resources.CustomResource {
     /**
-     * When set to `true`, the network is created in "auto subnet mode" and
+     * When set to `true`, the network is created in &#34;auto subnet mode&#34; and
      * it will create a subnet for each region automatically across the
      * `10.128.0.0/9` address range.
-     * When set to `false`, the network is created in "custom subnet mode" so
+     * When set to `false`, the network is created in &#34;custom subnet mode&#34; so
      * the user can explicitly connect subnetwork resources.
      * 
      */
@@ -57,10 +57,10 @@ public class Network extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> autoCreateSubnetworks;
 
     /**
-     * @return When set to `true`, the network is created in "auto subnet mode" and
+     * @return When set to `true`, the network is created in &#34;auto subnet mode&#34; and
      * it will create a subnet for each region automatically across the
      * `10.128.0.0/9` address range.
-     * When set to `false`, the network is created in "custom subnet mode" so
+     * When set to `false`, the network is created in &#34;custom subnet mode&#34; so
      * the user can explicitly connect subnetwork resources.
      * 
      */
@@ -173,9 +173,9 @@ public class Network extends com.pulumi.resources.CustomResource {
     }
     /**
      * The network-wide routing mode to use. If set to `REGIONAL`, this
-     * network's cloud routers will only advertise routes with subnetworks
+     * network&#39;s cloud routers will only advertise routes with subnetworks
      * of this network in the same region as the router. If set to `GLOBAL`,
-     * this network's cloud routers will advertise routes with all
+     * this network&#39;s cloud routers will advertise routes with all
      * subnetworks of this network, across regions.
      * Possible values are `REGIONAL` and `GLOBAL`.
      * 
@@ -185,9 +185,9 @@ public class Network extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The network-wide routing mode to use. If set to `REGIONAL`, this
-     * network's cloud routers will only advertise routes with subnetworks
+     * network&#39;s cloud routers will only advertise routes with subnetworks
      * of this network in the same region as the router. If set to `GLOBAL`,
-     * this network's cloud routers will advertise routes with all
+     * this network&#39;s cloud routers will advertise routes with all
      * subnetworks of this network, across regions.
      * Possible values are `REGIONAL` and `GLOBAL`.
      * 

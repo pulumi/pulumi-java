@@ -189,14 +189,14 @@ public class Note extends com.pulumi.resources.CustomResource {
         return this.longDescription;
     }
     /**
-     * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
+     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
+     * @return The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
      */
     public Output<String> name() {

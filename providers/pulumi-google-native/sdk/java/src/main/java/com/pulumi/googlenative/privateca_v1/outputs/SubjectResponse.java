@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SubjectResponse {
     /**
-     * The "common name" of the subject.
+     * The &#34;common name&#34; of the subject.
      * 
      */
     private final String commonName;
@@ -71,7 +71,7 @@ public final class SubjectResponse {
     }
 
     /**
-     * The "common name" of the subject.
+     * The &#34;common name&#34; of the subject.
      * 
     */
     public String commonName() {

@@ -49,7 +49,7 @@ public final class SparkSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SparkSource'.
+     * Expected value is &#39;SparkSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SparkSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SparkSource'.
+     * Expected value is &#39;SparkSource&#39;.
      * 
     */
     public String type() {

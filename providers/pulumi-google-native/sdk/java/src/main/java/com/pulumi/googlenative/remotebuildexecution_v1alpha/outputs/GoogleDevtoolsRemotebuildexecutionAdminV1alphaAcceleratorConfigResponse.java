@@ -15,7 +15,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      */
     private final String acceleratorCount;
     /**
-     * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
+     * The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
      * 
      */
     private final String acceleratorType;
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
         return this.acceleratorCount;
     }
     /**
-     * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
+     * The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
      * 
     */
     public String acceleratorType() {

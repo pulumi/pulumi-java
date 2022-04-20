@@ -30,7 +30,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>The description.</p>
+     * &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     @Import(name="description")
@@ -41,7 +41,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>The EC2 security groups that control access to the studio component.</p>
+     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
     @Import(name="ec2SecurityGroupIds")
@@ -52,7 +52,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>Initialization scripts for studio components.</p>
+     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
     @Import(name="initializationScripts")
@@ -63,7 +63,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>The name for the studio component.</p>
+     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -74,7 +74,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>Parameters for the studio component scripts.</p>
+     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
     @Import(name="scriptParameters")
@@ -85,7 +85,7 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * <p>The studioId. </p>
+     * &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     @Import(name="studioId", required=true)

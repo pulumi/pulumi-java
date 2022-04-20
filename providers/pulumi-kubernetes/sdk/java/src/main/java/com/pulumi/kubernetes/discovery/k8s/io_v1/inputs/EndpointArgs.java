@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Endpoint represents a single logical "backend" implementing a service.
+ * Endpoint represents a single logical &#34;backend&#34; implementing a service.
  * 
  */
 public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {

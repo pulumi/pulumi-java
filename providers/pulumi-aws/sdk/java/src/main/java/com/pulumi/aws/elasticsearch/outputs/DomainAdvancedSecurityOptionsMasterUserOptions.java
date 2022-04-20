@@ -17,12 +17,12 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
      */
     private final @Nullable String masterUserArn;
     /**
-     * Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     private final @Nullable String masterUserName;
     /**
-     * Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     private final @Nullable String masterUserPassword;
@@ -45,14 +45,14 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
         return Optional.ofNullable(this.masterUserArn);
     }
     /**
-     * Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
     */
     public Optional<String> masterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
     /**
-     * Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
     */
     public Optional<String> masterUserPassword() {

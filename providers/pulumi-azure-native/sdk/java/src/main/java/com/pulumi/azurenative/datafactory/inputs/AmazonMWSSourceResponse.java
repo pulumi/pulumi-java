@@ -99,7 +99,7 @@ public final class AmazonMWSSourceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy source type.
-     * Expected value is 'AmazonMWSSource'.
+     * Expected value is &#39;AmazonMWSSource&#39;.
      * 
      */
     @Import(name="type", required=true)

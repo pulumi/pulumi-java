@@ -62,7 +62,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The descriptive name of the vCenter's datacenter this VM is contained in.
+     * The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
      * 
      */
     @Import(name="datacenterDescription", required=true)
@@ -73,7 +73,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The id of the vCenter's datacenter this VM is contained in.
+     * The id of the vCenter&#39;s datacenter this VM is contained in.
      * 
      */
     @Import(name="datacenterId", required=true)
@@ -106,7 +106,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
      */
     @Import(name="guestDescription", required=true)
@@ -150,7 +150,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
+     * The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
      * 
      */
     @Import(name="vmId", required=true)

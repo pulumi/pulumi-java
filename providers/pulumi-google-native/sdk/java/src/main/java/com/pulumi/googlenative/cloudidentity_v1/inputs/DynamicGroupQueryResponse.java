@@ -17,7 +17,7 @@ public final class DynamicGroupQueryResponse extends com.pulumi.resources.Invoke
     public static final DynamicGroupQueryResponse Empty = new DynamicGroupQueryResponse();
 
     /**
-     * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
+     * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department==&#39;engineering&#39;)` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area==&#39;foo&#39; &amp;&amp; loc.building_id==&#39;bar&#39;)` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase(&#39;jOhn DoE&#39;)`
      * 
      */
     @Import(name="query", required=true)

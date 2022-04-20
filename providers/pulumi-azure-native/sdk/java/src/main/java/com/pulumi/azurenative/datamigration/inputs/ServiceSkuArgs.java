@@ -32,7 +32,7 @@ public final class ServiceSkuArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
+     * The SKU family, used when the service has multiple performance classes within a tier, such as &#39;A&#39;, &#39;D&#39;, etc. for virtual machines
      * 
      */
     @Import(name="family")
@@ -43,7 +43,7 @@ public final class ServiceSkuArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique name of the SKU, such as 'P3'
+     * The unique name of the SKU, such as &#39;P3&#39;
      * 
      */
     @Import(name="name")
@@ -54,7 +54,7 @@ public final class ServiceSkuArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
+     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. &#39;A1&#39; for virtual machines
      * 
      */
     @Import(name="size")
@@ -65,7 +65,7 @@ public final class ServiceSkuArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
+     * The tier of the SKU, such as &#39;Free&#39;, &#39;Basic&#39;, &#39;Standard&#39;, or &#39;Premium&#39;
      * 
      */
     @Import(name="tier")

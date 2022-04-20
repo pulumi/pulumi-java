@@ -27,14 +27,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:connectors/v1:Connection")
 public class Connection extends com.pulumi.resources.CustomResource {
     /**
-     * Optional. Configuration for establishing the connection's authentication with an external system.
+     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
      */
     @Export(name="authConfig", type=AuthConfigResponse.class, parameters={})
     private Output<AuthConfigResponse> authConfig;
 
     /**
-     * @return Optional. Configuration for establishing the connection's authentication with an external system.
+     * @return Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
      */
     public Output<AuthConfigResponse> authConfig() {
@@ -195,14 +195,14 @@ public class Connection extends com.pulumi.resources.CustomResource {
         return this.serviceAccount;
     }
     /**
-     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
      */
     @Export(name="serviceDirectory", type=String.class, parameters={})
     private Output<String> serviceDirectory;
 
     /**
-     * @return The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+     * @return The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
      */
     public Output<String> serviceDirectory() {

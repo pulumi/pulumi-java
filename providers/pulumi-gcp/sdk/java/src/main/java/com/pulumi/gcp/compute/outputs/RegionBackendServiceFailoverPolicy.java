@@ -36,9 +36,9 @@ public final class RegionBackendServiceFailoverPolicy {
      * The value of the field must be in [0, 1]. If the ratio of the healthy
      * VMs in the primary backend is at or below this number, traffic arriving
      * at the load-balanced IP will be directed to the failover backend.
-     * In case where 'failoverRatio' is not set or all the VMs in the backup
+     * In case where &#39;failoverRatio&#39; is not set or all the VMs in the backup
      * backend are unhealthy, the traffic will be directed back to the primary
-     * backend in the "force" mode, where traffic will be spread to the healthy
+     * backend in the &#34;force&#34; mode, where traffic will be spread to the healthy
      * VMs with the best effort, or to all VMs when no VM is healthy.
      * This field is only used with l4 load balancing.
      * 
@@ -83,9 +83,9 @@ public final class RegionBackendServiceFailoverPolicy {
      * The value of the field must be in [0, 1]. If the ratio of the healthy
      * VMs in the primary backend is at or below this number, traffic arriving
      * at the load-balanced IP will be directed to the failover backend.
-     * In case where 'failoverRatio' is not set or all the VMs in the backup
+     * In case where &#39;failoverRatio&#39; is not set or all the VMs in the backup
      * backend are unhealthy, the traffic will be directed back to the primary
-     * backend in the "force" mode, where traffic will be spread to the healthy
+     * backend in the &#34;force&#34; mode, where traffic will be spread to the healthy
      * VMs with the best effort, or to all VMs when no VM is healthy.
      * This field is only used with l4 load balancing.
      * 

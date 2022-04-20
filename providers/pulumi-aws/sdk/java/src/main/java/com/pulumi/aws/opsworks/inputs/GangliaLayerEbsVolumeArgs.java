@@ -36,7 +36,7 @@ public final class GangliaLayerEbsVolumeArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The path to mount the EBS volume on the layer's instances.
+     * The path to mount the EBS volume on the layer&#39;s instances.
      * 
      */
     @Import(name="mountPoint", required=true)

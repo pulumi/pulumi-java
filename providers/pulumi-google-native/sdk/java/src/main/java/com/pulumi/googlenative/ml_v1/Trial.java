@@ -38,14 +38,14 @@ public class Trial extends com.pulumi.resources.CustomResource {
         return this.clientId;
     }
     /**
-     * Time at which the trial's status changed to COMPLETED.
+     * Time at which the trial&#39;s status changed to COMPLETED.
      * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
-     * @return Time at which the trial's status changed to COMPLETED.
+     * @return Time at which the trial&#39;s status changed to COMPLETED.
      * 
      */
     public Output<String> endTime() {

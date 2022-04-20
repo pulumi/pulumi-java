@@ -101,7 +101,7 @@ public final class AvroSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'AvroSource'.
+     * Expected value is &#39;AvroSource&#39;.
      * 
      */
     @Import(name="type", required=true)

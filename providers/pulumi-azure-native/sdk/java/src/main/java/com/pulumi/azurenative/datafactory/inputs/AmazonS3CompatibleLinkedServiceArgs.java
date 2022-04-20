@@ -128,7 +128,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends com.pulumi.resour
 
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3Compatible'.
+     * Expected value is &#39;AmazonS3Compatible&#39;.
      * 
      */
     @Import(name="type", required=true)

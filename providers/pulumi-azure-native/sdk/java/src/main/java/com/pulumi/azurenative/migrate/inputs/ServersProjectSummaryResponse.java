@@ -56,7 +56,7 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
 
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

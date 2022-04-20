@@ -22,7 +22,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
     public static final VirtualMachineScaleSetStorageProfileResponse Empty = new VirtualMachineScaleSetStorageProfileResponse();
 
     /**
-     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="dataDisks")
@@ -44,7 +44,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
     }
 
     /**
-     * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="osDisk")

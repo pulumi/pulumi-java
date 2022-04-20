@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PublisherInfoResponse {
     /**
-     * The "OriginalName" field taken from the file's version resource
+     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String binaryName;
     /**
-     * The product name taken from the file's version resource
+     * The product name taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String productName;
@@ -27,7 +27,7 @@ public final class PublisherInfoResponse {
      */
     private final @Nullable String publisherName;
     /**
-     * The binary file version taken from the file's version resource
+     * The binary file version taken from the file&#39;s version resource
      * 
      */
     private final @Nullable String version;
@@ -45,14 +45,14 @@ public final class PublisherInfoResponse {
     }
 
     /**
-     * The "OriginalName" field taken from the file's version resource
+     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
     */
     public Optional<String> binaryName() {
         return Optional.ofNullable(this.binaryName);
     }
     /**
-     * The product name taken from the file's version resource
+     * The product name taken from the file&#39;s version resource
      * 
     */
     public Optional<String> productName() {
@@ -66,7 +66,7 @@ public final class PublisherInfoResponse {
         return Optional.ofNullable(this.publisherName);
     }
     /**
-     * The binary file version taken from the file's version resource
+     * The binary file version taken from the file&#39;s version resource
      * 
     */
     public Optional<String> version() {

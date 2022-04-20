@@ -20,7 +20,7 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     public static final VirtualNetworkRuleResponse Empty = new VirtualNetworkRuleResponse();
 
     /**
-     * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
      */
     @Import(name="id", required=true)

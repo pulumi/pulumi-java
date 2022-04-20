@@ -20,7 +20,7 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
     public static final TargetOSInfoArgs Empty = new TargetOSInfoArgs();
 
     /**
-     * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
+     * Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
      * 
      */
     @Import(name="osUpdateType", required=true)

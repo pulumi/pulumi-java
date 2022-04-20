@@ -39,7 +39,7 @@ public final class NetworkAssociationState extends com.pulumi.resources.Resource
     }
 
     /**
-     * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
+     * A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
      * 
      */
     @Import(name="securityGroups")

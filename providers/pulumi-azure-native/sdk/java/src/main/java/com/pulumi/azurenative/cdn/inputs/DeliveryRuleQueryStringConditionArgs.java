@@ -21,7 +21,7 @@ public final class DeliveryRuleQueryStringConditionArgs extends com.pulumi.resou
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'QueryString'.
+     * Expected value is &#39;QueryString&#39;.
      * 
      */
     @Import(name="name", required=true)

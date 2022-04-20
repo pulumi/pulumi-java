@@ -19,7 +19,7 @@ public final class SecurityProfileTagArgs extends com.pulumi.resources.ResourceA
     public static final SecurityProfileTagArgs Empty = new SecurityProfileTagArgs();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class SecurityProfileTagArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

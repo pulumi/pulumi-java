@@ -18,7 +18,7 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     public static final CustomMetricResponse Empty = new CustomMetricResponse();
 
     /**
-     * Allows filtering on the metric's fields.
+     * Allows filtering on the metric&#39;s fields.
      * 
      */
     @Import(name="filter", required=true)

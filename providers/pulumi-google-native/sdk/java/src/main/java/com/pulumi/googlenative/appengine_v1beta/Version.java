@@ -347,14 +347,14 @@ public class Version extends com.pulumi.resources.CustomResource {
         return this.livenessCheck;
     }
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
      */
     @Export(name="manualScaling", type=ManualScalingResponse.class, parameters={})
     private Output<ManualScalingResponse> manualScaling;
 
     /**
-     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
+     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
      */
     public Output<ManualScalingResponse> manualScaling() {
@@ -473,14 +473,14 @@ public class Version extends com.pulumi.resources.CustomResource {
         return this.runtimeChannel;
     }
     /**
-     * The path or name of the app's main executable.
+     * The path or name of the app&#39;s main executable.
      * 
      */
     @Export(name="runtimeMainExecutablePath", type=String.class, parameters={})
     private Output<String> runtimeMainExecutablePath;
 
     /**
-     * @return The path or name of the app's main executable.
+     * @return The path or name of the app&#39;s main executable.
      * 
      */
     public Output<String> runtimeMainExecutablePath() {
@@ -529,14 +529,14 @@ public class Version extends com.pulumi.resources.CustomResource {
         return this.threadsafe;
     }
     /**
-     * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
+     * Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
      */
     @Export(name="versionUrl", type=String.class, parameters={})
     private Output<String> versionUrl;
 
     /**
-     * @return Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
+     * @return Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
      */
     public Output<String> versionUrl() {

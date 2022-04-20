@@ -49,7 +49,7 @@ public final class ZohoSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ZohoSource'.
+     * Expected value is &#39;ZohoSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ZohoSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ZohoSource'.
+     * Expected value is &#39;ZohoSource&#39;.
      * 
     */
     public String type() {

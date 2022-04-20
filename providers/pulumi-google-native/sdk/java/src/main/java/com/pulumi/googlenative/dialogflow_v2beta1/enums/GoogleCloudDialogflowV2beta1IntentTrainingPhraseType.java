@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Example("EXAMPLE"),
         /**
-         * Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you've created in template mode, those will continue to work.
+         * Templates are not annotated with entity types, but they can contain @-prefixed entity type names as substrings. Template mode has been deprecated. Example mode is the only supported way to create new training phrases. If you have existing training phrases that you&#39;ve created in template mode, those will continue to work.
          * 
          */
         Template("TEMPLATE");

@@ -48,28 +48,28 @@ public class FlowVpcInterface extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * IDs of the network interfaces created in customer's account by MediaConnect.
+     * IDs of the network interfaces created in customer&#39;s account by MediaConnect.
      * 
      */
     @Export(name="networkInterfaceIds", type=List.class, parameters={String.class})
     private Output<List<String>> networkInterfaceIds;
 
     /**
-     * @return IDs of the network interfaces created in customer's account by MediaConnect.
+     * @return IDs of the network interfaces created in customer&#39;s account by MediaConnect.
      * 
      */
     public Output<List<String>> networkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
-     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
      * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
-     * @return Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * @return Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
      * 
      */
     public Output<String> roleArn() {

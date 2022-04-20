@@ -32,7 +32,7 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
      */
     @Import(name="type", required=true)

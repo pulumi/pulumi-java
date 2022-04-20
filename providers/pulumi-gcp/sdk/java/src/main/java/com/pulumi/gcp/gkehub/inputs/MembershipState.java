@@ -35,7 +35,7 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     /**
      * The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
      * 
-     * @Deprecated
+     * @deprecated
      * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
      * 
      */

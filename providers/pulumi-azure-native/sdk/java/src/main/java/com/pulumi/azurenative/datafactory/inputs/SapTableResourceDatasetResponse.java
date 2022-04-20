@@ -115,7 +115,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
 
     /**
      * Type of dataset.
-     * Expected value is 'SapTableResource'.
+     * Expected value is &#39;SapTableResource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -20,7 +20,7 @@ public final class ConfigurationIdentityArgs extends com.pulumi.resources.Resour
     public static final ConfigurationIdentityArgs Empty = new ConfigurationIdentityArgs();
 
     /**
-     * The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.
+     * The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
      * 
      */
     @Import(name="type")

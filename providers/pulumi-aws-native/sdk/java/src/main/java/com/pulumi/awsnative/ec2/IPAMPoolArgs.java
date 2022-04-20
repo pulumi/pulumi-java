@@ -32,7 +32,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
      */
     @Import(name="allocationDefaultNetmaskLength")
@@ -76,7 +76,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
     @Import(name="autoImport")
@@ -105,7 +105,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * The region of this pool. If not set, this will default to &#34;None&#34; which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
     @Import(name="locale")
@@ -138,7 +138,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * The Id of this pool&#39;s source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
     @Import(name="sourceIpamPoolId")

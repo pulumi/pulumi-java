@@ -16,7 +16,7 @@ public final class JobIAMPolicyState extends com.pulumi.resources.ResourceArgs {
     public static final JobIAMPolicyState Empty = new JobIAMPolicyState();
 
     /**
-     * (Computed) The etag of the jobs's IAM policy.
+     * (Computed) The etag of the jobs&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

@@ -28,7 +28,7 @@ public final class NfsAccessRuleResponse {
      */
     private final @Nullable String anonymousUID;
     /**
-     * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
      * 
      */
     private final @Nullable String filter;
@@ -43,7 +43,7 @@ public final class NfsAccessRuleResponse {
      */
     private final String scope;
     /**
-     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
+     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
      * 
      */
     private final @Nullable Boolean submountAccess;
@@ -95,7 +95,7 @@ public final class NfsAccessRuleResponse {
         return Optional.ofNullable(this.anonymousUID);
     }
     /**
-     * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
      * 
     */
     public Optional<String> filter() {
@@ -116,7 +116,7 @@ public final class NfsAccessRuleResponse {
         return this.scope;
     }
     /**
-     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
+     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
      * 
     */
     public Optional<Boolean> submountAccess() {

@@ -13,9 +13,9 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The theme colors that are used for data colors in charts. The colors description is a
+ * &lt;p&gt;The theme colors that are used for data colors in charts. The colors description is a
  *             hexadecimal color code that consists of six alphanumerical characters, prefixed with
- *                 <code>#</code>, for example #37BFF5. </p>
+ *                 &lt;code&gt;#&lt;/code&gt;, for example #37BFF5. &lt;/p&gt;
  * 
  */
 public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.ResourceArgs {
@@ -23,7 +23,7 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     public static final ThemeDataColorPaletteArgs Empty = new ThemeDataColorPaletteArgs();
 
     /**
-     * <p>The hexadecimal codes for the colors.</p>
+     * &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
      * 
      */
     @Import(name="colors")
@@ -34,8 +34,8 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * <p>The hexadecimal code of a color that applies to charts where a lack of data is
-     *             highlighted.</p>
+     * &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.&lt;/p&gt;
      * 
      */
     @Import(name="emptyFillColor")
@@ -46,7 +46,7 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
+     * &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
      * 
      */
     @Import(name="minMaxGradient")

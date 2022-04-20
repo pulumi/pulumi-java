@@ -24,7 +24,7 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The CryptoKey's name.
+     * The CryptoKey&#39;s name.
      * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
      * 
      */

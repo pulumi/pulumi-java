@@ -15,27 +15,27 @@ import java.util.StringJoiner;
     @EnumType
     public enum ParameterType {
         /**
-         * The parameter's value is a string.
+         * The parameter&#39;s value is a string.
          * 
          */
         String("String"),
         /**
-         * The parameter's value is a string that holds sensitive information.
+         * The parameter&#39;s value is a string that holds sensitive information.
          * 
          */
         SecretString("SecretString"),
         /**
-         * The parameter's value is a 32-bit signed integer.
+         * The parameter&#39;s value is a 32-bit signed integer.
          * 
          */
         Int("Int"),
         /**
-         * The parameter's value is a 64-bit double-precision floating point.
+         * The parameter&#39;s value is a 64-bit double-precision floating point.
          * 
          */
         Double("Double"),
         /**
-         * The parameter's value is a boolean value that is either true or false.
+         * The parameter&#39;s value is a boolean value that is either true or false.
          * 
          */
         Bool("Bool");

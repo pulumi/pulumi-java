@@ -15,7 +15,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGalleryImageArgs Empty = new GetGalleryImageArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=author)'
+     * Specify the $expand query. Example: &#39;properties($select=author)&#39;
      * 
      */
     @Import(name="expand")

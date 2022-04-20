@@ -75,7 +75,7 @@ public final class ProjectPropertiesResponse {
      */
     private final String provisioningState;
     /**
-     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -209,7 +209,7 @@ public final class ProjectPropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
     */
     public Optional<String> publicNetworkAccess() {

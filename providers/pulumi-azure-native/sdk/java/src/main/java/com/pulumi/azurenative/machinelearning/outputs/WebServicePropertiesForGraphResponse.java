@@ -51,17 +51,17 @@ public final class WebServicePropertiesForGraphResponse {
      */
     private final @Nullable DiagnosticsConfigurationResponse diagnostics;
     /**
-     * Defines sample input data for one or more of the service's inputs.
+     * Defines sample input data for one or more of the service&#39;s inputs.
      * 
      */
     private final @Nullable ExampleRequestResponse exampleRequest;
     /**
-     * When set to true, sample data is included in the web service's swagger definition. The default value is true.
+     * When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
      * 
      */
     private final @Nullable Boolean exposeSampleData;
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
      * 
      */
     private final @Nullable ServiceInputOutputSpecificationResponse input;
@@ -81,7 +81,7 @@ public final class WebServicePropertiesForGraphResponse {
      */
     private final String modifiedOn;
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
      * 
      */
     private final @Nullable ServiceInputOutputSpecificationResponse output;
@@ -92,7 +92,7 @@ public final class WebServicePropertiesForGraphResponse {
     private final @Nullable GraphPackageResponse package_;
     /**
      * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
-     * Expected value is 'Graph'.
+     * Expected value is &#39;Graph&#39;.
      * 
      */
     private final String packageType;
@@ -228,21 +228,21 @@ public final class WebServicePropertiesForGraphResponse {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
-     * Defines sample input data for one or more of the service's inputs.
+     * Defines sample input data for one or more of the service&#39;s inputs.
      * 
     */
     public Optional<ExampleRequestResponse> exampleRequest() {
         return Optional.ofNullable(this.exampleRequest);
     }
     /**
-     * When set to true, sample data is included in the web service's swagger definition. The default value is true.
+     * When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
      * 
     */
     public Optional<Boolean> exposeSampleData() {
         return Optional.ofNullable(this.exposeSampleData);
     }
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
      * 
     */
     public Optional<ServiceInputOutputSpecificationResponse> input() {
@@ -270,7 +270,7 @@ public final class WebServicePropertiesForGraphResponse {
         return this.modifiedOn;
     }
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
      * 
     */
     public Optional<ServiceInputOutputSpecificationResponse> output() {
@@ -285,7 +285,7 @@ public final class WebServicePropertiesForGraphResponse {
     }
     /**
      * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
-     * Expected value is 'Graph'.
+     * Expected value is &#39;Graph&#39;.
      * 
     */
     public String packageType() {

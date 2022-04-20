@@ -56,28 +56,28 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignElasticIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignElasticIps;
 
     /**
-     * @return Whether to automatically assign an elastic IP address to the layer's instances.
+     * @return Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps;
     }
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignPublicIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignPublicIps;
 
     /**
-     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
@@ -116,14 +116,14 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
         return this.customDeployRecipes;
     }
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Export(name="customInstanceProfileArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> customInstanceProfileArn;
 
     /**
-     * @return The ARN of an IAM profile that will be used for the layer's instances.
+     * @return The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ String> customInstanceProfileArn() {
@@ -144,14 +144,14 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
         return this.customJson;
     }
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Export(name="customSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSecurityGroupIds;
 
     /**
-     * @return Ids for a set of security groups to apply to the layer's instances.
+     * @return Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
@@ -190,14 +190,14 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
         return this.drainElbOnShutdown;
     }
     /**
-     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     @Export(name="ebsVolumes", type=List.class, parameters={MemcachedLayerEbsVolume.class})
     private Output</* @Nullable */ List<MemcachedLayerEbsVolume>> ebsVolumes;
 
     /**
-     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<MemcachedLayerEbsVolume>> ebsVolumes() {
@@ -274,14 +274,14 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
         return this.stackId;
     }
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Export(name="systemPackages", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> systemPackages;
 
     /**
-     * @return Names of a set of system packages to install on the layer's instances.
+     * @return Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> systemPackages() {

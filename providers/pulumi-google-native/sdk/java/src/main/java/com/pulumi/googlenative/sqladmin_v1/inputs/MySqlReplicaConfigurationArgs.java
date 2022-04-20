@@ -22,7 +22,7 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     public static final MySqlReplicaConfigurationArgs Empty = new MySqlReplicaConfigurationArgs();
 
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     @Import(name="caCertificate")
@@ -33,7 +33,7 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     @Import(name="clientCertificate")
@@ -44,7 +44,7 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     @Import(name="clientKey")
@@ -55,7 +55,7 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+     * Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
      * 
      */
     @Import(name="connectRetryInterval")
@@ -132,7 +132,7 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+     * Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
      * 
      */
     @Import(name="verifyServerCertificate")

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1__ExplanationConfigResponse {
     /**
-     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
      * 
      */
     private final GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
      */
     private final GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
     /**
-     * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+     * Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
      * 
      */
     private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
     }
 
     /**
-     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
      * 
     */
     public GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution() {
@@ -52,7 +52,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
         return this.sampledShapleyAttribution;
     }
     /**
-     * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+     * Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
      * 
     */
     public GoogleCloudMlV1__XraiAttributionResponse xraiAttribution() {

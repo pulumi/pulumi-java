@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class InstanceGroupManagerStatusResponse {
     /**
-     * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
+     * A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
      * 
      */
     private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
@@ -34,7 +34,7 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusStatefulResponse stateful;
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
@@ -54,7 +54,7 @@ public final class InstanceGroupManagerStatusResponse {
     }
 
     /**
-     * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
+     * A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
      * 
     */
     public InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig() {
@@ -82,7 +82,7 @@ public final class InstanceGroupManagerStatusResponse {
         return this.stateful;
     }
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
     */
     public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {

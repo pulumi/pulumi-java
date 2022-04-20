@@ -50,12 +50,12 @@ public final class MethodIntegration {
      */
     private final @Nullable String credentials;
     /**
-     * The integration's HTTP method type.
+     * The integration&#39;s HTTP method type.
      * 
      */
     private final @Nullable String integrationHttpMethod;
     /**
-     * The response that API Gateway provides after a method's backend completes processing a request.
+     * The response that API Gateway provides after a method&#39;s backend completes processing a request.
      * 
      */
     private final @Nullable List<MethodIntegrationResponse> integrationResponses;
@@ -165,14 +165,14 @@ public final class MethodIntegration {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The integration's HTTP method type.
+     * The integration&#39;s HTTP method type.
      * 
     */
     public Optional<String> integrationHttpMethod() {
         return Optional.ofNullable(this.integrationHttpMethod);
     }
     /**
-     * The response that API Gateway provides after a method's backend completes processing a request.
+     * The response that API Gateway provides after a method&#39;s backend completes processing a request.
      * 
     */
     public List<MethodIntegrationResponse> integrationResponses() {

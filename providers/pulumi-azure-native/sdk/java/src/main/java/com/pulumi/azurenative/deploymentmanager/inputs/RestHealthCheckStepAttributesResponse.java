@@ -44,7 +44,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     }
 
     /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
      */
     @Import(name="maxElasticDuration")
@@ -56,7 +56,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
 
     /**
      * The type of health check.
-     * Expected value is 'REST'.
+     * Expected value is &#39;REST&#39;.
      * 
      */
     @Import(name="type", required=true)

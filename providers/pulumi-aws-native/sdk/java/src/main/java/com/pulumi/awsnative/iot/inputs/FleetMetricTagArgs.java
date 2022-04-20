@@ -19,7 +19,7 @@ public final class FleetMetricTagArgs extends com.pulumi.resources.ResourceArgs 
     public static final FleetMetricTagArgs Empty = new FleetMetricTagArgs();
 
     /**
-     * The tag's key
+     * The tag&#39;s key
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class FleetMetricTagArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The tag's value
+     * The tag&#39;s value
      * 
      */
     @Import(name="value", required=true)

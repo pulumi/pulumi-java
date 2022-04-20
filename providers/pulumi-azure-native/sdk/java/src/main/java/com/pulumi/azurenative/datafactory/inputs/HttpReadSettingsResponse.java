@@ -111,7 +111,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
 
     /**
      * The read setting type.
-     * Expected value is 'HttpReadSettings'.
+     * Expected value is &#39;HttpReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

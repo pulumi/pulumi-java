@@ -34,12 +34,12 @@ public final class ImageTemplatePlatformImageSourceResponse {
     private final @Nullable String sku;
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'PlatformImage'.
+     * Expected value is &#39;PlatformImage&#39;.
      * 
      */
     private final String type;
     /**
-     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
      */
     private final @Nullable String version;
@@ -90,14 +90,14 @@ public final class ImageTemplatePlatformImageSourceResponse {
     }
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'PlatformImage'.
+     * Expected value is &#39;PlatformImage&#39;.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
     */
     public Optional<String> version() {

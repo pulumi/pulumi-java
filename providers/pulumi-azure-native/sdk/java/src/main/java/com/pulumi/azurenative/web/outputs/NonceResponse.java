@@ -18,7 +18,7 @@ public final class NonceResponse {
      */
     private final @Nullable String nonceExpirationInterval;
     /**
-     * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean validateNonce;
@@ -39,7 +39,7 @@ public final class NonceResponse {
         return Optional.ofNullable(this.nonceExpirationInterval);
     }
     /**
-     * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> validateNonce() {

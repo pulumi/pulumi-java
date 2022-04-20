@@ -97,14 +97,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.cryptoKeyConfig;
     }
     /**
-     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
+     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
      * 
      */
     @Export(name="dataprocServiceAccount", type=String.class, parameters={})
     private Output<String> dataprocServiceAccount;
 
     /**
-     * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
+     * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
      * 
      */
     public Output<String> dataprocServiceAccount() {
@@ -209,14 +209,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.gcsBucket;
     }
     /**
-     * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
+     * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
-     * @return The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
+     * @return The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
      * 
      */
     public Output<Map<String,String>> labels() {

@@ -17,7 +17,7 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     public static final OccurenceState Empty = new OccurenceState();
 
     /**
-     * Occurrence that represents a single "attestation". The authenticity
+     * Occurrence that represents a single &#34;attestation&#34;. The authenticity
      * of an attestation can be verified using the attached signature.
      * If the verifier trusts the public key of the signer, then verifying
      * the signature is sufficient to establish trust. In this circumstance,

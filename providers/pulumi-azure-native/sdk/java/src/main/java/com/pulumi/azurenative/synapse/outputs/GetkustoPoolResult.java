@@ -60,7 +60,7 @@ public final class GetkustoPoolResult {
      */
     private final String state;
     /**
-     * The reason for the Kusto Pool's current state.
+     * The reason for the Kusto Pool&#39;s current state.
      * 
      */
     private final String stateReason;
@@ -75,7 +75,7 @@ public final class GetkustoPoolResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -188,7 +188,7 @@ public final class GetkustoPoolResult {
         return this.state;
     }
     /**
-     * The reason for the Kusto Pool's current state.
+     * The reason for the Kusto Pool&#39;s current state.
      * 
     */
     public String stateReason() {
@@ -209,7 +209,7 @@ public final class GetkustoPoolResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

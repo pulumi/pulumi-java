@@ -126,7 +126,7 @@ public final class DrillTableDatasetResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of dataset.
-     * Expected value is 'DrillTable'.
+     * Expected value is &#39;DrillTable&#39;.
      * 
      */
     @Import(name="type", required=true)

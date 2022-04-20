@@ -42,7 +42,7 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     }
 
     /**
-     * This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
+     * This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
      * 
      */
     @Import(name="state")

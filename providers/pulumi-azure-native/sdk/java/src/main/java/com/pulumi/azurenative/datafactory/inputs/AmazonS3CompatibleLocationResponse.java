@@ -55,7 +55,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'AmazonS3CompatibleLocation'.
+     * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

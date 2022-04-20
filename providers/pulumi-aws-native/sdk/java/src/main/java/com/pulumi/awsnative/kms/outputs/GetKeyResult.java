@@ -40,17 +40,17 @@ public final class GetKeyResult {
      */
     private final @Nullable Object keyPolicy;
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
     private final @Nullable KeySpec keySpec;
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
     private final @Nullable KeyUsage keyUsage;
     /**
-     * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
     private final @Nullable Boolean multiRegion;
@@ -119,21 +119,21 @@ public final class GetKeyResult {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
     */
     public Optional<KeySpec> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
     */
     public Optional<KeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
-     * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
     */
     public Optional<Boolean> multiRegion() {

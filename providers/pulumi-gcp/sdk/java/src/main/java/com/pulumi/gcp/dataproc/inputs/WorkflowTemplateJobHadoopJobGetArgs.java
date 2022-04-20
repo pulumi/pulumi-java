@@ -74,7 +74,7 @@ public final class WorkflowTemplateJobHadoopJobGetArgs extends com.pulumi.resour
     }
 
     /**
-     * The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.
+     * The name of the driver&#39;s main class. The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.
      * 
      */
     @Import(name="mainClass")

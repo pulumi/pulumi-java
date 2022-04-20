@@ -46,7 +46,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Specifies a period in the object's expire (documented below).
+     * Specifies a period in the object&#39;s expire (documented below).
      * 
      */
     @Import(name="expiration")
@@ -112,7 +112,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Specifies a period in the object's transitions (documented below).
+     * Specifies a period in the object&#39;s transitions (documented below).
      * 
      */
     @Import(name="transitions")

@@ -18,7 +18,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
     public static final WorkerSettingsResponse Empty = new WorkerSettingsResponse();
 
     /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
      */
     @Import(name="baseUrl", required=true)
@@ -40,7 +40,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
+     * The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
      * 
      */
     @Import(name="servicePath", required=true)
@@ -51,7 +51,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
+     * The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
      * 
      */
     @Import(name="shuffleServicePath", required=true)

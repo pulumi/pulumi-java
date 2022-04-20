@@ -19,7 +19,7 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
     public static final EventSubscriptionIdentityResponse Empty = new EventSubscriptionIdentityResponse();
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
      */
     @Import(name="type")

@@ -47,7 +47,7 @@ public final class StandardEncoderPresetResponse {
     private final List<Object> formats;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.StandardEncoderPreset'.
+     * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
      * 
      */
     private final String odataType;
@@ -87,7 +87,7 @@ public final class StandardEncoderPresetResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.StandardEncoderPreset'.
+     * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
      * 
     */
     public String odataType() {

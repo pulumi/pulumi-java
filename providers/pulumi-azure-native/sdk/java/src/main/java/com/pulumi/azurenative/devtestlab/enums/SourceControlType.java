@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The artifact source's type.
+     * The artifact source&#39;s type.
      * 
      */
     @EnumType

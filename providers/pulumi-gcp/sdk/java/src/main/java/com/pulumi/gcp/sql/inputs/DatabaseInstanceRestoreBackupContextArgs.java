@@ -29,7 +29,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
 
     /**
      * The ID of the instance that the backup was taken from. If left empty,
-     * this instance's ID will be used.
+     * this instance&#39;s ID will be used.
      * 
      */
     @Import(name="instanceId")

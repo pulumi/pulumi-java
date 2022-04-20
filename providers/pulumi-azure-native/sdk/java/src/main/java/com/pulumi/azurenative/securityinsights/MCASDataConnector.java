@@ -62,7 +62,7 @@ public class MCASDataConnector extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftCloudAppSecurity'.
+     * Expected value is &#39;MicrosoftCloudAppSecurity&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class MCASDataConnector extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the data connector
-     * Expected value is 'MicrosoftCloudAppSecurity'.
+     * Expected value is &#39;MicrosoftCloudAppSecurity&#39;.
      * 
      */
     public Output<String> kind() {

@@ -51,7 +51,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The current version of the origin access identity's information.
+     * The current version of the origin access identity&#39;s information.
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */

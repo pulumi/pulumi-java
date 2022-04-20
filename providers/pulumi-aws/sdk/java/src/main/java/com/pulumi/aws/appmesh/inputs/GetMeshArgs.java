@@ -16,7 +16,7 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMeshArgs Empty = new GetMeshArgs();
 
     /**
-     * The AWS account ID of the service mesh's owner.
+     * The AWS account ID of the service mesh&#39;s owner.
      * 
      */
     @Import(name="meshOwner")

@@ -28,7 +28,7 @@ public final class TriggerGithubPullRequestGetArgs extends com.pulumi.resources.
     }
 
     /**
-     * Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+     * Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
      */

@@ -66,13 +66,13 @@ public final class AzureSqlSinkResponse {
      */
     private final @Nullable Object storedProcedureTableTypeParameterName;
     /**
-     * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object tableOption;
     /**
      * Copy sink type.
-     * Expected value is 'AzureSqlSink'.
+     * Expected value is &#39;AzureSqlSink&#39;.
      * 
      */
     private final String type;
@@ -204,7 +204,7 @@ public final class AzureSqlSinkResponse {
         return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
     /**
-     * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> tableOption() {
@@ -212,7 +212,7 @@ public final class AzureSqlSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureSqlSink'.
+     * Expected value is &#39;AzureSqlSink&#39;.
      * 
     */
     public String type() {

@@ -22,7 +22,7 @@ public final class GetServingConfigResult {
      */
     private final String displayName;
     /**
-     * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity' * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * How much diversity to use in recommendation model results e.g. &#39;medium-diversity&#39; or &#39;high-diversity&#39;. Currently supported values: * &#39;no-diversity&#39; * &#39;low-diversity&#39; * &#39;medium-diversity&#39; * &#39;high-diversity&#39; * &#39;auto-diversity&#39; If not specified, we choose default based on recommendation model type. Default value: &#39;no-diversity&#39;. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
     private final String diversityLevel;
@@ -37,7 +37,7 @@ public final class GetServingConfigResult {
      */
     private final GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec;
     /**
-     * Whether to add additional category filters on the 'similar-items' model. If not specified, we enable it by default. Allowed values are: * 'no-category-match': No additional filtering of original results from the model and the customer's filters. * 'relaxed-category-match': Only keep results with categories that match at least one item categories in the PredictRequests's context item. * If customer also sends filters in the PredictRequest, then the results will satisfy both conditions (user given and category match). Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * Whether to add additional category filters on the &#39;similar-items&#39; model. If not specified, we enable it by default. Allowed values are: * &#39;no-category-match&#39;: No additional filtering of original results from the model and the customer&#39;s filters. * &#39;relaxed-category-match&#39;: Only keep results with categories that match at least one item categories in the PredictRequests&#39;s context item. * If customer also sends filters in the PredictRequest, then the results will satisfy both conditions (user given and category match). Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
     private final String enableCategoryFilterLevel;
@@ -72,7 +72,7 @@ public final class GetServingConfigResult {
      */
     private final List<String> onewaySynonymsControlIds;
     /**
-     * How much price ranking we want in serving results. Price reranking causes product items with a similar recommendation probability to be ordered by price, with the highest-priced items first. This setting could result in a decrease in click-through and conversion rates. Allowed values are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-reranking' If not specified, we choose default based on model type. Default value: 'no-price-reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * How much price ranking we want in serving results. Price reranking causes product items with a similar recommendation probability to be ordered by price, with the highest-priced items first. This setting could result in a decrease in click-through and conversion rates. Allowed values are: * &#39;no-price-reranking&#39; * &#39;low-price-raranking&#39; * &#39;medium-price-reranking&#39; * &#39;high-price-reranking&#39; If not specified, we choose default based on model type. Default value: &#39;no-price-reranking&#39;. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
     private final String priceRerankingLevel;
@@ -150,7 +150,7 @@ public final class GetServingConfigResult {
         return this.displayName;
     }
     /**
-     * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity' * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * How much diversity to use in recommendation model results e.g. &#39;medium-diversity&#39; or &#39;high-diversity&#39;. Currently supported values: * &#39;no-diversity&#39; * &#39;low-diversity&#39; * &#39;medium-diversity&#39; * &#39;high-diversity&#39; * &#39;auto-diversity&#39; If not specified, we choose default based on recommendation model type. Default value: &#39;no-diversity&#39;. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
     */
     public String diversityLevel() {
@@ -171,7 +171,7 @@ public final class GetServingConfigResult {
         return this.dynamicFacetSpec;
     }
     /**
-     * Whether to add additional category filters on the 'similar-items' model. If not specified, we enable it by default. Allowed values are: * 'no-category-match': No additional filtering of original results from the model and the customer's filters. * 'relaxed-category-match': Only keep results with categories that match at least one item categories in the PredictRequests's context item. * If customer also sends filters in the PredictRequest, then the results will satisfy both conditions (user given and category match). Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * Whether to add additional category filters on the &#39;similar-items&#39; model. If not specified, we enable it by default. Allowed values are: * &#39;no-category-match&#39;: No additional filtering of original results from the model and the customer&#39;s filters. * &#39;relaxed-category-match&#39;: Only keep results with categories that match at least one item categories in the PredictRequests&#39;s context item. * If customer also sends filters in the PredictRequest, then the results will satisfy both conditions (user given and category match). Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
     */
     public String enableCategoryFilterLevel() {
@@ -220,7 +220,7 @@ public final class GetServingConfigResult {
         return this.onewaySynonymsControlIds;
     }
     /**
-     * How much price ranking we want in serving results. Price reranking causes product items with a similar recommendation probability to be ordered by price, with the highest-priced items first. This setting could result in a decrease in click-through and conversion rates. Allowed values are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-reranking' If not specified, we choose default based on model type. Default value: 'no-price-reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
+     * How much price ranking we want in serving results. Price reranking causes product items with a similar recommendation probability to be ordered by price, with the highest-priced items first. This setting could result in a decrease in click-through and conversion rates. Allowed values are: * &#39;no-price-reranking&#39; * &#39;low-price-raranking&#39; * &#39;medium-price-reranking&#39; * &#39;high-price-reranking&#39; If not specified, we choose default based on model type. Default value: &#39;no-price-reranking&#39;. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
     */
     public String priceRerankingLevel() {

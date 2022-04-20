@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The key type like 'AzureKeyVault'.
+     * The key type like &#39;AzureKeyVault&#39;.
      * 
      */
     @EnumType

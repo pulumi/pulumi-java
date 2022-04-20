@@ -30,8 +30,8 @@ public final class InstanceCluster {
      */
     private final @Nullable Integer numNodes;
     /**
-     * The storage type to use. One of `"SSD"` or
-     * `"HDD"`. Defaults to `"SSD"`.
+     * The storage type to use. One of `&#34;SSD&#34;` or
+     * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
      * 
      */
     private final @Nullable String storageType;
@@ -81,8 +81,8 @@ public final class InstanceCluster {
         return Optional.ofNullable(this.numNodes);
     }
     /**
-     * The storage type to use. One of `"SSD"` or
-     * `"HDD"`. Defaults to `"SSD"`.
+     * The storage type to use. One of `&#34;SSD&#34;` or
+     * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
      * 
     */
     public Optional<String> storageType() {

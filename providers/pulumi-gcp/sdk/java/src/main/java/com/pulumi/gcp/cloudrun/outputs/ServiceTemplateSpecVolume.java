@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ServiceTemplateSpecVolume {
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final String name;
     /**
-     * The secret's value will be presented as the content of a file whose
+     * The secret&#39;s value will be presented as the content of a file whose
      * name is defined in the item path. If no items are defined, the name of
      * the file is the secret_name.
      * Structure is documented below.
@@ -33,14 +33,14 @@ public final class ServiceTemplateSpecVolume {
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * The secret's value will be presented as the content of a file whose
+     * The secret&#39;s value will be presented as the content of a file whose
      * name is defined in the item path. If no items are defined, the name of
      * the file is the secret_name.
      * Structure is documented below.

@@ -21,7 +21,7 @@ public final class GetEntryGroupResult {
      */
     private final String description;
     /**
-     * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
+     * A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;. Default value is an empty string.
      * 
      */
     private final String displayName;
@@ -58,7 +58,7 @@ public final class GetEntryGroupResult {
         return this.description;
     }
     /**
-     * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
+     * A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;. Default value is an empty string.
      * 
     */
     public String displayName() {

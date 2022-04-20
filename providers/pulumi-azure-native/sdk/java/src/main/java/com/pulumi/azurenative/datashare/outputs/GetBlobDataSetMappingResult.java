@@ -39,7 +39,7 @@ public final class GetBlobDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     private final String kind;
@@ -153,7 +153,7 @@ public final class GetBlobDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
     */
     public String kind() {

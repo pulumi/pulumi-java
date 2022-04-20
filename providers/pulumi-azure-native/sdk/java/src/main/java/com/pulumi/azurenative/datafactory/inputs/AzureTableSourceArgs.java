@@ -110,7 +110,7 @@ public final class AzureTableSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'AzureTableSource'.
+     * Expected value is &#39;AzureTableSource&#39;.
      * 
      */
     @Import(name="type", required=true)

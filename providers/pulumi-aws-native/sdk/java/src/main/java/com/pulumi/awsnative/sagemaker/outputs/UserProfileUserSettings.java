@@ -21,7 +21,7 @@ public final class UserProfileUserSettings {
      */
     private final @Nullable String executionRole;
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
      */
     private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
@@ -63,7 +63,7 @@ public final class UserProfileUserSettings {
         return Optional.ofNullable(this.executionRole);
     }
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
     */
     public Optional<UserProfileJupyterServerAppSettings> jupyterServerAppSettings() {

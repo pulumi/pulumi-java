@@ -29,7 +29,7 @@ public final class GetMCASDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftCloudAppSecurity'.
+     * Expected value is &#39;MicrosoftCloudAppSecurity&#39;.
      * 
      */
     private final String kind;
@@ -90,7 +90,7 @@ public final class GetMCASDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftCloudAppSecurity'.
+     * Expected value is &#39;MicrosoftCloudAppSecurity&#39;.
      * 
     */
     public String kind() {

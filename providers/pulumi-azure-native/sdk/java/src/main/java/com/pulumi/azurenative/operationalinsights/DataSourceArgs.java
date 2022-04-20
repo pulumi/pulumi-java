@@ -42,7 +42,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The data source properties in raw json format, each kind of data source have it's own schema.
+     * The data source properties in raw json format, each kind of data source have it&#39;s own schema.
      * 
      */
     @Import(name="properties", required=true)

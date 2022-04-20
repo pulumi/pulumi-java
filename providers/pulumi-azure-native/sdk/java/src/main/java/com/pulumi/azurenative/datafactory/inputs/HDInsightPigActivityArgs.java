@@ -151,7 +151,7 @@ public final class HDInsightPigActivityArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightPig'.
+     * Expected value is &#39;HDInsightPig&#39;.
      * 
      */
     @Import(name="type", required=true)

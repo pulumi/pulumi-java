@@ -30,7 +30,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     }
 
     /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
+     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
      * 
      */
     @Import(name="forwardedIpConfig")

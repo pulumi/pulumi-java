@@ -17,7 +17,7 @@ public final class IngressProfileResponse {
      */
     private final @Nullable String ip;
     /**
-     * The ingress profile name.  Must be "default" (immutable).
+     * The ingress profile name.  Must be &#34;default&#34; (immutable).
      * 
      */
     private final @Nullable String name;
@@ -45,7 +45,7 @@ public final class IngressProfileResponse {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * The ingress profile name.  Must be "default" (immutable).
+     * The ingress profile name.  Must be &#34;default&#34; (immutable).
      * 
     */
     public Optional<String> name() {

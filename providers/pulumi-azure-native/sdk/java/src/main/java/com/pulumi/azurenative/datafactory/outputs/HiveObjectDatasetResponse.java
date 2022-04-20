@@ -64,7 +64,7 @@ public final class HiveObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'HiveObject'.
+     * Expected value is &#39;HiveObject&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class HiveObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'HiveObject'.
+     * Expected value is &#39;HiveObject&#39;.
      * 
     */
     public String type() {

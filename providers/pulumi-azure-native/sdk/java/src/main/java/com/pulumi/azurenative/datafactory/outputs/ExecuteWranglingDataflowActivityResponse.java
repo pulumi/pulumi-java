@@ -84,13 +84,13 @@ public final class ExecuteWranglingDataflowActivityResponse {
      */
     private final @Nullable DataFlowStagingInfoResponse staging;
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
+     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
      */
     private final @Nullable Object traceLevel;
     /**
      * Type of activity.
-     * Expected value is 'ExecuteWranglingDataflow'.
+     * Expected value is &#39;ExecuteWranglingDataflow&#39;.
      * 
      */
     private final String type;
@@ -219,7 +219,7 @@ public final class ExecuteWranglingDataflowActivityResponse {
         return Optional.ofNullable(this.staging);
     }
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
+     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
     */
     public Optional<Object> traceLevel() {
@@ -227,7 +227,7 @@ public final class ExecuteWranglingDataflowActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'ExecuteWranglingDataflow'.
+     * Expected value is &#39;ExecuteWranglingDataflow&#39;.
      * 
     */
     public String type() {

@@ -61,7 +61,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     }
 
     /**
-     * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+     * The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
     @Import(name="subnetResourceId")

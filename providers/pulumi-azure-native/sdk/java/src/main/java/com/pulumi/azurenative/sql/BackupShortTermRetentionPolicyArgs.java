@@ -28,7 +28,7 @@ public final class BackupShortTermRetentionPolicyArgs extends com.pulumi.resourc
     }
 
     /**
-     * The policy name. Should always be "default".
+     * The policy name. Should always be &#34;default&#34;.
      * 
      */
     @Import(name="policyName")

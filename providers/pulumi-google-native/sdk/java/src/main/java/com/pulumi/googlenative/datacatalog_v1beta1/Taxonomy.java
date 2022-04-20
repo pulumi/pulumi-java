@@ -65,14 +65,14 @@ public class Taxonomy extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+     * Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+     * @return Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
      */
     public Output<String> name() {

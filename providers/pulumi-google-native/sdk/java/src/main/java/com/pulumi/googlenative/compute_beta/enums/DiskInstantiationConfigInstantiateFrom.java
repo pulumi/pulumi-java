@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+     * Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
      * 
      */
     @EnumType
@@ -40,12 +40,12 @@ import java.util.StringJoiner;
          */
         DoNotInclude("DO_NOT_INCLUDE"),
         /**
-         * Use the same source image used for creation of the source instance's corresponding disk. The request will fail if the source VM's disk was created from a snapshot. Applicable to: boot disk, additional read-write disks.
+         * Use the same source image used for creation of the source instance&#39;s corresponding disk. The request will fail if the source VM&#39;s disk was created from a snapshot. Applicable to: boot disk, additional read-write disks.
          * 
          */
         SourceImage("SOURCE_IMAGE"),
         /**
-         * Use the same source image family used for creation of the source instance's corresponding disk. The request will fail if the source image of the source disk does not belong to any image family. Applicable to: boot disk, additional read-write disks.
+         * Use the same source image family used for creation of the source instance&#39;s corresponding disk. The request will fail if the source image of the source disk does not belong to any image family. Applicable to: boot disk, additional read-write disks.
          * 
          */
         SourceImageFamily("SOURCE_IMAGE_FAMILY");

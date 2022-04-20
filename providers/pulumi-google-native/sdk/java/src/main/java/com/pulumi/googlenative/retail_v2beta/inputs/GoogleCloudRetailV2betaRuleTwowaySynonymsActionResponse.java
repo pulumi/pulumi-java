@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of "sneakers" and "shoes". * "sneakers" will use a synonym of "shoes". * "shoes" will use a synonym of "sneakers".
+ * Creates a set of terms that will be treated as synonyms of each other. Example: synonyms of &#34;sneakers&#34; and &#34;shoes&#34;. * &#34;sneakers&#34; will use a synonym of &#34;shoes&#34;. * &#34;shoes&#34; will use a synonym of &#34;sneakers&#34;.
  * 
  */
 public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse extends com.pulumi.resources.InvokeArgs {

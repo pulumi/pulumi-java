@@ -21,7 +21,7 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     public static final ReferenceDataSetArgs Empty = new ReferenceDataSetArgs();
 
     /**
-     * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
+     * The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
      * 
      */
     @Import(name="dataStringComparisonBehavior")

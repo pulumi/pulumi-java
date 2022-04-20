@@ -57,7 +57,7 @@ public final class AzureWorkloadAutoProtectionIntentArgs extends com.pulumi.reso
 
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureWorkloadAutoProtectionIntent'.
+     * Expected value is &#39;AzureWorkloadAutoProtectionIntent&#39;.
      * 
      */
     @Import(name="protectionIntentItemType", required=true)

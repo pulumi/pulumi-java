@@ -53,7 +53,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'CosmosDbMongoDbApi'.
+     * Expected value is &#39;CosmosDbMongoDbApi&#39;.
      * 
      */
     private final String type;
@@ -129,7 +129,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'CosmosDbMongoDbApi'.
+     * Expected value is &#39;CosmosDbMongoDbApi&#39;.
      * 
     */
     public String type() {

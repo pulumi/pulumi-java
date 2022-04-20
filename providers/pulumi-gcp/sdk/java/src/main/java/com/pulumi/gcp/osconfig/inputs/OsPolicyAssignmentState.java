@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     @Import(name="etag")

@@ -36,7 +36,7 @@ public final class FileTaskStepResponse {
     private final String taskFilePath;
     /**
      * The type of the step.
-     * Expected value is 'FileTask'.
+     * Expected value is &#39;FileTask&#39;.
      * 
      */
     private final String type;
@@ -99,7 +99,7 @@ public final class FileTaskStepResponse {
     }
     /**
      * The type of the step.
-     * Expected value is 'FileTask'.
+     * Expected value is &#39;FileTask&#39;.
      * 
     */
     public String type() {

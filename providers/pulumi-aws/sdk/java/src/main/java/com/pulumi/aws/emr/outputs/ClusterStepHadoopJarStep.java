@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterStepHadoopJarStep {
     /**
-     * List of command line arguments passed to the JAR file's main function when executed.
+     * List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
      */
     private final @Nullable List<String> args;
@@ -47,7 +47,7 @@ public final class ClusterStepHadoopJarStep {
     }
 
     /**
-     * List of command line arguments passed to the JAR file's main function when executed.
+     * List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
     */
     public List<String> args() {

@@ -26,7 +26,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * May be used to expand the properties within account's properties. By default, data is not included when fetching properties. Currently we only support geoReplicationStats and blobRestoreStatus.
+     * May be used to expand the properties within account&#39;s properties. By default, data is not included when fetching properties. Currently we only support geoReplicationStats and blobRestoreStatus.
      * 
      */
     @Import(name="expand")
@@ -37,7 +37,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

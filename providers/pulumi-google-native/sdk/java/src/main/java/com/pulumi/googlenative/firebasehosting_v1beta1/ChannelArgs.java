@@ -25,7 +25,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
      * 
      */
     @Import(name="expireTime")

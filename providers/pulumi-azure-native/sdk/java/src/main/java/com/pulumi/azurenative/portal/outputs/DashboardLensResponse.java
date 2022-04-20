@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardLensResponse {
     /**
-     * The dashboard len's metadata.
+     * The dashboard len&#39;s metadata.
      * 
      */
     private final @Nullable Map<String,Object> metadata;
@@ -42,7 +42,7 @@ public final class DashboardLensResponse {
     }
 
     /**
-     * The dashboard len's metadata.
+     * The dashboard len&#39;s metadata.
      * 
     */
     public Map<String,Object> metadata() {

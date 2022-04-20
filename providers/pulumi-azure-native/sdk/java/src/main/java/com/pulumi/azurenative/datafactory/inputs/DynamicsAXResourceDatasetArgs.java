@@ -115,7 +115,7 @@ public final class DynamicsAXResourceDatasetArgs extends com.pulumi.resources.Re
 
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsAXResource'.
+     * Expected value is &#39;DynamicsAXResource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -143,7 +143,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
+     * Time zone for the gateway. The time zone is of the format &#34;GMT&#34;, &#34;GMT-hr:mm&#34;, or &#34;GMT+hr:mm&#34;. For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway&#39;s maintenance schedule.
      * 
      */
     @Import(name="gatewayTimezone")

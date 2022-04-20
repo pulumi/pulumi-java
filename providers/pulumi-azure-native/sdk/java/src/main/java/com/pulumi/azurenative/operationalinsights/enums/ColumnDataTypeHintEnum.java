@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum ColumnDataTypeHintEnum {
         /**
-         * A string that matches the pattern of a URI, for example, scheme://username:password@host:1234/this/is/a/path?k1=v1&k2=v2#fragment
+         * A string that matches the pattern of a URI, for example, scheme://username:password@host:1234/this/is/a/path?k1=v1&amp;k2=v2#fragment
          * 
          */
         Uri("uri"),

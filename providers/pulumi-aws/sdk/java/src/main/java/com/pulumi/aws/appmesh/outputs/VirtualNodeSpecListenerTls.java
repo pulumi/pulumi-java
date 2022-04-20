@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNodeSpecListenerTls {
     /**
-     * The listener's TLS certificate.
+     * The listener&#39;s TLS certificate.
      * 
      */
     private final VirtualNodeSpecListenerTlsCertificate certificate;
     /**
-     * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+     * The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
      */
     private final String mode;
     /**
-     * The listener's Transport Layer Security (TLS) validation context.
+     * The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidation validation;
@@ -40,21 +40,21 @@ public final class VirtualNodeSpecListenerTls {
     }
 
     /**
-     * The listener's TLS certificate.
+     * The listener&#39;s TLS certificate.
      * 
     */
     public VirtualNodeSpecListenerTlsCertificate certificate() {
         return this.certificate;
     }
     /**
-     * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+     * The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
     */
     public String mode() {
         return this.mode;
     }
     /**
-     * The listener's Transport Layer Security (TLS) validation context.
+     * The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
     */
     public Optional<VirtualNodeSpecListenerTlsValidation> validation() {

@@ -30,7 +30,7 @@ public final class BudgetAmountSpecifiedAmount {
     private final @Nullable Integer nanos;
     /**
      * The whole units of the amount. For example if currencyCode
-     * is "USD", then 1 unit is one US dollar.
+     * is &#34;USD&#34;, then 1 unit is one US dollar.
      * 
      */
     private final @Nullable String units;
@@ -67,7 +67,7 @@ public final class BudgetAmountSpecifiedAmount {
     }
     /**
      * The whole units of the amount. For example if currencyCode
-     * is "USD", then 1 unit is one US dollar.
+     * is &#34;USD&#34;, then 1 unit is one US dollar.
      * 
     */
     public Optional<String> units() {

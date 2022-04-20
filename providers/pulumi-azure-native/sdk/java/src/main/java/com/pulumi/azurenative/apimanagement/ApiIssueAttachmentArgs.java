@@ -49,7 +49,7 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
      */
     @Import(name="contentFormat", required=true)

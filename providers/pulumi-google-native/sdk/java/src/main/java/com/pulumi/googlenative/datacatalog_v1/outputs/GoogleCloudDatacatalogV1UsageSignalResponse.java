@@ -16,7 +16,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
      */
     private final String updateTime;
     /**
-     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
+     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}`.
      * 
      */
     private final Map<String,String> usageWithinTimeRange;
@@ -37,7 +37,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
         return this.updateTime;
     }
     /**
-     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
+     * Usage statistics over each of the predefined time ranges. Supported time ranges are `{&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}`.
      * 
     */
     public Map<String,String> usageWithinTimeRange() {

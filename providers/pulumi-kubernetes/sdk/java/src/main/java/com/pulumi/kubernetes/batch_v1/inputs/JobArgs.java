@@ -22,20 +22,20 @@ import javax.annotation.Nullable;
  * The following conditions are used to determine whether the resource creation has
  * succeeded or failed:
  * 
- * 1. The Job's '.status.startTime' is set, which indicates that the Job has started running.
- * 2. The Job's '.status.conditions' has a status of type 'Complete', and a 'status' set
- *    to 'True'.
- * 3. The Job's '.status.conditions' do not have a status of type 'Failed', with a
- *     'status' set to 'True'. If this condition is set, we should fail the Job immediately.
+ * 1. The Job&#39;s &#39;.status.startTime&#39; is set, which indicates that the Job has started running.
+ * 2. The Job&#39;s &#39;.status.conditions&#39; has a status of type &#39;Complete&#39;, and a &#39;status&#39; set
+ *    to &#39;True&#39;.
+ * 3. The Job&#39;s &#39;.status.conditions&#39; do not have a status of type &#39;Failed&#39;, with a
+ *     &#39;status&#39; set to &#39;True&#39;. If this condition is set, we should fail the Job immediately.
  * 
  * If the Job has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
- * by setting the 'customTimeouts' option on the resource.
+ * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  * By default, if a resource failed to become ready in a previous update,
  * Pulumi will continue to wait for readiness on the next update. If you would prefer
  * to schedule a replacement for an unready resource on the next update, you can add the
- * "pulumi.com/replaceUnready": "true" annotation to the resource definition.
+ * &#34;pulumi.com/replaceUnready&#34;: &#34;true&#34; annotation to the resource definition.
  * 
  */
 public final class JobArgs extends com.pulumi.resources.ResourceArgs {
@@ -65,7 +65,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

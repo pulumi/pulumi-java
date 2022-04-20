@@ -57,7 +57,7 @@ public final class SqlServerSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
      */
     @Import(name="partitionOption")
@@ -145,7 +145,7 @@ public final class SqlServerSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
     @Import(name="storedProcedureParameters")
@@ -157,7 +157,7 @@ public final class SqlServerSourceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy source type.
-     * Expected value is 'SqlServerSource'.
+     * Expected value is &#39;SqlServerSource&#39;.
      * 
      */
     @Import(name="type", required=true)

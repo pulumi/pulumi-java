@@ -32,7 +32,7 @@ public final class GuestAgentProfileResponse {
      */
     private final String status;
     /**
-     * Specifies the VM's unique SMBIOS ID.
+     * Specifies the VM&#39;s unique SMBIOS ID.
      * 
      */
     private final String vmUuid;
@@ -80,7 +80,7 @@ public final class GuestAgentProfileResponse {
         return this.status;
     }
     /**
-     * Specifies the VM's unique SMBIOS ID.
+     * Specifies the VM&#39;s unique SMBIOS ID.
      * 
     */
     public String vmUuid() {

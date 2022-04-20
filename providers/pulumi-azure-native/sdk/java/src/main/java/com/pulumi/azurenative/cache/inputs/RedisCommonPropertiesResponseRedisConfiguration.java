@@ -74,7 +74,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
     }
 
     /**
-     * The eviction strategy used when your data won't fit within its memory limit.
+     * The eviction strategy used when your data won&#39;t fit within its memory limit.
      * 
      */
     @Import(name="maxmemoryPolicy")

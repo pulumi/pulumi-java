@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>A version of a theme.</p>
+ * &lt;p&gt;A version of a theme.&lt;/p&gt;
  * 
  */
 public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
@@ -24,7 +24,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     public static final ThemeVersion Empty = new ThemeVersion();
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     @Import(name="arn")
@@ -35,8 +35,8 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-     *             themes initially inherit from a default QuickSight theme.</p>
+     * &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
      * 
      */
     @Import(name="baseThemeId")
@@ -54,7 +54,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The date and time that this theme version was created.</p>
+     * &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
      * 
      */
     @Import(name="createdTime")
@@ -65,7 +65,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The description of the theme.</p>
+     * &lt;p&gt;The description of the theme.&lt;/p&gt;
      * 
      */
     @Import(name="description")
@@ -76,7 +76,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>Errors associated with the theme.</p>
+     * &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
      * 
      */
     @Import(name="errors")
@@ -94,7 +94,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The version number of the theme.</p>
+     * &lt;p&gt;The version number of the theme.&lt;/p&gt;
      * 
      */
     @Import(name="versionNumber")

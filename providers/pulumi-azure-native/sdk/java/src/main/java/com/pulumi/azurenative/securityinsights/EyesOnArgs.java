@@ -17,7 +17,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the setting
-     * Expected value is 'EyesOn'.
+     * Expected value is &#39;EyesOn&#39;.
      * 
      */
     @Import(name="kind", required=true)

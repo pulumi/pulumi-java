@@ -90,7 +90,7 @@ public final class PartnerRegistrationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The customer service number of the publisher. The expected phone format should start with a '+' sign
+     * The customer service number of the publisher. The expected phone format should start with a &#39;+&#39; sign
      * followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
      * length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
@@ -104,7 +104,7 @@ public final class PartnerRegistrationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Official name of the partner name. For example: "Contoso".
+     * Official name of the partner name. For example: &#34;Contoso&#34;.
      * 
      */
     @Import(name="partnerName")
@@ -159,7 +159,7 @@ public final class PartnerRegistrationArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)

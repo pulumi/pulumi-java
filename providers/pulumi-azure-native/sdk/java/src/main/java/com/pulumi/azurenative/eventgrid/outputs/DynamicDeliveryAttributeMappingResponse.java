@@ -23,7 +23,7 @@ public final class DynamicDeliveryAttributeMappingResponse {
     private final @Nullable String sourceField;
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Dynamic'.
+     * Expected value is &#39;Dynamic&#39;.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class DynamicDeliveryAttributeMappingResponse {
     }
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Dynamic'.
+     * Expected value is &#39;Dynamic&#39;.
      * 
     */
     public String type() {

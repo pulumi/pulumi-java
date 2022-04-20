@@ -59,7 +59,7 @@ public final class OracleServiceCloudObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'OracleServiceCloudObject'.
+     * Expected value is &#39;OracleServiceCloudObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class OracleServiceCloudObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'OracleServiceCloudObject'.
+     * Expected value is &#39;OracleServiceCloudObject&#39;.
      * 
     */
     public String type() {

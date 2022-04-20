@@ -22,9 +22,9 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudTrail resource.
  * 
- * > **Tip:** For a multi-region trail, this resource must be in the home region of the trail.
+ * &gt; **Tip:** For a multi-region trail, this resource must be in the home region of the trail.
  * 
- * > **Tip:** For an organization trail, this resource must be in the master account of the organization.
+ * &gt; **Tip:** For an organization trail, this resource must be in the master account of the organization.
  * 
  * ## Example Usage
  * ### Data Event Logging

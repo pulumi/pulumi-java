@@ -22,7 +22,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     public static final GangliaLayerArgs Empty = new GangliaLayerArgs();
 
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignElasticIps")
@@ -33,7 +33,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignPublicIps")
@@ -76,7 +76,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Import(name="customInstanceProfileArn")
@@ -98,7 +98,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Import(name="customSecurityGroupIds")
@@ -141,7 +141,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     @Import(name="ebsVolumes")
@@ -218,7 +218,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Import(name="systemPackages")
@@ -240,7 +240,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URL path to use for Ganglia. Defaults to "/ganglia".
+     * The URL path to use for Ganglia. Defaults to &#34;/ganglia&#34;.
      * 
      */
     @Import(name="url")
@@ -262,7 +262,7 @@ public final class GangliaLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The username to use for Ganglia. Defaults to "opsworks".
+     * The username to use for Ganglia. Defaults to &#34;opsworks&#34;.
      * 
      */
     @Import(name="username")

@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * NetworkConfig reports the relative names of network & subnetwork.
+ * NetworkConfig reports the relative names of network &amp; subnetwork.
  * 
  */
 public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs {

@@ -257,7 +257,7 @@ public final class DatashareFunctions {
      * A DataSet data transfer object.
      * API Version: 2020-09-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ADLSGen1FileDataSet, ADLSGen1FolderDataSet, ADLSGen2FileDataSet, ADLSGen2FileSystemDataSet, ADLSGen2FolderDataSet, BlobContainerDataSet, BlobDataSet, BlobFolderDataSet, KustoClusterDataSet, KustoDatabaseDataSet, SqlDBTableDataSet, SqlDWTableDataSet, SynapseWorkspaceSqlPoolTableDataSet.
      * 
      */
@@ -272,7 +272,7 @@ public final class DatashareFunctions {
      * A data set mapping data transfer object.
      * API Version: 2020-09-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping.
      * 
      */
@@ -452,7 +452,7 @@ public final class DatashareFunctions {
      * A Synchronization Setting data transfer object.
      * API Version: 2020-09-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ScheduledSynchronizationSetting.
      * 
      */
@@ -467,7 +467,7 @@ public final class DatashareFunctions {
      * A Trigger data transfer object.
      * API Version: 2020-09-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ScheduledTrigger.
      * 
      */

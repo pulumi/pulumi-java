@@ -23,7 +23,7 @@ public final class RoutingRuleResponse {
      */
     private final @Nullable List<String> acceptedProtocols;
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
@@ -107,7 +107,7 @@ public final class RoutingRuleResponse {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> enabledState() {

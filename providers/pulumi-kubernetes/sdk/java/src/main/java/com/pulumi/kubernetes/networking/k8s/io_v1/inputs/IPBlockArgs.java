@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * IPBlock describes a particular CIDR (Ex. "192.168.1.1/24","2001:db9::/64") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.
+ * IPBlock describes a particular CIDR (Ex. &#34;192.168.1.1/24&#34;,&#34;2001:db9::/64&#34;) that is allowed to the pods matched by a NetworkPolicySpec&#39;s podSelector. The except entry describes CIDRs that should not be included within this rule.
  * 
  */
 public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
     public static final IPBlockArgs Empty = new IPBlockArgs();
 
     /**
-     * CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64"
+     * CIDR is a string representing the IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34;
      * 
      */
     @Import(name="cidr", required=true)
@@ -32,7 +32,7 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64" Except values will be rejected if they are outside the CIDR range
+     * Except is a slice of CIDRs that should not be included within an IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34; Except values will be rejected if they are outside the CIDR range
      * 
      */
     @Import(name="except")

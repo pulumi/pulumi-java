@@ -60,14 +60,14 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
         return this.comment;
     }
     /**
-     * Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
+     * Content Type Profile Config specifies when to forward content if a content type isn&#39;t recognized and profiles to use as by default in a request if a query argument doesn&#39;t specify a profile to use.
      * 
      */
     @Export(name="contentTypeProfileConfig", type=FieldLevelEncryptionConfigContentTypeProfileConfig.class, parameters={})
     private Output<FieldLevelEncryptionConfigContentTypeProfileConfig> contentTypeProfileConfig;
 
     /**
-     * @return Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
+     * @return Content Type Profile Config specifies when to forward content if a content type isn&#39;t recognized and profiles to use as by default in a request if a query argument doesn&#39;t specify a profile to use.
      * 
      */
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfig> contentTypeProfileConfig() {
@@ -88,14 +88,14 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
         return this.etag;
     }
     /**
-     * Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
+     * Query Arg Profile Config that specifies when to forward content if a profile isn&#39;t found and the profile that can be provided as a query argument in a request.
      * 
      */
     @Export(name="queryArgProfileConfig", type=FieldLevelEncryptionConfigQueryArgProfileConfig.class, parameters={})
     private Output<FieldLevelEncryptionConfigQueryArgProfileConfig> queryArgProfileConfig;
 
     /**
-     * @return Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
+     * @return Query Arg Profile Config that specifies when to forward content if a profile isn&#39;t found and the profile that can be provided as a query argument in a request.
      * 
      */
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfig> queryArgProfileConfig() {

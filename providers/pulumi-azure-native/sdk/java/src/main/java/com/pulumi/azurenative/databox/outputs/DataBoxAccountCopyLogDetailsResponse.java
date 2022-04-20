@@ -16,7 +16,7 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     private final String accountName;
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     private final String copyLogDetailsType;
@@ -52,7 +52,7 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     }
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
     */
     public String copyLogDetailsType() {

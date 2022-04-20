@@ -67,7 +67,7 @@ public final class ActiveDefaultSecurityUserRuleResponse {
     private final @Nullable String id;
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     private final String kind;
@@ -233,7 +233,7 @@ public final class ActiveDefaultSecurityUserRuleResponse {
     }
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
     */
     public String kind() {

@@ -21,7 +21,7 @@ public final class UnknownTargetArgs extends com.pulumi.resources.ResourceArgs {
     public static final UnknownTargetArgs Empty = new UnknownTargetArgs();
 
     /**
-     * Dictionary of string->string pairs containing information about the Storage Target.
+     * Dictionary of string-&gt;string pairs containing information about the Storage Target.
      * 
      */
     @Import(name="attributes")

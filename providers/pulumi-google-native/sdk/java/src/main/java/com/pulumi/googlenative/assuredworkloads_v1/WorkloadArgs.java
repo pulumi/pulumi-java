@@ -66,7 +66,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
+     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update &amp; Delete operations.
      * 
      */
     @Import(name="etag")

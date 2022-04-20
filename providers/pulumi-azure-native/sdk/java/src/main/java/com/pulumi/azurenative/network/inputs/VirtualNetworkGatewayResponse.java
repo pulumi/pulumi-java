@@ -40,7 +40,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Virtual network gateway's BGP speaker settings.
+     * Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     @Import(name="bgpSettings")

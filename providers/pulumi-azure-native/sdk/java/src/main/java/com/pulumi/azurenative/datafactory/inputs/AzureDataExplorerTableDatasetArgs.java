@@ -115,7 +115,7 @@ public final class AzureDataExplorerTableDatasetArgs extends com.pulumi.resource
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataExplorerTable'.
+     * Expected value is &#39;AzureDataExplorerTable&#39;.
      * 
      */
     @Import(name="type", required=true)

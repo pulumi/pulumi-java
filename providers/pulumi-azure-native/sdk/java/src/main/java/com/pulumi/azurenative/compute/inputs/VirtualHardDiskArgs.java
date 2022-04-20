@@ -20,7 +20,7 @@ public final class VirtualHardDiskArgs extends com.pulumi.resources.ResourceArgs
     public static final VirtualHardDiskArgs Empty = new VirtualHardDiskArgs();
 
     /**
-     * Specifies the virtual hard disk's uri.
+     * Specifies the virtual hard disk&#39;s uri.
      * 
      */
     @Import(name="uri")

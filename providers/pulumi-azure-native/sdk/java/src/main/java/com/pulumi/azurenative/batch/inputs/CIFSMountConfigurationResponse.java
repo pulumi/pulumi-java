@@ -15,7 +15,7 @@ public final class CIFSMountConfigurationResponse extends com.pulumi.resources.I
     public static final CIFSMountConfigurationResponse Empty = new CIFSMountConfigurationResponse();
 
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     @Import(name="mountOptions")

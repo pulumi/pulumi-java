@@ -50,7 +50,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
      * 
      */
     @Import(name="topicArn")

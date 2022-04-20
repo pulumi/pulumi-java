@@ -122,7 +122,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.H265Layer'.
+     * Expected value is &#39;#Microsoft.Media.H265Layer&#39;.
      * 
      */
     @Import(name="odataType", required=true)

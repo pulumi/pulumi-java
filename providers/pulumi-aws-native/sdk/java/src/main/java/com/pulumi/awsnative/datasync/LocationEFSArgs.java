@@ -37,7 +37,7 @@ public final class LocationEFSArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+     * A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
     @Import(name="subdirectory")

@@ -34,7 +34,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The kind of the environment.
-     * Expected value is 'Gen2'.
+     * Expected value is &#39;Gen2&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -78,7 +78,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+     * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
      * 
      */
     @Import(name="storageConfiguration", required=true)
@@ -100,7 +100,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The list of event properties which will be used to define the environment's time series id.
+     * The list of event properties which will be used to define the environment&#39;s time series id.
      * 
      */
     @Import(name="timeSeriesIdProperties", required=true)
@@ -111,7 +111,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
+     * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
      * 
      */
     @Import(name="warmStoreConfiguration")

@@ -19,7 +19,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     public static final GoogleCloudChannelV1CloudIdentityInfoResponse Empty = new GoogleCloudChannelV1CloudIdentityInfoResponse();
 
     /**
-     * URI of Customer's Admin console dashboard.
+     * URI of Customer&#39;s Admin console dashboard.
      * 
      */
     @Import(name="adminConsoleUri", required=true)
@@ -63,7 +63,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
     }
 
     /**
-     * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
+     * Whether the domain is verified. This field is not returned for a Customer&#39;s cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK&#39;s Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
      */
     @Import(name="isDomainVerified", required=true)

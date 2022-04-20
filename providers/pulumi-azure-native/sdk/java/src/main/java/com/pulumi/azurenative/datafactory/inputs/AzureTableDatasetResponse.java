@@ -115,7 +115,7 @@ public final class AzureTableDatasetResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureTable'.
+     * Expected value is &#39;AzureTable&#39;.
      * 
      */
     @Import(name="type", required=true)

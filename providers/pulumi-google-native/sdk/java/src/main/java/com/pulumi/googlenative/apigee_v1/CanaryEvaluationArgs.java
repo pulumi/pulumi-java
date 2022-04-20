@@ -27,7 +27,7 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * End time for the evaluation's analysis.
+     * End time for the evaluation&#39;s analysis.
      * 
      */
     @Import(name="endTime", required=true)
@@ -63,7 +63,7 @@ public final class CanaryEvaluationArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Start time for the canary evaluation's analysis.
+     * Start time for the canary evaluation&#39;s analysis.
      * 
      */
     @Import(name="startTime", required=true)

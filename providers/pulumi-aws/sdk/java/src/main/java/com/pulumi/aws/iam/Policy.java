@@ -117,14 +117,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.policy;
     }
     /**
-     * The policy's ID.
+     * The policy&#39;s ID.
      * 
      */
     @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
-     * @return The policy's ID.
+     * @return The policy&#39;s ID.
      * 
      */
     public Output<String> policyId() {

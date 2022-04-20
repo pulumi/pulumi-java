@@ -50,7 +50,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
      */
     @Import(name="budgetFilter")
@@ -61,7 +61,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User data for display name in UI. Validation: <= 60 chars.
+     * User data for display name in UI. Validation: &lt;= 60 chars.
      * 
      */
     @Import(name="displayName")

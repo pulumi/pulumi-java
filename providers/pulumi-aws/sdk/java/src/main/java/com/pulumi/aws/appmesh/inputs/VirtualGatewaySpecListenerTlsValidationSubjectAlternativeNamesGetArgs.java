@@ -15,7 +15,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     public static final VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs Empty = new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs();
 
     /**
-     * The criteria for determining a SAN's match.
+     * The criteria for determining a SAN&#39;s match.
      * 
      */
     @Import(name="match", required=true)

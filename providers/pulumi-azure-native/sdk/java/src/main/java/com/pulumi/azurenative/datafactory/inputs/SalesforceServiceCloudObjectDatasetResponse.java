@@ -115,7 +115,7 @@ public final class SalesforceServiceCloudObjectDatasetResponse extends com.pulum
 
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceServiceCloudObject'.
+     * Expected value is &#39;SalesforceServiceCloudObject&#39;.
      * 
      */
     @Import(name="type", required=true)

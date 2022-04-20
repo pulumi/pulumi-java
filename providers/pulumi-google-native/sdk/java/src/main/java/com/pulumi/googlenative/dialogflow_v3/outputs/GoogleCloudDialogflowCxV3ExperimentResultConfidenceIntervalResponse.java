@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
      */
     private final Double lowerBound;
     /**
-     * The percent change between an experiment metric's value and the value for its control.
+     * The percent change between an experiment metric&#39;s value and the value for its control.
      * 
      */
     private final Double ratio;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
         return this.lowerBound;
     }
     /**
-     * The percent change between an experiment metric's value and the value for its control.
+     * The percent change between an experiment metric&#39;s value and the value for its control.
      * 
     */
     public Double ratio() {

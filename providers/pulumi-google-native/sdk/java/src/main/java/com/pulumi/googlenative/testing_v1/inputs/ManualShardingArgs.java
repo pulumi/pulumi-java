@@ -20,7 +20,7 @@ public final class ManualShardingArgs extends com.pulumi.resources.ResourceArgs 
     public static final ManualShardingArgs Empty = new ManualShardingArgs();
 
     /**
-     * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
+     * Group of packages, classes, and/or test methods to be run for each shard. When any physical devices are selected, the number of test_targets_for_shard must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
      * 
      */
     @Import(name="testTargetsForShard", required=true)

@@ -64,7 +64,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
+     * A name for the API key. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
      * 
      */
     @Import(name="name")

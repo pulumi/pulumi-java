@@ -26,7 +26,7 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional, used to expand the properties within share's properties.
+     * Optional, used to expand the properties within share&#39;s properties.
      * 
      */
     @Import(name="expand")
@@ -37,7 +37,7 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

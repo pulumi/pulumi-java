@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'RBAC'.
+     * Expected value is &#39;RBAC&#39;.
      * 
      */
     private final String authorizationType;
@@ -41,7 +41,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
 
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'RBAC'.
+     * Expected value is &#39;RBAC&#39;.
      * 
     */
     public String authorizationType() {

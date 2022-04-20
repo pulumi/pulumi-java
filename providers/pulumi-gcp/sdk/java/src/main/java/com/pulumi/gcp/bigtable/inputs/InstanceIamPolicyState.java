@@ -16,7 +16,7 @@ public final class InstanceIamPolicyState extends com.pulumi.resources.ResourceA
     public static final InstanceIamPolicyState Empty = new InstanceIamPolicyState();
 
     /**
-     * (Computed) The etag of the instances's IAM policy.
+     * (Computed) The etag of the instances&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

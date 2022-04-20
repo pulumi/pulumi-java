@@ -21,7 +21,7 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final WsdlServiceArgs Empty = new WsdlServiceArgs();
 
     /**
-     * List of the endpoints' qualified names
+     * List of the endpoints&#39; qualified names
      * 
      */
     @Import(name="endpointQualifiedNames")
@@ -32,7 +32,7 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The service's qualified name
+     * The service&#39;s qualified name
      * 
      */
     @Import(name="qualifiedName", required=true)

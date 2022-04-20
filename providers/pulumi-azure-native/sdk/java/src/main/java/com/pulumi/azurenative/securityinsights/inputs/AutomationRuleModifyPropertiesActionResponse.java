@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * Describes an automation rule action to modify an object's properties
+ * Describes an automation rule action to modify an object&#39;s properties
  * 
  */
 public final class AutomationRuleModifyPropertiesActionResponse extends com.pulumi.resources.InvokeArgs {
@@ -32,7 +32,7 @@ public final class AutomationRuleModifyPropertiesActionResponse extends com.pulu
 
     /**
      * The type of the automation rule action
-     * Expected value is 'ModifyProperties'.
+     * Expected value is &#39;ModifyProperties&#39;.
      * 
      */
     @Import(name="actionType", required=true)

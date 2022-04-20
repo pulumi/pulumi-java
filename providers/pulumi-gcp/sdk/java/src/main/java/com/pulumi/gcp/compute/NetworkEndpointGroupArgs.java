@@ -59,7 +59,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
 
     /**
      * The network to which all network endpoints in the NEG belong.
-     * Uses "default" project network if unspecified.
+     * Uses &#34;default&#34; project network if unspecified.
      * 
      */
     @Import(name="network", required=true)

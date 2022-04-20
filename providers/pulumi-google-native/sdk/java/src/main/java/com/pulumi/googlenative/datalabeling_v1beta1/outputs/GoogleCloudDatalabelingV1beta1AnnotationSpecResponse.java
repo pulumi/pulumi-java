@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
      */
     private final String displayName;
     /**
-     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: "dog", index: 0 }` and one AnnotationSpec with `{ display_name: "cat", index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
+     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
      * 
      */
     private final Integer index;
@@ -51,7 +51,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
         return this.displayName;
     }
     /**
-     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: "dog", index: 0 }` and one AnnotationSpec with `{ display_name: "cat", index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
+     * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: &#34;dog&#34;, index: 0 }` and one AnnotationSpec with `{ display_name: &#34;cat&#34;, index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
      * 
     */
     public Integer index() {

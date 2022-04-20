@@ -42,7 +42,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Provides details for the errors that led to the Cutover Job's state.
+     * Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
     @Import(name="error", required=true)

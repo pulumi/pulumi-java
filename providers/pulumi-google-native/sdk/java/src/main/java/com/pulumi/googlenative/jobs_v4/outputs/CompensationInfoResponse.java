@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class CompensationInfoResponse {
     /**
-     * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     private final CompensationRangeResponse annualizedBaseCompensationRange;
     /**
-     * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     private final CompensationRangeResponse annualizedTotalCompensationRange;
@@ -38,14 +38,14 @@ public final class CompensationInfoResponse {
     }
 
     /**
-     * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
     */
     public CompensationRangeResponse annualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
     }
     /**
-     * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
     */
     public CompensationRangeResponse annualizedTotalCompensationRange() {

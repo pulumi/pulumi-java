@@ -176,14 +176,14 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
         return this.result;
     }
     /**
-     * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
     @Export(name="special", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> special;
 
     /**
-     * @return Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * @return Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
     public Output</* @Nullable */ Boolean> special() {

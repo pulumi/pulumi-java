@@ -29,7 +29,7 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Gets or sets the association with Commercial's Billing Account.
+     * Gets or sets the association with Commercial&#39;s Billing Account.
      * 
      */
     @Import(name="claim")

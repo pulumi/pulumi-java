@@ -36,7 +36,7 @@ public final class GetScheduleResult {
      */
     private final @Nullable String expiryTime;
     /**
-     * Gets or sets the expiry time's offset in minutes.
+     * Gets or sets the expiry time&#39;s offset in minutes.
      * 
      */
     private final @Nullable Double expiryTimeOffsetMinutes;
@@ -76,7 +76,7 @@ public final class GetScheduleResult {
      */
     private final @Nullable String nextRun;
     /**
-     * Gets or sets the next run time's offset in minutes.
+     * Gets or sets the next run time&#39;s offset in minutes.
      * 
      */
     private final @Nullable Double nextRunOffsetMinutes;
@@ -86,7 +86,7 @@ public final class GetScheduleResult {
      */
     private final @Nullable String startTime;
     /**
-     * Gets the start time's offset in minutes.
+     * Gets the start time&#39;s offset in minutes.
      * 
      */
     private final Double startTimeOffsetMinutes;
@@ -168,7 +168,7 @@ public final class GetScheduleResult {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
-     * Gets or sets the expiry time's offset in minutes.
+     * Gets or sets the expiry time&#39;s offset in minutes.
      * 
     */
     public Optional<Double> expiryTimeOffsetMinutes() {
@@ -224,7 +224,7 @@ public final class GetScheduleResult {
         return Optional.ofNullable(this.nextRun);
     }
     /**
-     * Gets or sets the next run time's offset in minutes.
+     * Gets or sets the next run time&#39;s offset in minutes.
      * 
     */
     public Optional<Double> nextRunOffsetMinutes() {
@@ -238,7 +238,7 @@ public final class GetScheduleResult {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Gets the start time's offset in minutes.
+     * Gets the start time&#39;s offset in minutes.
      * 
     */
     public Double startTimeOffsetMinutes() {

@@ -71,7 +71,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     }
 
     /**
-     * A list of guest accelerator cards' type and count to use for instances created from this machine image.
+     * A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
      * 
      */
     @Import(name="guestAccelerators", required=true)
@@ -126,7 +126,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     }
 
     /**
-     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
      */
     @Import(name="minCpuPlatform", required=true)

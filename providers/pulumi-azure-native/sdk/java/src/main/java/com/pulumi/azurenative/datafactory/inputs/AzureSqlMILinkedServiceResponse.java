@@ -174,7 +174,7 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlMI'.
+     * Expected value is &#39;AzureSqlMI&#39;.
      * 
      */
     @Import(name="type", required=true)

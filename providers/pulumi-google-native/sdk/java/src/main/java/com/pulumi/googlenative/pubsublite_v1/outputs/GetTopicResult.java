@@ -18,17 +18,17 @@ public final class GetTopicResult {
      */
     private final String name;
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * 
      */
     private final PartitionConfigResponse partitionConfig;
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * 
      */
     private final ReservationConfigResponse reservationConfig;
     /**
-     * The settings for this topic's message retention.
+     * The settings for this topic&#39;s message retention.
      * 
      */
     private final RetentionConfigResponse retentionConfig;
@@ -53,21 +53,21 @@ public final class GetTopicResult {
         return this.name;
     }
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * 
     */
     public PartitionConfigResponse partitionConfig() {
         return this.partitionConfig;
     }
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * 
     */
     public ReservationConfigResponse reservationConfig() {
         return this.reservationConfig;
     }
     /**
-     * The settings for this topic's message retention.
+     * The settings for this topic&#39;s message retention.
      * 
     */
     public RetentionConfigResponse retentionConfig() {

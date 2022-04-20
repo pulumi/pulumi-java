@@ -16,7 +16,7 @@ public final class WorkflowTemplateParameterValidationRegexArgs extends com.pulu
     public static final WorkflowTemplateParameterValidationRegexArgs Empty = new WorkflowTemplateParameterValidationRegexArgs();
 
     /**
-     * Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
      * 
      */
     @Import(name="regexes", required=true)

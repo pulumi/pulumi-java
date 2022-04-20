@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The rule's stringified attribute.
+     * The rule&#39;s stringified attribute.
      * 
      */
     @EnumType

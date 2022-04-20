@@ -26,7 +26,7 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
     }
 
     /**
-     * The expand expression to apply on the operation. 'InstanceView' will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
+     * The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
      * 
      */
     @Import(name="expand")

@@ -115,7 +115,7 @@ public final class ConcurObjectDatasetArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of dataset.
-     * Expected value is 'ConcurObject'.
+     * Expected value is &#39;ConcurObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -144,7 +144,7 @@ public final class ReplicationProtectedItemPropertiesResponse {
      */
     private final @Nullable String recoveryServicesProviderId;
     /**
-     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
+     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM&#39;s replication group into account. This is a string representation of the ProtectionHealth enumeration.
      * 
      */
     private final @Nullable String replicationHealth;
@@ -386,7 +386,7 @@ public final class ReplicationProtectedItemPropertiesResponse {
         return Optional.ofNullable(this.recoveryServicesProviderId);
     }
     /**
-     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
+     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM&#39;s replication group into account. This is a string representation of the ProtectionHealth enumeration.
      * 
     */
     public Optional<String> replicationHealth() {

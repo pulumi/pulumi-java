@@ -17,7 +17,7 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The kind of the setting
-     * Expected value is 'EntityAnalytics'.
+     * Expected value is &#39;EntityAnalytics&#39;.
      * 
      */
     @Import(name="kind", required=true)

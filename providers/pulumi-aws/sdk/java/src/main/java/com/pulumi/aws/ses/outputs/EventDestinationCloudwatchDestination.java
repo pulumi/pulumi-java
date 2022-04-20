@@ -20,7 +20,7 @@ public final class EventDestinationCloudwatchDestination {
      */
     private final String dimensionName;
     /**
-     * The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
+     * The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
      * 
      */
     private final String valueSource;
@@ -50,7 +50,7 @@ public final class EventDestinationCloudwatchDestination {
         return this.dimensionName;
     }
     /**
-     * The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
+     * The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
      * 
     */
     public String valueSource() {

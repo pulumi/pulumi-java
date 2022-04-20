@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Properties of a user's secret store.
+ * Properties of a user&#39;s secret store.
  * 
  */
 public final class UserSecretStoreArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class UserSecretStoreArgs extends com.pulumi.resources.ResourceArgs
     public static final UserSecretStoreArgs Empty = new UserSecretStoreArgs();
 
     /**
-     * The ID of the user's Key vault.
+     * The ID of the user&#39;s Key vault.
      * 
      */
     @Import(name="keyVaultId")
@@ -31,7 +31,7 @@ public final class UserSecretStoreArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The URI of the user's Key vault.
+     * The URI of the user&#39;s Key vault.
      * 
      */
     @Import(name="keyVaultUri")

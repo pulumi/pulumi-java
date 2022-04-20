@@ -19,7 +19,7 @@ public final class UserSubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final UserSubjectArgs Empty = new UserSubjectArgs();
 
     /**
-     * `name` is the username that matches, or "*" to match all usernames. Required.
+     * `name` is the username that matches, or &#34;*&#34; to match all usernames. Required.
      * 
      */
     @Import(name="name", required=true)

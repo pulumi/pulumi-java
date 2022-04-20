@@ -182,7 +182,7 @@ public final class DPMProtectedItemArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * backup item type.
-     * Expected value is 'DPMProtectedItem'.
+     * Expected value is &#39;DPMProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

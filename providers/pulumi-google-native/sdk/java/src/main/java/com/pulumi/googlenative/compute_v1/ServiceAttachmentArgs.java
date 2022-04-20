@@ -64,7 +64,7 @@ public final class ServiceAttachmentArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * If specified, the domain name will be used during the integration between the PSC connected endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.". Current max number of domain names supported is 1.
+     * If specified, the domain name will be used during the integration between the PSC connected endpoints and the Cloud DNS. For example, this is a valid domain name: &#34;p.mycompany.com.&#34;. Current max number of domain names supported is 1.
      * 
      */
     @Import(name="domainNames")

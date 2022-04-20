@@ -20,7 +20,7 @@ public final class GetCustomerGatewayResult {
      */
     private final String arn;
     /**
-     * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+     * The gateway&#39;s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
     private final Integer bgpAsn;
@@ -37,7 +37,7 @@ public final class GetCustomerGatewayResult {
     private final @Nullable List<GetCustomerGatewayFilter> filters;
     private final String id;
     /**
-     * The IP address of the gateway's Internet-routable external interface.
+     * The IP address of the gateway&#39;s Internet-routable external interface.
      * 
      */
     private final String ipAddress;
@@ -47,7 +47,7 @@ public final class GetCustomerGatewayResult {
      */
     private final Map<String,String> tags;
     /**
-     * The type of customer gateway. The only type AWS supports at this time is "ipsec.1".
+     * The type of customer gateway. The only type AWS supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     private final String type;
@@ -82,7 +82,7 @@ public final class GetCustomerGatewayResult {
         return this.arn;
     }
     /**
-     * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+     * The gateway&#39;s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
     */
     public Integer bgpAsn() {
@@ -109,7 +109,7 @@ public final class GetCustomerGatewayResult {
         return this.id;
     }
     /**
-     * The IP address of the gateway's Internet-routable external interface.
+     * The IP address of the gateway&#39;s Internet-routable external interface.
      * 
     */
     public String ipAddress() {
@@ -123,7 +123,7 @@ public final class GetCustomerGatewayResult {
         return this.tags;
     }
     /**
-     * The type of customer gateway. The only type AWS supports at this time is "ipsec.1".
+     * The type of customer gateway. The only type AWS supports at this time is &#34;ipsec.1&#34;.
      * 
     */
     public String type() {

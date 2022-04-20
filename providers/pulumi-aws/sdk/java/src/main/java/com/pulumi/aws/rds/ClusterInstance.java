@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * 
  * For more information on Amazon Aurora, see [Aurora on Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html) in the Amazon RDS User Guide.
  * 
- * > **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
+ * &gt; **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
  * 
  * ## Example Usage
  * 
@@ -368,14 +368,14 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
         return this.performanceInsightsKmsKeyId;
     }
     /**
-     * Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     @Export(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
     private Output<Integer> performanceInsightsRetentionPeriod;
 
     /**
-     * @return Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * @return Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     public Output<Integer> performanceInsightsRetentionPeriod() {
@@ -397,7 +397,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The daily time range during which automated backups are created if automated backups are enabled.
-     * Eg: "04:00-09:00"
+     * Eg: &#34;04:00-09:00&#34;
      * 
      */
     @Export(name="preferredBackupWindow", type=String.class, parameters={})
@@ -405,7 +405,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The daily time range during which automated backups are created if automated backups are enabled.
-     * Eg: "04:00-09:00"
+     * Eg: &#34;04:00-09:00&#34;
      * 
      */
     public Output<String> preferredBackupWindow() {
@@ -413,7 +413,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
@@ -421,7 +421,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     public Output<String> preferredMaintenanceWindow() {

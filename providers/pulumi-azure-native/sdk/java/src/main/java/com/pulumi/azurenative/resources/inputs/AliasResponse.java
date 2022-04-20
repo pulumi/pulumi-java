@@ -23,7 +23,7 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     public static final AliasResponse Empty = new AliasResponse();
 
     /**
-     * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
+     * The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
      * 
      */
     @Import(name="defaultMetadata", required=true)

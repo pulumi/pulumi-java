@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureActiveDirectoryLoginResponse {
     /**
-     * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean disableWWWAuthenticate;
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
-     * a user logs in. Each parameter must be in the form "key=value".
+     * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
      */
     private final @Nullable List<String> loginParameters;
@@ -34,7 +34,7 @@ public final class AzureActiveDirectoryLoginResponse {
     }
 
     /**
-     * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> disableWWWAuthenticate() {
@@ -42,7 +42,7 @@ public final class AzureActiveDirectoryLoginResponse {
     }
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
-     * a user logs in. Each parameter must be in the form "key=value".
+     * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
     */
     public List<String> loginParameters() {

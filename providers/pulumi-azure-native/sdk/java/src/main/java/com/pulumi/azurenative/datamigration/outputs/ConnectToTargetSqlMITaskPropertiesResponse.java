@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI&#39;.
      * 
     */
     public String taskType() {

@@ -42,7 +42,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     }
 
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
      */
     @Import(name="keyVaultSecretId")

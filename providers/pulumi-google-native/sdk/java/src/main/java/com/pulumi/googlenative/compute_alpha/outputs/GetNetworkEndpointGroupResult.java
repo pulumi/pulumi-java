@@ -21,17 +21,17 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final Map<String,String> annotations;
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     private final NetworkEndpointGroupAppEngineResponse appEngine;
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     private final NetworkEndpointGroupCloudFunctionResponse cloudFunction;
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     private final NetworkEndpointGroupCloudRunResponse cloudRun;
@@ -61,7 +61,7 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final String name;
     /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
+     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
      */
     private final String network;
@@ -71,7 +71,7 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final String networkEndpointType;
     /**
-     * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
+     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
      */
     private final String pscTargetService;
@@ -91,7 +91,7 @@ public final class GetNetworkEndpointGroupResult {
      */
     private final String selfLinkWithId;
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
      * 
      */
     private final NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment;
@@ -168,21 +168,21 @@ public final class GetNetworkEndpointGroupResult {
         return this.annotations;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
     */
     public NetworkEndpointGroupAppEngineResponse appEngine() {
         return this.appEngine;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
     */
     public NetworkEndpointGroupCloudFunctionResponse cloudFunction() {
         return this.cloudFunction;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
     */
     public NetworkEndpointGroupCloudRunResponse cloudRun() {
@@ -224,7 +224,7 @@ public final class GetNetworkEndpointGroupResult {
         return this.name;
     }
     /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
+     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
     */
     public String network() {
@@ -238,7 +238,7 @@ public final class GetNetworkEndpointGroupResult {
         return this.networkEndpointType;
     }
     /**
-     * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
+     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
     */
     public String pscTargetService() {
@@ -266,7 +266,7 @@ public final class GetNetworkEndpointGroupResult {
         return this.selfLinkWithId;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
      * 
     */
     public NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment() {

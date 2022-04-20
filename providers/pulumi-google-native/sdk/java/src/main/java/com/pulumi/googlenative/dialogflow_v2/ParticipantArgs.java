@@ -25,7 +25,7 @@ public final class ParticipantArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
+     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have &#39;US&#39; or &#39;CA&#39; in their market metadata values and &#39;agent&#39; in their user metadata values will be ```documents_metadata_filters { key: &#34;market&#34; value: &#34;US,CA&#34; } documents_metadata_filters { key: &#34;user&#34; value: &#34;agent&#34; }```
      * 
      */
     @Import(name="documentsMetadataFilters")

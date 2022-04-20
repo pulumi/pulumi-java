@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class OAuthTokenResponse {
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
      */
     private final String scope;
@@ -29,7 +29,7 @@ public final class OAuthTokenResponse {
     }
 
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
     */
     public String scope() {

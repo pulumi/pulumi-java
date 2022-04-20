@@ -111,7 +111,7 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The read setting type.
-     * Expected value is 'HttpReadSettings'.
+     * Expected value is &#39;HttpReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

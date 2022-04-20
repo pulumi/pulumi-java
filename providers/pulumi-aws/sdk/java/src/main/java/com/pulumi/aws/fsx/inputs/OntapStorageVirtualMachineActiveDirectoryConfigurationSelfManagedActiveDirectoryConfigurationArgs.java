@@ -50,8 +50,8 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     }
 
     /**
-     * @Deprecated
-     * use 'organizational_unit_distinguished_name' instead
+     * @deprecated
+     * use &#39;organizational_unit_distinguished_name&#39; instead
      * 
      */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */

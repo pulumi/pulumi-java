@@ -59,7 +59,7 @@ public final class RestSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'RestSink'.
+     * Expected value is &#39;RestSink&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class RestSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'RestSink'.
+     * Expected value is &#39;RestSink&#39;.
      * 
     */
     public String type() {

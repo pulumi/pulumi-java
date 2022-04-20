@@ -23,7 +23,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     public static final JobStatisticsResponse Empty = new JobStatisticsResponse();
 
     /**
-     * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+     * [TrustedTester] [Output-only] Job progress (0.0 -&gt; 1.0) for LOAD and EXTRACT jobs.
      * 
      */
     @Import(name="completionRatio", required=true)
@@ -111,7 +111,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Quotas which delayed this job's start time.
+     * Quotas which delayed this job&#39;s start time.
      * 
      */
     @Import(name="quotaDeferments", required=true)

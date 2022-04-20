@@ -39,7 +39,7 @@ public final class GetADLSGen2FileDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     private final String kind;
@@ -153,7 +153,7 @@ public final class GetADLSGen2FileDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
     */
     public String kind() {

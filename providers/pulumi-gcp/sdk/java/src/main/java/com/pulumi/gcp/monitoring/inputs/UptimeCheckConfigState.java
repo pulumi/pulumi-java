@@ -22,7 +22,7 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
     public static final UptimeCheckConfigState Empty = new UptimeCheckConfigState();
 
     /**
-     * The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+     * The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required.
      * Structure is documented below.
      * 
      */

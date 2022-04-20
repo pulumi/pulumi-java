@@ -22,7 +22,7 @@ public final class SparkSqlBatchResponse {
      */
     private final String queryFileUri;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
      */
     private final Map<String,String> queryVariables;
@@ -52,7 +52,7 @@ public final class SparkSqlBatchResponse {
         return this.queryFileUri;
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
     */
     public Map<String,String> queryVariables() {

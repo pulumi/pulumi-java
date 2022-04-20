@@ -16,7 +16,7 @@ public final class NoteAttestationAuthorityHintArgs extends com.pulumi.resources
 
     /**
      * The human readable name of this Attestation Authority, for
-     * example "qa".
+     * example &#34;qa&#34;.
      * 
      */
     @Import(name="humanReadableName", required=true)

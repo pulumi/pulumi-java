@@ -34,7 +34,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to clone custom hostnames from source app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="cloneCustomHostNames")
@@ -45,7 +45,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to clone source control from source app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="cloneSourceControl")
@@ -56,7 +56,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to configure load balancing for source and destination app.
+     * &lt;code&gt;true&lt;/code&gt; to configure load balancing for source and destination app.
      * 
      */
     @Import(name="configureLoadBalancing")
@@ -90,7 +90,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to overwrite destination app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="overwrite")

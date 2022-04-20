@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- *  Route 53 Resolver DNS Firewall rules can be imported using the Route 53 Resolver DNS Firewall rule group ID and domain list ID separated by ':', e.g.,
+ *  Route 53 Resolver DNS Firewall rules can be imported using the Route 53 Resolver DNS Firewall rule group ID and domain list ID separated by &#39;:&#39;, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:route53/resolverFirewallRule:ResolverFirewallRule example rslvr-frg-0123456789abcdef:rslvr-fdl-0123456789abcdef
@@ -31,28 +31,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:route53/resolverFirewallRule:ResolverFirewallRule")
 public class ResolverFirewallRule extends com.pulumi.resources.CustomResource {
     /**
-     * The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule's domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
+     * The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule&#39;s domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
      * 
      */
     @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
-     * @return The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule's domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
+     * @return The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule&#39;s domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
      * 
      */
     public Output<String> action() {
         return this.action;
     }
     /**
-     * The DNS record's type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
+     * The DNS record&#39;s type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
      * 
      */
     @Export(name="blockOverrideDnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> blockOverrideDnsType;
 
     /**
-     * @return The DNS record's type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
+     * @return The DNS record&#39;s type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
      * 
      */
     public Output</* @Nullable */ String> blockOverrideDnsType() {

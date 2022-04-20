@@ -21,7 +21,7 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
 
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
      */
     @Import(name="instanceType")

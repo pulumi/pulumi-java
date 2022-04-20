@@ -29,7 +29,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     }
 
     /**
-     * Statistics on each issue. Key is the issue's resource name.
+     * Statistics on each issue. Key is the issue&#39;s resource name.
      * 
      */
     @Import(name="issueStats", required=true)

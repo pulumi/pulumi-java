@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of the query's source entity
+     * The type of the query&#39;s source entity
      * 
      */
     @EnumType

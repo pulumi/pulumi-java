@@ -56,8 +56,8 @@ public final class RegistryState extends com.pulumi.resources.ResourceArgs {
     /**
      * The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
      * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
-     * "DEBUG"]
+     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
+     * &#34;DEBUG&#34;]
      * 
      */
     @Import(name="logLevel")

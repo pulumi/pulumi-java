@@ -49,7 +49,7 @@ public final class HiveSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'HiveSource'.
+     * Expected value is &#39;HiveSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class HiveSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'HiveSource'.
+     * Expected value is &#39;HiveSource&#39;.
      * 
     */
     public String type() {

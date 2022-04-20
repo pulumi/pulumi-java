@@ -48,14 +48,14 @@ public class Lien extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
+     * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: &#39;compute.googleapis.com&#39;
      * 
      */
     @Export(name="origin", type=String.class, parameters={})
     private Output<String> origin;
 
     /**
-     * @return A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
+     * @return A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: &#39;compute.googleapis.com&#39;
      * 
      */
     public Output<String> origin() {
@@ -76,28 +76,28 @@ public class Lien extends com.pulumi.resources.CustomResource {
         return this.parent;
     }
     /**
-     * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
+     * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: &#39;Holds production API key&#39;
      * 
      */
     @Export(name="reason", type=String.class, parameters={})
     private Output<String> reason;
 
     /**
-     * @return Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
+     * @return Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: &#39;Holds production API key&#39;
      * 
      */
     public Output<String> reason() {
         return this.reason;
     }
     /**
-     * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
+     * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: [&#39;resourcemanager.projects.delete&#39;]
      * 
      */
     @Export(name="restrictions", type=List.class, parameters={String.class})
     private Output<List<String>> restrictions;
 
     /**
-     * @return The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
+     * @return The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: [&#39;resourcemanager.projects.delete&#39;]
      * 
      */
     public Output<List<String>> restrictions() {

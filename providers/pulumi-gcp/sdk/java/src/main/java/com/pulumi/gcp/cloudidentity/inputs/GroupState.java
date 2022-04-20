@@ -82,8 +82,8 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     /**
      * The labels that apply to the Group.
      * Must not contain more than one entry. Must contain the entry
-     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
-     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * &#39;cloudidentity.googleapis.com/groups.discussion_forum&#39;: &#39;&#39; if the Group is a Google Group or
+     * &#39;system/groups/external&#39;: &#39;&#39; if the Group is an external-identity-mapped group.
      * 
      */
     @Import(name="labels")

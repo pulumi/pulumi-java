@@ -29,7 +29,7 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     /**
      * The source’s display name. A source’s display name must be unique
      * amongst its siblings, for example, two sources with the same parent
-     * can't share the same display name. The display name must start and end
+     * can&#39;t share the same display name. The display name must start and end
      * with a letter or digit, may contain letters, digits, spaces, hyphens,
      * and underscores, and can be no longer than 32 characters.
      * 
@@ -42,7 +42,7 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
+     * The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
      * 
      */
     @Import(name="name")

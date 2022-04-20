@@ -90,7 +90,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
     }
     /**
      * Display information such as title and description. A short name to identify the entry,
-     * for example, "Analytics Data - Jan 2011".
+     * for example, &#34;Analytics Data - Jan 2011&#34;.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
@@ -98,7 +98,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Display information such as title and description. A short name to identify the entry,
-     * for example, "Analytics Data - Jan 2011".
+     * for example, &#34;Analytics Data - Jan 2011&#34;.
      * 
      */
     public Output</* @Nullable */ String> displayName() {
@@ -149,14 +149,14 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.gcsFilesetSpec;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
     @Export(name="integratedSystem", type=String.class, parameters={})
     private Output<String> integratedSystem;
 
     /**
-     * @return This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * @return This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
     public Output<String> integratedSystem() {
@@ -243,7 +243,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog does not integrate with.
+     * This field indicates the entry&#39;s source system that Data Catalog does not integrate with.
      * userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
@@ -252,7 +252,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> userSpecifiedSystem;
 
     /**
-     * @return This field indicates the entry's source system that Data Catalog does not integrate with.
+     * @return This field indicates the entry&#39;s source system that Data Catalog does not integrate with.
      * userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
@@ -263,7 +263,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
     /**
      * Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
      * When creating an entry, users should check the enum values first, if nothing matches the entry
-     * to be created, then provide a custom value, for example "my_special_type".
+     * to be created, then provide a custom value, for example &#34;my_special_type&#34;.
      * userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
@@ -274,7 +274,7 @@ public class Entry extends com.pulumi.resources.CustomResource {
     /**
      * @return Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
      * When creating an entry, users should check the enum values first, if nothing matches the entry
-     * to be created, then provide a custom value, for example "my_special_type".
+     * to be created, then provide a custom value, for example &#34;my_special_type&#34;.
      * userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 

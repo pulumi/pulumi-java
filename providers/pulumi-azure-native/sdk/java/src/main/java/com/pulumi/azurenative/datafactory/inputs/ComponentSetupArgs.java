@@ -46,7 +46,7 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The type of custom setup.
-     * Expected value is 'ComponentSetup'.
+     * Expected value is &#39;ComponentSetup&#39;.
      * 
      */
     @Import(name="type", required=true)

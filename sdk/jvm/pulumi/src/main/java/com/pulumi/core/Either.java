@@ -20,7 +20,7 @@ import java.util.function.Function;
  * A non-null {@code Either<L,R>} reference can be used as an alternative to the classic error handling (exceptions).
  * <p>
  * <pre>
- *  public static Either<Exception, Integer> divide(int x, int y) {
+ *  {@literal public static Either<Exception, Integer> divide(int x, int y)} {
  *    try {
  *      return Either.valueOf(x / y);
  *    } catch (Exception e) {

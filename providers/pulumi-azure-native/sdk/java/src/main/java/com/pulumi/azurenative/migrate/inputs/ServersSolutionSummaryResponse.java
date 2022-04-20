@@ -44,7 +44,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
 
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

@@ -17,7 +17,7 @@ public final class DebugOptionsResponse extends com.pulumi.resources.InvokeArgs 
     public static final DebugOptionsResponse Empty = new DebugOptionsResponse();
 
     /**
-     * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+     * When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
      * 
      */
     @Import(name="enableHotKeyLogging", required=true)

@@ -109,14 +109,14 @@ public class GatewayAssociationProposal extends com.pulumi.resources.CustomResou
         return this.dxGatewayId;
     }
     /**
-     * AWS Account identifier of the Direct Connect Gateway's owner.
+     * AWS Account identifier of the Direct Connect Gateway&#39;s owner.
      * 
      */
     @Export(name="dxGatewayOwnerAccountId", type=String.class, parameters={})
     private Output<String> dxGatewayOwnerAccountId;
 
     /**
-     * @return AWS Account identifier of the Direct Connect Gateway's owner.
+     * @return AWS Account identifier of the Direct Connect Gateway&#39;s owner.
      * 
      */
     public Output<String> dxGatewayOwnerAccountId() {

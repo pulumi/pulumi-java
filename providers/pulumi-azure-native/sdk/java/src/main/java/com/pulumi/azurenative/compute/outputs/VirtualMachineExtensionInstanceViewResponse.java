@@ -29,7 +29,7 @@ public final class VirtualMachineExtensionInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> substatuses;
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final @Nullable String type;
@@ -75,7 +75,7 @@ public final class VirtualMachineExtensionInstanceViewResponse {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
     */
     public Optional<String> type() {

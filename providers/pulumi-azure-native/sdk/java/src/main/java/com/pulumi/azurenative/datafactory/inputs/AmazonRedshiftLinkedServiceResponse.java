@@ -128,7 +128,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends com.pulumi.resour
 
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRedshift'.
+     * Expected value is &#39;AmazonRedshift&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -27,14 +27,14 @@ public class Database extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
-     * @return The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * @return The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
     public Output</* @Nullable */ String> databaseName() {

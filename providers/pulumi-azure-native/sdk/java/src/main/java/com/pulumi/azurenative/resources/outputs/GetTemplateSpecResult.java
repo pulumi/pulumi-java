@@ -61,7 +61,7 @@ public final class GetTemplateSpecResult {
      */
     private final String type;
     /**
-     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
+     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to &#39;versions&#39;.
      * 
      */
     private final Map<String,TemplateSpecVersionInfoResponse> versions;
@@ -154,7 +154,7 @@ public final class GetTemplateSpecResult {
         return this.type;
     }
     /**
-     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
+     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to &#39;versions&#39;.
      * 
     */
     public Map<String,TemplateSpecVersionInfoResponse> versions() {

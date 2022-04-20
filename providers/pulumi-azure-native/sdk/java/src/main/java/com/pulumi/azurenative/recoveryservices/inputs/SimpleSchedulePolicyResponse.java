@@ -23,7 +23,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'SimpleSchedulePolicy'.
+     * Expected value is &#39;SimpleSchedulePolicy&#39;.
      * 
      */
     @Import(name="schedulePolicyType", required=true)

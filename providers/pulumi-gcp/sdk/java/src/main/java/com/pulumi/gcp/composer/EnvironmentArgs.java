@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and
      * must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63
      * characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be
-     * associated with a given environment. Both keys and values must be <= 128 bytes in size.
+     * associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
      * 
      */
     @Import(name="labels")

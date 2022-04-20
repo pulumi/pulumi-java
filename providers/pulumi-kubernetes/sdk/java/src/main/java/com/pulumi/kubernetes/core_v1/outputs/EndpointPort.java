@@ -18,7 +18,7 @@ public final class EndpointPort {
      */
     private final @Nullable String appProtocol;
     /**
-     * The name of this port.  This must match the 'name' field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
+     * The name of this port.  This must match the &#39;name&#39; field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
      * 
      */
     private final @Nullable String name;
@@ -31,9 +31,9 @@ public final class EndpointPort {
      * The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
      * 
      * Possible enum values:
-     *  - `"SCTP"` is the SCTP protocol.
-     *  - `"TCP"` is the TCP protocol.
-     *  - `"UDP"` is the UDP protocol.
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     private final @Nullable String protocol;
@@ -58,7 +58,7 @@ public final class EndpointPort {
         return Optional.ofNullable(this.appProtocol);
     }
     /**
-     * The name of this port.  This must match the 'name' field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
+     * The name of this port.  This must match the &#39;name&#39; field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
      * 
     */
     public Optional<String> name() {
@@ -75,9 +75,9 @@ public final class EndpointPort {
      * The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
      * 
      * Possible enum values:
-     *  - `"SCTP"` is the SCTP protocol.
-     *  - `"TCP"` is the TCP protocol.
-     *  - `"UDP"` is the UDP protocol.
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
     */
     public Optional<String> protocol() {

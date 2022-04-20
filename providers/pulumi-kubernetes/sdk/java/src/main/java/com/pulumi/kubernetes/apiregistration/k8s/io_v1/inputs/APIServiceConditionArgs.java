@@ -42,7 +42,7 @@ public final class APIServiceConditionArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")

@@ -23,7 +23,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     public static final ContainerStatusArgs Empty = new ContainerStatusArgs();
 
     /**
-     * Container's ID in the format 'docker://<container_id>'.
+     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
      * 
      */
     @Import(name="containerID")
@@ -45,7 +45,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * ImageID of the container's image.
+     * ImageID of the container&#39;s image.
      * 
      */
     @Import(name="imageID", required=true)
@@ -56,7 +56,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Details about the container's last termination condition.
+     * Details about the container&#39;s last termination condition.
      * 
      */
     @Import(name="lastState")
@@ -111,7 +111,7 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Details about the container's current condition.
+     * Details about the container&#39;s current condition.
      * 
      */
     @Import(name="state")

@@ -115,7 +115,7 @@ public final class MarketoObjectDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'MarketoObject'.
+     * Expected value is &#39;MarketoObject&#39;.
      * 
      */
     @Import(name="type", required=true)

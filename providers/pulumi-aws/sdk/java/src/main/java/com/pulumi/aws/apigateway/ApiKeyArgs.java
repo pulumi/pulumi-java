@@ -18,7 +18,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApiKeyArgs Empty = new ApiKeyArgs();
 
     /**
-     * The API key description. Defaults to "Managed by Pulumi".
+     * The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

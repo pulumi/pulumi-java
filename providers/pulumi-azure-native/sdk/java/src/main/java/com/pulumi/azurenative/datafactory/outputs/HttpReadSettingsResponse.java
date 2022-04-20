@@ -55,7 +55,7 @@ public final class HttpReadSettingsResponse {
     private final @Nullable Object requestTimeout;
     /**
      * The read setting type.
-     * Expected value is 'HttpReadSettings'.
+     * Expected value is &#39;HttpReadSettings&#39;.
      * 
      */
     private final String type;
@@ -140,7 +140,7 @@ public final class HttpReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'HttpReadSettings'.
+     * Expected value is &#39;HttpReadSettings&#39;.
      * 
     */
     public String type() {

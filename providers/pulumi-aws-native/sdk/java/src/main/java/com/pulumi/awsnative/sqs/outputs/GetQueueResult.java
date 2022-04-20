@@ -67,7 +67,7 @@ public final class GetQueueResult {
      */
     private final @Nullable String queueUrl;
     /**
-     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
+     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn&#39;t yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
      * 
      */
     private final @Nullable Integer receiveMessageWaitTimeSeconds;
@@ -87,7 +87,7 @@ public final class GetQueueResult {
      */
     private final @Nullable List<QueueTag> tags;
     /**
-     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
+     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don&#39;t specify a value, AWS CloudFormation uses the default value of 30 seconds.
      * 
      */
     private final @Nullable Integer visibilityTimeout;
@@ -197,7 +197,7 @@ public final class GetQueueResult {
         return Optional.ofNullable(this.queueUrl);
     }
     /**
-     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
+     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn&#39;t yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
      * 
     */
     public Optional<Integer> receiveMessageWaitTimeSeconds() {
@@ -225,7 +225,7 @@ public final class GetQueueResult {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
+     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don&#39;t specify a value, AWS CloudFormation uses the default value of 30 seconds.
      * 
     */
     public Optional<Integer> visibilityTimeout() {

@@ -35,7 +35,7 @@ public final class ExperimentMetricGoalObjectArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
      */
     @Import(name="eventPattern", required=true)

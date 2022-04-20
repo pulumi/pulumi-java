@@ -28,7 +28,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
     private final @Nullable String policyId;
     /**
      * backup protectionIntent type.
-     * Expected value is 'RecoveryServiceVaultItem'.
+     * Expected value is &#39;RecoveryServiceVaultItem&#39;.
      * 
      */
     private final String protectionIntentItemType;
@@ -82,7 +82,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
     }
     /**
      * backup protectionIntent type.
-     * Expected value is 'RecoveryServiceVaultItem'.
+     * Expected value is &#39;RecoveryServiceVaultItem&#39;.
      * 
     */
     public String protectionIntentItemType() {

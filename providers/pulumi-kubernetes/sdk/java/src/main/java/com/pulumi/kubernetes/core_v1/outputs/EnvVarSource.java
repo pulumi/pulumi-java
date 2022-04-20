@@ -20,7 +20,7 @@ public final class EnvVarSource {
      */
     private final @Nullable ConfigMapKeySelector configMapKeyRef;
     /**
-     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
      * 
      */
     private final @Nullable ObjectFieldSelector fieldRef;
@@ -30,7 +30,7 @@ public final class EnvVarSource {
      */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
     /**
-     * Selects a key of a secret in the pod's namespace
+     * Selects a key of a secret in the pod&#39;s namespace
      * 
      */
     private final @Nullable SecretKeySelector secretKeyRef;
@@ -55,7 +55,7 @@ public final class EnvVarSource {
         return Optional.ofNullable(this.configMapKeyRef);
     }
     /**
-     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
      * 
     */
     public Optional<ObjectFieldSelector> fieldRef() {
@@ -69,7 +69,7 @@ public final class EnvVarSource {
         return Optional.ofNullable(this.resourceFieldRef);
     }
     /**
-     * Selects a key of a secret in the pod's namespace
+     * Selects a key of a secret in the pod&#39;s namespace
      * 
     */
     public Optional<SecretKeySelector> secretKeyRef() {

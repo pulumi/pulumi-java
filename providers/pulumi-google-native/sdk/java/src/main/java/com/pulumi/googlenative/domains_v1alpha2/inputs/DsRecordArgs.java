@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain's DNS zone.
+ * Defines a Delegation Signer (DS) record, which is needed to enable DNSSEC for a domain. It contains a digest (hash) of a DNSKEY record that must be present in the domain&#39;s DNS zone.
  * 
  */
 public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {

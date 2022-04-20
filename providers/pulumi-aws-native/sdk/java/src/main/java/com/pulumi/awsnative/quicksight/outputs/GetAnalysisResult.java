@@ -16,48 +16,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAnalysisResult {
     /**
-     * <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * <p>The time that the analysis was created.</p>
+     * &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * <p>The ARNs of the datasets of the analysis.</p>
+     * &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> dataSetArns;
     /**
-     * <p>Errors associated with the analysis.</p>
+     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisError> errors;
     /**
-     * <p>The descriptive name of the analysis.</p>
+     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). </p>
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisResourcePermission> permissions;
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable List<AnalysisTag> tags;
     /**
-     * <p>The ARN of the theme of the analysis.</p>
+     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
      */
     private final @Nullable String themeArn;
@@ -83,62 +83,62 @@ public final class GetAnalysisResult {
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
      * 
     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * <p>The time that the analysis was created.</p>
+     * &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
      * 
     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * <p>The ARNs of the datasets of the analysis.</p>
+     * &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
      * 
     */
     public List<String> dataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
-     * <p>Errors associated with the analysis.</p>
+     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
     */
     public List<AnalysisError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * <p>The descriptive name of the analysis.</p>
+     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). </p>
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
     */
     public List<AnalysisResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
      * 
     */
     public List<AnalysisTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * <p>The ARN of the theme of the analysis.</p>
+     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
     */
     public Optional<String> themeArn() {

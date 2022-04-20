@@ -93,7 +93,7 @@ public final class JobDetailsResponse {
      */
     private final @Nullable PackageInformationResponse returnPackage;
     /**
-     * Specifies the return carrier and customer's account with the carrier.
+     * Specifies the return carrier and customer&#39;s account with the carrier.
      * 
      */
     private final @Nullable ReturnShippingResponse returnShipping;
@@ -252,7 +252,7 @@ public final class JobDetailsResponse {
         return Optional.ofNullable(this.returnPackage);
     }
     /**
-     * Specifies the return carrier and customer's account with the carrier.
+     * Specifies the return carrier and customer&#39;s account with the carrier.
      * 
     */
     public Optional<ReturnShippingResponse> returnShipping() {

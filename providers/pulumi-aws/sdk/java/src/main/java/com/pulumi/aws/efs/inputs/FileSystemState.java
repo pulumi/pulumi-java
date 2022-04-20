@@ -34,7 +34,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+     * The identifier of the Availability Zone in which the file system&#39;s One Zone storage classes exist.
      * 
      */
     @Import(name="availabilityZoneId")
@@ -136,7 +136,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
+     * The file system performance mode. Can be either `&#34;generalPurpose&#34;` or `&#34;maxIO&#34;` (Default: `&#34;generalPurpose&#34;`).
      * 
      */
     @Import(name="performanceMode")

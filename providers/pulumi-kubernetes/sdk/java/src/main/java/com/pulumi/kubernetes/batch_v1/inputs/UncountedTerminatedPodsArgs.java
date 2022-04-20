@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * UncountedTerminatedPods holds UIDs of Pods that have terminated but haven't been accounted in Job status counters.
+ * UncountedTerminatedPods holds UIDs of Pods that have terminated but haven&#39;t been accounted in Job status counters.
  * 
  */
 public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.ResourceArgs {

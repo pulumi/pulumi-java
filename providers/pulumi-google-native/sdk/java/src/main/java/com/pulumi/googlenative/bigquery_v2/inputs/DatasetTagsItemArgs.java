@@ -16,7 +16,7 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
     public static final DatasetTagsItemArgs Empty = new DatasetTagsItemArgs();
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
+     * [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
      * 
      */
     @Import(name="tagKey")
@@ -27,7 +27,7 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * [Required] Friendly short name of the tag value, e.g. "production".
+     * [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
      * 
      */
     @Import(name="tagValue")

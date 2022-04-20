@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceTemplateSpecContainerEnv {
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final @Nullable String name;
@@ -25,12 +25,12 @@ public final class ServiceTemplateSpecContainerEnv {
      * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
      * references will never be expanded, regardless of whether the variable
      * exists or not.
-     * Defaults to "".
+     * Defaults to &#34;&#34;.
      * 
      */
     private final @Nullable String value;
     /**
-     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Source for the environment variable&#39;s value. Only supports secret_key_ref.
      * Structure is documented below.
      * 
      */
@@ -47,7 +47,7 @@ public final class ServiceTemplateSpecContainerEnv {
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public Optional<String> name() {
@@ -61,14 +61,14 @@ public final class ServiceTemplateSpecContainerEnv {
      * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
      * references will never be expanded, regardless of whether the variable
      * exists or not.
-     * Defaults to "".
+     * Defaults to &#34;&#34;.
      * 
     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Source for the environment variable&#39;s value. Only supports secret_key_ref.
      * Structure is documented below.
      * 
     */

@@ -14,7 +14,7 @@ public final class IntentFollowupIntentInfo {
     private final @Nullable String followupIntentName;
     /**
      * The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     private final @Nullable String parentFollowupIntentName;
@@ -32,7 +32,7 @@ public final class IntentFollowupIntentInfo {
     }
     /**
      * The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
     */
     public Optional<String> parentFollowupIntentName() {

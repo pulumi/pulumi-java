@@ -55,7 +55,7 @@ public final class FtpReadSettingsResponse {
     private final @Nullable Object recursive;
     /**
      * The read setting type.
-     * Expected value is 'FtpReadSettings'.
+     * Expected value is &#39;FtpReadSettings&#39;.
      * 
      */
     private final String type;
@@ -161,7 +161,7 @@ public final class FtpReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'FtpReadSettings'.
+     * Expected value is &#39;FtpReadSettings&#39;.
      * 
     */
     public String type() {

@@ -26,10 +26,10 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
  * 
- * > **Warning:** This resource creates a Firestore Index on a project that already has
- * Firestore enabled. If you haven't already enabled it, you can create a
+ * &gt; **Warning:** This resource creates a Firestore Index on a project that already has
+ * Firestore enabled. If you haven&#39;t already enabled it, you can create a
  * `gcp.appengine.Application` resource with `database_type` set to
- * `"CLOUD_FIRESTORE"` to do so. Your Firestore location will be the same as
+ * `&#34;CLOUD_FIRESTORE&#34;` to do so. Your Firestore location will be the same as
  * the App Engine location specified.
  * 
  * ## Example Usage
@@ -60,14 +60,14 @@ public class Index extends com.pulumi.resources.CustomResource {
         return this.collection;
     }
     /**
-     * The Firestore database id. Defaults to `"(default)"`.
+     * The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     @Export(name="database", type=String.class, parameters={})
     private Output</* @Nullable */ String> database;
 
     /**
-     * @return The Firestore database id. Defaults to `"(default)"`.
+     * @return The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
     public Output</* @Nullable */ String> database() {
@@ -79,7 +79,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * specified as the last field, it will be added automatically with the
      * same direction as that of the last field defined. If the final field
      * in a composite index is not directional, the `__name__` will be
-     * ordered `"ASCENDING"` (unless explicitly specified otherwise).
+     * ordered `&#34;ASCENDING&#34;` (unless explicitly specified otherwise).
      * Structure is documented below.
      * 
      */
@@ -92,7 +92,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * specified as the last field, it will be added automatically with the
      * same direction as that of the last field defined. If the final field
      * in a composite index is not directional, the `__name__` will be
-     * ordered `"ASCENDING"` (unless explicitly specified otherwise).
+     * ordered `&#34;ASCENDING&#34;` (unless explicitly specified otherwise).
      * Structure is documented below.
      * 
      */
@@ -101,7 +101,7 @@ public class Index extends com.pulumi.resources.CustomResource {
     }
     /**
      * A server defined name for this index. Format:
-     * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
+     * &#39;projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}&#39;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -109,7 +109,7 @@ public class Index extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A server defined name for this index. Format:
-     * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
+     * &#39;projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}&#39;
      * 
      */
     public Output<String> name() {

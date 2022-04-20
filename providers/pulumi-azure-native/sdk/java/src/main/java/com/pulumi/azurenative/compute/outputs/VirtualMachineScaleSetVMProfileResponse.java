@@ -20,17 +20,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetVMProfileResponse {
     /**
-     * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
+     * Specifies the billing related details of a Azure Spot VMSS. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
      * 
      */
     private final @Nullable BillingProfileResponse billingProfile;
     /**
-     * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
+     * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
      * 
      */
     private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
     /**
-     * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+     * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
      * 
      */
     private final @Nullable String evictionPolicy;
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
     /**
-     * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
+     * Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
      */
     private final @Nullable String licenseType;
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
     /**
-     * Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview
+     * Specifies the priority for the virtual machines in the scale set. &lt;br&gt;&lt;br&gt;Minimum api-version: 2017-10-30-preview
      * 
      */
     private final @Nullable String priority;
@@ -75,7 +75,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
     /**
-     * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
+     * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
      * 
      */
     private final @Nullable String userData;
@@ -109,21 +109,21 @@ public final class VirtualMachineScaleSetVMProfileResponse {
     }
 
     /**
-     * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
+     * Specifies the billing related details of a Azure Spot VMSS. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
      * 
     */
     public Optional<BillingProfileResponse> billingProfile() {
         return Optional.ofNullable(this.billingProfile);
     }
     /**
-     * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
+     * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
      * 
     */
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
     /**
-     * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+     * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
      * 
     */
     public Optional<String> evictionPolicy() {
@@ -137,7 +137,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
         return Optional.ofNullable(this.extensionProfile);
     }
     /**
-     * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
+     * Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
     */
     public Optional<String> licenseType() {
@@ -158,7 +158,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview
+     * Specifies the priority for the virtual machines in the scale set. &lt;br&gt;&lt;br&gt;Minimum api-version: 2017-10-30-preview
      * 
     */
     public Optional<String> priority() {
@@ -186,7 +186,7 @@ public final class VirtualMachineScaleSetVMProfileResponse {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
+     * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
      * 
     */
     public Optional<String> userData() {

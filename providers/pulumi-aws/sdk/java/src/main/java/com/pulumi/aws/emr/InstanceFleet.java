@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * Provides an Elastic MapReduce Cluster Instance Fleet configuration.
  * See [Amazon Elastic MapReduce Documentation](https://aws.amazon.com/documentation/emr/) for more information.
  * 
- * > **NOTE:** At this time, Instance Fleets cannot be destroyed through the API nor
+ * &gt; **NOTE:** At this time, Instance Fleets cannot be destroyed through the API nor
  * web interface. Instance Fleets are destroyed when the EMR Cluster is destroyed.
  * the provider will resize any Instance Fleet to zero when destroying the resource.
  * 

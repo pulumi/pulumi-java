@@ -21,7 +21,7 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     public static final IngressBackendArgs Empty = new IngressBackendArgs();
 
     /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with "Service".
+     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with &#34;Service&#34;.
      * 
      */
     @Import(name="resource")
@@ -32,7 +32,7 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Service references a Service as a Backend. This is a mutually exclusive setting with "Resource".
+     * Service references a Service as a Backend. This is a mutually exclusive setting with &#34;Resource&#34;.
      * 
      */
     @Import(name="service")

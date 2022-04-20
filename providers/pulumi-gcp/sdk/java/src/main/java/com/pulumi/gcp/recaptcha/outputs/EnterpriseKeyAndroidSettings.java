@@ -19,7 +19,7 @@ public final class EnterpriseKeyAndroidSettings {
      */
     private final @Nullable Boolean allowAllPackageNames;
     /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
      */
     private final @Nullable List<String> allowedPackageNames;
@@ -40,7 +40,7 @@ public final class EnterpriseKeyAndroidSettings {
         return Optional.ofNullable(this.allowAllPackageNames);
     }
     /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
     */
     public List<String> allowedPackageNames() {

@@ -20,7 +20,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
+ * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
@@ -93,28 +93,28 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
         return this.platformUpdateDomainCount;
     }
     /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     @Export(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup;
 
     /**
-     * @return Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * @return Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     public Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
-     * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
      */
     public Output</* @Nullable */ SkuResponse> sku() {

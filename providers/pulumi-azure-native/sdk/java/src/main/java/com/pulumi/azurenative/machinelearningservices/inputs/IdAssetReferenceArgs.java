@@ -31,7 +31,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'Id'.
+     * Expected value is &#39;Id&#39;.
      * 
      */
     @Import(name="referenceType", required=true)

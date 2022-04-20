@@ -33,7 +33,7 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="preloadEnabled")

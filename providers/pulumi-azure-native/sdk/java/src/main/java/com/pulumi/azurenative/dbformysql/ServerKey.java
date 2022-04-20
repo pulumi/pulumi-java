@@ -74,28 +74,28 @@ public class ServerKey extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The key type like 'AzureKeyVault'.
+     * The key type like &#39;AzureKeyVault&#39;.
      * 
      */
     @Export(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
     /**
-     * @return The key type like 'AzureKeyVault'.
+     * @return The key type like &#39;AzureKeyVault&#39;.
      * 
      */
     public Output<String> serverKeyType() {
         return this.serverKeyType;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

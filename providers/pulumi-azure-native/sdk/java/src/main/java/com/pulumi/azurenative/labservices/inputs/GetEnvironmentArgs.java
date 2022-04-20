@@ -37,7 +37,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=networkInterface)'
+     * Specify the $expand query. Example: &#39;properties($expand=networkInterface)&#39;
      * 
      */
     @Import(name="expand")

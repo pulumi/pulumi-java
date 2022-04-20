@@ -35,7 +35,7 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
      */
     @Import(name="jupyterServerAppSettings")

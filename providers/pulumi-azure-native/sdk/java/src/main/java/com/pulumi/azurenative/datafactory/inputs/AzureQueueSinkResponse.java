@@ -66,7 +66,7 @@ public final class AzureQueueSinkResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureQueueSink'.
+     * Expected value is &#39;AzureQueueSink&#39;.
      * 
      */
     @Import(name="type", required=true)

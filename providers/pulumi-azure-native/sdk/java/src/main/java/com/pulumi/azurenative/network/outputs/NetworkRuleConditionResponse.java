@@ -44,7 +44,7 @@ public final class NetworkRuleConditionResponse {
     private final @Nullable String name;
     /**
      * Rule Condition Type.
-     * Expected value is 'NetworkRuleCondition'.
+     * Expected value is &#39;NetworkRuleCondition&#39;.
      * 
      */
     private final String ruleConditionType;
@@ -125,7 +125,7 @@ public final class NetworkRuleConditionResponse {
     }
     /**
      * Rule Condition Type.
-     * Expected value is 'NetworkRuleCondition'.
+     * Expected value is &#39;NetworkRuleCondition&#39;.
      * 
     */
     public String ruleConditionType() {

@@ -32,7 +32,7 @@ public final class GetIscsiTargetResult {
      */
     private final String status;
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
      */
     private final String targetIqn;
@@ -94,7 +94,7 @@ public final class GetIscsiTargetResult {
         return this.status;
     }
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
     */
     public String targetIqn() {

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Api is a light-weight descriptor for an API Interface. Interfaces are also described as "protocol buffer services" in some contexts, such as by the "service" keyword in a .proto file, but they are different from API Services, which represent a concrete implementation of an interface as opposed to simply a description of methods and bindings. They are also sometimes simply referred to as "APIs" in other contexts, such as the name of this message itself. See https://cloud.google.com/apis/design/glossary for detailed terminology.
+ * Api is a light-weight descriptor for an API Interface. Interfaces are also described as &#34;protocol buffer services&#34; in some contexts, such as by the &#34;service&#34; keyword in a .proto file, but they are different from API Services, which represent a concrete implementation of an interface as opposed to simply a description of methods and bindings. They are also sometimes simply referred to as &#34;APIs&#34; in other contexts, such as the name of this message itself. See https://cloud.google.com/apis/design/glossary for detailed terminology.
  * 
  */
 public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
@@ -48,7 +48,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The fully qualified name of this interface, including package name followed by the interface's simple name.
+     * The fully qualified name of this interface, including package name followed by the interface&#39;s simple name.
      * 
      */
     @Import(name="name")

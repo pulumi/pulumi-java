@@ -71,7 +71,7 @@ public final class SybaseLinkedServiceResponse {
     private final Object server;
     /**
      * Type of linked service.
-     * Expected value is 'Sybase'.
+     * Expected value is &#39;Sybase&#39;.
      * 
      */
     private final String type;
@@ -181,7 +181,7 @@ public final class SybaseLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Sybase'.
+     * Expected value is &#39;Sybase&#39;.
      * 
     */
     public String type() {

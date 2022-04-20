@@ -16,7 +16,7 @@ public final class ZipInfoResponse {
      */
     private final Integer filesCount;
     /**
-     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
+     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
      * 
      */
     private final String sourceUrl;
@@ -37,7 +37,7 @@ public final class ZipInfoResponse {
         return this.filesCount;
     }
     /**
-     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
+     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
      * 
     */
     public String sourceUrl() {

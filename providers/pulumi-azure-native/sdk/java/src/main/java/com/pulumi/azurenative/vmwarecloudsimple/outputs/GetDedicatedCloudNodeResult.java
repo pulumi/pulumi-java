@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDedicatedCloudNodeResult {
     /**
-     * Availability Zone id, e.g. "az1"
+     * Availability Zone id, e.g. &#34;az1&#34;
      * 
      */
     private final String availabilityZoneId;
     /**
-     * Availability Zone name, e.g. "Availability Zone 1"
+     * Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
      */
     private final String availabilityZoneName;
@@ -35,7 +35,7 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final String created;
     /**
-     * SKU's id
+     * SKU&#39;s id
      * 
      */
     private final String id;
@@ -45,7 +45,7 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final String location;
     /**
-     * SKU's name
+     * SKU&#39;s name
      * 
      */
     private final String name;
@@ -55,12 +55,12 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final Integer nodesCount;
     /**
-     * Placement Group id, e.g. "n1"
+     * Placement Group id, e.g. &#34;n1&#34;
      * 
      */
     private final String placementGroupId;
     /**
-     * Placement Name, e.g. "Placement Group 1"
+     * Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
      */
     private final String placementGroupName;
@@ -153,14 +153,14 @@ public final class GetDedicatedCloudNodeResult {
     }
 
     /**
-     * Availability Zone id, e.g. "az1"
+     * Availability Zone id, e.g. &#34;az1&#34;
      * 
     */
     public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * Availability Zone name, e.g. "Availability Zone 1"
+     * Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
     */
     public String availabilityZoneName() {
@@ -181,7 +181,7 @@ public final class GetDedicatedCloudNodeResult {
         return this.created;
     }
     /**
-     * SKU's id
+     * SKU&#39;s id
      * 
     */
     public String id() {
@@ -195,7 +195,7 @@ public final class GetDedicatedCloudNodeResult {
         return this.location;
     }
     /**
-     * SKU's name
+     * SKU&#39;s name
      * 
     */
     public String name() {
@@ -209,14 +209,14 @@ public final class GetDedicatedCloudNodeResult {
         return this.nodesCount;
     }
     /**
-     * Placement Group id, e.g. "n1"
+     * Placement Group id, e.g. &#34;n1&#34;
      * 
     */
     public String placementGroupId() {
         return this.placementGroupId;
     }
     /**
-     * Placement Name, e.g. "Placement Group 1"
+     * Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
     */
     public String placementGroupName() {

@@ -77,7 +77,7 @@ public final class GoogleCloudStorageReadSettingsResponse extends com.pulumi.res
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -88,7 +88,7 @@ public final class GoogleCloudStorageReadSettingsResponse extends com.pulumi.res
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -133,7 +133,7 @@ public final class GoogleCloudStorageReadSettingsResponse extends com.pulumi.res
 
     /**
      * The read setting type.
-     * Expected value is 'GoogleCloudStorageReadSettings'.
+     * Expected value is &#39;GoogleCloudStorageReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

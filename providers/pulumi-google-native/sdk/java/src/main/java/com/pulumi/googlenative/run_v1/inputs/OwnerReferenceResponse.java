@@ -29,7 +29,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
+     * If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
      * 
      */
     @Import(name="blockOwnerDeletion", required=true)

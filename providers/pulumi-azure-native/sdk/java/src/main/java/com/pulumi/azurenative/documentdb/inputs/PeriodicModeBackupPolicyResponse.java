@@ -33,7 +33,7 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
 
     /**
      * Describes the mode of backups.
-     * Expected value is 'Periodic'.
+     * Expected value is &#39;Periodic&#39;.
      * 
      */
     @Import(name="type", required=true)

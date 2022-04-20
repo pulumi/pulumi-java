@@ -118,18 +118,18 @@ public class Method extends com.pulumi.resources.CustomResource {
         return this.operationName;
     }
     /**
-     * A map of the API models used for the request's content type
+     * A map of the API models used for the request&#39;s content type
      * where key is the content type (e.g., `application/json`)
-     * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
+     * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
      * 
      */
     @Export(name="requestModels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> requestModels;
 
     /**
-     * @return A map of the API models used for the request's content type
+     * @return A map of the API models used for the request&#39;s content type
      * where key is the content type (e.g., `application/json`)
-     * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
+     * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> requestModels() {
@@ -137,7 +137,7 @@ public class Method extends com.pulumi.resources.CustomResource {
     }
     /**
      * A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-     * For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+     * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
     @Export(name="requestParameters", type=Map.class, parameters={String.class, Boolean.class})
@@ -145,7 +145,7 @@ public class Method extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-     * For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+     * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
     public Output</* @Nullable */ Map<String,Boolean>> requestParameters() {

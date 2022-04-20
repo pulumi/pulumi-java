@@ -17,7 +17,7 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
      */
     private final @Nullable String imageIdOverride;
     /**
-     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn&#39;t specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
      * 
      */
     private final @Nullable String imageType;
@@ -38,7 +38,7 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
         return Optional.ofNullable(this.imageIdOverride);
     }
     /**
-     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn&#39;t specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
      * 
     */
     public Optional<String> imageType() {

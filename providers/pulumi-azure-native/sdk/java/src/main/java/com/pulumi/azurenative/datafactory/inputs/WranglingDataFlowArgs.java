@@ -91,7 +91,7 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of data flow.
-     * Expected value is 'WranglingDataFlow'.
+     * Expected value is &#39;WranglingDataFlow&#39;.
      * 
      */
     @Import(name="type", required=true)

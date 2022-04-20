@@ -48,7 +48,7 @@ public final class TransferSpecResponse {
      */
     private final HttpDataResponse httpDataSource;
     /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
      * 
      */
     private final ObjectConditionsResponse objectConditions;
@@ -78,7 +78,7 @@ public final class TransferSpecResponse {
      */
     private final TransferManifestResponse transferManifest;
     /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
+     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
      * 
      */
     private final TransferOptionsResponse transferOptions;
@@ -156,7 +156,7 @@ public final class TransferSpecResponse {
         return this.httpDataSource;
     }
     /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
      * 
     */
     public ObjectConditionsResponse objectConditions() {
@@ -198,7 +198,7 @@ public final class TransferSpecResponse {
         return this.transferManifest;
     }
     /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
+     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
      * 
     */
     public TransferOptionsResponse transferOptions() {

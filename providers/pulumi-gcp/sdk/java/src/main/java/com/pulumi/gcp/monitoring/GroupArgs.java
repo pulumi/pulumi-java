@@ -54,9 +54,9 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the group's parent, if it has one. The format is
-     * "projects/{project_id_or_number}/groups/{group_id}". For
-     * groups with no parent, parentName is the empty string, "".
+     * The name of the group&#39;s parent, if it has one. The format is
+     * &#34;projects/{project_id_or_number}/groups/{group_id}&#34;. For
+     * groups with no parent, parentName is the empty string, &#34;&#34;.
      * 
      */
     @Import(name="parentName")

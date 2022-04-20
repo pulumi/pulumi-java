@@ -16,7 +16,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * <!-- Bug: Type and Name are switched -->
+ * &lt;!-- Bug: Type and Name are switched --&gt;
  * Manages the lifecycle of docker image/tag in a registry.
  * 
  * ## Example Usage
@@ -31,18 +31,18 @@ import javax.annotation.Nullable;
  * - **build** (Block List, Max: 1) Definition for building the image (see below for nested schema)
  * - **id** (String) The ID of this resource.
  * - **insecure_skip_verify** (Boolean) If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
- * - **keep_remotely** (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker registry on destroy operation. Defaults to `false`
+ * - **keep_remotely** (Boolean) If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from the docker registry on destroy operation. Defaults to `false`
  * 
  * ### Read-Only
  * 
  * - **sha256_digest** (String) The sha256 digest of the image.
  * 
- * <a id="nestedblock--build"></a>
+ * &lt;a id=&#34;nestedblock--build&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `build`
  * 
  * Required:
  * 
- * - **context** (String) The absolute path to the context folder. You can use the helper function '${path.cwd}/context-dir'.
+ * - **context** (String) The absolute path to the context folder. You can use the helper function &#39;${path.cwd}/context-dir&#39;.
  * 
  * Optional:
  * 
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  * - **cpu_set_mems** (String) MEMs in which to allow execution (`0-3`, `0`, `1`)
  * - **cpu_shares** (Number) CPU shares (relative weight)
  * - **dockerfile** (String) Dockerfile file. Defaults to `Dockerfile`
- * - **extra_hosts** (List of String) A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
+ * - **extra_hosts** (List of String) A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form [&#34;hostname:IP&#34;]
  * - **force_remove** (Boolean) Always remove intermediate containers
  * - **isolation** (String) Isolation represents the isolation technology of a container. The supported values are
  * - **labels** (Map of String) User-defined key/value metadata
@@ -78,7 +78,7 @@ import javax.annotation.Nullable;
  * - **ulimit** (Block List) Configuration for ulimits (see below for nested schema)
  * - **version** (String) Version of the unerlying builder to use
  * 
- * <a id="nestedblock--build--auth_config"></a>
+ * &lt;a id=&#34;nestedblock--build--auth_config&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `build.auth_config`
  * 
  * Required:
@@ -95,7 +95,7 @@ import javax.annotation.Nullable;
  * - **server_address** (String) the server address
  * - **user_name** (String) the registry user name
  * 
- * <a id="nestedblock--build--ulimit"></a>
+ * &lt;a id=&#34;nestedblock--build--ulimit&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `build.ulimit`
  * 
  * Required:
@@ -136,7 +136,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
         return this.insecureSkipVerify;
     }
     /**
-     * If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
@@ -144,7 +144,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> keepRemotely;
 
     /**
-     * @return If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */

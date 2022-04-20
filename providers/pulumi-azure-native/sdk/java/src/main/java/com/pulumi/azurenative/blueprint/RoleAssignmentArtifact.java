@@ -76,7 +76,7 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'roleAssignment'.
+     * Expected value is &#39;roleAssignment&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
 
     /**
      * @return Specifies the kind of blueprint artifact.
-     * Expected value is 'roleAssignment'.
+     * Expected value is &#39;roleAssignment&#39;.
      * 
      */
     public Output<String> kind() {

@@ -52,13 +52,13 @@ public final class GetActivityCustomEntityQueryResult {
      */
     private final String id;
     /**
-     * The type of the query's source entity
+     * The type of the query&#39;s source entity
      * 
      */
     private final @Nullable String inputEntityType;
     /**
      * The kind of the entity query
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     private final String kind;
@@ -191,7 +191,7 @@ public final class GetActivityCustomEntityQueryResult {
         return this.id;
     }
     /**
-     * The type of the query's source entity
+     * The type of the query&#39;s source entity
      * 
     */
     public Optional<String> inputEntityType() {
@@ -199,7 +199,7 @@ public final class GetActivityCustomEntityQueryResult {
     }
     /**
      * The kind of the entity query
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
     */
     public String kind() {

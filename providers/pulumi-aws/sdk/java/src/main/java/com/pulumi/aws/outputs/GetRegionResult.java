@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionResult {
     /**
-     * The region's description in this format: "Location (Region name)".
+     * The region&#39;s description in this format: &#34;Location (Region name)&#34;.
      * 
      */
     private final String description;
@@ -43,7 +43,7 @@ public final class GetRegionResult {
     }
 
     /**
-     * The region's description in this format: "Location (Region name)".
+     * The region&#39;s description in this format: &#34;Location (Region name)&#34;.
      * 
     */
     public String description() {

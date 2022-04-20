@@ -59,7 +59,7 @@ public final class DocumentDbCollectionDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'DocumentDbCollection'.
+     * Expected value is &#39;DocumentDbCollection&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class DocumentDbCollectionDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'DocumentDbCollection'.
+     * Expected value is &#39;DocumentDbCollection&#39;.
      * 
     */
     public String type() {

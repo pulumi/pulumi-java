@@ -57,7 +57,7 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
      * 
      */
     @Import(name="type", required=true)

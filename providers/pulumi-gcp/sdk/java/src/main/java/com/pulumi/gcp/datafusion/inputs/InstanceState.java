@@ -19,7 +19,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     public static final InstanceState Empty = new InstanceState();
 
     /**
-     * The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * The time the instance was created in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     @Import(name="createTime")
@@ -223,7 +223,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * The time the instance was last updated in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     @Import(name="updateTime")

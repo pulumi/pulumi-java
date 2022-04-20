@@ -39,7 +39,7 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The volume type. Valid options are 'gp2', 'io1' and 'standard'.
+     * The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
      * 
      */
     @Import(name="type", required=true)

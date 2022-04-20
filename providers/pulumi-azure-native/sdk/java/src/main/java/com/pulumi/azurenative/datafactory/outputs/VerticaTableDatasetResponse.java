@@ -64,7 +64,7 @@ public final class VerticaTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'VerticaTable'.
+     * Expected value is &#39;VerticaTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class VerticaTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'VerticaTable'.
+     * Expected value is &#39;VerticaTable&#39;.
      * 
     */
     public String type() {

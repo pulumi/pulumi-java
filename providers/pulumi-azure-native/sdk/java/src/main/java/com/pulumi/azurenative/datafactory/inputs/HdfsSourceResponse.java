@@ -89,7 +89,7 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HdfsSource'.
+     * Expected value is &#39;HdfsSource&#39;.
      * 
      */
     @Import(name="type", required=true)

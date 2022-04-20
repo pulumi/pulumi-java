@@ -42,7 +42,7 @@ public final class DefenderForContainersAwsOfferingResponse {
     private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
     /**
      * The type of the security offering.
-     * Expected value is 'DefenderForContainersAws'.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
      * 
      */
     private final String offeringType;
@@ -100,7 +100,7 @@ public final class DefenderForContainersAwsOfferingResponse {
     }
     /**
      * The type of the security offering.
-     * Expected value is 'DefenderForContainersAws'.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
      * 
     */
     public String offeringType() {

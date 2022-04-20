@@ -57,7 +57,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     @Import(name="client")
@@ -101,7 +101,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Output only. The endpoint of the cluster's API server.
+     * Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     @Import(name="endpoint")
@@ -190,7 +190,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
      * 
      */
     @Import(name="resourceGroupId")

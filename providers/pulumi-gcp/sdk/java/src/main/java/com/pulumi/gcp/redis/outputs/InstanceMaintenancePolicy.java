@@ -16,7 +16,7 @@ public final class InstanceMaintenancePolicy {
     /**
      * - 
      * Output only. The time when the policy was created.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
      */
@@ -31,7 +31,7 @@ public final class InstanceMaintenancePolicy {
     /**
      * - 
      * Output only. The time when the policy was last updated.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
      */
@@ -60,7 +60,7 @@ public final class InstanceMaintenancePolicy {
     /**
      * - 
      * Output only. The time when the policy was created.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
     */
@@ -79,7 +79,7 @@ public final class InstanceMaintenancePolicy {
     /**
      * - 
      * Output only. The time when the policy was last updated.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
     */

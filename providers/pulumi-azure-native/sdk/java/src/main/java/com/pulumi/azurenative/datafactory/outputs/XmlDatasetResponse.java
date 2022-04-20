@@ -88,7 +88,7 @@ public final class XmlDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Xml'.
+     * Expected value is &#39;Xml&#39;.
      * 
      */
     private final String type;
@@ -200,7 +200,7 @@ public final class XmlDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Xml'.
+     * Expected value is &#39;Xml&#39;.
      * 
     */
     public String type() {

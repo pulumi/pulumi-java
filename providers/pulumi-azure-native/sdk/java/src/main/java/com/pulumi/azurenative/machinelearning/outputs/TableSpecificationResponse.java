@@ -19,7 +19,7 @@ public final class TableSpecificationResponse {
      */
     private final @Nullable String description;
     /**
-     * The format, if 'type' is not 'object'
+     * The format, if &#39;type&#39; is not &#39;object&#39;
      * 
      */
     private final @Nullable String format;
@@ -61,7 +61,7 @@ public final class TableSpecificationResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The format, if 'type' is not 'object'
+     * The format, if &#39;type&#39; is not &#39;object&#39;
      * 
     */
     public Optional<String> format() {

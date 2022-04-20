@@ -205,14 +205,14 @@ public class BackupRun extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
+     * The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
+     * @return The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
      */
     public Output<String> type() {

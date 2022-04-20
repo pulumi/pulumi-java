@@ -115,7 +115,7 @@ public final class MariaDBTableDatasetArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of dataset.
-     * Expected value is 'MariaDBTable'.
+     * Expected value is &#39;MariaDBTable&#39;.
      * 
      */
     @Import(name="type", required=true)

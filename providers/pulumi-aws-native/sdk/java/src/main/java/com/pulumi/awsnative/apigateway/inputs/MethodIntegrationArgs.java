@@ -90,7 +90,7 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The integration's HTTP method type.
+     * The integration&#39;s HTTP method type.
      * 
      */
     @Import(name="integrationHttpMethod")
@@ -101,7 +101,7 @@ public final class MethodIntegrationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The response that API Gateway provides after a method's backend completes processing a request.
+     * The response that API Gateway provides after a method&#39;s backend completes processing a request.
      * 
      */
     @Import(name="integrationResponses")

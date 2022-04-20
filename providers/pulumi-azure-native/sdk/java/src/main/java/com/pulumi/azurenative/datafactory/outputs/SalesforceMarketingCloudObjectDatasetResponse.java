@@ -59,7 +59,7 @@ public final class SalesforceMarketingCloudObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceMarketingCloudObject'.
+     * Expected value is &#39;SalesforceMarketingCloudObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SalesforceMarketingCloudObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SalesforceMarketingCloudObject'.
+     * Expected value is &#39;SalesforceMarketingCloudObject&#39;.
      * 
     */
     public String type() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetConsentResult {
     /**
-     * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+     * The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
     private final String consentArtifact;
@@ -33,7 +33,7 @@ public final class GetConsentResult {
      */
     private final String name;
     /**
-     * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+     * Optional. Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
     private final List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies;
@@ -43,7 +43,7 @@ public final class GetConsentResult {
      */
     private final String revisionCreateTime;
     /**
-     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's resource name.
+     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent&#39;s resource name.
      * 
      */
     private final String revisionId;
@@ -58,7 +58,7 @@ public final class GetConsentResult {
      */
     private final String ttl;
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     private final String userId;
@@ -88,7 +88,7 @@ public final class GetConsentResult {
     }
 
     /**
-     * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+     * The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
     */
     public String consentArtifact() {
@@ -116,7 +116,7 @@ public final class GetConsentResult {
         return this.name;
     }
     /**
-     * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+     * Optional. Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
      * 
     */
     public List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies() {
@@ -130,7 +130,7 @@ public final class GetConsentResult {
         return this.revisionCreateTime;
     }
     /**
-     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's resource name.
+     * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent&#39;s resource name.
      * 
     */
     public String revisionId() {
@@ -151,7 +151,7 @@ public final class GetConsentResult {
         return this.ttl;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
     */
     public String userId() {

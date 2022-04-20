@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * In a GcsData resource, an object's name is the Cloud Storage object's name and its "last modification time" refers to the object's `updated` property of Cloud Storage objects, which changes when the content or the metadata of the object is updated.
+ * In a GcsData resource, an object&#39;s name is the Cloud Storage object&#39;s name and its &#34;last modification time&#34; refers to the object&#39;s `updated` property of Cloud Storage objects, which changes when the content or the metadata of the object is updated.
  * 
  */
 public final class GcsDataResponse extends com.pulumi.resources.InvokeArgs {
@@ -28,7 +28,7 @@ public final class GcsDataResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;. The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
      * 
      */
     @Import(name="path", required=true)

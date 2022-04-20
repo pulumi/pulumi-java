@@ -43,7 +43,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The display name of the dashboard.</p>
+     * &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -61,11 +61,11 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     * &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
      *             for granting permissions by providing a list of IAM action information for each
-     *             principal ARN. </p>
+     *             principal ARN. &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit the permissions list.</p>
+     *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -83,8 +83,8 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             dashboard.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.&lt;/p&gt;
      * 
      */
     @Import(name="tags")
@@ -95,10 +95,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
-     *             dashboard.</p>
+     *             dashboard.&lt;/p&gt;
      * 
      */
     @Import(name="themeArn")
@@ -109,7 +109,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A description for the first version of the dashboard being created.</p>
+     * &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
      * 
      */
     @Import(name="versionDescription")

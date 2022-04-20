@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * A global network endpoint group contains endpoints that reside outside of Google Cloud.
  * Currently a global network endpoint group can only support a single endpoint.
  * 
- * Recreating a global network endpoint group that's in use by another resource will give a
+ * Recreating a global network endpoint group that&#39;s in use by another resource will give a
  * `resourceInUseByAnotherResource` error. Use `lifecycle.create_before_destroy`
  * to avoid this type of error.
  * 

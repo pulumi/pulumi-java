@@ -77,14 +77,14 @@ public class Inventory extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
+     * Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     @Export(name="filter", type=InventoryFilter.class, parameters={})
     private Output</* @Nullable */ InventoryFilter> filter;
 
     /**
-     * @return Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
+     * @return Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     public Output</* @Nullable */ InventoryFilter> filter() {

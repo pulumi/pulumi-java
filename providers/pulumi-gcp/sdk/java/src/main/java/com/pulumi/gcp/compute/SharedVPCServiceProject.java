@@ -21,9 +21,9 @@ import javax.annotation.Nullable;
  * 
  * For more information, see,
  * [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
- * where the Shared VPC feature is referred to by its former name "XPN".
+ * where the Shared VPC feature is referred to by its former name &#34;XPN&#34;.
  * 
- * > **Note:** If Shared VPC Admin role is set at the folder level, use the google-beta provider. The google provider only supports this permission at project or organizational level currently. [[0]](https://cloud.google.com/vpc/docs/provisioning-shared-vpc#enable-shared-vpc-host)
+ * &gt; **Note:** If Shared VPC Admin role is set at the folder level, use the google-beta provider. The google provider only supports this permission at project or organizational level currently. [[0]](https://cloud.google.com/vpc/docs/provisioning-shared-vpc#enable-shared-vpc-host)
  * 
  * ## Example Usage
  * 

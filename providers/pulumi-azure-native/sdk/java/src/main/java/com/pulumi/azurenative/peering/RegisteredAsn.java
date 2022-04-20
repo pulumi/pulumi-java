@@ -16,7 +16,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The customer's ASN that is registered by the peering service provider.
+ * The customer&#39;s ASN that is registered by the peering service provider.
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
@@ -33,14 +33,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:peering:RegisteredAsn")
 public class RegisteredAsn extends com.pulumi.resources.CustomResource {
     /**
-     * The customer's ASN from which traffic originates.
+     * The customer&#39;s ASN from which traffic originates.
      * 
      */
     @Export(name="asn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> asn;
 
     /**
-     * @return The customer's ASN from which traffic originates.
+     * @return The customer&#39;s ASN from which traffic originates.
      * 
      */
     public Output</* @Nullable */ Integer> asn() {

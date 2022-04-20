@@ -61,7 +61,7 @@ public final class OracleCloudStorageLinkedServiceResponse {
     private final @Nullable Object serviceUrl;
     /**
      * Type of linked service.
-     * Expected value is 'OracleCloudStorage'.
+     * Expected value is &#39;OracleCloudStorage&#39;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class OracleCloudStorageLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'OracleCloudStorage'.
+     * Expected value is &#39;OracleCloudStorage&#39;.
      * 
     */
     public String type() {

@@ -58,7 +58,7 @@ public final class ValidationActivityResponse {
     private final @Nullable Object timeout;
     /**
      * Type of activity.
-     * Expected value is 'Validation'.
+     * Expected value is &#39;Validation&#39;.
      * 
      */
     private final String type;
@@ -150,7 +150,7 @@ public final class ValidationActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Validation'.
+     * Expected value is &#39;Validation&#39;.
      * 
     */
     public String type() {

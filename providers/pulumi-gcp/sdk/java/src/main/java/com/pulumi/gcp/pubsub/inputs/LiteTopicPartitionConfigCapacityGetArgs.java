@@ -15,7 +15,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends com.pulumi.re
     public static final LiteTopicPartitionConfigCapacityGetArgs Empty = new LiteTopicPartitionConfigCapacityGetArgs();
 
     /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     @Import(name="publishMibPerSec", required=true)
@@ -26,7 +26,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends com.pulumi.re
     }
 
     /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     @Import(name="subscribeMibPerSec", required=true)

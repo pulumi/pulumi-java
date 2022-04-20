@@ -54,7 +54,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Expected value is 'AzureBackupRule'.
+     * Expected value is &#39;AzureBackupRule&#39;.
      * 
      */
     @Import(name="objectType", required=true)

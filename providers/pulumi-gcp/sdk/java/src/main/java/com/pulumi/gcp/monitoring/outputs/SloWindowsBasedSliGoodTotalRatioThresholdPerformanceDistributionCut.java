@@ -21,10 +21,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     /**
      * Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
-     * that range.min <= x <= range.max. inclusive of min and
+     * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
      * just one of min or max. Summed value `X` should satisfy
-     * `range.min <= X <= range.max` for a good window.
+     * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
      */
@@ -51,10 +51,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     /**
      * Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
-     * that range.min <= x <= range.max. inclusive of min and
+     * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
      * just one of min or max. Summed value `X` should satisfy
-     * `range.min <= X <= range.max` for a good window.
+     * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
     */

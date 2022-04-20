@@ -25,14 +25,14 @@ import javax.annotation.Nullable;
  * Creates a new Google SQL Database Instance. For more information, see the [official documentation](https://cloud.google.com/sql/),
  * or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/instances).
  * 
- * > **NOTE on `gcp.sql.DatabaseInstance`:** - Second-generation instances include a
- * default 'root'@'%' user with no password. This user will be deleted by the provider on
+ * &gt; **NOTE on `gcp.sql.DatabaseInstance`:** - Second-generation instances include a
+ * default &#39;root&#39;@&#39;%&#39; user with no password. This user will be deleted by the provider on
  * instance creation. You should use `gcp.sql.User` to define a custom user with
  * a restricted host and strong password.
  * 
- * > **Note**: On newer versions of the provider, you must explicitly set `deletion_protection=false`
+ * &gt; **Note**: On newer versions of the provider, you must explicitly set `deletion_protection=false`
  * (and run `pulumi update` to write the field to state) in order to destroy an instance.
- * It is recommended to not set this field (or set it to true) until you're ready to destroy the instance and its databases.
+ * It is recommended to not set this field (or set it to true) until you&#39;re ready to destroy the instance and its databases.
  * 
  * ## Example Usage
  * 
@@ -52,7 +52,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{name}}
  * ```
  * 
- *  config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn't sufficient to know that your config could reproduce the imported resource.
+ *  config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn&#39;t sufficient to know that your config could reproduce the imported resource.
  * 
  */
 @ResourceType(type="gcp:sql/databaseInstance:DatabaseInstance")
@@ -144,7 +144,7 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * to use this feature, a special kind of service account must be created and
      * granted permission on this key.  This step can currently only be done
      * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
-     * That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+     * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */
@@ -158,7 +158,7 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * to use this feature, a special kind of service account must be created and
      * granted permission on this key.  This step can currently only be done
      * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
-     * That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+     * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */

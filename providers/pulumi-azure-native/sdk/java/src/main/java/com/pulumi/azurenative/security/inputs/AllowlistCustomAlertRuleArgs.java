@@ -44,7 +44,7 @@ public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.Res
 
     /**
      * The type of the custom alert rule.
-     * Expected value is 'AllowlistCustomAlertRule'.
+     * Expected value is &#39;AllowlistCustomAlertRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

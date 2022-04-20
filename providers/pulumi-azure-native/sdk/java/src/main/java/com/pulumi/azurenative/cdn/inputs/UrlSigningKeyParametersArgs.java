@@ -55,7 +55,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
 
     /**
      * The type of the Secret to create.
-     * Expected value is 'UrlSigningKey'.
+     * Expected value is &#39;UrlSigningKey&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -21,7 +21,7 @@ public final class ApiKeyResponse {
      */
     private final String id;
     /**
-     * The last time any of the key's properties were modified.
+     * The last time any of the key&#39;s properties were modified.
      * 
      */
     private final String lastModified;
@@ -72,7 +72,7 @@ public final class ApiKeyResponse {
         return this.id;
     }
     /**
-     * The last time any of the key's properties were modified.
+     * The last time any of the key&#39;s properties were modified.
      * 
     */
     public String lastModified() {

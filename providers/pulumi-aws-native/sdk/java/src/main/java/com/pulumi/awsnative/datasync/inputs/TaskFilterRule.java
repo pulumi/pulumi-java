@@ -31,7 +31,7 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
+     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
      * 
      */
     @Import(name="value")

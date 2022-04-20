@@ -27,7 +27,7 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
+     * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both [&#34;Shoes &amp; Accessories&#34; -&gt; &#34;Shoes&#34;] and [&#34;Sports &amp; Fitness&#34; -&gt; &#34;Athletic Clothing&#34; -&gt; &#34;Shoes&#34;], it could be represented as: &#34;categoryHierarchies&#34;: [ { &#34;categories&#34;: [&#34;Shoes &amp; Accessories&#34;, &#34;Shoes&#34;]}, { &#34;categories&#34;: [&#34;Sports &amp; Fitness&#34;, &#34;Athletic Clothing&#34;, &#34;Shoes&#34;] } ]
      * 
      */
     @Import(name="categoryHierarchies", required=true)

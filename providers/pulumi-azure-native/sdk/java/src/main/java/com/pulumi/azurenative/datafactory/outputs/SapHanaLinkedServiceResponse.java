@@ -66,7 +66,7 @@ public final class SapHanaLinkedServiceResponse {
     private final @Nullable Object server;
     /**
      * Type of linked service.
-     * Expected value is 'SapHana'.
+     * Expected value is &#39;SapHana&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class SapHanaLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapHana'.
+     * Expected value is &#39;SapHana&#39;.
      * 
     */
     public String type() {

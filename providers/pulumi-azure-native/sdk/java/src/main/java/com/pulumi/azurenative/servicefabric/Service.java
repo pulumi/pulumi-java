@@ -124,14 +124,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.partitionDescription;
     }
     /**
-     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
+     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
      * 
      */
     @Export(name="placementConstraints", type=String.class, parameters={})
     private Output</* @Nullable */ String> placementConstraints;
 
     /**
-     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
+     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
      * 
      */
     public Output</* @Nullable */ String> placementConstraints() {

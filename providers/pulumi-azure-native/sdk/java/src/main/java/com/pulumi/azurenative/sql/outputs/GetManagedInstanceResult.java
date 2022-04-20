@@ -65,7 +65,7 @@ public final class GetManagedInstanceResult {
      */
     private final @Nullable String keyId;
     /**
-     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
      */
     private final @Nullable String licenseType;
@@ -80,7 +80,7 @@ public final class GetManagedInstanceResult {
      */
     private final @Nullable String maintenanceConfigurationId;
     /**
-     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     private final @Nullable String minimalTlsVersion;
@@ -146,7 +146,7 @@ public final class GetManagedInstanceResult {
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * An example of valid timezone id is &#34;Pacific Standard Time&#34; or &#34;W. Europe Standard Time&#34;.
      * 
      */
     private final @Nullable String timezoneId;
@@ -292,7 +292,7 @@ public final class GetManagedInstanceResult {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
     */
     public Optional<String> licenseType() {
@@ -313,7 +313,7 @@ public final class GetManagedInstanceResult {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
-     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
     */
     public Optional<String> minimalTlsVersion() {
@@ -405,7 +405,7 @@ public final class GetManagedInstanceResult {
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * An example of valid timezone id is &#34;Pacific Standard Time&#34; or &#34;W. Europe Standard Time&#34;.
      * 
     */
     public Optional<String> timezoneId() {

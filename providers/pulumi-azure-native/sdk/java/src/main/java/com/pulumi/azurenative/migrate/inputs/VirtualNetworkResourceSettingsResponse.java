@@ -59,7 +59,7 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/virtualNetworks'.
+     * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

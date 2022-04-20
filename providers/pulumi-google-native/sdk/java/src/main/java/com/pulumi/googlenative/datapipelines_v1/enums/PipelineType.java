@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum PipelineType {
         /**
-         * The pipeline type isn't specified.
+         * The pipeline type isn&#39;t specified.
          * 
          */
         PipelineTypeUnspecified("PIPELINE_TYPE_UNSPECIFIED"),
@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         PipelineTypeBatch("PIPELINE_TYPE_BATCH"),
         /**
-         * A streaming pipeline. The underlying job is continuously running until it is manually terminated by the user. This type of pipeline doesn't have a schedule to run on, and the linked job gets created when the pipeline is created.
+         * A streaming pipeline. The underlying job is continuously running until it is manually terminated by the user. This type of pipeline doesn&#39;t have a schedule to run on, and the linked job gets created when the pipeline is created.
          * 
          */
         PipelineTypeStreaming("PIPELINE_TYPE_STREAMING");

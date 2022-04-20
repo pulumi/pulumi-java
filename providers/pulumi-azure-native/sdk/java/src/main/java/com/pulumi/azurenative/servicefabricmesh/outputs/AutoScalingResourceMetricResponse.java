@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class AutoScalingResourceMetricResponse {
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
-     * Expected value is 'Resource'.
+     * Expected value is &#39;Resource&#39;.
      * 
      */
     private final String kind;
@@ -31,7 +31,7 @@ public final class AutoScalingResourceMetricResponse {
 
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
-     * Expected value is 'Resource'.
+     * Expected value is &#39;Resource&#39;.
      * 
     */
     public String kind() {

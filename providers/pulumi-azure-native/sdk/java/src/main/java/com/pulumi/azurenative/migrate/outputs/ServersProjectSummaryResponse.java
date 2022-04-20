@@ -30,7 +30,7 @@ public final class ServersProjectSummaryResponse {
     private final @Nullable Map<String,String> extendedSummary;
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
      */
     private final String instanceType;
@@ -105,7 +105,7 @@ public final class ServersProjectSummaryResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'Servers'.
+     * Expected value is &#39;Servers&#39;.
      * 
     */
     public String instanceType() {

@@ -18,7 +18,7 @@ public final class AutomationRuleModifyPropertiesActionResponse {
     private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
     /**
      * The type of the automation rule action
-     * Expected value is 'ModifyProperties'.
+     * Expected value is &#39;ModifyProperties&#39;.
      * 
      */
     private final String actionType;
@@ -47,7 +47,7 @@ public final class AutomationRuleModifyPropertiesActionResponse {
     }
     /**
      * The type of the automation rule action
-     * Expected value is 'ModifyProperties'.
+     * Expected value is &#39;ModifyProperties&#39;.
      * 
     */
     public String actionType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Represents a reviewer's decision for a given review
+     * Represents a reviewer&#39;s decision for a given review
      * 
      */
     @EnumType

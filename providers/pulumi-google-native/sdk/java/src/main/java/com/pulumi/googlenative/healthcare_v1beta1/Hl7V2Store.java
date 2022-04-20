@@ -53,28 +53,28 @@ public class Hl7V2Store extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
+     * The notification destination all messages (both Ingest &amp; Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
      * 
      */
     @Export(name="notificationConfig", type=NotificationConfigResponse.class, parameters={})
     private Output<NotificationConfigResponse> notificationConfig;
 
     /**
-     * @return The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
+     * @return The notification destination all messages (both Ingest &amp; Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
      * 
      */
     public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
-     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
      */
     @Export(name="notificationConfigs", type=List.class, parameters={Hl7V2NotificationConfigResponse.class})
     private Output<List<Hl7V2NotificationConfigResponse>> notificationConfigs;
 
     /**
-     * @return A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * @return A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
      */
     public Output<List<Hl7V2NotificationConfigResponse>> notificationConfigs() {

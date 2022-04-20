@@ -15,7 +15,7 @@ import java.util.Objects;
 public final class WebBasicAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Basic'.
+     * Expected value is &#39;Basic&#39;.
      * 
      */
     private final String authenticationType;
@@ -49,7 +49,7 @@ public final class WebBasicAuthenticationResponse {
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Basic'.
+     * Expected value is &#39;Basic&#39;.
      * 
     */
     public String authenticationType() {

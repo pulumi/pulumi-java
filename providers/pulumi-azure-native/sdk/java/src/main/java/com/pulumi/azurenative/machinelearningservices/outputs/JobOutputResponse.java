@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class JobOutputResponse {
     /**
-     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
+     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
      * 
      */
     private final String datastoreId;
@@ -29,7 +29,7 @@ public final class JobOutputResponse {
     }
 
     /**
-     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
+     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
      * 
     */
     public String datastoreId() {

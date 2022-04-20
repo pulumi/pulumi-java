@@ -35,7 +35,7 @@ public final class GetMeshResult {
     private final String meshOwner;
     private final String name;
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
      */
     private final String resourceOwner;
@@ -107,7 +107,7 @@ public final class GetMeshResult {
         return this.name;
     }
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
     */
     public String resourceOwner() {

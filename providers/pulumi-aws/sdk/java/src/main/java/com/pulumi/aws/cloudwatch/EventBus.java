@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an EventBridge event bus resource.
  * 
- * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+ * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
  * 
@@ -61,14 +61,14 @@ public class EventBus extends com.pulumi.resources.CustomResource {
         return this.eventSourceName;
     }
     /**
-     * The name of the new event bus. The names of custom event buses can't contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
+     * The name of the new event bus. The names of custom event buses can&#39;t contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the new event bus. The names of custom event buses can't contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
+     * @return The name of the new event bus. The names of custom event buses can&#39;t contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
      * 
      */
     public Output<String> name() {

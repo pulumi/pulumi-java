@@ -15,7 +15,7 @@ public final class AssignmentOsTypeResponse {
      */
     private final String osArchitecture;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
      */
     private final String osShortName;
@@ -43,7 +43,7 @@ public final class AssignmentOsTypeResponse {
         return this.osArchitecture;
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
+     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
     */
     public String osShortName() {

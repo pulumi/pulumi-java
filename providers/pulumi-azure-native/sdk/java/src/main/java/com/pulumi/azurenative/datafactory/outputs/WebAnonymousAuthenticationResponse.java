@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class WebAnonymousAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Anonymous'.
+     * Expected value is &#39;Anonymous&#39;.
      * 
      */
     private final String authenticationType;
@@ -32,7 +32,7 @@ public final class WebAnonymousAuthenticationResponse {
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Anonymous'.
+     * Expected value is &#39;Anonymous&#39;.
      * 
     */
     public String authenticationType() {

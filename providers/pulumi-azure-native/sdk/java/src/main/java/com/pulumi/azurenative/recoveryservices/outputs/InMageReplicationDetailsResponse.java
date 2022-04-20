@@ -68,7 +68,7 @@ public final class InMageReplicationDetailsResponse {
     private final @Nullable String infrastructureVmId;
     /**
      * Gets the Instance type.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
      */
     private final String instanceType;
@@ -358,7 +358,7 @@ public final class InMageReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
     */
     public String instanceType() {

@@ -31,12 +31,12 @@ public final class GetProjectResult {
      */
     private final String etag;
     /**
-     * Optional. The labels associated with this project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"myBusinessDimension" : "businessValue"`
+     * Optional. The labels associated with this project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `&#34;myBusinessDimension&#34; : &#34;businessValue&#34;`
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The unique resource name of the project. It is an int64 generated number prefixed by "projects/". Example: `projects/415104041262`
+     * The unique resource name of the project. It is an int64 generated number prefixed by &#34;projects/&#34;. Example: `projects/415104041262`
      * 
      */
     private final String name;
@@ -114,14 +114,14 @@ public final class GetProjectResult {
         return this.etag;
     }
     /**
-     * Optional. The labels associated with this project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"myBusinessDimension" : "businessValue"`
+     * Optional. The labels associated with this project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `&#34;myBusinessDimension&#34; : &#34;businessValue&#34;`
      * 
     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The unique resource name of the project. It is an int64 generated number prefixed by "projects/". Example: `projects/415104041262`
+     * The unique resource name of the project. It is an int64 generated number prefixed by &#34;projects/&#34;. Example: `projects/415104041262`
      * 
     */
     public String name() {

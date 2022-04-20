@@ -24,7 +24,7 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
+     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
      * 
      */
     @Import(name="bandwidthLimit")

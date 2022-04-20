@@ -16,7 +16,7 @@ public final class GetMetadataImportResult {
      */
     private final String createTime;
     /**
-     * Immutable. A database dump from a pre-existing metastore's database.
+     * Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
      */
     private final DatabaseDumpResponse databaseDump;
@@ -72,7 +72,7 @@ public final class GetMetadataImportResult {
         return this.createTime;
     }
     /**
-     * Immutable. A database dump from a pre-existing metastore's database.
+     * Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
     */
     public DatabaseDumpResponse databaseDump() {

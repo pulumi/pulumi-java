@@ -33,7 +33,7 @@ public final class StringNotInAdvancedFilterArgs extends com.pulumi.resources.Re
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotIn'.
+     * Expected value is &#39;StringNotIn&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

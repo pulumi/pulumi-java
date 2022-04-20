@@ -55,11 +55,11 @@ public final class NamespaceConditionArgs extends com.pulumi.resources.ResourceA
      * Type of namespace controller condition.
      * 
      * Possible enum values:
-     *  - `"NamespaceContentRemaining"` contains information about resources remaining in a namespace.
-     *  - `"NamespaceDeletionContentFailure"` contains information about namespace deleter errors during deletion of resources.
-     *  - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
-     *  - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
-     *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
+     *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
+     *  - `&#34;NamespaceDeletionContentFailure&#34;` contains information about namespace deleter errors during deletion of resources.
+     *  - `&#34;NamespaceDeletionDiscoveryFailure&#34;` contains information about namespace deleter errors during resource discovery.
+     *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
+     *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
      * 
      */
     @Import(name="type", required=true)

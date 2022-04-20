@@ -30,7 +30,7 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureBackupParams'.
+     * Expected value is &#39;AzureBackupParams&#39;.
      * 
      */
     @Import(name="objectType", required=true)

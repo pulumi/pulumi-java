@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * Describes a subordinate CA's issuers. This is either a resource name to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
+ * Describes a subordinate CA&#39;s issuers. This is either a resource name to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
  * 
  */
 public final class SubordinateConfigArgs extends com.pulumi.resources.ResourceArgs {

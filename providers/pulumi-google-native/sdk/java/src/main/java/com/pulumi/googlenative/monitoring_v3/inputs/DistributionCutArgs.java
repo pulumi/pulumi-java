@@ -32,7 +32,7 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     @Import(name="range")

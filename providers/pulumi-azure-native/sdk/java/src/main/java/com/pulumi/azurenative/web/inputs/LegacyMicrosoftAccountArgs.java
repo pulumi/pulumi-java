@@ -23,7 +23,7 @@ public final class LegacyMicrosoftAccountArgs extends com.pulumi.resources.Resou
     public static final LegacyMicrosoftAccountArgs Empty = new LegacyMicrosoftAccountArgs();
 
     /**
-     * <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

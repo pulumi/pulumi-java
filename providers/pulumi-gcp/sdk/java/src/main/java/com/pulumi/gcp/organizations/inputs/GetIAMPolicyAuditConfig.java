@@ -15,7 +15,7 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
     public static final GetIAMPolicyAuditConfig Empty = new GetIAMPolicyAuditConfig();
 
     /**
-     * A nested block that defines the operations you'd like to log.
+     * A nested block that defines the operations you&#39;d like to log.
      * 
      */
     @Import(name="auditLogConfigs", required=true)

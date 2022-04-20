@@ -22,7 +22,7 @@ public final class APIServiceCondition {
      */
     private final @Nullable String message;
     /**
-     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -66,7 +66,7 @@ public final class APIServiceCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Unique, one-word, CamelCase reason for the condition's last transition.
+     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {

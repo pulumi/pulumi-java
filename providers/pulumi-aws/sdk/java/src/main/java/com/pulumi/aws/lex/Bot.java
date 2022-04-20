@@ -88,14 +88,14 @@ public class Bot extends com.pulumi.resources.CustomResource {
         return this.childDirected;
     }
     /**
-     * The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
+     * The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
      * 
      */
     @Export(name="clarificationPrompt", type=BotClarificationPrompt.class, parameters={})
     private Output</* @Nullable */ BotClarificationPrompt> clarificationPrompt;
 
     /**
-     * @return The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
+     * @return The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
      * 
      */
     public Output</* @Nullable */ BotClarificationPrompt> clarificationPrompt() {
@@ -144,14 +144,14 @@ public class Bot extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
+     * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
      * 
      */
     @Export(name="detectSentiment", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> detectSentiment;
 
     /**
-     * @return When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
+     * @return When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
      * 
      */
     public Output</* @Nullable */ Boolean> detectSentiment() {
@@ -270,14 +270,14 @@ public class Bot extends com.pulumi.resources.CustomResource {
         return this.nluIntentConfidenceThreshold;
     }
     /**
-     * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
+     * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
      * 
      */
     @Export(name="processBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> processBehavior;
 
     /**
-     * @return If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
+     * @return If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
      * 
      */
     public Output</* @Nullable */ String> processBehavior() {
@@ -285,7 +285,7 @@ public class Bot extends com.pulumi.resources.CustomResource {
     }
     /**
      * When you send a request to create or update a bot, Amazon Lex sets the status response
-     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
+     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
      * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
      * failure_reason response element.
      * 
@@ -295,7 +295,7 @@ public class Bot extends com.pulumi.resources.CustomResource {
 
     /**
      * @return When you send a request to create or update a bot, Amazon Lex sets the status response
-     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
+     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
      * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
      * failure_reason response element.
      * 

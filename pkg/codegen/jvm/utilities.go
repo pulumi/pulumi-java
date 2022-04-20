@@ -4,10 +4,12 @@ package jvm
 
 import (
 	"fmt"
-	"github.com/pulumi/pulumi/pkg/v3/codegen"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"html"
 	"io"
 	"strings"
+
+	"github.com/pulumi/pulumi/pkg/v3/codegen"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
 // The following 3 functions are copied from pkg/codegen utils with one change.
@@ -58,6 +60,7 @@ func formatBlockComment(comment string, indent string) string {
 	prefix := fmt.Sprintf("%s * ", indent)
 	comment = strings.ReplaceAll(comment, "*/", "*{@literal /}")
 	comment = codegen.FilterExamples(comment, "java")
+	comment = html.EscapeString(comment)
 	comment = strings.Join(strings.Split(comment, "\n"), "\n"+prefix)
 	return prefix + comment
 }

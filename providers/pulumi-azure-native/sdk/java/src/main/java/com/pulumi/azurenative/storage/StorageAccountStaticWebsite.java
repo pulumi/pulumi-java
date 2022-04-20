@@ -54,14 +54,14 @@ public class StorageAccountStaticWebsite extends com.pulumi.resources.CustomReso
         return this.error404Document;
     }
     /**
-     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
+     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
      * 
      */
     @Export(name="indexDocument", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexDocument;
 
     /**
-     * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
+     * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
      * 
      */
     public Output</* @Nullable */ String> indexDocument() {

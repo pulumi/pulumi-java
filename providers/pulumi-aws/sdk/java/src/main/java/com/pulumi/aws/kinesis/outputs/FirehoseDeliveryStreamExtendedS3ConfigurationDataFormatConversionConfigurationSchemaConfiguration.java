@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration {
     /**
-     * The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+     * The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
      * 
      */
     private final @Nullable String catalogId;
@@ -22,12 +22,12 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final String databaseName;
     /**
-     * If you don't specify an AWS Region, the default is the current region.
+     * If you don&#39;t specify an AWS Region, the default is the current region.
      * 
      */
     private final @Nullable String region;
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     private final String roleArn;
@@ -59,7 +59,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+     * The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
      * 
     */
     public Optional<String> catalogId() {
@@ -73,14 +73,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
         return this.databaseName;
     }
     /**
-     * If you don't specify an AWS Region, the default is the current region.
+     * If you don&#39;t specify an AWS Region, the default is the current region.
      * 
     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
     */
     public String roleArn() {

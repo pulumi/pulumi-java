@@ -155,7 +155,7 @@ public final class LookupActivityResponse {
     private final Object source;
     /**
      * Type of activity.
-     * Expected value is 'Lookup'.
+     * Expected value is &#39;Lookup&#39;.
      * 
      */
     private final String type;
@@ -247,7 +247,7 @@ public final class LookupActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Lookup'.
+     * Expected value is &#39;Lookup&#39;.
      * 
     */
     public String type() {

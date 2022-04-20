@@ -55,7 +55,7 @@ public final class AmazonRedshiftSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AmazonRedshiftSource'.
+     * Expected value is &#39;AmazonRedshiftSource&#39;.
      * 
      */
     private final String type;
@@ -140,7 +140,7 @@ public final class AmazonRedshiftSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AmazonRedshiftSource'.
+     * Expected value is &#39;AmazonRedshiftSource&#39;.
      * 
     */
     public String type() {

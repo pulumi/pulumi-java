@@ -119,7 +119,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The locale in which you would like to create the IPAM pool. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. Possible values: Any AWS region, such as `us-east-1`.
+     * The locale in which you would like to create the IPAM pool. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. Possible values: Any AWS region, such as `us-east-1`.
      * 
      */
     @Import(name="locale")

@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse();
 
     /**
-     * Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.
+     * Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
      * 
      */
     @Import(name="values", required=true)

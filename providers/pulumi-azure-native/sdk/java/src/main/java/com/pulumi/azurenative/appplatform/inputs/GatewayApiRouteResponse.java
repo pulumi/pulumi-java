@@ -99,7 +99,7 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Pass currently-authenticated user's identity token to application service, default is 'false'
+     * Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
      * 
      */
     @Import(name="tokenRelay")

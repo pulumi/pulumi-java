@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
     /**
-     * The claim name that must be present in the token, for example, "isAdmin" or "paid".
+     * The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
      * 
      */
     private final String claim;
@@ -25,7 +25,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
      */
     private final String roleArn;
     /**
-     * A brief string that the claim must match, for example, "paid" or "yes".
+     * A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
      * 
      */
     private final String value;
@@ -43,7 +43,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
     }
 
     /**
-     * The claim name that must be present in the token, for example, "isAdmin" or "paid".
+     * The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
      * 
     */
     public String claim() {
@@ -64,7 +64,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
         return this.roleArn;
     }
     /**
-     * A brief string that the claim must match, for example, "paid" or "yes".
+     * A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
      * 
     */
     public String value() {

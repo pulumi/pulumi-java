@@ -42,7 +42,7 @@ public final class ScheduleTriggerResponse {
     private final String runtimeState;
     /**
      * Trigger type.
-     * Expected value is 'ScheduleTrigger'.
+     * Expected value is &#39;ScheduleTrigger&#39;.
      * 
      */
     private final String type;
@@ -100,7 +100,7 @@ public final class ScheduleTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'ScheduleTrigger'.
+     * Expected value is &#39;ScheduleTrigger&#39;.
      * 
     */
     public String type() {

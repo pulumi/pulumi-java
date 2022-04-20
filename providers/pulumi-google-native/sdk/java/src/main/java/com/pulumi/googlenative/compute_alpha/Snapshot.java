@@ -276,14 +276,14 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
         return this.selfLink;
     }
     /**
-     * Server-defined URL for this resource's resource id.
+     * Server-defined URL for this resource&#39;s resource id.
      * 
      */
     @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
-     * @return Server-defined URL for this resource's resource id.
+     * @return Server-defined URL for this resource&#39;s resource id.
      * 
      */
     public Output<String> selfLinkWithId() {

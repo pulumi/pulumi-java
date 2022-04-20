@@ -38,7 +38,7 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
+     * The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
      * 
      */
     @Import(name="window", required=true)

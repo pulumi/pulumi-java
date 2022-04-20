@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleEmailActionResponse {
     /**
-     * the list of administrator's custom email addresses to notify of the activation of the alert.
+     * the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
      * 
      */
     private final @Nullable List<String> customEmails;
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
      * 
      */
     private final String odataType;
@@ -41,7 +41,7 @@ public final class RuleEmailActionResponse {
     }
 
     /**
-     * the list of administrator's custom email addresses to notify of the activation of the alert.
+     * the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
      * 
     */
     public List<String> customEmails() {
@@ -49,7 +49,7 @@ public final class RuleEmailActionResponse {
     }
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
      * 
     */
     public String odataType() {
