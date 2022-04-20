@@ -14,7 +14,6 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.logging.Level;
 
 import static com.pulumi.serialization.internal.ConverterTests.ContainerColor;
@@ -203,7 +202,7 @@ class ComplexTypeConverterTest {
         assertThat(value.map).containsAllEntriesOf(Map.of("k", 3));
         assertThat(value.$private).isInstanceOf(Map.class);
         //noinspection unchecked
-        assertThat((Map<String, Object>) value.$private).containsAllEntriesOf(Map.of("o", Optional.of(5.5))); // C# didn't have Optional, it has Nullable type.
+        assertThat((Map<String, Object>) value.$private).containsAllEntriesOf(Map.of("o", 5.5));
         assertThat(value.size).isEqualTo(ContainerSize.SixInch);
         assertThat(value.color).isEqualTo(ContainerColor.Blue);
     }

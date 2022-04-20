@@ -13,7 +13,6 @@ import org.junit.jupiter.api.TestFactory;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Stream;
 
 import static com.google.common.collect.Lists.newArrayList;
@@ -57,24 +56,27 @@ class ReSerializerTest {
 
     @TestFactory
     Stream<DynamicTest> testSerializeDeserializeCommonTypes() {
+        var nr = Stream.iterate(1, i -> i + 1).map(String::valueOf).iterator();
         return Stream.of(
-                dynamicTest("1", () -> assertThat(reSerialize(null)).isNull()),
-                dynamicTest("2", () -> assertThat(reSerialize("test")).isEqualTo("test")),
-                dynamicTest("3", () -> assertThat(reSerialize(true)).isEqualTo(true)),
-                dynamicTest("4", () -> assertThat(reSerialize(false)).isEqualTo(false)),
-                dynamicTest("5", () -> assertThat(reSerialize(1)).isEqualTo(1.0)),
-                dynamicTest("6", () -> assertThat(reSerialize(1.0)).isEqualTo(1.0)),
-                dynamicTest("7", () -> assertThat(reSerialize(List.of())).isEqualTo(List.of())),
-                dynamicTest("8", () -> assertThat(reSerialize(Map.of())).isEqualTo(Map.of())),
-                dynamicTest("9", () -> assertThat(reSerialize(List.of(1))).isEqualTo(List.of(Optional.of(1.0)))),
-                dynamicTest("0", () ->
-                        assertThat(reSerialize(Map.of("1", 1))).isEqualTo(Map.of("1", Optional.of(1.0)))),
-                // we remove null entries explicitly in serialization in serializeListAsync
-                dynamicTest("1", () ->
-                        assertThat(reSerialize(newArrayList(1, null)))
-                                .isEqualTo(List.of(Optional.of(1.0), Optional.empty()))),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(null)).isNull()),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize("test")).isEqualTo("test")),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(true)).isEqualTo(true)),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(false)).isEqualTo(false)),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(1)).isEqualTo(1.0)),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(1.0)).isEqualTo(1.0)),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(List.of())).isEqualTo(List.of())),
+                dynamicTest(nr.next(), () -> assertThat(reSerialize(Map.of())).isEqualTo(Map.of())),
+                dynamicTest(nr.next(), () ->
+                        assertThat(reSerialize(List.of(1))).isEqualTo(List.of(1.0))),
+                dynamicTest(nr.next(), () ->
+                        assertThat(reSerialize(Map.of("1", 1))).isEqualTo(Map.of("1", 1.0))),
+                dynamicTest(nr.next(), () ->
+                        assertThat(reSerialize(Map.of("v", List.of("a", "b")))).isEqualTo(Map.of("v", List.of("a", "b")))),
+                dynamicTest(nr.next(), () ->
+                        assertThat(reSerialize(newArrayList(1, null))).isEqualTo(newArrayList(1.0, null))),
                 // we remove null entries explicitly in serialization in serializeMapAsync
-                dynamicTest("12", () -> {
+                // we remove null entries explicitly in serialization in deserializeStruct
+                dynamicTest(nr.next(), () -> {
                     var map = newHashMap();
                     map.put("1", null);
                     assertThat(reSerialize(map)).isEqualTo(Map.of());
@@ -98,10 +100,8 @@ class ReSerializerTest {
                                         dynamicTest("not null", () -> assertThat(o).isNotNull()),
                                         dynamicTest("is Map", () -> assertThat(o).isInstanceOf(Map.class)),
                                         dynamicTest("contains", () -> assertThat((Map<Object, Object>) o).containsAllEntriesOf(
-                                                Map.of("test", Optional.of(
-                                                        List.of(Optional.of("test1"), Optional.of("1"))
-                                                ))
-                                        ))
+                                                Map.of("test", List.of("test1", "1")))
+                                        )
                                 ))
                 )
         );

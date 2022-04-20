@@ -800,12 +800,15 @@ class ConverterTests {
     @SuppressWarnings("unused")
     private static Stream<Arguments> testJsons() {
         return Stream.of(
+                arguments("null", "null"),
+                arguments("", "null"),
                 arguments("\"x\"", "\"x\""),
                 arguments("1.1", "1.1"),
                 arguments("true", "true"),
                 arguments("null", "null"),
                 arguments("[1,true,null]", "[1.0,true,null]"),
-                arguments("{\"n\":1}", "{\"n\":1.0}")
+                arguments("{\"n\":1}", "{\"n\":1.0}"),
+                arguments("{\"n\":[1,true,null],\"m\":null}", "{\"n\":[1.0,true,null]}")
         );
     }
 }
