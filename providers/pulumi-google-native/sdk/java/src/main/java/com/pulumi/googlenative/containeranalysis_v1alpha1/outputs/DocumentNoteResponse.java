@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DocumentNoteResponse {
     /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
      * 
      */
     private final String dataLicence;
@@ -29,7 +29,7 @@ public final class DocumentNoteResponse {
     }
 
     /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
      * 
     */
     public String dataLicence() {

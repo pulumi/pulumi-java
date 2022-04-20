@@ -53,7 +53,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
+     * Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
      * 
      */
     @Import(name="enableNonSecurity")

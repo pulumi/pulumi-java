@@ -94,7 +94,7 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="servicePrincipalId", required=true)
@@ -105,7 +105,7 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="servicePrincipalKey", required=true)
@@ -128,7 +128,7 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of linked service.
-     * Expected value is 'DynamicsAX'.
+     * Expected value is &#39;DynamicsAX&#39;.
      * 
      */
     @Import(name="type", required=true)

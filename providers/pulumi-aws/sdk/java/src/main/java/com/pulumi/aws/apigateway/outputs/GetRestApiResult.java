@@ -39,7 +39,7 @@ public final class GetRestApiResult {
      */
     private final List<GetRestApiEndpointConfiguration> endpointConfigurations;
     /**
-     * The execution ARN part to be used in `lambda_permission`'s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+     * The execution ARN part to be used in `lambda_permission`&#39;s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
      */
     private final String executionArn;
@@ -60,7 +60,7 @@ public final class GetRestApiResult {
      */
     private final String policy;
     /**
-     * Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
+     * Set to the ID of the API Gateway Resource on the found REST API where the route matches &#39;/&#39;.
      * 
      */
     private final String rootResourceId;
@@ -134,7 +134,7 @@ public final class GetRestApiResult {
         return this.endpointConfigurations;
     }
     /**
-     * The execution ARN part to be used in `lambda_permission`'s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+     * The execution ARN part to be used in `lambda_permission`&#39;s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
     */
     public String executionArn() {
@@ -165,7 +165,7 @@ public final class GetRestApiResult {
         return this.policy;
     }
     /**
-     * Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
+     * Set to the ID of the API Gateway Resource on the found REST API where the route matches &#39;/&#39;.
      * 
     */
     public String rootResourceId() {

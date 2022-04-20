@@ -65,7 +65,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
      * 
      */
     @Import(name="odataType", required=true)

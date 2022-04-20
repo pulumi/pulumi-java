@@ -74,14 +74,14 @@ public class Mesh extends com.pulumi.resources.CustomResource {
         return this.lastUpdatedDate;
     }
     /**
-     * The AWS account ID of the service mesh's owner.
+     * The AWS account ID of the service mesh&#39;s owner.
      * 
      */
     @Export(name="meshOwner", type=String.class, parameters={})
     private Output<String> meshOwner;
 
     /**
-     * @return The AWS account ID of the service mesh's owner.
+     * @return The AWS account ID of the service mesh&#39;s owner.
      * 
      */
     public Output<String> meshOwner() {
@@ -102,14 +102,14 @@ public class Mesh extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
      */
     @Export(name="resourceOwner", type=String.class, parameters={})
     private Output<String> resourceOwner;
 
     /**
-     * @return The resource owner's AWS account ID.
+     * @return The resource owner&#39;s AWS account ID.
      * 
      */
     public Output<String> resourceOwner() {

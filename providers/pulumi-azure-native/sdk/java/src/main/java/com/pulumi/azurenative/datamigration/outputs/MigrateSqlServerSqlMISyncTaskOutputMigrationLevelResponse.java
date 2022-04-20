@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     private final String id;
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -137,7 +137,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
     */
     public String resultType() {

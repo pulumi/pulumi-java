@@ -26,7 +26,7 @@ public final class CloudSqlSettingsArgs extends com.pulumi.resources.ResourceArg
     public static final CloudSqlSettingsArgs Empty = new CloudSqlSettingsArgs();
 
     /**
-     * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
+     * The activation policy specifies when the instance is activated; it is applicable only when the instance state is &#39;RUNNABLE&#39;. Valid values: &#39;ALWAYS&#39;: The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
      */
     @Import(name="activationPolicy")
@@ -70,7 +70,7 @@ public final class CloudSqlSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * The database flags passed to the Cloud SQL instance at startup. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="databaseFlags")
@@ -147,7 +147,7 @@ public final class CloudSqlSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.
+     * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;18kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
      */
     @Import(name="userLabels")

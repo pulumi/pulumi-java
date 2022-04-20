@@ -16,7 +16,7 @@ public final class BucketLifecycleRuleArgs extends com.pulumi.resources.Resource
     public static final BucketLifecycleRuleArgs Empty = new BucketLifecycleRuleArgs();
 
     /**
-     * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
+     * The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
     @Import(name="action", required=true)
@@ -27,7 +27,7 @@ public final class BucketLifecycleRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
+     * The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
     @Import(name="condition", required=true)

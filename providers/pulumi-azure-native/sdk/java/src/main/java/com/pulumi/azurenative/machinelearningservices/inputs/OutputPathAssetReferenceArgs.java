@@ -43,7 +43,7 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
 
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'OutputPath'.
+     * Expected value is &#39;OutputPath&#39;.
      * 
      */
     @Import(name="referenceType", required=true)

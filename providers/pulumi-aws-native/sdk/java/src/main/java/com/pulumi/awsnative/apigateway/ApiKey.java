@@ -95,14 +95,14 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
         return this.generateDistinctId;
     }
     /**
-     * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
+     * A name for the API key. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
+     * @return A name for the API key. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
      * 
      */
     public Output</* @Nullable */ String> name() {

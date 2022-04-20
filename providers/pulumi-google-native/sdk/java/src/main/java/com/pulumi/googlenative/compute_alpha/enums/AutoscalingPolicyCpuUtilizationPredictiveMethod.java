@@ -26,7 +26,7 @@ import java.util.StringJoiner;
         OptimizeAvailability("OPTIMIZE_AVAILABILITY"),
         PredictiveMethodUnspecified("PREDICTIVE_METHOD_UNSPECIFIED"),
         /**
-         * Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand. This value is being DEPRECATED - it won't be promoted to beta and v1. Use OPTIMIZE_AVAILABILITY instead.
+         * Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand. This value is being DEPRECATED - it won&#39;t be promoted to beta and v1. Use OPTIMIZE_AVAILABILITY instead.
          * 
          */
         Standard("STANDARD");

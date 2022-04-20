@@ -19,7 +19,7 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
     public static final DockerExecutorArgs Empty = new DockerExecutorArgs();
 
     /**
-     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
+     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
      * 
      */
     @Import(name="cmd", required=true)

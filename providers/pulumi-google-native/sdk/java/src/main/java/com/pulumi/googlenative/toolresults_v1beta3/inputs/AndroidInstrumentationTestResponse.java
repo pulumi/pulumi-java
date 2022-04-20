@@ -41,7 +41,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     }
 
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
+     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
      */
     @Import(name="testTargets", required=true)

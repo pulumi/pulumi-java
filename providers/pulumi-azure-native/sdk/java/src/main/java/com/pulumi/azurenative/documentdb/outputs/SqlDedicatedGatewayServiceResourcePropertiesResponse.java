@@ -36,7 +36,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
     private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
     /**
      * ServiceType for the service.
-     * Expected value is 'SqlDedicatedGateway'.
+     * Expected value is &#39;SqlDedicatedGateway&#39;.
      * 
      */
     private final String serviceType;
@@ -99,7 +99,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
     }
     /**
      * ServiceType for the service.
-     * Expected value is 'SqlDedicatedGateway'.
+     * Expected value is &#39;SqlDedicatedGateway&#39;.
      * 
     */
     public String serviceType() {

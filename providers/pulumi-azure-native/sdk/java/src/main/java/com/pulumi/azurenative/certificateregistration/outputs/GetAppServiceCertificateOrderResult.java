@@ -24,7 +24,7 @@ public final class GetAppServiceCertificateOrderResult {
      */
     private final List<String> appServiceCertificateNotRenewableReasons;
     /**
-     * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean autoRenew;
@@ -64,7 +64,7 @@ public final class GetAppServiceCertificateOrderResult {
      */
     private final CertificateDetailsResponse intermediate;
     /**
-     * <code>true</code> if private key is external; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if private key is external; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final Boolean isPrivateKeyExternal;
@@ -213,7 +213,7 @@ public final class GetAppServiceCertificateOrderResult {
         return this.appServiceCertificateNotRenewableReasons;
     }
     /**
-     * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> autoRenew() {
@@ -269,7 +269,7 @@ public final class GetAppServiceCertificateOrderResult {
         return this.intermediate;
     }
     /**
-     * <code>true</code> if private key is external; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if private key is external; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Boolean isPrivateKeyExternal() {

@@ -55,7 +55,7 @@ public final class AzureFileStorageWriteSettingsArgs extends com.pulumi.resource
 
     /**
      * The write setting type.
-     * Expected value is 'AzureFileStorageWriteSettings'.
+     * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

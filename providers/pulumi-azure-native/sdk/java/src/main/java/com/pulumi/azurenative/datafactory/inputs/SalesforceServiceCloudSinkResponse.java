@@ -32,7 +32,7 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     }
 
     /**
-     * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+     * The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="externalIdFieldName")
@@ -88,7 +88,7 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
 
     /**
      * Copy sink type.
-     * Expected value is 'SalesforceServiceCloudSink'.
+     * Expected value is &#39;SalesforceServiceCloudSink&#39;.
      * 
      */
     @Import(name="type", required=true)

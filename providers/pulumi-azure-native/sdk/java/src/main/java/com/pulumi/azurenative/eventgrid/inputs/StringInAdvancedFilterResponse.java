@@ -33,7 +33,7 @@ public final class StringInAdvancedFilterResponse extends com.pulumi.resources.I
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringIn'.
+     * Expected value is &#39;StringIn&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

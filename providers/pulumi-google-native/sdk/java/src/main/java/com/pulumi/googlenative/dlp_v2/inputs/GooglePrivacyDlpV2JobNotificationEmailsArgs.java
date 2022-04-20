@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * Enable email notification to project owners and editors on jobs's completion/failure.
+ * Enable email notification to project owners and editors on jobs&#39;s completion/failure.
  * 
  */
 public final class GooglePrivacyDlpV2JobNotificationEmailsArgs extends com.pulumi.resources.ResourceArgs {

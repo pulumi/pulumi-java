@@ -134,7 +134,7 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
+     * Map of URIs associated with the APIE.g., `uris[&#34;GRAPHQL&#34;] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
     @Import(name="uris")

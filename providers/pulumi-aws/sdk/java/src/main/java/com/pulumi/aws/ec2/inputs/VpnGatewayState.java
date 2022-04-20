@@ -17,7 +17,7 @@ public final class VpnGatewayState extends com.pulumi.resources.ResourceArgs {
     public static final VpnGatewayState Empty = new VpnGatewayState();
 
     /**
-     * The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don't specify an ASN, the virtual private gateway is created with the default ASN.
+     * The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don&#39;t specify an ASN, the virtual private gateway is created with the default ASN.
      * 
      */
     @Import(name="amazonSideAsn")

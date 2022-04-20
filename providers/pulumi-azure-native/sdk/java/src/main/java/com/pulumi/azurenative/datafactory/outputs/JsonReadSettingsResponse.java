@@ -22,7 +22,7 @@ public final class JsonReadSettingsResponse {
     private final @Nullable Object compressionProperties;
     /**
      * The read setting type.
-     * Expected value is 'JsonReadSettings'.
+     * Expected value is &#39;JsonReadSettings&#39;.
      * 
      */
     private final String type;
@@ -44,7 +44,7 @@ public final class JsonReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'JsonReadSettings'.
+     * Expected value is &#39;JsonReadSettings&#39;.
      * 
     */
     public String type() {

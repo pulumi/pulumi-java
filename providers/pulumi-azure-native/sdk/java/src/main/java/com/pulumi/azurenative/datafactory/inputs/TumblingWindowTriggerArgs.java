@@ -41,7 +41,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     @Import(name="delay")
@@ -152,7 +152,7 @@ public final class TumblingWindowTriggerArgs extends com.pulumi.resources.Resour
 
     /**
      * Trigger type.
-     * Expected value is 'TumblingWindowTrigger'.
+     * Expected value is &#39;TumblingWindowTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

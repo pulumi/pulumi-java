@@ -69,7 +69,7 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
      */
     @Import(name="minCpuPlatform")

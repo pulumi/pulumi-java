@@ -17,7 +17,7 @@ public final class BuildInfoResponse extends com.pulumi.resources.InvokeArgs {
     public static final BuildInfoResponse Empty = new BuildInfoResponse();
 
     /**
-     * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
+     * The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
      * 
      */
     @Import(name="cloudBuildId", required=true)

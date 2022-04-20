@@ -22,7 +22,7 @@ public final class SlackChannelArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The channel name
-     * Expected value is 'SlackChannel'.
+     * Expected value is &#39;SlackChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

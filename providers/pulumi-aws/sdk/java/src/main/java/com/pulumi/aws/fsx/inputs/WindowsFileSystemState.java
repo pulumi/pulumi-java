@@ -22,7 +22,7 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
     public static final WindowsFileSystemState Empty = new WindowsFileSystemState();
 
     /**
-     * The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+     * The ID for an existing Microsoft Active Directory instance that the file system should join when it&#39;s created. Cannot be specified with `self_managed_active_directory`.
      * 
      */
     @Import(name="activeDirectoryId")

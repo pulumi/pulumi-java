@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Represents one week day in a month. An example is "the 4th Sunday".
+ * Represents one week day in a month. An example is &#34;the 4th Sunday&#34;.
  * 
  */
 public final class WeekDayOfMonthResponse extends com.pulumi.resources.InvokeArgs {

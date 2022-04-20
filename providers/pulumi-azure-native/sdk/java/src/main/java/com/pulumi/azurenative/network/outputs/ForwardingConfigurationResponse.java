@@ -34,7 +34,7 @@ public final class ForwardingConfigurationResponse {
      */
     private final @Nullable String forwardingProtocol;
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
      * 
      */
     private final String odataType;
@@ -82,7 +82,7 @@ public final class ForwardingConfigurationResponse {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
-     * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
      * 
     */
     public String odataType() {

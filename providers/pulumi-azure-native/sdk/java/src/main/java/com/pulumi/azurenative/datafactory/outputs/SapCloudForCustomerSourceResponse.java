@@ -33,7 +33,7 @@ public final class SapCloudForCustomerSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP Cloud for Customer OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
@@ -54,7 +54,7 @@ public final class SapCloudForCustomerSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapCloudForCustomerSource'.
+     * Expected value is &#39;SapCloudForCustomerSource&#39;.
      * 
      */
     private final String type;
@@ -110,7 +110,7 @@ public final class SapCloudForCustomerSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP Cloud for Customer OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> query() {
@@ -139,7 +139,7 @@ public final class SapCloudForCustomerSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapCloudForCustomerSource'.
+     * Expected value is &#39;SapCloudForCustomerSource&#39;.
      * 
     */
     public String type() {

@@ -18,7 +18,7 @@ public final class AudioTrackDescriptorResponse {
     private final @Nullable String channelMapping;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.AudioTrackDescriptor'.
+     * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
      * 
      */
     private final String odataType;
@@ -40,7 +40,7 @@ public final class AudioTrackDescriptorResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.AudioTrackDescriptor'.
+     * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
      * 
     */
     public String odataType() {

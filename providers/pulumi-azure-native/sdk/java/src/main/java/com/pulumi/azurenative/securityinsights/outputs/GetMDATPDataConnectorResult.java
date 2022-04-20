@@ -29,7 +29,7 @@ public final class GetMDATPDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftDefenderAdvancedThreatProtection'.
+     * Expected value is &#39;MicrosoftDefenderAdvancedThreatProtection&#39;.
      * 
      */
     private final String kind;
@@ -90,7 +90,7 @@ public final class GetMDATPDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftDefenderAdvancedThreatProtection'.
+     * Expected value is &#39;MicrosoftDefenderAdvancedThreatProtection&#39;.
      * 
     */
     public String kind() {

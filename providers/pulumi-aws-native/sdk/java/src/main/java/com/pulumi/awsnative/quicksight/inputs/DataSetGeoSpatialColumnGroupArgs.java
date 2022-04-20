@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Geospatial column group that denotes a hierarchy.</p>
+ * &lt;p&gt;Geospatial column group that denotes a hierarchy.&lt;/p&gt;
  * 
  */
 public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,7 +22,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
     public static final DataSetGeoSpatialColumnGroupArgs Empty = new DataSetGeoSpatialColumnGroupArgs();
 
     /**
-     * <p>Columns in this hierarchy.</p>
+     * &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
      * 
      */
     @Import(name="columns", required=true)
@@ -40,7 +40,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
     }
 
     /**
-     * <p>A display name for the hierarchy.</p>
+     * &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)

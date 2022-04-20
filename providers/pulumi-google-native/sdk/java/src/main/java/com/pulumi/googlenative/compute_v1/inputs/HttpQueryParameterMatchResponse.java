@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * HttpRouteRuleMatch criteria for a request's query parameter.
+ * HttpRouteRuleMatch criteria for a request&#39;s query parameter.
  * 
  */
 public final class HttpQueryParameterMatchResponse extends com.pulumi.resources.InvokeArgs {

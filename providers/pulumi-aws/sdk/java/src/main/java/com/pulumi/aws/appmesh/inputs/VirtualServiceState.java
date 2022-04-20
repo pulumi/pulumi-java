@@ -62,7 +62,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
     @Import(name="meshOwner")
@@ -84,7 +84,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
      */
     @Import(name="resourceOwner")

@@ -105,13 +105,13 @@ public final class ExecuteSSISPackageActivityResponse {
      */
     private final @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
     /**
-     * Specifies the runtime to execute SSIS package. The value should be "x86" or "x64". Type: string (or Expression with resultType string).
+     * Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object runtime;
     /**
      * Type of activity.
-     * Expected value is 'ExecuteSSISPackage'.
+     * Expected value is &#39;ExecuteSSISPackage&#39;.
      * 
      */
     private final String type;
@@ -276,7 +276,7 @@ public final class ExecuteSSISPackageActivityResponse {
         return this.propertyOverrides == null ? Map.of() : this.propertyOverrides;
     }
     /**
-     * Specifies the runtime to execute SSIS package. The value should be "x86" or "x64". Type: string (or Expression with resultType string).
+     * Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> runtime() {
@@ -284,7 +284,7 @@ public final class ExecuteSSISPackageActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'ExecuteSSISPackage'.
+     * Expected value is &#39;ExecuteSSISPackage&#39;.
      * 
     */
     public String type() {

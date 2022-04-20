@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An alias IP range attached to an instance's network interface.
+ * An alias IP range attached to an instance&#39;s network interface.
  * 
  */
 public final class AliasIpRangeArgs extends com.pulumi.resources.ResourceArgs {

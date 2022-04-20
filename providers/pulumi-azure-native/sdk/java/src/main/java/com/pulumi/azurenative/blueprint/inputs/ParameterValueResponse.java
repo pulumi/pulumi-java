@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Value for the specified parameter. Can be either 'value' or 'reference' but not both.
+ * Value for the specified parameter. Can be either &#39;value&#39; or &#39;reference&#39; but not both.
  * 
  */
 public final class ParameterValueResponse extends com.pulumi.resources.InvokeArgs {

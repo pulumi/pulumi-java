@@ -204,14 +204,14 @@ public class RegionSslCertificate extends com.pulumi.resources.CustomResource {
         return this.subjectAlternativeNames;
     }
     /**
-     * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+     * (Optional) Specifies the type of SSL certificate, either &#34;SELF_MANAGED&#34; or &#34;MANAGED&#34;. If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+     * @return (Optional) Specifies the type of SSL certificate, either &#34;SELF_MANAGED&#34; or &#34;MANAGED&#34;. If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
     public Output<String> type() {

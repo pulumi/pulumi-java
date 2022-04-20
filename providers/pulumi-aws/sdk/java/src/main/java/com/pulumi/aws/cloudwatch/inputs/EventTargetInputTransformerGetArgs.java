@@ -20,7 +20,7 @@ public final class EventTargetInputTransformerGetArgs extends com.pulumi.resourc
      * Key value pairs specified in the form of JSONPath (for example, time = $.time)
      * * You can have as many as 100 key-value pairs.
      * * You must use JSON dot notation, not bracket notation.
-     * * The keys can't start with "AWS".
+     * * The keys can&#39;t start with &#34;AWS&#34;.
      * 
      */
     @Import(name="inputPaths")
@@ -31,7 +31,7 @@ public final class EventTargetInputTransformerGetArgs extends com.pulumi.resourc
     }
 
     /**
-     * Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g., `"\"Your string goes here.\\nA new line.\""`
+     * Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g., `&#34;\&#34;Your string goes here.\\nA new line.\&#34;&#34;`
      * 
      */
     @Import(name="inputTemplate", required=true)

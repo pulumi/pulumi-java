@@ -21,7 +21,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     public static final BackendArgs Empty = new BackendArgs();
 
     /**
-     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     @Import(name="rules")

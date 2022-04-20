@@ -99,7 +99,7 @@ public final class MagentoSourceResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Copy source type.
-     * Expected value is 'MagentoSource'.
+     * Expected value is &#39;MagentoSource&#39;.
      * 
      */
     @Import(name="type", required=true)

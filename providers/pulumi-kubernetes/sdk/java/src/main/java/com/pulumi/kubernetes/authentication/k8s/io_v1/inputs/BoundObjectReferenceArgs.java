@@ -31,7 +31,7 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
+     * Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
      * 
      */
     @Import(name="kind")

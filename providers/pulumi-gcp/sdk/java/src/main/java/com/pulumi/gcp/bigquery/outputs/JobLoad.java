@@ -38,7 +38,7 @@ public final class JobLoad {
     /**
      * Specifies whether the job is allowed to create new tables. The following values are supported:
      * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
-     * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
+     * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
      * Creation, truncation and append actions occur as one atomic update upon job completion
      * Default value is `CREATE_IF_NEEDED`.
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
@@ -66,7 +66,7 @@ public final class JobLoad {
     private final @Nullable String encoding;
     /**
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
-     * Default is ','
+     * Default is &#39;,&#39;
      * 
      */
     private final @Nullable String fieldDelimiter;
@@ -76,7 +76,7 @@ public final class JobLoad {
      * and if there are too many bad records, an invalid error is returned in the job result.
      * The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
      * CSV: Trailing columns
-     * JSON: Named values that don't match any column names
+     * JSON: Named values that don&#39;t match any column names
      * 
      */
     private final @Nullable Boolean ignoreUnknownValues;
@@ -95,16 +95,16 @@ public final class JobLoad {
      */
     private final @Nullable String nullMarker;
     /**
-     * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+     * If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
      * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
-     * If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
+     * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
      */
     private final @Nullable List<String> projectionFields;
     /**
      * The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
      * and then uses the first byte of the encoded string to split the data in its raw, binary state.
-     * The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
+     * The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string.
      * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
      * 
      */
@@ -126,26 +126,26 @@ public final class JobLoad {
      * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
      * the row is read as data. Otherwise data is read starting from the second row.
      * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
-     * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+     * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
      * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
      * 
      */
     private final @Nullable Integer skipLeadingRows;
     /**
-     * The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
-     * For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-     * For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+     * The format of the data files. For CSV files, specify &#34;CSV&#34;. For datastore backups, specify &#34;DATASTORE_BACKUP&#34;.
+     * For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro, specify &#34;AVRO&#34;. For parquet, specify &#34;PARQUET&#34;.
+     * For orc, specify &#34;ORC&#34;. [Beta] For Bigtable, specify &#34;BIGTABLE&#34;.
      * The default value is CSV.
      * 
      */
     private final @Nullable String sourceFormat;
     /**
      * The fully-qualified URIs that point to your data in Google Cloud.
-     * For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
-     * and it must come after the 'bucket' name. Size limits related to load jobs apply
+     * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+     * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
      * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
      * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
-     * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
+     * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
      * 
      */
     private final List<String> sourceUris;
@@ -159,7 +159,7 @@ public final class JobLoad {
      * Specifies the action that occurs if the destination table already exists. The following values are supported:
      * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
      * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
-     * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
+     * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
      * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
      * Creation, truncation and append actions occur as one atomic update upon job completion.
      * Default value is `WRITE_EMPTY`.
@@ -237,7 +237,7 @@ public final class JobLoad {
     /**
      * Specifies whether the job is allowed to create new tables. The following values are supported:
      * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
-     * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
+     * CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result.
      * Creation, truncation and append actions occur as one atomic update upon job completion
      * Default value is `CREATE_IF_NEEDED`.
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
@@ -273,7 +273,7 @@ public final class JobLoad {
     }
     /**
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
-     * Default is ','
+     * Default is &#39;,&#39;
      * 
     */
     public Optional<String> fieldDelimiter() {
@@ -285,7 +285,7 @@ public final class JobLoad {
      * and if there are too many bad records, an invalid error is returned in the job result.
      * The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
      * CSV: Trailing columns
-     * JSON: Named values that don't match any column names
+     * JSON: Named values that don&#39;t match any column names
      * 
     */
     public Optional<Boolean> ignoreUnknownValues() {
@@ -310,9 +310,9 @@ public final class JobLoad {
         return Optional.ofNullable(this.nullMarker);
     }
     /**
-     * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+     * If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
      * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
-     * If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
+     * If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
     */
     public List<String> projectionFields() {
@@ -321,7 +321,7 @@ public final class JobLoad {
     /**
      * The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
      * and then uses the first byte of the encoded string to split the data in its raw, binary state.
-     * The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
+     * The default value is a double-quote (&#39;&#34;&#39;). If your data does not contain quoted sections, set the property value to an empty string.
      * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
      * 
     */
@@ -347,7 +347,7 @@ public final class JobLoad {
      * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
      * the row is read as data. Otherwise data is read starting from the second row.
      * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
-     * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+     * skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
      * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
      * 
     */
@@ -355,9 +355,9 @@ public final class JobLoad {
         return Optional.ofNullable(this.skipLeadingRows);
     }
     /**
-     * The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
-     * For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
-     * For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
+     * The format of the data files. For CSV files, specify &#34;CSV&#34;. For datastore backups, specify &#34;DATASTORE_BACKUP&#34;.
+     * For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro, specify &#34;AVRO&#34;. For parquet, specify &#34;PARQUET&#34;.
+     * For orc, specify &#34;ORC&#34;. [Beta] For Bigtable, specify &#34;BIGTABLE&#34;.
      * The default value is CSV.
      * 
     */
@@ -366,11 +366,11 @@ public final class JobLoad {
     }
     /**
      * The fully-qualified URIs that point to your data in Google Cloud.
-     * For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
-     * and it must come after the 'bucket' name. Size limits related to load jobs apply
+     * For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character
+     * and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply
      * to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
      * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
-     * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
+     * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
      * 
     */
     public List<String> sourceUris() {
@@ -388,7 +388,7 @@ public final class JobLoad {
      * Specifies the action that occurs if the destination table already exists. The following values are supported:
      * WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
      * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
-     * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
+     * WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result.
      * Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
      * Creation, truncation and append actions occur as one atomic update upon job completion.
      * Default value is `WRITE_EMPTY`.

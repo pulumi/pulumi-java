@@ -31,7 +31,7 @@ public final class ControlActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     private final String type;
@@ -78,7 +78,7 @@ public final class ControlActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
     */
     public String type() {

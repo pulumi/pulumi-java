@@ -29,7 +29,7 @@ public final class AudioResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Audio'.
+     * Expected value is &#39;#Microsoft.Media.Audio&#39;.
      * 
      */
     private final String odataType;
@@ -76,7 +76,7 @@ public final class AudioResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Audio'.
+     * Expected value is &#39;#Microsoft.Media.Audio&#39;.
      * 
     */
     public String odataType() {

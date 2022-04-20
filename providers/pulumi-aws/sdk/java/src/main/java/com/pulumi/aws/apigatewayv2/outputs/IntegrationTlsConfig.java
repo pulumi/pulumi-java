@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntegrationTlsConfig {
     /**
-     * If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+     * If you specify a server name, API Gateway uses it to verify the hostname on the integration&#39;s certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
      * 
      */
     private final @Nullable String serverNameToVerify;
@@ -23,7 +23,7 @@ public final class IntegrationTlsConfig {
     }
 
     /**
-     * If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+     * If you specify a server name, API Gateway uses it to verify the hostname on the integration&#39;s certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
      * 
     */
     public Optional<String> serverNameToVerify() {

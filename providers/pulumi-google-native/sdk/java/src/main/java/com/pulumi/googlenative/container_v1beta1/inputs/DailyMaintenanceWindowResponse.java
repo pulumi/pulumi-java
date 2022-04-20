@@ -28,7 +28,7 @@ public final class DailyMaintenanceWindowResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Time within the maintenance window to start the maintenance operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * Time within the maintenance window to start the maintenance operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
      */
     @Import(name="startTime", required=true)

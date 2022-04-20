@@ -33,7 +33,7 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
 
     /**
      * The Compression setting type.
-     * Expected value is 'TarGZipReadSettings'.
+     * Expected value is &#39;TarGZipReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

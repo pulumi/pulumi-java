@@ -18,7 +18,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      */
     private final @Nullable String buildCommand;
     /**
-     * The port that your application listens to in the container. Defaults to `"8080"`.
+     * The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
      * 
      */
     private final @Nullable String port;
@@ -28,7 +28,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      */
     private final String runtime;
     /**
-     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren't valid.
+     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
      * 
      */
     private final @Nullable Map<String,String> runtimeEnvironmentVariables;
@@ -60,7 +60,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
         return Optional.ofNullable(this.buildCommand);
     }
     /**
-     * The port that your application listens to in the container. Defaults to `"8080"`.
+     * The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
      * 
     */
     public Optional<String> port() {
@@ -74,7 +74,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
         return this.runtime;
     }
     /**
-     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren't valid.
+     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
      * 
     */
     public Map<String,String> runtimeEnvironmentVariables() {

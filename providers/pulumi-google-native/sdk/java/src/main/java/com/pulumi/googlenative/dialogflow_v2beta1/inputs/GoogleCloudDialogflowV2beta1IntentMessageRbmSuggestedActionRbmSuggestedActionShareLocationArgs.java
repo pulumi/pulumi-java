@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * Opens the device's location chooser so the user can pick a location to send back to the agent.
+ * Opens the device&#39;s location chooser so the user can pick a location to send back to the agent.
  * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs extends com.pulumi.resources.ResourceArgs {

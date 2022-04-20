@@ -87,7 +87,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     @Import(name="minimalTlsVersion")
@@ -109,7 +109,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="publicNetworkAccess")

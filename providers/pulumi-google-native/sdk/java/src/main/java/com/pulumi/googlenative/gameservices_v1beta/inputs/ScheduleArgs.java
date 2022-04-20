@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The schedule of a recurring or one time event. The event's time span is specified by start_time and end_time. If the scheduled event's timespan is larger than the cron_spec + cron_job_duration, the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is effective starting at the local time specified by cron_spec, and is recurring. ```start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec start time + duration```
+ * The schedule of a recurring or one time event. The event&#39;s time span is specified by start_time and end_time. If the scheduled event&#39;s timespan is larger than the cron_spec + cron_job_duration, the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is effective starting at the local time specified by cron_spec, and is recurring. ```start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec start time + duration```
  * 
  */
 public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
     /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
+     * The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
      * 
      */
     @Import(name="cronJobDuration")

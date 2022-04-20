@@ -13,7 +13,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends com.p
     public static final GetInstanceTemplateNetworkInterfaceAccessConfig Empty = new GetInstanceTemplateNetworkInterfaceAccessConfig();
 
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */

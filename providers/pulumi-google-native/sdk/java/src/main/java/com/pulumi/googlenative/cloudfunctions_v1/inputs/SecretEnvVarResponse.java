@@ -28,7 +28,7 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
+     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
      */
     @Import(name="project", required=true)
@@ -50,7 +50,7 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     * Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
      */
     @Import(name="version", required=true)

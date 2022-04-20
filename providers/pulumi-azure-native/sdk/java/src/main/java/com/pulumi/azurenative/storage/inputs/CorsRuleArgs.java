@@ -43,7 +43,7 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
+     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
      * 
      */
     @Import(name="allowedOrigins", required=true)

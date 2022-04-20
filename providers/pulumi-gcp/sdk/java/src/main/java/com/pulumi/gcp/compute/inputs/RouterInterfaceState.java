@@ -54,7 +54,7 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The ID of the project in which this interface's router belongs. If it
+     * The ID of the project in which this interface&#39;s router belongs. If it
      * is not provided, the provider project is used. Changing this forces a new interface to be created.
      * 
      */
@@ -66,7 +66,7 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The region this interface's router sits in. If not specified,
+     * The region this interface&#39;s router sits in. If not specified,
      * the project region will be used. Changing this forces a new interface to be
      * created.
      * 

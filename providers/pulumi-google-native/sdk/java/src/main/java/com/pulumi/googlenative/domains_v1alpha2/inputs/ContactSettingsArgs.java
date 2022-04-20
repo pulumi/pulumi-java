@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * Defines the contact information associated with a `Registration`. [ICANN](https://icann.org/) requires all domain names to have associated contact information. The `registrant_contact` is considered the domain's legal owner, and often the other contacts are identical.
+ * Defines the contact information associated with a `Registration`. [ICANN](https://icann.org/) requires all domain names to have associated contact information. The `registrant_contact` is considered the domain&#39;s legal owner, and often the other contacts are identical.
  * 
  */
 public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs {

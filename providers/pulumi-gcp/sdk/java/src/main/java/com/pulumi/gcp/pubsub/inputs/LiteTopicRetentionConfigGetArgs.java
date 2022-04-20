@@ -17,7 +17,7 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
 
     /**
      * The provisioned storage, in bytes, per partition. If the number of bytes stored
-     * in any of the topic's partitions grows beyond this value, older messages will be
+     * in any of the topic&#39;s partitions grows beyond this value, older messages will be
      * dropped to make room for newer ones, regardless of the value of period.
      * 
      */
@@ -31,8 +31,8 @@ public final class LiteTopicRetentionConfigGetArgs extends com.pulumi.resources.
     /**
      * How long a published message is retained. If unset, messages will be retained as
      * long as the bytes retained for each partition is below perPartitionBytes. A
-     * duration in seconds with up to nine fractional digits, terminated by 's'.
-     * Example: "3.5s".
+     * duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+     * Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="period")

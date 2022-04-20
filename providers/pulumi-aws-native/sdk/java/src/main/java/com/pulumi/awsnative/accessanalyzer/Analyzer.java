@@ -16,7 +16,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
+ * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
  * 
  * ## Example Usage
  * 

@@ -44,14 +44,14 @@ public class PublishingDestination extends com.pulumi.resources.CustomResource {
         return this.destinationArn;
     }
     /**
-     * Currently there is only "S3" available as destination type which is also the default value
+     * Currently there is only &#34;S3&#34; available as destination type which is also the default value
      * 
      */
     @Export(name="destinationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationType;
 
     /**
-     * @return Currently there is only "S3" available as destination type which is also the default value
+     * @return Currently there is only &#34;S3&#34; available as destination type which is also the default value
      * 
      */
     public Output</* @Nullable */ String> destinationType() {

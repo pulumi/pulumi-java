@@ -17,7 +17,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
+ * Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn&#39;t exist.
  * 
  */
 @ResourceType(type="google-native:translate/v3:Glossary")

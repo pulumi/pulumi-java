@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Optional. What type of media is the content (ie "audio").
+     * Optional. What type of media is the content (ie &#34;audio&#34;).
      * 
      */
     @EnumType

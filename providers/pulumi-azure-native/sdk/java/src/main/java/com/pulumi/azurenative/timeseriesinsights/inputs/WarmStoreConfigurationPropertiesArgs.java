@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
+ * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
  * 
  */
 public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resou
     public static final WarmStoreConfigurationPropertiesArgs Empty = new WarmStoreConfigurationPropertiesArgs();
 
     /**
-     * ISO8601 timespan specifying the number of days the environment's events will be available for query from the warm store.
+     * ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
      * 
      */
     @Import(name="dataRetention", required=true)

@@ -29,7 +29,7 @@ public final class FieldLevelEncryptionConfigArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
+     * Content Type Profile Config specifies when to forward content if a content type isn&#39;t recognized and profiles to use as by default in a request if a query argument doesn&#39;t specify a profile to use.
      * 
      */
     @Import(name="contentTypeProfileConfig", required=true)
@@ -40,7 +40,7 @@ public final class FieldLevelEncryptionConfigArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
+     * Query Arg Profile Config that specifies when to forward content if a profile isn&#39;t found and the profile that can be provided as a query argument in a request.
      * 
      */
     @Import(name="queryArgProfileConfig", required=true)

@@ -58,7 +58,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. All prefixes must be within link-local address space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to select an unused /29 from the supplied candidate prefix(es). The request will fail if all possible /29s are in use on Google's edge. If not supplied, Google will randomly select an unused /29 from all of link-local space.
+     * Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. All prefixes must be within link-local address space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to select an unused /29 from the supplied candidate prefix(es). The request will fail if all possible /29s are in use on Google&#39;s edge. If not supplied, Google will randomly select an unused /29 from all of link-local space.
      * 
      */
     @Import(name="candidateSubnets")
@@ -135,7 +135,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * URL of the underlying Interconnect object that this attachment's traffic will traverse through.
+     * URL of the underlying Interconnect object that this attachment&#39;s traffic will traverse through.
      * 
      */
     @Import(name="interconnect")
@@ -146,7 +146,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * A list of URLs of addresses that have been reserved for the VLAN attachment. Used only for the VLAN attachment that has the encryption option as IPSEC. The addresses must be regional internal IP address ranges. When creating an HA VPN gateway over the VLAN attachment, if the attachment is configured to use a regional internal IP address, then the VPN gateway's IP address is allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is paired to this VLAN attachment, then a regional internal IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN attachment. If this field is not specified when creating the VLAN attachment, then later on when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is allocated from the regional external IP address pool. Not currently available publicly.
+     * A list of URLs of addresses that have been reserved for the VLAN attachment. Used only for the VLAN attachment that has the encryption option as IPSEC. The addresses must be regional internal IP address ranges. When creating an HA VPN gateway over the VLAN attachment, if the attachment is configured to use a regional internal IP address, then the VPN gateway&#39;s IP address is allocated from the IP address range specified here. For example, if the HA VPN gateway&#39;s interface 0 is paired to this VLAN attachment, then a regional internal IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN attachment. If this field is not specified when creating the VLAN attachment, then later on when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway&#39;s IP address is allocated from the regional external IP address pool. Not currently available publicly.
      * 
      */
     @Import(name="ipsecInternalAddresses")
@@ -179,7 +179,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * [Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
+     * [Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to initiate provisioning with a selected partner. Of the form &#34;XXXXX/region/domain&#34;
      * 
      */
     @Import(name="pairingKey")
@@ -233,7 +233,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region as this InterconnectAttachment. The InterconnectAttachment will automatically connect the Interconnect to the network & region within which the Cloud Router is configured.
+     * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region as this InterconnectAttachment. The InterconnectAttachment will automatically connect the Interconnect to the network &amp; region within which the Cloud Router is configured.
      * 
      */
     @Import(name="router")

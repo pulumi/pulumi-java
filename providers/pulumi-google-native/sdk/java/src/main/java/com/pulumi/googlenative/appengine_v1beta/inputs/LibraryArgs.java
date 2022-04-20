@@ -20,7 +20,7 @@ public final class LibraryArgs extends com.pulumi.resources.ResourceArgs {
     public static final LibraryArgs Empty = new LibraryArgs();
 
     /**
-     * Name of the library. Example: "django".
+     * Name of the library. Example: &#34;django&#34;.
      * 
      */
     @Import(name="name")
@@ -31,7 +31,7 @@ public final class LibraryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Version of the library to select, or "latest".
+     * Version of the library to select, or &#34;latest&#34;.
      * 
      */
     @Import(name="version")

@@ -21,7 +21,7 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
     public static final VpnLinkBgpSettingsArgs Empty = new VpnLinkBgpSettingsArgs();
 
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
      */
     @Import(name="asn")

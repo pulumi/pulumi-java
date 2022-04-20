@@ -79,7 +79,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Rule Type.
-     * Expected value is 'NatRule'.
+     * Expected value is &#39;NatRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

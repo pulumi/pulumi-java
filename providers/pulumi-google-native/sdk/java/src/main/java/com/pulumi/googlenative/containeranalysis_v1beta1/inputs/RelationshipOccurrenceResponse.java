@@ -39,7 +39,7 @@ public final class RelationshipOccurrenceResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
      * 
      */
     @Import(name="target", required=true)

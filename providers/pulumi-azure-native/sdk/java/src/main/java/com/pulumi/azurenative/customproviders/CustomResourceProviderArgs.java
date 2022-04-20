@@ -87,7 +87,7 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * A list of validations to run on the custom resource provider's requests.
+     * A list of validations to run on the custom resource provider&#39;s requests.
      * 
      */
     @Import(name="validations")

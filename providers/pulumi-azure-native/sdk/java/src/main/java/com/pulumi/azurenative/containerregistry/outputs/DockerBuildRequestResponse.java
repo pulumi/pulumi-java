@@ -91,7 +91,7 @@ public final class DockerBuildRequestResponse {
     private final @Nullable Integer timeout;
     /**
      * The type of the run request.
-     * Expected value is 'DockerBuildRequest'.
+     * Expected value is &#39;DockerBuildRequest&#39;.
      * 
      */
     private final String type;
@@ -231,7 +231,7 @@ public final class DockerBuildRequestResponse {
     }
     /**
      * The type of the run request.
-     * Expected value is 'DockerBuildRequest'.
+     * Expected value is &#39;DockerBuildRequest&#39;.
      * 
     */
     public String type() {

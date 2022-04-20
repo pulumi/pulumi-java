@@ -40,7 +40,7 @@ public final class BlobOutputDataSourceResponse {
     private final @Nullable String timeFormat;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Blob'.
+     * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
      */
     private final String type;
@@ -98,7 +98,7 @@ public final class BlobOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Blob'.
+     * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
     */
     public String type() {

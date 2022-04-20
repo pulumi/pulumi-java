@@ -44,7 +44,7 @@ public final class HdfsLocationArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'HdfsLocation'.
+     * Expected value is &#39;HdfsLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

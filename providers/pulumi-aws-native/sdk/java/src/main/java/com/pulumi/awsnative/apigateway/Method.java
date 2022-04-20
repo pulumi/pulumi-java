@@ -53,14 +53,14 @@ public class Method extends com.pulumi.resources.CustomResource {
         return this.authorizationScopes;
     }
     /**
-     * The method's authorization type.
+     * The method&#39;s authorization type.
      * 
      */
     @Export(name="authorizationType", type=MethodAuthorizationType.class, parameters={})
     private Output</* @Nullable */ MethodAuthorizationType> authorizationType;
 
     /**
-     * @return The method's authorization type.
+     * @return The method&#39;s authorization type.
      * 
      */
     public Output</* @Nullable */ MethodAuthorizationType> authorizationType() {
@@ -137,14 +137,14 @@ public class Method extends com.pulumi.resources.CustomResource {
         return this.operationName;
     }
     /**
-     * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
     @Export(name="requestModels", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> requestModels;
 
     /**
-     * @return The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * @return The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
     public Output</* @Nullable */ Object> requestModels() {

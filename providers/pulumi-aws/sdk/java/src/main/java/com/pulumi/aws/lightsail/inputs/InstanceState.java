@@ -90,7 +90,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     /**
      * (**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
      * 
-     * @Deprecated
+     * @deprecated
      * use `ipv6_addresses` attribute instead
      * 
      */

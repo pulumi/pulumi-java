@@ -21,7 +21,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'HttpVersion'.
+     * Expected value is &#39;HttpVersion&#39;.
      * 
      */
     @Import(name="name", required=true)

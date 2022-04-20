@@ -47,7 +47,7 @@ public final class GetUserAssignedIdentityResult {
      */
     private final String tenantId;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -122,7 +122,7 @@ public final class GetUserAssignedIdentityResult {
         return this.tenantId;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

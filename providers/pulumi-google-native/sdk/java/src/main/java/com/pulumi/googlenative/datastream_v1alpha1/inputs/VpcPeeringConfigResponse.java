@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.
+ * The VPC Peering configuration is used to create VPC peering between Datastream and the consumer&#39;s VPC.
  * 
  */
 public final class VpcPeeringConfigResponse extends com.pulumi.resources.InvokeArgs {

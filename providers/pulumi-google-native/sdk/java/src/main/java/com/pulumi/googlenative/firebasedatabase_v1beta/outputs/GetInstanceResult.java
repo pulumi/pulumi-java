@@ -25,7 +25,7 @@ public final class GetInstanceResult {
      */
     private final String project;
     /**
-     * The database's lifecycle state. Read-only.
+     * The database&#39;s lifecycle state. Read-only.
      * 
      */
     private final String state;
@@ -71,7 +71,7 @@ public final class GetInstanceResult {
         return this.project;
     }
     /**
-     * The database's lifecycle state. Read-only.
+     * The database&#39;s lifecycle state. Read-only.
      * 
     */
     public String state() {

@@ -115,7 +115,7 @@ public final class AzureMLUpdateResourceActivityResponse extends com.pulumi.reso
 
     /**
      * Type of activity.
-     * Expected value is 'AzureMLUpdateResource'.
+     * Expected value is &#39;AzureMLUpdateResource&#39;.
      * 
      */
     @Import(name="type", required=true)

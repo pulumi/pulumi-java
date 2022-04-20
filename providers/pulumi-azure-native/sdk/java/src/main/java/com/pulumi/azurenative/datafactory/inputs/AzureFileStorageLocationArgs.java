@@ -44,7 +44,7 @@ public final class AzureFileStorageLocationArgs extends com.pulumi.resources.Res
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureFileStorageLocation'.
+     * Expected value is &#39;AzureFileStorageLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

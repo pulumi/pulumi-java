@@ -21,7 +21,7 @@ public final class DeliveryRuleRequestHeaderConditionArgs extends com.pulumi.res
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RequestHeader'.
+     * Expected value is &#39;RequestHeader&#39;.
      * 
      */
     @Import(name="name", required=true)

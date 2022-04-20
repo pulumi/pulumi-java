@@ -75,21 +75,21 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.certificateAuthorityArn;
     }
     /**
-     * The certificate's PEM-formatted public key
+     * The certificate&#39;s PEM-formatted public key
      * 
      */
     @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
     /**
-     * @return The certificate's PEM-formatted public key
+     * @return The certificate&#39;s PEM-formatted public key
      * 
      */
     public Output</* @Nullable */ String> certificateBody() {
         return this.certificateBody;
     }
     /**
-     * The certificate's PEM-formatted chain
+     * The certificate&#39;s PEM-formatted chain
      * * Creating a private CA issued certificate
      * 
      */
@@ -97,7 +97,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> certificateChain;
 
     /**
-     * @return The certificate's PEM-formatted chain
+     * @return The certificate&#39;s PEM-formatted chain
      * * Creating a private CA issued certificate
      * 
      */
@@ -149,14 +149,14 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.options;
     }
     /**
-     * The certificate's PEM-formatted private key
+     * The certificate&#39;s PEM-formatted private key
      * 
      */
     @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
     /**
-     * @return The certificate's PEM-formatted private key
+     * @return The certificate&#39;s PEM-formatted private key
      * 
      */
     public Output</* @Nullable */ String> privateKey() {

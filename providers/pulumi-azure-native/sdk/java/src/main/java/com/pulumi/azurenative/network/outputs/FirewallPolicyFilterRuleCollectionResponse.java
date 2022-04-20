@@ -35,7 +35,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
     private final @Nullable Integer priority;
     /**
      * The type of the rule collection.
-     * Expected value is 'FirewallPolicyFilterRuleCollection'.
+     * Expected value is &#39;FirewallPolicyFilterRuleCollection&#39;.
      * 
      */
     private final String ruleCollectionType;
@@ -82,7 +82,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
     }
     /**
      * The type of the rule collection.
-     * Expected value is 'FirewallPolicyFilterRuleCollection'.
+     * Expected value is &#39;FirewallPolicyFilterRuleCollection&#39;.
      * 
     */
     public String ruleCollectionType() {

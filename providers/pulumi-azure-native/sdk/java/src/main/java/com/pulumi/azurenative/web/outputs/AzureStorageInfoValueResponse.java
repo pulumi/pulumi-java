@@ -22,7 +22,7 @@ public final class AzureStorageInfoValueResponse {
      */
     private final @Nullable String accountName;
     /**
-     * Path to mount the storage within the site's runtime environment.
+     * Path to mount the storage within the site&#39;s runtime environment.
      * 
      */
     private final @Nullable String mountPath;
@@ -73,7 +73,7 @@ public final class AzureStorageInfoValueResponse {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * Path to mount the storage within the site's runtime environment.
+     * Path to mount the storage within the site&#39;s runtime environment.
      * 
     */
     public Optional<String> mountPath() {

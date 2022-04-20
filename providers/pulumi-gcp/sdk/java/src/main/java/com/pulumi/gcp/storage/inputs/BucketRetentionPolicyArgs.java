@@ -17,7 +17,7 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
     public static final BucketRetentionPolicyArgs Empty = new BucketRetentionPolicyArgs();
 
     /**
-     * If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
+     * If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket&#39;s retention policy.  Caution: Locking a bucket is an irreversible action.
      * 
      */
     @Import(name="isLocked")

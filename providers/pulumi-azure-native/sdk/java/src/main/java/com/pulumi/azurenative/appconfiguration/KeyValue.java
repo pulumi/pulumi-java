@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:appconfiguration:KeyValue")
 public class KeyValue extends com.pulumi.resources.CustomResource {
     /**
-     * The content type of the key-value's value.
+     * The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
@@ -42,7 +42,7 @@ public class KeyValue extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> contentType;
 
     /**
-     * @return The content type of the key-value's value.
+     * @return The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */

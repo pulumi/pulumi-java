@@ -24,7 +24,7 @@ public final class MediaGraphRtspSourceResponse {
     private final String name;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
      * 
      */
     private final String odataType;
@@ -62,7 +62,7 @@ public final class MediaGraphRtspSourceResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
      * 
     */
     public String odataType() {

@@ -120,7 +120,7 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
     private final @Nullable String protectedItemDataId;
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
      */
     private final String protectedItemType;
@@ -348,7 +348,7 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
     */
     public String protectedItemType() {

@@ -20,7 +20,7 @@ public final class InstanceNetworkInterface {
      * Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Omit to ensure that the instance
      * is not accessible from the Internet. If omitted, ssh will not
-     * work unless this provider can send traffic to the instance's network (e.g. via
+     * work unless this provider can send traffic to the instance&#39;s network (e.g. via
      * tunnel or because it is running on another cloud instance on that network).
      * This block can be repeated multiple times. Structure documented below.
      * 
@@ -54,7 +54,7 @@ public final class InstanceNetworkInterface {
     private final @Nullable String name;
     /**
      * The name or self_link of the network to attach this interface to.
-     * Either `network` or `subnetwork` must be provided. If network isn't provided it will
+     * Either `network` or `subnetwork` must be provided. If network isn&#39;t provided it will
      * be inferred from the subnetwork.
      * 
      */
@@ -71,7 +71,7 @@ public final class InstanceNetworkInterface {
      */
     private final @Nullable String nicType;
     /**
-     * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
      */
     private final @Nullable Integer queueCount;
@@ -82,7 +82,7 @@ public final class InstanceNetworkInterface {
     private final @Nullable String stackType;
     /**
      * The name or self_link of the subnetwork to attach this
-     * interface to. Either `network` or `subnetwork` must be provided. If network isn't provided
+     * interface to. Either `network` or `subnetwork` must be provided. If network isn&#39;t provided
      * it will be inferred from the subnetwork. The subnetwork must exist in the same region this
      * instance will be created in. If the network resource is in
      * [legacy](https://cloud.google.com/vpc/docs/legacy) mode, do not specify this field. If the
@@ -132,7 +132,7 @@ public final class InstanceNetworkInterface {
      * Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Omit to ensure that the instance
      * is not accessible from the Internet. If omitted, ssh will not
-     * work unless this provider can send traffic to the instance's network (e.g. via
+     * work unless this provider can send traffic to the instance&#39;s network (e.g. via
      * tunnel or because it is running on another cloud instance on that network).
      * This block can be repeated multiple times. Structure documented below.
      * 
@@ -176,7 +176,7 @@ public final class InstanceNetworkInterface {
     }
     /**
      * The name or self_link of the network to attach this interface to.
-     * Either `network` or `subnetwork` must be provided. If network isn't provided it will
+     * Either `network` or `subnetwork` must be provided. If network isn&#39;t provided it will
      * be inferred from the subnetwork.
      * 
     */
@@ -199,7 +199,7 @@ public final class InstanceNetworkInterface {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
     */
     public Optional<Integer> queueCount() {
@@ -214,7 +214,7 @@ public final class InstanceNetworkInterface {
     }
     /**
      * The name or self_link of the subnetwork to attach this
-     * interface to. Either `network` or `subnetwork` must be provided. If network isn't provided
+     * interface to. Either `network` or `subnetwork` must be provided. If network isn&#39;t provided
      * it will be inferred from the subnetwork. The subnetwork must exist in the same region this
      * instance will be created in. If the network resource is in
      * [legacy](https://cloud.google.com/vpc/docs/legacy) mode, do not specify this field. If the

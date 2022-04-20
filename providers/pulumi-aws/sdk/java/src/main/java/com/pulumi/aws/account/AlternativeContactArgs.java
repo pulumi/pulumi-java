@@ -16,7 +16,7 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     public static final AlternativeContactArgs Empty = new AlternativeContactArgs();
 
     /**
-     * The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
+     * The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
      * 
      */
     @Import(name="accountId")

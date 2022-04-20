@@ -33,7 +33,7 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterArgs extends com.pulum
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberGreaterThanOrEquals'.
+     * Expected value is &#39;NumberGreaterThanOrEquals&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

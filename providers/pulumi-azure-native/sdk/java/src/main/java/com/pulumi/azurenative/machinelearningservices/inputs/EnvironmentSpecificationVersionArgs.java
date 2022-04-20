@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * Environment specification version details.
- * <see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
+ * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/specification.html&#34; /&gt;
  * 
  */
 public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resources.ResourceArgs {
@@ -28,7 +28,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
 
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-     * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
      * 
      */
     @Import(name="condaFile")

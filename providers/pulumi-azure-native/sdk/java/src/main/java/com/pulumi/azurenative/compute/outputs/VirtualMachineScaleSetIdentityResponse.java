@@ -24,12 +24,12 @@ public final class VirtualMachineScaleSetIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
+     * The type of identity used for the virtual machine scale set. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine scale set.
      * 
      */
     private final @Nullable String type;
     /**
-     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities;
@@ -61,14 +61,14 @@ public final class VirtualMachineScaleSetIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
+     * The type of identity used for the virtual machine scale set. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the virtual machine scale set.
      * 
     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
     */
     public Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities() {

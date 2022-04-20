@@ -19,10 +19,10 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * The "AMI from instance" resource allows the creation of an Amazon Machine
+ * The &#34;AMI from instance&#34; resource allows the creation of an Amazon Machine
  * Image (AMI) modelled after an existing EBS-backed EC2 instance.
  * 
- * The created AMI will refer to implicitly-created snapshots of the instance's
+ * The created AMI will refer to implicitly-created snapshots of the instance&#39;s
  * EBS volumes and mimick its assigned block device configuration at the time
  * the resource is created.
  * 
@@ -43,14 +43,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/amiFromInstance:AmiFromInstance")
 public class AmiFromInstance extends com.pulumi.resources.CustomResource {
     /**
-     * Machine architecture for created instances. Defaults to "x86_64".
+     * Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     @Export(name="architecture", type=String.class, parameters={})
     private Output<String> architecture;
 
     /**
-     * @return Machine architecture for created instances. Defaults to "x86_64".
+     * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     public Output<String> architecture() {
@@ -295,7 +295,7 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
         return this.sourceInstanceId;
     }
     /**
-     * When set to "simple" (the default), enables enhanced networking
+     * When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -303,7 +303,7 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
     private Output<String> sriovNetSupport;
 
     /**
-     * @return When set to "simple" (the default), enables enhanced networking
+     * @return When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -338,7 +338,7 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */
@@ -347,7 +347,7 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */

@@ -29,8 +29,8 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      */
     private final @Nullable String searchCriteria;
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'WindowsUpdate'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsUpdate&#39;.
      * 
      */
     private final String type;
@@ -76,8 +76,8 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
         return Optional.ofNullable(this.searchCriteria);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'WindowsUpdate'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsUpdate&#39;.
      * 
     */
     public String type() {

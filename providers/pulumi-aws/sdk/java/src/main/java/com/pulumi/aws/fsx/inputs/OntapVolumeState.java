@@ -53,7 +53,7 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
+     * Specifies the location in the storage virtual machine&#39;s namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
     @Import(name="junctionPath")
@@ -159,7 +159,7 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Volume's UUID (universally unique identifier).
+     * The Volume&#39;s UUID (universally unique identifier).
      * 
      */
     @Import(name="uuid")

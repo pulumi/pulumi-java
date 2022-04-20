@@ -71,7 +71,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

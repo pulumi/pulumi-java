@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallFirewallStatusSyncState {
     /**
-     * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+     * Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
      * 
      */
     private final @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments;
@@ -33,7 +33,7 @@ public final class FirewallFirewallStatusSyncState {
     }
 
     /**
-     * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+     * Nested list describing the attachment status of the firewall&#39;s association with a single VPC subnet.
      * 
     */
     public List<FirewallFirewallStatusSyncStateAttachment> attachments() {

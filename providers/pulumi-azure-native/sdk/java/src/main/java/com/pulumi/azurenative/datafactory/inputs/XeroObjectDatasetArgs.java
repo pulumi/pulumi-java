@@ -115,7 +115,7 @@ public final class XeroObjectDatasetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset.
-     * Expected value is 'XeroObject'.
+     * Expected value is &#39;XeroObject&#39;.
      * 
      */
     @Import(name="type", required=true)

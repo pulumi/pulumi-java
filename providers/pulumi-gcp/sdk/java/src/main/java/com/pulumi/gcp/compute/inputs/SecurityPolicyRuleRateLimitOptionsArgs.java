@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     public static final SecurityPolicyRuleRateLimitOptionsArgs Empty = new SecurityPolicyRuleRateLimitOptionsArgs();
 
     /**
-     * Can only be specified if the `action` for the rule is "rate_based_ban".
+     * Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
      * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
      */
@@ -32,9 +32,9 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     }
 
     /**
-     * Can only be specified if the `action` for the rule is "rate_based_ban".
-     * If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also
-     * exceed this 'ban_threshold'. Structure is documented below.
+     * Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+     * If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also
+     * exceed this &#39;ban_threshold&#39;. Structure is documented below.
      * 
      */
     @Import(name="banThreshold")
@@ -45,7 +45,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     }
 
     /**
-     * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
+     * Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
      * 
      */
     @Import(name="conformAction", required=true)
@@ -57,7 +57,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
 
     /**
      * Determines the key to enforce the rate_limit_threshold on.
-     * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
+     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
      * 
      */
     @Import(name="enforceOnKey")
@@ -80,7 +80,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
 
     /**
      * When a request is denied, returns the HTTP response code specified.
-     * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
+     * Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502.
      * 
      */
     @Import(name="exceedAction", required=true)

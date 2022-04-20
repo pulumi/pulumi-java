@@ -15,7 +15,7 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs ext
     public static final BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs Empty = new BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs();
 
     /**
-     * Whether delete markers should be replicated. Either `"Enabled"` or `"Disabled"`.
+     * Whether delete markers should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     @Import(name="status", required=true)

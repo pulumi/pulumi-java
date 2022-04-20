@@ -15,7 +15,7 @@ public final class GetDatasetResult {
      */
     private final String name;
     /**
-     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
+     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as &#34;America/New_York&#34; or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
      * 
      */
     private final String timeZone;
@@ -36,7 +36,7 @@ public final class GetDatasetResult {
         return this.name;
     }
     /**
-     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
+     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as &#34;America/New_York&#34; or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
      * 
     */
     public String timeZone() {

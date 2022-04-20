@@ -29,11 +29,11 @@ import javax.annotation.Nullable;
  * 
  * For information about Lambda and how to use it, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
  * 
- * > To give an external source (like a CloudWatch Event Rule, SNS, or S3) permission to access the Lambda function, use the `aws.lambda.Permission` resource. See [Lambda ****Permission Model][4] for more details. On the other hand, the `role` argument of this resource is the function's execution role for identity and access to AWS services and resources.
+ * &gt; To give an external source (like a CloudWatch Event Rule, SNS, or S3) permission to access the Lambda function, use the `aws.lambda.Permission` resource. See [Lambda ****Permission Model][4] for more details. On the other hand, the `role` argument of this resource is the function&#39;s execution role for identity and access to AWS services and resources.
  * 
- * > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
+ * &gt; **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
  * 
- * > To give an external source (like an EventBridge Rule, SNS, or S3) permission to access the Lambda function, use the `aws.lambda.Permission` resource. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details. On the other hand, the `role` argument of this resource is the function's execution role for identity and access to AWS services and resources.
+ * &gt; To give an external source (like an EventBridge Rule, SNS, or S3) permission to access the Lambda function, use the `aws.lambda.Permission` resource. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details. On the other hand, the `role` argument of this resource is the function&#39;s execution role for identity and access to AWS services and resources.
  * 
  * ## Example Usage
  * 
@@ -49,14 +49,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:lambda/function:Function")
 public class Function extends com.pulumi.resources.CustomResource {
     /**
-     * Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
+     * Instruction set architecture for your Lambda function. Valid values are `[&#34;x86_64&#34;]` and `[&#34;arm64&#34;]`. Default is `[&#34;x86_64&#34;]`. Removing this attribute, function&#39;s architecture stay the same.
      * 
      */
     @Export(name="architectures", type=List.class, parameters={String.class})
     private Output<List<String>> architectures;
 
     /**
-     * @return Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
+     * @return Instruction set architecture for your Lambda function. Valid values are `[&#34;x86_64&#34;]` and `[&#34;arm64&#34;]`. Default is `[&#34;x86_64&#34;]`. Removing this attribute, function&#39;s architecture stay the same.
      * 
      */
     public Output<List<String>> architectures() {
@@ -77,14 +77,14 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+     * Path to the function&#39;s deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
     @Export(name="code", type=Archive.class, parameters={})
     private Output</* @Nullable */ Archive> code;
 
     /**
-     * @return Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+     * @return Path to the function&#39;s deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
     public Output</* @Nullable */ Archive> code() {
@@ -189,28 +189,28 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.imageConfig;
     }
     /**
-     * ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+     * ECR image URI containing the function&#39;s deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
     @Export(name="imageUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageUri;
 
     /**
-     * @return ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+     * @return ECR image URI containing the function&#39;s deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
     public Output</* @Nullable */ String> imageUri() {
         return this.imageUri;
     }
     /**
-     * ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`.
+     * ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`.
      * 
      */
     @Export(name="invokeArn", type=String.class, parameters={})
     private Output<String> invokeArn;
 
     /**
-     * @return ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`.
+     * @return ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`.
      * 
      */
     public Output<String> invokeArn() {
@@ -343,70 +343,70 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.reservedConcurrentExecutions;
     }
     /**
-     * Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
+     * Amazon Resource Name (ARN) of the function&#39;s execution role. The role provides the function&#39;s identity and access to AWS services and resources.
      * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
-     * @return Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
+     * @return Amazon Resource Name (ARN) of the function&#39;s execution role. The role provides the function&#39;s identity and access to AWS services and resources.
      * 
      */
     public Output<String> role() {
         return this.role;
     }
     /**
-     * Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+     * Identifier of the function&#39;s runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
      * 
      */
     @Export(name="runtime", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtime;
 
     /**
-     * @return Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+     * @return Identifier of the function&#39;s runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
      * 
      */
     public Output</* @Nullable */ String> runtime() {
         return this.runtime;
     }
     /**
-     * S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+     * S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
     @Export(name="s3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Bucket;
 
     /**
-     * @return S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+     * @return S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
     public Output</* @Nullable */ String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
-     * S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+     * S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
     @Export(name="s3Key", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Key;
 
     /**
-     * @return S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+     * @return S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
     public Output</* @Nullable */ String> s3Key() {
         return this.s3Key;
     }
     /**
-     * Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+     * Object version containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
     @Export(name="s3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3ObjectVersion;
 
     /**
-     * @return Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+     * @return Object version containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
     public Output</* @Nullable */ String> s3ObjectVersion() {
@@ -441,14 +441,14 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.signingProfileVersionArn;
     }
     /**
-     * Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
+     * Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256(&#34;file.zip&#34;)`, where &#34;file.zip&#34; is the local filename of the lambda function source archive.
      * 
      */
     @Export(name="sourceCodeHash", type=String.class, parameters={})
     private Output<String> sourceCodeHash;
 
     /**
-     * @return Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
+     * @return Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256(&#34;file.zip&#34;)`, where &#34;file.zip&#34; is the local filename of the lambda function source archive.
      * 
      */
     public Output<String> sourceCodeHash() {

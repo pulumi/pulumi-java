@@ -115,7 +115,7 @@ public final class DynamicsAXResourceDatasetResponse extends com.pulumi.resource
 
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsAXResource'.
+     * Expected value is &#39;DynamicsAXResource&#39;.
      * 
      */
     @Import(name="type", required=true)

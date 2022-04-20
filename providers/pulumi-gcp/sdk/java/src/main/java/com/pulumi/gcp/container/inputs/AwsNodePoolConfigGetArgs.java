@@ -55,7 +55,7 @@ public final class AwsNodePoolConfigGetArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Optional. The initial labels assigned to nodes of this node pool. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")

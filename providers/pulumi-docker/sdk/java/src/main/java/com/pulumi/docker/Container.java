@@ -37,19 +37,19 @@ import javax.annotation.Nullable;
  * 
  * # prints the container ID
  * 
- * 9a550c0f0163d39d77222d3efd58701b625d47676c25c686c95b5b92d1cba6fd you provide the definition for the resource as follows terraform resource "docker_container" "foo" {
+ * 9a550c0f0163d39d77222d3efd58701b625d47676c25c686c95b5b92d1cba6fd you provide the definition for the resource as follows terraform resource &#34;docker_container&#34; &#34;foo&#34; {
  * 
  *  name
  * 
- * = "foo"
+ * = &#34;foo&#34;
  * 
- *  image = "nginx"
+ *  image = &#34;nginx&#34;
  * 
  *  ports {
  * 
- *  internal = "80"
+ *  internal = &#34;80&#34;
  * 
- *  external = "8080"
+ *  external = &#34;8080&#34;
  * 
  *  } } then the import command is as follows #!/bin/bash
  * 
@@ -104,7 +104,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     }
     /**
      * The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
-     * `["/usr/bin/myprogram","-","baz.con"]`.
+     * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
      * 
      */
     @Export(name="command", type=List.class, parameters={String.class})
@@ -112,7 +112,7 @@ public class Container extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
-     * `["/usr/bin/myprogram","-","baz.con"]`.
+     * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
      * 
      */
     public Output<List<String>> command() {
@@ -249,7 +249,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
      * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
-     * `"/usr/bin/myprogra"]`.
+     * `&#34;/usr/bin/myprogra&#34;]`.
      * 
      */
     @Export(name="entrypoints", type=List.class, parameters={String.class})
@@ -258,7 +258,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * @return The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
      * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
-     * `"/usr/bin/myprogra"]`.
+     * `&#34;/usr/bin/myprogra&#34;]`.
      * 
      */
     public Output<List<String>> entrypoints() {
@@ -295,7 +295,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * The network gateway of the container.
      * 
-     * @Deprecated
+     * @deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
      */
@@ -401,8 +401,8 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * The IP address of the container.
      * 
-     * @Deprecated
-     * Use `network_data` instead. The IP address of the container's first network it.
+     * @deprecated
+     * Use `network_data` instead. The IP address of the container&#39;s first network it.
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
@@ -419,7 +419,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * The IP prefix length of the container.
      * 
-     * @Deprecated
+     * @deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
      */
@@ -435,7 +435,7 @@ public class Container extends com.pulumi.resources.CustomResource {
         return this.ipPrefixLength;
     }
     /**
-     * IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or
+     * IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
      * `host`.
      * 
      */
@@ -443,7 +443,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     private Output<String> ipcMode;
 
     /**
-     * @return IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or
+     * @return IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
      * `host`.
      * 
      */
@@ -467,7 +467,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * Set of links for link based connectivity between containers that are running on the same host.
      * 
-     * @Deprecated
+     * @deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
      * 
      */
@@ -525,14 +525,14 @@ public class Container extends com.pulumi.resources.CustomResource {
         return this.logs;
     }
     /**
-     * The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
+     * The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
      * 
      */
     @Export(name="maxRetryCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetryCount;
 
     /**
-     * @return The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
+     * @return The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
      * 
      */
     public Output</* @Nullable */ Integer> maxRetryCount() {
@@ -554,7 +554,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     }
     /**
      * The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
-     * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
+     * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
     @Export(name="memorySwap", type=Integer.class, parameters={})
@@ -562,7 +562,7 @@ public class Container extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
-     * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
+     * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
     public Output</* @Nullable */ Integer> memorySwap() {
@@ -615,7 +615,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * Set an alias for the container in all specified networks
      * 
-     * @Deprecated
+     * @deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -661,7 +661,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     /**
      * ID of the networks in which the container is.
      * 
-     * @Deprecated
+     * @deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -691,28 +691,28 @@ public class Container extends com.pulumi.resources.CustomResource {
         return this.networksAdvanced;
     }
     /**
-     * he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+     * he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
      * 
      */
     @Export(name="pidMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> pidMode;
 
     /**
-     * @return he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+     * @return he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
      * 
      */
     public Output</* @Nullable */ String> pidMode() {
         return this.pidMode;
     }
     /**
-     * Publish a container's port(s) to the host.
+     * Publish a container&#39;s port(s) to the host.
      * 
      */
     @Export(name="ports", type=List.class, parameters={ContainerPort.class})
     private Output</* @Nullable */ List<ContainerPort>> ports;
 
     /**
-     * @return Publish a container's port(s) to the host.
+     * @return Publish a container&#39;s port(s) to the host.
      * 
      */
     public Output</* @Nullable */ List<ContainerPort>> ports() {
@@ -775,21 +775,21 @@ public class Container extends com.pulumi.resources.CustomResource {
         return this.removeVolumes;
     }
     /**
-     * The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
+     * The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
      * 
      */
     @Export(name="restart", type=String.class, parameters={})
     private Output</* @Nullable */ String> restart;
 
     /**
-     * @return The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
+     * @return The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
      * 
      */
     public Output</* @Nullable */ String> restart() {
         return this.restart;
     }
     /**
-     * If `true`, then the container will be automatically removed after his execution. Terraform won't check this container
+     * If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
      * after creation. Defaults to `false`.
      * 
      */
@@ -797,7 +797,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> rm;
 
     /**
-     * @return If `true`, then the container will be automatically removed after his execution. Terraform won't check this container
+     * @return If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
      * after creation. Defaults to `false`.
      * 
      */

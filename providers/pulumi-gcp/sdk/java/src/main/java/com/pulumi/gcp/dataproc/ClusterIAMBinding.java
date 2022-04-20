@@ -22,9 +22,9 @@ import javax.annotation.Nullable;
  * * `gcp.dataproc.ClusterIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cluster are preserved.
  * * `gcp.dataproc.ClusterIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cluster are preserved.
  * 
- * > **Note:** `gcp.dataproc.ClusterIAMPolicy` **cannot** be used in conjunction with `gcp.dataproc.ClusterIAMBinding` and `gcp.dataproc.ClusterIAMMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as `gcp.dataproc.ClusterIAMPolicy` replaces the entire policy.
+ * &gt; **Note:** `gcp.dataproc.ClusterIAMPolicy` **cannot** be used in conjunction with `gcp.dataproc.ClusterIAMBinding` and `gcp.dataproc.ClusterIAMMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as `gcp.dataproc.ClusterIAMPolicy` replaces the entire policy.
  * 
- * > **Note:** `gcp.dataproc.ClusterIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.ClusterIAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.dataproc.ClusterIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.ClusterIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_dataproc\_cluster\_iam\_policy
  * 
@@ -37,18 +37,18 @@ import javax.annotation.Nullable;
  * Cluster IAM resources can be imported using the project, region, cluster name, role and/or member.
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor "projects/{project}/regions/{region}/clusters/{cluster}"
+ *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor &#34;projects/{project}/regions/{region}/clusters/{cluster}&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor "projects/{project}/regions/{region}/clusters/{cluster} roles/editor"
+ *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor &#34;projects/{project}/regions/{region}/clusters/{cluster} roles/editor&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor "projects/{project}/regions/{region}/clusters/{cluster} roles/editor user:jane@example.com"
+ *  $ pulumi import gcp:dataproc/clusterIAMBinding:ClusterIAMBinding editor &#34;projects/{project}/regions/{region}/clusters/{cluster} roles/editor user:jane@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -76,14 +76,14 @@ public class ClusterIAMBinding extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the clusters's IAM policy.
+     * (Computed) The etag of the clusters&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the clusters's IAM policy.
+     * @return (Computed) The etag of the clusters&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

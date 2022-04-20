@@ -47,14 +47,14 @@ public class VpcIpv6CidrBlockAssociation extends com.pulumi.resources.CustomReso
         return this.ipv6CidrBlock;
     }
     /**
-     * The ID of an IPv6 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts.
+     * The ID of an IPv6 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts.
      * 
      */
     @Export(name="ipv6IpamPoolId", type=String.class, parameters={})
     private Output<String> ipv6IpamPoolId;
 
     /**
-     * @return The ID of an IPv6 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts.
+     * @return The ID of an IPv6 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts.
      * 
      */
     public Output<String> ipv6IpamPoolId() {

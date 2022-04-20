@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         Verbose("verbose"),
         /**
-         * Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.
+         * Traces with &#39;severity&#39; set to &#39;information&#39; and &#39;error&#39; will be sent to the logger attached to this diagnostic instance.
          * 
          */
         Information("information"),
         /**
-         * Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.
+         * Only traces with &#39;severity&#39; set to &#39;error&#39; will be sent to the logger attached to this diagnostic instance.
          * 
          */
         Error("error");

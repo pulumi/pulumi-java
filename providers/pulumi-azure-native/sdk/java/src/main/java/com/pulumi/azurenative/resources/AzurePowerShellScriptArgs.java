@@ -24,7 +24,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
     public static final AzurePowerShellScriptArgs Empty = new AzurePowerShellScriptArgs();
 
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
     @Import(name="arguments")
@@ -46,7 +46,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     @Import(name="cleanupPreference")
@@ -102,7 +102,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of the script.
-     * Expected value is 'AzurePowerShell'.
+     * Expected value is &#39;AzurePowerShell&#39;.
      * 
      */
     @Import(name="kind", required=true)

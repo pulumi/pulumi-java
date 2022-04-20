@@ -24,7 +24,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
      */
     private final @Nullable String instanceInterruptionBehavior;
     /**
-     * The maximum hourly price you're willing to pay for the Spot Instances.
+     * The maximum hourly price you&#39;re willing to pay for the Spot Instances.
      * 
      */
     private final @Nullable String maxPrice;
@@ -69,7 +69,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
     /**
-     * The maximum hourly price you're willing to pay for the Spot Instances.
+     * The maximum hourly price you&#39;re willing to pay for the Spot Instances.
      * 
     */
     public Optional<String> maxPrice() {

@@ -36,7 +36,7 @@ public final class GetJobResult {
      */
     private final String driverControlFilesUri;
     /**
-     * A URI pointing to the location of the stdout of the job's driver program.
+     * A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     private final String driverOutputResourceUri;
@@ -178,7 +178,7 @@ public final class GetJobResult {
         return this.driverControlFilesUri;
     }
     /**
-     * A URI pointing to the location of the stdout of the job's driver program.
+     * A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
     */
     public String driverOutputResourceUri() {

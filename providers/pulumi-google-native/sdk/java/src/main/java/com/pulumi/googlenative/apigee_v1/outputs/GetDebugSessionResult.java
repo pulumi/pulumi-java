@@ -36,7 +36,7 @@ public final class GetDebugSessionResult {
      */
     private final Integer tracesize;
     /**
-     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it&#39;s received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
     private final Integer validity;
@@ -93,7 +93,7 @@ public final class GetDebugSessionResult {
         return this.tracesize;
     }
     /**
-     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it&#39;s received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
     */
     public Integer validity() {

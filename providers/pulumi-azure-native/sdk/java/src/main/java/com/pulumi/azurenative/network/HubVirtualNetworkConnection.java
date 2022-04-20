@@ -49,14 +49,14 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
         return this.allowHubToRemoteVnetTransit;
     }
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
     @Export(name="allowRemoteVnetToUseHubVnetGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways;
 
     /**
-     * @return Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     * @return Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
     public Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways() {

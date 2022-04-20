@@ -40,7 +40,7 @@ public final class TaskRunRequestResponse {
     private final String taskId;
     /**
      * The type of the run request.
-     * Expected value is 'TaskRunRequest'.
+     * Expected value is &#39;TaskRunRequest&#39;.
      * 
      */
     private final String type;
@@ -98,7 +98,7 @@ public final class TaskRunRequestResponse {
     }
     /**
      * The type of the run request.
-     * Expected value is 'TaskRunRequest'.
+     * Expected value is &#39;TaskRunRequest&#39;.
      * 
     */
     public String type() {

@@ -39,7 +39,7 @@ public final class AzureMySqlSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureMySqlSink'.
+     * Expected value is &#39;AzureMySqlSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class AzureMySqlSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureMySqlSink'.
+     * Expected value is &#39;AzureMySqlSink&#39;.
      * 
     */
     public String type() {

@@ -30,7 +30,7 @@ public final class GetEyesOnResult {
     private final Boolean isEnabled;
     /**
      * The kind of the setting
-     * Expected value is 'EyesOn'.
+     * Expected value is &#39;EyesOn&#39;.
      * 
      */
     private final String kind;
@@ -91,7 +91,7 @@ public final class GetEyesOnResult {
     }
     /**
      * The kind of the setting
-     * Expected value is 'EyesOn'.
+     * Expected value is &#39;EyesOn&#39;.
      * 
     */
     public String kind() {

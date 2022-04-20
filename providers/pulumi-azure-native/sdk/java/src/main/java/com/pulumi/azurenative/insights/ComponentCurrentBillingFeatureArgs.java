@@ -18,7 +18,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     public static final ComponentCurrentBillingFeatureArgs Empty = new ComponentCurrentBillingFeatureArgs();
 
     /**
-     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
+     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
      * 
      */
     @Import(name="currentBillingFeatures")

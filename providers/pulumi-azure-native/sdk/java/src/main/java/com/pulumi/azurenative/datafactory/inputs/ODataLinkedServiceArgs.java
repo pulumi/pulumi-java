@@ -207,7 +207,7 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of linked service.
-     * Expected value is 'OData'.
+     * Expected value is &#39;OData&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -34,7 +34,7 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels[&#39;&lt;KEY&gt;&#39;]`, `metadata.annotations[&#39;&lt;KEY&gt;&#39;]`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
      * 
      */
     @Import(name="fieldRef")
@@ -56,7 +56,7 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Selects a key of a secret in the pod's namespace
+     * Selects a key of a secret in the pod&#39;s namespace
      * 
      */
     @Import(name="secretKeyRef")

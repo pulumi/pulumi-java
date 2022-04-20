@@ -16,7 +16,7 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
     public static final TagBindingState Empty = new TagBindingState();
 
     /**
-     * The generated id for the TagBinding. This is a string of the form: 'tagBindings/{full-resource-name}/{tag-value-name}'
+     * The generated id for the TagBinding. This is a string of the form: &#39;tagBindings/{full-resource-name}/{tag-value-name}&#39;
      * 
      */
     @Import(name="name")

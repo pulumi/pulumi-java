@@ -26,7 +26,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     public static final BucketState Empty = new BucketState();
 
     /**
-     * The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     @Import(name="cors")
@@ -44,7 +44,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bucket's encryption configuration. Structure is documented below.
+     * The bucket&#39;s encryption configuration. Structure is documented below.
      * 
      */
     @Import(name="encryption")
@@ -79,7 +79,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     @Import(name="lifecycleRules")
@@ -101,7 +101,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+     * The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
     @Import(name="logging")
@@ -157,7 +157,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+     * Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
     @Import(name="retentionPolicy")
@@ -201,7 +201,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The base URL of the bucket, in the format `gs://<bucket-name>`.
+     * The base URL of the bucket, in the format `gs://&lt;bucket-name&gt;`.
      * 
      */
     @Import(name="url")
@@ -212,7 +212,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+     * The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
     @Import(name="versioning")

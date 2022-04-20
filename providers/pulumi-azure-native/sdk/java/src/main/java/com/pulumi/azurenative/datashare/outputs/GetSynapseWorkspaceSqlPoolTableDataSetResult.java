@@ -22,7 +22,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     private final String kind;
@@ -81,7 +81,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
     */
     public String kind() {

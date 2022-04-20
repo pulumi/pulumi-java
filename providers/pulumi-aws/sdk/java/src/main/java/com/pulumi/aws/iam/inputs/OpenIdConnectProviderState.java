@@ -29,7 +29,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     }
 
     /**
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
+     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)
      * 
      */
     @Import(name="clientIdLists")
@@ -62,7 +62,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     }
 
     /**
-     * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
+     * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s).
      * 
      */
     @Import(name="thumbprintLists")

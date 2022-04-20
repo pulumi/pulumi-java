@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The server key type like 'ServiceManaged', 'AzureKeyVault'.
+     * The server key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     @EnumType

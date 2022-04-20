@@ -48,7 +48,7 @@ public final class GetInstanceResult {
      */
     private final Map<String,String> labels;
     /**
-     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
      * 
      */
     private final String memcacheFullVersion;
@@ -184,7 +184,7 @@ public final class GetInstanceResult {
         return this.labels;
     }
     /**
-     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
      * 
     */
     public String memcacheFullVersion() {

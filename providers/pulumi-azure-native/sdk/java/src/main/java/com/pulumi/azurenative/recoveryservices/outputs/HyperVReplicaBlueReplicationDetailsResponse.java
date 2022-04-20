@@ -22,7 +22,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplica2012R2'.
+     * Expected value is &#39;HyperVReplica2012R2&#39;.
      * 
      */
     private final String instanceType;
@@ -86,7 +86,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplica2012R2'.
+     * Expected value is &#39;HyperVReplica2012R2&#39;.
      * 
     */
     public String instanceType() {

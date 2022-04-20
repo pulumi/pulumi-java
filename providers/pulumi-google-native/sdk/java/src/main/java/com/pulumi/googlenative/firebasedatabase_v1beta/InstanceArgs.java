@@ -65,7 +65,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The database's lifecycle state. Read-only.
+     * The database&#39;s lifecycle state. Read-only.
      * 
      */
     @Import(name="state")

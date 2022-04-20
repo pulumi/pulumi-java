@@ -17,7 +17,7 @@ public final class GoogleCloudRunOpV2VolumeResponse {
      */
     private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final String name;
@@ -45,7 +45,7 @@ public final class GoogleCloudRunOpV2VolumeResponse {
         return this.cloudSqlInstance;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public String name() {

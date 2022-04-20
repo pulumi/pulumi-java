@@ -11,7 +11,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum RouterBgpPeerAdvertisedGroupsItem {
         /**
-         * Advertise peer subnets of the router's VPC.
+         * Advertise peer subnets of the router&#39;s VPC.
          * 
          */
         AllPeerVpcSubnets("ALL_PEER_VPC_SUBNETS"),
@@ -21,7 +21,7 @@ import java.util.StringJoiner;
          */
         AllSubnets("ALL_SUBNETS"),
         /**
-         * Advertise the router's own VPC subnets.
+         * Advertise the router&#39;s own VPC subnets.
          * 
          */
         AllVpcSubnets("ALL_VPC_SUBNETS");

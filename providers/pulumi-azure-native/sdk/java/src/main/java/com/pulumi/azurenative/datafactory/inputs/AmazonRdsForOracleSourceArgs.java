@@ -122,7 +122,7 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
 
     /**
      * Copy source type.
-     * Expected value is 'AmazonRdsForOracleSource'.
+     * Expected value is &#39;AmazonRdsForOracleSource&#39;.
      * 
      */
     @Import(name="type", required=true)

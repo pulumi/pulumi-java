@@ -93,7 +93,7 @@ public final class GetIotSecuritySolutionResult {
      */
     private final @Nullable String unmaskedIpLoggingStatus;
     /**
-     * Properties of the IoT Security solution's user defined resources.
+     * Properties of the IoT Security solution&#39;s user defined resources.
      * 
      */
     private final @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources;
@@ -247,7 +247,7 @@ public final class GetIotSecuritySolutionResult {
         return Optional.ofNullable(this.unmaskedIpLoggingStatus);
     }
     /**
-     * Properties of the IoT Security solution's user defined resources.
+     * Properties of the IoT Security solution&#39;s user defined resources.
      * 
     */
     public Optional<UserDefinedResourcesPropertiesResponse> userDefinedResources() {

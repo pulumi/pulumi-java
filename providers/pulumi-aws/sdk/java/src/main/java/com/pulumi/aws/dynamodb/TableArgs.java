@@ -175,7 +175,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
+     * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
      * 
      */
     @Import(name="serverSideEncryption")
@@ -197,7 +197,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+     * When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
     @Import(name="streamViewType")

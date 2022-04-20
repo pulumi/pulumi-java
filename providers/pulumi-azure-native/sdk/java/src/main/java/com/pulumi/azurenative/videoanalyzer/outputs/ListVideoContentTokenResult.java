@@ -15,7 +15,7 @@ public final class ListVideoContentTokenResult {
      */
     private final String expirationDate;
     /**
-     * The content token value to be added to the video content URL as the value for the "token" query string parameter. The token is specific to a single video.
+     * The content token value to be added to the video content URL as the value for the &#34;token&#34; query string parameter. The token is specific to a single video.
      * 
      */
     private final String token;
@@ -36,7 +36,7 @@ public final class ListVideoContentTokenResult {
         return this.expirationDate;
     }
     /**
-     * The content token value to be added to the video content URL as the value for the "token" query string parameter. The token is specific to a single video.
+     * The content token value to be added to the video content URL as the value for the &#34;token&#34; query string parameter. The token is specific to a single video.
      * 
     */
     public String token() {

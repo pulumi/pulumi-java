@@ -20,7 +20,7 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
     public static final FingerprintArgs Empty = new FingerprintArgs();
 
     /**
-     * The layer ID of the final layer in the Docker image's v1 representation.
+     * The layer ID of the final layer in the Docker image&#39;s v1 representation.
      * 
      */
     @Import(name="v1Name", required=true)

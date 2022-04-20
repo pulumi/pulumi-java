@@ -88,7 +88,7 @@ public final class AzureDataLakeStoreSinkArgs extends com.pulumi.resources.Resou
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataLakeStoreSink'.
+     * Expected value is &#39;AzureDataLakeStoreSink&#39;.
      * 
      */
     @Import(name="type", required=true)

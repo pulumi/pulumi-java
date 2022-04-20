@@ -25,18 +25,18 @@ import javax.annotation.Nullable;
  * ## Block devices
  * 
  * Each of the `*_block_device` attributes controls a portion of the AWS
- * Instance's "Block Device Mapping". It's a good idea to familiarize yourself with [AWS's Block Device
+ * Instance&#39;s &#34;Block Device Mapping&#34;. It&#39;s a good idea to familiarize yourself with [AWS&#39;s Block Device
  * Mapping docs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
  * to understand the implications of using these attributes.
  * 
  * The `root_block_device` mapping supports the following:
  * 
- * * `volume_type` - (Optional) The type of volume. Can be `"standard"`, `"gp2"`,
- *   or `"io1"`. (Default: `"standard"`).
+ * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`,
+ *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
  * * `volume_size` - (Optional) The size of the volume in gigabytes.
  * * `iops` - (Optional) The amount of provisioned
  *   [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `"io1"`.
+ *   This must be set with a `volume_type` of `&#34;io1&#34;`.
  * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
  *   on instance termination (Default: `true`).
  * 
@@ -47,12 +47,12 @@ import javax.annotation.Nullable;
  * 
  * * `device_name` - The name of the device to mount.
  * * `snapshot_id` - (Optional) The Snapshot ID to mount.
- * * `volume_type` - (Optional) The type of volume. Can be `"standard"`, `"gp2"`,
- *   or `"io1"`. (Default: `"standard"`).
+ * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`,
+ *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
  * * `volume_size` - (Optional) The size of the volume in gigabytes.
  * * `iops` - (Optional) The amount of provisioned
  *   [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `"io1"`.
+ *   This must be set with a `volume_type` of `&#34;io1&#34;`.
  * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
  *   on instance termination (Default: `true`).
  * 
@@ -63,15 +63,15 @@ import javax.annotation.Nullable;
  * * `device_name` - The name of the block device to mount on the instance.
  * * `virtual_name` - The [Instance Store Device
  *   Name](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
- *   (e.g., `"ephemeral0"`)
+ *   (e.g., `&#34;ephemeral0&#34;`)
  * 
  * Each AWS Instance type has a different set of Instance Store block devices
  * available for attachment. AWS [publishes a
  * list](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes)
  * of which ephemeral devices are available on each type. The devices are always
- * identified by the `virtual_name` in the format `"ephemeral{0..N}"`.
+ * identified by the `virtual_name` in the format `&#34;ephemeral{0..N}&#34;`.
  * 
- * > **NOTE:** Currently, changes to `*_block_device` configuration of _existing_
+ * &gt; **NOTE:** Currently, changes to `*_block_device` configuration of _existing_
  * resources cannot be automatically detected by this provider. After making updates
  * to block device configuration, resource recreation can be manually triggered by
  * using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
@@ -88,56 +88,56 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:opsworks/instance:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
-     * The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
+     * The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
      * 
      */
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentVersion;
 
     /**
-     * @return The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
+     * @return The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
      * 
      */
     public Output</* @Nullable */ String> agentVersion() {
         return this.agentVersion;
     }
     /**
-     * The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
+     * The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
      * 
      */
     @Export(name="amiId", type=String.class, parameters={})
     private Output<String> amiId;
 
     /**
-     * @return The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
+     * @return The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
      * 
      */
     public Output<String> amiId() {
         return this.amiId;
     }
     /**
-     * Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
+     * Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
      * 
      */
     @Export(name="architecture", type=String.class, parameters={})
     private Output</* @Nullable */ String> architecture;
 
     /**
-     * @return Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
+     * @return Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
      * 
      */
     public Output</* @Nullable */ String> architecture() {
         return this.architecture;
     }
     /**
-     * Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
+     * Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
      * 
      */
     @Export(name="autoScalingType", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoScalingType;
 
     /**
-     * @return Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
+     * @return Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
      * 
      */
     public Output</* @Nullable */ String> autoScalingType() {
@@ -235,7 +235,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     @Export(name="ephemeralBlockDevices", type=List.class, parameters={InstanceEphemeralBlockDevice.class})
@@ -243,21 +243,21 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     public Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
-     * The instance's host name.
+     * The instance&#39;s host name.
      * 
      */
     @Export(name="hostname", type=String.class, parameters={})
     private Output<String> hostname;
 
     /**
-     * @return The instance's host name.
+     * @return The instance&#39;s host name.
      * 
      */
     public Output<String> hostname() {
@@ -345,7 +345,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC
      * 
      */
@@ -354,7 +354,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC
      * 
      */
@@ -377,7 +377,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
      * 
      */
     @Export(name="publicDns", type=String.class, parameters={})
@@ -385,7 +385,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
      * 
      */
     public Output<String> publicDns() {
@@ -452,14 +452,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.rootBlockDevices;
     }
     /**
-     * Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
+     * Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
      * 
      */
     @Export(name="rootDeviceType", type=String.class, parameters={})
     private Output<String> rootDeviceType;
 
     /**
-     * @return Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
+     * @return Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
      * 
      */
     public Output<String> rootDeviceType() {
@@ -526,14 +526,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.stackId;
     }
     /**
-     * The desired state of the instance.  Can be either `"running"` or `"stopped"`.
+     * The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
-     * @return The desired state of the instance.  Can be either `"running"` or `"stopped"`.
+     * @return The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
      * 
      */
     public Output</* @Nullable */ String> state() {
@@ -560,14 +560,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.subnetId;
     }
     /**
-     * Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
+     * Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
      * 
      */
     @Export(name="tenancy", type=String.class, parameters={})
     private Output<String> tenancy;
 
     /**
-     * @return Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
+     * @return Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
      * 
      */
     public Output<String> tenancy() {
@@ -575,7 +575,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either `"paravirtual"` or `"hvm"`.
+     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
      * 
      */
     @Export(name="virtualizationType", type=String.class, parameters={})
@@ -583,7 +583,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Keyword to choose what virtualization mode created instances
-     * will use. Can be either `"paravirtual"` or `"hvm"`.
+     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
      * 
      */
     public Output<String> virtualizationType() {

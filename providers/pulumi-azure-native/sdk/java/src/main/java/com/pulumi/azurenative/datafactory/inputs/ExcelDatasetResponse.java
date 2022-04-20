@@ -195,7 +195,7 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Type of dataset.
-     * Expected value is 'Excel'.
+     * Expected value is &#39;Excel&#39;.
      * 
      */
     @Import(name="type", required=true)

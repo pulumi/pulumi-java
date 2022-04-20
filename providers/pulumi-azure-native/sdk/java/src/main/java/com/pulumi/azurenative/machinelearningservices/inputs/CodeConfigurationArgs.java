@@ -31,7 +31,7 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The script to execute on startup. eg. "score.py"
+     * The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     @Import(name="scoringScript", required=true)

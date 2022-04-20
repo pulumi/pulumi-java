@@ -95,7 +95,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
     }
 
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="domain", required=true)
@@ -129,7 +129,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricksDeltaLake'.
+     * Expected value is &#39;AzureDatabricksDeltaLake&#39;.
      * 
      */
     @Import(name="type", required=true)

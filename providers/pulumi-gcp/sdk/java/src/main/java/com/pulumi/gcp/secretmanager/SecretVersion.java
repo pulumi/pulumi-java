@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * A secret version resource.
  * 
- * > **Warning:** All arguments including `payload.secret_data` will be stored in the raw
+ * &gt; **Warning:** All arguments including `payload.secret_data` will be stored in the raw
  * state as plain-text.
  * 
  * ## Example Usage
@@ -76,14 +76,14 @@ public class SecretVersion extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * @return The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
      * 
      */
     public Output<String> name() {

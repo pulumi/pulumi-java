@@ -19,7 +19,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
      */
     @Import(name="odataType", required=true)

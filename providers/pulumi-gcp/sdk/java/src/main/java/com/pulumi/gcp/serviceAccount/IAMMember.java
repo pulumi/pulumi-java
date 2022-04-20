@@ -23,9 +23,9 @@ import javax.annotation.Nullable;
  * * `gcp.serviceAccount.IAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service account are preserved.
  * * `gcp.serviceAccount.IAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service account are preserved.
  * 
- * > **Note:** `gcp.serviceAccount.IAMPolicy` **cannot** be used in conjunction with `gcp.serviceAccount.IAMBinding` and `gcp.serviceAccount.IAMMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.serviceAccount.IAMPolicy` **cannot** be used in conjunction with `gcp.serviceAccount.IAMBinding` and `gcp.serviceAccount.IAMMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.serviceAccount.IAMBinding` resources **can be** used in conjunction with `gcp.serviceAccount.IAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.serviceAccount.IAMBinding` resources **can be** used in conjunction with `gcp.serviceAccount.IAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_service\_account\_iam\_policy
  * 
@@ -46,21 +46,21 @@ import javax.annotation.Nullable;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser"
+ *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam &#34;projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/editor user:foo@example.com"
+ *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam &#34;projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/editor user:foo@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. With conditions
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. With conditions
  * 
  * ```sh
- *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser expires_after_2019_12_31"
+ *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam &#34;projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser expires_after_2019_12_31&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser user:foo@example.com expires_after_2019_12_31"
+ *  $ pulumi import gcp:serviceAccount/iAMMember:IAMMember admin-account-iam &#34;projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/iam.serviceAccountUser user:foo@example.com expires_after_2019_12_31&#34;
  * ```
  * 
  */

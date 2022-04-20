@@ -19,7 +19,7 @@ public final class ScheduledAuditTagArgs extends com.pulumi.resources.ResourceAr
     public static final ScheduledAuditTagArgs Empty = new ScheduledAuditTagArgs();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class ScheduledAuditTagArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class JobStatistics4Response {
     /**
-     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
+     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
      * 
      */
     private final List<String> destinationUriFileCounts;
@@ -30,7 +30,7 @@ public final class JobStatistics4Response {
     }
 
     /**
-     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
+     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the &#39;destinationUris&#39; field.
      * 
     */
     public List<String> destinationUriFileCounts() {

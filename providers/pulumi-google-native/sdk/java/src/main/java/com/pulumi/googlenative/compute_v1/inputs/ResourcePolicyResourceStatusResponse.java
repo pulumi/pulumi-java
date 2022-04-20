@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Contains output only fields. Use this sub-message for all output fields set on ResourcePolicy. The internal structure of this "status" field should mimic the structure of ResourcePolicy proto specification.
+ * Contains output only fields. Use this sub-message for all output fields set on ResourcePolicy. The internal structure of this &#34;status&#34; field should mimic the structure of ResourcePolicy proto specification.
  * 
  */
 public final class ResourcePolicyResourceStatusResponse extends com.pulumi.resources.InvokeArgs {

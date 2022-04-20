@@ -17,7 +17,7 @@ public final class LabelSelectorRequirement {
      */
     private final String key;
     /**
-     * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
      * 
      */
     private final String operator;
@@ -45,7 +45,7 @@ public final class LabelSelectorRequirement {
         return this.key;
     }
     /**
-     * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
      * 
     */
     public String operator() {

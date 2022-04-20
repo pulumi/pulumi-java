@@ -199,14 +199,14 @@ public class Trigger extends com.pulumi.resources.CustomResource {
         return this.github;
     }
     /**
-     * ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+     * ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
      * 
      */
     @Export(name="ignoredFiles", type=List.class, parameters={String.class})
     private Output<List<String>> ignoredFiles;
 
     /**
-     * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
+     * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for &#34;**&#34;. If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
      * 
      */
     public Output<List<String>> ignoredFiles() {
@@ -339,14 +339,14 @@ public class Trigger extends com.pulumi.resources.CustomResource {
         return this.triggerTemplate;
     }
     /**
-     * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
+     * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * 
      */
     @Export(name="webhookConfig", type=WebhookConfigResponse.class, parameters={})
     private Output<WebhookConfigResponse> webhookConfig;
 
     /**
-     * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
+     * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * 
      */
     public Output<WebhookConfigResponse> webhookConfig() {

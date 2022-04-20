@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Prevents `query_term` from being associated with specified terms during search. Example: Don't associate "gShoe" and "cheap".
+ * Prevents `query_term` from being associated with specified terms during search. Example: Don&#39;t associate &#34;gShoe&#34; and &#34;cheap&#34;.
  * 
  */
 public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse extends com.pulumi.resources.InvokeArgs {

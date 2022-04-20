@@ -39,7 +39,7 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Addon type.
-     * Expected value is 'ArcForKubernetes'.
+     * Expected value is &#39;ArcForKubernetes&#39;.
      * 
      */
     @Import(name="kind", required=true)

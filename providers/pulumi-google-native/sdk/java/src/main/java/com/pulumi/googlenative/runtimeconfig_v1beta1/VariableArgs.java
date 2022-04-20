@@ -48,7 +48,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: "my text value"`. The string must be valid UTF-8.
+     * The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: &#34;my text value&#34;`. The string must be valid UTF-8.
      * 
      */
     @Import(name="text")

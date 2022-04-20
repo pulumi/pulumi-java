@@ -28,7 +28,7 @@ public final class SecretPolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `"{}"` to delete the policy, `"{}"` is not a valid policy since `policy` is required.
+     * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `&#34;{}&#34;` to delete the policy, `&#34;{}&#34;` is not a valid policy since `policy` is required.
      * 
      */
     @Import(name="policy", required=true)

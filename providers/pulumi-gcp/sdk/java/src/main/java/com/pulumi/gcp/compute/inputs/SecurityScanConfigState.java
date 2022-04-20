@@ -81,7 +81,7 @@ public final class SecurityScanConfigState extends com.pulumi.resources.Resource
     }
 
     /**
-     * A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
+     * A server defined name for this index. Format: &#39;projects/{{project}}/scanConfigs/{{server_generated_id}}&#39;
      * 
      */
     @Import(name="name")

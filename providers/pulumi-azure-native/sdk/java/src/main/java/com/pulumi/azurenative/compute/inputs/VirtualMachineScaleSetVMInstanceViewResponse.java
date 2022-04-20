@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     public static final VirtualMachineScaleSetVMInstanceViewResponse Empty = new VirtualMachineScaleSetVMInstanceViewResponse();
 
     /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
+     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     @Import(name="assignedHost", required=true)
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends com.pulu
     }
 
     /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
+     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. &lt;br&gt;&lt;br&gt; You can easily view the output of your console log. &lt;br&gt;&lt;br&gt; Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
      */
     @Import(name="bootDiagnostics")

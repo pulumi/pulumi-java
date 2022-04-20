@@ -22,7 +22,7 @@ public final class WebChatChannelArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The channel name
-     * Expected value is 'WebChatChannel'.
+     * Expected value is &#39;WebChatChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

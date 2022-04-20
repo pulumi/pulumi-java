@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DockerExecutorResponse {
     /**
-     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
+     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
      * 
      */
     private final String cmd;
@@ -29,7 +29,7 @@ public final class DockerExecutorResponse {
     }
 
     /**
-     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
+     * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
      * 
     */
     public String cmd() {

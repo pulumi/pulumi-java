@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:addons:SupportPlanType")
 public class SupportPlanType extends com.pulumi.resources.CustomResource {
     /**
-     * The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+     * The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+     * @return The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
      * 
      */
     public Output<String> name() {

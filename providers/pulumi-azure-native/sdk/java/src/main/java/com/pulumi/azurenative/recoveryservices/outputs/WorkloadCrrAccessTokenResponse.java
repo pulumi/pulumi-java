@@ -76,7 +76,7 @@ public final class WorkloadCrrAccessTokenResponse {
     private final @Nullable String datasourceType;
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'WorkloadCrrAccessToken'.
+     * Expected value is &#39;WorkloadCrrAccessToken&#39;.
      * 
      */
     private final String objectType;
@@ -327,7 +327,7 @@ public final class WorkloadCrrAccessTokenResponse {
     }
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'WorkloadCrrAccessToken'.
+     * Expected value is &#39;WorkloadCrrAccessToken&#39;.
      * 
     */
     public String objectType() {

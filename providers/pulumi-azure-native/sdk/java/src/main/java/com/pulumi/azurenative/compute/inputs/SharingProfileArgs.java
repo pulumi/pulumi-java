@@ -22,7 +22,7 @@ public final class SharingProfileArgs extends com.pulumi.resources.ResourceArgs 
     public static final SharingProfileArgs Empty = new SharingProfileArgs();
 
     /**
-     * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+     * This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
      * 
      */
     @Import(name="permissions")

@@ -92,14 +92,14 @@ public class Studio extends com.pulumi.resources.CustomResource {
         return this.engineSecurityGroupId;
     }
     /**
-     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
+     * Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
      */
     @Export(name="idpAuthUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> idpAuthUrl;
 
     /**
-     * @return Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
+     * @return Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
      */
     public Output</* @Nullable */ String> idpAuthUrl() {

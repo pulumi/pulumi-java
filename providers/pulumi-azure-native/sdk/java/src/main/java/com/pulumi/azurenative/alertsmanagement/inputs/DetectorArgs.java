@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The detector information. By default this is not populated, unless it's specified in expandDetector
+ * The detector information. By default this is not populated, unless it&#39;s specified in expandDetector
  * 
  */
 public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
@@ -23,7 +23,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     public static final DetectorArgs Empty = new DetectorArgs();
 
     /**
-     * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
+     * The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
      */
     @Import(name="description")
@@ -45,7 +45,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
+     * The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
      */
     @Import(name="imagePaths")
@@ -56,7 +56,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
+     * The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
      */
     @Import(name="name")
@@ -67,7 +67,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The detector's parameters.'
+     * The detector&#39;s parameters.&#39;
      * 
      */
     @Import(name="parameters")
@@ -78,7 +78,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
+     * The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
      */
     @Import(name="supportedResourceTypes")

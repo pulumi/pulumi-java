@@ -25,7 +25,7 @@ public final class TumblingWindowTriggerResponse {
      */
     private final @Nullable List<Object> annotations;
     /**
-     * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object delay;
@@ -81,7 +81,7 @@ public final class TumblingWindowTriggerResponse {
     private final String startTime;
     /**
      * Trigger type.
-     * Expected value is 'TumblingWindowTrigger'.
+     * Expected value is &#39;TumblingWindowTrigger&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class TumblingWindowTriggerResponse {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
     public Optional<Object> delay() {
@@ -202,7 +202,7 @@ public final class TumblingWindowTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'TumblingWindowTrigger'.
+     * Expected value is &#39;TumblingWindowTrigger&#39;.
      * 
     */
     public String type() {

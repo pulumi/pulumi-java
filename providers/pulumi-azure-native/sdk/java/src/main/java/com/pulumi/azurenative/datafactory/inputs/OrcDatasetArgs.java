@@ -139,7 +139,7 @@ public final class OrcDatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'Orc'.
+     * Expected value is &#39;Orc&#39;.
      * 
      */
     @Import(name="type", required=true)

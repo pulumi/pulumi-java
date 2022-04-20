@@ -52,7 +52,7 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The Pub/Sub topic to send notifications to. Its format is
-     * "projects/[project_id]/topics/[topic]".
+     * &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     @Import(name="pubsubTopic", required=true)

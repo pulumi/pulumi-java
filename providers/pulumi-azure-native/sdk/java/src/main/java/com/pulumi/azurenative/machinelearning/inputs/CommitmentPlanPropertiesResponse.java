@@ -21,7 +21,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     public static final CommitmentPlanPropertiesResponse Empty = new CommitmentPlanPropertiesResponse();
 
     /**
-     * Indicates whether usage beyond the commitment plan's included quantities will be charged.
+     * Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
      * 
      */
     @Import(name="chargeForOverage", required=true)
@@ -109,7 +109,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     }
 
     /**
-     * The frequency at which this commitment plan's included quantities are refilled.
+     * The frequency at which this commitment plan&#39;s included quantities are refilled.
      * 
      */
     @Import(name="refillFrequencyInDays", required=true)
@@ -120,7 +120,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     }
 
     /**
-     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
+     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
      * 
      */
     @Import(name="suspendPlanOnOverage", required=true)

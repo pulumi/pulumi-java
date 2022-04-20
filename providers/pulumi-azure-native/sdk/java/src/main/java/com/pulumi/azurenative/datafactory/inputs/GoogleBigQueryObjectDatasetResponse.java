@@ -137,7 +137,7 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'GoogleBigQueryObject'.
+     * Expected value is &#39;GoogleBigQueryObject&#39;.
      * 
      */
     @Import(name="type", required=true)

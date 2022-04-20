@@ -23,10 +23,10 @@ import javax.annotation.Nullable;
  * *Amazon Machine Image* (AMI).
  * 
  * If you just want to duplicate an existing AMI, possibly copying it to another
- * region, it's better to use `aws.ec2.AmiCopy` instead.
+ * region, it&#39;s better to use `aws.ec2.AmiCopy` instead.
  * 
  * If you just want to share an existing AMI with another AWS account,
- * it's better to use `aws.ec2.AmiLaunchPermission` instead.
+ * it&#39;s better to use `aws.ec2.AmiLaunchPermission` instead.
  * 
  * ## Example Usage
  * 
@@ -42,14 +42,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/ami:Ami")
 public class Ami extends com.pulumi.resources.CustomResource {
     /**
-     * Machine architecture for created instances. Defaults to "x86_64".
+     * Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     @Export(name="architecture", type=String.class, parameters={})
     private Output</* @Nullable */ String> architecture;
 
     /**
-     * @return Machine architecture for created instances. Defaults to "x86_64".
+     * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
     public Output</* @Nullable */ String> architecture() {
@@ -324,7 +324,7 @@ public class Ami extends com.pulumi.resources.CustomResource {
         return this.rootSnapshotId;
     }
     /**
-     * When set to "simple" (the default), enables enhanced networking
+     * When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -332,7 +332,7 @@ public class Ami extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> sriovNetSupport;
 
     /**
-     * @return When set to "simple" (the default), enables enhanced networking
+     * @return When set to &#34;simple&#34; (the default), enables enhanced networking
      * for created instances. No other value is supported at this time.
      * 
      */
@@ -383,7 +383,7 @@ public class Ami extends com.pulumi.resources.CustomResource {
     }
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */
@@ -392,7 +392,7 @@ public class Ami extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Keyword to choose what virtualization mode created instances
-     * will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
+     * will use. Can be either &#34;paravirtual&#34; (the default) or &#34;hvm&#34;. The choice of virtualization type
      * changes the set of further arguments that are required, as described below.
      * 
      */

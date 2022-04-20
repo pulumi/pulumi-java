@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Factory's GitHub repo information.
+ * Factory&#39;s GitHub repo information.
  * 
  */
 public final class FactoryGitHubConfigurationResponse extends com.pulumi.resources.InvokeArgs {
@@ -110,7 +110,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
 
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryGitHubConfiguration'.
+     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
      * 
      */
     @Import(name="type", required=true)

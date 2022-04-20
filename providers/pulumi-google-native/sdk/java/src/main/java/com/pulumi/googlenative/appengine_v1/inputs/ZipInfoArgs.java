@@ -32,7 +32,7 @@ public final class ZipInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
+     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
      * 
      */
     @Import(name="sourceUrl")

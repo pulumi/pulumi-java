@@ -30,7 +30,7 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
     }
 
     /**
-     * True if there aren't any missing Targets.
+     * True if there aren&#39;t any missing Targets.
      * 
      */
     @Import(name="status", required=true)

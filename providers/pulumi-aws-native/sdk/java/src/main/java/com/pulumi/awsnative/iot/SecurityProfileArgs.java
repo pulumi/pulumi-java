@@ -21,7 +21,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     public static final SecurityProfileArgs Empty = new SecurityProfileArgs();
 
     /**
-     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
      */
     @Import(name="additionalMetricsToRetainV2")

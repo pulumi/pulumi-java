@@ -92,7 +92,7 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Trigger type.
-     * Expected value is 'BlobTrigger'.
+     * Expected value is &#39;BlobTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

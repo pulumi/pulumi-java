@@ -115,7 +115,7 @@ public final class AmazonRdsForSqlServerTableDatasetArgs extends com.pulumi.reso
 
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForSqlServerTable'.
+     * Expected value is &#39;AmazonRdsForSqlServerTable&#39;.
      * 
      */
     @Import(name="type", required=true)

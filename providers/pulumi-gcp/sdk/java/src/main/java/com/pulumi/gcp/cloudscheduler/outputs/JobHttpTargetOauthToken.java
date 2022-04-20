@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class JobHttpTargetOauthToken {
     /**
      * OAuth scope to be used for generating OAuth access token. If not specified,
-     * "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
      */
     private final @Nullable String scope;
@@ -34,7 +34,7 @@ public final class JobHttpTargetOauthToken {
 
     /**
      * OAuth scope to be used for generating OAuth access token. If not specified,
-     * "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
     */
     public Optional<String> scope() {

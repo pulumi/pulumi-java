@@ -140,7 +140,7 @@ public final class SybaseLinkedServiceArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of linked service.
-     * Expected value is 'Sybase'.
+     * Expected value is &#39;Sybase&#39;.
      * 
      */
     @Import(name="type", required=true)

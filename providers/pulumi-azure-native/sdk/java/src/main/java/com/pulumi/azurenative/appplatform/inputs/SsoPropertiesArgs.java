@@ -54,7 +54,7 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * It defines the specific actions applications can be allowed to do on a user's behalf
+     * It defines the specific actions applications can be allowed to do on a user&#39;s behalf
      * 
      */
     @Import(name="scope")

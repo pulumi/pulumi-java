@@ -42,7 +42,7 @@ public final class GetActivityLogAlertResult {
      */
     private final String id;
     /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
      */
     private final @Nullable String location;
@@ -127,7 +127,7 @@ public final class GetActivityLogAlertResult {
         return this.id;
     }
     /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
     */
     public Optional<String> location() {

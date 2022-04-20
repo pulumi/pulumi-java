@@ -33,14 +33,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:insights:ComponentCurrentBillingFeature")
 public class ComponentCurrentBillingFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
+     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
      * 
      */
     @Export(name="currentBillingFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> currentBillingFeatures;
 
     /**
-     * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
+     * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
      * 
      */
     public Output</* @Nullable */ List<String>> currentBillingFeatures() {

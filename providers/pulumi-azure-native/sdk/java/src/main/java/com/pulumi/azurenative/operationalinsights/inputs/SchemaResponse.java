@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Table's schema.
+ * Table&#39;s schema.
  * 
  */
 public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
@@ -122,7 +122,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
      */
     @Import(name="source", required=true)
@@ -155,7 +155,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
      */
     @Import(name="tableType", required=true)

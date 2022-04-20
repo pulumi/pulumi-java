@@ -20,7 +20,7 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
     public static final GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs Empty = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs();
 
     /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
      * 
      */
     @Import(name="mode")

@@ -33,7 +33,7 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
      * 
      */
     @Import(name="odataType", required=true)

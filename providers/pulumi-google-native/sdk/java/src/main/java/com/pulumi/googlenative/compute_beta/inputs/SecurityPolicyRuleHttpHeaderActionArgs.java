@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends com.pulumi.res
     public static final SecurityPolicyRuleHttpHeaderActionArgs Empty = new SecurityPolicyRuleHttpHeaderActionArgs();
 
     /**
-     * The list of request headers to add or overwrite if they're already present.
+     * The list of request headers to add or overwrite if they&#39;re already present.
      * 
      */
     @Import(name="requestHeadersToAdds")

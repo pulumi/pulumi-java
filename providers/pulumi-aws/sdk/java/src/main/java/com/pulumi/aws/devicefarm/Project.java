@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * For more information about Device Farm Projects, see the AWS Documentation on
  * [Device Farm Projects][aws-get-project].
  * 
- * > **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
+ * &gt; **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
  * 
  * ## Example Usage
  * 

@@ -77,7 +77,7 @@ public final class NatRuleResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Rule Type.
-     * Expected value is 'NatRule'.
+     * Expected value is &#39;NatRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

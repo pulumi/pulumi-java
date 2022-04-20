@@ -23,7 +23,7 @@ public final class CsvSerializationResponse {
     private final @Nullable String fieldDelimiter;
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Csv'.
+     * Expected value is &#39;Csv&#39;.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class CsvSerializationResponse {
     }
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Csv'.
+     * Expected value is &#39;Csv&#39;.
      * 
     */
     public String type() {

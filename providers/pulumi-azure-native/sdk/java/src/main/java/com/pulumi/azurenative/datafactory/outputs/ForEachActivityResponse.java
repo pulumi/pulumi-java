@@ -92,7 +92,7 @@ public final class ForEachActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'ForEach'.
+     * Expected value is &#39;ForEach&#39;.
      * 
      */
     private final String type;
@@ -175,7 +175,7 @@ public final class ForEachActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'ForEach'.
+     * Expected value is &#39;ForEach&#39;.
      * 
     */
     public String type() {

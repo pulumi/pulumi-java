@@ -41,7 +41,7 @@ public final class Cloudresourcemanager_v3Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the folder's resource name, for example: "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
+     * Gets the access control policy for a folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the folder&#39;s resource name, for example: &#34;folders/1234&#34;. The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
      * 
      */
     public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args) {
@@ -61,7 +61,7 @@ public final class Cloudresourcemanager_v3Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getLien", TypeShape.of(GetLienResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for an organization resource. The policy may be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, for example: "organizations/123". Authorization requires the IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization.
+     * Gets the access control policy for an organization resource. The policy may be empty if no such policy or resource exists. The `resource` field should be the organization&#39;s resource name, for example: &#34;organizations/123&#34;. Authorization requires the IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization.
      * 
      */
     public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args) {
@@ -107,7 +107,7 @@ public final class Cloudresourcemanager_v3Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagKey", TypeShape.of(GetTagKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a TagKey. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagKey's resource name. For example, "tagKeys/1234". The caller must have `cloudresourcemanager.googleapis.com/tagKeys.getIamPolicy` permission on the specified TagKey.
+     * Gets the access control policy for a TagKey. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagKey&#39;s resource name. For example, &#34;tagKeys/1234&#34;. The caller must have `cloudresourcemanager.googleapis.com/tagKeys.getIamPolicy` permission on the specified TagKey.
      * 
      */
     public static CompletableFuture<GetTagKeyIamPolicyResult> getTagKeyIamPolicy(GetTagKeyIamPolicyArgs args) {
@@ -127,7 +127,7 @@ public final class Cloudresourcemanager_v3Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValue", TypeShape.of(GetTagValueResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
+     * Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue&#39;s resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
      * 
      */
     public static CompletableFuture<GetTagValueIamPolicyResult> getTagValueIamPolicy(GetTagValueIamPolicyArgs args) {

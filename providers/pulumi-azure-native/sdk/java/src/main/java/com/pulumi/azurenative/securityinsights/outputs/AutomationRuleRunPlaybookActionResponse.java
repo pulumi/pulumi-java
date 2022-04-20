@@ -18,7 +18,7 @@ public final class AutomationRuleRunPlaybookActionResponse {
     private final AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
     /**
      * The type of the automation rule action
-     * Expected value is 'RunPlaybook'.
+     * Expected value is &#39;RunPlaybook&#39;.
      * 
      */
     private final String actionType;
@@ -47,7 +47,7 @@ public final class AutomationRuleRunPlaybookActionResponse {
     }
     /**
      * The type of the automation rule action
-     * Expected value is 'RunPlaybook'.
+     * Expected value is &#39;RunPlaybook&#39;.
      * 
     */
     public String actionType() {

@@ -58,7 +58,7 @@ public final class GameServerDeploymentRolloutState extends com.pulumi.resources
 
     /**
      * The resource id of the game server deployment eg:
-     * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
+     * &#39;projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout&#39;.
      * 
      */
     @Import(name="name")

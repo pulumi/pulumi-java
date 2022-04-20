@@ -22,7 +22,7 @@ public final class SoftwareRecipeStepInstallMsiResponse {
      */
     private final String artifactId;
     /**
-     * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
+     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
      */
     private final List<String> flags;
@@ -52,7 +52,7 @@ public final class SoftwareRecipeStepInstallMsiResponse {
         return this.artifactId;
     }
     /**
-     * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
+     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
     */
     public List<String> flags() {

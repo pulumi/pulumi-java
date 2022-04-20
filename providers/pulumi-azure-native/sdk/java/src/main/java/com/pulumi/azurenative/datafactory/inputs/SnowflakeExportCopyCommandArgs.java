@@ -22,7 +22,7 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
     public static final SnowflakeExportCopyCommandArgs Empty = new SnowflakeExportCopyCommandArgs();
 
     /**
-     * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
+     * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
      * 
      */
     @Import(name="additionalCopyOptions")
@@ -33,7 +33,7 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "OVERWRITE": "TRUE", "MAX_FILE_SIZE": "'FALSE'" }
+     * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;OVERWRITE&#34;: &#34;TRUE&#34;, &#34;MAX_FILE_SIZE&#34;: &#34;&#39;FALSE&#39;&#34; }
      * 
      */
     @Import(name="additionalFormatOptions")
@@ -45,7 +45,7 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
 
     /**
      * The export setting type.
-     * Expected value is 'SnowflakeExportCopyCommand'.
+     * Expected value is &#39;SnowflakeExportCopyCommand&#39;.
      * 
      */
     @Import(name="type", required=true)

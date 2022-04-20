@@ -43,7 +43,7 @@ public final class RoboDirectiveArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
      */
     @Import(name="resourceName", required=true)

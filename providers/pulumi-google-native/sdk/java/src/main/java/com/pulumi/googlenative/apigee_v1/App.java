@@ -16,7 +16,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Creates an app associated with a developer. This API associates the developer app with the specified API product and auto-generates an API key for the app to use in calls to API proxies inside that API product. The `name` is the unique ID of the app that you can use in API calls. The `DisplayName` (set as an attribute) appears in the UI. If you don't set the `DisplayName` attribute, the `name` appears in the UI.
+ * Creates an app associated with a developer. This API associates the developer app with the specified API product and auto-generates an API key for the app to use in calls to API proxies inside that API product. The `name` is the unique ID of the app that you can use in API calls. The `DisplayName` (set as an attribute) appears in the UI. If you don&#39;t set the `DisplayName` attribute, the `name` appears in the UI.
  * 
  */
 @ResourceType(type="google-native:apigee/v1:App")
@@ -134,14 +134,14 @@ public class App extends com.pulumi.resources.CustomResource {
         return this.developerId;
     }
     /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
      */
     @Export(name="keyExpiresIn", type=String.class, parameters={})
     private Output<String> keyExpiresIn;
 
     /**
-     * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
      */
     public Output<String> keyExpiresIn() {

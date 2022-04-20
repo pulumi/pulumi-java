@@ -54,7 +54,7 @@ public final class AzureDataExplorerSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureDataExplorerSource'.
+     * Expected value is &#39;AzureDataExplorerSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class AzureDataExplorerSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureDataExplorerSource'.
+     * Expected value is &#39;AzureDataExplorerSource&#39;.
      * 
     */
     public String type() {

@@ -27,7 +27,7 @@ public final class MediaGraphAssetSinkResponse {
     private final String name;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphAssetSink&#39;.
      * 
      */
     private final String odataType;
@@ -67,7 +67,7 @@ public final class MediaGraphAssetSinkResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphAssetSink&#39;.
      * 
     */
     public String odataType() {

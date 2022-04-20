@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PhotonPersistentDiskVolumeSource {
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
@@ -31,7 +31,7 @@ public final class PhotonPersistentDiskVolumeSource {
     }
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
     */
     public Optional<String> fsType() {

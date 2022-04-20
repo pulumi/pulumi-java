@@ -40,7 +40,7 @@ public final class MDATPDataConnectorArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftDefenderAdvancedThreatProtection'.
+     * Expected value is &#39;MicrosoftDefenderAdvancedThreatProtection&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -51,7 +51,7 @@ public final class MDATPDataConnectorArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

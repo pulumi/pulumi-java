@@ -28,7 +28,7 @@ public final class AutoScaleSettingsResponse {
      */
     private final @Nullable String pollingInterval;
     /**
-     * Expected value is 'Auto'.
+     * Expected value is &#39;Auto&#39;.
      * 
      */
     private final String scaleType;
@@ -74,7 +74,7 @@ public final class AutoScaleSettingsResponse {
         return Optional.ofNullable(this.pollingInterval);
     }
     /**
-     * Expected value is 'Auto'.
+     * Expected value is &#39;Auto&#39;.
      * 
     */
     public String scaleType() {

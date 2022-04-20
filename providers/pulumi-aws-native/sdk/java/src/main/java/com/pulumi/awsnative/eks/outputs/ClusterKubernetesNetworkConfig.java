@@ -18,7 +18,7 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily;
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
+     * The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
      * 
      */
     private final @Nullable String serviceIpv4Cidr;
@@ -46,7 +46,7 @@ public final class ClusterKubernetesNetworkConfig {
         return Optional.ofNullable(this.ipFamily);
     }
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
+     * The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
      * 
     */
     public Optional<String> serviceIpv4Cidr() {

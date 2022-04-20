@@ -29,7 +29,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     }
 
     /**
-     * This is of the form 'https://{account}.file.core.windows.net/'.
+     * This is of the form &#39;https://{account}.file.core.windows.net/&#39;.
      * 
      */
     @Import(name="azureFileUrl", required=true)
@@ -40,7 +40,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     }
 
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     @Import(name="mountOptions")

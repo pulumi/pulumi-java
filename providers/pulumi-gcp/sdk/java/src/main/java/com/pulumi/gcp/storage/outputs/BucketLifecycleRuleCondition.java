@@ -54,7 +54,7 @@ public final class BucketLifecycleRuleCondition {
      */
     private final @Nullable Integer numNewerVersions;
     /**
-     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
+     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `&#34;LIVE&#34;`, `&#34;ARCHIVED&#34;`, `&#34;ANY&#34;`.
      * 
      */
     private final @Nullable String withState;
@@ -138,7 +138,7 @@ public final class BucketLifecycleRuleCondition {
         return Optional.ofNullable(this.numNewerVersions);
     }
     /**
-     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
+     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `&#34;LIVE&#34;`, `&#34;ARCHIVED&#34;`, `&#34;ANY&#34;`.
      * 
     */
     public Optional<String> withState() {

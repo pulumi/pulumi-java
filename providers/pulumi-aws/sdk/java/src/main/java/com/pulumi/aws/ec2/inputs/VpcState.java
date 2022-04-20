@@ -150,7 +150,7 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
+     * The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
      * 
      */
     @Import(name="ipv4IpamPoolId")
@@ -229,7 +229,7 @@ public final class VpcState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC's main route table by using an
+     * this VPC. Note that you can change a VPC&#39;s main route table by using an
      * `aws.ec2.MainRouteTableAssociation`.
      * 
      */

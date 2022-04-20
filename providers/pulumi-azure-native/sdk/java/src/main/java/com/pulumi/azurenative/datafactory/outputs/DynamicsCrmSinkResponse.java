@@ -44,7 +44,7 @@ public final class DynamicsCrmSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'DynamicsCrmSink'.
+     * Expected value is &#39;DynamicsCrmSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class DynamicsCrmSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'DynamicsCrmSink'.
+     * Expected value is &#39;DynamicsCrmSink&#39;.
      * 
     */
     public String type() {

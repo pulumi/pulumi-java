@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Volume {
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     private final @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore;
@@ -56,7 +56,7 @@ public final class Volume {
      */
     private final @Nullable AzureFileVolumeSource azureFile;
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable CephFSVolumeSource cephfs;
@@ -81,12 +81,12 @@ public final class Volume {
      */
     private final @Nullable DownwardAPIVolumeSource downwardAPI;
     /**
-     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
      */
     private final @Nullable EmptyDirVolumeSource emptyDir;
     /**
-     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
      * 
      * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
      *    tracking are needed,
@@ -104,7 +104,7 @@ public final class Volume {
      */
     private final @Nullable EphemeralVolumeSource ephemeral;
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     private final @Nullable FCVolumeSource fc;
@@ -114,22 +114,22 @@ public final class Volume {
      */
     private final @Nullable FlexVolumeSource flexVolume;
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
      * 
      */
     private final @Nullable FlockerVolumeSource flocker;
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     private final @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk;
     /**
-     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
+     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
      * 
      */
     private final @Nullable GitRepoVolumeSource gitRepo;
     /**
-     * Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
      * 
      */
     private final @Nullable GlusterfsVolumeSource glusterfs;
@@ -139,17 +139,17 @@ public final class Volume {
      */
     private final @Nullable HostPathVolumeSource hostPath;
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
      * 
      */
     private final @Nullable ISCSIVolumeSource iscsi;
     /**
-     * Volume's name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
     private final String name;
     /**
-     * NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     private final @Nullable NFSVolumeSource nfs;
@@ -174,12 +174,12 @@ public final class Volume {
      */
     private final @Nullable ProjectedVolumeSource projected;
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable QuobyteVolumeSource quobyte;
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     private final @Nullable RBDVolumeSource rbd;
@@ -269,7 +269,7 @@ public final class Volume {
     }
 
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
     */
     public Optional<AWSElasticBlockStoreVolumeSource> awsElasticBlockStore() {
@@ -290,7 +290,7 @@ public final class Volume {
         return Optional.ofNullable(this.azureFile);
     }
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
     */
     public Optional<CephFSVolumeSource> cephfs() {
@@ -325,14 +325,14 @@ public final class Volume {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
-     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
     */
     public Optional<EmptyDirVolumeSource> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
     /**
-     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
      * 
      * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
      *    tracking are needed,
@@ -352,7 +352,7 @@ public final class Volume {
         return Optional.ofNullable(this.ephemeral);
     }
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
     */
     public Optional<FCVolumeSource> fc() {
@@ -366,28 +366,28 @@ public final class Volume {
         return Optional.ofNullable(this.flexVolume);
     }
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
      * 
     */
     public Optional<FlockerVolumeSource> flocker() {
         return Optional.ofNullable(this.flocker);
     }
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
     */
     public Optional<GCEPersistentDiskVolumeSource> gcePersistentDisk() {
         return Optional.ofNullable(this.gcePersistentDisk);
     }
     /**
-     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
+     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
      * 
     */
     public Optional<GitRepoVolumeSource> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
     /**
-     * Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
      * 
     */
     public Optional<GlusterfsVolumeSource> glusterfs() {
@@ -401,21 +401,21 @@ public final class Volume {
         return Optional.ofNullable(this.hostPath);
     }
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
      * 
     */
     public Optional<ISCSIVolumeSource> iscsi() {
         return Optional.ofNullable(this.iscsi);
     }
     /**
-     * Volume's name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
     */
     public Optional<NFSVolumeSource> nfs() {
@@ -450,14 +450,14 @@ public final class Volume {
         return Optional.ofNullable(this.projected);
     }
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
     */
     public Optional<QuobyteVolumeSource> quobyte() {
         return Optional.ofNullable(this.quobyte);
     }
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
     */
     public Optional<RBDVolumeSource> rbd() {

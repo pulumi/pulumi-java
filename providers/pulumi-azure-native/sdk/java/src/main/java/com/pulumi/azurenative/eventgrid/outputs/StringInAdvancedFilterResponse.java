@@ -19,7 +19,7 @@ public final class StringInAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringIn'.
+     * Expected value is &#39;StringIn&#39;.
      * 
      */
     private final String operatorType;
@@ -48,7 +48,7 @@ public final class StringInAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringIn'.
+     * Expected value is &#39;StringIn&#39;.
      * 
     */
     public String operatorType() {

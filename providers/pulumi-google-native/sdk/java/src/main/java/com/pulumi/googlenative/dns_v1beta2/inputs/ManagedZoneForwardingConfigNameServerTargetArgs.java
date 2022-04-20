@@ -39,7 +39,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends com.p
     }
 
     /**
-     * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address of a target name server. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
      */
     @Import(name="ipv6Address")

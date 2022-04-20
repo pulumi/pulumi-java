@@ -22,7 +22,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     private final String authenticationProvisioningState;
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-     * Expected value is 'awsCreds'.
+     * Expected value is &#39;awsCreds&#39;.
      * 
      */
     private final String authenticationType;
@@ -74,7 +74,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     }
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-     * Expected value is 'awsCreds'.
+     * Expected value is &#39;awsCreds&#39;.
      * 
     */
     public String authenticationType() {

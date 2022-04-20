@@ -20,7 +20,7 @@ public final class InstanceGroupManagerActionsSummaryResponse {
      */
     private final Integer creating;
     /**
-     * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.
+     * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group&#39;s targetSize value accordingly.
      * 
      */
     private final Integer creatingWithoutRetries;
@@ -120,7 +120,7 @@ public final class InstanceGroupManagerActionsSummaryResponse {
         return this.creating;
     }
     /**
-     * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.
+     * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group&#39;s targetSize value accordingly.
      * 
     */
     public Integer creatingWithoutRetries() {

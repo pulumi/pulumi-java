@@ -19,7 +19,7 @@ public final class AutoScalingResourceMetricResponse extends com.pulumi.resource
 
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
-     * Expected value is 'Resource'.
+     * Expected value is &#39;Resource&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -73,7 +73,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+     * Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn&#39;t applicable to jobs running on Fargate resources, and shouldn&#39;t be specified.
      * 
      */
     @Import(name="tags")

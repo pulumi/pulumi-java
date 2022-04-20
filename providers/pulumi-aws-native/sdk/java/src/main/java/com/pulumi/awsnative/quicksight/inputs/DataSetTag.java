@@ -9,8 +9,8 @@ import java.util.Objects;
 
 
 /**
- * <p>The key or keys of the key-value pairs for the resource tag or tags assigned to the
- *             resource.</p>
+ * &lt;p&gt;The key or keys of the key-value pairs for the resource tag or tags assigned to the
+ *             resource.&lt;/p&gt;
  * 
  */
 public final class DataSetTag extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSetTag extends com.pulumi.resources.InvokeArgs {
     public static final DataSetTag Empty = new DataSetTag();
 
     /**
-     * <p>Tag key.</p>
+     * &lt;p&gt;Tag key.&lt;/p&gt;
      * 
      */
     @Import(name="key", required=true)
@@ -29,7 +29,7 @@ public final class DataSetTag extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>Tag value.</p>
+     * &lt;p&gt;Tag value.&lt;/p&gt;
      * 
      */
     @Import(name="value", required=true)

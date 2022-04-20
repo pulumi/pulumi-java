@@ -20,7 +20,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
 
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'RBAC'.
+     * Expected value is &#39;RBAC&#39;.
      * 
      */
     @Import(name="authorizationType", required=true)

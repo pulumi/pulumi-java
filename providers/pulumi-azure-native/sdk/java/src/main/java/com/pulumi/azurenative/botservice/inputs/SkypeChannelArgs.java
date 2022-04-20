@@ -22,7 +22,7 @@ public final class SkypeChannelArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The channel name
-     * Expected value is 'SkypeChannel'.
+     * Expected value is &#39;SkypeChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

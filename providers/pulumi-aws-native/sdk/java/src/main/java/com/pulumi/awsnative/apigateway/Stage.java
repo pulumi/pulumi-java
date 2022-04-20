@@ -54,14 +54,14 @@ public class Stage extends com.pulumi.resources.CustomResource {
         return this.cacheClusterEnabled;
     }
     /**
-     * The stage's cache cluster size.
+     * The stage&#39;s cache cluster size.
      * 
      */
     @Export(name="cacheClusterSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheClusterSize;
 
     /**
-     * @return The stage's cache cluster size.
+     * @return The stage&#39;s cache cluster size.
      * 
      */
     public Output</* @Nullable */ String> cacheClusterSize() {
@@ -152,14 +152,14 @@ public class Stage extends com.pulumi.resources.CustomResource {
         return this.methodSettings;
     }
     /**
-     * The ID of the RestApi resource that you're deploying with this stage.
+     * The ID of the RestApi resource that you&#39;re deploying with this stage.
      * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
-     * @return The ID of the RestApi resource that you're deploying with this stage.
+     * @return The ID of the RestApi resource that you&#39;re deploying with this stage.
      * 
      */
     public Output<String> restApiId() {

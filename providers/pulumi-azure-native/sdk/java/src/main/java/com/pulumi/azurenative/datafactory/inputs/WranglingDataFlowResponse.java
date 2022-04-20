@@ -91,7 +91,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of data flow.
-     * Expected value is 'WranglingDataFlow'.
+     * Expected value is &#39;WranglingDataFlow&#39;.
      * 
      */
     @Import(name="type", required=true)

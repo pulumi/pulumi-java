@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The list of Energy services resource's Data Partition Names.
+ * The list of Energy services resource&#39;s Data Partition Names.
  * 
  */
 public final class DataPartitionNamesArgs extends com.pulumi.resources.ResourceArgs {

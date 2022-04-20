@@ -21,7 +21,7 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
     public static final AsymmetricEncryptedSecretArgs Empty = new AsymmetricEncryptedSecretArgs();
 
     /**
-     * The algorithm used to encrypt "Value".
+     * The algorithm used to encrypt &#34;Value&#34;.
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
@@ -32,7 +32,7 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
+     * Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
      * 
      */
     @Import(name="encryptionCertThumbprint")

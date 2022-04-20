@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class DevopsFunctions {
     /**
-     * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+     * Pipeline used to configure Continuous Integration (CI) &amp; Continuous Delivery (CD) for Azure resources.
      * API Version: 2020-07-13-preview.
      * 
      */

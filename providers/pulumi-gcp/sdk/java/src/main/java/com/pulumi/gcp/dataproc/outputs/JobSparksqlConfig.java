@@ -21,7 +21,7 @@ public final class JobSparksqlConfig {
     private final @Nullable List<String> jarFileUris;
     private final @Nullable JobSparksqlConfigLoggingConfig loggingConfig;
     /**
-     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
      */
     private final @Nullable Map<String,String> properties;
@@ -38,7 +38,7 @@ public final class JobSparksqlConfig {
      */
     private final @Nullable List<String> queryLists;
     /**
-     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
      * 
      */
     private final @Nullable Map<String,String> scriptVariables;
@@ -70,7 +70,7 @@ public final class JobSparksqlConfig {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
-     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
     */
     public Map<String,String> properties() {
@@ -93,7 +93,7 @@ public final class JobSparksqlConfig {
         return this.queryLists == null ? List.of() : this.queryLists;
     }
     /**
-     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
      * 
     */
     public Map<String,String> scriptVariables() {

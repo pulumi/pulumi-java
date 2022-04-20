@@ -83,7 +83,7 @@ public final class BinarySinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'BinarySink'.
+     * Expected value is &#39;BinarySink&#39;.
      * 
      */
     @Import(name="type", required=true)

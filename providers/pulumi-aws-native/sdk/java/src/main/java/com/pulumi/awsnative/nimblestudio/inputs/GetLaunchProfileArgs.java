@@ -20,7 +20,7 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * <p>The studio ID. </p>
+     * &lt;p&gt;The studio ID. &lt;/p&gt;
      * 
      */
     @Import(name="studioId", required=true)

@@ -159,7 +159,7 @@ public final class AzurePostgreSqlSectionResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")

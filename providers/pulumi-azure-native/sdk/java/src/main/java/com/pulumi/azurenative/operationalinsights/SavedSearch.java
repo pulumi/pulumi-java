@@ -62,14 +62,14 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
+     * The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
-     * @return The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
+     * @return The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
      */
     public Output</* @Nullable */ String> etag() {
@@ -90,14 +90,14 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
         return this.functionAlias;
     }
     /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
     @Export(name="functionParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionParameters;
 
     /**
-     * @return The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * @return The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
     public Output</* @Nullable */ String> functionParameters() {
@@ -146,14 +146,14 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

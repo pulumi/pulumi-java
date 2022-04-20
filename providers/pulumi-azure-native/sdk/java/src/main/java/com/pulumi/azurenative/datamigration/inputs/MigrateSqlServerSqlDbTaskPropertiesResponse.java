@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends com.pulum
 
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.SqlDb'.
+     * Expected value is &#39;Migrate.SqlServer.SqlDb&#39;.
      * 
      */
     @Import(name="taskType", required=true)

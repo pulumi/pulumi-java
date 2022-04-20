@@ -27,7 +27,7 @@ public final class DeploymentCondition {
      */
     private final @Nullable String message;
     /**
-     * The reason for the condition's last transition.
+     * The reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -80,7 +80,7 @@ public final class DeploymentCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The reason for the condition's last transition.
+     * The reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {

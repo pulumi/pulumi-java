@@ -37,7 +37,7 @@ public final class S3Functions {
      * The S3 object data source allows access to the metadata and
      * _optionally_ (see below) content of an object stored inside S3 bucket.
      * 
-     * > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
+     * &gt; **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
      * 
      * ## Example Usage
      * 
@@ -49,7 +49,7 @@ public final class S3Functions {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
+     * &gt; **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider&#39;s performance.
      * 
      * The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
      * 

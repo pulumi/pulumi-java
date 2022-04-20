@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
 
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.SqlDb.Sync'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.SqlDb.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

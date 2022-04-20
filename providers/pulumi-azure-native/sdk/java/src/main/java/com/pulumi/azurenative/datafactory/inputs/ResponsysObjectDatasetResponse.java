@@ -115,7 +115,7 @@ public final class ResponsysObjectDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'ResponsysObject'.
+     * Expected value is &#39;ResponsysObject&#39;.
      * 
      */
     @Import(name="type", required=true)

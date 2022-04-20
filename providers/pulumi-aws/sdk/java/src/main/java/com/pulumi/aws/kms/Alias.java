@@ -14,7 +14,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases & keys,
+ * Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
  * but API (hence this provider too) allows you to create as many aliases as
  * the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) allow you.
  * 
@@ -46,14 +46,14 @@ public class Alias extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
+     * The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
+     * @return The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
      * 
      */
     public Output<String> name() {
@@ -61,7 +61,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
     }
     /**
      * Creates an unique alias beginning with the specified prefix.
-     * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
+     * The name must start with the word &#34;alias&#34; followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
     @Export(name="namePrefix", type=String.class, parameters={})
@@ -69,7 +69,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Creates an unique alias beginning with the specified prefix.
-     * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
+     * The name must start with the word &#34;alias&#34; followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
     public Output<String> namePrefix() {

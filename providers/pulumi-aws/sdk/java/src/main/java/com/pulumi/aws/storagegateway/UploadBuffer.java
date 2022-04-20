@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway upload buffer.
  * 
- * > **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.
+ * &gt; **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.
  * 
  * ## Example Usage
  * 

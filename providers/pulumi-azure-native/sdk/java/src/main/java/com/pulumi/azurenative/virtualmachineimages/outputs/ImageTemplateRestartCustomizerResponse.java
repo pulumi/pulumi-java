@@ -17,23 +17,23 @@ public final class ImageTemplateRestartCustomizerResponse {
      */
     private final @Nullable String name;
     /**
-     * Command to check if restart succeeded [Default: '']
+     * Command to check if restart succeeded [Default: &#39;&#39;]
      * 
      */
     private final @Nullable String restartCheckCommand;
     /**
-     * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
+     * Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
      * 
      */
     private final @Nullable String restartCommand;
     /**
-     * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
+     * Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
      * 
      */
     private final @Nullable String restartTimeout;
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'WindowsRestart'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsRestart&#39;.
      * 
      */
     private final String type;
@@ -60,29 +60,29 @@ public final class ImageTemplateRestartCustomizerResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Command to check if restart succeeded [Default: '']
+     * Command to check if restart succeeded [Default: &#39;&#39;]
      * 
     */
     public Optional<String> restartCheckCommand() {
         return Optional.ofNullable(this.restartCheckCommand);
     }
     /**
-     * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
+     * Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
      * 
     */
     public Optional<String> restartCommand() {
         return Optional.ofNullable(this.restartCommand);
     }
     /**
-     * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
+     * Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
      * 
     */
     public Optional<String> restartTimeout() {
         return Optional.ofNullable(this.restartTimeout);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'WindowsRestart'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsRestart&#39;.
      * 
     */
     public String type() {

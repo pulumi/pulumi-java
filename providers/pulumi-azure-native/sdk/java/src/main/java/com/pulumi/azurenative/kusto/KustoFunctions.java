@@ -83,7 +83,7 @@ public final class KustoFunctions {
      * Class representing an data connection.
      * API Version: 2021-01-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
      * 
      */
@@ -98,7 +98,7 @@ public final class KustoFunctions {
      * Class representing a Kusto database.
      * API Version: 2021-01-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase.
      * 
      */

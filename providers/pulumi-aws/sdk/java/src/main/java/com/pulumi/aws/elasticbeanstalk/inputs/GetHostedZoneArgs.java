@@ -15,7 +15,7 @@ public final class GetHostedZoneArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostedZoneArgs Empty = new GetHostedZoneArgs();
 
     /**
-     * The region you'd like the zone for. By default, fetches the current region.
+     * The region you&#39;d like the zone for. By default, fetches the current region.
      * 
      */
     @Import(name="region")

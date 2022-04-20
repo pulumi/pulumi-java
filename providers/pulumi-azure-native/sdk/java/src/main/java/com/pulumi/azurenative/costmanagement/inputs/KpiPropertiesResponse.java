@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Each KPI must contain a 'type' and 'enabled' key.
+ * Each KPI must contain a &#39;type&#39; and &#39;enabled&#39; key.
  * 
  */
 public final class KpiPropertiesResponse extends com.pulumi.resources.InvokeArgs {

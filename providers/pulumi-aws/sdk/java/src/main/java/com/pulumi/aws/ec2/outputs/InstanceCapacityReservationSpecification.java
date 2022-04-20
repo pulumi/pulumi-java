@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceCapacityReservationSpecification {
     /**
-     * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
      * 
      */
     private final @Nullable String capacityReservationPreference;
@@ -32,7 +32,7 @@ public final class InstanceCapacityReservationSpecification {
     }
 
     /**
-     * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
      * 
     */
     public Optional<String> capacityReservationPreference() {

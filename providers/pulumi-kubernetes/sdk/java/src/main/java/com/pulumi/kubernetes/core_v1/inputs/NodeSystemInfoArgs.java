@@ -52,7 +52,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
+     * Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
      * 
      */
     @Import(name="kernelVersion", required=true)

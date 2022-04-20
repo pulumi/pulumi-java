@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Control over the rate of notifications sent to this alert policy's notification channels.
+ * Control over the rate of notifications sent to this alert policy&#39;s notification channels.
  * 
  */
 public final class NotificationRateLimitResponse extends com.pulumi.resources.InvokeArgs {

@@ -64,7 +64,7 @@ public final class GetCommunicationServiceResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -173,7 +173,7 @@ public final class GetCommunicationServiceResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

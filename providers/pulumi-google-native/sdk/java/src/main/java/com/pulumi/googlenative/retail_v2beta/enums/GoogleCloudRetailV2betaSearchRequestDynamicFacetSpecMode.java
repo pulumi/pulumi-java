@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
      * 
      */
     @EnumType

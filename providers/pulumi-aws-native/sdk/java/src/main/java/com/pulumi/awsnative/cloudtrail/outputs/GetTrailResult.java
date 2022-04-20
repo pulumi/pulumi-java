@@ -23,7 +23,7 @@ public final class GetTrailResult {
      */
     private final @Nullable String cloudWatchLogsLogGroupArn;
     /**
-     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
+     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
      * 
      */
     private final @Nullable String cloudWatchLogsRoleArn;
@@ -33,7 +33,7 @@ public final class GetTrailResult {
      */
     private final @Nullable Boolean enableLogFileValidation;
     /**
-     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
+     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
      * 
      */
     private final @Nullable List<TrailEventSelector> eventSelectors;
@@ -63,7 +63,7 @@ public final class GetTrailResult {
      */
     private final @Nullable Boolean isOrganizationTrail;
     /**
-     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
+     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
      */
     private final @Nullable String kMSKeyId;
@@ -132,7 +132,7 @@ public final class GetTrailResult {
         return Optional.ofNullable(this.cloudWatchLogsLogGroupArn);
     }
     /**
-     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
+     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
      * 
     */
     public Optional<String> cloudWatchLogsRoleArn() {
@@ -146,7 +146,7 @@ public final class GetTrailResult {
         return Optional.ofNullable(this.enableLogFileValidation);
     }
     /**
-     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
+     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
      * 
     */
     public List<TrailEventSelector> eventSelectors() {
@@ -188,7 +188,7 @@ public final class GetTrailResult {
         return Optional.ofNullable(this.isOrganizationTrail);
     }
     /**
-     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
+     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
     */
     public Optional<String> kMSKeyId() {

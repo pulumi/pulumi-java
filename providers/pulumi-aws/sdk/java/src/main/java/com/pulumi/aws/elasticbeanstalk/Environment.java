@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  * The `setting` and `all_settings` mappings support the following format:
  * 
- * * `namespace` - unique namespace identifying the option's associated AWS resource
+ * * `namespace` - unique namespace identifying the option&#39;s associated AWS resource
  * * `name` - name of the configuration option
  * * `value` - value for the configuration option
  * * `resource` - (Optional) resource name for [scheduled action](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction)

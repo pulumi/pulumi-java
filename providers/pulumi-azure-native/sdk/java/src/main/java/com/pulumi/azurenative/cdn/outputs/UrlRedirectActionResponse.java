@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class UrlRedirectActionResponse {
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlRedirect'.
+     * Expected value is &#39;UrlRedirect&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class UrlRedirectActionResponse {
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlRedirect'.
+     * Expected value is &#39;UrlRedirect&#39;.
      * 
     */
     public String name() {

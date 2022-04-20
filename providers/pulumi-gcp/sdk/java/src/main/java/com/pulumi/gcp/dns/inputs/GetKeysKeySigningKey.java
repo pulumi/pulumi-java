@@ -39,7 +39,7 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience.
      * 
      */
     @Import(name="description", required=true)
@@ -105,7 +105,7 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
+     * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone&#39;s DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
      * 
      */
     @Import(name="keyTag", required=true)

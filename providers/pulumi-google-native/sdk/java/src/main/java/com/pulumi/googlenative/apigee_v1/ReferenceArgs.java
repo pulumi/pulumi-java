@@ -63,7 +63,7 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
      */
     @Import(name="resourceType")

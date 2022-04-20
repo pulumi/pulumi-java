@@ -44,7 +44,7 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+     * Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
      * 
      */
     @Import(name="encoding")

@@ -70,14 +70,14 @@ public class NotebookInstanceLifecycleConfiguration extends com.pulumi.resources
         return this.onCreate;
     }
     /**
-     * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
+     * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it&#39;s created.
      * 
      */
     @Export(name="onStart", type=String.class, parameters={})
     private Output</* @Nullable */ String> onStart;
 
     /**
-     * @return A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
+     * @return A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it&#39;s created.
      * 
      */
     public Output</* @Nullable */ String> onStart() {

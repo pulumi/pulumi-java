@@ -22,7 +22,7 @@ public final class CloneJobResponse {
      */
     private final String createTime;
     /**
-     * Provides details for the errors that led to the Clone Job's state.
+     * Provides details for the errors that led to the Clone Job&#39;s state.
      * 
      */
     private final StatusResponse error;
@@ -73,7 +73,7 @@ public final class CloneJobResponse {
         return this.createTime;
     }
     /**
-     * Provides details for the errors that led to the Clone Job's state.
+     * Provides details for the errors that led to the Clone Job&#39;s state.
      * 
     */
     public StatusResponse error() {

@@ -76,14 +76,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.homeDirectoryMappings;
     }
     /**
-     * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+     * The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
     @Export(name="homeDirectoryType", type=String.class, parameters={})
     private Output</* @Nullable */ String> homeDirectoryType;
 
     /**
-     * @return The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+     * @return The type of landing directory (folder) you mapped for your users&#39; home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
     public Output</* @Nullable */ String> homeDirectoryType() {
@@ -104,14 +104,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.policy;
     }
     /**
-     * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+     * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
     @Export(name="posixProfile", type=UserPosixProfile.class, parameters={})
     private Output</* @Nullable */ UserPosixProfile> posixProfile;
 
     /**
-     * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+     * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users&#39; access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
     public Output</* @Nullable */ UserPosixProfile> posixProfile() {

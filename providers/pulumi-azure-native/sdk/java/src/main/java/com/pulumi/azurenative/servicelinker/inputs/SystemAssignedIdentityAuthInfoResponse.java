@@ -19,7 +19,7 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
 
     /**
      * The authentication type.
-     * Expected value is 'systemAssignedIdentity'.
+     * Expected value is &#39;systemAssignedIdentity&#39;.
      * 
      */
     @Import(name="authType", required=true)

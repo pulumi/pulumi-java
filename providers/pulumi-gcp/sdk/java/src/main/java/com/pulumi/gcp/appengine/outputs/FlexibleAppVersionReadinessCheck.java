@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class FlexibleAppVersionReadinessCheck {
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully
-     * replies to a healthcheck until it is ready to serve traffic. Default: "300s"
+     * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
      * 
      */
     private final @Nullable String appStartTimeout;
@@ -29,7 +29,7 @@ public final class FlexibleAppVersionReadinessCheck {
      */
     private final @Nullable Double failureThreshold;
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     private final @Nullable String host;
@@ -45,7 +45,7 @@ public final class FlexibleAppVersionReadinessCheck {
      */
     private final @Nullable Double successThreshold;
     /**
-     * Time before the check is considered failed. Default: "4s"
+     * Time before the check is considered failed. Default: &#34;4s&#34;
      * 
      */
     private final @Nullable String timeout;
@@ -70,7 +70,7 @@ public final class FlexibleAppVersionReadinessCheck {
 
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully
-     * replies to a healthcheck until it is ready to serve traffic. Default: "300s"
+     * replies to a healthcheck until it is ready to serve traffic. Default: &#34;300s&#34;
      * 
     */
     public Optional<String> appStartTimeout() {
@@ -91,7 +91,7 @@ public final class FlexibleAppVersionReadinessCheck {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
     */
     public Optional<String> host() {
@@ -113,7 +113,7 @@ public final class FlexibleAppVersionReadinessCheck {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
-     * Time before the check is considered failed. Default: "4s"
+     * Time before the check is considered failed. Default: &#34;4s&#34;
      * 
     */
     public Optional<String> timeout() {

@@ -94,14 +94,14 @@ public class Volume extends com.pulumi.resources.CustomResource {
         return this.dataProtection;
     }
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
      */
     @Export(name="encryptionKeySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeySource;
 
     /**
-     * @return Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
      */
     public Output</* @Nullable */ String> encryptionKeySource() {
@@ -304,14 +304,14 @@ public class Volume extends com.pulumi.resources.CustomResource {
         return this.smbEncryption;
     }
     /**
-     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
      */
     @Export(name="snapshotDirectoryVisible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> snapshotDirectoryVisible;
 
     /**
-     * @return If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * @return If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
      */
     public Output</* @Nullable */ Boolean> snapshotDirectoryVisible() {

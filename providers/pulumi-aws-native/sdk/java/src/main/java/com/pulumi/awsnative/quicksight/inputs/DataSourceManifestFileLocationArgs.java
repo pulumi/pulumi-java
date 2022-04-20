@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Amazon S3 manifest file location.</p>
+ * &lt;p&gt;Amazon S3 manifest file location.&lt;/p&gt;
  * 
  */
 public final class DataSourceManifestFileLocationArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class DataSourceManifestFileLocationArgs extends com.pulumi.resourc
     public static final DataSourceManifestFileLocationArgs Empty = new DataSourceManifestFileLocationArgs();
 
     /**
-     * <p>Amazon S3 bucket.</p>
+     * &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
      * 
      */
     @Import(name="bucket", required=true)
@@ -30,7 +30,7 @@ public final class DataSourceManifestFileLocationArgs extends com.pulumi.resourc
     }
 
     /**
-     * <p>Amazon S3 key that identifies an object.</p>
+     * &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
      * 
      */
     @Import(name="key", required=true)

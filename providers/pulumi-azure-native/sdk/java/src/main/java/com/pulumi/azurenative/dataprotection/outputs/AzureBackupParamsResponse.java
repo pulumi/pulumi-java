@@ -16,7 +16,7 @@ public final class AzureBackupParamsResponse {
     private final String backupType;
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureBackupParams'.
+     * Expected value is &#39;AzureBackupParams&#39;.
      * 
      */
     private final String objectType;
@@ -38,7 +38,7 @@ public final class AzureBackupParamsResponse {
     }
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureBackupParams'.
+     * Expected value is &#39;AzureBackupParams&#39;.
      * 
     */
     public String objectType() {

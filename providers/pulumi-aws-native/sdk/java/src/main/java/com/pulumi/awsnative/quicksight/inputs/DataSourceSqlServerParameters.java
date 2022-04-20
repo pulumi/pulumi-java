@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>SQL Server parameters.</p>
+ * &lt;p&gt;SQL Server parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceSqlServerParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceSqlServerParameters extends com.pulumi.resources.In
     public static final DataSourceSqlServerParameters Empty = new DataSourceSqlServerParameters();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -29,7 +29,7 @@ public final class DataSourceSqlServerParameters extends com.pulumi.resources.In
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -40,7 +40,7 @@ public final class DataSourceSqlServerParameters extends com.pulumi.resources.In
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

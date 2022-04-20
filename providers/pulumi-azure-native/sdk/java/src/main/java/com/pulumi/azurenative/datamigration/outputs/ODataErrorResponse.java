@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ODataErrorResponse {
     /**
-     * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
+     * The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
      * 
      */
     private final String code;
@@ -37,7 +37,7 @@ public final class ODataErrorResponse {
     }
 
     /**
-     * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
+     * The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
      * 
     */
     public String code() {

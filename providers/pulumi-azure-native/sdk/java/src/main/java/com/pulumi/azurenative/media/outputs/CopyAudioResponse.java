@@ -18,7 +18,7 @@ public final class CopyAudioResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyAudio'.
+     * Expected value is &#39;#Microsoft.Media.CopyAudio&#39;.
      * 
      */
     private final String odataType;
@@ -40,7 +40,7 @@ public final class CopyAudioResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyAudio'.
+     * Expected value is &#39;#Microsoft.Media.CopyAudio&#39;.
      * 
     */
     public String odataType() {

@@ -39,7 +39,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
     }
 
     /**
-     * Web address for the edu customer's institution.
+     * Web address for the edu customer&#39;s institution.
      * 
      */
     @Import(name="website", required=true)

@@ -30,7 +30,7 @@ public final class GetEntityAnalyticsResult {
     private final Boolean isEnabled;
     /**
      * The kind of the setting
-     * Expected value is 'EntityAnalytics'.
+     * Expected value is &#39;EntityAnalytics&#39;.
      * 
      */
     private final String kind;
@@ -91,7 +91,7 @@ public final class GetEntityAnalyticsResult {
     }
     /**
      * The kind of the setting
-     * Expected value is 'EntityAnalytics'.
+     * Expected value is &#39;EntityAnalytics&#39;.
      * 
     */
     public String kind() {

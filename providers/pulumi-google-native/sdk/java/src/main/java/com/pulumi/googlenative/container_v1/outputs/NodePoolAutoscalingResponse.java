@@ -21,12 +21,12 @@ public final class NodePoolAutoscalingResponse {
      */
     private final Boolean enabled;
     /**
-     * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
+     * Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
      * 
      */
     private final Integer maxNodeCount;
     /**
-     * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
+     * Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     private final Integer minNodeCount;
@@ -58,14 +58,14 @@ public final class NodePoolAutoscalingResponse {
         return this.enabled;
     }
     /**
-     * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
+     * Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
      * 
     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
-     * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
+     * Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
     */
     public Integer minNodeCount() {

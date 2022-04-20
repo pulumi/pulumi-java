@@ -107,7 +107,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
+     * A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
     @Import(name="versionName")

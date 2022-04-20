@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DaemonSetUpdateStrategy {
     /**
-     * Rolling update config params. Present only if type = "RollingUpdate".
+     * Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
      * 
      */
     private final @Nullable RollingUpdateDaemonSet rollingUpdate;
     /**
-     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
+     * Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
      * 
      * Possible enum values:
-     *  - `"OnDelete"` Replace the old daemons only when it's killed
-     *  - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
+     *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
+     *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
      * 
      */
     private final @Nullable String type;
@@ -36,18 +36,18 @@ public final class DaemonSetUpdateStrategy {
     }
 
     /**
-     * Rolling update config params. Present only if type = "RollingUpdate".
+     * Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
      * 
     */
     public Optional<RollingUpdateDaemonSet> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
-     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
+     * Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
      * 
      * Possible enum values:
-     *  - `"OnDelete"` Replace the old daemons only when it's killed
-     *  - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
+     *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
+     *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
      * 
     */
     public Optional<String> type() {

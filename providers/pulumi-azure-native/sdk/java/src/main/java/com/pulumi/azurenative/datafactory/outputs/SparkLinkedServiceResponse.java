@@ -101,7 +101,7 @@ public final class SparkLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'Spark'.
+     * Expected value is &#39;Spark&#39;.
      * 
      */
     private final String type;
@@ -272,7 +272,7 @@ public final class SparkLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Spark'.
+     * Expected value is &#39;Spark&#39;.
      * 
     */
     public String type() {

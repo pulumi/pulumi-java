@@ -102,7 +102,7 @@ public final class ProcessServerResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The Process Server's friendly name.
+     * The Process Server&#39;s friendly name.
      * 
      */
     @Import(name="friendlyName")

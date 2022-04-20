@@ -116,7 +116,7 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
 
     /**
      * Type of activity.
-     * Expected value is 'DatabricksNotebook'.
+     * Expected value is &#39;DatabricksNotebook&#39;.
      * 
      */
     @Import(name="type", required=true)

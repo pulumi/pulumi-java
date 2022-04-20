@@ -23,12 +23,12 @@ public final class TransferJobTransferSpecObjectConditions {
      */
     private final @Nullable List<String> includePrefixes;
     /**
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String maxTimeElapsedSinceLastModification;
     /**
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String minTimeElapsedSinceLastModification;
@@ -60,14 +60,14 @@ public final class TransferJobTransferSpecObjectConditions {
         return this.includePrefixes == null ? List.of() : this.includePrefixes;
     }
     /**
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> maxTimeElapsedSinceLastModification() {
         return Optional.ofNullable(this.maxTimeElapsedSinceLastModification);
     }
     /**
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> minTimeElapsedSinceLastModification() {

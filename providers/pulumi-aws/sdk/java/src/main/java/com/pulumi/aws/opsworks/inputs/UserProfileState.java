@@ -50,7 +50,7 @@ public final class UserProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user's IAM ARN
+     * The user&#39;s IAM ARN
      * 
      */
     @Import(name="userArn")

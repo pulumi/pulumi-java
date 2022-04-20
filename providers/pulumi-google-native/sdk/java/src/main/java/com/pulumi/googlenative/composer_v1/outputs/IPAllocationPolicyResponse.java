@@ -16,7 +16,7 @@ public final class IPAllocationPolicyResponse {
      */
     private final String clusterIpv4CidrBlock;
     /**
-     * Optional. The name of the GKE cluster's secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the GKE cluster&#39;s secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     private final String clusterSecondaryRangeName;
@@ -26,7 +26,7 @@ public final class IPAllocationPolicyResponse {
      */
     private final String servicesIpv4CidrBlock;
     /**
-     * Optional. The name of the services' secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the services&#39; secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     private final String servicesSecondaryRangeName;
@@ -58,7 +58,7 @@ public final class IPAllocationPolicyResponse {
         return this.clusterIpv4CidrBlock;
     }
     /**
-     * Optional. The name of the GKE cluster's secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the GKE cluster&#39;s secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
     */
     public String clusterSecondaryRangeName() {
@@ -72,7 +72,7 @@ public final class IPAllocationPolicyResponse {
         return this.servicesIpv4CidrBlock;
     }
     /**
-     * Optional. The name of the services' secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the services&#39; secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
     */
     public String servicesSecondaryRangeName() {

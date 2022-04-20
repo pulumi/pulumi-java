@@ -13,7 +13,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
+ * Creates a processor from the type processor that the user chose. The processor will be at &#34;ENABLED&#34; state by default after its creation.
  * Auto-naming is currently not supported for this resource.
  * 
  */

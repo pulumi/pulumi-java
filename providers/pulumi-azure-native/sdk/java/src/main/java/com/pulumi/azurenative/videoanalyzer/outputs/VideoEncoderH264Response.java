@@ -29,7 +29,7 @@ public final class VideoEncoderH264Response {
     private final @Nullable VideoScaleResponse scale;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class VideoEncoderH264Response {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
      * 
     */
     public String type() {

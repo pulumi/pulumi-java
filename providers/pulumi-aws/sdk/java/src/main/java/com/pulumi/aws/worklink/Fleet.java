@@ -45,14 +45,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
+     * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `&#34;AmazonWorkLink-&#34;`.
      * 
      */
     @Export(name="auditStreamArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> auditStreamArn;
 
     /**
-     * @return The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
+     * @return The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `&#34;AmazonWorkLink-&#34;`.
      * 
      */
     public Output</* @Nullable */ String> auditStreamArn() {

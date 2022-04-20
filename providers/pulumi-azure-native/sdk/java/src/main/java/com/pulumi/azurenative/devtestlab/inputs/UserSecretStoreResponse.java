@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Properties of a user's secret store.
+ * Properties of a user&#39;s secret store.
  * 
  */
 public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     public static final UserSecretStoreResponse Empty = new UserSecretStoreResponse();
 
     /**
-     * The ID of the user's Key vault.
+     * The ID of the user&#39;s Key vault.
      * 
      */
     @Import(name="keyVaultId")
@@ -30,7 +30,7 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The URI of the user's Key vault.
+     * The URI of the user&#39;s Key vault.
      * 
      */
     @Import(name="keyVaultUri")

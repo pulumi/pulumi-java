@@ -138,7 +138,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     }
 
     /**
-     * Type of resource e.g "Microsoft.Web/sites".
+     * Type of resource e.g &#34;Microsoft.Web/sites&#34;.
      * 
      */
     @Import(name="type")

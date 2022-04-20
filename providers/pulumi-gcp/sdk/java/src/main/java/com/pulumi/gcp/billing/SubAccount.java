@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Allows creation and management of a Google Cloud Billing Subaccount.
  * 
- * !> **WARNING:** Deleting this resource will not delete or close the billing subaccount.
+ * !&gt; **WARNING:** Deleting this resource will not delete or close the billing subaccount.
  * 
  * ## Import
  * 
@@ -45,18 +45,18 @@ public class SubAccount extends com.pulumi.resources.CustomResource {
         return this.billingAccountId;
     }
     /**
-     * If set to "RENAME_ON_DESTROY" the billing account display_name
-     * will be changed to "Destroyed" along with a timestamp.  If set to "" this will not occur.
-     * Default is "".
+     * If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+     * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+     * Default is &#34;&#34;.
      * 
      */
     @Export(name="deletionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> deletionPolicy;
 
     /**
-     * @return If set to "RENAME_ON_DESTROY" the billing account display_name
-     * will be changed to "Destroyed" along with a timestamp.  If set to "" this will not occur.
-     * Default is "".
+     * @return If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+     * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+     * Default is &#34;&#34;.
      * 
      */
     public Output</* @Nullable */ String> deletionPolicy() {

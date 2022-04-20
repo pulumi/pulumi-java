@@ -46,7 +46,7 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.
+     * The properties of the route that is used as a fall-back route when none of the conditions specified in the &#39;routes&#39; section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the &#39;routes&#39; section get routed to the built-in eventhub endpoint.
      * 
      */
     @Import(name="fallbackRoute")

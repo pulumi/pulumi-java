@@ -92,14 +92,14 @@ public class VPC extends com.pulumi.resources.CustomResource {
         return this.enableDnsHostnames;
     }
     /**
-     * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+     * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
      */
     @Export(name="enableDnsSupport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsSupport;
 
     /**
-     * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
+     * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
      */
     public Output</* @Nullable */ Boolean> enableDnsSupport() {
@@ -108,11 +108,11 @@ public class VPC extends com.pulumi.resources.CustomResource {
     /**
      * The allowed tenancy of instances launched into the VPC.
      * 
-     * "default": An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+     * &#34;default&#34;: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
      * 
-     * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+     * &#34;dedicated&#34;: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
      * 
-     * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
+     * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
      * 
      */
     @Export(name="instanceTenancy", type=String.class, parameters={})
@@ -121,11 +121,11 @@ public class VPC extends com.pulumi.resources.CustomResource {
     /**
      * @return The allowed tenancy of instances launched into the VPC.
      * 
-     * "default": An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+     * &#34;default&#34;: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
      * 
-     * "dedicated": An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+     * &#34;dedicated&#34;: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
      * 
-     * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
+     * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
      * 
      */
     public Output</* @Nullable */ String> instanceTenancy() {

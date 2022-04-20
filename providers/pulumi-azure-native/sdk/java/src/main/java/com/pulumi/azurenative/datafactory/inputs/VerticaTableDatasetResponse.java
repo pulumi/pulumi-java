@@ -126,7 +126,7 @@ public final class VerticaTableDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'VerticaTable'.
+     * Expected value is &#39;VerticaTable&#39;.
      * 
      */
     @Import(name="type", required=true)

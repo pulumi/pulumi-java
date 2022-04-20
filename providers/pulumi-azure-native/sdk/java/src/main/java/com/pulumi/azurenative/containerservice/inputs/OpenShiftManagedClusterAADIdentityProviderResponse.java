@@ -43,7 +43,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
 
     /**
      * The kind of the provider.
-     * Expected value is 'AADIdentityProvider'.
+     * Expected value is &#39;AADIdentityProvider&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -59,7 +59,7 @@ public final class SnowflakeDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'SnowflakeTable'.
+     * Expected value is &#39;SnowflakeTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SnowflakeDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SnowflakeTable'.
+     * Expected value is &#39;SnowflakeTable&#39;.
      * 
     */
     public String type() {

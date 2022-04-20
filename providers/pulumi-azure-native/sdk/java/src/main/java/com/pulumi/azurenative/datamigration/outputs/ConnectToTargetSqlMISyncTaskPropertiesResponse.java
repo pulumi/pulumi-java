@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI.Sync.LRS&#39;.
      * 
     */
     public String taskType() {

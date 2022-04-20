@@ -29,7 +29,7 @@ public final class TriggerBuildSecretArgs extends com.pulumi.resources.ResourceA
 
     /**
      * A list of global environment variables, which are encrypted using a Cloud Key Management
-     * Service crypto key. These values must be specified in the build's Secret. These variables
+     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
      * will be available to all build steps in this build.
      * 
      */

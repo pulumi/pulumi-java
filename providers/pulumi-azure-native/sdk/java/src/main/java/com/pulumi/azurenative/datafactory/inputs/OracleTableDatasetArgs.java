@@ -126,7 +126,7 @@ public final class OracleTableDatasetArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of dataset.
-     * Expected value is 'OracleTable'.
+     * Expected value is &#39;OracleTable&#39;.
      * 
      */
     @Import(name="type", required=true)

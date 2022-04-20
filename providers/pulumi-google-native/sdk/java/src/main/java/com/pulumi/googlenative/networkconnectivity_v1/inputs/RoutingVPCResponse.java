@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
+ * RoutingVPC contains information about the VPC networks that are associated with a hub&#39;s spokes.
  * 
  */
 public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {

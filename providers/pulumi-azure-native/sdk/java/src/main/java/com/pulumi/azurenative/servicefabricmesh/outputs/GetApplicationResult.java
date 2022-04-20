@@ -86,7 +86,7 @@ public final class GetApplicationResult {
      */
     private final String type;
     /**
-     * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
+     * When the application&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
      */
     private final String unhealthyEvaluation;
@@ -224,7 +224,7 @@ public final class GetApplicationResult {
         return this.type;
     }
     /**
-     * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
+     * When the application&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
     */
     public String unhealthyEvaluation() {

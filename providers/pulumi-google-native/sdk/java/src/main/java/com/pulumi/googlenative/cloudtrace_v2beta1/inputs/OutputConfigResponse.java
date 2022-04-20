@@ -17,7 +17,7 @@ public final class OutputConfigResponse extends com.pulumi.resources.InvokeArgs 
     public static final OutputConfigResponse Empty = new OutputConfigResponse();
 
     /**
-     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
      * 
      */
     @Import(name="destination", required=true)

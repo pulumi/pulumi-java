@@ -20,7 +20,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends com.pulu
     public static final VirtualMachineScaleSetVMProtectionPolicyArgs Empty = new VirtualMachineScaleSetVMProtectionPolicyArgs();
 
     /**
-     * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+     * Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
      * 
      */
     @Import(name="protectFromScaleIn")

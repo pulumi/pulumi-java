@@ -64,7 +64,7 @@ public final class Office365DatasetResponse {
     private final Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'Office365Table'.
+     * Expected value is &#39;Office365Table&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class Office365DatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Office365Table'.
+     * Expected value is &#39;Office365Table&#39;.
      * 
     */
     public String type() {

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetFilterResponse {
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     private final @Nullable List<BudgetFilterPropertiesResponse> and;
@@ -24,7 +24,7 @@ public final class BudgetFilterResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse dimensions;
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
      */
     private final @Nullable BudgetFilterPropertiesResponse not;
@@ -47,7 +47,7 @@ public final class BudgetFilterResponse {
     }
 
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
     */
     public List<BudgetFilterPropertiesResponse> and() {
@@ -61,7 +61,7 @@ public final class BudgetFilterResponse {
         return Optional.ofNullable(this.dimensions);
     }
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
     */
     public Optional<BudgetFilterPropertiesResponse> not() {

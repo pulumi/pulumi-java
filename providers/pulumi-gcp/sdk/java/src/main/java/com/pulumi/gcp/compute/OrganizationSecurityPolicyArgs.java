@@ -52,7 +52,7 @@ public final class OrganizationSecurityPolicyArgs extends com.pulumi.resources.R
     /**
      * The type indicates the intended use of the security policy.
      * For organization security policies, the only supported type
-     * is "FIREWALL".
+     * is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 

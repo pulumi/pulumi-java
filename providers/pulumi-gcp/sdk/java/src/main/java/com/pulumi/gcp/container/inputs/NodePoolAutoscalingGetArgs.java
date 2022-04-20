@@ -15,7 +15,7 @@ public final class NodePoolAutoscalingGetArgs extends com.pulumi.resources.Resou
     public static final NodePoolAutoscalingGetArgs Empty = new NodePoolAutoscalingGetArgs();
 
     /**
-     * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+     * Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
      * 
      */
     @Import(name="maxNodeCount", required=true)
@@ -26,8 +26,8 @@ public final class NodePoolAutoscalingGetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Minimum number of nodes in the NodePool. Must be >=0 and
-     * <= `max_node_count`.
+     * Minimum number of nodes in the NodePool. Must be &gt;=0 and
+     * &lt;= `max_node_count`.
      * 
      */
     @Import(name="minNodeCount", required=true)

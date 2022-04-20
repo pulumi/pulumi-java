@@ -22,7 +22,7 @@ public final class GetKustoDatabaseDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     private final String kind;
@@ -95,7 +95,7 @@ public final class GetKustoDatabaseDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
     */
     public String kind() {

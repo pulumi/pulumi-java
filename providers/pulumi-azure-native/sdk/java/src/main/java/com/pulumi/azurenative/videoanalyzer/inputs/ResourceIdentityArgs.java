@@ -19,7 +19,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
     /**
-     * The user assigned managed identity's resource identifier to use when accessing a resource.
+     * The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
      * 
      */
     @Import(name="userAssignedIdentity", required=true)

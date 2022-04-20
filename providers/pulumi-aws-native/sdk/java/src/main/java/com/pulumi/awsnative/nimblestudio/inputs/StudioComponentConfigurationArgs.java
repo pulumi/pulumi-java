@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The configuration of the studio component, based on component type.</p>
+ * &lt;p&gt;The configuration of the studio component, based on component type.&lt;/p&gt;
  * 
  */
 public final class StudioComponentConfigurationArgs extends com.pulumi.resources.ResourceArgs {

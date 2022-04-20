@@ -177,14 +177,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.newGameSessionProtectionPolicy;
     }
     /**
-     * Operating system of the fleet's computing resources.
+     * Operating system of the fleet&#39;s computing resources.
      * 
      */
     @Export(name="operatingSystem", type=String.class, parameters={})
     private Output<String> operatingSystem;
 
     /**
-     * @return Operating system of the fleet's computing resources.
+     * @return Operating system of the fleet&#39;s computing resources.
      * 
      */
     public Output<String> operatingSystem() {

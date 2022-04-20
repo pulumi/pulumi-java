@@ -56,7 +56,7 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name of this policy tag, whose format is:
-     * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
+     * &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}&#34;
      * 
      */
     @Import(name="name")
@@ -67,7 +67,7 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource name of this policy tag's parent policy tag.
+     * Resource name of this policy tag&#39;s parent policy tag.
      * If empty, it means this policy tag is a top level policy tag.
      * If not set, defaults to an empty string.
      * 

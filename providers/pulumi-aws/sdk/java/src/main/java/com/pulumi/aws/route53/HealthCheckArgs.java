@@ -78,7 +78,7 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
+     * A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS&#39; defaults: when the `type` is &#34;HTTPS&#34; `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
      * 
      */
     @Import(name="enableSni")

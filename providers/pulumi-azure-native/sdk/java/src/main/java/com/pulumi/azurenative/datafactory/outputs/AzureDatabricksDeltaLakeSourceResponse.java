@@ -45,7 +45,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureDatabricksDeltaLakeSource'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
      * 
      */
     private final String type;
@@ -112,7 +112,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureDatabricksDeltaLakeSource'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
      * 
     */
     public String type() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountResult {
     /**
-     * The account's data-plane ID
+     * The account&#39;s data-plane ID
      * 
      */
     private final String accountId;
@@ -48,7 +48,7 @@ public final class GetAccountResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -74,7 +74,7 @@ public final class GetAccountResult {
     }
 
     /**
-     * The account's data-plane ID
+     * The account&#39;s data-plane ID
      * 
     */
     public String accountId() {
@@ -123,7 +123,7 @@ public final class GetAccountResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

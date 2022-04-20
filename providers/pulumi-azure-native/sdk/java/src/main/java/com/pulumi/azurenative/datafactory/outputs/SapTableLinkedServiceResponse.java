@@ -80,7 +80,7 @@ public final class SapTableLinkedServiceResponse {
      */
     private final @Nullable Object server;
     /**
-     * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * External security product&#39;s library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sncLibraryPath;
@@ -90,12 +90,12 @@ public final class SapTableLinkedServiceResponse {
      */
     private final @Nullable Object sncMode;
     /**
-     * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Initiator&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sncMyName;
     /**
-     * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Communication partner&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sncPartnerName;
@@ -116,7 +116,7 @@ public final class SapTableLinkedServiceResponse {
     private final @Nullable Object systemNumber;
     /**
      * Type of linked service.
-     * Expected value is 'SapTable'.
+     * Expected value is &#39;SapTable&#39;.
      * 
      */
     private final String type;
@@ -257,7 +257,7 @@ public final class SapTableLinkedServiceResponse {
         return Optional.ofNullable(this.server);
     }
     /**
-     * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * External security product&#39;s library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> sncLibraryPath() {
@@ -271,14 +271,14 @@ public final class SapTableLinkedServiceResponse {
         return Optional.ofNullable(this.sncMode);
     }
     /**
-     * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Initiator&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> sncMyName() {
         return Optional.ofNullable(this.sncMyName);
     }
     /**
-     * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Communication partner&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> sncPartnerName() {
@@ -307,7 +307,7 @@ public final class SapTableLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapTable'.
+     * Expected value is &#39;SapTable&#39;.
      * 
     */
     public String type() {

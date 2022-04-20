@@ -39,7 +39,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
+     * The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don&#39;t want to change the desired capacity at the scheduled time.
      * 
      */
     @Import(name="desiredCapacity")
@@ -50,7 +50,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
+     * The time for this action to end, in &#34;YYYY-MM-DDThh:mm:ssZ&#34; format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
@@ -63,7 +63,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum size for the Auto Scaling group. Default 0.
-     * Set to -1 if you don't want to change the maximum size at the scheduled time.
+     * Set to -1 if you don&#39;t want to change the maximum size at the scheduled time.
      * 
      */
     @Import(name="maxSize")
@@ -75,7 +75,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum size for the Auto Scaling group. Default 0.
-     * Set to -1 if you don't want to change the minimum size at the scheduled time.
+     * Set to -1 if you don&#39;t want to change the minimum size at the scheduled time.
      * 
      */
     @Import(name="minSize")
@@ -108,7 +108,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
+     * The time for this action to start, in &#34;YYYY-MM-DDThh:mm:ssZ&#34; format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */

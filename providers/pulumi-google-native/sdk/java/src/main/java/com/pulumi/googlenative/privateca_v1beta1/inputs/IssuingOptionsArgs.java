@@ -19,7 +19,7 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
     public static final IssuingOptionsArgs Empty = new IssuingOptionsArgs();
 
     /**
-     * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
+     * When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
      * 
      */
     @Import(name="includeCaCertUrl", required=true)

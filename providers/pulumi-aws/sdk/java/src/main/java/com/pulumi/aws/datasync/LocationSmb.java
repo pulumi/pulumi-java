@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Manages a SMB Location within AWS DataSync.
  * 
- * > **NOTE:** The DataSync Agents must be available before creating this resource.
+ * &gt; **NOTE:** The DataSync Agents must be available before creating this resource.
  * 
  * ## Example Usage
  * 

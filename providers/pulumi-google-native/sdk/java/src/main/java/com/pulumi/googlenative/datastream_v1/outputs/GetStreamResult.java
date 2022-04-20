@@ -57,7 +57,7 @@ public final class GetStreamResult {
      */
     private final Map<String,String> labels;
     /**
-     * The stream's name.
+     * The stream&#39;s name.
      * 
      */
     private final String name;
@@ -162,7 +162,7 @@ public final class GetStreamResult {
         return this.labels;
     }
     /**
-     * The stream's name.
+     * The stream&#39;s name.
      * 
     */
     public String name() {

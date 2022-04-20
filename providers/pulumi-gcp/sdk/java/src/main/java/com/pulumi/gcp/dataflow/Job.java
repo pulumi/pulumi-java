@@ -24,13 +24,13 @@ import javax.annotation.Nullable;
  * [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
  * 
  * ## Example Usage
- * ## Note on "destroy" / "apply"
+ * ## Note on &#34;destroy&#34; / &#34;apply&#34;
  * 
  * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.
  * 
- * The Dataflow resource is considered 'existing' while it is in a nonterminal state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE', 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.
+ * The Dataflow resource is considered &#39;existing&#39; while it is in a nonterminal state.  If it reaches a terminal state (e.g. &#39;FAILED&#39;, &#39;COMPLETE&#39;, &#39;CANCELLED&#39;), it will be recreated on the next &#39;apply&#39;.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.
  * 
- * A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancelled", the job terminates - any data written remains where it is, but no new data will be processed.  If "drained", no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is "drain". When `on_delete` is set to `"drain"` in the configuration, you may experience a long wait for your `pulumi destroy` to complete.
+ * A Dataflow job which is &#39;destroyed&#39; may be &#34;cancelled&#34; or &#34;drained&#34;.  If &#34;cancelled&#34;, the job terminates - any data written remains where it is, but no new data will be processed.  If &#34;drained&#34;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &#34;drain&#34;. When `on_delete` is set to `&#34;drain&#34;` in the configuration, you may experience a long wait for your `pulumi destroy` to complete.
  * 
  * ## Import
  * 
@@ -40,14 +40,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:dataflow/job:Job")
 public class Job extends com.pulumi.resources.CustomResource {
     /**
-     * List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+     * List of experiments that should be used by the job. An example value is `[&#34;enable_stackdriver_agent_metrics&#34;]`.
      * 
      */
     @Export(name="additionalExperiments", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> additionalExperiments;
 
     /**
-     * @return List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
+     * @return List of experiments that should be used by the job. An example value is `[&#34;enable_stackdriver_agent_metrics&#34;]`.
      * 
      */
     public Output</* @Nullable */ List<String>> additionalExperiments() {
@@ -68,14 +68,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.enableStreamingEngine;
     }
     /**
-     * The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
+     * The configuration for VM IPs.  Options are `&#34;WORKER_IP_PUBLIC&#34;` or `&#34;WORKER_IP_PRIVATE&#34;`.
      * 
      */
     @Export(name="ipConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipConfiguration;
 
     /**
-     * @return The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
+     * @return The configuration for VM IPs.  Options are `&#34;WORKER_IP_PUBLIC&#34;` or `&#34;WORKER_IP_PRIVATE&#34;`.
      * 
      */
     public Output</* @Nullable */ String> ipConfiguration() {
@@ -114,7 +114,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * <<<<<<< HEAD
+     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, Object.class})
@@ -125,7 +125,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * <<<<<<< HEAD
+     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     public Output</* @Nullable */ Map<String,Object>> labels() {
@@ -174,28 +174,28 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The network to which VMs will be assigned. If it is not provided, "default" will be used.
+     * The network to which VMs will be assigned. If it is not provided, &#34;default&#34; will be used.
      * 
      */
     @Export(name="network", type=String.class, parameters={})
     private Output</* @Nullable */ String> network;
 
     /**
-     * @return The network to which VMs will be assigned. If it is not provided, "default" will be used.
+     * @return The network to which VMs will be assigned. If it is not provided, &#34;default&#34; will be used.
      * 
      */
     public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
-     * One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
+     * One of &#34;drain&#34; or &#34;cancel&#34;.  Specifies behavior of deletion during `pulumi destroy`.  See above note.
      * 
      */
     @Export(name="onDelete", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDelete;
 
     /**
-     * @return One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
+     * @return One of &#34;drain&#34; or &#34;cancel&#34;.  Specifies behavior of deletion during `pulumi destroy`.  See above note.
      * 
      */
     public Output</* @Nullable */ String> onDelete() {
@@ -272,14 +272,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `"googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME"`
+     * The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
      * 
      */
     @Export(name="subnetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetwork;
 
     /**
-     * @return The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `"googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME"`
+     * @return The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
      * 
      */
     public Output</* @Nullable */ String> subnetwork() {
@@ -315,7 +315,7 @@ public class Job extends com.pulumi.resources.CustomResource {
     }
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     @Export(name="transformNameMapping", type=Map.class, parameters={String.class, Object.class})
@@ -323,7 +323,7 @@ public class Job extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * > > > > > > > v4.1.0
+     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     public Output</* @Nullable */ Map<String,Object>> transformNameMapping() {

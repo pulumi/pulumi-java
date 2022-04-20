@@ -22,7 +22,7 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     public static final IdentitySourceArgs Empty = new IdentitySourceArgs();
 
     /**
-     * The domain's NetBIOS name
+     * The domain&#39;s NetBIOS name
      * 
      */
     @Import(name="alias")
@@ -55,7 +55,7 @@ public final class IdentitySourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The domain's dns name
+     * The domain&#39;s dns name
      * 
      */
     @Import(name="domain")

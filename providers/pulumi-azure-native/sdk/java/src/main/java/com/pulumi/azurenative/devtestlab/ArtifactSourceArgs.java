@@ -31,7 +31,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The artifact source's branch reference.
+     * The artifact source&#39;s branch reference.
      * 
      */
     @Import(name="branchRef")
@@ -42,7 +42,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The artifact source's display name.
+     * The artifact source&#39;s display name.
      * 
      */
     @Import(name="displayName")
@@ -119,7 +119,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The artifact source's type.
+     * The artifact source&#39;s type.
      * 
      */
     @Import(name="sourceType")
@@ -152,7 +152,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The artifact source's URI.
+     * The artifact source&#39;s URI.
      * 
      */
     @Import(name="uri")

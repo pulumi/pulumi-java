@@ -43,7 +43,7 @@ public final class GoogleTypeMoneyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
+     * The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
      * 
      */
     @Import(name="units")

@@ -49,7 +49,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends com.pulum
     }
 
     /**
-     * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
+     * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it&#39;s created.
      * 
      */
     @Import(name="onStart")

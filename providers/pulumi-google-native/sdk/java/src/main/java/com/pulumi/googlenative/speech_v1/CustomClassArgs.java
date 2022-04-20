@@ -18,7 +18,7 @@ public final class CustomClassArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomClassArgs Empty = new CustomClassArgs();
 
     /**
-     * The ID to use for the custom class, which will become the final component of the custom class' resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * The ID to use for the custom class, which will become the final component of the custom class&#39; resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
      * 
      */
     @Import(name="customClassId", required=true)

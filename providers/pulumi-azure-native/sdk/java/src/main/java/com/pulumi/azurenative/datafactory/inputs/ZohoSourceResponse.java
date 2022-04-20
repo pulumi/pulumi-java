@@ -99,7 +99,7 @@ public final class ZohoSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'ZohoSource'.
+     * Expected value is &#39;ZohoSource&#39;.
      * 
      */
     @Import(name="type", required=true)

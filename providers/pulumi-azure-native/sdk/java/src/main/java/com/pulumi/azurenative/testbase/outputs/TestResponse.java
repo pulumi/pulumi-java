@@ -20,7 +20,7 @@ public final class TestResponse {
      */
     private final List<CommandResponse> commands;
     /**
-     * Indicates if this test is active.It doesn't schedule test for not active Test.
+     * Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
      * 
      */
     private final @Nullable Boolean isActive;
@@ -55,7 +55,7 @@ public final class TestResponse {
         return this.commands;
     }
     /**
-     * Indicates if this test is active.It doesn't schedule test for not active Test.
+     * Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
      * 
     */
     public Optional<Boolean> isActive() {

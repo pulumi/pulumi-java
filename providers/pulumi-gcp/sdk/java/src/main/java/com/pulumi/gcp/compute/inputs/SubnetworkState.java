@@ -57,7 +57,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
     /**
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
-     * @Deprecated
+     * @deprecated
      * This field is not useful for users, and has been removed as an output.
      * 
      */
@@ -96,7 +96,7 @@ public final class SubnetworkState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
+     * The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation
      * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
      * cannot enable direct path.
      * Possible values are `EXTERNAL`.

@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/dataproc/docs)
  * 
- * !> **Warning:** Due to limitations of the API, all arguments except
+ * !&gt; **Warning:** Due to limitations of the API, all arguments except
  * `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
  * whole cluster!
  * 

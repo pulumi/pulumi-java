@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs();
 
     /**
-     * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
+     * Custom metadata for your handoff procedure. Dialogflow doesn&#39;t impose any structure on this.
      * 
      */
     @Import(name="metadata")

@@ -18,7 +18,7 @@ public final class SalesforceServiceCloudSinkResponse {
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+     * The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object externalIdFieldName;
@@ -44,7 +44,7 @@ public final class SalesforceServiceCloudSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'SalesforceServiceCloudSink'.
+     * Expected value is &#39;SalesforceServiceCloudSink&#39;.
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class SalesforceServiceCloudSinkResponse {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+     * The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> externalIdFieldName() {
@@ -132,7 +132,7 @@ public final class SalesforceServiceCloudSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'SalesforceServiceCloudSink'.
+     * Expected value is &#39;SalesforceServiceCloudSink&#39;.
      * 
     */
     public String type() {

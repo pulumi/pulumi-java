@@ -80,7 +80,7 @@ public final class SavedAttachedDiskResponse {
      */
     private final String source;
     /**
-     * A size of the storage used by the disk's snapshot by this machine image.
+     * A size of the storage used by the disk&#39;s snapshot by this machine image.
      * 
      */
     private final String storageBytes;
@@ -223,7 +223,7 @@ public final class SavedAttachedDiskResponse {
         return this.source;
     }
     /**
-     * A size of the storage used by the disk's snapshot by this machine image.
+     * A size of the storage used by the disk&#39;s snapshot by this machine image.
      * 
     */
     public String storageBytes() {

@@ -104,7 +104,7 @@ public final class NetezzaLinkedServiceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'Netezza'.
+     * Expected value is &#39;Netezza&#39;.
      * 
      */
     @Import(name="type", required=true)

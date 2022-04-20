@@ -49,7 +49,7 @@ public final class CouchbaseSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'CouchbaseSource'.
+     * Expected value is &#39;CouchbaseSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class CouchbaseSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'CouchbaseSource'.
+     * Expected value is &#39;CouchbaseSource&#39;.
      * 
     */
     public String type() {

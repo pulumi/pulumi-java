@@ -24,7 +24,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     }
 
     /**
-     * The type of the parent resource. This can be either \'topics\' or \'domains\'.
+     * The type of the parent resource. This can be either \&#39;topics\&#39; or \&#39;domains\&#39;.
      * 
      */
     @Import(name="parentType", required=true)
@@ -46,7 +46,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)

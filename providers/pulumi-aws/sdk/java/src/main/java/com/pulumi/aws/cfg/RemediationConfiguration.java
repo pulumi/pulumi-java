@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Config Remediation Configuration.
  * 
- * > **Note:** Config Remediation Configuration requires an existing Config Rule to be present.
+ * &gt; **Note:** Config Remediation Configuration requires an existing Config Rule to be present.
  * 
  * ## Example Usage
  * 

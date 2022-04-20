@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServiceResult {
     /**
-     * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
+     * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either &#39;default&#39; or &#39;highDensity&#39;. For all other SKUs, this value must be &#39;default&#39;.
      * 
      */
     private final @Nullable String hostingMode;
@@ -50,7 +50,7 @@ public final class GetServiceResult {
      */
     private final @Nullable NetworkRuleSetResponse networkRuleSet;
     /**
-     * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
+     * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For &#39;standard3&#39; services with hostingMode set to &#39;highDensity&#39;, the allowed values are between 1 and 3.
      * 
      */
     private final @Nullable Integer partitionCount;
@@ -60,12 +60,12 @@ public final class GetServiceResult {
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up.
+     * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either &#39;succeeded&#39; or &#39;failed&#39;. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as &#39;succeeded&#39; directly in the call to Create search service. This is because the free service uses capacity that is already set up.
      * 
      */
     private final String provisioningState;
     /**
-     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -85,7 +85,7 @@ public final class GetServiceResult {
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
+     * The status of the search service. Possible values include: &#39;running&#39;: The search service is running and no provisioning operations are underway. &#39;provisioning&#39;: The search service is being provisioned or scaled up or down. &#39;deleting&#39;: The search service is being deleted. &#39;degraded&#39;: The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. &#39;disabled&#39;: The search service is disabled. In this state, the service will reject all API requests. &#39;error&#39;: The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
      * 
      */
     private final String status;
@@ -100,7 +100,7 @@ public final class GetServiceResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class GetServiceResult {
     }
 
     /**
-     * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
+     * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either &#39;default&#39; or &#39;highDensity&#39;. For all other SKUs, this value must be &#39;default&#39;.
      * 
     */
     public Optional<String> hostingMode() {
@@ -186,7 +186,7 @@ public final class GetServiceResult {
         return Optional.ofNullable(this.networkRuleSet);
     }
     /**
-     * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
+     * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For &#39;standard3&#39; services with hostingMode set to &#39;highDensity&#39;, the allowed values are between 1 and 3.
      * 
     */
     public Optional<Integer> partitionCount() {
@@ -200,14 +200,14 @@ public final class GetServiceResult {
         return this.privateEndpointConnections;
     }
     /**
-     * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up.
+     * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either &#39;succeeded&#39; or &#39;failed&#39;. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as &#39;succeeded&#39; directly in the call to Create search service. This is because the free service uses capacity that is already set up.
      * 
     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
     */
     public Optional<String> publicNetworkAccess() {
@@ -235,7 +235,7 @@ public final class GetServiceResult {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
+     * The status of the search service. Possible values include: &#39;running&#39;: The search service is running and no provisioning operations are underway. &#39;provisioning&#39;: The search service is being provisioned or scaled up or down. &#39;deleting&#39;: The search service is being deleted. &#39;degraded&#39;: The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. &#39;disabled&#39;: The search service is disabled. In this state, the service will reject all API requests. &#39;error&#39;: The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
      * 
     */
     public String status() {
@@ -256,7 +256,7 @@ public final class GetServiceResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

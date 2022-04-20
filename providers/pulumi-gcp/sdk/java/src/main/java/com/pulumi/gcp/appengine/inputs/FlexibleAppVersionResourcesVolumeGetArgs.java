@@ -38,7 +38,7 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends com.pulumi.r
     }
 
     /**
-     * Underlying volume type, e.g. 'tmpfs'.
+     * Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
      */
     @Import(name="volumeType", required=true)

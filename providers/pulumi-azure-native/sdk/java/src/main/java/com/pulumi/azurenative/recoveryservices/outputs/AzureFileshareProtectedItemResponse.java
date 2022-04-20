@@ -97,7 +97,7 @@ public final class AzureFileshareProtectedItemResponse {
     private final @Nullable String policyId;
     /**
      * backup item type.
-     * Expected value is 'AzureFileShareProtectedItem'.
+     * Expected value is &#39;AzureFileShareProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -282,7 +282,7 @@ public final class AzureFileshareProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'AzureFileShareProtectedItem'.
+     * Expected value is &#39;AzureFileShareProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

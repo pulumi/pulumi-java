@@ -125,7 +125,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bot's endpoint
+     * The bot&#39;s endpoint
      * 
      */
     @Import(name="endpoint", required=true)
@@ -191,7 +191,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The bot's manifest url
+     * The bot&#39;s manifest url
      * 
      */
     @Import(name="manifestUrl")

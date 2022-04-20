@@ -45,7 +45,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AZ's to serve traffic in.
+     * The AZ&#39;s to serve traffic in.
      * 
      */
     @Import(name="availabilityZones")
@@ -202,7 +202,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Use this for Classic or Default VPC only.
      * 
      */
@@ -215,7 +215,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Only available on ELBs launched in a VPC.
      * 
      */

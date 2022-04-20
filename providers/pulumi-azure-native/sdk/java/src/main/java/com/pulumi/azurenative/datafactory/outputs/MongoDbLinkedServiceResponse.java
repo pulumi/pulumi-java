@@ -86,7 +86,7 @@ public final class MongoDbLinkedServiceResponse {
     private final Object server;
     /**
      * Type of linked service.
-     * Expected value is 'MongoDb'.
+     * Expected value is &#39;MongoDb&#39;.
      * 
      */
     private final String type;
@@ -223,7 +223,7 @@ public final class MongoDbLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'MongoDb'.
+     * Expected value is &#39;MongoDb&#39;.
      * 
     */
     public String type() {

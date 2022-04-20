@@ -32,7 +32,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
     }
 
     /**
-     * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+     * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. &#34;foo=bar&#34; in URL-encoded form is &#34;foo%3Dbar&#34; and in base64 encoding is &#34;Zm9vJTI1M0RiYXI=&#34;.
      * 
      */
     @Import(name="body")
@@ -77,7 +77,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
     }
 
     /**
-     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
      * 
      */
     @Import(name="path")

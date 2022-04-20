@@ -38,7 +38,7 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final Map<String,String> labels;
     /**
-     * A list of publicly visible licenses. Reserved for Google's use.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use.
      * 
      */
     private final List<String> licenses;
@@ -144,7 +144,7 @@ public final class AttachedDiskInitializeParamsResponse {
         return this.labels;
     }
     /**
-     * A list of publicly visible licenses. Reserved for Google's use.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use.
      * 
     */
     public List<String> licenses() {

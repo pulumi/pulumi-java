@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * Represents a monthly schedule. An example of a valid monthly schedule is "on the third Tuesday of the month" or "on the 15th of the month".
+ * Represents a monthly schedule. An example of a valid monthly schedule is &#34;on the third Tuesday of the month&#34; or &#34;on the 15th of the month&#34;.
  * 
  */
 public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     public static final MonthlyScheduleArgs Empty = new MonthlyScheduleArgs();
 
     /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.
+     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
      * 
      */
     @Import(name="monthDay", required=true)

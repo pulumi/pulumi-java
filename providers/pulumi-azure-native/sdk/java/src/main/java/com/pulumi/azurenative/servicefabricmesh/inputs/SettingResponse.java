@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a setting for the container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+ * Describes a setting for the container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
  * 
  */
 public final class SettingResponse extends com.pulumi.resources.InvokeArgs {

@@ -18,7 +18,7 @@ public final class ObjectTypeField {
      */
     private final @Nullable ObjectTypeFieldContentType contentType;
     /**
-     * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
+     * A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
      * 
      */
     private final @Nullable String source;
@@ -46,7 +46,7 @@ public final class ObjectTypeField {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
+     * A field of a ProfileObject. For example: _source.FirstName, where &#34;_source&#34; is a ProfileObjectType of a Zendesk user and &#34;FirstName&#34; is a field in that ObjectType.
      * 
     */
     public Optional<String> source() {

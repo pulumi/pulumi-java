@@ -123,7 +123,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
      * 
      */
     @Import(name="model")

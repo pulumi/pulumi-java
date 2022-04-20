@@ -15,7 +15,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends com
     public static final AzureClusterControlPlaneDatabaseEncryptionGetArgs Empty = new AzureClusterControlPlaneDatabaseEncryptionGetArgs();
 
     /**
-     * The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: `/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.KeyVault/vaults/<key-vault-id>/keys/<key-name>` Encryption will always take the latest version of the key and hence specific version is not supported.
+     * The ARM ID of the Azure Key Vault key to encrypt / decrypt data. For example: `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-id&gt;/providers/Microsoft.KeyVault/vaults/&lt;key-vault-id&gt;/keys/&lt;key-name&gt;` Encryption will always take the latest version of the key and hence specific version is not supported.
      * 
      */
     @Import(name="keyId", required=true)

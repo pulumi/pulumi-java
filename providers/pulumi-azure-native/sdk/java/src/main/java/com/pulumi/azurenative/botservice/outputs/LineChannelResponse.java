@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class LineChannelResponse {
     /**
      * The channel name
-     * Expected value is 'LineChannel'.
+     * Expected value is &#39;LineChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class LineChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'LineChannel'.
+     * Expected value is &#39;LineChannel&#39;.
      * 
     */
     public String channelName() {

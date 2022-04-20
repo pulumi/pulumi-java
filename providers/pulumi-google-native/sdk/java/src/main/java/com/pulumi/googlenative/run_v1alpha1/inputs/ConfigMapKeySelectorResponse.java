@@ -30,7 +30,7 @@ public final class ConfigMapKeySelectorResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
      * 
      */
     @Import(name="localObjectReference", required=true)

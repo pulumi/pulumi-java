@@ -28,7 +28,7 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * Output only. Identifier of the brand, in the format &#39;projects/{project_number}/brands/{brand_id}&#39;. NOTE: The brand
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */

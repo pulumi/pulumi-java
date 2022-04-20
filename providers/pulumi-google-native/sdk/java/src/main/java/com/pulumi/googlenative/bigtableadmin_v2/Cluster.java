@@ -36,14 +36,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.clusterConfig;
     }
     /**
-     * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
+     * Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
      * 
      */
     @Export(name="defaultStorageType", type=String.class, parameters={})
     private Output<String> defaultStorageType;
 
     /**
-     * @return Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
+     * @return Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
      * 
      */
     public Output<String> defaultStorageType() {
@@ -64,14 +64,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.encryptionConfig;
     }
     /**
-     * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+     * Immutable. The location where this cluster&#39;s nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
-     * @return Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
+     * @return Immutable. The location where this cluster&#39;s nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
      */
     public Output<String> location() {

@@ -89,7 +89,7 @@ public final class SnowflakeSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'SnowflakeSink'.
+     * Expected value is &#39;SnowflakeSink&#39;.
      * 
      */
     @Import(name="type", required=true)

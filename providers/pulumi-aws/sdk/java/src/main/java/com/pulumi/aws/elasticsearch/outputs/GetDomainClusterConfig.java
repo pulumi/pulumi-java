@@ -51,7 +51,7 @@ public final class GetDomainClusterConfig {
      */
     private final @Nullable Boolean warmEnabled;
     /**
-     * The instance type for the Elasticsearch cluster's warm nodes.
+     * The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
      */
     private final String warmType;
@@ -140,7 +140,7 @@ public final class GetDomainClusterConfig {
         return Optional.ofNullable(this.warmEnabled);
     }
     /**
-     * The instance type for the Elasticsearch cluster's warm nodes.
+     * The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
     */
     public String warmType() {

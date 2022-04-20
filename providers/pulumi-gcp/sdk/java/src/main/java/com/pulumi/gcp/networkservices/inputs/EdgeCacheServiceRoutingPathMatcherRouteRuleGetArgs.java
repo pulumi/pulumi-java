@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     }
 
     /**
-     * The header actions, including adding & removing headers, for requests that match this route.
+     * The header actions, including adding &amp; removing headers, for requests that match this route.
      * Structure is documented below.
      * 
      */
@@ -57,7 +57,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     }
 
     /**
-     * The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names ("my-origin") or fully-qualified resource URLs - e.g. "networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin"
+     * The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
      * Only one of origin or urlRedirect can be set.
      * 
      */

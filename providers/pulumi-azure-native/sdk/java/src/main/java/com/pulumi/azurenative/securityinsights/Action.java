@@ -88,14 +88,14 @@ public class Action extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The name of the logic app's workflow.
+     * The name of the logic app&#39;s workflow.
      * 
      */
     @Export(name="workflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workflowId;
 
     /**
-     * @return The name of the logic app's workflow.
+     * @return The name of the logic app&#39;s workflow.
      * 
      */
     public Output</* @Nullable */ String> workflowId() {

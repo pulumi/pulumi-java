@@ -17,7 +17,7 @@ public final class ClusterKeyResponse {
      */
     private final @Nullable String name;
     /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
+     * Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
      * 
      */
     private final @Nullable String orderBy;
@@ -38,7 +38,7 @@ public final class ClusterKeyResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
+     * Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
      * 
     */
     public Optional<String> orderBy() {

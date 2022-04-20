@@ -18,7 +18,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     public static final GatewayRouteResponse Empty = new GatewayRouteResponse();
 
     /**
-     * The route's AS path sequence.
+     * The route&#39;s AS path sequence.
      * 
      */
     @Import(name="asPath", required=true)
@@ -29,7 +29,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The gateway's local address.
+     * The gateway&#39;s local address.
      * 
      */
     @Import(name="localAddress", required=true)
@@ -40,7 +40,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The route's network prefix.
+     * The route&#39;s network prefix.
      * 
      */
     @Import(name="network", required=true)
@@ -51,7 +51,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The route's next hop.
+     * The route&#39;s next hop.
      * 
      */
     @Import(name="nextHop", required=true)
@@ -84,7 +84,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The route's weight.
+     * The route&#39;s weight.
      * 
      */
     @Import(name="weight", required=true)

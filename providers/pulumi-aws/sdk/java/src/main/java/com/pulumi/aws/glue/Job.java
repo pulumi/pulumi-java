@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glue Job resource.
  * 
- * > Glue functionality, such as monitoring and logging of jobs, is typically managed with the `default_arguments` argument. See the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the Glue developer guide for additional information.
+ * &gt; Glue functionality, such as monitoring and logging of jobs, is typically managed with the `default_arguments` argument. See the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the Glue developer guide for additional information.
  * 
  * ## Example Usage
  * 
@@ -123,14 +123,14 @@ public class Job extends com.pulumi.resources.CustomResource {
         return this.executionProperty;
     }
     /**
-     * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
+     * The version of glue to use, for example &#34;1.0&#34;. For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
     @Export(name="glueVersion", type=String.class, parameters={})
     private Output<String> glueVersion;
 
     /**
-     * @return The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
+     * @return The version of glue to use, for example &#34;1.0&#34;. For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
     public Output<String> glueVersion() {

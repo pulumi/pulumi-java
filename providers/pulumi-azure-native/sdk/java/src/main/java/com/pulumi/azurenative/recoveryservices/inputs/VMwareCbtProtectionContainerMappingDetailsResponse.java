@@ -19,7 +19,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

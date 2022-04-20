@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The configuration for a Microsoft Active Directory (Microsoft AD) studio resource.</p>
+ * &lt;p&gt;The configuration for a Microsoft Active Directory (Microsoft AD) studio resource.&lt;/p&gt;
  * 
  */
 public final class StudioComponentActiveDirectoryConfiguration extends com.pulumi.resources.InvokeArgs {
@@ -21,7 +21,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     public static final StudioComponentActiveDirectoryConfiguration Empty = new StudioComponentActiveDirectoryConfiguration();
 
     /**
-     * <p>A collection of custom attributes for an Active Directory computer.</p>
+     * &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
      * 
      */
     @Import(name="computerAttributes")
@@ -32,7 +32,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     }
 
     /**
-     * <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>
+     * &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
      * 
      */
     @Import(name="directoryId")
@@ -43,7 +43,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     }
 
     /**
-     * <p>The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.</p>
+     * &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
      * 
      */
     @Import(name="organizationalUnitDistinguishedName")

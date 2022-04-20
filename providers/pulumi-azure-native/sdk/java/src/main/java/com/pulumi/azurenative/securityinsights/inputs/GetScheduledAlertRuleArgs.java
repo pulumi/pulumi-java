@@ -13,7 +13,7 @@ public final class GetScheduledAlertRuleArgs extends com.pulumi.resources.Invoke
     public static final GetScheduledAlertRuleArgs Empty = new GetScheduledAlertRuleArgs();
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

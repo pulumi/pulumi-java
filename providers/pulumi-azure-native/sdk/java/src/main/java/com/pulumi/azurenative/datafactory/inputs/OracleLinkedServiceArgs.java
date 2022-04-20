@@ -104,7 +104,7 @@ public final class OracleLinkedServiceArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of linked service.
-     * Expected value is 'Oracle'.
+     * Expected value is &#39;Oracle&#39;.
      * 
      */
     @Import(name="type", required=true)

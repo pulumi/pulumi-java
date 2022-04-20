@@ -66,7 +66,7 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
 
     /**
      * The write setting type.
-     * Expected value is 'AzureBlobFSWriteSettings'.
+     * Expected value is &#39;AzureBlobFSWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

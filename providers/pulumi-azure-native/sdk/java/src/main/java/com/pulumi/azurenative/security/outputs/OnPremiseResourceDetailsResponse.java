@@ -16,7 +16,7 @@ public final class OnPremiseResourceDetailsResponse {
     private final String machineName;
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremise'.
+     * Expected value is &#39;OnPremise&#39;.
      * 
      */
     private final String source;
@@ -59,7 +59,7 @@ public final class OnPremiseResourceDetailsResponse {
     }
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremise'.
+     * Expected value is &#39;OnPremise&#39;.
      * 
     */
     public String source() {

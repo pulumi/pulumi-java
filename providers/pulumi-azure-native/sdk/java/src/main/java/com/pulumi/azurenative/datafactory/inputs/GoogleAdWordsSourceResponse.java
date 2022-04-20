@@ -99,7 +99,7 @@ public final class GoogleAdWordsSourceResponse extends com.pulumi.resources.Invo
 
     /**
      * Copy source type.
-     * Expected value is 'GoogleAdWordsSource'.
+     * Expected value is &#39;GoogleAdWordsSource&#39;.
      * 
      */
     @Import(name="type", required=true)

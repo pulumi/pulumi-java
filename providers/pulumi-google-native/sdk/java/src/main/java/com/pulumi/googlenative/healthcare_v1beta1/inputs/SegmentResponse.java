@@ -18,7 +18,7 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
     public static final SegmentResponse Empty = new SegmentResponse();
 
     /**
-     * A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, "hemoglobin") denotes that the first component of Field 0 has the value "hemoglobin". * (1.1.2, "CBC") denotes that the second sub-component of the first component of Field 1 has the value "CBC". * (1[0].1, "HbA1c") denotes that the first component of the first Instance of Field 1, which is repeated, has the value "HbA1c".
+     * A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, &#34;hemoglobin&#34;) denotes that the first component of Field 0 has the value &#34;hemoglobin&#34;. * (1.1.2, &#34;CBC&#34;) denotes that the second sub-component of the first component of Field 1 has the value &#34;CBC&#34;. * (1[0].1, &#34;HbA1c&#34;) denotes that the first component of the first Instance of Field 1, which is repeated, has the value &#34;HbA1c&#34;.
      * 
      */
     @Import(name="fields", required=true)
@@ -40,7 +40,7 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Set ID for segments that can be in a set. This can be empty if it's missing or isn't applicable.
+     * Set ID for segments that can be in a set. This can be empty if it&#39;s missing or isn&#39;t applicable.
      * 
      */
     @Import(name="setId", required=true)

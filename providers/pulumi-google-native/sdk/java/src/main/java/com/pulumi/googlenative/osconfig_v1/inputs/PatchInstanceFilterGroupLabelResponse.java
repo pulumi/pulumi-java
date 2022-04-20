@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Targets a group of VM instances by using their [assigned labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A `GroupLabel` is a combination of labels that is used to target VMs for a patch job. For example, a patch job can target VMs that have the following `GroupLabel`: `{"env":"test", "app":"web"}`. This means that the patch job is applied to VMs that have both the labels `env=test` and `app=web`.
+ * Targets a group of VM instances by using their [assigned labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A `GroupLabel` is a combination of labels that is used to target VMs for a patch job. For example, a patch job can target VMs that have the following `GroupLabel`: `{&#34;env&#34;:&#34;test&#34;, &#34;app&#34;:&#34;web&#34;}`. This means that the patch job is applied to VMs that have both the labels `env=test` and `app=web`.
  * 
  */
 public final class PatchInstanceFilterGroupLabelResponse extends com.pulumi.resources.InvokeArgs {

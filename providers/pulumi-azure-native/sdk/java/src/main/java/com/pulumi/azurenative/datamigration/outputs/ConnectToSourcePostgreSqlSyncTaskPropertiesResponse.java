@@ -45,7 +45,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.PostgreSql.Sync'.
+     * Expected value is &#39;ConnectToSource.PostgreSql.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.PostgreSql.Sync'.
+     * Expected value is &#39;ConnectToSource.PostgreSql.Sync&#39;.
      * 
     */
     public String taskType() {

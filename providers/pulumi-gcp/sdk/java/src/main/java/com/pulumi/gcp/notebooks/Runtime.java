@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * A Cloud AI Platform Notebook runtime.
  * 
- * > **Note:** Due to limitations of the Notebooks Runtime API, many fields
+ * &gt; **Note:** Due to limitations of the Notebooks Runtime API, many fields
  * in this resource do not properly detect drift. These fields will also not
  * appear in state once imported.
  * 
@@ -70,7 +70,7 @@ public class Runtime extends com.pulumi.resources.CustomResource {
     }
     /**
      * The health state of this runtime. For a list of possible output values, see
-     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
      * 
      */
     @Export(name="healthState", type=String.class, parameters={})
@@ -78,7 +78,7 @@ public class Runtime extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The health state of this runtime. For a list of possible output values, see
-     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
      * 
      */
     public Output<String> healthState() {

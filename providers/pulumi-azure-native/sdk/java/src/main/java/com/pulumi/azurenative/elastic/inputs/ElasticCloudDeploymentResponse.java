@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the user's elastic deployment associated with the monitor resource.
+ * Details of the user&#39;s elastic deployment associated with the monitor resource.
  * 
  */
 public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.InvokeArgs {

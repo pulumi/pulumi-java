@@ -38,7 +38,7 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'GenericContainer'.
+     * Expected value is &#39;GenericContainer&#39;.
      * 
      */
     @Import(name="containerType", required=true)
@@ -60,7 +60,7 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Name of the container's fabric
+     * Name of the container&#39;s fabric
      * 
      */
     @Import(name="fabricName")

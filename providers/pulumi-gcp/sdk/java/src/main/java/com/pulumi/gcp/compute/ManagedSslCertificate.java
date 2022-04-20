@@ -31,11 +31,11 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates)
  * 
- * > **Warning:** This resource should be used with extreme caution!  Provisioning an SSL
+ * &gt; **Warning:** This resource should be used with extreme caution!  Provisioning an SSL
  * certificate is complex.  Ensure that you understand the lifecycle of a
  * certificate before attempting complex tasks like cert rotation automatically.
- * This resource will "return" as soon as the certificate object is created,
- * but post-creation the certificate object will go through a "provisioning"
+ * This resource will &#34;return&#34; as soon as the certificate object is created,
+ * but post-creation the certificate object will go through a &#34;provisioning&#34;
  * process.  The provisioning process can complete only when the domain name
  * for which the certificate is created points to a target pool which, itself,
  * points at the certificate.  Depending on your DNS provider, this may take

@@ -77,7 +77,7 @@ public final class SapCloudForCustomerSinkResponse extends com.pulumi.resources.
 
     /**
      * Copy sink type.
-     * Expected value is 'SapCloudForCustomerSink'.
+     * Expected value is &#39;SapCloudForCustomerSink&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -110,7 +110,7 @@ public final class SapCloudForCustomerSinkResponse extends com.pulumi.resources.
     }
 
     /**
-     * The write behavior for the operation. Default is 'Insert'.
+     * The write behavior for the operation. Default is &#39;Insert&#39;.
      * 
      */
     @Import(name="writeBehavior")

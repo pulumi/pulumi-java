@@ -52,7 +52,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The firewall rule's type.
+     * The firewall rule&#39;s type.
      * 
      */
     @Import(name="firewallRuleType", required=true)

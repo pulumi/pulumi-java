@@ -392,25 +392,25 @@ import java.util.StringJoiner;
         Z1d_Metal("z1d.metal"),
         Z1d_XLarge("z1d.xlarge"),
         /**
-         * @Deprecated
+         * @deprecated
          * This instancetype has been deprecated
          */
         @Deprecated /* This instancetype has been deprecated */
         U_12tb1Metal("u-12tb1.metal"),
         /**
-         * @Deprecated
+         * @deprecated
          * This instancetype has been deprecated
          */
         @Deprecated /* This instancetype has been deprecated */
         U_6tb1Metal("u-6tb1.metal"),
         /**
-         * @Deprecated
+         * @deprecated
          * This instancetype has been deprecated
          */
         @Deprecated /* This instancetype has been deprecated */
         U_9tb1Metal("u-9tb1.metal"),
         /**
-         * @Deprecated
+         * @deprecated
          * This instancetype has been deprecated
          */
         @Deprecated /* This instancetype has been deprecated */

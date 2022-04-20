@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Configuration for using the free DNS zone provided by Google Domains as a `Registration`'s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
+ * Configuration for using the free DNS zone provided by Google Domains as a `Registration`&#39;s `dns_provider`. You cannot configure the DNS zone itself using the API. To configure the DNS zone, go to [Google Domains](https://domains.google/).
  * 
  */
 public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeArgs {

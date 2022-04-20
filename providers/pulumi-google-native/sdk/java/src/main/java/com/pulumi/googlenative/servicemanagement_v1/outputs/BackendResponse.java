@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BackendResponse {
     /**
-     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     private final List<BackendRuleResponse> rules;
@@ -22,7 +22,7 @@ public final class BackendResponse {
     }
 
     /**
-     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
     */
     public List<BackendRuleResponse> rules() {

@@ -230,14 +230,14 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
         return this.userId;
     }
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
-     * @return This instance's version of the data model. This can change as new features are added that can be marked private workbook.
+     * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
     public Output</* @Nullable */ String> version() {

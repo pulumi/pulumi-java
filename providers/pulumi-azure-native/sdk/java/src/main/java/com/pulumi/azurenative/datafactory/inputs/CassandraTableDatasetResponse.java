@@ -126,7 +126,7 @@ public final class CassandraTableDatasetResponse extends com.pulumi.resources.In
 
     /**
      * Type of dataset.
-     * Expected value is 'CassandraTable'.
+     * Expected value is &#39;CassandraTable&#39;.
      * 
      */
     @Import(name="type", required=true)

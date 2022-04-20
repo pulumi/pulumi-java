@@ -35,7 +35,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
     }
 
     /**
-     * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
      */
     @Import(name="ipv6Address", required=true)

@@ -149,7 +149,7 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the PathMatcher to use to match the path portion of the URL if the
-     * hostRule matches the URL's host portion.
+     * hostRule matches the URL&#39;s host portion.
      * 
      */
     @Import(name="pathMatchers")

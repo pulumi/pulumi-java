@@ -17,7 +17,7 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Timestamp when the Folder was created. Assigned by the server.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="createTime")
@@ -40,7 +40,7 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The folder id from the name "folders/{folder_id}"
+     * The folder id from the name &#34;folders/{folder_id}&#34;
      * 
      */
     @Import(name="folderId")

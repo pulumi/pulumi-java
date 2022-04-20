@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBucketResult {
     /**
-     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
      */
     private final @Nullable Boolean ableToUpdateBundle;
@@ -76,7 +76,7 @@ public final class GetBucketResult {
     }
 
     /**
-     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
     */
     public Optional<Boolean> ableToUpdateBundle() {

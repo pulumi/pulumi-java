@@ -147,7 +147,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
+     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
      */
     @Import(name="streamOptions")

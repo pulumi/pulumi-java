@@ -83,7 +83,7 @@ public final class GetUserTablesSqlTaskPropertiesResponse extends com.pulumi.res
 
     /**
      * Task type.
-     * Expected value is 'GetUserTables.Sql'.
+     * Expected value is &#39;GetUserTables.Sql&#39;.
      * 
      */
     @Import(name="taskType", required=true)

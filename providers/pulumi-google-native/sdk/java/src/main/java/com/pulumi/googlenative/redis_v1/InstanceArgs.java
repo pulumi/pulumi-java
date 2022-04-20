@@ -36,7 +36,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to &#34;true&#34; AUTH is enabled on the instance. Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     @Import(name="authEnabled")

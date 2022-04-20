@@ -25,7 +25,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
 
     /**
      * Command type.
-     * Expected value is 'Migrate.Sync.Complete.Database'.
+     * Expected value is &#39;Migrate.Sync.Complete.Database&#39;.
      * 
      */
     @Import(name="commandType", required=true)

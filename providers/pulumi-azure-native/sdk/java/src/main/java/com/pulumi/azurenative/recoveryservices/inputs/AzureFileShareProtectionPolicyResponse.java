@@ -29,7 +29,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureStorage'.
+     * Expected value is &#39;AzureStorage&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)
@@ -73,7 +73,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     }
 
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     @Import(name="timeZone")

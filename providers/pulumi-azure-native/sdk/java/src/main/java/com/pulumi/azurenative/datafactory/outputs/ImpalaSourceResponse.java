@@ -49,7 +49,7 @@ public final class ImpalaSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ImpalaSource'.
+     * Expected value is &#39;ImpalaSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ImpalaSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ImpalaSource'.
+     * Expected value is &#39;ImpalaSource&#39;.
      * 
     */
     public String type() {

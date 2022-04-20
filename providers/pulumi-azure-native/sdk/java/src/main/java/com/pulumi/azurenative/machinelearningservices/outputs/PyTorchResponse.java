@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class PyTorchResponse {
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'PyTorch'.
+     * Expected value is &#39;PyTorch&#39;.
      * 
      */
     private final String distributionType;
@@ -34,7 +34,7 @@ public final class PyTorchResponse {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'PyTorch'.
+     * Expected value is &#39;PyTorch&#39;.
      * 
     */
     public String distributionType() {

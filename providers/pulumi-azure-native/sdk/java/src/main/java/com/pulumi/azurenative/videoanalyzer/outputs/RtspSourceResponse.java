@@ -31,7 +31,7 @@ public final class RtspSourceResponse {
     private final @Nullable String transport;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
      * 
      */
     private final String type;
@@ -71,7 +71,7 @@ public final class RtspSourceResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
      * 
     */
     public String type() {

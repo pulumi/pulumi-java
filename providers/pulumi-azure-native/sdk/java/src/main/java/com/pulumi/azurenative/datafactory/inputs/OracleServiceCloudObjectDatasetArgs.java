@@ -115,7 +115,7 @@ public final class OracleServiceCloudObjectDatasetArgs extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'OracleServiceCloudObject'.
+     * Expected value is &#39;OracleServiceCloudObject&#39;.
      * 
      */
     @Import(name="type", required=true)

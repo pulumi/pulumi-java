@@ -16,21 +16,21 @@ import javax.annotation.Nullable;
 /**
  * Creates a new execution using the latest revision of the given workflow.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
 @ResourceType(type="google-native:workflowexecutions/v1beta:Execution")
 public class Execution extends com.pulumi.resources.CustomResource {
     /**
-     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
      */
     @Export(name="argument", type=String.class, parameters={})
     private Output<String> argument;
 
     /**
-     * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
+     * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
      * 
      */
     public Output<String> argument() {
@@ -65,14 +65,14 @@ public class Execution extends com.pulumi.resources.CustomResource {
         return this.endTime;
     }
     /**
-     * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
      * 
      */
     @Export(name="error", type=ErrorResponse.class, parameters={})
     private Output<ErrorResponse> error;
 
     /**
-     * @return The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
+     * @return The error which caused the execution to finish prematurely. The value is only present if the execution&#39;s state is `FAILED` or `CANCELLED`.
      * 
      */
     public Output<ErrorResponse> error() {
@@ -93,14 +93,14 @@ public class Execution extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
      * 
      */
     @Export(name="result", type=String.class, parameters={})
     private Output<String> result;
 
     /**
-     * @return Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
+     * @return Output of the execution represented as a JSON string. The value can only be present if the execution&#39;s state is `SUCCEEDED`.
      * 
      */
     public Output<String> result() {

@@ -48,14 +48,14 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
         return this.creationTime;
     }
     /**
-     * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+     * The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
      * 
      */
     @Export(name="keyVaultProperties", type=EncryptionScopeKeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
-     * @return The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+     * @return The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
      * 
      */
     public Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> keyVaultProperties() {
@@ -132,14 +132,14 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

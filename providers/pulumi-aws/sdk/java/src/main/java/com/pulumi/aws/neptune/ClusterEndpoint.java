@@ -94,14 +94,14 @@ public class ClusterEndpoint extends com.pulumi.resources.CustomResource {
         return this.endpointType;
     }
     /**
-     * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
      * 
      */
     @Export(name="excludedMembers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludedMembers;
 
     /**
-     * @return List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * @return List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
      * 
      */
     public Output</* @Nullable */ List<String>> excludedMembers() {

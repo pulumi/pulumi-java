@@ -18,17 +18,17 @@ public final class GetArtifactSourceResult {
      */
     private final @Nullable String armTemplateFolderPath;
     /**
-     * The artifact source's branch reference.
+     * The artifact source&#39;s branch reference.
      * 
      */
     private final @Nullable String branchRef;
     /**
-     * The artifact source's creation date.
+     * The artifact source&#39;s creation date.
      * 
      */
     private final String createdDate;
     /**
-     * The artifact source's display name.
+     * The artifact source&#39;s display name.
      * 
      */
     private final @Nullable String displayName;
@@ -63,7 +63,7 @@ public final class GetArtifactSourceResult {
      */
     private final @Nullable String securityToken;
     /**
-     * The artifact source's type.
+     * The artifact source&#39;s type.
      * 
      */
     private final @Nullable String sourceType;
@@ -88,7 +88,7 @@ public final class GetArtifactSourceResult {
      */
     private final String uniqueIdentifier;
     /**
-     * The artifact source's URI.
+     * The artifact source&#39;s URI.
      * 
      */
     private final @Nullable String uri;
@@ -137,21 +137,21 @@ public final class GetArtifactSourceResult {
         return Optional.ofNullable(this.armTemplateFolderPath);
     }
     /**
-     * The artifact source's branch reference.
+     * The artifact source&#39;s branch reference.
      * 
     */
     public Optional<String> branchRef() {
         return Optional.ofNullable(this.branchRef);
     }
     /**
-     * The artifact source's creation date.
+     * The artifact source&#39;s creation date.
      * 
     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The artifact source's display name.
+     * The artifact source&#39;s display name.
      * 
     */
     public Optional<String> displayName() {
@@ -200,7 +200,7 @@ public final class GetArtifactSourceResult {
         return Optional.ofNullable(this.securityToken);
     }
     /**
-     * The artifact source's type.
+     * The artifact source&#39;s type.
      * 
     */
     public Optional<String> sourceType() {
@@ -235,7 +235,7 @@ public final class GetArtifactSourceResult {
         return this.uniqueIdentifier;
     }
     /**
-     * The artifact source's URI.
+     * The artifact source&#39;s URI.
      * 
     */
     public Optional<String> uri() {

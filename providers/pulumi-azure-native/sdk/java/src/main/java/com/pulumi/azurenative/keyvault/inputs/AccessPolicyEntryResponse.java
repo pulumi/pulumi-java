@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+ * An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID.
  * 
  */
 public final class AccessPolicyEntryResponse extends com.pulumi.resources.InvokeArgs {

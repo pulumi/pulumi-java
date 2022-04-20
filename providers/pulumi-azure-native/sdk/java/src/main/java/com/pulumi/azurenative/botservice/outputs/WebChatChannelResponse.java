@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class WebChatChannelResponse {
     /**
      * The channel name
-     * Expected value is 'WebChatChannel'.
+     * Expected value is &#39;WebChatChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class WebChatChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'WebChatChannel'.
+     * Expected value is &#39;WebChatChannel&#39;.
      * 
     */
     public String channelName() {

@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example of monitoring Healthy Hosts on NLB using Target Group and NLB
  * 
- * > **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
+ * &gt; **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
  * You must choose one or the other
  * 
  * ## Import
@@ -44,14 +44,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:cloudwatch/metricAlarm:MetricAlarm")
 public class MetricAlarm extends com.pulumi.resources.CustomResource {
     /**
-     * Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
+     * Indicates whether or not actions should be executed during any changes to the alarm&#39;s state. Defaults to `true`.
      * 
      */
     @Export(name="actionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> actionsEnabled;
 
     /**
-     * @return Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
+     * @return Indicates whether or not actions should be executed during any changes to the alarm&#39;s state. Defaults to `true`.
      * 
      */
     public Output</* @Nullable */ Boolean> actionsEnabled() {
@@ -238,14 +238,14 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
         return this.metricQueries;
     }
     /**
-     * The descriptive name for the alarm. This name must be unique within the user's AWS account
+     * The descriptive name for the alarm. This name must be unique within the user&#39;s AWS account
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The descriptive name for the alarm. This name must be unique within the user's AWS account
+     * @return The descriptive name for the alarm. This name must be unique within the user&#39;s AWS account
      * 
      */
     public Output<String> name() {
@@ -296,7 +296,7 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
         return this.period;
     }
     /**
-     * The statistic to apply to the alarm's associated metric.
+     * The statistic to apply to the alarm&#39;s associated metric.
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */
@@ -304,7 +304,7 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> statistic;
 
     /**
-     * @return The statistic to apply to the alarm's associated metric.
+     * @return The statistic to apply to the alarm&#39;s associated metric.
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */

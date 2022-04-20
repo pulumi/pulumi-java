@@ -90,14 +90,14 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
         return this.azureRegion;
     }
     /**
-     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     @Export(name="client", type=String.class, parameters={})
     private Output<String> client;
 
     /**
-     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     public Output<String> client() {
@@ -146,14 +146,14 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Output only. The endpoint of the cluster's API server.
+     * Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
-     * @return Output only. The endpoint of the cluster's API server.
+     * @return Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     public Output<String> endpoint() {
@@ -260,14 +260,14 @@ public class AzureCluster extends com.pulumi.resources.CustomResource {
         return this.reconciling;
     }
     /**
-     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
      * 
      */
     @Export(name="resourceGroupId", type=String.class, parameters={})
     private Output<String> resourceGroupId;
 
     /**
-     * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
      * 
      */
     public Output<String> resourceGroupId() {

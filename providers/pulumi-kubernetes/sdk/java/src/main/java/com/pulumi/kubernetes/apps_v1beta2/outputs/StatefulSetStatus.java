@@ -20,7 +20,7 @@ public final class StatefulSetStatus {
      */
     private final @Nullable Integer collisionCount;
     /**
-     * Represents the latest available observations of a statefulset's current state.
+     * Represents the latest available observations of a statefulset&#39;s current state.
      * 
      */
     private final @Nullable List<StatefulSetCondition> conditions;
@@ -35,7 +35,7 @@ public final class StatefulSetStatus {
      */
     private final @Nullable String currentRevision;
     /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
+     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
      * 
      */
     private final @Nullable Integer observedGeneration;
@@ -90,7 +90,7 @@ public final class StatefulSetStatus {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
-     * Represents the latest available observations of a statefulset's current state.
+     * Represents the latest available observations of a statefulset&#39;s current state.
      * 
     */
     public List<StatefulSetCondition> conditions() {
@@ -111,7 +111,7 @@ public final class StatefulSetStatus {
         return Optional.ofNullable(this.currentRevision);
     }
     /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
+     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
      * 
     */
     public Optional<Integer> observedGeneration() {

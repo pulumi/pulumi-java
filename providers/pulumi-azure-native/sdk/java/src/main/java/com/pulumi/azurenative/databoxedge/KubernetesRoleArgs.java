@@ -44,7 +44,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Role type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -20,7 +20,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse {
      */
     private final String fieldPath;
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * 
      */
     private final String order;
@@ -50,7 +50,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse {
         return this.fieldPath;
     }
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * 
     */
     public String order() {

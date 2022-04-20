@@ -55,7 +55,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     @Import(name="appPackageId", required=true)

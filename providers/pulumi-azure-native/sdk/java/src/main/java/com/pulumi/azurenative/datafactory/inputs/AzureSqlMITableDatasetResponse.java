@@ -126,7 +126,7 @@ public final class AzureSqlMITableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlMITable'.
+     * Expected value is &#39;AzureSqlMITable&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -44,7 +44,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends com.pul
 
     /**
      * The import setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -65,7 +65,7 @@ public final class GetDomainNameResult {
      */
     private final String regionalCertificateName;
     /**
-     * The hostname for the custom domain's regional endpoint.
+     * The hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     private final String regionalDomainName;
@@ -193,7 +193,7 @@ public final class GetDomainNameResult {
         return this.regionalCertificateName;
     }
     /**
-     * The hostname for the custom domain's regional endpoint.
+     * The hostname for the custom domain&#39;s regional endpoint.
      * 
     */
     public String regionalDomainName() {

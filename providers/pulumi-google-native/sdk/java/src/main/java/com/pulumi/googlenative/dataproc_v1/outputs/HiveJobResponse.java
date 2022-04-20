@@ -39,7 +39,7 @@ public final class HiveJobResponse {
      */
     private final QueryListResponse queryList;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
      * 
      */
     private final Map<String,String> scriptVariables;
@@ -96,7 +96,7 @@ public final class HiveJobResponse {
         return this.queryList;
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
      * 
     */
     public Map<String,String> scriptVariables() {

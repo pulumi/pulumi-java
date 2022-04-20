@@ -42,7 +42,7 @@ public final class GetVpcResult {
     private final String id;
     /**
      * The allowed tenancy of instances launched into the
-     * selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
+     * selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34;host&#34;`.
      * 
      */
     private final String instanceTenancy;
@@ -154,7 +154,7 @@ public final class GetVpcResult {
     }
     /**
      * The allowed tenancy of instances launched into the
-     * selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
+     * selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34;host&#34;`.
      * 
     */
     public String instanceTenancy() {

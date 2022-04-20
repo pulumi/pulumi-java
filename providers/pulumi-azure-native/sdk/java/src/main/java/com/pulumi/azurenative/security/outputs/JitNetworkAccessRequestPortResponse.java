@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JitNetworkAccessRequestPortResponse {
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
      */
     private final @Nullable String allowedSourceAddressPrefix;
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
      */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
     /**
-     * The date & time at which the request ends in UTC
+     * The date &amp; time at which the request ends in UTC
      * 
      */
     private final String endTimeUtc;
     /**
-     * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
+     * The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
      * 
      */
     private final @Nullable Integer mappedPort;
@@ -64,28 +64,28 @@ public final class JitNetworkAccessRequestPortResponse {
     }
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
     */
     public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
     */
     public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
-     * The date & time at which the request ends in UTC
+     * The date &amp; time at which the request ends in UTC
      * 
     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
     /**
-     * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
+     * The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
      * 
     */
     public Optional<Integer> mappedPort() {

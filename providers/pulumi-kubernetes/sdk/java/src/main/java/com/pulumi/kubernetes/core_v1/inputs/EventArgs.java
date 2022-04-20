@@ -124,7 +124,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata", required=true)
@@ -135,7 +135,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
+     * This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
      * 
      */
     @Import(name="reason")
@@ -179,7 +179,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Data about the Event series this event represents or nil if it's a singleton Event.
+     * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     @Import(name="series")

@@ -44,14 +44,14 @@ public class Trail extends com.pulumi.resources.CustomResource {
         return this.cloudWatchLogsLogGroupArn;
     }
     /**
-     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
+     * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
      * 
      */
     @Export(name="cloudWatchLogsRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogsRoleArn;
 
     /**
-     * @return Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
+     * @return Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
      * 
      */
     public Output</* @Nullable */ String> cloudWatchLogsRoleArn() {
@@ -72,14 +72,14 @@ public class Trail extends com.pulumi.resources.CustomResource {
         return this.enableLogFileValidation;
     }
     /**
-     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
+     * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
      * 
      */
     @Export(name="eventSelectors", type=List.class, parameters={TrailEventSelector.class})
     private Output</* @Nullable */ List<TrailEventSelector>> eventSelectors;
 
     /**
-     * @return Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
+     * @return Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
      * 
      */
     public Output</* @Nullable */ List<TrailEventSelector>> eventSelectors() {
@@ -156,14 +156,14 @@ public class Trail extends com.pulumi.resources.CustomResource {
         return this.isOrganizationTrail;
     }
     /**
-     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
+     * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
      */
     @Export(name="kMSKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyId;
 
     /**
-     * @return Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
+     * @return Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
      */
     public Output</* @Nullable */ String> kMSKeyId() {

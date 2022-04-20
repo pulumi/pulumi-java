@@ -13,7 +13,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     public static final GetDelegatedAdministratorsDelegatedAdministrator Empty = new GetDelegatedAdministratorsDelegatedAdministrator();
 
     /**
-     * The Amazon Resource Name (ARN) of the delegated administrator's account.
+     * The Amazon Resource Name (ARN) of the delegated administrator&#39;s account.
      * 
      */
     @Import(name="arn", required=true)
@@ -35,7 +35,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator&#39;s AWS account.
      * 
      */
     @Import(name="email", required=true)
@@ -46,7 +46,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The unique identifier (ID) of the delegated administrator's account.
+     * The unique identifier (ID) of the delegated administrator&#39;s account.
      * 
      */
     @Import(name="id", required=true)
@@ -57,7 +57,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The method by which the delegated administrator's account joined the organization.
+     * The method by which the delegated administrator&#39;s account joined the organization.
      * 
      */
     @Import(name="joinedMethod", required=true)
@@ -68,7 +68,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The date when the delegated administrator's account became a part of the organization.
+     * The date when the delegated administrator&#39;s account became a part of the organization.
      * 
      */
     @Import(name="joinedTimestamp", required=true)
@@ -79,7 +79,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The friendly name of the delegated administrator's account.
+     * The friendly name of the delegated administrator&#39;s account.
      * 
      */
     @Import(name="name", required=true)
@@ -90,7 +90,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends com.
     }
 
     /**
-     * The status of the delegated administrator's account in the organization.
+     * The status of the delegated administrator&#39;s account in the organization.
      * 
      */
     @Import(name="status", required=true)

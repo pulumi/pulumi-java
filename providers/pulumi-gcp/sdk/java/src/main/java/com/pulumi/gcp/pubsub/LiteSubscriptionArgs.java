@@ -17,7 +17,7 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
     public static final LiteSubscriptionArgs Empty = new LiteSubscriptionArgs();
 
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * Structure is documented below.
      * 
      */

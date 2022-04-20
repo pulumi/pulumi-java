@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the user's elastic account.
+ * Details of the user&#39;s elastic account.
  * 
  */
 public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeArgs {

@@ -16,7 +16,7 @@ public final class ListTopLevelDomainAgreementsArgs extends com.pulumi.resources
     public static final ListTopLevelDomainAgreementsArgs Empty = new ListTopLevelDomainAgreementsArgs();
 
     /**
-     * If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
+     * If &lt;code&gt;true&lt;/code&gt;, then the list of agreements will include agreements for domain transfer as well; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="forTransfer")
@@ -27,7 +27,7 @@ public final class ListTopLevelDomainAgreementsArgs extends com.pulumi.resources
     }
 
     /**
-     * If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
+     * If &lt;code&gt;true&lt;/code&gt;, then the list of agreements will include agreements for domain privacy as well; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="includePrivacy")

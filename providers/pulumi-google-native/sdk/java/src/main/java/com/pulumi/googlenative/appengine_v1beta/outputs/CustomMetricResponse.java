@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CustomMetricResponse {
     /**
-     * Allows filtering on the metric's fields.
+     * Allows filtering on the metric&#39;s fields.
      * 
      */
     private final String filter;
@@ -51,7 +51,7 @@ public final class CustomMetricResponse {
     }
 
     /**
-     * Allows filtering on the metric's fields.
+     * Allows filtering on the metric&#39;s fields.
      * 
     */
     public String filter() {

@@ -19,7 +19,7 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     public static final ShareSettingsResponse Empty = new ShareSettingsResponse();
 
     /**
-     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     @Import(name="projectMap", required=true)
@@ -30,7 +30,7 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     @Import(name="projects", required=true)

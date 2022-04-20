@@ -40,7 +40,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
+     * The Azure region of the Visual Studio account associated with this request (i.e &#39;southcentralus&#39;.)
      * 
      */
     @Import(name="location")

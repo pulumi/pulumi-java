@@ -62,7 +62,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
 
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     @Import(name="endpointComputeType", required=true)

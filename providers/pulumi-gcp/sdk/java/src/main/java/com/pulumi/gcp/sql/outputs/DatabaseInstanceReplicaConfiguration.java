@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseInstanceReplicaConfiguration {
     /**
-     * PEM representation of the trusted CA's x509
+     * PEM representation of the trusted CA&#39;s x509
      * certificate.
      * 
      */
     private final @Nullable String caCertificate;
     /**
-     * PEM representation of the replica's x509
+     * PEM representation of the replica&#39;s x509
      * certificate.
      * 
      */
     private final @Nullable String clientCertificate;
     /**
-     * PEM representation of the replica's private key. The
+     * PEM representation of the replica&#39;s private key. The
      * corresponding public key in encoded in the `client_certificate`.
      * 
      */
@@ -69,7 +69,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      */
     private final @Nullable String username;
     /**
-     * True if the master's common name
+     * True if the master&#39;s common name
      * value is checked during the SSL handshake.
      * 
      */
@@ -102,7 +102,7 @@ public final class DatabaseInstanceReplicaConfiguration {
     }
 
     /**
-     * PEM representation of the trusted CA's x509
+     * PEM representation of the trusted CA&#39;s x509
      * certificate.
      * 
     */
@@ -110,7 +110,7 @@ public final class DatabaseInstanceReplicaConfiguration {
         return Optional.ofNullable(this.caCertificate);
     }
     /**
-     * PEM representation of the replica's x509
+     * PEM representation of the replica&#39;s x509
      * certificate.
      * 
     */
@@ -118,7 +118,7 @@ public final class DatabaseInstanceReplicaConfiguration {
         return Optional.ofNullable(this.clientCertificate);
     }
     /**
-     * PEM representation of the replica's private key. The
+     * PEM representation of the replica&#39;s private key. The
      * corresponding public key in encoded in the `client_certificate`.
      * 
     */
@@ -177,7 +177,7 @@ public final class DatabaseInstanceReplicaConfiguration {
         return Optional.ofNullable(this.username);
     }
     /**
-     * True if the master's common name
+     * True if the master&#39;s common name
      * value is checked during the SSL handshake.
      * 
     */

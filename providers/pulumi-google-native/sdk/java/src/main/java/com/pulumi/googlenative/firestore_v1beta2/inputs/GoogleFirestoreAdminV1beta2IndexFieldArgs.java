@@ -44,7 +44,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends com.pulumi.
     }
 
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * 
      */
     @Import(name="order")

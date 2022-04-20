@@ -99,7 +99,7 @@ public final class GoogleAdWordsSourceArgs extends com.pulumi.resources.Resource
 
     /**
      * Copy source type.
-     * Expected value is 'GoogleAdWordsSource'.
+     * Expected value is &#39;GoogleAdWordsSource&#39;.
      * 
      */
     @Import(name="type", required=true)

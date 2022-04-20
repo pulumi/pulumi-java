@@ -46,7 +46,7 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Graph parameter's type.
+     * Graph parameter&#39;s type.
      * 
      */
     @Import(name="type", required=true)

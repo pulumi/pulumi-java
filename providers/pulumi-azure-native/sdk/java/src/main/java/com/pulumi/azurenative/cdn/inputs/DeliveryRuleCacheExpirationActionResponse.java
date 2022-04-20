@@ -20,7 +20,7 @@ public final class DeliveryRuleCacheExpirationActionResponse extends com.pulumi.
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'CacheExpiration'.
+     * Expected value is &#39;CacheExpiration&#39;.
      * 
      */
     @Import(name="name", required=true)

@@ -154,7 +154,7 @@ public final class AzureBlobFSDatasetArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlobFSFile'.
+     * Expected value is &#39;AzureBlobFSFile&#39;.
      * 
      */
     @Import(name="type", required=true)

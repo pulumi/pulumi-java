@@ -89,7 +89,7 @@ public final class AzureDatabricksDeltaLakeSinkArgs extends com.pulumi.resources
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureDatabricksDeltaLakeSink'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSink&#39;.
      * 
      */
     @Import(name="type", required=true)

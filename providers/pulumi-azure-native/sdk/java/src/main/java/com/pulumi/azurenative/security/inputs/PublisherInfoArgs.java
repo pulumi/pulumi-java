@@ -20,7 +20,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     public static final PublisherInfoArgs Empty = new PublisherInfoArgs();
 
     /**
-     * The "OriginalName" field taken from the file's version resource
+     * The &#34;OriginalName&#34; field taken from the file&#39;s version resource
      * 
      */
     @Import(name="binaryName")
@@ -31,7 +31,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The product name taken from the file's version resource
+     * The product name taken from the file&#39;s version resource
      * 
      */
     @Import(name="productName")
@@ -53,7 +53,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The binary file version taken from the file's version resource
+     * The binary file version taken from the file&#39;s version resource
      * 
      */
     @Import(name="version")

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JsonFieldResponse {
     /**
-     * Name of a field in the input event schema that's to be used as the source of a mapping.
+     * Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
      * 
      */
     private final @Nullable String sourceField;
@@ -23,7 +23,7 @@ public final class JsonFieldResponse {
     }
 
     /**
-     * Name of a field in the input event schema that's to be used as the source of a mapping.
+     * Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
      * 
     */
     public Optional<String> sourceField() {

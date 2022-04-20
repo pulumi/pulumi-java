@@ -206,7 +206,7 @@ public final class AzureFileshareProtectedItemArgs extends com.pulumi.resources.
 
     /**
      * backup item type.
-     * Expected value is 'AzureFileShareProtectedItem'.
+     * Expected value is &#39;AzureFileShareProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

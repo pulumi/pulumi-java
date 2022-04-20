@@ -25,7 +25,7 @@ public final class UnsecuredEndpointResponse {
     private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
      * 
      */
     private final String type;
@@ -63,7 +63,7 @@ public final class UnsecuredEndpointResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
      * 
     */
     public String type() {

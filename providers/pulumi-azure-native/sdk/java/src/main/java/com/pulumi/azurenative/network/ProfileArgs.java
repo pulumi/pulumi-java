@@ -170,7 +170,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
     @Import(name="trafficViewEnrollmentStatus")

@@ -18,7 +18,7 @@ public final class IsNotNullAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNotNull'.
+     * Expected value is &#39;IsNotNull&#39;.
      * 
      */
     private final String operatorType;
@@ -40,7 +40,7 @@ public final class IsNotNullAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNotNull'.
+     * Expected value is &#39;IsNotNull&#39;.
      * 
     */
     public String operatorType() {

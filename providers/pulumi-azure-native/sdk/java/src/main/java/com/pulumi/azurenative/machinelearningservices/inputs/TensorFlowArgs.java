@@ -22,7 +22,7 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'TensorFlow'.
+     * Expected value is &#39;TensorFlow&#39;.
      * 
      */
     @Import(name="distributionType", required=true)

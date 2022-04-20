@@ -26,7 +26,7 @@ public final class GetPeriodicTimerEventTriggerResult {
     private final String id;
     /**
      * Trigger Kind.
-     * Expected value is 'PeriodicTimerEvent'.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
      * 
      */
     private final String kind;
@@ -92,7 +92,7 @@ public final class GetPeriodicTimerEventTriggerResult {
     }
     /**
      * Trigger Kind.
-     * Expected value is 'PeriodicTimerEvent'.
+     * Expected value is &#39;PeriodicTimerEvent&#39;.
      * 
     */
     public String kind() {

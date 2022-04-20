@@ -23,7 +23,7 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
     public static final DWCopyCommandSettingsArgs Empty = new DWCopyCommandSettingsArgs();
 
     /**
-     * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
+     * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
      * 
      */
     @Import(name="additionalOptions")

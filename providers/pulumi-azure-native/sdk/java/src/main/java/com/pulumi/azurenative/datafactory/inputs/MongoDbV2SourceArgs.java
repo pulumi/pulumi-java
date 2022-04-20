@@ -33,7 +33,7 @@ public final class MongoDbV2SourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
+     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property&#39;s main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
      * 
      */
     @Import(name="batchSize")
@@ -122,7 +122,7 @@ public final class MongoDbV2SourceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy source type.
-     * Expected value is 'MongoDbV2Source'.
+     * Expected value is &#39;MongoDbV2Source&#39;.
      * 
      */
     @Import(name="type", required=true)

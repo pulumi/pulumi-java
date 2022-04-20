@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class UserAssignedIdentityAuthInfoResponse {
     /**
      * The authentication type.
-     * Expected value is 'userAssignedIdentity'.
+     * Expected value is &#39;userAssignedIdentity&#39;.
      * 
      */
     private final String authType;
@@ -38,7 +38,7 @@ public final class UserAssignedIdentityAuthInfoResponse {
 
     /**
      * The authentication type.
-     * Expected value is 'userAssignedIdentity'.
+     * Expected value is &#39;userAssignedIdentity&#39;.
      * 
     */
     public String authType() {

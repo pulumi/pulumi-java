@@ -39,7 +39,7 @@ public final class AzurePostgreSqlSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzurePostgreSqlSink'.
+     * Expected value is &#39;AzurePostgreSqlSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class AzurePostgreSqlSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzurePostgreSqlSink'.
+     * Expected value is &#39;AzurePostgreSqlSink&#39;.
      * 
     */
     public String type() {

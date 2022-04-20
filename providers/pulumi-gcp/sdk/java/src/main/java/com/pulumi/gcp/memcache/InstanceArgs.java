@@ -22,7 +22,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The full name of the GCE network to connect the instance to.  If not provided,
-     * 'default' will be used.
+     * &#39;default&#39; will be used.
      * 
      */
     @Import(name="authorizedNetwork")

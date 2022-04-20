@@ -53,7 +53,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
     @Import(name="localTimestamp")

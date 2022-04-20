@@ -32,7 +32,7 @@ public final class GetWorkerPoolResult {
      */
     private final NetworkConfigResponse networkConfig;
     /**
-     * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
     private final String region;
@@ -101,7 +101,7 @@ public final class GetWorkerPoolResult {
         return this.networkConfig;
     }
     /**
-     * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
     */
     public String region() {

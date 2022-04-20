@@ -132,14 +132,14 @@ public class HttpsHealthCheck extends com.pulumi.resources.CustomResource {
         return this.port;
     }
     /**
-     * The request path of the HTTPS health check request. The default value is "/".
+     * The request path of the HTTPS health check request. The default value is &#34;/&#34;.
      * 
      */
     @Export(name="requestPath", type=String.class, parameters={})
     private Output<String> requestPath;
 
     /**
-     * @return The request path of the HTTPS health check request. The default value is "/".
+     * @return The request path of the HTTPS health check request. The default value is &#34;/&#34;.
      * 
      */
     public Output<String> requestPath() {

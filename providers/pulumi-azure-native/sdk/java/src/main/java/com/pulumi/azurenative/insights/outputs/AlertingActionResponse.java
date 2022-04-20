@@ -21,7 +21,7 @@ public final class AlertingActionResponse {
     private final @Nullable AzNsActionGroupResponse aznsAction;
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
      * 
      */
     private final String odataType;
@@ -64,7 +64,7 @@ public final class AlertingActionResponse {
     }
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
      * 
     */
     public String odataType() {

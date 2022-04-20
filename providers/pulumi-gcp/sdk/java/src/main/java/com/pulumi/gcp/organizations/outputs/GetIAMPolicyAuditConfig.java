@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetIAMPolicyAuditConfig {
     /**
-     * A nested block that defines the operations you'd like to log.
+     * A nested block that defines the operations you&#39;d like to log.
      * 
      */
     private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
@@ -31,7 +31,7 @@ public final class GetIAMPolicyAuditConfig {
     }
 
     /**
-     * A nested block that defines the operations you'd like to log.
+     * A nested block that defines the operations you&#39;d like to log.
      * 
     */
     public List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs() {

@@ -42,7 +42,7 @@ public final class ReplicaSetConditionArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The reason for the condition's last transition.
+     * The reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")

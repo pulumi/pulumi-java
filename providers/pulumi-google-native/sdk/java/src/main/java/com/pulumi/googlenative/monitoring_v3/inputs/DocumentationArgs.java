@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A content string and a MIME type that describes the content string's format.
+ * A content string and a MIME type that describes the content string&#39;s format.
  * 
  */
 public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
@@ -31,7 +31,7 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+     * The format of the content field. Presently, only the value &#34;text/markdown&#34; is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
      * 
      */
     @Import(name="mimeType")

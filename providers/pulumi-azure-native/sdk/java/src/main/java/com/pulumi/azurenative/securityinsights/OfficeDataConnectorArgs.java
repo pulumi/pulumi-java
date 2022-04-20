@@ -40,7 +40,7 @@ public final class OfficeDataConnectorArgs extends com.pulumi.resources.Resource
 
     /**
      * The kind of the data connector
-     * Expected value is 'Office365'.
+     * Expected value is &#39;Office365&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -51,7 +51,7 @@ public final class OfficeDataConnectorArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

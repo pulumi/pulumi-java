@@ -126,7 +126,7 @@ public final class AzureSqlTableDatasetArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlTable'.
+     * Expected value is &#39;AzureSqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

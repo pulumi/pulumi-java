@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
     /**
-     * A finding's CIDR value.
+     * A finding&#39;s CIDR value.
      * 
      */
     private final String cidr;
@@ -21,7 +21,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
     }
 
     /**
-     * A finding's CIDR value.
+     * A finding&#39;s CIDR value.
      * 
     */
     public String cidr() {

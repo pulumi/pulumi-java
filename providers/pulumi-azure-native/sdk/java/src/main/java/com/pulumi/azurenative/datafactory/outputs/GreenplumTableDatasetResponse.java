@@ -64,7 +64,7 @@ public final class GreenplumTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'GreenplumTable'.
+     * Expected value is &#39;GreenplumTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class GreenplumTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'GreenplumTable'.
+     * Expected value is &#39;GreenplumTable&#39;.
      * 
     */
     public String type() {

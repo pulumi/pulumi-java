@@ -33,7 +33,7 @@ public final class EventTargetEcsTarget {
      */
     private final @Nullable String group;
     /**
-     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
+     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
      * 
      */
     private final @Nullable String launchType;
@@ -121,7 +121,7 @@ public final class EventTargetEcsTarget {
         return Optional.ofNullable(this.group);
     }
     /**
-     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
+     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
      * 
     */
     public Optional<String> launchType() {

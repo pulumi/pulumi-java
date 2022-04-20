@@ -15,12 +15,12 @@ public final class FleetLocationCapacity {
      */
     private final Integer desiredEC2Instances;
     /**
-     * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * The maximum value that is allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     private final Integer maxSize;
     /**
-     * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * The minimum value allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     private final Integer minSize;
@@ -43,14 +43,14 @@ public final class FleetLocationCapacity {
         return this.desiredEC2Instances;
     }
     /**
-     * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * The maximum value that is allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
     */
     public Integer maxSize() {
         return this.maxSize;
     }
     /**
-     * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * The minimum value allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
     */
     public Integer minSize() {

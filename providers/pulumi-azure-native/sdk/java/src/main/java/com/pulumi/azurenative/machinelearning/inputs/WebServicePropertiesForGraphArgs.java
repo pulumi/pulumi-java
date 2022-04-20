@@ -78,7 +78,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
     }
 
     /**
-     * Defines sample input data for one or more of the service's inputs.
+     * Defines sample input data for one or more of the service&#39;s inputs.
      * 
      */
     @Import(name="exampleRequest")
@@ -89,7 +89,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
     }
 
     /**
-     * When set to true, sample data is included in the web service's swagger definition. The default value is true.
+     * When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
      * 
      */
     @Import(name="exposeSampleData")
@@ -100,7 +100,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
     }
 
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
      * 
      */
     @Import(name="input")
@@ -133,7 +133,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
     }
 
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
+     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
      * 
      */
     @Import(name="output")
@@ -156,7 +156,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
 
     /**
      * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
-     * Expected value is 'Graph'.
+     * Expected value is &#39;Graph&#39;.
      * 
      */
     @Import(name="packageType", required=true)

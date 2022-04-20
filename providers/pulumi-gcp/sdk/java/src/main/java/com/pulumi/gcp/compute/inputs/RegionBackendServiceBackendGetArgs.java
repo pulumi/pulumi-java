@@ -32,9 +32,9 @@ public final class RegionBackendServiceBackendGetArgs extends com.pulumi.resourc
     }
 
     /**
-     * A multiplier applied to the group's maximum servicing capacity
+     * A multiplier applied to the group&#39;s maximum servicing capacity
      * (based on UTILIZATION, RATE or CONNECTION).
-     * ~>**NOTE**: This field cannot be set for
+     * ~&gt;**NOTE**: This field cannot be set for
      * INTERNAL region backend services (default loadBalancingScheme),
      * but is required for non-INTERNAL backend service. The total
      * capacity_scaler for all backends must be non-zero.

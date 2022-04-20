@@ -133,7 +133,7 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The vendor of the product. e.g. "google"
+     * The vendor of the product. e.g. &#34;google&#34;
      * 
      */
     @Import(name="vendor")

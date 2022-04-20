@@ -71,28 +71,28 @@ public class Alarm extends com.pulumi.resources.CustomResource {
         return this.contactProtocols;
     }
     /**
-     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
+     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
      */
     @Export(name="datapointsToAlarm", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> datapointsToAlarm;
 
     /**
-     * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
+     * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
      */
     public Output</* @Nullable */ Integer> datapointsToAlarm() {
         return this.datapointsToAlarm;
     }
     /**
-     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
+     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
      * 
      */
     @Export(name="evaluationPeriods", type=Integer.class, parameters={})
     private Output<Integer> evaluationPeriods;
 
     /**
-     * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
+     * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
      * 
      */
     public Output<Integer> evaluationPeriods() {
@@ -127,14 +127,14 @@ public class Alarm extends com.pulumi.resources.CustomResource {
         return this.monitoredResourceName;
     }
     /**
-     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
+     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
      */
     @Export(name="notificationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> notificationEnabled;
 
     /**
-     * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
+     * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
      */
     public Output</* @Nullable */ Boolean> notificationEnabled() {

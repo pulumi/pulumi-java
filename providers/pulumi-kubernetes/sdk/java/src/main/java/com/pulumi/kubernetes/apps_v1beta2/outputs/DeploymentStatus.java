@@ -24,7 +24,7 @@ public final class DeploymentStatus {
      */
     private final @Nullable Integer collisionCount;
     /**
-     * Represents the latest available observations of a deployment's current state.
+     * Represents the latest available observations of a deployment&#39;s current state.
      * 
      */
     private final @Nullable List<DeploymentCondition> conditions;
@@ -89,7 +89,7 @@ public final class DeploymentStatus {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
-     * Represents the latest available observations of a deployment's current state.
+     * Represents the latest available observations of a deployment&#39;s current state.
      * 
     */
     public List<DeploymentCondition> conditions() {

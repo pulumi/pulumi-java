@@ -27,7 +27,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable Map<String,String> metadata;
     /**
-     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default`*`default`
+     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
      * 
      */
     private final @Nullable String network;
@@ -67,7 +67,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable List<String> tags;
     /**
-     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
      * 
      */
     private final @Nullable String zone;
@@ -113,7 +113,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default`*`default`
+     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see /regions/global/default`*`default`
      * 
     */
     public Optional<String> network() {
@@ -169,7 +169,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
      * 
     */
     public Optional<String> zone() {

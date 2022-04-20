@@ -22,7 +22,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Creates a Redis instance based on the specified tier and memory size. By default, the instance is accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The creation is executed asynchronously and callers may check the returned operation to track its progress. Once the operation is completed the Redis instance will be fully functional. Completed longrunning.Operation will contain the new instance object in the response field. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
+ * Creates a Redis instance based on the specified tier and memory size. By default, the instance is accessible from the project&#39;s [default network](https://cloud.google.com/vpc/docs/vpc). The creation is executed asynchronously and callers may check the returned operation to track its progress. Once the operation is completed the Redis instance will be fully functional. Completed longrunning.Operation will contain the new instance object in the response field. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
  * 
  */
 @ResourceType(type="google-native:redis/v1:Instance")
@@ -42,14 +42,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.alternativeLocationId;
     }
     /**
-     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to &#34;true&#34; AUTH is enabled on the instance. Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     @Export(name="authEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> authEnabled;
 
     /**
-     * @return Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     * @return Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to &#34;true&#34; AUTH is enabled on the instance. Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     public Output<Boolean> authEnabled() {
@@ -252,14 +252,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.persistenceConfig;
     }
     /**
-     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is &#34;serviceAccount:&#34;. The value may change over time for a given instance so should be checked before each import/export operation.
      * 
      */
     @Export(name="persistenceIamIdentity", type=String.class, parameters={})
     private Output<String> persistenceIamIdentity;
 
     /**
-     * @return Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     * @return Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is &#34;serviceAccount:&#34;. The value may change over time for a given instance so should be checked before each import/export operation.
      * 
      */
     public Output<String> persistenceIamIdentity() {
@@ -280,28 +280,28 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.port;
     }
     /**
-     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target &#39;host&#39;.
      * 
      */
     @Export(name="readEndpoint", type=String.class, parameters={})
     private Output<String> readEndpoint;
 
     /**
-     * @return Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     * @return Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target &#39;host&#39;.
      * 
      */
     public Output<String> readEndpoint() {
         return this.readEndpoint;
     }
     /**
-     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target &#39;port&#39;.
      * 
      */
     @Export(name="readEndpointPort", type=Integer.class, parameters={})
     private Output<Integer> readEndpointPort;
 
     /**
-     * @return The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     * @return The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target &#39;port&#39;.
      * 
      */
     public Output<Integer> readEndpointPort() {

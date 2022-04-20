@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * [Access Control for Organizations Using IAM](https://cloud.google.com/resource-manager/docs/access-control-org)
  * doc for more information.
  * 
- * > This resource reads the specified billing account on every provider apply and plan operation so you must have permissions on the specified billing account.
+ * &gt; This resource reads the specified billing account on every provider apply and plan operation so you must have permissions on the specified billing account.
  * 
  * To get more information about projects, see:
  * 
@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:organizations/project:Project")
 public class Project extends com.pulumi.resources.CustomResource {
     /**
-     * Create the 'default' network automatically.  Default `true`.
+     * Create the &#39;default&#39; network automatically.  Default `true`.
      * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
      * will still need to have 1 network slot available to create the project successfully, even if
      * you set `auto_create_network` to `false`, since the network will exist momentarily.
@@ -58,7 +58,7 @@ public class Project extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> autoCreateNetwork;
 
     /**
-     * @return Create the 'default' network automatically.  Default `true`.
+     * @return Create the &#39;default&#39; network automatically.  Default `true`.
      * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
      * will still need to have 1 network slot available to create the project successfully, even if
      * you set `auto_create_network` to `false`, since the network will exist momentarily.

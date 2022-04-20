@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
+     * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;. If &#39;Disabled&#39;, private endpoints are the exclusive access method. Default value is &#39;Enabled&#39;
      * 
      */
     @EnumType

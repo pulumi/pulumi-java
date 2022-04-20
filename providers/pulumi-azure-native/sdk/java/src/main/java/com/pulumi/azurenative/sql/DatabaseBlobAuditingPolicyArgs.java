@@ -69,7 +69,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends com.pulumi.resources.R
      * The general form for defining an action to be audited is:
      * {action} ON {object} BY {principal}
      * 
-     * Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+     * Note that &lt;object&gt; in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
      * 
      * For example:
      * SELECT on dbo.myTable by public
@@ -110,10 +110,10 @@ public final class DatabaseBlobAuditingPolicyArgs extends com.pulumi.resources.R
 
     /**
      * Specifies whether audit events are sent to Azure Monitor.
-     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+     * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39; and &#39;IsAzureMonitorTargetEnabled&#39; as true.
      * 
-     * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
-     * Note that for server level audit you should use the 'master' database as {databaseName}.
+     * When using REST API to configure auditing, Diagnostic Settings with &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should be also created.
+     * Note that for server level audit you should use the &#39;master&#39; database as {databaseName}.
      * 
      * Diagnostic Settings URI format:
      * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
@@ -130,7 +130,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Specifies whether storageAccountAccessKey value is the storage's secondary key.
+     * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
      */
     @Import(name="isStorageSecondaryKeyInUse")
@@ -201,7 +201,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends com.pulumi.resources.R
      * If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
      * Prerequisites for using managed identity authentication:
      * 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
-     * 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
+     * 2. Grant SQL Server identity access to the storage account by adding &#39;Storage Blob Data Contributor&#39; RBAC role to the server identity.
      *    For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
      * 
      */

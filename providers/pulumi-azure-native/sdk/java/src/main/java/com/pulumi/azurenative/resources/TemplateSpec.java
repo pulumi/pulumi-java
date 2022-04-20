@@ -148,14 +148,14 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
+     * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to &#39;versions&#39;.
      * 
      */
     @Export(name="versions", type=Map.class, parameters={String.class, TemplateSpecVersionInfoResponse.class})
     private Output<Map<String,TemplateSpecVersionInfoResponse>> versions;
 
     /**
-     * @return High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
+     * @return High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to &#39;versions&#39;.
      * 
      */
     public Output<Map<String,TemplateSpecVersionInfoResponse>> versions() {

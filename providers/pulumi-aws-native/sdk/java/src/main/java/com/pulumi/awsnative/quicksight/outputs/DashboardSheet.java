@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardSheet {
     /**
-     * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
-     *             console.</p>
+     * &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
+     *             console.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>The unique identifier associated with a sheet.</p>
+     * &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
      * 
      */
     private final @Nullable String sheetId;
@@ -32,15 +32,15 @@ public final class DashboardSheet {
     }
 
     /**
-     * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
-     *             console.</p>
+     * &lt;p&gt;The name of a sheet. This name is displayed on the sheet&#39;s tab in the QuickSight
+     *             console.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>The unique identifier associated with a sheet.</p>
+     * &lt;p&gt;The unique identifier associated with a sheet.&lt;/p&gt;
      * 
     */
     public Optional<String> sheetId() {

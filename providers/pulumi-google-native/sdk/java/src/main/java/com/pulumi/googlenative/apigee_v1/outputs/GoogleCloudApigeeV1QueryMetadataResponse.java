@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
      */
     private final String endTimestamp;
     /**
-     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
      * 
      */
     private final List<String> metrics;
@@ -72,7 +72,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
         return this.endTimestamp;
     }
     /**
-     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
      * 
     */
     public List<String> metrics() {

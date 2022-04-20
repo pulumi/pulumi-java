@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new MetadataImport in a given project and location.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -36,14 +36,14 @@ public class MetadataImport extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Immutable. A database dump from a pre-existing metastore's database.
+     * Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
      */
     @Export(name="databaseDump", type=DatabaseDumpResponse.class, parameters={})
     private Output<DatabaseDumpResponse> databaseDump;
 
     /**
-     * @return Immutable. A database dump from a pre-existing metastore's database.
+     * @return Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
      */
     public Output<DatabaseDumpResponse> databaseDump() {

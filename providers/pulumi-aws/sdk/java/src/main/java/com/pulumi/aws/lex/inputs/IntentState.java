@@ -51,7 +51,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
      * The statement that you want Amazon Lex to convey to the user
      * after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
      * you provide a Lambda function in the `fulfillment_activity`. If you return the intent to the client
-     * application, you can't specify this element. The `follow_up_prompt` and `conclusion_statement` are
+     * application, you can&#39;t specify this element. The `follow_up_prompt` and `conclusion_statement` are
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
@@ -185,7 +185,7 @@ public final class IntentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the user answers "no" to the question defined in the prompt field,
+     * If the user answers &#34;no&#34; to the question defined in the prompt field,
      * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
      * documented below under statement.
      * 

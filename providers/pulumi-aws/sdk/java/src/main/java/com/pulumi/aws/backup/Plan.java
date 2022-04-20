@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * Backup Plan can be imported using the `id`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:backup/plan:Plan test <id>
+ *  $ pulumi import aws:backup/plan:Plan test &lt;id&gt;
  * ```
  * 
  */

@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
 
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI&#39;.
      * 
      */
     @Import(name="taskType", required=true)

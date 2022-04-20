@@ -61,7 +61,7 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
 
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ActiveDirectoryOAuth'.
+     * Expected value is &#39;ActiveDirectoryOAuth&#39;.
      * 
      */
     @Import(name="type", required=true)

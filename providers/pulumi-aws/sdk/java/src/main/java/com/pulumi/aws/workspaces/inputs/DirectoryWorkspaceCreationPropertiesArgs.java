@@ -28,7 +28,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends com.pulumi.r
     }
 
     /**
-     * The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
+     * The default organizational unit (OU) for your WorkSpace directories. Should conform `&#34;OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;&#34;` pattern.
      * 
      */
     @Import(name="defaultOu")

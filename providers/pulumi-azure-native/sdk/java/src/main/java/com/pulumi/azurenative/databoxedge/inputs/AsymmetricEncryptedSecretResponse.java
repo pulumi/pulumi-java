@@ -19,7 +19,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     public static final AsymmetricEncryptedSecretResponse Empty = new AsymmetricEncryptedSecretResponse();
 
     /**
-     * The algorithm used to encrypt "Value".
+     * The algorithm used to encrypt &#34;Value&#34;.
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
@@ -30,7 +30,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     }
 
     /**
-     * Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+     * Thumbprint certificate used to encrypt \&#34;Value\&#34;. If the value is unencrypted, it will be null.
      * 
      */
     @Import(name="encryptionCertThumbprint")

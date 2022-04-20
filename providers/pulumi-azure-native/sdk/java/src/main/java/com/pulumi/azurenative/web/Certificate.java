@@ -287,14 +287,14 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.selfLink;
     }
     /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     @Export(name="serverFarmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverFarmId;
 
     /**
-     * @return Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     public Output</* @Nullable */ String> serverFarmId() {

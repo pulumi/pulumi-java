@@ -19,14 +19,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:apigateway:Resource")
 public class Resource extends com.pulumi.resources.CustomResource {
     /**
-     * The parent resource's identifier.
+     * The parent resource&#39;s identifier.
      * 
      */
     @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
-     * @return The parent resource's identifier.
+     * @return The parent resource&#39;s identifier.
      * 
      */
     public Output<String> parentId() {

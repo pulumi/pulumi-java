@@ -27,7 +27,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse {
      */
     private final @Nullable String id;
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
      */
     private final @Nullable String keyVaultSecretId;
@@ -87,7 +87,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
     */
     public Optional<String> keyVaultSecretId() {

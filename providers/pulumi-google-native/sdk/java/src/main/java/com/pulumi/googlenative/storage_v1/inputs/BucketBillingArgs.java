@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's billing configuration.
+ * The bucket&#39;s billing configuration.
  * 
  */
 public final class BucketBillingArgs extends com.pulumi.resources.ResourceArgs {

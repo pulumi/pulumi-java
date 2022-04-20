@@ -29,7 +29,7 @@ public final class TeradataSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
+     * The partition mechanism that will be used for teradata read in parallel. Possible values include: &#34;None&#34;, &#34;Hash&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -60,7 +60,7 @@ public final class TeradataSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'TeradataSource'.
+     * Expected value is &#39;TeradataSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class TeradataSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
+     * The partition mechanism that will be used for teradata read in parallel. Possible values include: &#34;None&#34;, &#34;Hash&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -154,7 +154,7 @@ public final class TeradataSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'TeradataSource'.
+     * Expected value is &#39;TeradataSource&#39;.
      * 
     */
     public String type() {

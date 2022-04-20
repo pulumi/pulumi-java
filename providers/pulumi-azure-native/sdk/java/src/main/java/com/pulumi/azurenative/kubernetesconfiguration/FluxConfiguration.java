@@ -21,7 +21,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * The Flux Configuration object returned in Get & Put response.
+ * The Flux Configuration object returned in Get &amp; Put response.
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
@@ -262,14 +262,14 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SubjectConfigResponse {
     /**
-     * Optional. The "common name" of the distinguished name.
+     * Optional. The &#34;common name&#34; of the distinguished name.
      * 
      */
     private final String commonName;
@@ -38,7 +38,7 @@ public final class SubjectConfigResponse {
     }
 
     /**
-     * Optional. The "common name" of the distinguished name.
+     * Optional. The &#34;common name&#34; of the distinguished name.
      * 
     */
     public String commonName() {

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MHSMNetworkRuleSetResponse {
     /**
-     * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
+     * Tells what traffic can bypass network rules. This can be &#39;AzureServices&#39; or &#39;None&#39;.  If not specified the default is &#39;AzureServices&#39;.
      * 
      */
     private final @Nullable String bypass;
@@ -48,7 +48,7 @@ public final class MHSMNetworkRuleSetResponse {
     }
 
     /**
-     * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
+     * Tells what traffic can bypass network rules. This can be &#39;AzureServices&#39; or &#39;None&#39;.  If not specified the default is &#39;AzureServices&#39;.
      * 
     */
     public Optional<String> bypass() {

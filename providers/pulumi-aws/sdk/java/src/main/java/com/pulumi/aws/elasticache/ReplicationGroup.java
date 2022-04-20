@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * [single-node Redis instance (Cluster Mode Disabled)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.html),
  * see the `aws.elasticache.Cluster` resource.
  * 
- * > **Note:** When you change an attribute, such as `engine_version`, by
+ * &gt; **Note:** When you change an attribute, such as `engine_version`, by
  * default the ElastiCache API applies it in the next maintenance window. Because
  * of this, this provider may report a difference in its planning phase because the
  * actual modification has not yet taken place. You can use the
@@ -36,9 +36,9 @@ import javax.annotation.Nullable;
  * [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Modify.html)
  * for more information.
  * 
- * > **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
+ * &gt; **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
  * 
- * > **Note:** Be aware of the terminology collision around "cluster" for `aws.elasticache.ReplicationGroup`. For example, it is possible to create a ["Cluster Mode Disabled [Redis] Cluster"](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.CON.Redis.html). With "Cluster Mode Enabled", the data will be stored in shards (called "node groups"). See [Redis Cluster Configuration](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/cluster-create-determine-requirements.html#redis-cluster-configuration) for a diagram of the differences. To enable cluster mode, use a parameter group that has cluster mode enabled. The default parameter groups provided by AWS end with ".cluster.on", for example `default.redis6.x.cluster.on`.
+ * &gt; **Note:** Be aware of the terminology collision around &#34;cluster&#34; for `aws.elasticache.ReplicationGroup`. For example, it is possible to create a [&#34;Cluster Mode Disabled [Redis] Cluster&#34;](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.CON.Redis.html). With &#34;Cluster Mode Enabled&#34;, the data will be stored in shards (called &#34;node groups&#34;). See [Redis Cluster Configuration](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/cluster-create-determine-requirements.html#redis-cluster-configuration) for a diagram of the differences. To enable cluster mode, use a parameter group that has cluster mode enabled. The default parameter groups provided by AWS end with &#34;.cluster.on&#34;, for example `default.redis6.x.cluster.on`.
  * 
  * ## Example Usage
  * 
@@ -138,14 +138,14 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
         return this.automaticFailoverEnabled;
     }
     /**
-     * List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
+     * List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
      * 
      */
     @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> availabilityZones;
 
     /**
-     * @return List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
+     * @return List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
      * 
      */
     public Output</* @Nullable */ List<String>> availabilityZones() {
@@ -376,14 +376,14 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
         return this.numberCacheClusters;
     }
     /**
-     * Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+     * Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
     @Export(name="parameterGroupName", type=String.class, parameters={})
     private Output<String> parameterGroupName;
 
     /**
-     * @return Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+     * @return Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
     public Output<String> parameterGroupName() {

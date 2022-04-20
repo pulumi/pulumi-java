@@ -92,7 +92,7 @@ public final class ManagedNodeGroupArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
+     * Set of instance types associated with the EKS Node Group. Defaults to `[&#34;t3.medium&#34;]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
      * 
      */
     @Import(name="instanceTypes")

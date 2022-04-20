@@ -22,7 +22,7 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     public static final LocalNetworkGatewayResponse Empty = new LocalNetworkGatewayResponse();
 
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
      */
     @Import(name="bgpSettings")

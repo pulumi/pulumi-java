@@ -90,14 +90,14 @@ public class Alias extends com.pulumi.resources.CustomResource {
         return this.functionVersion;
     }
     /**
-     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+     * The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`
      * 
      */
     @Export(name="invokeArn", type=String.class, parameters={})
     private Output<String> invokeArn;
 
     /**
-     * @return The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+     * @return The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`
      * 
      */
     public Output<String> invokeArn() {
@@ -118,14 +118,14 @@ public class Alias extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The Lambda alias' route configuration settings. Fields documented below
+     * The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
     @Export(name="routingConfig", type=AliasRoutingConfig.class, parameters={})
     private Output</* @Nullable */ AliasRoutingConfig> routingConfig;
 
     /**
-     * @return The Lambda alias' route configuration settings. Fields documented below
+     * @return The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
     public Output</* @Nullable */ AliasRoutingConfig> routingConfig() {

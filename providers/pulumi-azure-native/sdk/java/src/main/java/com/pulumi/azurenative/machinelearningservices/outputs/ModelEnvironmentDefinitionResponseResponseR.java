@@ -47,7 +47,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
      */
     private final @Nullable String rscriptPath;
     /**
-     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. &#34;2019-04-17&#34;
      * 
      */
     private final @Nullable String snapshotDate;
@@ -121,7 +121,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
         return Optional.ofNullable(this.rscriptPath);
     }
     /**
-     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. &#34;2019-04-17&#34;
      * 
     */
     public Optional<String> snapshotDate() {

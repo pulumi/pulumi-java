@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's versioning configuration.
+ * The bucket&#39;s versioning configuration.
  * 
  */
 public final class BucketVersioningResponse extends com.pulumi.resources.InvokeArgs {

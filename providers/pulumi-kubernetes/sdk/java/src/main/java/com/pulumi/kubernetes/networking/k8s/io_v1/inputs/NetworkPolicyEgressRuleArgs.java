@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and to. This type is beta-level in 1.8
+ * NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec&#39;s podSelector. The traffic must match both ports and to. This type is beta-level in 1.8
  * 
  */
 public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.ResourceArgs {

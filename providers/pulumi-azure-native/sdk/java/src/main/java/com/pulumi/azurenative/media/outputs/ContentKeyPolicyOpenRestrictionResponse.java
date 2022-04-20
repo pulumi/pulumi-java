@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ContentKeyPolicyOpenRestrictionResponse {
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#39;.
      * 
      */
     private final String odataType;
@@ -23,7 +23,7 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#39;.
      * 
     */
     public String odataType() {

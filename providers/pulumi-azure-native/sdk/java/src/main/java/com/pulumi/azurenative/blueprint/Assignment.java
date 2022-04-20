@@ -178,14 +178,14 @@ public class Assignment extends com.pulumi.resources.CustomResource {
         return this.resourceGroups;
     }
     /**
-     * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
-     * @return The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * @return The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
     public Output</* @Nullable */ String> scope() {

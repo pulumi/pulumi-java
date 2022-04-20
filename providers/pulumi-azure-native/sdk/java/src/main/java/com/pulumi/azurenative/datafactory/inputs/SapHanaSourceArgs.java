@@ -66,7 +66,7 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "SapHanaDynamicRange".
+     * The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
      * 
      */
     @Import(name="partitionOption")
@@ -133,7 +133,7 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'SapHanaSource'.
+     * Expected value is &#39;SapHanaSource&#39;.
      * 
      */
     @Import(name="type", required=true)

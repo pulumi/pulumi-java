@@ -34,7 +34,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Expected value is 'BackupPolicy'.
+     * Expected value is &#39;BackupPolicy&#39;.
      * 
      */
     @Import(name="objectType", required=true)

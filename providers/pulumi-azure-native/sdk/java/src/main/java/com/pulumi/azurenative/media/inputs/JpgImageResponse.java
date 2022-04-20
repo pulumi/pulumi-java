@@ -57,7 +57,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgImage'.
+     * Expected value is &#39;#Microsoft.Media.JpgImage&#39;.
      * 
      */
     @Import(name="odataType", required=true)

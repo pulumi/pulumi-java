@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Custom script action to run on HDI ondemand cluster once it's up.
+ * Custom script action to run on HDI ondemand cluster once it&#39;s up.
  * 
  */
 public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {

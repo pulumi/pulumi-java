@@ -95,7 +95,7 @@ public final class DelimitedTextSinkResponse extends com.pulumi.resources.Invoke
 
     /**
      * Copy sink type.
-     * Expected value is 'DelimitedTextSink'.
+     * Expected value is &#39;DelimitedTextSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the `aws.ebs.DefaultKmsKey` resource.
  * 
- * > **NOTE:** Removing this resource disables default EBS encryption.
+ * &gt; **NOTE:** Removing this resource disables default EBS encryption.
  * 
  * ## Example Usage
  * 

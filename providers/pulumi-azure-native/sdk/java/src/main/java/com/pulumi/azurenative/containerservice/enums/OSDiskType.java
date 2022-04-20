@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
      */
     @EnumType

@@ -34,7 +34,7 @@ public final class RuntimeState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The health state of this runtime. For a list of possible output values, see
-     * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
+     * &#39;https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate&#39;.
      * 
      */
     @Import(name="healthState")

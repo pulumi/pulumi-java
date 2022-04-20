@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:databoxedge:Trigger trigger1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/triggers/trigger1 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
  * 
  */

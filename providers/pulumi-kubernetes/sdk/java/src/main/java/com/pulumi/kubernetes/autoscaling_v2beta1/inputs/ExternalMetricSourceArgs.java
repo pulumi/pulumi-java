@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one "target" type should be set.
+ * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one &#34;target&#34; type should be set.
  * 
  */
 public final class ExternalMetricSourceArgs extends com.pulumi.resources.ResourceArgs {

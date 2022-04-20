@@ -73,7 +73,7 @@ public final class AFDCustomDomainArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
     @Import(name="tlsSettings")

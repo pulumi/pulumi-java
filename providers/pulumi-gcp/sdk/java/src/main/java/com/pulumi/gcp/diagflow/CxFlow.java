@@ -72,9 +72,9 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * A flow's event handlers serve two purposes:
+     * A flow&#39;s event handlers serve two purposes:
      * They are responsible for handling events (e.g. no match, webhook errors) in the flow.
-     * They are inherited by every page's [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
+     * They are inherited by every page&#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
      * Unlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
      * Structure is documented below.
      * 
@@ -83,9 +83,9 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
     private Output<List<CxFlowEventHandler>> eventHandlers;
 
     /**
-     * @return A flow's event handlers serve two purposes:
+     * @return A flow&#39;s event handlers serve two purposes:
      * They are responsible for handling events (e.g. no match, webhook errors) in the flow.
-     * They are inherited by every page's [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
+     * They are inherited by every page&#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
      * Unlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
      * Structure is documented below.
      * 
@@ -99,7 +99,7 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * Flow.event_handlers.trigger_fulfillment.conditional_cases
      * Flow.transition_routes.trigger_fulfillment.messages
      * Flow.transition_routes.trigger_fulfillment.conditional_cases
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
@@ -111,7 +111,7 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * Flow.event_handlers.trigger_fulfillment.conditional_cases
      * Flow.transition_routes.trigger_fulfillment.messages
      * Flow.transition_routes.trigger_fulfillment.conditional_cases
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     public Output</* @Nullable */ String> languageCode() {
@@ -151,7 +151,7 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
     }
     /**
      * The agent to create a flow for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     @Export(name="parent", type=String.class, parameters={})
@@ -159,45 +159,45 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The agent to create a flow for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
-     * A flow's transition route group serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
-     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * A flow&#39;s transition route group serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
+     * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
     @Export(name="transitionRouteGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitionRouteGroups;
 
     /**
-     * @return A flow's transition route group serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
-     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * @return A flow&#39;s transition route group serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
+     * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
     public Output</* @Nullable */ List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
     /**
-     * A flow's transition routes serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
+     * A flow&#39;s transition routes serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
     @Export(name="transitionRoutes", type=List.class, parameters={CxFlowTransitionRoute.class})
     private Output</* @Nullable */ List<CxFlowTransitionRoute>> transitionRoutes;
 
     /**
-     * @return A flow's transition routes serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
+     * @return A flow&#39;s transition routes serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
     public Output</* @Nullable */ List<CxFlowTransitionRoute>> transitionRoutes() {

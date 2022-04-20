@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * Web Service API. In order to update a Launch Configuration, this provider will
  * destroy the existing resource and create a replacement. In order to effectively
  * use a Launch Configuration resource with an [AutoScaling Group resource](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html),
- * it's recommended to specify `create_before_destroy` in a [lifecycle](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html) block.
+ * it&#39;s recommended to specify `create_before_destroy` in a [lifecycle](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html) block.
  * Either omit the Launch Configuration `name` attribute, or specify a partial name
  * with `name_prefix`.  Example:
  * 
@@ -49,18 +49,18 @@ import javax.annotation.Nullable;
  * ## Block devices
  * 
  * Each of the `*_block_device` attributes controls a portion of the AWS
- * Launch Configuration's "Block Device Mapping". It's a good idea to familiarize yourself with [AWS's Block Device
+ * Launch Configuration&#39;s &#34;Block Device Mapping&#34;. It&#39;s a good idea to familiarize yourself with [AWS&#39;s Block Device
  * Mapping docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
  * to understand the implications of using these attributes.
  * 
  * The `root_block_device` mapping supports the following:
  * 
- * * `volume_type` - (Optional) The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"st1"`, `"sc1"`
- *   or `"io1"`. (Default: `"standard"`).
+ * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`, `&#34;gp3&#34;`, `&#34;st1&#34;`, `&#34;sc1&#34;`
+ *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
  * * `volume_size` - (Optional) The size of the volume in gigabytes.
  * * `iops` - (Optional) The amount of provisioned
  *   [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `"io1"`.
+ *   This must be set with a `volume_type` of `&#34;io1&#34;`.
  * * `throughput` - (Optional) The throughput (MiBps) to provision for a `gp3` volume.
  * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
  *   on instance termination (Default: `true`).
@@ -73,12 +73,12 @@ import javax.annotation.Nullable;
  * 
  * * `device_name` - (Required) The name of the device to mount.
  * * `snapshot_id` - (Optional) The Snapshot ID to mount.
- * * `volume_type` - (Optional) The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"st1"`, `"sc1"`
- *   or `"io1"`. (Default: `"standard"`).
+ * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`, `&#34;gp3&#34;`, `&#34;st1&#34;`, `&#34;sc1&#34;`
+ *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
  * * `volume_size` - (Optional) The size of the volume in gigabytes.
  * * `iops` - (Optional) The amount of provisioned
  *   [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `"io1"`.
+ *   This must be set with a `volume_type` of `&#34;io1&#34;`.
  * * `throughput` - (Optional) The throughput (MiBps) to provision for a `gp3` volume.
  * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
  *   on instance termination (Default: `true`).
@@ -92,15 +92,15 @@ import javax.annotation.Nullable;
  * * `device_name` - The name of the block device to mount on the instance.
  * * `virtual_name` - The [Instance Store Device
  *   Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
- *   (e.g., `"ephemeral0"`)
+ *   (e.g., `&#34;ephemeral0&#34;`)
  * 
  * Each AWS Instance type has a different set of Instance Store block devices
  * available for attachment. AWS [publishes a
  * list](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes)
  * of which ephemeral devices are available on each type. The devices are always
- * identified by the `virtual_name` in the format `"ephemeral{0..N}"`.
+ * identified by the `virtual_name` in the format `&#34;ephemeral{0..N}&#34;`.
  * 
- * > **NOTE:** Changes to `*_block_device` configuration of _existing_ resources
+ * &gt; **NOTE:** Changes to `*_block_device` configuration of _existing_ resources
  * cannot currently be detected by this provider. After updating to block device
  * configuration, resource recreation can be manually triggered by using the
  * [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
@@ -190,7 +190,7 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
     }
     /**
      * Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     @Export(name="ephemeralBlockDevices", type=List.class, parameters={LaunchConfigurationEphemeralBlockDevice.class})
@@ -198,7 +198,7 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     public Output</* @Nullable */ List<LaunchConfigurationEphemeralBlockDevice>> ephemeralBlockDevices() {
@@ -310,7 +310,7 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
     }
     /**
      * The tenancy of the instance. Valid values are
-     * `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+     * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
      * for more details
      * 
      */
@@ -319,7 +319,7 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The tenancy of the instance. Valid values are
-     * `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+     * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
      * for more details
      * 
      */

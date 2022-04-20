@@ -99,7 +99,7 @@ public final class HubspotSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HubspotSource'.
+     * Expected value is &#39;HubspotSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -109,7 +109,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
         return this.entities;
     }
     /**
-     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
      * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * Structure is documented below.
      * 
@@ -118,7 +118,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ List<CxEntityTypeExcludedPhrase>> excludedPhrases;
 
     /**
-     * @return Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+     * @return Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
      * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * Structure is documented below.
      * 
@@ -153,7 +153,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * EntityType.entities.value
      * EntityType.entities.synonyms
      * EntityType.excluded_phrases.value
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
@@ -164,23 +164,23 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * EntityType.entities.value
      * EntityType.entities.synonyms
      * EntityType.excluded_phrases.value
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     public Output</* @Nullable */ String> languageCode() {
         return this.languageCode;
     }
     /**
-     * The unique identifier of the entity type. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent
-     * ID>/entityTypes/<Entity Type ID>.
+     * The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+     * ID&gt;/entityTypes/&lt;Entity Type ID&gt;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The unique identifier of the entity type. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent
-     * ID>/entityTypes/<Entity Type ID>.
+     * @return The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+     * ID&gt;/entityTypes/&lt;Entity Type ID&gt;.
      * 
      */
     public Output<String> name() {
@@ -188,7 +188,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
     }
     /**
      * The agent to create a entity type for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     @Export(name="parent", type=String.class, parameters={})
@@ -196,7 +196,7 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The agent to create a entity type for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     public Output</* @Nullable */ String> parent() {

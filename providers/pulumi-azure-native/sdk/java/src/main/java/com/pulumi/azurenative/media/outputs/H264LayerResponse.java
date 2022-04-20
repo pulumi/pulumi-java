@@ -65,7 +65,7 @@ public final class H264LayerResponse {
     private final @Nullable Integer maxBitrate;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.H264Layer'.
+     * Expected value is &#39;#Microsoft.Media.H264Layer&#39;.
      * 
      */
     private final String odataType;
@@ -196,7 +196,7 @@ public final class H264LayerResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.H264Layer'.
+     * Expected value is &#39;#Microsoft.Media.H264Layer&#39;.
      * 
     */
     public String odataType() {

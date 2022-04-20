@@ -100,14 +100,14 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The schedule of action. The schedule is defined format of "at expression" or "cron expression", for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
+     * The schedule of action. The schedule is defined format of &#34;at expression&#34; or &#34;cron expression&#34;, for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
      * 
      */
     @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
-     * @return The schedule of action. The schedule is defined format of "at expression" or "cron expression", for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
+     * @return The schedule of action. The schedule is defined format of &#34;at expression&#34; or &#34;cron expression&#34;, for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
      * 
      */
     public Output<String> schedule() {

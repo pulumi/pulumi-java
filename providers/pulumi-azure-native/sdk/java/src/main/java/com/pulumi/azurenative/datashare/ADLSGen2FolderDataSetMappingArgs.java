@@ -72,7 +72,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
      */
     @Import(name="kind", required=true)

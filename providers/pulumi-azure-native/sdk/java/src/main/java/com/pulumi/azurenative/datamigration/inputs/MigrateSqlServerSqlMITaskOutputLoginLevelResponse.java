@@ -72,7 +72,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
 
     /**
      * Result type
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

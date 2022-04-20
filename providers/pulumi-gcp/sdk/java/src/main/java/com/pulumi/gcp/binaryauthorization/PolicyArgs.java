@@ -21,7 +21,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A whitelist of image patterns to exclude from admission rules. If an
-     * image's name matches a whitelist pattern, the image's admission
+     * image&#39;s name matches a whitelist pattern, the image&#39;s admission
      * requests will always be permitted regardless of your admission rules.
      * Structure is documented below.
      * 

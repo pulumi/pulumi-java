@@ -59,7 +59,7 @@ public final class SapTableResourceDatasetResponse {
     private final Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SapTableResource'.
+     * Expected value is &#39;SapTableResource&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SapTableResourceDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SapTableResource'.
+     * Expected value is &#39;SapTableResource&#39;.
      * 
     */
     public String type() {

@@ -115,7 +115,7 @@ public final class DynamicsCrmEntityDatasetArgs extends com.pulumi.resources.Res
 
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsCrmEntity'.
+     * Expected value is &#39;DynamicsCrmEntity&#39;.
      * 
      */
     @Import(name="type", required=true)

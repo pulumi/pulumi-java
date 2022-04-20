@@ -17,7 +17,7 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String cloudComposerNetworkIpv4CidrBlock;
     /**
-     * The IP range reserved for the tenant project's Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
     private final String cloudComposerNetworkIpv4ReservedRange;
@@ -42,7 +42,7 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String webServerIpv4CidrBlock;
     /**
-     * The IP range reserved for the tenant project's App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
     private final String webServerIpv4ReservedRange;
@@ -73,7 +73,7 @@ public final class PrivateEnvironmentConfigResponse {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
     /**
-     * The IP range reserved for the tenant project's Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
     */
     public String cloudComposerNetworkIpv4ReservedRange() {
@@ -108,7 +108,7 @@ public final class PrivateEnvironmentConfigResponse {
         return this.webServerIpv4CidrBlock;
     }
     /**
-     * The IP range reserved for the tenant project's App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
     */
     public String webServerIpv4ReservedRange() {

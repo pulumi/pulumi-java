@@ -30,7 +30,7 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The ingress profile name.  Must be "default" (immutable).
+     * The ingress profile name.  Must be &#34;default&#34; (immutable).
      * 
      */
     @Import(name="name")

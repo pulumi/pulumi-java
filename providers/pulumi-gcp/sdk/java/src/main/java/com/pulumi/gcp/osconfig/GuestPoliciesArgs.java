@@ -50,7 +50,7 @@ public final class GuestPoliciesArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     @Import(name="etag")

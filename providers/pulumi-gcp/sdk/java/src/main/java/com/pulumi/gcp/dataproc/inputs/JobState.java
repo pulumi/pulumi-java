@@ -40,7 +40,7 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A URI pointing to the location of the stdout of the job's driver program.
+     * A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     @Import(name="driverOutputResourceUri")

@@ -15,7 +15,7 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
     public static final GetLogDeliveryCanonicalUserIdArgs Empty = new GetLogDeliveryCanonicalUserIdArgs();
 
     /**
-     * The region you'd like the zone for. By default, fetches the current region.
+     * The region you&#39;d like the zone for. By default, fetches the current region.
      * 
      */
     @Import(name="region")

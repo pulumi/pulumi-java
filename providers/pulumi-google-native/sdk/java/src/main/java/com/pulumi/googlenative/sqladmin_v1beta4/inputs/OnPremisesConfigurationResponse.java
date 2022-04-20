@@ -18,7 +18,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     public static final OnPremisesConfigurationResponse Empty = new OnPremisesConfigurationResponse();
 
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     @Import(name="caCertificate", required=true)
@@ -29,7 +29,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     }
 
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     @Import(name="clientCertificate", required=true)
@@ -40,7 +40,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     }
 
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     @Import(name="clientKey", required=true)

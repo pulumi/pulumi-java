@@ -23,7 +23,7 @@ public final class ScriptSecureStringExecutionParameterResponse {
     private final @Nullable String secureValue;
     /**
      * The type of execution parameter
-     * Expected value is 'SecureValue'.
+     * Expected value is &#39;SecureValue&#39;.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class ScriptSecureStringExecutionParameterResponse {
     }
     /**
      * The type of execution parameter
-     * Expected value is 'SecureValue'.
+     * Expected value is &#39;SecureValue&#39;.
      * 
     */
     public String type() {

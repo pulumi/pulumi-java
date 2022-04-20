@@ -25,13 +25,13 @@ public final class CxFlowEventHandler {
     private final @Nullable String name;
     /**
      * The target flow to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     private final @Nullable String targetFlow;
     /**
      * The target page to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
      * 
      */
     private final @Nullable String targetPage;
@@ -73,7 +73,7 @@ public final class CxFlowEventHandler {
     }
     /**
      * The target flow to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
     */
     public Optional<String> targetFlow() {
@@ -81,7 +81,7 @@ public final class CxFlowEventHandler {
     }
     /**
      * The target page to transition to.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
      * 
     */
     public Optional<String> targetPage() {

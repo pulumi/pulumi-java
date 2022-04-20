@@ -16,7 +16,7 @@ public final class ErrorDetailResponse extends com.pulumi.resources.InvokeArgs {
     public static final ErrorDetailResponse Empty = new ErrorDetailResponse();
 
     /**
-     * The error's code.
+     * The error&#39;s code.
      * 
      */
     @Import(name="code", required=true)

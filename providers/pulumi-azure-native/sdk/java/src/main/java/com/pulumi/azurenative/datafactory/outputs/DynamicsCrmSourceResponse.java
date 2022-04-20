@@ -28,7 +28,7 @@ public final class DynamicsCrmSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online & on-premises). Type: string (or Expression with resultType string).
+     * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online &amp; on-premises). Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
@@ -44,7 +44,7 @@ public final class DynamicsCrmSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'DynamicsCrmSource'.
+     * Expected value is &#39;DynamicsCrmSource&#39;.
      * 
      */
     private final String type;
@@ -89,7 +89,7 @@ public final class DynamicsCrmSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online & on-premises). Type: string (or Expression with resultType string).
+     * FetchXML is a proprietary query language that is used in Microsoft Dynamics CRM (online &amp; on-premises). Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> query() {
@@ -111,7 +111,7 @@ public final class DynamicsCrmSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'DynamicsCrmSource'.
+     * Expected value is &#39;DynamicsCrmSource&#39;.
      * 
     */
     public String type() {

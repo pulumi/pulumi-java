@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Attaches an EC2 instance to an Elastic Load Balancer (ELB). For attaching resources with Application Load Balancer (ALB) or Network Load Balancer (NLB), see the `aws.lb.TargetGroupAttachment` resource.
  * 
- * > **NOTE on ELB Instances and ELB Attachments:** This provider currently provides
+ * &gt; **NOTE on ELB Instances and ELB Attachments:** This provider currently provides
  * both a standalone ELB Attachment resource (describing an instance attached to
  * an ELB), and an Elastic Load Balancer resource with
  * `instances` defined in-line. At this time you cannot use an ELB with in-line

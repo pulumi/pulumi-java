@@ -16,7 +16,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
     private final String keyValue;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
      * 
      */
     private final String odataType;
@@ -38,7 +38,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
      * 
     */
     public String odataType() {

@@ -49,7 +49,7 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.SqlServer'.
+     * Expected value is &#39;ConnectToSource.SqlServer&#39;.
      * 
      */
     private final String taskType;
@@ -107,7 +107,7 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.SqlServer'.
+     * Expected value is &#39;ConnectToSource.SqlServer&#39;.
      * 
     */
     public String taskType() {

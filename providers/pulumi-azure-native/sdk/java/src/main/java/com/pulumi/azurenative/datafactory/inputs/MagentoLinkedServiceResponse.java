@@ -106,7 +106,7 @@ public final class MagentoLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'Magento'.
+     * Expected value is &#39;Magento&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -128,7 +128,7 @@ public final class MagentoLinkedServiceResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
     @Import(name="useHostVerification")

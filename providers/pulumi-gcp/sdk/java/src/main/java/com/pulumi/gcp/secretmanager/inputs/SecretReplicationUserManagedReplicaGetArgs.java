@@ -29,7 +29,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends com.pulumi
     }
 
     /**
-     * The canonical IDs of the location to replicate data. For example: "us-east1".
+     * The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
      * 
      */
     @Import(name="location", required=true)

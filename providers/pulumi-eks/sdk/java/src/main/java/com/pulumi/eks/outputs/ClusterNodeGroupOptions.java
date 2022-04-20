@@ -32,7 +32,7 @@ public final class ClusterNodeGroupOptions {
      */
     private final @Nullable String amiId;
     /**
-     * The tags to apply to the NodeGroup's AutoScalingGroup in the CloudFormation Stack.
+     * The tags to apply to the NodeGroup&#39;s AutoScalingGroup in the CloudFormation Stack.
      * 
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
@@ -93,7 +93,7 @@ public final class ClusterNodeGroupOptions {
      */
     private final @Nullable InstanceProfile instanceProfile;
     /**
-     * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+     * The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
      * 
      */
     private final @Nullable String instanceType;
@@ -103,7 +103,7 @@ public final class ClusterNodeGroupOptions {
      */
     private final @Nullable String keyName;
     /**
-     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
+     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, &#39;--port=10251 --address=0.0.0.0&#39;. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
      * 
      */
     private final @Nullable String kubeletExtraArgs;
@@ -135,7 +135,7 @@ public final class ClusterNodeGroupOptions {
      */
     private final @Nullable String nodePublicKey;
     /**
-     * The size in GiB of a cluster node's root volume. Defaults to 20.
+     * The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
      * 
      */
     private final @Nullable Integer nodeRootVolumeSize;
@@ -154,7 +154,7 @@ public final class ClusterNodeGroupOptions {
     /**
      * The set of subnets to override and use for the worker node group.
      * 
-     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
+     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster&#39;s `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
      * 
      */
     private final @Nullable List<String> nodeSubnetIds;
@@ -257,7 +257,7 @@ public final class ClusterNodeGroupOptions {
         return Optional.ofNullable(this.amiId);
     }
     /**
-     * The tags to apply to the NodeGroup's AutoScalingGroup in the CloudFormation Stack.
+     * The tags to apply to the NodeGroup&#39;s AutoScalingGroup in the CloudFormation Stack.
      * 
      * Per AWS, all stack-level tags, including automatically created tags, and the `cloudFormationTags` option are propagated to resources that AWS CloudFormation supports, including the AutoScalingGroup. See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html
      * 
@@ -336,7 +336,7 @@ public final class ClusterNodeGroupOptions {
         return Optional.ofNullable(this.instanceProfile);
     }
     /**
-     * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+     * The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
      * 
     */
     public Optional<String> instanceType() {
@@ -350,7 +350,7 @@ public final class ClusterNodeGroupOptions {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
+     * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, &#39;--port=10251 --address=0.0.0.0&#39;. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
      * 
     */
     public Optional<String> kubeletExtraArgs() {
@@ -394,7 +394,7 @@ public final class ClusterNodeGroupOptions {
         return Optional.ofNullable(this.nodePublicKey);
     }
     /**
-     * The size in GiB of a cluster node's root volume. Defaults to 20.
+     * The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
      * 
     */
     public Optional<Integer> nodeRootVolumeSize() {
@@ -417,7 +417,7 @@ public final class ClusterNodeGroupOptions {
     /**
      * The set of subnets to override and use for the worker node group.
      * 
-     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
+     * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster&#39;s `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
      * 
     */
     public List<String> nodeSubnetIds() {

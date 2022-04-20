@@ -122,7 +122,7 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
     }
     /**
      * Role type.
-     * Expected value is 'IOT'.
+     * Expected value is &#39;IOT&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -130,7 +130,7 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Role type.
-     * Expected value is 'IOT'.
+     * Expected value is &#39;IOT&#39;.
      * 
      */
     public Output<String> kind() {

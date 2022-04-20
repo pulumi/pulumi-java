@@ -22,7 +22,7 @@ public final class MsTeamsChannelArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The channel name
-     * Expected value is 'MsTeamsChannel'.
+     * Expected value is &#39;MsTeamsChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

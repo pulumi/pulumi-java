@@ -27,7 +27,7 @@ public final class DicomStoreIamBindingState extends com.pulumi.resources.Resour
     /**
      * The DICOM store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{dicom_store_name}` or
-     * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */
@@ -39,7 +39,7 @@ public final class DicomStoreIamBindingState extends com.pulumi.resources.Resour
     }
 
     /**
-     * (Computed) The etag of the DICOM store's IAM policy.
+     * (Computed) The etag of the DICOM store&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

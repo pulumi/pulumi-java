@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:logic:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
+ * $ pulumi import azure-native:logic:IntegrationAccountAgreement &lt;IntegrationAccountAgreementName&gt; /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/&lt;IntegrationAccountAgreementName&gt; 
  * ```
  * 
  */

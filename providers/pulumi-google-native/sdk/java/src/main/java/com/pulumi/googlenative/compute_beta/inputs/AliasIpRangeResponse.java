@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * An alias IP range attached to an instance's network interface.
+ * An alias IP range attached to an instance&#39;s network interface.
  * 
  */
 public final class AliasIpRangeResponse extends com.pulumi.resources.InvokeArgs {

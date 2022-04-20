@@ -49,7 +49,7 @@ public final class ShopifySourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ShopifySource'.
+     * Expected value is &#39;ShopifySource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ShopifySourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ShopifySource'.
+     * Expected value is &#39;ShopifySource&#39;.
      * 
     */
     public String type() {

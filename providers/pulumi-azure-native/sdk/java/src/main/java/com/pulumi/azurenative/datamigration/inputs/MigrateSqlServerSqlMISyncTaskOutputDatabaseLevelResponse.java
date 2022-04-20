@@ -129,7 +129,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
 
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

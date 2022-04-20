@@ -54,14 +54,14 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
         return this.amountOfRam;
     }
     /**
-     * The list of Virtual Disks' Controllers
+     * The list of Virtual Disks&#39; Controllers
      * 
      */
     @Export(name="controllers", type=List.class, parameters={VirtualDiskControllerResponse.class})
     private Output<List<VirtualDiskControllerResponse>> controllers;
 
     /**
-     * @return The list of Virtual Disks' Controllers
+     * @return The list of Virtual Disks&#39; Controllers
      * 
      */
     public Output<List<VirtualDiskControllerResponse>> controllers() {

@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="pulumi:providers:aws")
 public class Provider extends com.pulumi.resources.ProviderResource {
     /**
-     * The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     @Export(name="accessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessKey;
 
     /**
-     * @return The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * @return The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     public Output</* @Nullable */ String> accessKey() {
@@ -80,14 +80,14 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return this.region;
     }
     /**
-     * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     @Export(name="secretKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretKey;
 
     /**
-     * @return The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+     * @return The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
     public Output</* @Nullable */ String> secretKey() {

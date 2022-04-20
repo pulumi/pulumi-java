@@ -45,7 +45,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI&#39;.
      * 
     */
     public String taskType() {

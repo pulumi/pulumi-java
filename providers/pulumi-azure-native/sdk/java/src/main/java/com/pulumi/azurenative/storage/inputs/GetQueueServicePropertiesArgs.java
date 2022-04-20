@@ -24,7 +24,7 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
     }
 
     /**
-     * The name of the Queue Service within the specified storage account. Queue Service Name must be 'default'
+     * The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
      * 
      */
     @Import(name="queueServiceName", required=true)
@@ -35,7 +35,7 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

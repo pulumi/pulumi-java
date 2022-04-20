@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An object that contains the details about an environment's state.
+ * An object that contains the details about an environment&#39;s state.
  * 
  */
 public final class EnvironmentStateDetailsResponse extends com.pulumi.resources.InvokeArgs {

@@ -24,7 +24,7 @@ public final class CustomLayerEbsVolume {
      */
     private final @Nullable Integer iops;
     /**
-     * The path to mount the EBS volume on the layer's instances.
+     * The path to mount the EBS volume on the layer&#39;s instances.
      * 
      */
     private final String mountPoint;
@@ -82,7 +82,7 @@ public final class CustomLayerEbsVolume {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The path to mount the EBS volume on the layer's instances.
+     * The path to mount the EBS volume on the layer&#39;s instances.
      * 
     */
     public String mountPoint() {

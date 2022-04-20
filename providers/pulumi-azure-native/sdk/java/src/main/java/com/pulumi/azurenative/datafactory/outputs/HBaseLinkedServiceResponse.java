@@ -91,7 +91,7 @@ public final class HBaseLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'HBase'.
+     * Expected value is &#39;HBase&#39;.
      * 
      */
     private final String type;
@@ -237,7 +237,7 @@ public final class HBaseLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'HBase'.
+     * Expected value is &#39;HBase&#39;.
      * 
     */
     public String type() {

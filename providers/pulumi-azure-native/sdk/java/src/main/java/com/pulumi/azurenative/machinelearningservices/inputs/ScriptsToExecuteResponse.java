@@ -19,7 +19,7 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
     public static final ScriptsToExecuteResponse Empty = new ScriptsToExecuteResponse();
 
     /**
-     * Script that's run only once during provision of the compute.
+     * Script that&#39;s run only once during provision of the compute.
      * 
      */
     @Import(name="creationScript")
@@ -30,7 +30,7 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Script that's run every time the machine starts.
+     * Script that&#39;s run every time the machine starts.
      * 
      */
     @Import(name="startupScript")

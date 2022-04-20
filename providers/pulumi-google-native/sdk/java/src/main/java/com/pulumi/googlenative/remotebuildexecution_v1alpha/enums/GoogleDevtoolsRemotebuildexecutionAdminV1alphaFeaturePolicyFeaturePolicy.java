@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Allowed("ALLOWED"),
         /**
-         * Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: "Feature forbidden by FeaturePolicy: Feature on instance "
+         * Feature is forbidden. Requests attempting to leverage it will get an FailedPrecondition error, with a message like: &#34;Feature forbidden by FeaturePolicy: Feature on instance &#34;
          * 
          */
         Forbidden("FORBIDDEN"),

@@ -88,7 +88,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we'll automatically choose from official GPU drivers.
+     * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     @Import(name="customGpuDriverPath")
@@ -139,7 +139,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     /**
      * Whether the end user authorizes Google Cloud to install GPU driver
      * on this instance. If this field is empty or set to false, the GPU driver
-     * won't be installed. Only applicable to instances with GPUs.
+     * won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
     @Import(name="installGpuDriver")
@@ -154,7 +154,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * Format: alias@example.com.
      * Currently supports one owner only.
      * If not specified, all of the service account users of
-     * your VM instance's service account can use the instance.
+     * your VM instance&#39;s service account can use the instance.
      * 
      */
     @Import(name="instanceOwners")
@@ -178,7 +178,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Labels to apply to this instance. These can be later modified by the setLabels method.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -212,7 +212,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Custom metadata to apply to this instance.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="metadata")

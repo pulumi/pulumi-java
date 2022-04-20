@@ -20,7 +20,7 @@ public final class DeliveryRuleRequestSchemeConditionResponse extends com.pulumi
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RequestScheme'.
+     * Expected value is &#39;RequestScheme&#39;.
      * 
      */
     @Import(name="name", required=true)

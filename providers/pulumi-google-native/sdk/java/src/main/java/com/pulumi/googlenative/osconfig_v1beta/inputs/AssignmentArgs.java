@@ -23,7 +23,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssignmentArgs Empty = new AssignmentArgs();
 
     /**
-     * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".
+     * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example &#34;env=prod or env=staging&#34;.
      * 
      */
     @Import(name="groupLabels")
@@ -34,7 +34,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.
+     * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix=&#34;prod-&#34;. Only supported for project-level policies.
      * 
      */
     @Import(name="instanceNamePrefixes")

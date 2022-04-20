@@ -51,7 +51,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The IAM user's name.
+     * The IAM user&#39;s name.
      * 
      */
     @Import(name="user", required=true)

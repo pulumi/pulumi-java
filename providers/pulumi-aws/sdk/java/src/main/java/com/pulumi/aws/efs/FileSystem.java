@@ -51,14 +51,14 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+     * The identifier of the Availability Zone in which the file system&#39;s One Zone storage classes exist.
      * 
      */
     @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     /**
-     * @return The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+     * @return The identifier of the Availability Zone in which the file system&#39;s One Zone storage classes exist.
      * 
      */
     public Output<String> availabilityZoneId() {
@@ -183,14 +183,14 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
         return this.ownerId;
     }
     /**
-     * The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
+     * The file system performance mode. Can be either `&#34;generalPurpose&#34;` or `&#34;maxIO&#34;` (Default: `&#34;generalPurpose&#34;`).
      * 
      */
     @Export(name="performanceMode", type=String.class, parameters={})
     private Output<String> performanceMode;
 
     /**
-     * @return The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
+     * @return The file system performance mode. Can be either `&#34;generalPurpose&#34;` or `&#34;maxIO&#34;` (Default: `&#34;generalPurpose&#34;`).
      * 
      */
     public Output<String> performanceMode() {

@@ -51,7 +51,7 @@ public final class AzureDatabricksLinkedServiceResponse {
      */
     private final @Nullable String description;
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
      */
     private final Object domain;
@@ -101,7 +101,7 @@ public final class AzureDatabricksLinkedServiceResponse {
      */
     private final @Nullable Object newClusterNodeType;
     /**
-     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object newClusterNumOfWorker;
@@ -132,7 +132,7 @@ public final class AzureDatabricksLinkedServiceResponse {
     private final @Nullable Object policyId;
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricks'.
+     * Expected value is &#39;AzureDatabricks&#39;.
      * 
      */
     private final String type;
@@ -237,7 +237,7 @@ public final class AzureDatabricksLinkedServiceResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
     */
     public Object domain() {
@@ -307,7 +307,7 @@ public final class AzureDatabricksLinkedServiceResponse {
         return Optional.ofNullable(this.newClusterNodeType);
     }
     /**
-     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> newClusterNumOfWorker() {
@@ -350,7 +350,7 @@ public final class AzureDatabricksLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricks'.
+     * Expected value is &#39;AzureDatabricks&#39;.
      * 
     */
     public String type() {

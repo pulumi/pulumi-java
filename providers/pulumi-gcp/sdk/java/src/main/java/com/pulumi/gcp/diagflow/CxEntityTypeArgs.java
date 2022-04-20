@@ -68,7 +68,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
      * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * Structure is documented below.
      * 
@@ -100,7 +100,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
      * EntityType.entities.value
      * EntityType.entities.synonyms
      * EntityType.excluded_phrases.value
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     @Import(name="languageCode")
@@ -112,7 +112,7 @@ public final class CxEntityTypeArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The agent to create a entity type for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     @Import(name="parent")

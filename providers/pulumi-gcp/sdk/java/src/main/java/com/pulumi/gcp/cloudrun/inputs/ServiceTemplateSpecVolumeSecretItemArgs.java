@@ -18,7 +18,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
 
     /**
      * The Cloud Secret Manager secret version.
-     * Can be 'latest' for the latest value or an integer for a specific version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     @Import(name="key", required=true)
@@ -45,8 +45,8 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
     /**
      * The relative path of the file to map the key to.
      * May not be an absolute path.
-     * May not contain the path element '..'.
-     * May not start with the string '..'.
+     * May not contain the path element &#39;..&#39;.
+     * May not start with the string &#39;..&#39;.
      * 
      */
     @Import(name="path", required=true)

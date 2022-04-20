@@ -49,7 +49,7 @@ public final class Db2SourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'Db2Source'.
+     * Expected value is &#39;Db2Source&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class Db2SourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'Db2Source'.
+     * Expected value is &#39;Db2Source&#39;.
      * 
     */
     public String type() {

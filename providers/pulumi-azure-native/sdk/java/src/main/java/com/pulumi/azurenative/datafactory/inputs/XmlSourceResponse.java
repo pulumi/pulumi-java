@@ -113,7 +113,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'XmlSource'.
+     * Expected value is &#39;XmlSource&#39;.
      * 
      */
     @Import(name="type", required=true)

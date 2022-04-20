@@ -32,7 +32,7 @@ public final class CustomResourceDefinitionVersion {
      */
     private final @Nullable String deprecationWarning;
     /**
-     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.
+     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
      * 
      */
     private final String name;
@@ -99,7 +99,7 @@ public final class CustomResourceDefinitionVersion {
         return Optional.ofNullable(this.deprecationWarning);
     }
     /**
-     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.
+     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/&lt;group&gt;/&lt;version&gt;/...` if `served` is true.
      * 
     */
     public String name() {

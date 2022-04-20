@@ -25,7 +25,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
+     * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs[&#34;volume_size&#34;]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
      */
     @Import(name="ebs", required=true)

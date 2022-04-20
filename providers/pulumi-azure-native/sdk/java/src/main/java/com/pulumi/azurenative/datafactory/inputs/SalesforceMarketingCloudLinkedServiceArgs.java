@@ -117,7 +117,7 @@ public final class SalesforceMarketingCloudLinkedServiceArgs extends com.pulumi.
 
     /**
      * Type of linked service.
-     * Expected value is 'SalesforceMarketingCloud'.
+     * Expected value is &#39;SalesforceMarketingCloud&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -139,7 +139,7 @@ public final class SalesforceMarketingCloudLinkedServiceArgs extends com.pulumi.
     }
 
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     @Import(name="useHostVerification")

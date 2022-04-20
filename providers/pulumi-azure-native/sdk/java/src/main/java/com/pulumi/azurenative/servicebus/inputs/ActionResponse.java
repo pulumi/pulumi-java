@@ -44,7 +44,7 @@ public final class ActionResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * SQL expression. e.g. MyProperty='ABC'
+     * SQL expression. e.g. MyProperty=&#39;ABC&#39;
      * 
      */
     @Import(name="sqlExpression")

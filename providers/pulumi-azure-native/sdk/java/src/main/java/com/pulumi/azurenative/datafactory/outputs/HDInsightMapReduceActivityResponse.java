@@ -85,7 +85,7 @@ public final class HDInsightMapReduceActivityResponse {
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
      * Type of activity.
-     * Expected value is 'HDInsightMapReduce'.
+     * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
      */
     private final String type;
@@ -222,7 +222,7 @@ public final class HDInsightMapReduceActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'HDInsightMapReduce'.
+     * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
     */
     public String type() {

@@ -64,7 +64,7 @@ public final class ExportExecutionResponse {
      */
     private final @Nullable String status;
     /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
+     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
      * 
      */
     private final @Nullable String submittedBy;
@@ -180,7 +180,7 @@ public final class ExportExecutionResponse {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
+     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
      * 
     */
     public Optional<String> submittedBy() {

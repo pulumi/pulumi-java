@@ -42,7 +42,7 @@ public final class GetBackendServiceResult {
     private final BackendServiceCdnPolicyResponse cdnPolicy;
     private final CircuitBreakersResponse circuitBreakers;
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
      */
     private final String compressionMode;
@@ -295,7 +295,7 @@ public final class GetBackendServiceResult {
         return this.circuitBreakers;
     }
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
     */
     public String compressionMode() {

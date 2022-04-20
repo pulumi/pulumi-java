@@ -41,7 +41,7 @@ public final class GetKeyResult {
      */
     private final Map<String,String> labels;
     /**
-     * The resource name for the Key in the format "projects/{project}/keys/{key}".
+     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
      */
     private final String name;
@@ -119,7 +119,7 @@ public final class GetKeyResult {
         return this.labels;
     }
     /**
-     * The resource name for the Key in the format "projects/{project}/keys/{key}".
+     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
     */
     public String name() {

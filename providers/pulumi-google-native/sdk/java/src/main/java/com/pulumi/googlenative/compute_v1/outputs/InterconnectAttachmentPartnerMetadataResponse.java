@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InterconnectAttachmentPartnerMetadataResponse {
     /**
-     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
+     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
      * 
      */
     private final String interconnectName;
@@ -20,7 +20,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
      */
     private final String partnerName;
     /**
-     * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
      */
     private final String portalUrl;
@@ -36,7 +36,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
     }
 
     /**
-     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
+     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
      * 
     */
     public String interconnectName() {
@@ -50,7 +50,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
         return this.partnerName;
     }
     /**
-     * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
     */
     public String portalUrl() {

@@ -19,7 +19,7 @@ public final class SharingProfileResponse {
      */
     private final List<SharingProfileGroupResponse> groups;
     /**
-     * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+     * This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
      * 
      */
     private final @Nullable String permissions;
@@ -40,7 +40,7 @@ public final class SharingProfileResponse {
         return this.groups;
     }
     /**
-     * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+     * This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
      * 
     */
     public Optional<String> permissions() {

@@ -126,7 +126,7 @@ public final class AzurePostgreSqlTableDatasetResponse extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'AzurePostgreSqlTable'.
+     * Expected value is &#39;AzurePostgreSqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

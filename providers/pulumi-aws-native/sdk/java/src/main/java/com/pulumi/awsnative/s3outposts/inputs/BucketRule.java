@@ -67,7 +67,7 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
+     * Unique identifier for the lifecycle rule. The value can&#39;t be longer than 255 characters.
      * 
      */
     @Import(name="id")

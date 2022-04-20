@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a commitment in the specified project using the data included in the request.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */

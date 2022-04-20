@@ -50,14 +50,14 @@ public class EntryGroup extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * A short name to identify the entry group, for example, "analytics data - jan 2011".
+     * A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
-     * @return A short name to identify the entry group, for example, "analytics data - jan 2011".
+     * @return A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;.
      * 
      */
     public Output</* @Nullable */ String> displayName() {

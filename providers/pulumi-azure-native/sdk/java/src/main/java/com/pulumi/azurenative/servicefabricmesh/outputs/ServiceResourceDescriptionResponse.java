@@ -88,7 +88,7 @@ public final class ServiceResourceDescriptionResponse {
      */
     private final String type;
     /**
-     * When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
+     * When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
      * 
      */
     private final String unhealthyEvaluation;
@@ -226,7 +226,7 @@ public final class ServiceResourceDescriptionResponse {
         return this.type;
     }
     /**
-     * When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
+     * When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
      * 
     */
     public String unhealthyEvaluation() {

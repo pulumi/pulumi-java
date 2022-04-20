@@ -36,7 +36,7 @@ public final class PeeringFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The essential information related to the peer's ASN.
+     * The essential information related to the peer&#39;s ASN.
      * API Version: 2021-01-01.
      * 
      */
@@ -80,7 +80,7 @@ public final class PeeringFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The customer's ASN that is registered by the peering service provider.
+     * The customer&#39;s ASN that is registered by the peering service provider.
      * API Version: 2021-01-01.
      * 
      */
@@ -91,7 +91,7 @@ public final class PeeringFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredAsn", TypeShape.of(GetRegisteredAsnResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The customer's prefix that is registered by the peering service provider.
+     * The customer&#39;s prefix that is registered by the peering service provider.
      * API Version: 2021-01-01.
      * 
      */

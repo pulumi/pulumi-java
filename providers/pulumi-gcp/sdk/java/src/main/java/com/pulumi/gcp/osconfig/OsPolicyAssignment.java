@@ -89,14 +89,14 @@ public class OsPolicyAssignment extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     public Output<String> etag() {

@@ -24,7 +24,7 @@ public final class GetPublisherResult {
      */
     private final @Nullable String publisherId;
     /**
-     * The URL to the publisher's profile with the identity provider.
+     * The URL to the publisher&#39;s profile with the identity provider.
      * 
      */
     private final @Nullable String publisherProfile;
@@ -61,7 +61,7 @@ public final class GetPublisherResult {
         return Optional.ofNullable(this.publisherId);
     }
     /**
-     * The URL to the publisher's profile with the identity provider.
+     * The URL to the publisher&#39;s profile with the identity provider.
      * 
     */
     public Optional<String> publisherProfile() {

@@ -28,7 +28,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
     }
 
     /**
-     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
+     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
      * 
      */
     @Import(name="location")
@@ -46,7 +46,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends com.pulu
     }
 
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
      */
     @Import(name="signatureRrdatas")

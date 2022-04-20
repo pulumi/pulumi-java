@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:
-     * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+     * &#34;projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}&#34;.
      * 
      */
     private final String cloudSecret;
@@ -23,7 +23,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
 
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:
-     * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
+     * &#34;projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}&#34;.
      * 
     */
     public String cloudSecret() {

@@ -118,7 +118,7 @@ public final class SqlServerLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'SqlServer'.
+     * Expected value is &#39;SqlServer&#39;.
      * 
      */
     @Import(name="type", required=true)

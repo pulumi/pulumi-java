@@ -56,7 +56,7 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs".
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;.
      * 
      */
     @Import(name="fsType")

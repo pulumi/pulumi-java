@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * <p>A decimal parameter.</p>
+ * &lt;p&gt;A decimal parameter.&lt;/p&gt;
  * 
  */
 public final class DashboardDecimalParameterArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class DashboardDecimalParameterArgs extends com.pulumi.resources.Re
     public static final DashboardDecimalParameterArgs Empty = new DashboardDecimalParameterArgs();
 
     /**
-     * <p>A display name for the decimal parameter.</p>
+     * &lt;p&gt;A display name for the decimal parameter.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)
@@ -32,7 +32,7 @@ public final class DashboardDecimalParameterArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * <p>The values for the decimal parameter.</p>
+     * &lt;p&gt;The values for the decimal parameter.&lt;/p&gt;
      * 
      */
     @Import(name="values", required=true)

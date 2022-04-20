@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:blueprint:Artifact ownerAssignment /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: PolicyAssignmentArtifact, RoleAssignmentArtifact, TemplateArtifact.
  * 
  */

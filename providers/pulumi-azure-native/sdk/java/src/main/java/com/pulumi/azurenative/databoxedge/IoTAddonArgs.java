@@ -62,7 +62,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Addon type.
-     * Expected value is 'IotEdge'.
+     * Expected value is &#39;IotEdge&#39;.
      * 
      */
     @Import(name="kind", required=true)

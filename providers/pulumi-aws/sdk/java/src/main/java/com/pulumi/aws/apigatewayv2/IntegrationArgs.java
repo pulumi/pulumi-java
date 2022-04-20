@@ -87,7 +87,7 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
+     * The integration&#39;s HTTP method. Must be specified if `integration_type` is not `MOCK`.
      * 
      */
     @Import(name="integrationMethod")

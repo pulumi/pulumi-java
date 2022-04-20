@@ -22,7 +22,7 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The path of the config file containing auth settings if they come from a file.
-     * If the path is relative, base will the site's root directory.
+     * If the path is relative, base will the site&#39;s root directory.
      * 
      */
     @Import(name="configFilePath")
@@ -33,7 +33,7 @@ public final class AuthPlatformArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

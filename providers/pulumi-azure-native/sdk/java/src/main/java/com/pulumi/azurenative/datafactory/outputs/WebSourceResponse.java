@@ -39,7 +39,7 @@ public final class WebSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'WebSource'.
+     * Expected value is &#39;WebSource&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class WebSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'WebSource'.
+     * Expected value is &#39;WebSource&#39;.
      * 
     */
     public String type() {

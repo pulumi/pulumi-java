@@ -80,7 +80,7 @@ public final class WebAclRuleStatement {
      */
     private final @Nullable WebAclRuleStatementRuleGroupReferenceStatement ruleGroupReferenceStatement;
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
+     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
      */
     private final @Nullable WebAclRuleStatementSizeConstraintStatement sizeConstraintStatement;
@@ -205,7 +205,7 @@ public final class WebAclRuleStatement {
         return Optional.ofNullable(this.ruleGroupReferenceStatement);
     }
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
+     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
     */
     public Optional<WebAclRuleStatementSizeConstraintStatement> sizeConstraintStatement() {

@@ -59,7 +59,7 @@ public final class ODataResourceDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'ODataResource'.
+     * Expected value is &#39;ODataResource&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class ODataResourceDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'ODataResource'.
+     * Expected value is &#39;ODataResource&#39;.
      * 
     */
     public String type() {

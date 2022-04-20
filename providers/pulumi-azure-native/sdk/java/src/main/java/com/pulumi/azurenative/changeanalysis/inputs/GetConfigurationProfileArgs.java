@@ -13,7 +13,7 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
     public static final GetConfigurationProfileArgs Empty = new GetConfigurationProfileArgs();
 
     /**
-     * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
+     * The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
      * 
      */
     @Import(name="profileName", required=true)

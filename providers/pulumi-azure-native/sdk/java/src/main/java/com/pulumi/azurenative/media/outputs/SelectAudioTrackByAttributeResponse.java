@@ -33,7 +33,7 @@ public final class SelectAudioTrackByAttributeResponse {
     private final @Nullable String filterValue;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
      * 
      */
     private final String odataType;
@@ -82,7 +82,7 @@ public final class SelectAudioTrackByAttributeResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
+     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
      * 
     */
     public String odataType() {

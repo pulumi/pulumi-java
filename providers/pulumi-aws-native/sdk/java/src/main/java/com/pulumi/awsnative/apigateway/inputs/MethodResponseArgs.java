@@ -17,7 +17,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     public static final MethodResponseArgs Empty = new MethodResponseArgs();
 
     /**
-     * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
      * 
      */
     @Import(name="responseModels")
@@ -39,7 +39,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The method response's status code, which you map to an IntegrationResponse.
+     * The method response&#39;s status code, which you map to an IntegrationResponse.
      * 
      */
     @Import(name="statusCode", required=true)

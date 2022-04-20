@@ -13,7 +13,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
     public static final GetWorkloadNetworkDnsZoneArgs Empty = new GetWorkloadNetworkDnsZoneArgs();
 
     /**
-     * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
+     * NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
      * 
      */
     @Import(name="dnsZoneId", required=true)

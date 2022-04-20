@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Data source credentials. This is a variant type structure. For this structure to be
- *             valid, only one of the attributes can be non-null.</p>
+ * &lt;p&gt;Data source credentials. This is a variant type structure. For this structure to be
+ *             valid, only one of the attributes can be non-null.&lt;/p&gt;
  * 
  */
 public final class DataSourceCredentialsArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,10 +22,10 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
     public static final DataSourceCredentialsArgs Empty = new DataSourceCredentialsArgs();
 
     /**
-     * <p>The Amazon Resource Name (ARN) of a data source that has the credential pair that you
-     *             want to use. When <code>CopySourceArn</code> is not null, the credential pair from the
+     * &lt;p&gt;The Amazon Resource Name (ARN) of a data source that has the credential pair that you
+     *             want to use. When &lt;code&gt;CopySourceArn&lt;/code&gt; is not null, the credential pair from the
      *             data source in the ARN is used as the credentials for the
-     *             <code>DataSourceCredentials</code> structure.</p>
+     *             &lt;code&gt;DataSourceCredentials&lt;/code&gt; structure.&lt;/p&gt;
      * 
      */
     @Import(name="copySourceArn")

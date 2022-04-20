@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TokenRequest {
     /**
-     * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
+     * Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
      * 
      */
     private final String audience;
     /**
-     * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
+     * ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
      * 
      */
     private final @Nullable Integer expirationSeconds;
@@ -32,14 +32,14 @@ public final class TokenRequest {
     }
 
     /**
-     * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
+     * Audience is the intended audience of the token in &#34;TokenRequestSpec&#34;. It will default to the audiences of kube apiserver.
      * 
     */
     public String audience() {
         return this.audience;
     }
     /**
-     * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
+     * ExpirationSeconds is the duration of validity of the token in &#34;TokenRequestSpec&#34;. It has the same default value of &#34;ExpirationSeconds&#34; in &#34;TokenRequestSpec&#34;
      * 
     */
     public Optional<Integer> expirationSeconds() {

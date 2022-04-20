@@ -16,7 +16,7 @@ public final class TopicRuleSnsGetArgs extends com.pulumi.resources.ResourceArgs
     public static final TopicRuleSnsGetArgs Empty = new TopicRuleSnsGetArgs();
 
     /**
-     * The message format of the message to publish. Accepted values are "JSON" and "RAW".
+     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
      * 
      */
     @Import(name="messageFormat")

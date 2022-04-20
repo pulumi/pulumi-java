@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn't define it's own.
+ * Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn&#39;t define it&#39;s own.
  * 
  */
 public final class ServiceAuthConfigurationResponse extends com.pulumi.resources.InvokeArgs {

@@ -30,7 +30,7 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".
+     * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: &#34;example.com&#34;. Maps to IAM policy member &#34;domain:DOMAIN&#34;.
      * 
      */
     @Import(name="domain")
@@ -41,7 +41,7 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".
+     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member &#34;group:GROUP&#34;.
      * 
      */
     @Import(name="groupByEmail")
@@ -52,7 +52,7 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * [Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.
+     * [Pick one] Some other type of member that appears in the IAM Policy but isn&#39;t a user, group, domain, or special group.
      * 
      */
     @Import(name="iamMember")
@@ -63,7 +63,7 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
+     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to &#34;roles/bigquery.dataOwner&#34;, it will be returned back as &#34;OWNER&#34;.
      * 
      */
     @Import(name="role")
@@ -96,7 +96,7 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".
+     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member &#34;user:EMAIL&#34; or &#34;serviceAccount:EMAIL&#34;.
      * 
      */
     @Import(name="userByEmail")

@@ -18,7 +18,7 @@ public final class IngressTLS {
      */
     private final @Nullable List<String> hosts;
     /**
-     * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+     * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the &#34;Host&#34; header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
      * 
      */
     private final @Nullable String secretName;
@@ -39,7 +39,7 @@ public final class IngressTLS {
         return this.hosts == null ? List.of() : this.hosts;
     }
     /**
-     * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+     * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the &#34;Host&#34; header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
      * 
     */
     public Optional<String> secretName() {

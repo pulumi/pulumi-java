@@ -19,7 +19,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via GetConversationProfile API.
+ * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and ConversationProfile.UpdateTime aren&#39;t populated in the response. You can retrieve them via GetConversationProfile API.
  * 
  */
 @ResourceType(type="google-native:dialogflow/v2:ConversationProfile")
@@ -95,14 +95,14 @@ public class ConversationProfile extends com.pulumi.resources.CustomResource {
         return this.humanAgentHandoffConfig;
     }
     /**
-     * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+     * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
-     * @return Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
+     * @return Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: &#34;en-US&#34;.
      * 
      */
     public Output<String> languageCode() {

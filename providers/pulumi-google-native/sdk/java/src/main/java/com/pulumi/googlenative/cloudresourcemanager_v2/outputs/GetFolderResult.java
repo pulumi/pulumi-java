@@ -15,7 +15,7 @@ public final class GetFolderResult {
      */
     private final String createTime;
     /**
-     * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+     * The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
      * 
      */
     private final String displayName;
@@ -25,12 +25,12 @@ public final class GetFolderResult {
      */
     private final String lifecycleState;
     /**
-     * The resource name of the Folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
+     * The resource name of the Folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
      * 
      */
     private final String name;
     /**
-     * The Folder's parent's resource name. Updates to the folder's parent must be performed via MoveFolder.
+     * The Folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed via MoveFolder.
      * 
      */
     private final String parent;
@@ -57,7 +57,7 @@ public final class GetFolderResult {
         return this.createTime;
     }
     /**
-     * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+     * The folder&#39;s display name. A folder&#39;s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
      * 
     */
     public String displayName() {
@@ -71,14 +71,14 @@ public final class GetFolderResult {
         return this.lifecycleState;
     }
     /**
-     * The resource name of the Folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
+     * The resource name of the Folder. Its format is `folders/{folder_id}`, for example: &#34;folders/1234&#34;.
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * The Folder's parent's resource name. Updates to the folder's parent must be performed via MoveFolder.
+     * The Folder&#39;s parent&#39;s resource name. Updates to the folder&#39;s parent must be performed via MoveFolder.
      * 
     */
     public String parent() {

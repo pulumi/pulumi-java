@@ -21,7 +21,7 @@ public final class UrlRewriteActionArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlRewrite'.
+     * Expected value is &#39;UrlRewrite&#39;.
      * 
      */
     @Import(name="name", required=true)

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GitHubEventsConfigResponse {
     /**
-     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     private final String enterpriseConfigResourceName;
@@ -22,12 +22,12 @@ public final class GitHubEventsConfigResponse {
      */
     private final String installationId;
     /**
-     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
      * 
      */
     private final String name;
     /**
-     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     private final String owner;
@@ -59,7 +59,7 @@ public final class GitHubEventsConfigResponse {
     }
 
     /**
-     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
     */
     public String enterpriseConfigResourceName() {
@@ -73,14 +73,14 @@ public final class GitHubEventsConfigResponse {
         return this.installationId;
     }
     /**
-     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
     */
     public String owner() {

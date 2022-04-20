@@ -172,7 +172,7 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'MongoDb'.
+     * Expected value is &#39;MongoDb&#39;.
      * 
      */
     @Import(name="type", required=true)

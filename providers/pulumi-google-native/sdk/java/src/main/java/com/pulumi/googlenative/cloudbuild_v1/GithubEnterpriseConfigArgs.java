@@ -64,7 +64,7 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     @Import(name="name")

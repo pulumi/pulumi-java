@@ -27,7 +27,7 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Version of MSK Kafka. For example 2.4.1.1 or "2.2.1" etc. Either `preferred_versions` or `version` must be set.
+     * Version of MSK Kafka. For example 2.4.1.1 or &#34;2.2.1&#34; etc. Either `preferred_versions` or `version` must be set.
      * 
      */
     @Import(name="version")

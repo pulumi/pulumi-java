@@ -23,7 +23,7 @@ public final class ContainerRegistryArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * If omitted, the default is "docker.io".
+     * If omitted, the default is &#34;docker.io&#34;.
      * 
      */
     @Import(name="registryServer")

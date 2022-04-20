@@ -19,7 +19,7 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
     public static final ConsentLinkDefinitionResponse Empty = new ConsentLinkDefinitionResponse();
 
     /**
-     * Display name of the parameter in the connection provider's OAuth settings
+     * Display name of the parameter in the connection provider&#39;s OAuth settings
      * 
      */
     @Import(name="displayName")

@@ -42,7 +42,7 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
      * 
      */
     @Import(name="status")

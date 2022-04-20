@@ -39,7 +39,7 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
 
     /**
      * Kind of data set.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     @Import(name="kind", required=true)

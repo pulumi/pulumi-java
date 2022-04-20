@@ -178,14 +178,14 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
+     * Map of URIs associated with the APIE.g., `uris[&#34;GRAPHQL&#34;] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
     @Export(name="uris", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> uris;
 
     /**
-     * @return Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
+     * @return Map of URIs associated with the APIE.g., `uris[&#34;GRAPHQL&#34;] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
     public Output<Map<String,String>> uris() {

@@ -17,7 +17,7 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
     public static final ServerEndpointDetailsGetArgs Empty = new ServerEndpointDetailsGetArgs();
 
     /**
-     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server&#39;s endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     @Import(name="addressAllocationIds")
@@ -28,7 +28,7 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * A list of security groups IDs that are available to attach to your server's endpoint. If no security groups are specified, the VPC's default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
+     * A list of security groups IDs that are available to attach to your server&#39;s endpoint. If no security groups are specified, the VPC&#39;s default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     @Import(name="securityGroupIds")
@@ -61,7 +61,7 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The VPC ID of the virtual private cloud in which the SFTP server's endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
+     * The VPC ID of the virtual private cloud in which the SFTP server&#39;s endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
     @Import(name="vpcId")

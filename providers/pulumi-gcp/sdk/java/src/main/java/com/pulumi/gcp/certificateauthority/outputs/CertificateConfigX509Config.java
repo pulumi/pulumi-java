@@ -24,7 +24,7 @@ public final class CertificateConfigX509Config {
     private final @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions;
     /**
      * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
-     * "Authority Information Access" extension in the certificate.
+     * &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     private final @Nullable List<String> aiaOcspServers;
@@ -71,7 +71,7 @@ public final class CertificateConfigX509Config {
     }
     /**
      * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
-     * "Authority Information Access" extension in the certificate.
+     * &#34;Authority Information Access&#34; extension in the certificate.
      * 
     */
     public List<String> aiaOcspServers() {

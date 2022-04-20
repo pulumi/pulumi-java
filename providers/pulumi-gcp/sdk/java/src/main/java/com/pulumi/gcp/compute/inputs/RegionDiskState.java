@@ -66,7 +66,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
-     * @Deprecated
+     * @deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
      * 
      */
@@ -91,7 +91,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Labels to apply to this disk.  A list of key->value pairs.
+     * Labels to apply to this disk.  A list of key-&gt;value pairs.
      * 
      */
     @Import(name="labels")
@@ -145,7 +145,7 @@ public final class RegionDiskState extends com.pulumi.resources.ResourceArgs {
      * in a request, a default value is used. Currently supported sizes
      * are 4096 and 16384, other sizes may be added in the future.
      * If an unsupported value is requested, the error message will list
-     * the supported values for the caller's project.
+     * the supported values for the caller&#39;s project.
      * 
      */
     @Import(name="physicalBlockSizeBytes")

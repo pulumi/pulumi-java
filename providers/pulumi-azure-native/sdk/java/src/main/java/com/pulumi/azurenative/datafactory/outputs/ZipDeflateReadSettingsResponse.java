@@ -19,7 +19,7 @@ public final class ZipDeflateReadSettingsResponse {
     private final @Nullable Object preserveZipFileNameAsFolder;
     /**
      * The Compression setting type.
-     * Expected value is 'ZipDeflateReadSettings'.
+     * Expected value is &#39;ZipDeflateReadSettings&#39;.
      * 
      */
     private final String type;
@@ -41,7 +41,7 @@ public final class ZipDeflateReadSettingsResponse {
     }
     /**
      * The Compression setting type.
-     * Expected value is 'ZipDeflateReadSettings'.
+     * Expected value is &#39;ZipDeflateReadSettings&#39;.
      * 
     */
     public String type() {

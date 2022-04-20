@@ -101,7 +101,7 @@ public final class ExcelSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'ExcelSource'.
+     * Expected value is &#39;ExcelSource&#39;.
      * 
      */
     @Import(name="type", required=true)

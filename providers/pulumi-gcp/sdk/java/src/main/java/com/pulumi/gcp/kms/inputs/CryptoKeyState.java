@@ -43,7 +43,7 @@ public final class CryptoKeyState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The KeyRing that this key belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     @Import(name="keyRing")

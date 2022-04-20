@@ -32,7 +32,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The Jupyter server's app settings. See Jupyter Server App Settings below.
+     * The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
      * 
      */
     @Import(name="jupyterServerAppSettings")

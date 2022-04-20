@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * the virtual network. Routes are associated with virtual machines by tag,
  * and the set of routes for a particular virtual machine is called its
  * routing table. For each packet leaving a virtual machine, the system
- * searches that virtual machine's routing table for a single best matching
+ * searches that virtual machine&#39;s routing table for a single best matching
  * route.
  * 
  * Routes match packets by destination IP address, preferring smaller or more
@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  * the next_hop field of the winning route -- either to another virtual
  * machine destination, a virtual machine gateway or a Compute
  * Engine-operated gateway. Packets that do not match any route in the
- * sending virtual machine's routing table will be dropped.
+ * sending virtual machine&#39;s routing table will be dropped.
  * 
  * A Route resource must have exactly one specification of either
  * nextHopGateway, nextHopInstance, nextHopIp, nextHopVpnTunnel, or

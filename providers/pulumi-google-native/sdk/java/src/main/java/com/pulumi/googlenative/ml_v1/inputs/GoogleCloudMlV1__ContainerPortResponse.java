@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends com.pulumi.res
     public static final GoogleCloudMlV1__ContainerPortResponse Empty = new GoogleCloudMlV1__ContainerPortResponse();
 
     /**
-     * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
+     * Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
      * 
      */
     @Import(name="containerPort", required=true)

@@ -99,7 +99,7 @@ public final class PostgreSqlSourceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy source type.
-     * Expected value is 'PostgreSqlSource'.
+     * Expected value is &#39;PostgreSqlSource&#39;.
      * 
      */
     @Import(name="type", required=true)

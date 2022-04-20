@@ -16,7 +16,7 @@ public final class SubscriptionIAMPolicyState extends com.pulumi.resources.Resou
     public static final SubscriptionIAMPolicyState Empty = new SubscriptionIAMPolicyState();
 
     /**
-     * (Computed) The etag of the subscription's IAM policy.
+     * (Computed) The etag of the subscription&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

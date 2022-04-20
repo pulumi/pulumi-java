@@ -19,7 +19,7 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
     public static final SubjectConfigResponse Empty = new SubjectConfigResponse();
 
     /**
-     * Optional. The "common name" of the distinguished name.
+     * Optional. The &#34;common name&#34; of the distinguished name.
      * 
      */
     @Import(name="commonName", required=true)

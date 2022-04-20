@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's uniform bucket-level access configuration.
+ * The bucket&#39;s uniform bucket-level access configuration.
  * 
  */
 public final class BucketIamConfigurationUniformBucketLevelAccessResponse extends com.pulumi.resources.InvokeArgs {

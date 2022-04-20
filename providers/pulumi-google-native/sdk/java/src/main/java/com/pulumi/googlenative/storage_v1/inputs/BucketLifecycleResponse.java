@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's lifecycle configuration. See lifecycle management for more information.
+ * The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
  * 
  */
 public final class BucketLifecycleResponse extends com.pulumi.resources.InvokeArgs {

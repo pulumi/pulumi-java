@@ -23,7 +23,7 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedTriggerContext'.
+     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
      * 
      */
     @Import(name="objectType", required=true)

@@ -113,7 +113,7 @@ public final class DelimitedTextSourceResponse extends com.pulumi.resources.Invo
 
     /**
      * Copy source type.
-     * Expected value is 'DelimitedTextSource'.
+     * Expected value is &#39;DelimitedTextSource&#39;.
      * 
      */
     @Import(name="type", required=true)

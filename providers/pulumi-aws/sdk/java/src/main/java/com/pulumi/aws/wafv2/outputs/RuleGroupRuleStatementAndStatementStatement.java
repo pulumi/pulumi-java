@@ -62,7 +62,7 @@ public final class RuleGroupRuleStatementAndStatementStatement {
      */
     private final @Nullable RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement;
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
+     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
      */
     private final @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatement sizeConstraintStatement;
@@ -160,7 +160,7 @@ public final class RuleGroupRuleStatementAndStatementStatement {
         return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
+     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
     */
     public Optional<RuleGroupRuleStatementAndStatementStatementSizeConstraintStatement> sizeConstraintStatement() {

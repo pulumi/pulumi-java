@@ -65,7 +65,7 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
     /**
      * A reference to a RegionBackendService resource. This will be used if
      * none of the pathRules defined by this PathMatcher is matched by
-     * the URL's path portion.
+     * the URL&#39;s path portion.
      * 
      */
     @Export(name="defaultService", type=String.class, parameters={})
@@ -74,7 +74,7 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
     /**
      * @return A reference to a RegionBackendService resource. This will be used if
      * none of the pathRules defined by this PathMatcher is matched by
-     * the URL's path portion.
+     * the URL&#39;s path portion.
      * 
      */
     public Output</* @Nullable */ String> defaultService() {
@@ -176,7 +176,7 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
     }
     /**
      * The name of the PathMatcher to use to match the path portion of
-     * the URL if the hostRule matches the URL's host portion.
+     * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
     @Export(name="pathMatchers", type=List.class, parameters={RegionUrlMapPathMatcher.class})
@@ -184,7 +184,7 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The name of the PathMatcher to use to match the path portion of
-     * the URL if the hostRule matches the URL's host portion.
+     * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
     public Output</* @Nullable */ List<RegionUrlMapPathMatcher>> pathMatchers() {

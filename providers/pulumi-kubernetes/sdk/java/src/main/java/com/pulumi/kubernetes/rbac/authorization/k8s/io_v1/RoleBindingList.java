@@ -64,14 +64,14 @@ public class RoleBindingList extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
-     * @return Standard object's metadata.
+     * @return Standard object&#39;s metadata.
      * 
      */
     public Output</* @Nullable */ ListMeta> metadata() {

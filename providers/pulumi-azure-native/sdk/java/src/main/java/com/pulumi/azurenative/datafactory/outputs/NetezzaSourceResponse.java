@@ -29,7 +29,7 @@ public final class NetezzaSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
+     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: &#34;None&#34;, &#34;DataSlice&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -60,7 +60,7 @@ public final class NetezzaSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'NetezzaSource'.
+     * Expected value is &#39;NetezzaSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class NetezzaSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
+     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: &#34;None&#34;, &#34;DataSlice&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -154,7 +154,7 @@ public final class NetezzaSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'NetezzaSource'.
+     * Expected value is &#39;NetezzaSource&#39;.
      * 
     */
     public String type() {

@@ -34,7 +34,7 @@ public final class OracleSourceResponse {
      */
     private final @Nullable Object oracleReaderQuery;
     /**
-     * The partition mechanism that will be used for Oracle read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Oracle read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -60,7 +60,7 @@ public final class OracleSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'OracleSource'.
+     * Expected value is &#39;OracleSource&#39;.
      * 
      */
     private final String type;
@@ -118,7 +118,7 @@ public final class OracleSourceResponse {
         return Optional.ofNullable(this.oracleReaderQuery);
     }
     /**
-     * The partition mechanism that will be used for Oracle read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Oracle read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -154,7 +154,7 @@ public final class OracleSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'OracleSource'.
+     * Expected value is &#39;OracleSource&#39;.
      * 
     */
     public String type() {

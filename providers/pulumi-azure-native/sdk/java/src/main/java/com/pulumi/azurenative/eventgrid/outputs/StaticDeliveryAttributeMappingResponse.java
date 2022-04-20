@@ -24,7 +24,7 @@ public final class StaticDeliveryAttributeMappingResponse {
     private final @Nullable String name;
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Static'.
+     * Expected value is &#39;Static&#39;.
      * 
      */
     private final String type;
@@ -62,7 +62,7 @@ public final class StaticDeliveryAttributeMappingResponse {
     }
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Static'.
+     * Expected value is &#39;Static&#39;.
      * 
     */
     public String type() {

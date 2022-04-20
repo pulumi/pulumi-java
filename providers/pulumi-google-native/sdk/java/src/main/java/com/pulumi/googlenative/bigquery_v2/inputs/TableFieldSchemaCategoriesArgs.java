@@ -21,7 +21,7 @@ public final class TableFieldSchemaCategoriesArgs extends com.pulumi.resources.R
     public static final TableFieldSchemaCategoriesArgs Empty = new TableFieldSchemaCategoriesArgs();
 
     /**
-     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
+     * A list of category resource names. For example, &#34;projects/1/taxonomies/2/categories/3&#34;. At most 5 categories are allowed.
      * 
      */
     @Import(name="names")

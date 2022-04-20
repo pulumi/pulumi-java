@@ -21,7 +21,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     public static final VolumeMountArgs Empty = new VolumeMountArgs();
 
     /**
-     * Path within the container at which the volume should be mounted.  Must not contain ':'.
+     * Path within the container at which the volume should be mounted.  Must not contain &#39;:&#39;.
      * 
      */
     @Import(name="mountPath", required=true)
@@ -65,7 +65,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
      */
     @Import(name="subPath")
@@ -76,7 +76,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
+     * Expanded path within the volume from which the container&#39;s volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&#39;s environment. Defaults to &#34;&#34; (volume&#39;s root). SubPathExpr and SubPath are mutually exclusive.
      * 
      */
     @Import(name="subPathExpr")

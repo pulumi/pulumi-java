@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  * notification config is a Cloud SCC resource that contains the
  * configuration to send notifications for create/update events of
  * findings, assets and etc.
- * > **Note:** In order to use Cloud SCC resources, your organization must be enrolled
+ * &gt; **Note:** In order to use Cloud SCC resources, your organization must be enrolled
  * in [SCC Standard/Premium](https://cloud.google.com/security-command-center/docs/quickstart-security-command-center).
  * Without doing so, you may run into errors during resource creation.
  * 
@@ -76,7 +76,7 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
     }
     /**
      * The resource name of this notification config, in the format
-     * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
+     * &#39;organizations/{{organization}}/notificationConfigs/{{config_id}}&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The resource name of this notification config, in the format
-     * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
+     * &#39;organizations/{{organization}}/notificationConfigs/{{config_id}}&#39;.
      * 
      */
     public Output<String> name() {
@@ -108,7 +108,7 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
     }
     /**
      * The Pub/Sub topic to send notifications to. Its format is
-     * "projects/[project_id]/topics/[topic]".
+     * &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     @Export(name="pubsubTopic", type=String.class, parameters={})
@@ -116,21 +116,21 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The Pub/Sub topic to send notifications to. Its format is
-     * "projects/[project_id]/topics/[topic]".
+     * &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
-     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
-     * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * @return The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     public Output<String> serviceAccount() {

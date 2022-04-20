@@ -115,7 +115,7 @@ public final class JiraObjectDatasetResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of dataset.
-     * Expected value is 'JiraObject'.
+     * Expected value is &#39;JiraObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -48,7 +48,7 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     }
 
     /**
-     * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+     * Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
      * 
      */
     @Import(name="parent")

@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends com.pul
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb.Sync'.
+     * Expected value is &#39;ConnectToTarget.SqlDb.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

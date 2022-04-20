@@ -29,7 +29,7 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
+     * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
      * 
      */
     @Import(name="masterIpv4CidrBlock", required=true)
@@ -40,7 +40,7 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the GKE cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network.
+     * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the GKE cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
      * 
      */
     @Import(name="masterIpv4ReservedRange", required=true)

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeviceFleetOutputConfig {
     /**
-     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
+     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don&#39;t provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role&#39;s account.
      * 
      */
     private final @Nullable String kmsKeyId;
@@ -31,7 +31,7 @@ public final class DeviceFleetOutputConfig {
     }
 
     /**
-     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
+     * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don&#39;t provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role&#39;s account.
      * 
     */
     public Optional<String> kmsKeyId() {

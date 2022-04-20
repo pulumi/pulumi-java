@@ -152,7 +152,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The domain's URL.
+     * The domain&#39;s URL.
      * 
      */
     @Import(name="url")

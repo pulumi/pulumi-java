@@ -126,14 +126,14 @@ public class AFDCustomDomain extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
     @Export(name="tlsSettings", type=AFDDomainHttpsParametersResponse.class, parameters={})
     private Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings;
 
     /**
-     * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
     public Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings() {

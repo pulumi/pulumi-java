@@ -23,7 +23,7 @@ public final class PngLayerResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngLayer'.
+     * Expected value is &#39;#Microsoft.Media.PngLayer&#39;.
      * 
      */
     private final String odataType;
@@ -61,7 +61,7 @@ public final class PngLayerResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngLayer'.
+     * Expected value is &#39;#Microsoft.Media.PngLayer&#39;.
      * 
     */
     public String odataType() {

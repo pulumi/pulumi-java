@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * If not specified, the default value is 'enabled'.
+     * If not specified, the default value is &#39;enabled&#39;.
      * 
      */
     @EnumType

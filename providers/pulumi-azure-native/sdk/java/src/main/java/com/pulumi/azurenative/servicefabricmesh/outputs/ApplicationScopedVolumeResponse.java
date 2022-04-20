@@ -29,7 +29,7 @@ public final class ApplicationScopedVolumeResponse {
      */
     private final String name;
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
      */
     private final @Nullable Boolean readOnly;
@@ -68,7 +68,7 @@ public final class ApplicationScopedVolumeResponse {
         return this.name;
     }
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
     */
     public Optional<Boolean> readOnly() {

@@ -37,7 +37,7 @@ public final class GetEnvironmentResult {
      */
     private final String name;
     /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
      * 
      */
     private final String postStartupScript;
@@ -101,7 +101,7 @@ public final class GetEnvironmentResult {
         return this.name;
     }
     /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
      * 
     */
     public String postStartupScript() {

@@ -42,7 +42,7 @@ public final class GetCacheResult {
      */
     private final String type;
     /**
-     * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
      */
     private final String useFromLocation;
@@ -108,7 +108,7 @@ public final class GetCacheResult {
         return this.type;
     }
     /**
-     * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
     */
     public String useFromLocation() {

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * Authoritatively manages the default object ACLs for a Google Cloud Storage bucket
  * without managing the bucket itself.
  * 
- * > Note that for each object, its creator will have the `"OWNER"` role in addition
+ * &gt; Note that for each object, its creator will have the `&#34;OWNER&#34;` role in addition
  * to the default ACL that has been defined.
  * 
  * For more information see
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls).
  * 
- * > Want fine-grained control over default object ACLs? Use `gcp.storage.DefaultObjectAccessControl`
+ * &gt; Want fine-grained control over default object ACLs? Use `gcp.storage.DefaultObjectAccessControl`
  * to control individual role entity pairs.
  * 
  * ## Example Usage

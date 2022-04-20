@@ -21,7 +21,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends com.
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'StorageQueue'.
+     * Expected value is &#39;StorageQueue&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

@@ -31,7 +31,7 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Name of ReliableCollection resource. Right now it's not used and you can use any string.
+     * Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
      * 
      */
     @Import(name="name", required=true)

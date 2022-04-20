@@ -14,63 +14,63 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a source.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
 @ResourceType(type="google-native:securitycenter/v1:Source")
 public class Source extends com.pulumi.resources.CustomResource {
     /**
-     * The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
+     * The canonical name of the finding. It&#39;s either &#34;organizations/{organization_id}/sources/{source_id}&#34;, &#34;folders/{folder_id}/sources/{source_id}&#34; or &#34;projects/{project_number}/sources/{source_id}&#34;, depending on the closest CRM ancestor of the resource associated with the finding.
      * 
      */
     @Export(name="canonicalName", type=String.class, parameters={})
     private Output<String> canonicalName;
 
     /**
-     * @return The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
+     * @return The canonical name of the finding. It&#39;s either &#34;organizations/{organization_id}/sources/{source_id}&#34;, &#34;folders/{folder_id}/sources/{source_id}&#34; or &#34;projects/{project_number}/sources/{source_id}&#34;, depending on the closest CRM ancestor of the resource associated with the finding.
      * 
      */
     public Output<String> canonicalName() {
         return this.canonicalName;
     }
     /**
-     * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries."
+     * The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries.&#34;
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries."
+     * @return The description of the source (max of 1024 characters). Example: &#34;Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries.&#34;
      * 
      */
     public Output<String> description() {
         return this.description;
     }
     /**
-     * The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+     * The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
+     * @return The source&#39;s display name. A source&#39;s display name must be unique amongst its siblings, for example, two sources with the same parent can&#39;t share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
      * 
      */
     public Output<String> displayName() {
         return this.displayName;
     }
     /**
-     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
+     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
+     * @return The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/sources/{source_id}&#34;
      * 
      */
     public Output<String> name() {

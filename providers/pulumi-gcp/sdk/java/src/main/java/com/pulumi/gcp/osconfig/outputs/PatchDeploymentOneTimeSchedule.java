@@ -10,8 +10,8 @@ import java.util.Objects;
 @CustomType
 public final class PatchDeploymentOneTimeSchedule {
     /**
-     * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
-     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The desired patch job execution time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String executeTime;
@@ -22,8 +22,8 @@ public final class PatchDeploymentOneTimeSchedule {
     }
 
     /**
-     * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
-     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The desired patch job execution time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public String executeTime() {

@@ -206,7 +206,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * (Optional, Deprecated)
      * The name of the Filestore zone of the instance.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of location.
      * 
      */

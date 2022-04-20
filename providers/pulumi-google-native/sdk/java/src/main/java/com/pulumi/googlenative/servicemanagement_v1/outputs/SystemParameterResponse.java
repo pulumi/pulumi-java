@@ -15,7 +15,7 @@ public final class SystemParameterResponse {
      */
     private final String httpHeader;
     /**
-     * Define the name of the parameter, such as "api_key" . It is case sensitive.
+     * Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
      * 
      */
     private final String name;
@@ -43,7 +43,7 @@ public final class SystemParameterResponse {
         return this.httpHeader;
     }
     /**
-     * Define the name of the parameter, such as "api_key" . It is case sensitive.
+     * Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
      * 
     */
     public String name() {

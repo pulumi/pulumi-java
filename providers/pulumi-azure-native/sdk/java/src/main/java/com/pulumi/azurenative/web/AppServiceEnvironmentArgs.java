@@ -100,7 +100,7 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Front-end VM size, e.g. "Medium", "Large".
+     * Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
      */
     @Import(name="multiSize")

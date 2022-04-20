@@ -17,7 +17,7 @@ public final class ClusterBootstrapActionGetArgs extends com.pulumi.resources.Re
     public static final ClusterBootstrapActionGetArgs Empty = new ClusterBootstrapActionGetArgs();
 
     /**
-     * List of command line arguments passed to the JAR file's main function when executed.
+     * List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
      */
     @Import(name="args")

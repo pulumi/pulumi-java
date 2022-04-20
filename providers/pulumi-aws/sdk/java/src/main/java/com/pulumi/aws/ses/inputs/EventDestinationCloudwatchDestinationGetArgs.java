@@ -37,7 +37,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends com.pulu
     }
 
     /**
-     * The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
+     * The source for the value. May be any of `&#34;messageTag&#34;`, `&#34;emailHeader&#34;` or `&#34;linkTag&#34;`.
      * 
      */
     @Import(name="valueSource", required=true)

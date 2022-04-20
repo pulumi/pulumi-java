@@ -50,7 +50,7 @@ public final class GatewayApiRouteResponse {
      */
     private final @Nullable String title;
     /**
-     * Pass currently-authenticated user's identity token to application service, default is 'false'
+     * Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
      * 
      */
     private final @Nullable Boolean tokenRelay;
@@ -132,7 +132,7 @@ public final class GatewayApiRouteResponse {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Pass currently-authenticated user's identity token to application service, default is 'false'
+     * Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
      * 
     */
     public Optional<Boolean> tokenRelay() {

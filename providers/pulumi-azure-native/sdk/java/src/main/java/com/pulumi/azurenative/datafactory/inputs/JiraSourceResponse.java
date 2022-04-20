@@ -99,7 +99,7 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'JiraSource'.
+     * Expected value is &#39;JiraSource&#39;.
      * 
      */
     @Import(name="type", required=true)

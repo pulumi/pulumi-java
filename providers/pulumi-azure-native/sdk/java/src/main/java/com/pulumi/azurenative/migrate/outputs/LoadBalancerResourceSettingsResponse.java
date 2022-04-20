@@ -26,7 +26,7 @@ public final class LoadBalancerResourceSettingsResponse {
     private final @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/loadBalancers'.
+     * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
      * 
      */
     private final String resourceType;
@@ -79,7 +79,7 @@ public final class LoadBalancerResourceSettingsResponse {
     }
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/loadBalancers'.
+     * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
      * 
     */
     public String resourceType() {

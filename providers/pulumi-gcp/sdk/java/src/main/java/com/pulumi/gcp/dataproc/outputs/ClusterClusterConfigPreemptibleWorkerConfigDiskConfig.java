@@ -22,7 +22,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
     private final @Nullable Integer bootDiskSizeGb;
     /**
      * The disk type of the primary disk attached to each preemptible worker node.
-     * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
+     * One of `&#34;pd-ssd&#34;` or `&#34;pd-standard&#34;`. Defaults to `&#34;pd-standard&#34;`.
      * 
      */
     private final @Nullable String bootDiskType;
@@ -55,7 +55,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
     }
     /**
      * The disk type of the primary disk attached to each preemptible worker node.
-     * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
+     * One of `&#34;pd-ssd&#34;` or `&#34;pd-standard&#34;`. Defaults to `&#34;pd-standard&#34;`.
      * 
     */
     public Optional<String> bootDiskType() {

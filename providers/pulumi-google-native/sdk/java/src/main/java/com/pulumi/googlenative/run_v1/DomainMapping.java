@@ -23,28 +23,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:run/v1:DomainMapping")
 public class DomainMapping extends com.pulumi.resources.CustomResource {
     /**
-     * The API version for this call such as "domains.cloudrun.com/v1".
+     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
      */
     @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
-     * @return The API version for this call such as "domains.cloudrun.com/v1".
+     * @return The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
      */
     public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case "DomainMapping".
+     * The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
-     * @return The kind of resource, in this case "DomainMapping".
+     * @return The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
      */
     public Output<String> kind() {

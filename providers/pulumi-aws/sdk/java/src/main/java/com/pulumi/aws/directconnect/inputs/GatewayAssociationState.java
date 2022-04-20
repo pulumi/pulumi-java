@@ -108,8 +108,8 @@ public final class GatewayAssociationState extends com.pulumi.resources.Resource
     }
 
     /**
-     * @Deprecated
-     * use 'associated_gateway_id' argument instead
+     * @deprecated
+     * use &#39;associated_gateway_id&#39; argument instead
      * 
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */

@@ -20,7 +20,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     public static final SkuResponse Empty = new SkuResponse();
 
     /**
-     * The scale up/out capacity, representing server's compute units.
+     * The scale up/out capacity, representing server&#39;s compute units.
      * 
      */
     @Import(name="capacity")

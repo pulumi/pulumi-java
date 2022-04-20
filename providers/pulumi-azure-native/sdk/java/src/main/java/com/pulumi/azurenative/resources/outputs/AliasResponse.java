@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AliasResponse {
     /**
-     * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
+     * The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
      * 
      */
     private final AliasPathMetadataResponse defaultMetadata;
@@ -63,7 +63,7 @@ public final class AliasResponse {
     }
 
     /**
-     * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
+     * The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
      * 
     */
     public AliasPathMetadataResponse defaultMetadata() {

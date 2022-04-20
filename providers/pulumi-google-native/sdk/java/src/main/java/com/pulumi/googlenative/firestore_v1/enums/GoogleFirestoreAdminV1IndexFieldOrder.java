@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, !=, &lt;, &lt;=, &gt;, &gt;=.
      * 
      */
     @EnumType

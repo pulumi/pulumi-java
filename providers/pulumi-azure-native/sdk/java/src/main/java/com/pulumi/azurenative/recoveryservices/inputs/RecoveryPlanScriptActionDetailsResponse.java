@@ -32,7 +32,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends com.pulumi.re
 
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ScriptActionDetails'.
+     * Expected value is &#39;ScriptActionDetails&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

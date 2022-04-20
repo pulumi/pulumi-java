@@ -30,7 +30,7 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
+     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent &#34;flapping&#34; of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
      */
     @Import(name="waitPeriodMs", required=true)

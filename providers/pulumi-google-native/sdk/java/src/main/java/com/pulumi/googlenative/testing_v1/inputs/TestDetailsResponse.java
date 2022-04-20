@@ -29,7 +29,7 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
+     * Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
      * 
      */
     @Import(name="progressMessages", required=true)

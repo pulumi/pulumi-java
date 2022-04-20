@@ -45,7 +45,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureDatabricksDeltaLakeSink'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSink&#39;.
      * 
      */
     private final String type;
@@ -126,7 +126,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureDatabricksDeltaLakeSink'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSink&#39;.
      * 
     */
     public String type() {

@@ -119,7 +119,7 @@ public final class GetImageResult {
      */
     private final String selfLink;
     /**
-     * Server-defined URL for this resource's resource id.
+     * Server-defined URL for this resource&#39;s resource id.
      * 
      */
     private final String selfLinkWithId;
@@ -409,7 +409,7 @@ public final class GetImageResult {
         return this.selfLink;
     }
     /**
-     * Server-defined URL for this resource's resource id.
+     * Server-defined URL for this resource&#39;s resource id.
      * 
     */
     public String selfLinkWithId() {

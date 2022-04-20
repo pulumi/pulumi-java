@@ -64,7 +64,7 @@ public final class CassandraTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'CassandraTable'.
+     * Expected value is &#39;CassandraTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class CassandraTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'CassandraTable'.
+     * Expected value is &#39;CassandraTable&#39;.
      * 
     */
     public String type() {

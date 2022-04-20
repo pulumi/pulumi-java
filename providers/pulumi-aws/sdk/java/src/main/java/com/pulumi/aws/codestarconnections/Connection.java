@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeStar Connection.
  * 
- * > **NOTE:** The `aws.codestarconnections.Connection` resource is created in the state `PENDING`. Authentication with the connection provider must be completed in the AWS Console.
+ * &gt; **NOTE:** The `aws.codestarconnections.Connection` resource is created in the state `PENDING`. Authentication with the connection provider must be completed in the AWS Console.
  * 
  * ## Example Usage
  * 

@@ -28,7 +28,7 @@ public final class SerialPortArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'
+     * The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
      * 
      */
     @Import(name="parentResourceType", required=true)

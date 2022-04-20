@@ -49,7 +49,7 @@ public final class NetworkRuleResponse {
     private final @Nullable String name;
     /**
      * Rule Type.
-     * Expected value is 'NetworkRule'.
+     * Expected value is &#39;NetworkRule&#39;.
      * 
      */
     private final String ruleType;
@@ -139,7 +139,7 @@ public final class NetworkRuleResponse {
     }
     /**
      * Rule Type.
-     * Expected value is 'NetworkRule'.
+     * Expected value is &#39;NetworkRule&#39;.
      * 
     */
     public String ruleType() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FirewallPolicyRuleSecureTagResponse {
     /**
-     * Name of the secure tag, created with TagManager's TagValue API.
+     * Name of the secure tag, created with TagManager&#39;s TagValue API.
      * 
      */
     private final String name;
@@ -29,7 +29,7 @@ public final class FirewallPolicyRuleSecureTagResponse {
     }
 
     /**
-     * Name of the secure tag, created with TagManager's TagValue API.
+     * Name of the secure tag, created with TagManager&#39;s TagValue API.
      * 
     */
     public String name() {

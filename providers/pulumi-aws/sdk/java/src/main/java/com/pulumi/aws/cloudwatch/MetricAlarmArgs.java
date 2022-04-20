@@ -22,7 +22,7 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
     public static final MetricAlarmArgs Empty = new MetricAlarmArgs();
 
     /**
-     * Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
+     * Indicates whether or not actions should be executed during any changes to the alarm&#39;s state. Defaults to `true`.
      * 
      */
     @Import(name="actionsEnabled")
@@ -160,7 +160,7 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The descriptive name for the alarm. This name must be unique within the user's AWS account
+     * The descriptive name for the alarm. This name must be unique within the user&#39;s AWS account
      * 
      */
     @Import(name="name")
@@ -205,7 +205,7 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The statistic to apply to the alarm's associated metric.
+     * The statistic to apply to the alarm&#39;s associated metric.
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */

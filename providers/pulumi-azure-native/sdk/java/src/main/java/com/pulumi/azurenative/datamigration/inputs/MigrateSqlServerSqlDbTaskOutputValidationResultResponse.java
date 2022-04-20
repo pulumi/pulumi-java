@@ -45,7 +45,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
 
     /**
      * Result type
-     * Expected value is 'MigrationValidationOutput'.
+     * Expected value is &#39;MigrationValidationOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

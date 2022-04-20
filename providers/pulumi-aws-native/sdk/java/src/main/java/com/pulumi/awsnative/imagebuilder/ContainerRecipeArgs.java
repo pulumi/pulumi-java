@@ -166,7 +166,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The semantic version of the container recipe (<major>.<minor>.<patch>).
+     * The semantic version of the container recipe (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
      * 
      */
     @Import(name="version")

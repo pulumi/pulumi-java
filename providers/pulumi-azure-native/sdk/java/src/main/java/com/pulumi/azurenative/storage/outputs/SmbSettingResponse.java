@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SmbSettingResponse {
     /**
-     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     private final @Nullable String authenticationMethods;
     /**
-     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     private final @Nullable String channelEncryption;
     /**
-     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
      * 
      */
     private final @Nullable String kerberosTicketEncryption;
@@ -33,7 +33,7 @@ public final class SmbSettingResponse {
      */
     private final @Nullable MultichannelResponse multichannel;
     /**
-     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     private final @Nullable String versions;
@@ -53,21 +53,21 @@ public final class SmbSettingResponse {
     }
 
     /**
-     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
      * 
     */
     public Optional<String> authenticationMethods() {
         return Optional.ofNullable(this.authenticationMethods);
     }
     /**
-     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
      * 
     */
     public Optional<String> channelEncryption() {
         return Optional.ofNullable(this.channelEncryption);
     }
     /**
-     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
      * 
     */
     public Optional<String> kerberosTicketEncryption() {
@@ -81,7 +81,7 @@ public final class SmbSettingResponse {
         return Optional.ofNullable(this.multichannel);
     }
     /**
-     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
      * 
     */
     public Optional<String> versions() {

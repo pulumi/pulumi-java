@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the final state "deliver" and associated resource.
+ * Details of the final state &#34;deliver&#34; and associated resource.
  * 
  */
 public final class DeliverInfoResponse extends com.pulumi.resources.InvokeArgs {

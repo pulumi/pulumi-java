@@ -14,7 +14,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * > **Note:** AWS accounts can only be associated with a single Security Hub master account. Destroying this resource will disassociate the member account from the master account.
+ * &gt; **Note:** AWS accounts can only be associated with a single Security Hub master account. Destroying this resource will disassociate the member account from the master account.
  * 
  * Accepts a Security Hub invitation.
  * 
@@ -46,14 +46,14 @@ public class InviteAccepter extends com.pulumi.resources.CustomResource {
         return this.invitationId;
     }
     /**
-     * The account ID of the master Security Hub account whose invitation you're accepting.
+     * The account ID of the master Security Hub account whose invitation you&#39;re accepting.
      * 
      */
     @Export(name="masterId", type=String.class, parameters={})
     private Output<String> masterId;
 
     /**
-     * @return The account ID of the master Security Hub account whose invitation you're accepting.
+     * @return The account ID of the master Security Hub account whose invitation you&#39;re accepting.
      * 
      */
     public Output<String> masterId() {

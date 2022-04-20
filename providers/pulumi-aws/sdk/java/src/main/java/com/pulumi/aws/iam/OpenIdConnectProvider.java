@@ -46,14 +46,14 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
+     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)
      * 
      */
     @Export(name="clientIdLists", type=List.class, parameters={String.class})
     private Output<List<String>> clientIdLists;
 
     /**
-     * @return A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
+     * @return A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)
      * 
      */
     public Output<List<String>> clientIdLists() {
@@ -88,14 +88,14 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
+     * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s).
      * 
      */
     @Export(name="thumbprintLists", type=List.class, parameters={String.class})
     private Output<List<String>> thumbprintLists;
 
     /**
-     * @return A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
+     * @return A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s).
      * 
      */
     public Output<List<String>> thumbprintLists() {

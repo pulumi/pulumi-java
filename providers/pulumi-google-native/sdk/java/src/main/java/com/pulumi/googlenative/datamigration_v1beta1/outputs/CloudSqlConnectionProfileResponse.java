@@ -16,12 +16,12 @@ public final class CloudSqlConnectionProfileResponse {
      */
     private final String cloudSqlId;
     /**
-     * The Cloud SQL database instance's private IP.
+     * The Cloud SQL database instance&#39;s private IP.
      * 
      */
     private final String privateIp;
     /**
-     * The Cloud SQL database instance's public IP.
+     * The Cloud SQL database instance&#39;s public IP.
      * 
      */
     private final String publicIp;
@@ -51,14 +51,14 @@ public final class CloudSqlConnectionProfileResponse {
         return this.cloudSqlId;
     }
     /**
-     * The Cloud SQL database instance's private IP.
+     * The Cloud SQL database instance&#39;s private IP.
      * 
     */
     public String privateIp() {
         return this.privateIp;
     }
     /**
-     * The Cloud SQL database instance's public IP.
+     * The Cloud SQL database instance&#39;s public IP.
      * 
     */
     public String publicIp() {

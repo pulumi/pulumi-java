@@ -23,7 +23,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
 
     /**
      * Enumerates the triggers for auto scaling.
-     * Expected value is 'AverageLoad'.
+     * Expected value is &#39;AverageLoad&#39;.
      * 
      */
     @Import(name="kind", required=true)

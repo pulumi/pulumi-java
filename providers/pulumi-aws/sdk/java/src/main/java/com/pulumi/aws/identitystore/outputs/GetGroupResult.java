@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupResult {
     /**
-     * The group's display name value.
+     * The group&#39;s display name value.
      * 
      */
     private final String displayName;
@@ -40,7 +40,7 @@ public final class GetGroupResult {
     }
 
     /**
-     * The group's display name value.
+     * The group&#39;s display name value.
      * 
     */
     public String displayName() {

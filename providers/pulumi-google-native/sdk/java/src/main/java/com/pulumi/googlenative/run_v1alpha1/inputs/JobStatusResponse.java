@@ -43,7 +43,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
      */
     @Import(name="conditions", required=true)
@@ -87,7 +87,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional. The 'generation' of the job that was last processed by the controller.
+     * Optional. The &#39;generation&#39; of the job that was last processed by the controller.
      * 
      */
     @Import(name="observedGeneration", required=true)

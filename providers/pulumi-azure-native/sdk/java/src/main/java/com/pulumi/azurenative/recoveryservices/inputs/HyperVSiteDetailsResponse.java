@@ -19,7 +19,7 @@ public final class HyperVSiteDetailsResponse extends com.pulumi.resources.Invoke
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'HyperVSite'.
+     * Expected value is &#39;HyperVSite&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

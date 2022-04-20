@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentLicenseServiceConfiguration {
     /**
-     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String endpoint;
@@ -23,7 +23,7 @@ public final class StudioComponentLicenseServiceConfiguration {
     }
 
     /**
-     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
      * 
     */
     public Optional<String> endpoint() {

@@ -15,7 +15,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends com.pulumi
     public static final AzureClusterControlPlaneProxyConfigGetArgs Empty = new AzureClusterControlPlaneProxyConfigGetArgs();
 
     /**
-     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
+     * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
      * 
      */
     @Import(name="resourceGroupId", required=true)
@@ -26,7 +26,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends com.pulumi
     }
 
     /**
-     * The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>`.
+     * The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;`.
      * 
      */
     @Import(name="secretId", required=true)

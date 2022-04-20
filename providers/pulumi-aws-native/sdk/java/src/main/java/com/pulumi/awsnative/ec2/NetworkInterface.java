@@ -67,28 +67,28 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
         return this.interfaceType;
     }
     /**
-     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
+     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
      * 
      */
     @Export(name="ipv6AddressCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv6AddressCount;
 
     /**
-     * @return The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
+     * @return The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
      * 
      */
     public Output</* @Nullable */ Integer> ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
+     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
      * 
      */
     @Export(name="ipv6Addresses", type=List.class, parameters={NetworkInterfaceInstanceIpv6Address.class})
     private Output</* @Nullable */ List<NetworkInterfaceInstanceIpv6Address>> ipv6Addresses;
 
     /**
-     * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
+     * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
      * 
      */
     public Output</* @Nullable */ List<NetworkInterfaceInstanceIpv6Address>> ipv6Addresses() {
@@ -137,14 +137,14 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
         return this.privateIpAddresses;
     }
     /**
-     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
+     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
      * 
      */
     @Export(name="secondaryPrivateIpAddressCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> secondaryPrivateIpAddressCount;
 
     /**
-     * @return The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
+     * @return The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
      * 
      */
     public Output</* @Nullable */ Integer> secondaryPrivateIpAddressCount() {

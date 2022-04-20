@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * [Access Control for Organizations Using IAM](https://cloud.google.com/resource-manager/docs/access-control-org)
  * doc for more information.
  * 
- * > This resource reads the specified billing account on every provider apply and plan operation so you must have permissions on the specified billing account.
+ * &gt; This resource reads the specified billing account on every provider apply and plan operation so you must have permissions on the specified billing account.
  * 
  * To get more information about projects, see:
  * 

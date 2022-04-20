@@ -19,7 +19,7 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
     /**
-     * The API version for this call such as "domains.cloudrun.com/v1".
+     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
      */
     @Import(name="apiVersion")
@@ -37,7 +37,7 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The kind of resource, in this case "DomainMapping".
+     * The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
      */
     @Import(name="kind")

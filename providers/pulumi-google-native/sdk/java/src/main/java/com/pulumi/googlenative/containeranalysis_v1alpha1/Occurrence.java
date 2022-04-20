@@ -190,28 +190,28 @@ public class Occurrence extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     * The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     * @return The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
     @Export(name="noteName", type=String.class, parameters={})
     private Output<String> noteName;
 
     /**
-     * @return An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     * @return An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
     public Output<String> noteName() {

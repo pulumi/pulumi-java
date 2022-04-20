@@ -13,11 +13,11 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlexibleAppVersionEndpointsApiService {
     /**
-     * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
-     * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+     * Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.
+     * By default, the rollout strategy for Endpoints is &#34;FIXED&#34;. This means that Endpoints starts up with a particular configuration ID.
      * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
      * and is required in this case.
-     * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+     * Endpoints also has a rollout strategy called &#34;MANAGED&#34;. When using this, Endpoints fetches the latest configuration and does not need
      * the configuration ID. In this case, configId must be omitted.
      * 
      */
@@ -53,11 +53,11 @@ public final class FlexibleAppVersionEndpointsApiService {
     }
 
     /**
-     * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
-     * By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
+     * Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.
+     * By default, the rollout strategy for Endpoints is &#34;FIXED&#34;. This means that Endpoints starts up with a particular configuration ID.
      * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
      * and is required in this case.
-     * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
+     * Endpoints also has a rollout strategy called &#34;MANAGED&#34;. When using this, Endpoints fetches the latest configuration and does not need
      * the configuration ID. In this case, configId must be omitted.
      * 
     */

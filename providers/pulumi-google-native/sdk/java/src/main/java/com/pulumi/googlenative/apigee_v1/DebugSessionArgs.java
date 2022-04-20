@@ -100,7 +100,7 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it&#39;s received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
     @Import(name="validity")

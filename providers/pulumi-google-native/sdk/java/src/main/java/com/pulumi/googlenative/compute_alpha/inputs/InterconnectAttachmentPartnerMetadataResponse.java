@@ -17,7 +17,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
     public static final InterconnectAttachmentPartnerMetadataResponse Empty = new InterconnectAttachmentPartnerMetadataResponse();
 
     /**
-     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
+     * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
      * 
      */
     @Import(name="interconnectName", required=true)
@@ -39,7 +39,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
     }
 
     /**
-     * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
      */
     @Import(name="portalUrl", required=true)

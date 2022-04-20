@@ -35,7 +35,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pu
     }
 
     /**
-     * Name of the deployment slot. If a slot is not specified, the API will get a gateway for the production slot's Virtual Network.
+     * Name of the deployment slot. If a slot is not specified, the API will get a gateway for the production slot&#39;s Virtual Network.
      * 
      */
     @Import(name="slot", required=true)

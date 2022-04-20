@@ -26,7 +26,7 @@ public final class NetworkInterfaceResourceSettingsResponse {
     private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkInterfaces'.
+     * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
      * 
      */
     private final String resourceType;
@@ -64,7 +64,7 @@ public final class NetworkInterfaceResourceSettingsResponse {
     }
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkInterfaces'.
+     * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
      * 
     */
     public String resourceType() {

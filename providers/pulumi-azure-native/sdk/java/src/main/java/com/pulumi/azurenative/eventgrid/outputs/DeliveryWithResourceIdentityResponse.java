@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 public final class DeliveryWithResourceIdentityResponse {
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable Object destination;
@@ -41,7 +41,7 @@ public final class DeliveryWithResourceIdentityResponse {
 
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
     public Optional<Object> destination() {

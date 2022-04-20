@@ -38,7 +38,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions='integrations'` or `extensions='apigateway'` will export the API with x-amazon-apigateway-integration extensions. `extensions='authorizers'` will export the API with x-amazon-apigateway-authorizer extensions.
+     * A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions=&#39;integrations&#39;` or `extensions=&#39;apigateway&#39;` will export the API with x-amazon-apigateway-integration extensions. `extensions=&#39;authorizers&#39;` will export the API with x-amazon-apigateway-authorizer extensions.
      * 
      */
     @Import(name="parameters")

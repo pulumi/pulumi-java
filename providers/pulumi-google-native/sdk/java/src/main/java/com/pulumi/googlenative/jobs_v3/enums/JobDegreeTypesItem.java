@@ -36,17 +36,17 @@ import java.util.StringJoiner;
          */
         AdultRemedialEducation("ADULT_REMEDIAL_EDUCATION"),
         /**
-         * Associate's or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.
+         * Associate&#39;s or equivalent; Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes. ISCED code 5.
          * 
          */
         AssociatesOrEquivalent("ASSOCIATES_OR_EQUIVALENT"),
         /**
-         * Bachelor's or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.
+         * Bachelor&#39;s or equivalent; Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification. ISCED code 6.
          * 
          */
         BachelorsOrEquivalent("BACHELORS_OR_EQUIVALENT"),
         /**
-         * Master's or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.
+         * Master&#39;s or equivalent; Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification. ISCED code 7.
          * 
          */
         MastersOrEquivalent("MASTERS_OR_EQUIVALENT"),

@@ -23,7 +23,7 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Basic'.
+     * Expected value is &#39;Basic&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

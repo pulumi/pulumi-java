@@ -125,7 +125,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Desired status of the instance. Either
-     * `"RUNNING"` or `"TERMINATED"`.
+     * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
      * 
      */
     @Import(name="desiredStatus")

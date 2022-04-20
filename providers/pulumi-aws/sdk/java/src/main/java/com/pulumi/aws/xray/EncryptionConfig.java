@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Creates and manages an AWS XRay Encryption Config.
  * 
- * > **NOTE:** Removing this resource from the provider has no effect to the encryption configuration within X-Ray.
+ * &gt; **NOTE:** Removing this resource from the provider has no effect to the encryption configuration within X-Ray.
  * 
  * ## Example Usage
  * 

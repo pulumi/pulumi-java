@@ -40,7 +40,7 @@ public final class FirewallPolicyFilterRuleResponse {
     private final @Nullable List<Object> ruleConditions;
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyFilterRule'.
+     * Expected value is &#39;FirewallPolicyFilterRule&#39;.
      * 
      */
     private final String ruleType;
@@ -89,7 +89,7 @@ public final class FirewallPolicyFilterRuleResponse {
     }
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyFilterRule'.
+     * Expected value is &#39;FirewallPolicyFilterRule&#39;.
      * 
     */
     public String ruleType() {

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a debug session for a deployed API Proxy revision.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -92,14 +92,14 @@ public class DebugSession extends com.pulumi.resources.CustomResource {
         return this.tracesize;
     }
     /**
-     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it&#39;s received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
     @Export(name="validity", type=Integer.class, parameters={})
     private Output<Integer> validity;
 
     /**
-     * @return Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     * @return Optional. The length of time, in seconds, that this debug session is valid, starting from when it&#39;s received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
     public Output<Integer> validity() {

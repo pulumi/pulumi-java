@@ -44,7 +44,7 @@ public final class CmdkeySetupArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of custom setup.
-     * Expected value is 'CmdkeySetup'.
+     * Expected value is &#39;CmdkeySetup&#39;.
      * 
      */
     @Import(name="type", required=true)

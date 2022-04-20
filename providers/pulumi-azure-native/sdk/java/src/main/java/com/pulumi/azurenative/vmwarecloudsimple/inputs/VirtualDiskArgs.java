@@ -22,7 +22,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     public static final VirtualDiskArgs Empty = new VirtualDiskArgs();
 
     /**
-     * Disk's Controller id
+     * Disk&#39;s Controller id
      * 
      */
     @Import(name="controllerId", required=true)
@@ -33,7 +33,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Disk's independence mode type
+     * Disk&#39;s independence mode type
      * 
      */
     @Import(name="independenceMode", required=true)
@@ -44,7 +44,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Disk's total size
+     * Disk&#39;s total size
      * 
      */
     @Import(name="totalSize", required=true)
@@ -55,7 +55,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Disk's id
+     * Disk&#39;s id
      * 
      */
     @Import(name="virtualDiskId")

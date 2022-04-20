@@ -80,7 +80,7 @@ public final class VMwareDetailsResponse {
     private final @Nullable String hostName;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMware'.
+     * Expected value is &#39;VMware&#39;.
      * 
      */
     private final String instanceType;
@@ -341,7 +341,7 @@ public final class VMwareDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMware'.
+     * Expected value is &#39;VMware&#39;.
      * 
     */
     public String instanceType() {

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetStorageProfileResponse {
     /**
-     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
      */
     private final @Nullable ImageReferenceResponse imageReference;
     /**
-     * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
     }
 
     /**
-     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
     */
     public List<VirtualMachineScaleSetDataDiskResponse> dataDisks() {
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
         return Optional.ofNullable(this.imageReference);
     }
     /**
-     * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
     */
     public Optional<VirtualMachineScaleSetOSDiskResponse> osDisk() {

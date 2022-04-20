@@ -77,7 +77,7 @@ public final class HttpSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HttpSource'.
+     * Expected value is &#39;HttpSource&#39;.
      * 
      */
     @Import(name="type", required=true)

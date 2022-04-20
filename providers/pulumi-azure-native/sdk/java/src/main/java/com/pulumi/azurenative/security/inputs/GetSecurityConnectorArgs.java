@@ -13,7 +13,7 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
     public static final GetSecurityConnectorArgs Empty = new GetSecurityConnectorArgs();
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

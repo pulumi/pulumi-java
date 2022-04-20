@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:BastionHost bastionhost' /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/bastionHosts/bastionhosttenant' 
+ * $ pulumi import azure-native:network:BastionHost bastionhost&#39; /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/bastionHosts/bastionhosttenant&#39; 
  * ```
  * 
  */

@@ -54,28 +54,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:dns/managedZone:ManagedZone")
 public class ManagedZone extends com.pulumi.resources.CustomResource {
     /**
-     * A textual description field. Defaults to 'Managed by Pulumi'.
+     * A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return A textual description field. Defaults to 'Managed by Pulumi'.
+     * @return A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     public Output<String> description() {
         return this.description;
     }
     /**
-     * The DNS name of this managed zone, for instance "example.com.".
+     * The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
-     * @return The DNS name of this managed zone, for instance "example.com.".
+     * @return The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     public Output<String> dnsName() {
@@ -262,7 +262,7 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
         return this.serviceDirectoryConfig;
     }
     /**
-     * The zone's visibility: public zones are exposed to the Internet,
+     * The zone&#39;s visibility: public zones are exposed to the Internet,
      * while private zones are visible only to Virtual Private Cloud resources.
      * Default value is `public`.
      * Possible values are `private` and `public`.
@@ -272,7 +272,7 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> visibility;
 
     /**
-     * @return The zone's visibility: public zones are exposed to the Internet,
+     * @return The zone&#39;s visibility: public zones are exposed to the Internet,
      * while private zones are visible only to Virtual Private Cloud resources.
      * Default value is `public`.
      * Possible values are `private` and `public`.

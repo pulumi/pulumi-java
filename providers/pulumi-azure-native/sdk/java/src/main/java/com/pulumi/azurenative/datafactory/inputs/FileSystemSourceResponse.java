@@ -88,7 +88,7 @@ public final class FileSystemSourceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy source type.
-     * Expected value is 'FileSystemSource'.
+     * Expected value is &#39;FileSystemSource&#39;.
      * 
      */
     @Import(name="type", required=true)

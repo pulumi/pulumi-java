@@ -25,7 +25,7 @@ public final class TableIamBindingState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * (Computed) The etag of the tables's IAM policy.
+     * (Computed) The etag of the tables&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

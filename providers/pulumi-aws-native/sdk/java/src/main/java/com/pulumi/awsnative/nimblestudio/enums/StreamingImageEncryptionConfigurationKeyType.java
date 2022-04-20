@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * <p/>
+     * &lt;p/&gt;
      * 
      */
     @EnumType

@@ -227,7 +227,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'DelimitedText'.
+     * Expected value is &#39;DelimitedText&#39;.
      * 
      */
     @Import(name="type", required=true)

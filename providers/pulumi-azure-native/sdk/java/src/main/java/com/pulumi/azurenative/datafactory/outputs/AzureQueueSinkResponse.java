@@ -34,7 +34,7 @@ public final class AzureQueueSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureQueueSink'.
+     * Expected value is &#39;AzureQueueSink&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class AzureQueueSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureQueueSink'.
+     * Expected value is &#39;AzureQueueSink&#39;.
      * 
     */
     public String type() {

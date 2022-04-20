@@ -43,7 +43,7 @@ public final class GetPackageResult {
      */
     private final String id;
     /**
-     * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
      * 
      */
     private final Boolean isEnabled;
@@ -88,7 +88,7 @@ public final class GetPackageResult {
      */
     private final List<TargetOSInfoResponse> targetOSList;
     /**
-     * OOB, functional or both. Mapped to the data in 'tests' property.
+     * OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
      * 
      */
     private final List<String> testTypes;
@@ -103,7 +103,7 @@ public final class GetPackageResult {
      */
     private final String type;
     /**
-     * The validation results. There's validation on package when it's created or updated.
+     * The validation results. There&#39;s validation on package when it&#39;s created or updated.
      * 
      */
     private final List<PackageValidationResultResponse> validationResults;
@@ -191,7 +191,7 @@ public final class GetPackageResult {
         return this.id;
     }
     /**
-     * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
      * 
     */
     public Boolean isEnabled() {
@@ -254,7 +254,7 @@ public final class GetPackageResult {
         return this.targetOSList;
     }
     /**
-     * OOB, functional or both. Mapped to the data in 'tests' property.
+     * OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
      * 
     */
     public List<String> testTypes() {
@@ -275,7 +275,7 @@ public final class GetPackageResult {
         return this.type;
     }
     /**
-     * The validation results. There's validation on package when it's created or updated.
+     * The validation results. There&#39;s validation on package when it&#39;s created or updated.
      * 
     */
     public List<PackageValidationResultResponse> validationResults() {

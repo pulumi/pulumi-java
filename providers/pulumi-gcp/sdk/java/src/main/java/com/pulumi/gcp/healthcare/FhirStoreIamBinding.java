@@ -22,9 +22,9 @@ import javax.annotation.Nullable;
  * * `gcp.healthcare.FhirStoreIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the FHIR store are preserved.
  * * `gcp.healthcare.FhirStoreIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the FHIR store are preserved.
  * 
- * > **Note:** `gcp.healthcare.FhirStoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.FhirStoreIamBinding` and `gcp.healthcare.FhirStoreIamMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.healthcare.FhirStoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.FhirStoreIamBinding` and `gcp.healthcare.FhirStoreIamMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.healthcare.FhirStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.FhirStoreIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.healthcare.FhirStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.FhirStoreIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_healthcare\_fhir\_store\_iam\_policy
  * 
@@ -39,7 +39,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `fhir_store_id`, role, and account e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/fhirStoreIamBinding:FhirStoreIamBinding fhir_store_iam "your-project-id/location-name/dataset-name/fhir-store-name roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:healthcare/fhirStoreIamBinding:FhirStoreIamBinding fhir_store_iam &#34;your-project-id/location-name/dataset-name/fhir-store-name roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  * This binding resource can be imported using the `fhir_store_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/fhirStoreIamBinding:FhirStoreIamBinding fhir_store_iam "your-project-id/location-name/dataset-name/fhir-store-name roles/viewer"
+ *  $ pulumi import gcp:healthcare/fhirStoreIamBinding:FhirStoreIamBinding fhir_store_iam &#34;your-project-id/location-name/dataset-name/fhir-store-name roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -68,14 +68,14 @@ public class FhirStoreIamBinding extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the FHIR store's IAM policy.
+     * (Computed) The etag of the FHIR store&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the FHIR store's IAM policy.
+     * @return (Computed) The etag of the FHIR store&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {
@@ -84,7 +84,7 @@ public class FhirStoreIamBinding extends com.pulumi.resources.CustomResource {
     /**
      * The FHIR store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
-     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */
@@ -94,7 +94,7 @@ public class FhirStoreIamBinding extends com.pulumi.resources.CustomResource {
     /**
      * @return The FHIR store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
-     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

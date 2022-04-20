@@ -54,7 +54,7 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The OData query to filter the data in SharePoint Online list. For example, "$top=1". Type: string (or Expression with resultType string).
+     * The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -88,7 +88,7 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
 
     /**
      * Copy source type.
-     * Expected value is 'SharePointOnlineListSource'.
+     * Expected value is &#39;SharePointOnlineListSource&#39;.
      * 
      */
     @Import(name="type", required=true)

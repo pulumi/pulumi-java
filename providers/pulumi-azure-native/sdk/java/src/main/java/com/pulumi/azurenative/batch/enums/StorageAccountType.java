@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * If omitted, the default is "Standard_LRS". Values are:
+     * If omitted, the default is &#34;Standard_LRS&#34;. Values are:
      * 
      *  Standard_LRS - The data disk should use standard locally redundant storage.
      *  Premium_LRS - The data disk should use premium locally redundant storage.

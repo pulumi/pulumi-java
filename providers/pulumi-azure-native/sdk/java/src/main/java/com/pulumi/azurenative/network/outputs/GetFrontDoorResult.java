@@ -36,7 +36,7 @@ public final class GetFrontDoorResult {
      */
     private final String cname;
     /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
@@ -173,7 +173,7 @@ public final class GetFrontDoorResult {
         return this.cname;
     }
     /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> enabledState() {

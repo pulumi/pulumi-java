@@ -110,7 +110,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
+     * Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
      * 
      */
     @Import(name="maintenanceFreezeDurationHours", required=true)

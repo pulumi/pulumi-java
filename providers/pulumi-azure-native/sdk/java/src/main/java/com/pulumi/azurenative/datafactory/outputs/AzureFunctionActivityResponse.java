@@ -38,7 +38,7 @@ public final class AzureFunctionActivityResponse {
      */
     private final Object functionName;
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object headers;
@@ -64,7 +64,7 @@ public final class AzureFunctionActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'AzureFunctionActivity'.
+     * Expected value is &#39;AzureFunctionActivity&#39;.
      * 
      */
     private final String type;
@@ -129,7 +129,7 @@ public final class AzureFunctionActivityResponse {
         return this.functionName;
     }
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> headers() {
@@ -165,7 +165,7 @@ public final class AzureFunctionActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AzureFunctionActivity'.
+     * Expected value is &#39;AzureFunctionActivity&#39;.
      * 
     */
     public String type() {

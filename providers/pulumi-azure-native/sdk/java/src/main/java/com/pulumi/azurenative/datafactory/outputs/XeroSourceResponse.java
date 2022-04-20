@@ -49,7 +49,7 @@ public final class XeroSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'XeroSource'.
+     * Expected value is &#39;XeroSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class XeroSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'XeroSource'.
+     * Expected value is &#39;XeroSource&#39;.
      * 
     */
     public String type() {

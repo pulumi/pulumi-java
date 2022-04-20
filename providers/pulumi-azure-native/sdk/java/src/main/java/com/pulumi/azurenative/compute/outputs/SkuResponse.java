@@ -23,7 +23,7 @@ public final class SkuResponse {
      */
     private final @Nullable String name;
     /**
-     * Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+     * Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
      * 
      */
     private final @Nullable String tier;
@@ -53,7 +53,7 @@ public final class SkuResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+     * Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
      * 
     */
     public Optional<String> tier() {

@@ -50,7 +50,7 @@ public final class GatewayAssociationProposalArgs extends com.pulumi.resources.R
     }
 
     /**
-     * AWS Account identifier of the Direct Connect Gateway's owner.
+     * AWS Account identifier of the Direct Connect Gateway&#39;s owner.
      * 
      */
     @Import(name="dxGatewayOwnerAccountId", required=true)

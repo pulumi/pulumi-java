@@ -77,7 +77,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
      */
     @Import(name="experimentName")
@@ -101,7 +101,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Sweep'.
+     * Expected value is &#39;Sweep&#39;.
      * 
      */
     @Import(name="jobType", required=true)

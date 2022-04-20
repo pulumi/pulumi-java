@@ -18,7 +18,7 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     public static final SaasSubscriptionLevelArgs Empty = new SaasSubscriptionLevelArgs();
 
     /**
-     * Resource location. Only value allowed for SaaS is 'global'
+     * Resource location. Only value allowed for SaaS is &#39;global&#39;
      * 
      */
     @Import(name="location")

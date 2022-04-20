@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
      * 
      */
     @EnumType

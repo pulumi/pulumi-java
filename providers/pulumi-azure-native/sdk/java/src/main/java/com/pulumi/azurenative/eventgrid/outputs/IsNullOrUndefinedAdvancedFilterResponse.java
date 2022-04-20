@@ -18,7 +18,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNullOrUndefined'.
+     * Expected value is &#39;IsNullOrUndefined&#39;.
      * 
      */
     private final String operatorType;
@@ -40,7 +40,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNullOrUndefined'.
+     * Expected value is &#39;IsNullOrUndefined&#39;.
      * 
     */
     public String operatorType() {

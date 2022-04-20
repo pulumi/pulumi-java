@@ -31,7 +31,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The group's category.
+     * The group&#39;s category.
      * 
      */
     @Import(name="category")
@@ -42,7 +42,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The group's description.
+     * The group&#39;s description.
      * 
      */
     @Import(name="description")
@@ -53,7 +53,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The group's display name.
+     * The group&#39;s display name.
      * 
      */
     @Import(name="displayName")

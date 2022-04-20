@@ -21,7 +21,7 @@ public final class FlexibleAppVersionResourcesVolume {
      */
     private final Integer sizeGb;
     /**
-     * Underlying volume type, e.g. 'tmpfs'.
+     * Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
      */
     private final String volumeType;
@@ -51,7 +51,7 @@ public final class FlexibleAppVersionResourcesVolume {
         return this.sizeGb;
     }
     /**
-     * Underlying volume type, e.g. 'tmpfs'.
+     * Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
     */
     public String volumeType() {

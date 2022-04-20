@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 /**
  * Provides a Direct Connect hosted transit virtual interface resource.
- * This resource represents the allocator's side of the hosted virtual interface.
+ * This resource represents the allocator&#39;s side of the hosted virtual interface.
  * A hosted virtual interface is a virtual interface that is owned by another AWS account.
  * 
  * ## Example Usage

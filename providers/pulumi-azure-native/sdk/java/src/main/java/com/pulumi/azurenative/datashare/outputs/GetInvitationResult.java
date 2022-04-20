@@ -53,7 +53,7 @@ public final class GetInvitationResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The target Azure AD Id. Can't be combined with email.
+     * The target Azure AD Id. Can&#39;t be combined with email.
      * 
      */
     private final @Nullable String targetActiveDirectoryId;
@@ -174,7 +174,7 @@ public final class GetInvitationResult {
         return this.systemData;
     }
     /**
-     * The target Azure AD Id. Can't be combined with email.
+     * The target Azure AD Id. Can&#39;t be combined with email.
      * 
     */
     public Optional<String> targetActiveDirectoryId() {

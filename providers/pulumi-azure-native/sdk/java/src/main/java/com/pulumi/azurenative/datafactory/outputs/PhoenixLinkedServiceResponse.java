@@ -91,7 +91,7 @@ public final class PhoenixLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'Phoenix'.
+     * Expected value is &#39;Phoenix&#39;.
      * 
      */
     private final String type;
@@ -244,7 +244,7 @@ public final class PhoenixLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Phoenix'.
+     * Expected value is &#39;Phoenix&#39;.
      * 
     */
     public String type() {

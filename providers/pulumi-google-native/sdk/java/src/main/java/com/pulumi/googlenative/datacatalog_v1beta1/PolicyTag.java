@@ -63,28 +63,28 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+     * Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+     * @return Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * Resource name of this policy tag's parent policy tag (e.g. for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the "Geolocation" policy tag in the example above). If not set, defaults to an empty string.
+     * Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
      * 
      */
     @Export(name="parentPolicyTag", type=String.class, parameters={})
     private Output<String> parentPolicyTag;
 
     /**
-     * @return Resource name of this policy tag's parent policy tag (e.g. for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the "Geolocation" policy tag in the example above). If not set, defaults to an empty string.
+     * @return Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
      * 
      */
     public Output<String> parentPolicyTag() {

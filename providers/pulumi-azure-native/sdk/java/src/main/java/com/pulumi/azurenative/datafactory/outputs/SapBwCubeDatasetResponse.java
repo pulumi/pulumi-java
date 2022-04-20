@@ -54,7 +54,7 @@ public final class SapBwCubeDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'SapBwCube'.
+     * Expected value is &#39;SapBwCube&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class SapBwCubeDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SapBwCube'.
+     * Expected value is &#39;SapBwCube&#39;.
      * 
     */
     public String type() {

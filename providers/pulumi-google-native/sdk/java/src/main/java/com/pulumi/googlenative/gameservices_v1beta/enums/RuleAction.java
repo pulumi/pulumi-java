@@ -20,27 +20,27 @@ import java.util.StringJoiner;
          */
         NoAction("NO_ACTION"),
         /**
-         * Matching 'Entries' grant access.
+         * Matching &#39;Entries&#39; grant access.
          * 
          */
         Allow("ALLOW"),
         /**
-         * Matching 'Entries' grant access and the caller promises to log the request per the returned log_configs.
+         * Matching &#39;Entries&#39; grant access and the caller promises to log the request per the returned log_configs.
          * 
          */
         AllowWithLog("ALLOW_WITH_LOG"),
         /**
-         * Matching 'Entries' deny access.
+         * Matching &#39;Entries&#39; deny access.
          * 
          */
         Deny("DENY"),
         /**
-         * Matching 'Entries' deny access and the caller promises to log the request per the returned log_configs.
+         * Matching &#39;Entries&#39; deny access and the caller promises to log the request per the returned log_configs.
          * 
          */
         DenyWithLog("DENY_WITH_LOG"),
         /**
-         * Matching 'Entries' tell IAM.Check callers to generate logs.
+         * Matching &#39;Entries&#39; tell IAM.Check callers to generate logs.
          * 
          */
         Log("LOG");

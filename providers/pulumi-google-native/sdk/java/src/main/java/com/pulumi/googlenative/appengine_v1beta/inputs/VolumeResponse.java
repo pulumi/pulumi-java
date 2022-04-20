@@ -40,7 +40,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Underlying volume type, e.g. 'tmpfs'.
+     * Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
      */
     @Import(name="volumeType", required=true)

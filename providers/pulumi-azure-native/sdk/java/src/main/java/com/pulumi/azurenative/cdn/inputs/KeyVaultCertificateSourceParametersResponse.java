@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes the parameters for using a user's KeyVault certificate for securing custom domain.
+ * Describes the parameters for using a user&#39;s KeyVault certificate for securing custom domain.
  * 
  */
 public final class KeyVaultCertificateSourceParametersResponse extends com.pulumi.resources.InvokeArgs {
@@ -37,7 +37,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     }
 
     /**
-     * Resource group of the user's Key Vault containing the SSL certificate
+     * Resource group of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -70,7 +70,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     }
 
     /**
-     * Subscription Id of the user's Key Vault containing the SSL certificate
+     * Subscription Id of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     @Import(name="subscriptionId", required=true)
@@ -92,7 +92,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
     }
 
     /**
-     * The name of the user's Key Vault containing the SSL certificate
+     * The name of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     @Import(name="vaultName", required=true)

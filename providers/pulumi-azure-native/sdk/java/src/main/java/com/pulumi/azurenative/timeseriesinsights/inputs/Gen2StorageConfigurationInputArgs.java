@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
+ * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment&#39;s data.
  * 
  */
 public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
     public static final Gen2StorageConfigurationInputArgs Empty = new Gen2StorageConfigurationInputArgs();
 
     /**
-     * The name of the storage account that will hold the environment's Gen2 data.
+     * The name of the storage account that will hold the environment&#39;s Gen2 data.
      * 
      */
     @Import(name="accountName", required=true)

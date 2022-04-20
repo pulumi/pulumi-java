@@ -17,7 +17,7 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
     public static final AccessPointRootDirectoryArgs Empty = new AccessPointRootDirectoryArgs();
 
     /**
-     * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's RootDirectory. If the RootDirectory>Path specified does not exist, EFS creates the root directory using the CreationInfo settings when a client connects to an access point. When specifying the CreationInfo, you must provide values for all properties.   If you do not provide CreationInfo and the specified RootDirectory>Path does not exist, attempts to mount the file system using the access point will fail.
+     * (Optional) Specifies the POSIX IDs and permissions to apply to the access point&#39;s RootDirectory. If the RootDirectory&gt;Path specified does not exist, EFS creates the root directory using the CreationInfo settings when a client connects to an access point. When specifying the CreationInfo, you must provide values for all properties.   If you do not provide CreationInfo and the specified RootDirectory&gt;Path does not exist, attempts to mount the file system using the access point will fail.
      * 
      */
     @Import(name="creationInfo")

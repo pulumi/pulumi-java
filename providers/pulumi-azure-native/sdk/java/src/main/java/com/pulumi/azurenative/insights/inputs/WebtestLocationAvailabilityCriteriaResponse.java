@@ -42,7 +42,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
 
     /**
      * specifies the type of the alert criteria.
-     * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
+     * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
      * 
      */
     @Import(name="odataType", required=true)

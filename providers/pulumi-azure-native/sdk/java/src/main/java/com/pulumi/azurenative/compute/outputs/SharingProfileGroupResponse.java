@@ -18,7 +18,7 @@ public final class SharingProfileGroupResponse {
      */
     private final @Nullable List<String> ids;
     /**
-     * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+     * This property allows you to specify the type of sharing group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Subscriptions** &lt;br&gt;&lt;br&gt; **AADTenants**
      * 
      */
     private final @Nullable String type;
@@ -39,7 +39,7 @@ public final class SharingProfileGroupResponse {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
-     * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+     * This property allows you to specify the type of sharing group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Subscriptions** &lt;br&gt;&lt;br&gt; **AADTenants**
      * 
     */
     public Optional<String> type() {

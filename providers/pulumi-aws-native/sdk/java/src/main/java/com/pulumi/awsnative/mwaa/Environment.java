@@ -32,7 +32,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      *     
      *     Would be represented as
      *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
      * 
      */
     @Export(name="airflowConfigurationOptions", type=Object.class, parameters={})
@@ -47,7 +47,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      *     
      *     Would be represented as
      *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
+     *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
      * 
      */
     public Output</* @Nullable */ Object> airflowConfigurationOptions() {

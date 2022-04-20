@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * Required. The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
      * 
      */
     @EnumType
@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         DirectionUnspecified("DIRECTION_UNSPECIFIED"),
         /**
-         * The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.
+         * The property&#39;s values are indexed so as to support sequencing in ascending order and also query by &lt;, &gt;, &lt;=, &gt;=, and =.
          * 
          */
         Ascending("ASCENDING"),
         /**
-         * The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.
+         * The property&#39;s values are indexed so as to support sequencing in descending order and also query by &lt;, &gt;, &lt;=, &gt;=, and =.
          * 
          */
         Descending("DESCENDING");

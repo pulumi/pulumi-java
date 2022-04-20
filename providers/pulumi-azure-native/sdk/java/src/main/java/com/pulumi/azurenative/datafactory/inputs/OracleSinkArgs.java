@@ -77,7 +77,7 @@ public final class OracleSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'OracleSink'.
+     * Expected value is &#39;OracleSink&#39;.
      * 
      */
     @Import(name="type", required=true)

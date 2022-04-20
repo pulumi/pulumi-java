@@ -16,7 +16,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
     public static final GetTestablePermissionsArgs Empty = new GetTestablePermissionsArgs();
 
     /**
-     * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
+     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
     @Import(name="customSupportLevel")
@@ -38,7 +38,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
     }
 
     /**
-     * The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `["GA", "BETA"]` for example. Can be a list of `"ALPHA"`, `"BETA"`, `"GA"`, `"DEPRECATED"`. Default is `["GA"]`.
+     * The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
      * 
      */
     @Import(name="stages")

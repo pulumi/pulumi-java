@@ -20,7 +20,7 @@ public final class GoogleCloudChannelV1EduDataResponse {
      */
     private final String instituteType;
     /**
-     * Web address for the edu customer's institution.
+     * Web address for the edu customer&#39;s institution.
      * 
      */
     private final String website;
@@ -50,7 +50,7 @@ public final class GoogleCloudChannelV1EduDataResponse {
         return this.instituteType;
     }
     /**
-     * Web address for the edu customer's institution.
+     * Web address for the edu customer&#39;s institution.
      * 
     */
     public String website() {

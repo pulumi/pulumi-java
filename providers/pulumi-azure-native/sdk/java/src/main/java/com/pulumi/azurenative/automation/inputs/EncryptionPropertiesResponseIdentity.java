@@ -19,7 +19,7 @@ public final class EncryptionPropertiesResponseIdentity extends com.pulumi.resou
     public static final EncryptionPropertiesResponseIdentity Empty = new EncryptionPropertiesResponseIdentity();
 
     /**
-     * The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The user identity used for CMK. It will be an ARM resource id in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     @Import(name="userAssignedIdentity")

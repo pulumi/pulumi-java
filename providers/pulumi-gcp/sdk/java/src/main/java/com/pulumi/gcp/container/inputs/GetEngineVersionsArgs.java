@@ -43,8 +43,8 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
     /**
      * If provided, the provider will only return versions
      * that match the string prefix. For example, `1.11.` will match all `1.11` series
-     * releases. Since this is just a string match, it's recommended that you append a
-     * `.` after minor versions to ensure that prefixes such as `1.1` don't match
+     * releases. Since this is just a string match, it&#39;s recommended that you append a
+     * `.` after minor versions to ensure that prefixes such as `1.1` don&#39;t match
      * versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
      * for full details on how version strings are formatted.
      * 

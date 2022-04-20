@@ -64,14 +64,14 @@ public class StatefulSetList extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard list's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard list&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
-     * @return Standard list's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard list&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ListMeta> metadata() {

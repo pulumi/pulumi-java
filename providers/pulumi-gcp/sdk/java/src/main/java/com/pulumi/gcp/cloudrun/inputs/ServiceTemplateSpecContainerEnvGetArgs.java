@@ -17,7 +17,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
     public static final ServiceTemplateSpecContainerEnvGetArgs Empty = new ServiceTemplateSpecContainerEnvGetArgs();
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name")
@@ -35,7 +35,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
      * syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
      * references will never be expanded, regardless of whether the variable
      * exists or not.
-     * Defaults to "".
+     * Defaults to &#34;&#34;.
      * 
      */
     @Import(name="value")
@@ -46,7 +46,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
     }
 
     /**
-     * Source for the environment variable's value. Only supports secret_key_ref.
+     * Source for the environment variable&#39;s value. Only supports secret_key_ref.
      * Structure is documented below.
      * 
      */

@@ -24,15 +24,15 @@ import javax.annotation.Nullable;
  * 
  * These resources are intended to convert the permissions system for BigQuery datasets to the standard IAM interface. For advanced usages, including [creating authorized views](https://cloud.google.com/bigquery/docs/share-access-views), please use either `gcp.bigquery.DatasetAccess` or the `access` field on `gcp.bigquery.Dataset`.
  * 
- * > **Note:** These resources **cannot** be used with `gcp.bigquery.DatasetAccess` resources or the `access` field on `gcp.bigquery.Dataset` or they will fight over what the policy should be.
+ * &gt; **Note:** These resources **cannot** be used with `gcp.bigquery.DatasetAccess` resources or the `access` field on `gcp.bigquery.Dataset` or they will fight over what the policy should be.
  * 
- * > **Note:** Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the `gcp.bigquery.DatasetAccess` instead.
+ * &gt; **Note:** Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the `gcp.bigquery.DatasetAccess` instead.
  * 
- * > **Note:** Legacy BigQuery roles `OWNER` `WRITER` and `READER` **cannot** be used with any of these IAM resources. Instead use the full role form of: `roles/bigquery.dataOwner` `roles/bigquery.dataEditor` and `roles/bigquery.dataViewer`.
+ * &gt; **Note:** Legacy BigQuery roles `OWNER` `WRITER` and `READER` **cannot** be used with any of these IAM resources. Instead use the full role form of: `roles/bigquery.dataOwner` `roles/bigquery.dataEditor` and `roles/bigquery.dataViewer`.
  * 
- * > **Note:** `gcp.bigquery.DatasetIamPolicy` **cannot** be used in conjunction with `gcp.bigquery.DatasetIamBinding` and `gcp.bigquery.DatasetIamMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.bigquery.DatasetIamPolicy` **cannot** be used in conjunction with `gcp.bigquery.DatasetIamBinding` and `gcp.bigquery.DatasetIamMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.bigquery.DatasetIamBinding` resources **can be** used in conjunction with `gcp.bigquery.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.bigquery.DatasetIamBinding` resources **can be** used in conjunction with `gcp.bigquery.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigquery\_dataset\_iam\_policy
  * 
@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `dataset_id`, role, and account e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:bigquery/datasetIamBinding:DatasetIamBinding dataset_iam "projects/your-project-id/datasets/dataset-id roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:bigquery/datasetIamBinding:DatasetIamBinding dataset_iam &#34;projects/your-project-id/datasets/dataset-id roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  * This binding resource can be imported using the `dataset_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:bigquery/datasetIamBinding:DatasetIamBinding dataset_iam "projects/your-project-id/datasets/dataset-id roles/viewer"
+ *  $ pulumi import gcp:bigquery/datasetIamBinding:DatasetIamBinding dataset_iam &#34;projects/your-project-id/datasets/dataset-id roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -66,7 +66,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigquery/datasetIamBinding:DatasetIamBinding dataset_iam projects/your-project-id/datasets/dataset-id
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -94,14 +94,14 @@ public class DatasetIamBinding extends com.pulumi.resources.CustomResource {
         return this.datasetId;
     }
     /**
-     * (Computed) The etag of the dataset's IAM policy.
+     * (Computed) The etag of the dataset&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the dataset's IAM policy.
+     * @return (Computed) The etag of the dataset&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

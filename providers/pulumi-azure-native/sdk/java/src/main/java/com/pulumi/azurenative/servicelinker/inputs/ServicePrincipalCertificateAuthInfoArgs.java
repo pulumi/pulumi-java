@@ -20,7 +20,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
 
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalCertificate'.
+     * Expected value is &#39;servicePrincipalCertificate&#39;.
      * 
      */
     @Import(name="authType", required=true)

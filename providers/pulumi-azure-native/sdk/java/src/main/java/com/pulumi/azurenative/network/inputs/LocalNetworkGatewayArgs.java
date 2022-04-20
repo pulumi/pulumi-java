@@ -23,7 +23,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     public static final LocalNetworkGatewayArgs Empty = new LocalNetworkGatewayArgs();
 
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
      */
     @Import(name="bgpSettings")

@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Container for the expiration rule that describes when noncurrent objects are expired. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 expire noncurrent object versions at a specific period in the object's lifetime
+ * Container for the expiration rule that describes when noncurrent objects are expired. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 expire noncurrent object versions at a specific period in the object&#39;s lifetime
  * 
  */
 public final class BucketNoncurrentVersionExpiration extends com.pulumi.resources.InvokeArgs {

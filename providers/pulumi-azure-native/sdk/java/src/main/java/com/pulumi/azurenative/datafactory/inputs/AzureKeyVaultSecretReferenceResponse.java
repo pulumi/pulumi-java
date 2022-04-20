@@ -56,7 +56,7 @@ public final class AzureKeyVaultSecretReferenceResponse extends com.pulumi.resou
 
     /**
      * Type of the secret.
-     * Expected value is 'AzureKeyVaultSecret'.
+     * Expected value is &#39;AzureKeyVaultSecret&#39;.
      * 
      */
     @Import(name="type", required=true)

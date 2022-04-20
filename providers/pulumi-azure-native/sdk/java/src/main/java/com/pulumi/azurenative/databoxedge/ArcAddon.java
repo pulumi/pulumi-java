@@ -62,7 +62,7 @@ public class ArcAddon extends com.pulumi.resources.CustomResource {
     }
     /**
      * Addon type.
-     * Expected value is 'ArcForKubernetes'.
+     * Expected value is &#39;ArcForKubernetes&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class ArcAddon extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Addon type.
-     * Expected value is 'ArcForKubernetes'.
+     * Expected value is &#39;ArcForKubernetes&#39;.
      * 
      */
     public Output<String> kind() {

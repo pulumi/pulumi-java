@@ -53,7 +53,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+     * The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
     @Import(name="tableName")

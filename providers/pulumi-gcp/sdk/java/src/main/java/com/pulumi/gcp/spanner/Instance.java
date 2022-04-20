@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:spanner/instance:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
-     * The name of the instance's configuration (similar but not
+     * The name of the instance&#39;s configuration (similar but not
      * quite the same as a region) which defines the geographic placement and
      * replication of your databases in this instance. It determines where your data
      * is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
@@ -60,7 +60,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     private Output<String> config;
 
     /**
-     * @return The name of the instance's configuration (similar but not
+     * @return The name of the instance&#39;s configuration (similar but not
      * quite the same as a region) which defines the geographic placement and
      * replication of your databases in this instance. It determines where your data
      * is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
@@ -104,16 +104,16 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.forceDestroy;
     }
     /**
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
-     * @return An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * @return An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {
@@ -186,14 +186,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * Instance status: 'CREATING' or 'READY'.
+     * Instance status: &#39;CREATING&#39; or &#39;READY&#39;.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
-     * @return Instance status: 'CREATING' or 'READY'.
+     * @return Instance status: &#39;CREATING&#39; or &#39;READY&#39;.
      * 
      */
     public Output<String> state() {

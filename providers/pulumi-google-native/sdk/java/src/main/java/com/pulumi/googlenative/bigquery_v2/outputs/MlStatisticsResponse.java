@@ -17,7 +17,7 @@ public final class MlStatisticsResponse {
      */
     private final List<IterationResultResponse> iterationResults;
     /**
-     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     * Maximum number of iterations specified as max_iterations in the &#39;CREATE MODEL&#39; query. The actual number of iterations may be less than this number due to early stop.
      * 
      */
     private final String maxIterations;
@@ -38,7 +38,7 @@ public final class MlStatisticsResponse {
         return this.iterationResults;
     }
     /**
-     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     * Maximum number of iterations specified as max_iterations in the &#39;CREATE MODEL&#39; query. The actual number of iterations may be less than this number due to early stop.
      * 
     */
     public String maxIterations() {

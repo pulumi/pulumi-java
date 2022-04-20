@@ -36,7 +36,7 @@ public final class SsisEnvironmentResponse {
     private final @Nullable String name;
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Environment'.
+     * Expected value is &#39;Environment&#39;.
      * 
      */
     private final String type;
@@ -92,7 +92,7 @@ public final class SsisEnvironmentResponse {
     }
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Environment'.
+     * Expected value is &#39;Environment&#39;.
      * 
     */
     public String type() {

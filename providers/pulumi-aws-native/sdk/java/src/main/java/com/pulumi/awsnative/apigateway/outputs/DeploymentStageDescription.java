@@ -31,7 +31,7 @@ public final class DeploymentStageDescription {
      */
     private final @Nullable Boolean cacheClusterEnabled;
     /**
-     * The size of the stage's cache cluster.
+     * The size of the stage&#39;s cache cluster.
      * 
      */
     private final @Nullable String cacheClusterSize;
@@ -81,7 +81,7 @@ public final class DeploymentStageDescription {
      */
     private final @Nullable String loggingLevel;
     /**
-     * Configures settings for all of the stage's methods.
+     * Configures settings for all of the stage&#39;s methods.
      * 
      */
     private final @Nullable List<DeploymentMethodSetting> methodSettings;
@@ -111,7 +111,7 @@ public final class DeploymentStageDescription {
      */
     private final @Nullable Boolean tracingEnabled;
     /**
-     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
      * 
      */
     private final @Nullable Object variables;
@@ -173,7 +173,7 @@ public final class DeploymentStageDescription {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
     /**
-     * The size of the stage's cache cluster.
+     * The size of the stage&#39;s cache cluster.
      * 
     */
     public Optional<String> cacheClusterSize() {
@@ -243,7 +243,7 @@ public final class DeploymentStageDescription {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
-     * Configures settings for all of the stage's methods.
+     * Configures settings for all of the stage&#39;s methods.
      * 
     */
     public List<DeploymentMethodSetting> methodSettings() {
@@ -285,7 +285,7 @@ public final class DeploymentStageDescription {
         return Optional.ofNullable(this.tracingEnabled);
     }
     /**
-     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
      * 
     */
     public Optional<Object> variables() {

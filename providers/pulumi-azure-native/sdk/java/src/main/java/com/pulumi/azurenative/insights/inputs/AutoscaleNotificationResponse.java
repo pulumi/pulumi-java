@@ -33,7 +33,7 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     }
 
     /**
-     * the operation associated with the notification and its value must be "scale"
+     * the operation associated with the notification and its value must be &#34;scale&#34;
      * 
      */
     @Import(name="operation", required=true)

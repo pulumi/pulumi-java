@@ -16,7 +16,7 @@ public final class AzureResourceDetailsResponse {
     private final String id;
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'Azure'.
+     * Expected value is &#39;Azure&#39;.
      * 
      */
     private final String source;
@@ -38,7 +38,7 @@ public final class AzureResourceDetailsResponse {
     }
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'Azure'.
+     * Expected value is &#39;Azure&#39;.
      * 
     */
     public String source() {

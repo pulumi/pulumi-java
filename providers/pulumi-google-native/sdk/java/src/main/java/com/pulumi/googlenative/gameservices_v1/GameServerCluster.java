@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:gameservices/v1:GameServerCluster")
 public class GameServerCluster extends com.pulumi.resources.CustomResource {
     /**
-     * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
+     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
      * 
      */
     @Export(name="clusterState", type=KubernetesClusterStateResponse.class, parameters={})
     private Output<KubernetesClusterStateResponse> clusterState;
 
     /**
-     * @return The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
+     * @return The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
      * 
      */
     public Output<KubernetesClusterStateResponse> clusterState() {

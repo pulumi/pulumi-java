@@ -21,7 +21,7 @@ public final class WebACLJsonMatchPattern extends com.pulumi.resources.InvokeArg
     public static final WebACLJsonMatchPattern Empty = new WebACLJsonMatchPattern();
 
     /**
-     * Inspect all parts of the web request's JSON body.
+     * Inspect all parts of the web request&#39;s JSON body.
      * 
      */
     @Import(name="all")

@@ -15,7 +15,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
      */
     private final String productId;
     /**
-     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
+     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
      * 
      */
     private final String provisioningId;
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
         return this.productId;
     }
     /**
-     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
+     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
      * 
     */
     public String provisioningId() {

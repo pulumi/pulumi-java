@@ -36,7 +36,7 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
      * 
      */
     @Import(name="name")

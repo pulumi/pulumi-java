@@ -40,7 +40,7 @@ public final class ApplicationRuleConditionResponse {
     private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
     /**
      * Rule Condition Type.
-     * Expected value is 'ApplicationRuleCondition'.
+     * Expected value is &#39;ApplicationRuleCondition&#39;.
      * 
      */
     private final String ruleConditionType;
@@ -119,7 +119,7 @@ public final class ApplicationRuleConditionResponse {
     }
     /**
      * Rule Condition Type.
-     * Expected value is 'ApplicationRuleCondition'.
+     * Expected value is &#39;ApplicationRuleCondition&#39;.
      * 
     */
     public String ruleConditionType() {

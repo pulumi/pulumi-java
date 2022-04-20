@@ -41,7 +41,7 @@ public final class ContainerAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource ID of the Container App's KubeEnvironment.
+     * Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
     @Import(name="kubeEnvironmentId")

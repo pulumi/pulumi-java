@@ -135,7 +135,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The current version of the distribution's information. For example:
+     * The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
      */
@@ -295,7 +295,7 @@ public final class DistributionState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The current status of the distribution. `Deployed` if the
-     * distribution's information is fully propagated throughout the Amazon
+     * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
      */

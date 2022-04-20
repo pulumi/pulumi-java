@@ -17,7 +17,7 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     public static final StreamingImageArgs Empty = new StreamingImageArgs();
 
     /**
-     * <p>A human-readable description of the streaming image.</p>
+     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
      */
     @Import(name="description")
@@ -28,7 +28,7 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
      * 
      */
     @Import(name="ec2ImageId", required=true)
@@ -39,7 +39,7 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * <p>A friendly name for a streaming image resource.</p>
+     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -50,7 +50,7 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * <p>The studioId. </p>
+     * &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     @Import(name="studioId", required=true)

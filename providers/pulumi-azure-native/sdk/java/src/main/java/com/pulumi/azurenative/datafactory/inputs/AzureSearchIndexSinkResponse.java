@@ -66,7 +66,7 @@ public final class AzureSearchIndexSinkResponse extends com.pulumi.resources.Inv
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureSearchIndexSink'.
+     * Expected value is &#39;AzureSearchIndexSink&#39;.
      * 
      */
     @Import(name="type", required=true)

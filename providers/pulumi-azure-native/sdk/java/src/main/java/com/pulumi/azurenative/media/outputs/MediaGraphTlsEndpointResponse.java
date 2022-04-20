@@ -21,12 +21,12 @@ public final class MediaGraphTlsEndpointResponse {
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
      * 
      */
     private final String odataType;
     /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
+     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
      * 
      */
     private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
@@ -64,14 +64,14 @@ public final class MediaGraphTlsEndpointResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
      * 
     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
+     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
      * 
     */
     public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {

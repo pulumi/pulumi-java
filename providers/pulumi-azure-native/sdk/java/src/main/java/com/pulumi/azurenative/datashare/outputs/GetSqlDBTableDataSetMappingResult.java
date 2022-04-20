@@ -32,7 +32,7 @@ public final class GetSqlDBTableDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'SqlDBTable'.
+     * Expected value is &#39;SqlDBTable&#39;.
      * 
      */
     private final String kind;
@@ -130,7 +130,7 @@ public final class GetSqlDBTableDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'SqlDBTable'.
+     * Expected value is &#39;SqlDBTable&#39;.
      * 
     */
     public String kind() {

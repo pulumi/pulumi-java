@@ -19,7 +19,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends com.pulumi.resource
     public static final InboundSamlConfigIdpConfigGetArgs Empty = new InboundSamlConfigIdpConfigGetArgs();
 
     /**
-     * The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * The IdP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
      */

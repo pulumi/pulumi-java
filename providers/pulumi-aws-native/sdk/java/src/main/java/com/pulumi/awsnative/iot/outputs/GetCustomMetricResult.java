@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCustomMetricResult {
     /**
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
     private final @Nullable String displayName;
@@ -40,7 +40,7 @@ public final class GetCustomMetricResult {
     }
 
     /**
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
     */
     public Optional<String> displayName() {

@@ -22,7 +22,7 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
     public static final NamespaceStatusArgs Empty = new NamespaceStatusArgs();
 
     /**
-     * Represents the latest available observations of a namespace's current state.
+     * Represents the latest available observations of a namespace&#39;s current state.
      * 
      */
     @Import(name="conditions")
@@ -36,8 +36,8 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
      * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      * Possible enum values:
-     *  - `"Active"` means the namespace is available for use in the system
-     *  - `"Terminating"` means the namespace is undergoing graceful termination
+     *  - `&#34;Active&#34;` means the namespace is available for use in the system
+     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
      * 
      */
     @Import(name="phase")

@@ -66,7 +66,7 @@ public final class SapBWLinkedServiceResponse {
     private final Object systemNumber;
     /**
      * Type of linked service.
-     * Expected value is 'SapBW'.
+     * Expected value is &#39;SapBW&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class SapBWLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapBW'.
+     * Expected value is &#39;SapBW&#39;.
      * 
     */
     public String type() {

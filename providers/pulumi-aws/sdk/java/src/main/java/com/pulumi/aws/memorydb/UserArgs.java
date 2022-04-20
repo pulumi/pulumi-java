@@ -29,7 +29,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Denotes the user's authentication properties. Detailed below.
+     * Denotes the user&#39;s authentication properties. Detailed below.
      * 
      */
     @Import(name="authenticationMode", required=true)

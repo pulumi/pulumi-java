@@ -45,7 +45,7 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.
+     * OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don&#39;t support breaking down by location, setting this field will result in an error.
      * 
      */
     @Import(name="location")
@@ -56,7 +56,7 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.
+     * OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service&#39;s methods. For service types that don&#39;t support breaking down by method, setting this field will result in an error.
      * 
      */
     @Import(name="method")
@@ -67,7 +67,7 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.
+     * OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don&#39;t support breaking down by version, setting this field will result in an error.
      * 
      */
     @Import(name="version")

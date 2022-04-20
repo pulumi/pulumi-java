@@ -32,7 +32,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
+     * Configuration block with action that you want AWS WAF to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
     @Import(name="defaultAction")

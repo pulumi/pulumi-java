@@ -19,7 +19,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * @Deprecated
+ * @deprecated
  * gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry
  * 
  */
@@ -71,8 +71,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
     /**
      * The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
      * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
-     * "DEBUG"]
+     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
+     * &#34;DEBUG&#34;]
      * 
      */
     @Export(name="logLevel", type=String.class, parameters={})
@@ -81,8 +81,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
     /**
      * @return The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
      * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO",
-     * "DEBUG"]
+     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
+     * &#34;DEBUG&#34;]
      * 
      */
     public Output</* @Nullable */ String> logLevel() {

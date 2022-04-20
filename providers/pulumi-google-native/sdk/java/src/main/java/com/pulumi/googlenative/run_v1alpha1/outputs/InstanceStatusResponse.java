@@ -17,7 +17,7 @@ public final class InstanceStatusResponse {
      */
     private final String completionTime;
     /**
-     * Optional. The number of times this instance exited with code > 0; +optional
+     * Optional. The number of times this instance exited with code &gt; 0; +optional
      * 
      */
     private final Integer failed;
@@ -80,7 +80,7 @@ public final class InstanceStatusResponse {
         return this.completionTime;
     }
     /**
-     * Optional. The number of times this instance exited with code > 0; +optional
+     * Optional. The number of times this instance exited with code &gt; 0; +optional
      * 
     */
     public Integer failed() {

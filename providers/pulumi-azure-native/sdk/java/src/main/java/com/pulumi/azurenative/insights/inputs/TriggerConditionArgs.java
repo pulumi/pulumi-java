@@ -46,7 +46,7 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
      * 
      */
     @Import(name="thresholdOperator", required=true)

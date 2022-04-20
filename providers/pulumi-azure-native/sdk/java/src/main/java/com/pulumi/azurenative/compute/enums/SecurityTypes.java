@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.
+     * Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. &lt;br&gt;&lt;br&gt; Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.
      * 
      */
     @EnumType

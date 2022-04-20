@@ -41,7 +41,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A window is good if the metric's value is in a good range, averaged across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
      * 
      */
     @Import(name="metricMeanInRange", required=true)
@@ -52,7 +52,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A window is good if the metric's value is in a good range, summed across returned streams.
+     * A window is good if the metric&#39;s value is in a good range, summed across returned streams.
      * 
      */
     @Import(name="metricSumInRange", required=true)

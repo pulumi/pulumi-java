@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DashboardDateTimeParameter {
     /**
-     * <p>A display name for the date-time parameter.</p>
+     * &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
      * 
      */
     private final String name;
     /**
-     * <p>The values for the date-time parameter.</p>
+     * &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
      * 
      */
     private final List<String> values;
@@ -30,14 +30,14 @@ public final class DashboardDateTimeParameter {
     }
 
     /**
-     * <p>A display name for the date-time parameter.</p>
+     * &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * <p>The values for the date-time parameter.</p>
+     * &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
      * 
     */
     public List<String> values() {

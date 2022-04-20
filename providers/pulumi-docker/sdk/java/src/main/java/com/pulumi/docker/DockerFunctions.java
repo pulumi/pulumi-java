@@ -37,7 +37,7 @@ public final class DockerFunctions {
      * - **options** (Map of String) Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * - **scope** (String) Scope of the network. One of `swarm`, `global`, or `local`.
      * 
-     * <a id="nestedatt--ipam_config"></a>
+     * &lt;a id=&#34;nestedatt--ipam_config&#34;&gt;&lt;/a&gt;
      * ### Nested Schema for `ipam_config`
      * 
      * Read-Only:
@@ -60,8 +60,8 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      * ### With alias
-     * data "docker.Plugin" "by_alias" {
-     *   alias = "sample-volume-plugin:latest"
+     * data &#34;docker.Plugin&#34; &#34;by_alias&#34; {
+     *   alias = &#34;sample-volume-plugin:latest&#34;
      * }
      * ## Schema
      * 
@@ -130,7 +130,7 @@ public final class DockerFunctions {
      * 
      * ### Read-Only
      * 
-     * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`. It may be empty in the edge case where the local image was pulled from a repo, tagged locally, and then referred to in the data source by that local name/tag.
+     * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`. It may be empty in the edge case where the local image was pulled from a repo, tagged locally, and then referred to in the data source by that local name/tag.
      * 
      */
     public static CompletableFuture<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args) {

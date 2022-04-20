@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
+ * RoutingVPC contains information about the VPC networks that are associated with a hub&#39;s spokes.
  * 
  */
 public final class RoutingVPCArgs extends com.pulumi.resources.ResourceArgs {

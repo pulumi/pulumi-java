@@ -20,7 +20,7 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     public static final ScriptsToExecuteArgs Empty = new ScriptsToExecuteArgs();
 
     /**
-     * Script that's run only once during provision of the compute.
+     * Script that&#39;s run only once during provision of the compute.
      * 
      */
     @Import(name="creationScript")
@@ -31,7 +31,7 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Script that's run every time the machine starts.
+     * Script that&#39;s run every time the machine starts.
      * 
      */
     @Import(name="startupScript")

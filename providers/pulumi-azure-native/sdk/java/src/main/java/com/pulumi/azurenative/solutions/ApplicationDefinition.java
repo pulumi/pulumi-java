@@ -211,14 +211,14 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
         return this.managedBy;
     }
     /**
-     * The managed application management policy that determines publisher's access to the managed resource group.
+     * The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
      */
     @Export(name="managementPolicy", type=ApplicationManagementPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy;
 
     /**
-     * @return The managed application management policy that determines publisher's access to the managed resource group.
+     * @return The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
      */
     public Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy() {

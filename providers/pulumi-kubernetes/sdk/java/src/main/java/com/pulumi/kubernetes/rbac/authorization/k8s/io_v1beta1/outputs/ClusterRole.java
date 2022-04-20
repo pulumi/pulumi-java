@@ -31,7 +31,7 @@ public final class ClusterRole {
      */
     private final @Nullable String kind;
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     private final @Nullable ObjectMeta metadata;
@@ -77,7 +77,7 @@ public final class ClusterRole {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
     */
     public Optional<ObjectMeta> metadata() {

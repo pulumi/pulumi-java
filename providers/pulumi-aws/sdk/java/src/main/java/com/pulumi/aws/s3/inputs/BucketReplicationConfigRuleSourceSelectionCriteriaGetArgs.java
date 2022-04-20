@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs ext
     public static final BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs Empty = new BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs();
 
     /**
-     * A configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when `filter` is specified), you can specify this element and set the status to `Enabled` to replicate modifications on replicas.
+     * A configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn&#39;t replicate replica modifications by default. In the latest version of replication configuration (when `filter` is specified), you can specify this element and set the status to `Enabled` to replicate modifications on replicas.
      * 
      */
     @Import(name="replicaModifications")

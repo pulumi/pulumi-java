@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse {
     /**
-     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.
+     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
      * 
      */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
@@ -79,7 +79,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     }
 
     /**
-     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.
+     * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ &#34;gcr.io/project-foo&#34;, &#34;gcr.io/project-bar/repo-baz&#34;, ] } will allow any repositories under &#34;gcr.io/project-foo&#34; plus the repository &#34;gcr.io/project-bar/repo-baz&#34;. Default (UNSPECIFIED) is equivalent to any source is allowed.
      * 
     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources() {

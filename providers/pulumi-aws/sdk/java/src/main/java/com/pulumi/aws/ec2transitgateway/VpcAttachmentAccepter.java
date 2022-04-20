@@ -17,12 +17,12 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Manages the accepter's side of an EC2 Transit Gateway VPC Attachment.
+ * Manages the accepter&#39;s side of an EC2 Transit Gateway VPC Attachment.
  * 
- * When a cross-account (requester's AWS account differs from the accepter's AWS account) EC2 Transit Gateway VPC Attachment
- * is created, an EC2 Transit Gateway VPC Attachment resource is automatically created in the accepter's account.
+ * When a cross-account (requester&#39;s AWS account differs from the accepter&#39;s AWS account) EC2 Transit Gateway VPC Attachment
+ * is created, an EC2 Transit Gateway VPC Attachment resource is automatically created in the accepter&#39;s account.
  * The requester can use the `aws.ec2transitgateway.VpcAttachment` resource to manage its side of the connection
- * and the accepter can use the `aws.ec2transitgateway.VpcAttachmentAccepter` resource to "adopt" its side of the
+ * and the accepter can use the `aws.ec2transitgateway.VpcAttachmentAccepter` resource to &#34;adopt&#34; its side of the
  * connection into management.
  * 
  * ## Example Usage

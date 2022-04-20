@@ -18,7 +18,7 @@ public final class AudioEncoderAacResponse {
     private final @Nullable String bitrateKbps;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
      * 
      */
     private final String type;
@@ -40,7 +40,7 @@ public final class AudioEncoderAacResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
      * 
     */
     public String type() {

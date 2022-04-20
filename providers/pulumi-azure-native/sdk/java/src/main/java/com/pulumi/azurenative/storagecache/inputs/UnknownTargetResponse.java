@@ -20,7 +20,7 @@ public final class UnknownTargetResponse extends com.pulumi.resources.InvokeArgs
     public static final UnknownTargetResponse Empty = new UnknownTargetResponse();
 
     /**
-     * Dictionary of string->string pairs containing information about the Storage Target.
+     * Dictionary of string-&gt;string pairs containing information about the Storage Target.
      * 
      */
     @Import(name="attributes")

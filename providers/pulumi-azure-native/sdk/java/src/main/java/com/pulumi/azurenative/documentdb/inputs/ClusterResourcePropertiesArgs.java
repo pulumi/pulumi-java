@@ -28,7 +28,7 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
     public static final ClusterResourcePropertiesArgs Empty = new ClusterResourcePropertiesArgs();
 
     /**
-     * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
+     * Which authentication method Cassandra should use to authenticate clients. &#39;None&#39; turns off authentication, so should not be used except in emergencies. &#39;Cassandra&#39; is the default password based authentication. The default is &#39;Cassandra&#39;.
      * 
      */
     @Import(name="authenticationMethod")
@@ -72,7 +72,7 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
+     * Resource id of a subnet that this cluster&#39;s management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;
      * 
      */
     @Import(name="delegatedManagementSubnetId")
@@ -116,7 +116,7 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
+     * Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is &#39;Cassandra&#39;.
      * 
      */
     @Import(name="initialCassandraAdminPassword")

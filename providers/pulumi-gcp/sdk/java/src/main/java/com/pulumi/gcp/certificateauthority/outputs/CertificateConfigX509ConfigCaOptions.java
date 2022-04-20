@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateConfigX509ConfigCaOptions {
     /**
-     * When true, the "CA" in Basic Constraints extension will be set to true.
+     * When true, the &#34;CA&#34; in Basic Constraints extension will be set to true.
      * 
      */
     private final @Nullable Boolean isCa;
     /**
-     * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
+     * Refers to the &#34;path length constraint&#34; in Basic Constraints extension. For a CA certificate, this value describes the depth of
      * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
      * 
      */
     private final @Nullable Integer maxIssuerPathLength;
     /**
-     * When true, the "CA" in Basic Constraints extension will be set to false.
+     * When true, the &#34;CA&#34; in Basic Constraints extension will be set to false.
      * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
      * 
      */
     private final @Nullable Boolean nonCa;
     /**
-     * When true, the "path length constraint" in Basic Constraints extension will be set to 0.
+     * When true, the &#34;path length constraint&#34; in Basic Constraints extension will be set to 0.
      * if both `max_issuer_path_length` and `zero_max_issuer_path_length` are unset,
      * the max path length will be omitted from the CA certificate.
      * 
@@ -50,14 +50,14 @@ public final class CertificateConfigX509ConfigCaOptions {
     }
 
     /**
-     * When true, the "CA" in Basic Constraints extension will be set to true.
+     * When true, the &#34;CA&#34; in Basic Constraints extension will be set to true.
      * 
     */
     public Optional<Boolean> isCa() {
         return Optional.ofNullable(this.isCa);
     }
     /**
-     * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
+     * Refers to the &#34;path length constraint&#34; in Basic Constraints extension. For a CA certificate, this value describes the depth of
      * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
      * 
     */
@@ -65,7 +65,7 @@ public final class CertificateConfigX509ConfigCaOptions {
         return Optional.ofNullable(this.maxIssuerPathLength);
     }
     /**
-     * When true, the "CA" in Basic Constraints extension will be set to false.
+     * When true, the &#34;CA&#34; in Basic Constraints extension will be set to false.
      * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
      * 
     */
@@ -73,7 +73,7 @@ public final class CertificateConfigX509ConfigCaOptions {
         return Optional.ofNullable(this.nonCa);
     }
     /**
-     * When true, the "path length constraint" in Basic Constraints extension will be set to 0.
+     * When true, the &#34;path length constraint&#34; in Basic Constraints extension will be set to 0.
      * if both `max_issuer_path_length` and `zero_max_issuer_path_length` are unset,
      * the max path length will be omitted from the CA certificate.
      * 

@@ -33,7 +33,7 @@ public final class DataLakeAnalyticsArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The type of compute
-     * Expected value is 'DataLakeAnalytics'.
+     * Expected value is &#39;DataLakeAnalytics&#39;.
      * 
      */
     @Import(name="computeType", required=true)

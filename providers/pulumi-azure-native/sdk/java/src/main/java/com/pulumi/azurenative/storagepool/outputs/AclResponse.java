@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class AclResponse {
     /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
      * 
      */
     private final String initiatorIqn;
@@ -44,7 +44,7 @@ public final class AclResponse {
     }
 
     /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
      * 
     */
     public String initiatorIqn() {

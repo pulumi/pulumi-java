@@ -92,7 +92,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeStore'.
+     * Expected value is &#39;AzureDataLakeStore&#39;.
      * 
      */
     private final String type;
@@ -231,7 +231,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeStore'.
+     * Expected value is &#39;AzureDataLakeStore&#39;.
      * 
     */
     public String type() {

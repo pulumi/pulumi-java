@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorModelIotTopicPublish {
     /**
-     * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
+     * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.&lt;variable-name&gt;`) and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the topic string.
      * 
      */
     private final String mqttTopic;
@@ -28,7 +28,7 @@ public final class DetectorModelIotTopicPublish {
     }
 
     /**
-     * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
+     * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.&lt;variable-name&gt;`) and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the topic string.
      * 
     */
     public String mqttTopic() {

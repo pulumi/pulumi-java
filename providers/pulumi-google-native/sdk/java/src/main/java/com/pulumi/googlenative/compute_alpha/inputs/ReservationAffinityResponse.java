@@ -40,7 +40,7 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or "projects/different-project/reservations/some-reservation-name" to target a shared reservation in the same zone but in a different project.
+     * Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or &#34;projects/different-project/reservations/some-reservation-name&#34; to target a shared reservation in the same zone but in a different project.
      * 
      */
     @Import(name="values", required=true)

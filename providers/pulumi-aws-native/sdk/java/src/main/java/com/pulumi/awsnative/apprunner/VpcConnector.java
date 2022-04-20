@@ -78,28 +78,28 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
         return this.vpcConnectorArn;
     }
     /**
-     * A name for the VPC connector. If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     * A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
     @Export(name="vpcConnectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcConnectorName;
 
     /**
-     * @return A name for the VPC connector. If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     * @return A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
     public Output</* @Nullable */ String> vpcConnectorName() {
         return this.vpcConnectorName;
     }
     /**
-     * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
+     * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
      * 
      */
     @Export(name="vpcConnectorRevision", type=Integer.class, parameters={})
     private Output<Integer> vpcConnectorRevision;
 
     /**
-     * @return The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
+     * @return The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
      * 
      */
     public Output<Integer> vpcConnectorRevision() {

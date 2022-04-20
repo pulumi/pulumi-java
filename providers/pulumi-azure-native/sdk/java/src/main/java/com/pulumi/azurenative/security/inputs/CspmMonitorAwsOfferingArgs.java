@@ -33,7 +33,7 @@ public final class CspmMonitorAwsOfferingArgs extends com.pulumi.resources.Resou
 
     /**
      * The type of the security offering.
-     * Expected value is 'CspmMonitorAws'.
+     * Expected value is &#39;CspmMonitorAws&#39;.
      * 
      */
     @Import(name="offeringType", required=true)

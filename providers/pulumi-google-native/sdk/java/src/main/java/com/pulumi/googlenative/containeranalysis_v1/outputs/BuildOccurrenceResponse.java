@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class BuildOccurrenceResponse {
     /**
-     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
+     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
      */
     private final InTotoStatementResponse intotoStatement;
@@ -38,7 +38,7 @@ public final class BuildOccurrenceResponse {
     }
 
     /**
-     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
+     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
     */
     public InTotoStatementResponse intotoStatement() {

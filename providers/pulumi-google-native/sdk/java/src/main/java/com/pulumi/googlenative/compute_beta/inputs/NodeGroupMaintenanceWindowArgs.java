@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Time window specified for daily maintenance operations. GCE's internal maintenance will be performed within this window.
+ * Time window specified for daily maintenance operations. GCE&#39;s internal maintenance will be performed within this window.
  * 
  */
 public final class NodeGroupMaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {

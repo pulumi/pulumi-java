@@ -22,7 +22,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     public static final BuildStepArgs Empty = new BuildStepArgs();
 
     /**
-     * A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
+     * A list of arguments that will be presented to the step when it is started. If the image used to run the step&#39;s container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
      * 
      */
     @Import(name="args")
@@ -33,7 +33,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Working directory to use when running this step's container. If this value is a relative path, it is relative to the build's working directory. If this value is absolute, it may be outside the build's working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step's execution.
+     * Working directory to use when running this step&#39;s container. If this value is a relative path, it is relative to the build&#39;s working directory. If this value is absolute, it may be outside the build&#39;s working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step&#39;s execution.
      * 
      */
     @Import(name="dir")
@@ -44,7 +44,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Entrypoint to be used instead of the build step image's default entrypoint. If unset, the image's default entrypoint is used.
+     * Entrypoint to be used instead of the build step image&#39;s default entrypoint. If unset, the image&#39;s default entrypoint is used.
      * 
      */
     @Import(name="entrypoint")
@@ -55,7 +55,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * A list of environment variable definitions to be used when running a step. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
      */
     @Import(name="env")
@@ -77,7 +77,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the container image that will run this particular build step. If the image is available in the host's Docker daemon's cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account's credentials if necessary. The Docker daemon's cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like "ubuntu", "debian", but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host's Docker daemon's cache and is available to use as the name for a later build step.
+     * The name of the container image that will run this particular build step. If the image is available in the host&#39;s Docker daemon&#39;s cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account&#39;s credentials if necessary. The Docker daemon&#39;s cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host&#39;s Docker daemon&#39;s cache and is available to use as the name for a later build step.
      * 
      */
     @Import(name="name", required=true)
@@ -99,7 +99,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`.
+     * A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`.
      * 
      */
     @Import(name="secretEnv")

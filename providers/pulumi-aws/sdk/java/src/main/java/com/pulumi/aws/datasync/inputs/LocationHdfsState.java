@@ -98,7 +98,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URI of the HDFS cluster's Key Management Server (KMS).
+     * The URI of the HDFS cluster&#39;s Key Management Server (KMS).
      * 
      */
     @Import(name="kmsKeyProviderUri")
@@ -120,7 +120,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn't specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+     * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
     @Import(name="qopConfiguration")
@@ -153,7 +153,7 @@ public final class LocationHdfsState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn't specified, it will default to /.
+     * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
      * 
      */
     @Import(name="subdirectory")

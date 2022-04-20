@@ -111,7 +111,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
 
     /**
      * Copy source type.
-     * Expected value is 'AmazonRedshiftSource'.
+     * Expected value is &#39;AmazonRedshiftSource&#39;.
      * 
      */
     @Import(name="type", required=true)

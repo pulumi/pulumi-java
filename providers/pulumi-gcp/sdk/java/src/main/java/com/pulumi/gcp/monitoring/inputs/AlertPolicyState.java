@@ -23,7 +23,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     public static final AlertPolicyState Empty = new AlertPolicyState();
 
     /**
-     * Control over how this alert policy's notification channels are notified.
+     * Control over how this alert policy&#39;s notification channels are notified.
      * Structure is documented below.
      * 
      */
@@ -77,7 +77,7 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     /**
      * A short name or phrase used to identify the
      * condition in dashboards, notifications, and
-     * incidents. To avoid confusion, don't use the same
+     * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 

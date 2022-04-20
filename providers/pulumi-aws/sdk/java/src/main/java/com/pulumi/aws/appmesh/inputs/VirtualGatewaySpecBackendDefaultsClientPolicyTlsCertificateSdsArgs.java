@@ -15,7 +15,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSd
     public static final VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs Empty = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs();
 
     /**
-     * The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * The name of the secret for a virtual gateway&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
      */
     @Import(name="secretName", required=true)

@@ -91,7 +91,7 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
     }
 
     /**
-     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+     * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. &#34;2019-04-17&#34;
      * 
      */
     @Import(name="snapshotDate")

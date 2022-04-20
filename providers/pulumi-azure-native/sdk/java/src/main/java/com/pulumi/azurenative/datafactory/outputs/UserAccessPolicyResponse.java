@@ -22,7 +22,7 @@ public final class UserAccessPolicyResponse {
      */
     private final @Nullable String expireTime;
     /**
-     * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
+     * The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
      */
     private final @Nullable String permissions;
@@ -66,7 +66,7 @@ public final class UserAccessPolicyResponse {
         return Optional.ofNullable(this.expireTime);
     }
     /**
-     * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
+     * The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
     */
     public Optional<String> permissions() {

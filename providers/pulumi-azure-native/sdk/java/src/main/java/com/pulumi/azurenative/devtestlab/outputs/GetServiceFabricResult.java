@@ -24,7 +24,7 @@ public final class GetServiceFabricResult {
      */
     private final @Nullable String environmentId;
     /**
-     * The backing service fabric resource's id
+     * The backing service fabric resource&#39;s id
      * 
      */
     private final @Nullable String externalServiceFabricId;
@@ -103,7 +103,7 @@ public final class GetServiceFabricResult {
         return Optional.ofNullable(this.environmentId);
     }
     /**
-     * The backing service fabric resource's id
+     * The backing service fabric resource&#39;s id
      * 
     */
     public Optional<String> externalServiceFabricId() {

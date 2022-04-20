@@ -76,7 +76,7 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
     @Import(name="vms")

@@ -59,7 +59,7 @@ public final class EloquaObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'EloquaObject'.
+     * Expected value is &#39;EloquaObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class EloquaObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'EloquaObject'.
+     * Expected value is &#39;EloquaObject&#39;.
      * 
     */
     public String type() {

@@ -69,7 +69,7 @@ public final class EntityTypeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
+     * The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.
      * 
      */
     @Import(name="name")

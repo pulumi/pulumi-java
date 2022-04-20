@@ -34,7 +34,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
+     * &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
      * 
      */
     @Import(name="columnGroups")
@@ -87,7 +87,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The display name for the dataset.</p>
+     * &lt;p&gt;The display name for the dataset.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -98,7 +98,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A list of resource permissions on the dataset.</p>
+     * &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -123,7 +123,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
      * 
      */
     @Import(name="tags")

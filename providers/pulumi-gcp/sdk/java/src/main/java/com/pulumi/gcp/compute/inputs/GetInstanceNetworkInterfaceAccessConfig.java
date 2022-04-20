@@ -13,7 +13,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends com.pulumi.re
     public static final GetInstanceNetworkInterfaceAccessConfig Empty = new GetInstanceNetworkInterfaceAccessConfig();
 
     /**
-     * The IP address that is be 1:1 mapped to the instance's
+     * The IP address that is be 1:1 mapped to the instance&#39;s
      * network ip.
      * 
      */

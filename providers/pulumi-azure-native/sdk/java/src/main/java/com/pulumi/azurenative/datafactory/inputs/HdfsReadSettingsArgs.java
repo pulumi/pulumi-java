@@ -89,7 +89,7 @@ public final class HdfsReadSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -100,7 +100,7 @@ public final class HdfsReadSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -134,7 +134,7 @@ public final class HdfsReadSettingsArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The read setting type.
-     * Expected value is 'HdfsReadSettings'.
+     * Expected value is &#39;HdfsReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

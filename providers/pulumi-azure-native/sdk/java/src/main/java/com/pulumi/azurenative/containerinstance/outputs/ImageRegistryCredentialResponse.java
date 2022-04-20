@@ -17,7 +17,7 @@ public final class ImageRegistryCredentialResponse {
      */
     private final @Nullable String password;
     /**
-     * The Docker image registry server without a protocol such as "http" and "https".
+     * The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
      * 
      */
     private final String server;
@@ -45,7 +45,7 @@ public final class ImageRegistryCredentialResponse {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The Docker image registry server without a protocol such as "http" and "https".
+     * The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
      * 
     */
     public String server() {

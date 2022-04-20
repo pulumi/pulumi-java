@@ -53,7 +53,7 @@ public final class ProcessServerResponse {
      */
     private final @Nullable String cpuLoadStatus;
     /**
-     * The Process Server's friendly name.
+     * The Process Server&#39;s friendly name.
      * 
      */
     private final @Nullable String friendlyName;
@@ -324,7 +324,7 @@ public final class ProcessServerResponse {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
     /**
-     * The Process Server's friendly name.
+     * The Process Server&#39;s friendly name.
      * 
     */
     public Optional<String> friendlyName() {

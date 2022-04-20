@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * S3 location of bot definitions zip file, if it's not defined inline in CloudFormation.
+ * S3 location of bot definitions zip file, if it&#39;s not defined inline in CloudFormation.
  * 
  */
 public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {

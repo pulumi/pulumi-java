@@ -113,7 +113,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.
+     * Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
     @Import(name="machineType", required=true)
@@ -135,7 +135,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
      */
     @Import(name="network", required=true)
@@ -212,7 +212,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".
+     * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
      * 
      */
     @Import(name="subnetwork", required=true)
@@ -234,7 +234,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+     * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
     @Import(name="teardownPolicy", required=true)

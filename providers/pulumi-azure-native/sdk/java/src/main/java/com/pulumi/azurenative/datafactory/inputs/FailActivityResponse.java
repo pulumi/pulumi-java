@@ -46,7 +46,7 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="errorCode", required=true)
@@ -57,7 +57,7 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="message", required=true)
@@ -80,7 +80,7 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Fail'.
+     * Expected value is &#39;Fail&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -17,7 +17,7 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     public static final SourceContextResponse Empty = new SourceContextResponse();
 
     /**
-     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
+     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
      * 
      */
     @Import(name="fileName", required=true)

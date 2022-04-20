@@ -45,7 +45,7 @@ public final class PatchInstanceFilterArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     @Import(name="instanceNamePrefixes")

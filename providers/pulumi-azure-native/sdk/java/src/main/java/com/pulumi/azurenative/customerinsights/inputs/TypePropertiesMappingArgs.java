@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Metadata for a Link's property mapping.
+ * Metadata for a Link&#39;s property mapping.
  * 
  */
 public final class TypePropertiesMappingArgs extends com.pulumi.resources.ResourceArgs {

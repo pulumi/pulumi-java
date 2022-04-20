@@ -17,7 +17,7 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
     public static final MatchingCriteriaResponse Empty = new MatchingCriteriaResponse();
 
     /**
-     * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+     * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the &#39;type&#39; attribute.
      * 
      */
     @Import(name="attribute", required=true)

@@ -21,7 +21,7 @@ public final class DeliveryRuleCookiesConditionArgs extends com.pulumi.resources
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'Cookies'.
+     * Expected value is &#39;Cookies&#39;.
      * 
      */
     @Import(name="name", required=true)

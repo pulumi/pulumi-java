@@ -126,7 +126,7 @@ public final class ImpalaObjectDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'ImpalaObject'.
+     * Expected value is &#39;ImpalaObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -122,7 +122,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The daily time range (in UTC) during which
-     * automated backups are created if they are enabled. Example: "09:46-10:16". Must
+     * automated backups are created if they are enabled. Example: &#34;09:46-10:16&#34;. Must
      * not overlap with `maintenance_window`.
      * 
      */
@@ -146,7 +146,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The character set name to use for DB
-     * encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+     * encoding in Oracle and Microsoft SQL instances (collation). This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
      * or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
      * 
@@ -209,7 +209,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+     * If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
     @Import(name="deletionProtection")
@@ -266,7 +266,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     /**
      * (Required unless a `snapshot_identifier` or `replicate_source_db`
      * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
+     * Note that for Amazon Aurora instances the engine must match the `DB cluster`&#39;s engine&#39;.
      * For information on the difference between the available Aurora MySQL engines
      * see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
      * in the Amazon RDS User Guide.
@@ -284,7 +284,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
      * The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`&#39;s engine version&#39;.
      * 
      */
     @Import(name="engineVersion")
@@ -380,7 +380,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The amount of provisioned IOPS. Setting this implies a
-     * storage_type of "io1".
+     * storage_type of &#34;io1&#34;.
      * 
      */
     @Import(name="iops")
@@ -427,7 +427,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00". See [RDS
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;. See [RDS
      * Maintenance Window
      * docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * for more information.
@@ -503,7 +503,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+     * The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
      * 
      */
@@ -573,7 +573,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     @Import(name="performanceInsightsRetentionPeriod")
@@ -707,7 +707,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether or not to create this
-     * database from a snapshot. This correlates to the snapshot ID you'd find in the
+     * database from a snapshot. This correlates to the snapshot ID you&#39;d find in the
      * RDS console, e.g: rds:production-2015-06-26-06-05.
      * 
      */
@@ -744,9 +744,9 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * One of "standard" (magnetic), "gp2" (general
-     * purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
-     * specified, "gp2" if not.
+     * One of &#34;standard&#34; (magnetic), &#34;gp2&#34; (general
+     * purpose SSD), or &#34;io1&#34; (provisioned IOPS SSD). The default is &#34;io1&#34; if `iops` is
+     * specified, &#34;gp2&#34; if not.
      * 
      */
     @Import(name="storageType")

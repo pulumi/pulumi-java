@@ -217,14 +217,14 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
+     * When the application&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
      */
     @Export(name="unhealthyEvaluation", type=String.class, parameters={})
     private Output<String> unhealthyEvaluation;
 
     /**
-     * @return When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
+     * @return When the application&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
      */
     public Output<String> unhealthyEvaluation() {

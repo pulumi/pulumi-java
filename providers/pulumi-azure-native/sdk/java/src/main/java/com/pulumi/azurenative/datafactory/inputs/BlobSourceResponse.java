@@ -99,7 +99,7 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'BlobSource'.
+     * Expected value is &#39;BlobSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -50,7 +50,7 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Expected value is 'Auto'.
+     * Expected value is &#39;Auto&#39;.
      * 
      */
     @Import(name="scaleType", required=true)

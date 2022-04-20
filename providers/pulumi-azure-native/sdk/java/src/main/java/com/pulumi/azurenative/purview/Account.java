@@ -84,14 +84,14 @@ public class Account extends com.pulumi.resources.CustomResource {
         return this.createdBy;
     }
     /**
-     * Gets the creators of the entity's object id.
+     * Gets the creators of the entity&#39;s object id.
      * 
      */
     @Export(name="createdByObjectId", type=String.class, parameters={})
     private Output<String> createdByObjectId;
 
     /**
-     * @return Gets the creators of the entity's object id.
+     * @return Gets the creators of the entity&#39;s object id.
      * 
      */
     public Output<String> createdByObjectId() {

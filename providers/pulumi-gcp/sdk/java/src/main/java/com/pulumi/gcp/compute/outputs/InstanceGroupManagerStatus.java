@@ -25,7 +25,7 @@ public final class InstanceGroupManagerStatus {
      */
     private final @Nullable List<InstanceGroupManagerStatusStateful> statefuls;
     /**
-     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
      * 
      */
     private final @Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets;
@@ -55,7 +55,7 @@ public final class InstanceGroupManagerStatus {
         return this.statefuls == null ? List.of() : this.statefuls;
     }
     /**
-     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
+     * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances&#39; target version are specified by version field on Instance Group Manager.
      * 
     */
     public List<InstanceGroupManagerStatusVersionTarget> versionTargets() {

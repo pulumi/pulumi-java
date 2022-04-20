@@ -71,7 +71,7 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The target Azure AD Id. Can't be combined with email.
+     * The target Azure AD Id. Can&#39;t be combined with email.
      * 
      */
     @Import(name="targetActiveDirectoryId")

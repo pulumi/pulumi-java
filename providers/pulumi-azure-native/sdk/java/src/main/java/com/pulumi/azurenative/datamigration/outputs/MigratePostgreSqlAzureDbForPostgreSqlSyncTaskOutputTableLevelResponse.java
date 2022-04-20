@@ -67,7 +67,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
     private final String lastModifiedTime;
     /**
      * Result type
-     * Expected value is 'TableLevelOutput'.
+     * Expected value is &#39;TableLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -200,7 +200,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
     }
     /**
      * Result type
-     * Expected value is 'TableLevelOutput'.
+     * Expected value is &#39;TableLevelOutput&#39;.
      * 
     */
     public String resultType() {

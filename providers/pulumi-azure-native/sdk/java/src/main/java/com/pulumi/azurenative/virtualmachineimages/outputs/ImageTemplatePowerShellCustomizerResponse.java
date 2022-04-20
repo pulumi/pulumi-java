@@ -45,8 +45,8 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      */
     private final @Nullable String sha256Checksum;
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'PowerShell'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;PowerShell&#39;.
      * 
      */
     private final String type;
@@ -119,8 +119,8 @@ public final class ImageTemplatePowerShellCustomizerResponse {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'PowerShell'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;PowerShell&#39;.
      * 
     */
     public String type() {

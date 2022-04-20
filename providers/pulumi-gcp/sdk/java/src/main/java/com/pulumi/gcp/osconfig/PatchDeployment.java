@@ -50,16 +50,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:osconfig/patchDeployment:PatchDeployment")
 public class PatchDeployment extends com.pulumi.resources.CustomResource {
     /**
-     * Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
-     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
-     * @return Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
-     * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * @return Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> createTime() {
@@ -81,7 +81,7 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
     }
     /**
      * Duration of the patch. After the duration ends, the patch times out.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
     @Export(name="duration", type=String.class, parameters={})
@@ -89,7 +89,7 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Duration of the patch. After the duration ends, the patch times out.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
     public Output</* @Nullable */ String> duration() {
@@ -114,7 +114,7 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
     /**
      * - 
      * The time the last patch job ran successfully.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="lastExecuteTime", type=String.class, parameters={})
@@ -123,7 +123,7 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
     /**
      * @return -
      * The time the last patch job ran successfully.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> lastExecuteTime() {
@@ -250,16 +250,16 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
         return this.rollout;
     }
     /**
-     * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
-     * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+     * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
-     * @return Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
-     * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * @return Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+     * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> updateTime() {

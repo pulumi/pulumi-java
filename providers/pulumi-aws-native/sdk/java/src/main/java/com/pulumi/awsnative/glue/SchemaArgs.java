@@ -40,7 +40,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
      * 
      */
     @Import(name="dataFormat", required=true)

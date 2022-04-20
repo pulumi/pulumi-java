@@ -27,7 +27,7 @@ public final class GetClusterResult {
      */
     private final String dataIngestionUri;
     /**
-     * A boolean value that indicates if the cluster's disks are encrypted.
+     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
      */
     private final @Nullable Boolean enableDiskEncryption;
@@ -72,7 +72,7 @@ public final class GetClusterResult {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
     /**
-     * List of the cluster's language extensions.
+     * List of the cluster&#39;s language extensions.
      * 
      */
     private final LanguageExtensionsListResponse languageExtensions;
@@ -107,7 +107,7 @@ public final class GetClusterResult {
      */
     private final String state;
     /**
-     * The reason for the cluster's current state.
+     * The reason for the cluster&#39;s current state.
      * 
      */
     private final String stateReason;
@@ -117,12 +117,12 @@ public final class GetClusterResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The cluster's external tenants.
+     * The cluster&#39;s external tenants.
      * 
      */
     private final @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -202,7 +202,7 @@ public final class GetClusterResult {
         return this.dataIngestionUri;
     }
     /**
-     * A boolean value that indicates if the cluster's disks are encrypted.
+     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
     */
     public Optional<Boolean> enableDiskEncryption() {
@@ -265,7 +265,7 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
-     * List of the cluster's language extensions.
+     * List of the cluster&#39;s language extensions.
      * 
     */
     public LanguageExtensionsListResponse languageExtensions() {
@@ -314,7 +314,7 @@ public final class GetClusterResult {
         return this.state;
     }
     /**
-     * The reason for the cluster's current state.
+     * The reason for the cluster&#39;s current state.
      * 
     */
     public String stateReason() {
@@ -328,14 +328,14 @@ public final class GetClusterResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The cluster's external tenants.
+     * The cluster&#39;s external tenants.
      * 
     */
     public List<TrustedExternalTenantResponse> trustedExternalTenants() {
         return this.trustedExternalTenants == null ? List.of() : this.trustedExternalTenants;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

@@ -18,7 +18,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
     /**
-     * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
+     * The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
     @Import(name="databaseName")

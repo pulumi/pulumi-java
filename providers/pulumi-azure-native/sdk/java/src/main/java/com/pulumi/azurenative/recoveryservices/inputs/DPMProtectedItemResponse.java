@@ -177,7 +177,7 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
 
     /**
      * backup item type.
-     * Expected value is 'DPMProtectedItem'.
+     * Expected value is &#39;DPMProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

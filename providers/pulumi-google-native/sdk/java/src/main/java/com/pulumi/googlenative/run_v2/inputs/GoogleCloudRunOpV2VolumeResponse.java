@@ -30,7 +30,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)

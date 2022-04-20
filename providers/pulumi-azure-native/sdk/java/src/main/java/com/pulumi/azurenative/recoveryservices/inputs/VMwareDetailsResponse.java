@@ -160,7 +160,7 @@ public final class VMwareDetailsResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMware'.
+     * Expected value is &#39;VMware&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

@@ -27,7 +27,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
     }
 
     /**
-     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+     * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn&#39;t specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
      * 
      */
     @Import(name="imageType")

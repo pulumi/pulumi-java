@@ -22,7 +22,7 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     public static final DevicePoolRuleArgs Empty = new DevicePoolRuleArgs();
 
     /**
-     * The rule's stringified attribute.
+     * The rule&#39;s stringified attribute.
      * 
      */
     @Import(name="attribute")
@@ -33,7 +33,7 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Specifies how Device Farm compares the rule's attribute to the value.
+     * Specifies how Device Farm compares the rule&#39;s attribute to the value.
      * 
      */
     @Import(name="operator")
@@ -44,7 +44,7 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The rule's value.
+     * The rule&#39;s value.
      * 
      */
     @Import(name="value")

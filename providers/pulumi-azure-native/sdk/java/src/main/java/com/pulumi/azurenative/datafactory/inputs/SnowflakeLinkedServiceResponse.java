@@ -104,7 +104,7 @@ public final class SnowflakeLinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'Snowflake'.
+     * Expected value is &#39;Snowflake&#39;.
      * 
      */
     @Import(name="type", required=true)

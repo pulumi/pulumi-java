@@ -19,7 +19,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     public static final RegionNetworkEndpointGroupState Empty = new RegionNetworkEndpointGroupState();
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
      * Only one of cloud_run, app_engine or cloud_function may be set.
      * Structure is documented below.
      * 
@@ -32,7 +32,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     }
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
      * Only one of cloud_run, app_engine or cloud_function may be set.
      * Structure is documented below.
      * 
@@ -45,7 +45,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     }
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS".
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
      * Only one of cloud_run, app_engine or cloud_function may be set.
      * Structure is documented below.
      * 

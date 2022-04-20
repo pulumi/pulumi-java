@@ -37,7 +37,7 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
      * 
      */
     @Import(name="odataType", required=true)

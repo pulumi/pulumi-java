@@ -27,7 +27,7 @@ public final class SettingsPropertiesResponseCache {
      */
     private final String name;
     /**
-     * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+     * Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
      * 
      */
     private final @Nullable String parent;
@@ -80,7 +80,7 @@ public final class SettingsPropertiesResponseCache {
         return this.name;
     }
     /**
-     * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+     * Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
      * 
     */
     public Optional<String> parent() {

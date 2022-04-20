@@ -103,14 +103,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.bucketEncryption;
     }
     /**
-     * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+     * A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
     @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     /**
-     * @return A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+     * @return A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
     public Output</* @Nullable */ String> bucketName() {

@@ -11,7 +11,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum JobJobBenefitsItem {
         /**
-         * Default value if the type isn't specified.
+         * Default value if the type isn&#39;t specified.
          * 
          */
         JobBenefitUnspecified("JOB_BENEFIT_UNSPECIFIED"),

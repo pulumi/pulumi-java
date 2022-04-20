@@ -22,11 +22,11 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Provides an Elastic Load Balancer resource, also known as a "Classic
- * Load Balancer" after the release of
+ * Provides an Elastic Load Balancer resource, also known as a &#34;Classic
+ * Load Balancer&#34; after the release of
  * `Application/Network Load Balancers`.
  * 
- * > **NOTE on ELB Instances and ELB Attachments:** This provider currently
+ * &gt; **NOTE on ELB Instances and ELB Attachments:** This provider currently
  * provides both a standalone ELB Attachment resource
  * (describing an instance attached to an ELB), and an ELB resource with
  * `instances` defined in-line. At this time you cannot use an ELB with in-line
@@ -82,14 +82,14 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The AZ's to serve traffic in.
+     * The AZ&#39;s to serve traffic in.
      * 
      */
     @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
-     * @return The AZ's to serve traffic in.
+     * @return The AZ&#39;s to serve traffic in.
      * 
      */
     public Output<List<String>> availabilityZones() {
@@ -283,7 +283,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
     }
     /**
      * The name of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Use this for Classic or Default VPC only.
      * 
      */
@@ -292,7 +292,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The name of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Use this for Classic or Default VPC only.
      * 
      */
@@ -301,7 +301,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
     }
     /**
      * The ID of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Only available on ELBs launched in a VPC.
      * 
      */
@@ -310,7 +310,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The ID of the security group that you can use as
-     * part of your inbound rules for your load balancer's back-end application
+     * part of your inbound rules for your load balancer&#39;s back-end application
      * instances. Only available on ELBs launched in a VPC.
      * 
      */

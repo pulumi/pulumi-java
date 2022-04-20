@@ -43,7 +43,7 @@ public final class AutoscalingPolicyState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The "resource name" of the autoscaling policy.
+     * The &#34;resource name&#34; of the autoscaling policy.
      * 
      */
     @Import(name="name")

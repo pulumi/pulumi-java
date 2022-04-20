@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class CommitmentPlanPropertiesResponse {
     /**
-     * Indicates whether usage beyond the commitment plan's included quantities will be charged.
+     * Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
      * 
      */
     private final Boolean chargeForOverage;
@@ -54,12 +54,12 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final String planMeter;
     /**
-     * The frequency at which this commitment plan's included quantities are refilled.
+     * The frequency at which this commitment plan&#39;s included quantities are refilled.
      * 
      */
     private final Integer refillFrequencyInDays;
     /**
-     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
+     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
      * 
      */
     private final Boolean suspendPlanOnOverage;
@@ -89,7 +89,7 @@ public final class CommitmentPlanPropertiesResponse {
     }
 
     /**
-     * Indicates whether usage beyond the commitment plan's included quantities will be charged.
+     * Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
      * 
     */
     public Boolean chargeForOverage() {
@@ -145,14 +145,14 @@ public final class CommitmentPlanPropertiesResponse {
         return this.planMeter;
     }
     /**
-     * The frequency at which this commitment plan's included quantities are refilled.
+     * The frequency at which this commitment plan&#39;s included quantities are refilled.
      * 
     */
     public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
     /**
-     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
+     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
      * 
     */
     public Boolean suspendPlanOnOverage() {

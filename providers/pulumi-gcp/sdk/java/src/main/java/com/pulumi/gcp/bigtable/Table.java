@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:bigtable/table:Table default {{instance_name}}/{{name}}
  * ```
  * 
- *  The following fields can't be read and will show diffs if set in config when imported- `split_keys`
+ *  The following fields can&#39;t be read and will show diffs if set in config when imported- `split_keys`
  * 
  */
 @ResourceType(type="gcp:bigtable/table:Table")
@@ -103,7 +103,7 @@ public class Table extends com.pulumi.resources.CustomResource {
     }
     /**
      * A list of predefined keys to split the table on.
-     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * !&gt; **Warning:** Modifying the `split_keys` of an existing table will cause the provider
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */
@@ -112,7 +112,7 @@ public class Table extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A list of predefined keys to split the table on.
-     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * !&gt; **Warning:** Modifying the `split_keys` of an existing table will cause the provider
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * A note that indicates a type of analysis a provider would perform. This note exists in a provider's project. A `Discovery` occurrence is created in a consumer's project at the start of analysis.
+ * A note that indicates a type of analysis a provider would perform. This note exists in a provider&#39;s project. A `Discovery` occurrence is created in a consumer&#39;s project at the start of analysis.
  * 
  */
 public final class DiscoveryNoteResponse extends com.pulumi.resources.InvokeArgs {

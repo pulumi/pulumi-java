@@ -24,7 +24,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
      */
     @Import(name="type")
@@ -35,7 +35,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     @Import(name="userAssignedIdentities")

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
     @EnumType

@@ -64,7 +64,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     /**
      * The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
      * The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-     * Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
+     * Note that you can&#39;t specify an Availability Zone group or a launch group if you specify a duration.
      * 
      */
     @Import(name="blockDurationMinutes")
@@ -75,7 +75,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+     * Describes an instance&#39;s Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
     @Import(name="capacityReservationSpecification")
@@ -163,7 +163,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
+     * One or more configuration blocks to customize Ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
     @Import(name="ephemeralBlockDevices")
@@ -242,8 +242,8 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     /**
      * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
      * 
-     * @Deprecated
-     * Use the parameter "instance_interruption_behavior" instead.
+     * @deprecated
+     * Use the parameter &#34;instance_interruption_behavior&#34; instead.
      * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
@@ -368,7 +368,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
+     * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource&#39;s `strategy` argument is set to `&#34;partition&#34;`.
      * 
      */
     @Import(name="placementPartitionNumber")
@@ -401,7 +401,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+     * A list of secondary private IPv4 addresses to assign to the instance&#39;s primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
     @Import(name="secondaryPrivateIps")

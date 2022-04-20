@@ -33,7 +33,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * The format, if 'type' is not 'object'
+     * The format, if &#39;type&#39; is not &#39;object&#39;
      * 
      */
     @Import(name="format")

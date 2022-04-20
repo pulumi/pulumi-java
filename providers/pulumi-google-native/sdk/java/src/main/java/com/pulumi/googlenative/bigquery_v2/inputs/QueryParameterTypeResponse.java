@@ -15,7 +15,7 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
     public static final QueryParameterTypeResponse Empty = new QueryParameterTypeResponse();
 
     /**
-     * [Optional] The type of the array's elements, if this is an array.
+     * [Optional] The type of the array&#39;s elements, if this is an array.
      * 
      */
     @Import(name="arrayType", required=true)

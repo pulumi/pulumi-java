@@ -39,7 +39,7 @@ public final class DatabaseInstanceSettingsGetArgs extends com.pulumi.resources.
 
     /**
      * The availability type of the Cloud SQL
-     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL
      * instances, ensure that `settings.backup_configuration.enabled` and
      * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
      * 

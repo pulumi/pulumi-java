@@ -45,7 +45,7 @@ public final class GetCertificateResult {
      */
     private final Map<String,String> labels;
     /**
-     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
     private final String lifetime;
@@ -75,7 +75,7 @@ public final class GetCertificateResult {
      */
     private final RevocationDetailsResponse revocationDetails;
     /**
-     * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
     private final String subjectMode;
@@ -160,7 +160,7 @@ public final class GetCertificateResult {
         return this.labels;
     }
     /**
-     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
     */
     public String lifetime() {
@@ -202,7 +202,7 @@ public final class GetCertificateResult {
         return this.revocationDetails;
     }
     /**
-     * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
     */
     public String subjectMode() {

@@ -21,7 +21,7 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
     public static final DaemonSetUpdateStrategyArgs Empty = new DaemonSetUpdateStrategyArgs();
 
     /**
-     * Rolling update config params. Present only if type = "RollingUpdate".
+     * Rolling update config params. Present only if type = &#34;RollingUpdate&#34;.
      * 
      */
     @Import(name="rollingUpdate")
@@ -32,7 +32,7 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
+     * Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
      * 
      */
     @Import(name="type")

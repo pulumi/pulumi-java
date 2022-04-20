@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 /**
  * A description of the conditions under which some aspect of your system is
- * considered to be "unhealthy" and the ways to notify people or services
+ * considered to be &#34;unhealthy&#34; and the ways to notify people or services
  * about this state.
  * 
  * To get more information about AlertPolicy, see:
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:monitoring/alertPolicy:AlertPolicy")
 public class AlertPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * Control over how this alert policy's notification channels are notified.
+     * Control over how this alert policy&#39;s notification channels are notified.
      * Structure is documented below.
      * 
      */
@@ -53,7 +53,7 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ AlertPolicyAlertStrategy> alertStrategy;
 
     /**
-     * @return Control over how this alert policy's notification channels are notified.
+     * @return Control over how this alert policy&#39;s notification channels are notified.
      * Structure is documented below.
      * 
      */
@@ -119,7 +119,7 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
     /**
      * A short name or phrase used to identify the
      * condition in dashboards, notifications, and
-     * incidents. To avoid confusion, don't use the same
+     * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 
@@ -130,7 +130,7 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
     /**
      * @return A short name or phrase used to identify the
      * condition in dashboards, notifications, and
-     * incidents. To avoid confusion, don't use the same
+     * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 

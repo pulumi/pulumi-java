@@ -32,8 +32,8 @@ public final class ImageTemplateFileCustomizerResponse {
      */
     private final @Nullable String sourceUri;
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'File'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;File&#39;.
      * 
      */
     private final String type;
@@ -81,8 +81,8 @@ public final class ImageTemplateFileCustomizerResponse {
         return Optional.ofNullable(this.sourceUri);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'File'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;File&#39;.
      * 
     */
     public String type() {

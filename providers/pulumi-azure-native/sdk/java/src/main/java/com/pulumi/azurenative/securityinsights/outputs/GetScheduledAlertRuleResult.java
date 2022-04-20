@@ -46,7 +46,7 @@ public final class GetScheduledAlertRuleResult {
     private final String id;
     /**
      * The kind of the alert rule
-     * Expected value is 'Scheduled'.
+     * Expected value is &#39;Scheduled&#39;.
      * 
      */
     private final String kind;
@@ -197,7 +197,7 @@ public final class GetScheduledAlertRuleResult {
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'Scheduled'.
+     * Expected value is &#39;Scheduled&#39;.
      * 
     */
     public String kind() {

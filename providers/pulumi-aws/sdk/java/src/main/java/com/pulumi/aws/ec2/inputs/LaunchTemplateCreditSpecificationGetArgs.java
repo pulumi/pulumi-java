@@ -16,7 +16,7 @@ public final class LaunchTemplateCreditSpecificationGetArgs extends com.pulumi.r
     public static final LaunchTemplateCreditSpecificationGetArgs Empty = new LaunchTemplateCreditSpecificationGetArgs();
 
     /**
-     * The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+     * The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
      * 
      */
     @Import(name="cpuCredits")

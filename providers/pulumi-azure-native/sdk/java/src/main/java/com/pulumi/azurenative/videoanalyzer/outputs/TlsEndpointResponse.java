@@ -21,7 +21,7 @@ public final class TlsEndpointResponse {
      */
     private final UsernamePasswordCredentialsResponse credentials;
     /**
-     * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
+     * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer&#39;s list of trusted authorities should be used.
      * 
      */
     private final @Nullable PemCertificateListResponse trustedCertificates;
@@ -32,7 +32,7 @@ public final class TlsEndpointResponse {
     private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.TlsEndpoint&#39;.
      * 
      */
     private final String type;
@@ -71,7 +71,7 @@ public final class TlsEndpointResponse {
         return this.credentials;
     }
     /**
-     * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
+     * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer&#39;s list of trusted authorities should be used.
      * 
     */
     public Optional<PemCertificateListResponse> trustedCertificates() {
@@ -86,7 +86,7 @@ public final class TlsEndpointResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.TlsEndpoint&#39;.
      * 
     */
     public String type() {

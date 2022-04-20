@@ -22,7 +22,7 @@ public final class PriorityLevelConfigurationCondition {
      */
     private final @Nullable String message;
     /**
-     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
+     * `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -66,7 +66,7 @@ public final class PriorityLevelConfigurationCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
+     * `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {

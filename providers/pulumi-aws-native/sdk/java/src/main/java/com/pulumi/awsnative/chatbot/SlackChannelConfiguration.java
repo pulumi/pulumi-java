@@ -49,14 +49,14 @@ public class SlackChannelConfiguration extends com.pulumi.resources.CustomResour
         return this.configurationName;
     }
     /**
-     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
+     * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
      */
     @Export(name="guardrailPolicies", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> guardrailPolicies;
 
     /**
-     * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
+     * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
      */
     public Output</* @Nullable */ List<String>> guardrailPolicies() {

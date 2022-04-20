@@ -21,7 +21,7 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
 
     /**
      * Gets the class type.
-     * Expected value is 'Azure'.
+     * Expected value is &#39;Azure&#39;.
      * 
      */
     @Import(name="instanceType")

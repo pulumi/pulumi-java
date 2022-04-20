@@ -30,7 +30,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     }
 
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
     @Import(name="allowRemoteVnetToUseHubVnetGateways")

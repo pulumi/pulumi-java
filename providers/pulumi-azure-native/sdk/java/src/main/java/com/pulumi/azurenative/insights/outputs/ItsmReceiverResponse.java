@@ -20,7 +20,7 @@ public final class ItsmReceiverResponse {
      */
     private final String name;
     /**
-     * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
+     * Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
      * 
      */
     private final String region;
@@ -64,7 +64,7 @@ public final class ItsmReceiverResponse {
         return this.name;
     }
     /**
-     * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
+     * Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
      * 
     */
     public String region() {

@@ -91,7 +91,7 @@ public final class SftpServerLinkedServiceResponse {
     private final @Nullable Object skipHostKeyValidation;
     /**
      * Type of linked service.
-     * Expected value is 'Sftp'.
+     * Expected value is &#39;Sftp&#39;.
      * 
      */
     private final String type;
@@ -237,7 +237,7 @@ public final class SftpServerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Sftp'.
+     * Expected value is &#39;Sftp&#39;.
      * 
     */
     public String type() {

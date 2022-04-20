@@ -57,7 +57,7 @@ public final class InstanceGroupConfigResponse {
      */
     private final ManagedGroupConfigResponse managedGroupConfig;
     /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
      */
     private final String minCpuPlatform;
@@ -155,7 +155,7 @@ public final class InstanceGroupConfigResponse {
         return this.managedGroupConfig;
     }
     /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
     */
     public String minCpuPlatform() {

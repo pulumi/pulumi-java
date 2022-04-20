@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * The full name of the GCE network to connect the instance to.  If not provided,
-     * 'default' will be used.
+     * &#39;default&#39; will be used.
      * 
      */
     @Export(name="authorizedNetwork", type=String.class, parameters={})
@@ -63,7 +63,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The full name of the GCE network to connect the instance to.  If not provided,
-     * 'default' will be used.
+     * &#39;default&#39; will be used.
      * 
      */
     public Output<String> authorizedNetwork() {

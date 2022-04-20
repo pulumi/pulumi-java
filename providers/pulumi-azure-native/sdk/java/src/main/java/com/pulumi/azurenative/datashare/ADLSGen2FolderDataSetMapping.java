@@ -90,7 +90,7 @@ public class ADLSGen2FolderDataSetMapping extends com.pulumi.resources.CustomRes
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -98,7 +98,7 @@ public class ADLSGen2FolderDataSetMapping extends com.pulumi.resources.CustomRes
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
      */
     public Output<String> kind() {

@@ -14,7 +14,7 @@ import java.util.Objects;
 public final class AverageLoadScalingTriggerResponse {
     /**
      * Enumerates the triggers for auto scaling.
-     * Expected value is 'AverageLoad'.
+     * Expected value is &#39;AverageLoad&#39;.
      * 
      */
     private final String kind;
@@ -55,7 +55,7 @@ public final class AverageLoadScalingTriggerResponse {
 
     /**
      * Enumerates the triggers for auto scaling.
-     * Expected value is 'AverageLoad'.
+     * Expected value is &#39;AverageLoad&#39;.
      * 
     */
     public String kind() {

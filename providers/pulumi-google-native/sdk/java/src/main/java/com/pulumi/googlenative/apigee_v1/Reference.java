@@ -61,14 +61,14 @@ public class Reference extends com.pulumi.resources.CustomResource {
         return this.refers;
     }
     /**
-     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
      */
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
-     * @return The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     * @return The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
      * 
      */
     public Output<String> resourceType() {

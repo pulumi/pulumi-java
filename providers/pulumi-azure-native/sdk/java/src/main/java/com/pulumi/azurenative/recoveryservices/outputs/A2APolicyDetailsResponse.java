@@ -24,7 +24,7 @@ public final class A2APolicyDetailsResponse {
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
      */
     private final String instanceType;
@@ -76,7 +76,7 @@ public final class A2APolicyDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
     */
     public String instanceType() {

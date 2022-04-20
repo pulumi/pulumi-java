@@ -22,7 +22,7 @@ public final class DataLakeAnalyticsResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'DataLakeAnalytics'.
+     * Expected value is &#39;DataLakeAnalytics&#39;.
      * 
      */
     private final String computeType;
@@ -82,7 +82,7 @@ public final class DataLakeAnalyticsResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'DataLakeAnalytics'.
+     * Expected value is &#39;DataLakeAnalytics&#39;.
      * 
     */
     public String computeType() {

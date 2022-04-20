@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The write behavior for the operation. Default is 'Insert'.
+     * The write behavior for the operation. Default is &#39;Insert&#39;.
      * 
      */
     @EnumType

@@ -59,7 +59,7 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
+     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
      * 
      */
     @Import(name="suppressAlerts")

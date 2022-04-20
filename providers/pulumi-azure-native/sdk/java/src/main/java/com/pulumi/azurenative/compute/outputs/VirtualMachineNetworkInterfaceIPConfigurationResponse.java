@@ -41,7 +41,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable Boolean primary;
     /**
-     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
      */
     private final @Nullable String privateIPAddressVersion;
@@ -112,7 +112,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
         return Optional.ofNullable(this.primary);
     }
     /**
-     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
     */
     public Optional<String> privateIPAddressVersion() {

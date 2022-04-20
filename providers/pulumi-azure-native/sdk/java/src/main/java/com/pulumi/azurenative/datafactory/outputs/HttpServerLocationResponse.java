@@ -29,7 +29,7 @@ public final class HttpServerLocationResponse {
     private final @Nullable Object relativeUrl;
     /**
      * Type of dataset storage location.
-     * Expected value is 'HttpServerLocation'.
+     * Expected value is &#39;HttpServerLocation&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class HttpServerLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'HttpServerLocation'.
+     * Expected value is &#39;HttpServerLocation&#39;.
      * 
     */
     public String type() {

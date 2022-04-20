@@ -22,7 +22,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
     /**
-     * Optional. Configuration for establishing the connection's authentication with an external system.
+     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
      */
     @Import(name="authConfig")

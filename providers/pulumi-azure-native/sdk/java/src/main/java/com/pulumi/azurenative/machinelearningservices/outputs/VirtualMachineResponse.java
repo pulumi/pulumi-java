@@ -22,7 +22,7 @@ public final class VirtualMachineResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'VirtualMachine'.
+     * Expected value is &#39;VirtualMachine&#39;.
      * 
      */
     private final String computeType;
@@ -82,7 +82,7 @@ public final class VirtualMachineResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'VirtualMachine'.
+     * Expected value is &#39;VirtualMachine&#39;.
      * 
     */
     public String computeType() {

@@ -27,7 +27,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
 
     /**
      * The mode to create a new server.
-     * Expected value is 'PointInTimeRestore'.
+     * Expected value is &#39;PointInTimeRestore&#39;.
      * 
      */
     @Import(name="createMode", required=true)
@@ -49,7 +49,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="publicNetworkAccess")

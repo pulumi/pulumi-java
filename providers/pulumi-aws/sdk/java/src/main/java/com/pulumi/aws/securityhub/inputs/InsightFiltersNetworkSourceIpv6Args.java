@@ -15,7 +15,7 @@ public final class InsightFiltersNetworkSourceIpv6Args extends com.pulumi.resour
     public static final InsightFiltersNetworkSourceIpv6Args Empty = new InsightFiltersNetworkSourceIpv6Args();
 
     /**
-     * A finding's CIDR value.
+     * A finding&#39;s CIDR value.
      * 
      */
     @Import(name="cidr", required=true)

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
+     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
      * 
      */
     @EnumType

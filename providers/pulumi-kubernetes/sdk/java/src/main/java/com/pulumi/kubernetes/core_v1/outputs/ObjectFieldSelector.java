@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ObjectFieldSelector {
     /**
-     * Version of the schema the FieldPath is written in terms of, defaults to "v1".
+     * Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
      * 
      */
     private final @Nullable String apiVersion;
@@ -31,7 +31,7 @@ public final class ObjectFieldSelector {
     }
 
     /**
-     * Version of the schema the FieldPath is written in terms of, defaults to "v1".
+     * Version of the schema the FieldPath is written in terms of, defaults to &#34;v1&#34;.
      * 
     */
     public Optional<String> apiVersion() {

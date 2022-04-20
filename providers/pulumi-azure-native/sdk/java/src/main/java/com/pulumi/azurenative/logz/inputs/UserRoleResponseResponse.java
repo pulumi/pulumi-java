@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Response for checking user's role for Logz.io account.
+ * Response for checking user&#39;s role for Logz.io account.
  * 
  */
 public final class UserRoleResponseResponse extends com.pulumi.resources.InvokeArgs {

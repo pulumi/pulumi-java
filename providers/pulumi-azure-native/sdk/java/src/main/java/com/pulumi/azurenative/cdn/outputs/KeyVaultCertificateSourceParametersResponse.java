@@ -18,7 +18,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
     private final String deleteRule;
     private final String odataType;
     /**
-     * Resource group of the user's Key Vault containing the SSL certificate
+     * Resource group of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     private final String resourceGroupName;
@@ -33,7 +33,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
      */
     private final @Nullable String secretVersion;
     /**
-     * Subscription Id of the user's Key Vault containing the SSL certificate
+     * Subscription Id of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     private final String subscriptionId;
@@ -43,7 +43,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
      */
     private final String updateRule;
     /**
-     * The name of the user's Key Vault containing the SSL certificate
+     * The name of the user&#39;s Key Vault containing the SSL certificate
      * 
      */
     private final String vaultName;
@@ -79,7 +79,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
         return this.odataType;
     }
     /**
-     * Resource group of the user's Key Vault containing the SSL certificate
+     * Resource group of the user&#39;s Key Vault containing the SSL certificate
      * 
     */
     public String resourceGroupName() {
@@ -100,7 +100,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
-     * Subscription Id of the user's Key Vault containing the SSL certificate
+     * Subscription Id of the user&#39;s Key Vault containing the SSL certificate
      * 
     */
     public String subscriptionId() {
@@ -114,7 +114,7 @@ public final class KeyVaultCertificateSourceParametersResponse {
         return this.updateRule;
     }
     /**
-     * The name of the user's Key Vault containing the SSL certificate
+     * The name of the user&#39;s Key Vault containing the SSL certificate
      * 
     */
     public String vaultName() {

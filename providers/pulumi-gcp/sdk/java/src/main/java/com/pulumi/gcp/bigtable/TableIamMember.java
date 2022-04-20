@@ -21,9 +21,9 @@ import javax.annotation.Nullable;
  * * `gcp.bigtable.TableIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the table are preserved.
  * * `gcp.bigtable.TableIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the table are preserved.
  * 
- * > **Note:** `gcp.bigtable.TableIamPolicy` **cannot** be used in conjunction with `gcp.bigtable.TableIamBinding` and `gcp.bigtable.TableIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the table as `gcp.bigtable.TableIamPolicy` replaces the entire policy.
+ * &gt; **Note:** `gcp.bigtable.TableIamPolicy` **cannot** be used in conjunction with `gcp.bigtable.TableIamBinding` and `gcp.bigtable.TableIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the table as `gcp.bigtable.TableIamPolicy` replaces the entire policy.
  * 
- * > **Note:** `gcp.bigtable.TableIamBinding` resources **can be** used in conjunction with `gcp.bigtable.TableIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.bigtable.TableIamBinding` resources **can be** used in conjunction with `gcp.bigtable.TableIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigtable\_table\_iam\_policy
  * 
@@ -36,18 +36,18 @@ import javax.annotation.Nullable;
  * Table IAM resources can be imported using the project, table name, role and/or member.
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table}"
+ *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor &#34;projects/{project}/tables/{table}&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table} roles/editor"
+ *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor &#34;projects/{project}/tables/{table} roles/editor&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor "projects/{project}/tables/{table} roles/editor user:jane@example.com"
+ *  $ pulumi import gcp:bigtable/tableIamMember:TableIamMember editor &#34;projects/{project}/tables/{table} roles/editor user:jane@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -61,14 +61,14 @@ public class TableIamMember extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the tables's IAM policy.
+     * (Computed) The etag of the tables&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the tables's IAM policy.
+     * @return (Computed) The etag of the tables&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

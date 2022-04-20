@@ -44,7 +44,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends com.pulumi.
 
     /**
      * The import setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
      * 
      */
     @Import(name="type", required=true)

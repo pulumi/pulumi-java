@@ -258,7 +258,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends com.pulumi.resourc
     }
 
     /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
      */
     @Import(name="osDiskType")
@@ -291,7 +291,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends com.pulumi.resourc
     }
 
     /**
-     * Pod SubnetID specifies the VNet's subnet identifier for pods.
+     * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
      * 
      */
     @Import(name="podSubnetID")
@@ -390,7 +390,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends com.pulumi.resourc
     }
 
     /**
-     * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
+     * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
      * 
      */
     @Import(name="vnetSubnetID")

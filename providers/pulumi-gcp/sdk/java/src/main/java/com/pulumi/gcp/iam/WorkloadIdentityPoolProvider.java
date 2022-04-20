@@ -231,7 +231,7 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
     }
     /**
      * The resource name of the provider as
-     * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
+     * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -239,7 +239,7 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
 
     /**
      * @return The resource name of the provider as
-     * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
+     * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}&#39;.
      * 
      */
     public Output<String> name() {

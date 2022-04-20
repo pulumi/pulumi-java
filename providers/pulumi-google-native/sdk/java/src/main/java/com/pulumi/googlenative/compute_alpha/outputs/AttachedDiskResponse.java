@@ -42,7 +42,7 @@ public final class AttachedDiskResponse {
      */
     private final String diskSizeGb;
     /**
-     * [Input Only] Whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
+     * [Input Only] Whether to force attach the regional disk even if it&#39;s currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
      * 
      */
     private final Boolean forceAttach;
@@ -190,7 +190,7 @@ public final class AttachedDiskResponse {
         return this.diskSizeGb;
     }
     /**
-     * [Input Only] Whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
+     * [Input Only] Whether to force attach the regional disk even if it&#39;s currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
      * 
     */
     public Boolean forceAttach() {

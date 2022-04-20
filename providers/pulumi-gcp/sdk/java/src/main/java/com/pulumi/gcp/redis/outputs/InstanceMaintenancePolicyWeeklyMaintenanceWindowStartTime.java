@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23.
-     * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+     * An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
      * 
      */
     private final @Nullable Integer hours;
@@ -48,7 +48,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
 
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23.
-     * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+     * An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
      * 
     */
     public Optional<Integer> hours() {

@@ -30,7 +30,7 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The script to execute on startup. eg. "score.py"
+     * The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     @Import(name="scoringScript", required=true)

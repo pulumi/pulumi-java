@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SandboxConfigResponse {
     /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
+     * Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
      * 
      */
     private final String sandboxType;
@@ -29,7 +29,7 @@ public final class SandboxConfigResponse {
     }
 
     /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
+     * Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
      * 
     */
     public String sandboxType() {

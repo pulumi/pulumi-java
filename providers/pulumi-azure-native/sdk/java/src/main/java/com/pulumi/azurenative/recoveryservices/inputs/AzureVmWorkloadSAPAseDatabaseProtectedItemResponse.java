@@ -257,7 +257,7 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSAPAseDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSAPAseDatabase&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

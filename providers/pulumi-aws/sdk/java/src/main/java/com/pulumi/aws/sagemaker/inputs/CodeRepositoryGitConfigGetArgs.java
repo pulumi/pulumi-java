@@ -38,7 +38,7 @@ public final class CodeRepositoryGitConfigGetArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
+     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{&#34;username&#34;: UserName, &#34;password&#34;: Password}`
      * 
      */
     @Import(name="secretArn")

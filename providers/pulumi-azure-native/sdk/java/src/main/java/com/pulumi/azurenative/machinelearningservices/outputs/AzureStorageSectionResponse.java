@@ -30,7 +30,7 @@ public final class AzureStorageSectionResponse {
      */
     private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
     /**
-     *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+     *  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
      */
     private final @Nullable Integer blobCacheTimeout;
@@ -76,7 +76,7 @@ public final class AzureStorageSectionResponse {
      */
     private final @Nullable String sasToken;
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     private final @Nullable String serviceDataAccessAuthIdentity;
@@ -142,7 +142,7 @@ public final class AzureStorageSectionResponse {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
     /**
-     *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+     *  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
     */
     public Optional<Integer> blobCacheTimeout() {
@@ -208,7 +208,7 @@ public final class AzureStorageSectionResponse {
         return Optional.ofNullable(this.sasToken);
     }
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
     */
     public Optional<String> serviceDataAccessAuthIdentity() {

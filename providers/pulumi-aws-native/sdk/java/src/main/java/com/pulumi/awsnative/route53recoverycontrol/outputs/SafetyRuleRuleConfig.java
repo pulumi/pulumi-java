@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SafetyRuleRuleConfig {
     /**
-     * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+     * Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
      * 
      */
     private final Boolean inverted;
@@ -34,7 +34,7 @@ public final class SafetyRuleRuleConfig {
     }
 
     /**
-     * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+     * Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
      * 
     */
     public Boolean inverted() {

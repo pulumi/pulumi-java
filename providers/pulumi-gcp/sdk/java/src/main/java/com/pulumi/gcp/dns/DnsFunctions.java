@@ -29,7 +29,7 @@ public final class DnsFunctions {
         return Deployment.getInstance().invokeAsync("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Provides access to a zone's attributes within Google Cloud DNS.
+     * Provides access to a zone&#39;s attributes within Google Cloud DNS.
      * For more information see
      * [the official documentation](https://cloud.google.com/dns/zones/)
      * and

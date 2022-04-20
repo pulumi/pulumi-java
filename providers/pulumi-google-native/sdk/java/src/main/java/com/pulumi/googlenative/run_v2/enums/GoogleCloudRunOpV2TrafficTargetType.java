@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         TrafficTargetAllocationTypeUnspecified("TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED"),
         /**
-         * Allocates instances to the Service's latest ready Revision.
+         * Allocates instances to the Service&#39;s latest ready Revision.
          * 
          */
         TrafficTargetAllocationTypeLatest("TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST"),

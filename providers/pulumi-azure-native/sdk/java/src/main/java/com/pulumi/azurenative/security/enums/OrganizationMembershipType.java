@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The multi cloud account's membership type in the organization
+     * The multi cloud account&#39;s membership type in the organization
      * 
      */
     @EnumType

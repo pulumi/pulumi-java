@@ -178,14 +178,14 @@ public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
         return this.virtualHub;
     }
     /**
-     * All P2S VPN clients' connection health status.
+     * All P2S VPN clients&#39; connection health status.
      * 
      */
     @Export(name="vpnClientConnectionHealth", type=VpnClientConnectionHealthResponse.class, parameters={})
     private Output<VpnClientConnectionHealthResponse> vpnClientConnectionHealth;
 
     /**
-     * @return All P2S VPN clients' connection health status.
+     * @return All P2S VPN clients&#39; connection health status.
      * 
      */
     public Output<VpnClientConnectionHealthResponse> vpnClientConnectionHealth() {

@@ -32,7 +32,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the resource. E.g., the name of a Docker image - "Debian".
+     * The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
      * 
      */
     @Import(name="name")
@@ -43,7 +43,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
+     * The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
      * 
      */
     @Import(name="uri")

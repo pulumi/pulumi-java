@@ -27,7 +27,7 @@ public final class HealthCheckResponse {
      */
     private final Integer healthyThreshold;
     /**
-     * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+     * Host header to send when performing an HTTP health check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     private final String host;
@@ -87,7 +87,7 @@ public final class HealthCheckResponse {
         return this.healthyThreshold;
     }
     /**
-     * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+     * Host header to send when performing an HTTP health check. Example: &#34;myapp.appspot.com&#34;
      * 
     */
     public String host() {

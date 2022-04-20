@@ -60,7 +60,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
 
     /**
      * Indicates the type of function.
-     * Expected value is 'Scalar'.
+     * Expected value is &#39;Scalar&#39;.
      * 
      */
     @Import(name="type", required=true)

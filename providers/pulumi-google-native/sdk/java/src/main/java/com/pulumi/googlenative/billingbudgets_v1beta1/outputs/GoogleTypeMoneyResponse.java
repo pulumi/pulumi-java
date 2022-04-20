@@ -21,7 +21,7 @@ public final class GoogleTypeMoneyResponse {
      */
     private final Integer nanos;
     /**
-     * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
+     * The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
      * 
      */
     private final String units;
@@ -51,7 +51,7 @@ public final class GoogleTypeMoneyResponse {
         return this.nanos;
     }
     /**
-     * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
+     * The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
      * 
     */
     public String units() {

@@ -22,7 +22,7 @@ public final class HorizontalPodAutoscalerCondition {
      */
     private final @Nullable String message;
     /**
-     * reason is the reason for the condition's last transition.
+     * reason is the reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -66,7 +66,7 @@ public final class HorizontalPodAutoscalerCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * reason is the reason for the condition's last transition.
+     * reason is the reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {

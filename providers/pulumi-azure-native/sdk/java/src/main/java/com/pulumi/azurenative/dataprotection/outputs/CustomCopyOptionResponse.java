@@ -18,7 +18,7 @@ public final class CustomCopyOptionResponse {
     private final @Nullable String duration;
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'CustomCopyOption'.
+     * Expected value is &#39;CustomCopyOption&#39;.
      * 
      */
     private final String objectType;
@@ -40,7 +40,7 @@ public final class CustomCopyOptionResponse {
     }
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'CustomCopyOption'.
+     * Expected value is &#39;CustomCopyOption&#39;.
      * 
     */
     public String objectType() {

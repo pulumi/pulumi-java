@@ -26,12 +26,12 @@ public final class GetHl7V2StoreResult {
      */
     private final String name;
     /**
-     * The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
+     * The notification destination all messages (both Ingest &amp; Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
      * 
      */
     private final NotificationConfigResponse notificationConfig;
     /**
-     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
      */
     private final List<Hl7V2NotificationConfigResponse> notificationConfigs;
@@ -77,14 +77,14 @@ public final class GetHl7V2StoreResult {
         return this.name;
     }
     /**
-     * The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
+     * The notification destination all messages (both Ingest &amp; Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
      * 
     */
     public NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
     /**
-     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
+     * A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
     */
     public List<Hl7V2NotificationConfigResponse> notificationConfigs() {

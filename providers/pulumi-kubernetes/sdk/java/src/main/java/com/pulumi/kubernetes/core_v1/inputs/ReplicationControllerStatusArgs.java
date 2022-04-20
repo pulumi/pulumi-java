@@ -33,7 +33,7 @@ public final class ReplicationControllerStatusArgs extends com.pulumi.resources.
     }
 
     /**
-     * Represents the latest available observations of a replication controller's current state.
+     * Represents the latest available observations of a replication controller&#39;s current state.
      * 
      */
     @Import(name="conditions")

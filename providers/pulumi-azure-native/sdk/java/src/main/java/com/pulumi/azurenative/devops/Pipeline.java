@@ -19,7 +19,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+ * Pipeline used to configure Continuous Integration (CI) &amp; Continuous Delivery (CD) for Azure resources.
  * API Version: 2020-07-13-preview.
  * 
  * ## Example Usage
@@ -92,14 +92,14 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
         return this.pipelineId;
     }
     /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     @Export(name="pipelineType", type=String.class, parameters={})
     private Output<String> pipelineType;
 
     /**
-     * @return Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * @return Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     public Output<String> pipelineType() {

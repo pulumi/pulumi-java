@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Conditions that determine which objects are transferred. Applies only to Cloud Data Sources such as S3, Azure, and Cloud Storage. The "last modification time" refers to the time of the last change to the object's content or metadata — specifically, this is the `updated` property of Cloud Storage objects, the `LastModified` field of S3 objects, and the `Last-Modified` header of Azure blobs. Transfers with a PosixFilesystem source or destination don't support `ObjectConditions`.
+ * Conditions that determine which objects are transferred. Applies only to Cloud Data Sources such as S3, Azure, and Cloud Storage. The &#34;last modification time&#34; refers to the time of the last change to the object&#39;s content or metadata — specifically, this is the `updated` property of Cloud Storage objects, the `LastModified` field of S3 objects, and the `Last-Modified` header of Azure blobs. Transfers with a PosixFilesystem source or destination don&#39;t support `ObjectConditions`.
  * 
  */
 public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArgs {
@@ -43,7 +43,7 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" are transferred.
+     * If specified, only objects with a &#34;last modification time&#34; before this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred.
      * 
      */
     @Import(name="lastModifiedBefore")
@@ -54,7 +54,7 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
+     * If specified, only objects with a &#34;last modification time&#34; on or after this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day&#39;s worth of data at a time. For that you&#39;d set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
      * 
      */
     @Import(name="lastModifiedSince")
@@ -65,7 +65,7 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Ensures that objects are not transferred if a specific maximum time has elapsed since the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation`and the "last modification time" of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred if a specific maximum time has elapsed since the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation`and the &#34;last modification time&#34; of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
      */
     @Import(name="maxTimeElapsedSinceLastModification")
@@ -76,7 +76,7 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Ensures that objects are not transferred until a specific minimum time has elapsed after the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation` and the "last modification time" of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred until a specific minimum time has elapsed after the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation` and the &#34;last modification time&#34; of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
      */
     @Import(name="minTimeElapsedSinceLastModification")

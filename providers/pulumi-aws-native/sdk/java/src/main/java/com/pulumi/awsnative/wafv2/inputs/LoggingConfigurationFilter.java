@@ -16,7 +16,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     public static final LoggingConfigurationFilter Empty = new LoggingConfigurationFilter();
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
      * 
      */
     @Import(name="behavior", required=true)

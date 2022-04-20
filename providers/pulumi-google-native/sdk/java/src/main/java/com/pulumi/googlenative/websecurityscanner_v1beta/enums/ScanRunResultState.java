@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".
+     * The result state of the ScanRun. This field is only available after the execution state reaches &#34;FINISHED&#34;.
      * 
      */
     @EnumType

@@ -15,7 +15,7 @@ public final class GetLabAccountArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLabAccountArgs Empty = new GetLabAccountArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=sizeConfiguration)'
+     * Specify the $expand query. Example: &#39;properties($expand=sizeConfiguration)&#39;
      * 
      */
     @Import(name="expand")

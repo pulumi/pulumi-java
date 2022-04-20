@@ -69,7 +69,7 @@ public final class RestSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'RestSource'.
+     * Expected value is &#39;RestSource&#39;.
      * 
      */
     private final String type;
@@ -181,7 +181,7 @@ public final class RestSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'RestSource'.
+     * Expected value is &#39;RestSource&#39;.
      * 
     */
     public String type() {

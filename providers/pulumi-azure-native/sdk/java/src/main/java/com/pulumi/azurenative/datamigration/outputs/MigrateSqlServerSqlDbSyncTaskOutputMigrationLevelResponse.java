@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
     private final String id;
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -102,7 +102,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
     */
     public String resultType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Describes the parameters for using a user's KeyVault for URL Signing Key.
+ * Describes the parameters for using a user&#39;s KeyVault for URL Signing Key.
  * 
  */
 public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resources.InvokeArgs {
@@ -24,7 +24,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     }
 
     /**
-     * Resource group of the user's Key Vault containing the secret
+     * Resource group of the user&#39;s Key Vault containing the secret
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -57,7 +57,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     }
 
     /**
-     * Subscription Id of the user's Key Vault containing the secret
+     * Subscription Id of the user&#39;s Key Vault containing the secret
      * 
      */
     @Import(name="subscriptionId", required=true)
@@ -68,7 +68,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     }
 
     /**
-     * The name of the user's Key Vault containing the secret
+     * The name of the user&#39;s Key Vault containing the secret
      * 
      */
     @Import(name="vaultName", required=true)

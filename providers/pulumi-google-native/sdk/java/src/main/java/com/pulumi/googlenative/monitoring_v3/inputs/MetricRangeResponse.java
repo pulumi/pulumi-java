@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min <= x <= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
+ * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies range.min &lt;= x &lt;= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType = DOUBLE and MetricKind = GAUGE.
  * 
  */
 public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
     public static final MetricRangeResponse Empty = new MetricRangeResponse();
 
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     @Import(name="range", required=true)

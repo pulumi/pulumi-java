@@ -37,14 +37,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.alternativeNameServerConfig;
     }
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     * @return A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
      */
     public Output<String> description() {

@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationGet
     public static final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationGetArgs Empty = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationGetArgs();
 
     /**
-     * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
+     * The SANs for a virtual gateway&#39;s listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     @Import(name="subjectAlternativeNames")

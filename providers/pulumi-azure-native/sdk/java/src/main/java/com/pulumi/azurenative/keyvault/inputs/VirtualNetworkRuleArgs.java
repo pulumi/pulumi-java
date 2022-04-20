@@ -21,7 +21,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 
     /**
-     * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+     * Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
      * 
      */
     @Import(name="id", required=true)

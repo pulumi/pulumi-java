@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Refers to the sku name which should be "Standard"
+     * Refers to the sku name which should be &#34;Standard&#34;
      * 
      */
     @EnumType

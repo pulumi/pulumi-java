@@ -100,7 +100,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     }
 
     /**
-     * Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+     * Determines the type of network access granted to workers. Possible values: - &#34;public&#34;: Workers can connect to the public internet. - &#34;private&#34;: Workers can only connect to Google APIs and services. - &#34;restricted-private&#34;: Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
      * 
      */
     @Import(name="networkAccess")
@@ -111,7 +111,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     }
 
     /**
-     * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
+     * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won&#39;t be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
      * 
      */
     @Import(name="reserved")

@@ -28,7 +28,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends com.p
     }
 
     /**
-     * The format of the source file. Only "text/csv" is supported.
+     * The format of the source file. Only &#34;text/csv&#34; is supported.
      * 
      */
     @Import(name="mimeType", required=true)

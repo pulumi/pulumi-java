@@ -22,14 +22,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:networksecurity/v1beta1:AuthorizationPolicy")
 public class AuthorizationPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
+     * The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
      */
     @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
-     * @return The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
+     * @return The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
      */
     public Output<String> action() {
@@ -92,14 +92,14 @@ public class AuthorizationPolicy extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
      */
     @Export(name="rules", type=List.class, parameters={RuleResponse.class})
     private Output<List<RuleResponse>> rules;
 
     /**
-     * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+     * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
      */
     public Output<List<RuleResponse>> rules() {

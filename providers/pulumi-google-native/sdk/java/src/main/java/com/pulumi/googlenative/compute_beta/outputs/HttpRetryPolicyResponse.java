@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class HttpRetryPolicyResponse {
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
      */
     private final Integer numRetries;
@@ -39,7 +39,7 @@ public final class HttpRetryPolicyResponse {
     }
 
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
     */
     public Integer numRetries() {

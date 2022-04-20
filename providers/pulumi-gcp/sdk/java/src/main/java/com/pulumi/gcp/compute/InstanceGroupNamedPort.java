@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Mange the named ports setting for a managed instance group without
  * managing the group as whole. This resource is primarily intended for use
- * with GKE-generated groups that shouldn't otherwise be managed by other
+ * with GKE-generated groups that shouldn&#39;t otherwise be managed by other
  * tools.
  * 
  * To get more information about InstanceGroupNamedPort, see:

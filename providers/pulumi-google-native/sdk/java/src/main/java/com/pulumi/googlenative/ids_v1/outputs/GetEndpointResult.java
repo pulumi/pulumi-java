@@ -22,12 +22,12 @@ public final class GetEndpointResult {
      */
     private final String description;
     /**
-     * The fully qualified URL of the endpoint's ILB Forwarding Rule.
+     * The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
      * 
      */
     private final String endpointForwardingRule;
     /**
-     * The IP address of the IDS Endpoint's ILB.
+     * The IP address of the IDS Endpoint&#39;s ILB.
      * 
      */
     private final String endpointIp;
@@ -108,14 +108,14 @@ public final class GetEndpointResult {
         return this.description;
     }
     /**
-     * The fully qualified URL of the endpoint's ILB Forwarding Rule.
+     * The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
      * 
     */
     public String endpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
-     * The IP address of the IDS Endpoint's ILB.
+     * The IP address of the IDS Endpoint&#39;s ILB.
      * 
     */
     public String endpointIp() {

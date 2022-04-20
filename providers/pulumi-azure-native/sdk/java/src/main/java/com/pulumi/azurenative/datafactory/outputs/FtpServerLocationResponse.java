@@ -24,7 +24,7 @@ public final class FtpServerLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'FtpServerLocation'.
+     * Expected value is &#39;FtpServerLocation&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class FtpServerLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'FtpServerLocation'.
+     * Expected value is &#39;FtpServerLocation&#39;.
      * 
     */
     public String type() {

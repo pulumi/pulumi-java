@@ -49,7 +49,7 @@ public final class MarketoSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'MarketoSource'.
+     * Expected value is &#39;MarketoSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class MarketoSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'MarketoSource'.
+     * Expected value is &#39;MarketoSource&#39;.
      * 
     */
     public String type() {

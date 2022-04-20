@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class RuleWebhookActionResponse {
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
      * 
      */
     private final String odataType;
@@ -41,7 +41,7 @@ public final class RuleWebhookActionResponse {
 
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
      * 
     */
     public String odataType() {

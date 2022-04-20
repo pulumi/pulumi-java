@@ -38,17 +38,17 @@ public final class GetDisasterRecoveryConfigResult {
      */
     private final Double pendingReplicationOperationsCount;
     /**
-     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
      * 
      */
     private final String provisioningState;
     /**
-     * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+     * role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
      * 
      */
     private final String role;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -109,21 +109,21 @@ public final class GetDisasterRecoveryConfigResult {
         return this.pendingReplicationOperationsCount;
     }
     /**
-     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
+     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
      * 
     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+     * role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
      * 
     */
     public String role() {
         return this.role;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

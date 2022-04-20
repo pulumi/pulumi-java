@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Table's schema.
+ * Table&#39;s schema.
  * 
  */
 public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {

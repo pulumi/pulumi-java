@@ -33,7 +33,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
 
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
     @Import(name="taskType", required=true)

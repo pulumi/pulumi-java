@@ -64,7 +64,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specify "ALL" (default) or "CONSOLIDATED_BILLING".
+     * Specify &#34;ALL&#34; (default) or &#34;CONSOLIDATED_BILLING&#34;.
      * 
      */
     @Import(name="featureSet")

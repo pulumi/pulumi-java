@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * * `gcp.kms.CryptoKeyIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the crypto key are preserved.
  * * `gcp.kms.CryptoKeyIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the crypto key are preserved.
  * 
- * > **Note:** `gcp.kms.CryptoKeyIAMPolicy` **cannot** be used in conjunction with `gcp.kms.CryptoKeyIAMBinding` and `gcp.kms.CryptoKeyIAMMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.kms.CryptoKeyIAMPolicy` **cannot** be used in conjunction with `gcp.kms.CryptoKeyIAMBinding` and `gcp.kms.CryptoKeyIAMMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * With IAM Conditions:
  * 
@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `crypto_key_id`, role, and member identity e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key "your-project-id/location-name/key-ring-name/key-name roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key &#34;your-project-id/location-name/key-ring-name/key-name roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; first the resource in question and then the role.
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * These bindings can be imported using the `crypto_key_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key "your-project-id/location-name/key-ring-name/key-name roles/editor"
+ *  $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key &#34;your-project-id/location-name/key-ring-name/key-name roles/editor&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -63,7 +63,7 @@ public class CryptoKeyIAMPolicy extends com.pulumi.resources.CustomResource {
      * The crypto key ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
      * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-     * the provider's project setting will be used as a fallback.
+     * the provider&#39;s project setting will be used as a fallback.
      * 
      */
     @Export(name="cryptoKeyId", type=String.class, parameters={})
@@ -73,21 +73,21 @@ public class CryptoKeyIAMPolicy extends com.pulumi.resources.CustomResource {
      * @return The crypto key ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
      * `{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-     * the provider's project setting will be used as a fallback.
+     * the provider&#39;s project setting will be used as a fallback.
      * 
      */
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
     /**
-     * (Computed) The etag of the project's IAM policy.
+     * (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the project's IAM policy.
+     * @return (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

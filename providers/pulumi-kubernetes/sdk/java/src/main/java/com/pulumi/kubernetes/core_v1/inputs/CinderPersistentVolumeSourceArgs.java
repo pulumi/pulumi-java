@@ -22,7 +22,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
     public static final CinderPersistentVolumeSourceArgs Empty = new CinderPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     @Import(name="fsType")

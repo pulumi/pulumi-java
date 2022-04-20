@@ -24,7 +24,7 @@ public final class SftpLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'SftpLocation'.
+     * Expected value is &#39;SftpLocation&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class SftpLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'SftpLocation'.
+     * Expected value is &#39;SftpLocation&#39;.
      * 
     */
     public String type() {

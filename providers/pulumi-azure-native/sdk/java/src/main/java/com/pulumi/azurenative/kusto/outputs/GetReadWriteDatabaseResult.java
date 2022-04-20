@@ -30,7 +30,7 @@ public final class GetReadWriteDatabaseResult {
     private final Boolean isFollowed;
     /**
      * Kind of the database
-     * Expected value is 'ReadWrite'.
+     * Expected value is &#39;ReadWrite&#39;.
      * 
      */
     private final String kind;
@@ -60,7 +60,7 @@ public final class GetReadWriteDatabaseResult {
      */
     private final DatabaseStatisticsResponse statistics;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -112,7 +112,7 @@ public final class GetReadWriteDatabaseResult {
     }
     /**
      * Kind of the database
-     * Expected value is 'ReadWrite'.
+     * Expected value is &#39;ReadWrite&#39;.
      * 
     */
     public String kind() {
@@ -154,7 +154,7 @@ public final class GetReadWriteDatabaseResult {
         return this.statistics;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

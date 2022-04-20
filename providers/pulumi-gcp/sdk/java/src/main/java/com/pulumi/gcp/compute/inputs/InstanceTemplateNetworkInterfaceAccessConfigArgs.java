@@ -16,7 +16,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends com.
     public static final InstanceTemplateNetworkInterfaceAccessConfigArgs Empty = new InstanceTemplateNetworkInterfaceAccessConfigArgs();
 
     /**
-     * The IP address that will be 1:1 mapped to the instance's
+     * The IP address that will be 1:1 mapped to the instance&#39;s
      * network ip. If not given, one will be generated.
      * 
      */

@@ -23,7 +23,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     public static final ManagedClusterWindowsProfileArgs Empty = new ManagedClusterWindowsProfileArgs();
 
     /**
-     * Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
+     * Specifies the password of the administrator account. &lt;br&gt;&lt;br&gt; **Minimum-length:** 8 characters &lt;br&gt;&lt;br&gt; **Max-length:** 123 characters &lt;br&gt;&lt;br&gt; **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled &lt;br&gt; Has lower characters &lt;br&gt;Has upper characters &lt;br&gt; Has a digit &lt;br&gt; Has a special character (Regex match [\W_]) &lt;br&gt;&lt;br&gt; **Disallowed values:** &#34;abc@123&#34;, &#34;P@$$w0rd&#34;, &#34;P@ssw0rd&#34;, &#34;P@ssword123&#34;, &#34;Pa$$word&#34;, &#34;pass@word1&#34;, &#34;Password!&#34;, &#34;Password1&#34;, &#34;Password22&#34;, &#34;iloveyou!&#34;
      * 
      */
     @Import(name="adminPassword")
@@ -34,7 +34,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     }
 
     /**
-     * Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
+     * Specifies the name of the administrator account. &lt;br&gt;&lt;br&gt; **restriction:** Cannot end in &#34;.&#34; &lt;br&gt;&lt;br&gt; **Disallowed values:** &#34;administrator&#34;, &#34;admin&#34;, &#34;user&#34;, &#34;user1&#34;, &#34;test&#34;, &#34;user2&#34;, &#34;test1&#34;, &#34;user3&#34;, &#34;admin1&#34;, &#34;1&#34;, &#34;123&#34;, &#34;a&#34;, &#34;actuser&#34;, &#34;adm&#34;, &#34;admin2&#34;, &#34;aspnet&#34;, &#34;backup&#34;, &#34;console&#34;, &#34;david&#34;, &#34;guest&#34;, &#34;john&#34;, &#34;owner&#34;, &#34;root&#34;, &#34;server&#34;, &#34;sql&#34;, &#34;support&#34;, &#34;support_388945a0&#34;, &#34;sys&#34;, &#34;test2&#34;, &#34;test3&#34;, &#34;user4&#34;, &#34;user5&#34;. &lt;br&gt;&lt;br&gt; **Minimum-length:** 1 character &lt;br&gt;&lt;br&gt; **Max-length:** 20 characters
      * 
      */
     @Import(name="adminUsername", required=true)

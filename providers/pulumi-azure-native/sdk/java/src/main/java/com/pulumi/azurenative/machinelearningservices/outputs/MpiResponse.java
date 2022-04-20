@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class MpiResponse {
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'Mpi'.
+     * Expected value is &#39;Mpi&#39;.
      * 
      */
     private final String distributionType;
@@ -34,7 +34,7 @@ public final class MpiResponse {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'Mpi'.
+     * Expected value is &#39;Mpi&#39;.
      * 
     */
     public String distributionType() {

@@ -46,7 +46,7 @@ public final class GetJobStepResult {
      */
     private final @Nullable JobStepOutputResponse output;
     /**
-     * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
     private final @Nullable Integer stepId;
@@ -126,7 +126,7 @@ public final class GetJobStepResult {
         return Optional.ofNullable(this.output);
     }
     /**
-     * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
     */
     public Optional<Integer> stepId() {

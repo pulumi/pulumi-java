@@ -20,7 +20,7 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
     public static final ConnectionMonitorOutputResponse Empty = new ConnectionMonitorOutputResponse();
 
     /**
-     * Connection monitor output destination type. Currently, only "Workspace" is supported.
+     * Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
      * 
      */
     @Import(name="type")

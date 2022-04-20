@@ -31,7 +31,7 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the setting
-     * Expected value is 'Ueba'.
+     * Expected value is &#39;Ueba&#39;.
      * 
      */
     @Import(name="kind", required=true)

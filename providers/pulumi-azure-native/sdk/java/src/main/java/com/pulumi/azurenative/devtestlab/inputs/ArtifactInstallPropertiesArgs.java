@@ -22,7 +22,7 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
     public static final ArtifactInstallPropertiesArgs Empty = new ArtifactInstallPropertiesArgs();
 
     /**
-     * The artifact's identifier.
+     * The artifact&#39;s identifier.
      * 
      */
     @Import(name="artifactId")
@@ -33,7 +33,7 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The artifact's title.
+     * The artifact&#39;s title.
      * 
      */
     @Import(name="artifactTitle")

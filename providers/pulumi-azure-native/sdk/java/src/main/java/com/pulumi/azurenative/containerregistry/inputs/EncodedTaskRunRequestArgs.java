@@ -139,7 +139,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
 
     /**
      * The type of the run request.
-     * Expected value is 'EncodedTaskRunRequest'.
+     * Expected value is &#39;EncodedTaskRunRequest&#39;.
      * 
      */
     @Import(name="type", required=true)

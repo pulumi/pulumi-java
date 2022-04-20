@@ -21,12 +21,12 @@ public final class GlobalValidationResponse {
     /**
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
-     * action is set to "RedirectToLoginPage".
+     * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
     private final @Nullable String redirectToProvider;
     /**
-     * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean requireAuthentication;
@@ -58,14 +58,14 @@ public final class GlobalValidationResponse {
     /**
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
-     * action is set to "RedirectToLoginPage".
+     * action is set to &#34;RedirectToLoginPage&#34;.
      * 
     */
     public Optional<String> redirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
     /**
-     * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> requireAuthentication() {

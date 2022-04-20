@@ -21,7 +21,7 @@ public final class DeliveryRuleUrlFileNameConditionArgs extends com.pulumi.resou
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'UrlFileName'.
+     * Expected value is &#39;UrlFileName&#39;.
      * 
      */
     @Import(name="name", required=true)

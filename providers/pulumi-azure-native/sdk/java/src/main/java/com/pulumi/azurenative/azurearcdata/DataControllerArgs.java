@@ -48,7 +48,7 @@ public final class DataControllerArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The data controller's properties
+     * The data controller&#39;s properties
      * 
      */
     @Import(name="properties", required=true)

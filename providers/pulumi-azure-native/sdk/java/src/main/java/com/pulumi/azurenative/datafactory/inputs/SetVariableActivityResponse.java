@@ -58,7 +58,7 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of activity.
-     * Expected value is 'SetVariable'.
+     * Expected value is &#39;SetVariable&#39;.
      * 
      */
     @Import(name="type", required=true)

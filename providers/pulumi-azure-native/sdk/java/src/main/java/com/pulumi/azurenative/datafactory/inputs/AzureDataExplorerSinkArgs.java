@@ -99,7 +99,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataExplorerSink'.
+     * Expected value is &#39;AzureDataExplorerSink&#39;.
      * 
      */
     @Import(name="type", required=true)

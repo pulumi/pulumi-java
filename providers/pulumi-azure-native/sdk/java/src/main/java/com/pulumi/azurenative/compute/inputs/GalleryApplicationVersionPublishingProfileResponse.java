@@ -47,7 +47,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     }
 
     /**
-     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
+     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
      * 
      */
     @Import(name="excludeFromLatest")

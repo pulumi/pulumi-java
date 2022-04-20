@@ -49,7 +49,7 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
+     * Immutable. The resource name of the new TagKey&#39;s parent. Must be of the form `organizations/{org_id}`.
      * 
      */
     @Import(name="parent")

@@ -55,7 +55,7 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The group ID (GID) of the file's owners.
+     * The group ID (GID) of the file&#39;s owners.
      * 
      */
     @Import(name="gid")
@@ -110,7 +110,7 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
      * 
      */
     @Import(name="preserveDeletedFiles")
@@ -165,7 +165,7 @@ public final class TaskOptionsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user ID (UID) of the file's owner.
+     * The user ID (UID) of the file&#39;s owner.
      * 
      */
     @Import(name="uid")

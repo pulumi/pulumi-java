@@ -26,7 +26,7 @@ public final class GetClusterResult {
      * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don't use AQUA.
+     * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
@@ -52,7 +52,7 @@ public final class GetClusterResult {
      */
     private final @Nullable String availabilityZoneRelocationStatus;
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
     private final @Nullable Boolean classic;
@@ -82,12 +82,12 @@ public final class GetClusterResult {
      */
     private final @Nullable Boolean deferMaintenance;
     /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
      */
     private final @Nullable Integer deferMaintenanceDuration;
     /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
      */
     private final @Nullable String deferMaintenanceEndTime;
@@ -329,7 +329,7 @@ public final class GetClusterResult {
      * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don't use AQUA.
+     * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
     */
@@ -365,7 +365,7 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.availabilityZoneRelocationStatus);
     }
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
     */
     public Optional<Boolean> classic() {
@@ -407,14 +407,14 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.deferMaintenance);
     }
     /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
     */
     public Optional<Integer> deferMaintenanceDuration() {
         return Optional.ofNullable(this.deferMaintenanceDuration);
     }
     /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
     */
     public Optional<String> deferMaintenanceEndTime() {

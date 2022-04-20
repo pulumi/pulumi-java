@@ -40,7 +40,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The last time any of the key's properties were modified.
+     * The last time any of the key&#39;s properties were modified.
      * 
      */
     @Import(name="lastModified", required=true)

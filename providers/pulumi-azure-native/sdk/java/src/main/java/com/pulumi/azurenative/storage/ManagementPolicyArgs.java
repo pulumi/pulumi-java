@@ -28,7 +28,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The name of the Storage Account Management Policy. It should always be 'default'
+     * The name of the Storage Account Management Policy. It should always be &#39;default&#39;
      * 
      */
     @Import(name="managementPolicyName")
@@ -50,7 +50,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

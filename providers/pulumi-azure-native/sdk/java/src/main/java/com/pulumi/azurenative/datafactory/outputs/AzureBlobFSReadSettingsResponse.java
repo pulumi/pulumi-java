@@ -39,12 +39,12 @@ public final class AzureBlobFSReadSettingsResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeEnd;
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeStart;
@@ -60,7 +60,7 @@ public final class AzureBlobFSReadSettingsResponse {
     private final @Nullable Object recursive;
     /**
      * The read setting type.
-     * Expected value is 'AzureBlobFSReadSettings'.
+     * Expected value is &#39;AzureBlobFSReadSettings&#39;.
      * 
      */
     private final String type;
@@ -139,14 +139,14 @@ public final class AzureBlobFSReadSettingsResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeStart() {
@@ -168,7 +168,7 @@ public final class AzureBlobFSReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'AzureBlobFSReadSettings'.
+     * Expected value is &#39;AzureBlobFSReadSettings&#39;.
      * 
     */
     public String type() {

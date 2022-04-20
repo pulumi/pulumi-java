@@ -16,7 +16,7 @@ public final class StreamEncryption {
      */
     private final StreamEncryptionEncryptionType encryptionType;
     /**
-     * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+     * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
      * 
      */
     private final String keyId;
@@ -37,7 +37,7 @@ public final class StreamEncryption {
         return this.encryptionType;
     }
     /**
-     * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+     * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
      * 
     */
     public String keyId() {

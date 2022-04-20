@@ -51,7 +51,7 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
+     * IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
      * 
      */
     @Import(name="protocol", required=true)

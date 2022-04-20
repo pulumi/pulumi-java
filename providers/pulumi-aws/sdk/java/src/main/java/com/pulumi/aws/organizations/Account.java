@@ -17,9 +17,9 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to create a member account in the current organization.
  * 
- * > **Note:** Account management must be done from the organization's master account.
+ * &gt; **Note:** Account management must be done from the organization&#39;s master account.
  * 
- * !> **WARNING:** Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the [AWS Organizations documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html) for more information.
+ * !&gt; **WARNING:** Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the [AWS Organizations documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html) for more information.
  * 
  * ## Example Usage
  * 
@@ -31,17 +31,17 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:organizations/account:Account my_org 111111111111
  * ```
  * 
- *  Certain resource arguments, like `role_name`, do not have an Organizations API method for reading the information after account creation. If the argument is set in the this provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the this provider configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_organizations_account" "account" {
+ *  Certain resource arguments, like `role_name`, do not have an Organizations API method for reading the information after account creation. If the argument is set in the this provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the this provider configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource &#34;aws_organizations_account&#34; &#34;account&#34; {
  * 
  *  name
  * 
- * = "my_new_account"
+ * = &#34;my_new_account&#34;
  * 
  *  email
  * 
- *  = "john@doe.org"
+ *  = &#34;john@doe.org&#34;
  * 
- *  role_name = "myOrganizationRole"
+ *  role_name = &#34;myOrganizationRole&#34;
  * 
  * # There is no AWS Organizations API for reading role_name
  * 

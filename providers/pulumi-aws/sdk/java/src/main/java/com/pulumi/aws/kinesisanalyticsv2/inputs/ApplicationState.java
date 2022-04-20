@@ -21,7 +21,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationState Empty = new ApplicationState();
 
     /**
-     * The application's configuration
+     * The application&#39;s configuration
      * 
      */
     @Import(name="applicationConfiguration")

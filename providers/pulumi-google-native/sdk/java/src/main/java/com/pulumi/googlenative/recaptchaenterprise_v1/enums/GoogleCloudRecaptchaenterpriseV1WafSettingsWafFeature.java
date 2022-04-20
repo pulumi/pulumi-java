@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         ChallengePage("CHALLENGE_PAGE"),
         /**
-         * Use reCAPTCHA session-tokens to protect the whole user session on the site's domain.
+         * Use reCAPTCHA session-tokens to protect the whole user session on the site&#39;s domain.
          * 
          */
         SessionToken("SESSION_TOKEN"),

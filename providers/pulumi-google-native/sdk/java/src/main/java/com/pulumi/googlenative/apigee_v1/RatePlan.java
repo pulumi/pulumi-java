@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Create a rate plan that is associated with an API product in an organization. Using rate plans, API product owners can monetize their API products by configuring one or more of the following: - Billing frequency - Initial setup fees for using an API product - Payment funding model (postpaid only) - Fixed recurring or consumption-based charges for using an API product - Revenue sharing with developer partners An API product can have multiple rate plans associated with it but *only one* rate plan can be active at any point of time. **Note: From the developer's perspective, they purchase API products not rate plans.
+ * Create a rate plan that is associated with an API product in an organization. Using rate plans, API product owners can monetize their API products by configuring one or more of the following: - Billing frequency - Initial setup fees for using an API product - Payment funding model (postpaid only) - Fixed recurring or consumption-based charges for using an API product - Revenue sharing with developer partners An API product can have multiple rate plans associated with it but *only one* rate plan can be active at any point of time. **Note: From the developer&#39;s perspective, they purchase API products not rate plans.
  * Auto-naming is currently not supported for this resource.
  * 
  */
@@ -53,14 +53,14 @@ public class RatePlan extends com.pulumi.resources.CustomResource {
         return this.billingPeriod;
     }
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
     @Export(name="consumptionPricingRates", type=List.class, parameters={GoogleCloudApigeeV1RateRangeResponse.class})
     private Output<List<GoogleCloudApigeeV1RateRangeResponse>> consumptionPricingRates;
 
     /**
-     * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
     public Output<List<GoogleCloudApigeeV1RateRangeResponse>> consumptionPricingRates() {

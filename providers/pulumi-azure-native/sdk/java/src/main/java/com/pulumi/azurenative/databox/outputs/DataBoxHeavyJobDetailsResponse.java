@@ -73,7 +73,7 @@ public final class DataBoxHeavyJobDetailsResponse {
     private final @Nullable Integer expectedDataSizeInTeraBytes;
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
     private final String jobDetailsType;
@@ -209,7 +209,7 @@ public final class DataBoxHeavyJobDetailsResponse {
     }
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
     */
     public String jobDetailsType() {

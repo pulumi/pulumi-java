@@ -79,14 +79,14 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
         return this.networkConfiguration;
     }
     /**
-     * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+     * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn&#39;t specified, the LATEST platform version is used by default.
      * 
      */
     @Export(name="platformVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformVersion;
 
     /**
-     * @return The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+     * @return The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn&#39;t specified, the LATEST platform version is used by default.
      * 
      */
     public Output</* @Nullable */ String> platformVersion() {

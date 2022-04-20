@@ -53,7 +53,7 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
     }
 
     /**
-     * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
      */
     @Import(name="resourcePaths", required=true)

@@ -16,7 +16,7 @@ public final class IntegrationTlsConfigGetArgs extends com.pulumi.resources.Reso
     public static final IntegrationTlsConfigGetArgs Empty = new IntegrationTlsConfigGetArgs();
 
     /**
-     * If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
+     * If you specify a server name, API Gateway uses it to verify the hostname on the integration&#39;s certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
      * 
      */
     @Import(name="serverNameToVerify")

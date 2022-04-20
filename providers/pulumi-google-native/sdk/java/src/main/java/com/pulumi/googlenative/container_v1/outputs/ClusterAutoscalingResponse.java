@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterAutoscalingResponse {
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
      * 
      */
     private final List<String> autoprovisioningLocations;
@@ -54,7 +54,7 @@ public final class ClusterAutoscalingResponse {
     }
 
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
      * 
     */
     public List<String> autoprovisioningLocations() {

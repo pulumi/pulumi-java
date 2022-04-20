@@ -19,7 +19,7 @@ public final class AutomationSourceResponse {
      */
     private final @Nullable String eventSource;
     /**
-     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
+     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
      * 
      */
     private final @Nullable List<AutomationRuleSetResponse> ruleSets;
@@ -40,7 +40,7 @@ public final class AutomationSourceResponse {
         return Optional.ofNullable(this.eventSource);
     }
     /**
-     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
+     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
      * 
     */
     public List<AutomationRuleSetResponse> ruleSets() {
