@@ -53,7 +53,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     }
 
     /**
-     * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
+     * Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     @Import(name="reason")
@@ -72,8 +72,8 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
 
     /**
      * Possible enum values:
-     *  - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
-     *  - `"Resizing"` - a user trigger resize of pvc has been started
+     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
      * 
      */
     @Import(name="type", required=true)

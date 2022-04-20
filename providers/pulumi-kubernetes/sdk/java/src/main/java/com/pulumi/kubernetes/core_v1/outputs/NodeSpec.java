@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeSpec {
     /**
-     * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
      * 
      */
     private final @Nullable NodeConfigSource configSource;
@@ -36,12 +36,12 @@ public final class NodeSpec {
      */
     private final @Nullable List<String> podCIDRs;
     /**
-     * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
+     * ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
      * 
      */
     private final @Nullable String providerID;
     /**
-     * If specified, the node's taints.
+     * If specified, the node&#39;s taints.
      * 
      */
     private final @Nullable List<Taint> taints;
@@ -70,7 +70,7 @@ public final class NodeSpec {
     }
 
     /**
-     * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
      * 
     */
     public Optional<NodeConfigSource> configSource() {
@@ -98,14 +98,14 @@ public final class NodeSpec {
         return this.podCIDRs == null ? List.of() : this.podCIDRs;
     }
     /**
-     * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
+     * ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
      * 
     */
     public Optional<String> providerID() {
         return Optional.ofNullable(this.providerID);
     }
     /**
-     * If specified, the node's taints.
+     * If specified, the node&#39;s taints.
      * 
     */
     public List<Taint> taints() {

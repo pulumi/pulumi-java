@@ -24,7 +24,7 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     public static final NodeSpecArgs Empty = new NodeSpecArgs();
 
     /**
-     * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
      * 
      */
     @Import(name="configSource")
@@ -68,7 +68,7 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ID of the node assigned by the cloud provider in the format: <ProviderName>://<ProviderSpecificNodeID>
+     * ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
      * 
      */
     @Import(name="providerID")
@@ -79,7 +79,7 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If specified, the node's taints.
+     * If specified, the node&#39;s taints.
      * 
      */
     @Import(name="taints")

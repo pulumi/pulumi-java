@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * FlowSchemaSpec describes how the FlowSchema's specification looks like.
+ * FlowSchemaSpec describes how the FlowSchema&#39;s specification looks like.
  * 
  */
 public final class FlowSchemaSpecArgs extends com.pulumi.resources.ResourceArgs {

@@ -66,14 +66,14 @@ public class ClusterRole extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata.
+     * @return Standard object&#39;s metadata.
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {

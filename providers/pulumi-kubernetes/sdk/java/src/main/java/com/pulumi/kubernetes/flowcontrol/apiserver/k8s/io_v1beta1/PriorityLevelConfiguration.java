@@ -52,42 +52,42 @@ public class PriorityLevelConfiguration extends com.pulumi.resources.CustomResou
         return this.kind;
     }
     /**
-     * `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * `metadata` is the standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return `metadata` is the standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
-     * `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * `spec` is the specification of the desired behavior of a &#34;request-priority&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
     @Export(name="spec", type=PriorityLevelConfigurationSpec.class, parameters={})
     private Output</* @Nullable */ PriorityLevelConfigurationSpec> spec;
 
     /**
-     * @return `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * @return `spec` is the specification of the desired behavior of a &#34;request-priority&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
     public Output</* @Nullable */ PriorityLevelConfigurationSpec> spec() {
         return this.spec;
     }
     /**
-     * `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * `status` is the current status of a &#34;request-priority&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
     @Export(name="status", type=PriorityLevelConfigurationStatus.class, parameters={})
     private Output</* @Nullable */ PriorityLevelConfigurationStatus> status;
 
     /**
-     * @return `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * @return `status` is the current status of a &#34;request-priority&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
     public Output</* @Nullable */ PriorityLevelConfigurationStatus> status() {

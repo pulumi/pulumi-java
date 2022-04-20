@@ -21,13 +21,13 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     public static final ScopedResourceSelectorRequirementArgs Empty = new ScopedResourceSelectorRequirementArgs();
 
     /**
-     * Represents a scope's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
+     * Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
      * 
      * Possible enum values:
-     *  - `"DoesNotExist"`
-     *  - `"Exists"`
-     *  - `"In"`
-     *  - `"NotIn"`
+     *  - `&#34;DoesNotExist&#34;`
+     *  - `&#34;Exists&#34;`
+     *  - `&#34;In&#34;`
+     *  - `&#34;NotIn&#34;`
      * 
      */
     @Import(name="operator", required=true)
@@ -41,12 +41,12 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
      * The name of the scope that the selector applies to.
      * 
      * Possible enum values:
-     *  - `"BestEffort"` Match all pod objects that have best effort quality of service
-     *  - `"CrossNamespacePodAffinity"` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-     *  - `"NotBestEffort"` Match all pod objects that do not have best effort quality of service
-     *  - `"NotTerminating"` Match all pod objects where spec.activeDeadlineSeconds is nil
-     *  - `"PriorityClass"` Match all pod objects that have priority class mentioned
-     *  - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
+     *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
+     *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
+     *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
+     *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
+     *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
+     *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
      * 
      */
     @Import(name="scopeName", required=true)

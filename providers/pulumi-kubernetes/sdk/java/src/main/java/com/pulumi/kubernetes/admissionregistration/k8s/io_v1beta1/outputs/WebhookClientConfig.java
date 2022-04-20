@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebhookClientConfig {
     /**
-     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
+     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
      */
     private final @Nullable String caBundle;
@@ -31,11 +31,11 @@ public final class WebhookClientConfig {
      * 
      * Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.
      * 
-     * The scheme must be "https"; the URL must begin with "https://".
+     * The scheme must be &#34;https&#34;; the URL must begin with &#34;https://&#34;.
      * 
      * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
      * 
-     * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
+     * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
      * 
      */
     private final @Nullable String url;
@@ -51,7 +51,7 @@ public final class WebhookClientConfig {
     }
 
     /**
-     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
+     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
     */
     public Optional<String> caBundle() {
@@ -73,11 +73,11 @@ public final class WebhookClientConfig {
      * 
      * Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.
      * 
-     * The scheme must be "https"; the URL must begin with "https://".
+     * The scheme must be &#34;https&#34;; the URL must begin with &#34;https://&#34;.
      * 
      * A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.
      * 
-     * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
+     * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
      * 
     */
     public Optional<String> url() {

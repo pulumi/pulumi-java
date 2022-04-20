@@ -27,15 +27,15 @@ public final class PersistentVolumeClaimCondition {
      */
     private final @Nullable String message;
     /**
-     * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
+     * Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     private final @Nullable String reason;
     private final String status;
     /**
      * Possible enum values:
-     *  - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
-     *  - `"Resizing"` - a user trigger resize of pvc has been started
+     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
      * 
      */
     private final String type;
@@ -78,7 +78,7 @@ public final class PersistentVolumeClaimCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
+     * Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
     */
     public Optional<String> reason() {
@@ -89,8 +89,8 @@ public final class PersistentVolumeClaimCondition {
     }
     /**
      * Possible enum values:
-     *  - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
-     *  - `"Resizing"` - a user trigger resize of pvc has been started
+     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
      * 
     */
     public String type() {

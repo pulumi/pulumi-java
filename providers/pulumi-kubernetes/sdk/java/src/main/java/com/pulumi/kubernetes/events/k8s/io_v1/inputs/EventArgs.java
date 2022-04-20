@@ -113,7 +113,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")
@@ -146,7 +146,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
     @Import(name="regarding")
@@ -190,7 +190,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * series is data about the Event series this event represents or nil if it's a singleton Event.
+     * series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     @Import(name="series")

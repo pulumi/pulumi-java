@@ -33,7 +33,7 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Represents the latest available observations of a replica set's current state.
+     * Represents the latest available observations of a replica set&#39;s current state.
      * 
      */
     @Import(name="conditions")

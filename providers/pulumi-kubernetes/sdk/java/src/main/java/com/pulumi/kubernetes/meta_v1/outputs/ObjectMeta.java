@@ -70,7 +70,7 @@ public final class ObjectMeta {
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.
+     * ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn&#39;t need to set or understand this field. A workflow can be the user&#39;s name, a controller&#39;s name, or the name of a specific apply path like &#34;ci-cd&#34;. The set of fields is always in the version that the workflow used when modifying the object.
      * 
      */
     private final @Nullable List<ManagedFieldsEntry> managedFields;
@@ -80,7 +80,7 @@ public final class ObjectMeta {
      */
     private final @Nullable String name;
     /**
-     * Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+     * Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the &#34;default&#34; namespace, but &#34;default&#34; is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
      * 
      * Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
      * 
@@ -221,7 +221,7 @@ public final class ObjectMeta {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.
+     * ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn&#39;t need to set or understand this field. A workflow can be the user&#39;s name, a controller&#39;s name, or the name of a specific apply path like &#34;ci-cd&#34;. The set of fields is always in the version that the workflow used when modifying the object.
      * 
     */
     public List<ManagedFieldsEntry> managedFields() {
@@ -235,7 +235,7 @@ public final class ObjectMeta {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+     * Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the &#34;default&#34; namespace, but &#34;default&#34; is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
      * 
      * Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
      * 

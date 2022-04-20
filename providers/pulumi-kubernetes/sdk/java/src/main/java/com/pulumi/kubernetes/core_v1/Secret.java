@@ -19,11 +19,11 @@ import javax.annotation.Nullable;
 /**
  * Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.
  * 
- * Note: While Pulumi automatically encrypts the 'data' and 'stringData'
- * fields, this encryption only applies to Pulumi's context, including the state file,
+ * Note: While Pulumi automatically encrypts the &#39;data&#39; and &#39;stringData&#39;
+ * fields, this encryption only applies to Pulumi&#39;s context, including the state file,
  * the Service, the CLI, etc. Kubernetes does not encrypt Secret resources by default,
  * and the contents are visible to users with access to the Secret in Kubernetes using
- * tools like 'kubectl'.
+ * tools like &#39;kubectl&#39;.
  * 
  * For more information on securing Kubernetes Secrets, see the following links:
  * https://kubernetes.io/docs/concepts/configuration/secret/#security-properties
@@ -47,14 +47,14 @@ public class Secret extends com.pulumi.resources.CustomResource {
         return this.apiVersion;
     }
     /**
-     * Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
+     * Data contains the secret data. Each key must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
      * 
      */
     @Export(name="data", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> data;
 
     /**
-     * @return Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
+     * @return Data contains the secret data. Each key must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
      * 
      */
     public Output</* @Nullable */ Map<String,String>> data() {
@@ -89,14 +89,14 @@ public class Secret extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {

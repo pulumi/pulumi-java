@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TokenReviewStatus {
     /**
-     * Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token's audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is "true", the token is valid against the audience of the Kubernetes API server.
+     * Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token&#39;s audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is &#34;true&#34;, the token is valid against the audience of the Kubernetes API server.
      * 
      */
     private final @Nullable List<String> audiences;
@@ -25,7 +25,7 @@ public final class TokenReviewStatus {
      */
     private final @Nullable Boolean authenticated;
     /**
-     * Error indicates that the token couldn't be checked
+     * Error indicates that the token couldn&#39;t be checked
      * 
      */
     private final @Nullable String error;
@@ -48,7 +48,7 @@ public final class TokenReviewStatus {
     }
 
     /**
-     * Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token's audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is "true", the token is valid against the audience of the Kubernetes API server.
+     * Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token&#39;s audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is &#34;true&#34;, the token is valid against the audience of the Kubernetes API server.
      * 
     */
     public List<String> audiences() {
@@ -62,7 +62,7 @@ public final class TokenReviewStatus {
         return Optional.ofNullable(this.authenticated);
     }
     /**
-     * Error indicates that the token couldn't be checked
+     * Error indicates that the token couldn&#39;t be checked
      * 
     */
     public Optional<String> error() {

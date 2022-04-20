@@ -17,7 +17,7 @@ public final class HostPathVolumeSource {
      */
     private final String path;
     /**
-     * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     private final @Nullable String type;
@@ -38,7 +38,7 @@ public final class HostPathVolumeSource {
         return this.path;
     }
     /**
-     * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
     */
     public Optional<String> type() {

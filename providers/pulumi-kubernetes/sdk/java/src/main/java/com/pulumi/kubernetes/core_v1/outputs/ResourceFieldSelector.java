@@ -17,7 +17,7 @@ public final class ResourceFieldSelector {
      */
     private final @Nullable String containerName;
     /**
-     * Specifies the output format of the exposed resources, defaults to "1"
+     * Specifies the output format of the exposed resources, defaults to &#34;1&#34;
      * 
      */
     private final @Nullable String divisor;
@@ -45,7 +45,7 @@ public final class ResourceFieldSelector {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * Specifies the output format of the exposed resources, defaults to "1"
+     * Specifies the output format of the exposed resources, defaults to &#34;1&#34;
      * 
     */
     public Optional<String> divisor() {

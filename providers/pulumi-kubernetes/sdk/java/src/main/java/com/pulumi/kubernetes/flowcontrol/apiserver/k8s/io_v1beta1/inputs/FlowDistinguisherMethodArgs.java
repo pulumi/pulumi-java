@@ -19,7 +19,7 @@ public final class FlowDistinguisherMethodArgs extends com.pulumi.resources.Reso
     public static final FlowDistinguisherMethodArgs Empty = new FlowDistinguisherMethodArgs();
 
     /**
-     * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
+     * `type` is the type of flow distinguisher method The supported types are &#34;ByUser&#34; and &#34;ByNamespace&#34;. Required.
      * 
      */
     @Import(name="type", required=true)

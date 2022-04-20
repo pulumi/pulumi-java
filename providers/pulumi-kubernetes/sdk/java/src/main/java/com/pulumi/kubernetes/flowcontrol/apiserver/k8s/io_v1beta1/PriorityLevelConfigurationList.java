@@ -64,14 +64,14 @@ public class PriorityLevelConfigurationList extends com.pulumi.resources.CustomR
         return this.kind;
     }
     /**
-     * `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * `metadata` is the standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
-     * @return `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return `metadata` is the standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ListMeta> metadata() {

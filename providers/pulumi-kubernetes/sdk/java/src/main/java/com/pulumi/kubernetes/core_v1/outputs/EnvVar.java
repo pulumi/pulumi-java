@@ -18,12 +18,12 @@ public final class EnvVar {
      */
     private final String name;
     /**
-     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
+     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
      * 
      */
     private final @Nullable String value;
     /**
-     * Source for the environment variable's value. Cannot be used if value is not empty.
+     * Source for the environment variable&#39;s value. Cannot be used if value is not empty.
      * 
      */
     private final @Nullable EnvVarSource valueFrom;
@@ -46,14 +46,14 @@ public final class EnvVar {
         return this.name;
     }
     /**
-     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
+     * Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
      * 
     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * Source for the environment variable's value. Cannot be used if value is not empty.
+     * Source for the environment variable&#39;s value. Cannot be used if value is not empty.
      * 
     */
     public Optional<EnvVarSource> valueFrom() {

@@ -49,7 +49,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     @Import(name="awsElasticBlockStore")
@@ -82,7 +82,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     @Import(name="cephfs")
@@ -137,7 +137,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
      */
     @Import(name="emptyDir")
@@ -148,7 +148,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
      * 
      * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
      *    tracking are needed,
@@ -172,7 +172,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     @Import(name="fc")
@@ -194,7 +194,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
      * 
      */
     @Import(name="flocker")
@@ -205,7 +205,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     @Import(name="gcePersistentDisk")
@@ -216,7 +216,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
+     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
      * 
      */
     @Import(name="gitRepo")
@@ -227,7 +227,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
      * 
      */
     @Import(name="glusterfs")
@@ -249,7 +249,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
      * 
      */
     @Import(name="iscsi")
@@ -260,7 +260,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Volume's name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
     @Import(name="name", required=true)
@@ -271,7 +271,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     @Import(name="nfs")
@@ -326,7 +326,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     @Import(name="quobyte")
@@ -337,7 +337,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     @Import(name="rbd")

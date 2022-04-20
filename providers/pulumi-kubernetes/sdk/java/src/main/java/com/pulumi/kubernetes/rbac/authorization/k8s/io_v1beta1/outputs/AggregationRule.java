@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AggregationRule {
     /**
-     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
+     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
      * 
      */
     private final @Nullable List<LabelSelector> clusterRoleSelectors;
@@ -23,7 +23,7 @@ public final class AggregationRule {
     }
 
     /**
-     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
+     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
      * 
     */
     public List<LabelSelector> clusterRoleSelectors() {

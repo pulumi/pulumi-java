@@ -21,7 +21,7 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
     public static final ServiceBackendPortArgs Empty = new ServiceBackendPortArgs();
 
     /**
-     * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
+     * Name is the name of the port on the Service. This is a mutually exclusive setting with &#34;Number&#34;.
      * 
      */
     @Import(name="name")
@@ -32,7 +32,7 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
+     * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with &#34;Name&#34;.
      * 
      */
     @Import(name="number")

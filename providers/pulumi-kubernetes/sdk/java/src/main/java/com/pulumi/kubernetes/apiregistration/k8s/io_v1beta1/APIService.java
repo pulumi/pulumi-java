@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * APIService represents a server for a particular GroupVersion. Name must be "version.group".
+ * APIService represents a server for a particular GroupVersion. Name must be &#34;version.group&#34;.
  * 
  */
 @ResourceType(type="kubernetes:apiregistration.k8s.io/v1beta1:APIService")

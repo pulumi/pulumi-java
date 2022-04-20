@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and from.
+ * NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods matched by a NetworkPolicySpec&#39;s podSelector. The traffic must match both ports and from.
  * 
  */
 public final class NetworkPolicyIngressRuleArgs extends com.pulumi.resources.ResourceArgs {

@@ -21,7 +21,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
     public static final CustomResourceDefinitionNamesArgs Empty = new CustomResourceDefinitionNamesArgs();
 
     /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
+     * categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
      */
     @Import(name="categories")
@@ -43,7 +43,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
     }
 
     /**
-     * listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".
+     * listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
      * 
      */
     @Import(name="listKind")
@@ -54,7 +54,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
     }
 
     /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.
+     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
      * 
      */
     @Import(name="plural", required=true)
@@ -65,7 +65,7 @@ public final class CustomResourceDefinitionNamesArgs extends com.pulumi.resource
     }
 
     /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.
+     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
      * 
      */
     @Import(name="shortNames")

@@ -138,14 +138,14 @@ public class Event extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {
@@ -180,14 +180,14 @@ public class Event extends com.pulumi.resources.CustomResource {
         return this.reason;
     }
     /**
-     * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
     @Export(name="regarding", type=ObjectReference.class, parameters={})
     private Output</* @Nullable */ ObjectReference> regarding;
 
     /**
-     * @return regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     * @return regarding contains the object this Event is about. In most cases it&#39;s an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
     public Output</* @Nullable */ ObjectReference> regarding() {
@@ -236,14 +236,14 @@ public class Event extends com.pulumi.resources.CustomResource {
         return this.reportingInstance;
     }
     /**
-     * series is data about the Event series this event represents or nil if it's a singleton Event.
+     * series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     @Export(name="series", type=EventSeries.class, parameters={})
     private Output</* @Nullable */ EventSeries> series;
 
     /**
-     * @return series is data about the Event series this event represents or nil if it's a singleton Event.
+     * @return series is data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
     public Output</* @Nullable */ EventSeries> series() {

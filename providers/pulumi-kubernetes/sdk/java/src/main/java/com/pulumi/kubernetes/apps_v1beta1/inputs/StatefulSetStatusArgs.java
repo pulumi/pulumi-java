@@ -34,7 +34,7 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Represents the latest available observations of a statefulset's current state.
+     * Represents the latest available observations of a statefulset&#39;s current state.
      * 
      */
     @Import(name="conditions")
@@ -67,7 +67,7 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
+     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&#39;s generation, which is updated on mutation by the API Server.
      * 
      */
     @Import(name="observedGeneration")

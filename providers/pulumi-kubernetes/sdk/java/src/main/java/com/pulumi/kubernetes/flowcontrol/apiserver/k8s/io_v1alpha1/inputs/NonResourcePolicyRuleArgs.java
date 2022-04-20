@@ -21,12 +21,12 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
 
     /**
      * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
-     *   - "/healthz" is legal
-     *   - "/hea*" is illegal
-     *   - "/hea" is legal but matches nothing
-     *   - "/hea/*" also matches nothing
-     *   - "/healthz/*" matches all per-component health checks.
-     *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
+     *   - &#34;/healthz&#34; is legal
+     *   - &#34;/hea*&#34; is illegal
+     *   - &#34;/hea&#34; is legal but matches nothing
+     *   - &#34;/hea/*&#34; also matches nothing
+     *   - &#34;/healthz/*&#34; matches all per-component health checks.
+     *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
      */
     @Import(name="nonResourceURLs", required=true)
@@ -37,7 +37,7 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
+     * `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
      * 
      */
     @Import(name="verbs", required=true)

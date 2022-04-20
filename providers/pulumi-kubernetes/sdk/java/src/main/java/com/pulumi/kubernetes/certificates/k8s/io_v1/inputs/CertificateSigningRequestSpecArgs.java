@@ -69,7 +69,7 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     }
 
     /**
-     * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
+     * request contains an x509 certificate signing request encoded in a &#34;CERTIFICATE REQUEST&#34; PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
      */
     @Import(name="request", required=true)
@@ -82,15 +82,15 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     /**
      * signerName indicates the requested signer, and is a qualified name.
      * 
-     * List/watch requests for CertificateSigningRequests can filter on this field using a "spec.signerName=NAME" fieldSelector.
+     * List/watch requests for CertificateSigningRequests can filter on this field using a &#34;spec.signerName=NAME&#34; fieldSelector.
      * 
      * Well-known Kubernetes signers are:
-     *  1. "kubernetes.io/kube-apiserver-client": issues client certificates that can be used to authenticate to kube-apiserver.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the "csrsigning" controller in kube-controller-manager.
-     *  2. "kubernetes.io/kube-apiserver-client-kubelet": issues client certificates that kubelets use to authenticate to kube-apiserver.
-     *       Requests for this signer can be auto-approved by the "csrapproving" controller in kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
-     *  3. "kubernetes.io/kubelet-serving" issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
-     *       Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the "csrsigning" controller in kube-controller-manager.
+     *  1. &#34;kubernetes.io/kube-apiserver-client&#34;: issues client certificates that can be used to authenticate to kube-apiserver.
+     *       Requests for this signer are never auto-approved by kube-controller-manager, can be issued by the &#34;csrsigning&#34; controller in kube-controller-manager.
+     *  2. &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;: issues client certificates that kubelets use to authenticate to kube-apiserver.
+     *       Requests for this signer can be auto-approved by the &#34;csrapproving&#34; controller in kube-controller-manager, and can be issued by the &#34;csrsigning&#34; controller in kube-controller-manager.
+     *  3. &#34;kubernetes.io/kubelet-serving&#34; issues serving certificates that kubelets use to serve TLS endpoints, which kube-apiserver can connect to securely.
+     *       Requests for this signer are never auto-approved by kube-controller-manager, and can be issued by the &#34;csrsigning&#34; controller in kube-controller-manager.
      * 
      * More details are available at https://k8s.io/docs/reference/access-authn-authz/certificate-signing-requests/#kubernetes-signers
      * 
@@ -124,18 +124,18 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     /**
      * usages specifies a set of key usages requested in the issued certificate.
      * 
-     * Requests for TLS client certificates typically request: "digital signature", "key encipherment", "client auth".
+     * Requests for TLS client certificates typically request: &#34;digital signature&#34;, &#34;key encipherment&#34;, &#34;client auth&#34;.
      * 
-     * Requests for TLS serving certificates typically request: "key encipherment", "digital signature", "server auth".
+     * Requests for TLS serving certificates typically request: &#34;key encipherment&#34;, &#34;digital signature&#34;, &#34;server auth&#34;.
      * 
      * Valid values are:
-     *  "signing", "digital signature", "content commitment",
-     *  "key encipherment", "key agreement", "data encipherment",
-     *  "cert sign", "crl sign", "encipher only", "decipher only", "any",
-     *  "server auth", "client auth",
-     *  "code signing", "email protection", "s/mime",
-     *  "ipsec end system", "ipsec tunnel", "ipsec user",
-     *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
+     *  &#34;signing&#34;, &#34;digital signature&#34;, &#34;content commitment&#34;,
+     *  &#34;key encipherment&#34;, &#34;key agreement&#34;, &#34;data encipherment&#34;,
+     *  &#34;cert sign&#34;, &#34;crl sign&#34;, &#34;encipher only&#34;, &#34;decipher only&#34;, &#34;any&#34;,
+     *  &#34;server auth&#34;, &#34;client auth&#34;,
+     *  &#34;code signing&#34;, &#34;email protection&#34;, &#34;s/mime&#34;,
+     *  &#34;ipsec end system&#34;, &#34;ipsec tunnel&#34;, &#34;ipsec user&#34;,
+     *  &#34;timestamping&#34;, &#34;ocsp signing&#34;, &#34;microsoft sgc&#34;, &#34;netscape sgc&#34;
      * 
      */
     @Import(name="usages")

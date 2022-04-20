@@ -96,7 +96,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
+     * Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
      * 
      */
     @Import(name="devel")
@@ -283,7 +283,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Names of resources created by the release grouped by "kind/version".
+     * Names of resources created by the release grouped by &#34;kind/version&#34;.
      * 
      */
     @Import(name="resourceNames")
@@ -294,7 +294,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
+     * When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
      * 
      */
     @Import(name="reuseValues")

@@ -27,7 +27,7 @@ public final class JobCondition {
      */
     private final @Nullable String message;
     /**
-     * (brief) reason for the condition's last transition.
+     * (brief) reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
@@ -40,9 +40,9 @@ public final class JobCondition {
      * Type of job condition, Complete or Failed.
      * 
      * Possible enum values:
-     *  - `"Complete"` means the job has completed its execution.
-     *  - `"Failed"` means the job has failed its execution.
-     *  - `"Suspended"` means the job has been suspended.
+     *  - `&#34;Complete&#34;` means the job has completed its execution.
+     *  - `&#34;Failed&#34;` means the job has failed its execution.
+     *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
      */
     private final String type;
@@ -85,7 +85,7 @@ public final class JobCondition {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason for the condition's last transition.
+     * (brief) reason for the condition&#39;s last transition.
      * 
     */
     public Optional<String> reason() {
@@ -102,9 +102,9 @@ public final class JobCondition {
      * Type of job condition, Complete or Failed.
      * 
      * Possible enum values:
-     *  - `"Complete"` means the job has completed its execution.
-     *  - `"Failed"` means the job has failed its execution.
-     *  - `"Suspended"` means the job has been suspended.
+     *  - `&#34;Complete&#34;` means the job has completed its execution.
+     *  - `&#34;Failed&#34;` means the job has failed its execution.
+     *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
     */
     public String type() {

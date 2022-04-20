@@ -31,7 +31,7 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Specifies the output format of the exposed resources, defaults to "1"
+     * Specifies the output format of the exposed resources, defaults to &#34;1&#34;
      * 
      */
     @Import(name="divisor")
