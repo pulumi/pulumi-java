@@ -30,7 +30,7 @@ public final class GetAuthorizerResult {
      */
     private final @Nullable Integer authorizerResultTtlInSeconds;
     /**
-     * Specifies the authorizer's Uniform Resource Identifier (URI).
+     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
      */
     private final @Nullable String authorizerUri;
@@ -109,7 +109,7 @@ public final class GetAuthorizerResult {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
     /**
-     * Specifies the authorizer's Uniform Resource Identifier (URI).
+     * Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
      * 
     */
     public Optional<String> authorizerUri() {

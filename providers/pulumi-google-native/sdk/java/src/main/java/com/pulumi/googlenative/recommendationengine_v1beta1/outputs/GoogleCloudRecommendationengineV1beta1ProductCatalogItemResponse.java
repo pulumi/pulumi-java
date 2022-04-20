@@ -25,7 +25,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      */
     private final String canonicalProductUri;
     /**
-     * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
+     * Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
      * 
      */
     private final Map<String,String> costs;
@@ -90,7 +90,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         return this.canonicalProductUri;
     }
     /**
-     * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
+     * Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
      * 
     */
     public Map<String,String> costs() {

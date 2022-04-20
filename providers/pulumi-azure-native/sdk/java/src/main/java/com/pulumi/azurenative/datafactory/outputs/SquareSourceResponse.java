@@ -49,7 +49,7 @@ public final class SquareSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SquareSource'.
+     * Expected value is &#39;SquareSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SquareSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SquareSource'.
+     * Expected value is &#39;SquareSource&#39;.
      * 
     */
     public String type() {

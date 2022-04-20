@@ -18,9 +18,9 @@ import javax.annotation.Nullable;
 /**
  * Manages Cost and Usage Report Definitions.
  * 
- * > *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
+ * &gt; *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
  * 
- * > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
+ * &gt; *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
  * 
  * ## Example Usage
  * 

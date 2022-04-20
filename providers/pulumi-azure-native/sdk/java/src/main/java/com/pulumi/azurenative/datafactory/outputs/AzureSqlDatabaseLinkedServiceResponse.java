@@ -88,7 +88,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDatabase'.
+     * Expected value is &#39;AzureSqlDatabase&#39;.
      * 
      */
     private final String type;
@@ -218,7 +218,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDatabase'.
+     * Expected value is &#39;AzureSqlDatabase&#39;.
      * 
     */
     public String type() {

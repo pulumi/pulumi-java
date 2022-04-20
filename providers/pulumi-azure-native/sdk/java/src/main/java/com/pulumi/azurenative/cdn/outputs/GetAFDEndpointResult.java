@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class GetAFDEndpointResult {
     private final String deploymentStatus;
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
@@ -96,7 +96,7 @@ public final class GetAFDEndpointResult {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> enabledState() {

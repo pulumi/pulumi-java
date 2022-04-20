@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * A package managed by APT. - install: `apt-get update && apt-get -y install [name]` - remove: `apt-get -y remove [name]`
+ * A package managed by APT. - install: `apt-get update &amp;&amp; apt-get -y install [name]` - remove: `apt-get -y remove [name]`
  * 
  */
 public final class OSPolicyResourcePackageResourceAPTArgs extends com.pulumi.resources.ResourceArgs {

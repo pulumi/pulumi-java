@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  * An existing Helm Release resource can be imported using its `type token`, `name` and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import kubernetes:helm.sh/v3:Release myRelease <namespace>/<releaseName>
+ * $ pulumi import kubernetes:helm.sh/v3:Release myRelease &lt;namespace&gt;/&lt;releaseName&gt;
  * ```
  * 
  */
@@ -126,14 +126,14 @@ public class Release extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
+     * Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
      * 
      */
     @Export(name="devel", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> devel;
 
     /**
-     * @return Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
+     * @return Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
      * 
      */
     public Output</* @Nullable */ Boolean> devel() {
@@ -364,28 +364,28 @@ public class Release extends com.pulumi.resources.CustomResource {
         return this.resetValues;
     }
     /**
-     * Names of resources created by the release grouped by "kind/version".
+     * Names of resources created by the release grouped by &#34;kind/version&#34;.
      * 
      */
     @Export(name="resourceNames", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> resourceNames;
 
     /**
-     * @return Names of resources created by the release grouped by "kind/version".
+     * @return Names of resources created by the release grouped by &#34;kind/version&#34;.
      * 
      */
     public Output</* @Nullable */ Map<String,List<String>>> resourceNames() {
         return this.resourceNames;
     }
     /**
-     * When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
+     * When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
      * 
      */
     @Export(name="reuseValues", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reuseValues;
 
     /**
-     * @return When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
+     * @return When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
      * 
      */
     public Output</* @Nullable */ Boolean> reuseValues() {

@@ -513,7 +513,7 @@ public final class Compute_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+     * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
      * 
      */
     public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {

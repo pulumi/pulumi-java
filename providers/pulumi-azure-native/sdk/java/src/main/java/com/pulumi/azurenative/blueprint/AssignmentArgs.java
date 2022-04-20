@@ -120,7 +120,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
     @Import(name="resourceScope", required=true)
@@ -131,7 +131,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
     @Import(name="scope")

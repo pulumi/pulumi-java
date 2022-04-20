@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The behavior of the endpoint filter. Currently only 'Include' is supported.
+     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
      * 
      */
     @EnumType

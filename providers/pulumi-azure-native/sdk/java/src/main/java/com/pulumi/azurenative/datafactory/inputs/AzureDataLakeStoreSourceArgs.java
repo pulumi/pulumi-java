@@ -77,7 +77,7 @@ public final class AzureDataLakeStoreSourceArgs extends com.pulumi.resources.Res
 
     /**
      * Copy source type.
-     * Expected value is 'AzureDataLakeStoreSource'.
+     * Expected value is &#39;AzureDataLakeStoreSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ClusterStatusResponse {
     /**
-     * Optional. Output only. Details of cluster's state.
+     * Optional. Output only. Details of cluster&#39;s state.
      * 
      */
     private final String detail;
     /**
-     * The cluster's state.
+     * The cluster&#39;s state.
      * 
      */
     private final String state;
@@ -43,14 +43,14 @@ public final class ClusterStatusResponse {
     }
 
     /**
-     * Optional. Output only. Details of cluster's state.
+     * Optional. Output only. Details of cluster&#39;s state.
      * 
     */
     public String detail() {
         return this.detail;
     }
     /**
-     * The cluster's state.
+     * The cluster&#39;s state.
      * 
     */
     public String state() {

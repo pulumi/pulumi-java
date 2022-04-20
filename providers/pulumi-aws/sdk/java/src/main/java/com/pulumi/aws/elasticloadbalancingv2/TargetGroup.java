@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Target Group resource for use with Load Balancer resources.
  * 
- * > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
+ * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
  * 
  * ## Example Usage
  * 
@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticloadbalancingv2/targetGroup:TargetGroup app_front_end arn:aws:elasticloadbalancing:us-west-2:187416307283:targetgroup/app-front-end/20cfe21448b66314
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancingv2.TargetGroup has been deprecated in favor of aws.lb.TargetGroup
  * 
  */

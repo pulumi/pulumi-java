@@ -32,7 +32,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
+     * A copy of the build&#39;s `source.repo_source`, if exists, with any revisions resolved.
      * 
      */
     @Import(name="resolvedRepoSource", required=true)
@@ -43,7 +43,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * A copy of the build's `source.storage_source`, if exists, with any generations resolved.
+     * A copy of the build&#39;s `source.storage_source`, if exists, with any generations resolved.
      * 
      */
     @Import(name="resolvedStorageSource", required=true)
@@ -54,7 +54,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
+     * A copy of the build&#39;s `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
      * 
      */
     @Import(name="resolvedStorageSourceManifest", required=true)

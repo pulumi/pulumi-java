@@ -16,7 +16,7 @@ public final class StandardSqlFieldResponse {
      */
     private final String name;
     /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
+     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
      * 
      */
     private final StandardSqlDataTypeResponse type;
@@ -37,7 +37,7 @@ public final class StandardSqlFieldResponse {
         return this.name;
     }
     /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
+     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
      * 
     */
     public StandardSqlDataTypeResponse type() {

@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
     }
 
     /**
-     * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
+     * The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
      * 
      */
     @Import(name="parentFollowupIntentName", required=true)

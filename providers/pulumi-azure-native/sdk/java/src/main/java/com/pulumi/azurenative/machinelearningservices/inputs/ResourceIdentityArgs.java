@@ -24,7 +24,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
     /**
-     * Defines values for a ResourceIdentity's type.
+     * Defines values for a ResourceIdentity&#39;s type.
      * 
      */
     @Import(name="type")

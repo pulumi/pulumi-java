@@ -19,7 +19,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     public static final VirtualNetworkConfigurationArgs Empty = new VirtualNetworkConfigurationArgs();
 
     /**
-     * Data management's service public IP address resource id.
+     * Data management&#39;s service public IP address resource id.
      * 
      */
     @Import(name="dataManagementPublicIpId", required=true)
@@ -30,7 +30,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     }
 
     /**
-     * Engine service's public IP address resource id.
+     * Engine service&#39;s public IP address resource id.
      * 
      */
     @Import(name="enginePublicIpId", required=true)

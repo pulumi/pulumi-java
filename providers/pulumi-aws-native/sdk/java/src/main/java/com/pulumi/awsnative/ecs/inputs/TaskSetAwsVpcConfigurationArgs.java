@@ -22,7 +22,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends com.pulumi.resources.R
     public static final TaskSetAwsVpcConfigurationArgs Empty = new TaskSetAwsVpcConfigurationArgs();
 
     /**
-     * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
+     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
      * 
      */
     @Import(name="assignPublicIp")

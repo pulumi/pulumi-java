@@ -49,7 +49,7 @@ public final class AzureKeyVaultLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
      */
     private final String type;
@@ -116,7 +116,7 @@ public final class AzureKeyVaultLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
     */
     public String type() {

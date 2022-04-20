@@ -204,7 +204,7 @@ public final class DefaultVpcState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC's main route table by using an
+     * this VPC. Note that you can change a VPC&#39;s main route table by using an
      * `aws.ec2.MainRouteTableAssociation`
      * 
      */

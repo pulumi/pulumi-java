@@ -17,7 +17,7 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
     public static final AccessPointRootDirectoryArgs Empty = new AccessPointRootDirectoryArgs();
 
     /**
-     * POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+     * POSIX IDs and permissions to apply to the access point&#39;s Root Directory. See Creation Info below.
      * 
      */
     @Import(name="creationInfo")

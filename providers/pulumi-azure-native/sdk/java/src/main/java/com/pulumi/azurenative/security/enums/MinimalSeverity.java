@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Medium("Medium"),
         /**
-         * Don't get notifications on new alerts with low, medium or high severity
+         * Don&#39;t get notifications on new alerts with low, medium or high severity
          * 
          */
         Low("Low");

@@ -42,7 +42,7 @@ public final class PriorityLevelConfigurationConditionArgs extends com.pulumi.re
     }
 
     /**
-     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
+     * `reason` is a unique, one-word, CamelCase reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")

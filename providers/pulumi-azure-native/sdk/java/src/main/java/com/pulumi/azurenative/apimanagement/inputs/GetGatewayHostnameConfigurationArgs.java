@@ -13,7 +13,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
     public static final GetGatewayHostnameConfigurationArgs Empty = new GetGatewayHostnameConfigurationArgs();
 
     /**
-     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
      * 
      */
     @Import(name="gatewayId", required=true)

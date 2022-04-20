@@ -37,7 +37,7 @@ public final class GetActionResult {
      */
     private final String type;
     /**
-     * The name of the logic app's workflow.
+     * The name of the logic app&#39;s workflow.
      * 
      */
     private final @Nullable String workflowId;
@@ -94,7 +94,7 @@ public final class GetActionResult {
         return this.type;
     }
     /**
-     * The name of the logic app's workflow.
+     * The name of the logic app&#39;s workflow.
      * 
     */
     public Optional<String> workflowId() {

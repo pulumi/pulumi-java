@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The configuration for a shared file storage system that is associated with a studio resource.</p>
+ * &lt;p&gt;The configuration for a shared file storage system that is associated with a studio resource.&lt;/p&gt;
  * 
  */
 public final class StudioComponentSharedFileSystemConfiguration extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     public static final StudioComponentSharedFileSystemConfiguration Empty = new StudioComponentSharedFileSystemConfiguration();
 
     /**
-     * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
      * 
      */
     @Import(name="endpoint")
@@ -30,7 +30,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     }
 
     /**
-     * <p>The unique identifier for a file system.</p>
+     * &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
      * 
      */
     @Import(name="fileSystemId")
@@ -41,7 +41,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     }
 
     /**
-     * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
      * 
      */
     @Import(name="linuxMountPoint")
@@ -52,7 +52,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     }
 
     /**
-     * <p>The name of the file share.</p>
+     * &lt;p&gt;The name of the file share.&lt;/p&gt;
      * 
      */
     @Import(name="shareName")
@@ -63,7 +63,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     }
 
     /**
-     * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+     * &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
      * 
      */
     @Import(name="windowsMountDrive")

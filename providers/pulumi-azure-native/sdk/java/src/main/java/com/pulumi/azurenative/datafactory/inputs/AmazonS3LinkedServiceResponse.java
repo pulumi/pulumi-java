@@ -139,7 +139,7 @@ public final class AmazonS3LinkedServiceResponse extends com.pulumi.resources.In
 
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3'.
+     * Expected value is &#39;AmazonS3&#39;.
      * 
      */
     @Import(name="type", required=true)

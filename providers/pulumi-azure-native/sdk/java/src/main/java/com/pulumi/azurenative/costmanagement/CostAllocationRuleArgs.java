@@ -39,7 +39,7 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.
+     * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
      * 
      */
     @Import(name="ruleName")

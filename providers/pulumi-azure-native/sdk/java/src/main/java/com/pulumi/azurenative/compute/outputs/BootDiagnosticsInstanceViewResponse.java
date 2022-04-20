@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class BootDiagnosticsInstanceViewResponse {
     /**
-     * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The console screenshot blob URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
     private final String consoleScreenshotBlobUri;
     /**
-     * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The serial console log blob Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
     private final String serialConsoleLogBlobUri;
     /**
-     * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+     * The boot diagnostics status information for the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
      * 
      */
     private final InstanceViewStatusResponse status;
@@ -37,21 +37,21 @@ public final class BootDiagnosticsInstanceViewResponse {
     }
 
     /**
-     * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The console screenshot blob URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
     */
     public String consoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
     }
     /**
-     * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The serial console log blob Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
     */
     public String serialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
     }
     /**
-     * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+     * The boot diagnostics status information for the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
      * 
     */
     public InstanceViewStatusResponse status() {

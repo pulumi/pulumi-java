@@ -88,7 +88,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     }
 
     /**
-     * A list of publicly visible licenses. Reserved for Google's use.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use.
      * 
      */
     @Import(name="licenses", required=true)

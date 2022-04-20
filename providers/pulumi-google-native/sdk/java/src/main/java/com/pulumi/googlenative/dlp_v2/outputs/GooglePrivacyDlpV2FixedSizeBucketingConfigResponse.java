@@ -16,12 +16,12 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
      */
     private final Double bucketSize;
     /**
-     * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".
+     * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value &#34;-10&#34;.
      * 
      */
     private final GooglePrivacyDlpV2ValueResponse lowerBound;
     /**
-     * Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".
+     * Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value &#34;89+&#34;.
      * 
      */
     private final GooglePrivacyDlpV2ValueResponse upperBound;
@@ -44,14 +44,14 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
         return this.bucketSize;
     }
     /**
-     * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".
+     * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value &#34;-10&#34;.
      * 
     */
     public GooglePrivacyDlpV2ValueResponse lowerBound() {
         return this.lowerBound;
     }
     /**
-     * Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".
+     * Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value &#34;89+&#34;.
      * 
     */
     public GooglePrivacyDlpV2ValueResponse upperBound() {

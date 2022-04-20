@@ -110,7 +110,7 @@ public final class AzureDataExplorerSourceResponse extends com.pulumi.resources.
 
     /**
      * Copy source type.
-     * Expected value is 'AzureDataExplorerSource'.
+     * Expected value is &#39;AzureDataExplorerSource&#39;.
      * 
      */
     @Import(name="type", required=true)

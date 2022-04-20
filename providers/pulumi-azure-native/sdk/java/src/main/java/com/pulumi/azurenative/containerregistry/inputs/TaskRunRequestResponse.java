@@ -78,7 +78,7 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * The type of the run request.
-     * Expected value is 'TaskRunRequest'.
+     * Expected value is &#39;TaskRunRequest&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -18,7 +18,7 @@ public final class ManagedIdentityResponse {
     private final @Nullable String clientId;
     /**
      * Enum to determine identity framework.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     private final String identityType;
@@ -54,7 +54,7 @@ public final class ManagedIdentityResponse {
     }
     /**
      * Enum to determine identity framework.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
     */
     public String identityType() {

@@ -21,7 +21,7 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlRedirect'.
+     * Expected value is &#39;UrlRedirect&#39;.
      * 
      */
     @Import(name="name", required=true)

@@ -73,7 +73,7 @@ public final class GetAssignmentResult {
      */
     private final Map<String,ResourceGroupValueResponse> resourceGroups;
     /**
-     * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
     private final @Nullable String scope;
@@ -198,7 +198,7 @@ public final class GetAssignmentResult {
         return this.resourceGroups;
     }
     /**
-     * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
+     * The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
     */
     public Optional<String> scope() {

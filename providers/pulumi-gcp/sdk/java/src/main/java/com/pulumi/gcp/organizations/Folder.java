@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * Folders can be imported using the folder's id, e.g. # Both syntaxes are valid
+ * Folders can be imported using the folder&#39;s id, e.g. # Both syntaxes are valid
  * 
  * ```sh
  *  $ pulumi import gcp:organizations/folder:Folder department1 1234567
@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
 public class Folder extends com.pulumi.resources.CustomResource {
     /**
      * Timestamp when the Folder was created. Assigned by the server.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="createTime", type=String.class, parameters={})
@@ -55,7 +55,7 @@ public class Folder extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Timestamp when the Folder was created. Assigned by the server.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> createTime() {
@@ -78,14 +78,14 @@ public class Folder extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The folder id from the name "folders/{folder_id}"
+     * The folder id from the name &#34;folders/{folder_id}&#34;
      * 
      */
     @Export(name="folderId", type=String.class, parameters={})
     private Output<String> folderId;
 
     /**
-     * @return The folder id from the name "folders/{folder_id}"
+     * @return The folder id from the name &#34;folders/{folder_id}&#34;
      * 
      */
     public Output<String> folderId() {

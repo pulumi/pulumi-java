@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Translate_v3beta1Functions {
     /**
-     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn&#39;t exist.
      * 
      */
     public static CompletableFuture<GetGlossaryResult> getGlossary(GetGlossaryArgs args) {

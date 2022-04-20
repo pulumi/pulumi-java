@@ -23,7 +23,7 @@ public final class ReportScheduleResponse {
      */
     private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
     /**
-     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
      * 
      */
     private final @Nullable String status;
@@ -53,7 +53,7 @@ public final class ReportScheduleResponse {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
-     * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
+     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
      * 
     */
     public Optional<String> status() {

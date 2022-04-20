@@ -28,7 +28,7 @@ public final class RuleMetricDataSourceResponse {
     private final @Nullable String metricNamespace;
     /**
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
      * 
      */
     private final String odataType;
@@ -82,7 +82,7 @@ public final class RuleMetricDataSourceResponse {
     }
     /**
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
      * 
     */
     public String odataType() {

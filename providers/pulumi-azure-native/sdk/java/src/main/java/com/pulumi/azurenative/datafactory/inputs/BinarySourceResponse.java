@@ -102,7 +102,7 @@ public final class BinarySourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'BinarySource'.
+     * Expected value is &#39;BinarySource&#39;.
      * 
      */
     @Import(name="type", required=true)

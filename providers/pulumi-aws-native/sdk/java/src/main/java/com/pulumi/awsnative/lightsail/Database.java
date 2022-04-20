@@ -71,28 +71,28 @@ public class Database extends com.pulumi.resources.CustomResource {
         return this.databaseArn;
     }
     /**
-     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn&#39;t specified, no database is created in the database resource. For PostgreSQL, if this parameter isn&#39;t specified, a database named postgres is created in the database resource.
      * 
      */
     @Export(name="masterDatabaseName", type=String.class, parameters={})
     private Output<String> masterDatabaseName;
 
     /**
-     * @return The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
+     * @return The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn&#39;t specified, no database is created in the database resource. For PostgreSQL, if this parameter isn&#39;t specified, a database named postgres is created in the database resource.
      * 
      */
     public Output<String> masterDatabaseName() {
         return this.masterDatabaseName;
     }
     /**
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * The password for the master user. The password can include any printable ASCII character except &#34;/&#34;, &#34;&#34;&#34;, or &#34;@&#34;. It cannot contain spaces.
      * 
      */
     @Export(name="masterUserPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterUserPassword;
 
     /**
-     * @return The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
+     * @return The password for the master user. The password can include any printable ASCII character except &#34;/&#34;, &#34;&#34;&#34;, or &#34;@&#34;. It cannot contain spaces.
      * 
      */
     public Output</* @Nullable */ String> masterUserPassword() {

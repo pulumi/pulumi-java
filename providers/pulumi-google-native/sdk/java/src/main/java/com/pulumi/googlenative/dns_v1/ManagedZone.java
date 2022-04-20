@@ -48,28 +48,28 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
         return this.creationTime;
     }
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the managed zone&#39;s function.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
+     * @return A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the managed zone&#39;s function.
      * 
      */
     public Output<String> description() {
         return this.description;
     }
     /**
-     * The DNS name of this managed zone, for instance "example.com.".
+     * The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
-     * @return The DNS name of this managed zone, for instance "example.com.".
+     * @return The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     public Output<String> dnsName() {
@@ -222,14 +222,14 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
         return this.serviceDirectoryConfig;
     }
     /**
-     * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
+     * The zone&#39;s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
     @Export(name="visibility", type=String.class, parameters={})
     private Output<String> visibility;
 
     /**
-     * @return The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
+     * @return The zone&#39;s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
     public Output<String> visibility() {

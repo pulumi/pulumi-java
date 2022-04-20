@@ -39,7 +39,7 @@ public final class GetSignalRPrivateEndpointConnectionResult {
      */
     private final String provisioningState;
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class GetSignalRPrivateEndpointConnectionResult {
         return this.provisioningState;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
     */
     public String type() {

@@ -108,7 +108,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     }
 
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Import(name="type", required=true)

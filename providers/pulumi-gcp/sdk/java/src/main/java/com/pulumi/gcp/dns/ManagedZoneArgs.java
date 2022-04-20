@@ -23,7 +23,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 
     /**
-     * A textual description field. Defaults to 'Managed by Pulumi'.
+     * A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Import(name="description")
@@ -34,7 +34,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DNS name of this managed zone, for instance "example.com.".
+     * The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     @Import(name="dnsName", required=true)
@@ -168,7 +168,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The zone's visibility: public zones are exposed to the Internet,
+     * The zone&#39;s visibility: public zones are exposed to the Internet,
      * while private zones are visible only to Virtual Private Cloud resources.
      * Default value is `public`.
      * Possible values are `private` and `public`.

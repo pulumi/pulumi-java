@@ -46,7 +46,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     }
 
     /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
      * 
      */
     @Import(name="fsType")
@@ -57,7 +57,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     }
 
     /**
-     * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
+     * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
      * 
      */
     @Import(name="initiatorName")
@@ -79,7 +79,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends com.pulumi.resources.
     }
 
     /**
-     * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
+     * iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
      * 
      */
     @Import(name="iscsiInterface")

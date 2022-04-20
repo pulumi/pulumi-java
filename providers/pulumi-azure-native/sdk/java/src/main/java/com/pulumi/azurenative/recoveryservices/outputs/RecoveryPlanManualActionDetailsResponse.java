@@ -18,7 +18,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
     private final @Nullable String description;
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ManualActionDetails'.
+     * Expected value is &#39;ManualActionDetails&#39;.
      * 
      */
     private final String instanceType;
@@ -40,7 +40,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
     }
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ManualActionDetails'.
+     * Expected value is &#39;ManualActionDetails&#39;.
      * 
     */
     public String instanceType() {

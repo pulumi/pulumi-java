@@ -30,7 +30,7 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
 
     /**
      * Role type.
-     * Expected value is 'CloudEdgeManagement'.
+     * Expected value is &#39;CloudEdgeManagement&#39;.
      * 
      */
     @Import(name="kind", required=true)

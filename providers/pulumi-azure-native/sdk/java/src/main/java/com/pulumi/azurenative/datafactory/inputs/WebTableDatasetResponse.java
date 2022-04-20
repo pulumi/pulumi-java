@@ -126,7 +126,7 @@ public final class WebTableDatasetResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of dataset.
-     * Expected value is 'WebTable'.
+     * Expected value is &#39;WebTable&#39;.
      * 
      */
     @Import(name="type", required=true)

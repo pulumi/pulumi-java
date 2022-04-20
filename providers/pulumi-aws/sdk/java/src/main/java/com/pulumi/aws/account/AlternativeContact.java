@@ -36,14 +36,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:account/alternativeContact:AlternativeContact")
 public class AlternativeContact extends com.pulumi.resources.CustomResource {
     /**
-     * The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
+     * The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> accountId;
 
     /**
-     * @return The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
+     * @return The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
      * 
      */
     public Output</* @Nullable */ String> accountId() {

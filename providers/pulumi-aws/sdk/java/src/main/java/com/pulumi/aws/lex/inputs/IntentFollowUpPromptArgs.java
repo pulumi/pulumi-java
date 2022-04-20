@@ -27,7 +27,7 @@ public final class IntentFollowUpPromptArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * If the user answers "no" to the question defined in the prompt field,
+     * If the user answers &#34;no&#34; to the question defined in the prompt field,
      * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
      * documented below under statement.
      * 

@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardParameters {
     /**
-     * <p>Date-time parameters.</p>
+     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardDateTimeParameter> dateTimeParameters;
     /**
-     * <p>Decimal parameters.</p>
+     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardDecimalParameter> decimalParameters;
     /**
-     * <p>Integer parameters.</p>
+     * &lt;p&gt;Integer parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardIntegerParameter> integerParameters;
     /**
-     * <p>String parameters.</p>
+     * &lt;p&gt;String parameters.&lt;/p&gt;
      * 
      */
     private final @Nullable List<DashboardStringParameter> stringParameters;
@@ -48,28 +48,28 @@ public final class DashboardParameters {
     }
 
     /**
-     * <p>Date-time parameters.</p>
+     * &lt;p&gt;Date-time parameters.&lt;/p&gt;
      * 
     */
     public List<DashboardDateTimeParameter> dateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
-     * <p>Decimal parameters.</p>
+     * &lt;p&gt;Decimal parameters.&lt;/p&gt;
      * 
     */
     public List<DashboardDecimalParameter> decimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
-     * <p>Integer parameters.</p>
+     * &lt;p&gt;Integer parameters.&lt;/p&gt;
      * 
     */
     public List<DashboardIntegerParameter> integerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
-     * <p>String parameters.</p>
+     * &lt;p&gt;String parameters.&lt;/p&gt;
      * 
     */
     public List<DashboardStringParameter> stringParameters() {

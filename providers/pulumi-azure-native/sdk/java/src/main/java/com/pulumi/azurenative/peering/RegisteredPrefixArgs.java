@@ -27,7 +27,7 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The customer's prefix from which traffic originates.
+     * The customer&#39;s prefix from which traffic originates.
      * 
      */
     @Import(name="prefix")

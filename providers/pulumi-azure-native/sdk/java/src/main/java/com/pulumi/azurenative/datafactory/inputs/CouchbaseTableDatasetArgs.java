@@ -115,7 +115,7 @@ public final class CouchbaseTableDatasetArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of dataset.
-     * Expected value is 'CouchbaseTable'.
+     * Expected value is &#39;CouchbaseTable&#39;.
      * 
      */
     @Import(name="type", required=true)

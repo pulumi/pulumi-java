@@ -53,7 +53,7 @@ public final class AccountPublicAccessBlockState extends com.pulumi.resources.Re
     }
 
     /**
-     * Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
+     * Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */

@@ -230,14 +230,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.materializedView;
     }
     /**
-     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
      * 
      */
     @Export(name="model", type=ModelDefinitionResponse.class, parameters={})
     private Output<ModelDefinitionResponse> model;
 
     /**
-     * @return [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
+     * @return [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
      * 
      */
     public Output<ModelDefinitionResponse> model() {
@@ -258,14 +258,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.numBytes;
     }
     /**
-     * The number of bytes in the table that are considered "long-term storage".
+     * The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     @Export(name="numLongTermBytes", type=String.class, parameters={})
     private Output<String> numLongTermBytes;
 
     /**
-     * @return The number of bytes in the table that are considered "long-term storage".
+     * @return The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     public Output<String> numLongTermBytes() {
@@ -370,14 +370,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.snapshotDefinition;
     }
     /**
-     * Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
+     * Contains information regarding this table&#39;s streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
      * 
      */
     @Export(name="streamingBuffer", type=StreamingbufferResponse.class, parameters={})
     private Output<StreamingbufferResponse> streamingBuffer;
 
     /**
-     * @return Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
+     * @return Contains information regarding this table&#39;s streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
      * 
      */
     public Output<StreamingbufferResponse> streamingBuffer() {

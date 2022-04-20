@@ -29,7 +29,7 @@ public final class GoogleCloudStorageLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'GoogleCloudStorageLocation'.
+     * Expected value is &#39;GoogleCloudStorageLocation&#39;.
      * 
      */
     private final String type;
@@ -76,7 +76,7 @@ public final class GoogleCloudStorageLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'GoogleCloudStorageLocation'.
+     * Expected value is &#39;GoogleCloudStorageLocation&#39;.
      * 
     */
     public String type() {

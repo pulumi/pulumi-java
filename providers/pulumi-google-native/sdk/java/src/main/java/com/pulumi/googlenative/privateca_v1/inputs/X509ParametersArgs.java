@@ -36,7 +36,7 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     @Import(name="aiaOcspServers")

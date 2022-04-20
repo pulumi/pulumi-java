@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentitySourceResponse {
     /**
-     * The domain's NetBIOS name
+     * The domain&#39;s NetBIOS name
      * 
      */
     private final @Nullable String alias;
@@ -27,7 +27,7 @@ public final class IdentitySourceResponse {
      */
     private final @Nullable String baseUserDN;
     /**
-     * The domain's dns name
+     * The domain&#39;s dns name
      * 
      */
     private final @Nullable String domain;
@@ -87,7 +87,7 @@ public final class IdentitySourceResponse {
     }
 
     /**
-     * The domain's NetBIOS name
+     * The domain&#39;s NetBIOS name
      * 
     */
     public Optional<String> alias() {
@@ -108,7 +108,7 @@ public final class IdentitySourceResponse {
         return Optional.ofNullable(this.baseUserDN);
     }
     /**
-     * The domain's dns name
+     * The domain&#39;s dns name
      * 
     */
     public Optional<String> domain() {

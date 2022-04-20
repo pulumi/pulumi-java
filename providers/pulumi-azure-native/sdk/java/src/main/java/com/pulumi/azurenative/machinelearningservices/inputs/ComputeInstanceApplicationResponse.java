@@ -30,7 +30,7 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
     }
 
     /**
-     * Application' endpoint URI.
+     * Application&#39; endpoint URI.
      * 
      */
     @Import(name="endpointUri")

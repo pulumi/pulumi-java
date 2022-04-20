@@ -21,7 +21,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     public static final LocationResponse Empty = new LocationResponse();
 
     /**
-     * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+     * The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
      * 
      */
     @Import(name="documentEndpoint", required=true)
@@ -43,7 +43,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
      */
     @Import(name="id", required=true)
@@ -76,7 +76,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
+     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
      * 
      */
     @Import(name="provisioningState", required=true)

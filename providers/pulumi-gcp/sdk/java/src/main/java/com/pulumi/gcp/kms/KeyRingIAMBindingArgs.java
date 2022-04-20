@@ -32,7 +32,7 @@ public final class KeyRingIAMBindingArgs extends com.pulumi.resources.ResourceAr
     /**
      * The key ring ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}` or
-     * `{location_name}/{key_ring_name}`. In the second form, the provider's
+     * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

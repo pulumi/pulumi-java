@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class AzureFunctionEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
      */
     private final String endpointType;
@@ -48,7 +48,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'AzureFunction'.
+     * Expected value is &#39;AzureFunction&#39;.
      * 
     */
     public String endpointType() {

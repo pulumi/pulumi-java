@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ContinuousModeBackupPolicyResponse {
     /**
      * Describes the mode of backups.
-     * Expected value is 'Continuous'.
+     * Expected value is &#39;Continuous&#39;.
      * 
      */
     private final String type;
@@ -23,7 +23,7 @@ public final class ContinuousModeBackupPolicyResponse {
 
     /**
      * Describes the mode of backups.
-     * Expected value is 'Continuous'.
+     * Expected value is &#39;Continuous&#39;.
      * 
     */
     public String type() {

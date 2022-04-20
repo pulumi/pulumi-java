@@ -39,7 +39,7 @@ public final class S3BucketAssociationState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
+     * The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn&#39;t specified, the action associates specified S3 resources with Macie for the current master account.
      * 
      */
     @Import(name="memberAccountId")

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAutoscalingGroupsFilter {
     /**
-     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
+     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:&lt;tag name&gt;`
      * 
      */
     private final String name;
@@ -30,7 +30,7 @@ public final class GetAutoscalingGroupsFilter {
     }
 
     /**
-     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
+     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:&lt;tag name&gt;`
      * 
     */
     public String name() {

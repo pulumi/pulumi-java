@@ -38,7 +38,7 @@ public final class PatchBaselineSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+     * The specific operating system versions a patch repository applies to, such as `&#34;Ubuntu16.04&#34;`, `&#34;AmazonLinux2016.09&#34;`, `&#34;RedhatEnterpriseLinux7.2&#34;` or `&#34;Suse12.7&#34;`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
      * 
      */
     @Import(name="products", required=true)

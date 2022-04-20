@@ -31,7 +31,7 @@ public final class GetServiceBindingResult {
      */
     private final Map<String,String> labels;
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
      * 
      */
     private final String name;
@@ -93,7 +93,7 @@ public final class GetServiceBindingResult {
         return this.labels;
     }
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
+     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
      * 
     */
     public String name() {

@@ -46,7 +46,7 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
 
     /**
      * The type of dashboard part.
-     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
      * 
      */
     @Import(name="type", required=true)

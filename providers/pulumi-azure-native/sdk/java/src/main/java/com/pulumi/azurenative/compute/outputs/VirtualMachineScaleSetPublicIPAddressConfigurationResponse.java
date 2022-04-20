@@ -43,7 +43,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
      */
     private final String name;
     /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
      */
     private final @Nullable String publicIPAddressVersion;
@@ -114,7 +114,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
         return this.name;
     }
     /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
     */
     public Optional<String> publicIPAddressVersion() {

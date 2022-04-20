@@ -53,14 +53,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.associatedWorkspaces;
     }
     /**
-     * The cluster's billing type.
+     * The cluster&#39;s billing type.
      * 
      */
     @Export(name="billingType", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingType;
 
     /**
-     * @return The cluster's billing type.
+     * @return The cluster&#39;s billing type.
      * 
      */
     public Output</* @Nullable */ String> billingType() {
@@ -123,14 +123,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.identity;
     }
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
     @Export(name="isAvailabilityZonesEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled;
 
     /**
-     * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
     public Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled() {
@@ -235,14 +235,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

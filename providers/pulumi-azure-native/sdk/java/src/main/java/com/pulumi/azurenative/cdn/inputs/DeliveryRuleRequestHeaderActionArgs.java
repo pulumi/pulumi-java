@@ -21,7 +21,7 @@ public final class DeliveryRuleRequestHeaderActionArgs extends com.pulumi.resour
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'ModifyRequestHeader'.
+     * Expected value is &#39;ModifyRequestHeader&#39;.
      * 
      */
     @Import(name="name", required=true)

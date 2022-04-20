@@ -20,7 +20,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
+ * Specifies information about the dedicated host group that the dedicated hosts should be assigned to. &lt;br&gt;&lt;br&gt; Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
@@ -107,14 +107,14 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
         return this.platformFaultDomainCount;
     }
     /**
-     * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
+     * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     @Export(name="supportAutomaticPlacement", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportAutomaticPlacement;
 
     /**
-     * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
+     * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     public Output</* @Nullable */ Boolean> supportAutomaticPlacement() {

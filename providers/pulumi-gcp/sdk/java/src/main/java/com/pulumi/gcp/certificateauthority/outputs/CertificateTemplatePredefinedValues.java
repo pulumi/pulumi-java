@@ -22,7 +22,7 @@ public final class CertificateTemplatePredefinedValues {
      */
     private final @Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions;
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     private final @Nullable List<String> aiaOcspServers;
@@ -64,7 +64,7 @@ public final class CertificateTemplatePredefinedValues {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
     */
     public List<String> aiaOcspServers() {

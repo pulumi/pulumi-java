@@ -276,14 +276,14 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
         return this.port;
     }
     /**
-     * The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
+     * The daily time range during which automated backups are created if automated backups are enabled. Eg: &#34;04:00-09:00&#34;
      * 
      */
     @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output<String> preferredBackupWindow;
 
     /**
-     * @return The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
+     * @return The daily time range during which automated backups are created if automated backups are enabled. Eg: &#34;04:00-09:00&#34;
      * 
      */
     public Output<String> preferredBackupWindow() {
@@ -291,7 +291,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
@@ -299,7 +299,7 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;.
      * 
      */
     public Output<String> preferredMaintenanceWindow() {

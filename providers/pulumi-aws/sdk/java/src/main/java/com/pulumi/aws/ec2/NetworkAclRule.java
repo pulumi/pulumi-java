@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Creates an entry (a rule) in a network ACL with the specified rule number.
  * 
- * > **NOTE on Network ACLs and Network ACL Rules:** This provider currently
+ * &gt; **NOTE on Network ACLs and Network ACL Rules:** This provider currently
  * provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
  * defined in-line. At this time you cannot use a Network ACL with in-line rules
  * in conjunction with any Network ACL Rule resources. Doing so will cause
@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:ec2/networkAclRule:NetworkAclRule my_rule acl-7aaabd18:100:tcp:false
  * ```
  * 
- *  Or by the procotol's decimal valueconsole
+ *  Or by the procotol&#39;s decimal valueconsole
  * 
  * ```sh
  *  $ pulumi import aws:ec2/networkAclRule:NetworkAclRule my_rule acl-7aaabd18:100:6:false

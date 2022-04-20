@@ -68,9 +68,9 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
 
     /**
      * The relative URI.
-     * The relative URL must begin with "/" and must be a valid HTTP relative URL.
+     * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
      * It can contain a path, query string arguments, and \# fragments.
-     * If the relative URL is empty, then the root path "/" will be used.
+     * If the relative URL is empty, then the root path &#34;/&#34; will be used.
      * No spaces are allowed, and the maximum length allowed is 2083 characters
      * 
      */

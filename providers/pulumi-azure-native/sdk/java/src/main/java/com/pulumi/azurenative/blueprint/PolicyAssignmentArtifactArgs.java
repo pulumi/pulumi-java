@@ -75,7 +75,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
 
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'policyAssignment'.
+     * Expected value is &#39;policyAssignment&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -119,7 +119,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
     @Import(name="resourceScope", required=true)

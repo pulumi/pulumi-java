@@ -30,7 +30,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     }
 
     /**
-     * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the 'se' parameter in the generated uri.
+     * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
      * 
      */
     @Import(name="downloadUri", required=true)
@@ -118,7 +118,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     }
 
     /**
-     * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -> InProgress -> Done -> Expired
+     * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
      * 
      */
     @Import(name="status", required=true)

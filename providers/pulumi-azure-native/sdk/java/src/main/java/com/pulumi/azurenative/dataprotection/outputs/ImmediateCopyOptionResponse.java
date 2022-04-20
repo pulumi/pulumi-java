@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ImmediateCopyOptionResponse {
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ImmediateCopyOption'.
+     * Expected value is &#39;ImmediateCopyOption&#39;.
      * 
      */
     private final String objectType;
@@ -23,7 +23,7 @@ public final class ImmediateCopyOptionResponse {
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ImmediateCopyOption'.
+     * Expected value is &#39;ImmediateCopyOption&#39;.
      * 
     */
     public String objectType() {

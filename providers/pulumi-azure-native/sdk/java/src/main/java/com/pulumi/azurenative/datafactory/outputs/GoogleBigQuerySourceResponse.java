@@ -49,7 +49,7 @@ public final class GoogleBigQuerySourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'GoogleBigQuerySource'.
+     * Expected value is &#39;GoogleBigQuerySource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class GoogleBigQuerySourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'GoogleBigQuerySource'.
+     * Expected value is &#39;GoogleBigQuerySource&#39;.
      * 
     */
     public String type() {

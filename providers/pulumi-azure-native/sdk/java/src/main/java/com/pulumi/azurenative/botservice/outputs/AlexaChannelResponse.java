@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class AlexaChannelResponse {
     /**
      * The channel name
-     * Expected value is 'AlexaChannel'.
+     * Expected value is &#39;AlexaChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class AlexaChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'AlexaChannel'.
+     * Expected value is &#39;AlexaChannel&#39;.
      * 
     */
     public String channelName() {

@@ -15,7 +15,7 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
     public static final GetDelegatedAdministratorsArgs Empty = new GetDelegatedAdministratorsArgs();
 
     /**
-     * Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don't specify a service principal, the operation lists all delegated administrators for all services in your organization.
+     * Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don&#39;t specify a service principal, the operation lists all delegated administrators for all services in your organization.
      * 
      */
     @Import(name="servicePrincipal")

@@ -24,7 +24,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     public static final MetricAlertMultipleResourceMultipleMetricCriteriaArgs Empty = new MetricAlertMultipleResourceMultipleMetricCriteriaArgs();
 
     /**
-     * the list of multiple metric criteria for this 'all of' operation.
+     * the list of multiple metric criteria for this &#39;all of&#39; operation.
      * 
      */
     @Import(name="allOf")
@@ -36,7 +36,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
 
     /**
      * specifies the type of the alert criteria.
-     * Expected value is 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'.
+     * Expected value is &#39;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#39;.
      * 
      */
     @Import(name="odataType", required=true)

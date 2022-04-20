@@ -22,7 +22,7 @@ public final class SmsChannelResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The channel name
-     * Expected value is 'SmsChannel'.
+     * Expected value is &#39;SmsChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

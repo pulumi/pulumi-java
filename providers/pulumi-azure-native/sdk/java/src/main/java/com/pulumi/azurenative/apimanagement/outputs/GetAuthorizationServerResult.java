@@ -45,7 +45,7 @@ public final class GetAuthorizationServerResult {
      */
     private final String clientRegistrationEndpoint;
     /**
-     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     private final @Nullable String clientSecret;
@@ -95,7 +95,7 @@ public final class GetAuthorizationServerResult {
      */
     private final @Nullable Boolean supportState;
     /**
-     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
      */
     private final @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters;
@@ -195,7 +195,7 @@ public final class GetAuthorizationServerResult {
         return this.clientRegistrationEndpoint;
     }
     /**
-     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
     */
     public Optional<String> clientSecret() {
@@ -265,7 +265,7 @@ public final class GetAuthorizationServerResult {
         return Optional.ofNullable(this.supportState);
     }
     /**
-     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
     */
     public List<TokenBodyParameterContractResponse> tokenBodyParameters() {

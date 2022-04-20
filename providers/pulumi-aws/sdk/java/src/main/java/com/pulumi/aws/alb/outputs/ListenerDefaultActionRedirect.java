@@ -17,7 +17,7 @@ public final class ListenerDefaultActionRedirect {
      */
     private final @Nullable String host;
     /**
-     * Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+     * Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
      * 
      */
     private final @Nullable String path;
@@ -32,7 +32,7 @@ public final class ListenerDefaultActionRedirect {
      */
     private final @Nullable String protocol;
     /**
-     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
      * 
      */
     private final @Nullable String query;
@@ -66,7 +66,7 @@ public final class ListenerDefaultActionRedirect {
         return Optional.ofNullable(this.host);
     }
     /**
-     * Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+     * Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
      * 
     */
     public Optional<String> path() {
@@ -87,7 +87,7 @@ public final class ListenerDefaultActionRedirect {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
+     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
      * 
     */
     public Optional<String> query() {

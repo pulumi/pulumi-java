@@ -41,7 +41,7 @@ public final class DeploymentSpec {
      */
     private final @Nullable Integer revisionHistoryLimit;
     /**
-     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template's labels.
+     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template&#39;s labels.
      * 
      */
     private final LabelSelector selector;
@@ -112,7 +112,7 @@ public final class DeploymentSpec {
         return Optional.ofNullable(this.revisionHistoryLimit);
     }
     /**
-     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template's labels.
+     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template&#39;s labels.
      * 
     */
     public LabelSelector selector() {

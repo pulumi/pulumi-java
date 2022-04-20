@@ -241,7 +241,7 @@ public final class AzureIaaSVMProtectedItemArgs extends com.pulumi.resources.Res
 
     /**
      * backup item type.
-     * Expected value is 'AzureIaaSVMProtectedItem'.
+     * Expected value is &#39;AzureIaaSVMProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

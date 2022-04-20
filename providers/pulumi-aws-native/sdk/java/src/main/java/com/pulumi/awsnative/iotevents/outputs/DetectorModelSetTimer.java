@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorModelSetTimer {
     /**
-     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.<variable-name>`), and input values (`$input.<input-name>.<path-to-datum>`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
      * 
      */
     private final @Nullable String durationExpression;
@@ -39,7 +39,7 @@ public final class DetectorModelSetTimer {
     }
 
     /**
-     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.<variable-name>`), and input values (`$input.<input-name>.<path-to-datum>`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
      * 
     */
     public Optional<String> durationExpression() {

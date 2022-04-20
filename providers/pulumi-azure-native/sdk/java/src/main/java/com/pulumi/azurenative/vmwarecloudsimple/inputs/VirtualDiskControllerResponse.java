@@ -17,7 +17,7 @@ public final class VirtualDiskControllerResponse extends com.pulumi.resources.In
     public static final VirtualDiskControllerResponse Empty = new VirtualDiskControllerResponse();
 
     /**
-     * Controller's id
+     * Controller&#39;s id
      * 
      */
     @Import(name="id", required=true)

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Bind API methods to metrics. Binding a method to a metric causes that metric's configured quota behaviors to apply to the method call.
+ * Bind API methods to metrics. Binding a method to a metric causes that metric&#39;s configured quota behaviors to apply to the method call.
  * 
  */
 public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {

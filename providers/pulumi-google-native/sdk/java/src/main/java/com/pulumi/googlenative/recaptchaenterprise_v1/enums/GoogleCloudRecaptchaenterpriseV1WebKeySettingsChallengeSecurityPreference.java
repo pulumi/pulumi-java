@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference {
         /**
-         * Default type that indicates this enum hasn't been specified.
+         * Default type that indicates this enum hasn&#39;t been specified.
          * 
          */
         ChallengeSecurityPreferenceUnspecified("CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED"),

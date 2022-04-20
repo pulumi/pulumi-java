@@ -20,7 +20,7 @@ public final class DeliveryRuleIsDeviceConditionResponse extends com.pulumi.reso
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'IsDevice'.
+     * Expected value is &#39;IsDevice&#39;.
      * 
      */
     @Import(name="name", required=true)

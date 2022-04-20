@@ -60,14 +60,14 @@ public class Webhook extends com.pulumi.resources.CustomResource {
         return this.buildType;
     }
     /**
-     * Information about the webhook's trigger. Filter group blocks are documented below.
+     * Information about the webhook&#39;s trigger. Filter group blocks are documented below.
      * 
      */
     @Export(name="filterGroups", type=List.class, parameters={WebhookFilterGroup.class})
     private Output</* @Nullable */ List<WebhookFilterGroup>> filterGroups;
 
     /**
-     * @return Information about the webhook's trigger. Filter group blocks are documented below.
+     * @return Information about the webhook&#39;s trigger. Filter group blocks are documented below.
      * 
      */
     public Output</* @Nullable */ List<WebhookFilterGroup>> filterGroups() {

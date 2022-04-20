@@ -19,7 +19,7 @@ public final class ManagerSkuArgs extends com.pulumi.resources.ResourceArgs {
     public static final ManagerSkuArgs Empty = new ManagerSkuArgs();
 
     /**
-     * Refers to the sku name which should be "Standard"
+     * Refers to the sku name which should be &#34;Standard&#34;
      * 
      */
     @Import(name="name", required=true)

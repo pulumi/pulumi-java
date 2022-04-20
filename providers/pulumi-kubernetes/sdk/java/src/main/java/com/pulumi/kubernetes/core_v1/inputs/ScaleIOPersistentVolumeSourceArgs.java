@@ -22,7 +22,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     public static final ScaleIOPersistentVolumeSourceArgs Empty = new ScaleIOPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
      * 
      */
     @Import(name="fsType")

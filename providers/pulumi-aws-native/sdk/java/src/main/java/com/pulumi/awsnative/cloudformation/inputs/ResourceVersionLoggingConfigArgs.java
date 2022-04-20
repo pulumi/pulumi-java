@@ -16,7 +16,7 @@ public final class ResourceVersionLoggingConfigArgs extends com.pulumi.resources
     public static final ResourceVersionLoggingConfigArgs Empty = new ResourceVersionLoggingConfigArgs();
 
     /**
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
+     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
      */
     @Import(name="logGroupName")

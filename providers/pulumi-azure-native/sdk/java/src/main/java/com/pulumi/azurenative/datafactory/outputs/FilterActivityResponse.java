@@ -42,7 +42,7 @@ public final class FilterActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'Filter'.
+     * Expected value is &#39;Filter&#39;.
      * 
      */
     private final String type;
@@ -107,7 +107,7 @@ public final class FilterActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Filter'.
+     * Expected value is &#39;Filter&#39;.
      * 
     */
     public String type() {

@@ -43,7 +43,7 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * The week days list. Applicable only for schedules of recurrence type 'weekly'.
+     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
      */
     @Import(name="weeklyDaysList")

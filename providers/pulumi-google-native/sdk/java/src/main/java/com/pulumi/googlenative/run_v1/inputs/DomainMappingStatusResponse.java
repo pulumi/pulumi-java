@@ -43,7 +43,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     * ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
      * 
      */
     @Import(name="observedGeneration", required=true)
@@ -54,7 +54,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     @Import(name="resourceRecords", required=true)

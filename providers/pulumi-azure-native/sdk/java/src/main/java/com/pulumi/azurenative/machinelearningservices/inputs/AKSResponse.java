@@ -36,7 +36,7 @@ public final class AKSResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of compute
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     @Import(name="computeType", required=true)

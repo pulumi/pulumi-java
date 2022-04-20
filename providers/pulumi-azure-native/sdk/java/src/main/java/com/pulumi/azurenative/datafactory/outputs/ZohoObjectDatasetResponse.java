@@ -59,7 +59,7 @@ public final class ZohoObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'ZohoObject'.
+     * Expected value is &#39;ZohoObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class ZohoObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'ZohoObject'.
+     * Expected value is &#39;ZohoObject&#39;.
      * 
     */
     public String type() {

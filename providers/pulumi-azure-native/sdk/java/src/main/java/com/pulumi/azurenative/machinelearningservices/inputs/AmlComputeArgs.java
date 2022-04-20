@@ -33,7 +33,7 @@ public final class AmlComputeArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of compute
-     * Expected value is 'AmlCompute'.
+     * Expected value is &#39;AmlCompute&#39;.
      * 
      */
     @Import(name="computeType", required=true)

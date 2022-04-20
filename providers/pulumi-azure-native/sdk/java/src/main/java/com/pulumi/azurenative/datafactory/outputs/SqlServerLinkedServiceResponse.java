@@ -62,7 +62,7 @@ public final class SqlServerLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'SqlServer'.
+     * Expected value is &#39;SqlServer&#39;.
      * 
      */
     private final String type;
@@ -154,7 +154,7 @@ public final class SqlServerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SqlServer'.
+     * Expected value is &#39;SqlServer&#39;.
      * 
     */
     public String type() {

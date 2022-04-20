@@ -40,7 +40,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores '_'.
+     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores &#39;_&#39;.
      * 
      */
     @Import(name="displayName", required=true)

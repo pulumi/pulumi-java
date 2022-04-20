@@ -23,7 +23,7 @@ public final class PSCredentialExecutionParameterResponse {
     private final @Nullable String password;
     /**
      * The type of execution parameter
-     * Expected value is 'Credential'.
+     * Expected value is &#39;Credential&#39;.
      * 
      */
     private final String type;
@@ -61,7 +61,7 @@ public final class PSCredentialExecutionParameterResponse {
     }
     /**
      * The type of execution parameter
-     * Expected value is 'Credential'.
+     * Expected value is &#39;Credential&#39;.
      * 
     */
     public String type() {

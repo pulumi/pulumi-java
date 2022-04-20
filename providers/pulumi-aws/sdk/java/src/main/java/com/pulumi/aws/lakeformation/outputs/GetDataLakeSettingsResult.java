@@ -36,7 +36,7 @@ public final class GetDataLakeSettingsResult {
      */
     private final String id;
     /**
-     * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
+     * List of the resource-owning account IDs that the caller&#39;s account can use to share their user access details (user ARNs).
      * 
      */
     private final List<String> trustedResourceOwners;
@@ -89,7 +89,7 @@ public final class GetDataLakeSettingsResult {
         return this.id;
     }
     /**
-     * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
+     * List of the resource-owning account IDs that the caller&#39;s account can use to share their user access details (user ARNs).
      * 
     */
     public List<String> trustedResourceOwners() {

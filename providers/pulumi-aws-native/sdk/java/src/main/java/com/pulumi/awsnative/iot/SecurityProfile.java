@@ -26,14 +26,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:iot:SecurityProfile")
 public class SecurityProfile extends com.pulumi.resources.CustomResource {
     /**
-     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
      */
     @Export(name="additionalMetricsToRetainV2", type=List.class, parameters={SecurityProfileMetricToRetain.class})
     private Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2;
 
     /**
-     * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+     * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
      */
     public Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2() {

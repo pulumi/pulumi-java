@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'Key'.
+     * Expected value is &#39;Key&#39;.
      * 
      */
     private final String authorizationType;
@@ -32,7 +32,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
 
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'Key'.
+     * Expected value is &#39;Key&#39;.
      * 
     */
     public String authorizationType() {

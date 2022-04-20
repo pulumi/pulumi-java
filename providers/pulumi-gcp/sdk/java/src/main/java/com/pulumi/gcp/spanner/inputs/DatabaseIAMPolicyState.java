@@ -27,7 +27,7 @@ public final class DatabaseIAMPolicyState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the database's IAM policy.
+     * (Computed) The etag of the database&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

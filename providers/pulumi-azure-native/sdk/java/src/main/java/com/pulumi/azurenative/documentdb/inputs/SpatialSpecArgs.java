@@ -30,7 +30,7 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of path's spatial type
+     * List of path&#39;s spatial type
      * 
      */
     @Import(name="types")

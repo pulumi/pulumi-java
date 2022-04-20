@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketReplicationConfigRuleDestinationReplicationTime {
     /**
-     * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     private final String status;
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
     }
 
     /**
-     * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
     */
     public String status() {

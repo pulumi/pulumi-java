@@ -17,7 +17,7 @@ public final class HealthCheckStepPropertiesResponse {
     private final RestHealthCheckStepAttributesResponse attributes;
     /**
      * The type of step.
-     * Expected value is 'HealthCheck'.
+     * Expected value is &#39;HealthCheck&#39;.
      * 
      */
     private final String stepType;
@@ -39,7 +39,7 @@ public final class HealthCheckStepPropertiesResponse {
     }
     /**
      * The type of step.
-     * Expected value is 'HealthCheck'.
+     * Expected value is &#39;HealthCheck&#39;.
      * 
     */
     public String stepType() {

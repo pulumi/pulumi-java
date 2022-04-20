@@ -50,7 +50,7 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Kind of the database
-     * Expected value is 'ReadWrite'.
+     * Expected value is &#39;ReadWrite&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -29,7 +29,7 @@ public final class ConnectivityTestSourceGetArgs extends com.pulumi.resources.Re
 
     /**
      * The IP address of the endpoint, which can be an external or
-     * internal IP. An IPv6 address is only allowed when the test's
+     * internal IP. An IPv6 address is only allowed when the test&#39;s
      * destination is a global load balancer VIP.
      * 
      */

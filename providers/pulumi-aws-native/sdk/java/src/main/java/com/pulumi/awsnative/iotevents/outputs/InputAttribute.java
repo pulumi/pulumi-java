@@ -12,7 +12,7 @@ public final class InputAttribute {
     /**
      * An expression that specifies an attribute-value pair in a JSON structure. Use this to specify an attribute from the JSON payload that is made available by the input. Inputs are derived from messages sent to AWS IoT Events (`BatchPutMessage`). Each such message contains a JSON payload. The attribute (and its paired value) specified here are available for use in the `condition` expressions used by detectors.
      * 
-     * _Syntax_: `<field-name>.<field-name>...`
+     * _Syntax_: `&lt;field-name&gt;.&lt;field-name&gt;...`
      * 
      */
     private final String jsonPath;
@@ -25,7 +25,7 @@ public final class InputAttribute {
     /**
      * An expression that specifies an attribute-value pair in a JSON structure. Use this to specify an attribute from the JSON payload that is made available by the input. Inputs are derived from messages sent to AWS IoT Events (`BatchPutMessage`). Each such message contains a JSON payload. The attribute (and its paired value) specified here are available for use in the `condition` expressions used by detectors.
      * 
-     * _Syntax_: `<field-name>.<field-name>...`
+     * _Syntax_: `&lt;field-name&gt;.&lt;field-name&gt;...`
      * 
     */
     public String jsonPath() {

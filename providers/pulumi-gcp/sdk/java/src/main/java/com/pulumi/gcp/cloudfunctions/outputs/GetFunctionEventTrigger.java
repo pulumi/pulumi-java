@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetFunctionEventTrigger {
     /**
-     * The type of event to observe. For example: `"google.storage.object.finalize"`.
+     * The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
      * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
      * for a full reference of accepted triggers.
      * 
@@ -24,7 +24,7 @@ public final class GetFunctionEventTrigger {
      */
     private final List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
     /**
-     * The name of the resource whose events are being observed, for example, `"myBucket"`
+     * The name of the resource whose events are being observed, for example, `&#34;myBucket&#34;`
      * 
      */
     private final String resource;
@@ -40,7 +40,7 @@ public final class GetFunctionEventTrigger {
     }
 
     /**
-     * The type of event to observe. For example: `"google.storage.object.finalize"`.
+     * The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
      * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
      * for a full reference of accepted triggers.
      * 
@@ -56,7 +56,7 @@ public final class GetFunctionEventTrigger {
         return this.failurePolicies;
     }
     /**
-     * The name of the resource whose events are being observed, for example, `"myBucket"`
+     * The name of the resource whose events are being observed, for example, `&#34;myBucket&#34;`
      * 
     */
     public String resource() {

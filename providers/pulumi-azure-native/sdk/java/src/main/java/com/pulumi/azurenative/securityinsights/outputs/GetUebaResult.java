@@ -30,7 +30,7 @@ public final class GetUebaResult {
     private final String id;
     /**
      * The kind of the setting
-     * Expected value is 'Ueba'.
+     * Expected value is &#39;Ueba&#39;.
      * 
      */
     private final String kind;
@@ -91,7 +91,7 @@ public final class GetUebaResult {
     }
     /**
      * The kind of the setting
-     * Expected value is 'Ueba'.
+     * Expected value is &#39;Ueba&#39;.
      * 
     */
     public String kind() {

@@ -16,12 +16,12 @@ public final class ScaleRuleMetricDimensionResponse {
      */
     private final String dimensionName;
     /**
-     * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
      */
     private final String operator;
     /**
-     * list of dimension values. For example: ["App1","App2"].
+     * list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
      * 
      */
     private final List<String> values;
@@ -44,14 +44,14 @@ public final class ScaleRuleMetricDimensionResponse {
         return this.dimensionName;
     }
     /**
-     * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
     */
     public String operator() {
         return this.operator;
     }
     /**
-     * list of dimension values. For example: ["App1","App2"].
+     * list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
      * 
     */
     public List<String> values() {

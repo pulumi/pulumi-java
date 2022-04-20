@@ -40,7 +40,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Information about the webhook's trigger. Filter group blocks are documented below.
+     * Information about the webhook&#39;s trigger. Filter group blocks are documented below.
      * 
      */
     @Import(name="filterGroups")

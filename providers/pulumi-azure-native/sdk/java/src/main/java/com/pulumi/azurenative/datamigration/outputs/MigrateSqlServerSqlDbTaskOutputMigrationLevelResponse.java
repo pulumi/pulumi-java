@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     private final MigrationReportResultResponse migrationReport;
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -191,7 +191,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
     */
     public String resultType() {

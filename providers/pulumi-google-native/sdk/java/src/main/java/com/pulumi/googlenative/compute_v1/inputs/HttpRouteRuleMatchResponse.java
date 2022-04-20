@@ -66,7 +66,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+     * For satisfying the matchRule condition, the request&#39;s path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
      * 
      */
     @Import(name="prefixMatch", required=true)

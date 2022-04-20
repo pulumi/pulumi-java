@@ -31,7 +31,7 @@ public final class GetGithubEnterpriseConfigResult {
      */
     private final String hostUrl;
     /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     private final String name;
@@ -107,7 +107,7 @@ public final class GetGithubEnterpriseConfigResult {
         return this.hostUrl;
     }
     /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
     */
     public String name() {

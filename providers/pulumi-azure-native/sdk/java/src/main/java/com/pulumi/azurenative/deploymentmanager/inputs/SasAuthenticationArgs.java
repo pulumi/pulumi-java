@@ -31,7 +31,7 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The authentication type
-     * Expected value is 'Sas'.
+     * Expected value is &#39;Sas&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -36,7 +36,7 @@ public final class DataLakeAnalyticsResponse extends com.pulumi.resources.Invoke
 
     /**
      * The type of compute
-     * Expected value is 'DataLakeAnalytics'.
+     * Expected value is &#39;DataLakeAnalytics&#39;.
      * 
      */
     @Import(name="computeType", required=true)

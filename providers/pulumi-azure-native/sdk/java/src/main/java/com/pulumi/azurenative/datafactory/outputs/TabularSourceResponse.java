@@ -44,7 +44,7 @@ public final class TabularSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'TabularSource'.
+     * Expected value is &#39;TabularSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class TabularSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'TabularSource'.
+     * Expected value is &#39;TabularSource&#39;.
      * 
     */
     public String type() {

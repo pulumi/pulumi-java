@@ -16,7 +16,7 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     public static final BucketWebsiteArgs Empty = new BucketWebsiteArgs();
 
     /**
-     * Behaves as the bucket's directory index where
+     * Behaves as the bucket&#39;s directory index where
      * missing objects are treated as potential directories.
      * 
      */

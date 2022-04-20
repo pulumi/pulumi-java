@@ -66,7 +66,7 @@ public final class MongoDbAtlasSinkResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy sink type.
-     * Expected value is 'MongoDbAtlasSink'.
+     * Expected value is &#39;MongoDbAtlasSink&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -99,7 +99,7 @@ public final class MongoDbAtlasSinkResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is &#34;insert&#34;. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="writeBehavior")

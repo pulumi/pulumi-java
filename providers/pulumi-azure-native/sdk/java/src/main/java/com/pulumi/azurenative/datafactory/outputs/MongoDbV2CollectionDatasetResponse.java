@@ -59,7 +59,7 @@ public final class MongoDbV2CollectionDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'MongoDbV2Collection'.
+     * Expected value is &#39;MongoDbV2Collection&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class MongoDbV2CollectionDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'MongoDbV2Collection'.
+     * Expected value is &#39;MongoDbV2Collection&#39;.
      * 
     */
     public String type() {

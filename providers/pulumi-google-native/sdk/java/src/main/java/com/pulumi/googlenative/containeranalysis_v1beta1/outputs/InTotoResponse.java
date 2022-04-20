@@ -34,7 +34,7 @@ public final class InTotoResponse {
      */
     private final String stepName;
     /**
-     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
+     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
      * 
      */
     private final String threshold;
@@ -87,7 +87,7 @@ public final class InTotoResponse {
         return this.stepName;
     }
     /**
-     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
+     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
      * 
     */
     public String threshold() {

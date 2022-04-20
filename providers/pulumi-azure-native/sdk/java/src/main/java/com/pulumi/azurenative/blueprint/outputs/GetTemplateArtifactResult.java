@@ -37,7 +37,7 @@ public final class GetTemplateArtifactResult {
     private final String id;
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'template'.
+     * Expected value is &#39;template&#39;.
      * 
      */
     private final String kind;
@@ -121,7 +121,7 @@ public final class GetTemplateArtifactResult {
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'template'.
+     * Expected value is &#39;template&#39;.
      * 
     */
     public String kind() {

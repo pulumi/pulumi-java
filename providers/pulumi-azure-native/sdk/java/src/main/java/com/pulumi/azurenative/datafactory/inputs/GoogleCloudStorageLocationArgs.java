@@ -55,7 +55,7 @@ public final class GoogleCloudStorageLocationArgs extends com.pulumi.resources.R
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'GoogleCloudStorageLocation'.
+     * Expected value is &#39;GoogleCloudStorageLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

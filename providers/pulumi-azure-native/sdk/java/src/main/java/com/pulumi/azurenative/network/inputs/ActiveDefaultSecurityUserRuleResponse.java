@@ -135,7 +135,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
 
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     @Import(name="kind", required=true)

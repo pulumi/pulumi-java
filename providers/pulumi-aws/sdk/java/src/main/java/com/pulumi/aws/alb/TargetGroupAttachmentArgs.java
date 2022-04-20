@@ -17,7 +17,7 @@ public final class TargetGroupAttachmentArgs extends com.pulumi.resources.Resour
     public static final TargetGroupAttachmentArgs Empty = new TargetGroupAttachmentArgs();
 
     /**
-     * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+     * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to &#39;all&#39;.
      * 
      */
     @Import(name="availabilityZone")

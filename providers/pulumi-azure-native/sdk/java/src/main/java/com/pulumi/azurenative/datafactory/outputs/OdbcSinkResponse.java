@@ -39,7 +39,7 @@ public final class OdbcSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'OdbcSink'.
+     * Expected value is &#39;OdbcSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class OdbcSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'OdbcSink'.
+     * Expected value is &#39;OdbcSink&#39;.
      * 
     */
     public String type() {

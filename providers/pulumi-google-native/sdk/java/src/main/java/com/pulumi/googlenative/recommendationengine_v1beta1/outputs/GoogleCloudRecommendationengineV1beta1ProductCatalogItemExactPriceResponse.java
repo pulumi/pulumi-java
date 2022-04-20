@@ -15,7 +15,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      */
     private final Double displayPrice;
     /**
-     * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
+     * Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
      * 
      */
     private final Double originalPrice;
@@ -36,7 +36,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
         return this.displayPrice;
     }
     /**
-     * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
+     * Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
      * 
     */
     public Double originalPrice() {

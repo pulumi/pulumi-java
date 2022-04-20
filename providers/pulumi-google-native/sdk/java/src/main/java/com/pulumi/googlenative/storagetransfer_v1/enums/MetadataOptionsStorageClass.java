@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         StorageClassUnspecified("STORAGE_CLASS_UNSPECIFIED"),
         /**
-         * Use the destination bucket's default storage class.
+         * Use the destination bucket&#39;s default storage class.
          * 
          */
         StorageClassDestinationBucketDefault("STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT"),
         /**
-         * Preserve the object's original storage class. This is only supported for transfers from Google Cloud Storage buckets.
+         * Preserve the object&#39;s original storage class. This is only supported for transfers from Google Cloud Storage buckets.
          * 
          */
         StorageClassPreserve("STORAGE_CLASS_PRESERVE"),

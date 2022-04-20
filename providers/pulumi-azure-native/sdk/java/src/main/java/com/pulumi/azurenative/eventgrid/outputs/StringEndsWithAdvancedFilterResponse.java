@@ -19,7 +19,7 @@ public final class StringEndsWithAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringEndsWith'.
+     * Expected value is &#39;StringEndsWith&#39;.
      * 
      */
     private final String operatorType;
@@ -48,7 +48,7 @@ public final class StringEndsWithAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringEndsWith'.
+     * Expected value is &#39;StringEndsWith&#39;.
      * 
     */
     public String operatorType() {

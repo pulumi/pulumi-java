@@ -14,7 +14,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Creates a keystore or truststore. - Keystore: Contains certificates and their associated keys. - Truststore: Contains trusted certificates used to validate a server's certificate. These certificates are typically self-signed certificates or certificates that are not signed by a trusted CA.
+ * Creates a keystore or truststore. - Keystore: Contains certificates and their associated keys. - Truststore: Contains trusted certificates used to validate a server&#39;s certificate. These certificates are typically self-signed certificates or certificates that are not signed by a trusted CA.
  * 
  */
 @ResourceType(type="google-native:apigee/v1:Keystore")

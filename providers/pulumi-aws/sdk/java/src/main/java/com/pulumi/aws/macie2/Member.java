@@ -130,14 +130,14 @@ public class Member extends com.pulumi.resources.CustomResource {
         return this.invite;
     }
     /**
-     * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
      * 
      */
     @Export(name="invitedAt", type=String.class, parameters={})
     private Output<String> invitedAt;
 
     /**
-     * @return The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * @return The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
      * 
      */
     public Output<String> invitedAt() {

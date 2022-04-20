@@ -32,7 +32,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'AzureOperationalStoreParameters'.
+     * Expected value is &#39;AzureOperationalStoreParameters&#39;.
      * 
      */
     @Import(name="objectType", required=true)

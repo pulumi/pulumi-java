@@ -21,7 +21,7 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
     public static final ArtifactObjectsArgs Empty = new ArtifactObjectsArgs();
 
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
      */
     @Import(name="location")
@@ -32,7 +32,7 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
      */
     @Import(name="paths")

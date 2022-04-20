@@ -22,7 +22,7 @@ public final class DatabricksResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'Databricks'.
+     * Expected value is &#39;Databricks&#39;.
      * 
      */
     private final String computeType;
@@ -82,7 +82,7 @@ public final class DatabricksResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'Databricks'.
+     * Expected value is &#39;Databricks&#39;.
      * 
     */
     public String computeType() {

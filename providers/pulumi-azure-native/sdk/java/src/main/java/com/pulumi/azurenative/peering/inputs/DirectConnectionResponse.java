@@ -77,7 +77,7 @@ public final class DirectConnectionResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The ID used within Microsoft's peering provisioning system to track the connection
+     * The ID used within Microsoft&#39;s peering provisioning system to track the connection
      * 
      */
     @Import(name="microsoftTrackingId", required=true)

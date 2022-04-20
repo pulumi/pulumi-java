@@ -31,7 +31,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z"
+     * The date time offset of when the token validity expires. For example &#34;2017-05-24T10:42:03.1567373Z&#34;
      * 
      */
     @Import(name="expiry", required=true)
@@ -64,7 +64,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
+     * Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: &#34;eastus&#34;, &#34;westus2&#34;. Omitting this parameter will allow all region locations to be accessible.
      * 
      */
     @Import(name="regions")
@@ -97,7 +97,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The date time offset of when the token validity begins. For example "2017-05-24T10:42:03.1567373Z".
+     * The date time offset of when the token validity begins. For example &#34;2017-05-24T10:42:03.1567373Z&#34;.
      * 
      */
     @Import(name="start", required=true)

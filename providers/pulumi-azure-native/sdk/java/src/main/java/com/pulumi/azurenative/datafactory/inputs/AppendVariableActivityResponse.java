@@ -58,7 +58,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
 
     /**
      * Type of activity.
-     * Expected value is 'AppendVariable'.
+     * Expected value is &#39;AppendVariable&#39;.
      * 
      */
     @Import(name="type", required=true)

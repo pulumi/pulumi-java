@@ -58,7 +58,7 @@ public final class DataboxedgeFunctions {
      * Role Addon
      * API Version: 2020-12-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ArcAddon, IoTAddon.
      * 
      */
@@ -227,7 +227,7 @@ public final class DataboxedgeFunctions {
      * Compute role.
      * API Version: 2020-12-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
      * 
      */
@@ -275,7 +275,7 @@ public final class DataboxedgeFunctions {
      * Trigger details.
      * API Version: 2020-12-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
      * 
      */

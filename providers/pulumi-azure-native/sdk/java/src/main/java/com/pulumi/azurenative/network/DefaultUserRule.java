@@ -133,7 +133,7 @@ public class DefaultUserRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -141,7 +141,7 @@ public class DefaultUserRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     public Output<String> kind() {

@@ -39,8 +39,8 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Indicates whether OSS Redis AUTH is enabled for the
-     * instance. If set to "true" AUTH is enabled on the instance.
-     * Default value is "false" meaning AUTH is disabled.
+     * instance. If set to &#34;true&#34; AUTH is enabled on the instance.
+     * Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     @Import(name="authEnabled")
@@ -90,7 +90,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     /**
      * - 
      * Output only. The time when the policy was created.
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
      */
@@ -221,7 +221,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
-     * "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+     * &#34;serviceAccount:&#34;. The value may change over time for a given instance so should be checked before each import/export
      * operation.
      * 
      */
@@ -258,7 +258,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     /**
      * Output only. Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy
      * replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write
-     * requests must target 'host'.
+     * requests must target &#39;host&#39;.
      * 
      */
     @Import(name="readEndpoint")
@@ -270,7 +270,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Output only. The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target
-     * 'port'.
+     * &#39;port&#39;.
      * 
      */
     @Import(name="readEndpointPort")
@@ -285,7 +285,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * backend will default to READ_REPLICAS_DISABLED. - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be
      * provided and the instance cannot scale up or down the number of replicas. - READ_REPLICAS_ENABLED: If enabled, read
      * endpoint will be provided and the instance can scale up and down the number of replicas. Default value:
-     * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
+     * &#34;READ_REPLICAS_DISABLED&#34; Possible values: [&#34;READ_REPLICAS_DISABLED&#34;, &#34;READ_REPLICAS_ENABLED&#34;]
      * 
      */
     @Import(name="readReplicasMode")

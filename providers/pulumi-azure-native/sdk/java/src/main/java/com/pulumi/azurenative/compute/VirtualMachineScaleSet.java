@@ -101,14 +101,14 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
         return this.extendedLocation;
     }
     /**
-     * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+     * Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     @Export(name="hostGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> hostGroup;
 
     /**
-     * @return Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+     * @return Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     public Output</* @Nullable */ SubResourceResponse> hostGroup() {
@@ -185,14 +185,14 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
         return this.overprovision;
     }
     /**
-     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
      */
     @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
-     * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+     * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
      */
     public Output</* @Nullable */ PlanResponse> plan() {
@@ -227,14 +227,14 @@ public class VirtualMachineScaleSet extends com.pulumi.resources.CustomResource 
         return this.provisioningState;
     }
     /**
-     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     @Export(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup;
 
     /**
-     * @return Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * @return Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     public Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup() {

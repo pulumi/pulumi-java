@@ -34,7 +34,7 @@ public final class GetStackSetResult {
      */
     private final @Nullable List<StackSetCapability> capabilities;
     /**
-     * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
      * 
      */
     private final @Nullable String description;
@@ -59,7 +59,7 @@ public final class GetStackSetResult {
      */
     private final @Nullable List<StackSetStackInstances> stackInstancesGroup;
     /**
-     * The ID of the stack set that you're creating.
+     * The ID of the stack set that you&#39;re creating.
      * 
      */
     private final @Nullable String stackSetId;
@@ -122,7 +122,7 @@ public final class GetStackSetResult {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
-     * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
      * 
     */
     public Optional<String> description() {
@@ -157,7 +157,7 @@ public final class GetStackSetResult {
         return this.stackInstancesGroup == null ? List.of() : this.stackInstancesGroup;
     }
     /**
-     * The ID of the stack set that you're creating.
+     * The ID of the stack set that you&#39;re creating.
      * 
     */
     public Optional<String> stackSetId() {

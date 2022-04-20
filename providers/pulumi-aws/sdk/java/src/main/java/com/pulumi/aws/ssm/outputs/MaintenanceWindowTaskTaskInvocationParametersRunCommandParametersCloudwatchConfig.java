@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig {
     /**
-     * The name of the CloudWatch log group where you want to send command output. If you don't specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
+     * The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
      * 
      */
     private final @Nullable String cloudwatchLogGroupName;
@@ -32,7 +32,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     /**
-     * The name of the CloudWatch log group where you want to send command output. If you don't specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
+     * The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
      * 
     */
     public Optional<String> cloudwatchLogGroupName() {

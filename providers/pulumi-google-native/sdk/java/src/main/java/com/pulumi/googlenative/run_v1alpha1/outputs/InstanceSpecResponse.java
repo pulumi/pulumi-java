@@ -28,7 +28,7 @@ public final class InstanceSpecResponse {
      */
     private final String restartPolicy;
     /**
-     * Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project's default service account. +optional
+     * Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project&#39;s default service account. +optional
      * 
      */
     private final String serviceAccountName;
@@ -81,7 +81,7 @@ public final class InstanceSpecResponse {
         return this.restartPolicy;
     }
     /**
-     * Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project's default service account. +optional
+     * Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project&#39;s default service account. +optional
      * 
     */
     public String serviceAccountName() {

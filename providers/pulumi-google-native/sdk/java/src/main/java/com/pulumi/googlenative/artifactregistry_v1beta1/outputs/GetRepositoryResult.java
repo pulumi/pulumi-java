@@ -36,7 +36,7 @@ public final class GetRepositoryResult {
      */
     private final Map<String,String> labels;
     /**
-     * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+     * The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
      * 
      */
     private final String name;
@@ -100,7 +100,7 @@ public final class GetRepositoryResult {
         return this.labels;
     }
     /**
-     * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+     * The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
      * 
     */
     public String name() {

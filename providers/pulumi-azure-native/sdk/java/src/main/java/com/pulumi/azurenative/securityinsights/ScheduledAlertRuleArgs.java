@@ -68,7 +68,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The kind of the alert rule
-     * Expected value is 'Scheduled'.
+     * Expected value is &#39;Scheduled&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -112,7 +112,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

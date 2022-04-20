@@ -31,7 +31,7 @@ public final class ZoneState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+     * A comment for the hosted zone. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Import(name="comment")

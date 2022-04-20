@@ -183,7 +183,7 @@ public final class HBaseLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'HBase'.
+     * Expected value is &#39;HBase&#39;.
      * 
      */
     @Import(name="type", required=true)

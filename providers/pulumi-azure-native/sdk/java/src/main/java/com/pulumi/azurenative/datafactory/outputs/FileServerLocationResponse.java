@@ -24,7 +24,7 @@ public final class FileServerLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'FileServerLocation'.
+     * Expected value is &#39;FileServerLocation&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class FileServerLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'FileServerLocation'.
+     * Expected value is &#39;FileServerLocation&#39;.
      * 
     */
     public String type() {

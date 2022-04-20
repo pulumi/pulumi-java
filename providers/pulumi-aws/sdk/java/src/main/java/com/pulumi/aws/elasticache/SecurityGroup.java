@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  * Provides an ElastiCache Security Group to control access to one or more cache
  * clusters.
  * 
- * > **NOTE:** ElastiCache Security Groups are for use only when working with an
+ * &gt; **NOTE:** ElastiCache Security Groups are for use only when working with an
  * ElastiCache cluster **outside** of a VPC. If you are using a VPC, see the
  * ElastiCache Subnet Group resource.
  * 
@@ -36,14 +36,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:elasticache/securityGroup:SecurityGroup")
 public class SecurityGroup extends com.pulumi.resources.CustomResource {
     /**
-     * description for the cache security group. Defaults to "Managed by Pulumi".
+     * description for the cache security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return description for the cache security group. Defaults to "Managed by Pulumi".
+     * @return description for the cache security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

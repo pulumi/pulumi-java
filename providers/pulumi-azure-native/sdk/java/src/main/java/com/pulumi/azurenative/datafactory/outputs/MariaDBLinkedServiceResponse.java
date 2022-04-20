@@ -54,7 +54,7 @@ public final class MariaDBLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
      * Type of linked service.
-     * Expected value is 'MariaDB'.
+     * Expected value is &#39;MariaDB&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class MariaDBLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'MariaDB'.
+     * Expected value is &#39;MariaDB&#39;.
      * 
     */
     public String type() {

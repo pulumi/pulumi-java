@@ -84,7 +84,7 @@ public final class AKSServiceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The compute environment type for the service.
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     @Import(name="computeType", required=true)

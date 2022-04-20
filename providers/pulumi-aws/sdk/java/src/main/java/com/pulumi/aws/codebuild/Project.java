@@ -29,7 +29,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g., the "rebuild every time a code change is pushed" option in the CodeBuild web console).
+ * Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g., the &#34;rebuild every time a code change is pushed&#34; option in the CodeBuild web console).
  * 
  * ## Example Usage
  * 
@@ -171,14 +171,14 @@ public class Project extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+     * AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.
      * 
      */
     @Export(name="encryptionKey", type=String.class, parameters={})
     private Output<String> encryptionKey;
 
     /**
-     * @return AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+     * @return AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.
      * 
      */
     public Output<String> encryptionKey() {
@@ -241,14 +241,14 @@ public class Project extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Specifies the visibility of the project's builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
+     * Specifies the visibility of the project&#39;s builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
      * 
      */
     @Export(name="projectVisibility", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectVisibility;
 
     /**
-     * @return Specifies the visibility of the project's builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
+     * @return Specifies the visibility of the project&#39;s builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
      * 
      */
     public Output</* @Nullable */ String> projectVisibility() {
@@ -283,14 +283,14 @@ public class Project extends com.pulumi.resources.CustomResource {
         return this.queuedTimeout;
     }
     /**
-     * The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds.
+     * The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project&#39;s builds.
      * 
      */
     @Export(name="resourceAccessRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceAccessRole;
 
     /**
-     * @return The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds.
+     * @return The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project&#39;s builds.
      * 
      */
     public Output</* @Nullable */ String> resourceAccessRole() {

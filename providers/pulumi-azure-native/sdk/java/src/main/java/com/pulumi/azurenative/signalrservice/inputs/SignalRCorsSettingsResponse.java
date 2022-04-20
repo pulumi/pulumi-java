@@ -20,7 +20,7 @@ public final class SignalRCorsSettingsResponse extends com.pulumi.resources.Invo
     public static final SignalRCorsSettingsResponse Empty = new SignalRCorsSettingsResponse();
 
     /**
-     * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
+     * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all. If omitted, allow all by default.
      * 
      */
     @Import(name="allowedOrigins")

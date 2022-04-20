@@ -24,7 +24,7 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final HTTPGetActionArgs Empty = new HTTPGetActionArgs();
 
     /**
-     * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+     * Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
      */
     @Import(name="host")
@@ -71,8 +71,8 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * Scheme to use for connecting to the host. Defaults to HTTP.
      * 
      * Possible enum values:
-     *  - `"HTTP"` means that the scheme used will be http://
-     *  - `"HTTPS"` means that the scheme used will be https://
+     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
+     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
      * 
      */
     @Import(name="scheme")

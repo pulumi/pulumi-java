@@ -54,7 +54,7 @@ public final class CouchbaseLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'Couchbase'.
+     * Expected value is &#39;Couchbase&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class CouchbaseLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Couchbase'.
+     * Expected value is &#39;Couchbase&#39;.
      * 
     */
     public String type() {

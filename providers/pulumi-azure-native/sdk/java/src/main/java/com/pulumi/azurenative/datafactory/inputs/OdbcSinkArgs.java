@@ -77,7 +77,7 @@ public final class OdbcSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'OdbcSink'.
+     * Expected value is &#39;OdbcSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRoleAssignmentResult {
     /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
      */
     private final @Nullable String condition;
     /**
-     * Version of the condition. Currently accepted value is '2.0'
+     * Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
      */
     private final @Nullable String conditionVersion;
@@ -122,14 +122,14 @@ public final class GetRoleAssignmentResult {
     }
 
     /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * Version of the condition. Currently accepted value is '2.0'
+     * Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
     */
     public Optional<String> conditionVersion() {

@@ -111,7 +111,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+     * The ARN prefix to be used in an `aws.lambda.Permission`&#39;s `source_arn` attribute
      * or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 

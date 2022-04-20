@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Creating a budget](https://cloud.google.com/billing/docs/how-to/budgets)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the Billing Budgets API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the
@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
 public class Budget extends com.pulumi.resources.CustomResource {
     /**
      * Defines notifications that are sent on every update to the
-     * billing account's spend, regardless of the thresholds defined
+     * billing account&#39;s spend, regardless of the thresholds defined
      * using threshold rules.
      * Structure is documented below.
      * 
@@ -66,7 +66,7 @@ public class Budget extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Defines notifications that are sent on every update to the
-     * billing account's spend, regardless of the thresholds defined
+     * billing account&#39;s spend, regardless of the thresholds defined
      * using threshold rules.
      * Structure is documented below.
      * 
@@ -123,14 +123,14 @@ public class Budget extends com.pulumi.resources.CustomResource {
         return this.budgetFilter;
     }
     /**
-     * User data for display name in UI. Must be <= 60 chars.
+     * User data for display name in UI. Must be &lt;= 60 chars.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
-     * @return User data for display name in UI. Must be <= 60 chars.
+     * @return User data for display name in UI. Must be &lt;= 60 chars.
      * 
      */
     public Output</* @Nullable */ String> displayName() {

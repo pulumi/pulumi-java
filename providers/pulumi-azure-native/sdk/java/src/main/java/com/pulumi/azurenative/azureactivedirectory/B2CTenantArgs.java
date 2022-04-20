@@ -19,7 +19,7 @@ public final class B2CTenantArgs extends com.pulumi.resources.ResourceArgs {
     public static final B2CTenantArgs Empty = new B2CTenantArgs();
 
     /**
-     * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
+     * The location in which the resource is hosted and data resides. Can be one of &#39;United States&#39;, &#39;Europe&#39;, &#39;Asia Pacific&#39;, or &#39;Australia&#39; (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
      * 
      */
     @Import(name="location")

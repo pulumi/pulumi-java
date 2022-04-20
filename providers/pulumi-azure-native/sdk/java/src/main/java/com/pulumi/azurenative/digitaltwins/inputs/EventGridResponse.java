@@ -87,7 +87,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

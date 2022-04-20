@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerImage {
     /**
-     * Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7", "dockerhub.io/google_containers/hyperkube:v1.0.7"]
+     * Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
      * 
      */
     private final List<String> names;
@@ -33,7 +33,7 @@ public final class ContainerImage {
     }
 
     /**
-     * Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7", "dockerhub.io/google_containers/hyperkube:v1.0.7"]
+     * Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
      * 
     */
     public List<String> names() {

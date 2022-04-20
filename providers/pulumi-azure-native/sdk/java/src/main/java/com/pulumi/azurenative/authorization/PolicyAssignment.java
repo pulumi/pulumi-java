@@ -149,14 +149,14 @@ public class PolicyAssignment extends com.pulumi.resources.CustomResource {
         return this.nonComplianceMessages;
     }
     /**
-     * The policy's excluded scopes.
+     * The policy&#39;s excluded scopes.
      * 
      */
     @Export(name="notScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notScopes;
 
     /**
-     * @return The policy's excluded scopes.
+     * @return The policy&#39;s excluded scopes.
      * 
      */
     public Output</* @Nullable */ List<String>> notScopes() {

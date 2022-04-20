@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse {
     /**
-     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
      */
     private final Boolean allowPlaybackInterruption;
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse {
     }
 
     /**
-     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
     */
     public Boolean allowPlaybackInterruption() {

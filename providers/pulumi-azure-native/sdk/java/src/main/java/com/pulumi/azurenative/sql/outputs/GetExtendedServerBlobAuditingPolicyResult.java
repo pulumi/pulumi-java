@@ -64,7 +64,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      * The general form for defining an action to be audited is:
      * {action} ON {object} BY {principal}
      * 
-     * Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+     * Note that &lt;object&gt; in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
      * 
      * For example:
      * SELECT on dbo.myTable by public
@@ -82,10 +82,10 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
     private final String id;
     /**
      * Specifies whether audit events are sent to Azure Monitor.
-     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+     * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39; and &#39;IsAzureMonitorTargetEnabled&#39; as true.
      * 
-     * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
-     * Note that for server level audit you should use the 'master' database as {databaseName}.
+     * When using REST API to configure auditing, Diagnostic Settings with &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should be also created.
+     * Note that for server level audit you should use the &#39;master&#39; database as {databaseName}.
      * 
      * Diagnostic Settings URI format:
      * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
@@ -97,9 +97,9 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
     private final @Nullable Boolean isAzureMonitorTargetEnabled;
     /**
      * Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
-     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
+     * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39;, &#39;IsAzureMonitorTargetEnabled&#39; as true and &#39;IsDevopsAuditEnabled&#39; as true
      * 
-     * When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created.
+     * When using REST API to configure auditing, Diagnostic Settings with &#39;DevOpsOperationsAudit&#39; diagnostic logs category on the master database should also be created.
      * 
      * Diagnostic Settings URI format:
      * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
@@ -110,7 +110,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      */
     private final @Nullable Boolean isDevopsAuditEnabled;
     /**
-     * Specifies whether storageAccountAccessKey value is the storage's secondary key.
+     * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
      */
     private final @Nullable Boolean isStorageSecondaryKeyInUse;
@@ -236,7 +236,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      * The general form for defining an action to be audited is:
      * {action} ON {object} BY {principal}
      * 
-     * Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+     * Note that &lt;object&gt; in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
      * 
      * For example:
      * SELECT on dbo.myTable by public
@@ -258,10 +258,10 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
     }
     /**
      * Specifies whether audit events are sent to Azure Monitor.
-     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+     * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39; and &#39;IsAzureMonitorTargetEnabled&#39; as true.
      * 
-     * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
-     * Note that for server level audit you should use the 'master' database as {databaseName}.
+     * When using REST API to configure auditing, Diagnostic Settings with &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should be also created.
+     * Note that for server level audit you should use the &#39;master&#39; database as {databaseName}.
      * 
      * Diagnostic Settings URI format:
      * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
@@ -275,9 +275,9 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
     }
     /**
      * Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
-     * In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
+     * In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39;, &#39;IsAzureMonitorTargetEnabled&#39; as true and &#39;IsDevopsAuditEnabled&#39; as true
      * 
-     * When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created.
+     * When using REST API to configure auditing, Diagnostic Settings with &#39;DevOpsOperationsAudit&#39; diagnostic logs category on the master database should also be created.
      * 
      * Diagnostic Settings URI format:
      * PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
@@ -290,7 +290,7 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
         return Optional.ofNullable(this.isDevopsAuditEnabled);
     }
     /**
-     * Specifies whether storageAccountAccessKey value is the storage's secondary key.
+     * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
     */
     public Optional<Boolean> isStorageSecondaryKeyInUse() {

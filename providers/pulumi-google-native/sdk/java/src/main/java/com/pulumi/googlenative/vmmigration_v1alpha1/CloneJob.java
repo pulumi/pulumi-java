@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 /**
  * Initiates a Clone of a specific migrating VM.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -51,14 +51,14 @@ public class CloneJob extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Provides details for the errors that led to the Clone Job's state.
+     * Provides details for the errors that led to the Clone Job&#39;s state.
      * 
      */
     @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
-     * @return Provides details for the errors that led to the Clone Job's state.
+     * @return Provides details for the errors that led to the Clone Job&#39;s state.
      * 
      */
     public Output<StatusResponse> error() {

@@ -128,7 +128,7 @@ public final class OdbcLinkedServiceArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of linked service.
-     * Expected value is 'Odbc'.
+     * Expected value is &#39;Odbc&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -16,7 +16,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     public static final FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs Empty = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationGetArgs();
 
     /**
-     * The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+     * The ID of the AWS Glue Data Catalog. If you don&#39;t supply this, the AWS account ID is used by default.
      * 
      */
     @Import(name="catalogId")
@@ -38,7 +38,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * If you don't specify an AWS Region, the default is the current region.
+     * If you don&#39;t specify an AWS Region, the default is the current region.
      * 
      */
     @Import(name="region")
@@ -49,7 +49,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     @Import(name="roleArn", required=true)

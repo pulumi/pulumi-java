@@ -30,7 +30,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
     }
 
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
      * 
      */
     @Import(name="interpreter", required=true)

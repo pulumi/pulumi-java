@@ -33,7 +33,7 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Duration of the patch. After the duration ends, the patch times out.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
     @Import(name="duration")

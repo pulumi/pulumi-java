@@ -21,7 +21,7 @@ public final class AzureStaticWebAppsArgs extends com.pulumi.resources.ResourceA
     public static final AzureStaticWebAppsArgs Empty = new AzureStaticWebAppsArgs();
 
     /**
-     * <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

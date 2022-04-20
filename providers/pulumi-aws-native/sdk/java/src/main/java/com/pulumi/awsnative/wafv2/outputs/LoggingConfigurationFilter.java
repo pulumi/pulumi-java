@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class LoggingConfigurationFilter {
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
      * 
      */
     private final LoggingConfigurationFilterBehavior behavior;
@@ -39,7 +39,7 @@ public final class LoggingConfigurationFilter {
     }
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
      * 
     */
     public LoggingConfigurationFilterBehavior behavior() {

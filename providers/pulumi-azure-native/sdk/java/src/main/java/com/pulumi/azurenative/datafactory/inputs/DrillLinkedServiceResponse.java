@@ -104,7 +104,7 @@ public final class DrillLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'Drill'.
+     * Expected value is &#39;Drill&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
     /**
-     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
+     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don&#39;t want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
      * 
      */
     private final @Nullable String customCname;
@@ -54,7 +54,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
     }
 
     /**
-     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
+     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don&#39;t want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
      * 
     */
     public Optional<String> customCname() {

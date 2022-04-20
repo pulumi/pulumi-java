@@ -19,7 +19,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     public static final IndexArgs Empty = new IndexArgs();
 
     /**
-     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
     @Import(name="ancestor", required=true)

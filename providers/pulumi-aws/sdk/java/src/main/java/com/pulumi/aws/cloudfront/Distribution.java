@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  * CloudFront web distributions, see the [POST Distribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) page in the Amazon
  * CloudFront API Reference.
  * 
- * > **NOTE:** CloudFront distributions take about 15 minutes to a deployed state
+ * &gt; **NOTE:** CloudFront distributions take about 15 minutes to a deployed state
  * after creation or modification. During this time, deletes to resources will be
  * blocked. If you need to delete a distribution that is enabled and you do not
  * want to wait, you need to use the `retain_on_delete` flag.
@@ -192,7 +192,7 @@ public class Distribution extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * The current version of the distribution's information. For example:
+     * The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
      */
@@ -200,7 +200,7 @@ public class Distribution extends com.pulumi.resources.CustomResource {
     private Output<String> etag;
 
     /**
-     * @return The current version of the distribution's information. For example:
+     * @return The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
      */
@@ -407,7 +407,7 @@ public class Distribution extends com.pulumi.resources.CustomResource {
     }
     /**
      * The current status of the distribution. `Deployed` if the
-     * distribution's information is fully propagated throughout the Amazon
+     * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
      */
@@ -416,7 +416,7 @@ public class Distribution extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The current status of the distribution. `Deployed` if the
-     * distribution's information is fully propagated throughout the Amazon
+     * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
      */

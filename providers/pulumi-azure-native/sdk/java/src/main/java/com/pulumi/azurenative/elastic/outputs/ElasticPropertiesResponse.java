@@ -18,7 +18,7 @@ public final class ElasticPropertiesResponse {
      */
     private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
     /**
-     * Details of the user's elastic account.
+     * Details of the user&#39;s elastic account.
      * 
      */
     private final @Nullable ElasticCloudUserResponse elasticCloudUser;
@@ -39,7 +39,7 @@ public final class ElasticPropertiesResponse {
         return Optional.ofNullable(this.elasticCloudDeployment);
     }
     /**
-     * Details of the user's elastic account.
+     * Details of the user&#39;s elastic account.
      * 
     */
     public Optional<ElasticCloudUserResponse> elasticCloudUser() {

@@ -64,7 +64,7 @@ public final class SparkObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SparkObject'.
+     * Expected value is &#39;SparkObject&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class SparkObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SparkObject'.
+     * Expected value is &#39;SparkObject&#39;.
      * 
     */
     public String type() {

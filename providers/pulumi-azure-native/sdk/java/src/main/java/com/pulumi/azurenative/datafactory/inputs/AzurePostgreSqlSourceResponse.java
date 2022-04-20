@@ -99,7 +99,7 @@ public final class AzurePostgreSqlSourceResponse extends com.pulumi.resources.In
 
     /**
      * Copy source type.
-     * Expected value is 'AzurePostgreSqlSource'.
+     * Expected value is &#39;AzurePostgreSqlSource&#39;.
      * 
      */
     @Import(name="type", required=true)

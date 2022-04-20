@@ -19,7 +19,7 @@ public final class JobInputSequenceResponse {
     private final @Nullable List<JobInputClipResponse> inputs;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputSequence'.
+     * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
      * 
      */
     private final String odataType;
@@ -41,7 +41,7 @@ public final class JobInputSequenceResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JobInputSequence'.
+     * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
      * 
     */
     public String odataType() {

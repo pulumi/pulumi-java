@@ -24,7 +24,7 @@ public final class RuntimeSoftwareConfigArgs extends com.pulumi.resources.Resour
     public static final RuntimeSoftwareConfigArgs Empty = new RuntimeSoftwareConfigArgs();
 
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     @Import(name="customGpuDriverPath")

@@ -74,17 +74,17 @@ public final class GetMigratingVmResult {
      */
     private final SchedulePolicyResponse policy;
     /**
-     * The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * The recent clone jobs performed on the migrating VM. This field holds the vm&#39;s last completed clone job and the vm&#39;s running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the &#34;view&#34; parameter of the Get/List request.
      * 
      */
     private final List<CloneJobResponse> recentCloneJobs;
     /**
-     * The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * The recent cutover jobs performed on the migrating VM. This field holds the vm&#39;s last completed cutover job and the vm&#39;s running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the &#34;view&#34; parameter of the Get/List request.
      * 
      */
     private final List<CutoverJobResponse> recentCutoverJobs;
     /**
-     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
      * 
      */
     private final String sourceVmId;
@@ -220,21 +220,21 @@ public final class GetMigratingVmResult {
         return this.policy;
     }
     /**
-     * The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * The recent clone jobs performed on the migrating VM. This field holds the vm&#39;s last completed clone job and the vm&#39;s running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the &#34;view&#34; parameter of the Get/List request.
      * 
     */
     public List<CloneJobResponse> recentCloneJobs() {
         return this.recentCloneJobs;
     }
     /**
-     * The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
+     * The recent cutover jobs performed on the migrating VM. This field holds the vm&#39;s last completed cutover job and the vm&#39;s running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the &#34;view&#34; parameter of the Get/List request.
      * 
     */
     public List<CutoverJobResponse> recentCutoverJobs() {
         return this.recentCutoverJobs;
     }
     /**
-     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     * The unique ID of the VM in the source. The VM&#39;s name in vSphere can be changed, so this is not the VM&#39;s name but rather its moRef id. This id is of the form vm-.
      * 
     */
     public String sourceVmId() {

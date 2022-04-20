@@ -26,7 +26,7 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
     }
 
     /**
-     * ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
+     * ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
      * 
      */
     @Import(name="snsCallerArn", required=true)

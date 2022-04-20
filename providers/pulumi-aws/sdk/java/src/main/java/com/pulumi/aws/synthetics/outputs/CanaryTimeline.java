@@ -22,12 +22,12 @@ public final class CanaryTimeline {
      */
     private final @Nullable String lastModified;
     /**
-     * Date and time that the canary's most recent run started.
+     * Date and time that the canary&#39;s most recent run started.
      * 
      */
     private final @Nullable String lastStarted;
     /**
-     * Date and time that the canary's most recent run ended.
+     * Date and time that the canary&#39;s most recent run ended.
      * 
      */
     private final @Nullable String lastStopped;
@@ -59,14 +59,14 @@ public final class CanaryTimeline {
         return Optional.ofNullable(this.lastModified);
     }
     /**
-     * Date and time that the canary's most recent run started.
+     * Date and time that the canary&#39;s most recent run started.
      * 
     */
     public Optional<String> lastStarted() {
         return Optional.ofNullable(this.lastStarted);
     }
     /**
-     * Date and time that the canary's most recent run ended.
+     * Date and time that the canary&#39;s most recent run ended.
      * 
     */
     public Optional<String> lastStopped() {

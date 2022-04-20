@@ -32,7 +32,7 @@ public final class FirewallPolicyFirewallPolicy {
      */
     private final @Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
     /**
-     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
+     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy&#39;s `stateless_default_actions`. See Stateless Custom Action below for details.
      * 
      */
     private final @Nullable List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions;
@@ -94,7 +94,7 @@ public final class FirewallPolicyFirewallPolicy {
         return this.statefulRuleGroupReferences == null ? List.of() : this.statefulRuleGroupReferences;
     }
     /**
-     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
+     * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy&#39;s `stateless_default_actions`. See Stateless Custom Action below for details.
      * 
     */
     public List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions() {

@@ -26,7 +26,7 @@ import java.util.Objects;
 @CustomType
 public final class StepResponse {
     /**
-     * Display information of the final state "abort" and reason.
+     * Display information of the final state &#34;abort&#34; and reason.
      * 
      */
     private final AbortInfoResponse abort;
@@ -41,7 +41,7 @@ public final class StepResponse {
      */
     private final CloudSQLInstanceInfoResponse cloudSqlInstance;
     /**
-     * Display information of the final state "deliver" and reason.
+     * Display information of the final state &#34;deliver&#34; and reason.
      * 
      */
     private final DeliverInfoResponse deliver;
@@ -51,7 +51,7 @@ public final class StepResponse {
      */
     private final String description;
     /**
-     * Display information of the final state "drop" and reason.
+     * Display information of the final state &#34;drop&#34; and reason.
      * 
      */
     private final DropInfoResponse drop;
@@ -66,7 +66,7 @@ public final class StepResponse {
      */
     private final FirewallInfoResponse firewall;
     /**
-     * Display information of the final state "forward" and reason.
+     * Display information of the final state &#34;forward&#34; and reason.
      * 
      */
     private final ForwardInfoResponse forward;
@@ -164,7 +164,7 @@ public final class StepResponse {
     }
 
     /**
-     * Display information of the final state "abort" and reason.
+     * Display information of the final state &#34;abort&#34; and reason.
      * 
     */
     public AbortInfoResponse abort() {
@@ -185,7 +185,7 @@ public final class StepResponse {
         return this.cloudSqlInstance;
     }
     /**
-     * Display information of the final state "deliver" and reason.
+     * Display information of the final state &#34;deliver&#34; and reason.
      * 
     */
     public DeliverInfoResponse deliver() {
@@ -199,7 +199,7 @@ public final class StepResponse {
         return this.description;
     }
     /**
-     * Display information of the final state "drop" and reason.
+     * Display information of the final state &#34;drop&#34; and reason.
      * 
     */
     public DropInfoResponse drop() {
@@ -220,7 +220,7 @@ public final class StepResponse {
         return this.firewall;
     }
     /**
-     * Display information of the final state "forward" and reason.
+     * Display information of the final state &#34;forward&#34; and reason.
      * 
     */
     public ForwardInfoResponse forward() {

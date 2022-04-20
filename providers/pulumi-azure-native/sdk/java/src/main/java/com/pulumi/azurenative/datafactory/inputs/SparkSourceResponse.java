@@ -99,7 +99,7 @@ public final class SparkSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'SparkSource'.
+     * Expected value is &#39;SparkSource&#39;.
      * 
      */
     @Import(name="type", required=true)

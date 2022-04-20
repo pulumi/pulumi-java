@@ -22,7 +22,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
      */
     private final String krb5ConfigGcsUri;
     /**
-     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
+     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
      * 
      */
     private final String principal;
@@ -53,7 +53,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
         return this.krb5ConfigGcsUri;
     }
     /**
-     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
+     * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
      * 
     */
     public String principal() {

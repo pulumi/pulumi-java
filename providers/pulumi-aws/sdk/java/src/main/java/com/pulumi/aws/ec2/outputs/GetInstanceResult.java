@@ -99,7 +99,7 @@ public final class GetInstanceResult {
      */
     private final String instanceType;
     /**
-     * The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
+     * The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn&#39;t change if you attach an EIP to the instance.
      * 
      */
     private final List<String> ipv6Addresses;
@@ -148,7 +148,7 @@ public final class GetInstanceResult {
     private final Integer placementPartitionNumber;
     /**
      * The private DNS name assigned to the Instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC.
      * 
      */
@@ -160,12 +160,12 @@ public final class GetInstanceResult {
     private final String privateIp;
     /**
      * The public DNS name assigned to the Instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC.
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     private final String publicDns;
     /**
-     * The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
+     * The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP&#39;s address directly and not use `public_ip`, as this field will change after the EIP is attached.
      * 
      */
     private final String publicIp;
@@ -175,7 +175,7 @@ public final class GetInstanceResult {
      */
     private final List<GetInstanceRootBlockDevice> rootBlockDevices;
     /**
-     * The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+     * The secondary private IPv4 addresses assigned to the instance&#39;s primary network interface (eth0) in a VPC.
      * 
      */
     private final List<String> secondaryPrivateIps;
@@ -427,7 +427,7 @@ public final class GetInstanceResult {
         return this.instanceType;
     }
     /**
-     * The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
+     * The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn&#39;t change if you attach an EIP to the instance.
      * 
     */
     public List<String> ipv6Addresses() {
@@ -494,7 +494,7 @@ public final class GetInstanceResult {
     }
     /**
      * The private DNS name assigned to the Instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC.
      * 
     */
@@ -510,14 +510,14 @@ public final class GetInstanceResult {
     }
     /**
      * The public DNS name assigned to the Instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC.
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
     */
     public String publicDns() {
         return this.publicDns;
     }
     /**
-     * The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
+     * The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP&#39;s address directly and not use `public_ip`, as this field will change after the EIP is attached.
      * 
     */
     public String publicIp() {
@@ -531,7 +531,7 @@ public final class GetInstanceResult {
         return this.rootBlockDevices;
     }
     /**
-     * The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+     * The secondary private IPv4 addresses assigned to the instance&#39;s primary network interface (eth0) in a VPC.
      * 
     */
     public List<String> secondaryPrivateIps() {

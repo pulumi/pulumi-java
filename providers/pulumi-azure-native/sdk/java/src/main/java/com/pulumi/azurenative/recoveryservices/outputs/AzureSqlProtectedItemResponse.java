@@ -80,7 +80,7 @@ public final class AzureSqlProtectedItemResponse {
     private final @Nullable String protectedItemDataId;
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Sql/servers/databases'.
+     * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
      * 
      */
     private final String protectedItemType;
@@ -231,7 +231,7 @@ public final class AzureSqlProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Sql/servers/databases'.
+     * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
      * 
     */
     public String protectedItemType() {

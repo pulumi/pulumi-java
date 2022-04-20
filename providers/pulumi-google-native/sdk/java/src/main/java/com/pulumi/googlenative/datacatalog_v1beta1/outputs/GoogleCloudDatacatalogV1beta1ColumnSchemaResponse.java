@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
      */
     private final String description;
     /**
-     * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     * Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
      */
     private final String mode;
@@ -65,7 +65,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
         return this.description;
     }
     /**
-     * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     * Optional. A column&#39;s mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
     */
     public String mode() {

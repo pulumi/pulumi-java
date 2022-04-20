@@ -45,14 +45,14 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
         return this.branch;
     }
     /**
-     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="deploymentRollbackEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deploymentRollbackEnabled;
 
     /**
-     * @return <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> deploymentRollbackEnabled() {
@@ -73,42 +73,42 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
         return this.gitHubActionConfiguration;
     }
     /**
-     * <code>true</code> if this is deployed via GitHub action.
+     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
     @Export(name="isGitHubAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGitHubAction;
 
     /**
-     * @return <code>true</code> if this is deployed via GitHub action.
+     * @return &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
     public Output</* @Nullable */ Boolean> isGitHubAction() {
         return this.isGitHubAction;
     }
     /**
-     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
     @Export(name="isManualIntegration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isManualIntegration;
 
     /**
-     * @return <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * @return &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
     public Output</* @Nullable */ Boolean> isManualIntegration() {
         return this.isManualIntegration;
     }
     /**
-     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
     @Export(name="isMercurial", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMercurial;
 
     /**
-     * @return <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     * @return &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
     public Output</* @Nullable */ Boolean> isMercurial() {

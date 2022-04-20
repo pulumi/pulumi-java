@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+ * Contact information for domain registration. If &#39;Domain Privacy&#39; option is not selected then the contact information is made publicly available through the Whois
  * directories as per ICANN requirements.
  * 
  */

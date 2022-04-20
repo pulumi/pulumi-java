@@ -115,7 +115,7 @@ public final class ZohoObjectDatasetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset.
-     * Expected value is 'ZohoObject'.
+     * Expected value is &#39;ZohoObject&#39;.
      * 
      */
     @Import(name="type", required=true)

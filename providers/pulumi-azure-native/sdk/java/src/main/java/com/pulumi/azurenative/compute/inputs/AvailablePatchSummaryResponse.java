@@ -97,7 +97,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
+     * The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
      * 
      */
     @Import(name="status", required=true)

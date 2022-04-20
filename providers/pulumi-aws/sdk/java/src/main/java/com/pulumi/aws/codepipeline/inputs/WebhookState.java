@@ -20,7 +20,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     public static final WebhookState Empty = new WebhookState();
 
     /**
-     * The CodePipeline webhook's ARN.
+     * The CodePipeline webhook&#39;s ARN.
      * 
      */
     @Import(name="arn")
@@ -119,7 +119,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
+     * The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the target.
      * 
      */
     @Import(name="url")

@@ -122,14 +122,14 @@ public class Message extends com.pulumi.resources.CustomResource {
         return this.patientIds;
     }
     /**
-     * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
      */
     @Export(name="schematizedData", type=SchematizedDataResponse.class, parameters={})
     private Output<SchematizedDataResponse> schematizedData;
 
     /**
-     * @return The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * @return The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
      */
     public Output<SchematizedDataResponse> schematizedData() {

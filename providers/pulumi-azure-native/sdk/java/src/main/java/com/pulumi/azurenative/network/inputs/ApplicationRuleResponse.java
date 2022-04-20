@@ -79,7 +79,7 @@ public final class ApplicationRuleResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Rule Type.
-     * Expected value is 'ApplicationRule'.
+     * Expected value is &#39;ApplicationRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

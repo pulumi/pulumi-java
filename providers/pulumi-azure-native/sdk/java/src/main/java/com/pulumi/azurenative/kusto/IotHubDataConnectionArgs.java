@@ -97,7 +97,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
 
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'IotHub'.
+     * Expected value is &#39;IotHub&#39;.
      * 
      */
     @Import(name="kind", required=true)

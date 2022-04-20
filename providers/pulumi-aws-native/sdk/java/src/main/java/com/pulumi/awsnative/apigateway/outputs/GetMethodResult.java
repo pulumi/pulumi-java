@@ -28,7 +28,7 @@ public final class GetMethodResult {
      */
     private final @Nullable List<String> authorizationScopes;
     /**
-     * The method's authorization type.
+     * The method&#39;s authorization type.
      * 
      */
     private final @Nullable MethodAuthorizationType authorizationType;
@@ -53,7 +53,7 @@ public final class GetMethodResult {
      */
     private final @Nullable String operationName;
     /**
-     * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
     private final @Nullable Object requestModels;
@@ -107,7 +107,7 @@ public final class GetMethodResult {
         return this.authorizationScopes == null ? List.of() : this.authorizationScopes;
     }
     /**
-     * The method's authorization type.
+     * The method&#39;s authorization type.
      * 
     */
     public Optional<MethodAuthorizationType> authorizationType() {
@@ -142,7 +142,7 @@ public final class GetMethodResult {
         return Optional.ofNullable(this.operationName);
     }
     /**
-     * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
     */
     public Optional<Object> requestModels() {

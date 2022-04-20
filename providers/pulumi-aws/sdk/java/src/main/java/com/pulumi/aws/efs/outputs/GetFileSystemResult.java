@@ -20,12 +20,12 @@ public final class GetFileSystemResult {
      */
     private final String arn;
     /**
-     * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+     * The identifier of the Availability Zone in which the file system&#39;s One Zone storage classes exist.
      * 
      */
     private final String availabilityZoneId;
     /**
-     * The Availability Zone name in which the file system's One Zone storage classes exist.
+     * The Availability Zone name in which the file system&#39;s One Zone storage classes exist.
      * 
      */
     private final String availabilityZoneName;
@@ -121,14 +121,14 @@ public final class GetFileSystemResult {
         return this.arn;
     }
     /**
-     * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
+     * The identifier of the Availability Zone in which the file system&#39;s One Zone storage classes exist.
      * 
     */
     public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * The Availability Zone name in which the file system's One Zone storage classes exist.
+     * The Availability Zone name in which the file system&#39;s One Zone storage classes exist.
      * 
     */
     public String availabilityZoneName() {

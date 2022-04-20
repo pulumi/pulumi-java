@@ -17,7 +17,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     public static final VirtualNetworkConfigurationResponse Empty = new VirtualNetworkConfigurationResponse();
 
     /**
-     * Data management's service public IP address resource id.
+     * Data management&#39;s service public IP address resource id.
      * 
      */
     @Import(name="dataManagementPublicIpId", required=true)
@@ -28,7 +28,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     }
 
     /**
-     * Engine service's public IP address resource id.
+     * Engine service&#39;s public IP address resource id.
      * 
      */
     @Import(name="enginePublicIpId", required=true)

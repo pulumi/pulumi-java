@@ -29,7 +29,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
     private final String endpointBaseUrl;
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
      */
     private final String endpointType;
@@ -90,7 +90,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
     }
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
     */
     public String endpointType() {

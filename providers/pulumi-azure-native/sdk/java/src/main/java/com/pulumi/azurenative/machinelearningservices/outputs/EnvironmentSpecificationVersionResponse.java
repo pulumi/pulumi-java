@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 public final class EnvironmentSpecificationVersionResponse {
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-     * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
      * 
      */
     private final @Nullable String condaFile;
@@ -35,7 +35,7 @@ public final class EnvironmentSpecificationVersionResponse {
     private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
     /**
      * Environment specification is either user managed or curated by the Azure ML service
-     * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
+     * &lt;see href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments&#34; /&gt;
      * 
      */
     private final String environmentSpecificationType;
@@ -82,7 +82,7 @@ public final class EnvironmentSpecificationVersionResponse {
 
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-     * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
      * 
     */
     public Optional<String> condaFile() {
@@ -104,7 +104,7 @@ public final class EnvironmentSpecificationVersionResponse {
     }
     /**
      * Environment specification is either user managed or curated by the Azure ML service
-     * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
+     * &lt;see href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments&#34; /&gt;
      * 
     */
     public String environmentSpecificationType() {

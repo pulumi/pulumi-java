@@ -102,14 +102,14 @@ public class Cache extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
      */
     @Export(name="useFromLocation", type=String.class, parameters={})
     private Output<String> useFromLocation;
 
     /**
-     * @return Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+     * @return Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
      */
     public Output<String> useFromLocation() {

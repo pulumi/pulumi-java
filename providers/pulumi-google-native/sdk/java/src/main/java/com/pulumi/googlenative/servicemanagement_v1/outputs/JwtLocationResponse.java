@@ -20,7 +20,7 @@ public final class JwtLocationResponse {
      */
     private final String query;
     /**
-     * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type. Must be empty for "in" query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
+     * The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
      * 
      */
     private final String valuePrefix;
@@ -50,7 +50,7 @@ public final class JwtLocationResponse {
         return this.query;
     }
     /**
-     * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type. Must be empty for "in" query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
+     * The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
      * 
     */
     public String valuePrefix() {

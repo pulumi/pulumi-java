@@ -17,7 +17,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     public static final GoogleCloudChannelV1ContactInfoResponse Empty = new GoogleCloudChannelV1ContactInfoResponse();
 
     /**
-     * The customer account contact's display name, formatted as a combination of the customer's first and last name.
+     * The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
      * 
      */
     @Import(name="displayName", required=true)
@@ -28,7 +28,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     }
 
     /**
-     * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
+     * The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
      * 
      */
     @Import(name="email", required=true)
@@ -39,7 +39,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     }
 
     /**
-     * The customer account contact's first name. Optional for Team customers.
+     * The customer account contact&#39;s first name. Optional for Team customers.
      * 
      */
     @Import(name="firstName", required=true)
@@ -50,7 +50,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     }
 
     /**
-     * The customer account contact's last name. Optional for Team customers.
+     * The customer account contact&#39;s last name. Optional for Team customers.
      * 
      */
     @Import(name="lastName", required=true)
@@ -61,7 +61,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     }
 
     /**
-     * The customer account's contact phone number.
+     * The customer account&#39;s contact phone number.
      * 
      */
     @Import(name="phone", required=true)
@@ -72,7 +72,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     }
 
     /**
-     * Optional. The customer account contact's job title.
+     * Optional. The customer account contact&#39;s job title.
      * 
      */
     @Import(name="title", required=true)

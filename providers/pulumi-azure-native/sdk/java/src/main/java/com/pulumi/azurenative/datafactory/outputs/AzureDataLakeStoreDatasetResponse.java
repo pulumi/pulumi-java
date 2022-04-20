@@ -80,7 +80,7 @@ public final class AzureDataLakeStoreDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataLakeStoreFile'.
+     * Expected value is &#39;AzureDataLakeStoreFile&#39;.
      * 
      */
     private final String type;
@@ -192,7 +192,7 @@ public final class AzureDataLakeStoreDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataLakeStoreFile'.
+     * Expected value is &#39;AzureDataLakeStoreFile&#39;.
      * 
     */
     public String type() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The display options for the layout of tiles on a sheet.</p>
+ * &lt;p&gt;The display options for the layout of tiles on a sheet.&lt;/p&gt;
  * 
  */
 public final class ThemeTileLayoutStyleArgs extends com.pulumi.resources.ResourceArgs {

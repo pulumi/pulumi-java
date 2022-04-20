@@ -50,7 +50,7 @@ public final class FrontendEndpointResponse {
      */
     private final String resourceState;
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String sessionAffinityEnabledState;
@@ -146,7 +146,7 @@ public final class FrontendEndpointResponse {
         return this.resourceState;
     }
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> sessionAffinityEnabledState() {

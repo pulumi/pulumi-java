@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetDataPoolResult {
     /**
-     * The Data Pool's data-plane ID
+     * The Data Pool&#39;s data-plane ID
      * 
      */
     private final String dataPoolId;
@@ -43,7 +43,7 @@ public final class GetDataPoolResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -67,7 +67,7 @@ public final class GetDataPoolResult {
     }
 
     /**
-     * The Data Pool's data-plane ID
+     * The Data Pool&#39;s data-plane ID
      * 
     */
     public String dataPoolId() {
@@ -109,7 +109,7 @@ public final class GetDataPoolResult {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class DestinationResponse {
     /**
-     * List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
+     * List of host names to match. Matched against the &#34;:authority&#34; header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example &#34;mydomain.*&#34;) or a suffix match (example // *.myorg.com&#34;) or a presence(any) match &#34;*&#34;.
      * 
      */
     private final List<String> hosts;
@@ -46,7 +46,7 @@ public final class DestinationResponse {
     }
 
     /**
-     * List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
+     * List of host names to match. Matched against the &#34;:authority&#34; header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example &#34;mydomain.*&#34;) or a suffix match (example // *.myorg.com&#34;) or a presence(any) match &#34;*&#34;.
      * 
     */
     public List<String> hosts() {

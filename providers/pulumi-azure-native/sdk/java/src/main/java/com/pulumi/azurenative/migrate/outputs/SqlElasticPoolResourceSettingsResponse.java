@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class SqlElasticPoolResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Sql/servers/elasticPools'.
+     * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
      * 
      */
     private final String resourceType;
@@ -40,7 +40,7 @@ public final class SqlElasticPoolResourceSettingsResponse {
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Sql/servers/elasticPools'.
+     * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
      * 
     */
     public String resourceType() {

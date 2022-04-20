@@ -22,7 +22,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     public static final CacheUsernameDownloadSettingsResponse Empty = new CacheUsernameDownloadSettingsResponse();
 
     /**
-     * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
+     * Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
      * 
      */
     @Import(name="autoDownloadCertificate")
@@ -33,7 +33,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     }
 
     /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
+     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
      * 
      */
     @Import(name="caCertificateURI")
@@ -77,7 +77,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     }
 
     /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
      */
     @Import(name="groupFileURI")
@@ -121,7 +121,7 @@ public final class CacheUsernameDownloadSettingsResponse extends com.pulumi.reso
     }
 
     /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
+     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
      */
     @Import(name="userFileURI")

@@ -20,7 +20,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     public static final PacketCaptureFilterResponse Empty = new PacketCaptureFilterResponse();
 
     /**
-     * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
     @Import(name="localIPAddress")
@@ -31,7 +31,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
     @Import(name="localPort")
@@ -53,7 +53,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
     @Import(name="remoteIPAddress")
@@ -64,7 +64,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
     @Import(name="remotePort")

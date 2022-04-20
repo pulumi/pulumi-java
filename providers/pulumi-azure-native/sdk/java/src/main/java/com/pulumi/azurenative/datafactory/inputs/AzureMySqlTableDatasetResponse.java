@@ -126,7 +126,7 @@ public final class AzureMySqlTableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureMySqlTable'.
+     * Expected value is &#39;AzureMySqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

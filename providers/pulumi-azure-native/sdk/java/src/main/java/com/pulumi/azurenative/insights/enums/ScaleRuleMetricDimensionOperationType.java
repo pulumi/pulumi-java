@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
      */
     @EnumType

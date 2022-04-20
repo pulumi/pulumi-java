@@ -17,7 +17,7 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     public static final MaterializedViewDefinitionArgs Empty = new MaterializedViewDefinitionArgs();
 
     /**
-     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
+     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
      * 
      */
     @Import(name="enableRefresh")
@@ -39,7 +39,7 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     }
 
     /**
-     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
+     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
      * 
      */
     @Import(name="refreshIntervalMs")

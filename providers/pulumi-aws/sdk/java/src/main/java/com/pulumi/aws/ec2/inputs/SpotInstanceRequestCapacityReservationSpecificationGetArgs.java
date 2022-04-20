@@ -17,7 +17,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
     public static final SpotInstanceRequestCapacityReservationSpecificationGetArgs Empty = new SpotInstanceRequestCapacityReservationSpecificationGetArgs();
 
     /**
-     * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `&#34;open&#34;` or `&#34;none&#34;`. (Default: `&#34;open&#34;`).
      * 
      */
     @Import(name="capacityReservationPreference")

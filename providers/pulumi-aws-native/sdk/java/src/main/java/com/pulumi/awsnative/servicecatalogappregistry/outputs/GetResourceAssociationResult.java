@@ -26,7 +26,7 @@ public final class GetResourceAssociationResult {
     private final @Nullable String resource;
     private final @Nullable String resourceArn;
     /**
-     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
      */
     private final @Nullable ResourceAssociationResourceType resourceType;
@@ -71,7 +71,7 @@ public final class GetResourceAssociationResult {
         return Optional.ofNullable(this.resourceArn);
     }
     /**
-     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
     */
     public Optional<ResourceAssociationResourceType> resourceType() {

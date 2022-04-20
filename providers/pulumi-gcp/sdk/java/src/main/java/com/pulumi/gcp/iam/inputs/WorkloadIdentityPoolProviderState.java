@@ -136,7 +136,7 @@ public final class WorkloadIdentityPoolProviderState extends com.pulumi.resource
 
     /**
      * The resource name of the provider as
-     * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
+     * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}&#39;.
      * 
      */
     @Import(name="name")

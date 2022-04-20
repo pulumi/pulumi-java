@@ -48,7 +48,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
     }
     /**
      * Kind of data set.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -56,7 +56,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
 
     /**
      * @return Kind of data set.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     public Output<String> kind() {

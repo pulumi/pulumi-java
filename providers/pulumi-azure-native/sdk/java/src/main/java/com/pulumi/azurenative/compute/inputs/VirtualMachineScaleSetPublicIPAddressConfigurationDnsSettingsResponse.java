@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Describes a virtual machines scale sets network configuration's DNS settings.
+ * Describes a virtual machines scale sets network configuration&#39;s DNS settings.
  * 
  */
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse extends com.pulumi.resources.InvokeArgs {

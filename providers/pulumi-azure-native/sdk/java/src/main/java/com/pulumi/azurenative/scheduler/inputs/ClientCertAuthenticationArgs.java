@@ -72,7 +72,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
 
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     @Import(name="type", required=true)

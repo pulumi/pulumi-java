@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.</p>
+ * &lt;p&gt;An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.&lt;/p&gt;
  * 
  */
 public final class StudioComponentActiveDirectoryComputerAttribute extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
     public static final StudioComponentActiveDirectoryComputerAttribute Empty = new StudioComponentActiveDirectoryComputerAttribute();
 
     /**
-     * <p>The name for the LDAP attribute.</p>
+     * &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -30,7 +30,7 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
     }
 
     /**
-     * <p>The value for the LDAP attribute.</p>
+     * &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
      * 
      */
     @Import(name="value")

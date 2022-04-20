@@ -33,7 +33,7 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional. The number of times this instance exited with code > 0; +optional
+     * Optional. The number of times this instance exited with code &gt; 0; +optional
      * 
      */
     @Import(name="failed")

@@ -13,34 +13,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStudioResult {
     /**
-     * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
+     * &lt;p&gt;The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
      * 
      */
     private final @Nullable String adminRoleArn;
     /**
-     * <p>A friendly name for the studio.</p>
+     * &lt;p&gt;A friendly name for the studio.&lt;/p&gt;
      * 
      */
     private final @Nullable String displayName;
     /**
-     * <p>The Amazon Web Services Region where the studio resource is located.</p>
+     * &lt;p&gt;The Amazon Web Services Region where the studio resource is located.&lt;/p&gt;
      * 
      */
     private final @Nullable String homeRegion;
     /**
-     * <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
+     * &lt;p&gt;The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.&lt;/p&gt;
      * 
      */
     private final @Nullable String ssoClientId;
     private final @Nullable StudioEncryptionConfiguration studioEncryptionConfiguration;
     private final @Nullable String studioId;
     /**
-     * <p>The address of the web page for the studio.</p>
+     * &lt;p&gt;The address of the web page for the studio.&lt;/p&gt;
      * 
      */
     private final @Nullable String studioUrl;
     /**
-     * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
+     * &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
      * 
      */
     private final @Nullable String userRoleArn;
@@ -66,28 +66,28 @@ public final class GetStudioResult {
     }
 
     /**
-     * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
+     * &lt;p&gt;The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
      * 
     */
     public Optional<String> adminRoleArn() {
         return Optional.ofNullable(this.adminRoleArn);
     }
     /**
-     * <p>A friendly name for the studio.</p>
+     * &lt;p&gt;A friendly name for the studio.&lt;/p&gt;
      * 
     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * <p>The Amazon Web Services Region where the studio resource is located.</p>
+     * &lt;p&gt;The Amazon Web Services Region where the studio resource is located.&lt;/p&gt;
      * 
     */
     public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     /**
-     * <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
+     * &lt;p&gt;The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.&lt;/p&gt;
      * 
     */
     public Optional<String> ssoClientId() {
@@ -100,14 +100,14 @@ public final class GetStudioResult {
         return Optional.ofNullable(this.studioId);
     }
     /**
-     * <p>The address of the web page for the studio.</p>
+     * &lt;p&gt;The address of the web page for the studio.&lt;/p&gt;
      * 
     */
     public Optional<String> studioUrl() {
         return Optional.ofNullable(this.studioUrl);
     }
     /**
-     * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
+     * &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
      * 
     */
     public Optional<String> userRoleArn() {

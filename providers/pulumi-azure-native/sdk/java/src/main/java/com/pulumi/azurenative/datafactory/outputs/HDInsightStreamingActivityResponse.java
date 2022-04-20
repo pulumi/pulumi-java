@@ -105,7 +105,7 @@ public final class HDInsightStreamingActivityResponse {
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
      * Type of activity.
-     * Expected value is 'HDInsightStreaming'.
+     * Expected value is &#39;HDInsightStreaming&#39;.
      * 
      */
     private final String type;
@@ -278,7 +278,7 @@ public final class HDInsightStreamingActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'HDInsightStreaming'.
+     * Expected value is &#39;HDInsightStreaming&#39;.
      * 
     */
     public String type() {

@@ -19,7 +19,7 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.AbsoluteClipTime'.
+     * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
      * 
      */
     @Import(name="odataType", required=true)

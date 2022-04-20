@@ -99,7 +99,7 @@ public final class HBaseSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HBaseSource'.
+     * Expected value is &#39;HBaseSource&#39;.
      * 
      */
     @Import(name="type", required=true)

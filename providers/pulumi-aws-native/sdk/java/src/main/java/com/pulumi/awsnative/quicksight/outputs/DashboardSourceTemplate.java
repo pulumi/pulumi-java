@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class DashboardSourceTemplate {
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final String arn;
     /**
-     * <p>Dataset references.</p>
+     * &lt;p&gt;Dataset references.&lt;/p&gt;
      * 
      */
     private final List<DashboardDataSetReference> dataSetReferences;
@@ -31,14 +31,14 @@ public final class DashboardSourceTemplate {
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
     */
     public String arn() {
         return this.arn;
     }
     /**
-     * <p>Dataset references.</p>
+     * &lt;p&gt;Dataset references.&lt;/p&gt;
      * 
     */
     public List<DashboardDataSetReference> dataSetReferences() {

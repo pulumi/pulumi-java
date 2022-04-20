@@ -115,7 +115,7 @@ public final class HubspotObjectDatasetArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of dataset.
-     * Expected value is 'HubspotObject'.
+     * Expected value is &#39;HubspotObject&#39;.
      * 
      */
     @Import(name="type", required=true)

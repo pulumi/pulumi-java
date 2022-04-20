@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the ACM API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the
@@ -94,7 +94,7 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
     }
     /**
      * Resource name for the Access Level. The short_name component must begin
-     * with a letter and only include alphanumeric and '_'.
+     * with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
@@ -103,7 +103,7 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Resource name for the Access Level. The short_name component must begin
-     * with a letter and only include alphanumeric and '_'.
+     * with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */

@@ -52,7 +52,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The version number of the Data Fusion instance, such as '6.0.1.0'.
+     * The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
      * 
      */
     @Import(name="versionNumber", required=true)

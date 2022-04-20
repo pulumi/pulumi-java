@@ -16,7 +16,7 @@ public final class TableIamPolicyState extends com.pulumi.resources.ResourceArgs
     public static final TableIamPolicyState Empty = new TableIamPolicyState();
 
     /**
-     * (Computed) The etag of the tables's IAM policy.
+     * (Computed) The etag of the tables&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

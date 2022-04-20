@@ -13,7 +13,7 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLogGroupArgs Empty = new GetLogGroupArgs();
 
     /**
-     * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
     @Import(name="logGroupName", required=true)

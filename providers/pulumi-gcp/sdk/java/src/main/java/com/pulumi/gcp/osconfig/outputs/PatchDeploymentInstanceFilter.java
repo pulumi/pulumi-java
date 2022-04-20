@@ -27,7 +27,7 @@ public final class PatchDeploymentInstanceFilter {
     private final @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels;
     /**
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
-     * VMs when targeting configs, for example prefix="prod-".
+     * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     private final @Nullable List<String> instanceNamePrefixes;
@@ -75,7 +75,7 @@ public final class PatchDeploymentInstanceFilter {
     }
     /**
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
-     * VMs when targeting configs, for example prefix="prod-".
+     * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
     */
     public List<String> instanceNamePrefixes() {

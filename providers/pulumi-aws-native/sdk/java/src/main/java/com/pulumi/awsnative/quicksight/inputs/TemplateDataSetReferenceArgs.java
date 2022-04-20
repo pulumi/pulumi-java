@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Dataset reference.</p>
+ * &lt;p&gt;Dataset reference.&lt;/p&gt;
  * 
  */
 public final class TemplateDataSetReferenceArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class TemplateDataSetReferenceArgs extends com.pulumi.resources.Res
     public static final TemplateDataSetReferenceArgs Empty = new TemplateDataSetReferenceArgs();
 
     /**
-     * <p>Dataset Amazon Resource Name (ARN).</p>
+     * &lt;p&gt;Dataset Amazon Resource Name (ARN).&lt;/p&gt;
      * 
      */
     @Import(name="dataSetArn", required=true)
@@ -30,7 +30,7 @@ public final class TemplateDataSetReferenceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * <p>Dataset placeholder.</p>
+     * &lt;p&gt;Dataset placeholder.&lt;/p&gt;
      * 
      */
     @Import(name="dataSetPlaceholder", required=true)

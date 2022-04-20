@@ -21,7 +21,7 @@ public final class UrlSigningActionArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlSigning'.
+     * Expected value is &#39;UrlSigning&#39;.
      * 
      */
     @Import(name="name", required=true)

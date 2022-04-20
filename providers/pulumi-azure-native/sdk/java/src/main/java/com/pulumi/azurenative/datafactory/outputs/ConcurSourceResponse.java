@@ -49,7 +49,7 @@ public final class ConcurSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ConcurSource'.
+     * Expected value is &#39;ConcurSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ConcurSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ConcurSource'.
+     * Expected value is &#39;ConcurSource&#39;.
      * 
     */
     public String type() {

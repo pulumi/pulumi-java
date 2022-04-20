@@ -21,8 +21,8 @@ import javax.annotation.Nullable;
 /**
  * Provides an AutoScaling Scaling Policy resource.
  * 
- * > **NOTE:** You may want to omit `desired_capacity` attribute from attached `aws.autoscaling.Group`
- * when using autoscaling policies. It's good practice to pick either
+ * &gt; **NOTE:** You may want to omit `desired_capacity` attribute from attached `aws.autoscaling.Group`
+ * when using autoscaling policies. It&#39;s good practice to pick either
  * [manual](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-manual-scaling.html)
  * or [dynamic](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html)
  * (policy-based) scaling.
@@ -97,28 +97,28 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.cooldown;
     }
     /**
-     * The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
+     * The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
      * 
      */
     @Export(name="estimatedInstanceWarmup", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> estimatedInstanceWarmup;
 
     /**
-     * @return The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
+     * @return The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
      * 
      */
     public Output</* @Nullable */ Integer> estimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup;
     }
     /**
-     * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
+     * The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
      * 
      */
     @Export(name="metricAggregationType", type=String.class, parameters={})
     private Output<String> metricAggregationType;
 
     /**
-     * @return The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
+     * @return The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
      * 
      */
     public Output<String> metricAggregationType() {
@@ -153,14 +153,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+     * The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
      * 
      */
     @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
-     * @return The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
+     * @return The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
      * 
      */
     public Output</* @Nullable */ String> policyType() {

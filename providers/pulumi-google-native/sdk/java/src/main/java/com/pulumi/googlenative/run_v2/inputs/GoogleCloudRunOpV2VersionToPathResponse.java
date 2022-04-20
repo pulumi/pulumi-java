@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * VersionToPath maps a specific version of a secret to a relative file to mount to, relative to VolumeMount's mount_path.
+ * VersionToPath maps a specific version of a secret to a relative file to mount to, relative to VolumeMount&#39;s mount_path.
  * 
  */
 public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
     public static final GoogleCloudRunOpV2VersionToPathResponse Empty = new GoogleCloudRunOpV2VersionToPathResponse();
 
     /**
-     * Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
     @Import(name="mode", required=true)
@@ -40,7 +40,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
     }
 
     /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
+     * The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
      * 
      */
     @Import(name="version", required=true)

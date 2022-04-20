@@ -76,14 +76,14 @@ public class GithubEnterpriseConfig extends com.pulumi.resources.CustomResource 
         return this.hostUrl;
     }
     /**
-     * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * @return Optional. The full resource name for the GitHubEnterpriseConfig For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     public Output<String> name() {

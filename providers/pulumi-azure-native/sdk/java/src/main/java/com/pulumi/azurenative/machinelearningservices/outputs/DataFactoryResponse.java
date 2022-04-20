@@ -21,7 +21,7 @@ public final class DataFactoryResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'DataFactory'.
+     * Expected value is &#39;DataFactory&#39;.
      * 
      */
     private final String computeType;
@@ -78,7 +78,7 @@ public final class DataFactoryResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'DataFactory'.
+     * Expected value is &#39;DataFactory&#39;.
      * 
     */
     public String computeType() {

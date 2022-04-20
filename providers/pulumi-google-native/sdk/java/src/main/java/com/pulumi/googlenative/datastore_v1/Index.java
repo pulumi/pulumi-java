@@ -15,21 +15,21 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During index creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single property cannot be created.
+ * Creates the specified index. A newly created index&#39;s initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During index creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single property cannot be created.
  * Auto-naming is currently not supported for this resource.
  * 
  */
 @ResourceType(type="google-native:datastore/v1:Index")
 public class Index extends com.pulumi.resources.CustomResource {
     /**
-     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
     @Export(name="ancestor", type=String.class, parameters={})
     private Output<String> ancestor;
 
     /**
-     * @return The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * @return The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
     public Output<String> ancestor() {

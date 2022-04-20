@@ -98,7 +98,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
 
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
      */
     @Import(name="kind", required=true)

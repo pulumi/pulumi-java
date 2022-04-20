@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * and [Dataflow](https://cloud.google.com/dataflow/).
  * 
  * ## Example Usage
- * ## Note on "destroy" / "apply"
+ * ## Note on &#34;destroy&#34; / &#34;apply&#34;
  * 
  * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly,
  * getting new data from (e.g.) a GCS bucket, and outputting data continuously.
@@ -30,17 +30,17 @@ import javax.annotation.Nullable;
  * running due to programming errors or other issues. In this way, Dataflow jobs
  * are different from most other provider / Google resources.
  * 
- * The Dataflow resource is considered 'existing' while it is in a nonterminal
- * state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE',
- * 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for
+ * The Dataflow resource is considered &#39;existing&#39; while it is in a nonterminal
+ * state.  If it reaches a terminal state (e.g. &#39;FAILED&#39;, &#39;COMPLETE&#39;,
+ * &#39;CANCELLED&#39;), it will be recreated on the next &#39;apply&#39;.  This is as expected for
  * jobs which run continuously, but may surprise users who use this resource for
  * other kinds of Dataflow jobs.
  * 
- * A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If
- * "cancelled", the job terminates - any data written remains where it is, but no
- * new data will be processed.  If "drained", no new data will enter the pipeline,
+ * A Dataflow job which is &#39;destroyed&#39; may be &#34;cancelled&#34; or &#34;drained&#34;.  If
+ * &#34;cancelled&#34;, the job terminates - any data written remains where it is, but no
+ * new data will be processed.  If &#34;drained&#34;, no new data will enter the pipeline,
  * but any data currently in the pipeline will finish being processed.  The default
- * is "cancelled", but if a user sets `on_delete` to `"drain"` in the
+ * is &#34;cancelled&#34;, but if a user sets `on_delete` to `&#34;drain&#34;` in the
  * configuration, you may experience a long wait for your `pulumi destroy` to
  * complete.
  * 
@@ -90,7 +90,7 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
      * that begin with `goog-dataflow-provided`. Unless explicitly set in config, these
      * labels will be ignored to prevent diffs on re-apply.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated until the API supports this field
      * 
      */
@@ -126,7 +126,7 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * One of "drain" or "cancel". Specifies behavior of
+     * One of &#34;drain&#34; or &#34;cancel&#34;. Specifies behavior of
      * deletion during `pulumi destroy`.  See above note.
      * 
      */
@@ -134,7 +134,7 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> onDelete;
 
     /**
-     * @return One of "drain" or "cancel". Specifies behavior of
+     * @return One of &#34;drain&#34; or &#34;cancel&#34;. Specifies behavior of
      * deletion during `pulumi destroy`.  See above note.
      * 
      */

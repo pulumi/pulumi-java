@@ -80,7 +80,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
     private final Object scriptPath;
     /**
      * Type of activity.
-     * Expected value is 'DataLakeAnalyticsU-SQL'.
+     * Expected value is &#39;DataLakeAnalyticsU-SQL&#39;.
      * 
      */
     private final String type;
@@ -208,7 +208,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'DataLakeAnalyticsU-SQL'.
+     * Expected value is &#39;DataLakeAnalyticsU-SQL&#39;.
      * 
     */
     public String type() {

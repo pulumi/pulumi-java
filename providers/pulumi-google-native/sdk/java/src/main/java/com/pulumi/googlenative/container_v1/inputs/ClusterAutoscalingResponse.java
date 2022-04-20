@@ -21,7 +21,7 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     public static final ClusterAutoscalingResponse Empty = new ClusterAutoscalingResponse();
 
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
      * 
      */
     @Import(name="autoprovisioningLocations", required=true)

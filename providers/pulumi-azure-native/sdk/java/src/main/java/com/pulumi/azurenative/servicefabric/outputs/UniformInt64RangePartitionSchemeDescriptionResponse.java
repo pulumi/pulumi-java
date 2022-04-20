@@ -29,7 +29,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     private final String lowKey;
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'UniformInt64Range'.
+     * Expected value is &#39;UniformInt64Range&#39;.
      * 
      */
     private final String partitionScheme;
@@ -71,7 +71,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     }
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'UniformInt64Range'.
+     * Expected value is &#39;UniformInt64Range&#39;.
      * 
     */
     public String partitionScheme() {

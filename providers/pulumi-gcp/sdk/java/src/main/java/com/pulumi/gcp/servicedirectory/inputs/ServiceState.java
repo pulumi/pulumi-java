@@ -31,7 +31,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
+     * The resource name for the service in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*&#39;.
      * 
      */
     @Import(name="name")

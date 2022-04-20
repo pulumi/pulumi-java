@@ -33,42 +33,42 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:sql:ServerAdvisor")
 public class ServerAdvisor extends com.pulumi.resources.CustomResource {
     /**
-     * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+     * Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
      * 
      */
     @Export(name="advisorStatus", type=String.class, parameters={})
     private Output<String> advisorStatus;
 
     /**
-     * @return Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+     * @return Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
      * 
      */
     public Output<String> advisorStatus() {
         return this.advisorStatus;
     }
     /**
-     * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
+     * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
      * 
      */
     @Export(name="autoExecuteStatus", type=String.class, parameters={})
     private Output<String> autoExecuteStatus;
 
     /**
-     * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
+     * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
      * 
      */
     public Output<String> autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
-     * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
+     * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
      * 
      */
     @Export(name="autoExecuteStatusInheritedFrom", type=String.class, parameters={})
     private Output<String> autoExecuteStatusInheritedFrom;
 
     /**
-     * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
+     * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
      * 
      */
     public Output<String> autoExecuteStatusInheritedFrom() {
@@ -131,14 +131,14 @@ public class ServerAdvisor extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+     * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
      * 
      */
     @Export(name="recommendationsStatus", type=String.class, parameters={})
     private Output<String> recommendationsStatus;
 
     /**
-     * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+     * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
      * 
      */
     public Output<String> recommendationsStatus() {

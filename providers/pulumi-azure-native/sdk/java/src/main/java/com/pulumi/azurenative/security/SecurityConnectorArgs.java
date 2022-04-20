@@ -25,7 +25,7 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     public static final SecurityConnectorArgs Empty = new SecurityConnectorArgs();
 
     /**
-     * The multi cloud resource's cloud name.
+     * The multi cloud resource&#39;s cloud name.
      * 
      */
     @Import(name="cloudName")
@@ -80,7 +80,7 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The multi cloud account's organizational data
+     * The multi cloud account&#39;s organizational data
      * 
      */
     @Import(name="organizationalData")
@@ -91,7 +91,7 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

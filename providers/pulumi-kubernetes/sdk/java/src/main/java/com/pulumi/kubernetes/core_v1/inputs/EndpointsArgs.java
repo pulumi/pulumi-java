@@ -16,15 +16,15 @@ import javax.annotation.Nullable;
 
 /**
  * Endpoints is a collection of endpoints that implement the actual service. Example:
- *   Name: "mysvc",
+ *   Name: &#34;mysvc&#34;,
  *   Subsets: [
  *     {
- *       Addresses: [{"ip": "10.10.1.1"}, {"ip": "10.10.2.2"}],
- *       Ports: [{"name": "a", "port": 8675}, {"name": "b", "port": 309}]
+ *       Addresses: [{&#34;ip&#34;: &#34;10.10.1.1&#34;}, {&#34;ip&#34;: &#34;10.10.2.2&#34;}],
+ *       Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 8675}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 309}]
  *     },
  *     {
- *       Addresses: [{"ip": "10.10.3.3"}],
- *       Ports: [{"name": "a", "port": 93}, {"name": "b", "port": 76}]
+ *       Addresses: [{&#34;ip&#34;: &#34;10.10.3.3&#34;}],
+ *       Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 93}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 76}]
  *     },
  *  ]
  * 
@@ -56,7 +56,7 @@ public final class EndpointsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

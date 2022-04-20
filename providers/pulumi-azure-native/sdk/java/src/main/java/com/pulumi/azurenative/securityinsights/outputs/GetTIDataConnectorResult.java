@@ -29,7 +29,7 @@ public final class GetTIDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'ThreatIntelligence'.
+     * Expected value is &#39;ThreatIntelligence&#39;.
      * 
      */
     private final String kind;
@@ -97,7 +97,7 @@ public final class GetTIDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'ThreatIntelligence'.
+     * Expected value is &#39;ThreatIntelligence&#39;.
      * 
     */
     public String kind() {

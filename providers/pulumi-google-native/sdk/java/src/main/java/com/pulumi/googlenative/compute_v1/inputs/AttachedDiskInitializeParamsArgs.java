@@ -79,7 +79,7 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
     }
 
     /**
-     * A list of publicly visible licenses. Reserved for Google's use.
+     * A list of publicly visible licenses. Reserved for Google&#39;s use.
      * 
      */
     @Import(name="licenses")

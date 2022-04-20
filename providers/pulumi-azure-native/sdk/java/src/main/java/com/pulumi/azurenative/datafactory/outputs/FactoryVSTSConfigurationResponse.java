@@ -48,7 +48,7 @@ public final class FactoryVSTSConfigurationResponse {
     private final @Nullable String tenantId;
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryVSTSConfiguration'.
+     * Expected value is &#39;FactoryVSTSConfiguration&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class FactoryVSTSConfigurationResponse {
     }
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryVSTSConfiguration'.
+     * Expected value is &#39;FactoryVSTSConfiguration&#39;.
      * 
     */
     public String type() {

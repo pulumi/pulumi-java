@@ -24,7 +24,7 @@ public final class GetDatabaseResult {
      */
     private final String databaseDialect;
     /**
-     * The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+     * The read-write region which contains the database&#39;s leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
      */
     private final String defaultLeader;
@@ -103,7 +103,7 @@ public final class GetDatabaseResult {
         return this.databaseDialect;
     }
     /**
-     * The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+     * The read-write region which contains the database&#39;s leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
     */
     public String defaultLeader() {

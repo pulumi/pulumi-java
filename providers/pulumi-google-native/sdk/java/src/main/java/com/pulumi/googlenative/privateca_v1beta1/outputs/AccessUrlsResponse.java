@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AccessUrlsResponse {
     /**
-     * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
+     * The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
      * 
      */
     private final String caCertificateAccessUrl;
     /**
-     * The URL where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
+     * The URL where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
      * 
      */
     private final String crlAccessUrl;
@@ -29,14 +29,14 @@ public final class AccessUrlsResponse {
     }
 
     /**
-     * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
+     * The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
      * 
     */
     public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
     /**
-     * The URL where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
+     * The URL where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
      * 
     */
     public String crlAccessUrl() {

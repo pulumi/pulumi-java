@@ -26,14 +26,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:quicksight:Dashboard")
 public class Dashboard extends com.pulumi.resources.CustomResource {
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -46,14 +46,14 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>The time that this dataset was created.</p>
+     * &lt;p&gt;The time that this dataset was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>The time that this dataset was created.</p>
+     * @return &lt;p&gt;The time that this dataset was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
@@ -72,42 +72,42 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
         return this.dashboardPublishOptions;
     }
     /**
-     * <p>The last time that this dataset was published.</p>
+     * &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
      * 
      */
     @Export(name="lastPublishedTime", type=String.class, parameters={})
     private Output<String> lastPublishedTime;
 
     /**
-     * @return <p>The last time that this dataset was published.</p>
+     * @return &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
      * 
      */
     public Output<String> lastPublishedTime() {
         return this.lastPublishedTime;
     }
     /**
-     * <p>The last time that this dataset was updated.</p>
+     * &lt;p&gt;The last time that this dataset was updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>The last time that this dataset was updated.</p>
+     * @return &lt;p&gt;The last time that this dataset was updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * <p>The display name of the dashboard.</p>
+     * &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>The display name of the dashboard.</p>
+     * @return &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
@@ -120,22 +120,22 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
         return this.parameters;
     }
     /**
-     * <p>A structure that contains the permissions of the dashboard. You can use this structure
+     * &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
      *             for granting permissions by providing a list of IAM action information for each
-     *             principal ARN. </p>
+     *             principal ARN. &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit the permissions list.</p>
+     *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={DashboardResourcePermission.class})
     private Output</* @Nullable */ List<DashboardResourcePermission>> permissions;
 
     /**
-     * @return <p>A structure that contains the permissions of the dashboard. You can use this structure
+     * @return &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
      *             for granting permissions by providing a list of IAM action information for each
-     *             principal ARN. </p>
+     *             principal ARN. &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit the permissions list.</p>
+     *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DashboardResourcePermission>> permissions() {
@@ -148,36 +148,36 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
         return this.sourceEntity;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             dashboard.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
 
     /**
-     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             dashboard.</p>
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             dashboard.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DashboardTag>> tags() {
         return this.tags;
     }
     /**
-     * <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
-     *             dashboard.</p>
+     *             dashboard.&lt;/p&gt;
      * 
      */
     @Export(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
-     *             dashboard.</p>
+     *             dashboard.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> themeArn() {
@@ -190,14 +190,14 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
         return this.version;
     }
     /**
-     * <p>A description for the first version of the dashboard being created.</p>
+     * &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
      * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
 
     /**
-     * @return <p>A description for the first version of the dashboard being created.</p>
+     * @return &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> versionDescription() {

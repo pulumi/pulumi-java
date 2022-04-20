@@ -79,9 +79,9 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * Type of resource that this limit applies to.
      * 
      * Possible enum values:
-     *  - `"Container"` Limit that applies to all containers in a namespace
-     *  - `"PersistentVolumeClaim"` Limit that applies to all persistent volume claims in a namespace
-     *  - `"Pod"` Limit that applies to all pods in a namespace
+     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
+     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
+     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
      * 
      */
     @Import(name="type", required=true)

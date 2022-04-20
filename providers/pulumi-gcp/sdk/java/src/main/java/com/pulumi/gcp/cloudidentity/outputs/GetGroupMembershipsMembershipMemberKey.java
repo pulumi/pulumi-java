@@ -12,7 +12,7 @@ public final class GetGroupMembershipsMembershipMemberKey {
     /**
      * The ID of the entity. For Google-managed entities, the id is the email address of an existing
      * group or user. For external-identity-mapped entities, the id is a string conforming
-     * to the Identity Source's requirements.
+     * to the Identity Source&#39;s requirements.
      * 
      */
     private final String id;
@@ -36,7 +36,7 @@ public final class GetGroupMembershipsMembershipMemberKey {
     /**
      * The ID of the entity. For Google-managed entities, the id is the email address of an existing
      * group or user. For external-identity-mapped entities, the id is a string conforming
-     * to the Identity Source's requirements.
+     * to the Identity Source&#39;s requirements.
      * 
     */
     public String id() {

@@ -106,14 +106,14 @@ public class VirtualMachineImageTemplate extends com.pulumi.resources.CustomReso
         return this.identity;
     }
     /**
-     * State of 'run' that is currently executing or was last executed.
+     * State of &#39;run&#39; that is currently executing or was last executed.
      * 
      */
     @Export(name="lastRunStatus", type=ImageTemplateLastRunStatusResponse.class, parameters={})
     private Output<ImageTemplateLastRunStatusResponse> lastRunStatus;
 
     /**
-     * @return State of 'run' that is currently executing or was last executed.
+     * @return State of &#39;run&#39; that is currently executing or was last executed.
      * 
      */
     public Output<ImageTemplateLastRunStatusResponse> lastRunStatus() {

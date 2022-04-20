@@ -78,7 +78,7 @@ public final class CloudServiceExtensionPropertiesArgs extends com.pulumi.resour
     }
 
     /**
-     * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
+     * Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
      * 
      */
     @Import(name="rolesAppliedTo")

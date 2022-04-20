@@ -23,7 +23,7 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     public static final AzureActiveDirectoryArgs Empty = new AzureActiveDirectoryArgs();
 
     /**
-     * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

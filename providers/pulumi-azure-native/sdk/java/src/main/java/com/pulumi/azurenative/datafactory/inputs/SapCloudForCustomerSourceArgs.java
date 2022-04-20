@@ -65,7 +65,7 @@ public final class SapCloudForCustomerSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP Cloud for Customer OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -110,7 +110,7 @@ public final class SapCloudForCustomerSourceArgs extends com.pulumi.resources.Re
 
     /**
      * Copy source type.
-     * Expected value is 'SapCloudForCustomerSource'.
+     * Expected value is &#39;SapCloudForCustomerSource&#39;.
      * 
      */
     @Import(name="type", required=true)

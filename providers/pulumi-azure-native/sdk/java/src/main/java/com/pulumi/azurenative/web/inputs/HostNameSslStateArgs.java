@@ -67,7 +67,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set to <code>true</code> to update existing hostname.
+     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
      * 
      */
     @Import(name="toUpdate")

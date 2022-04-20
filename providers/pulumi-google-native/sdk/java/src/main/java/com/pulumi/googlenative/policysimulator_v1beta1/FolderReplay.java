@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Creates and starts a Replay using the given ReplayConfig.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */

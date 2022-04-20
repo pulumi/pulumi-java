@@ -17,7 +17,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
     public static final WebAclLoggingConfigurationLoggingFilterFilterGetArgs Empty = new WebAclLoggingConfigurationLoggingFilterFilterGetArgs();
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement. Valid values: `KEEP` or `DROP`.
      * 
      */
     @Import(name="behavior", required=true)

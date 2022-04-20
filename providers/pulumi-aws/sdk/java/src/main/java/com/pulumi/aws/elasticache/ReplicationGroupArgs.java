@@ -76,7 +76,7 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
+     * List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
      * 
      */
     @Import(name="availabilityZones")
@@ -219,7 +219,7 @@ public final class ReplicationGroupArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
+     * Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable &#34;cluster mode&#34;, i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
     @Import(name="parameterGroupName")

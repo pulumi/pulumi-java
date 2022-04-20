@@ -18,7 +18,7 @@ public final class StageResponse extends com.pulumi.resources.InvokeArgs {
     public static final StageResponse Empty = new StageResponse();
 
     /**
-     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     * Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`.
      * 
      */
     @Import(name="profiles", required=true)

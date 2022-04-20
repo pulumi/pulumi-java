@@ -22,7 +22,7 @@ public final class BuildApprovalResponse {
      */
     private final ApprovalResultResponse result;
     /**
-     * The state of this build's approval.
+     * The state of this build&#39;s approval.
      * 
      */
     private final String state;
@@ -52,7 +52,7 @@ public final class BuildApprovalResponse {
         return this.result;
     }
     /**
-     * The state of this build's approval.
+     * The state of this build&#39;s approval.
      * 
     */
     public String state() {

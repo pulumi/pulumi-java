@@ -64,7 +64,7 @@ public final class AmazonRedshiftTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRedshiftTable'.
+     * Expected value is &#39;AmazonRedshiftTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AmazonRedshiftTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRedshiftTable'.
+     * Expected value is &#39;AmazonRedshiftTable&#39;.
      * 
     */
     public String type() {

@@ -49,7 +49,7 @@ public final class PhoenixSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'PhoenixSource'.
+     * Expected value is &#39;PhoenixSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class PhoenixSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'PhoenixSource'.
+     * Expected value is &#39;PhoenixSource&#39;.
      * 
     */
     public String type() {

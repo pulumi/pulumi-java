@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage a GuardDuty detector.
  * 
- * > **NOTE:** Deleting this resource is equivalent to "disabling" GuardDuty for an AWS region, which removes all existing findings. You can set the `enable` attribute to `false` to instead "suspend" monitoring and feedback reporting while keeping existing data. See the [Suspending or Disabling Amazon GuardDuty documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html) for more information.
+ * &gt; **NOTE:** Deleting this resource is equivalent to &#34;disabling&#34; GuardDuty for an AWS region, which removes all existing findings. You can set the `enable` attribute to `false` to instead &#34;suspend&#34; monitoring and feedback reporting while keeping existing data. See the [Suspending or Disabling Amazon GuardDuty documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html) for more information.
  * 
  * ## Example Usage
  * 

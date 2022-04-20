@@ -21,7 +21,7 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     public static final DomainState Empty = new DomainState();
 
     /**
-     * The domain's ARN.
+     * The domain&#39;s ARN.
      * 
      */
     @Import(name="arn")

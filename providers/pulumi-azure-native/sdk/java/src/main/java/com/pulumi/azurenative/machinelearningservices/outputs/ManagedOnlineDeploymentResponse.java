@@ -40,7 +40,7 @@ public final class ManagedOnlineDeploymentResponse {
     private final @Nullable String description;
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     private final String endpointComputeType;
@@ -150,7 +150,7 @@ public final class ManagedOnlineDeploymentResponse {
     }
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
     */
     public String endpointComputeType() {

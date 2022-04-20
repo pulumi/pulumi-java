@@ -45,7 +45,7 @@ public final class GenericProtectedItemResponse {
      */
     private final @Nullable String deferredDeleteTimeRemaining;
     /**
-     * Name of this backup item's fabric.
+     * Name of this backup item&#39;s fabric.
      * 
      */
     private final @Nullable String fabricName;
@@ -91,7 +91,7 @@ public final class GenericProtectedItemResponse {
     private final @Nullable Double protectedItemId;
     /**
      * backup item type.
-     * Expected value is 'GenericProtectedItem'.
+     * Expected value is &#39;GenericProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -203,7 +203,7 @@ public final class GenericProtectedItemResponse {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
-     * Name of this backup item's fabric.
+     * Name of this backup item&#39;s fabric.
      * 
     */
     public Optional<String> fabricName() {
@@ -267,7 +267,7 @@ public final class GenericProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'GenericProtectedItem'.
+     * Expected value is &#39;GenericProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

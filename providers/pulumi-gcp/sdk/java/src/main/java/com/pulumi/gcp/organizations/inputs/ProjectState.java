@@ -18,7 +18,7 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
     public static final ProjectState Empty = new ProjectState();
 
     /**
-     * Create the 'default' network automatically.  Default `true`.
+     * Create the &#39;default&#39; network automatically.  Default `true`.
      * If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
      * will still need to have 1 network slot available to create the project successfully, even if
      * you set `auto_create_network` to `false`, since the network will exist momentarily.

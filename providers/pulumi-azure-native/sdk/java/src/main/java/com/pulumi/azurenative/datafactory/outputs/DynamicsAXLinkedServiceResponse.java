@@ -50,12 +50,12 @@ public final class DynamicsAXLinkedServiceResponse {
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     private final Object servicePrincipalId;
     /**
-     * Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
@@ -66,7 +66,7 @@ public final class DynamicsAXLinkedServiceResponse {
     private final Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'DynamicsAX'.
+     * Expected value is &#39;DynamicsAX&#39;.
      * 
      */
     private final String type;
@@ -145,14 +145,14 @@ public final class DynamicsAXLinkedServiceResponse {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
     */
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
-     * Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
@@ -167,7 +167,7 @@ public final class DynamicsAXLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'DynamicsAX'.
+     * Expected value is &#39;DynamicsAX&#39;.
      * 
     */
     public String type() {

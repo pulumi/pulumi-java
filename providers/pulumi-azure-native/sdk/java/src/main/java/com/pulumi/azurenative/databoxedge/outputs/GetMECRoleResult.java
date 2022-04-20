@@ -25,7 +25,7 @@ public final class GetMECRoleResult {
     private final String id;
     /**
      * Role type.
-     * Expected value is 'MEC'.
+     * Expected value is &#39;MEC&#39;.
      * 
      */
     private final String kind;
@@ -84,7 +84,7 @@ public final class GetMECRoleResult {
     }
     /**
      * Role type.
-     * Expected value is 'MEC'.
+     * Expected value is &#39;MEC&#39;.
      * 
     */
     public String kind() {

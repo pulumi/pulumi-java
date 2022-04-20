@@ -17,7 +17,7 @@ public final class TypeResponse {
      */
     private final List<FieldResponse> fields;
     /**
-     * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
+     * The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
      * 
      */
     private final String name;
@@ -45,7 +45,7 @@ public final class TypeResponse {
         return this.fields;
     }
     /**
-     * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
+     * The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
      * 
     */
     public String name() {

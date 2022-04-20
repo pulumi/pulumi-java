@@ -44,7 +44,7 @@ public final class AzureDataLakeStoreLocationArgs extends com.pulumi.resources.R
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureDataLakeStoreLocation'.
+     * Expected value is &#39;AzureDataLakeStoreLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

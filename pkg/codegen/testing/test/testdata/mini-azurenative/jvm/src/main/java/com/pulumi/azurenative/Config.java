@@ -45,7 +45,7 @@ public final class Config {
         return Codegen.stringProp("clientSecret").config(config).get();
     }
 /**
- * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.
+ * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn&#39;t specified.
  * 
  */
     public Optional<Boolean> disablePulumiPartnerId() {

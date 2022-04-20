@@ -19,7 +19,7 @@ public final class TarReadSettingsResponse {
     private final @Nullable Object preserveCompressionFileNameAsFolder;
     /**
      * The Compression setting type.
-     * Expected value is 'TarReadSettings'.
+     * Expected value is &#39;TarReadSettings&#39;.
      * 
      */
     private final String type;
@@ -41,7 +41,7 @@ public final class TarReadSettingsResponse {
     }
     /**
      * The Compression setting type.
-     * Expected value is 'TarReadSettings'.
+     * Expected value is &#39;TarReadSettings&#39;.
      * 
     */
     public String type() {

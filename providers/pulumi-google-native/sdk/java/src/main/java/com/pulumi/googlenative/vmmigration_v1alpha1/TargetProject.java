@@ -33,14 +33,14 @@ public class TargetProject extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The target project's description.
+     * The target project&#39;s description.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The target project's description.
+     * @return The target project&#39;s description.
      * 
      */
     public Output<String> description() {

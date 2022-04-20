@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an App Runner Connection.
  * 
- * > **NOTE:** After creation, you must complete the authentication handshake using the App Runner console.
+ * &gt; **NOTE:** After creation, you must complete the authentication handshake using the App Runner console.
  * 
  * ## Example Usage
  * 

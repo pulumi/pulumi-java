@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiskEncryptionConfigurationResponse {
     /**
-     * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+     * On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
      * 
      */
     private final @Nullable List<String> targets;
@@ -23,7 +23,7 @@ public final class DiskEncryptionConfigurationResponse {
     }
 
     /**
-     * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+     * On Linux pool, only &#34;TemporaryDisk&#34; is supported; on Windows pool, &#34;OsDisk&#34; and &#34;TemporaryDisk&#34; must be specified.
      * 
     */
     public List<String> targets() {

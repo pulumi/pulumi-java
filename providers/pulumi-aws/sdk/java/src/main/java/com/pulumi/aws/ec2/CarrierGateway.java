@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * `aws_ec2_carrier_gateway` can be imported using the carrier gateway's ID, e.g.,
+ * `aws_ec2_carrier_gateway` can be imported using the carrier gateway&#39;s ID, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:ec2/carrierGateway:CarrierGateway example cgw-12345

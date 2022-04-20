@@ -19,7 +19,7 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
     public static final LoadBalancerInfoResponse Empty = new LoadBalancerInfoResponse();
 
     /**
-     * Type of load balancer's backend configuration.
+     * Type of load balancer&#39;s backend configuration.
      * 
      */
     @Import(name="backendType", required=true)

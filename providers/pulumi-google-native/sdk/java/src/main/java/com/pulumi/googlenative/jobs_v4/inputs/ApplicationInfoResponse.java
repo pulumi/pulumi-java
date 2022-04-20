@@ -29,7 +29,7 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     * Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
      * 
      */
     @Import(name="instruction", required=true)

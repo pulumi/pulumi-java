@@ -42,7 +42,7 @@ public final class GetWorkloadResult {
      */
     private final Boolean enableSovereignControls;
     /**
-     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
+     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update &amp; Delete operations.
      * 
      */
     private final String etag;
@@ -155,7 +155,7 @@ public final class GetWorkloadResult {
         return this.enableSovereignControls;
     }
     /**
-     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
+     * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update &amp; Delete operations.
      * 
     */
     public String etag() {

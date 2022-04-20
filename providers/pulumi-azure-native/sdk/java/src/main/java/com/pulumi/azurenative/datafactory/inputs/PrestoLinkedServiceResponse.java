@@ -205,7 +205,7 @@ public final class PrestoLinkedServiceResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of linked service.
-     * Expected value is 'Presto'.
+     * Expected value is &#39;Presto&#39;.
      * 
      */
     @Import(name="type", required=true)

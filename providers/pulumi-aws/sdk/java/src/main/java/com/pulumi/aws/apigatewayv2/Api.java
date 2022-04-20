@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an Amazon API Gateway Version 2 API.
  * 
- * > **Note:** Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.
+ * &gt; **Note:** Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.
  * 
  * ## Example Usage
  * 
@@ -155,7 +155,7 @@ public class Api extends com.pulumi.resources.CustomResource {
         return this.disableExecuteApiEndpoint;
     }
     /**
-     * The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+     * The ARN prefix to be used in an `aws.lambda.Permission`&#39;s `source_arn` attribute
      * or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
@@ -164,7 +164,7 @@ public class Api extends com.pulumi.resources.CustomResource {
     private Output<String> executionArn;
 
     /**
-     * @return The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+     * @return The ARN prefix to be used in an `aws.lambda.Permission`&#39;s `source_arn` attribute
      * or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 

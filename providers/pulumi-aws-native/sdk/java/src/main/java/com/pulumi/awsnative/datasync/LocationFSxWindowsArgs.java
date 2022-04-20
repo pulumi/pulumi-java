@@ -62,7 +62,7 @@ public final class LocationFSxWindowsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * A subdirectory in the location's path.
+     * A subdirectory in the location&#39;s path.
      * 
      */
     @Import(name="subdirectory")

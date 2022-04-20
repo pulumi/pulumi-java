@@ -50,7 +50,7 @@ public final class DomainClusterConfig {
      */
     private final @Nullable Boolean warmEnabled;
     /**
-     * Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+     * Instance type for the Elasticsearch cluster&#39;s warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
      * 
      */
     private final @Nullable String warmType;
@@ -139,7 +139,7 @@ public final class DomainClusterConfig {
         return Optional.ofNullable(this.warmEnabled);
     }
     /**
-     * Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+     * Instance type for the Elasticsearch cluster&#39;s warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
      * 
     */
     public Optional<String> warmType() {

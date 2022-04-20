@@ -43,7 +43,7 @@ public final class IosDeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Location of the file on the device, inside the app's sandboxed filesystem
+     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
      * 
      */
     @Import(name="devicePath")

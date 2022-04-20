@@ -65,7 +65,7 @@ public final class SapEccSourceResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * SAP ECC OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP ECC OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -110,7 +110,7 @@ public final class SapEccSourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'SapEccSource'.
+     * Expected value is &#39;SapEccSource&#39;.
      * 
      */
     @Import(name="type", required=true)

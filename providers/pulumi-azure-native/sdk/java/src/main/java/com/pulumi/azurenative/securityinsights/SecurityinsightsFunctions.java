@@ -141,7 +141,7 @@ public final class SecurityinsightsFunctions {
      * Alert rule.
      * API Version: 2020-01-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule.
      * 
      */
@@ -211,7 +211,7 @@ public final class SecurityinsightsFunctions {
      * Data connector.
      * API Version: 2020-01-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector.
      * 
      */
@@ -259,7 +259,7 @@ public final class SecurityinsightsFunctions {
      * Specific entity query.
      * API Version: 2021-03-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ActivityCustomEntityQuery.
      * 
      */
@@ -384,7 +384,7 @@ public final class SecurityinsightsFunctions {
      * The Setting.
      * API Version: 2021-03-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba.
      * 
      */

@@ -24,10 +24,10 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/datastore/docs/concepts/indexes)
  * 
- * > **Warning:** This resource creates a Datastore Index on a project that has already
- * enabled a Datastore-compatible database. If you haven't already enabled
+ * &gt; **Warning:** This resource creates a Datastore Index on a project that has already
+ * enabled a Datastore-compatible database. If you haven&#39;t already enabled
  * one, you can create a `gcp.appengine.Application` resource with
- * `database_type` set to `"CLOUD_DATASTORE_COMPATIBILITY"` to do so. Your
+ * `database_type` set to `&#34;CLOUD_DATASTORE_COMPATIBILITY&#34;` to do so. Your
  * Datastore location will be the same as the App Engine location specified.
  * 
  * ## Example Usage

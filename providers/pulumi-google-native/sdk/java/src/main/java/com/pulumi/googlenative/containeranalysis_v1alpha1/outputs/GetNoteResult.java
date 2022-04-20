@@ -81,7 +81,7 @@ public final class GetNoteResult {
      */
     private final String longDescription;
     /**
-     * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
+     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
      */
     private final String name;
@@ -262,7 +262,7 @@ public final class GetNoteResult {
         return this.longDescription;
     }
     /**
-     * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
+     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
     */
     public String name() {

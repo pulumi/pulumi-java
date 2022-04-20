@@ -155,7 +155,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+     * The maximum amount per hour for On-Demand Instances that you&#39;re willing to pay. When the maximum amount you&#39;re willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
     @Import(name="onDemandMaxTotalPrice")

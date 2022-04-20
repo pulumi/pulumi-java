@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DashboardStringParameter {
     /**
-     * <p>A display name for a string parameter.</p>
+     * &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
      * 
      */
     private final String name;
     /**
-     * <p>The values of a string parameter.</p>
+     * &lt;p&gt;The values of a string parameter.&lt;/p&gt;
      * 
      */
     private final List<String> values;
@@ -30,14 +30,14 @@ public final class DashboardStringParameter {
     }
 
     /**
-     * <p>A display name for a string parameter.</p>
+     * &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * <p>The values of a string parameter.</p>
+     * &lt;p&gt;The values of a string parameter.&lt;/p&gt;
      * 
     */
     public List<String> values() {

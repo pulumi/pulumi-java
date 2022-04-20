@@ -67,7 +67,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
 
     /**
      * The KeyRing that this import job belongs to.
-     * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
      * 
      */
     @Import(name="keyRing")
@@ -102,7 +102,7 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
+     * The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
      * 
      */
     @Import(name="publicKeys")

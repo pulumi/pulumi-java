@@ -37,14 +37,14 @@ public class DomainMapping extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     @Export(name="resourceRecords", type=List.class, parameters={ResourceRecordResponse.class})
     private Output<List<ResourceRecordResponse>> resourceRecords;
 
     /**
-     * @return The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
      * 
      */
     public Output<List<ResourceRecordResponse>> resourceRecords() {

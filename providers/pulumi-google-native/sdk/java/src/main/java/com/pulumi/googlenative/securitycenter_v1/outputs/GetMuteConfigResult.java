@@ -35,7 +35,7 @@ public final class GetMuteConfigResult {
      */
     private final String mostRecentEditor;
     /**
-     * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+     * This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
      * 
      */
     private final String name;
@@ -99,7 +99,7 @@ public final class GetMuteConfigResult {
         return this.mostRecentEditor;
     }
     /**
-     * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+     * This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
      * 
     */
     public String name() {

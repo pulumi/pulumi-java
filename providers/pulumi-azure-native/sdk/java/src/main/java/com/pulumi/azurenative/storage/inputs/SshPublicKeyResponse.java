@@ -26,7 +26,7 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
+     * Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
      * 
      */
     @Import(name="key")

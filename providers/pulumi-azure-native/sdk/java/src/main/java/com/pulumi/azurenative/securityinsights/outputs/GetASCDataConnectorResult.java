@@ -29,7 +29,7 @@ public final class GetASCDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'AzureSecurityCenter'.
+     * Expected value is &#39;AzureSecurityCenter&#39;.
      * 
      */
     private final String kind;
@@ -90,7 +90,7 @@ public final class GetASCDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AzureSecurityCenter'.
+     * Expected value is &#39;AzureSecurityCenter&#39;.
      * 
     */
     public String kind() {

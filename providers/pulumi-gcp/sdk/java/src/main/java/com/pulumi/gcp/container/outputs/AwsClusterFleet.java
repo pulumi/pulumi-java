@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class AwsClusterFleet {
     /**
      * - 
-     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
+     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
      * 
      */
     private final @Nullable String membership;
@@ -33,7 +33,7 @@ public final class AwsClusterFleet {
 
     /**
      * - 
-     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
+     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
      * 
     */
     public Optional<String> membership() {

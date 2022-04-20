@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool id, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag example <identity-pool-id>:<identity_provider_name>
+ *  $ pulumi import aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag example &lt;identity-pool-id&gt;:&lt;identity_provider_name&gt;
  * ```
  * 
  */

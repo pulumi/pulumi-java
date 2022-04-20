@@ -64,7 +64,7 @@ public class KubernetesRole extends com.pulumi.resources.CustomResource {
     }
     /**
      * Role type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -72,7 +72,7 @@ public class KubernetesRole extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Role type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     public Output<String> kind() {

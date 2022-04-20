@@ -39,8 +39,8 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="createTime")
@@ -62,7 +62,7 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     @Import(name="etag")
@@ -153,8 +153,8 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="updateTime")

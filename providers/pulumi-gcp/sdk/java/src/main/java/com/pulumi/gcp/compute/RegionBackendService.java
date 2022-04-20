@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Internal TCP/UDP Load Balancing](https://cloud.google.com/compute/docs/load-balancing/internal/)
  * 
- * > **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
+ * &gt; **Warning:** All arguments including `iap.oauth2_client_secret` and `iap.oauth2_client_secret_sha256` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
  * ## Example Usage
@@ -461,7 +461,7 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * loadBalancingScheme is EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
      * and the backends are instance groups. The named port must be defined on each
      * backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
-     * default of "http" if not given.
+     * default of &#34;http&#34; if not given.
      * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
      * 
      */
@@ -474,7 +474,7 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * loadBalancingScheme is EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
      * and the backends are instance groups. The named port must be defined on each
      * backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
-     * default of "http" if not given.
+     * default of &#34;http&#34; if not given.
      * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
      * 
      */

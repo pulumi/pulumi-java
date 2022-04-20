@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * with custom software already setup. See [What is Amazon Lightsail?](https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail)
  * for more information.
  * 
- * > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
+ * &gt; **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see [&#34;Regions and Availability Zones in Amazon Lightsail&#34;](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
  * 
  * ## Example Usage
  * ## Availability Zones
@@ -83,7 +83,7 @@ import javax.annotation.Nullable;
  * Lightsail Instances can be imported using their name, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:lightsail/instance:Instance gitlab_test 'custom gitlab'
+ *  $ pulumi import aws:lightsail/instance:Instance gitlab_test &#39;custom gitlab&#39;
  * ```
  * 
  */
@@ -178,7 +178,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * (**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
      * 
-     * @Deprecated
+     * @deprecated
      * use `ipv6_addresses` attribute instead
      * 
      */

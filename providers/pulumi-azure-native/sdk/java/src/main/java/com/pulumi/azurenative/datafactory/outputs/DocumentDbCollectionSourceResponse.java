@@ -54,7 +54,7 @@ public final class DocumentDbCollectionSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'DocumentDbCollectionSource'.
+     * Expected value is &#39;DocumentDbCollectionSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class DocumentDbCollectionSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'DocumentDbCollectionSource'.
+     * Expected value is &#39;DocumentDbCollectionSource&#39;.
      * 
     */
     public String type() {

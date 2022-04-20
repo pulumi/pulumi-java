@@ -31,7 +31,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
+     * A multiplier applied to the backend&#39;s target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
      * 
      */
     @Import(name="capacityScaler", required=true)
@@ -75,7 +75,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
      * 
      */
     @Import(name="maxConnections", required=true)
@@ -86,7 +86,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
      * 
      */
     @Import(name="maxConnectionsPerEndpoint", required=true)
@@ -97,7 +97,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE.
+     * Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is RATE.
      * 
      */
     @Import(name="maxConnectionsPerInstance", required=true)
@@ -108,7 +108,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
      * 
      */
     @Import(name="maxRate", required=true)
@@ -119,7 +119,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
      * 
      */
     @Import(name="maxRatePerEndpoint", required=true)
@@ -130,7 +130,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is CONNECTION.
+     * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode. Not available if the backend&#39;s balancingMode is CONNECTION.
      * 
      */
     @Import(name="maxRatePerInstance", required=true)

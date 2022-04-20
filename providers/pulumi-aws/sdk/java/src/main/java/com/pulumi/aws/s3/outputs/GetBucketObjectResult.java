@@ -56,7 +56,7 @@ public final class GetBucketObjectResult {
      */
     private final String contentType;
     /**
-     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
+     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
      * 
      */
     private final String etag;
@@ -87,7 +87,7 @@ public final class GetBucketObjectResult {
      */
     private final Map<String,String> metadata;
     /**
-     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
+     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
      * 
      */
     private final String objectLockLegalHoldStatus;
@@ -97,7 +97,7 @@ public final class GetBucketObjectResult {
      */
     private final String objectLockMode;
     /**
-     * The date and time when this object's object lock will expire.
+     * The date and time when this object&#39;s object lock will expire.
      * 
      */
     private final String objectLockRetainUntilDate;
@@ -249,7 +249,7 @@ public final class GetBucketObjectResult {
         return this.contentType;
     }
     /**
-     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
+     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
      * 
     */
     public String etag() {
@@ -294,7 +294,7 @@ public final class GetBucketObjectResult {
         return this.metadata;
     }
     /**
-     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
+     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
      * 
     */
     public String objectLockLegalHoldStatus() {
@@ -308,7 +308,7 @@ public final class GetBucketObjectResult {
         return this.objectLockMode;
     }
     /**
-     * The date and time when this object's object lock will expire.
+     * The date and time when this object&#39;s object lock will expire.
      * 
     */
     public String objectLockRetainUntilDate() {

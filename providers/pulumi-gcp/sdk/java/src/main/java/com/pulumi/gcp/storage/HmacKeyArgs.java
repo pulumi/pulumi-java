@@ -28,7 +28,7 @@ public final class HmacKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The email address of the key's associated service account.
+     * The email address of the key&#39;s associated service account.
      * 
      */
     @Import(name="serviceAccountEmail", required=true)

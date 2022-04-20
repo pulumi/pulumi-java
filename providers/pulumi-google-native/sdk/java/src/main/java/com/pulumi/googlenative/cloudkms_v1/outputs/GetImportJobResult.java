@@ -32,7 +32,7 @@ public final class GetImportJobResult {
      */
     private final String expireTime;
     /**
-     * The time this ImportJob's key material was generated.
+     * The time this ImportJob&#39;s key material was generated.
      * 
      */
     private final String generateTime;
@@ -115,7 +115,7 @@ public final class GetImportJobResult {
         return this.expireTime;
     }
     /**
-     * The time this ImportJob's key material was generated.
+     * The time this ImportJob&#39;s key material was generated.
      * 
     */
     public String generateTime() {

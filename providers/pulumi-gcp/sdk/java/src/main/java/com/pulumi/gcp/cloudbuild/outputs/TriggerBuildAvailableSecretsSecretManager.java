@@ -13,7 +13,7 @@ public final class TriggerBuildAvailableSecretsSecretManager {
      * A list of global environment variable definitions that will exist for all build steps
      * in this build. If a variable is defined in both globally and in a build step,
      * the variable will use the build step value.
-     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
      */
     private final String env;
@@ -35,7 +35,7 @@ public final class TriggerBuildAvailableSecretsSecretManager {
      * A list of global environment variable definitions that will exist for all build steps
      * in this build. If a variable is defined in both globally and in a build step,
      * the variable will use the build step value.
-     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
     */
     public String env() {

@@ -99,7 +99,7 @@ public final class HiveSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'HiveSource'.
+     * Expected value is &#39;HiveSource&#39;.
      * 
      */
     @Import(name="type", required=true)

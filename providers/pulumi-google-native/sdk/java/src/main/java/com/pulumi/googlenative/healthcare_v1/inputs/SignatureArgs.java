@@ -22,7 +22,7 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
     public static final SignatureArgs Empty = new SignatureArgs();
 
     /**
-     * Optional. An image of the user's signature.
+     * Optional. An image of the user&#39;s signature.
      * 
      */
     @Import(name="image")
@@ -33,7 +33,7 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
      */
     @Import(name="metadata")
@@ -55,7 +55,7 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Import(name="userId", required=true)

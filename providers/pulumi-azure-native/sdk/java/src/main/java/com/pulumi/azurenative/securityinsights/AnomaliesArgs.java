@@ -17,7 +17,7 @@ public final class AnomaliesArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the setting
-     * Expected value is 'Anomalies'.
+     * Expected value is &#39;Anomalies&#39;.
      * 
      */
     @Import(name="kind", required=true)

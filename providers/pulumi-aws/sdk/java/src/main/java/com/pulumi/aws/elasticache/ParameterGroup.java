@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an ElastiCache parameter group resource.
  * 
- * > **NOTE:** Attempting to remove the `reserved-memory` parameter when `family` is set to `redis2.6` or `redis2.8` may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.
+ * &gt; **NOTE:** Attempting to remove the `reserved-memory` parameter when `family` is set to `redis2.6` or `redis2.8` may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.
  * 
  * ## Example Usage
  * 
@@ -49,14 +49,14 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
+     * The description of the ElastiCache parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
+     * @return The description of the ElastiCache parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output<String> description() {

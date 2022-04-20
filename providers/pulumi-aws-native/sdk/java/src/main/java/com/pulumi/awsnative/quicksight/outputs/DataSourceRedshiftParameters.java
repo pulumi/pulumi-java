@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceRedshiftParameters {
     /**
-     * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
-     *             provided.</p>
+     * &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+     *             provided.&lt;/p&gt;
      * 
      */
     private final @Nullable String clusterId;
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     private final String database;
     /**
-     * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
      */
     private final @Nullable String host;
     /**
-     * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
      */
     private final @Nullable Double port;
@@ -47,29 +47,29 @@ public final class DataSourceRedshiftParameters {
     }
 
     /**
-     * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
-     *             provided.</p>
+     * &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+     *             provided.&lt;/p&gt;
      * 
     */
     public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
     */
     public String database() {
         return this.database;
     }
     /**
-     * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
+     * &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
      * 
     */
     public Optional<Double> port() {

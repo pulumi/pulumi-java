@@ -25,9 +25,9 @@ import javax.annotation.Nullable;
  * under the registered domain name using
  * the `aws.apigateway.BasePathMapping` resource.
  * 
- * API Gateway domains can be defined as either 'edge-optimized' or 'regional'.  In an edge-optimized configuration,
+ * API Gateway domains can be defined as either &#39;edge-optimized&#39; or &#39;regional&#39;.  In an edge-optimized configuration,
  * API Gateway internally creates and manages a CloudFront distribution to route requests on the given hostname. In
- * addition to this resource it's necessary to create a DNS record corresponding to the given domain name which is an alias
+ * addition to this resource it&#39;s necessary to create a DNS record corresponding to the given domain name which is an alias
  * (either Route53 alias or traditional CNAME) to the Cloudfront domain name exported in the `cloudfront_domain_name`
  * attribute.
  * 
@@ -36,9 +36,9 @@ import javax.annotation.Nullable;
  * given domain name which is an alias (either Route53 alias or traditional CNAME) to the regional domain name exported in
  * the `regional_domain_name` attribute.
  * 
- * > **Note:** API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the [Regions and Endpoints Documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region). To import an existing private key and certificate into ACM or request an ACM certificate, see the `aws.acm.Certificate` resource.
+ * &gt; **Note:** API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the [Regions and Endpoints Documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region). To import an existing private key and certificate into ACM or request an ACM certificate, see the `aws.acm.Certificate` resource.
  * 
- * > **Note:** The `aws.apigateway.DomainName` resource expects dependency on the `aws.acm.CertificateValidation` as
+ * &gt; **Note:** The `aws.apigateway.DomainName` resource expects dependency on the `aws.acm.CertificateValidation` as
  * only verified certificates can be used. This can be made either explicitly by adding the
  * `depends_on = [aws_acm_certificate_validation.cert]` attribute. Or implicitly by referring certificate ARN
  * from the validation resource where it will be available after the resource creation:
@@ -276,14 +276,14 @@ public class DomainName extends com.pulumi.resources.CustomResource {
         return this.regionalCertificateName;
     }
     /**
-     * The hostname for the custom domain's regional endpoint.
+     * The hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     /**
-     * @return The hostname for the custom domain's regional endpoint.
+     * @return The hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     public Output<String> regionalDomainName() {

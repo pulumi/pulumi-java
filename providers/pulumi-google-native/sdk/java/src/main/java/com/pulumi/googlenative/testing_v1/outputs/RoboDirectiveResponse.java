@@ -20,7 +20,7 @@ public final class RoboDirectiveResponse {
      */
     private final String inputText;
     /**
-     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
      */
     private final String resourceName;
@@ -50,7 +50,7 @@ public final class RoboDirectiveResponse {
         return this.inputText;
     }
     /**
-     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
      * 
     */
     public String resourceName() {

@@ -88,7 +88,7 @@ public final class FileServerReadSettingsResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -99,7 +99,7 @@ public final class FileServerReadSettingsResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -133,7 +133,7 @@ public final class FileServerReadSettingsResponse extends com.pulumi.resources.I
 
     /**
      * The read setting type.
-     * Expected value is 'FileServerReadSettings'.
+     * Expected value is &#39;FileServerReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

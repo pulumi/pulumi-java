@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardError {
     /**
-     * <p>Message.</p>
+     * &lt;p&gt;Message.&lt;/p&gt;
      * 
      */
     private final @Nullable String message;
@@ -28,7 +28,7 @@ public final class DashboardError {
     }
 
     /**
-     * <p>Message.</p>
+     * &lt;p&gt;Message.&lt;/p&gt;
      * 
     */
     public Optional<String> message() {

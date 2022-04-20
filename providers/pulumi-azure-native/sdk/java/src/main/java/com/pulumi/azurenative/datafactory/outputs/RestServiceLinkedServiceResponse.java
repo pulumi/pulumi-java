@@ -81,12 +81,12 @@ public final class RestServiceLinkedServiceResponse {
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * The application's client ID used in AadServicePrincipal authentication type.
+     * The application&#39;s client ID used in AadServicePrincipal authentication type.
      * 
      */
     private final @Nullable Object servicePrincipalId;
     /**
-     * The application's key used in AadServicePrincipal authentication type.
+     * The application&#39;s key used in AadServicePrincipal authentication type.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
@@ -97,7 +97,7 @@ public final class RestServiceLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'RestService'.
+     * Expected value is &#39;RestService&#39;.
      * 
      */
     private final String type;
@@ -237,14 +237,14 @@ public final class RestServiceLinkedServiceResponse {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The application's client ID used in AadServicePrincipal authentication type.
+     * The application&#39;s client ID used in AadServicePrincipal authentication type.
      * 
     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The application's key used in AadServicePrincipal authentication type.
+     * The application&#39;s key used in AadServicePrincipal authentication type.
      * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
@@ -259,7 +259,7 @@ public final class RestServiceLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'RestService'.
+     * Expected value is &#39;RestService&#39;.
      * 
     */
     public String type() {

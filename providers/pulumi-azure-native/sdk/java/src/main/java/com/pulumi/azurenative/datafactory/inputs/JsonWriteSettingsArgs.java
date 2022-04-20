@@ -21,7 +21,7 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
     public static final JsonWriteSettingsArgs Empty = new JsonWriteSettingsArgs();
 
     /**
-     * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
+     * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
      * 
      */
     @Import(name="filePattern")
@@ -33,7 +33,7 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The write setting type.
-     * Expected value is 'JsonWriteSettings'.
+     * Expected value is &#39;JsonWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

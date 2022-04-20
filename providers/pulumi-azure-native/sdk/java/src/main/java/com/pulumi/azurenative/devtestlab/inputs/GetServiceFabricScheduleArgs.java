@@ -15,7 +15,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     public static final GetServiceFabricScheduleArgs Empty = new GetServiceFabricScheduleArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=status)'
+     * Specify the $expand query. Example: &#39;properties($select=status)&#39;
      * 
      */
     @Import(name="expand")

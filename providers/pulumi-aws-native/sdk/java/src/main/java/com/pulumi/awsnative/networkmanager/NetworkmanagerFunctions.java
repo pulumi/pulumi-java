@@ -45,7 +45,7 @@ public final class NetworkmanagerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
+     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
      * 
      */
     public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args) {

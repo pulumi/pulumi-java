@@ -20,7 +20,7 @@ public final class AccessPointCreationInfo {
      */
     private final String ownerUid;
     /**
-     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
      * 
      */
     private final String permissions;
@@ -50,7 +50,7 @@ public final class AccessPointCreationInfo {
         return this.ownerUid;
     }
     /**
-     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+     * Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
      * 
     */
     public String permissions() {

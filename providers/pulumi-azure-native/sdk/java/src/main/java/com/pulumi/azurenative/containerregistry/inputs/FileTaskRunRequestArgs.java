@@ -128,7 +128,7 @@ public final class FileTaskRunRequestArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The type of the run request.
-     * Expected value is 'FileTaskRunRequest'.
+     * Expected value is &#39;FileTaskRunRequest&#39;.
      * 
      */
     @Import(name="type", required=true)

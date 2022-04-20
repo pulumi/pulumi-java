@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class MetricCriteriaResponse {
     /**
      * Specifies the type of threshold criteria
-     * Expected value is 'StaticThresholdCriterion'.
+     * Expected value is &#39;StaticThresholdCriterion&#39;.
      * 
      */
     private final String criterionType;
@@ -47,7 +47,7 @@ public final class MetricCriteriaResponse {
      */
     private final String operator;
     /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
      */
     private final @Nullable Boolean skipMetricValidation;
@@ -86,7 +86,7 @@ public final class MetricCriteriaResponse {
 
     /**
      * Specifies the type of threshold criteria
-     * Expected value is 'StaticThresholdCriterion'.
+     * Expected value is &#39;StaticThresholdCriterion&#39;.
      * 
     */
     public String criterionType() {
@@ -128,7 +128,7 @@ public final class MetricCriteriaResponse {
         return this.operator;
     }
     /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
     */
     public Optional<Boolean> skipMetricValidation() {

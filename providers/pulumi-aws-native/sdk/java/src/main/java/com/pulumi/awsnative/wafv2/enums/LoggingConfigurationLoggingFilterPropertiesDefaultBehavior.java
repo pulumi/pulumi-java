@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Default handling for logs that don't match any of the specified filtering conditions.
+     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
      */
     @EnumType

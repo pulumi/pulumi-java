@@ -96,7 +96,7 @@ public final class WebAppSitePushSettingsSlotArgs extends com.pulumi.resources.R
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
      * Validation should be performed at the PushRequestHandler.
      * 
      */

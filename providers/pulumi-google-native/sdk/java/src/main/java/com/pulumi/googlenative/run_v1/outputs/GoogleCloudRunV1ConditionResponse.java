@@ -20,7 +20,7 @@ public final class GoogleCloudRunV1ConditionResponse {
      */
     private final String message;
     /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
+     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
      */
     private final String reason;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunV1ConditionResponse {
      */
     private final String status;
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
      */
     private final String type;
@@ -71,7 +71,7 @@ public final class GoogleCloudRunV1ConditionResponse {
         return this.message;
     }
     /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
+     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
     */
     public String reason() {
@@ -92,7 +92,7 @@ public final class GoogleCloudRunV1ConditionResponse {
         return this.status;
     }
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
     */
     public String type() {

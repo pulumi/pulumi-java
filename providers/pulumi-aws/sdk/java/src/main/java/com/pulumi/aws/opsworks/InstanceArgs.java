@@ -21,7 +21,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     public static final InstanceArgs Empty = new InstanceArgs();
 
     /**
-     * The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
+     * The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
      * 
      */
     @Import(name="agentVersion")
@@ -32,7 +32,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
+     * The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
      * 
      */
     @Import(name="amiId")
@@ -43,7 +43,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
+     * Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
      * 
      */
     @Import(name="architecture")
@@ -54,7 +54,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
+     * Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
      * 
      */
     @Import(name="autoScalingType")
@@ -136,7 +136,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     @Import(name="ephemeralBlockDevices")
@@ -147,7 +147,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The instance's host name.
+     * The instance&#39;s host name.
      * 
      */
     @Import(name="hostname")
@@ -231,7 +231,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
      * for your VPC
      * 
      */
@@ -255,7 +255,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you've enabled DNS hostnames for your VPC
+     * is only available if you&#39;ve enabled DNS hostnames for your VPC
      * 
      */
     @Import(name="publicDns")
@@ -324,7 +324,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
+     * Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
      * 
      */
     @Import(name="rootDeviceType")
@@ -389,7 +389,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The desired state of the instance.  Can be either `"running"` or `"stopped"`.
+     * The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
      * 
      */
     @Import(name="state")
@@ -418,7 +418,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
+     * Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
      * 
      */
     @Import(name="tenancy")
@@ -430,7 +430,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Keyword to choose what virtualization mode created instances
-     * will use. Can be either `"paravirtual"` or `"hvm"`.
+     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
      * 
      */
     @Import(name="virtualizationType")

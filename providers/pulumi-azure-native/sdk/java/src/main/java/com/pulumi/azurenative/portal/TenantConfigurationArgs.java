@@ -17,7 +17,7 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
     public static final TenantConfigurationArgs Empty = new TenantConfigurationArgs();
 
     /**
-     * The configuration name. Value must be 'default'
+     * The configuration name. Value must be &#39;default&#39;
      * 
      */
     @Import(name="configurationName")

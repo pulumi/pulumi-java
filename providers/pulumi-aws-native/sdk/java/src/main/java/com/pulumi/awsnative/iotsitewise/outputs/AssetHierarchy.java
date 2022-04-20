@@ -15,7 +15,7 @@ public final class AssetHierarchy {
      */
     private final String childAssetId;
     /**
-     * The LogicalID of a hierarchy in the parent asset's model.
+     * The LogicalID of a hierarchy in the parent asset&#39;s model.
      * 
      */
     private final String logicalId;
@@ -36,7 +36,7 @@ public final class AssetHierarchy {
         return this.childAssetId;
     }
     /**
-     * The LogicalID of a hierarchy in the parent asset's model.
+     * The LogicalID of a hierarchy in the parent asset&#39;s model.
      * 
     */
     public String logicalId() {

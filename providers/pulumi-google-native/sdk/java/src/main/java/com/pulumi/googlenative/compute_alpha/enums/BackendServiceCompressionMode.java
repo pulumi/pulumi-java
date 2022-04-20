@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
      */
     @EnumType

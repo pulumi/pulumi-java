@@ -47,7 +47,7 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The size of the stage's cache cluster.
+     * The size of the stage&#39;s cache cluster.
      * 
      */
     @Import(name="cacheClusterSize")
@@ -157,7 +157,7 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Configures settings for all of the stage's methods.
+     * Configures settings for all of the stage&#39;s methods.
      * 
      */
     @Import(name="methodSettings")
@@ -223,7 +223,7 @@ public final class DeploymentStageDescriptionArgs extends com.pulumi.resources.R
     }
 
     /**
-     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
+     * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
      * 
      */
     @Import(name="variables")

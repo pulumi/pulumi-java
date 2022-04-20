@@ -79,14 +79,14 @@ public class Hub extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
     @Export(name="routingVpcs", type=List.class, parameters={RoutingVPCResponse.class})
     private Output<List<RoutingVPCResponse>> routingVpcs;
 
     /**
-     * @return The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * @return The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
     public Output<List<RoutingVPCResponse>> routingVpcs() {

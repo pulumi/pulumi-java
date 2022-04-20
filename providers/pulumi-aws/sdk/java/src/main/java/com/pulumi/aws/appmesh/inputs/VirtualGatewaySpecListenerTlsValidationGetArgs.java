@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends com.pu
     public static final VirtualGatewaySpecListenerTlsValidationGetArgs Empty = new VirtualGatewaySpecListenerTlsValidationGetArgs();
 
     /**
-     * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
+     * The SANs for a virtual gateway&#39;s listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     @Import(name="subjectAlternativeNames")

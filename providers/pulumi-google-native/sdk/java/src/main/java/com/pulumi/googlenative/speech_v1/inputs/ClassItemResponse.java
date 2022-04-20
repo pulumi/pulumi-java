@@ -17,7 +17,7 @@ public final class ClassItemResponse extends com.pulumi.resources.InvokeArgs {
     public static final ClassItemResponse Empty = new ClassItemResponse();
 
     /**
-     * The class item's value.
+     * The class item&#39;s value.
      * 
      */
     @Import(name="value", required=true)

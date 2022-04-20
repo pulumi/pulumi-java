@@ -34,7 +34,7 @@ public final class DriveStatusResponse {
      */
     private final @Nullable String driveHeaderHash;
     /**
-     * The drive's hardware serial number, without spaces.
+     * The drive&#39;s hardware serial number, without spaces.
      * 
      */
     private final @Nullable String driveId;
@@ -64,7 +64,7 @@ public final class DriveStatusResponse {
      */
     private final @Nullable Integer percentComplete;
     /**
-     * The drive's current state.
+     * The drive&#39;s current state.
      * 
      */
     private final @Nullable String state;
@@ -131,7 +131,7 @@ public final class DriveStatusResponse {
         return Optional.ofNullable(this.driveHeaderHash);
     }
     /**
-     * The drive's hardware serial number, without spaces.
+     * The drive&#39;s hardware serial number, without spaces.
      * 
     */
     public Optional<String> driveId() {
@@ -173,7 +173,7 @@ public final class DriveStatusResponse {
         return Optional.ofNullable(this.percentComplete);
     }
     /**
-     * The drive's current state.
+     * The drive&#39;s current state.
      * 
     */
     public Optional<String> state() {

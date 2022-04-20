@@ -43,7 +43,7 @@ public final class GetEncryptionProtectorResult {
      */
     private final @Nullable String serverKeyName;
     /**
-     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     private final String serverKeyType;
@@ -137,7 +137,7 @@ public final class GetEncryptionProtectorResult {
         return Optional.ofNullable(this.serverKeyName);
     }
     /**
-     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
     */
     public String serverKeyType() {

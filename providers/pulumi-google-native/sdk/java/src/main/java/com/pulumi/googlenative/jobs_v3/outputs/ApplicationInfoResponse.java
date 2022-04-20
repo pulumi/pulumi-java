@@ -16,7 +16,7 @@ public final class ApplicationInfoResponse {
      */
     private final List<String> emails;
     /**
-     * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
      * 
      */
     private final String instruction;
@@ -44,7 +44,7 @@ public final class ApplicationInfoResponse {
         return this.emails;
     }
     /**
-     * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
      * 
     */
     public String instruction() {

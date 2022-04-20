@@ -83,7 +83,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends com.pu
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
     @Import(name="taskType", required=true)

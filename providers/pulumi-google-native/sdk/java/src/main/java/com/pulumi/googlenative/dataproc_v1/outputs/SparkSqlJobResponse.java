@@ -24,7 +24,7 @@ public final class SparkSqlJobResponse {
      */
     private final LoggingConfigResponse loggingConfig;
     /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+     * Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
      */
     private final Map<String,String> properties;
@@ -39,7 +39,7 @@ public final class SparkSqlJobResponse {
      */
     private final QueryListResponse queryList;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
      */
     private final Map<String,String> scriptVariables;
@@ -75,7 +75,7 @@ public final class SparkSqlJobResponse {
         return this.loggingConfig;
     }
     /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+     * Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
     */
     public Map<String,String> properties() {
@@ -96,7 +96,7 @@ public final class SparkSqlJobResponse {
         return this.queryList;
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
     */
     public Map<String,String> scriptVariables() {

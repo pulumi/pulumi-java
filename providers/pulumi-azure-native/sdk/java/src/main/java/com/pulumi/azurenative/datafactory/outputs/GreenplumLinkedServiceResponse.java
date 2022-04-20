@@ -54,7 +54,7 @@ public final class GreenplumLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
      * Type of linked service.
-     * Expected value is 'Greenplum'.
+     * Expected value is &#39;Greenplum&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class GreenplumLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Greenplum'.
+     * Expected value is &#39;Greenplum&#39;.
      * 
     */
     public String type() {

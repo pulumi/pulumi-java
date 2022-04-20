@@ -43,16 +43,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:diagflow/cxVersion:CxVersion")
 public class CxVersion extends com.pulumi.resources.CustomResource {
     /**
-     * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples:
-     * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples:
+     * &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
-     * @return A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples:
-     * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * @return A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples:
+     * &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> createTime() {
@@ -118,7 +118,7 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
     }
     /**
      * The Flow to create an Version for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     @Export(name="parent", type=String.class, parameters={})
@@ -126,7 +126,7 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The Flow to create an Version for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     public Output</* @Nullable */ String> parent() {

@@ -29,7 +29,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
+     * The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;
      * 
      */
     @Import(name="galleryApplicationVersionName")

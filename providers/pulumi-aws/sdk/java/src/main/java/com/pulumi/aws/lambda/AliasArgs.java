@@ -61,7 +61,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Lambda alias' route configuration settings. Fields documented below
+     * The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
     @Import(name="routingConfig")

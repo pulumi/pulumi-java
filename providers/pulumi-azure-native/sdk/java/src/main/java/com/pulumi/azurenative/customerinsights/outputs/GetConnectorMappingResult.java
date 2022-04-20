@@ -78,7 +78,7 @@ public final class GetConnectorMappingResult {
      */
     private final String name;
     /**
-     * The next run time based on customer's settings.
+     * The next run time based on customer&#39;s settings.
      * 
      */
     private final String nextRunTime;
@@ -235,7 +235,7 @@ public final class GetConnectorMappingResult {
         return this.name;
     }
     /**
-     * The next run time based on customer's settings.
+     * The next run time based on customer&#39;s settings.
      * 
     */
     public String nextRunTime() {

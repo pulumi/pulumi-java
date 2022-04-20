@@ -45,7 +45,7 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'GetUserTables.Sql'.
+     * Expected value is &#39;GetUserTables.Sql&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'GetUserTables.Sql'.
+     * Expected value is &#39;GetUserTables.Sql&#39;.
      * 
     */
     public String taskType() {

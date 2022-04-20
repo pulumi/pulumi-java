@@ -45,8 +45,8 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
 
     /**
      * The set of Google API scopes to be made available
-     * on all of the node VMs under the "default" service account.
-     * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
+     * on all of the node VMs under the &#34;default&#34; service account.
+     * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
      */
     @Import(name="oauthScopes")
@@ -58,7 +58,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
 
     /**
      * The service account to be used by the Node VMs.
-     * If not specified, the "default" service account is used.
+     * If not specified, the &#34;default&#34; service account is used.
      * 
      */
     @Import(name="serviceAccount")

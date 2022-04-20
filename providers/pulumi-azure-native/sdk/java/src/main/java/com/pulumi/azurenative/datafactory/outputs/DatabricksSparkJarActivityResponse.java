@@ -60,7 +60,7 @@ public final class DatabricksSparkJarActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkJar'.
+     * Expected value is &#39;DatabricksSparkJar&#39;.
      * 
      */
     private final String type;
@@ -152,7 +152,7 @@ public final class DatabricksSparkJarActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkJar'.
+     * Expected value is &#39;DatabricksSparkJar&#39;.
      * 
     */
     public String type() {

@@ -31,7 +31,7 @@ public final class CrossVersionObjectReferenceArgs extends com.pulumi.resources.
     }
 
     /**
-     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds&#34;
      * 
      */
     @Import(name="kind", required=true)

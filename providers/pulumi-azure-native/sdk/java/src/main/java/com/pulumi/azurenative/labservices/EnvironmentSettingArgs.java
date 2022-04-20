@@ -20,7 +20,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     public static final EnvironmentSettingArgs Empty = new EnvironmentSettingArgs();
 
     /**
-     * Describes the user's progress in configuring their environment setting
+     * Describes the user&#39;s progress in configuring their environment setting
      * 
      */
     @Import(name="configurationState")

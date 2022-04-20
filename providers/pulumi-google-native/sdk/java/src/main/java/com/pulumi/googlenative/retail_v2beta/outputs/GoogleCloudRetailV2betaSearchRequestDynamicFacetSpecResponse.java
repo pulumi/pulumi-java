@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse {
     /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
      * 
      */
     private final String mode;
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
     }
 
     /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
      * 
     */
     public String mode() {

@@ -21,9 +21,9 @@ import javax.annotation.Nullable;
  * * `gcp.pubsub.SubscriptionIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subscription are preserved.
  * * `gcp.pubsub.SubscriptionIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subscription are preserved.
  * 
- * > **Note:** `gcp.pubsub.SubscriptionIAMPolicy` **cannot** be used in conjunction with `gcp.pubsub.SubscriptionIAMBinding` and `gcp.pubsub.SubscriptionIAMMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.pubsub.SubscriptionIAMPolicy` **cannot** be used in conjunction with `gcp.pubsub.SubscriptionIAMBinding` and `gcp.pubsub.SubscriptionIAMMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_pubsub\_subscription\_iam\_policy
  * 
@@ -40,14 +40,14 @@ import javax.annotation.Nullable;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember editor "projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor"
+ *  $ pulumi import gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember editor &#34;projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember editor "projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor jane@example.com"
+ *  $ pulumi import gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember editor &#34;projects/{your-project-id}/subscriptions/{your-subscription-name} roles/editor jane@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -61,14 +61,14 @@ public class SubscriptionIAMMember extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the subscription's IAM policy.
+     * (Computed) The etag of the subscription&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the subscription's IAM policy.
+     * @return (Computed) The etag of the subscription&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

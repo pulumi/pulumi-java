@@ -16,7 +16,7 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
     public static final DeploymentConfigurationResponse Empty = new DeploymentConfigurationResponse();
 
     /**
-     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
+     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
      * 
      */
     @Import(name="cloudServiceConfiguration")

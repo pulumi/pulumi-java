@@ -28,7 +28,7 @@ public final class PatientIdResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The patient's unique identifier.
+     * The patient&#39;s unique identifier.
      * 
      */
     @Import(name="value", required=true)

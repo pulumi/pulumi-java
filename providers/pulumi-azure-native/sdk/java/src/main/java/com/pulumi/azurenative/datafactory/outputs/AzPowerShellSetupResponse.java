@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class AzPowerShellSetupResponse {
     /**
      * The type of custom setup.
-     * Expected value is 'AzPowerShellSetup'.
+     * Expected value is &#39;AzPowerShellSetup&#39;.
      * 
      */
     private final String type;
@@ -31,7 +31,7 @@ public final class AzPowerShellSetupResponse {
 
     /**
      * The type of custom setup.
-     * Expected value is 'AzPowerShellSetup'.
+     * Expected value is &#39;AzPowerShellSetup&#39;.
      * 
     */
     public String type() {

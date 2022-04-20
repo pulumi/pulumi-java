@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The convention used when determining the session cookie's expiration.
+     * The convention used when determining the session cookie&#39;s expiration.
      * 
      */
     @EnumType

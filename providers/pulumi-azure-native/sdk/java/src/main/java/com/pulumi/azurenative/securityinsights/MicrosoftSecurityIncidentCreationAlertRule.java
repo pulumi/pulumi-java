@@ -75,28 +75,28 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
         return this.displayName;
     }
     /**
-     * the alerts' displayNames on which the cases will not be generated
+     * the alerts&#39; displayNames on which the cases will not be generated
      * 
      */
     @Export(name="displayNamesExcludeFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesExcludeFilter;
 
     /**
-     * @return the alerts' displayNames on which the cases will not be generated
+     * @return the alerts&#39; displayNames on which the cases will not be generated
      * 
      */
     public Output</* @Nullable */ List<String>> displayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter;
     }
     /**
-     * the alerts' displayNames on which the cases will be generated
+     * the alerts&#39; displayNames on which the cases will be generated
      * 
      */
     @Export(name="displayNamesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesFilter;
 
     /**
-     * @return the alerts' displayNames on which the cases will be generated
+     * @return the alerts&#39; displayNames on which the cases will be generated
      * 
      */
     public Output</* @Nullable */ List<String>> displayNamesFilter() {
@@ -132,7 +132,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'MicrosoftSecurityIncidentCreation'.
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -140,7 +140,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
 
     /**
      * @return The kind of the alert rule
-     * Expected value is 'MicrosoftSecurityIncidentCreation'.
+     * Expected value is &#39;MicrosoftSecurityIncidentCreation&#39;.
      * 
      */
     public Output<String> kind() {
@@ -175,28 +175,28 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
         return this.name;
     }
     /**
-     * The alerts' productName on which the cases will be generated
+     * The alerts&#39; productName on which the cases will be generated
      * 
      */
     @Export(name="productFilter", type=String.class, parameters={})
     private Output<String> productFilter;
 
     /**
-     * @return The alerts' productName on which the cases will be generated
+     * @return The alerts&#39; productName on which the cases will be generated
      * 
      */
     public Output<String> productFilter() {
         return this.productFilter;
     }
     /**
-     * the alerts' severities on which the cases will be generated
+     * the alerts&#39; severities on which the cases will be generated
      * 
      */
     @Export(name="severitiesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> severitiesFilter;
 
     /**
-     * @return the alerts' severities on which the cases will be generated
+     * @return the alerts&#39; severities on which the cases will be generated
      * 
      */
     public Output</* @Nullable */ List<String>> severitiesFilter() {

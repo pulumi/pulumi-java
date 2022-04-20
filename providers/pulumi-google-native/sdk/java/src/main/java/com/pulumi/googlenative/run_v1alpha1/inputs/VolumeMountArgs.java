@@ -21,7 +21,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     public static final VolumeMountArgs Empty = new VolumeMountArgs();
 
     /**
-     * Path within the container at which the volume should be mounted. Must not contain ':'.
+     * Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
      * 
      */
     @Import(name="mountPath")
@@ -54,7 +54,7 @@ public final class VolumeMountArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
      */
     @Import(name="subPath")

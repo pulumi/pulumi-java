@@ -20,7 +20,7 @@ public final class ExternalProtectionLevelOptionsArgs extends com.pulumi.resourc
     public static final ExternalProtectionLevelOptionsArgs Empty = new ExternalProtectionLevelOptionsArgs();
 
     /**
-     * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
+     * The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
      * 
      */
     @Import(name="ekmConnectionKeyPath")

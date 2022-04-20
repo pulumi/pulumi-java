@@ -33,7 +33,7 @@ public final class ODataSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
@@ -49,7 +49,7 @@ public final class ODataSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ODataSource'.
+     * Expected value is &#39;ODataSource&#39;.
      * 
      */
     private final String type;
@@ -103,7 +103,7 @@ public final class ODataSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> query() {
@@ -125,7 +125,7 @@ public final class ODataSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ODataSource'.
+     * Expected value is &#39;ODataSource&#39;.
      * 
     */
     public String type() {

@@ -166,7 +166,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
 
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Sql/servers/databases'.
+     * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

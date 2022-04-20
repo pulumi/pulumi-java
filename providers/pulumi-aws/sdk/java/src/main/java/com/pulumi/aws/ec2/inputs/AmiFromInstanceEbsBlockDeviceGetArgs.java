@@ -41,7 +41,7 @@ public final class AmiFromInstanceEbsBlockDeviceGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
+     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
     @Import(name="encrypted")

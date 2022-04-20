@@ -28,7 +28,7 @@ public final class OriginEndpointHlsPackageArgs extends com.pulumi.resources.Res
     public static final OriginEndpointHlsPackageArgs Empty = new OriginEndpointHlsPackageArgs();
 
     /**
-     * This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+     * This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
      * 
      */
     @Import(name="adMarkers")
@@ -75,7 +75,7 @@ public final class OriginEndpointHlsPackageArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
      * 
      */
     @Import(name="playlistType")

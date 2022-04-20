@@ -115,7 +115,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of data flow.
-     * Expected value is 'Flowlet'.
+     * Expected value is &#39;Flowlet&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -60,7 +60,7 @@ public final class ProjectIamPolicyArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: "bindings, etag"`
+     * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: &#34;bindings, etag&#34;`
      * 
      */
     @Import(name="updateMask")

@@ -22,7 +22,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * 
      */
     @Import(name="dataset")
@@ -103,8 +103,8 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
      * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
      * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
      * No more than 64 labels can be associated with a given store.
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -154,7 +154,7 @@ public final class FhirStoreState extends com.pulumi.resources.ResourceArgs {
      * this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
      * resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
      * from the list, the server stops streaming to that location. Before adding a new config, you must add the required
-     * bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+     * bigquery.dataEditor role to your project&#39;s Cloud Healthcare Service Agent service account. Some lag (typically on
      * the order of dozens of seconds) is expected before the results show up in the streaming destination.
      * Structure is documented below.
      * 

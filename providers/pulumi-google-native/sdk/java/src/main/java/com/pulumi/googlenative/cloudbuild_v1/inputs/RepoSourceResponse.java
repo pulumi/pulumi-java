@@ -41,7 +41,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
+     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
      * 
      */
     @Import(name="dir", required=true)

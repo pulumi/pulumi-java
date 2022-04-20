@@ -48,7 +48,7 @@ public class ScheduledTrigger extends com.pulumi.resources.CustomResource {
     }
     /**
      * Kind of synchronization on trigger.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -56,7 +56,7 @@ public class ScheduledTrigger extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Kind of synchronization on trigger.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     public Output<String> kind() {

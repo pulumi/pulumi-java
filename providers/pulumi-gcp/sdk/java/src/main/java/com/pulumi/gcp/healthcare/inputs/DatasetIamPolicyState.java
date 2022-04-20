@@ -18,7 +18,7 @@ public final class DatasetIamPolicyState extends com.pulumi.resources.ResourceAr
     /**
      * The dataset ID, in the form
      * `{project_id}/{location_name}/{dataset_name}` or
-     * `{location_name}/{dataset_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */
@@ -30,7 +30,7 @@ public final class DatasetIamPolicyState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * (Computed) The etag of the dataset's IAM policy.
+     * (Computed) The etag of the dataset&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

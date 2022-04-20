@@ -41,7 +41,7 @@ public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources
     }
 
     /**
-     * The value indicating whether to support HTTP status code 'CONTINUE'.
+     * The value indicating whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)

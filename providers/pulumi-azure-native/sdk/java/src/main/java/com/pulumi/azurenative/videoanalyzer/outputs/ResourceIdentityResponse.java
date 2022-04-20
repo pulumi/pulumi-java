@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourceIdentityResponse {
     /**
-     * The user assigned managed identity's resource identifier to use when accessing a resource.
+     * The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
      * 
      */
     private final String userAssignedIdentity;
@@ -21,7 +21,7 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * The user assigned managed identity's resource identifier to use when accessing a resource.
+     * The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
      * 
     */
     public String userAssignedIdentity() {

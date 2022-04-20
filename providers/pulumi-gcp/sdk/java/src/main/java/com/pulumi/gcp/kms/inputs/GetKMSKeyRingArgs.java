@@ -27,7 +27,7 @@ public final class GetKMSKeyRingArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The KeyRing's name.
+     * The KeyRing&#39;s name.
      * A KeyRing name must exist within the provided location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
      * 
      */

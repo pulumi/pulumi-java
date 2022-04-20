@@ -27,7 +27,7 @@ public final class GetArcAddonResult {
     private final String id;
     /**
      * Addon type.
-     * Expected value is 'ArcForKubernetes'.
+     * Expected value is &#39;ArcForKubernetes&#39;.
      * 
      */
     private final String kind;
@@ -130,7 +130,7 @@ public final class GetArcAddonResult {
     }
     /**
      * Addon type.
-     * Expected value is 'ArcForKubernetes'.
+     * Expected value is &#39;ArcForKubernetes&#39;.
      * 
     */
     public String kind() {

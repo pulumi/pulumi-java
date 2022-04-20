@@ -19,7 +19,7 @@ public final class MediaGraphClearEndpointResponse {
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
      * 
      */
     private final String odataType;
@@ -48,7 +48,7 @@ public final class MediaGraphClearEndpointResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
      * 
     */
     public String odataType() {

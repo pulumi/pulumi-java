@@ -29,7 +29,7 @@ public final class WebAppSourceControlSlotArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="deploymentRollbackEnabled")
@@ -51,7 +51,7 @@ public final class WebAppSourceControlSlotArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <code>true</code> if this is deployed via GitHub action.
+     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
     @Import(name="isGitHubAction")
@@ -62,7 +62,7 @@ public final class WebAppSourceControlSlotArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
     @Import(name="isManualIntegration")
@@ -73,7 +73,7 @@ public final class WebAppSourceControlSlotArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
     @Import(name="isMercurial")

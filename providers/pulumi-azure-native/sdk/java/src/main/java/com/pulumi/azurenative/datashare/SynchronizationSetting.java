@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:datashare:SynchronizationSetting SynchronizationSetting1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/synchronizationSettings/SynchronizationSetting1 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: ScheduledSynchronizationSetting.
  * 
  */

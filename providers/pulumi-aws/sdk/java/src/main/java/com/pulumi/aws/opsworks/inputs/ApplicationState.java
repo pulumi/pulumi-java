@@ -54,7 +54,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The data source's ARN.
+     * The data source&#39;s ARN.
      * 
      */
     @Import(name="dataSourceArn")
@@ -76,7 +76,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
+     * The data source&#39;s type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
     @Import(name="dataSourceType")

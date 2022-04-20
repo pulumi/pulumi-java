@@ -44,7 +44,7 @@ public final class ZypperSettingsArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.
+     * An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
      * 
      */
     @Import(name="exclusivePatches")

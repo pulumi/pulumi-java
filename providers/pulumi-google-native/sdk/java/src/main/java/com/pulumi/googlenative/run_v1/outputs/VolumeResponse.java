@@ -13,7 +13,7 @@ import java.util.Objects;
 public final class VolumeResponse {
     private final ConfigMapVolumeSourceResponse configMap;
     /**
-     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
      * 
      */
     private final String name;
@@ -33,7 +33,7 @@ public final class VolumeResponse {
         return this.configMap;
     }
     /**
-     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
      * 
     */
     public String name() {

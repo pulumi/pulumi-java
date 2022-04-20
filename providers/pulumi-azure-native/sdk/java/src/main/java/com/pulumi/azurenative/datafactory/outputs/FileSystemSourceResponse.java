@@ -44,7 +44,7 @@ public final class FileSystemSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'FileSystemSource'.
+     * Expected value is &#39;FileSystemSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class FileSystemSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'FileSystemSource'.
+     * Expected value is &#39;FileSystemSource&#39;.
      * 
     */
     public String type() {

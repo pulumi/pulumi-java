@@ -66,7 +66,7 @@ public final class OdbcLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'Odbc'.
+     * Expected value is &#39;Odbc&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class OdbcLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Odbc'.
+     * Expected value is &#39;Odbc&#39;.
      * 
     */
     public String type() {

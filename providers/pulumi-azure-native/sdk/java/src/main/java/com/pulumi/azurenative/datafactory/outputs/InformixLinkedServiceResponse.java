@@ -66,7 +66,7 @@ public final class InformixLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'Informix'.
+     * Expected value is &#39;Informix&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class InformixLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Informix'.
+     * Expected value is &#39;Informix&#39;.
      * 
     */
     public String type() {

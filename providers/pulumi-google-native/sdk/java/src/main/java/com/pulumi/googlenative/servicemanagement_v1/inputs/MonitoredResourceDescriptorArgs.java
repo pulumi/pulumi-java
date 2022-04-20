@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An object that describes the schema of a MonitoredResource object using a type name and a set of labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has a type of `"gce_instance"` and specifies the use of the labels `"instance_id"` and `"zone"` to identify particular VM instances. Different APIs can support different monitored resource types. APIs generally provide a `list` method that returns the monitored resource descriptors used by the API.
+ * An object that describes the schema of a MonitoredResource object using a type name and a set of labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has a type of `&#34;gce_instance&#34;` and specifies the use of the labels `&#34;instance_id&#34;` and `&#34;zone&#34;` to identify particular VM instances. Different APIs can support different monitored resource types. APIs generally provide a `list` method that returns the monitored resource descriptors used by the API.
  * 
  */
 public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.ResourceArgs {
@@ -34,7 +34,7 @@ public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.
     }
 
     /**
-     * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `"Google Cloud SQL Database"`.
+     * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
      * 
      */
     @Import(name="displayName")
@@ -45,7 +45,7 @@ public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.
     }
 
     /**
-     * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `"database_id"` and `"zone"`.
+     * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
      * 
      */
     @Import(name="labels", required=true)
@@ -67,7 +67,7 @@ public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.
     }
 
     /**
-     * Optional. The resource name of the monitored resource descriptor: `"projects/{project_id}/monitoredResourceDescriptors/{type}"` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `"monitoredResourceDescriptors/{type}"`.
+     * Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
      * 
      */
     @Import(name="name")
@@ -78,7 +78,7 @@ public final class MonitoredResourceDescriptorArgs extends com.pulumi.resources.
     }
 
     /**
-     * The monitored resource type. For example, the type `"cloudsql_database"` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
+     * The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
      * 
      */
     @Import(name="type", required=true)

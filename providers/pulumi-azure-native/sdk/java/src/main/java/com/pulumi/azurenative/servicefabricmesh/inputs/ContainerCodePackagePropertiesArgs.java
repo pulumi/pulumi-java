@@ -152,7 +152,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
     }
 
     /**
-     * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+     * The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
      * 
      */
     @Import(name="settings")
@@ -163,7 +163,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
     }
 
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
      * 
      */
     @Import(name="volumeRefs")
@@ -174,7 +174,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
     }
 
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
      * 
      */
     @Import(name="volumes")

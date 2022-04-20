@@ -98,7 +98,7 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'PowerBI'.
+     * Expected value is &#39;PowerBI&#39;.
      * 
      */
     @Import(name="type", required=true)

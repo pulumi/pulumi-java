@@ -60,7 +60,7 @@ public final class AmazonRdsForOracleSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AmazonRdsForOracleSource'.
+     * Expected value is &#39;AmazonRdsForOracleSource&#39;.
      * 
      */
     private final String type;
@@ -154,7 +154,7 @@ public final class AmazonRdsForOracleSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AmazonRdsForOracleSource'.
+     * Expected value is &#39;AmazonRdsForOracleSource&#39;.
      * 
     */
     public String type() {

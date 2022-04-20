@@ -66,7 +66,7 @@ public final class TeradataLinkedServiceResponse {
     private final @Nullable Object server;
     /**
      * Type of linked service.
-     * Expected value is 'Teradata'.
+     * Expected value is &#39;Teradata&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class TeradataLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Teradata'.
+     * Expected value is &#39;Teradata&#39;.
      * 
     */
     public String type() {

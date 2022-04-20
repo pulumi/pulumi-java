@@ -25,11 +25,11 @@ import javax.annotation.Nullable;
  * 1.  Ingress object exists.
  * 2.  Endpoint objects exist with matching names for each Ingress path (except when Service
  *     type is ExternalName).
- * 3.  Ingress entry exists for '.status.loadBalancer.ingress'.
+ * 3.  Ingress entry exists for &#39;.status.loadBalancer.ingress&#39;.
  * 
  * If the Ingress has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
- * by setting the 'customTimeouts' option on the resource.
+ * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
  */
 public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
@@ -59,7 +59,7 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

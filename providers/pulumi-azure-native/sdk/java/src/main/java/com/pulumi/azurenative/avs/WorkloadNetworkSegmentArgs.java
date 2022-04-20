@@ -73,7 +73,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * NSX Segment identifier. Generally the same as the Segment's display name
+     * NSX Segment identifier. Generally the same as the Segment&#39;s display name
      * 
      */
     @Import(name="segmentId")

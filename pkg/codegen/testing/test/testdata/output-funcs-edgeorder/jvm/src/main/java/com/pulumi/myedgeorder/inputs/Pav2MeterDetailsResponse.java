@@ -20,7 +20,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Represents billing type.
-     * Expected value is 'Pav2'.
+     * Expected value is &#39;Pav2&#39;.
      * 
      */
     @Import(name="billingType", required=true)

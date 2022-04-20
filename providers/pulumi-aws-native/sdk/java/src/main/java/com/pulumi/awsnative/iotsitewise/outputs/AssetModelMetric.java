@@ -23,7 +23,7 @@ public final class AssetModelMetric {
      */
     private final List<AssetModelExpressionVariable> variables;
     /**
-     * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
+     * The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
      * 
      */
     private final AssetModelMetricWindow window;
@@ -53,7 +53,7 @@ public final class AssetModelMetric {
         return this.variables;
     }
     /**
-     * The window (time interval) over which AWS IoT SiteWise computes the metric's aggregation expression
+     * The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
      * 
     */
     public AssetModelMetricWindow window() {

@@ -29,7 +29,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
+     * Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
      * 
      */
     @Import(name="name")

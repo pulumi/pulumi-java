@@ -121,7 +121,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * URL of the VPC network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used. If the selected project doesn't have the default network, you must specify a network or subnet. If the network is not specified but the subnetwork is specified, the network is inferred. If you specify this property, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/global/networks/ network - projects/project/global/networks/network - global/networks/default
+     * URL of the VPC network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used. If the selected project doesn&#39;t have the default network, you must specify a network or subnet. If the network is not specified but the subnetwork is specified, the network is inferred. If you specify this property, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/global/networks/ network - projects/project/global/networks/network - global/networks/default
      * 
      */
     @Import(name="network", required=true)
@@ -154,7 +154,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.
+     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It&#39;ll be empty if not specified by the users.
      * 
      */
     @Import(name="queueCount", required=true)

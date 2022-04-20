@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:compute/autoscalar:Autoscalar default {{name}}
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler
  * 
  */

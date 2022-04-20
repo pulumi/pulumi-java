@@ -32,7 +32,7 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
+     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
      * 
      */
     @Import(name="port")

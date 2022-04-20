@@ -43,8 +43,8 @@ public final class ExportPipelineTargetPropertiesArgs extends com.pulumi.resourc
 
     /**
      * The target uri of the export pipeline.
-     * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-     * When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
+     * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+     * When &#39;AzureStorageBlobContainer&#39;:  &#34;https://accountName.blob.core.windows.net/containerName&#34;
      * 
      */
     @Import(name="uri")

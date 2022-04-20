@@ -23,7 +23,7 @@ public final class MachineExtensionPropertiesResponseInstanceView {
      */
     private final @Nullable MachineExtensionInstanceViewResponseStatus status;
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final String type;
@@ -60,7 +60,7 @@ public final class MachineExtensionPropertiesResponseInstanceView {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
     */
     public String type() {

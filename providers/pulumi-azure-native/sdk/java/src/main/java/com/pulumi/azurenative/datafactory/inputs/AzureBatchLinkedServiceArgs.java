@@ -152,7 +152,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureBatch'.
+     * Expected value is &#39;AzureBatch&#39;.
      * 
      */
     @Import(name="type", required=true)

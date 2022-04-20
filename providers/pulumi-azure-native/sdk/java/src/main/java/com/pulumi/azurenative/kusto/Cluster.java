@@ -55,14 +55,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.dataIngestionUri;
     }
     /**
-     * A boolean value that indicates if the cluster's disks are encrypted.
+     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
      */
     @Export(name="enableDiskEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDiskEncryption;
 
     /**
-     * @return A boolean value that indicates if the cluster's disks are encrypted.
+     * @return A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
      */
     public Output</* @Nullable */ Boolean> enableDiskEncryption() {
@@ -167,14 +167,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.keyVaultProperties;
     }
     /**
-     * List of the cluster's language extensions.
+     * List of the cluster&#39;s language extensions.
      * 
      */
     @Export(name="languageExtensions", type=LanguageExtensionsListResponse.class, parameters={})
     private Output<LanguageExtensionsListResponse> languageExtensions;
 
     /**
-     * @return List of the cluster's language extensions.
+     * @return List of the cluster&#39;s language extensions.
      * 
      */
     public Output<LanguageExtensionsListResponse> languageExtensions() {
@@ -265,14 +265,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The reason for the cluster's current state.
+     * The reason for the cluster&#39;s current state.
      * 
      */
     @Export(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
     /**
-     * @return The reason for the cluster's current state.
+     * @return The reason for the cluster&#39;s current state.
      * 
      */
     public Output<String> stateReason() {
@@ -293,28 +293,28 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The cluster's external tenants.
+     * The cluster&#39;s external tenants.
      * 
      */
     @Export(name="trustedExternalTenants", type=List.class, parameters={TrustedExternalTenantResponse.class})
     private Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants;
 
     /**
-     * @return The cluster's external tenants.
+     * @return The cluster&#39;s external tenants.
      * 
      */
     public Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants() {
         return this.trustedExternalTenants;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

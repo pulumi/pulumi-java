@@ -33,7 +33,7 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
      * 
      */
     @Import(name="odataType", required=true)

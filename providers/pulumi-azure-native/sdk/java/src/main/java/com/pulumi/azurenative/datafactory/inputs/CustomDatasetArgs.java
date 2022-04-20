@@ -104,7 +104,7 @@ public final class CustomDatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'CustomDataset'.
+     * Expected value is &#39;CustomDataset&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -106,7 +106,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends com.pulumi.resour
 
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRdsForOracle'.
+     * Expected value is &#39;AmazonRdsForOracle&#39;.
      * 
      */
     @Import(name="type", required=true)

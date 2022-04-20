@@ -77,7 +77,7 @@ public final class OrcDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Orc'.
+     * Expected value is &#39;Orc&#39;.
      * 
      */
     private final String type;
@@ -171,7 +171,7 @@ public final class OrcDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Orc'.
+     * Expected value is &#39;Orc&#39;.
      * 
     */
     public String type() {

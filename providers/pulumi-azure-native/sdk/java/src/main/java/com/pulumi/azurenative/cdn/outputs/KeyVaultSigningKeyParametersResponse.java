@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class KeyVaultSigningKeyParametersResponse {
     private final String odataType;
     /**
-     * Resource group of the user's Key Vault containing the secret
+     * Resource group of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String resourceGroupName;
@@ -26,12 +26,12 @@ public final class KeyVaultSigningKeyParametersResponse {
      */
     private final String secretVersion;
     /**
-     * Subscription Id of the user's Key Vault containing the secret
+     * Subscription Id of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String subscriptionId;
     /**
-     * The name of the user's Key Vault containing the secret
+     * The name of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String vaultName;
@@ -56,7 +56,7 @@ public final class KeyVaultSigningKeyParametersResponse {
         return this.odataType;
     }
     /**
-     * Resource group of the user's Key Vault containing the secret
+     * Resource group of the user&#39;s Key Vault containing the secret
      * 
     */
     public String resourceGroupName() {
@@ -77,14 +77,14 @@ public final class KeyVaultSigningKeyParametersResponse {
         return this.secretVersion;
     }
     /**
-     * Subscription Id of the user's Key Vault containing the secret
+     * Subscription Id of the user&#39;s Key Vault containing the secret
      * 
     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * The name of the user's Key Vault containing the secret
+     * The name of the user&#39;s Key Vault containing the secret
      * 
     */
     public String vaultName() {

@@ -37,14 +37,14 @@ public class Agent extends com.pulumi.resources.CustomResource {
         return this.advancedSettings;
     }
     /**
-     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
     @Export(name="avatarUri", type=String.class, parameters={})
     private Output<String> avatarUri;
 
     /**
-     * @return The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
     public Output<String> avatarUri() {

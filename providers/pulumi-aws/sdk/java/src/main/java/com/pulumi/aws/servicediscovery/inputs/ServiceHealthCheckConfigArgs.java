@@ -28,7 +28,7 @@ public final class ServiceHealthCheckConfigArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don't specify a value, the default value is /.
+     * The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don&#39;t specify a value, the default value is /.
      * 
      */
     @Import(name="resourcePath")

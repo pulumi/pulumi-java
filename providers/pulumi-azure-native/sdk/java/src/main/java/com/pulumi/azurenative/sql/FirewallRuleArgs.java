@@ -16,7 +16,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final FirewallRuleArgs Empty = new FirewallRuleArgs();
 
     /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     @Import(name="endIpAddress")
@@ -71,7 +71,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
+     * The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
     @Import(name="startIpAddress")

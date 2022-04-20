@@ -31,7 +31,7 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
      * 
      */
     @Import(name="type", required=true)

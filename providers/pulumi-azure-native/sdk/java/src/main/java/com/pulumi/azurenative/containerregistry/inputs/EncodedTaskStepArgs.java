@@ -67,7 +67,7 @@ public final class EncodedTaskStepArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The type of the step.
-     * Expected value is 'EncodedTask'.
+     * Expected value is &#39;EncodedTask&#39;.
      * 
      */
     @Import(name="type", required=true)

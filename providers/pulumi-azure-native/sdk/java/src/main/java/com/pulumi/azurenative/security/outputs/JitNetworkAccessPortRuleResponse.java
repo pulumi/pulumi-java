@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JitNetworkAccessPortRuleResponse {
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
      */
     private final @Nullable String allowedSourceAddressPrefix;
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
      */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
@@ -46,14 +46,14 @@ public final class JitNetworkAccessPortRuleResponse {
     }
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
     */
     public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
     */
     public List<String> allowedSourceAddressPrefixes() {

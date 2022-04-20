@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends com.pulu
 
     /**
      * Result type
-     * Expected value is 'ErrorOutput'.
+     * Expected value is &#39;ErrorOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

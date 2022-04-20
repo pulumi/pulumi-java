@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
      * 
      */
     @EnumType

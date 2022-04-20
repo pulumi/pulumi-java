@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:network:AdminRule SampleAdminRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityAdminConfigurations/myTestSecurityConfig/ruleCollections/rules/SampleAdminRule 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: AdminRule, DefaultAdminRule.
  * 
  */

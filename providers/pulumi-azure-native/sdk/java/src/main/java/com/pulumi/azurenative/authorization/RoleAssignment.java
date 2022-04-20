@@ -32,28 +32,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:authorization:RoleAssignment")
 public class RoleAssignment extends com.pulumi.resources.CustomResource {
     /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
      */
     @Export(name="condition", type=String.class, parameters={})
     private Output</* @Nullable */ String> condition;
 
     /**
-     * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
      */
     public Output</* @Nullable */ String> condition() {
         return this.condition;
     }
     /**
-     * Version of the condition. Currently accepted value is '2.0'
+     * Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
      */
     @Export(name="conditionVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> conditionVersion;
 
     /**
-     * @return Version of the condition. Currently accepted value is '2.0'
+     * @return Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
      */
     public Output</* @Nullable */ String> conditionVersion() {

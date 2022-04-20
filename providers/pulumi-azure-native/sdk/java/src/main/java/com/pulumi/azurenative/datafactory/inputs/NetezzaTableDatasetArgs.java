@@ -126,7 +126,7 @@ public final class NetezzaTableDatasetArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of dataset.
-     * Expected value is 'NetezzaTable'.
+     * Expected value is &#39;NetezzaTable&#39;.
      * 
      */
     @Import(name="type", required=true)

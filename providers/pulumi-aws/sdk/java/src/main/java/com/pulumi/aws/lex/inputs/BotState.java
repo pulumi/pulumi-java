@@ -64,7 +64,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
+     * The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
      * 
      */
     @Import(name="clarificationPrompt")
@@ -108,7 +108,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
+     * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
      * 
      */
     @Import(name="detectSentiment")
@@ -207,7 +207,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
+     * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
      * 
      */
     @Import(name="processBehavior")
@@ -219,7 +219,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * When you send a request to create or update a bot, Amazon Lex sets the status response
-     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
+     * element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can&#39;t
      * build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
      * failure_reason response element.
      * 

@@ -57,7 +57,7 @@ public final class AvroSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'AvroSource'.
+     * Expected value is &#39;AvroSource&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class AvroSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AvroSource'.
+     * Expected value is &#39;AvroSource&#39;.
      * 
     */
     public String type() {

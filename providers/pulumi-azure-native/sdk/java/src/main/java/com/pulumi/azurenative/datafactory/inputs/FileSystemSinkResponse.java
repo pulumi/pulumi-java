@@ -77,7 +77,7 @@ public final class FileSystemSinkResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Copy sink type.
-     * Expected value is 'FileSystemSink'.
+     * Expected value is &#39;FileSystemSink&#39;.
      * 
      */
     @Import(name="type", required=true)

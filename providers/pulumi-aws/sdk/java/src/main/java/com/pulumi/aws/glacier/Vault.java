@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Glacier Vault Resource. You can refer to the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html) for a full explanation of the Glacier Vault functionality
  * 
- * > **NOTE:** When removing a Glacier Vault, the Vault must be empty.
+ * &gt; **NOTE:** When removing a Glacier Vault, the Vault must be empty.
  * 
  * ## Example Usage
  * 
@@ -78,14 +78,14 @@ public class Vault extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.' (period).
+     * The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, &#39;_&#39; (underscore), &#39;-&#39; (hyphen), and &#39;.&#39; (period).
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.' (period).
+     * @return The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, &#39;_&#39; (underscore), &#39;-&#39; (hyphen), and &#39;.&#39; (period).
      * 
      */
     public Output<String> name() {

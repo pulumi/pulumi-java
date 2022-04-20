@@ -61,7 +61,7 @@ public final class SchemaResponse {
      */
     private final List<String> solutions;
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
      */
     private final String source;
@@ -76,7 +76,7 @@ public final class SchemaResponse {
      */
     private final String tableSubType;
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
      */
     private final String tableType;
@@ -175,7 +175,7 @@ public final class SchemaResponse {
         return this.solutions;
     }
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
     */
     public String source() {
@@ -196,7 +196,7 @@ public final class SchemaResponse {
         return this.tableSubType;
     }
     /**
-     * Table's creator.
+     * Table&#39;s creator.
      * 
     */
     public String tableType() {

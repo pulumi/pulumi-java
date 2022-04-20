@@ -40,7 +40,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
+     * The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
      * 
      */
     @Import(name="profileName")

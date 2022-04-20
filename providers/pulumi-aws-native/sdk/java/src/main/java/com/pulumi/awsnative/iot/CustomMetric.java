@@ -24,14 +24,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:iot:CustomMetric")
 public class CustomMetric extends com.pulumi.resources.CustomResource {
     /**
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
-     * @return Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * @return Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
     public Output</* @Nullable */ String> displayName() {
@@ -52,14 +52,14 @@ public class CustomMetric extends com.pulumi.resources.CustomResource {
         return this.metricArn;
     }
     /**
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
     @Export(name="metricName", type=String.class, parameters={})
     private Output</* @Nullable */ String> metricName;
 
     /**
-     * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
+     * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
     public Output</* @Nullable */ String> metricName() {

@@ -35,7 +35,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends com.pulumi.
     }
 
     /**
-     * Developer's information to be used in OAuth consent screen.
+     * Developer&#39;s information to be used in OAuth consent screen.
      * 
      */
     @Import(name="developerEmailAddress", required=true)

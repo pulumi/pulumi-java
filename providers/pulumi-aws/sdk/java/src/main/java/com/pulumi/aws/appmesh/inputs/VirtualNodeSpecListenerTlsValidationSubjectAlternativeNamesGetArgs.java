@@ -15,7 +15,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGe
     public static final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs Empty = new VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs();
 
     /**
-     * The criteria for determining a SAN's match.
+     * The criteria for determining a SAN&#39;s match.
      * 
      */
     @Import(name="match", required=true)

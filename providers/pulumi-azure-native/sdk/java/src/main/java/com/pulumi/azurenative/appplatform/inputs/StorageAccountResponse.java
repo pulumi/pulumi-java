@@ -30,7 +30,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * The type of the storage.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
      */
     @Import(name="storageType", required=true)

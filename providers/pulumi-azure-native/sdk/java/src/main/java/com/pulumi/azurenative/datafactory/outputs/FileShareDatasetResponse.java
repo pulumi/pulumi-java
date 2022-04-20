@@ -69,12 +69,12 @@ public final class FileShareDatasetResponse {
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeEnd;
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeStart;
@@ -95,7 +95,7 @@ public final class FileShareDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'FileShare'.
+     * Expected value is &#39;FileShare&#39;.
      * 
      */
     private final String type;
@@ -198,14 +198,14 @@ public final class FileShareDatasetResponse {
         return this.linkedServiceName;
     }
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeStart() {
@@ -234,7 +234,7 @@ public final class FileShareDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'FileShare'.
+     * Expected value is &#39;FileShare&#39;.
      * 
     */
     public String type() {

@@ -38,7 +38,7 @@ public final class GetWebhookResult {
      */
     private final GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse serviceDirectory;
     /**
-     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
      */
     private final String timeout;
@@ -95,7 +95,7 @@ public final class GetWebhookResult {
         return this.serviceDirectory;
     }
     /**
-     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
     */
     public String timeout() {

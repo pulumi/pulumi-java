@@ -24,7 +24,7 @@ public final class AvroFormatResponse {
     private final @Nullable Object serializer;
     /**
      * Type of dataset storage format.
-     * Expected value is 'AvroFormat'.
+     * Expected value is &#39;AvroFormat&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class AvroFormatResponse {
     }
     /**
      * Type of dataset storage format.
-     * Expected value is 'AvroFormat'.
+     * Expected value is &#39;AvroFormat&#39;.
      * 
     */
     public String type() {

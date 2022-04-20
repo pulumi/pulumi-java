@@ -120,7 +120,7 @@ public final class AzureBlobDatasetArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -131,7 +131,7 @@ public final class AzureBlobDatasetArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -187,7 +187,7 @@ public final class AzureBlobDatasetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlob'.
+     * Expected value is &#39;AzureBlob&#39;.
      * 
      */
     @Import(name="type", required=true)

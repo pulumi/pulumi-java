@@ -32,7 +32,7 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
+     * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
      * 
      */
     @Import(name="masterIpv4CidrBlock")

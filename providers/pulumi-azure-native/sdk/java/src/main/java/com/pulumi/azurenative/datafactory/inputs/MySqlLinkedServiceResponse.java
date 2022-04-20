@@ -104,7 +104,7 @@ public final class MySqlLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'MySql'.
+     * Expected value is &#39;MySql&#39;.
      * 
      */
     @Import(name="type", required=true)

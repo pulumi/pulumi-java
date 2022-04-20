@@ -33,7 +33,7 @@ public final class HostNameSslStateResponse {
      */
     private final @Nullable String thumbprint;
     /**
-     * Set to <code>true</code> to update existing hostname.
+     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
      * 
      */
     private final @Nullable Boolean toUpdate;
@@ -88,7 +88,7 @@ public final class HostNameSslStateResponse {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
-     * Set to <code>true</code> to update existing hostname.
+     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
      * 
     */
     public Optional<Boolean> toUpdate() {

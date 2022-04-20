@@ -117,7 +117,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends com.pulumi.re
 
     /**
      * Type of linked service.
-     * Expected value is 'OracleCloudStorage'.
+     * Expected value is &#39;OracleCloudStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

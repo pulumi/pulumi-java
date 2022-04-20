@@ -43,7 +43,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
 
     /**
      * Type of the delivery attribute or header name.
-     * Expected value is 'Dynamic'.
+     * Expected value is &#39;Dynamic&#39;.
      * 
      */
     @Import(name="type", required=true)

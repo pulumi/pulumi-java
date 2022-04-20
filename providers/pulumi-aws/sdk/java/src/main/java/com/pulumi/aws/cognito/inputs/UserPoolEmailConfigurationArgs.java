@@ -38,7 +38,7 @@ public final class UserPoolEmailConfigurationArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
+     * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith &lt;john@example.com&gt;` or `\&#34;John Smith Ph.D.\&#34; &lt;john@example.com&gt;`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
      * 
      */
     @Import(name="fromEmailAddress")

@@ -25,12 +25,12 @@ public final class GetBudgetResult {
      */
     private final GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse amount;
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
      */
     private final GoogleCloudBillingBudgetsV1beta1FilterResponse budgetFilter;
     /**
-     * User data for display name in UI. Validation: <= 60 chars.
+     * User data for display name in UI. Validation: &lt;= 60 chars.
      * 
      */
     private final String displayName;
@@ -83,14 +83,14 @@ public final class GetBudgetResult {
         return this.amount;
     }
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
     */
     public GoogleCloudBillingBudgetsV1beta1FilterResponse budgetFilter() {
         return this.budgetFilter;
     }
     /**
-     * User data for display name in UI. Validation: <= 60 chars.
+     * User data for display name in UI. Validation: &lt;= 60 chars.
      * 
     */
     public String displayName() {

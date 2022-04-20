@@ -95,7 +95,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends com.pulumi.r
 
     /**
      * Type of linked service.
-     * Expected value is 'SapCloudForCustomer'.
+     * Expected value is &#39;SapCloudForCustomer&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -106,7 +106,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends com.pulumi.r
     }
 
     /**
-     * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+     * The URL of SAP Cloud for Customer OData API. For example, &#39;[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]&#39;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="url", required=true)

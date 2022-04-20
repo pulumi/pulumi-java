@@ -21,7 +21,7 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
     public static final DashboardPartsArgs Empty = new DashboardPartsArgs();
 
     /**
-     * The dashboard part's metadata.
+     * The dashboard part&#39;s metadata.
      * 
      */
     @Import(name="metadata")
@@ -32,7 +32,7 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The dashboard's part position.
+     * The dashboard&#39;s part position.
      * 
      */
     @Import(name="position", required=true)

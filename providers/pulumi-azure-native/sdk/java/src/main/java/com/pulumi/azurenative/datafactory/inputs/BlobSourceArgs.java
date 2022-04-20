@@ -99,7 +99,7 @@ public final class BlobSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'BlobSource'.
+     * Expected value is &#39;BlobSource&#39;.
      * 
      */
     @Import(name="type", required=true)

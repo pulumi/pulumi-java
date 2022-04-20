@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * * `gcp.healthcare.Hl7StoreIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the HL7v2 store are preserved.
  * * `gcp.healthcare.Hl7StoreIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the HL7v2 store are preserved.
  * 
- * > **Note:** `gcp.healthcare.Hl7StoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.Hl7StoreIamBinding` and `gcp.healthcare.Hl7StoreIamMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.healthcare.Hl7StoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.Hl7StoreIamBinding` and `gcp.healthcare.Hl7StoreIamMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_healthcare\_hl7\_v2\_store\_iam\_policy
  * 
@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `hl7_v2_store_id`, role, and account e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/hl7StoreIamPolicy:Hl7StoreIamPolicy hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:healthcare/hl7StoreIamPolicy:Hl7StoreIamPolicy hl7_v2_store_iam &#34;your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * This binding resource can be imported using the `hl7_v2_store_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/hl7StoreIamPolicy:Hl7StoreIamPolicy hl7_v2_store_iam "your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer"
+ *  $ pulumi import gcp:healthcare/hl7StoreIamPolicy:Hl7StoreIamPolicy hl7_v2_store_iam &#34;your-project-id/location-name/dataset-name/hl7-v2-store-name roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -60,14 +60,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:healthcare/hl7StoreIamPolicy:Hl7StoreIamPolicy")
 public class Hl7StoreIamPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * (Computed) The etag of the HL7v2 store's IAM policy.
+     * (Computed) The etag of the HL7v2 store&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the HL7v2 store's IAM policy.
+     * @return (Computed) The etag of the HL7v2 store&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {
@@ -76,7 +76,7 @@ public class Hl7StoreIamPolicy extends com.pulumi.resources.CustomResource {
     /**
      * The HL7v2 store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
-     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */
@@ -86,7 +86,7 @@ public class Hl7StoreIamPolicy extends com.pulumi.resources.CustomResource {
     /**
      * @return The HL7v2 store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
-     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the final state "drop" and associated resource.
+ * Details of the final state &#34;drop&#34; and associated resource.
  * 
  */
 public final class DropInfoResponse extends com.pulumi.resources.InvokeArgs {

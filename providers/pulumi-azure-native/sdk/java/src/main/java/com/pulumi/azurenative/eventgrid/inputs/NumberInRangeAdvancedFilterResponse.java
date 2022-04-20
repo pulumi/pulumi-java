@@ -34,7 +34,7 @@ public final class NumberInRangeAdvancedFilterResponse extends com.pulumi.resour
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberInRange'.
+     * Expected value is &#39;NumberInRange&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

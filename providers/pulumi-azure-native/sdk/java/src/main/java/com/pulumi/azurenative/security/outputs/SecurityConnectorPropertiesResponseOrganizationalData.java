@@ -18,12 +18,12 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
      */
     private final @Nullable List<String> excludedAccountIds;
     /**
-     * The multi cloud account's membership type in the organization
+     * The multi cloud account&#39;s membership type in the organization
      * 
      */
     private final @Nullable String organizationMembershipType;
     /**
-     * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
+     * If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
      * 
      */
     private final @Nullable String parentHierarchyId;
@@ -53,14 +53,14 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
         return this.excludedAccountIds == null ? List.of() : this.excludedAccountIds;
     }
     /**
-     * The multi cloud account's membership type in the organization
+     * The multi cloud account&#39;s membership type in the organization
      * 
     */
     public Optional<String> organizationMembershipType() {
         return Optional.ofNullable(this.organizationMembershipType);
     }
     /**
-     * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
+     * If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
      * 
     */
     public Optional<String> parentHierarchyId() {

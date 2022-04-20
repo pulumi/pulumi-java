@@ -18,7 +18,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     public static final CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs Empty = new CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs();
 
     /**
-     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
+     * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don&#39;t want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
      * 
      */
     @Import(name="customCname")

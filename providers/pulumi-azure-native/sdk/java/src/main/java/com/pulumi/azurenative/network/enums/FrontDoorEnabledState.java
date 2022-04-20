@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @EnumType

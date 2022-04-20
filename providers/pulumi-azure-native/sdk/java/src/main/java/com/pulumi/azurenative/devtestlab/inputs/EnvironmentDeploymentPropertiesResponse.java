@@ -21,7 +21,7 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
     public static final EnvironmentDeploymentPropertiesResponse Empty = new EnvironmentDeploymentPropertiesResponse();
 
     /**
-     * The Azure Resource Manager template's identifier.
+     * The Azure Resource Manager template&#39;s identifier.
      * 
      */
     @Import(name="armTemplateId")

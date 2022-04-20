@@ -82,14 +82,14 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
         return this.cname;
     }
     /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
-     * @return Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
+     * @return Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> enabledState() {

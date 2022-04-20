@@ -27,7 +27,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
     public static final ServerPropertiesForDefaultCreateArgs Empty = new ServerPropertiesForDefaultCreateArgs();
 
     /**
-     * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     * The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
     @Import(name="administratorLogin", required=true)
@@ -50,7 +50,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
 
     /**
      * The mode to create a new server.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     @Import(name="createMode", required=true)
@@ -83,7 +83,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
     }
 
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="publicNetworkAccess")

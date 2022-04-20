@@ -32,7 +32,7 @@ public final class SetVariableActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'SetVariable'.
+     * Expected value is &#39;SetVariable&#39;.
      * 
      */
     private final String type;
@@ -93,7 +93,7 @@ public final class SetVariableActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'SetVariable'.
+     * Expected value is &#39;SetVariable&#39;.
      * 
     */
     public String type() {

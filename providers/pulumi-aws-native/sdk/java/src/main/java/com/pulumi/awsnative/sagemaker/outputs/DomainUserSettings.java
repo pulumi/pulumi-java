@@ -21,7 +21,7 @@ public final class DomainUserSettings {
      */
     private final @Nullable String executionRole;
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
      */
     private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
@@ -63,7 +63,7 @@ public final class DomainUserSettings {
         return Optional.ofNullable(this.executionRole);
     }
     /**
-     * The Jupyter server's app settings.
+     * The Jupyter server&#39;s app settings.
      * 
     */
     public Optional<DomainJupyterServerAppSettings> jupyterServerAppSettings() {

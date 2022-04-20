@@ -20,7 +20,7 @@ public final class ReplicaArgs extends com.pulumi.resources.ResourceArgs {
     public static final ReplicaArgs Empty = new ReplicaArgs();
 
     /**
-     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+     * The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
      * 
      */
     @Import(name="location")

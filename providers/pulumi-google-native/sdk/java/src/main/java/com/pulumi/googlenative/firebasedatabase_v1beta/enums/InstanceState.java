@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The database's lifecycle state. Read-only.
+     * The database&#39;s lifecycle state. Read-only.
      * 
      */
     @EnumType

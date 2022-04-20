@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WorkerSettingsResponse {
     /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
      */
     private final String baseUrl;
@@ -21,12 +21,12 @@ public final class WorkerSettingsResponse {
      */
     private final Boolean reportingEnabled;
     /**
-     * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
+     * The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
      * 
      */
     private final String servicePath;
     /**
-     * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
+     * The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
      * 
      */
     private final String shuffleServicePath;
@@ -58,7 +58,7 @@ public final class WorkerSettingsResponse {
     }
 
     /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
     */
     public String baseUrl() {
@@ -72,14 +72,14 @@ public final class WorkerSettingsResponse {
         return this.reportingEnabled;
     }
     /**
-     * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
+     * The Cloud Dataflow service path relative to the root URL, for example, &#34;dataflow/v1b3/projects&#34;.
      * 
     */
     public String servicePath() {
         return this.servicePath;
     }
     /**
-     * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
+     * The Shuffle service path relative to the root URL, for example, &#34;shuffle/v1beta1&#34;.
      * 
     */
     public String shuffleServicePath() {

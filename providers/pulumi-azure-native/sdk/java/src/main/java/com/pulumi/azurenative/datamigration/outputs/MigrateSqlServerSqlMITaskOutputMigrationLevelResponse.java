@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
     private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -197,7 +197,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
     */
     public String resultType() {

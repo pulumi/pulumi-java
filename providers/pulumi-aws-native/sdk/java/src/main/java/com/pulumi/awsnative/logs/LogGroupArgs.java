@@ -30,7 +30,7 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
     @Import(name="logGroupName")

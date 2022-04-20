@@ -73,7 +73,7 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     @Export(name="features", type=List.class, parameters={SignalRFeatureResponse.class})
@@ -85,7 +85,7 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     public Output</* @Nullable */ List<SignalRFeatureResponse>> features() {
@@ -107,7 +107,7 @@ public class SignalR extends com.pulumi.resources.CustomResource {
     }
     /**
      * Prefix for the hostName of the SignalR service. Retained for future use.
-     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
      * 
      */
     @Export(name="hostNamePrefix", type=String.class, parameters={})
@@ -115,21 +115,21 @@ public class SignalR extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Prefix for the hostName of the SignalR service. Retained for future use.
-     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
      * 
      */
     public Output<String> hostNamePrefix() {
         return this.hostNamePrefix;
     }
     /**
-     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
-     * @return The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * @return The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     public Output</* @Nullable */ String> kind() {
@@ -262,14 +262,14 @@ public class SignalR extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     public Output<String> type() {

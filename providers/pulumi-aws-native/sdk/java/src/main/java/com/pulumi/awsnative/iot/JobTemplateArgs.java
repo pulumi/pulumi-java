@@ -45,7 +45,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The job document. Required if you don't specify a value for documentSource.
+     * The job document. Required if you don&#39;t specify a value for documentSource.
      * 
      */
     @Import(name="document")
@@ -56,7 +56,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
+     * An S3 link to the job document to use in the template. Required if you don&#39;t specify a value for document.
      * 
      */
     @Import(name="documentSource")

@@ -97,7 +97,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="headers")
@@ -164,7 +164,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of activity.
-     * Expected value is 'WebActivity'.
+     * Expected value is &#39;WebActivity&#39;.
      * 
      */
     @Import(name="type", required=true)

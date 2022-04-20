@@ -31,7 +31,7 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
 
     /**
      * The type of step.
-     * Expected value is 'HealthCheck'.
+     * Expected value is &#39;HealthCheck&#39;.
      * 
      */
     @Import(name="stepType", required=true)

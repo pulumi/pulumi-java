@@ -134,14 +134,14 @@ public class CustomResourceProvider extends com.pulumi.resources.CustomResource 
         return this.type;
     }
     /**
-     * A list of validations to run on the custom resource provider's requests.
+     * A list of validations to run on the custom resource provider&#39;s requests.
      * 
      */
     @Export(name="validations", type=List.class, parameters={CustomRPValidationsResponse.class})
     private Output</* @Nullable */ List<CustomRPValidationsResponse>> validations;
 
     /**
-     * @return A list of validations to run on the custom resource provider's requests.
+     * @return A list of validations to run on the custom resource provider&#39;s requests.
      * 
      */
     public Output</* @Nullable */ List<CustomRPValidationsResponse>> validations() {

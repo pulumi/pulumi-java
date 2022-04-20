@@ -78,14 +78,14 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
         return this.networkConfig;
     }
     /**
-     * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
-     * @return Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * @return Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
     public Output<String> region() {

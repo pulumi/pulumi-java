@@ -52,7 +52,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
      */
     @Import(name="encryptionKey")

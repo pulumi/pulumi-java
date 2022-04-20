@@ -31,7 +31,7 @@ public final class QueueStatsResponse {
      */
     private final String oldestEstimatedArrivalTime;
     /**
-     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
+     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven&#39;t been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
      * 
      */
     private final String tasksCount;
@@ -79,7 +79,7 @@ public final class QueueStatsResponse {
         return this.oldestEstimatedArrivalTime;
     }
     /**
-     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
+     * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven&#39;t been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
      * 
     */
     public String tasksCount() {

@@ -62,35 +62,35 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+     * Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
      * 
      */
     @Export(name="operatingRegions", type=List.class, parameters={VpcIpamOperatingRegion.class})
     private Output<List<VpcIpamOperatingRegion>> operatingRegions;
 
     /**
-     * @return Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
+     * @return Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
      * 
      */
     public Output<List<VpcIpamOperatingRegion>> operatingRegions() {
         return this.operatingRegions;
     }
     /**
-     * The ID of the IPAM's private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
+     * The ID of the IPAM&#39;s private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
     @Export(name="privateDefaultScopeId", type=String.class, parameters={})
     private Output<String> privateDefaultScopeId;
 
     /**
-     * @return The ID of the IPAM's private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
+     * @return The ID of the IPAM&#39;s private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
     public Output<String> privateDefaultScopeId() {
         return this.privateDefaultScopeId;
     }
     /**
-     * The ID of the IPAM's public scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private
+     * The ID of the IPAM&#39;s public scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private
      * IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
@@ -98,7 +98,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
     private Output<String> publicDefaultScopeId;
 
     /**
-     * @return The ID of the IPAM's public scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private
+     * @return The ID of the IPAM&#39;s public scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private
      * IP space. The public scope is intended for all internet-routable IP space.
      * 
      */

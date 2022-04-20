@@ -117,14 +117,14 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * <code>true</code> if a resync is required; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="resyncRequired", type=Boolean.class, parameters={})
     private Output<Boolean> resyncRequired;
 
     /**
-     * @return <code>true</code> if a resync is required; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output<Boolean> resyncRequired() {
@@ -159,14 +159,14 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The Virtual Network's resource ID.
+     * The Virtual Network&#39;s resource ID.
      * 
      */
     @Export(name="vnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vnetResourceId;
 
     /**
-     * @return The Virtual Network's resource ID.
+     * @return The Virtual Network&#39;s resource ID.
      * 
      */
     public Output</* @Nullable */ String> vnetResourceId() {

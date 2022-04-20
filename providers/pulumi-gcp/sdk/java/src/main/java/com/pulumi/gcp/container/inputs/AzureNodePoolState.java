@@ -166,7 +166,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     @Import(name="subnetId")

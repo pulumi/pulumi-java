@@ -58,7 +58,7 @@ public final class GetEntryResult {
      */
     private final String description;
     /**
-     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
+     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
      * 
      */
     private final String displayName;
@@ -73,7 +73,7 @@ public final class GetEntryResult {
      */
     private final GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec;
     /**
-     * Indicates the entry's source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+     * Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
      * 
      */
     private final String integratedSystem;
@@ -123,12 +123,12 @@ public final class GetEntryResult {
      */
     private final GoogleCloudDatacatalogV1UsageSignalResponse usageSignal;
     /**
-     * Indicates the entry's source system that Data Catalog doesn't automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
      */
     private final String userSpecifiedSystem;
     /**
-     * Custom entry type that doesn't match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
      */
     private final String userSpecifiedType;
@@ -231,7 +231,7 @@ public final class GetEntryResult {
         return this.description;
     }
     /**
-     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
+     * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
      * 
     */
     public String displayName() {
@@ -252,7 +252,7 @@ public final class GetEntryResult {
         return this.gcsFilesetSpec;
     }
     /**
-     * Indicates the entry's source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+     * Indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
      * 
     */
     public String integratedSystem() {
@@ -322,14 +322,14 @@ public final class GetEntryResult {
         return this.usageSignal;
     }
     /**
-     * Indicates the entry's source system that Data Catalog doesn't automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * Indicates the entry&#39;s source system that Data Catalog doesn&#39;t automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
     */
     public String userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
-     * Custom entry type that doesn't match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
+     * Custom entry type that doesn&#39;t match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
     */
     public String userSpecifiedType() {

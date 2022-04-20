@@ -35,7 +35,7 @@ public final class JsonInputSchemaMappingResponse {
     private final @Nullable JsonFieldResponse id;
     /**
      * Type of the custom mapping
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
      */
     private final String inputSchemaMappingType;
@@ -98,7 +98,7 @@ public final class JsonInputSchemaMappingResponse {
     }
     /**
      * Type of the custom mapping
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
     */
     public String inputSchemaMappingType() {

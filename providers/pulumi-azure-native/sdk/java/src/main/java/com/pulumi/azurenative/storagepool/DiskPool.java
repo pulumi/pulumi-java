@@ -49,14 +49,14 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
         return this.additionalCapabilities;
     }
     /**
-     * Logical zone for Disk pool resource; example: ["1"].
+     * Logical zone for Disk pool resource; example: [&#34;1&#34;].
      * 
      */
     @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
-     * @return Logical zone for Disk pool resource; example: ["1"].
+     * @return Logical zone for Disk pool resource; example: [&#34;1&#34;].
      * 
      */
     public Output<List<String>> availabilityZones() {

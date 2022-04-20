@@ -49,14 +49,14 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
         return this.allSubscriptions;
     }
     /**
-     * Gets or sets the association with Commercial's Billing Account.
+     * Gets or sets the association with Commercial&#39;s Billing Account.
      * 
      */
     @Export(name="claim", type=String.class, parameters={})
     private Output</* @Nullable */ String> claim;
 
     /**
-     * @return Gets or sets the association with Commercial's Billing Account.
+     * @return Gets or sets the association with Commercial&#39;s Billing Account.
      * 
      */
     public Output</* @Nullable */ String> claim() {

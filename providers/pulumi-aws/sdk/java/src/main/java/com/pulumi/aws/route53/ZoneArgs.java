@@ -20,7 +20,7 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     public static final ZoneArgs Empty = new ZoneArgs();
 
     /**
-     * A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+     * A comment for the hosted zone. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Import(name="comment")

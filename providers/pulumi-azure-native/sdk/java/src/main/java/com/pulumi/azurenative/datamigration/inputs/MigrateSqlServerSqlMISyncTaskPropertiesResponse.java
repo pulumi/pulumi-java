@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends com.p
 
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI.Sync.LRS&#39;.
      * 
      */
     @Import(name="taskType", required=true)

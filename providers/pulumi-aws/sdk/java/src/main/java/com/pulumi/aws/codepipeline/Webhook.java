@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:codepipeline/webhook:Webhook")
 public class Webhook extends com.pulumi.resources.CustomResource {
     /**
-     * The CodePipeline webhook's ARN.
+     * The CodePipeline webhook&#39;s ARN.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return The CodePipeline webhook's ARN.
+     * @return The CodePipeline webhook&#39;s ARN.
      * 
      */
     public Output<String> arn() {
@@ -160,14 +160,14 @@ public class Webhook extends com.pulumi.resources.CustomResource {
         return this.targetPipeline;
     }
     /**
-     * The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
+     * The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the target.
      * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
-     * @return The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
+     * @return The CodePipeline webhook&#39;s URL. POST events to this endpoint to trigger the target.
      * 
      */
     public Output<String> url() {

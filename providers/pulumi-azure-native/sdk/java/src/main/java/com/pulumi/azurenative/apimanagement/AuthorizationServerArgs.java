@@ -101,7 +101,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     @Import(name="clientSecret")
@@ -211,7 +211,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
      */
     @Import(name="tokenBodyParameters")

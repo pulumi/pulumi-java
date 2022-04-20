@@ -17,7 +17,7 @@ public final class AppCookieStickinessPolicyArgs extends com.pulumi.resources.Re
     public static final AppCookieStickinessPolicyArgs Empty = new AppCookieStickinessPolicyArgs();
 
     /**
-     * The application cookie whose lifetime the ELB's cookie should follow.
+     * The application cookie whose lifetime the ELB&#39;s cookie should follow.
      * 
      */
     @Import(name="cookieName", required=true)

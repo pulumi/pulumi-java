@@ -27,7 +27,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class IotwirelessFunctions {
     /**
-     * Destination's resource schema demonstrating some basic constructs and validation rules.
+     * Destination&#39;s resource schema demonstrating some basic constructs and validation rules.
      * 
      */
     public static CompletableFuture<GetDestinationResult> getDestination(GetDestinationArgs args) {
@@ -37,7 +37,7 @@ public final class IotwirelessFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDestination", TypeShape.of(GetDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Device Profile's resource schema demonstrating some basic constructs and validation rules.
+     * Device Profile&#39;s resource schema demonstrating some basic constructs and validation rules.
      * 
      */
     public static CompletableFuture<GetDeviceProfileResult> getDeviceProfile(GetDeviceProfileArgs args) {

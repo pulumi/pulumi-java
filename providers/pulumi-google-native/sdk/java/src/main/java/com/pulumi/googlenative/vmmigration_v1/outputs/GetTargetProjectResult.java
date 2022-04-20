@@ -15,7 +15,7 @@ public final class GetTargetProjectResult {
      */
     private final String createTime;
     /**
-     * The target project's description.
+     * The target project&#39;s description.
      * 
      */
     private final String description;
@@ -57,7 +57,7 @@ public final class GetTargetProjectResult {
         return this.createTime;
     }
     /**
-     * The target project's description.
+     * The target project&#39;s description.
      * 
     */
     public String description() {

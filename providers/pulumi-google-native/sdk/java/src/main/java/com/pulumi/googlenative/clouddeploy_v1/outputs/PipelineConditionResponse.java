@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class PipelineConditionResponse {
     /**
-     * Details around the Pipeline's overall status.
+     * Details around the Pipeline&#39;s overall status.
      * 
      */
     private final PipelineReadyConditionResponse pipelineReadyCondition;
@@ -30,7 +30,7 @@ public final class PipelineConditionResponse {
     }
 
     /**
-     * Details around the Pipeline's overall status.
+     * Details around the Pipeline&#39;s overall status.
      * 
     */
     public PipelineReadyConditionResponse pipelineReadyCondition() {

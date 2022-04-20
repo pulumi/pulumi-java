@@ -55,7 +55,7 @@ public final class TeradataSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
+     * The partition mechanism that will be used for teradata read in parallel. Possible values include: &#34;None&#34;, &#34;Hash&#34;, &#34;DynamicRange&#34;.
      * 
      */
     @Import(name="partitionOption")
@@ -122,7 +122,7 @@ public final class TeradataSourceArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'TeradataSource'.
+     * Expected value is &#39;TeradataSource&#39;.
      * 
      */
     @Import(name="type", required=true)

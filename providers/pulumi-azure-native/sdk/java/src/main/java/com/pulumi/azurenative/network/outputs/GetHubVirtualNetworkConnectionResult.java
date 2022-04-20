@@ -20,7 +20,7 @@ public final class GetHubVirtualNetworkConnectionResult {
      */
     private final @Nullable Boolean allowHubToRemoteVnetTransit;
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
     private final @Nullable Boolean allowRemoteVnetToUseHubVnetGateways;
@@ -90,7 +90,7 @@ public final class GetHubVirtualNetworkConnectionResult {
         return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
     */
     public Optional<Boolean> allowRemoteVnetToUseHubVnetGateways() {

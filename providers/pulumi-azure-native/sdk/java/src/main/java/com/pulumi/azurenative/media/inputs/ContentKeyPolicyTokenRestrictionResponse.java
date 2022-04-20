@@ -60,7 +60,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
      * 
      */
     @Import(name="odataType", required=true)

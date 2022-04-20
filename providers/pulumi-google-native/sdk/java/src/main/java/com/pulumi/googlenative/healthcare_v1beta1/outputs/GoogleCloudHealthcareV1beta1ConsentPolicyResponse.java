@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse {
     /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
+     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
      * 
      */
     private final ExprResponse authorizationRule;
@@ -31,7 +31,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse {
     }
 
     /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
+     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
      * 
     */
     public ExprResponse authorizationRule() {

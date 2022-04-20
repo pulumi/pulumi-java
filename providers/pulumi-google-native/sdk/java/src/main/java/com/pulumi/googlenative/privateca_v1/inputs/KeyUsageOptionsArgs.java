@@ -31,7 +31,7 @@ public final class KeyUsageOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
      */
     @Import(name="contentCommitment")

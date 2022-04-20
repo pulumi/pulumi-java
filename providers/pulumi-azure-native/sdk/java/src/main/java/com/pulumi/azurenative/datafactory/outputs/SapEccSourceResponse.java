@@ -33,7 +33,7 @@ public final class SapEccSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * SAP ECC OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP ECC OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
@@ -54,7 +54,7 @@ public final class SapEccSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapEccSource'.
+     * Expected value is &#39;SapEccSource&#39;.
      * 
      */
     private final String type;
@@ -110,7 +110,7 @@ public final class SapEccSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * SAP ECC OData query. For example, "$top=1". Type: string (or Expression with resultType string).
+     * SAP ECC OData query. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> query() {
@@ -139,7 +139,7 @@ public final class SapEccSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapEccSource'.
+     * Expected value is &#39;SapEccSource&#39;.
      * 
     */
     public String type() {

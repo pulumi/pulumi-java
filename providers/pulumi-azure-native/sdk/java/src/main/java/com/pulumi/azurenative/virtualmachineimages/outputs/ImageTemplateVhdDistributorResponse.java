@@ -23,7 +23,7 @@ public final class ImageTemplateVhdDistributorResponse {
     private final String runOutputName;
     /**
      * Type of distribution.
-     * Expected value is 'VHD'.
+     * Expected value is &#39;VHD&#39;.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class ImageTemplateVhdDistributorResponse {
     }
     /**
      * Type of distribution.
-     * Expected value is 'VHD'.
+     * Expected value is &#39;VHD&#39;.
      * 
     */
     public String type() {

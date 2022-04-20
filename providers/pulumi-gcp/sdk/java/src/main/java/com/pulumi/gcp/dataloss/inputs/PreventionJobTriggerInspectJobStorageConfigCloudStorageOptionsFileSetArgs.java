@@ -29,7 +29,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     /**
-     * The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
+     * The Cloud Storage url of the file(s) to scan, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard
      * in the path is allowed.
      * If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
      * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is

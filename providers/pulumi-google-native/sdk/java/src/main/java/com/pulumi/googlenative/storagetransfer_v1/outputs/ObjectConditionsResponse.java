@@ -21,22 +21,22 @@ public final class ObjectConditionsResponse {
      */
     private final List<String> includePrefixes;
     /**
-     * If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" are transferred.
+     * If specified, only objects with a &#34;last modification time&#34; before this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred.
      * 
      */
     private final String lastModifiedBefore;
     /**
-     * If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
+     * If specified, only objects with a &#34;last modification time&#34; on or after this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day&#39;s worth of data at a time. For that you&#39;d set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
      * 
      */
     private final String lastModifiedSince;
     /**
-     * Ensures that objects are not transferred if a specific maximum time has elapsed since the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation`and the "last modification time" of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred if a specific maximum time has elapsed since the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation`and the &#34;last modification time&#34; of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
      */
     private final String maxTimeElapsedSinceLastModification;
     /**
-     * Ensures that objects are not transferred until a specific minimum time has elapsed after the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation` and the "last modification time" of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred until a specific minimum time has elapsed after the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation` and the &#34;last modification time&#34; of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
      */
     private final String minTimeElapsedSinceLastModification;
@@ -72,28 +72,28 @@ public final class ObjectConditionsResponse {
         return this.includePrefixes;
     }
     /**
-     * If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" are transferred.
+     * If specified, only objects with a &#34;last modification time&#34; before this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred.
      * 
     */
     public String lastModifiedBefore() {
         return this.lastModifiedBefore;
     }
     /**
-     * If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
+     * If specified, only objects with a &#34;last modification time&#34; on or after this timestamp and objects that don&#39;t have a &#34;last modification time&#34; are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day&#39;s worth of data at a time. For that you&#39;d set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day
      * 
     */
     public String lastModifiedSince() {
         return this.lastModifiedSince;
     }
     /**
-     * Ensures that objects are not transferred if a specific maximum time has elapsed since the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation`and the "last modification time" of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred if a specific maximum time has elapsed since the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation`and the &#34;last modification time&#34; of the object is less than the value of max_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
     */
     public String maxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification;
     }
     /**
-     * Ensures that objects are not transferred until a specific minimum time has elapsed after the "last modification time". When a TransferOperation begins, objects with a "last modification time" are transferred only if the elapsed time between the start_time of the `TransferOperation` and the "last modification time" of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a "last modification time" are also transferred.
+     * Ensures that objects are not transferred until a specific minimum time has elapsed after the &#34;last modification time&#34;. When a TransferOperation begins, objects with a &#34;last modification time&#34; are transferred only if the elapsed time between the start_time of the `TransferOperation` and the &#34;last modification time&#34; of the object is equal to or greater than the value of min_time_elapsed_since_last_modification`. Objects that do not have a &#34;last modification time&#34; are also transferred.
      * 
     */
     public String minTimeElapsedSinceLastModification() {

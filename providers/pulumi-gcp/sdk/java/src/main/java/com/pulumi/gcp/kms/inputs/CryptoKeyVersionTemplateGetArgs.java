@@ -28,7 +28,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends com.pulumi.resources.
     }
 
     /**
-     * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
+     * The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
      * 
      */
     @Import(name="protectionLevel")

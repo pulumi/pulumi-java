@@ -115,7 +115,7 @@ public final class InformixTableDatasetResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of dataset.
-     * Expected value is 'InformixTable'.
+     * Expected value is &#39;InformixTable&#39;.
      * 
      */
     @Import(name="type", required=true)

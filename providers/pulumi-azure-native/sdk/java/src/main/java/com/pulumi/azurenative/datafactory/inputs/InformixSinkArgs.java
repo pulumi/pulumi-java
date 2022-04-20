@@ -77,7 +77,7 @@ public final class InformixSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'InformixSink'.
+     * Expected value is &#39;InformixSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -39,7 +39,7 @@ public final class ACIServiceResponseResponse {
     private final @Nullable String cname;
     /**
      * The compute environment type for the service.
-     * Expected value is 'ACI'.
+     * Expected value is &#39;ACI&#39;.
      * 
      */
     private final String computeType;
@@ -226,7 +226,7 @@ public final class ACIServiceResponseResponse {
     }
     /**
      * The compute environment type for the service.
-     * Expected value is 'ACI'.
+     * Expected value is &#39;ACI&#39;.
      * 
     */
     public String computeType() {

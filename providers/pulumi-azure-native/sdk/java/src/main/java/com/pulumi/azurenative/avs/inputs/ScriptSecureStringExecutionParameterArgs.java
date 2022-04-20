@@ -43,7 +43,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
 
     /**
      * The type of execution parameter
-     * Expected value is 'SecureValue'.
+     * Expected value is &#39;SecureValue&#39;.
      * 
      */
     @Import(name="type", required=true)

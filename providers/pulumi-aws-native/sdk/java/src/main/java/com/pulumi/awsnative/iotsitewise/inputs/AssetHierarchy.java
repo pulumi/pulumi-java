@@ -28,7 +28,7 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The LogicalID of a hierarchy in the parent asset's model.
+     * The LogicalID of a hierarchy in the parent asset&#39;s model.
      * 
      */
     @Import(name="logicalId", required=true)

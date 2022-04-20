@@ -85,7 +85,7 @@ public final class TestCaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
      * 
      */
     @Import(name="tags")

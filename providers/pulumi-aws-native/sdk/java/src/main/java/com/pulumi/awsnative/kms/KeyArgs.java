@@ -67,7 +67,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
     @Import(name="keySpec")
@@ -78,7 +78,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
     @Import(name="keyUsage")
@@ -89,7 +89,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
     @Import(name="multiRegion")

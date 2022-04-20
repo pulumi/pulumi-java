@@ -40,7 +40,7 @@ import java.util.StringJoiner;
          */
         AbandonedSessionRate("ABANDONED_SESSION_RATE"),
         /**
-         * Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.
+         * Percentage of sessions reached Dialogflow &#39;END_PAGE&#39; or &#39;END_SESSION&#39;.
          * 
          */
         SessionEndRate("SESSION_END_RATE");

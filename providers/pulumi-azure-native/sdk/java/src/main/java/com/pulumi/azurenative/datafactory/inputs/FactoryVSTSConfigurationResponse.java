@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Factory's VSTS repo information.
+ * Factory&#39;s VSTS repo information.
  * 
  */
 public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources.InvokeArgs {
@@ -98,7 +98,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
 
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryVSTSConfiguration'.
+     * Expected value is &#39;FactoryVSTSConfiguration&#39;.
      * 
      */
     @Import(name="type", required=true)

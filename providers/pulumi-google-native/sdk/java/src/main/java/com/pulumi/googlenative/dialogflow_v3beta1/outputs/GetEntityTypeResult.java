@@ -34,7 +34,7 @@ public final class GetEntityTypeResult {
      */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities;
     /**
-     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases;
@@ -103,7 +103,7 @@ public final class GetEntityTypeResult {
         return this.entities;
     }
     /**
-     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
     */
     public List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases() {

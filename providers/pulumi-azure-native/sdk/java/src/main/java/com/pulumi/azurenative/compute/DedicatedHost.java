@@ -38,28 +38,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:compute:DedicatedHost")
 public class DedicatedHost extends com.pulumi.resources.CustomResource {
     /**
-     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
+     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
      * 
      */
     @Export(name="autoReplaceOnFailure", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoReplaceOnFailure;
 
     /**
-     * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
+     * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
      * 
      */
     public Output</* @Nullable */ Boolean> autoReplaceOnFailure() {
         return this.autoReplaceOnFailure;
     }
     /**
-     * A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.
+     * A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
      * 
      */
     @Export(name="hostId", type=String.class, parameters={})
     private Output<String> hostId;
 
     /**
-     * @return A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.
+     * @return A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
      * 
      */
     public Output<String> hostId() {
@@ -80,14 +80,14 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
         return this.instanceView;
     }
     /**
-     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
+     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
      * 
      */
     @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
-     * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
+     * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
      * 
      */
     public Output</* @Nullable */ String> licenseType() {

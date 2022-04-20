@@ -76,7 +76,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The current state of the desired VPC.
-     * Can be either `"pending"` or `"available"`.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
      */
     @Import(name="state")

@@ -33,7 +33,7 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
     @Import(name="selector")

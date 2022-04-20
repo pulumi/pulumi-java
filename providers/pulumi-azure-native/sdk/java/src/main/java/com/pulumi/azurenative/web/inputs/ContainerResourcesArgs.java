@@ -32,7 +32,7 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Required memory, e.g. "250Mb"
+     * Required memory, e.g. &#34;250Mb&#34;
      * 
      */
     @Import(name="memory")

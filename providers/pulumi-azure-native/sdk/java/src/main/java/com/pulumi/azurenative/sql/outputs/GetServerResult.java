@@ -57,7 +57,7 @@ public final class GetServerResult {
      */
     private final String location;
     /**
-     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     private final @Nullable String minimalTlsVersion;
@@ -77,7 +77,7 @@ public final class GetServerResult {
      */
     private final List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -204,7 +204,7 @@ public final class GetServerResult {
         return this.location;
     }
     /**
-     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
     */
     public Optional<String> minimalTlsVersion() {
@@ -232,7 +232,7 @@ public final class GetServerResult {
         return this.privateEndpointConnections;
     }
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> publicNetworkAccess() {

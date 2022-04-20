@@ -49,7 +49,7 @@ public final class GreenplumSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'GreenplumSource'.
+     * Expected value is &#39;GreenplumSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class GreenplumSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'GreenplumSource'.
+     * Expected value is &#39;GreenplumSource&#39;.
      * 
     */
     public String type() {

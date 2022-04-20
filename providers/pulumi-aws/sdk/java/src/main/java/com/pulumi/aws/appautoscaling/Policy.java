@@ -116,28 +116,28 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.serviceNamespace;
     }
     /**
-     * Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+     * Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
      * 
      */
     @Export(name="stepScalingPolicyConfiguration", type=PolicyStepScalingPolicyConfiguration.class, parameters={})
     private Output</* @Nullable */ PolicyStepScalingPolicyConfiguration> stepScalingPolicyConfiguration;
 
     /**
-     * @return Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+     * @return Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
      * 
      */
     public Output</* @Nullable */ PolicyStepScalingPolicyConfiguration> stepScalingPolicyConfiguration() {
         return this.stepScalingPolicyConfiguration;
     }
     /**
-     * A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+     * A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
      * 
      */
     @Export(name="targetTrackingScalingPolicyConfiguration", type=PolicyTargetTrackingScalingPolicyConfiguration.class, parameters={})
     private Output</* @Nullable */ PolicyTargetTrackingScalingPolicyConfiguration> targetTrackingScalingPolicyConfiguration;
 
     /**
-     * @return A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+     * @return A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
      * 
      */
     public Output</* @Nullable */ PolicyTargetTrackingScalingPolicyConfiguration> targetTrackingScalingPolicyConfiguration() {

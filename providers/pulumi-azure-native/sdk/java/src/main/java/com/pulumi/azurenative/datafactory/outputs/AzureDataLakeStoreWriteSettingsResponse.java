@@ -23,7 +23,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object expiryDateTime;
@@ -34,7 +34,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
     private final @Nullable Object maxConcurrentConnections;
     /**
      * The write setting type.
-     * Expected value is 'AzureDataLakeStoreWriteSettings'.
+     * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
      * 
      */
     private final String type;
@@ -68,7 +68,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
      * 
     */
     public Optional<Object> expiryDateTime() {
@@ -83,7 +83,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
     }
     /**
      * The write setting type.
-     * Expected value is 'AzureDataLakeStoreWriteSettings'.
+     * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
      * 
     */
     public String type() {

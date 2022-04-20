@@ -16,7 +16,7 @@ public final class IdAssetReferenceResponse {
     private final String assetId;
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'Id'.
+     * Expected value is &#39;Id&#39;.
      * 
      */
     private final String referenceType;
@@ -38,7 +38,7 @@ public final class IdAssetReferenceResponse {
     }
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'Id'.
+     * Expected value is &#39;Id&#39;.
      * 
     */
     public String referenceType() {

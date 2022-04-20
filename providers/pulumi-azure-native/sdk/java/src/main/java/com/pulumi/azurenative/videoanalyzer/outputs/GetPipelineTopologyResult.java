@@ -41,7 +41,7 @@ public final class GetPipelineTopologyResult {
      */
     private final String name;
     /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
     private final @Nullable List<ParameterDeclarationResponse> parameters;
@@ -71,7 +71,7 @@ public final class GetPipelineTopologyResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -131,7 +131,7 @@ public final class GetPipelineTopologyResult {
         return this.name;
     }
     /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
     */
     public List<ParameterDeclarationResponse> parameters() {
@@ -173,7 +173,7 @@ public final class GetPipelineTopologyResult {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class ComputeInstanceCreatedByResponse {
      */
     private final String userName;
     /**
-     * Uniquely identifies user' Azure Active Directory organization.
+     * Uniquely identifies user&#39; Azure Active Directory organization.
      * 
      */
     private final String userOrgId;
@@ -50,7 +50,7 @@ public final class ComputeInstanceCreatedByResponse {
         return this.userName;
     }
     /**
-     * Uniquely identifies user' Azure Active Directory organization.
+     * Uniquely identifies user&#39; Azure Active Directory organization.
      * 
     */
     public String userOrgId() {

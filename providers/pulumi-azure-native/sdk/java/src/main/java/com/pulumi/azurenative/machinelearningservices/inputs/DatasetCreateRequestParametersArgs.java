@@ -44,7 +44,7 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     }
 
     /**
-     * The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
+     * The partition information of each path will be extracted into columns based on the specified format. Format part &#39;{column_name}&#39; creates string column, and &#39;{column_name:yyyy/MM/dd/HH/mm/ss}&#39; creates datetime column, where &#39;yyyy&#39;, &#39;MM&#39;, &#39;dd&#39;, &#39;HH&#39;, &#39;mm&#39; and &#39;ss&#39; are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path &#39;../USA/2019/01/01/data.parquet&#39; where the partition is by country/region and time, partition_format=&#39;/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv&#39; creates a string column &#39;CountryOrRegion&#39; with the value &#39;USA&#39; and a datetime column &#39;PartitionDate&#39; with the value &#39;2019-01-01
      * 
      */
     @Import(name="partitionFormat")
@@ -69,7 +69,7 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     }
 
     /**
-     * The separator used to split columns for 'delimited_files' sourceType.
+     * The separator used to split columns for &#39;delimited_files&#39; sourceType.
      * 
      */
     @Import(name="separator")

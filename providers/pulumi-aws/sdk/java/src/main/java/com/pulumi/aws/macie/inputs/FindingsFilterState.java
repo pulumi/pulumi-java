@@ -19,7 +19,7 @@ public final class FindingsFilterState extends com.pulumi.resources.ResourceArgs
     public static final FindingsFilterState Empty = new FindingsFilterState();
 
     /**
-     * The action to perform on findings that meet the filter criteria (`finding_criteria`). Valid values are: `ARCHIVE`, suppress (automatically archive) the findings; and, `NOOP`, don't perform any action on the findings.
+     * The action to perform on findings that meet the filter criteria (`finding_criteria`). Valid values are: `ARCHIVE`, suppress (automatically archive) the findings; and, `NOOP`, don&#39;t perform any action on the findings.
      * 
      */
     @Import(name="action")

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class CdnManagedHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'Cdn'.
+     * Expected value is &#39;Cdn&#39;.
      * 
      */
     private final String certificateSource;
@@ -48,7 +48,7 @@ public final class CdnManagedHttpsParametersResponse {
 
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'Cdn'.
+     * Expected value is &#39;Cdn&#39;.
      * 
     */
     public String certificateSource() {

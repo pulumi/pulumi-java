@@ -25,7 +25,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
 
     /**
      * The compute environment type for the service.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     @Import(name="computeType", required=true)

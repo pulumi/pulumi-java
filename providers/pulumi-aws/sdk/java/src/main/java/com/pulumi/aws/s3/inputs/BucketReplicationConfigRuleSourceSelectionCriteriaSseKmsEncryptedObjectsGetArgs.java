@@ -15,7 +15,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
     public static final BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs Empty = new BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs();
 
     /**
-     * Whether the existing objects should be replicated. Either `"Enabled"` or `"Disabled"`.
+     * Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     @Import(name="status", required=true)

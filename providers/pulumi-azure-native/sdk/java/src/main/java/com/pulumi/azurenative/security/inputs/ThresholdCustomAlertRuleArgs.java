@@ -55,7 +55,7 @@ public final class ThresholdCustomAlertRuleArgs extends com.pulumi.resources.Res
 
     /**
      * The type of the custom alert rule.
-     * Expected value is 'ThresholdCustomAlertRule'.
+     * Expected value is &#39;ThresholdCustomAlertRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

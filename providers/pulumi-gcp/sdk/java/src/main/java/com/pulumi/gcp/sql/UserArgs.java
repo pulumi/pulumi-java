@@ -30,7 +30,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The host the user can connect from. This is only supported
-     * for MySQL instances. Don't set this field for PostgreSQL instances.
+     * for MySQL instances. Don&#39;t set this field for PostgreSQL instances.
      * Can be an IP address. Changing this forces a new resource to be created.
      * 
      */
@@ -91,8 +91,8 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The user type. It determines the method to authenticate the
-     * user during login. The default is the database's built-in user type. Flags
-     * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
+     * user during login. The default is the database&#39;s built-in user type. Flags
+     * include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;.
      * 
      */
     @Import(name="type")

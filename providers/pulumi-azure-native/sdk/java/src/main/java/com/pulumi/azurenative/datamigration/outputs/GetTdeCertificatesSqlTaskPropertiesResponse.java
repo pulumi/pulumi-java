@@ -45,7 +45,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'GetTDECertificates.Sql'.
+     * Expected value is &#39;GetTDECertificates.Sql&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'GetTDECertificates.Sql'.
+     * Expected value is &#39;GetTDECertificates.Sql&#39;.
      * 
     */
     public String taskType() {

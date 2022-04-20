@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
+ * Backfill strategy to automatically backfill the Stream&#39;s objects. Specific objects can be excluded.
  * 
  */
 public final class BackfillAllStrategyResponse extends com.pulumi.resources.InvokeArgs {

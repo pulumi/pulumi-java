@@ -20,7 +20,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
     public static final IoTHubEventSourceArgs Empty = new IoTHubEventSourceArgs();
 
     /**
-     * The name of the iot hub's consumer group that holds the partitions from which events will be read.
+     * The name of the iot hub&#39;s consumer group that holds the partitions from which events will be read.
      * 
      */
     @Import(name="consumerGroupName", required=true)
@@ -75,7 +75,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
+     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant &#39;service connect&#39; permissions to the iot hub.
      * 
      */
     @Import(name="keyName", required=true)
@@ -87,7 +87,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The kind of the event source.
-     * Expected value is 'Microsoft.IoTHub'.
+     * Expected value is &#39;Microsoft.IoTHub&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -98,7 +98,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
     @Import(name="localTimestamp")
@@ -164,7 +164,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
     @Import(name="timestampPropertyName")
@@ -175,7 +175,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
+     * The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
      * 
      */
     @Import(name="type")

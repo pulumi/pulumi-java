@@ -29,7 +29,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends com.pulumi.resources
     }
 
     /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
      */
     @Import(name="allowedPackageNames")

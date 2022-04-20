@@ -15,7 +15,7 @@ public final class UserPoolSmsConfiguration {
      */
     private final String externalId;
     /**
-     * ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
+     * ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
      * 
      */
     private final String snsCallerArn;
@@ -36,7 +36,7 @@ public final class UserPoolSmsConfiguration {
         return this.externalId;
     }
     /**
-     * ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
+     * ARN of the Amazon SNS caller. This is usually the IAM role that you&#39;ve given Cognito permission to assume.
      * 
     */
     public String snsCallerArn() {

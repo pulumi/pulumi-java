@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     }
 
     /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See IPSet Forwarded IP Config below for more details.
      * 
      */
     @Import(name="ipSetForwardedIpConfig")

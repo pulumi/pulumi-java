@@ -39,7 +39,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends com.pulu
     }
 
     /**
-     * Indicates whether to support HTTP status code 'CONTINUE'.
+     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)

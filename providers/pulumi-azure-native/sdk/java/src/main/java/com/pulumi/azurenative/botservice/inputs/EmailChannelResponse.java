@@ -22,7 +22,7 @@ public final class EmailChannelResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * The channel name
-     * Expected value is 'EmailChannel'.
+     * Expected value is &#39;EmailChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

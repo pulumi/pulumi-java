@@ -18,7 +18,7 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
     public static final OptionResponse Empty = new OptionResponse();
 
     /**
-     * The option's name. For protobuf built-in options (options defined in descriptor.proto), this is the short name. For example, `"map_entry"`. For custom options, it should be the fully-qualified name. For example, `"google.api.http"`.
+     * The option&#39;s name. For protobuf built-in options (options defined in descriptor.proto), this is the short name. For example, `&#34;map_entry&#34;`. For custom options, it should be the fully-qualified name. For example, `&#34;google.api.http&#34;`.
      * 
      */
     @Import(name="name", required=true)
@@ -29,7 +29,7 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The option's value packed in an Any message. If the value is a primitive, the corresponding wrapper type defined in google/protobuf/wrappers.proto should be used. If the value is an enum, it should be stored as an int32 value using the google.protobuf.Int32Value type.
+     * The option&#39;s value packed in an Any message. If the value is a primitive, the corresponding wrapper type defined in google/protobuf/wrappers.proto should be used. If the value is an enum, it should be stored as an int32 value using the google.protobuf.Int32Value type.
      * 
      */
     @Import(name="value", required=true)

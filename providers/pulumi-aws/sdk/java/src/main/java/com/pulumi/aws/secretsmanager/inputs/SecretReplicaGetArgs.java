@@ -16,7 +16,7 @@ public final class SecretReplicaGetArgs extends com.pulumi.resources.ResourceArg
     public static final SecretReplicaGetArgs Empty = new SecretReplicaGetArgs();
 
     /**
-     * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account's default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
+     * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account&#39;s default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
      * 
      */
     @Import(name="kmsKeyId")

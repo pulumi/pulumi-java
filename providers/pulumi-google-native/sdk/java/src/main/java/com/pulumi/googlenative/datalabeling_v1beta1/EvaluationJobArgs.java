@@ -18,7 +18,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     public static final EvaluationJobArgs Empty = new EvaluationJobArgs();
 
     /**
-     * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     @Import(name="annotationSpecSet", required=true)
@@ -51,7 +51,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
+     * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
      * 
      */
     @Import(name="labelMissingGroundTruth", required=true)
@@ -62,7 +62,7 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
+     * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
      * 
      */
     @Import(name="modelVersion", required=true)

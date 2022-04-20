@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
 public class Hl7Store extends com.pulumi.resources.CustomResource {
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * 
      */
     @Export(name="dataset", type=String.class, parameters={})
@@ -55,7 +55,7 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * 
      */
     public Output<String> dataset() {
@@ -68,8 +68,8 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
      * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
      * No more than 64 labels can be associated with a given store.
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
@@ -82,8 +82,8 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
      * bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
      * No more than 64 labels can be associated with a given store.
-     * An object containing a list of "key": value pairs.
-     * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> labels() {
@@ -111,7 +111,7 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * A nested object resource
      * Structure is documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * This field has been replaced by notificationConfigs
      * 
      */
@@ -131,7 +131,7 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
     }
     /**
      * A list of notification configs. Each configuration uses a filter to determine whether to publish a
-     * message (both Ingest & Create) on the corresponding notification destination. Only the message name
+     * message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
      * is sent as part of the notification. Supplied by the client.
      * Structure is documented below.
      * 
@@ -141,7 +141,7 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A list of notification configs. Each configuration uses a filter to determine whether to publish a
-     * message (both Ingest & Create) on the corresponding notification destination. Only the message name
+     * message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
      * is sent as part of the notification. Supplied by the client.
      * Structure is documented below.
      * 

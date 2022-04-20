@@ -130,7 +130,7 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
 
     /**
      * Gets the Instance type.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

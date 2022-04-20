@@ -211,7 +211,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * WebhookConfig describes the configuration of a trigger that creates
-     * a build whenever a webhook is sent to a trigger's webhook URL.
+     * a build whenever a webhook is sent to a trigger&#39;s webhook URL.
      * One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
      * Structure is documented below.
      * 

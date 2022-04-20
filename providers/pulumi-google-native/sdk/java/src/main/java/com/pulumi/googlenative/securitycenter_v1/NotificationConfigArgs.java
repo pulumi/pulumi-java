@@ -35,7 +35,7 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
      */
     @Import(name="name")
@@ -53,7 +53,7 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     @Import(name="pubsubTopic")

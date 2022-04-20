@@ -63,7 +63,7 @@ public class EntityAnalytics extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the setting
-     * Expected value is 'EntityAnalytics'.
+     * Expected value is &#39;EntityAnalytics&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -71,7 +71,7 @@ public class EntityAnalytics extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the setting
-     * Expected value is 'EntityAnalytics'.
+     * Expected value is &#39;EntityAnalytics&#39;.
      * 
      */
     public Output<String> kind() {

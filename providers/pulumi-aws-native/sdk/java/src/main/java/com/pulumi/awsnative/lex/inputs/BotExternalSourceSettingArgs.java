@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Provides information about the external source of the slot type's definition.
+ * Provides information about the external source of the slot type&#39;s definition.
  * 
  */
 public final class BotExternalSourceSettingArgs extends com.pulumi.resources.ResourceArgs {

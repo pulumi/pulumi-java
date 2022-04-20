@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favor of aws.elb.LoadBalancerCookieStickinessPolicy
  * 
  */

@@ -17,7 +17,7 @@ public final class SoftwareRecipeStepRunScriptResponse {
      */
     private final List<Integer> allowedExitCodes;
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
      * 
      */
     private final String interpreter;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepRunScriptResponse {
         return this.allowedExitCodes;
     }
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
+     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
      * 
     */
     public String interpreter() {

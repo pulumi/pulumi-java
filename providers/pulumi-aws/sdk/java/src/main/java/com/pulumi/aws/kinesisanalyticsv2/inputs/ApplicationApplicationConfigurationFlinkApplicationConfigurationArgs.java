@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     public static final ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs Empty = new ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs();
 
     /**
-     * Describes an application's checkpointing configuration.
+     * Describes an application&#39;s checkpointing configuration.
      * 
      */
     @Import(name="checkpointConfiguration")

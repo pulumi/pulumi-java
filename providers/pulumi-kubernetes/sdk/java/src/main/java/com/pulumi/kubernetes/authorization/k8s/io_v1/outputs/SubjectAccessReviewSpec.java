@@ -21,7 +21,7 @@ public final class SubjectAccessReviewSpec {
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
-     * Groups is the groups you're testing for.
+     * Groups is the groups you&#39;re testing for.
      * 
      */
     private final @Nullable List<String> groups;
@@ -41,7 +41,7 @@ public final class SubjectAccessReviewSpec {
      */
     private final @Nullable String uid;
     /**
-     * User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
+     * User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
      * 
      */
     private final @Nullable String user;
@@ -70,7 +70,7 @@ public final class SubjectAccessReviewSpec {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
-     * Groups is the groups you're testing for.
+     * Groups is the groups you&#39;re testing for.
      * 
     */
     public List<String> groups() {
@@ -98,7 +98,7 @@ public final class SubjectAccessReviewSpec {
         return Optional.ofNullable(this.uid);
     }
     /**
-     * User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
+     * User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
      * 
     */
     public Optional<String> user() {

@@ -28,7 +28,7 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
     }
 
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
      */
     @Import(name="noDevice")

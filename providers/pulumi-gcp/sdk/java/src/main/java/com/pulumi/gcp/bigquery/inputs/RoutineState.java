@@ -88,7 +88,7 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. If language = "JAVASCRIPT", this field stores the path of the
+     * Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
      * imported JAVASCRIPT libraries.
      * 
      */
@@ -135,7 +135,7 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Can be set only if routineType = "TABLE_VALUED_FUNCTION".
+     * Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
      * If absent, the return table type is inferred from definitionBody at query time in each query
      * that references this routine. If present, then the columns in the evaluated table result will
      * be cast to match the column types specificed in return table type, at query time.
@@ -149,11 +149,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A JSON schema for the return type. Optional if language = "SQL"; required otherwise.
+     * A JSON schema for the return type. Optional if language = &#34;SQL&#34;; required otherwise.
      * If absent, the return type is inferred from definitionBody at query time in each query
      * that references this routine. If present, then the evaluated result will be cast to
-     * the specified returned type at query time. ~>**NOTE**: Because this field expects a JSON
-     * string, any changes to the string will create a diff, even if the JSON itself hasn't
+     * the specified returned type at query time. ~&gt;**NOTE**: Because this field expects a JSON
+     * string, any changes to the string will create a diff, even if the JSON itself hasn&#39;t
      * changed. If the API returns a different value for the same schema, e.g. it switche
      * d the order of values or replaced STRUCT field type with RECORD field type, we currently
      * cannot suppress the recurring diff this causes. As a workaround, we recommend using

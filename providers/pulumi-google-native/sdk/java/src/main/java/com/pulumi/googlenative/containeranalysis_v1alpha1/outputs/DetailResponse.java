@@ -63,7 +63,7 @@ public final class DetailResponse {
      */
     private final String source;
     /**
-     * The vendor of the product. e.g. "google"
+     * The vendor of the product. e.g. &#34;google&#34;
      * 
      */
     private final String vendor;
@@ -165,7 +165,7 @@ public final class DetailResponse {
         return this.source;
     }
     /**
-     * The vendor of the product. e.g. "google"
+     * The vendor of the product. e.g. &#34;google&#34;
      * 
     */
     public String vendor() {

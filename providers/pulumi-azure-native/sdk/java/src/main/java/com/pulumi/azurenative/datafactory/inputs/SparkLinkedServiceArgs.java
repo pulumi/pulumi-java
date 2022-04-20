@@ -208,7 +208,7 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of linked service.
-     * Expected value is 'Spark'.
+     * Expected value is &#39;Spark&#39;.
      * 
      */
     @Import(name="type", required=true)

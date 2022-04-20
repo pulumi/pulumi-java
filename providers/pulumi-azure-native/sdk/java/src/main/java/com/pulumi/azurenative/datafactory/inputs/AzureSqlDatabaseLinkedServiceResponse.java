@@ -174,7 +174,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends com.pulumi.reso
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureSqlDatabase'.
+     * Expected value is &#39;AzureSqlDatabase&#39;.
      * 
      */
     @Import(name="type", required=true)

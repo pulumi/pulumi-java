@@ -17,7 +17,7 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
     public static final GoogleTypeTimeOfDayResponse Empty = new GoogleTypeTimeOfDayResponse();
 
     /**
-     * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+     * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
      * 
      */
     @Import(name="hours", required=true)

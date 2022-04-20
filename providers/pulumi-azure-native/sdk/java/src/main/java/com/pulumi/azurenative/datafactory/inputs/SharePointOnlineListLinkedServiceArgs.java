@@ -128,7 +128,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
 
     /**
      * Type of linked service.
-     * Expected value is 'SharePointOnlineList'.
+     * Expected value is &#39;SharePointOnlineList&#39;.
      * 
      */
     @Import(name="type", required=true)

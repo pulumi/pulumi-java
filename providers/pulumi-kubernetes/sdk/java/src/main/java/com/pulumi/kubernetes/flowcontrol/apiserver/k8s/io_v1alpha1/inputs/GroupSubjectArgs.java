@@ -19,7 +19,7 @@ public final class GroupSubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final GroupSubjectArgs Empty = new GroupSubjectArgs();
 
     /**
-     * name is the user group that matches, or "*" to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
+     * name is the user group that matches, or &#34;*&#34; to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
      * 
      */
     @Import(name="name", required=true)

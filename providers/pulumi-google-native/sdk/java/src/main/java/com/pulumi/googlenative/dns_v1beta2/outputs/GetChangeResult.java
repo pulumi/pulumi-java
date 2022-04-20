@@ -34,7 +34,7 @@ public final class GetChangeResult {
      */
     private final String startTime;
     /**
-     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
     private final String status;
@@ -87,7 +87,7 @@ public final class GetChangeResult {
         return this.startTime;
     }
     /**
-     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
     */
     public String status() {

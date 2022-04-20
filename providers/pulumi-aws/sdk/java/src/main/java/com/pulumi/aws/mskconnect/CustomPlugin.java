@@ -22,10 +22,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * MSK Connect Custom Plugin can be imported using the plugin's `arn`, e.g.,
+ * MSK Connect Custom Plugin can be imported using the plugin&#39;s `arn`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:mskconnect/customPlugin:CustomPlugin example 'arn:aws:kafkaconnect:eu-central-1:123456789012:custom-plugin/debezium-example/abcdefgh-1234-5678-9abc-defghijklmno-4'
+ *  $ pulumi import aws:mskconnect/customPlugin:CustomPlugin example &#39;arn:aws:kafkaconnect:eu-central-1:123456789012:custom-plugin/debezium-example/abcdefgh-1234-5678-9abc-defghijklmno-4&#39;
  * ```
  * 
  */

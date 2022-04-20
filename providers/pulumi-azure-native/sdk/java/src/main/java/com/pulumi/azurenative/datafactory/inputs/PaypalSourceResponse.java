@@ -99,7 +99,7 @@ public final class PaypalSourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'PaypalSource'.
+     * Expected value is &#39;PaypalSource&#39;.
      * 
      */
     @Import(name="type", required=true)

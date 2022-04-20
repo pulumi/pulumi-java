@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EncryptionConfigResponse {
     /**
-     * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+     * Optional. Customer-managed Encryption Key available through Google&#39;s Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
      * 
      */
     private final String kmsKeyName;
@@ -21,7 +21,7 @@ public final class EncryptionConfigResponse {
     }
 
     /**
-     * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+     * Optional. Customer-managed Encryption Key available through Google&#39;s Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
      * 
     */
     public String kmsKeyName() {

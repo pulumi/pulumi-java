@@ -52,7 +52,7 @@ public final class GetAFDCustomDomainResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
     private final @Nullable AFDDomainHttpsParametersResponse tlsSettings;
@@ -146,7 +146,7 @@ public final class GetAFDCustomDomainResult {
         return this.systemData;
     }
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
     */
     public Optional<AFDDomainHttpsParametersResponse> tlsSettings() {

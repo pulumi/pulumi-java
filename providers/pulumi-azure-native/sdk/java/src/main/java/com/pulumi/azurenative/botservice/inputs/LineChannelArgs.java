@@ -22,7 +22,7 @@ public final class LineChannelArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The channel name
-     * Expected value is 'LineChannel'.
+     * Expected value is &#39;LineChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

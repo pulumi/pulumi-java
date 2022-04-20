@@ -28,7 +28,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the type of threshold criteria
-     * Expected value is 'StaticThresholdCriterion'.
+     * Expected value is &#39;StaticThresholdCriterion&#39;.
      * 
      */
     @Import(name="criterionType", required=true)
@@ -94,7 +94,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
+     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
      */
     @Import(name="skipMetricValidation")

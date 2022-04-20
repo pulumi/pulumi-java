@@ -15,7 +15,7 @@ public final class DocumentationResponse {
      */
     private final String content;
     /**
-     * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+     * The format of the content field. Presently, only the value &#34;text/markdown&#34; is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
      * 
      */
     private final String mimeType;
@@ -36,7 +36,7 @@ public final class DocumentationResponse {
         return this.content;
     }
     /**
-     * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+     * The format of the content field. Presently, only the value &#34;text/markdown&#34; is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
      * 
     */
     public String mimeType() {

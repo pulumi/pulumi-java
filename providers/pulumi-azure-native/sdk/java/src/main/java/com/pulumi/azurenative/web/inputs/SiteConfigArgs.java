@@ -65,7 +65,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="alwaysOn")
@@ -120,7 +120,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="autoHealEnabled")
@@ -197,7 +197,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="detailedErrorLoggingEnabled")
@@ -299,7 +299,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="httpLoggingEnabled")
@@ -398,7 +398,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="localMySqlEnabled")
@@ -576,7 +576,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="remoteDebuggingEnabled")
@@ -598,7 +598,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="requestTracingEnabled")
@@ -675,7 +675,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="use32BitWorkerProcess")
@@ -730,7 +730,7 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="webSocketsEnabled")

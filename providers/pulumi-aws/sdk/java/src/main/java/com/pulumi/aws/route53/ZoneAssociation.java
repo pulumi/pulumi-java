@@ -16,9 +16,9 @@ import javax.annotation.Nullable;
 /**
  * Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones. See the `aws.route53.VpcAssociationAuthorization` resource for setting up cross-account associations.
  * 
- * > **NOTE:** Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the `vpc` configuration blocks available within the `aws.route53.Zone` resource instead.
+ * &gt; **NOTE:** Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the `vpc` configuration blocks available within the `aws.route53.Zone` resource instead.
  * 
- * > **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the `aws.route53.Zone` resource via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) in the `aws.route53.Zone` resource to manage additional associations via this resource.
+ * &gt; **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the `aws.route53.Zone` resource via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) in the `aws.route53.Zone` resource to manage additional associations via this resource.
  * 
  * ## Example Usage
  * 
@@ -68,14 +68,14 @@ public class ZoneAssociation extends com.pulumi.resources.CustomResource {
         return this.vpcId;
     }
     /**
-     * The VPC's region. Defaults to the region of the AWS provider.
+     * The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     @Export(name="vpcRegion", type=String.class, parameters={})
     private Output<String> vpcRegion;
 
     /**
-     * @return The VPC's region. Defaults to the region of the AWS provider.
+     * @return The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     public Output<String> vpcRegion() {

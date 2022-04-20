@@ -20,7 +20,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     public static final CapabilityArgs Empty = new CapabilityArgs();
 
     /**
-     * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
+     * Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
      * 
      */
     @Import(name="name")

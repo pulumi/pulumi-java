@@ -8,7 +8,7 @@ import static java.util.Objects.requireNonNull;
 
 /**
  * Regular expressions for simple use cases with a sane API.
- * <p/>
+ * <p>
  * Limitations:
  * <ul>
  *     <li>Does not support multiline patterns (Pattern.MULTILINE mode),

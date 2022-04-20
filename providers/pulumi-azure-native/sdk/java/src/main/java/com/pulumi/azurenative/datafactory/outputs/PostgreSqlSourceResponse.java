@@ -49,7 +49,7 @@ public final class PostgreSqlSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'PostgreSqlSource'.
+     * Expected value is &#39;PostgreSqlSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class PostgreSqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'PostgreSqlSource'.
+     * Expected value is &#39;PostgreSqlSource&#39;.
      * 
     */
     public String type() {

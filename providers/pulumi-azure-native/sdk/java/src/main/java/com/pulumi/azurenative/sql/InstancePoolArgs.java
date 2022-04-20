@@ -32,7 +32,7 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
      */
     @Import(name="licenseType", required=true)

@@ -30,7 +30,7 @@ public final class GetContainerAppResult {
      */
     private final @Nullable String kind;
     /**
-     * Resource ID of the Container App's KubeEnvironment.
+     * Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
     private final @Nullable String kubeEnvironmentId;
@@ -125,7 +125,7 @@ public final class GetContainerAppResult {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource ID of the Container App's KubeEnvironment.
+     * Resource ID of the Container App&#39;s KubeEnvironment.
      * 
     */
     public Optional<String> kubeEnvironmentId() {

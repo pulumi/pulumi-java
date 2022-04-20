@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * Gamelift Aliases can be imported using the ID, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:gamelift/alias:Alias example <alias-id>
+ *  $ pulumi import aws:gamelift/alias:Alias example &lt;alias-id&gt;
  * ```
  * 
  */

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetIndexResult {
     /**
-     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
     private final String ancestor;
@@ -59,7 +59,7 @@ public final class GetIndexResult {
     }
 
     /**
-     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
     */
     public String ancestor() {

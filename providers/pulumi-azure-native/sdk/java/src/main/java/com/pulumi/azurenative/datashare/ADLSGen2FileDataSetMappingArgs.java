@@ -74,7 +74,7 @@ public final class ADLSGen2FileDataSetMappingArgs extends com.pulumi.resources.R
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     @Import(name="kind", required=true)

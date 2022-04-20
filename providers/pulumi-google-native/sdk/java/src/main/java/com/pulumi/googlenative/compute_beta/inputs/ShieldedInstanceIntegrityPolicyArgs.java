@@ -20,7 +20,7 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends com.pulumi.resour
     public static final ShieldedInstanceIntegrityPolicyArgs Empty = new ShieldedInstanceIntegrityPolicyArgs();
 
     /**
-     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
+     * Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
      * 
      */
     @Import(name="updateAutoLearnPolicy")

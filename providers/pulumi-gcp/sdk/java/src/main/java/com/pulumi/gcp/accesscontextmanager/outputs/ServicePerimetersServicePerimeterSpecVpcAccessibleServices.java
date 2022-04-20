@@ -21,7 +21,7 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServices {
     private final @Nullable List<String> allowedServices;
     /**
      * Whether to restrict API calls within the Service Perimeter to the
-     * list of APIs specified in 'allowedServices'.
+     * list of APIs specified in &#39;allowedServices&#39;.
      * 
      */
     private final @Nullable Boolean enableRestriction;
@@ -44,7 +44,7 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServices {
     }
     /**
      * Whether to restrict API calls within the Service Perimeter to the
-     * list of APIs specified in 'allowedServices'.
+     * list of APIs specified in &#39;allowedServices&#39;.
      * 
     */
     public Optional<Boolean> enableRestriction() {

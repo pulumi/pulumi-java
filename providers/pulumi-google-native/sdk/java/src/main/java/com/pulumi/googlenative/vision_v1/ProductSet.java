@@ -48,14 +48,14 @@ public class ProductSet extends com.pulumi.resources.CustomResource {
         return this.indexError;
     }
     /**
-     * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
+     * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
      * 
      */
     @Export(name="indexTime", type=String.class, parameters={})
     private Output<String> indexTime;
 
     /**
-     * @return The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
+     * @return The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
      * 
      */
     public Output<String> indexTime() {

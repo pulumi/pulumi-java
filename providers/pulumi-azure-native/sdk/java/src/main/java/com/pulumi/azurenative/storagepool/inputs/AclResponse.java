@@ -18,7 +18,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     public static final AclResponse Empty = new AclResponse();
 
     /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
      * 
      */
     @Import(name="initiatorIqn", required=true)

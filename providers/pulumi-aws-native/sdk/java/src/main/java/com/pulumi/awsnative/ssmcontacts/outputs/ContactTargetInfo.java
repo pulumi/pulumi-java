@@ -16,7 +16,7 @@ public final class ContactTargetInfo {
      */
     private final String contactId;
     /**
-     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
+     * A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
      * 
      */
     private final Boolean isEssential;
@@ -37,7 +37,7 @@ public final class ContactTargetInfo {
         return this.contactId;
     }
     /**
-     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
+     * A Boolean value determining if the contact&#39;s acknowledgement stops the progress of stages in the plan.
      * 
     */
     public Boolean isEssential() {

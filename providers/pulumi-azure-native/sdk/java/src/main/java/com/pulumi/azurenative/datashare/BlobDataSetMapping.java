@@ -90,7 +90,7 @@ public class BlobDataSetMapping extends com.pulumi.resources.CustomResource {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -98,7 +98,7 @@ public class BlobDataSetMapping extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     public Output<String> kind() {

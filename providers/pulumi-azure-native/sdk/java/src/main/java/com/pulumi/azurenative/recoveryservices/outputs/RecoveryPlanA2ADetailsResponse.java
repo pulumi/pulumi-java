@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class RecoveryPlanA2ADetailsResponse {
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
      */
     private final String instanceType;
@@ -40,7 +40,7 @@ public final class RecoveryPlanA2ADetailsResponse {
 
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
     */
     public String instanceType() {

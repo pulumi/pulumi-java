@@ -20,7 +20,7 @@ public final class DailyMaintenanceWindowArgs extends com.pulumi.resources.Resou
     public static final DailyMaintenanceWindowArgs Empty = new DailyMaintenanceWindowArgs();
 
     /**
-     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     * Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
      * 
      */
     @Import(name="startTime")

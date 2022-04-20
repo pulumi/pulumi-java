@@ -59,7 +59,7 @@ public final class FlowletResponse {
     private final @Nullable List<TransformationResponse> transformations;
     /**
      * Type of data flow.
-     * Expected value is 'Flowlet'.
+     * Expected value is &#39;Flowlet&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class FlowletResponse {
     }
     /**
      * Type of data flow.
-     * Expected value is 'Flowlet'.
+     * Expected value is &#39;Flowlet&#39;.
      * 
     */
     public String type() {

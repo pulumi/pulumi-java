@@ -41,7 +41,7 @@ public final class WorkflowTemplateJobHiveJob {
      */
     private final @Nullable WorkflowTemplateJobHiveJobQueryList queryList;
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
      * 
      */
     private final @Nullable Map<String,String> scriptVariables;
@@ -98,7 +98,7 @@ public final class WorkflowTemplateJobHiveJob {
         return Optional.ofNullable(this.queryList);
     }
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
      * 
     */
     public Map<String,String> scriptVariables() {

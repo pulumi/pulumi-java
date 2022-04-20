@@ -57,7 +57,7 @@ public final class JobExtractArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
-     * Default is ','
+     * Default is &#39;,&#39;
      * 
      */
     @Import(name="fieldDelimiter")

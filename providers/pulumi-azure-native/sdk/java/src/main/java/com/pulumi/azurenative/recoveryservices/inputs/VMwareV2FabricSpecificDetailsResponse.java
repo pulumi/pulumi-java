@@ -19,7 +19,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareV2'.
+     * Expected value is &#39;VMwareV2&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

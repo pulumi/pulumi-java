@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * SES event destinations can be imported using `configuration_set_name` together with the event destination's `name`, e.g.,
+ * SES event destinations can be imported using `configuration_set_name` together with the event destination&#39;s `name`, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:ses/eventDestination:EventDestination sns some-configuration-set-test/event-destination-sns
@@ -105,14 +105,14 @@ public class EventDestination extends com.pulumi.resources.CustomResource {
         return this.kinesisDestination;
     }
     /**
-     * A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
+     * A list of matching types. May be any of `&#34;send&#34;`, `&#34;reject&#34;`, `&#34;bounce&#34;`, `&#34;complaint&#34;`, `&#34;delivery&#34;`, `&#34;open&#34;`, `&#34;click&#34;`, or `&#34;renderingFailure&#34;`.
      * 
      */
     @Export(name="matchingTypes", type=List.class, parameters={String.class})
     private Output<List<String>> matchingTypes;
 
     /**
-     * @return A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
+     * @return A list of matching types. May be any of `&#34;send&#34;`, `&#34;reject&#34;`, `&#34;bounce&#34;`, `&#34;complaint&#34;`, `&#34;delivery&#34;`, `&#34;open&#34;`, `&#34;click&#34;`, or `&#34;renderingFailure&#34;`.
      * 
      */
     public Output<List<String>> matchingTypes() {

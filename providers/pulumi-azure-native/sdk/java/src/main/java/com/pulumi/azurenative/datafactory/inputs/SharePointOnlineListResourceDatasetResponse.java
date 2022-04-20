@@ -115,7 +115,7 @@ public final class SharePointOnlineListResourceDatasetResponse extends com.pulum
 
     /**
      * Type of dataset.
-     * Expected value is 'SharePointOnlineListResource'.
+     * Expected value is &#39;SharePointOnlineListResource&#39;.
      * 
      */
     @Import(name="type", required=true)

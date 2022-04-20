@@ -17,7 +17,7 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
     public static final UrlRewriteResponse Empty = new UrlRewriteResponse();
 
     /**
-     * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
+     * Before forwarding the request to the selected service, the request&#39;s host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
      * 
      */
     @Import(name="hostRewrite", required=true)
@@ -28,7 +28,7 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+     * Before forwarding the request to the selected backend service, the matching portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
      * 
      */
     @Import(name="pathPrefixRewrite", required=true)

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class ServiceBusTopicEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'ServiceBusTopic'.
+     * Expected value is &#39;ServiceBusTopic&#39;.
      * 
      */
     private final String endpointType;
@@ -33,7 +33,7 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse {
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'ServiceBusTopic'.
+     * Expected value is &#39;ServiceBusTopic&#39;.
      * 
     */
     public String endpointType() {

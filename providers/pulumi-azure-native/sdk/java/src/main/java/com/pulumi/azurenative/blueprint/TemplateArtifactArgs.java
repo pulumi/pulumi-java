@@ -76,7 +76,7 @@ public final class TemplateArtifactArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'template'.
+     * Expected value is &#39;template&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -109,7 +109,7 @@ public final class TemplateArtifactArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
     @Import(name="resourceScope", required=true)

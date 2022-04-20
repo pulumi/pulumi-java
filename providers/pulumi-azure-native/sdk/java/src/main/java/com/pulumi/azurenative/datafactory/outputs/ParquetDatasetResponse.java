@@ -77,7 +77,7 @@ public final class ParquetDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Parquet'.
+     * Expected value is &#39;Parquet&#39;.
      * 
      */
     private final String type;
@@ -171,7 +171,7 @@ public final class ParquetDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Parquet'.
+     * Expected value is &#39;Parquet&#39;.
      * 
     */
     public String type() {

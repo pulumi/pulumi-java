@@ -69,7 +69,7 @@ public final class GoogleCloudBillingBudgetsV1FilterArgs extends com.pulumi.reso
     }
 
     /**
-     * Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. If omitted, the report includes all labeled and unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name": "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
+     * Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. If omitted, the report includes all labeled and unlabeled usage. An object containing a single `&#34;key&#34;: value` pair. Example: `{ &#34;name&#34;: &#34;wrench&#34; }`. _Currently, multiple entries or multiple values per entry are not allowed._
      * 
      */
     @Import(name="labels")

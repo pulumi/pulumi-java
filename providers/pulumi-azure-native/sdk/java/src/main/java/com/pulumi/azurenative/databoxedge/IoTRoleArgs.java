@@ -91,7 +91,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Role type.
-     * Expected value is 'IOT'.
+     * Expected value is &#39;IOT&#39;.
      * 
      */
     @Import(name="kind", required=true)

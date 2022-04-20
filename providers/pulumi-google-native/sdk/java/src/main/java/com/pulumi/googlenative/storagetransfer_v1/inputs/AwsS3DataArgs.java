@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * An AwsS3Data resource can be a data source, but not a data sink. In an AwsS3Data resource, an object's name is the S3 object's key name.
+ * An AwsS3Data resource can be a data source, but not a data sink. In an AwsS3Data resource, an object&#39;s name is the S3 object&#39;s key name.
  * 
  */
 public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
@@ -43,7 +43,7 @@ public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+     * Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
      * 
      */
     @Import(name="path")

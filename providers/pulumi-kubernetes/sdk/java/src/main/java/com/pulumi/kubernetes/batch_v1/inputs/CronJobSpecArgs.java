@@ -23,12 +23,12 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     public static final CronJobSpecArgs Empty = new CronJobSpecArgs();
 
     /**
-     * Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
+     * Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
      * 
      * Possible enum values:
-     *  - `"Allow"` allows CronJobs to run concurrently.
-     *  - `"Forbid"` forbids concurrent runs, skipping next run if previous hasn't finished yet.
-     *  - `"Replace"` cancels currently running job and replaces it with a new one.
+     *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
+     *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
+     *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
      * 
      */
     @Import(name="concurrencyPolicy")

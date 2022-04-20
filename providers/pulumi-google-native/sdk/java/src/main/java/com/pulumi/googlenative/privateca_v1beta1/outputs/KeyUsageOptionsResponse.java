@@ -15,7 +15,7 @@ public final class KeyUsageOptionsResponse {
      */
     private final Boolean certSign;
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
      */
     private final Boolean contentCommitment;
@@ -85,7 +85,7 @@ public final class KeyUsageOptionsResponse {
         return this.certSign;
     }
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
     */
     public Boolean contentCommitment() {

@@ -19,7 +19,7 @@ public final class InMageBasePolicyDetailsResponse {
     private final @Nullable Integer appConsistentFrequencyInMinutes;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageBasePolicyDetails'.
+     * Expected value is &#39;InMageBasePolicyDetails&#39;.
      * 
      */
     private final String instanceType;
@@ -62,7 +62,7 @@ public final class InMageBasePolicyDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageBasePolicyDetails'.
+     * Expected value is &#39;InMageBasePolicyDetails&#39;.
      * 
     */
     public String instanceType() {

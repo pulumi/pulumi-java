@@ -39,7 +39,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends com.pulumi.res
     }
 
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     @Import(name="host")
@@ -50,7 +50,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends com.pulumi.res
     }
 
     /**
-     * The initial delay before starting to execute the checks. Default: "300s"
+     * The initial delay before starting to execute the checks. Default: &#34;300s&#34;
      * 
      */
     @Import(name="initialDelay")
@@ -84,7 +84,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends com.pulumi.res
     }
 
     /**
-     * Time before the check is considered failed. Default: "4s"
+     * Time before the check is considered failed. Default: &#34;4s&#34;
      * 
      */
     @Import(name="timeout")

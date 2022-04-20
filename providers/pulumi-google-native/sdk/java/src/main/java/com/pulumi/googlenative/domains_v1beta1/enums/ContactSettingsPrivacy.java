@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         PublicContactData("PUBLIC_CONTACT_DATA"),
         /**
-         * None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant's email address. Cloud Domains provides this privacy proxy service at no additional cost.
+         * None of the data from `ContactSettings` is publicly available. Instead, proxy contact data is published for your domain. Email sent to the proxy email address is forwarded to the registrant&#39;s email address. Cloud Domains provides this privacy proxy service at no additional cost.
          * 
          */
         PrivateContactData("PRIVATE_CONTACT_DATA"),

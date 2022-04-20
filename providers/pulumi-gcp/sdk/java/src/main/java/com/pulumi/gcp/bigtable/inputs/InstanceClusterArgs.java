@@ -52,8 +52,8 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The storage type to use. One of `"SSD"` or
-     * `"HDD"`. Defaults to `"SSD"`.
+     * The storage type to use. One of `&#34;SSD&#34;` or
+     * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
      * 
      */
     @Import(name="storageType")

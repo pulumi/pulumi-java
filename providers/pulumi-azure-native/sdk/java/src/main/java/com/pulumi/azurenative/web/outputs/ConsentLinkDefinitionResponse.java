@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConsentLinkDefinitionResponse {
     /**
-     * Display name of the parameter in the connection provider's OAuth settings
+     * Display name of the parameter in the connection provider&#39;s OAuth settings
      * 
      */
     private final @Nullable String displayName;
@@ -45,7 +45,7 @@ public final class ConsentLinkDefinitionResponse {
     }
 
     /**
-     * Display name of the parameter in the connection provider's OAuth settings
+     * Display name of the parameter in the connection provider&#39;s OAuth settings
      * 
     */
     public Optional<String> displayName() {

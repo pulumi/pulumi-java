@@ -64,7 +64,7 @@ public final class AzurePostgreSqlTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AzurePostgreSqlTable'.
+     * Expected value is &#39;AzurePostgreSqlTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AzurePostgreSqlTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzurePostgreSqlTable'.
+     * Expected value is &#39;AzurePostgreSqlTable&#39;.
      * 
     */
     public String type() {

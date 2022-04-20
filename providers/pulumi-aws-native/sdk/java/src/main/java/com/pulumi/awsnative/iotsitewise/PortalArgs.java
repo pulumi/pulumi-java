@@ -41,7 +41,7 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
+     * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
      * 
      */
     @Import(name="portalAuthMode")
@@ -52,7 +52,7 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AWS administrator's contact email address.
+     * The AWS administrator&#39;s contact email address.
      * 
      */
     @Import(name="portalContactEmail", required=true)
@@ -85,7 +85,7 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
     @Import(name="roleArn", required=true)

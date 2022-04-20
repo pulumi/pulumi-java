@@ -32,7 +32,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
+     * The code page name of the preferred encoding. If not provided, the default value is &#39;utf-8&#39;, unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the &#39;Name&#39; column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="encodingName")
@@ -43,7 +43,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
+     * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
      * 
      */
     @Import(name="filePattern")
@@ -54,7 +54,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
+     * The JSONPath of the JSON array element to be flattened. Example: &#34;$.ArrayPath&#34;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="jsonNodeReference")
@@ -65,7 +65,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
+     * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with &#34;$&#34;; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {&#34;Column1&#34;: &#34;$.Column1Path&#34;, &#34;Column2&#34;: &#34;Column2PathInArray&#34;}. Type: object (or Expression with resultType object).
      * 
      */
     @Import(name="jsonPathDefinition")
@@ -76,7 +76,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
+     * The character used to separate nesting levels. Default value is &#39;.&#39; (dot). Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="nestingSeparator")
@@ -99,7 +99,7 @@ public final class JsonFormatArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset storage format.
-     * Expected value is 'JsonFormat'.
+     * Expected value is &#39;JsonFormat&#39;.
      * 
      */
     @Import(name="type", required=true)

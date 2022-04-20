@@ -18,7 +18,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     public static final MysqlSslConfigResponse Empty = new MysqlSslConfigResponse();
 
     /**
-     * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.
      * 
      */
     @Import(name="caCertificate", required=true)
@@ -40,7 +40,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the &#39;client_key&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
      */
     @Import(name="clientCertificate", required=true)
@@ -62,7 +62,7 @@ public final class MysqlSslConfigResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; and the &#39;ca_certificate&#39; fields are mandatory.
      * 
      */
     @Import(name="clientKey", required=true)

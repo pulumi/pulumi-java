@@ -50,14 +50,14 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
      */
     @Export(name="entitlementArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> entitlementArn;
 
     /**
-     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
+     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
      */
     public Output</* @Nullable */ String> entitlementArn() {

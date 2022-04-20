@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum SoftwareRecipeStepExtractArchiveType {
         /**
-         * Indicates that the archive type isn't specified.
+         * Indicates that the archive type isn&#39;t specified.
          * 
          */
         ArchiveTypeUnspecified("ARCHIVE_TYPE_UNSPECIFIED"),

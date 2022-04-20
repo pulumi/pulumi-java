@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetConsentArtifactResult {
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
      */
     private final List<ImageResponse> consentContentScreenshots;
@@ -39,12 +39,12 @@ public final class GetConsentArtifactResult {
      */
     private final String name;
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     private final String userId;
     /**
-     * Optional. User's signature.
+     * Optional. User&#39;s signature.
      * 
      */
     private final SignatureResponse userSignature;
@@ -75,7 +75,7 @@ public final class GetConsentArtifactResult {
     }
 
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
     */
     public List<ImageResponse> consentContentScreenshots() {
@@ -110,14 +110,14 @@ public final class GetConsentArtifactResult {
         return this.name;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
     */
     public String userId() {
         return this.userId;
     }
     /**
-     * Optional. User's signature.
+     * Optional. User&#39;s signature.
      * 
     */
     public SignatureResponse userSignature() {

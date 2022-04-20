@@ -115,7 +115,7 @@ public final class RelationalTableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'RelationalTable'.
+     * Expected value is &#39;RelationalTable&#39;.
      * 
      */
     @Import(name="type", required=true)

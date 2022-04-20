@@ -75,12 +75,12 @@ public final class BotPropertiesResponse {
      */
     private final List<String> enabledChannels;
     /**
-     * The bot's endpoint
+     * The bot&#39;s endpoint
      * 
      */
     private final String endpoint;
     /**
-     * The bot's endpoint version
+     * The bot&#39;s endpoint version
      * 
      */
     private final String endpointVersion;
@@ -115,7 +115,7 @@ public final class BotPropertiesResponse {
      */
     private final @Nullable String luisKey;
     /**
-     * The bot's manifest url
+     * The bot&#39;s manifest url
      * 
      */
     private final @Nullable String manifestUrl;
@@ -335,14 +335,14 @@ public final class BotPropertiesResponse {
         return this.enabledChannels;
     }
     /**
-     * The bot's endpoint
+     * The bot&#39;s endpoint
      * 
     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The bot's endpoint version
+     * The bot&#39;s endpoint version
      * 
     */
     public String endpointVersion() {
@@ -391,7 +391,7 @@ public final class BotPropertiesResponse {
         return Optional.ofNullable(this.luisKey);
     }
     /**
-     * The bot's manifest url
+     * The bot&#39;s manifest url
      * 
     */
     public Optional<String> manifestUrl() {

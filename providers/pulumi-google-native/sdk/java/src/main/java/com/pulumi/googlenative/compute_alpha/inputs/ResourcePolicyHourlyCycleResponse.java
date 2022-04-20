@@ -40,7 +40,7 @@ public final class ResourcePolicyHourlyCycleResponse extends com.pulumi.resource
     }
 
     /**
-     * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+     * Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
      * 
      */
     @Import(name="startTime", required=true)

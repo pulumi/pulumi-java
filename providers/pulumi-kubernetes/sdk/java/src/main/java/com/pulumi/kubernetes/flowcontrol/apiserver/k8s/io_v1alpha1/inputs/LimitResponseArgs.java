@@ -21,7 +21,7 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
     public static final LimitResponseArgs Empty = new LimitResponseArgs();
 
     /**
-     * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
+     * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `&#34;Queue&#34;`.
      * 
      */
     @Import(name="queuing")
@@ -32,7 +32,7 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * `type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.
+     * `type` is &#34;Queue&#34; or &#34;Reject&#34;. &#34;Queue&#34; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. &#34;Reject&#34; means that requests that can not be executed upon arrival are rejected. Required.
      * 
      */
     @Import(name="type", required=true)

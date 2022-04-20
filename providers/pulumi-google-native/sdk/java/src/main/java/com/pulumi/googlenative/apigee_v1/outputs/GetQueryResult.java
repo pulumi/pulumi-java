@@ -67,7 +67,7 @@ public final class GetQueryResult {
      */
     private final String self;
     /**
-     * Query state could be "enqueued", "running", "completed", "failed".
+     * Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
      * 
      */
     private final String state;
@@ -185,7 +185,7 @@ public final class GetQueryResult {
         return this.self;
     }
     /**
-     * Query state could be "enqueued", "running", "completed", "failed".
+     * Query state could be &#34;enqueued&#34;, &#34;running&#34;, &#34;completed&#34;, &#34;failed&#34;.
      * 
     */
     public String state() {

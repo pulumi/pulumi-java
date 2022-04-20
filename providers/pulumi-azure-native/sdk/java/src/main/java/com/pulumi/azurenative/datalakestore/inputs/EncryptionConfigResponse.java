@@ -31,7 +31,7 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
+     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
      */
     @Import(name="type", required=true)

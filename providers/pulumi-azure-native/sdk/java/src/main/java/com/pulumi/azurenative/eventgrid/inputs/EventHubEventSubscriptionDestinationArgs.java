@@ -21,7 +21,7 @@ public final class EventHubEventSubscriptionDestinationArgs extends com.pulumi.r
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

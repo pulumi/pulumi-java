@@ -47,14 +47,14 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+     * Specifies whether to disable the policy lockout check performed when creating or updating the key&#39;s policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
      * 
      */
     @Export(name="bypassPolicyLockoutSafetyCheck", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck;
 
     /**
-     * @return Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+     * @return Specifies whether to disable the policy lockout check performed when creating or updating the key&#39;s policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
      * 
      */
     public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {

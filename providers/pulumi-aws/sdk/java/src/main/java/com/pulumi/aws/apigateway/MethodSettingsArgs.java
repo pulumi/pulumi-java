@@ -16,7 +16,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     public static final MethodSettingsArgs Empty = new MethodSettingsArgs();
 
     /**
-     * Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, "/")`).
+     * Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, &#34;/&#34;)`).
      * 
      */
     @Import(name="methodPath", required=true)

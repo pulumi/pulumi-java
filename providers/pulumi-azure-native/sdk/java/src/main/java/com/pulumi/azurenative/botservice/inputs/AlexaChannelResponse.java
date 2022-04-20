@@ -22,7 +22,7 @@ public final class AlexaChannelResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * The channel name
-     * Expected value is 'AlexaChannel'.
+     * Expected value is &#39;AlexaChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

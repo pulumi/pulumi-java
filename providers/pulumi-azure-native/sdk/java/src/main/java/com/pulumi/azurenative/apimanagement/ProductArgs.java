@@ -96,7 +96,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
+     * Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
      * 
      */
     @Import(name="subscriptionRequired")

@@ -31,7 +31,7 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     }
 
     /**
-     * Command to check if restart succeeded [Default: '']
+     * Command to check if restart succeeded [Default: &#39;&#39;]
      * 
      */
     @Import(name="restartCheckCommand")
@@ -42,7 +42,7 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     }
 
     /**
-     * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
+     * Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
      * 
      */
     @Import(name="restartCommand")
@@ -53,7 +53,7 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     }
 
     /**
-     * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
+     * Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
      * 
      */
     @Import(name="restartTimeout")
@@ -64,8 +64,8 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     }
 
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'WindowsRestart'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsRestart&#39;.
      * 
      */
     @Import(name="type", required=true)

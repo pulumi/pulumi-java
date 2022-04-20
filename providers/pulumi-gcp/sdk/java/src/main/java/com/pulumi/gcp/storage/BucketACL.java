@@ -15,7 +15,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Authoritatively manages a bucket's ACLs in Google cloud storage service (GCS). For more information see
+ * Authoritatively manages a bucket&#39;s ACLs in Google cloud storage service (GCS). For more information see
  * [the official documentation](https://cloud.google.com/storage/docs/access-control/lists)
  * and
  * [API](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls).
@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * 
  * Permissions can be granted either by ACLs or Cloud IAM policies. In general, permissions granted by Cloud IAM policies do not appear in ACLs, and permissions granted by ACLs do not appear in Cloud IAM policies. The only exception is for ACLs applied directly on a bucket and certain bucket-level Cloud IAM policies, as described in [Cloud IAM relation to ACLs](https://cloud.google.com/storage/docs/access-control/iam#acls).
  * 
- * **NOTE** This resource will not remove the `project-owners-<project_id>` entity from the `OWNER` role.
+ * **NOTE** This resource will not remove the `project-owners-&lt;project_id&gt;` entity from the `OWNER` role.
  * 
  * ## Example Usage
  * 

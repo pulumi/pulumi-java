@@ -54,7 +54,7 @@ public final class SnowflakeLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse password;
     /**
      * Type of linked service.
-     * Expected value is 'Snowflake'.
+     * Expected value is &#39;Snowflake&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class SnowflakeLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Snowflake'.
+     * Expected value is &#39;Snowflake&#39;.
      * 
     */
     public String type() {

@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     public static final InstanceGroupManagerStatusResponse Empty = new InstanceGroupManagerStatusResponse();
 
     /**
-     * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
+     * A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
      * 
      */
     @Import(name="allInstancesConfig", required=true)
@@ -61,7 +61,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     }
 
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
      */
     @Import(name="versionTarget", required=true)

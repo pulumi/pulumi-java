@@ -91,7 +91,7 @@ public final class SynapseFunctions {
      * Class representing a data connection.
      * API Version: 2021-04-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
      * 
      */
@@ -106,7 +106,7 @@ public final class SynapseFunctions {
      * Class representing a Kusto database.
      * API Version: 2021-04-01-preview.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: ReadWriteDatabase.
      * 
      */

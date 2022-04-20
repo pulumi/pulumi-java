@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  * For more information, see,
  * [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
- * where the Shared VPC feature is referred to by its former name "XPN".
+ * where the Shared VPC feature is referred to by its former name &#34;XPN&#34;.
  * 
  * ## Example Usage
  * 

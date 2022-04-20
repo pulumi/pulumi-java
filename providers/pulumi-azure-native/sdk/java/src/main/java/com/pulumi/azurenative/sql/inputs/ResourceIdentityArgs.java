@@ -24,7 +24,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
     /**
-     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
     @Import(name="type")

@@ -16,9 +16,9 @@ public final class ParameterGroupParameterArgs extends com.pulumi.resources.Reso
     public static final ParameterGroupParameterArgs Empty = new ParameterGroupParameterArgs();
 
     /**
-     * "immediate" (default), or "pending-reboot". Some
-     * engines can't apply some parameters without a reboot, and you will need to
-     * specify "pending-reboot" here.
+     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+     * engines can&#39;t apply some parameters without a reboot, and you will need to
+     * specify &#34;pending-reboot&#34; here.
      * 
      */
     @Import(name="applyMethod")

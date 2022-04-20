@@ -80,7 +80,7 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Trigger type.
-     * Expected value is 'ChainingTrigger'.
+     * Expected value is &#39;ChainingTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

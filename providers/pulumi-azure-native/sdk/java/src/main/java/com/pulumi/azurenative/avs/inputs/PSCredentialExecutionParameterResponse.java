@@ -43,7 +43,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
 
     /**
      * The type of execution parameter
-     * Expected value is 'Credential'.
+     * Expected value is &#39;Credential&#39;.
      * 
      */
     @Import(name="type", required=true)

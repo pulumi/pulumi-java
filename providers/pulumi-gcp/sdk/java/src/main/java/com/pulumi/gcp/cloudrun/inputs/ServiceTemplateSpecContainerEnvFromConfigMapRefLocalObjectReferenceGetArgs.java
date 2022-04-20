@@ -15,7 +15,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
     public static final ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs Empty = new ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceGetArgs();
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)

@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         UnspecifiedLogName("UNSPECIFIED_LOG_NAME"),
         /**
-         * Corresponds to "cloudaudit.googleapis.com/activity"
+         * Corresponds to &#34;cloudaudit.googleapis.com/activity&#34;
          * 
          */
         AdminActivity("ADMIN_ACTIVITY"),
         /**
-         * Corresponds to "cloudaudit.googleapis.com/data_access"
+         * Corresponds to &#34;cloudaudit.googleapis.com/data_access&#34;
          * 
          */
         DataAccess("DATA_ACCESS");

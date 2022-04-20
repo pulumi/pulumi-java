@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeResponse {
     private final String state;
     /**
      * The type of integration runtime.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
      */
     private final String type;
@@ -84,7 +84,7 @@ public final class ManagedIntegrationRuntimeResponse {
     }
     /**
      * The type of integration runtime.
-     * Expected value is 'Managed'.
+     * Expected value is &#39;Managed&#39;.
      * 
     */
     public String type() {

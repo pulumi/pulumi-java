@@ -28,7 +28,7 @@ public final class AzureBackupRuleResponse {
     private final DataStoreInfoBaseResponse dataStore;
     private final String name;
     /**
-     * Expected value is 'AzureBackupRule'.
+     * Expected value is &#39;AzureBackupRule&#39;.
      * 
      */
     private final String objectType;
@@ -70,7 +70,7 @@ public final class AzureBackupRuleResponse {
         return this.name;
     }
     /**
-     * Expected value is 'AzureBackupRule'.
+     * Expected value is &#39;AzureBackupRule&#39;.
      * 
     */
     public String objectType() {

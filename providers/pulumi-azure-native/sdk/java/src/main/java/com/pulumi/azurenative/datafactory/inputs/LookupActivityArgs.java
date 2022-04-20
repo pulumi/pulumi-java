@@ -211,7 +211,7 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Lookup'.
+     * Expected value is &#39;Lookup&#39;.
      * 
      */
     @Import(name="type", required=true)

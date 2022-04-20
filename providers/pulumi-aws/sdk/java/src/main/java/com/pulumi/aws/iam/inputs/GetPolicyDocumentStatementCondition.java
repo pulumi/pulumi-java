@@ -25,7 +25,7 @@ public final class GetPolicyDocumentStatementCondition extends com.pulumi.resour
     }
 
     /**
-     * Values to evaluate the condition against. If multiple values are provided, the condition matches if at least one of them applies. That is, AWS evaluates multiple values as though using an "OR" boolean operation.
+     * Values to evaluate the condition against. If multiple values are provided, the condition matches if at least one of them applies. That is, AWS evaluates multiple values as though using an &#34;OR&#34; boolean operation.
      * 
      */
     @Import(name="values", required=true)

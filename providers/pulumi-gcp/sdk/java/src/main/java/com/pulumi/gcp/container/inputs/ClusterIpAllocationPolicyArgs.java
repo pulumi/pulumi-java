@@ -32,7 +32,7 @@ public final class ClusterIpAllocationPolicyArgs extends com.pulumi.resources.Re
 
     /**
      * The name of the existing secondary
-     * range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
+     * range in the cluster&#39;s subnetwork to use for pod IP addresses. Alternatively,
      * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
      * 
      */
@@ -60,7 +60,7 @@ public final class ClusterIpAllocationPolicyArgs extends com.pulumi.resources.Re
 
     /**
      * The name of the existing
-     * secondary range in the cluster's subnetwork to use for service `ClusterIP`s.
+     * secondary range in the cluster&#39;s subnetwork to use for service `ClusterIP`s.
      * Alternatively, `services_ipv4_cidr_block` can be used to automatically create a
      * GKE-managed one.
      * 

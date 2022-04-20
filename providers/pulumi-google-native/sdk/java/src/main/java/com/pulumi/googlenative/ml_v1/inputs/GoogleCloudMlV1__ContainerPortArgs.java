@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends com.pulumi.resourc
     public static final GoogleCloudMlV1__ContainerPortArgs Empty = new GoogleCloudMlV1__ContainerPortArgs();
 
     /**
-     * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
+     * Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
      * 
      */
     @Import(name="containerPort")

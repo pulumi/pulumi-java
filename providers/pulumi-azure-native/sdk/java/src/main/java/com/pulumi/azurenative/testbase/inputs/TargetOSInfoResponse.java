@@ -18,7 +18,7 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
     public static final TargetOSInfoResponse Empty = new TargetOSInfoResponse();
 
     /**
-     * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
+     * Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
      * 
      */
     @Import(name="osUpdateType", required=true)

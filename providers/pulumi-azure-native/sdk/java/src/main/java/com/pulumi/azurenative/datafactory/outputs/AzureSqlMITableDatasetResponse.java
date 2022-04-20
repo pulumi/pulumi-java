@@ -64,7 +64,7 @@ public final class AzureSqlMITableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlMITable'.
+     * Expected value is &#39;AzureSqlMITable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AzureSqlMITableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlMITable'.
+     * Expected value is &#39;AzureSqlMITable&#39;.
      * 
     */
     public String type() {

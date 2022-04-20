@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 /**
  * Enables Security Hub for this AWS account.
  * 
- * > **NOTE:** Destroying this resource will disable Security Hub for this AWS account.
+ * &gt; **NOTE:** Destroying this resource will disable Security Hub for this AWS account.
  * 
  * ## Example Usage
  * 

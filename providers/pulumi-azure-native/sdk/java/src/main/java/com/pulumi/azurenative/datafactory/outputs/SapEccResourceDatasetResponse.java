@@ -59,7 +59,7 @@ public final class SapEccResourceDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'SapEccResource'.
+     * Expected value is &#39;SapEccResource&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SapEccResourceDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SapEccResource'.
+     * Expected value is &#39;SapEccResource&#39;.
      * 
     */
     public String type() {

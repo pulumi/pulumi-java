@@ -23,7 +23,7 @@ public final class TruncationSelectionPolicyResponse {
      */
     private final @Nullable Integer evaluationInterval;
     /**
-     * Expected value is 'TruncationSelection'.
+     * Expected value is &#39;TruncationSelection&#39;.
      * 
      */
     private final String policyType;
@@ -60,7 +60,7 @@ public final class TruncationSelectionPolicyResponse {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
-     * Expected value is 'TruncationSelection'.
+     * Expected value is &#39;TruncationSelection&#39;.
      * 
     */
     public String policyType() {

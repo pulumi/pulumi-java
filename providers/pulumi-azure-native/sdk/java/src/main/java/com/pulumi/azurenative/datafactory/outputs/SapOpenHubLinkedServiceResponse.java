@@ -91,7 +91,7 @@ public final class SapOpenHubLinkedServiceResponse {
     private final @Nullable Object systemNumber;
     /**
      * Type of linked service.
-     * Expected value is 'SapOpenHub'.
+     * Expected value is &#39;SapOpenHub&#39;.
      * 
      */
     private final String type;
@@ -237,7 +237,7 @@ public final class SapOpenHubLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapOpenHub'.
+     * Expected value is &#39;SapOpenHub&#39;.
      * 
     */
     public String type() {

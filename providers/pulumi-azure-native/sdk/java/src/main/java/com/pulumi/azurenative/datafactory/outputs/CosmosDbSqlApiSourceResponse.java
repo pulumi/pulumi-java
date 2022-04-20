@@ -59,7 +59,7 @@ public final class CosmosDbSqlApiSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbSqlApiSource'.
+     * Expected value is &#39;CosmosDbSqlApiSource&#39;.
      * 
      */
     private final String type;
@@ -153,7 +153,7 @@ public final class CosmosDbSqlApiSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbSqlApiSource'.
+     * Expected value is &#39;CosmosDbSqlApiSource&#39;.
      * 
     */
     public String type() {

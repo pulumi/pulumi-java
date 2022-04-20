@@ -78,7 +78,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
     /**
      * Provider peering service that is managing peering connectivity for a
      * service provider organization. For Google services that support this functionality it is
-     * 'servicenetworking.googleapis.com'.
+     * &#39;servicenetworking.googleapis.com&#39;.
      * 
      */
     @Export(name="service", type=String.class, parameters={})
@@ -87,7 +87,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
     /**
      * @return Provider peering service that is managing peering connectivity for a
      * service provider organization. For Google services that support this functionality it is
-     * 'servicenetworking.googleapis.com'.
+     * &#39;servicenetworking.googleapis.com&#39;.
      * 
      */
     public Output<String> service() {

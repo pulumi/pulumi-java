@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class SignatureResponse {
     /**
-     * Optional. An image of the user's signature.
+     * Optional. An image of the user&#39;s signature.
      * 
      */
     private final ImageResponse image;
     /**
-     * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
      */
     private final Map<String,String> metadata;
@@ -27,7 +27,7 @@ public final class SignatureResponse {
      */
     private final String signatureTime;
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     private final String userId;
@@ -45,14 +45,14 @@ public final class SignatureResponse {
     }
 
     /**
-     * Optional. An image of the user's signature.
+     * Optional. An image of the user&#39;s signature.
      * 
     */
     public ImageResponse image() {
         return this.image;
     }
     /**
-     * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
     */
     public Map<String,String> metadata() {
@@ -66,7 +66,7 @@ public final class SignatureResponse {
         return this.signatureTime;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
     */
     public String userId() {

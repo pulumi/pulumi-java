@@ -41,7 +41,7 @@ public final class CxEnvironmentArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The Agent to create an Environment for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     @Import(name="parent")

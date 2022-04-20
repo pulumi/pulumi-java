@@ -162,7 +162,7 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The application's client ID used in AadServicePrincipal authentication type.
+     * The application&#39;s client ID used in AadServicePrincipal authentication type.
      * 
      */
     @Import(name="servicePrincipalId")
@@ -173,7 +173,7 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The application's key used in AadServicePrincipal authentication type.
+     * The application&#39;s key used in AadServicePrincipal authentication type.
      * 
      */
     @Import(name="servicePrincipalKey")
@@ -196,7 +196,7 @@ public final class RestServiceLinkedServiceArgs extends com.pulumi.resources.Res
 
     /**
      * Type of linked service.
-     * Expected value is 'RestService'.
+     * Expected value is &#39;RestService&#39;.
      * 
      */
     @Import(name="type", required=true)

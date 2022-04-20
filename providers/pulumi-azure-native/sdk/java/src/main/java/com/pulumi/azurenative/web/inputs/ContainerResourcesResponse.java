@@ -31,7 +31,7 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Required memory, e.g. "250Mb"
+     * Required memory, e.g. &#34;250Mb&#34;
      * 
      */
     @Import(name="memory")

@@ -16,7 +16,7 @@ public final class AvroOptionsArgs extends com.pulumi.resources.ResourceArgs {
     public static final AvroOptionsArgs Empty = new AvroOptionsArgs();
 
     /**
-     * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+     * [Optional] If sourceFormat is set to &#34;AVRO&#34;, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
      * 
      */
     @Import(name="useAvroLogicalTypes")

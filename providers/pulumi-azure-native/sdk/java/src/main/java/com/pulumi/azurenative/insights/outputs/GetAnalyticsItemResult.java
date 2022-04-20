@@ -53,7 +53,7 @@ public final class GetAnalyticsItemResult {
      */
     private final @Nullable String type;
     /**
-     * This instance's version of the data model. This can change as new features are added.
+     * This instance&#39;s version of the data model. This can change as new features are added.
      * 
      */
     private final String version;
@@ -137,7 +137,7 @@ public final class GetAnalyticsItemResult {
         return Optional.ofNullable(this.type);
     }
     /**
-     * This instance's version of the data model. This can change as new features are added.
+     * This instance&#39;s version of the data model. This can change as new features are added.
      * 
     */
     public String version() {

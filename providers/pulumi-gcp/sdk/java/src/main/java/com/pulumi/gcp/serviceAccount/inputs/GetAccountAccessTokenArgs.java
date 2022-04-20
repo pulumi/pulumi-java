@@ -16,7 +16,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     public static final GetAccountAccessTokenArgs Empty = new GetAccountAccessTokenArgs();
 
     /**
-     * Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `["projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com"]`)
+     * Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
      * 
      */
     @Import(name="delegates")
@@ -38,7 +38,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The scopes the new credential should have (e.g. `["cloud-platform"]`)
+     * The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
      * 
      */
     @Import(name="scopes", required=true)

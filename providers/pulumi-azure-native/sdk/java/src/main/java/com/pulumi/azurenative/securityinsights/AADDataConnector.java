@@ -62,7 +62,7 @@ public class AADDataConnector extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AzureActiveDirectory'.
+     * Expected value is &#39;AzureActiveDirectory&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class AADDataConnector extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the data connector
-     * Expected value is 'AzureActiveDirectory'.
+     * Expected value is &#39;AzureActiveDirectory&#39;.
      * 
      */
     public Output<String> kind() {

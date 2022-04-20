@@ -23,14 +23,14 @@ public final class LaunchTemplateBlockDeviceMapping {
      */
     private final @Nullable LaunchTemplateBlockDeviceMappingEbs ebs;
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
      */
     private final @Nullable String noDevice;
     /**
      * The [Instance Store Device
      * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-     * (e.g., `"ephemeral0"`).
+     * (e.g., `&#34;ephemeral0&#34;`).
      * 
      */
     private final @Nullable String virtualName;
@@ -62,7 +62,7 @@ public final class LaunchTemplateBlockDeviceMapping {
         return Optional.ofNullable(this.ebs);
     }
     /**
-     * Suppresses the specified device included in the AMI's block device mapping.
+     * Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
     */
     public Optional<String> noDevice() {
@@ -71,7 +71,7 @@ public final class LaunchTemplateBlockDeviceMapping {
     /**
      * The [Instance Store Device
      * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-     * (e.g., `"ephemeral0"`).
+     * (e.g., `&#34;ephemeral0&#34;`).
      * 
     */
     public Optional<String> virtualName() {

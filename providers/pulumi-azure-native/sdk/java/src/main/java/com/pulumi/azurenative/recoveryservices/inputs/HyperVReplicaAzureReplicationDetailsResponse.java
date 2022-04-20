@@ -72,7 +72,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
 
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplicaAzure'.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

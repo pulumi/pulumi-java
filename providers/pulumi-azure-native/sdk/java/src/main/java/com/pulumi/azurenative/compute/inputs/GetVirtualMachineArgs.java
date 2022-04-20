@@ -15,7 +15,7 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
     public static final GetVirtualMachineArgs Empty = new GetVirtualMachineArgs();
 
     /**
-     * The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.
+     * The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. &#39;UserData&#39; retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.
      * 
      */
     @Import(name="expand")

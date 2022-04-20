@@ -36,7 +36,7 @@ public final class ComputeInstanceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The type of compute
-     * Expected value is 'ComputeInstance'.
+     * Expected value is &#39;ComputeInstance&#39;.
      * 
      */
     @Import(name="computeType", required=true)

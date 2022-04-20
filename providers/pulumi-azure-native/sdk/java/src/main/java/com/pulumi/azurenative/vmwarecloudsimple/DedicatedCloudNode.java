@@ -35,28 +35,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:vmwarecloudsimple:DedicatedCloudNode")
 public class DedicatedCloudNode extends com.pulumi.resources.CustomResource {
     /**
-     * Availability Zone id, e.g. "az1"
+     * Availability Zone id, e.g. &#34;az1&#34;
      * 
      */
     @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     /**
-     * @return Availability Zone id, e.g. "az1"
+     * @return Availability Zone id, e.g. &#34;az1&#34;
      * 
      */
     public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * Availability Zone name, e.g. "Availability Zone 1"
+     * Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
      */
     @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output<String> availabilityZoneName;
 
     /**
-     * @return Availability Zone name, e.g. "Availability Zone 1"
+     * @return Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
      */
     public Output<String> availabilityZoneName() {
@@ -105,14 +105,14 @@ public class DedicatedCloudNode extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * SKU's name
+     * SKU&#39;s name
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return SKU's name
+     * @return SKU&#39;s name
      * 
      */
     public Output<String> name() {
@@ -133,28 +133,28 @@ public class DedicatedCloudNode extends com.pulumi.resources.CustomResource {
         return this.nodesCount;
     }
     /**
-     * Placement Group id, e.g. "n1"
+     * Placement Group id, e.g. &#34;n1&#34;
      * 
      */
     @Export(name="placementGroupId", type=String.class, parameters={})
     private Output<String> placementGroupId;
 
     /**
-     * @return Placement Group id, e.g. "n1"
+     * @return Placement Group id, e.g. &#34;n1&#34;
      * 
      */
     public Output<String> placementGroupId() {
         return this.placementGroupId;
     }
     /**
-     * Placement Name, e.g. "Placement Group 1"
+     * Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
      */
     @Export(name="placementGroupName", type=String.class, parameters={})
     private Output<String> placementGroupName;
 
     /**
-     * @return Placement Name, e.g. "Placement Group 1"
+     * @return Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
      */
     public Output<String> placementGroupName() {

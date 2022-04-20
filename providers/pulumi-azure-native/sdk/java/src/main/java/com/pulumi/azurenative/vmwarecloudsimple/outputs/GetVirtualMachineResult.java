@@ -26,7 +26,7 @@ public final class GetVirtualMachineResult {
      */
     private final Integer amountOfRam;
     /**
-     * The list of Virtual Disks' Controllers
+     * The list of Virtual Disks&#39; Controllers
      * 
      */
     private final List<VirtualDiskControllerResponse> controllers;
@@ -222,7 +222,7 @@ public final class GetVirtualMachineResult {
         return this.amountOfRam;
     }
     /**
-     * The list of Virtual Disks' Controllers
+     * The list of Virtual Disks&#39; Controllers
      * 
     */
     public List<VirtualDiskControllerResponse> controllers() {

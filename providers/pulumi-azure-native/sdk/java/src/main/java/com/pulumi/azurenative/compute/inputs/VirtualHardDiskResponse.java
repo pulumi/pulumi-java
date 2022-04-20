@@ -19,7 +19,7 @@ public final class VirtualHardDiskResponse extends com.pulumi.resources.InvokeAr
     public static final VirtualHardDiskResponse Empty = new VirtualHardDiskResponse();
 
     /**
-     * Specifies the virtual hard disk's uri.
+     * Specifies the virtual hard disk&#39;s uri.
      * 
      */
     @Import(name="uri")

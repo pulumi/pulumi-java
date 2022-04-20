@@ -19,7 +19,7 @@ public final class URLMapDefaultRouteActionRetryPolicyGetArgs extends com.pulumi
     public static final URLMapDefaultRouteActionRetryPolicyGetArgs Empty = new URLMapDefaultRouteActionRetryPolicyGetArgs();
 
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
      */
     @Import(name="numRetries")

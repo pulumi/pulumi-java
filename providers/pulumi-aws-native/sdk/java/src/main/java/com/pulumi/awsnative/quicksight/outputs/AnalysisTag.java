@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AnalysisTag {
     /**
-     * <p>Tag key.</p>
+     * &lt;p&gt;Tag key.&lt;/p&gt;
      * 
      */
     private final String key;
     /**
-     * <p>Tag value.</p>
+     * &lt;p&gt;Tag value.&lt;/p&gt;
      * 
      */
     private final String value;
@@ -29,14 +29,14 @@ public final class AnalysisTag {
     }
 
     /**
-     * <p>Tag key.</p>
+     * &lt;p&gt;Tag key.&lt;/p&gt;
      * 
     */
     public String key() {
         return this.key;
     }
     /**
-     * <p>Tag value.</p>
+     * &lt;p&gt;Tag value.&lt;/p&gt;
      * 
     */
     public String value() {

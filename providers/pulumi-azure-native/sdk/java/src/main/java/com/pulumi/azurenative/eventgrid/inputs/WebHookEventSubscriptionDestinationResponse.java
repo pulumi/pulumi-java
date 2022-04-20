@@ -55,7 +55,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     * Required. The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
      * 
      */
     @EnumType
@@ -25,12 +25,12 @@ import java.util.StringJoiner;
          */
         Int64("INT64"),
         /**
-         * Encoded as a boolean "false" or "true".
+         * Encoded as a boolean &#34;false&#34; or &#34;true&#34;.
          * 
          */
         Bool("BOOL"),
         /**
-         * Encoded as a number, or string "NaN", "Infinity" or "-Infinity".
+         * Encoded as a number, or string &#34;NaN&#34;, &#34;Infinity&#34; or &#34;-Infinity&#34;.
          * 
          */
         Float64("FLOAT64"),
@@ -45,7 +45,7 @@ import java.util.StringJoiner;
          */
         Bytes("BYTES"),
         /**
-         * Encoded as an RFC 3339 timestamp with mandatory "Z" time zone string: 1985-04-12T23:20:50.52Z
+         * Encoded as an RFC 3339 timestamp with mandatory &#34;Z&#34; time zone string: 1985-04-12T23:20:50.52Z
          * 
          */
         Timestamp("TIMESTAMP"),
@@ -60,7 +60,7 @@ import java.util.StringJoiner;
          */
         Time("TIME"),
         /**
-         * Encoded as RFC 3339 full-date "T" partial-time: 1985-04-12T23:20:50.52
+         * Encoded as RFC 3339 full-date &#34;T&#34; partial-time: 1985-04-12T23:20:50.52
          * 
          */
         Datetime("DATETIME"),

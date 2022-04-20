@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be translated to "-e numShard" "-e shardIndex" AndroidJUnitRunner arguments. With uniform sharding enabled, specifying these sharding arguments via environment_variables is invalid.
+ * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be translated to &#34;-e numShard&#34; &#34;-e shardIndex&#34; AndroidJUnitRunner arguments. With uniform sharding enabled, specifying these sharding arguments via environment_variables is invalid.
  * 
  */
 public final class UniformShardingArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class UniformShardingArgs extends com.pulumi.resources.ResourceArgs
     public static final UniformShardingArgs Empty = new UniformShardingArgs();
 
     /**
-     * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
+     * Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
      * 
      */
     @Import(name="numShards", required=true)

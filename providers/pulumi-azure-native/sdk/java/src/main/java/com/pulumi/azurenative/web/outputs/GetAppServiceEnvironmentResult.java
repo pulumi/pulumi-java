@@ -78,7 +78,7 @@ public final class GetAppServiceEnvironmentResult {
      */
     private final Integer multiRoleCount;
     /**
-     * Front-end VM size, e.g. "Medium", "Large".
+     * Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
      */
     private final @Nullable String multiSize;
@@ -98,7 +98,7 @@ public final class GetAppServiceEnvironmentResult {
      */
     private final String status;
     /**
-     * <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
+     * &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
      * 
      */
@@ -255,7 +255,7 @@ public final class GetAppServiceEnvironmentResult {
         return this.multiRoleCount;
     }
     /**
-     * Front-end VM size, e.g. "Medium", "Large".
+     * Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
     */
     public Optional<String> multiSize() {
@@ -283,7 +283,7 @@ public final class GetAppServiceEnvironmentResult {
         return this.status;
     }
     /**
-     * <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
+     * &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
      * 
     */

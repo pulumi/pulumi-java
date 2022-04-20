@@ -77,14 +77,14 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
         return this.cacheAttributes;
     }
     /**
-     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
+     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
      * 
      */
     @Export(name="clientLists", type=List.class, parameters={String.class})
     private Output<List<String>> clientLists;
 
     /**
-     * @return The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
+     * @return The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
      * 
      */
     public Output<List<String>> clientLists() {

@@ -164,7 +164,7 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Delete'.
+     * Expected value is &#39;Delete&#39;.
      * 
      */
     @Import(name="type", required=true)

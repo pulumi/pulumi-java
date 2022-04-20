@@ -25,7 +25,7 @@ public final class GetVolumeContainerResult {
      */
     private final @Nullable String bandwidthSettingId;
     /**
-     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse encryptionKey;
@@ -50,7 +50,7 @@ public final class GetVolumeContainerResult {
      */
     private final String name;
     /**
-     * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+     * The owner ship status of the volume container. Only when the status is &#34;NotOwned&#34;, the delete operation on the volume container is permitted.
      * 
      */
     private final String ownerShipStatus;
@@ -118,7 +118,7 @@ public final class GetVolumeContainerResult {
         return Optional.ofNullable(this.bandwidthSettingId);
     }
     /**
-     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
     */
     public Optional<AsymmetricEncryptedSecretResponse> encryptionKey() {
@@ -153,7 +153,7 @@ public final class GetVolumeContainerResult {
         return this.name;
     }
     /**
-     * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+     * The owner ship status of the volume container. Only when the status is &#34;NotOwned&#34;, the delete operation on the volume container is permitted.
      * 
     */
     public String ownerShipStatus() {

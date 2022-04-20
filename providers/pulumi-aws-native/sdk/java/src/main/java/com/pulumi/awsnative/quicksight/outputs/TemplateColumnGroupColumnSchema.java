@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateColumnGroupColumnSchema {
     /**
-     * <p>The name of the column group's column schema.</p>
+     * &lt;p&gt;The name of the column group&#39;s column schema.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
@@ -23,7 +23,7 @@ public final class TemplateColumnGroupColumnSchema {
     }
 
     /**
-     * <p>The name of the column group's column schema.</p>
+     * &lt;p&gt;The name of the column group&#39;s column schema.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {

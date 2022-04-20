@@ -42,7 +42,7 @@ public final class GetClusterResult {
     private final @Nullable String endpoint;
     private final @Nullable ClusterLogging logging;
     /**
-     * The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
     private final @Nullable String openIdConnectIssuerUrl;
@@ -53,7 +53,7 @@ public final class GetClusterResult {
      */
     private final @Nullable List<ClusterTag> tags;
     /**
-     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
     private final @Nullable String version;
@@ -121,7 +121,7 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.logging);
     }
     /**
-     * The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
+     * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
     */
     public Optional<String> openIdConnectIssuerUrl() {
@@ -138,7 +138,7 @@ public final class GetClusterResult {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
     */
     public Optional<String> version() {

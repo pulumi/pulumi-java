@@ -52,7 +52,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
 
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremiseSql'.
+     * Expected value is &#39;OnPremiseSql&#39;.
      * 
      */
     @Import(name="source", required=true)

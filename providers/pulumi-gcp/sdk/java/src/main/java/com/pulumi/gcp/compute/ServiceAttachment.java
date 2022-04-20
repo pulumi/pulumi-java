@@ -67,7 +67,7 @@ public class ServiceAttachment extends com.pulumi.resources.CustomResource {
     }
     /**
      * The connection preference to use for this service attachment. Valid
-     * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
+     * values include &#34;ACCEPT_AUTOMATIC&#34;, &#34;ACCEPT_MANUAL&#34;.
      * 
      */
     @Export(name="connectionPreference", type=String.class, parameters={})
@@ -75,7 +75,7 @@ public class ServiceAttachment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The connection preference to use for this service attachment. Valid
-     * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
+     * values include &#34;ACCEPT_AUTOMATIC&#34;, &#34;ACCEPT_MANUAL&#34;.
      * 
      */
     public Output<String> connectionPreference() {

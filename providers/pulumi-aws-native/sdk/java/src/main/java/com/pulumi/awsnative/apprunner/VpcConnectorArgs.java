@@ -51,7 +51,7 @@ public final class VpcConnectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A name for the VPC connector. If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     * A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
     @Import(name="vpcConnectorName")

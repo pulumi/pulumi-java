@@ -101,7 +101,7 @@ public final class ODataLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'OData'.
+     * Expected value is &#39;OData&#39;.
      * 
      */
     private final String type;
@@ -272,7 +272,7 @@ public final class ODataLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'OData'.
+     * Expected value is &#39;OData&#39;.
      * 
     */
     public String type() {

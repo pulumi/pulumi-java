@@ -79,7 +79,7 @@ public final class ApplicationRuleArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Rule Type.
-     * Expected value is 'ApplicationRule'.
+     * Expected value is &#39;ApplicationRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

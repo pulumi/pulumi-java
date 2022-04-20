@@ -41,7 +41,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
      */
     @Import(name="properties")
@@ -76,7 +76,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
+     * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name=&#34;value&#34;;`).
      * 
      */
     @Import(name="scriptVariables")

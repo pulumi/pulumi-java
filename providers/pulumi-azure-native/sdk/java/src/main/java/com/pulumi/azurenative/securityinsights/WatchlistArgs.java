@@ -154,7 +154,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
+     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
      */
     @Import(name="rawContent")

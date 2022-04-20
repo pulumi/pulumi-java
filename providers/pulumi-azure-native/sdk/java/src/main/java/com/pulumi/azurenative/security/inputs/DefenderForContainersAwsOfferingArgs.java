@@ -69,7 +69,7 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
 
     /**
      * The type of the security offering.
-     * Expected value is 'DefenderForContainersAws'.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
      * 
      */
     @Import(name="offeringType", required=true)

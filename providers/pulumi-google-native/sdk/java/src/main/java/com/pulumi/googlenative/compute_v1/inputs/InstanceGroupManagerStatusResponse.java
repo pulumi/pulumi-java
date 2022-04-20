@@ -49,7 +49,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     }
 
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
      */
     @Import(name="versionTarget", required=true)

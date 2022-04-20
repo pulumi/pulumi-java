@@ -19,7 +19,7 @@ public final class RepresentationContractResponse {
      */
     private final String contentType;
     /**
-     * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
+     * Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
      * 
      */
     private final @Nullable List<ParameterContractResponse> formParameters;
@@ -29,12 +29,12 @@ public final class RepresentationContractResponse {
      */
     private final @Nullable String sample;
     /**
-     * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
      */
     private final @Nullable String schemaId;
     /**
-     * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
      */
     private final @Nullable String typeName;
@@ -61,7 +61,7 @@ public final class RepresentationContractResponse {
         return this.contentType;
     }
     /**
-     * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
+     * Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
      * 
     */
     public List<ParameterContractResponse> formParameters() {
@@ -75,14 +75,14 @@ public final class RepresentationContractResponse {
         return Optional.ofNullable(this.sample);
     }
     /**
-     * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
     */
     public Optional<String> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
     /**
-     * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
     */
     public Optional<String> typeName() {

@@ -27,7 +27,7 @@ public final class WebhookAuthenticationConfigurationArgs extends com.pulumi.res
     }
 
     /**
-     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
+     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
      * 
      */
     @Import(name="secretToken")

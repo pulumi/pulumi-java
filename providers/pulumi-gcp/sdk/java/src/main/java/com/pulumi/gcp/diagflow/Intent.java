@@ -124,7 +124,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
     }
     /**
      * The list of context names required for this intent to be triggered.
-     * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.
      * 
      */
     @Export(name="inputContextNames", type=List.class, parameters={String.class})
@@ -132,7 +132,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The list of context names required for this intent to be triggered.
-     * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.
      * 
      */
     public Output</* @Nullable */ List<String>> inputContextNames() {
@@ -171,14 +171,14 @@ public class Intent extends com.pulumi.resources.CustomResource {
         return this.mlDisabled;
     }
     /**
-     * The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * @return The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     public Output<String> name() {
@@ -186,7 +186,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
     }
     /**
      * The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Export(name="parentFollowupIntentName", type=String.class, parameters={})
@@ -194,7 +194,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The unique identifier of the parent intent in the chain of followup intents.
-     * Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     public Output<String> parentFollowupIntentName() {
@@ -252,7 +252,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
     }
     /**
      * The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
-     * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * chain for this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     @Export(name="rootFollowupIntentName", type=String.class, parameters={})
@@ -260,7 +260,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
-     * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
+     * chain for this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.
      * 
      */
     public Output<String> rootFollowupIntentName() {

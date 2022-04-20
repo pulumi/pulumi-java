@@ -65,14 +65,14 @@ public class Backup extends com.pulumi.resources.CustomResource {
         return this.fileSystemId;
     }
     /**
-     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest.
+     * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system&#39;s data at rest.
      * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
-     * @return The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest.
+     * @return The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system&#39;s data at rest.
      * 
      */
     public Output<String> kmsKeyId() {

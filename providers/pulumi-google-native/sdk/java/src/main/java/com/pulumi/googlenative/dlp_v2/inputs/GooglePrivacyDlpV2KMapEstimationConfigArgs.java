@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Reidentifiability metric. This corresponds to a risk model similar to what is called "journalist risk" in the literature, except the attack dataset is statistically modeled instead of being perfectly known. This can be done using publicly available data (like the US Census), or using a custom statistical model (indicated as one or several BigQuery tables), or by extrapolating from the distribution of values in the input dataset.
+ * Reidentifiability metric. This corresponds to a risk model similar to what is called &#34;journalist risk&#34; in the literature, except the attack dataset is statistically modeled instead of being perfectly known. This can be done using publicly available data (like the US Census), or using a custom statistical model (indicated as one or several BigQuery tables), or by extrapolating from the distribution of values in the input dataset.
  * 
  */
 public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends com.pulumi.resources.ResourceArgs {

@@ -40,7 +40,7 @@ public final class GetManagerResult {
      */
     private final String name;
     /**
-     * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
      */
     private final @Nullable String provisioningState;
@@ -118,7 +118,7 @@ public final class GetManagerResult {
         return this.name;
     }
     /**
-     * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
     */
     public Optional<String> provisioningState() {

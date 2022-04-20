@@ -44,7 +44,7 @@ public final class GetEventGridDataConnectionResult {
     private final @Nullable Boolean ignoreFirstRecord;
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
      */
     private final String kind;
@@ -79,7 +79,7 @@ public final class GetEventGridDataConnectionResult {
      */
     private final @Nullable String tableName;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -160,7 +160,7 @@ public final class GetEventGridDataConnectionResult {
     }
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
     */
     public String kind() {
@@ -209,7 +209,7 @@ public final class GetEventGridDataConnectionResult {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

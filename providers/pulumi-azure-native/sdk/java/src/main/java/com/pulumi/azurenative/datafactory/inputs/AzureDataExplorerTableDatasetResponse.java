@@ -115,7 +115,7 @@ public final class AzureDataExplorerTableDatasetResponse extends com.pulumi.reso
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataExplorerTable'.
+     * Expected value is &#39;AzureDataExplorerTable&#39;.
      * 
      */
     @Import(name="type", required=true)

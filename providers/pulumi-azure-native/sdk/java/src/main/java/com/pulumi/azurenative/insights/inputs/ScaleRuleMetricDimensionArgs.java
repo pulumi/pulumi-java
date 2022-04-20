@@ -33,7 +33,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
      */
     @Import(name="operator", required=true)
@@ -44,7 +44,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * list of dimension values. For example: ["App1","App2"].
+     * list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
      * 
      */
     @Import(name="values", required=true)

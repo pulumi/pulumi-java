@@ -17,7 +17,7 @@ public final class TestBaseAccountSKUCapabilityResponse extends com.pulumi.resou
     public static final TestBaseAccountSKUCapabilityResponse Empty = new TestBaseAccountSKUCapabilityResponse();
 
     /**
-     * An invariant to describe the feature, such as 'SLA'.
+     * An invariant to describe the feature, such as &#39;SLA&#39;.
      * 
      */
     @Import(name="name", required=true)

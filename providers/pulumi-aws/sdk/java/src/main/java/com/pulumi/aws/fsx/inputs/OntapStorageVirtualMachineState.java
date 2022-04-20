@@ -86,7 +86,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     }
 
     /**
-     * Describes the SVM's subtype, e.g. `DEFAULT`
+     * Describes the SVM&#39;s subtype, e.g. `DEFAULT`
      * 
      */
     @Import(name="subtype")
@@ -126,7 +126,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     }
 
     /**
-     * The SVM's UUID (universally unique identifier).
+     * The SVM&#39;s UUID (universally unique identifier).
      * 
      */
     @Import(name="uuid")

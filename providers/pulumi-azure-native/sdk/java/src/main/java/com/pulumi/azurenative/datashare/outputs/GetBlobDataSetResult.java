@@ -32,7 +32,7 @@ public final class GetBlobDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
      */
     private final String kind;
@@ -123,7 +123,7 @@ public final class GetBlobDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'Blob'.
+     * Expected value is &#39;Blob&#39;.
      * 
     */
     public String kind() {

@@ -29,7 +29,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends com.pulumi.
     }
 
     /**
-     * A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id". Depends on `cognito_identity_providers` set on `aws.cognito.IdentityPool` resource or a `aws.cognito.IdentityProvider` resource.
+     * A string identifying the identity provider, for example, &#34;graph.facebook.com&#34; or &#34;cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id&#34;. Depends on `cognito_identity_providers` set on `aws.cognito.IdentityPool` resource or a `aws.cognito.IdentityProvider` resource.
      * 
      */
     @Import(name="identityProvider", required=true)

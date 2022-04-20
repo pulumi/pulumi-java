@@ -141,7 +141,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
+     * Sets the Lustre version for the file system that you&#39;re creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
      * 
      */
     @Import(name="fileSystemTypeVersion")
@@ -152,7 +152,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
+     * S3 URI (with optional prefix) that you&#39;re using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
     @Import(name="importPath")
@@ -262,7 +262,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
+     * A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet&#39;s Availability Zone.
      * 
      */
     @Import(name="subnetIds")

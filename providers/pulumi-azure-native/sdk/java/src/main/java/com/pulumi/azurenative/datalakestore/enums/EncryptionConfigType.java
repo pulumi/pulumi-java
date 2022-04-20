@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
+     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
      */
     @EnumType

@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class RuntimeSoftwareConfigResponse {
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     private final String customGpuDriverPath;
@@ -75,7 +75,7 @@ public final class RuntimeSoftwareConfigResponse {
     }
 
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
     */
     public String customGpuDriverPath() {

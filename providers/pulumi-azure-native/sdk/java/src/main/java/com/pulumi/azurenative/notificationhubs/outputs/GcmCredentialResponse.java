@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GcmCredentialResponse {
     /**
-     * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
+     * The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
      * 
      */
     private final @Nullable String gcmEndpoint;
@@ -31,7 +31,7 @@ public final class GcmCredentialResponse {
     }
 
     /**
-     * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
+     * The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
      * 
     */
     public Optional<String> gcmEndpoint() {

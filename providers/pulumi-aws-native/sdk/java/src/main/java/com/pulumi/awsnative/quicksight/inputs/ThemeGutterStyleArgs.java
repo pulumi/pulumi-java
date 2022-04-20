@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The display options for gutter spacing between tiles on a sheet.</p>
+ * &lt;p&gt;The display options for gutter spacing between tiles on a sheet.&lt;/p&gt;
  * 
  */
 public final class ThemeGutterStyleArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,8 +20,8 @@ public final class ThemeGutterStyleArgs extends com.pulumi.resources.ResourceArg
     public static final ThemeGutterStyleArgs Empty = new ThemeGutterStyleArgs();
 
     /**
-     * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
-     *         </p>
+     * &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     *         &lt;/p&gt;
      * 
      */
     @Import(name="show")

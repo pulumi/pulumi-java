@@ -57,7 +57,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be specified when the versioned_expr is set to FIREWALL.
+     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules. This field may only be specified when the versioned_expr is set to FIREWALL.
      * 
      */
     @Import(name="enableLogging", required=true)
@@ -90,7 +90,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
      */
     @Import(name="match", required=true)
@@ -123,7 +123,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
+     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
      */
     @Import(name="rateLimitOptions", required=true)
@@ -167,7 +167,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+     * A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
     @Import(name="targetResources", required=true)

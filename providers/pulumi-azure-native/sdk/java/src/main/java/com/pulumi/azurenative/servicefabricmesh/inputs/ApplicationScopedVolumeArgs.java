@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a volume whose lifetime is scoped to the application's lifetime.
+ * Describes a volume whose lifetime is scoped to the application&#39;s lifetime.
  * 
  */
 public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.ResourceArgs {
@@ -55,7 +55,7 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
      */
     @Import(name="readOnly")

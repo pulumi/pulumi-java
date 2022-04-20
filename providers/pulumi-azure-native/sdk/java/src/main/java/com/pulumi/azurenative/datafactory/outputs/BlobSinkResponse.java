@@ -61,7 +61,7 @@ public final class BlobSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'BlobSink'.
+     * Expected value is &#39;BlobSink&#39;.
      * 
      */
     private final String type;
@@ -169,7 +169,7 @@ public final class BlobSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'BlobSink'.
+     * Expected value is &#39;BlobSink&#39;.
      * 
     */
     public String type() {

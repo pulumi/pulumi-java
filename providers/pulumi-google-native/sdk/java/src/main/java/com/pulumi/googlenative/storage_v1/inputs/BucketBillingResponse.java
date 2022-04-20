@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's billing configuration.
+ * The bucket&#39;s billing configuration.
  * 
  */
 public final class BucketBillingResponse extends com.pulumi.resources.InvokeArgs {

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+ * Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
  * 
  */
 public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse extends com
     public static final GoogleCloudHealthcareV1beta1ConsentPolicyResponse Empty = new GoogleCloudHealthcareV1beta1ConsentPolicyResponse();
 
     /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
+     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
      * 
      */
     @Import(name="authorizationRule", required=true)

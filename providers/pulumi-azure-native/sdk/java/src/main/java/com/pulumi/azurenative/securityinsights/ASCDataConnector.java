@@ -62,7 +62,7 @@ public class ASCDataConnector extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AzureSecurityCenter'.
+     * Expected value is &#39;AzureSecurityCenter&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -70,7 +70,7 @@ public class ASCDataConnector extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the data connector
-     * Expected value is 'AzureSecurityCenter'.
+     * Expected value is &#39;AzureSecurityCenter&#39;.
      * 
      */
     public Output<String> kind() {

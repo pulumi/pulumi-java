@@ -57,7 +57,7 @@ public final class InstancePropertiesResponse {
      */
     private final DisplayDeviceResponse displayDevice;
     /**
-     * A list of guest accelerator cards' type and count to use for instances created from these properties.
+     * A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
      * 
      */
     private final List<AcceleratorConfigResponse> guestAccelerators;
@@ -82,7 +82,7 @@ public final class InstancePropertiesResponse {
      */
     private final MetadataResponse metadata;
     /**
-     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
      */
     private final String minCpuPlatform;
@@ -112,7 +112,7 @@ public final class InstancePropertiesResponse {
      */
     private final ReservationAffinityResponse reservationAffinity;
     /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
      * 
      */
     private final Map<String,String> resourceManagerTags;
@@ -249,7 +249,7 @@ public final class InstancePropertiesResponse {
         return this.displayDevice;
     }
     /**
-     * A list of guest accelerator cards' type and count to use for instances created from these properties.
+     * A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
      * 
     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
@@ -284,7 +284,7 @@ public final class InstancePropertiesResponse {
         return this.metadata;
     }
     /**
-     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
+     * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
     */
     public String minCpuPlatform() {
@@ -326,7 +326,7 @@ public final class InstancePropertiesResponse {
         return this.reservationAffinity;
     }
     /**
-     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+     * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
      * 
     */
     public Map<String,String> resourceManagerTags() {

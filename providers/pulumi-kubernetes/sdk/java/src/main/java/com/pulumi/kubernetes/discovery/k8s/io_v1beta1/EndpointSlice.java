@@ -80,28 +80,28 @@ public class EndpointSlice extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata.
+     * @return Standard object&#39;s metadata.
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
-     * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
+     * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates &#34;all ports&#34;. Each slice may include a maximum of 100 ports.
      * 
      */
     @Export(name="ports", type=List.class, parameters={EndpointPort.class})
     private Output</* @Nullable */ List<EndpointPort>> ports;
 
     /**
-     * @return ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
+     * @return ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates &#34;all ports&#34;. Each slice may include a maximum of 100 ports.
      * 
      */
     public Output</* @Nullable */ List<EndpointPort>> ports() {

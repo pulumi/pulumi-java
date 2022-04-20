@@ -40,7 +40,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplicaAzure'.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
      */
     private final String instanceType;
@@ -243,7 +243,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplicaAzure'.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
     */
     public String instanceType() {

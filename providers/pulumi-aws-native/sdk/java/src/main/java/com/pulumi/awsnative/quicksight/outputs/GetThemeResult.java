@@ -17,34 +17,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetThemeResult {
     /**
-     * <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * <p>The date and time that the theme was created.</p>
+     * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * <p>The date and time that the theme was last updated.</p>
+     * &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
      * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
-     * <p>A display name for the theme.</p>
+     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>A valid grouping of resource permissions to apply to the new theme.
-     * 			</p>
+     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
      * 
      */
     private final @Nullable List<ThemeResourcePermission> permissions;
     /**
-     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.</p>
+     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
      * 
      */
     private final @Nullable List<ThemeTag> tags;
@@ -72,44 +72,44 @@ public final class GetThemeResult {
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the theme.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the theme.&lt;/p&gt;
      * 
     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * <p>The date and time that the theme was created.</p>
+     * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
      * 
     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * <p>The date and time that the theme was last updated.</p>
+     * &lt;p&gt;The date and time that the theme was last updated.&lt;/p&gt;
      * 
     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * <p>A display name for the theme.</p>
+     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>A valid grouping of resource permissions to apply to the new theme.
-     * 			</p>
+     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
      * 
     */
     public List<ThemeResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.</p>
+     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
      * 
     */
     public List<ThemeTag> tags() {

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Budget Resource Association.
  * 
- * > **Tip:** A "resource" is either a Service Catalog portfolio or product.
+ * &gt; **Tip:** A &#34;resource&#34; is either a Service Catalog portfolio or product.
  * 
  * ## Example Usage
  * 

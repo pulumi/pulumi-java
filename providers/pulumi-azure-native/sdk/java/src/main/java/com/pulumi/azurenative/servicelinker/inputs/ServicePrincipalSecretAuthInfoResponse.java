@@ -19,7 +19,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
 
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalSecret'.
+     * Expected value is &#39;servicePrincipalSecret&#39;.
      * 
      */
     @Import(name="authType", required=true)

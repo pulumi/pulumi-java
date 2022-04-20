@@ -81,7 +81,7 @@ public final class ExecutionActivityArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of activity.
-     * Expected value is 'Execution'.
+     * Expected value is &#39;Execution&#39;.
      * 
      */
     @Import(name="type", required=true)

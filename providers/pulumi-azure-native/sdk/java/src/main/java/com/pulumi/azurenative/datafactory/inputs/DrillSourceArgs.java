@@ -99,7 +99,7 @@ public final class DrillSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'DrillSource'.
+     * Expected value is &#39;DrillSource&#39;.
      * 
      */
     @Import(name="type", required=true)

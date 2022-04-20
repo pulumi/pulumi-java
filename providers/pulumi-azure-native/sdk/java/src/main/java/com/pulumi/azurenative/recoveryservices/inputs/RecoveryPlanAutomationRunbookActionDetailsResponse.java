@@ -32,7 +32,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
 
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'AutomationRunbookActionDetails'.
+     * Expected value is &#39;AutomationRunbookActionDetails&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

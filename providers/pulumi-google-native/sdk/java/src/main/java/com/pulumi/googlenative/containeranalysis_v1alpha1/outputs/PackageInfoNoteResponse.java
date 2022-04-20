@@ -54,7 +54,7 @@ public final class PackageInfoNoteResponse {
      */
     private final List<String> filesLicenseInfo;
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
      */
     private final String homePage;
@@ -194,7 +194,7 @@ public final class PackageInfoNoteResponse {
         return this.filesLicenseInfo;
     }
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
     */
     public String homePage() {

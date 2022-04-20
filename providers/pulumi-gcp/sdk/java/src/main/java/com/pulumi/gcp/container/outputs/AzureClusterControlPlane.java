@@ -25,7 +25,7 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption;
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
      * 
      */
     private final @Nullable AzureClusterControlPlaneMainVolume mainVolume;
@@ -50,7 +50,7 @@ public final class AzureClusterControlPlane {
      */
     private final AzureClusterControlPlaneSshConfig sshConfig;
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     private final String subnetId;
@@ -102,7 +102,7 @@ public final class AzureClusterControlPlane {
         return Optional.ofNullable(this.databaseEncryption);
     }
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
      * 
     */
     public Optional<AzureClusterControlPlaneMainVolume> mainVolume() {
@@ -137,7 +137,7 @@ public final class AzureClusterControlPlane {
         return this.sshConfig;
     }
     /**
-     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
+     * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
     */
     public String subnetId() {

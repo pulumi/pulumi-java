@@ -20,7 +20,7 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     public static final SecurityProfileResponse Empty = new SecurityProfileResponse();
 
     /**
-     * The resource ID of the user's Azure Active Directory Domain Service.
+     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
      */
     @Import(name="aaddsResourceId")
@@ -53,7 +53,7 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The organization's active directory domain.
+     * The organization&#39;s active directory domain.
      * 
      */
     @Import(name="domain")
@@ -97,7 +97,7 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
+     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
      */
     @Import(name="msiResourceId")

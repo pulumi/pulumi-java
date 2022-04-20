@@ -20,22 +20,22 @@ import javax.annotation.Nullable;
  * Provides a security group rule resource. Represents a single `ingress` or
  * `egress` group rule, which can be added to external Security Groups.
  * 
- * > **NOTE on Security Groups and Security Group Rules:** This provider currently
+ * &gt; **NOTE on Security Groups and Security Group Rules:** This provider currently
  * provides both a standalone Security Group Rule resource (a single `ingress` or
  * `egress` rule), and a Security Group resource with `ingress` and `egress` rules
  * defined in-line. At this time you cannot use a Security Group with in-line rules
  * in conjunction with any Security Group Rule resources. Doing so will cause
  * a conflict of rule settings and will overwrite rules.
  * 
- * > **NOTE:** Setting `protocol = "all"` or `protocol = -1` with `from_port` and `to_port` will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.
+ * &gt; **NOTE:** Setting `protocol = &#34;all&#34;` or `protocol = -1` with `from_port` and `to_port` will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.
  * 
- * > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
+ * &gt; **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * Security Group Rules can be imported using the `security_group_id`, `type`, `protocol`, `from_port`, `to_port`, and source(s)/destination(s) (e.g., `cidr_block`) separated by underscores (`_`). All parts are required. Not all rule permissions (e.g., not all of a rule's CIDR blocks) need to be imported for this provider to manage rule permissions. However, importing some of a rule's permissions but not others, and then making changes to the rule will result in the creation of an additional rule to capture the updated permissions. Rule permissions that were not imported are left intact in the original rule. Import an ingress rule in security group `sg-6e616f6d69` for TCP port 8000 with an IPv4 destination CIDR of `10.0.3.0/24`console
+ * Security Group Rules can be imported using the `security_group_id`, `type`, `protocol`, `from_port`, `to_port`, and source(s)/destination(s) (e.g., `cidr_block`) separated by underscores (`_`). All parts are required. Not all rule permissions (e.g., not all of a rule&#39;s CIDR blocks) need to be imported for this provider to manage rule permissions. However, importing some of a rule&#39;s permissions but not others, and then making changes to the rule will result in the creation of an additional rule to capture the updated permissions. Rule permissions that were not imported are left intact in the original rule. Import an ingress rule in security group `sg-6e616f6d69` for TCP port 8000 with an IPv4 destination CIDR of `10.0.3.0/24`console
  * 
  * ```sh
  *  $ pulumi import aws:ec2/securityGroupRule:SecurityGroupRule ingress sg-6e616f6d69_ingress_tcp_8000_8000_10.0.3.0/24
@@ -109,14 +109,14 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+     * Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
      * 
      */
     @Export(name="fromPort", type=Integer.class, parameters={})
     private Output<Integer> fromPort;
 
     /**
-     * @return Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+     * @return Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
      * 
      */
     public Output<Integer> fromPort() {
@@ -207,14 +207,14 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
         return this.sourceSecurityGroupId;
     }
     /**
-     * End port (or ICMP code if protocol is "icmp").
+     * End port (or ICMP code if protocol is &#34;icmp&#34;).
      * 
      */
     @Export(name="toPort", type=Integer.class, parameters={})
     private Output<Integer> toPort;
 
     /**
-     * @return End port (or ICMP code if protocol is "icmp").
+     * @return End port (or ICMP code if protocol is &#34;icmp&#34;).
      * 
      */
     public Output<Integer> toPort() {

@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an EventBridge Target resource.
  * 
- * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+ * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
  * ## Example SSM Document Usage

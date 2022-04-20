@@ -184,7 +184,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The hostname for the custom domain's regional endpoint.
+     * The hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     @Import(name="regionalDomainName")

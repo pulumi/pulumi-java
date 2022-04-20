@@ -14,28 +14,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStreamingImageResult {
     /**
-     * <p>A human-readable description of the streaming image.</p>
+     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     private final @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration;
     /**
-     * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> eulaIds;
     /**
-     * <p>A friendly name for a streaming image resource.</p>
+     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
      * 
      */
     private final @Nullable String owner;
     /**
-     * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
      * 
      */
     private final @Nullable String platform;
@@ -60,7 +60,7 @@ public final class GetStreamingImageResult {
     }
 
     /**
-     * <p>A human-readable description of the streaming image.</p>
+     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
     */
     public Optional<String> description() {
@@ -70,28 +70,28 @@ public final class GetStreamingImageResult {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
-     * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
      * 
     */
     public List<String> eulaIds() {
         return this.eulaIds == null ? List.of() : this.eulaIds;
     }
     /**
-     * <p>A friendly name for a streaming image resource.</p>
+     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
      * 
     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
-     * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
      * 
     */
     public Optional<String> platform() {

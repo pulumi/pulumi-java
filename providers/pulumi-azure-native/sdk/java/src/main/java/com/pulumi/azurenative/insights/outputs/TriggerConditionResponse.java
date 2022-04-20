@@ -24,7 +24,7 @@ public final class TriggerConditionResponse {
      */
     private final Double threshold;
     /**
-     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
      * 
      */
     private final String thresholdOperator;
@@ -54,7 +54,7 @@ public final class TriggerConditionResponse {
         return this.threshold;
     }
     /**
-     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
      * 
     */
     public String thresholdOperator() {

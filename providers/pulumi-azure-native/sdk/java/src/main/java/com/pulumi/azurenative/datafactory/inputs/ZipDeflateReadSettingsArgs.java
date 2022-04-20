@@ -33,7 +33,7 @@ public final class ZipDeflateReadSettingsArgs extends com.pulumi.resources.Resou
 
     /**
      * The Compression setting type.
-     * Expected value is 'ZipDeflateReadSettings'.
+     * Expected value is &#39;ZipDeflateReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

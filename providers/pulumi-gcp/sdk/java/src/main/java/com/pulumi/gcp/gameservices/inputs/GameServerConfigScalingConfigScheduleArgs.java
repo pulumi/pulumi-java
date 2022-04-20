@@ -17,8 +17,8 @@ public final class GameServerConfigScalingConfigScheduleArgs extends com.pulumi.
 
     /**
      * The duration for the cron job event. The duration of the event is effective
-     * after the cron job's start time.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * after the cron job&#39;s start time.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="cronJobDuration")
@@ -43,7 +43,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends com.pulumi.
 
     /**
      * The end time of the event.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="endTime")
@@ -55,7 +55,7 @@ public final class GameServerConfigScalingConfigScheduleArgs extends com.pulumi.
 
     /**
      * The start time of the event.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="startTime")

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Properties of a lab's announcement banner
+ * Properties of a lab&#39;s announcement banner
  * 
  */
 public final class LabAnnouncementPropertiesResponse extends com.pulumi.resources.InvokeArgs {

@@ -27,14 +27,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:monitoring/v3:AlertPolicy")
 public class AlertPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * Control over how this alert policy's notification channels are notified.
+     * Control over how this alert policy&#39;s notification channels are notified.
      * 
      */
     @Export(name="alertStrategy", type=AlertStrategyResponse.class, parameters={})
     private Output<AlertStrategyResponse> alertStrategy;
 
     /**
-     * @return Control over how this alert policy's notification channels are notified.
+     * @return Control over how this alert policy&#39;s notification channels are notified.
      * 
      */
     public Output<AlertStrategyResponse> alertStrategy() {
@@ -83,14 +83,14 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
         return this.creationRecord;
     }
     /**
-     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
+     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
+     * @return A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
      * 
      */
     public Output<String> displayName() {

@@ -55,7 +55,7 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'HttpServerLocation'.
+     * Expected value is &#39;HttpServerLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

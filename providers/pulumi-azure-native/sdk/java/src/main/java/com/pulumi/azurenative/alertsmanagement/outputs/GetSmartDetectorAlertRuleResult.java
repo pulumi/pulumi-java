@@ -27,7 +27,7 @@ public final class GetSmartDetectorAlertRuleResult {
      */
     private final @Nullable String description;
     /**
-     * The alert rule's detector.
+     * The alert rule&#39;s detector.
      * 
      */
     private final DetectorResponse detector;
@@ -127,7 +127,7 @@ public final class GetSmartDetectorAlertRuleResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The alert rule's detector.
+     * The alert rule&#39;s detector.
      * 
     */
     public DetectorResponse detector() {

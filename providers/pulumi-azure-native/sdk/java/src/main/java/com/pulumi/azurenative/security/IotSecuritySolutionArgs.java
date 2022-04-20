@@ -103,7 +103,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -158,7 +158,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Properties of the IoT Security solution's user defined resources.
+     * Properties of the IoT Security solution&#39;s user defined resources.
      * 
      */
     @Import(name="userDefinedResources")

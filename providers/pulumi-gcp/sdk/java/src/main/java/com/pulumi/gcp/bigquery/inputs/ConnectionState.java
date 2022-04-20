@@ -89,7 +89,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the connection in the form of:
-     * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
+     * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
      * 
      */
     @Import(name="name")

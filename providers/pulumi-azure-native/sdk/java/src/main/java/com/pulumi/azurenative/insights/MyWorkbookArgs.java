@@ -174,7 +174,7 @@ public final class MyWorkbookArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
     @Import(name="version")

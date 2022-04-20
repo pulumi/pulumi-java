@@ -15,12 +15,12 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * OAuth brand data. Only "Organization Internal" brands can be created
+ * OAuth brand data. Only &#34;Organization Internal&#34; brands can be created
  * programmatically via API. To convert it into an external brands
  * please use the GCP Console.
  * 
- * > **Note:** Brands can only be created once for a Google Cloud
- * project and the underlying Google API doesn't not support DELETE or PATCH methods.
+ * &gt; **Note:** Brands can only be created once for a Google Cloud
+ * project and the underlying Google API doesn&#39;t not support DELETE or PATCH methods.
  * Destroying a provider-managed Brand will remove it from state
  * but *will not delete it from Google Cloud.*
  * 
@@ -58,7 +58,7 @@ public class Brand extends com.pulumi.resources.CustomResource {
         return this.applicationTitle;
     }
     /**
-     * Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * Output only. Identifier of the brand, in the format &#39;projects/{project_number}/brands/{brand_id}&#39;. NOTE: The brand
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */
@@ -66,7 +66,7 @@ public class Brand extends com.pulumi.resources.CustomResource {
     private Output<String> name;
 
     /**
-     * @return Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
+     * @return Output only. Identifier of the brand, in the format &#39;projects/{project_number}/brands/{brand_id}&#39;. NOTE: The brand
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */

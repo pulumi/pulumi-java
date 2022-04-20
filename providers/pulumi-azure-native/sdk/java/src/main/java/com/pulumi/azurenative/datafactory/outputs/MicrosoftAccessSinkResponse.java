@@ -39,7 +39,7 @@ public final class MicrosoftAccessSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'MicrosoftAccessSink'.
+     * Expected value is &#39;MicrosoftAccessSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class MicrosoftAccessSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'MicrosoftAccessSink'.
+     * Expected value is &#39;MicrosoftAccessSink&#39;.
      * 
     */
     public String type() {

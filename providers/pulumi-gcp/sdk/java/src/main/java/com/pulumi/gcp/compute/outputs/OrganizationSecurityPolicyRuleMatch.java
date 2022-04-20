@@ -25,7 +25,7 @@ public final class OrganizationSecurityPolicyRuleMatch {
     private final @Nullable String description;
     /**
      * Preconfigured versioned expression. For organization security policy rules,
-     * the only supported type is "FIREWALL".
+     * the only supported type is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 
@@ -59,7 +59,7 @@ public final class OrganizationSecurityPolicyRuleMatch {
     }
     /**
      * Preconfigured versioned expression. For organization security policy rules,
-     * the only supported type is "FIREWALL".
+     * the only supported type is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 

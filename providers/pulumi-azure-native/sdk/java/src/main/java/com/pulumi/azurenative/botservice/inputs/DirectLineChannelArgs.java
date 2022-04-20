@@ -22,7 +22,7 @@ public final class DirectLineChannelArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The channel name
-     * Expected value is 'DirectLineChannel'.
+     * Expected value is &#39;DirectLineChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

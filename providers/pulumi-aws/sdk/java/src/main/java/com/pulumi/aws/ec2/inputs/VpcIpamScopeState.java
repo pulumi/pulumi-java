@@ -26,7 +26,7 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A description for the scope you're creating.
+     * A description for the scope you&#39;re creating.
      * 
      */
     @Import(name="description")
@@ -37,7 +37,7 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of the IPAM for which you're creating this scope.
+     * The ARN of the IPAM for which you&#39;re creating this scope.
      * 
      */
     @Import(name="ipamArn")
@@ -48,7 +48,7 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the IPAM for which you're creating this scope.
+     * The ID of the IPAM for which you&#39;re creating this scope.
      * 
      */
     @Import(name="ipamId")

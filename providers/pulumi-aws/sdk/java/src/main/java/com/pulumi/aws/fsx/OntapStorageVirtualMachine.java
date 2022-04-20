@@ -31,11 +31,11 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine example svm-12345678abcdef123
  * ```
  * 
- *  Certain resource arguments, like `svm_admin_password` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_ontap_storage_virtual_machine" "example" {
+ *  Certain resource arguments, like `svm_admin_password` and the `self_managed_active_directory` configuation block `password`, do not have a FSx API method for reading the information after creation. If these arguments are set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource &#34;aws_fsx_ontap_storage_virtual_machine&#34; &#34;example&#34; {
  * 
  * # ... other configuration ...
  * 
- *  svm_admin_password = "avoid-plaintext-passwords"
+ *  svm_admin_password = &#34;avoid-plaintext-passwords&#34;
  * 
  * # There is no FSx API for reading svm_admin_password
  * 
@@ -133,14 +133,14 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
         return this.rootVolumeSecurityStyle;
     }
     /**
-     * Describes the SVM's subtype, e.g. `DEFAULT`
+     * Describes the SVM&#39;s subtype, e.g. `DEFAULT`
      * 
      */
     @Export(name="subtype", type=String.class, parameters={})
     private Output<String> subtype;
 
     /**
-     * @return Describes the SVM's subtype, e.g. `DEFAULT`
+     * @return Describes the SVM&#39;s subtype, e.g. `DEFAULT`
      * 
      */
     public Output<String> subtype() {
@@ -181,14 +181,14 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
         return this.tagsAll;
     }
     /**
-     * The SVM's UUID (universally unique identifier).
+     * The SVM&#39;s UUID (universally unique identifier).
      * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
-     * @return The SVM's UUID (universally unique identifier).
+     * @return The SVM&#39;s UUID (universally unique identifier).
      * 
      */
     public Output<String> uuid() {

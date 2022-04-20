@@ -32,7 +32,7 @@ public final class LabelSelectorRequirementArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
      * 
      */
     @Import(name="operator", required=true)

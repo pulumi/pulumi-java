@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The configuration for a license service that is associated with a studio resource.</p>
+ * &lt;p&gt;The configuration for a license service that is associated with a studio resource.&lt;/p&gt;
  * 
  */
 public final class StudioComponentLicenseServiceConfigurationArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends com.pu
     public static final StudioComponentLicenseServiceConfigurationArgs Empty = new StudioComponentLicenseServiceConfigurationArgs();
 
     /**
-     * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+     * &lt;p&gt;The endpoint of the license service that is accessed by the studio component resource.&lt;/p&gt;
      * 
      */
     @Import(name="endpoint")

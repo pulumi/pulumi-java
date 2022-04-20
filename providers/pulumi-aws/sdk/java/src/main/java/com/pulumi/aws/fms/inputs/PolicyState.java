@@ -40,7 +40,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of lists of accounts and OU's to exclude from the policy.
+     * A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
     @Import(name="excludeMap")
@@ -62,7 +62,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of lists of accounts and OU's to include in the policy.
+     * A map of lists of accounts and OU&#39;s to include in the policy.
      * 
      */
     @Import(name="includeMap")

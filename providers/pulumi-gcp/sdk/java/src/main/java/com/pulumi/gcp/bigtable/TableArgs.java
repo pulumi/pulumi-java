@@ -64,7 +64,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A list of predefined keys to split the table on.
-     * !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
+     * !&gt; **Warning:** Modifying the `split_keys` of an existing table will cause the provider
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */

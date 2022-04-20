@@ -76,7 +76,7 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AmazonWebServicesCloudTrail'.
+     * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
 
     /**
      * @return The kind of the data connector
-     * Expected value is 'AmazonWebServicesCloudTrail'.
+     * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
      */
     public Output<String> kind() {

@@ -73,7 +73,7 @@ public final class WebLinkedServiceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of linked service.
-     * Expected value is 'Web'.
+     * Expected value is &#39;Web&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -95,7 +95,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
 
     /**
      * Type of activity.
-     * Expected value is 'AzureMLBatchExecution'.
+     * Expected value is &#39;AzureMLBatchExecution&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -117,7 +117,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
     }
 
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
      * 
      */
     @Import(name="webServiceInputs")
@@ -128,7 +128,7 @@ public final class AzureMLBatchExecutionActivityArgs extends com.pulumi.resource
     }
 
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
      * 
      */
     @Import(name="webServiceOutputs")

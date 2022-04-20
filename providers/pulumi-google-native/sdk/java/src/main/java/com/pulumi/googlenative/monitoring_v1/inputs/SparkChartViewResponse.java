@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * A sparkChart is a small chart suitable for inclusion in a table-cell or inline in text. This message contains the configuration for a sparkChart to show up on a Scorecard, showing recent trends of the scorecard's timeseries.
+ * A sparkChart is a small chart suitable for inclusion in a table-cell or inline in text. This message contains the configuration for a sparkChart to show up on a Scorecard, showing recent trends of the scorecard&#39;s timeseries.
  * 
  */
 public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArgs {

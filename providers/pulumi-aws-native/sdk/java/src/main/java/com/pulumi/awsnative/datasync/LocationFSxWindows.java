@@ -105,14 +105,14 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
         return this.securityGroupArns;
     }
     /**
-     * A subdirectory in the location's path.
+     * A subdirectory in the location&#39;s path.
      * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
-     * @return A subdirectory in the location's path.
+     * @return A subdirectory in the location&#39;s path.
      * 
      */
     public Output</* @Nullable */ String> subdirectory() {

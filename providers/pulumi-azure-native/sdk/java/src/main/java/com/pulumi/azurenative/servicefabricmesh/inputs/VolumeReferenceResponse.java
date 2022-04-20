@@ -42,7 +42,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
      */
     @Import(name="readOnly")

@@ -21,7 +21,7 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * The authentication type.
-     * Expected value is 'secret'.
+     * Expected value is &#39;secret&#39;.
      * 
      */
     @Import(name="authType", required=true)

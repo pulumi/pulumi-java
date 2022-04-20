@@ -78,7 +78,7 @@ public class TemplateArtifact extends com.pulumi.resources.CustomResource {
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'template'.
+     * Expected value is &#39;template&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -86,7 +86,7 @@ public class TemplateArtifact extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Specifies the kind of blueprint artifact.
-     * Expected value is 'template'.
+     * Expected value is &#39;template&#39;.
      * 
      */
     public Output<String> kind() {

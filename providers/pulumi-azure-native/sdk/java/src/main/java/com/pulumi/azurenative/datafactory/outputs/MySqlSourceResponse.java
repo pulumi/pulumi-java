@@ -49,7 +49,7 @@ public final class MySqlSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'MySqlSource'.
+     * Expected value is &#39;MySqlSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class MySqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'MySqlSource'.
+     * Expected value is &#39;MySqlSource&#39;.
      * 
     */
     public String type() {

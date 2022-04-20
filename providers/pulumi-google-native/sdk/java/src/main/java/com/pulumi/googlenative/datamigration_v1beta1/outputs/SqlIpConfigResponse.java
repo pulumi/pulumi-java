@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class SqlIpConfigResponse {
     /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
+     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
      * 
      */
     private final List<SqlAclEntryResponse> authorizedNetworks;
@@ -46,7 +46,7 @@ public final class SqlIpConfigResponse {
     }
 
     /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
+     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
      * 
     */
     public List<SqlAclEntryResponse> authorizedNetworks() {

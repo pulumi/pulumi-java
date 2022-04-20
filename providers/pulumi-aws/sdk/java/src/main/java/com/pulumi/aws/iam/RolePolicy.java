@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an IAM role inline policy.
  * 
- * > **NOTE:** For a given role, this resource is incompatible with using the `aws.iam.Role` resource `inline_policy` argument. When using that argument and this resource, both will attempt to manage the role's inline policies and the provider will show a permanent difference.
+ * &gt; **NOTE:** For a given role, this resource is incompatible with using the `aws.iam.Role` resource `inline_policy` argument. When using that argument and this resource, both will attempt to manage the role&#39;s inline policies and the provider will show a permanent difference.
  * 
  * ## Example Usage
  * 

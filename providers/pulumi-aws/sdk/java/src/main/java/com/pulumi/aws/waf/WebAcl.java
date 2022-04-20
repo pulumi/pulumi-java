@@ -49,14 +49,14 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
+     * Configuration block with action that you want AWS WAF to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
     @Export(name="defaultAction", type=WebAclDefaultAction.class, parameters={})
     private Output<WebAclDefaultAction> defaultAction;
 
     /**
-     * @return Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
+     * @return Configuration block with action that you want AWS WAF to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
     public Output<WebAclDefaultAction> defaultAction() {

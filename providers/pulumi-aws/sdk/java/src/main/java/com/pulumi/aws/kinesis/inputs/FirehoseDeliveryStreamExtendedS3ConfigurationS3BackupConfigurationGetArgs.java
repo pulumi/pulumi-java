@@ -63,7 +63,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
     }
 
     /**
-     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, & `HADOOP_SNAPPY`.
+     * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, &amp; `HADOOP_SNAPPY`.
      * 
      */
     @Import(name="compressionFormat")
@@ -97,7 +97,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
     }
 
     /**
-     * The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+     * The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
      */
     @Import(name="prefix")
@@ -108,7 +108,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
     }
 
     /**
-     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren&#39;t allowed.
      * 
      */
     @Import(name="roleArn", required=true)

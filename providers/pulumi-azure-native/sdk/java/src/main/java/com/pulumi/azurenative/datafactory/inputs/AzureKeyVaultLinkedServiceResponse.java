@@ -93,7 +93,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="type", required=true)

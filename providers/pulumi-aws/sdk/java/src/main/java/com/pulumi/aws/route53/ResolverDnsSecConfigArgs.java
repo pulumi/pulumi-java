@@ -15,7 +15,7 @@ public final class ResolverDnsSecConfigArgs extends com.pulumi.resources.Resourc
     public static final ResolverDnsSecConfigArgs Empty = new ResolverDnsSecConfigArgs();
 
     /**
-     * The ID of the virtual private cloud (VPC) that you're updating the DNSSEC validation status for.
+     * The ID of the virtual private cloud (VPC) that you&#39;re updating the DNSSEC validation status for.
      * 
      */
     @Import(name="resourceId", required=true)

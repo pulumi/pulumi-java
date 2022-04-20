@@ -87,7 +87,7 @@ public final class WorkflowTemplateJobPigJobArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name=&#34;value&#34;;`).
      * 
      */
     @Import(name="scriptVariables")

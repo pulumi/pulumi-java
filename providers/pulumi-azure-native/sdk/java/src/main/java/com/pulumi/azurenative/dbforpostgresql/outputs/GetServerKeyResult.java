@@ -32,12 +32,12 @@ public final class GetServerKeyResult {
      */
     private final String name;
     /**
-     * The key type like 'AzureKeyVault'.
+     * The key type like &#39;AzureKeyVault&#39;.
      * 
      */
     private final String serverKeyType;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -94,14 +94,14 @@ public final class GetServerKeyResult {
         return this.name;
     }
     /**
-     * The key type like 'AzureKeyVault'.
+     * The key type like &#39;AzureKeyVault&#39;.
      * 
     */
     public String serverKeyType() {
         return this.serverKeyType;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

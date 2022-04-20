@@ -31,7 +31,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
      */
     @Import(name="communities", required=true)

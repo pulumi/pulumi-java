@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The display options for tile borders for visuals.</p>
+ * &lt;p&gt;The display options for tile borders for visuals.&lt;/p&gt;
  * 
  */
 public final class ThemeBorderStyle extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class ThemeBorderStyle extends com.pulumi.resources.InvokeArgs {
     public static final ThemeBorderStyle Empty = new ThemeBorderStyle();
 
     /**
-     * <p>The option to enable display of borders for visuals.</p>
+     * &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
      * 
      */
     @Import(name="show")

@@ -78,7 +78,7 @@ public final class BinaryDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Binary'.
+     * Expected value is &#39;Binary&#39;.
      * 
      */
     private final String type;
@@ -172,7 +172,7 @@ public final class BinaryDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Binary'.
+     * Expected value is &#39;Binary&#39;.
      * 
     */
     public String type() {

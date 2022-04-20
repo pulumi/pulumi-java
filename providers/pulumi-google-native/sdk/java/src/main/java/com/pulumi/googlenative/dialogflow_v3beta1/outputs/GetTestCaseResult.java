@@ -39,7 +39,7 @@ public final class GetTestCaseResult {
      */
     private final String notes;
     /**
-     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
      * 
      */
     private final List<String> tags;
@@ -110,7 +110,7 @@ public final class GetTestCaseResult {
         return this.notes;
     }
     /**
-     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
      * 
     */
     public List<String> tags() {

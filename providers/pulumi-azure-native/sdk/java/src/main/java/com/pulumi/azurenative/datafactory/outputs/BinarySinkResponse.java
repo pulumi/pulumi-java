@@ -45,7 +45,7 @@ public final class BinarySinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'BinarySink'.
+     * Expected value is &#39;BinarySink&#39;.
      * 
      */
     private final String type;
@@ -117,7 +117,7 @@ public final class BinarySinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'BinarySink'.
+     * Expected value is &#39;BinarySink&#39;.
      * 
     */
     public String type() {

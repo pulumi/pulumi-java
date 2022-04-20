@@ -67,7 +67,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Gets or sets the expiry time's offset in minutes.
+     * Gets or sets the expiry time&#39;s offset in minutes.
      * 
      */
     @Import(name="expiryTimeOffsetMinutes")
@@ -133,7 +133,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Gets or sets the next run time's offset in minutes.
+     * Gets or sets the next run time&#39;s offset in minutes.
      * 
      */
     @Import(name="nextRunOffsetMinutes")
@@ -155,7 +155,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Gets the start time's offset in minutes.
+     * Gets the start time&#39;s offset in minutes.
      * 
      */
     @Import(name="startTimeOffsetMinutes", required=true)

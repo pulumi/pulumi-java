@@ -131,7 +131,7 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
+     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
      * 
      */
     @Import(name="submittedBy")

@@ -36,7 +36,7 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * The type of compute
-     * Expected value is 'VirtualMachine'.
+     * Expected value is &#39;VirtualMachine&#39;.
      * 
      */
     @Import(name="computeType", required=true)

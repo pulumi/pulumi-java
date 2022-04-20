@@ -27,7 +27,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * A filter which allows the exclusion of subscriptions from results (i.e. '$filter=children.childType ne Subscription')
+     * A filter which allows the exclusion of subscriptions from results (i.e. &#39;$filter=children.childType ne Subscription&#39;)
      * 
      */
     @Import(name="filter")

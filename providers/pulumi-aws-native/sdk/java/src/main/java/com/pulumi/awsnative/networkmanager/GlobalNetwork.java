@@ -15,7 +15,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
+ * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
  * 
  * ## Example Usage
  * 

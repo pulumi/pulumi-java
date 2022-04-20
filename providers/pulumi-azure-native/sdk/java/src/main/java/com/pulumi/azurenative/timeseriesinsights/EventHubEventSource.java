@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:timeseriesinsights:EventHubEventSource")
 public class EventHubEventSource extends com.pulumi.resources.CustomResource {
     /**
-     * The name of the event hub's consumer group that holds the partitions from which events will be read.
+     * The name of the event hub&#39;s consumer group that holds the partitions from which events will be read.
      * 
      */
     @Export(name="consumerGroupName", type=String.class, parameters={})
     private Output<String> consumerGroupName;
 
     /**
-     * @return The name of the event hub's consumer group that holds the partitions from which events will be read.
+     * @return The name of the event hub&#39;s consumer group that holds the partitions from which events will be read.
      * 
      */
     public Output<String> consumerGroupName() {
@@ -90,14 +90,14 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
         return this.eventSourceResourceId;
     }
     /**
-     * The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
+     * The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant &#39;Listen&#39; permissions to the event hub.
      * 
      */
     @Export(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
     /**
-     * @return The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
+     * @return The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant &#39;Listen&#39; permissions to the event hub.
      * 
      */
     public Output<String> keyName() {
@@ -105,7 +105,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the event source.
-     * Expected value is 'Microsoft.EventHub'.
+     * Expected value is &#39;Microsoft.EventHub&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -113,21 +113,21 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the event source.
-     * Expected value is 'Microsoft.EventHub'.
+     * Expected value is &#39;Microsoft.EventHub&#39;.
      * 
      */
     public Output<String> kind() {
         return this.kind;
     }
     /**
-     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
     @Export(name="localTimestamp", type=LocalTimestampResponse.class, parameters={})
     private Output</* @Nullable */ LocalTimestampResponse> localTimestamp;
 
     /**
-     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
     public Output</* @Nullable */ LocalTimestampResponse> localTimestamp() {
@@ -218,14 +218,14 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
         return this.time;
     }
     /**
-     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
     @Export(name="timestampPropertyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampPropertyName;
 
     /**
-     * @return The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * @return The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
     public Output</* @Nullable */ String> timestampPropertyName() {

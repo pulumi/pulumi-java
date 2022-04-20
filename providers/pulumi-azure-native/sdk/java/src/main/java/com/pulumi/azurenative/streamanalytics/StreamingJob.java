@@ -67,14 +67,14 @@ public class StreamingJob extends com.pulumi.resources.CustomResource {
         return this.createdDate;
     }
     /**
-     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
+     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to &#39;en-US&#39; if none specified.
      * 
      */
     @Export(name="dataLocale", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataLocale;
 
     /**
-     * @return The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
+     * @return The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to &#39;en-US&#39; if none specified.
      * 
      */
     public Output</* @Nullable */ String> dataLocale() {

@@ -18,7 +18,7 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
     public static final LocationHDFSNameNode Empty = new LocationHDFSNameNode();
 
     /**
-     * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
+     * The DNS name or IP address of the Name Node in the customer&#39;s on premises HDFS cluster.
      * 
      */
     @Import(name="hostname", required=true)

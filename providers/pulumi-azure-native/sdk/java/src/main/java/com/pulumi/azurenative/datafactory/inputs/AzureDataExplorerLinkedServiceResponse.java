@@ -84,7 +84,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends com.pulumi.res
     }
 
     /**
-     * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
+     * The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
      */
     @Import(name="endpoint", required=true)
@@ -140,7 +140,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends com.pulumi.res
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
      */
     @Import(name="type", required=true)

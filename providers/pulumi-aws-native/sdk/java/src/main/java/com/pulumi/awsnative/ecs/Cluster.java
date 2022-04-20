@@ -44,14 +44,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.capacityProviders;
     }
     /**
-     * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
     @Export(name="clusterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterName;
 
     /**
-     * @return A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * @return A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
     public Output</* @Nullable */ String> clusterName() {

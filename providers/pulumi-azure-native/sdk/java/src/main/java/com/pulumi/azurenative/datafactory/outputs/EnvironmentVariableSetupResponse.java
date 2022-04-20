@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class EnvironmentVariableSetupResponse {
     /**
      * The type of custom setup.
-     * Expected value is 'EnvironmentVariableSetup'.
+     * Expected value is &#39;EnvironmentVariableSetup&#39;.
      * 
      */
     private final String type;
@@ -38,7 +38,7 @@ public final class EnvironmentVariableSetupResponse {
 
     /**
      * The type of custom setup.
-     * Expected value is 'EnvironmentVariableSetup'.
+     * Expected value is &#39;EnvironmentVariableSetup&#39;.
      * 
     */
     public String type() {

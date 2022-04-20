@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends com.pulumi.re
 
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI&#39;.
      * 
      */
     @Import(name="taskType", required=true)

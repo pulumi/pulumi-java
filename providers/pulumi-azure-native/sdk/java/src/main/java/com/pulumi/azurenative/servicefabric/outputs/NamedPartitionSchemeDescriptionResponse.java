@@ -23,7 +23,7 @@ public final class NamedPartitionSchemeDescriptionResponse {
     private final List<String> names;
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'Named'.
+     * Expected value is &#39;Named&#39;.
      * 
      */
     private final String partitionScheme;
@@ -54,7 +54,7 @@ public final class NamedPartitionSchemeDescriptionResponse {
     }
     /**
      * Enumerates the ways that a service can be partitioned.
-     * Expected value is 'Named'.
+     * Expected value is &#39;Named&#39;.
      * 
     */
     public String partitionScheme() {

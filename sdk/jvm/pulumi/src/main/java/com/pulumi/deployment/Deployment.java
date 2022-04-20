@@ -51,7 +51,7 @@ public interface Deployment {
     /**
      * Dynamically invokes the function {@code token}, which is offered by a provider plugin.
      * <p>
-     * The result of {@code invoke} will be an @see {@link Output<T>} resolved to the
+     * The result of {@code invoke} will be an @see {@link Output}{@literal <T>} resolved to the
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
@@ -93,7 +93,7 @@ public interface Deployment {
     /**
      * Dynamically calls the function {@code token}, which is offered by a provider plugin.
      * <p>
-     * The result of {@code call} will be an @see {@link Output<T>} resolved to the
+     * The result of {@code call} will be an @see {@link Output}{@literal <T>} resolved to the
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
@@ -172,8 +172,8 @@ public interface Deployment {
      * <code>
      * public static void main(String[] args) {
      *     // program initialization code ...
-     * <p>
-     *     return Deployment.runAsync(() -> {
+     *
+     *     return Deployment.runAsync(() -{@literal >} {
      *        // Code that creates resources.
      *     });
      * }
@@ -216,8 +216,8 @@ public interface Deployment {
      * <code>
      * public static void main(String[] args) {
      *     // program initialization code ...
-     * <p>
-     *     return Deployment.runAsyncStack(() -> new MyStack()));
+     *
+     *     {@literal return Deployment.runAsyncStack(() -> new MyStack()));}
      * }
      * </code>
      * </p>

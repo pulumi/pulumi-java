@@ -45,7 +45,7 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Csv'.
+     * Expected value is &#39;Csv&#39;.
      * 
      */
     @Import(name="type", required=true)

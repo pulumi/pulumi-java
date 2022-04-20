@@ -35,7 +35,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
 
     /**
      * Gets the instance type.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

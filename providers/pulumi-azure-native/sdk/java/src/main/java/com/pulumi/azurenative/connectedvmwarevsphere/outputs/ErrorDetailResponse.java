@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ErrorDetailResponse {
     /**
-     * The error's code.
+     * The error&#39;s code.
      * 
      */
     private final String code;
@@ -46,7 +46,7 @@ public final class ErrorDetailResponse {
     }
 
     /**
-     * The error's code.
+     * The error&#39;s code.
      * 
     */
     public String code() {

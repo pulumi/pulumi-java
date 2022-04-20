@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Defines an object for the byproducts field in in-toto links. The suggested fields are "stderr", "stdout", and "return-value".
+ * Defines an object for the byproducts field in in-toto links. The suggested fields are &#34;stderr&#34;, &#34;stdout&#34;, and &#34;return-value&#34;.
  * 
  */
 public final class ByProductsResponse extends com.pulumi.resources.InvokeArgs {

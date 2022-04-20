@@ -18,7 +18,7 @@ import java.util.Objects;
 @CustomType
 public final class ContainerResponse {
     /**
-     * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * (Optional) Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
     private final List<String> args;
@@ -79,7 +79,7 @@ public final class ContainerResponse {
      */
     private final ProbeResponse startupProbe;
     /**
-     * (Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.
+     * (Optional) Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.
      * 
      */
     private final String terminationMessagePath;
@@ -89,12 +89,12 @@ public final class ContainerResponse {
      */
     private final String terminationMessagePolicy;
     /**
-     * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.
+     * (Optional) Volume to mount into the container&#39;s filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container&#39;s filesystem.
      * 
      */
     private final List<VolumeMountResponse> volumeMounts;
     /**
-     * (Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.
+     * (Optional) Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image.
      * 
      */
     private final String workingDir;
@@ -138,7 +138,7 @@ public final class ContainerResponse {
     }
 
     /**
-     * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * (Optional) Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
     public List<String> args() {
@@ -225,7 +225,7 @@ public final class ContainerResponse {
         return this.startupProbe;
     }
     /**
-     * (Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.
+     * (Optional) Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.
      * 
     */
     public String terminationMessagePath() {
@@ -239,14 +239,14 @@ public final class ContainerResponse {
         return this.terminationMessagePolicy;
     }
     /**
-     * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.
+     * (Optional) Volume to mount into the container&#39;s filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container&#39;s filesystem.
      * 
     */
     public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
     }
     /**
-     * (Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.
+     * (Optional) Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image.
      * 
     */
     public String workingDir() {

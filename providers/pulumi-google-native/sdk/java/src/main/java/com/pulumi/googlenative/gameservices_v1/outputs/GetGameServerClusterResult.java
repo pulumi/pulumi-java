@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetGameServerClusterResult {
     /**
-     * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
+     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
      * 
      */
     private final KubernetesClusterStateResponse clusterState;
@@ -74,7 +74,7 @@ public final class GetGameServerClusterResult {
     }
 
     /**
-     * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
+     * The state of the Kubernetes cluster, this will be available if &#39;view&#39; is set to `FULL` in the relevant List/Get/Preview request.
      * 
     */
     public KubernetesClusterStateResponse clusterState() {

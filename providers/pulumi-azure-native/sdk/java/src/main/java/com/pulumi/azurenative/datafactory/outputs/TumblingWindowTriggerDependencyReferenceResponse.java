@@ -29,7 +29,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
     private final @Nullable String size;
     /**
      * The type of dependency reference.
-     * Expected value is 'TumblingWindowTriggerDependencyReference'.
+     * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
     }
     /**
      * The type of dependency reference.
-     * Expected value is 'TumblingWindowTriggerDependencyReference'.
+     * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
      * 
     */
     public String type() {

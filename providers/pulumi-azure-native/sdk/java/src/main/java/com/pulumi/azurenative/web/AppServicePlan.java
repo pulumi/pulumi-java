@@ -80,42 +80,42 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
         return this.hostingEnvironmentProfile;
     }
     /**
-     * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Export(name="hyperV", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hyperV;
 
     /**
-     * @return If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * @return If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     public Output</* @Nullable */ Boolean> hyperV() {
         return this.hyperV;
     }
     /**
-     * If <code>true</code>, this App Service Plan owns spot instances.
+     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
      */
     @Export(name="isSpot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSpot;
 
     /**
-     * @return If <code>true</code>, this App Service Plan owns spot instances.
+     * @return If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
      */
     public Output</* @Nullable */ Boolean> isSpot() {
         return this.isSpot;
     }
     /**
-     * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Export(name="isXenon", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isXenon;
 
     /**
-     * @return Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * @return Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     public Output</* @Nullable */ Boolean> isXenon() {
@@ -220,16 +220,16 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
         return this.numberOfSites;
     }
     /**
-     * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-     * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
+     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
     @Export(name="perSiteScaling", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> perSiteScaling;
 
     /**
-     * @return If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-     * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
+     * @return If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
     public Output</* @Nullable */ Boolean> perSiteScaling() {
@@ -250,14 +250,14 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
-     * @return If Linux app service plan <code>true</code>, <code>false</code> otherwise.
+     * @return If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     public Output</* @Nullable */ Boolean> reserved() {

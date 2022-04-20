@@ -41,7 +41,7 @@ import java.util.StringJoiner;
          */
         InboundServiceXmppSubscribe("INBOUND_SERVICE_XMPP_SUBSCRIBE"),
         /**
-         * Allows an application to receive a user's chat presence.
+         * Allows an application to receive a user&#39;s chat presence.
          * 
          */
         InboundServiceXmppPresence("INBOUND_SERVICE_XMPP_PRESENCE"),

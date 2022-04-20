@@ -19,7 +19,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     public static final SignatureResponse Empty = new SignatureResponse();
 
     /**
-     * Optional. An image of the user's signature.
+     * Optional. An image of the user&#39;s signature.
      * 
      */
     @Import(name="image", required=true)
@@ -30,7 +30,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
      */
     @Import(name="metadata", required=true)
@@ -52,7 +52,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Import(name="userId", required=true)

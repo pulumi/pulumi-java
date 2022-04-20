@@ -80,7 +80,7 @@ public final class FilterActivityArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Filter'.
+     * Expected value is &#39;Filter&#39;.
      * 
      */
     @Import(name="type", required=true)

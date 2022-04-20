@@ -20,7 +20,7 @@ public final class UrlSigningActionResponse extends com.pulumi.resources.InvokeA
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlSigning'.
+     * Expected value is &#39;UrlSigning&#39;.
      * 
      */
     @Import(name="name", required=true)

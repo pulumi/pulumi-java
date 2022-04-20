@@ -55,7 +55,7 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Additional resource type qualifier.
-     * Expected value is 'machineGroup'.
+     * Expected value is &#39;machineGroup&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * This represents the details about a User's environment and its state.
+ * This represents the details about a User&#39;s environment and its state.
  * 
  */
 public final class EnvironmentDetailsResponse extends com.pulumi.resources.InvokeArgs {

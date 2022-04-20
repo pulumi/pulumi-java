@@ -33,7 +33,7 @@ public final class GetDomainResult {
      */
     private final Map<String,String> advancedOptions;
     /**
-     * Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
+     * Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
      * 
      */
     private final List<GetDomainAdvancedSecurityOption> advancedSecurityOptions;
@@ -196,7 +196,7 @@ public final class GetDomainResult {
         return this.advancedOptions;
     }
     /**
-     * Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
+     * Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
      * 
     */
     public List<GetDomainAdvancedSecurityOption> advancedSecurityOptions() {

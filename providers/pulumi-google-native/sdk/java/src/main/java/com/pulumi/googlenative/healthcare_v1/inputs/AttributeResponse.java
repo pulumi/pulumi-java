@@ -29,7 +29,7 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
+     * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines &#34;data type&#34; with acceptable values &#34;questionnaire&#34; and &#34;step-count&#34;, when the attribute name is data type, this field must contain one of those values.
      * 
      */
     @Import(name="values", required=true)

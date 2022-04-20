@@ -20,7 +20,7 @@ public final class ContinuousModeBackupPolicyArgs extends com.pulumi.resources.R
 
     /**
      * Describes the mode of backups.
-     * Expected value is 'Continuous'.
+     * Expected value is &#39;Continuous&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -16,7 +16,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntityArgs Empty = new GetEntityArgs();
 
     /**
-     * The filter parameter allows you to filter on the the name or display name fields. You can check for equality on the name field (e.g. name eq '{entityName}')  and you can check for substrings on either the name or display name fields(e.g. contains(name, '{substringToSearch}'), contains(displayName, '{substringToSearch')). Note that the '{entityName}' and '{substringToSearch}' fields are checked case insensitively.
+     * The filter parameter allows you to filter on the the name or display name fields. You can check for equality on the name field (e.g. name eq &#39;{entityName}&#39;)  and you can check for substrings on either the name or display name fields(e.g. contains(name, &#39;{substringToSearch}&#39;), contains(displayName, &#39;{substringToSearch&#39;)). Note that the &#39;{entityName}&#39; and &#39;{substringToSearch}&#39; fields are checked case insensitively.
      * 
      */
     @Import(name="filter")
@@ -27,7 +27,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A filter which allows the get entities call to focus on a particular group (i.e. "$filter=name eq 'groupName'")
+     * A filter which allows the get entities call to focus on a particular group (i.e. &#34;$filter=name eq &#39;groupName&#39;&#34;)
      * 
      */
     @Import(name="groupName")
@@ -39,11 +39,11 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The $search parameter is used in conjunction with the $filter parameter to return three different outputs depending on the parameter passed in.
-     * With $search=AllowedParents the API will return the entity info of all groups that the requested entity will be able to reparent to as determined by the user's permissions.
+     * With $search=AllowedParents the API will return the entity info of all groups that the requested entity will be able to reparent to as determined by the user&#39;s permissions.
      * With $search=AllowedChildren the API will return the entity info of all entities that can be added as children of the requested entity.
      * With $search=ParentAndFirstLevelChildren the API will return the parent and  first level of children that the user has either direct access to or indirect access via one of their descendants.
      * With $search=ParentOnly the API will return only the group if the user has access to at least one of the descendants of the group.
-     * With $search=ChildrenOnly the API will return only the first level of children of the group entity info specified in $filter.  The user must have direct access to the children entities or one of it's descendants for it to show up in the results.
+     * With $search=ChildrenOnly the API will return only the first level of children of the group entity info specified in $filter.  The user must have direct access to the children entities or one of it&#39;s descendants for it to show up in the results.
      * 
      */
     @Import(name="search")
@@ -54,7 +54,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * This parameter specifies the fields to include in the response. Can include any combination of Name,DisplayName,Type,ParentDisplayNameChain,ParentChain, e.g. '$select=Name,DisplayName,Type,ParentDisplayNameChain,ParentNameChain'. When specified the $select parameter can override select in $skipToken.
+     * This parameter specifies the fields to include in the response. Can include any combination of Name,DisplayName,Type,ParentDisplayNameChain,ParentChain, e.g. &#39;$select=Name,DisplayName,Type,ParentDisplayNameChain,ParentNameChain&#39;. When specified the $select parameter can override select in $skipToken.
      * 
      */
     @Import(name="select")

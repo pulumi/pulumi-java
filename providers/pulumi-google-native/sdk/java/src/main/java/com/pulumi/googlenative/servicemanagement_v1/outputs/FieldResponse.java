@@ -59,7 +59,7 @@ public final class FieldResponse {
      */
     private final Boolean packed;
     /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+     * The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
      * 
      */
     private final String typeUrl;
@@ -152,7 +152,7 @@ public final class FieldResponse {
         return this.packed;
     }
     /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+     * The field type URL, without the scheme, for message or enumeration types. Example: `&#34;type.googleapis.com/google.protobuf.Timestamp&#34;`.
      * 
     */
     public String typeUrl() {

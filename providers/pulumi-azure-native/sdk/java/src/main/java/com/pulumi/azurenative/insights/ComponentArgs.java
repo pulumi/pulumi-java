@@ -47,7 +47,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
      */
     @Import(name="flowType")
@@ -113,7 +113,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
     @Import(name="requestSource")

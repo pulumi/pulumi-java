@@ -20,7 +20,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends com.pulum
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -101,16 +101,16 @@ public class Realm extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The resource id of the realm, of the form: 'projects/{project_id}/locations/{location}/realms/{realm_id}'. For example,
-     * 'projects/my-project/locations/{location}/realms/my-realm'.
+     * The resource id of the realm, of the form: &#39;projects/{project_id}/locations/{location}/realms/{realm_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/realms/my-realm&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource id of the realm, of the form: 'projects/{project_id}/locations/{location}/realms/{realm_id}'. For example,
-     * 'projects/my-project/locations/{location}/realms/my-realm'.
+     * @return The resource id of the realm, of the form: &#39;projects/{project_id}/locations/{location}/realms/{realm_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/realms/my-realm&#39;.
      * 
      */
     public Output<String> name() {

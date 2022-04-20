@@ -19,7 +19,7 @@ public final class ConnectivityTestDestination {
     private final @Nullable String instance;
     /**
      * The IP address of the endpoint, which can be an external or
-     * internal IP. An IPv6 address is only allowed when the test's
+     * internal IP. An IPv6 address is only allowed when the test&#39;s
      * destination is a global load balancer VIP.
      * 
      */
@@ -71,7 +71,7 @@ public final class ConnectivityTestDestination {
     }
     /**
      * The IP address of the endpoint, which can be an external or
-     * internal IP. An IPv6 address is only allowed when the test's
+     * internal IP. An IPv6 address is only allowed when the test&#39;s
      * destination is a global load balancer VIP.
      * 
     */

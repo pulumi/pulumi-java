@@ -63,7 +63,7 @@ public final class EffectiveSecurityAdminRuleResponse {
     private final @Nullable String id;
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     private final String kind;
@@ -220,7 +220,7 @@ public final class EffectiveSecurityAdminRuleResponse {
     }
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
     */
     public String kind() {

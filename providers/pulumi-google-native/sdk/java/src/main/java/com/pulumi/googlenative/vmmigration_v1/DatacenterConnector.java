@@ -63,14 +63,14 @@ public class DatacenterConnector extends com.pulumi.resources.CustomResource {
         return this.error;
     }
     /**
-     * The connector's name.
+     * The connector&#39;s name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The connector's name.
+     * @return The connector&#39;s name.
      * 
      */
     public Output<String> name() {

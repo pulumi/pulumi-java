@@ -30,7 +30,7 @@ public final class ClusterParameterGroupState extends com.pulumi.resources.Resou
     }
 
     /**
-     * The description of the documentDB cluster parameter group. Defaults to "Managed by Pulumi".
+     * The description of the documentDB cluster parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

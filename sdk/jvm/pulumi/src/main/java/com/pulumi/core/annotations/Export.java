@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
 
 /**
  * Annotation used by a mark @see {@link com.pulumi.resources.Resource} output properties.
- * <p/>
+ * <p>
  * Use this annotation in your Pulumi programs to mark outputs of @see {@link com.pulumi.resources.ComponentResource}
- * and @see {@link Stack} resources.<br/>
+ * and @see {@link Stack} resources.<br>
  * Requirements:
  * <ul>
  *     <li>annotate a field of type @see {@link com.pulumi.core.Output}</li>

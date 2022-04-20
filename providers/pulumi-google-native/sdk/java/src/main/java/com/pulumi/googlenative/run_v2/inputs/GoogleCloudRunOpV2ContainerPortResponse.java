@@ -18,7 +18,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
     public static final GoogleCloudRunOpV2ContainerPortResponse Empty = new GoogleCloudRunOpV2ContainerPortResponse();
 
     /**
-     * Port number the container listens on. This must be a valid TCP port number, 0 < container_port < 65536.
+     * Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
      * 
      */
     @Import(name="containerPort", required=true)
@@ -29,7 +29,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
     }
 
     /**
-     * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     * If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
      * 
      */
     @Import(name="name", required=true)

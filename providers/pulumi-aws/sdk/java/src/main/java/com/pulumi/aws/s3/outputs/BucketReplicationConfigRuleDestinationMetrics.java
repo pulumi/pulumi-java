@@ -18,7 +18,7 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
      */
     private final @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold;
     /**
-     * The status of the Destination Metrics. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     private final String status;
@@ -39,7 +39,7 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
         return Optional.ofNullable(this.eventThreshold);
     }
     /**
-     * The status of the Destination Metrics. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
     */
     public String status() {

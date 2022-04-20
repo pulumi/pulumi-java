@@ -19,7 +19,7 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
     public static final GraphParameterLinkArgs Empty = new GraphParameterLinkArgs();
 
     /**
-     * The graph node's identifier
+     * The graph node&#39;s identifier
      * 
      */
     @Import(name="nodeId", required=true)

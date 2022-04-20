@@ -55,7 +55,7 @@ public final class InMageRcmPolicyCreationInputArgs extends com.pulumi.resources
 
     /**
      * The class type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     @Import(name="instanceType")

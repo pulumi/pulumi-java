@@ -110,14 +110,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
      * 
      */
     @Export(name="memcacheFullVersion", type=String.class, parameters={})
     private Output<String> memcacheFullVersion;
 
     /**
-     * @return The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
+     * @return The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
      * 
      */
     public Output<String> memcacheFullVersion() {

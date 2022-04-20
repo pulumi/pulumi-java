@@ -99,7 +99,7 @@ public final class FrontendEndpointResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="sessionAffinityEnabledState")

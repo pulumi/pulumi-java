@@ -27,22 +27,22 @@ public final class UserInfoResponse {
      */
     private final @Nullable String userIss;
     /**
-     *  A user's full name or a service principal's app ID.
+     *  A user&#39;s full name or a service principal&#39;s app ID.
      * 
      */
     private final @Nullable String userName;
     /**
-     * A user or service principal's object ID..
+     * A user or service principal&#39;s object ID..
      * 
      */
     private final @Nullable String userObjectId;
     /**
-     * A user or service principal's PuID.
+     * A user or service principal&#39;s PuID.
      * 
      */
     private final @Nullable String userPuId;
     /**
-     * A user or service principal's tenant ID.
+     * A user or service principal&#39;s tenant ID.
      * 
      */
     private final @Nullable String userTenantId;
@@ -87,28 +87,28 @@ public final class UserInfoResponse {
         return Optional.ofNullable(this.userIss);
     }
     /**
-     *  A user's full name or a service principal's app ID.
+     *  A user&#39;s full name or a service principal&#39;s app ID.
      * 
     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
     /**
-     * A user or service principal's object ID..
+     * A user or service principal&#39;s object ID..
      * 
     */
     public Optional<String> userObjectId() {
         return Optional.ofNullable(this.userObjectId);
     }
     /**
-     * A user or service principal's PuID.
+     * A user or service principal&#39;s PuID.
      * 
     */
     public Optional<String> userPuId() {
         return Optional.ofNullable(this.userPuId);
     }
     /**
-     * A user or service principal's tenant ID.
+     * A user or service principal&#39;s tenant ID.
      * 
     */
     public Optional<String> userTenantId() {

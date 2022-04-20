@@ -69,7 +69,7 @@ public final class GoogleBigQueryObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'GoogleBigQueryObject'.
+     * Expected value is &#39;GoogleBigQueryObject&#39;.
      * 
      */
     private final String type;
@@ -172,7 +172,7 @@ public final class GoogleBigQueryObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'GoogleBigQueryObject'.
+     * Expected value is &#39;GoogleBigQueryObject&#39;.
      * 
     */
     public String type() {

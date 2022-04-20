@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+ * CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are &#34;If-Match&#34;, &#34;If-None-Match&#34;, &#34;Session-Token&#34; and &#34;Throughput&#34;
  * 
  */
 public final class CreateUpdateOptionsArgs extends com.pulumi.resources.ResourceArgs {
@@ -32,7 +32,7 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Request Units per second. For example, "throughput": 10000.
+     * Request Units per second. For example, &#34;throughput&#34;: 10000.
      * 
      */
     @Import(name="throughput")

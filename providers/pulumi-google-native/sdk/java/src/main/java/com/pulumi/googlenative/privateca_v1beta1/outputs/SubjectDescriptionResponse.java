@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SubjectDescriptionResponse {
     /**
-     * The "common name" of the distinguished name.
+     * The &#34;common name&#34; of the distinguished name.
      * 
      */
     private final String commonName;
@@ -22,7 +22,7 @@ public final class SubjectDescriptionResponse {
      */
     private final String hexSerialNumber;
     /**
-     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
      * 
      */
     private final String lifetime;
@@ -66,7 +66,7 @@ public final class SubjectDescriptionResponse {
     }
 
     /**
-     * The "common name" of the distinguished name.
+     * The &#34;common name&#34; of the distinguished name.
      * 
     */
     public String commonName() {
@@ -80,7 +80,7 @@ public final class SubjectDescriptionResponse {
         return this.hexSerialNumber;
     }
     /**
-     * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
+     * For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
      * 
     */
     public String lifetime() {

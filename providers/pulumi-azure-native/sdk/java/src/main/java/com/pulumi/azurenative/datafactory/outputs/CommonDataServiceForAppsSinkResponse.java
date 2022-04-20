@@ -44,7 +44,7 @@ public final class CommonDataServiceForAppsSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'CommonDataServiceForAppsSink'.
+     * Expected value is &#39;CommonDataServiceForAppsSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class CommonDataServiceForAppsSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'CommonDataServiceForAppsSink'.
+     * Expected value is &#39;CommonDataServiceForAppsSink&#39;.
      * 
     */
     public String type() {

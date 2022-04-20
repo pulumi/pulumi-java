@@ -18,7 +18,7 @@ public final class ExportDatasetResponse {
      */
     private final @Nullable ExportDatasetConfigurationResponse configuration;
     /**
-     * The granularity of rows in the export. Currently only 'Daily' is supported.
+     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
      * 
      */
     private final @Nullable String granularity;
@@ -39,7 +39,7 @@ public final class ExportDatasetResponse {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * The granularity of rows in the export. Currently only 'Daily' is supported.
+     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
      * 
     */
     public Optional<String> granularity() {

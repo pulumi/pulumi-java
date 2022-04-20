@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Amazon Elasticsearch Service parameters.</p>
+ * &lt;p&gt;Amazon Elasticsearch Service parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceAmazonElasticsearchParametersArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,7 +19,7 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends com.pulum
     public static final DataSourceAmazonElasticsearchParametersArgs Empty = new DataSourceAmazonElasticsearchParametersArgs();
 
     /**
-     * <p>The Amazon Elasticsearch Service domain.</p>
+     * &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
      * 
      */
     @Import(name="domain", required=true)

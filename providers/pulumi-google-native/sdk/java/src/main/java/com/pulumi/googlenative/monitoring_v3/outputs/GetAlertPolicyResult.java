@@ -18,7 +18,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAlertPolicyResult {
     /**
-     * Control over how this alert policy's notification channels are notified.
+     * Control over how this alert policy&#39;s notification channels are notified.
      * 
      */
     private final AlertStrategyResponse alertStrategy;
@@ -38,7 +38,7 @@ public final class GetAlertPolicyResult {
      */
     private final MutationRecordResponse creationRecord;
     /**
-     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
+     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
      * 
      */
     private final String displayName;
@@ -107,7 +107,7 @@ public final class GetAlertPolicyResult {
     }
 
     /**
-     * Control over how this alert policy's notification channels are notified.
+     * Control over how this alert policy&#39;s notification channels are notified.
      * 
     */
     public AlertStrategyResponse alertStrategy() {
@@ -135,7 +135,7 @@ public final class GetAlertPolicyResult {
         return this.creationRecord;
     }
     /**
-     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
+     * A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don&#39;t use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.
      * 
     */
     public String displayName() {

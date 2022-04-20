@@ -54,7 +54,7 @@ public final class PostgreSqlLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse password;
     /**
      * Type of linked service.
-     * Expected value is 'PostgreSql'.
+     * Expected value is &#39;PostgreSql&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class PostgreSqlLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'PostgreSql'.
+     * Expected value is &#39;PostgreSql&#39;.
      * 
     */
     public String type() {

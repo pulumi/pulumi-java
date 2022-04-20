@@ -38,7 +38,7 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
     }
 
     /**
-     * Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g., `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
+     * Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource&#39;s attribute, e.g., `&#34;${aws_launch_template.foo.latest_version}&#34;`. It will use the default version if omitted.
      * 
      */
     @Import(name="version")

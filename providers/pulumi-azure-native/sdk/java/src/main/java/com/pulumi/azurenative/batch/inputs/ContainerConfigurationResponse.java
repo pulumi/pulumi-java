@@ -17,7 +17,7 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     public static final ContainerConfigurationResponse Empty = new ContainerConfigurationResponse();
 
     /**
-     * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+     * This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
      * 
      */
     @Import(name="containerImageNames")

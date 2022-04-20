@@ -20,7 +20,7 @@ public final class CSIVolumeSource {
      */
     private final String driver;
     /**
-     * Filesystem type to mount. Ex. "ext4", "xfs", "ntfs". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
      */
     private final @Nullable String fsType;
@@ -35,7 +35,7 @@ public final class CSIVolumeSource {
      */
     private final @Nullable Boolean readOnly;
     /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
+     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
      */
     private final @Nullable Map<String,String> volumeAttributes;
@@ -62,7 +62,7 @@ public final class CSIVolumeSource {
         return this.driver;
     }
     /**
-     * Filesystem type to mount. Ex. "ext4", "xfs", "ntfs". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
     */
     public Optional<String> fsType() {
@@ -83,7 +83,7 @@ public final class CSIVolumeSource {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
+     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
     */
     public Map<String,String> volumeAttributes() {

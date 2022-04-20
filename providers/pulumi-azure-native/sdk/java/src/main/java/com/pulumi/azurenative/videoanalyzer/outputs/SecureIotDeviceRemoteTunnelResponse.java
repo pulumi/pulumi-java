@@ -21,7 +21,7 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     private final String iotHubName;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
      * 
      */
     private final String type;
@@ -52,7 +52,7 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
      * 
     */
     public String type() {

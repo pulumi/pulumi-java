@@ -19,7 +19,7 @@ public final class NumberGreaterThanAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberGreaterThan'.
+     * Expected value is &#39;NumberGreaterThan&#39;.
      * 
      */
     private final String operatorType;
@@ -48,7 +48,7 @@ public final class NumberGreaterThanAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberGreaterThan'.
+     * Expected value is &#39;NumberGreaterThan&#39;.
      * 
     */
     public String operatorType() {

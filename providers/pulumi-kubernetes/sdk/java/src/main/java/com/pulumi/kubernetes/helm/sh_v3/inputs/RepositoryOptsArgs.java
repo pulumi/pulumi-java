@@ -20,7 +20,7 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
     public static final RepositoryOptsArgs Empty = new RepositoryOptsArgs();
 
     /**
-     * The Repository's CA File
+     * The Repository&#39;s CA File
      * 
      */
     @Import(name="caFile")
@@ -31,7 +31,7 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The repository's cert file
+     * The repository&#39;s cert file
      * 
      */
     @Import(name="certFile")
@@ -42,7 +42,7 @@ public final class RepositoryOptsArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The repository's cert key file
+     * The repository&#39;s cert key file
      * 
      */
     @Import(name="keyFile")

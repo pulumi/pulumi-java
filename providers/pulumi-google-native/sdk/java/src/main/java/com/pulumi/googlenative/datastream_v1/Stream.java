@@ -139,14 +139,14 @@ public class Stream extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The stream's name.
+     * The stream&#39;s name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The stream's name.
+     * @return The stream&#39;s name.
      * 
      */
     public Output<String> name() {

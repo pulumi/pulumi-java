@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
+     * Immutable. The type of storage used by this cluster to serve its parent instance&#39;s tables, unless explicitly overridden.
      * 
      */
     @EnumType

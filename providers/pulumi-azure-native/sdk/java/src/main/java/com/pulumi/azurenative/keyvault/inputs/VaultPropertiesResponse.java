@@ -27,7 +27,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     public static final VaultPropertiesResponse Empty = new VaultPropertiesResponse();
 
     /**
-     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
      * 
      */
     @Import(name="accessPolicies")
@@ -60,7 +60,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
      */
     @Import(name="enableSoftDelete")
@@ -159,7 +159,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * softDelete data retention days. It accepts >=7 and <=90.
+     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
      */
     @Import(name="softDeleteRetentionInDays")

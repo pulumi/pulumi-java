@@ -33,7 +33,7 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="requireHttps")

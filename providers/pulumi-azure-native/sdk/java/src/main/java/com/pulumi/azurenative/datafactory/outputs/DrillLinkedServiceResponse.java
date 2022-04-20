@@ -54,7 +54,7 @@ public final class DrillLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
      * Type of linked service.
-     * Expected value is 'Drill'.
+     * Expected value is &#39;Drill&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class DrillLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Drill'.
+     * Expected value is &#39;Drill&#39;.
      * 
     */
     public String type() {

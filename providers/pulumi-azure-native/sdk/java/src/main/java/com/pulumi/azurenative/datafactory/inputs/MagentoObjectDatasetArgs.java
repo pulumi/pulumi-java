@@ -115,7 +115,7 @@ public final class MagentoObjectDatasetArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of dataset.
-     * Expected value is 'MagentoObject'.
+     * Expected value is &#39;MagentoObject&#39;.
      * 
      */
     @Import(name="type", required=true)

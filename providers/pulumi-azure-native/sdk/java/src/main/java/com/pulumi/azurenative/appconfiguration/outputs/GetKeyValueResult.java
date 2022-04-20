@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetKeyValueResult {
     /**
-     * The content type of the key-value's value.
+     * The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
@@ -100,7 +100,7 @@ public final class GetKeyValueResult {
     }
 
     /**
-     * The content type of the key-value's value.
+     * The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
     */

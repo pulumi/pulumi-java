@@ -51,14 +51,14 @@ public class Component extends com.pulumi.resources.CustomResource {
         return this.appId;
     }
     /**
-     * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
+     * The unique ID of your application. This field mirrors the &#39;Name&#39; field and cannot be changed.
      * 
      */
     @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
-     * @return The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
+     * @return The unique ID of your application. This field mirrors the &#39;Name&#39; field and cannot be changed.
      * 
      */
     public Output<String> applicationId() {
@@ -121,14 +121,14 @@ public class Component extends com.pulumi.resources.CustomResource {
         return this.disableIpMasking;
     }
     /**
-     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
      */
     @Export(name="flowType", type=String.class, parameters={})
     private Output</* @Nullable */ String> flowType;
 
     /**
-     * @return Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+     * @return Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
      */
     public Output</* @Nullable */ String> flowType() {
@@ -275,14 +275,14 @@ public class Component extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
     @Export(name="requestSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestSource;
 
     /**
-     * @return Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * @return Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
     public Output</* @Nullable */ String> requestSource() {

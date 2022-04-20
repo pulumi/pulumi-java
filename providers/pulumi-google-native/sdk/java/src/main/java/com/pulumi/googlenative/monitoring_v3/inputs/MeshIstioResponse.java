@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Istio service scoped to an Istio mesh. Anthos clusters running ASM < 1.6.8 will have their services ingested as this type.
+ * Istio service scoped to an Istio mesh. Anthos clusters running ASM &lt; 1.6.8 will have their services ingested as this type.
  * 
  */
 public final class MeshIstioResponse extends com.pulumi.resources.InvokeArgs {

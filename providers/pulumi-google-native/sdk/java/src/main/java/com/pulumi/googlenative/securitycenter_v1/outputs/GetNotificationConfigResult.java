@@ -16,17 +16,17 @@ public final class GetNotificationConfigResult {
      */
     private final String description;
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
      */
     private final String name;
     /**
-     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
      */
     private final String pubsubTopic;
     /**
-     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
      */
     private final String serviceAccount;
@@ -58,21 +58,21 @@ public final class GetNotificationConfigResult {
         return this.description;
     }
     /**
-     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+     * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
+     * The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
      * 
     */
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
-     * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
+     * The service account that needs &#34;pubsub.topics.publish&#34; permission to publish to the Pub/Sub topic.
      * 
     */
     public String serviceAccount() {

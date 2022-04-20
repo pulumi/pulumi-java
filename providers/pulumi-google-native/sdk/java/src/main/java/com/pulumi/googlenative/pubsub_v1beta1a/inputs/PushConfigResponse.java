@@ -17,7 +17,7 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
     public static final PushConfigResponse Empty = new PushConfigResponse();
 
     /**
-     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
+     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
      * 
      */
     @Import(name="pushEndpoint", required=true)

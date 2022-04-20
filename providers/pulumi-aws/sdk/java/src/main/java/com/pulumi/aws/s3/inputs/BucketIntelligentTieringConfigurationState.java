@@ -30,7 +30,7 @@ public final class BucketIntelligentTieringConfigurationState extends com.pulumi
     }
 
     /**
-     * A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
+     * A bucket filter. The configuration only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     @Import(name="filter")

@@ -61,7 +61,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user's IAM ARN to set permissions for
+     * The user&#39;s IAM ARN to set permissions for
      * 
      */
     @Import(name="userArn")

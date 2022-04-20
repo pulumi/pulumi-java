@@ -13,7 +13,7 @@ public final class GetCustomMetricArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCustomMetricArgs Empty = new GetCustomMetricArgs();
 
     /**
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
     @Import(name="metricName", required=true)

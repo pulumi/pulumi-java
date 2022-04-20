@@ -52,7 +52,7 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
     @Import(name="functionParameters")

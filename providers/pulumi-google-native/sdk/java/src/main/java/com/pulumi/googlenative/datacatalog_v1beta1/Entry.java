@@ -19,7 +19,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information). A maximum of 100,000 entries may be created per entry group.
+ * Creates an entry. Only entries of &#39;FILESET&#39; type or user-specified type can be created. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information). A maximum of 100,000 entries may be created per entry group.
  * Auto-naming is currently not supported for this resource.
  * 
  */
@@ -68,14 +68,14 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
+     * Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
+     * @return Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
      * 
      */
     public Output<String> displayName() {
@@ -96,14 +96,14 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.gcsFilesetSpec;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
     @Export(name="integratedSystem", type=String.class, parameters={})
     private Output<String> integratedSystem;
 
     /**
-     * @return This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
+     * @return This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
     public Output<String> integratedSystem() {
@@ -194,28 +194,28 @@ public class Entry extends com.pulumi.resources.CustomResource {
         return this.usageSignal;
     }
     /**
-     * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
     @Export(name="userSpecifiedSystem", type=String.class, parameters={})
     private Output<String> userSpecifiedSystem;
 
     /**
-     * @return This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * @return This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
     public Output<String> userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
-     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
     @Export(name="userSpecifiedType", type=String.class, parameters={})
     private Output<String> userSpecifiedType;
 
     /**
-     * @return Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * @return Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
     public Output<String> userSpecifiedType() {

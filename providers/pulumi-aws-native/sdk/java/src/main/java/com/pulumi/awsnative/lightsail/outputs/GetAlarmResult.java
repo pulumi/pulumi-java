@@ -27,17 +27,17 @@ public final class GetAlarmResult {
      */
     private final @Nullable List<String> contactProtocols;
     /**
-     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
+     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
      */
     private final @Nullable Integer datapointsToAlarm;
     /**
-     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
+     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
      * 
      */
     private final @Nullable Integer evaluationPeriods;
     /**
-     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
+     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
      */
     private final @Nullable Boolean notificationEnabled;
@@ -104,21 +104,21 @@ public final class GetAlarmResult {
         return this.contactProtocols == null ? List.of() : this.contactProtocols;
     }
     /**
-     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
+     * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
     */
     public Optional<Integer> datapointsToAlarm() {
         return Optional.ofNullable(this.datapointsToAlarm);
     }
     /**
-     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
+     * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
      * 
     */
     public Optional<Integer> evaluationPeriods() {
         return Optional.ofNullable(this.evaluationPeriods);
     }
     /**
-     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
+     * Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
     */
     public Optional<Boolean> notificationEnabled() {

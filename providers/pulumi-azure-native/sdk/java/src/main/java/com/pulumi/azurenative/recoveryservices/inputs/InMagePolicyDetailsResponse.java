@@ -33,7 +33,7 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

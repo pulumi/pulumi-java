@@ -42,7 +42,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker local storage on destroy operation.
      * 
      */
@@ -54,9 +54,9 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
+     * The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
      * 
-     * @Deprecated
+     * @deprecated
      * Use repo_digest instead
      * 
      */
@@ -81,7 +81,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * @Deprecated
+     * @deprecated
      * Is unused and will be removed.
      * 
      */
@@ -97,7 +97,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     /**
      * A value which cause an image pull when changed
      * 
-     * @Deprecated
+     * @deprecated
      * Use field pull_triggers instead
      * 
      */
@@ -123,7 +123,7 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
+     * The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
      * 
      */
     @Import(name="repoDigest")

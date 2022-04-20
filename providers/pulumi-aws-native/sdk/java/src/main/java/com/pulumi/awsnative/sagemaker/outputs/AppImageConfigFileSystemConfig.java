@@ -23,7 +23,7 @@ public final class AppImageConfigFileSystemConfig {
      */
     private final @Nullable Integer defaultUid;
     /**
-     * The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
+     * The path within the image to mount the user&#39;s EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
      * 
      */
     private final @Nullable String mountPath;
@@ -53,7 +53,7 @@ public final class AppImageConfigFileSystemConfig {
         return Optional.ofNullable(this.defaultUid);
     }
     /**
-     * The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
+     * The path within the image to mount the user&#39;s EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
      * 
     */
     public Optional<String> mountPath() {

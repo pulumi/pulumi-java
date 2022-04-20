@@ -28,7 +28,7 @@ public final class ApnsVoipSandboxChannelState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
+     * The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
     @Import(name="bundleId")
@@ -53,7 +53,7 @@ public final class ApnsVoipSandboxChannelState extends com.pulumi.resources.Reso
      * The default authentication method used for APNs.
      * __NOTE__: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
      * You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-     * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
+     * If your default authentication type fails, Amazon Pinpoint doesn&#39;t attempt to use the other authentication type.
      * 
      */
     @Import(name="defaultAuthenticationMethod")
@@ -108,7 +108,7 @@ public final class ApnsVoipSandboxChannelState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
+     * The ID assigned to your signing key. To find this value, choose Certificates, IDs &amp; Profiles, and choose your key in the Keys section.
      * 
      */
     @Import(name="tokenKeyId")

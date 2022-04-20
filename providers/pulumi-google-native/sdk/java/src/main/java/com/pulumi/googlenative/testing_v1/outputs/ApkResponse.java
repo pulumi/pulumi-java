@@ -16,7 +16,7 @@ public final class ApkResponse {
      */
     private final FileReferenceResponse location;
     /**
-     * The java package for the APK to be installed. Value is determined by examining the application's manifest.
+     * The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
      * 
      */
     private final String packageName;
@@ -37,7 +37,7 @@ public final class ApkResponse {
         return this.location;
     }
     /**
-     * The java package for the APK to be installed. Value is determined by examining the application's manifest.
+     * The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
      * 
     */
     public String packageName() {

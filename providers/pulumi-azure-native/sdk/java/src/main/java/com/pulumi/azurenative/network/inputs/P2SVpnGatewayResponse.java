@@ -147,7 +147,7 @@ public final class P2SVpnGatewayResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * All P2S VPN clients' connection health status.
+     * All P2S VPN clients&#39; connection health status.
      * 
      */
     @Import(name="vpnClientConnectionHealth", required=true)

@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class AvroSerializationResponse {
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
      */
     private final String type;
@@ -23,7 +23,7 @@ public final class AvroSerializationResponse {
 
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
     */
     public String type() {

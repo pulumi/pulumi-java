@@ -19,7 +19,7 @@ public final class CMKIdentityDefinitionResponse extends com.pulumi.resources.In
     public static final CMKIdentityDefinitionResponse Empty = new CMKIdentityDefinitionResponse();
 
     /**
-     * The resource id of the user assigned identity to authenticate to customer's key vault.
+     * The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
      * 
      */
     @Import(name="userAssignedIdentity")

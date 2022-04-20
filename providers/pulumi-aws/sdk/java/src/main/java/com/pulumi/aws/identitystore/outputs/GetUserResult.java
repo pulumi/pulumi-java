@@ -20,7 +20,7 @@ public final class GetUserResult {
     private final String identityStoreId;
     private final String userId;
     /**
-     * The user's user name value.
+     * The user&#39;s user name value.
      * 
      */
     private final String userName;
@@ -56,7 +56,7 @@ public final class GetUserResult {
         return this.userId;
     }
     /**
-     * The user's user name value.
+     * The user&#39;s user name value.
      * 
     */
     public String userName() {

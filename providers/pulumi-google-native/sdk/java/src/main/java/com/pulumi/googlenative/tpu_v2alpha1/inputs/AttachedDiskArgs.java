@@ -32,7 +32,7 @@ public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
+     * Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
      * 
      */
     @Import(name="sourceDisk")

@@ -36,42 +36,42 @@ public class Topic extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The settings for this topic's partitions.
+     * The settings for this topic&#39;s partitions.
      * 
      */
     @Export(name="partitionConfig", type=PartitionConfigResponse.class, parameters={})
     private Output<PartitionConfigResponse> partitionConfig;
 
     /**
-     * @return The settings for this topic's partitions.
+     * @return The settings for this topic&#39;s partitions.
      * 
      */
     public Output<PartitionConfigResponse> partitionConfig() {
         return this.partitionConfig;
     }
     /**
-     * The settings for this topic's Reservation usage.
+     * The settings for this topic&#39;s Reservation usage.
      * 
      */
     @Export(name="reservationConfig", type=ReservationConfigResponse.class, parameters={})
     private Output<ReservationConfigResponse> reservationConfig;
 
     /**
-     * @return The settings for this topic's Reservation usage.
+     * @return The settings for this topic&#39;s Reservation usage.
      * 
      */
     public Output<ReservationConfigResponse> reservationConfig() {
         return this.reservationConfig;
     }
     /**
-     * The settings for this topic's message retention.
+     * The settings for this topic&#39;s message retention.
      * 
      */
     @Export(name="retentionConfig", type=RetentionConfigResponse.class, parameters={})
     private Output<RetentionConfigResponse> retentionConfig;
 
     /**
-     * @return The settings for this topic's message retention.
+     * @return The settings for this topic&#39;s message retention.
      * 
      */
     public Output<RetentionConfigResponse> retentionConfig() {

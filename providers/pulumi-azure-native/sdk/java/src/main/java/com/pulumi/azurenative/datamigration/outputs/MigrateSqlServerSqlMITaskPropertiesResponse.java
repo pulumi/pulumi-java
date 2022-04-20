@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI&#39;.
      * 
      */
     private final String taskType;
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDbMI'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDbMI&#39;.
      * 
     */
     public String taskType() {

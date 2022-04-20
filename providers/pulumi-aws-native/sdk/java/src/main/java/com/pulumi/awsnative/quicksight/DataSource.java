@@ -29,44 +29,44 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:quicksight:DataSource")
 public class DataSource extends com.pulumi.resources.CustomResource {
     /**
-     * <p>A set of alternate data source parameters that you want to share for the credentials
+     * &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
      *             parameters when you copy a data source by using a create or update request. The API
-     *             operation compares the <code>DataSourceParameters</code> structure that's in the request
-     *             with the structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+     *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
      *             structures are an exact match, the request is allowed to use the credentials from this
-     *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
-     *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
-     *             are automatically allowed.</p>
+     *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+     *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+     *             are automatically allowed.&lt;/p&gt;
      * 
      */
     @Export(name="alternateDataSourceParameters", type=List.class, parameters={DataSourceParameters.class})
     private Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters;
 
     /**
-     * @return <p>A set of alternate data source parameters that you want to share for the credentials
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
      *             parameters when you copy a data source by using a create or update request. The API
-     *             operation compares the <code>DataSourceParameters</code> structure that's in the request
-     *             with the structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+     *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
      *             structures are an exact match, the request is allowed to use the credentials from this
-     *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
-     *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
-     *             are automatically allowed.</p>
+     *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+     *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+     *             are automatically allowed.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters;
     }
     /**
-     * <p>The Amazon Resource Name (ARN) of the data source.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the data source.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -79,14 +79,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>The time that this data source was created.</p>
+     * &lt;p&gt;The time that this data source was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>The time that this data source was created.</p>
+     * @return &lt;p&gt;The time that this data source was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
@@ -117,42 +117,42 @@ public class DataSource extends com.pulumi.resources.CustomResource {
         return this.errorInfo;
     }
     /**
-     * <p>The last time that this data source was updated.</p>
+     * &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>The last time that this data source was updated.</p>
+     * @return &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * <p>A display name for the data source.</p>
+     * &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>A display name for the data source.</p>
+     * @return &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
-     * <p>A list of resource permissions on the data source.</p>
+     * &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={DataSourceResourcePermission.class})
     private Output</* @Nullable */ List<DataSourceResourcePermission>> permissions;
 
     /**
-     * @return <p>A list of resource permissions on the data source.</p>
+     * @return &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSourceResourcePermission>> permissions() {
@@ -171,14 +171,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={DataSourceTag.class})
     private Output</* @Nullable */ List<DataSourceTag>> tags;
 
     /**
-     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<DataSourceTag>> tags() {

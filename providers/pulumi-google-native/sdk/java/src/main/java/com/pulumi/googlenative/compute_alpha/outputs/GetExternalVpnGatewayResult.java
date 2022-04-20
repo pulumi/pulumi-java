@@ -23,7 +23,7 @@ public final class GetExternalVpnGatewayResult {
      */
     private final String description;
     /**
-     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers' gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
      * 
      */
     private final List<ExternalVpnGatewayInterfaceResponse> interfaces;
@@ -95,7 +95,7 @@ public final class GetExternalVpnGatewayResult {
         return this.description;
     }
     /**
-     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers' gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
      * 
     */
     public List<ExternalVpnGatewayInterfaceResponse> interfaces() {

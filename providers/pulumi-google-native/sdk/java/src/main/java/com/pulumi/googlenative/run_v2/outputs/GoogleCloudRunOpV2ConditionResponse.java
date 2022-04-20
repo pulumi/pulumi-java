@@ -55,7 +55,7 @@ public final class GoogleCloudRunOpV2ConditionResponse {
      */
     private final String state;
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
      */
     private final String type;
@@ -148,7 +148,7 @@ public final class GoogleCloudRunOpV2ConditionResponse {
         return this.state;
     }
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * &#34;Ready&#34;: True when the Resource is ready.
      * 
     */
     public String type() {

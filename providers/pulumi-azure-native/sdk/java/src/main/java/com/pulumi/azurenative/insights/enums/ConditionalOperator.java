@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
      * 
      */
     @EnumType

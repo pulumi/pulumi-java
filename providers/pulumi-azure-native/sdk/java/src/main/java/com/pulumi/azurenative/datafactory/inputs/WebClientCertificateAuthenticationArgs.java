@@ -24,7 +24,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

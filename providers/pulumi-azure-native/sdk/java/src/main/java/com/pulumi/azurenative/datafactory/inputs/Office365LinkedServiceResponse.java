@@ -94,7 +94,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="servicePrincipalId", required=true)
@@ -105,7 +105,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     }
 
     /**
-     * Specify the application's key.
+     * Specify the application&#39;s key.
      * 
      */
     @Import(name="servicePrincipalKey", required=true)
@@ -128,7 +128,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'Office365'.
+     * Expected value is &#39;Office365&#39;.
      * 
      */
     @Import(name="type", required=true)

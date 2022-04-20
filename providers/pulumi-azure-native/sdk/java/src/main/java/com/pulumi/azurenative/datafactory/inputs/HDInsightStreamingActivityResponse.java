@@ -215,7 +215,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightStreaming'.
+     * Expected value is &#39;HDInsightStreaming&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -19,7 +19,7 @@ public final class PeriodicModeBackupPolicyResponse {
     private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
     /**
      * Describes the mode of backups.
-     * Expected value is 'Periodic'.
+     * Expected value is &#39;Periodic&#39;.
      * 
      */
     private final String type;
@@ -41,7 +41,7 @@ public final class PeriodicModeBackupPolicyResponse {
     }
     /**
      * Describes the mode of backups.
-     * Expected value is 'Periodic'.
+     * Expected value is &#39;Periodic&#39;.
      * 
     */
     public String type() {

@@ -45,7 +45,7 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The week days list. Applicable only for schedules of recurrence type 'weekly'.
+     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
      */
     @Import(name="weeklyDaysList")

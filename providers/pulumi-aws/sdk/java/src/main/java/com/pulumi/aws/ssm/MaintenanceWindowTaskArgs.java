@@ -75,7 +75,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+     * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
      * 
      */
     @Import(name="serviceRoleArn")

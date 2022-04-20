@@ -64,7 +64,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The cycle's steps list reflecting its progress.
+     * The cycle&#39;s steps list reflecting its progress.
      * 
      */
     @Import(name="steps", required=true)

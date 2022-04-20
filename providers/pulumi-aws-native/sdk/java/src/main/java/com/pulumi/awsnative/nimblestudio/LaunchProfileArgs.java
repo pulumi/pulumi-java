@@ -19,7 +19,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     public static final LaunchProfileArgs Empty = new LaunchProfileArgs();
 
     /**
-     * <p>The description.</p>
+     * &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     @Import(name="description")
@@ -30,8 +30,8 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
-     *             These subnets must support the specified instance types. </p>
+     * &lt;p&gt;Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
+     *             These subnets must support the specified instance types. &lt;/p&gt;
      * 
      */
     @Import(name="ec2SubnetIds", required=true)
@@ -42,8 +42,8 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The version number of the protocol that is used by the launch profile. The only valid
-     *             version is "2021-03-31".</p>
+     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+     *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
      */
     @Import(name="launchProfileProtocolVersions", required=true)
@@ -54,7 +54,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The name for the launch profile.</p>
+     * &lt;p&gt;The name for the launch profile.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -72,8 +72,8 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Unique identifiers for a collection of studio components that can be used with this
-     *             launch profile.</p>
+     * &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+     *             launch profile.&lt;/p&gt;
      * 
      */
     @Import(name="studioComponentIds", required=true)
@@ -84,7 +84,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The studio ID. </p>
+     * &lt;p&gt;The studio ID. &lt;/p&gt;
      * 
      */
     @Import(name="studioId", required=true)

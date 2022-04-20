@@ -21,7 +21,7 @@ public final class LivenessCheckResponse {
      */
     private final Integer failureThreshold;
     /**
-     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     private final String host;
@@ -79,7 +79,7 @@ public final class LivenessCheckResponse {
         return this.failureThreshold;
     }
     /**
-     * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
      * 
     */
     public String host() {

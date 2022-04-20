@@ -20,7 +20,7 @@ public final class GetDiskPoolResult {
      */
     private final @Nullable List<String> additionalCapabilities;
     /**
-     * Logical zone for Disk pool resource; example: ["1"].
+     * Logical zone for Disk pool resource; example: [&#34;1&#34;].
      * 
      */
     private final List<String> availabilityZones;
@@ -118,7 +118,7 @@ public final class GetDiskPoolResult {
         return this.additionalCapabilities == null ? List.of() : this.additionalCapabilities;
     }
     /**
-     * Logical zone for Disk pool resource; example: ["1"].
+     * Logical zone for Disk pool resource; example: [&#34;1&#34;].
      * 
     */
     public List<String> availabilityZones() {

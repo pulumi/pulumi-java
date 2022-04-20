@@ -28,13 +28,13 @@ import javax.annotation.Nullable;
  * 1.  Ingress object exists.
  * 2.  Endpoint objects exist with matching names for each Ingress path (except when Service
  *     type is ExternalName).
- * 3.  Ingress entry exists for '.status.loadBalancer.ingress'.
+ * 3.  Ingress entry exists for &#39;.status.loadBalancer.ingress&#39;.
  * 
  * If the Ingress has not reached a Ready state after 10 minutes, it will
  * time out and mark the resource update as Failed. You can override the default timeout value
- * by setting the 'customTimeouts' option on the resource.
+ * by setting the &#39;customTimeouts&#39; option on the resource.
  * 
- * @Deprecated
+ * @deprecated
  * extensions/v1beta1/Ingress is deprecated by networking.k8s.io/v1beta1/Ingress and not supported by Kubernetes v1.20+ clusters.
  * 
  */
@@ -70,14 +70,14 @@ public class Ingress extends com.pulumi.resources.CustomResource {
         return this.kind;
     }
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     public Output</* @Nullable */ ObjectMeta> metadata() {

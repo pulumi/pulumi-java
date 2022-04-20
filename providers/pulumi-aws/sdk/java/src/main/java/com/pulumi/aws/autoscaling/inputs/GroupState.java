@@ -98,7 +98,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     /**
      * Allows deleting the Auto Scaling Group without waiting
      * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
-     * even if it's in the process of scaling a resource. Normally, this provider
+     * even if it&#39;s in the process of scaling a resource. Normally, this provider
      * drains all the instances before deleting the group.  This bypasses that
      * behavior and potentially leaves resources dangling.
      * 
@@ -129,7 +129,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * "EC2" or "ELB". Controls how health checking is done.
+     * &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
      * 
      */
     @Import(name="healthCheckType")
@@ -296,7 +296,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the placement group into which you'll launch your instances, if any.
+     * The name of the placement group into which you&#39;ll launch your instances, if any.
      * 
      */
     @Import(name="placementGroup")
@@ -401,7 +401,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * A maximum
      * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
      * wait for ASG instances to be healthy before timing out.  (See also Waiting
-     * for Capacity below.) Setting this to "0" causes
+     * for Capacity below.) Setting this to &#34;0&#34; causes
      * this provider to skip all Capacity Waiting behavior.
      * 
      */

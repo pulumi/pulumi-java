@@ -17,7 +17,7 @@ public final class TimeZoneResponse extends com.pulumi.resources.InvokeArgs {
     public static final TimeZoneResponse Empty = new TimeZoneResponse();
 
     /**
-     * Optional. IANA Time Zone Database version number, e.g. "2019a".
+     * Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
      */
     @Import(name="version", required=true)

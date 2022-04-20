@@ -39,7 +39,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends com.pul
     }
 
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * 
      */
     @Import(name="order", required=true)

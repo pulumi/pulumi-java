@@ -68,7 +68,7 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * INHERITED - Routes inherited from the real Virtual Network routes
      * STATIC - Static route set on the app only
      * 
-     * These values will be used for syncing an app's routes with those from a Virtual Network.
+     * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
      * 
      */
     @Import(name="routeType")

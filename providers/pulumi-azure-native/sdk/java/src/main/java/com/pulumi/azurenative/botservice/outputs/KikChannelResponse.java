@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class KikChannelResponse {
     /**
      * The channel name
-     * Expected value is 'KikChannel'.
+     * Expected value is &#39;KikChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class KikChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'KikChannel'.
+     * Expected value is &#39;KikChannel&#39;.
      * 
     */
     public String channelName() {

@@ -42,7 +42,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
     /**
      * Indicates the function binding type.
-     * Expected value is 'Microsoft.MachineLearning/WebService'.
+     * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
      * 
      */
     private final String type;
@@ -100,7 +100,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     }
     /**
      * Indicates the function binding type.
-     * Expected value is 'Microsoft.MachineLearning/WebService'.
+     * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
      * 
     */
     public String type() {

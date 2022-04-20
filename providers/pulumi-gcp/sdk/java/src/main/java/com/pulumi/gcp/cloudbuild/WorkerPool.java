@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Definition of custom Cloud Build WorkerPools for running jobs with custom configuration and custom networking.
  * 
- * > This resource is not currently public, and requires allow-listing of projects prior to use.
+ * &gt; This resource is not currently public, and requires allow-listing of projects prior to use.
  * 
  * ## Example Usage
  * 

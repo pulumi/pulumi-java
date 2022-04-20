@@ -31,7 +31,7 @@ public final class EncoderProcessorResponse {
     private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
      * 
      */
     private final String type;
@@ -71,7 +71,7 @@ public final class EncoderProcessorResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
      * 
     */
     public String type() {

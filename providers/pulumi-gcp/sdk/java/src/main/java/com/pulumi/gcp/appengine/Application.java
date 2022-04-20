@@ -20,12 +20,12 @@ import javax.annotation.Nullable;
 /**
  * Allows creation and management of an App Engine application.
  * 
- * > App Engine applications cannot be deleted once they're created; you have to delete the
+ * &gt; App Engine applications cannot be deleted once they&#39;re created; you have to delete the
  *    entire project to delete the application. This provider will report the application has been
  *    successfully deleted; this is a limitation of the provider, and will go away in the future.
  *    This provider is not able to delete App Engine applications.
  * 
- * > **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
+ * &gt; **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
  * ## Example Usage
@@ -56,14 +56,14 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.appId;
     }
     /**
-     * The domain to authenticate users with when using App Engine's User API.
+     * The domain to authenticate users with when using App Engine&#39;s User API.
      * 
      */
     @Export(name="authDomain", type=String.class, parameters={})
     private Output<String> authDomain;
 
     /**
-     * @return The domain to authenticate users with when using App Engine's User API.
+     * @return The domain to authenticate users with when using App Engine&#39;s User API.
      * 
      */
     public Output<String> authDomain() {
@@ -205,8 +205,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     }
     /**
      * The project ID to create the application under.
-     * ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
-     * you may get a "Permission denied" error.
+     * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a &#34;Permission denied&#34; error.
      * 
      */
     @Export(name="project", type=String.class, parameters={})
@@ -214,8 +214,8 @@ public class Application extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The project ID to create the application under.
-     * ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
-     * you may get a "Permission denied" error.
+     * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a &#34;Permission denied&#34; error.
      * 
      */
     public Output<String> project() {

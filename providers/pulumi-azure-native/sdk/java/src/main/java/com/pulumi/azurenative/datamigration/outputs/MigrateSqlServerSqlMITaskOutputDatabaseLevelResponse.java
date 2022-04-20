@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     private final String message;
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -125,7 +125,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
     */
     public String resultType() {

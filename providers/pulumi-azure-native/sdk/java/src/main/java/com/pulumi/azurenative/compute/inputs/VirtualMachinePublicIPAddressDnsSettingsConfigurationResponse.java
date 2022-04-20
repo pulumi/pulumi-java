@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Describes a virtual machines network configuration's DNS settings.
+ * Describes a virtual machines network configuration&#39;s DNS settings.
  * 
  */
 public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse extends com.pulumi.resources.InvokeArgs {

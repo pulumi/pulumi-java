@@ -50,7 +50,7 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Expected value is 'Auto'.
+     * Expected value is &#39;Auto&#39;.
      * 
      */
     @Import(name="scaleType", required=true)

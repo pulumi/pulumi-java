@@ -68,7 +68,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
 
     /**
      * ServiceType for the service.
-     * Expected value is 'SqlDedicatedGateway'.
+     * Expected value is &#39;SqlDedicatedGateway&#39;.
      * 
      */
     @Import(name="serviceType", required=true)

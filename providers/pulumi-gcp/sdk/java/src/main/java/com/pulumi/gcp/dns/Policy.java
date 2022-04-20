@@ -69,14 +69,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.alternativeNameServerConfig;
     }
     /**
-     * A textual description field. Defaults to 'Managed by Pulumi'.
+     * A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A textual description field. Defaults to 'Managed by Pulumi'.
+     * @return A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     public Output</* @Nullable */ String> description() {

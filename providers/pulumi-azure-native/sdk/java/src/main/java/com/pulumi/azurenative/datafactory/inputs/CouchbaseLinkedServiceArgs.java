@@ -104,7 +104,7 @@ public final class CouchbaseLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'Couchbase'.
+     * Expected value is &#39;Couchbase&#39;.
      * 
      */
     @Import(name="type", required=true)

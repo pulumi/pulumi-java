@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an API Gateway REST API. The REST API can be configured via [importing an OpenAPI specification](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api.html) in the `body` argument (with other arguments serving as overrides) or via other provider resources to manage the resources (`aws.apigateway.Resource` resource), methods (`aws.apigateway.Method` resource), integrations (`aws.apigateway.Integration` resource), etc. of the REST API. Once the REST API is configured, the `aws.apigateway.Deployment` resource can be used along with the `aws.apigateway.Stage` resource to publish the REST API.
  * 
- * > **Note:** Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.
+ * &gt; **Note:** Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.
  * 
  * ## Example Usage
  * 
@@ -149,7 +149,7 @@ public class RestApi extends com.pulumi.resources.CustomResource {
         return this.endpointConfiguration;
     }
     /**
-     * The execution ARN part to be used in `lambda_permission`'s `source_arn`
+     * The execution ARN part to be used in `lambda_permission`&#39;s `source_arn`
      * when allowing API Gateway to invoke a Lambda function,
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
@@ -158,7 +158,7 @@ public class RestApi extends com.pulumi.resources.CustomResource {
     private Output<String> executionArn;
 
     /**
-     * @return The execution ARN part to be used in `lambda_permission`'s `source_arn`
+     * @return The execution ARN part to be used in `lambda_permission`&#39;s `source_arn`
      * when allowing API Gateway to invoke a Lambda function,
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
@@ -223,14 +223,14 @@ public class RestApi extends com.pulumi.resources.CustomResource {
         return this.policy;
     }
     /**
-     * The resource ID of the REST API's root
+     * The resource ID of the REST API&#39;s root
      * 
      */
     @Export(name="rootResourceId", type=String.class, parameters={})
     private Output<String> rootResourceId;
 
     /**
-     * @return The resource ID of the REST API's root
+     * @return The resource ID of the REST API&#39;s root
      * 
      */
     public Output<String> rootResourceId() {

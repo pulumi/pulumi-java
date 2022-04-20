@@ -41,7 +41,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Path to mount the storage within the site's runtime environment.
+     * Path to mount the storage within the site&#39;s runtime environment.
      * 
      */
     @Import(name="mountPath")

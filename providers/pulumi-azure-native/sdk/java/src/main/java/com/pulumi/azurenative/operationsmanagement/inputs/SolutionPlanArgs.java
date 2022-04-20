@@ -31,7 +31,7 @@ public final class SolutionPlanArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
+     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
      * 
      */
     @Import(name="product")

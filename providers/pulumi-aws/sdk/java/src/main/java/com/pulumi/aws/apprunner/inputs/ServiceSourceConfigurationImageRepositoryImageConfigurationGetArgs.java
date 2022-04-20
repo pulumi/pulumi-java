@@ -17,7 +17,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
     public static final ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs Empty = new ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs();
 
     /**
-     * The port that your application listens to in the container. Defaults to `"8080"`.
+     * The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
      * 
      */
     @Import(name="port")
@@ -28,7 +28,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
     }
 
     /**
-     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren't valid.
+     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
      * 
      */
     @Import(name="runtimeEnvironmentVariables")

@@ -29,7 +29,7 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     @Import(name="range", required=true)

@@ -19,7 +19,7 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
     public static final DetectorModelPayload Empty = new DetectorModelPayload();
 
     /**
-     * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
      * 
      */
     @Import(name="contentExpression", required=true)

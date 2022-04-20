@@ -63,7 +63,7 @@ public final class EncryptionProtectorArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="serverKeyType", required=true)

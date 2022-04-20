@@ -19,7 +19,7 @@ public final class ApplicationAuthorizationArgs extends com.pulumi.resources.Res
     public static final ApplicationAuthorizationArgs Empty = new ApplicationAuthorizationArgs();
 
     /**
-     * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+     * The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
      * 
      */
     @Import(name="principalId", required=true)
@@ -30,7 +30,7 @@ public final class ApplicationAuthorizationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
+     * The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
      * 
      */
     @Import(name="roleDefinitionId", required=true)

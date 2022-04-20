@@ -73,7 +73,7 @@ public final class GetRegionSslCertificateResult {
      */
     private final List<String> subjectAlternativeNames;
     /**
-     * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+     * (Optional) Specifies the type of SSL certificate, either &#34;SELF_MANAGED&#34; or &#34;MANAGED&#34;. If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
     private final String type;
@@ -193,7 +193,7 @@ public final class GetRegionSslCertificateResult {
         return this.subjectAlternativeNames;
     }
     /**
-     * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+     * (Optional) Specifies the type of SSL certificate, either &#34;SELF_MANAGED&#34; or &#34;MANAGED&#34;. If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
     */
     public String type() {

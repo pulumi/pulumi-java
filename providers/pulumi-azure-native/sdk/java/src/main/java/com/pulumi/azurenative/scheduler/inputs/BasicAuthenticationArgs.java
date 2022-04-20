@@ -28,7 +28,7 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
 
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'Basic'.
+     * Expected value is &#39;Basic&#39;.
      * 
      */
     @Import(name="type", required=true)

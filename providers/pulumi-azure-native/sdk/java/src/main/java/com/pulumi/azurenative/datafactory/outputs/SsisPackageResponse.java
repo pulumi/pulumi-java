@@ -51,7 +51,7 @@ public final class SsisPackageResponse {
     private final @Nullable Double projectVersion;
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Package'.
+     * Expected value is &#39;Package&#39;.
      * 
      */
     private final String type;
@@ -127,7 +127,7 @@ public final class SsisPackageResponse {
     }
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Package'.
+     * Expected value is &#39;Package&#39;.
      * 
     */
     public String type() {

@@ -17,7 +17,7 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
     public static final GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse Empty = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse();
 
     /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
      * 
      */
     @Import(name="mode", required=true)

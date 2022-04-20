@@ -21,7 +21,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
     /**
      * The type of the Security policy to create.
-     * Expected value is 'WebApplicationFirewall'.
+     * Expected value is &#39;WebApplicationFirewall&#39;.
      * 
      */
     private final String type;
@@ -50,7 +50,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     }
     /**
      * The type of the Security policy to create.
-     * Expected value is 'WebApplicationFirewall'.
+     * Expected value is &#39;WebApplicationFirewall&#39;.
      * 
     */
     public String type() {

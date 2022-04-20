@@ -50,7 +50,7 @@ public final class AzureTableOutputDataSourceResponse {
     private final @Nullable String table;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Table'.
+     * Expected value is &#39;Microsoft.Storage/Table&#39;.
      * 
      */
     private final String type;
@@ -126,7 +126,7 @@ public final class AzureTableOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Table'.
+     * Expected value is &#39;Microsoft.Storage/Table&#39;.
      * 
     */
     public String type() {

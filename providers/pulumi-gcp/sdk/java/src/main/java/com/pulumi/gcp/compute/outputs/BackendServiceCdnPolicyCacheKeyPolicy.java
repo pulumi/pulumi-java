@@ -37,7 +37,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
      * Names of query string parameters to exclude in cache keys.
      * All other parameters will be included. Either specify
      * query_string_whitelist or query_string_blacklist, not both.
-     * '&' and '=' will be percent encoded and not treated as
+     * &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as
      * delimiters.
      * 
      */
@@ -46,7 +46,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
      * Names of query string parameters to include in cache keys.
      * All other parameters will be excluded. Either specify
      * query_string_whitelist or query_string_blacklist, not both.
-     * '&' and '=' will be percent encoded and not treated as
+     * &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as
      * delimiters.
      * 
      */
@@ -96,7 +96,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
      * Names of query string parameters to exclude in cache keys.
      * All other parameters will be included. Either specify
      * query_string_whitelist or query_string_blacklist, not both.
-     * '&' and '=' will be percent encoded and not treated as
+     * &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as
      * delimiters.
      * 
     */
@@ -107,7 +107,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
      * Names of query string parameters to include in cache keys.
      * All other parameters will be excluded. Either specify
      * query_string_whitelist or query_string_blacklist, not both.
-     * '&' and '=' will be percent encoded and not treated as
+     * &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as
      * delimiters.
      * 
     */

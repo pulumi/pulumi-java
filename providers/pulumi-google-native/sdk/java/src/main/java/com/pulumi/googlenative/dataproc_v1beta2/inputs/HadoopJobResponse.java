@@ -75,7 +75,7 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
+     * The name of the driver&#39;s main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
      * 
      */
     @Import(name="mainClass", required=true)
@@ -86,7 +86,7 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
+     * The HCFS URI of the jar file containing the main class. Examples: &#39;gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar&#39; &#39;hdfs:/tmp/test-samples/custom-wordcount.jar&#39; &#39;file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar&#39;
      * 
      */
     @Import(name="mainJarFileUri", required=true)

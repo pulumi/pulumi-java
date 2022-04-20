@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class DataBoxDiskCopyLogDetailsResponse {
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String copyLogDetailsType;
@@ -45,7 +45,7 @@ public final class DataBoxDiskCopyLogDetailsResponse {
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
     */
     public String copyLogDetailsType() {

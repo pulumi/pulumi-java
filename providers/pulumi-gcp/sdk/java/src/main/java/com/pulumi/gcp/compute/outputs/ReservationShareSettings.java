@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReservationShareSettings {
     /**
-     * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
+     * A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
      */
@@ -35,7 +35,7 @@ public final class ReservationShareSettings {
     }
 
     /**
-     * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
+     * A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
     */

@@ -34,7 +34,7 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="preloadEnabled")

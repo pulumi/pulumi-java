@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     private final String migrationId;
     /**
      * Result type
-     * Expected value is 'MigrationValidationOutput'.
+     * Expected value is &#39;MigrationValidationOutput&#39;.
      * 
      */
     private final String resultType;
@@ -69,7 +69,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     }
     /**
      * Result type
-     * Expected value is 'MigrationValidationOutput'.
+     * Expected value is &#39;MigrationValidationOutput&#39;.
      * 
     */
     public String resultType() {

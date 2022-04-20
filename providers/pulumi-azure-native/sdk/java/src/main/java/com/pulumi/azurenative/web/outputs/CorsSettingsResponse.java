@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class CorsSettingsResponse {
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin
-     * calls (for example: http://example.com:12345). Use "*" to allow all.
+     * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
      * 
      */
     private final @Nullable List<String> allowedOrigins;
@@ -37,7 +37,7 @@ public final class CorsSettingsResponse {
 
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin
-     * calls (for example: http://example.com:12345). Use "*" to allow all.
+     * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
      * 
     */
     public List<String> allowedOrigins() {

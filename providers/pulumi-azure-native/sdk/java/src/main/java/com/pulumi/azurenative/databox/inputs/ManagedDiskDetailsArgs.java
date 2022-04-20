@@ -21,7 +21,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Account Type of the data to be transferred.
-     * Expected value is 'ManagedDisk'.
+     * Expected value is &#39;ManagedDisk&#39;.
      * 
      */
     @Import(name="dataAccountType", required=true)

@@ -26,12 +26,12 @@ public final class FailActivityResponse {
      */
     private final @Nullable String description;
     /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     private final Object errorCode;
     /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     private final Object message;
@@ -42,7 +42,7 @@ public final class FailActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'Fail'.
+     * Expected value is &#39;Fail&#39;.
      * 
      */
     private final String type;
@@ -85,14 +85,14 @@ public final class FailActivityResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
     */
     public Object errorCode() {
         return this.errorCode;
     }
     /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
     */
     public Object message() {
@@ -107,7 +107,7 @@ public final class FailActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Fail'.
+     * Expected value is &#39;Fail&#39;.
      * 
     */
     public String type() {

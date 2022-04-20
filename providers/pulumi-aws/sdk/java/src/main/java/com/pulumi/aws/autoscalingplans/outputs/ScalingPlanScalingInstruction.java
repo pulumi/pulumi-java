@@ -71,7 +71,7 @@ public final class ScalingPlanScalingInstruction {
      */
     private final String scalableDimension;
     /**
-     * Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+     * Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
      * 
      */
     private final @Nullable String scalingPolicyUpdateBehavior;
@@ -198,7 +198,7 @@ public final class ScalingPlanScalingInstruction {
         return this.scalableDimension;
     }
     /**
-     * Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+     * Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
      * 
     */
     public Optional<String> scalingPolicyUpdateBehavior() {

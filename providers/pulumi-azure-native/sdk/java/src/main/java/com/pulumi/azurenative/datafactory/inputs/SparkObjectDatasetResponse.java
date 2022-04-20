@@ -126,7 +126,7 @@ public final class SparkObjectDatasetResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of dataset.
-     * Expected value is 'SparkObject'.
+     * Expected value is &#39;SparkObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -19,7 +19,7 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     public static final IdentitySourceResponse Empty = new IdentitySourceResponse();
 
     /**
-     * The domain's NetBIOS name
+     * The domain&#39;s NetBIOS name
      * 
      */
     @Import(name="alias")
@@ -52,7 +52,7 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The domain's dns name
+     * The domain&#39;s dns name
      * 
      */
     @Import(name="domain")

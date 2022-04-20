@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the `aws.elb.Attachment` resource.
  * 
- * > **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
+ * &gt; **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
  * 
  * ## Example Usage
  * ## Usage with lambda
@@ -32,14 +32,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:alb/targetGroupAttachment:TargetGroupAttachment")
 public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
     /**
-     * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+     * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to &#39;all&#39;.
      * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
-     * @return The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+     * @return The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to &#39;all&#39;.
      * 
      */
     public Output</* @Nullable */ String> availabilityZone() {

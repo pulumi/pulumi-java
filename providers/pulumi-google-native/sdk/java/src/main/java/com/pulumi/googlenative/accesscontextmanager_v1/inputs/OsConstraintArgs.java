@@ -22,7 +22,7 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
     public static final OsConstraintArgs Empty = new OsConstraintArgs();
 
     /**
-     * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
+     * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `&#34;major.minor.patch&#34;`. Examples: `&#34;10.5.301&#34;`, `&#34;9.2.1&#34;`.
      * 
      */
     @Import(name="minimumVersion")

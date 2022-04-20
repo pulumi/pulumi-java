@@ -126,7 +126,7 @@ public final class PostgreSqlTableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'PostgreSqlTable'.
+     * Expected value is &#39;PostgreSqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

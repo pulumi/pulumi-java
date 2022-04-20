@@ -28,7 +28,7 @@ public final class DocumentationResponse {
      */
     private final List<PageResponse> pages;
     /**
-     * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     private final List<DocumentationRuleResponse> rules;
@@ -81,7 +81,7 @@ public final class DocumentationResponse {
         return this.pages;
     }
     /**
-     * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
     */
     public List<DocumentationRuleResponse> rules() {

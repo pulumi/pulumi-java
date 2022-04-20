@@ -40,7 +40,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String acrUserManagedIdentityID;
     /**
-     * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean alwaysOn;
@@ -65,7 +65,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable List<NameValuePairResponse> appSettings;
     /**
-     * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean autoHealEnabled;
@@ -100,7 +100,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable List<String> defaultDocuments;
     /**
-     * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean detailedErrorLoggingEnabled;
@@ -148,7 +148,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable Boolean http20Enabled;
     /**
-     * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean httpLoggingEnabled;
@@ -193,7 +193,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String loadBalancing;
     /**
-     * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean localMySqlEnabled;
@@ -280,7 +280,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String pythonVersion;
     /**
-     * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean remoteDebuggingEnabled;
@@ -290,7 +290,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String remoteDebuggingVersion;
     /**
-     * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean requestTracingEnabled;
@@ -325,7 +325,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String tracingOptions;
     /**
-     * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean use32BitWorkerProcess;
@@ -350,7 +350,7 @@ public final class SiteConfigResponse {
      */
     private final @Nullable Boolean vnetRouteAllEnabled;
     /**
-     * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean webSocketsEnabled;
@@ -523,7 +523,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.acrUserManagedIdentityID);
     }
     /**
-     * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> alwaysOn() {
@@ -558,7 +558,7 @@ public final class SiteConfigResponse {
         return this.appSettings == null ? List.of() : this.appSettings;
     }
     /**
-     * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> autoHealEnabled() {
@@ -607,7 +607,7 @@ public final class SiteConfigResponse {
         return this.defaultDocuments == null ? List.of() : this.defaultDocuments;
     }
     /**
-     * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> detailedErrorLoggingEnabled() {
@@ -673,7 +673,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.http20Enabled);
     }
     /**
-     * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> httpLoggingEnabled() {
@@ -736,7 +736,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.loadBalancing);
     }
     /**
-     * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> localMySqlEnabled() {
@@ -857,7 +857,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.pythonVersion);
     }
     /**
-     * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> remoteDebuggingEnabled() {
@@ -871,7 +871,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.remoteDebuggingVersion);
     }
     /**
-     * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> requestTracingEnabled() {
@@ -920,7 +920,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.tracingOptions);
     }
     /**
-     * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> use32BitWorkerProcess() {
@@ -955,7 +955,7 @@ public final class SiteConfigResponse {
         return Optional.ofNullable(this.vnetRouteAllEnabled);
     }
     /**
-     * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> webSocketsEnabled() {

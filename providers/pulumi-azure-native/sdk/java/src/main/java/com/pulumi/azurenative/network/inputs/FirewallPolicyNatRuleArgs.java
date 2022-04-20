@@ -71,7 +71,7 @@ public final class FirewallPolicyNatRuleArgs extends com.pulumi.resources.Resour
 
     /**
      * The type of the rule.
-     * Expected value is 'FirewallPolicyNatRule'.
+     * Expected value is &#39;FirewallPolicyNatRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

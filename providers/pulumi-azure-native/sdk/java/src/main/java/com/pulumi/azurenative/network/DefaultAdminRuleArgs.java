@@ -39,7 +39,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Default'.
+     * Expected value is &#39;Default&#39;.
      * 
      */
     @Import(name="kind", required=true)

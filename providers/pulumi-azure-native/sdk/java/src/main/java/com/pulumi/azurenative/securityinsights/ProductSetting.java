@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:securityinsights:ProductSetting EyesOn /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/avdvirInt/providers/Microsoft.SecurityInsights/settings/EyesOn 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba.
  * 
  */

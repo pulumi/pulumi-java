@@ -22,28 +22,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:nimblestudio:StreamingImage")
 public class StreamingImage extends com.pulumi.resources.CustomResource {
     /**
-     * <p>A human-readable description of the streaming image.</p>
+     * &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return <p>A human-readable description of the streaming image.</p>
+     * @return &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
-     * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
      * 
      */
     @Export(name="ec2ImageId", type=String.class, parameters={})
     private Output<String> ec2ImageId;
 
     /**
-     * @return <p>The ID of an EC2 machine image with which to create this streaming image.</p>
+     * @return &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
      * 
      */
     public Output<String> ec2ImageId() {
@@ -56,56 +56,56 @@ public class StreamingImage extends com.pulumi.resources.CustomResource {
         return this.encryptionConfiguration;
     }
     /**
-     * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
      * 
      */
     @Export(name="eulaIds", type=List.class, parameters={String.class})
     private Output<List<String>> eulaIds;
 
     /**
-     * @return <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+     * @return &lt;p&gt;The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.&lt;/p&gt;
      * 
      */
     public Output<List<String>> eulaIds() {
         return this.eulaIds;
     }
     /**
-     * <p>A friendly name for a streaming image resource.</p>
+     * &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return <p>A friendly name for a streaming image resource.</p>
+     * @return &lt;p&gt;A friendly name for a streaming image resource.&lt;/p&gt;
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
      * 
      */
     @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
-     * @return <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+     * @return &lt;p&gt;The owner of the streaming image, either the studioId that contains the streaming image, or &#39;amazon&#39; for images that are provided by Amazon Nimble Studio.&lt;/p&gt;
      * 
      */
     public Output<String> owner() {
         return this.owner;
     }
     /**
-     * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
      * 
      */
     @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
-     * @return <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+     * @return &lt;p&gt;The platform of the streaming image, either WINDOWS or LINUX.&lt;/p&gt;
      * 
      */
     public Output<String> platform() {
@@ -118,14 +118,14 @@ public class StreamingImage extends com.pulumi.resources.CustomResource {
         return this.streamingImageId;
     }
     /**
-     * <p>The studioId. </p>
+     * &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
-     * @return <p>The studioId. </p>
+     * @return &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     public Output<String> studioId() {

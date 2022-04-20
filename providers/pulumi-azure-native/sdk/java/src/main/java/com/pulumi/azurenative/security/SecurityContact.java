@@ -90,14 +90,14 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
         return this.notificationsByRole;
     }
     /**
-     * The security contact's phone number
+     * The security contact&#39;s phone number
      * 
      */
     @Export(name="phone", type=String.class, parameters={})
     private Output</* @Nullable */ String> phone;
 
     /**
-     * @return The security contact's phone number
+     * @return The security contact&#39;s phone number
      * 
      */
     public Output</* @Nullable */ String> phone() {

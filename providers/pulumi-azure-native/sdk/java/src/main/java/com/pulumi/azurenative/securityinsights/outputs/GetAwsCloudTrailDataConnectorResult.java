@@ -34,7 +34,7 @@ public final class GetAwsCloudTrailDataConnectorResult {
     private final String id;
     /**
      * The kind of the data connector
-     * Expected value is 'AmazonWebServicesCloudTrail'.
+     * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
      */
     private final String kind;
@@ -97,7 +97,7 @@ public final class GetAwsCloudTrailDataConnectorResult {
     }
     /**
      * The kind of the data connector
-     * Expected value is 'AmazonWebServicesCloudTrail'.
+     * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
      * 
     */
     public String kind() {

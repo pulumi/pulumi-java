@@ -24,7 +24,7 @@ public final class NetworkSecurityGroupRuleResponse {
      */
     private final String sourceAddressPrefix;
     /**
-     * Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
+     * Valid values are &#39;*&#39; (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can&#39;t overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
      * 
      */
     private final @Nullable List<String> sourcePortRanges;
@@ -59,7 +59,7 @@ public final class NetworkSecurityGroupRuleResponse {
         return this.sourceAddressPrefix;
     }
     /**
-     * Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
+     * Valid values are &#39;*&#39; (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can&#39;t overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
      * 
     */
     public List<String> sourcePortRanges() {

@@ -34,7 +34,7 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The granularity of rows in the export. Currently only 'Daily' is supported.
+     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
      * 
      */
     @Import(name="granularity")

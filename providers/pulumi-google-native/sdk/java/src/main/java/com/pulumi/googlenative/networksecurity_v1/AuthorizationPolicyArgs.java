@@ -20,7 +20,7 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     public static final AuthorizationPolicyArgs Empty = new AuthorizationPolicyArgs();
 
     /**
-     * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
+     * The action to take when a rule match is found. Possible values are &#34;ALLOW&#34; or &#34;DENY&#34;.
      * 
      */
     @Import(name="action", required=true)
@@ -85,7 +85,7 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
+     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the &#39;action&#39; field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
      */
     @Import(name="rules")

@@ -160,7 +160,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
 
     /**
      * Type of activity.
-     * Expected value is 'DataLakeAnalyticsU-SQL'.
+     * Expected value is &#39;DataLakeAnalyticsU-SQL&#39;.
      * 
      */
     @Import(name="type", required=true)

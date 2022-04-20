@@ -31,9 +31,9 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     /**
      * Specifies the fraction of traffic sent to backendService, computed as weight /
      * (sum of all weightedBackendService weights in routeAction) . The selection of a
-     * backend service is determined only for new traffic. Once a user's request has
+     * backend service is determined only for new traffic. Once a user&#39;s request has
      * been directed to a backendService, subsequent requests will be sent to the same
-     * backendService as determined by the BackendService's session affinity policy.
+     * backendService as determined by the BackendService&#39;s session affinity policy.
      * The value must be between 0 and 1000
      * 
      */
@@ -71,9 +71,9 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     /**
      * Specifies the fraction of traffic sent to backendService, computed as weight /
      * (sum of all weightedBackendService weights in routeAction) . The selection of a
-     * backend service is determined only for new traffic. Once a user's request has
+     * backend service is determined only for new traffic. Once a user&#39;s request has
      * been directed to a backendService, subsequent requests will be sent to the same
-     * backendService as determined by the BackendService's session affinity policy.
+     * backendService as determined by the BackendService&#39;s session affinity policy.
      * The value must be between 0 and 1000
      * 
     */

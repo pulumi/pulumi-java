@@ -162,7 +162,7 @@ public final class Db2LinkedServiceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of linked service.
-     * Expected value is 'Db2'.
+     * Expected value is &#39;Db2&#39;.
      * 
      */
     @Import(name="type", required=true)

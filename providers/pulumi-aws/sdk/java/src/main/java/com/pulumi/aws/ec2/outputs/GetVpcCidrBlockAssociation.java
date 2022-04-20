@@ -21,7 +21,7 @@ public final class GetVpcCidrBlockAssociation {
     private final String cidrBlock;
     /**
      * The current state of the desired VPC.
-     * Can be either `"pending"` or `"available"`.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
      */
     private final String state;
@@ -52,7 +52,7 @@ public final class GetVpcCidrBlockAssociation {
     }
     /**
      * The current state of the desired VPC.
-     * Can be either `"pending"` or `"available"`.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
     */
     public String state() {

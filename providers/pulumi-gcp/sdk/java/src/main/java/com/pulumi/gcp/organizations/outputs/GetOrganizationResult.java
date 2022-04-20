@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOrganizationResult {
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String createTime;
@@ -28,7 +28,7 @@ public final class GetOrganizationResult {
      */
     private final String id;
     /**
-     * The Organization's current lifecycle state.
+     * The Organization&#39;s current lifecycle state.
      * 
      */
     private final String lifecycleState;
@@ -65,7 +65,7 @@ public final class GetOrganizationResult {
     }
 
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public String createTime() {
@@ -89,7 +89,7 @@ public final class GetOrganizationResult {
         return this.id;
     }
     /**
-     * The Organization's current lifecycle state.
+     * The Organization&#39;s current lifecycle state.
      * 
     */
     public String lifecycleState() {

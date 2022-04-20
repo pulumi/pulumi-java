@@ -21,7 +21,7 @@ public final class ApiKeyAuthenticationResponse {
     private final String name;
     /**
      * The authentication type.
-     * Expected value is 'ApiKey'.
+     * Expected value is &#39;ApiKey&#39;.
      * 
      */
     private final String type;
@@ -59,7 +59,7 @@ public final class ApiKeyAuthenticationResponse {
     }
     /**
      * The authentication type.
-     * Expected value is 'ApiKey'.
+     * Expected value is &#39;ApiKey&#39;.
      * 
     */
     public String type() {

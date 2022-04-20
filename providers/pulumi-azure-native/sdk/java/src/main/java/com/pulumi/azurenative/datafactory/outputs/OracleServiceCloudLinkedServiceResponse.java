@@ -56,7 +56,7 @@ public final class OracleServiceCloudLinkedServiceResponse {
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'OracleServiceCloud'.
+     * Expected value is &#39;OracleServiceCloud&#39;.
      * 
      */
     private final String type;
@@ -66,7 +66,7 @@ public final class OracleServiceCloudLinkedServiceResponse {
      */
     private final @Nullable Object useEncryptedEndpoints;
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object useHostVerification;
@@ -160,7 +160,7 @@ public final class OracleServiceCloudLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'OracleServiceCloud'.
+     * Expected value is &#39;OracleServiceCloud&#39;.
      * 
     */
     public String type() {
@@ -174,7 +174,7 @@ public final class OracleServiceCloudLinkedServiceResponse {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
     public Optional<Object> useHostVerification() {

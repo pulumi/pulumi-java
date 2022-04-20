@@ -54,7 +54,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
      */
     @Import(name="allowedCapabilities")
@@ -65,7 +65,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
+     * allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
      * 
      */
     @Import(name="allowedFlexVolumes")
@@ -98,9 +98,9 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to whitelist all allowed unsafe sysctls explicitly to avoid rejection.
+     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to whitelist all allowed unsafe sysctls explicitly to avoid rejection.
      * 
-     * Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     @Import(name="allowedUnsafeSysctls")
@@ -133,9 +133,9 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
      * 
-     * Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar", "foo.baz", etc.
+     * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
      * 
      */
     @Import(name="forbiddenSysctls")
@@ -234,7 +234,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
      */
     @Import(name="runAsGroup")
@@ -256,7 +256,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
      */
     @Import(name="runtimeClass")
@@ -289,7 +289,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
+     * volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
      * 
      */
     @Import(name="volumes")

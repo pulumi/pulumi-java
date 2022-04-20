@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  * [AWS CloudHSM User Guide](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) and the [Amazon
  * CloudHSM API Reference][2].
  * 
- * > **NOTE:** A CloudHSM Cluster can take several minutes to set up.
+ * &gt; **NOTE:** A CloudHSM Cluster can take several minutes to set up.
  * Practically no single attribute can be updated, except for `tags`.
  * If you need to delete a cluster, you have to remove its HSM modules first.
  * To initialize cluster, you have to add an HSM instance to the cluster, then sign CSR and upload it.
@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 public class Cluster extends com.pulumi.resources.CustomResource {
     /**
      * The list of cluster certificates.
-     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
+     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
      * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
      * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
@@ -53,7 +53,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The list of cluster certificates.
-     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
+     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
      * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
      * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
      * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.

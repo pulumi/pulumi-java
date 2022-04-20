@@ -26,7 +26,7 @@ public final class OnPremiseSqlResourceDetailsResponse {
     private final String serverName;
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremiseSql'.
+     * Expected value is &#39;OnPremiseSql&#39;.
      * 
      */
     private final String source;
@@ -87,7 +87,7 @@ public final class OnPremiseSqlResourceDetailsResponse {
     }
     /**
      * The platform where the assessed resource resides
-     * Expected value is 'OnPremiseSql'.
+     * Expected value is &#39;OnPremiseSql&#39;.
      * 
     */
     public String source() {

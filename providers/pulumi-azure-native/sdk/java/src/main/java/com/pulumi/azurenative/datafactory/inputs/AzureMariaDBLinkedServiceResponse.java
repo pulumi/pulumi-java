@@ -104,7 +104,7 @@ public final class AzureMariaDBLinkedServiceResponse extends com.pulumi.resource
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureMariaDB'.
+     * Expected value is &#39;AzureMariaDB&#39;.
      * 
      */
     @Import(name="type", required=true)

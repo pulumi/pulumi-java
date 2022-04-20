@@ -112,7 +112,7 @@ public final class SalesforceSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'SalesforceSource'.
+     * Expected value is &#39;SalesforceSource&#39;.
      * 
      */
     @Import(name="type", required=true)

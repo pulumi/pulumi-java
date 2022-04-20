@@ -21,7 +21,7 @@ public final class VmmToVmmCreateNetworkMappingInputArgs extends com.pulumi.reso
 
     /**
      * The instance type.
-     * Expected value is 'VmmToVmm'.
+     * Expected value is &#39;VmmToVmm&#39;.
      * 
      */
     @Import(name="instanceType")

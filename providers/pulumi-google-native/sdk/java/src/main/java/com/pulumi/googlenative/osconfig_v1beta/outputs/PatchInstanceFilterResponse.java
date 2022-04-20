@@ -18,12 +18,12 @@ public final class PatchInstanceFilterResponse {
      */
     private final Boolean all;
     /**
-     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
+     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example &#34;env=prod or env=staging&#34;.
      * 
      */
     private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     private final List<String> instanceNamePrefixes;
@@ -60,14 +60,14 @@ public final class PatchInstanceFilterResponse {
         return this.all;
     }
     /**
-     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
+     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example &#34;env=prod or env=staging&#34;.
      * 
     */
     public List<PatchInstanceFilterGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
     */
     public List<String> instanceNamePrefixes() {

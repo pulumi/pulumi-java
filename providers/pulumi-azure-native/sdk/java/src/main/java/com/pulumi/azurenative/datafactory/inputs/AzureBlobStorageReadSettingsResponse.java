@@ -77,7 +77,7 @@ public final class AzureBlobStorageReadSettingsResponse extends com.pulumi.resou
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -88,7 +88,7 @@ public final class AzureBlobStorageReadSettingsResponse extends com.pulumi.resou
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -133,7 +133,7 @@ public final class AzureBlobStorageReadSettingsResponse extends com.pulumi.resou
 
     /**
      * The read setting type.
-     * Expected value is 'AzureBlobStorageReadSettings'.
+     * Expected value is &#39;AzureBlobStorageReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

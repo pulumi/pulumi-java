@@ -41,14 +41,14 @@ public class Task extends com.pulumi.resources.CustomResource {
         return this.cloudWatchLogGroupArn;
     }
     /**
-     * The ARN of an AWS storage resource's location.
+     * The ARN of an AWS storage resource&#39;s location.
      * 
      */
     @Export(name="destinationLocationArn", type=String.class, parameters={})
     private Output<String> destinationLocationArn;
 
     /**
-     * @return The ARN of an AWS storage resource's location.
+     * @return The ARN of an AWS storage resource&#39;s location.
      * 
      */
     public Output<String> destinationLocationArn() {

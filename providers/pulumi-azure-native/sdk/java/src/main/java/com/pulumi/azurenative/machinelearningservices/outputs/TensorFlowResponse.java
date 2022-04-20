@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class TensorFlowResponse {
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'TensorFlow'.
+     * Expected value is &#39;TensorFlow&#39;.
      * 
      */
     private final String distributionType;
@@ -41,7 +41,7 @@ public final class TensorFlowResponse {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'TensorFlow'.
+     * Expected value is &#39;TensorFlow&#39;.
      * 
     */
     public String distributionType() {

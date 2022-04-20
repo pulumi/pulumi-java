@@ -22,7 +22,7 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
     public static final GridLayoutArgs Empty = new GridLayoutArgs();
 
     /**
-     * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
      */
     @Import(name="columns")

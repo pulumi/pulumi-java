@@ -62,7 +62,7 @@ public final class NetworkPeeringResponse {
      */
     private final Integer peerMtu;
     /**
-     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.
+     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
     private final String state;
@@ -171,7 +171,7 @@ public final class NetworkPeeringResponse {
         return this.peerMtu;
     }
     /**
-     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.
+     * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
     */
     public String state() {

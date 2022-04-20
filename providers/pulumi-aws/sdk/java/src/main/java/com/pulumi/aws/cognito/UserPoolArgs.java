@@ -74,7 +74,7 @@ public final class UserPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block for the user pool's device tracking. Detailed below.
+     * Configuration block for the user pool&#39;s device tracking. Detailed below.
      * 
      */
     @Import(name="deviceConfiguration")

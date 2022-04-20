@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class MySqlReplicaConfigurationResponse {
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     private final String caCertificate;
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     private final String clientCertificate;
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     private final String clientKey;
     /**
-     * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+     * Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
      * 
      */
     private final Integer connectRetryInterval;
@@ -62,7 +62,7 @@ public final class MySqlReplicaConfigurationResponse {
      */
     private final String username;
     /**
-     * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+     * Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
      * 
      */
     private final Boolean verifyServerCertificate;
@@ -94,28 +94,28 @@ public final class MySqlReplicaConfigurationResponse {
     }
 
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
     */
     public String caCertificate() {
         return this.caCertificate;
     }
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
     */
     public String clientKey() {
         return this.clientKey;
     }
     /**
-     * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+     * Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
      * 
     */
     public Integer connectRetryInterval() {
@@ -164,7 +164,7 @@ public final class MySqlReplicaConfigurationResponse {
         return this.username;
     }
     /**
-     * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+     * Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
      * 
     */
     public Boolean verifyServerCertificate() {

@@ -24,7 +24,7 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the HL7v2 store's IAM policy.
+     * (Computed) The etag of the HL7v2 store&#39;s IAM policy.
      * 
      */
     @Import(name="etag")
@@ -37,7 +37,7 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     /**
      * The HL7v2 store ID, in the form
      * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
-     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider's
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

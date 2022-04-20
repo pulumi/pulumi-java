@@ -24,7 +24,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     public static final ManagedServiceIdentityArgs Empty = new ManagedServiceIdentityArgs();
 
     /**
-     * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+     * Type of managed service identity. The type &#39;SystemAssigned&#39; includes an implicitly created identity. The type &#39;None&#39; will remove any identities from the resource.
      * 
      */
     @Import(name="type", required=true)
@@ -35,7 +35,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
      * 
      */
     @Import(name="userAssignedIdentities")

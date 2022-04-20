@@ -55,7 +55,7 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
 
     /**
      * The write setting type.
-     * Expected value is 'FileServerWriteSettings'.
+     * Expected value is &#39;FileServerWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

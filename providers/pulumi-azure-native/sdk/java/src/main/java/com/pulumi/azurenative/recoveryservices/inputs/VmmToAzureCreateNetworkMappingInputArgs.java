@@ -21,7 +21,7 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends com.pulumi.re
 
     /**
      * The instance type.
-     * Expected value is 'VmmToAzure'.
+     * Expected value is &#39;VmmToAzure&#39;.
      * 
      */
     @Import(name="instanceType")

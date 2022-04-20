@@ -92,7 +92,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. The list of regions where the model is going to be deployed. Only one region per model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for AI Platform services. Note: * No matter where a model is deployed, it can always be accessed by users from anywhere, both for online and batch prediction. * The region for a batch prediction job is set by the region field when submitting the batch prediction job and does not take its value from this field.
+     * Optional. The list of regions where the model is going to be deployed. Only one region per model is supported. Defaults to &#39;us-central1&#39; if nothing is set. See the available regions for AI Platform services. Note: * No matter where a model is deployed, it can always be accessed by users from anywhere, both for online and batch prediction. * The region for a batch prediction job is set by the region field when submitting the batch prediction job and does not take its value from this field.
      * 
      */
     @Import(name="regions")

@@ -45,7 +45,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
+     * Indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
      * 
      */
     @Import(name="enableServiceLinks", required=true)
@@ -67,7 +67,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
+     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
      * 
      */
     @Import(name="serviceAccountName", required=true)

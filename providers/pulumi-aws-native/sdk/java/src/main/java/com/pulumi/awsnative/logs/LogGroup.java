@@ -50,14 +50,14 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
         return this.kmsKeyId;
     }
     /**
-     * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
     @Export(name="logGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> logGroupName;
 
     /**
-     * @return The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * @return The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
     public Output</* @Nullable */ String> logGroupName() {

@@ -14,7 +14,7 @@ import java.util.Optional;
 import static java.util.Objects.requireNonNull;
 
 /**
- * Options to help control the behavior of  @see {@link Deployment#call(String, TypeShape, CallArgs, Resource, CallOptions)}"/>.
+ * Options to help control the behavior of  @see {@link Deployment#call(String, TypeShape, CallArgs, Resource, CallOptions)}.
  */
 @ParametersAreNonnullByDefault
 public final class CallOptions {

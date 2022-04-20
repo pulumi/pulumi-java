@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProviderResponse {
     /**
-     * The provider's marketplace application display name.
+     * The provider&#39;s marketplace application display name.
      * 
      */
     private final @Nullable String applicationName;
@@ -59,7 +59,7 @@ public final class ProviderResponse {
     }
 
     /**
-     * The provider's marketplace application display name.
+     * The provider&#39;s marketplace application display name.
      * 
     */
     public Optional<String> applicationName() {

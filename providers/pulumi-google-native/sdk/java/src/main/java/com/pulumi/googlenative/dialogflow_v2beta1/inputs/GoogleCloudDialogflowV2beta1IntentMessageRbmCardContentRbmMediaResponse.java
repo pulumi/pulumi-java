@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently supported: Image Types * image/jpeg * image/jpg' * image/gif * image/png Video Types * video/h263 * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
+ * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently supported: Image Types * image/jpeg * image/jpg&#39; * image/gif * image/png Video Types * video/h263 * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
  * 
  */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse extends com.pulumi.resources.InvokeArgs {
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     }
 
     /**
-     * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
+     * Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
      * 
      */
     @Import(name="thumbnailUri", required=true)

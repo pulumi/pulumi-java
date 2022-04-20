@@ -26,7 +26,7 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends com.pulu
     }
 
     /**
-     * The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+     * The Lambda version represents the signature of the &#34;request&#34; attribute in the &#34;event&#34; information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
      * 
      */
     @Import(name="lambdaVersion", required=true)

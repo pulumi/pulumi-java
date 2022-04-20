@@ -66,7 +66,7 @@ public final class HyperVReplicaBasePolicyDetailsResponse extends com.pulumi.res
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'HyperVReplicaBasePolicyDetails'.
+     * Expected value is &#39;HyperVReplicaBasePolicyDetails&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

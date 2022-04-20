@@ -95,7 +95,7 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of linked service.
-     * Expected value is 'SapEcc'.
+     * Expected value is &#39;SapEcc&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -106,7 +106,7 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
+     * The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="url", required=true)

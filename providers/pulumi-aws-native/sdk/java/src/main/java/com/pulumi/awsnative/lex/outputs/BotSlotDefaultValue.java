@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BotSlotDefaultValue {
     /**
-     * The default value to use when a user doesn't provide a value for a slot.
+     * The default value to use when a user doesn&#39;t provide a value for a slot.
      * 
      */
     private final String defaultValue;
@@ -21,7 +21,7 @@ public final class BotSlotDefaultValue {
     }
 
     /**
-     * The default value to use when a user doesn't provide a value for a slot.
+     * The default value to use when a user doesn&#39;t provide a value for a slot.
      * 
     */
     public String defaultValue() {

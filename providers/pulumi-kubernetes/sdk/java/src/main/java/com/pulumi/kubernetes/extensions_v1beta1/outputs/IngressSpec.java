@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IngressSpec {
     /**
-     * A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
+     * A default backend capable of servicing requests that don&#39;t match any rule. At least one of &#39;backend&#39; or &#39;rules&#39; must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
      * 
      */
     private final @Nullable IngressBackend backend;
@@ -49,7 +49,7 @@ public final class IngressSpec {
     }
 
     /**
-     * A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
+     * A default backend capable of servicing requests that don&#39;t match any rule. At least one of &#39;backend&#39; or &#39;rules&#39; must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
      * 
     */
     public Optional<IngressBackend> backend() {

@@ -32,7 +32,7 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
 
     /**
      * The type of a Service Fabric container network.
-     * Expected value is 'NetworkResourceProperties'.
+     * Expected value is &#39;NetworkResourceProperties&#39;.
      * 
      */
     @Import(name="kind", required=true)

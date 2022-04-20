@@ -72,14 +72,14 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
         return this.locationUri;
     }
     /**
-     * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+     * A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
-     * @return A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
+     * @return A subdirectory in the location&#39;s path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
     public Output</* @Nullable */ String> subdirectory() {

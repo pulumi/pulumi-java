@@ -205,7 +205,7 @@ public final class SparkLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'Spark'.
+     * Expected value is &#39;Spark&#39;.
      * 
      */
     @Import(name="type", required=true)

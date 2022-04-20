@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class DeliveryRuleRemoteAddressConditionResponse {
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RemoteAddress'.
+     * Expected value is &#39;RemoteAddress&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RemoteAddress'.
+     * Expected value is &#39;RemoteAddress&#39;.
      * 
     */
     public String name() {

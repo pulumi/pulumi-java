@@ -28,7 +28,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
     }
 
     /**
-     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
+     * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount.&#34;
      * 
      */
     @Import(name="provisioningId", required=true)

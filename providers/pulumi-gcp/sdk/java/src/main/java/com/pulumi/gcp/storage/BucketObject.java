@@ -121,14 +121,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.contentLanguage;
     }
     /**
-     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
      * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
-     * @return [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * @return [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
      * 
      */
     public Output<String> contentType() {
@@ -172,7 +172,7 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
     }
     /**
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
-     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
      * will be subject to bucket-level retention (if any).
      * 
      */
@@ -181,7 +181,7 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
-     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
      * will be subject to bucket-level retention (if any).
      * 
      */
@@ -245,14 +245,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.metadata;
     }
     /**
-     * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * @return The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
      * 
      */
     public Output<String> name() {
@@ -306,7 +306,7 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
     }
     /**
      * The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */
@@ -315,7 +315,7 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */

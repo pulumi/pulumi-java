@@ -31,7 +31,7 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Details of the user's elastic account.
+     * Details of the user&#39;s elastic account.
      * 
      */
     @Import(name="elasticCloudUser")

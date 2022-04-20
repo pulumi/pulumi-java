@@ -71,7 +71,7 @@ public final class AmazonS3LinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> sessionToken;
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3'.
+     * Expected value is &#39;AmazonS3&#39;.
      * 
      */
     private final String type;
@@ -174,7 +174,7 @@ public final class AmazonS3LinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AmazonS3'.
+     * Expected value is &#39;AmazonS3&#39;.
      * 
     */
     public String type() {

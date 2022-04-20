@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference {
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final String name;
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public String name() {

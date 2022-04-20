@@ -44,7 +44,7 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Represents the latest available observations of a deployment's current state.
+     * Represents the latest available observations of a deployment&#39;s current state.
      * 
      */
     @Import(name="conditions")

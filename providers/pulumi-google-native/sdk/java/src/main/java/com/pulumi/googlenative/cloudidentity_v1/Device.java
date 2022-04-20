@@ -331,14 +331,14 @@ public class Device extends com.pulumi.resources.CustomResource {
         return this.osVersion;
     }
     /**
-     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
      */
     @Export(name="otherAccounts", type=List.class, parameters={String.class})
     private Output<List<String>> otherAccounts;
 
     /**
-     * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
+     * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
      */
     public Output<List<String>> otherAccounts() {

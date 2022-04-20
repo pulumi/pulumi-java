@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
      */
     @EnumType

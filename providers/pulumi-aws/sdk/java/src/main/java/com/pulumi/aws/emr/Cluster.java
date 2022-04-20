@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:emr/cluster:Cluster cluster j-123456ABCDEF
  * ```
  * 
- *  Since the API does not return the actual values for Kerberos configurations, environments with those configurations will need to use the resource options configuration block `ignoreChanges` argument available to all provider resources to prevent perpetual differences, e.g. terraform resource "aws_emr_cluster" "example" {
+ *  Since the API does not return the actual values for Kerberos configurations, environments with those configurations will need to use the resource options configuration block `ignoreChanges` argument available to all provider resources to prevent perpetual differences, e.g. terraform resource &#34;aws_emr_cluster&#34; &#34;example&#34; {
  * 
  * # ... other configuration ...
  * 

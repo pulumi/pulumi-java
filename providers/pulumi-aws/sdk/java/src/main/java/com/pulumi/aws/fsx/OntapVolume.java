@@ -77,14 +77,14 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
         return this.flexcacheEndpointType;
     }
     /**
-     * Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
+     * Specifies the location in the storage virtual machine&#39;s namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
     @Export(name="junctionPath", type=String.class, parameters={})
     private Output<String> junctionPath;
 
     /**
-     * @return Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
+     * @return Specifies the location in the storage virtual machine&#39;s namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
     public Output<String> junctionPath() {
@@ -209,14 +209,14 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
         return this.tieringPolicy;
     }
     /**
-     * The Volume's UUID (universally unique identifier).
+     * The Volume&#39;s UUID (universally unique identifier).
      * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
-     * @return The Volume's UUID (universally unique identifier).
+     * @return The Volume&#39;s UUID (universally unique identifier).
      * 
      */
     public Output<String> uuid() {

@@ -15,7 +15,7 @@ public final class AzureNodePoolAutoscalingGetArgs extends com.pulumi.resources.
     public static final AzureNodePoolAutoscalingGetArgs Empty = new AzureNodePoolAutoscalingGetArgs();
 
     /**
-     * Required. Maximum number of nodes in the node pool. Must be >= min_node_count.
+     * Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
      * 
      */
     @Import(name="maxNodeCount", required=true)
@@ -26,7 +26,7 @@ public final class AzureNodePoolAutoscalingGetArgs extends com.pulumi.resources.
     }
 
     /**
-     * Required. Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.
+     * Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     @Import(name="minNodeCount", required=true)

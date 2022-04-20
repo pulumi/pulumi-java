@@ -126,7 +126,7 @@ public final class Office365DatasetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of dataset.
-     * Expected value is 'Office365Table'.
+     * Expected value is &#39;Office365Table&#39;.
      * 
      */
     @Import(name="type", required=true)

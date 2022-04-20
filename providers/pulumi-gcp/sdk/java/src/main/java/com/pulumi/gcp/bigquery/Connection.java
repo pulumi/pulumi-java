@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Cloud SQL federated queries](https://cloud.google.com/bigquery/docs/cloud-sql-federated-queries)
  * 
- * > **Warning:** All arguments including `cloud_sql.credential.password` will be stored in the raw
+ * &gt; **Warning:** All arguments including `cloud_sql.credential.password` will be stored in the raw
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
  * 
  * ## Example Usage
@@ -142,7 +142,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
     }
     /**
      * The resource name of the connection in the form of:
-     * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
+     * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -150,7 +150,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The resource name of the connection in the form of:
-     * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
+     * &#34;projects/{project_id}/locations/{location_id}/connections/{connectionId}&#34;
      * 
      */
     public Output<String> name() {

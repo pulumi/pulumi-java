@@ -142,7 +142,7 @@ public final class ForEachActivityResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of activity.
-     * Expected value is 'ForEach'.
+     * Expected value is &#39;ForEach&#39;.
      * 
      */
     @Import(name="type", required=true)

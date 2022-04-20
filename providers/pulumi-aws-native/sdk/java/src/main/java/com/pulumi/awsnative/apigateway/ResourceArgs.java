@@ -15,7 +15,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     /**
-     * The parent resource's identifier.
+     * The parent resource&#39;s identifier.
      * 
      */
     @Import(name="parentId", required=true)

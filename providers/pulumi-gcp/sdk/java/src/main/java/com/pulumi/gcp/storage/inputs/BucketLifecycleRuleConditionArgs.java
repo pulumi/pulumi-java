@@ -106,7 +106,7 @@ public final class BucketLifecycleRuleConditionArgs extends com.pulumi.resources
     }
 
     /**
-     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
+     * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `&#34;LIVE&#34;`, `&#34;ARCHIVED&#34;`, `&#34;ANY&#34;`.
      * 
      */
     @Import(name="withState")

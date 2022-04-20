@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+ * The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
  * 
  */
 public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs {
@@ -17,7 +17,7 @@ public final class BucketWebsiteResponse extends com.pulumi.resources.InvokeArgs
     public static final BucketWebsiteResponse Empty = new BucketWebsiteResponse();
 
     /**
-     * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
      * 
      */
     @Import(name="mainPageSuffix", required=true)

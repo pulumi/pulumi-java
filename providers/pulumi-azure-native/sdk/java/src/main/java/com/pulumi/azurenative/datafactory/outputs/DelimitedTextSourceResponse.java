@@ -63,7 +63,7 @@ public final class DelimitedTextSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'DelimitedTextSource'.
+     * Expected value is &#39;DelimitedTextSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class DelimitedTextSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'DelimitedTextSource'.
+     * Expected value is &#39;DelimitedTextSource&#39;.
      * 
     */
     public String type() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Describes a virtual machines network configuration's DNS settings.
+ * Describes a virtual machines network configuration&#39;s DNS settings.
  * 
  */
 public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs extends com.pulumi.resources.ResourceArgs {

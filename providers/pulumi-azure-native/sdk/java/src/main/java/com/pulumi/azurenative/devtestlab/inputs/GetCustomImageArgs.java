@@ -15,7 +15,7 @@ public final class GetCustomImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCustomImageArgs Empty = new GetCustomImageArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=vm)'
+     * Specify the $expand query. Example: &#39;properties($select=vm)&#39;
      * 
      */
     @Import(name="expand")

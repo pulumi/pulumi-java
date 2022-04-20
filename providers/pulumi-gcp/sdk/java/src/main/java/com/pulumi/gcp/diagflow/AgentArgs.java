@@ -36,7 +36,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+     * The URI of the agent&#39;s avatar, which are used throughout the Dialogflow console. When an image URL is entered
      * into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
      * from the API will be shown in the [avatarUriBackend] field.
      * 

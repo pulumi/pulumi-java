@@ -66,7 +66,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
 
     /**
      * Type of distribution.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -43,7 +43,7 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
+     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
      * 
      */
     @Import(name="creators")

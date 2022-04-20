@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * the operation associated with the notification and its value must be "scale"
+     * the operation associated with the notification and its value must be &#34;scale&#34;
      * 
      */
     @EnumType

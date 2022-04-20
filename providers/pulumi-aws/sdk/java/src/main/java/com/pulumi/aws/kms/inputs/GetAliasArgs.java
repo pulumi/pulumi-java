@@ -13,7 +13,7 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAliasArgs Empty = new GetAliasArgs();
 
     /**
-     * The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
+     * The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
      * 
      */
     @Import(name="name", required=true)

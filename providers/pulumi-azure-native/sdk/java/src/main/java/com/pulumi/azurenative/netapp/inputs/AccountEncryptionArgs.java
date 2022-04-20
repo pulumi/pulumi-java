@@ -20,7 +20,7 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     public static final AccountEncryptionArgs Empty = new AccountEncryptionArgs();
 
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
      * 
      */
     @Import(name="keySource")

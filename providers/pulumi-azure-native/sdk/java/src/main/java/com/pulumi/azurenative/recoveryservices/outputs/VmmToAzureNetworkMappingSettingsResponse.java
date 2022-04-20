@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class VmmToAzureNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
-     * Expected value is 'VmmToAzure'.
+     * Expected value is &#39;VmmToAzure&#39;.
      * 
      */
     private final String instanceType;
@@ -23,7 +23,7 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
 
     /**
      * Gets the Instance type.
-     * Expected value is 'VmmToAzure'.
+     * Expected value is &#39;VmmToAzure&#39;.
      * 
     */
     public String instanceType() {

@@ -21,7 +21,7 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse extends c
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'ServiceBusTopic'.
+     * Expected value is &#39;ServiceBusTopic&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

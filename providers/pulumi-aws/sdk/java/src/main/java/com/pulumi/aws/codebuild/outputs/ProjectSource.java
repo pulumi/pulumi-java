@@ -17,9 +17,9 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectSource {
     /**
-     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
@@ -31,7 +31,7 @@ public final class ProjectSource {
      */
     private final @Nullable ProjectSourceBuildStatusConfig buildStatusConfig;
     /**
-     * Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+     * Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
      * 
      */
     private final @Nullable String buildspec;
@@ -56,7 +56,7 @@ public final class ProjectSource {
      */
     private final @Nullable String location;
     /**
-     * Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+     * Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
      */
     private final @Nullable Boolean reportBuildStatus;
@@ -89,9 +89,9 @@ public final class ProjectSource {
     }
 
     /**
-     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
     */
@@ -107,7 +107,7 @@ public final class ProjectSource {
         return Optional.ofNullable(this.buildStatusConfig);
     }
     /**
-     * Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+     * Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
      * 
     */
     public Optional<String> buildspec() {
@@ -142,7 +142,7 @@ public final class ProjectSource {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+     * Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
     */
     public Optional<Boolean> reportBuildStatus() {

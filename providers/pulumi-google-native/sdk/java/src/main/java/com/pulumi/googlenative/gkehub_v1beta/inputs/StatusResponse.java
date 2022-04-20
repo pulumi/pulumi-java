@@ -17,7 +17,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     public static final StatusResponse Empty = new StatusResponse();
 
     /**
-     * Code specifies AppDevExperienceFeature's subcomponent ready state.
+     * Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
      * 
      */
     @Import(name="code", required=true)

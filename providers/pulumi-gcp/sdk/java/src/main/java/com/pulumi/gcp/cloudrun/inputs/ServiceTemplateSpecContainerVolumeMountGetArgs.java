@@ -16,7 +16,7 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends com.pu
 
     /**
      * Path within the container at which the volume should be mounted.  Must
-     * not contain ':'.
+     * not contain &#39;:&#39;.
      * 
      */
     @Import(name="mountPath", required=true)
@@ -27,7 +27,7 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends com.pu
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)

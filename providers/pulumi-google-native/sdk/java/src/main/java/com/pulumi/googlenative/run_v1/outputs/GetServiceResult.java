@@ -13,12 +13,12 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * The API version for this call such as "serving.knative.dev/v1".
+     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
      */
     private final String apiVersion;
     /**
-     * The kind of resource, in this case "Service".
+     * The kind of resource, in this case &#34;Service&#34;.
      * 
      */
     private final String kind;
@@ -53,14 +53,14 @@ public final class GetServiceResult {
     }
 
     /**
-     * The API version for this call such as "serving.knative.dev/v1".
+     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case "Service".
+     * The kind of resource, in this case &#34;Service&#34;.
      * 
     */
     public String kind() {

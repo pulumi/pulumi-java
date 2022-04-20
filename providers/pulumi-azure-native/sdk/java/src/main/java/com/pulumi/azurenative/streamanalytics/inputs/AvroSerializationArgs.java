@@ -20,7 +20,7 @@ public final class AvroSerializationArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Avro'.
+     * Expected value is &#39;Avro&#39;.
      * 
      */
     @Import(name="type", required=true)

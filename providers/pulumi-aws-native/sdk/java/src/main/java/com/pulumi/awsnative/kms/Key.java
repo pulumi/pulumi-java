@@ -94,42 +94,42 @@ public class Key extends com.pulumi.resources.CustomResource {
         return this.keyPolicy;
     }
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
     @Export(name="keySpec", type=KeySpec.class, parameters={})
     private Output</* @Nullable */ KeySpec> keySpec;
 
     /**
-     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
+     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
     public Output</* @Nullable */ KeySpec> keySpec() {
         return this.keySpec;
     }
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
     @Export(name="keyUsage", type=KeyUsage.class, parameters={})
     private Output</* @Nullable */ KeyUsage> keyUsage;
 
     /**
-     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
     public Output</* @Nullable */ KeyUsage> keyUsage() {
         return this.keyUsage;
     }
     /**
-     * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
     @Export(name="multiRegion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> multiRegion;
 
     /**
-     * @return Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
     public Output</* @Nullable */ Boolean> multiRegion() {

@@ -126,7 +126,7 @@ public final class SqlServerTableDatasetResponse extends com.pulumi.resources.In
 
     /**
      * Type of dataset.
-     * Expected value is 'SqlServerTable'.
+     * Expected value is &#39;SqlServerTable&#39;.
      * 
      */
     @Import(name="type", required=true)

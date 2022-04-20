@@ -77,14 +77,14 @@ public class Export extends com.pulumi.resources.CustomResource {
         return this.eTag;
     }
     /**
-     * The format of the export being delivered. Currently only 'Csv' is supported.
+     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
      */
     @com.pulumi.core.annotations.Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
-     * @return The format of the export being delivered. Currently only 'Csv' is supported.
+     * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
      */
     public Output</* @Nullable */ String> format() {

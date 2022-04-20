@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/monitoring/uptime-checks/)
  * 
- * > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
+ * &gt; **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:monitoring/uptimeCheckConfig:UptimeCheckConfig")
 public class UptimeCheckConfig extends com.pulumi.resources.CustomResource {
     /**
-     * The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+     * The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required.
      * Structure is documented below.
      * 
      */
@@ -53,7 +53,7 @@ public class UptimeCheckConfig extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ List<UptimeCheckConfigContentMatcher>> contentMatchers;
 
     /**
-     * @return The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+     * @return The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required.
      * Structure is documented below.
      * 
      */

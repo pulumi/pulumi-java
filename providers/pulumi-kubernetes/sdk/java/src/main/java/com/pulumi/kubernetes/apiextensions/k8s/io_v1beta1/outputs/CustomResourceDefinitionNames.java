@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomResourceDefinitionNames {
     /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
+     * categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
      */
     private final @Nullable List<String> categories;
@@ -23,17 +23,17 @@ public final class CustomResourceDefinitionNames {
      */
     private final String kind;
     /**
-     * listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".
+     * listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
      * 
      */
     private final @Nullable String listKind;
     /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.
+     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
      * 
      */
     private final String plural;
     /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.
+     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
      * 
      */
     private final @Nullable List<String> shortNames;
@@ -60,7 +60,7 @@ public final class CustomResourceDefinitionNames {
     }
 
     /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
+     * categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
     */
     public List<String> categories() {
@@ -74,21 +74,21 @@ public final class CustomResourceDefinitionNames {
         return this.kind;
     }
     /**
-     * listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".
+     * listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
      * 
     */
     public Optional<String> listKind() {
         return Optional.ofNullable(this.listKind);
     }
     /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.
+     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
      * 
     */
     public String plural() {
         return this.plural;
     }
     /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.
+     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
      * 
     */
     public List<String> shortNames() {

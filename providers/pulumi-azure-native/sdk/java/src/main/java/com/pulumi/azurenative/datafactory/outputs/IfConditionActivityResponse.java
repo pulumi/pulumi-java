@@ -85,7 +85,7 @@ public final class IfConditionActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'IfCondition'.
+     * Expected value is &#39;IfCondition&#39;.
      * 
      */
     private final String type;
@@ -159,7 +159,7 @@ public final class IfConditionActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'IfCondition'.
+     * Expected value is &#39;IfCondition&#39;.
      * 
     */
     public String type() {

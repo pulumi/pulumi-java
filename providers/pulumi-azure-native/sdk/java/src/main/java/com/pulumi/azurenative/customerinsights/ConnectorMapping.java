@@ -201,14 +201,14 @@ public class ConnectorMapping extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The next run time based on customer's settings.
+     * The next run time based on customer&#39;s settings.
      * 
      */
     @Export(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
     /**
-     * @return The next run time based on customer's settings.
+     * @return The next run time based on customer&#39;s settings.
      * 
      */
     public Output<String> nextRunTime() {

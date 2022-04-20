@@ -20,7 +20,7 @@ public final class DebugOptionsArgs extends com.pulumi.resources.ResourceArgs {
     public static final DebugOptionsArgs Empty = new DebugOptionsArgs();
 
     /**
-     * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+     * When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
      * 
      */
     @Import(name="enableHotKeyLogging")

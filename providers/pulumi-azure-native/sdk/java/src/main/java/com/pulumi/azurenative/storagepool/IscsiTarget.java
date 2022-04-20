@@ -75,14 +75,14 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
      */
     @Export(name="targetIqn", type=String.class, parameters={})
     private Output<String> targetIqn;
 
     /**
-     * @return iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
+     * @return iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
      */
     public Output<String> targetIqn() {

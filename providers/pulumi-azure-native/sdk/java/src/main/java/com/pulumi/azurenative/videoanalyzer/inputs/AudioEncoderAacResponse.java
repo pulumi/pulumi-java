@@ -32,7 +32,7 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
      * 
      */
     @Import(name="type", required=true)

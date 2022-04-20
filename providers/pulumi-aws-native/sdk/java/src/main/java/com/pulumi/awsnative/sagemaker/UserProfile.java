@@ -36,28 +36,28 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
         return this.domainId;
     }
     /**
-     * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is &#34;UserName&#34;. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     @Export(name="singleSignOnUserIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserIdentifier;
 
     /**
-     * @return A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * @return A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is &#34;UserName&#34;. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     public Output</* @Nullable */ String> singleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier;
     }
     /**
-     * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     @Export(name="singleSignOnUserValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserValue;
 
     /**
-     * @return The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
+     * @return The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
     public Output</* @Nullable */ String> singleSignOnUserValue() {

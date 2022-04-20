@@ -17,7 +17,7 @@ public final class ResourceSetDescriptionResponse {
      */
     private final @Nullable List<String> elements;
     /**
-     * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
+     * The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
      * 
      */
     private final @Nullable List<String> exceptions;
@@ -38,7 +38,7 @@ public final class ResourceSetDescriptionResponse {
         return this.elements == null ? List.of() : this.elements;
     }
     /**
-     * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
+     * The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
      * 
     */
     public List<String> exceptions() {

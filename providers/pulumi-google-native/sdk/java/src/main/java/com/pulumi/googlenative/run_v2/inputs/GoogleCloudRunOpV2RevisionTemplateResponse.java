@@ -124,7 +124,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
     }
 
     /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
+     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
      * 
      */
     @Import(name="serviceAccount", required=true)

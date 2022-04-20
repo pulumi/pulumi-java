@@ -30,7 +30,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     private final String id;
     /**
      * Result type
-     * Expected value is 'DatabaseLevelErrorOutput'.
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
      */
     private final String resultType;
@@ -70,7 +70,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     }
     /**
      * Result type
-     * Expected value is 'DatabaseLevelErrorOutput'.
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
     */
     public String resultType() {

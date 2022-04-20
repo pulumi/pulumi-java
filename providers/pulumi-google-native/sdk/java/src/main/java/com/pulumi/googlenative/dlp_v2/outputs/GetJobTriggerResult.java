@@ -54,7 +54,7 @@ public final class GetJobTriggerResult {
      */
     private final String status;
     /**
-     * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
+     * A list of triggers which will be OR&#39;ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
      */
     private final List<GooglePrivacyDlpV2TriggerResponse> triggers;
@@ -145,7 +145,7 @@ public final class GetJobTriggerResult {
         return this.status;
     }
     /**
-     * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
+     * A list of triggers which will be OR&#39;ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
     */
     public List<GooglePrivacyDlpV2TriggerResponse> triggers() {

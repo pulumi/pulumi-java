@@ -44,7 +44,7 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset storage format.
-     * Expected value is 'AvroFormat'.
+     * Expected value is &#39;AvroFormat&#39;.
      * 
      */
     @Import(name="type", required=true)

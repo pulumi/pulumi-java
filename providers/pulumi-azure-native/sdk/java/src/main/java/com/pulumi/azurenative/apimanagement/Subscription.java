@@ -145,14 +145,14 @@ public class Subscription extends com.pulumi.resources.CustomResource {
         return this.ownerId;
     }
     /**
-     * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     @Export(name="primaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryKey;
 
     /**
-     * @return Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * @return Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     public Output</* @Nullable */ String> primaryKey() {
@@ -173,14 +173,14 @@ public class Subscription extends com.pulumi.resources.CustomResource {
         return this.scope;
     }
     /**
-     * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     @Export(name="secondaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryKey;
 
     /**
-     * @return Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * @return Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     public Output</* @Nullable */ String> secondaryKey() {
@@ -215,14 +215,14 @@ public class Subscription extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
+     * Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
      */
     @Export(name="stateComment", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateComment;
 
     /**
-     * @return Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
+     * @return Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
      */
     public Output</* @Nullable */ String> stateComment() {

@@ -86,7 +86,7 @@ public final class AzureFileStorageLinkedServiceResponse {
     private final @Nullable Object snapshot;
     /**
      * Type of linked service.
-     * Expected value is 'AzureFileStorage'.
+     * Expected value is &#39;AzureFileStorage&#39;.
      * 
      */
     private final String type;
@@ -223,7 +223,7 @@ public final class AzureFileStorageLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureFileStorage'.
+     * Expected value is &#39;AzureFileStorage&#39;.
      * 
     */
     public String type() {

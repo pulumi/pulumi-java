@@ -63,7 +63,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
 
     /**
      * The entity query kind
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     @Import(name="kind", required=true)

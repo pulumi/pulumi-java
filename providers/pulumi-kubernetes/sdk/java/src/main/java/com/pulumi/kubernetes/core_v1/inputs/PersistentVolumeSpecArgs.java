@@ -57,7 +57,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     @Import(name="awsElasticBlockStore")
@@ -90,7 +90,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
+     * A description of the persistent volume&#39;s resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      * 
      */
     @Import(name="capacity")
@@ -101,7 +101,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     @Import(name="cephfs")
@@ -145,7 +145,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+     * FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     @Import(name="fc")
@@ -167,7 +167,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
+     * Flocker represents a Flocker volume attached to a kubelet&#39;s host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
      * 
      */
     @Import(name="flocker")
@@ -178,7 +178,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     @Import(name="gcePersistentDisk")
@@ -211,7 +211,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.
+     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. Provisioned by an admin.
      * 
      */
     @Import(name="iscsi")
@@ -233,7 +233,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
+     * A list of mount options, e.g. [&#34;ro&#34;, &#34;soft&#34;]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
      * 
      */
     @Import(name="mountOptions")
@@ -269,9 +269,9 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
      * What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
      * 
      * Possible enum values:
-     *  - `"Delete"` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
-     *  - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
-     *  - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
+     *  - `&#34;Delete&#34;` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
+     *  - `&#34;Recycle&#34;` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
+     *  - `&#34;Retain&#34;` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
      * 
      */
     @Import(name="persistentVolumeReclaimPolicy")
@@ -304,7 +304,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     @Import(name="quobyte")
@@ -315,7 +315,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     @Import(name="rbd")
@@ -348,7 +348,7 @@ public final class PersistentVolumeSpecArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
+     * StorageOS represents a StorageOS volume that is attached to the kubelet&#39;s host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
      * 
      */
     @Import(name="storageos")

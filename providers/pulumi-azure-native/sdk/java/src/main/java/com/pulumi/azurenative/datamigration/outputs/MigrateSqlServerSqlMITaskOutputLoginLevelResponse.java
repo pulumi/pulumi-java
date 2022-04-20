@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
     private final String message;
     /**
      * Result type
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -117,7 +117,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
     */
     public String resultType() {

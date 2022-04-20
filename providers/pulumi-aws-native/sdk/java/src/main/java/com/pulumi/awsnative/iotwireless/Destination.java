@@ -16,7 +16,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Destination's resource schema demonstrating some basic constructs and validation rules.
+ * Destination&#39;s resource schema demonstrating some basic constructs and validation rules.
  * 
  */
 @ResourceType(type="aws-native:iotwireless:Destination")

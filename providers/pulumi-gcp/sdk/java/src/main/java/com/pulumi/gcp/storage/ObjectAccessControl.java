@@ -94,10 +94,10 @@ public class ObjectAccessControl extends com.pulumi.resources.CustomResource {
     /**
      * The entity holding the permission, in one of the following forms:
      * * user-{{userId}}
-     * * user-{{email}} (such as "user-liz@example.com")
+     * * user-{{email}} (such as &#34;user-liz@example.com&#34;)
      * * group-{{groupId}}
-     * * group-{{email}} (such as "group-example@googlegroups.com")
-     * * domain-{{domain}} (such as "domain-example.com")
+     * * group-{{email}} (such as &#34;group-example@googlegroups.com&#34;)
+     * * domain-{{domain}} (such as &#34;domain-example.com&#34;)
      * * project-team-{{projectId}}
      * * allUsers
      * * allAuthenticatedUsers
@@ -109,10 +109,10 @@ public class ObjectAccessControl extends com.pulumi.resources.CustomResource {
     /**
      * @return The entity holding the permission, in one of the following forms:
      * * user-{{userId}}
-     * * user-{{email}} (such as "user-liz@example.com")
+     * * user-{{email}} (such as &#34;user-liz@example.com&#34;)
      * * group-{{groupId}}
-     * * group-{{email}} (such as "group-example@googlegroups.com")
-     * * domain-{{domain}} (such as "domain-example.com")
+     * * group-{{email}} (such as &#34;group-example@googlegroups.com&#34;)
+     * * domain-{{domain}} (such as &#34;domain-example.com&#34;)
      * * project-team-{{projectId}}
      * * allUsers
      * * allAuthenticatedUsers

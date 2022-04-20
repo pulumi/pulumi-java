@@ -36,7 +36,7 @@ public final class GetSignalRResult {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     private final @Nullable List<SignalRFeatureResponse> features;
@@ -47,7 +47,7 @@ public final class GetSignalRResult {
     private final String hostName;
     /**
      * Prefix for the hostName of the SignalR service. Retained for future use.
-     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
      * 
      */
     private final String hostNamePrefix;
@@ -57,7 +57,7 @@ public final class GetSignalRResult {
      */
     private final String id;
     /**
-     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final @Nullable String kind;
@@ -107,7 +107,7 @@ public final class GetSignalRResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final String type;
@@ -184,7 +184,7 @@ public final class GetSignalRResult {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
     */
     public List<SignalRFeatureResponse> features() {
@@ -199,7 +199,7 @@ public final class GetSignalRResult {
     }
     /**
      * Prefix for the hostName of the SignalR service. Retained for future use.
-     * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+     * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
      * 
     */
     public String hostNamePrefix() {
@@ -213,7 +213,7 @@ public final class GetSignalRResult {
         return this.id;
     }
     /**
-     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
     */
     public Optional<String> kind() {
@@ -283,7 +283,7 @@ public final class GetSignalRResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
     */
     public String type() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class AmlTokenResponse {
     /**
      * Enum to determine identity framework.
-     * Expected value is 'AMLToken'.
+     * Expected value is &#39;AMLToken&#39;.
      * 
      */
     private final String identityType;
@@ -23,7 +23,7 @@ public final class AmlTokenResponse {
 
     /**
      * Enum to determine identity framework.
-     * Expected value is 'AMLToken'.
+     * Expected value is &#39;AMLToken&#39;.
      * 
     */
     public String identityType() {

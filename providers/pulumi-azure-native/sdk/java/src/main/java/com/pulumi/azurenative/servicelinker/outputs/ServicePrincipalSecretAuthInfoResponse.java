@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ServicePrincipalSecretAuthInfoResponse {
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalSecret'.
+     * Expected value is &#39;servicePrincipalSecret&#39;.
      * 
      */
     private final String authType;
@@ -45,7 +45,7 @@ public final class ServicePrincipalSecretAuthInfoResponse {
 
     /**
      * The authentication type.
-     * Expected value is 'servicePrincipalSecret'.
+     * Expected value is &#39;servicePrincipalSecret&#39;.
      * 
     */
     public String authType() {

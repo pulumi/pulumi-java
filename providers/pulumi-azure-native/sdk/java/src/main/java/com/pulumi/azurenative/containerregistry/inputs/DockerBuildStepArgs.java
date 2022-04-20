@@ -112,7 +112,7 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The type of the step.
-     * Expected value is 'Docker'.
+     * Expected value is &#39;Docker&#39;.
      * 
      */
     @Import(name="type", required=true)
