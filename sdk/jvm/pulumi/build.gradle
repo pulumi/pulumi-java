@@ -87,6 +87,11 @@ sourceSets {
             srcDirs "build/generated/source/proto/main/java"
         }
     }
+    pub {
+        java {
+            srcDirs "src/main/java"
+        }
+    }
 }
 
 test {
@@ -110,31 +115,85 @@ test {
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 }
 
+
+def gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+def gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+def ossrhRepoUrl = project.findProperty("ossrhRepoUrl") ?: System.getenv("OSSRH_REPO_URL")
+def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
+def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
+
+task sourcesJar(type: Jar) {
+    from sourceSets.pub.java
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
 publishing {
     publications {
-        // TODO pom
-
-        // Publish to GitHub Packages like this
-        //
-        // gradle publish
-        //
-        // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
             groupId = "com.pulumi"
             artifactId = "pulumi"
             version = version
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
+            pom {
+                inceptionYear = "2022"
+                name = "pulumi"
+                packaging = "jar"
+                description = "Pulumi Java SDK"
+
+                url = "https://github.com/pulumi/pulumi-java"
+
+                scm {
+                    connection = "git@github.com:pulumi/pulumi-java.git"
+                    developerConnection = "git@github.com:pulumi/pulumi-java.git"
+                    url = "https://github.com/pulumi/pulumi-java"
+                }
+
+                licenses {
+                    license {
+                        name = "The Apache License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = "pulumi"
+                        name = "Pulumi"
+                        email = "support@pulumi.com"
+                    }
+                }
+            }
         }
     }
 
-    // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
-            credentials {
-                username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+    if (ossrhUsername) {
+        repositories {
+            maven {
+                name = "OSSRH"
+                url = ossrhRepoUrl
+                credentials {
+                    username = ossrhUsername
+                    password = ossrhPassword
+                }
+            }
+       }
+    } else {
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
+                credentials {
+                    username = gprUser
+                    password = gprToken
+                }
             }
         }
     }
@@ -143,5 +202,16 @@ publishing {
 javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
+    }
+}
+
+if (ossrhUsername) {
+    def signingKeyId = project.findProperty("signingKeyId") ?: System.getenv("SIGNING_KEY_ID")
+    def signingKey = project.findProperty("signingKey") ?: System.getenv("SIGNING_KEY")
+    def signingPassword = project.findProperty("signingPassword") ?: System.getenv("SIGNING_PASSWORD")
+
+    signing {
+        useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
+        sign publishing.publications.gpr
     }
 }
