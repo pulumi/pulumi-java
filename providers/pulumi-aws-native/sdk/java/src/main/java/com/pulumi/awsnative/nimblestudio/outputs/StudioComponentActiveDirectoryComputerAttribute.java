@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentActiveDirectoryComputerAttribute {
     /**
-     * <p>The name for the LDAP attribute.</p>
+     * &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * <p>The value for the LDAP attribute.</p>
+     * &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
      * 
      */
     private final @Nullable String value;
@@ -31,14 +31,14 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
     }
 
     /**
-     * <p>The name for the LDAP attribute.</p>
+     * &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * <p>The value for the LDAP attribute.</p>
+     * &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
      * 
     */
     public Optional<String> value() {

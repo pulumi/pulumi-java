@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The status of the Data Store. Possible statuses are 'CREATING', 'ACTIVE', 'DELETING', or 'DELETED'.
+     * The status of the Data Store. Possible statuses are &#39;CREATING&#39;, &#39;ACTIVE&#39;, &#39;DELETING&#39;, or &#39;DELETED&#39;.
      * 
      */
     @EnumType

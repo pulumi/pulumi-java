@@ -48,7 +48,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
      * 
      */
     @Import(name="callAs")
@@ -70,7 +70,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
      * 
      */
     @Import(name="description")

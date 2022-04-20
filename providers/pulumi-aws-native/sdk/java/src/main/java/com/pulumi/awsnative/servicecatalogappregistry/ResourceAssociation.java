@@ -60,14 +60,14 @@ public class ResourceAssociation extends com.pulumi.resources.CustomResource {
         return this.resourceArn;
     }
     /**
-     * The type of the CFN Resource for now it's enum CFN_STACK.
+     * The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
      */
     @Export(name="resourceType", type=ResourceAssociationResourceType.class, parameters={})
     private Output<ResourceAssociationResourceType> resourceType;
 
     /**
-     * @return The type of the CFN Resource for now it's enum CFN_STACK.
+     * @return The type of the CFN Resource for now it&#39;s enum CFN_STACK.
      * 
      */
     public Output<ResourceAssociationResourceType> resourceType() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Information required to reset the timer. The timer is reset to the previously evaluated result of the duration. The duration expression isn't reevaluated when you reset the timer.
+ * Information required to reset the timer. The timer is reset to the previously evaluated result of the duration. The duration expression isn&#39;t reevaluated when you reset the timer.
  * 
  */
 public final class DetectorModelResetTimerArgs extends com.pulumi.resources.ResourceArgs {

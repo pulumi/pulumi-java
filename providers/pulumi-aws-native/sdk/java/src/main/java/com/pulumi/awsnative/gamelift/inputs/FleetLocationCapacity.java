@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Current resource capacity settings in a specified fleet or location. The location value might refer to a fleet's remote location or its home Region.
+ * Current resource capacity settings in a specified fleet or location. The location value might refer to a fleet&#39;s remote location or its home Region.
  * 
  */
 public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs {
@@ -28,7 +28,7 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
+     * The maximum value that is allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     @Import(name="maxSize", required=true)
@@ -39,7 +39,7 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
+     * The minimum value allowed for the fleet&#39;s instance count for a location. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     @Import(name="minSize", required=true)

@@ -17,7 +17,7 @@ public final class DimensionTag extends com.pulumi.resources.InvokeArgs {
     public static final DimensionTag Empty = new DimensionTag();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -28,7 +28,7 @@ public final class DimensionTag extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

@@ -83,14 +83,14 @@ public class Flow extends com.pulumi.resources.CustomResource {
         return this.flowName;
     }
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     @Export(name="kMSArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSArn;
 
     /**
-     * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     public Output</* @Nullable */ String> kMSArn() {

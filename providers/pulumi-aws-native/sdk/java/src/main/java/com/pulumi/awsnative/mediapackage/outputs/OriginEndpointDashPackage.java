@@ -50,12 +50,12 @@ public final class OriginEndpointDashPackage {
      */
     private final @Nullable Integer minUpdatePeriodSeconds;
     /**
-     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
+     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
      * 
      */
     private final @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers;
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
      */
     private final @Nullable OriginEndpointDashPackageProfile profile;
@@ -162,14 +162,14 @@ public final class OriginEndpointDashPackage {
         return Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
     /**
-     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
+     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
      * 
     */
     public List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers() {
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
     */
     public Optional<OriginEndpointDashPackageProfile> profile() {

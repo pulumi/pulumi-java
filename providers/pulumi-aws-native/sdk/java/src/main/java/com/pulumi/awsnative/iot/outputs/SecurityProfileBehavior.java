@@ -27,7 +27,7 @@ public final class SecurityProfileBehavior {
      */
     private final String name;
     /**
-     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
+     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
      * 
      */
     private final @Nullable Boolean suppressAlerts;
@@ -67,7 +67,7 @@ public final class SecurityProfileBehavior {
         return this.name;
     }
     /**
-     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
+     * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
      * 
     */
     public Optional<Boolean> suppressAlerts() {

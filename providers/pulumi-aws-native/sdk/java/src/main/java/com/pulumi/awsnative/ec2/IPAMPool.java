@@ -40,14 +40,14 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
         return this.addressFamily;
     }
     /**
-     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
      */
     @Export(name="allocationDefaultNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationDefaultNetmaskLength;
 
     /**
-     * @return The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * @return The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
      */
     public Output</* @Nullable */ Integer> allocationDefaultNetmaskLength() {
@@ -110,14 +110,14 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
     @Export(name="autoImport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoImport;
 
     /**
-     * @return Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * @return Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
     public Output</* @Nullable */ Boolean> autoImport() {
@@ -200,14 +200,14 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
         return this.ipamScopeType;
     }
     /**
-     * The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * The region of this pool. If not set, this will default to &#34;None&#34; which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
     @Export(name="locale", type=String.class, parameters={})
     private Output</* @Nullable */ String> locale;
 
     /**
-     * @return The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
+     * @return The region of this pool. If not set, this will default to &#34;None&#34; which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
     public Output</* @Nullable */ String> locale() {
@@ -256,28 +256,28 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
         return this.publiclyAdvertisable;
     }
     /**
-     * The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * The Id of this pool&#39;s source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
     @Export(name="sourceIpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIpamPoolId;
 
     /**
-     * @return The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
+     * @return The Id of this pool&#39;s source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
     public Output</* @Nullable */ String> sourceIpamPoolId() {
         return this.sourceIpamPoolId;
     }
     /**
-     * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
      * 
      */
     @Export(name="state", type=IPAMPoolState.class, parameters={})
     private Output<IPAMPoolState> state;
 
     /**
-     * @return The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * @return The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
      * 
      */
     public Output<IPAMPoolState> state() {

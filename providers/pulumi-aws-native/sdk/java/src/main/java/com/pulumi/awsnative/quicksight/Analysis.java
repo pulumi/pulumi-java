@@ -33,14 +33,14 @@ public class Analysis extends com.pulumi.resources.CustomResource {
         return this.analysisId;
     }
     /**
-     * <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return <p>The Amazon Resource Name (ARN) of the analysis.</p>
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the analysis.&lt;/p&gt;
      * 
      */
     public Output<String> arn() {
@@ -53,70 +53,70 @@ public class Analysis extends com.pulumi.resources.CustomResource {
         return this.awsAccountId;
     }
     /**
-     * <p>The time that the analysis was created.</p>
+     * &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
      * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
-     * @return <p>The time that the analysis was created.</p>
+     * @return &lt;p&gt;The time that the analysis was created.&lt;/p&gt;
      * 
      */
     public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
-     * <p>The ARNs of the datasets of the analysis.</p>
+     * &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
      * 
      */
     @Export(name="dataSetArns", type=List.class, parameters={String.class})
     private Output<List<String>> dataSetArns;
 
     /**
-     * @return <p>The ARNs of the datasets of the analysis.</p>
+     * @return &lt;p&gt;The ARNs of the datasets of the analysis.&lt;/p&gt;
      * 
      */
     public Output<List<String>> dataSetArns() {
         return this.dataSetArns;
     }
     /**
-     * <p>Errors associated with the analysis.</p>
+     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
      */
     @Export(name="errors", type=List.class, parameters={AnalysisError.class})
     private Output</* @Nullable */ List<AnalysisError>> errors;
 
     /**
-     * @return <p>Errors associated with the analysis.</p>
+     * @return &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<AnalysisError>> errors() {
         return this.errors;
     }
     /**
-     * <p>The time that the analysis was last updated.</p>
+     * &lt;p&gt;The time that the analysis was last updated.&lt;/p&gt;
      * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
-     * @return <p>The time that the analysis was last updated.</p>
+     * @return &lt;p&gt;The time that the analysis was last updated.&lt;/p&gt;
      * 
      */
     public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * <p>The descriptive name of the analysis.</p>
+     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
-     * @return <p>The descriptive name of the analysis.</p>
+     * @return &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> name() {
@@ -129,38 +129,38 @@ public class Analysis extends com.pulumi.resources.CustomResource {
         return this.parameters;
     }
     /**
-     * <p>A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). </p>
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
      */
     @Export(name="permissions", type=List.class, parameters={AnalysisResourcePermission.class})
     private Output</* @Nullable */ List<AnalysisResourcePermission>> permissions;
 
     /**
-     * @return <p>A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     * @return &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). </p>
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<AnalysisResourcePermission>> permissions() {
         return this.permissions;
     }
     /**
-     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
      */
     @Export(name="sheets", type=List.class, parameters={AnalysisSheet.class})
     private Output<List<AnalysisSheet>> sheets;
 
     /**
-     * @return <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * @return &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
      */
     public Output<List<AnalysisSheet>> sheets() {
@@ -179,30 +179,30 @@ public class Analysis extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
      * 
      */
     @Export(name="tags", type=List.class, parameters={AnalysisTag.class})
     private Output</* @Nullable */ List<AnalysisTag>> tags;
 
     /**
-     * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.</p>
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<AnalysisTag>> tags() {
         return this.tags;
     }
     /**
-     * <p>The ARN of the theme of the analysis.</p>
+     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
      */
     @Export(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
     /**
-     * @return <p>The ARN of the theme of the analysis.</p>
+     * @return &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> themeArn() {

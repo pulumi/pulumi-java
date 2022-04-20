@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
+     * A value that specifies whether files in the destination that don&#39;t exist in the source file system should be preserved.
      * 
      */
     @EnumType

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The VPC security groups and subnets that are attached to a Lambda function. When you connect a function to a VPC, Lambda creates an elastic network interface for each combination of security group and subnet in the function's VPC configuration. The function can only access resources and the internet through that VPC.
+ * The VPC security groups and subnets that are attached to a Lambda function. When you connect a function to a VPC, Lambda creates an elastic network interface for each combination of security group and subnet in the function&#39;s VPC configuration. The function can only access resources and the internet through that VPC.
  * 
  */
 public final class FunctionVpcConfig extends com.pulumi.resources.InvokeArgs {

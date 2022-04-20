@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Dashboard source template.</p>
+ * &lt;p&gt;Dashboard source template.&lt;/p&gt;
  * 
  */
 public final class DashboardSourceTemplateArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     public static final DashboardSourceTemplateArgs Empty = new DashboardSourceTemplateArgs();
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     @Import(name="arn", required=true)
@@ -32,7 +32,7 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <p>Dataset references.</p>
+     * &lt;p&gt;Dataset references.&lt;/p&gt;
      * 
      */
     @Import(name="dataSetReferences", required=true)

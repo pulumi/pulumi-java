@@ -32,70 +32,70 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
         return this.configuration;
     }
     /**
-     * <p>The description.</p>
+     * &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return <p>The description.</p>
+     * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
-     * <p>The EC2 security groups that control access to the studio component.</p>
+     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
     @Export(name="ec2SecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ec2SecurityGroupIds;
 
     /**
-     * @return <p>The EC2 security groups that control access to the studio component.</p>
+     * @return &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<String>> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds;
     }
     /**
-     * <p>Initialization scripts for studio components.</p>
+     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
     @Export(name="initializationScripts", type=List.class, parameters={StudioComponentInitializationScript.class})
     private Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts;
 
     /**
-     * @return <p>Initialization scripts for studio components.</p>
+     * @return &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts() {
         return this.initializationScripts;
     }
     /**
-     * <p>The name for the studio component.</p>
+     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return <p>The name for the studio component.</p>
+     * @return &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * <p>Parameters for the studio component scripts.</p>
+     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
     @Export(name="scriptParameters", type=List.class, parameters={StudioComponentScriptParameterKeyValue.class})
     private Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters;
 
     /**
-     * @return <p>Parameters for the studio component scripts.</p>
+     * @return &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
     public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters() {
@@ -108,14 +108,14 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
         return this.studioComponentId;
     }
     /**
-     * <p>The studioId. </p>
+     * &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
-     * @return <p>The studioId. </p>
+     * @return &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     public Output<String> studioId() {

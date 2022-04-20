@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * <p>S3 parameters.</p>
+ * &lt;p&gt;S3 parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceS3Parameters extends com.pulumi.resources.InvokeArgs {

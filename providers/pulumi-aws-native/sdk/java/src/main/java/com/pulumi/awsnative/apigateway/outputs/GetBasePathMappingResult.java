@@ -18,7 +18,7 @@ public final class GetBasePathMappingResult {
      */
     private final @Nullable String restApiId;
     /**
-     * The name of the API's stage.
+     * The name of the API&#39;s stage.
      * 
      */
     private final @Nullable String stage;
@@ -44,7 +44,7 @@ public final class GetBasePathMappingResult {
         return Optional.ofNullable(this.restApiId);
     }
     /**
-     * The name of the API's stage.
+     * The name of the API&#39;s stage.
      * 
     */
     public Optional<String> stage() {

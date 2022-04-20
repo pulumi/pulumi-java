@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Permission for the resource.</p>
+ * &lt;p&gt;Permission for the resource.&lt;/p&gt;
  * 
  */
 public final class DataSourceResourcePermission extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceResourcePermission extends com.pulumi.resources.Inv
     public static final DataSourceResourcePermission Empty = new DataSourceResourcePermission();
 
     /**
-     * <p>The IAM action to grant or revoke permissions on.</p>
+     * &lt;p&gt;The IAM action to grant or revoke permissions on.&lt;/p&gt;
      * 
      */
     @Import(name="actions", required=true)
@@ -29,21 +29,21 @@ public final class DataSourceResourcePermission extends com.pulumi.resources.Inv
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the principal. This can be one of the
-     *             following:</p>
-     *         <ul>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)</p>
-     *             </li>
-     *             <li>
-     *                 <p>The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the principal. This can be one of the
+     *             following:&lt;/p&gt;
+     *         &lt;ul&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)&lt;/p&gt;
+     *             &lt;/li&gt;
+     *             &lt;li&gt;
+     *                 &lt;p&gt;The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight
      *                     ARN. Use this option only to share resources (templates) across AWS accounts.
-     *                     (This is less common.) </p>
-     *             </li>
-     *          </ul>
+     *                     (This is less common.) &lt;/p&gt;
+     *             &lt;/li&gt;
+     *          &lt;/ul&gt;
      * 
      */
     @Import(name="principal", required=true)

@@ -55,7 +55,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     }
 
     /**
-     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.
+     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
      * 
      */
     @Import(name="singleHeader")

@@ -45,7 +45,7 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A list of URLs in your website or application to exclude from RUM data collection. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * A list of URLs in your website or application to exclude from RUM data collection. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
      */
     @Import(name="excludedPages")
@@ -89,7 +89,7 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can't include both ExcludedPages and IncludedPages in the same operation.
+     * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can&#39;t include both ExcludedPages and IncludedPages in the same operation.
      * 
      */
     @Import(name="includedPages")

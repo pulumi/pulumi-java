@@ -18,7 +18,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
     public static final LoggingConfigurationFilterArgs Empty = new LoggingConfigurationFilterArgs();
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement.
      * 
      */
     @Import(name="behavior", required=true)

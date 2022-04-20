@@ -55,7 +55,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
+     * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
      * 
      */
     @Import(name="ipv6AddressCount")
@@ -66,7 +66,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
+     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
      * 
      */
     @Import(name="ipv6Addresses")
@@ -99,7 +99,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
+     * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
      * 
      */
     @Import(name="secondaryPrivateIpAddressCount")

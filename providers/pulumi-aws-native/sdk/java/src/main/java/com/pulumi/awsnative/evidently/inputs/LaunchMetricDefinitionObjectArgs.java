@@ -27,7 +27,7 @@ public final class LaunchMetricDefinitionObjectArgs extends com.pulumi.resources
     }
 
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
      */
     @Import(name="eventPattern", required=true)

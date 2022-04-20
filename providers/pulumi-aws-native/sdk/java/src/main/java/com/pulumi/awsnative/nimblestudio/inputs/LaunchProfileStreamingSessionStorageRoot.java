@@ -11,8 +11,8 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The upload storage root location (folder) on streaming workstations where files are
- *             uploaded.</p>
+ * &lt;p&gt;The upload storage root location (folder) on streaming workstations where files are
+ *             uploaded.&lt;/p&gt;
  * 
  */
 public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.resources.InvokeArgs {
@@ -20,7 +20,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
     public static final LaunchProfileStreamingSessionStorageRoot Empty = new LaunchProfileStreamingSessionStorageRoot();
 
     /**
-     * <p>The folder path in Linux workstations where files are uploaded.</p>
+     * &lt;p&gt;The folder path in Linux workstations where files are uploaded.&lt;/p&gt;
      * 
      */
     @Import(name="linux")
@@ -31,7 +31,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
     }
 
     /**
-     * <p>The folder path in Windows workstations where files are uploaded.</p>
+     * &lt;p&gt;The folder path in Windows workstations where files are uploaded.&lt;/p&gt;
      * 
      */
     @Import(name="windows")

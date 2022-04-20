@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Sheet controls option.</p>
+ * &lt;p&gt;Sheet controls option.&lt;/p&gt;
  * 
  */
 public final class DashboardSheetControlsOptionArgs extends com.pulumi.resources.ResourceArgs {

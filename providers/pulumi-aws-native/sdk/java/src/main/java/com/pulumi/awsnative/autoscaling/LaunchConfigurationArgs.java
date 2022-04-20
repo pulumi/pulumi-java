@@ -20,7 +20,7 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
     public static final LaunchConfigurationArgs Empty = new LaunchConfigurationArgs();
 
     /**
-     * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
+     * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group&#39;s instances.
      * 
      */
     @Import(name="associatePublicIpAddress")

@@ -36,7 +36,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
      * 
      * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
-     * disabled - Don't use AQUA.
+     * disabled - Don&#39;t use AQUA.
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
@@ -92,7 +92,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
     @Import(name="classic")
@@ -191,7 +191,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
      */
     @Import(name="deferMaintenanceDuration")
@@ -202,7 +202,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
      */
     @Import(name="deferMaintenanceEndTime")
@@ -365,7 +365,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user name associated with the master user account for the cluster that is being created. The user name can't be PUBLIC and first character must be a letter.
+     * The user name associated with the master user account for the cluster that is being created. The user name can&#39;t be PUBLIC and first character must be a letter.
      * 
      */
     @Import(name="masterUsername", required=true)
@@ -519,7 +519,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive.
+     * The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
      * 
      */
     @Import(name="snapshotIdentifier")

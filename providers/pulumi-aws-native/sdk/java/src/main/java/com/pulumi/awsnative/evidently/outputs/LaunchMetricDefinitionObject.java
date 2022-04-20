@@ -17,7 +17,7 @@ public final class LaunchMetricDefinitionObject {
      */
     private final String entityIdKey;
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
      */
     private final String eventPattern;
@@ -51,7 +51,7 @@ public final class LaunchMetricDefinitionObject {
         return this.entityIdKey;
     }
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
     */
     public String eventPattern() {

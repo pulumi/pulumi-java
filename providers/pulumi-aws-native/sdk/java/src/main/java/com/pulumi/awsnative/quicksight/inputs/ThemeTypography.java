@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The typeface for the theme.</p>
+ * &lt;p&gt;The typeface for the theme.&lt;/p&gt;
  * 
  */
 public final class ThemeTypography extends com.pulumi.resources.InvokeArgs {

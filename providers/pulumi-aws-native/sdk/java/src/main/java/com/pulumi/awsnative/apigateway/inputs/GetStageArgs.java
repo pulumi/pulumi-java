@@ -13,7 +13,7 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStageArgs Empty = new GetStageArgs();
 
     /**
-     * The ID of the RestApi resource that you're deploying with this stage.
+     * The ID of the RestApi resource that you&#39;re deploying with this stage.
      * 
      */
     @Import(name="restApiId", required=true)

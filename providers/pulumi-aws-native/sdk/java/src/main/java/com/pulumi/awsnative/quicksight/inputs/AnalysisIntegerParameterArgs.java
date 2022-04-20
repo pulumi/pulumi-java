@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * <p>An integer parameter.</p>
+ * &lt;p&gt;An integer parameter.&lt;/p&gt;
  * 
  */
 public final class AnalysisIntegerParameterArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class AnalysisIntegerParameterArgs extends com.pulumi.resources.Res
     public static final AnalysisIntegerParameterArgs Empty = new AnalysisIntegerParameterArgs();
 
     /**
-     * <p>The name of the integer parameter.</p>
+     * &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)
@@ -32,7 +32,7 @@ public final class AnalysisIntegerParameterArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * <p>The values for the integer parameter.</p>
+     * &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
      * 
      */
     @Import(name="values", required=true)

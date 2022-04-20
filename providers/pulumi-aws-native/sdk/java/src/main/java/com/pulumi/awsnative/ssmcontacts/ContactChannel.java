@@ -91,14 +91,14 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
         return this.contactId;
     }
     /**
-     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
+     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
      * 
      */
     @Export(name="deferActivation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deferActivation;
 
     /**
-     * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
+     * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
      * 
      */
     public Output</* @Nullable */ Boolean> deferActivation() {

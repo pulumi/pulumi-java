@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Contains a gateway's platform information.
+ * Contains a gateway&#39;s platform information.
  * 
  */
 public final class GatewayPlatformArgs extends com.pulumi.resources.ResourceArgs {

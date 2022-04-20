@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>MariaDB parameters.</p>
+ * &lt;p&gt;MariaDB parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceMariaDbParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceMariaDbParameters extends com.pulumi.resources.Invo
     public static final DataSourceMariaDbParameters Empty = new DataSourceMariaDbParameters();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -29,7 +29,7 @@ public final class DataSourceMariaDbParameters extends com.pulumi.resources.Invo
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -40,7 +40,7 @@ public final class DataSourceMariaDbParameters extends com.pulumi.resources.Invo
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

@@ -42,7 +42,7 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
     }
 
     /**
-     * The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
+     * The path within the image to mount the user&#39;s EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
      * 
      */
     @Import(name="mountPath")

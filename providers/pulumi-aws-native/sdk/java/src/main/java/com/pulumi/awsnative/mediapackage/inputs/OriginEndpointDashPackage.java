@@ -99,7 +99,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     }
 
     /**
-     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
+     * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains &#34;ADS&#34;, new periods will be created where the Channel source contains SCTE-35 ad markers.
      * 
      */
     @Import(name="periodTriggers")
@@ -110,7 +110,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
      */
     @Import(name="profile")

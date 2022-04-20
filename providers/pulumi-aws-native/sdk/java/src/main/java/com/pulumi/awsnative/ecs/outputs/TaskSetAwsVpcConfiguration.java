@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskSetAwsVpcConfiguration {
     /**
-     * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
+     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
      * 
      */
     private final @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp;
@@ -40,7 +40,7 @@ public final class TaskSetAwsVpcConfiguration {
     }
 
     /**
-     * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
+     * Whether the task&#39;s elastic network interface receives a public IP address. The default value is DISABLED.
      * 
     */
     public Optional<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp() {

@@ -36,7 +36,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Errors associated with the analysis.</p>
+     * &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
      */
     @Import(name="errors")
@@ -47,7 +47,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The descriptive name of the analysis.</p>
+     * &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -65,12 +65,12 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A structure that describes the principals and the resource-level permissions on an
-     *             analysis. You can use the <code>Permissions</code> structure to grant permissions by
+     * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
      *             providing a list of AWS Identity and Access Management (IAM) action information for each
-     *             principal listed by Amazon Resource Name (ARN). </p>
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
      * 
-     *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -88,8 +88,8 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     *             analysis.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
      * 
      */
     @Import(name="tags")
@@ -100,7 +100,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The ARN of the theme of the analysis.</p>
+     * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
      */
     @Import(name="themeArn")

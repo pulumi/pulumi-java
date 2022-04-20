@@ -19,7 +19,7 @@ public final class MitigationActionTagArgs extends com.pulumi.resources.Resource
     public static final MitigationActionTagArgs Empty = new MitigationActionTagArgs();
 
     /**
-     * The tag's key.
+     * The tag&#39;s key.
      * 
      */
     @Import(name="key", required=true)
@@ -30,7 +30,7 @@ public final class MitigationActionTagArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The tag's value.
+     * The tag&#39;s value.
      * 
      */
     @Import(name="value", required=true)

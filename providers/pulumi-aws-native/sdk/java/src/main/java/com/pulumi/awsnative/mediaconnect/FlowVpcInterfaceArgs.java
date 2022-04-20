@@ -39,7 +39,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Role Arn MediaConnect can assumes to create ENIs in customer's account.
+     * Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
      * 
      */
     @Import(name="roleArn", required=true)

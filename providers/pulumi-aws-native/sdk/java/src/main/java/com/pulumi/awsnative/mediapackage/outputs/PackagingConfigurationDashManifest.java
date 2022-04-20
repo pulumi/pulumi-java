@@ -27,7 +27,7 @@ public final class PackagingConfigurationDashManifest {
      */
     private final @Nullable Integer minBufferTimeSeconds;
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
      */
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
@@ -65,7 +65,7 @@ public final class PackagingConfigurationDashManifest {
         return Optional.ofNullable(this.minBufferTimeSeconds);
     }
     /**
-     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+     * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to &#34;HBBTV_1_5&#34;, HbbTV 1.5 compliant output is enabled.
      * 
     */
     public Optional<PackagingConfigurationDashManifestProfile> profile() {

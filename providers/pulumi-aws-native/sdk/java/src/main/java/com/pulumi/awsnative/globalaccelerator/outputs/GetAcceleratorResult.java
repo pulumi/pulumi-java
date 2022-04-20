@@ -21,7 +21,7 @@ public final class GetAcceleratorResult {
      */
     private final @Nullable String acceleratorArn;
     /**
-     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
      * 
      */
     private final @Nullable String dnsName;
@@ -73,7 +73,7 @@ public final class GetAcceleratorResult {
         return Optional.ofNullable(this.acceleratorArn);
     }
     /**
-     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
      * 
     */
     public Optional<String> dnsName() {

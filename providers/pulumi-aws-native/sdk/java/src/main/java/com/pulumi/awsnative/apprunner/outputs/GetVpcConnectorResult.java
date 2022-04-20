@@ -18,7 +18,7 @@ public final class GetVpcConnectorResult {
      */
     private final @Nullable String vpcConnectorArn;
     /**
-     * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
+     * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
      * 
      */
     private final @Nullable Integer vpcConnectorRevision;
@@ -39,7 +39,7 @@ public final class GetVpcConnectorResult {
         return Optional.ofNullable(this.vpcConnectorArn);
     }
     /**
-     * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
+     * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.
      * 
     */
     public Optional<Integer> vpcConnectorRevision() {

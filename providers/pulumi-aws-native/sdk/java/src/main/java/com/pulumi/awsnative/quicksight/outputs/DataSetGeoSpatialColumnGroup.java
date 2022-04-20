@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSetGeoSpatialColumnGroup {
     /**
-     * <p>Columns in this hierarchy.</p>
+     * &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
      * 
      */
     private final List<String> columns;
     private final @Nullable DataSetGeoSpatialCountryCode countryCode;
     /**
-     * <p>A display name for the hierarchy.</p>
+     * &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
      * 
      */
     private final String name;
@@ -36,7 +36,7 @@ public final class DataSetGeoSpatialColumnGroup {
     }
 
     /**
-     * <p>Columns in this hierarchy.</p>
+     * &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
      * 
     */
     public List<String> columns() {
@@ -46,7 +46,7 @@ public final class DataSetGeoSpatialColumnGroup {
         return Optional.ofNullable(this.countryCode);
     }
     /**
-     * <p>A display name for the hierarchy.</p>
+     * &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
      * 
     */
     public String name() {

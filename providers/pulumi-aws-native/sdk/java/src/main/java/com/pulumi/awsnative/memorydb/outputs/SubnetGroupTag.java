@@ -15,7 +15,7 @@ public final class SubnetGroupTag {
      */
     private final String key;
     /**
-     * The tag's value. May be null.
+     * The tag&#39;s value. May be null.
      * 
      */
     private final String value;
@@ -36,7 +36,7 @@ public final class SubnetGroupTag {
         return this.key;
     }
     /**
-     * The tag's value. May be null.
+     * The tag&#39;s value. May be null.
      * 
     */
     public String value() {

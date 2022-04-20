@@ -18,7 +18,7 @@ public final class TaskFilterRule {
      */
     private final @Nullable TaskFilterRuleFilterType filterType;
     /**
-     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
+     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
      * 
      */
     private final @Nullable String value;
@@ -39,7 +39,7 @@ public final class TaskFilterRule {
         return Optional.ofNullable(this.filterType);
     }
     /**
-     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
+     * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
      * 
     */
     public Optional<String> value() {

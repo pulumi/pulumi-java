@@ -60,28 +60,28 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The job document. Required if you don't specify a value for documentSource.
+     * The job document. Required if you don&#39;t specify a value for documentSource.
      * 
      */
     @Export(name="document", type=String.class, parameters={})
     private Output</* @Nullable */ String> document;
 
     /**
-     * @return The job document. Required if you don't specify a value for documentSource.
+     * @return The job document. Required if you don&#39;t specify a value for documentSource.
      * 
      */
     public Output</* @Nullable */ String> document() {
         return this.document;
     }
     /**
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
+     * An S3 link to the job document to use in the template. Required if you don&#39;t specify a value for document.
      * 
      */
     @Export(name="documentSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentSource;
 
     /**
-     * @return An S3 link to the job document to use in the template. Required if you don't specify a value for document.
+     * @return An S3 link to the job document to use in the template. Required if you don&#39;t specify a value for document.
      * 
      */
     public Output</* @Nullable */ String> documentSource() {

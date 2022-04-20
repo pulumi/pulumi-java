@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceSnowflakeParameters {
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     private final String database;
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     private final String host;
     /**
-     * <p>Warehouse.</p>
+     * &lt;p&gt;Warehouse.&lt;/p&gt;
      * 
      */
     private final String warehouse;
@@ -36,21 +36,21 @@ public final class DataSourceSnowflakeParameters {
     }
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
     */
     public String database() {
         return this.database;
     }
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
     */
     public String host() {
         return this.host;
     }
     /**
-     * <p>Warehouse.</p>
+     * &lt;p&gt;Warehouse.&lt;/p&gt;
      * 
     */
     public String warehouse() {

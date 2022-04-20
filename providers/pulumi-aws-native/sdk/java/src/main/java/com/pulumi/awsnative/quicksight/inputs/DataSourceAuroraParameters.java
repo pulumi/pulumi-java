@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Amazon Aurora parameters.</p>
+ * &lt;p&gt;Amazon Aurora parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceAuroraParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceAuroraParameters extends com.pulumi.resources.Invok
     public static final DataSourceAuroraParameters Empty = new DataSourceAuroraParameters();
 
     /**
-     * <p>Database.</p>
+     * &lt;p&gt;Database.&lt;/p&gt;
      * 
      */
     @Import(name="database", required=true)
@@ -29,7 +29,7 @@ public final class DataSourceAuroraParameters extends com.pulumi.resources.Invok
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -40,7 +40,7 @@ public final class DataSourceAuroraParameters extends com.pulumi.resources.Invok
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

@@ -13,14 +13,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSetIngestionWaitPolicy {
     /**
-     * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
-     *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
+     * &lt;p&gt;The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
+     *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.&lt;/p&gt;
      * 
      */
     private final @Nullable Double ingestionWaitTimeInHours;
     /**
-     * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
-     *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
+     * &lt;p&gt;Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
+     *   Applicable only when DataSetImportMode mode is set to SPICE.&lt;/p&gt;
      * 
      */
     private final @Nullable Boolean waitForSpiceIngestion;
@@ -34,16 +34,16 @@ public final class DataSetIngestionWaitPolicy {
     }
 
     /**
-     * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
-     *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
+     * &lt;p&gt;The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
+     *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.&lt;/p&gt;
      * 
     */
     public Optional<Double> ingestionWaitTimeInHours() {
         return Optional.ofNullable(this.ingestionWaitTimeInHours);
     }
     /**
-     * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
-     *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
+     * &lt;p&gt;Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
+     *   Applicable only when DataSetImportMode mode is set to SPICE.&lt;/p&gt;
      * 
     */
     public Optional<Boolean> waitForSpiceIngestion() {

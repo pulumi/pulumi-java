@@ -23,7 +23,7 @@ public final class SafetyRuleGatingRule {
      */
     private final List<String> targetControls;
     /**
-     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
+     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent &#34;flapping&#34; of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
      */
     private final Integer waitPeriodMs;
@@ -54,7 +54,7 @@ public final class SafetyRuleGatingRule {
         return this.targetControls;
     }
     /**
-     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
+     * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent &#34;flapping&#34; of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
     */
     public Integer waitPeriodMs() {

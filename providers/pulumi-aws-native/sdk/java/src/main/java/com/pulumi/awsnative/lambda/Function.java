@@ -137,14 +137,14 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.fileSystemConfigs;
     }
     /**
-     * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
+     * The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
      * 
      */
     @Export(name="functionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionName;
 
     /**
-     * @return The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
+     * @return The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
      * 
      */
     public Output</* @Nullable */ String> functionName() {
@@ -179,42 +179,42 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.imageConfig;
     }
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
-     * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
-     * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
     @Export(name="layers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> layers;
 
     /**
-     * @return A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * @return A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
     public Output</* @Nullable */ List<String>> layers() {
         return this.layers;
     }
     /**
-     * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
     @Export(name="memorySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> memorySize;
 
     /**
-     * @return The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * @return The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
     public Output</* @Nullable */ Integer> memorySize() {
@@ -249,28 +249,28 @@ public class Function extends com.pulumi.resources.CustomResource {
         return this.reservedConcurrentExecutions;
     }
     /**
-     * The Amazon Resource Name (ARN) of the function's execution role.
+     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the function's execution role.
+     * @return The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
      */
     public Output<String> role() {
         return this.role;
     }
     /**
-     * The identifier of the function's runtime.
+     * The identifier of the function&#39;s runtime.
      * 
      */
     @Export(name="runtime", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtime;
 
     /**
-     * @return The identifier of the function's runtime.
+     * @return The identifier of the function&#39;s runtime.
      * 
      */
     public Output</* @Nullable */ String> runtime() {

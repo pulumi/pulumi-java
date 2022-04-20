@@ -24,7 +24,7 @@ public final class DetectorModelDynamoDB {
      * 
      * * `NUMBER` - The hash key is a number.
      * 
-     * If you don't specify `hashKeyType`, the default value is `STRING`.
+     * If you don&#39;t specify `hashKeyType`, the default value is `STRING`.
      * 
      */
     private final @Nullable String hashKeyType;
@@ -38,11 +38,11 @@ public final class DetectorModelDynamoDB {
      * 
      * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
      * 
-     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * If you don&#39;t specify this parameter, AWS IoT Events triggers the `INSERT` operation.
      * 
      */
     private final @Nullable String operation;
@@ -50,7 +50,7 @@ public final class DetectorModelDynamoDB {
     /**
      * The name of the DynamoDB column that receives the action payload.
      * 
-     * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
+     * If you don&#39;t specify this parameter, the name of the DynamoDB column is `payload`.
      * 
      */
     private final @Nullable String payloadField;
@@ -66,7 +66,7 @@ public final class DetectorModelDynamoDB {
      * 
      * * `NUMBER` - The range key is number.
      * 
-     * If you don't specify `rangeKeyField`, the default value is `STRING`.
+     * If you don&#39;t specify `rangeKeyField`, the default value is `STRING`.
      * 
      */
     private final @Nullable String rangeKeyType;
@@ -119,7 +119,7 @@ public final class DetectorModelDynamoDB {
      * 
      * * `NUMBER` - The hash key is a number.
      * 
-     * If you don't specify `hashKeyType`, the default value is `STRING`.
+     * If you don&#39;t specify `hashKeyType`, the default value is `STRING`.
      * 
     */
     public Optional<String> hashKeyType() {
@@ -137,11 +137,11 @@ public final class DetectorModelDynamoDB {
      * 
      * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
      * 
-     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * * `DELETE` - Delete an existing item of the DynamoDB table. This item's partition key must match the specified hash key. If you specified a range key, the range key must match the item's sort key.
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
      * 
-     * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * If you don&#39;t specify this parameter, AWS IoT Events triggers the `INSERT` operation.
      * 
     */
     public Optional<String> operation() {
@@ -153,7 +153,7 @@ public final class DetectorModelDynamoDB {
     /**
      * The name of the DynamoDB column that receives the action payload.
      * 
-     * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
+     * If you don&#39;t specify this parameter, the name of the DynamoDB column is `payload`.
      * 
     */
     public Optional<String> payloadField() {
@@ -173,7 +173,7 @@ public final class DetectorModelDynamoDB {
      * 
      * * `NUMBER` - The range key is number.
      * 
-     * If you don't specify `rangeKeyField`, the default value is `STRING`.
+     * If you don&#39;t specify `rangeKeyField`, the default value is `STRING`.
      * 
     */
     public Optional<String> rangeKeyType() {

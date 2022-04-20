@@ -20,7 +20,7 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * <p>The studioId. </p>
+     * &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
     @Import(name="studioId", required=true)

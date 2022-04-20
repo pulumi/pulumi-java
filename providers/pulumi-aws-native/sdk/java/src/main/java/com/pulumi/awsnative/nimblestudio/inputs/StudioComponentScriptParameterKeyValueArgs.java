@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>A parameter for a studio component script, in the form of a key:value pair.</p>
+ * &lt;p&gt;A parameter for a studio component script, in the form of a key:value pair.&lt;/p&gt;
  * 
  */
 public final class StudioComponentScriptParameterKeyValueArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class StudioComponentScriptParameterKeyValueArgs extends com.pulumi
     public static final StudioComponentScriptParameterKeyValueArgs Empty = new StudioComponentScriptParameterKeyValueArgs();
 
     /**
-     * <p>A script parameter key.</p>
+     * &lt;p&gt;A script parameter key.&lt;/p&gt;
      * 
      */
     @Import(name="key")
@@ -31,7 +31,7 @@ public final class StudioComponentScriptParameterKeyValueArgs extends com.pulumi
     }
 
     /**
-     * <p>A script parameter value.</p>
+     * &lt;p&gt;A script parameter value.&lt;/p&gt;
      * 
      */
     @Import(name="value")

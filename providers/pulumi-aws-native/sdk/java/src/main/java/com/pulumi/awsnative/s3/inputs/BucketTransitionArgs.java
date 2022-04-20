@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * You must specify at least one of "TransitionDate" and "TransitionInDays"
+ * You must specify at least one of &#34;TransitionDate&#34; and &#34;TransitionInDays&#34;
  * 
  */
 public final class BucketTransitionArgs extends com.pulumi.resources.ResourceArgs {

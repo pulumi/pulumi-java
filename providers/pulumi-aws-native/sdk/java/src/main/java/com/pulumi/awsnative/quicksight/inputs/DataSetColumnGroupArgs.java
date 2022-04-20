@@ -12,9 +12,9 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Groupings of columns that work together in certain Amazon QuickSight features. This is
+ * &lt;p&gt;Groupings of columns that work together in certain Amazon QuickSight features. This is
  *             a variant type structure. For this structure to be valid, only one of the attributes can
- *             be non-null.</p>
+ *             be non-null.&lt;/p&gt;
  * 
  */
 public final class DataSetColumnGroupArgs extends com.pulumi.resources.ResourceArgs {

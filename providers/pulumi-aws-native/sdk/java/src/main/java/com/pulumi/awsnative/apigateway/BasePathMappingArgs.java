@@ -49,7 +49,7 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The name of the API's stage.
+     * The name of the API&#39;s stage.
      * 
      */
     @Import(name="stage")

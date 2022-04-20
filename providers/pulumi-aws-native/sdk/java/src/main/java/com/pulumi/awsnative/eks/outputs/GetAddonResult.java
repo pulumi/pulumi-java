@@ -24,7 +24,7 @@ public final class GetAddonResult {
      */
     private final @Nullable String arn;
     /**
-     * IAM role to bind to the add-on's service account
+     * IAM role to bind to the add-on&#39;s service account
      * 
      */
     private final @Nullable String serviceAccountRoleArn;
@@ -61,7 +61,7 @@ public final class GetAddonResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * IAM role to bind to the add-on's service account
+     * IAM role to bind to the add-on&#39;s service account
      * 
     */
     public Optional<String> serviceAccountRoleArn() {
