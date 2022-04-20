@@ -28,14 +28,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:opsworks/railsAppLayer:RailsAppLayer")
 public class RailsAppLayer extends com.pulumi.resources.CustomResource {
     /**
-     * Keyword for the app server to use. Defaults to "apache_passenger".
+     * Keyword for the app server to use. Defaults to &#34;apache_passenger&#34;.
      * 
      */
     @Export(name="appServer", type=String.class, parameters={})
     private Output</* @Nullable */ String> appServer;
 
     /**
-     * @return Keyword for the app server to use. Defaults to "apache_passenger".
+     * @return Keyword for the app server to use. Defaults to &#34;apache_passenger&#34;.
      * 
      */
     public Output</* @Nullable */ String> appServer() {
@@ -56,28 +56,28 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignElasticIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignElasticIps;
 
     /**
-     * @return Whether to automatically assign an elastic IP address to the layer's instances.
+     * @return Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps;
     }
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Export(name="autoAssignPublicIps", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoAssignPublicIps;
 
     /**
-     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
@@ -98,14 +98,14 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.autoHealing;
     }
     /**
-     * When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
+     * When OpsWorks is managing Bundler, which version to use. Defaults to &#34;1.5.3&#34;.
      * 
      */
     @Export(name="bundlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> bundlerVersion;
 
     /**
-     * @return When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
+     * @return When OpsWorks is managing Bundler, which version to use. Defaults to &#34;1.5.3&#34;.
      * 
      */
     public Output</* @Nullable */ String> bundlerVersion() {
@@ -130,14 +130,14 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.customDeployRecipes;
     }
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Export(name="customInstanceProfileArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> customInstanceProfileArn;
 
     /**
-     * @return The ARN of an IAM profile that will be used for the layer's instances.
+     * @return The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ String> customInstanceProfileArn() {
@@ -158,14 +158,14 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.customJson;
     }
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Export(name="customSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSecurityGroupIds;
 
     /**
-     * @return Ids for a set of security groups to apply to the layer's instances.
+     * @return Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
@@ -204,14 +204,14 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.drainElbOnShutdown;
     }
     /**
-     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     @Export(name="ebsVolumes", type=List.class, parameters={RailsAppLayerEbsVolume.class})
     private Output</* @Nullable */ List<RailsAppLayerEbsVolume>> ebsVolumes;
 
     /**
-     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<RailsAppLayerEbsVolume>> ebsVolumes() {
@@ -288,42 +288,42 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The version of Passenger to use. Defaults to "4.0.46".
+     * The version of Passenger to use. Defaults to &#34;4.0.46&#34;.
      * 
      */
     @Export(name="passengerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> passengerVersion;
 
     /**
-     * @return The version of Passenger to use. Defaults to "4.0.46".
+     * @return The version of Passenger to use. Defaults to &#34;4.0.46&#34;.
      * 
      */
     public Output</* @Nullable */ String> passengerVersion() {
         return this.passengerVersion;
     }
     /**
-     * The version of Ruby to use. Defaults to "2.0.0".
+     * The version of Ruby to use. Defaults to &#34;2.0.0&#34;.
      * 
      */
     @Export(name="rubyVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> rubyVersion;
 
     /**
-     * @return The version of Ruby to use. Defaults to "2.0.0".
+     * @return The version of Ruby to use. Defaults to &#34;2.0.0&#34;.
      * 
      */
     public Output</* @Nullable */ String> rubyVersion() {
         return this.rubyVersion;
     }
     /**
-     * The version of RubyGems to use. Defaults to "2.2.2".
+     * The version of RubyGems to use. Defaults to &#34;2.2.2&#34;.
      * 
      */
     @Export(name="rubygemsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> rubygemsVersion;
 
     /**
-     * @return The version of RubyGems to use. Defaults to "2.2.2".
+     * @return The version of RubyGems to use. Defaults to &#34;2.2.2&#34;.
      * 
      */
     public Output</* @Nullable */ String> rubygemsVersion() {
@@ -344,14 +344,14 @@ public class RailsAppLayer extends com.pulumi.resources.CustomResource {
         return this.stackId;
     }
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Export(name="systemPackages", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> systemPackages;
 
     /**
-     * @return Names of a set of system packages to install on the layer's instances.
+     * @return Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     public Output</* @Nullable */ List<String>> systemPackages() {

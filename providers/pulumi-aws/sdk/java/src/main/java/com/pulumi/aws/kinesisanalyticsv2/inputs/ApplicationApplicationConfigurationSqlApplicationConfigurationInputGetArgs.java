@@ -49,7 +49,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     /**
      * The input processing configuration for the input.
-     * An input processor transforms records as they are received from the stream, before the application's SQL code executes.
+     * An input processor transforms records as they are received from the stream, before the application&#39;s SQL code executes.
      * 
      */
     @Import(name="inputProcessingConfiguration")
@@ -82,7 +82,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
+     * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream&#39;s ARN.
      * 
      */
     @Import(name="kinesisFirehoseInput")
@@ -93,7 +93,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
+     * If the streaming source is a Kinesis data stream, identifies the stream&#39;s Amazon Resource Name (ARN).
      * 
      */
     @Import(name="kinesisStreamsInput")

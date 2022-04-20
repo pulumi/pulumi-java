@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:budgets/budget:Budget")
 public class Budget extends com.pulumi.resources.CustomResource {
     /**
-     * The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
-     * @return The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * @return The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     public Output<String> accountId() {
@@ -188,14 +188,14 @@ public class Budget extends com.pulumi.resources.CustomResource {
         return this.timePeriodEnd;
     }
     /**
-     * The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+     * The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
      * 
      */
     @Export(name="timePeriodStart", type=String.class, parameters={})
     private Output<String> timePeriodStart;
 
     /**
-     * @return The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+     * @return The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
      * 
      */
     public Output<String> timePeriodStart() {

@@ -44,7 +44,7 @@ public final class NetworkAclIngress {
      */
     private final @Nullable String ipv6CidrBlock;
     /**
-     * The protocol to match. If using the -1 'all'
+     * The protocol to match. If using the -1 &#39;all&#39;
      * protocol, you must specify a from and to port of 0.
      * 
      */
@@ -126,7 +126,7 @@ public final class NetworkAclIngress {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
     /**
-     * The protocol to match. If using the -1 'all'
+     * The protocol to match. If using the -1 &#39;all&#39;
      * protocol, you must specify a from and to port of 0.
      * 
     */

@@ -110,14 +110,14 @@ public class Stream extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
+     * Length of time data records are accessible after they are added to the stream. The maximum value of a stream&#39;s retention period is 8760 hours. Minimum value is 24. Default is 24.
      * 
      */
     @Export(name="retentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionPeriod;
 
     /**
-     * @return Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
+     * @return Length of time data records are accessible after they are added to the stream. The maximum value of a stream&#39;s retention period is 8760 hours. Minimum value is 24. Default is 24.
      * 
      */
     public Output</* @Nullable */ Integer> retentionPeriod() {

@@ -34,14 +34,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:budgets/budgetAction:BudgetAction")
 public class BudgetAction extends com.pulumi.resources.CustomResource {
     /**
-     * The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
-     * @return The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * @return The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     public Output<String> accountId() {

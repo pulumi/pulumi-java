@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * Identity Notification Topics can be imported using ID of the record. The ID is made up as IDENTITY|TYPE where IDENTITY is the SES Identity and TYPE is the Notification Type.
  * 
  * ```sh
- *  $ pulumi import aws:ses/identityNotificationTopic:IdentityNotificationTopic test 'example.com|Bounce'
+ *  $ pulumi import aws:ses/identityNotificationTopic:IdentityNotificationTopic test &#39;example.com|Bounce&#39;
  * ```
  * 
  */
@@ -73,14 +73,14 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
         return this.notificationType;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
      * 
      */
     @Export(name="topicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> topicArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
      * 
      */
     public Output</* @Nullable */ String> topicArn() {

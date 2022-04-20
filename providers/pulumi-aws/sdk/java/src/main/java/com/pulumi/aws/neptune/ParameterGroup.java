@@ -47,14 +47,14 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
+     * The description of the Neptune parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
+     * @return The description of the Neptune parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     public Output</* @Nullable */ String> description() {

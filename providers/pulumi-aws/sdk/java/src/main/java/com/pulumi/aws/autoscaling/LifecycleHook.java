@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an AutoScaling Lifecycle Hook resource.
  * 
- * > **NOTE:** This provider has two types of ways you can add lifecycle hooks - via
+ * &gt; **NOTE:** This provider has two types of ways you can add lifecycle hooks - via
  * the `initial_lifecycle_hook` attribute from the
  * `aws.autoscaling.Group`
  * resource, or via this one. Hooks added via this resource will not be added

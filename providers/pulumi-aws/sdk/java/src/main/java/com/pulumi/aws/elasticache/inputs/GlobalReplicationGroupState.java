@@ -19,7 +19,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     /**
      * (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
      * 
-     * @Deprecated
+     * @deprecated
      * Use engine_version_actual instead
      * 
      */

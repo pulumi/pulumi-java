@@ -28,7 +28,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionArgs extends c
     }
 
     /**
-     * Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
+     * Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `[&#34;ALL&#34;]`.
      * 
      */
     @Import(name="principal")

@@ -20,7 +20,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs extends com
     public static final VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs Empty = new VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs();
 
     /**
-     * The listener's TLS certificate.
+     * The listener&#39;s TLS certificate.
      * 
      */
     @Import(name="certificate")
@@ -53,7 +53,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs extends com
     }
 
     /**
-     * The listener's Transport Layer Security (TLS) validation context.
+     * The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     @Import(name="validation", required=true)

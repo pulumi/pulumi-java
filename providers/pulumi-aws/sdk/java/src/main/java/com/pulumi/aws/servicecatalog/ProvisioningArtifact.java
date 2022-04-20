@@ -17,11 +17,11 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Provisioning Artifact for a specified product.
  * 
- * > A "provisioning artifact" is also referred to as a "version."
+ * &gt; A &#34;provisioning artifact&#34; is also referred to as a &#34;version.&#34;
  * 
- * > **NOTE:** You cannot create a provisioning artifact for a product that was shared with you.
+ * &gt; **NOTE:** You cannot create a provisioning artifact for a product that was shared with you.
  * 
- * > **NOTE:** The user or role that use this resource must have the `cloudformation:GetTemplate` IAM policy permission. This policy permission is required when using the `template_physical_id` argument.
+ * &gt; **NOTE:** The user or role that use this resource must have the `cloudformation:GetTemplate` IAM policy permission. This policy permission is required when using the `template_physical_id` argument.
  * 
  * ## Example Usage
  * 

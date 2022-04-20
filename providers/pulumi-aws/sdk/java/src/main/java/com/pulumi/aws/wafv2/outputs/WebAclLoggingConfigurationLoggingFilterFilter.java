@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclLoggingConfigurationLoggingFilterFilter {
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement. Valid values: `KEEP` or `DROP`.
      * 
      */
     private final String behavior;
@@ -38,7 +38,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
     }
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
+     * How to handle logs that satisfy the filter&#39;s conditions and requirement. Valid values: `KEEP` or `DROP`.
      * 
     */
     public String behavior() {

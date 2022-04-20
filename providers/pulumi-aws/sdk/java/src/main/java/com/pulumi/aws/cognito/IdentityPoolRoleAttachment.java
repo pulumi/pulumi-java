@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool id, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment example <identity-pool-id>
+ *  $ pulumi import aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment example &lt;identity-pool-id&gt;
  * ```
  * 
  */
@@ -61,14 +61,14 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
         return this.roleMappings;
     }
     /**
-     * The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
+     * The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
      * 
      */
     @Export(name="roles", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> roles;
 
     /**
-     * @return The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
+     * @return The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
      * 
      */
     public Output<Map<String,String>> roles() {

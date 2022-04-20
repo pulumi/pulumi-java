@@ -40,7 +40,7 @@ public final class DefaultSecurityGroupIngress {
      */
     private final @Nullable List<String> prefixListIds;
     /**
-     * Protocol. If you select a protocol of "-1" (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to `0`. If not `icmp`, `tcp`, `udp`, or `-1` use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * Protocol. If you select a protocol of &#34;-1&#34; (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to `0`. If not `icmp`, `tcp`, `udp`, or `-1` use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
      * 
      */
     private final String protocol;
@@ -118,7 +118,7 @@ public final class DefaultSecurityGroupIngress {
         return this.prefixListIds == null ? List.of() : this.prefixListIds;
     }
     /**
-     * Protocol. If you select a protocol of "-1" (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to `0`. If not `icmp`, `tcp`, `udp`, or `-1` use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * Protocol. If you select a protocol of &#34;-1&#34; (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to `0`. If not `icmp`, `tcp`, `udp`, or `-1` use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
      * 
     */
     public String protocol() {

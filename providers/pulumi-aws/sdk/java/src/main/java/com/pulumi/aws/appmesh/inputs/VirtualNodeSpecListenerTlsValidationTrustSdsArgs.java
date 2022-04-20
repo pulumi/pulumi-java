@@ -15,7 +15,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustSdsArgs extends com.
     public static final VirtualNodeSpecListenerTlsValidationTrustSdsArgs Empty = new VirtualNodeSpecListenerTlsValidationTrustSdsArgs();
 
     /**
-     * The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     * The name of the secret for a virtual node&#39;s Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
      */
     @Import(name="secretName", required=true)

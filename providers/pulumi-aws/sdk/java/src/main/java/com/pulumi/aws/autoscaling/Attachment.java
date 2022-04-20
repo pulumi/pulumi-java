@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an Auto Scaling Attachment resource.
  * 
- * > **NOTE on Auto Scaling Groups and ASG Attachments:** This provider currently provides
+ * &gt; **NOTE on Auto Scaling Groups and ASG Attachments:** This provider currently provides
  * both a standalone `aws.autoscaling.Attachment` resource
  * (describing an ASG attached to an ELB or ALB), and an `aws.autoscaling.Group`
  * with `load_balancers` and `target_group_arns` defined in-line. These two methods are not

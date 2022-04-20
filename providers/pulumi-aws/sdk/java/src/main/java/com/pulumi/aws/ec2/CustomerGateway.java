@@ -45,14 +45,14 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+     * The gateway&#39;s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
     @Export(name="bgpAsn", type=String.class, parameters={})
     private Output<String> bgpAsn;
 
     /**
-     * @return The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+     * @return The gateway&#39;s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
     public Output<String> bgpAsn() {
@@ -87,14 +87,14 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
         return this.deviceName;
     }
     /**
-     * The IP address of the gateway's Internet-routable external interface.
+     * The IP address of the gateway&#39;s Internet-routable external interface.
      * 
      */
     @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
-     * @return The IP address of the gateway's Internet-routable external interface.
+     * @return The IP address of the gateway&#39;s Internet-routable external interface.
      * 
      */
     public Output<String> ipAddress() {
@@ -130,7 +130,7 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
     }
     /**
      * The type of customer gateway. The only type AWS
-     * supports at this time is "ipsec.1".
+     * supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
@@ -138,7 +138,7 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The type of customer gateway. The only type AWS
-     * supports at this time is "ipsec.1".
+     * supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     public Output<String> type() {

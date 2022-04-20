@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * Manages a Kinesis Analytics v2 Application.
  * This resource can be used to manage both Kinesis Data Analytics for SQL applications and Kinesis Data Analytics for Apache Flink applications.
  * 
- * > **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the `aws.kinesis.AnalyticsApplication`resource.
+ * &gt; **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the `aws.kinesis.AnalyticsApplication`resource.
  * 
  * ## Example Usage
  * 
@@ -38,14 +38,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:kinesisanalyticsv2/application:Application")
 public class Application extends com.pulumi.resources.CustomResource {
     /**
-     * The application's configuration
+     * The application&#39;s configuration
      * 
      */
     @Export(name="applicationConfiguration", type=ApplicationApplicationConfiguration.class, parameters={})
     private Output<ApplicationApplicationConfiguration> applicationConfiguration;
 
     /**
-     * @return The application's configuration
+     * @return The application&#39;s configuration
      * 
      */
     public Output<ApplicationApplicationConfiguration> applicationConfiguration() {

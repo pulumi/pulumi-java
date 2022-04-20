@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NfsFileShareNfsFileShareDefaults {
     /**
-     * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
+     * The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
      * 
      */
     private final @Nullable String directoryMode;
     /**
-     * The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
+     * The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
      * 
      */
     private final @Nullable String fileMode;
@@ -45,14 +45,14 @@ public final class NfsFileShareNfsFileShareDefaults {
     }
 
     /**
-     * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
+     * The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
      * 
     */
     public Optional<String> directoryMode() {
         return Optional.ofNullable(this.directoryMode);
     }
     /**
-     * The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
+     * The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
      * 
     */
     public Optional<String> fileMode() {

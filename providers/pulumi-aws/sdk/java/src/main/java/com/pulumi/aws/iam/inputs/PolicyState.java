@@ -84,7 +84,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The policy's ID.
+     * The policy&#39;s ID.
      * 
      */
     @Import(name="policyId")

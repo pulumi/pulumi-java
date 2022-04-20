@@ -412,14 +412,14 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add '@' before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
+     * A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add &#39;@&#39; before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
     @Export(name="validUserLists", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> validUserLists;
 
     /**
-     * @return A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add '@' before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
+     * @return A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add &#39;@&#39; before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
     public Output</* @Nullable */ List<String>> validUserLists() {

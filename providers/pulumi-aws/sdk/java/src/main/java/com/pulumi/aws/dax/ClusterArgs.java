@@ -33,7 +33,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of encryption the
-     * cluster's endpoint should support. Valid values are: `NONE` and `TLS`.
+     * cluster&#39;s endpoint should support. Valid values are: `NONE` and `TLS`.
      * Default value is `NONE`.
      * 
      */
@@ -69,7 +69,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * A valid Amazon Resource Name (ARN) that identifies
-     * an IAM role. At runtime, DAX will assume this role and use the role's
+     * an IAM role. At runtime, DAX will assume this role and use the role&#39;s
      * permissions to access DynamoDB on your behalf
      * 
      */

@@ -22,7 +22,7 @@ public final class ProjectEnvironmentEnvironmentVariable {
      */
     private final @Nullable String type;
     /**
-     * Environment variable's value.
+     * Environment variable&#39;s value.
      * 
      */
     private final String value;
@@ -52,7 +52,7 @@ public final class ProjectEnvironmentEnvironmentVariable {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Environment variable's value.
+     * Environment variable&#39;s value.
      * 
     */
     public String value() {

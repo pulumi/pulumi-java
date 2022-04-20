@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     public static final VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs Empty = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs();
 
     /**
-     * The listener's TLS certificate.
+     * The listener&#39;s TLS certificate.
      * 
      */
     @Import(name="certificate")
@@ -53,7 +53,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     }
 
     /**
-     * The listener's Transport Layer Security (TLS) validation context.
+     * The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     @Import(name="validation", required=true)

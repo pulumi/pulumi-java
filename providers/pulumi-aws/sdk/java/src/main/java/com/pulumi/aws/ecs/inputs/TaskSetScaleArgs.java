@@ -28,7 +28,7 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The value, specified as a percent total of a service's `desiredCount`, to scale the task set. Defaults to `0` if not specified. Accepted values are numbers between 0.0 and 100.0.
+     * The value, specified as a percent total of a service&#39;s `desiredCount`, to scale the task set. Defaults to `0` if not specified. Accepted values are numbers between 0.0 and 100.0.
      * 
      */
     @Import(name="value")

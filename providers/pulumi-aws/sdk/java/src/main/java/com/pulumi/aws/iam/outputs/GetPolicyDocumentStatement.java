@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPolicyDocumentStatement {
     /**
-     * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
+     * List of actions that this statement either allows or denies. For example, `[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]`.
      * 
      */
     private final @Nullable List<String> actions;
@@ -84,7 +84,7 @@ public final class GetPolicyDocumentStatement {
     }
 
     /**
-     * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
+     * List of actions that this statement either allows or denies. For example, `[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]`.
      * 
     */
     public List<String> actions() {

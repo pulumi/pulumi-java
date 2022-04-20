@@ -26,11 +26,11 @@ import javax.annotation.Nullable;
 /**
  * Provides an Amazon MQ broker resource. This resources also manages users for the broker.
  * 
- * > For more information on Amazon MQ, see [Amazon MQ documentation](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html).
+ * &gt; For more information on Amazon MQ, see [Amazon MQ documentation](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html).
  * 
- * > **NOTE:** Amazon MQ currently places limits on **RabbitMQ** brokers. For example, a RabbitMQ broker cannot have: instances with an associated IP address of an ENI attached to the broker, an associated LDAP server to authenticate and authorize broker connections, storage type `EFS`, audit logging, or `configuration` blocks. Although this resource allows you to create RabbitMQ users, RabbitMQ users cannot have console access or groups. Also, Amazon MQ does not return information about RabbitMQ users so drift detection is not possible.
+ * &gt; **NOTE:** Amazon MQ currently places limits on **RabbitMQ** brokers. For example, a RabbitMQ broker cannot have: instances with an associated IP address of an ENI attached to the broker, an associated LDAP server to authenticate and authorize broker connections, storage type `EFS`, audit logging, or `configuration` blocks. Although this resource allows you to create RabbitMQ users, RabbitMQ users cannot have console access or groups. Also, Amazon MQ does not return information about RabbitMQ users so drift detection is not possible.
  * 
- * > **NOTE:** Changes to an MQ Broker can occur when you change a parameter, such as `configuration` or `user`, and are reflected in the next maintenance window. Because of this, the provider may report a difference in its planning phase because a modification has not yet taken place. You can use the `apply_immediately` flag to instruct the service to apply the change immediately (see documentation below). Using `apply_immediately` can result in a brief downtime as the broker reboots.
+ * &gt; **NOTE:** Changes to an MQ Broker can occur when you change a parameter, such as `configuration` or `user`, and are reflected in the next maintenance window. Because of this, the provider may report a difference in its planning phase because a modification has not yet taken place. You can use the `apply_immediately` flag to instruct the service to apply the change immediately (see documentation below). Using `apply_immediately` can result in a brief downtime as the broker reboots.
  * 
  * ## Example Usage
  * 
@@ -186,24 +186,24 @@ public class Broker extends com.pulumi.resources.CustomResource {
         return this.engineVersion;
     }
     /**
-     * Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+     * Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
      * 
      */
     @Export(name="hostInstanceType", type=String.class, parameters={})
     private Output<String> hostInstanceType;
 
     /**
-     * @return Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+     * @return Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
      * 
      */
     public Output<String> hostInstanceType() {
         return this.hostInstanceType;
     }
     /**
-     * List of information about allocated brokers (both active & standby).
-     * * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+     * List of information about allocated brokers (both active &amp; standby).
+     * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
      * * `instances.0.ip_address` - IP Address of the broker.
-     * * `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+     * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
      * * For `ActiveMQ`:
      * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
      * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -218,10 +218,10 @@ public class Broker extends com.pulumi.resources.CustomResource {
     private Output<List<BrokerInstance>> instances;
 
     /**
-     * @return List of information about allocated brokers (both active & standby).
-     * * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+     * @return List of information about allocated brokers (both active &amp; standby).
+     * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
      * * `instances.0.ip_address` - IP Address of the broker.
-     * * `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+     * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
      * * For `ActiveMQ`:
      * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
      * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -278,14 +278,14 @@ public class Broker extends com.pulumi.resources.CustomResource {
         return this.maintenanceWindowStartTime;
     }
     /**
-     * Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+     * Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
      * 
      */
     @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
     /**
-     * @return Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+     * @return Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
      * 
      */
     public Output</* @Nullable */ Boolean> publiclyAccessible() {

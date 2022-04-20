@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an API Gateway VPC Link.
  * 
- * > **Note:** Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
+ * &gt; **Note:** Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
  * To enable private integration for HTTP APIs, use the `Amazon API Gateway Version 2 VPC Link` resource.
  * 
  * ## Example Usage
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * API Gateway VPC Link can be imported using the `id`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:apigateway/vpcLink:VpcLink example <vpc_link_id>
+ *  $ pulumi import aws:apigateway/vpcLink:VpcLink example &lt;vpc_link_id&gt;
  * ```
  * 
  */

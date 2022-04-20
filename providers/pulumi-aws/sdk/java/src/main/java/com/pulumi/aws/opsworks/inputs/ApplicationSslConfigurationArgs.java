@@ -16,7 +16,7 @@ public final class ApplicationSslConfigurationArgs extends com.pulumi.resources.
     public static final ApplicationSslConfigurationArgs Empty = new ApplicationSslConfigurationArgs();
 
     /**
-     * The contents of the certificate's domain.crt file.
+     * The contents of the certificate&#39;s domain.crt file.
      * 
      */
     @Import(name="certificate", required=true)
@@ -38,7 +38,7 @@ public final class ApplicationSslConfigurationArgs extends com.pulumi.resources.
     }
 
     /**
-     * The private key; the contents of the certificate's domain.key file.
+     * The private key; the contents of the certificate&#39;s domain.key file.
      * 
      */
     @Import(name="privateKey", required=true)

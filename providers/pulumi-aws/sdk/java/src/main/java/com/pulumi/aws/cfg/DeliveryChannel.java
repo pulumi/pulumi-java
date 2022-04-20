@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Config Delivery Channel.
  * 
- * > **Note:** Delivery Channel requires a `Configuration Recorder` to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
+ * &gt; **Note:** Delivery Channel requires a `Configuration Recorder` to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
  * 
  * ## Example Usage
  * 

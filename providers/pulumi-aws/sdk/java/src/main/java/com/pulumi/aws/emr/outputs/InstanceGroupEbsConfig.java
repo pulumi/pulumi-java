@@ -23,7 +23,7 @@ public final class InstanceGroupEbsConfig {
      */
     private final Integer size;
     /**
-     * The volume type. Valid options are 'gp2', 'io1' and 'standard'.
+     * The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
      * 
      */
     private final String type;
@@ -60,7 +60,7 @@ public final class InstanceGroupEbsConfig {
         return this.size;
     }
     /**
-     * The volume type. Valid options are 'gp2', 'io1' and 'standard'.
+     * The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
      * 
     */
     public String type() {

@@ -38,7 +38,7 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn't match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
+     * The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn&#39;t match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
      * 
      */
     @Import(name="defaultAction", required=true)

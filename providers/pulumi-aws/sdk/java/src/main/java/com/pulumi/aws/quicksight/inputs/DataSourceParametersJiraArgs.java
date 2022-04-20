@@ -15,7 +15,7 @@ public final class DataSourceParametersJiraArgs extends com.pulumi.resources.Res
     public static final DataSourceParametersJiraArgs Empty = new DataSourceParametersJiraArgs();
 
     /**
-     * The base URL of the Jira instance's site to which to connect.
+     * The base URL of the Jira instance&#39;s site to which to connect.
      * 
      */
     @Import(name="siteBaseUrl", required=true)

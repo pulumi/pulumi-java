@@ -42,7 +42,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsArgs extends com.pulumi.re
     /**
      * The amount of provisioned
      * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-     * This must be set with a `volume_type` of `"io1/io2"`.
+     * This must be set with a `volume_type` of `&#34;io1/io2&#34;`.
      * 
      */
     @Import(name="iops")

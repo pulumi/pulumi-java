@@ -61,7 +61,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
+     * Identifier of the function&#39;s runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
     @Import(name="runtime", required=true)

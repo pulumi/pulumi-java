@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
     /**
-     * The criteria for determining a SAN's match.
+     * The criteria for determining a SAN&#39;s match.
      * 
      */
     private final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match;
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
     }
 
     /**
-     * The criteria for determining a SAN's match.
+     * The criteria for determining a SAN&#39;s match.
      * 
     */
     public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match() {

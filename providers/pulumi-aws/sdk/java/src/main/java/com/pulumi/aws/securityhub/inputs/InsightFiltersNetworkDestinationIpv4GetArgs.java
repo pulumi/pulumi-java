@@ -15,7 +15,7 @@ public final class InsightFiltersNetworkDestinationIpv4GetArgs extends com.pulum
     public static final InsightFiltersNetworkDestinationIpv4GetArgs Empty = new InsightFiltersNetworkDestinationIpv4GetArgs();
 
     /**
-     * A finding's CIDR value.
+     * A finding&#39;s CIDR value.
      * 
      */
     @Import(name="cidr", required=true)

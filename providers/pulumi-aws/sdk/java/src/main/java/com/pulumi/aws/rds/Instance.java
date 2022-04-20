@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  * When upgrading the major version of an engine, `allow_major_version_upgrade`
  * must be set to `true`.
  * 
- * > **Note:** using `apply_immediately` can result in a brief downtime as the
+ * &gt; **Note:** using `apply_immediately` can result in a brief downtime as the
  * server reboots. See the AWS Docs on [RDS Maintenance][2] for more information.
  * 
  * ## RDS Instance Class Types
@@ -186,7 +186,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The daily time range (in UTC) during which
-     * automated backups are created if they are enabled. Example: "09:46-10:16". Must
+     * automated backups are created if they are enabled. Example: &#34;09:46-10:16&#34;. Must
      * not overlap with `maintenance_window`.
      * 
      */
@@ -195,7 +195,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The daily time range (in UTC) during which
-     * automated backups are created if they are enabled. Example: "09:46-10:16". Must
+     * automated backups are created if they are enabled. Example: &#34;09:46-10:16&#34;. Must
      * not overlap with `maintenance_window`.
      * 
      */
@@ -218,7 +218,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The character set name to use for DB
-     * encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+     * encoding in Oracle and Microsoft SQL instances (collation). This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
      * or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
      * 
@@ -228,7 +228,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The character set name to use for DB
-     * encoding in Oracle and Microsoft SQL instances (collation). This can't be changed. See [Oracle Character Sets
+     * encoding in Oracle and Microsoft SQL instances (collation). This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html)
      * or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
      * 
@@ -305,14 +305,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.deleteAutomatedBackups;
     }
     /**
-     * If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+     * If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
     @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
-     * @return If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+     * @return If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
     public Output</* @Nullable */ Boolean> deletionProtection() {
@@ -377,7 +377,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * (Required unless a `snapshot_identifier` or `replicate_source_db`
      * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
+     * Note that for Amazon Aurora instances the engine must match the `DB cluster`&#39;s engine&#39;.
      * For information on the difference between the available Aurora MySQL engines
      * see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
      * in the Amazon RDS User Guide.
@@ -389,7 +389,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * @return (Required unless a `snapshot_identifier` or `replicate_source_db`
      * is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
+     * Note that for Amazon Aurora instances the engine must match the `DB cluster`&#39;s engine&#39;.
      * For information on the difference between the available Aurora MySQL engines
      * see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
      * in the Amazon RDS User Guide.
@@ -403,7 +403,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
      * The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`&#39;s engine version&#39;.
      * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
@@ -414,7 +414,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
      * The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+     * Note that for Amazon Aurora instances the engine version must match the `DB cluster`&#39;s engine version&#39;.
      * 
      */
     public Output<String> engineVersion() {
@@ -534,7 +534,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The amount of provisioned IOPS. Setting this implies a
-     * storage_type of "io1".
+     * storage_type of &#34;io1&#34;.
      * 
      */
     @Export(name="iops", type=Integer.class, parameters={})
@@ -542,7 +542,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The amount of provisioned IOPS. Setting this implies a
-     * storage_type of "io1".
+     * storage_type of &#34;io1&#34;.
      * 
      */
     public Output</* @Nullable */ Integer> iops() {
@@ -596,7 +596,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00". See [RDS
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;. See [RDS
      * Maintenance Window
      * docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * for more information.
@@ -607,7 +607,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The window to perform maintenance in.
-     * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00". See [RDS
+     * Syntax: &#34;ddd:hh24:mi-ddd:hh24:mi&#34;. Eg: &#34;Mon:00:00-Mon:03:00&#34;. See [RDS
      * Maintenance Window
      * docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * for more information.
@@ -701,7 +701,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+     * The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
      * 
      */
@@ -709,7 +709,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     private Output<String> ncharCharacterSetName;
 
     /**
-     * @return The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+     * @return The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can&#39;t be changed. See [Oracle Character Sets
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
      * 
      */
@@ -793,14 +793,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.performanceInsightsKmsKeyId;
     }
     /**
-     * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     @Export(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
     private Output<Integer> performanceInsightsRetentionPeriod;
 
     /**
-     * @return The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
+     * @return The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to &#39;7&#39;.
      * 
      */
     public Output<Integer> performanceInsightsRetentionPeriod() {
@@ -972,7 +972,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Specifies whether or not to create this
-     * database from a snapshot. This correlates to the snapshot ID you'd find in the
+     * database from a snapshot. This correlates to the snapshot ID you&#39;d find in the
      * RDS console, e.g: rds:production-2015-06-26-06-05.
      * 
      */
@@ -981,7 +981,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Specifies whether or not to create this
-     * database from a snapshot. This correlates to the snapshot ID you'd find in the
+     * database from a snapshot. This correlates to the snapshot ID you&#39;d find in the
      * RDS console, e.g: rds:production-2015-06-26-06-05.
      * 
      */
@@ -1023,18 +1023,18 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.storageEncrypted;
     }
     /**
-     * One of "standard" (magnetic), "gp2" (general
-     * purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
-     * specified, "gp2" if not.
+     * One of &#34;standard&#34; (magnetic), &#34;gp2&#34; (general
+     * purpose SSD), or &#34;io1&#34; (provisioned IOPS SSD). The default is &#34;io1&#34; if `iops` is
+     * specified, &#34;gp2&#34; if not.
      * 
      */
     @Export(name="storageType", type=String.class, parameters={})
     private Output<String> storageType;
 
     /**
-     * @return One of "standard" (magnetic), "gp2" (general
-     * purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
-     * specified, "gp2" if not.
+     * @return One of &#34;standard&#34; (magnetic), &#34;gp2&#34; (general
+     * purpose SSD), or &#34;io1&#34; (provisioned IOPS SSD). The default is &#34;io1&#34; if `iops` is
+     * specified, &#34;gp2&#34; if not.
      * 
      */
     public Output<String> storageType() {

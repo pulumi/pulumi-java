@@ -31,14 +31,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:cloudsearch/domain:Domain")
 public class Domain extends com.pulumi.resources.CustomResource {
     /**
-     * The domain's ARN.
+     * The domain&#39;s ARN.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return The domain's ARN.
+     * @return The domain&#39;s ARN.
      * 
      */
     public Output<String> arn() {

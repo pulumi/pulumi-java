@@ -17,7 +17,7 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final String hashKeyField;
     /**
-     * The hash key type. Valid values are "STRING" or "NUMBER".
+     * The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
      */
     private final @Nullable String hashKeyType;
@@ -27,7 +27,7 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final String hashKeyValue;
     /**
-     * The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+     * The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
      * 
      */
     private final @Nullable String operation;
@@ -42,7 +42,7 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final @Nullable String rangeKeyField;
     /**
-     * The range key type. Valid values are "STRING" or "NUMBER".
+     * The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
      */
     private final @Nullable String rangeKeyType;
@@ -94,7 +94,7 @@ public final class TopicRuleErrorActionDynamodb {
         return this.hashKeyField;
     }
     /**
-     * The hash key type. Valid values are "STRING" or "NUMBER".
+     * The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
     */
     public Optional<String> hashKeyType() {
@@ -108,7 +108,7 @@ public final class TopicRuleErrorActionDynamodb {
         return this.hashKeyValue;
     }
     /**
-     * The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+     * The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
      * 
     */
     public Optional<String> operation() {
@@ -129,7 +129,7 @@ public final class TopicRuleErrorActionDynamodb {
         return Optional.ofNullable(this.rangeKeyField);
     }
     /**
-     * The range key type. Valid values are "STRING" or "NUMBER".
+     * The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
     */
     public Optional<String> rangeKeyType() {

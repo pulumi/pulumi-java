@@ -29,7 +29,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of the authorizer's Lambda function.
+     * The ARN of the authorizer&#39;s Lambda function.
      * 
      */
     @Import(name="authorizerFunctionArn")

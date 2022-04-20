@@ -38,7 +38,7 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
     }
 
     /**
-     * Environment variable's value.
+     * Environment variable&#39;s value.
      * 
      */
     @Import(name="value", required=true)

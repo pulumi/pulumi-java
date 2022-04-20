@@ -41,7 +41,7 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
+     * The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
      * 
      */
     @Import(name="roles", required=true)

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an IAM User Login Profile with limited support for password creation during this provider resource creation. Uses PGP to encrypt the password for safe transport to the user. PGP keys can be obtained from Keybase.
  * 
- * > To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
+ * &gt; To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
  * 
  * ## Example Usage
  * 
@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:iam/userLoginProfile:UserLoginProfile example myusername
  * ```
  * 
- *  Since this provider has no method to read the PGP or password information during import, use [`ignore_changes` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to ignore them unless password recreation is desired. e.g. terraform resource "aws_iam_user_login_profile" "example" {
+ *  Since this provider has no method to read the PGP or password information during import, use [`ignore_changes` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to ignore them unless password recreation is desired. e.g. terraform resource &#34;aws_iam_user_login_profile&#34; &#34;example&#34; {
  * 
  * # ... other configuration ...
  * 
@@ -122,14 +122,14 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
         return this.pgpKey;
     }
     /**
-     * The IAM user's name.
+     * The IAM user&#39;s name.
      * 
      */
     @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**
-     * @return The IAM user's name.
+     * @return The IAM user&#39;s name.
      * 
      */
     public Output<String> user() {

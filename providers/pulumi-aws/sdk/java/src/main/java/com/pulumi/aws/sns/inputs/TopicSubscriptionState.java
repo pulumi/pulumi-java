@@ -95,7 +95,7 @@ public final class TopicSubscriptionState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * AWS account ID of the subscription's owner.
+     * AWS account ID of the subscription&#39;s owner.
      * 
      */
     @Import(name="ownerId")

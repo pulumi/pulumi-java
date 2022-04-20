@@ -51,7 +51,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
+     * A specific availability zone state to require. May be any of `&#34;available&#34;`, `&#34;information&#34;` or `&#34;impaired&#34;`.
      * 
      */
     @Import(name="state")

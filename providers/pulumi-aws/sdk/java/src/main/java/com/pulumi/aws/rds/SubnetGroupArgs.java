@@ -18,7 +18,7 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubnetGroupArgs Empty = new SubnetGroupArgs();
 
     /**
-     * The description of the DB subnet group. Defaults to "Managed by Pulumi".
+     * The description of the DB subnet group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

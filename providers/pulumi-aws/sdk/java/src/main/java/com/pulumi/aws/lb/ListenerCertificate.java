@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  * This resource is for additional certificates and does not replace the default certificate on the listener.
  * 
- * > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
+ * &gt; **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
  * 
  * ## Example Usage
  * 

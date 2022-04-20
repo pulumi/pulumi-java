@@ -96,7 +96,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     }
 
     /**
-     * The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.
+     * The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can&#39;t be used. It is permanently removed some time after deletion.
      * 
      */
     @Import(name="status")

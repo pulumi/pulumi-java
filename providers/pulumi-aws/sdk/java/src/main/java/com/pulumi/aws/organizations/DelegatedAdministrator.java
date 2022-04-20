@@ -44,14 +44,14 @@ public class DelegatedAdministrator extends com.pulumi.resources.CustomResource 
         return this.accountId;
     }
     /**
-     * The Amazon Resource Name (ARN) of the delegated administrator's account.
+     * The Amazon Resource Name (ARN) of the delegated administrator&#39;s account.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the delegated administrator's account.
+     * @return The Amazon Resource Name (ARN) of the delegated administrator&#39;s account.
      * 
      */
     public Output<String> arn() {
@@ -72,56 +72,56 @@ public class DelegatedAdministrator extends com.pulumi.resources.CustomResource 
         return this.delegationEnabledDate;
     }
     /**
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator&#39;s AWS account.
      * 
      */
     @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
-     * @return The email address that is associated with the delegated administrator's AWS account.
+     * @return The email address that is associated with the delegated administrator&#39;s AWS account.
      * 
      */
     public Output<String> email() {
         return this.email;
     }
     /**
-     * The method by which the delegated administrator's account joined the organization.
+     * The method by which the delegated administrator&#39;s account joined the organization.
      * 
      */
     @Export(name="joinedMethod", type=String.class, parameters={})
     private Output<String> joinedMethod;
 
     /**
-     * @return The method by which the delegated administrator's account joined the organization.
+     * @return The method by which the delegated administrator&#39;s account joined the organization.
      * 
      */
     public Output<String> joinedMethod() {
         return this.joinedMethod;
     }
     /**
-     * The date when the delegated administrator's account became a part of the organization.
+     * The date when the delegated administrator&#39;s account became a part of the organization.
      * 
      */
     @Export(name="joinedTimestamp", type=String.class, parameters={})
     private Output<String> joinedTimestamp;
 
     /**
-     * @return The date when the delegated administrator's account became a part of the organization.
+     * @return The date when the delegated administrator&#39;s account became a part of the organization.
      * 
      */
     public Output<String> joinedTimestamp() {
         return this.joinedTimestamp;
     }
     /**
-     * The friendly name of the delegated administrator's account.
+     * The friendly name of the delegated administrator&#39;s account.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The friendly name of the delegated administrator's account.
+     * @return The friendly name of the delegated administrator&#39;s account.
      * 
      */
     public Output<String> name() {
@@ -142,14 +142,14 @@ public class DelegatedAdministrator extends com.pulumi.resources.CustomResource 
         return this.servicePrincipal;
     }
     /**
-     * The status of the delegated administrator's account in the organization.
+     * The status of the delegated administrator&#39;s account in the organization.
      * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return The status of the delegated administrator's account in the organization.
+     * @return The status of the delegated administrator&#39;s account in the organization.
      * 
      */
     public Output<String> status() {

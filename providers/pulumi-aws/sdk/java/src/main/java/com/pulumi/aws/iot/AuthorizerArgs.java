@@ -18,7 +18,7 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     public static final AuthorizerArgs Empty = new AuthorizerArgs();
 
     /**
-     * The ARN of the authorizer's Lambda function.
+     * The ARN of the authorizer&#39;s Lambda function.
      * 
      */
     @Import(name="authorizerFunctionArn", required=true)

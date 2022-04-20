@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an AWS Storage Gateway stored iSCSI volume.
  * 
- * > **NOTE:** The gateway must have a working storage added (e.g. via the `aws.storagegateway.WorkingStorage` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `WORKING STORAGE NOT CONFIGURED`.
+ * &gt; **NOTE:** The gateway must have a working storage added (e.g. via the `aws.storagegateway.WorkingStorage` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `WORKING STORAGE NOT CONFIGURED`.
  * 
  * ## Example Usage
  * 

@@ -73,7 +73,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
+     * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
      * 
      */
     @Import(name="ownerArn")

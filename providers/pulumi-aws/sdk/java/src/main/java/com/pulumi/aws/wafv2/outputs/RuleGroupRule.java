@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RuleGroupRule {
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule's statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
+     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
      * 
      */
     private final RuleGroupRuleAction action;
@@ -64,7 +64,7 @@ public final class RuleGroupRule {
     }
 
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule's statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
+     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
      * 
     */
     public RuleGroupRuleAction action() {

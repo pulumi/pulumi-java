@@ -23,7 +23,7 @@ public final class WebAclRuleGetArgs extends com.pulumi.resources.ResourceArgs {
     public static final WebAclRuleGetArgs Empty = new WebAclRuleGetArgs();
 
     /**
-     * The action that AWS WAF should take on a web request when it matches the rule's statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
+     * The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
      * 
      */
     @Import(name="action")

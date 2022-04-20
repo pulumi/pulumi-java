@@ -66,8 +66,8 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of an
-     * existing IAM role to bind to the add-on's service account. The role must be
-     * assigned the IAM permissions required by the add-on. If you don't specify
+     * existing IAM role to bind to the add-on&#39;s service account. The role must be
+     * assigned the IAM permissions required by the add-on. If you don&#39;t specify
      * an existing IAM role, then the add-on uses the permissions assigned to the node
      * IAM role. For more information, see [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html)
      * in the Amazon EKS User Guide.

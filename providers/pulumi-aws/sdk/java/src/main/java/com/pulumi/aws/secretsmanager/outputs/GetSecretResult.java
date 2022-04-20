@@ -35,14 +35,14 @@ public final class GetSecretResult {
     private final String kmsKeyId;
     private final String name;
     /**
-     * The resource-based policy document that's attached to the secret.
+     * The resource-based policy document that&#39;s attached to the secret.
      * 
      */
     private final String policy;
     /**
      * Whether rotation is enabled or not.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
@@ -51,7 +51,7 @@ public final class GetSecretResult {
     /**
      * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
@@ -60,7 +60,7 @@ public final class GetSecretResult {
     /**
      * Rotation rules if rotation is enabled.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
@@ -128,7 +128,7 @@ public final class GetSecretResult {
         return this.name;
     }
     /**
-     * The resource-based policy document that's attached to the secret.
+     * The resource-based policy document that&#39;s attached to the secret.
      * 
     */
     public String policy() {
@@ -137,7 +137,7 @@ public final class GetSecretResult {
     /**
      * Whether rotation is enabled or not.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
     */
@@ -148,7 +148,7 @@ public final class GetSecretResult {
     /**
      * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
     */
@@ -159,7 +159,7 @@ public final class GetSecretResult {
     /**
      * Rotation rules if rotation is enabled.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
     */

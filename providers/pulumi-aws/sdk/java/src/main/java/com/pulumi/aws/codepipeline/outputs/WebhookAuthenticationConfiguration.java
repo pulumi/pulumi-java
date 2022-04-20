@@ -17,7 +17,7 @@ public final class WebhookAuthenticationConfiguration {
      */
     private final @Nullable String allowedIpRange;
     /**
-     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
+     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
      * 
      */
     private final @Nullable String secretToken;
@@ -38,7 +38,7 @@ public final class WebhookAuthenticationConfiguration {
         return Optional.ofNullable(this.allowedIpRange);
     }
     /**
-     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
+     * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`&#39;s `configuration` block. Required for `GITHUB_HMAC`.
      * 
     */
     public Optional<String> secretToken() {

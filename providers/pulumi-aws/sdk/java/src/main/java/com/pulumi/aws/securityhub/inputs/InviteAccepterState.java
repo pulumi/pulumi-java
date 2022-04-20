@@ -27,7 +27,7 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The account ID of the master Security Hub account whose invitation you're accepting.
+     * The account ID of the master Security Hub account whose invitation you&#39;re accepting.
      * 
      */
     @Import(name="masterId")

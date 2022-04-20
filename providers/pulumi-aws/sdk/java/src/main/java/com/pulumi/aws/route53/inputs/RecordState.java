@@ -26,7 +26,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
     public static final RecordState Empty = new RecordState();
 
     /**
-     * An alias block. Conflicts with `ttl` & `records`.
+     * An alias block. Conflicts with `ttl` &amp; `records`.
      * Alias record documented below.
      * 
      */
@@ -126,7 +126,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
+     * A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
      * 
      */
     @Import(name="records")

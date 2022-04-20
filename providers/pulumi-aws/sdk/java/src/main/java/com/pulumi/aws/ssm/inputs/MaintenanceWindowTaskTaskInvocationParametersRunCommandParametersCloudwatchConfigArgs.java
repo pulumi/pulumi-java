@@ -17,7 +17,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     public static final MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs Empty = new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs();
 
     /**
-     * The name of the CloudWatch log group where you want to send command output. If you don't specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
+     * The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
      * 
      */
     @Import(name="cloudwatchLogGroupName")

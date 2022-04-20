@@ -36,7 +36,7 @@ public final class GetPolicyResult {
      */
     private final String policy;
     /**
-     * The policy's ID.
+     * The policy&#39;s ID.
      * 
      */
     private final String policyId;
@@ -106,7 +106,7 @@ public final class GetPolicyResult {
         return this.policy;
     }
     /**
-     * The policy's ID.
+     * The policy&#39;s ID.
      * 
     */
     public String policyId() {

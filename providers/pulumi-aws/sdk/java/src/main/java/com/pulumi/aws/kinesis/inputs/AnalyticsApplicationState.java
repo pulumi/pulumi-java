@@ -137,7 +137,7 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
 
     /**
      * Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
-     * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+     * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
     @Import(name="startApplication")

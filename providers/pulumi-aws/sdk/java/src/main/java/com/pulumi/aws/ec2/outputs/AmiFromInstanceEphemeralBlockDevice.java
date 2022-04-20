@@ -17,7 +17,7 @@ public final class AmiFromInstanceEphemeralBlockDevice {
      */
     private final @Nullable String deviceName;
     /**
-     * A name for the ephemeral device, of the form "ephemeralN" where
+     * A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
      * *N* is a volume number starting from zero.
      * 
      */
@@ -39,7 +39,7 @@ public final class AmiFromInstanceEphemeralBlockDevice {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * A name for the ephemeral device, of the form "ephemeralN" where
+     * A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
      * *N* is a volume number starting from zero.
      * 
     */

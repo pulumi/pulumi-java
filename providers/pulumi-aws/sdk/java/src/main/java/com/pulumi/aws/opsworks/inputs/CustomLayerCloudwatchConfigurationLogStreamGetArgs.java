@@ -105,7 +105,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
     }
 
     /**
-     * Specifies the destination log group. A log group is created automatically if it doesn't already exist.
+     * Specifies the destination log group. A log group is created automatically if it doesn&#39;t already exist.
      * 
      */
     @Import(name="logGroupName", required=true)

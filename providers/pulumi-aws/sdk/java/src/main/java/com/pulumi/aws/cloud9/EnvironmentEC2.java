@@ -94,14 +94,14 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
+     * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
      * 
      */
     @Export(name="ownerArn", type=String.class, parameters={})
     private Output<String> ownerArn;
 
     /**
-     * @return The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
+     * @return The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
      * 
      */
     public Output<String> ownerArn() {

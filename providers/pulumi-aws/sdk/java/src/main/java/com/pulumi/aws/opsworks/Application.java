@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * Opsworks Application can be imported using the `id`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:opsworks/application:Application test <id>
+ *  $ pulumi import aws:opsworks/application:Application test &lt;id&gt;
  * ```
  * 
  */
@@ -77,14 +77,14 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.awsFlowRubySettings;
     }
     /**
-     * The data source's ARN.
+     * The data source&#39;s ARN.
      * 
      */
     @Export(name="dataSourceArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSourceArn;
 
     /**
-     * @return The data source's ARN.
+     * @return The data source&#39;s ARN.
      * 
      */
     public Output</* @Nullable */ String> dataSourceArn() {
@@ -105,14 +105,14 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.dataSourceDatabaseName;
     }
     /**
-     * The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
+     * The data source&#39;s type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
     @Export(name="dataSourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSourceType;
 
     /**
-     * @return The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
+     * @return The data source&#39;s type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
     public Output</* @Nullable */ String> dataSourceType() {

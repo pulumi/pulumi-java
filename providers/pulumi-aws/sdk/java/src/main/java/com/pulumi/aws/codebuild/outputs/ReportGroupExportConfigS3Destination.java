@@ -24,7 +24,7 @@ public final class ReportGroupExportConfigS3Destination {
      */
     private final @Nullable Boolean encryptionDisabled;
     /**
-     * The encryption key for the report's encrypted raw data. The KMS key ARN.
+     * The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
      * 
      */
     private final String encryptionKey;
@@ -34,7 +34,7 @@ public final class ReportGroupExportConfigS3Destination {
      */
     private final @Nullable String packaging;
     /**
-     * The path to the exported report's raw data results.
+     * The path to the exported report&#39;s raw data results.
      * 
      */
     private final @Nullable String path;
@@ -69,7 +69,7 @@ public final class ReportGroupExportConfigS3Destination {
         return Optional.ofNullable(this.encryptionDisabled);
     }
     /**
-     * The encryption key for the report's encrypted raw data. The KMS key ARN.
+     * The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
      * 
     */
     public String encryptionKey() {
@@ -83,7 +83,7 @@ public final class ReportGroupExportConfigS3Destination {
         return Optional.ofNullable(this.packaging);
     }
     /**
-     * The path to the exported report's raw data results.
+     * The path to the exported report&#39;s raw data results.
      * 
     */
     public Optional<String> path() {

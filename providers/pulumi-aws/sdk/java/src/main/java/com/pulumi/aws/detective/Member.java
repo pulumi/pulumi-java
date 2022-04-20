@@ -149,14 +149,14 @@ public class Member extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
-     * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
+     * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account&#39;s status.
      * 
      */
     @Export(name="updatedTime", type=String.class, parameters={})
     private Output<String> updatedTime;
 
     /**
-     * @return Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
+     * @return Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account&#39;s status.
      * 
      */
     public Output<String> updatedTime() {

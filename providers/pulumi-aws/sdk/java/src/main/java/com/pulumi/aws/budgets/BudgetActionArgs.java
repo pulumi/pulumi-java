@@ -20,7 +20,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final BudgetActionArgs Empty = new BudgetActionArgs();
 
     /**
-     * The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     @Import(name="accountId")

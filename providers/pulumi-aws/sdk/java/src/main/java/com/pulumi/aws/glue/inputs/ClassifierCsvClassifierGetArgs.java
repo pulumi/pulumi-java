@@ -29,7 +29,7 @@ public final class ClassifierCsvClassifierGetArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
+     * Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
      * 
      */
     @Import(name="containsHeader")

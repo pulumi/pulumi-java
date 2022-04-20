@@ -14,7 +14,7 @@ public final class GetAmiIdsFilter extends com.pulumi.resources.InvokeArgs {
     public static final GetAmiIdsFilter Empty = new GetAmiIdsFilter();
 
     /**
-     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
+     * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:&lt;tag name&gt;`
      * 
      */
     @Import(name="name", required=true)

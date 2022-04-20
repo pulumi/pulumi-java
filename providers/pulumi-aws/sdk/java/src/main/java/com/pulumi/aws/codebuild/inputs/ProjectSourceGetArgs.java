@@ -21,9 +21,9 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     public static final ProjectSourceGetArgs Empty = new ProjectSourceGetArgs();
 
     /**
-     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
+     * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console&#39;s use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
-     * @Deprecated
+     * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
@@ -48,7 +48,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+     * Build specification to use for this build project&#39;s related builds. This must be set when `type` is `NO_SOURCE`.
      * 
      */
     @Import(name="buildspec")
@@ -103,7 +103,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+     * Whether to report the status of a build&#39;s start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
      */
     @Import(name="reportBuildStatus")

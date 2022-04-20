@@ -63,7 +63,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The description of the option group. Defaults to "Managed by Pulumi".
+     * The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="optionGroupDescription")

@@ -16,7 +16,7 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
     public static final ResolverRuleAssociationArgs Empty = new ResolverRuleAssociationArgs();
 
     /**
-     * A name for the association that you're creating between a resolver rule and a VPC.
+     * A name for the association that you&#39;re creating between a resolver rule and a VPC.
      * 
      */
     @Import(name="name")

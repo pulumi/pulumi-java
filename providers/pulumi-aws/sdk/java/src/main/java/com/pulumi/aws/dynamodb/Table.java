@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a DynamoDB table resource
  * 
- * > **Note:** It is recommended to use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) for `read_capacity` and/or `write_capacity` if there's `autoscaling policy` attached to the table.
+ * &gt; **Note:** It is recommended to use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) for `read_capacity` and/or `write_capacity` if there&#39;s `autoscaling policy` attached to the table.
  * 
  * ## Example Usage
  * 
@@ -249,14 +249,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.restoreToLatestTime;
     }
     /**
-     * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
+     * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
      * 
      */
     @Export(name="serverSideEncryption", type=TableServerSideEncryption.class, parameters={})
     private Output<TableServerSideEncryption> serverSideEncryption;
 
     /**
-     * @return Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
+     * @return Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
      * 
      */
     public Output<TableServerSideEncryption> serverSideEncryption() {
@@ -311,14 +311,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.streamLabel;
     }
     /**
-     * When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+     * When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
     @Export(name="streamViewType", type=String.class, parameters={})
     private Output<String> streamViewType;
 
     /**
-     * @return When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
+     * @return When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
     public Output<String> streamViewType() {

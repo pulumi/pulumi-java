@@ -67,7 +67,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable String serviceRoleArn;
     /**
-     * If this time is reached and the command has not already started executing, it doesn't run.
+     * If this time is reached and the command has not already started executing, it doesn&#39;t run.
      * 
      */
     private final @Nullable Integer timeoutSeconds;
@@ -169,7 +169,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
         return Optional.ofNullable(this.serviceRoleArn);
     }
     /**
-     * If this time is reached and the command has not already started executing, it doesn't run.
+     * If this time is reached and the command has not already started executing, it doesn&#39;t run.
      * 
     */
     public Optional<Integer> timeoutSeconds() {

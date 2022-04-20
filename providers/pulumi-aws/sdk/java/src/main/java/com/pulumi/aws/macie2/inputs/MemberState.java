@@ -95,7 +95,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
      * 
      */
     @Import(name="invitedAt")

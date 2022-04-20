@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Manages an association with WAF Regional Web ACL.
  * 
- * > **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
+ * &gt; **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
  * 
  * ## Example Usage
  * 

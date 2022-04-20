@@ -48,14 +48,14 @@ public class Zone extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+     * A comment for the hosted zone. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     @Export(name="comment", type=String.class, parameters={})
     private Output<String> comment;
 
     /**
-     * @return A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+     * @return A comment for the hosted zone. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
     public Output<String> comment() {
