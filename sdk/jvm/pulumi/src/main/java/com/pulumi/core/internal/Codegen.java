@@ -59,6 +59,7 @@ public final class Codegen {
         private final Function<String, T> readFromEnvVar;
         private final Function<String, T> parseJsonDefault;
         private final Function<Config, Optional<T>> tryReadFromConfig;
+        private final Function<R, R> finalize;
 
         private final List<String> envVars = new ArrayList<>();
         private Optional<Config> config = Optional.empty();
@@ -71,25 +72,28 @@ public final class Codegen {
                 Function<T, R> convert,
                 Function<String, T> readFromEnvVar,
                 Function<String, T> parseJsonDefault,
-                Function<Config, Optional<T>> tryReadFromConfig
+                Function<Config, Optional<T>> tryReadFromConfig,
+                Function<R, R> finalize
         ) {
             this.propertyName = propertyName;
             this.readFromEnvVar = readFromEnvVar;
             this.parseJsonDefault = parseJsonDefault;
             this.tryReadFromConfig = tryReadFromConfig;
             this.convert = convert;
+            this.finalize = finalize;
         }
 
         /**
          * Helper for Output-typed properties.
          */
         public PropertyBuilder<T, Output<R>> output() {
-            return new PropertyBuilder<>(
+            return new PropertyBuilder<T, Output<R>>(
                     this.propertyName,
-                    x -> Output.of(this.convert.apply(x)),
+                    x -> Output.of(this.finalize.apply(this.convert.apply(x))),
                     this.readFromEnvVar,
                     this.parseJsonDefault,
-                    this.tryReadFromConfig
+                    this.tryReadFromConfig,
+                    Functions.identity()
             );
         }
 
@@ -99,30 +103,33 @@ public final class Codegen {
         public PropertyBuilder<T, Output<R>> secret() {
             return new PropertyBuilder<>(
                     this.propertyName,
-                    x -> Output.of(this.convert.apply(x)).asSecret(),
+                    x -> Output.of(this.finalize.apply(this.convert.apply(x))),
                     this.readFromEnvVar,
                     this.parseJsonDefault,
-                    this.tryReadFromConfig
+                    this.tryReadFromConfig,
+                    x -> x.asSecret()
             );
         }
 
         public <X> PropertyBuilder<T, Either<X, R>> right(Class<X> __) {
             return new PropertyBuilder<>(
                     this.propertyName,
-                    x -> Either.ofRight(this.convert.apply(x)),
+                    x -> Either.ofRight(this.finalize.apply(this.convert.apply(x))),
                     this.readFromEnvVar,
                     this.parseJsonDefault,
-                    this.tryReadFromConfig
+                    this.tryReadFromConfig,
+                    Functions.identity()
             );
         }
 
         public <X> PropertyBuilder<T, Either<R, X>> left(Class<X> __) {
             return new PropertyBuilder<>(
                     this.propertyName,
-                    x -> Either.ofLeft(this.convert.apply(x)),
+                    x -> Either.ofLeft(this.finalize.apply(this.convert.apply(x))),
                     this.readFromEnvVar,
                     this.parseJsonDefault,
-                    this.tryReadFromConfig
+                    this.tryReadFromConfig,
+                    Functions.identity()
             );
         }
 
@@ -172,6 +179,10 @@ public final class Codegen {
          * Retrieves the final value of the property after applying defaults.
          */
         public Optional<R> get() {
+            return this.getRaw().map(this.finalize);
+        }
+
+        private Optional<R> getRaw() {
             // User-provided arguments disable any defaulting logic.
             if (this.arg.isPresent()) {
                 return this.arg;
@@ -253,7 +264,8 @@ public final class Codegen {
         Function<Config, Optional<Integer>> tryReadFromConfig =
                 config -> config.getInteger(propertyName);
         return new PropertyBuilder<>(
-                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig
+                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig,
+                Functions.identity()
         );
     }
 
@@ -263,7 +275,8 @@ public final class Codegen {
         Function<Config, Optional<Double>> tryReadFromConfig =
                 config -> config.getDouble(propertyName);
         return new PropertyBuilder<>(
-                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig
+                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig,
+                Functions.identity()
         );
     }
 
@@ -273,7 +286,8 @@ public final class Codegen {
         Function<Config, Optional<Boolean>> tryReadFromConfig =
                 config -> config.getBoolean(propertyName);
         return new PropertyBuilder<>(
-                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig
+                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig,
+                Functions.identity()
         );
     }
 
@@ -283,7 +297,8 @@ public final class Codegen {
         Function<Config, Optional<String>> tryReadFromConfig =
                 config -> config.get(propertyName);
         return new PropertyBuilder<>(
-                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig
+                propertyName, Codegen::identityConverter, readFromEnvVar, Codegen::throwingParseJson, tryReadFromConfig,
+                Functions.identity()
         );
     }
 
@@ -307,7 +322,8 @@ public final class Codegen {
         Function<Config, Optional<T>> tryReadFromConfig =
                 config -> config.getObject(propertyName, typeShape);
         return new PropertyBuilder<>(
-                propertyName, Codegen::identityConverter, readFromEnvVar, parseJson, tryReadFromConfig
+                propertyName, Codegen::identityConverter, readFromEnvVar, parseJson, tryReadFromConfig,
+                Functions.identity()
         );
     }
 
