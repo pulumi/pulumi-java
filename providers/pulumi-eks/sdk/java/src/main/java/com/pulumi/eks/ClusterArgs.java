@@ -83,7 +83,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IAM Role Provider used to create & authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+     * The IAM Role Provider used to create &amp; authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
      * 
      */
     @Import(name="creationRoleProvider")
@@ -105,7 +105,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: ["api", "audit", "authenticator", "controllerManager", "scheduler"]. By default it is off.
+     * Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: [&#34;api&#34;, &#34;audit&#34;, &#34;authenticator&#34;, &#34;controllerManager&#34;, &#34;scheduler&#34;]. By default it is off.
      * 
      */
     @Import(name="enabledClusterLogTypes")
@@ -231,7 +231,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+     * The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
      * 
      */
     @Import(name="instanceType")
@@ -242,7 +242,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't
+     * The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t
      * specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or
      * 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap
      * with resources in other networks that are peered or connected to your VPC. You can only specify
@@ -250,7 +250,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      * The block must meet the following requirements:
      * - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
-     * - Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+     * - Doesn&#39;t overlap with any CIDR block assigned to the VPC that you selected for VPC.
      * - Between /24 and /12.
      * 
      */
@@ -284,9 +284,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The cluster's physical resource name.
+     * The cluster&#39;s physical resource name.
      * 
-     * If not specified, the default is to use auto-naming for the cluster's name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
+     * If not specified, the default is to use auto-naming for the cluster&#39;s name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
      * 
      * See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming
      * 
@@ -352,7 +352,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to delete a cluster node's root volume on termination. Defaults to true.
+     * Whether to delete a cluster node&#39;s root volume on termination. Defaults to true.
      * 
      */
     @Import(name="nodeRootVolumeDeleteOnTermination")
@@ -363,7 +363,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to encrypt a cluster node's root volume. Defaults to false.
+     * Whether to encrypt a cluster node&#39;s root volume. Defaults to false.
      * 
      */
     @Import(name="nodeRootVolumeEncrypted")
@@ -374,7 +374,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Provisioned IOPS for a cluster node's root volume. Only valid for io1 volumes.
+     * Provisioned IOPS for a cluster node&#39;s root volume. Only valid for io1 volumes.
      * 
      */
     @Import(name="nodeRootVolumeIops")
@@ -385,7 +385,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The size in GiB of a cluster node's root volume. Defaults to 20.
+     * The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
      * 
      */
     @Import(name="nodeRootVolumeSize")
@@ -396,7 +396,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Provisioned throughput performance in integer MiB/s for a cluster node's root volume. Only valid for gp3 volumes.
+     * Provisioned throughput performance in integer MiB/s for a cluster node&#39;s root volume. Only valid for gp3 volumes.
      * 
      */
     @Import(name="nodeRootVolumeThroughput")
@@ -407,7 +407,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configured EBS type for a cluster node's root volume. Default is gp2.
+     * Configured EBS type for a cluster node&#39;s root volume. Default is gp2.
      * 
      */
     @Import(name="nodeRootVolumeType")
@@ -455,7 +455,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The set of private subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
      * 
-     * If `vpcId` is not set, the cluster will use the AWS account's default VPC subnets.
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
      * 
      * Worker network architecture options:
      *  - Private-only: Only set `privateSubnetIds`.
@@ -478,13 +478,13 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AWS provider credential options to scope the cluster's kubeconfig authentication when using a non-default credential chain.
+     * The AWS provider credential options to scope the cluster&#39;s kubeconfig authentication when using a non-default credential chain.
      * 
      * This is required for certain auth scenarios. For example:
      * - Creating and using a new AWS provider instance, or
      * - Setting the AWS_PROFILE environment variable, or
      * - Using a named profile configured on the AWS provider via:
-     *   `pulumi config set aws:profile <profileName>`
+     *   `pulumi config set aws:profile &lt;profileName&gt;`
      * 
      * See for more details:
      * - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
@@ -509,13 +509,13 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      * This option is required iff the proxy environment variables are not set.
      * 
-     * Format:      <protocol>://<host>:<port>
-     * Auth Format: <protocol>://<username>:<password>@<host>:<port>
+     * Format:      &lt;protocol&gt;://&lt;host&gt;:&lt;port&gt;
+     * Auth Format: &lt;protocol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;
      * 
      * Ex:
-     *   - "http://proxy.example.com:3128"
-     *   - "https://proxy.example.com"
-     *   - "http://username:password@proxy.example.com:3128"
+     *   - &#34;http://proxy.example.com:3128&#34;
+     *   - &#34;https://proxy.example.com&#34;
+     *   - &#34;http://username:password@proxy.example.com:3128&#34;
      * 
      */
     @Import(name="proxy")
@@ -539,7 +539,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The set of public subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
      * 
-     * If `vpcId` is not set, the cluster will use the AWS account's default VPC subnets.
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
      * 
      * Worker network architecture options:
      *  - Private-only: Only set `privateSubnetIds`.
@@ -608,7 +608,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The set of all subnets, public and private, to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
      * 
-     * If `vpcId` is not set, the cluster will use the AWS account's default VPC subnets.
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
      * 
      * If the list of subnets includes both public and private subnets, the worker nodes will only be attached to the private subnets, and the public subnets will be used for internet-facing load balancers.
      * 
