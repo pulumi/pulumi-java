@@ -51,6 +51,7 @@ public class JarDeployment extends ComponentResource {
                 JarDeployment.apply(applyArgs),
                 null);
 
+        // Check out JarDeploymentArgs
         final var args = JarDeployment.apply(applyArgs);
 
         final var appJar = deployJar(args.getJarPath(), args.getBucketName());
@@ -98,6 +99,7 @@ public class JarDeployment extends ComponentResource {
 
     public Output<String> deployApp(Output<String> kubeconfig, BucketObject appJar) {
 
+        // Get resource options with kubernetes provider
         final var clusterResourceOptions = clusterResourceOptions(kubeconfig);
 
         // Create a Kubernetes Namespace
@@ -105,7 +107,6 @@ public class JarDeployment extends ComponentResource {
                 .build(),
                 clusterResourceOptions);
 
-        // Export the Namespace name
         final var appLabels = Map.of(
                 "appClass", "gs-spring-boot"
         );
@@ -116,6 +117,12 @@ public class JarDeployment extends ComponentResource {
                 .labels(appLabels)
                 .build();
 
+        /*
+        // You can put your own asserts to make sure you don't run into weird misconfiguration issues twice
+        if (configMap.getId().contains("/")) {
+            throw new Exception("configMap name is invalid");
+        }
+        */
 
         // Create a Java deployment
         final var deployment = new Deployment("deployment", DeploymentArgs.builder()
