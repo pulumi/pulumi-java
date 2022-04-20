@@ -58,7 +58,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
 
     /**
      * placement policy type
-     * Expected value is 'VmVm'.
+     * Expected value is &#39;VmVm&#39;.
      * 
      */
     @Import(name="type", required=true)

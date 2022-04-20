@@ -69,12 +69,12 @@ public final class GetGalleryImageResult {
      */
     private final String name;
     /**
-     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
      */
     private final String osState;
     /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     private final String osType;
@@ -227,14 +227,14 @@ public final class GetGalleryImageResult {
         return this.name;
     }
     /**
-     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
     */
     public String osState() {
         return this.osState;
     }
     /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
     */
     public String osType() {

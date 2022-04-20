@@ -184,7 +184,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeStore'.
+     * Expected value is &#39;AzureDataLakeStore&#39;.
      * 
      */
     @Import(name="type", required=true)

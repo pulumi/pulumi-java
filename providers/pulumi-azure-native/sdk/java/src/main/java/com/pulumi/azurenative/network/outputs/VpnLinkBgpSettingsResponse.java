@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VpnLinkBgpSettingsResponse {
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
      */
     private final @Nullable Double asn;
@@ -32,7 +32,7 @@ public final class VpnLinkBgpSettingsResponse {
     }
 
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
     */
     public Optional<Double> asn() {

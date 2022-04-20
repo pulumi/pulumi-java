@@ -24,7 +24,7 @@ public final class ResourceIdentityResponse {
      */
     private final String tenantId;
     /**
-     * Defines values for a ResourceIdentity's type.
+     * Defines values for a ResourceIdentity&#39;s type.
      * 
      */
     private final @Nullable String type;
@@ -61,7 +61,7 @@ public final class ResourceIdentityResponse {
         return this.tenantId;
     }
     /**
-     * Defines values for a ResourceIdentity's type.
+     * Defines values for a ResourceIdentity&#39;s type.
      * 
     */
     public Optional<String> type() {

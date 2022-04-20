@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataResponse {
     private final @Nullable MarkdownPartMetadataResponseSettings settings;
     /**
      * The type of dashboard part.
-     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
      * 
      */
     private final String type;
@@ -57,7 +57,7 @@ public final class MarkdownPartMetadataResponse {
     }
     /**
      * The type of dashboard part.
-     * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
+     * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
      * 
     */
     public String type() {

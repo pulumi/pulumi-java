@@ -18,7 +18,7 @@ public final class NetworkResourcePropertiesResponse {
     private final @Nullable String description;
     /**
      * The type of a Service Fabric container network.
-     * Expected value is 'NetworkResourceProperties'.
+     * Expected value is &#39;NetworkResourceProperties&#39;.
      * 
      */
     private final String kind;
@@ -61,7 +61,7 @@ public final class NetworkResourcePropertiesResponse {
     }
     /**
      * The type of a Service Fabric container network.
-     * Expected value is 'NetworkResourceProperties'.
+     * Expected value is &#39;NetworkResourceProperties&#39;.
      * 
     */
     public String kind() {

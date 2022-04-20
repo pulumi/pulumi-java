@@ -17,7 +17,7 @@ public final class MediaGraphPemCertificateListResponse {
     private final List<String> certificates;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
      * 
      */
     private final String odataType;
@@ -39,7 +39,7 @@ public final class MediaGraphPemCertificateListResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphPemCertificateList&#39;.
      * 
     */
     public String odataType() {

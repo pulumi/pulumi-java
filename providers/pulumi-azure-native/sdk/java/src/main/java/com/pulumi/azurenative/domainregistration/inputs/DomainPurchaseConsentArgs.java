@@ -43,7 +43,7 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
+     * List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under &lt;code&gt;TopLevelDomain&lt;/code&gt; resource.
      * 
      */
     @Import(name="agreementKeys")

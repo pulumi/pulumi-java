@@ -95,7 +95,7 @@ public final class OrcSinkResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'OrcSink'.
+     * Expected value is &#39;OrcSink&#39;.
      * 
      */
     @Import(name="type", required=true)

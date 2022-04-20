@@ -65,7 +65,7 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
 
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureResourceItem'.
+     * Expected value is &#39;AzureResourceItem&#39;.
      * 
      */
     @Import(name="protectionIntentItemType", required=true)

@@ -131,7 +131,7 @@ public final class FileShareDatasetResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -142,7 +142,7 @@ public final class FileShareDatasetResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -187,7 +187,7 @@ public final class FileShareDatasetResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Type of dataset.
-     * Expected value is 'FileShare'.
+     * Expected value is &#39;FileShare&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -87,7 +87,7 @@ public final class GetWatchlistResult {
      */
     private final String provider;
     /**
-     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
+     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
      */
     private final @Nullable String rawContent;
@@ -302,7 +302,7 @@ public final class GetWatchlistResult {
         return this.provider;
     }
     /**
-     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
+     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
     */
     public Optional<String> rawContent() {

@@ -211,7 +211,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
 
     /**
      * backup item type.
-     * Expected value is 'MabFileFolderProtectedItem'.
+     * Expected value is &#39;MabFileFolderProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

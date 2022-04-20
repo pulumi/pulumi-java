@@ -100,7 +100,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If not specified, the default value is 'enabled'.
+     * If not specified, the default value is &#39;enabled&#39;.
      * 
      */
     @Import(name="publicNetworkAccess")

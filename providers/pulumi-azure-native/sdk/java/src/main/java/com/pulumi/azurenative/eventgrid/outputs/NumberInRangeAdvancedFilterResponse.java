@@ -20,7 +20,7 @@ public final class NumberInRangeAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberInRange'.
+     * Expected value is &#39;NumberInRange&#39;.
      * 
      */
     private final String operatorType;
@@ -49,7 +49,7 @@ public final class NumberInRangeAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberInRange'.
+     * Expected value is &#39;NumberInRange&#39;.
      * 
     */
     public String operatorType() {

@@ -104,7 +104,7 @@ public final class AzureMySqlLinkedServiceArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureMySql'.
+     * Expected value is &#39;AzureMySql&#39;.
      * 
      */
     @Import(name="type", required=true)

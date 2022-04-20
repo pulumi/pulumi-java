@@ -19,7 +19,7 @@ public final class AvailabilitySetResourceSettingsResponse {
     private final @Nullable Integer faultDomain;
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/availabilitySets'.
+     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
      * 
      */
     private final String resourceType;
@@ -55,7 +55,7 @@ public final class AvailabilitySetResourceSettingsResponse {
     }
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/availabilitySets'.
+     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
      * 
     */
     public String resourceType() {

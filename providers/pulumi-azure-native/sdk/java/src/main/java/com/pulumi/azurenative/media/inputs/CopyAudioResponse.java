@@ -32,7 +32,7 @@ public final class CopyAudioResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.CopyAudio'.
+     * Expected value is &#39;#Microsoft.Media.CopyAudio&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -63,7 +63,7 @@ public final class JsonSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'JsonSource'.
+     * Expected value is &#39;JsonSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class JsonSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'JsonSource'.
+     * Expected value is &#39;JsonSource&#39;.
      * 
     */
     public String type() {

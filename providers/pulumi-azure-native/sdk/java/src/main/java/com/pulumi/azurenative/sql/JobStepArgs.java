@@ -108,7 +108,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
+     * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
     @Import(name="stepId")

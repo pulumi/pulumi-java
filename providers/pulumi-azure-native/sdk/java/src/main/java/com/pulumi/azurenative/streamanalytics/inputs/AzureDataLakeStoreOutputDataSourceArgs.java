@@ -109,7 +109,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.DataLake/Accounts'.
+     * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
      * 
      */
     @Import(name="type", required=true)

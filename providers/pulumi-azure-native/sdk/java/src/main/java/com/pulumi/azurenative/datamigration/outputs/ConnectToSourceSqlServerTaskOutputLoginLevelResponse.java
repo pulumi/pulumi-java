@@ -43,7 +43,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
     private final String name;
     /**
      * Type of result - database level or task level
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -110,7 +110,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
     }
     /**
      * Type of result - database level or task level
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
     */
     public String resultType() {

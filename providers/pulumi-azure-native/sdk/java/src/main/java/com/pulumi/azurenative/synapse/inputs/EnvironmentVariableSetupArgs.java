@@ -20,7 +20,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
 
     /**
      * The type of custom setup.
-     * Expected value is 'EnvironmentVariableSetup'.
+     * Expected value is &#39;EnvironmentVariableSetup&#39;.
      * 
      */
     @Import(name="type", required=true)

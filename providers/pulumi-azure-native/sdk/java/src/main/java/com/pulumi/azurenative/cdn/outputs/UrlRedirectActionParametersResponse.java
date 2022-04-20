@@ -27,7 +27,7 @@ public final class UrlRedirectActionParametersResponse {
      */
     private final @Nullable String customPath;
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
+     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
      * 
      */
     private final @Nullable String customQueryString;
@@ -83,7 +83,7 @@ public final class UrlRedirectActionParametersResponse {
         return Optional.ofNullable(this.customPath);
     }
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
+     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
      * 
     */
     public Optional<String> customQueryString() {

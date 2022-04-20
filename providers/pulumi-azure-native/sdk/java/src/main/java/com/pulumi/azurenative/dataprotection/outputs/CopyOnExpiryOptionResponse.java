@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class CopyOnExpiryOptionResponse {
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'CopyOnExpiryOption'.
+     * Expected value is &#39;CopyOnExpiryOption&#39;.
      * 
      */
     private final String objectType;
@@ -23,7 +23,7 @@ public final class CopyOnExpiryOptionResponse {
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'CopyOnExpiryOption'.
+     * Expected value is &#39;CopyOnExpiryOption&#39;.
      * 
     */
     public String objectType() {

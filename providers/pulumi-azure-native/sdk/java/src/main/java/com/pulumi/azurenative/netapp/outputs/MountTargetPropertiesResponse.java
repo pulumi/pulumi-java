@@ -17,7 +17,7 @@ public final class MountTargetPropertiesResponse {
      */
     private final String fileSystemId;
     /**
-     * The mount target's IPv4 address
+     * The mount target&#39;s IPv4 address
      * 
      */
     private final String ipAddress;
@@ -27,7 +27,7 @@ public final class MountTargetPropertiesResponse {
      */
     private final String mountTargetId;
     /**
-     * The SMB server's Fully Qualified Domain Name, FQDN
+     * The SMB server&#39;s Fully Qualified Domain Name, FQDN
      * 
      */
     private final @Nullable String smbServerFqdn;
@@ -52,7 +52,7 @@ public final class MountTargetPropertiesResponse {
         return this.fileSystemId;
     }
     /**
-     * The mount target's IPv4 address
+     * The mount target&#39;s IPv4 address
      * 
     */
     public String ipAddress() {
@@ -66,7 +66,7 @@ public final class MountTargetPropertiesResponse {
         return this.mountTargetId;
     }
     /**
-     * The SMB server's Fully Qualified Domain Name, FQDN
+     * The SMB server&#39;s Fully Qualified Domain Name, FQDN
      * 
     */
     public Optional<String> smbServerFqdn() {

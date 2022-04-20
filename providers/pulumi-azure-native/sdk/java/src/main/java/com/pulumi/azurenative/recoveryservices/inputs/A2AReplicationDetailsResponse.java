@@ -96,7 +96,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
 
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
      */
     @Import(name="instanceType", required=true)
@@ -140,7 +140,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     }
 
     /**
-     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
+     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the &#34;same&#34; protected item even though other internal Ids/ARM Id might be changing.
      * 
      */
     @Import(name="lifecycleId")

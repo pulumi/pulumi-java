@@ -59,7 +59,7 @@ public final class MariaDBTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'MariaDBTable'.
+     * Expected value is &#39;MariaDBTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class MariaDBTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'MariaDBTable'.
+     * Expected value is &#39;MariaDBTable&#39;.
      * 
     */
     public String type() {

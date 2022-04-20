@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The logic app action that should be triggered. To learn more about Security Center's Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
+ * The logic app action that should be triggered. To learn more about Security Center&#39;s Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
  * 
  */
 public final class AutomationActionLogicAppResponse extends com.pulumi.resources.InvokeArgs {
@@ -21,7 +21,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
 
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'LogicApp'.
+     * Expected value is &#39;LogicApp&#39;.
      * 
      */
     @Import(name="actionType", required=true)

@@ -56,7 +56,7 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'ServiceBus'.
+     * Expected value is &#39;ServiceBus&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

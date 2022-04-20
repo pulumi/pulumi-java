@@ -22,7 +22,7 @@ public final class ResourceIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
     private final @Nullable String type;
@@ -52,7 +52,7 @@ public final class ResourceIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
     */
     public Optional<String> type() {

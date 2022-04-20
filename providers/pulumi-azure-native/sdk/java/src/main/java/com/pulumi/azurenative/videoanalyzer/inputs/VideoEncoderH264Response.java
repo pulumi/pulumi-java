@@ -55,7 +55,7 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
      * 
      */
     @Import(name="type", required=true)

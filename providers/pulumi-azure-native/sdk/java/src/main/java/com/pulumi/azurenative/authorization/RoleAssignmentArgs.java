@@ -18,7 +18,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
     public static final RoleAssignmentArgs Empty = new RoleAssignmentArgs();
 
     /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
      */
     @Import(name="condition")
@@ -29,7 +29,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Version of the condition. Currently accepted value is '2.0'
+     * Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
      */
     @Import(name="conditionVersion")
@@ -106,7 +106,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+     * The scope of the operation or resource. Valid scopes are: subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
      * 
      */
     @Import(name="scope", required=true)

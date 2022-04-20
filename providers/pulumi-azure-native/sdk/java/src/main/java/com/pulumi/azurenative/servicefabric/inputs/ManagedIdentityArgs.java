@@ -35,7 +35,7 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     @Import(name="userAssignedIdentities")

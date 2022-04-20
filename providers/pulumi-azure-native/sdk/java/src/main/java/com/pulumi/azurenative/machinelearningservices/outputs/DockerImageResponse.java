@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 public final class DockerImageResponse {
     /**
      * Image name of a custom base image.
-     * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
+     * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
      */
     private final String dockerImageUri;
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is 'Image'.
+     * Expected value is &#39;Image&#39;.
      * 
      */
     private final String dockerSpecificationType;
@@ -42,7 +42,7 @@ public final class DockerImageResponse {
 
     /**
      * Image name of a custom base image.
-     * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
+     * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
     */
     public String dockerImageUri() {
@@ -50,7 +50,7 @@ public final class DockerImageResponse {
     }
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is 'Image'.
+     * Expected value is &#39;Image&#39;.
      * 
     */
     public String dockerSpecificationType() {

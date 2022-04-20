@@ -68,7 +68,7 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Environment'.
+     * Expected value is &#39;Environment&#39;.
      * 
      */
     @Import(name="type", required=true)

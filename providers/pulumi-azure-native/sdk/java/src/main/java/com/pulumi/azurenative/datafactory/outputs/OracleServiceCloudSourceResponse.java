@@ -49,7 +49,7 @@ public final class OracleServiceCloudSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'OracleServiceCloudSource'.
+     * Expected value is &#39;OracleServiceCloudSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class OracleServiceCloudSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'OracleServiceCloudSource'.
+     * Expected value is &#39;OracleServiceCloudSource&#39;.
      * 
     */
     public String type() {

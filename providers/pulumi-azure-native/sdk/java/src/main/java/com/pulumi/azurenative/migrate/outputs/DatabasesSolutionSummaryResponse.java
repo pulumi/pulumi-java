@@ -24,7 +24,7 @@ public final class DatabasesSolutionSummaryResponse {
     private final @Nullable Integer databasesAssessedCount;
     /**
      * Gets the Instance type.
-     * Expected value is 'Databases'.
+     * Expected value is &#39;Databases&#39;.
      * 
      */
     private final String instanceType;
@@ -62,7 +62,7 @@ public final class DatabasesSolutionSummaryResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'Databases'.
+     * Expected value is &#39;Databases&#39;.
      * 
     */
     public String instanceType() {

@@ -64,12 +64,12 @@ public final class AzureBlobDatasetResponse {
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeEnd;
     /**
-     * The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeStart;
@@ -95,7 +95,7 @@ public final class AzureBlobDatasetResponse {
     private final @Nullable Object tableRootLocation;
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlob'.
+     * Expected value is &#39;AzureBlob&#39;.
      * 
      */
     private final String type;
@@ -191,14 +191,14 @@ public final class AzureBlobDatasetResponse {
         return this.linkedServiceName;
     }
     /**
-     * The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
+     * The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> modifiedDatetimeStart() {
@@ -234,7 +234,7 @@ public final class AzureBlobDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlob'.
+     * Expected value is &#39;AzureBlob&#39;.
      * 
     */
     public String type() {

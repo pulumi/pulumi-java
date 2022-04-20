@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GraphParameterLinkResponse {
     /**
-     * The graph node's identifier
+     * The graph node&#39;s identifier
      * 
      */
     private final String nodeId;
@@ -29,7 +29,7 @@ public final class GraphParameterLinkResponse {
     }
 
     /**
-     * The graph node's identifier
+     * The graph node&#39;s identifier
      * 
     */
     public String nodeId() {

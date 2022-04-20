@@ -24,9 +24,9 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
 
     /**
      * List of source artifacts to be transferred by the pipeline.
-     * Specify an image by repository ('hello-world'). This will use the 'latest' tag.
-     * Specify an image by tag ('hello-world:latest').
-     * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
+     * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
+     * Specify an image by tag (&#39;hello-world:latest&#39;).
+     * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
      * 
      */
     @Import(name="artifacts")

@@ -34,12 +34,12 @@ public final class SftpWriteSettingsResponse {
     private final @Nullable Object operationTimeout;
     /**
      * The write setting type.
-     * Expected value is 'SftpWriteSettings'.
+     * Expected value is &#39;SftpWriteSettings&#39;.
      * 
      */
     private final String type;
     /**
-     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
+     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn&#39;t support rename operation. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object useTempFileRename;
@@ -90,14 +90,14 @@ public final class SftpWriteSettingsResponse {
     }
     /**
      * The write setting type.
-     * Expected value is 'SftpWriteSettings'.
+     * Expected value is &#39;SftpWriteSettings&#39;.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
+     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn&#39;t support rename operation. Type: boolean (or Expression with resultType boolean).
      * 
     */
     public Optional<Object> useTempFileRename() {

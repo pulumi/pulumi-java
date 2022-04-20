@@ -20,7 +20,7 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     public static final EncryptionConfigurationResponse Empty = new EncryptionConfigurationResponse();
 
     /**
-     * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
      */
     @Import(name="identity")

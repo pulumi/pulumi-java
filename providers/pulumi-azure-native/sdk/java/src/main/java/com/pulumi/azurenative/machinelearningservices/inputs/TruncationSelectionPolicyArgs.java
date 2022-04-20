@@ -43,7 +43,7 @@ public final class TruncationSelectionPolicyArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Expected value is 'TruncationSelection'.
+     * Expected value is &#39;TruncationSelection&#39;.
      * 
      */
     @Import(name="policyType", required=true)

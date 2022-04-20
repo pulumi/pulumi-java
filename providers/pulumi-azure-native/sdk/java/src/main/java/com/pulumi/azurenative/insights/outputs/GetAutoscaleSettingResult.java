@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutoscaleSettingResult {
     /**
-     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -92,7 +92,7 @@ public final class GetAutoscaleSettingResult {
     }
 
     /**
-     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
     */
     public Optional<Boolean> enabled() {

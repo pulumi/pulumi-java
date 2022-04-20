@@ -23,7 +23,7 @@ public final class MedianStoppingPolicyResponse {
      */
     private final @Nullable Integer evaluationInterval;
     /**
-     * Expected value is 'MedianStopping'.
+     * Expected value is &#39;MedianStopping&#39;.
      * 
      */
     private final String policyType;
@@ -53,7 +53,7 @@ public final class MedianStoppingPolicyResponse {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
-     * Expected value is 'MedianStopping'.
+     * Expected value is &#39;MedianStopping&#39;.
      * 
     */
     public String policyType() {

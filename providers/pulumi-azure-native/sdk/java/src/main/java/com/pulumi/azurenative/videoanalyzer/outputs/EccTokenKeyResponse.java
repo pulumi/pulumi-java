@@ -21,7 +21,7 @@ public final class EccTokenKeyResponse {
     private final String kid;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
      * 
      */
     private final String type;
@@ -66,7 +66,7 @@ public final class EccTokenKeyResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
      * 
     */
     public String type() {

@@ -34,7 +34,7 @@ public final class HyperVReplicaBasePolicyDetailsResponse {
     private final @Nullable String initialReplicationMethod;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'HyperVReplicaBasePolicyDetails'.
+     * Expected value is &#39;HyperVReplicaBasePolicyDetails&#39;.
      * 
      */
     private final String instanceType;
@@ -125,7 +125,7 @@ public final class HyperVReplicaBasePolicyDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'HyperVReplicaBasePolicyDetails'.
+     * Expected value is &#39;HyperVReplicaBasePolicyDetails&#39;.
      * 
     */
     public String instanceType() {

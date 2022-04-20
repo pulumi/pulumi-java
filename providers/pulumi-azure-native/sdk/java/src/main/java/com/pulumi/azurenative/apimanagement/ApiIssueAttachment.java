@@ -46,14 +46,14 @@ public class ApiIssueAttachment extends com.pulumi.resources.CustomResource {
         return this.content;
     }
     /**
-     * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
      */
     @Export(name="contentFormat", type=String.class, parameters={})
     private Output<String> contentFormat;
 
     /**
-     * @return Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * @return Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
      */
     public Output<String> contentFormat() {

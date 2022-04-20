@@ -49,14 +49,14 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.customHeaders;
     }
     /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
+     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
      */
     @Export(name="endpointLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointLocation;
 
     /**
-     * @return Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
+     * @return Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
      */
     public Output</* @Nullable */ String> endpointLocation() {
@@ -91,56 +91,56 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.endpointStatus;
     }
     /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
     @Export(name="geoMapping", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> geoMapping;
 
     /**
-     * @return The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * @return The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
     public Output</* @Nullable */ List<String>> geoMapping() {
         return this.geoMapping;
     }
     /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Export(name="minChildEndpoints", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpoints;
 
     /**
-     * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     public Output</* @Nullable */ Double> minChildEndpoints() {
         return this.minChildEndpoints;
     }
     /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Export(name="minChildEndpointsIPv4", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv4;
 
     /**
-     * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     public Output</* @Nullable */ Double> minChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4;
     }
     /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Export(name="minChildEndpointsIPv6", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv6;
 
     /**
-     * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     public Output</* @Nullable */ Double> minChildEndpointsIPv6() {
@@ -161,28 +161,28 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
     @Export(name="priority", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> priority;
 
     /**
-     * @return The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * @return The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
     public Output</* @Nullable */ Double> priority() {
         return this.priority;
     }
     /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
     @Export(name="subnets", type=List.class, parameters={EndpointPropertiesResponseSubnets.class})
     private Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets;
 
     /**
-     * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
     public Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets() {
@@ -203,14 +203,14 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.target;
     }
     /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
+     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
      */
     @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
-     * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
+     * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
      */
     public Output</* @Nullable */ String> targetResourceId() {
@@ -231,14 +231,14 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
+     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
      */
     @Export(name="weight", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> weight;
 
     /**
-     * @return The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
+     * @return The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
      */
     public Output</* @Nullable */ Double> weight() {

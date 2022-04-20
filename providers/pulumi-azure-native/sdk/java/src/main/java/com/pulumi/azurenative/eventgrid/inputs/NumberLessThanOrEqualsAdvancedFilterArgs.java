@@ -33,7 +33,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberLessThanOrEquals'.
+     * Expected value is &#39;NumberLessThanOrEquals&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

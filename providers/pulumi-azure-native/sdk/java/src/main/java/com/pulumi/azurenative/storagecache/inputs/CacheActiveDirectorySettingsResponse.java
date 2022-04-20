@@ -64,7 +64,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     }
 
     /**
-     * The Active Directory domain's NetBIOS name.
+     * The Active Directory domain&#39;s NetBIOS name.
      * 
      */
     @Import(name="domainNetBiosName", required=true)
@@ -75,7 +75,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     }
 
     /**
-     * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
      */
     @Import(name="primaryDnsIpAddress", required=true)
@@ -86,7 +86,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     }
 
     /**
-     * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
      */
     @Import(name="secondaryDnsIpAddress")

@@ -27,7 +27,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The scope of the association. The scope can be any valid REST resource instance. For example, use '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}' for a virtual machine resource.
+     * The scope of the association. The scope can be any valid REST resource instance. For example, use &#39;/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}&#39; for a virtual machine resource.
      * 
      */
     @Import(name="scope", required=true)

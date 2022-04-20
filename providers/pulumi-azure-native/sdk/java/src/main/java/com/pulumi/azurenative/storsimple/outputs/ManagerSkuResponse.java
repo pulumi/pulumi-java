@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ManagerSkuResponse {
     /**
-     * Refers to the sku name which should be "Standard"
+     * Refers to the sku name which should be &#34;Standard&#34;
      * 
      */
     private final String name;
@@ -21,7 +21,7 @@ public final class ManagerSkuResponse {
     }
 
     /**
-     * Refers to the sku name which should be "Standard"
+     * Refers to the sku name which should be &#34;Standard&#34;
      * 
     */
     public String name() {

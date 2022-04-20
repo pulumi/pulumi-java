@@ -23,7 +23,7 @@ public final class BackendResponse {
      */
     private final @Nullable String backendHostHeader;
     /**
-     * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String enabledState;
@@ -48,7 +48,7 @@ public final class BackendResponse {
      */
     private final String privateEndpointStatus;
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkAlias;
@@ -58,12 +58,12 @@ public final class BackendResponse {
      */
     private final @Nullable String privateLinkApprovalMessage;
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     private final @Nullable String privateLinkLocation;
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkResourceId;
@@ -116,7 +116,7 @@ public final class BackendResponse {
         return Optional.ofNullable(this.backendHostHeader);
     }
     /**
-     * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this backend. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> enabledState() {
@@ -151,7 +151,7 @@ public final class BackendResponse {
         return this.privateEndpointStatus;
     }
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
     */
     public Optional<String> privateLinkAlias() {
@@ -165,14 +165,14 @@ public final class BackendResponse {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
     */
     public Optional<String> privateLinkResourceId() {

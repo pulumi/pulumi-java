@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:databoxedge:Addon arcName /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourcegroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/addonExamples/roles/kubernetesRole/addons/arcName 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: ArcAddon, IoTAddon.
  * 
  */

@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class DeliveryRuleCacheExpirationActionResponse {
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'CacheExpiration'.
+     * Expected value is &#39;CacheExpiration&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class DeliveryRuleCacheExpirationActionResponse {
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'CacheExpiration'.
+     * Expected value is &#39;CacheExpiration&#39;.
      * 
     */
     public String name() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VideoFlagsResponse {
     /**
-     * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
+     * Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
      * 
      */
     private final Boolean canStream;
@@ -20,7 +20,7 @@ public final class VideoFlagsResponse {
      */
     private final Boolean hasData;
     /**
-     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn't necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
      */
     private final Boolean isRecording;
@@ -36,7 +36,7 @@ public final class VideoFlagsResponse {
     }
 
     /**
-     * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
+     * Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
      * 
     */
     public Boolean canStream() {
@@ -50,7 +50,7 @@ public final class VideoFlagsResponse {
         return this.hasData;
     }
     /**
-     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn't necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+     * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
     */
     public Boolean isRecording() {

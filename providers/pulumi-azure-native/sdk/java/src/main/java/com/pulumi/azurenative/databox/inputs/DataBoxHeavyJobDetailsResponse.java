@@ -135,7 +135,7 @@ public final class DataBoxHeavyJobDetailsResponse extends com.pulumi.resources.I
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
     @Import(name="jobDetailsType", required=true)

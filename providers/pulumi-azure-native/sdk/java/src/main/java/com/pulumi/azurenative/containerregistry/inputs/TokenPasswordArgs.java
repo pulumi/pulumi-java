@@ -44,7 +44,7 @@ public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The password name "password1" or "password2"
+     * The password name &#34;password1&#34; or &#34;password2&#34;
      * 
      */
     @Import(name="name")

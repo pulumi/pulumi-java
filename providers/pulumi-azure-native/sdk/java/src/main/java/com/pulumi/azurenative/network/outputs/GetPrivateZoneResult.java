@@ -19,7 +19,7 @@ public final class GetPrivateZoneResult {
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
      */
     private final String id;
@@ -79,7 +79,7 @@ public final class GetPrivateZoneResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class GetPrivateZoneResult {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
+     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
     */
     public String id() {
@@ -208,7 +208,7 @@ public final class GetPrivateZoneResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
     */
     public String type() {

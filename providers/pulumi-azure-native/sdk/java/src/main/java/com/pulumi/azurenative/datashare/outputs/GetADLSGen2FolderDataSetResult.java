@@ -32,7 +32,7 @@ public final class GetADLSGen2FolderDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
      */
     private final String kind;
@@ -123,7 +123,7 @@ public final class GetADLSGen2FolderDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
     */
     public String kind() {

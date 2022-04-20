@@ -50,7 +50,7 @@ public final class ApplicationGatewayProbeResponse {
      */
     private final @Nullable String name;
     /**
-     * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
+     * Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
      * 
      */
     private final @Nullable String path;
@@ -174,7 +174,7 @@ public final class ApplicationGatewayProbeResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
+     * Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
      * 
     */
     public Optional<String> path() {

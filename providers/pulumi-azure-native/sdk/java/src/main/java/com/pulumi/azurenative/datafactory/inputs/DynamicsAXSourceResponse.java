@@ -110,7 +110,7 @@ public final class DynamicsAXSourceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy source type.
-     * Expected value is 'DynamicsAXSource'.
+     * Expected value is &#39;DynamicsAXSource&#39;.
      * 
      */
     @Import(name="type", required=true)

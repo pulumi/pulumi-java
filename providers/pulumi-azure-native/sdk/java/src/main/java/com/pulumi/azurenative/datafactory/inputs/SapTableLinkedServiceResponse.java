@@ -160,7 +160,7 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     }
 
     /**
-     * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * External security product&#39;s library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="sncLibraryPath")
@@ -182,7 +182,7 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Initiator&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="sncMyName")
@@ -193,7 +193,7 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * Communication partner&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="sncPartnerName")
@@ -238,7 +238,7 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
 
     /**
      * Type of linked service.
-     * Expected value is 'SapTable'.
+     * Expected value is &#39;SapTable&#39;.
      * 
      */
     @Import(name="type", required=true)

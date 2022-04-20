@@ -41,7 +41,7 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      * Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
      * 
-     * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
+     * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool&#39;s original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
      */
     @Import(name="createMode")

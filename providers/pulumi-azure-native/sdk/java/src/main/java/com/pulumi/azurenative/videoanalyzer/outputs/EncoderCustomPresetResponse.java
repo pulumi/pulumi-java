@@ -20,7 +20,7 @@ public final class EncoderCustomPresetResponse {
     private final @Nullable AudioEncoderAacResponse audioEncoder;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
      * 
      */
     private final String type;
@@ -49,7 +49,7 @@ public final class EncoderCustomPresetResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
      * 
     */
     public String type() {

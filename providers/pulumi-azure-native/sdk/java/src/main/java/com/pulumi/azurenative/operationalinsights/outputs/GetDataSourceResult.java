@@ -34,7 +34,7 @@ public final class GetDataSourceResult {
      */
     private final String name;
     /**
-     * The data source properties in raw json format, each kind of data source have it's own schema.
+     * The data source properties in raw json format, each kind of data source have it&#39;s own schema.
      * 
      */
     private final Object properties;
@@ -44,7 +44,7 @@ public final class GetDataSourceResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class GetDataSourceResult {
         return this.name;
     }
     /**
-     * The data source properties in raw json format, each kind of data source have it's own schema.
+     * The data source properties in raw json format, each kind of data source have it&#39;s own schema.
      * 
     */
     public Object properties() {
@@ -110,7 +110,7 @@ public final class GetDataSourceResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

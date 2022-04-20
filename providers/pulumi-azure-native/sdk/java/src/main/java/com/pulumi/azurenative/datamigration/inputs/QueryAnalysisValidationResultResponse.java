@@ -18,7 +18,7 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
     public static final QueryAnalysisValidationResultResponse Empty = new QueryAnalysisValidationResultResponse();
 
     /**
-     * List of queries executed and it's execution results in source and target
+     * List of queries executed and it&#39;s execution results in source and target
      * 
      */
     @Import(name="queryResults", required=true)

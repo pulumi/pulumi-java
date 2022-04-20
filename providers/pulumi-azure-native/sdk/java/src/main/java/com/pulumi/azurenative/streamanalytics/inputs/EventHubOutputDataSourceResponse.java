@@ -76,7 +76,7 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/EventHub'.
+     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
      * 
      */
     @Import(name="type", required=true)

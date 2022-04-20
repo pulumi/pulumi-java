@@ -33,7 +33,7 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/availabilitySets'.
+     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

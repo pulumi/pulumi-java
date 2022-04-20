@@ -46,7 +46,7 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * The type of custom setup.
-     * Expected value is 'ComponentSetup'.
+     * Expected value is &#39;ComponentSetup&#39;.
      * 
      */
     @Import(name="type", required=true)

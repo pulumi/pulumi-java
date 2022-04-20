@@ -110,7 +110,7 @@ public final class DocumentDbCollectionSourceArgs extends com.pulumi.resources.R
 
     /**
      * Copy source type.
-     * Expected value is 'DocumentDbCollectionSource'.
+     * Expected value is &#39;DocumentDbCollectionSource&#39;.
      * 
      */
     @Import(name="type", required=true)

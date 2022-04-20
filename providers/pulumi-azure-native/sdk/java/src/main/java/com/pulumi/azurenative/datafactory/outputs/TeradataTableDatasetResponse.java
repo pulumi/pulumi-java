@@ -64,7 +64,7 @@ public final class TeradataTableDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'TeradataTable'.
+     * Expected value is &#39;TeradataTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class TeradataTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'TeradataTable'.
+     * Expected value is &#39;TeradataTable&#39;.
      * 
     */
     public String type() {

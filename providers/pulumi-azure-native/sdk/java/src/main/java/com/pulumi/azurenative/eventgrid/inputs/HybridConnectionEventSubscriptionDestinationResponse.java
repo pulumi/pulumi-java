@@ -21,7 +21,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'HybridConnection'.
+     * Expected value is &#39;HybridConnection&#39;.
      * 
      */
     @Import(name="endpointType", required=true)

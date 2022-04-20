@@ -18,7 +18,7 @@ public final class AzureBlobFileSystemConfigurationResponse {
     private final @Nullable String accountKey;
     private final String accountName;
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     private final @Nullable String blobfuseOptions;
@@ -61,7 +61,7 @@ public final class AzureBlobFileSystemConfigurationResponse {
         return this.accountName;
     }
     /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
+     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
     */
     public Optional<String> blobfuseOptions() {

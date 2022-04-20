@@ -14,7 +14,7 @@ import java.util.Objects;
 public final class ScheduleBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedTriggerContext'.
+     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
      * 
      */
     private final String objectType;
@@ -41,7 +41,7 @@ public final class ScheduleBasedTriggerContextResponse {
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'ScheduleBasedTriggerContext'.
+     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
      * 
     */
     public String objectType() {

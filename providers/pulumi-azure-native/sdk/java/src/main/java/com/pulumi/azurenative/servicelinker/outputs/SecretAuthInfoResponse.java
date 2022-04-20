@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class SecretAuthInfoResponse {
     /**
      * The authentication type.
-     * Expected value is 'secret'.
+     * Expected value is &#39;secret&#39;.
      * 
      */
     private final String authType;
@@ -40,7 +40,7 @@ public final class SecretAuthInfoResponse {
 
     /**
      * The authentication type.
-     * Expected value is 'secret'.
+     * Expected value is &#39;secret&#39;.
      * 
     */
     public String authType() {

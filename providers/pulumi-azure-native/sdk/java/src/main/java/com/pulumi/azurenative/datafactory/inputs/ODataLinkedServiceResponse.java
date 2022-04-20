@@ -205,7 +205,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'OData'.
+     * Expected value is &#39;OData&#39;.
      * 
      */
     @Import(name="type", required=true)

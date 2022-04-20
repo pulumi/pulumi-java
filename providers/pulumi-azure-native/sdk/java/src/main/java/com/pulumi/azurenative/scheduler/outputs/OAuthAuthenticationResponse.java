@@ -33,7 +33,7 @@ public final class OAuthAuthenticationResponse {
     private final @Nullable String tenant;
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ActiveDirectoryOAuth'.
+     * Expected value is &#39;ActiveDirectoryOAuth&#39;.
      * 
      */
     private final String type;
@@ -82,7 +82,7 @@ public final class OAuthAuthenticationResponse {
     }
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ActiveDirectoryOAuth'.
+     * Expected value is &#39;ActiveDirectoryOAuth&#39;.
      * 
     */
     public String type() {

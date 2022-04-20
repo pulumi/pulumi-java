@@ -23,7 +23,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Network/networkSecurityGroups'.
+     * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

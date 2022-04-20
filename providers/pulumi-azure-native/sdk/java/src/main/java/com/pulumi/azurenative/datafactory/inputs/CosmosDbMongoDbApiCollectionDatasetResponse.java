@@ -115,7 +115,7 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
 
     /**
      * Type of dataset.
-     * Expected value is 'CosmosDbMongoDbApiCollection'.
+     * Expected value is &#39;CosmosDbMongoDbApiCollection&#39;.
      * 
      */
     @Import(name="type", required=true)

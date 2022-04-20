@@ -24,7 +24,7 @@ public final class HDInsightSparkActivityResponse {
      */
     private final @Nullable List<Object> arguments;
     /**
-     * The application's Java/Spark main class.
+     * The application&#39;s Java/Spark main class.
      * 
      */
     private final @Nullable String className;
@@ -69,7 +69,7 @@ public final class HDInsightSparkActivityResponse {
      */
     private final @Nullable Object proxyUser;
     /**
-     * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
+     * The root path in &#39;sparkJobLinkedService&#39; for all the job’s files. Type: string (or Expression with resultType string).
      * 
      */
     private final Object rootPath;
@@ -85,7 +85,7 @@ public final class HDInsightSparkActivityResponse {
     private final @Nullable LinkedServiceReferenceResponse sparkJobLinkedService;
     /**
      * Type of activity.
-     * Expected value is 'HDInsightSpark'.
+     * Expected value is &#39;HDInsightSpark&#39;.
      * 
      */
     private final String type;
@@ -137,7 +137,7 @@ public final class HDInsightSparkActivityResponse {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
-     * The application's Java/Spark main class.
+     * The application&#39;s Java/Spark main class.
      * 
     */
     public Optional<String> className() {
@@ -200,7 +200,7 @@ public final class HDInsightSparkActivityResponse {
         return Optional.ofNullable(this.proxyUser);
     }
     /**
-     * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
+     * The root path in &#39;sparkJobLinkedService&#39; for all the job’s files. Type: string (or Expression with resultType string).
      * 
     */
     public Object rootPath() {
@@ -222,7 +222,7 @@ public final class HDInsightSparkActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'HDInsightSpark'.
+     * Expected value is &#39;HDInsightSpark&#39;.
      * 
     */
     public String type() {

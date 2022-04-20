@@ -46,7 +46,7 @@ public final class ImageTemplateSharedImageDistributorResponse {
     private final @Nullable String storageAccountType;
     /**
      * Type of distribution.
-     * Expected value is 'SharedImage'.
+     * Expected value is &#39;SharedImage&#39;.
      * 
      */
     private final String type;
@@ -113,7 +113,7 @@ public final class ImageTemplateSharedImageDistributorResponse {
     }
     /**
      * Type of distribution.
-     * Expected value is 'SharedImage'.
+     * Expected value is &#39;SharedImage&#39;.
      * 
     */
     public String type() {

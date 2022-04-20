@@ -100,14 +100,14 @@ public class Pool extends com.pulumi.resources.CustomResource {
         return this.autoScaleRun;
     }
     /**
-     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
     @Export(name="certificates", type=List.class, parameters={CertificateReferenceResponse.class})
     private Output</* @Nullable */ List<CertificateReferenceResponse>> certificates;
 
     /**
-     * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
     public Output</* @Nullable */ List<CertificateReferenceResponse>> certificates() {
@@ -188,14 +188,14 @@ public class Pool extends com.pulumi.resources.CustomResource {
         return this.identity;
     }
     /**
-     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
      * 
      */
     @Export(name="interNodeCommunication", type=String.class, parameters={})
     private Output</* @Nullable */ String> interNodeCommunication;
 
     /**
-     * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
      * 
      */
     public Output</* @Nullable */ String> interNodeCommunication() {
@@ -298,14 +298,14 @@ public class Pool extends com.pulumi.resources.CustomResource {
         return this.resizeOperationStatus;
     }
     /**
-     * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     * Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
     @Export(name="scaleSettings", type=ScaleSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ScaleSettingsResponse> scaleSettings;
 
     /**
-     * @return Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     * @return Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
     public Output</* @Nullable */ ScaleSettingsResponse> scaleSettings() {

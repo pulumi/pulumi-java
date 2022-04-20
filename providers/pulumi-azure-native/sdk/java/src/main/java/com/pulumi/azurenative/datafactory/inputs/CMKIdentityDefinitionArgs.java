@@ -20,7 +20,7 @@ public final class CMKIdentityDefinitionArgs extends com.pulumi.resources.Resour
     public static final CMKIdentityDefinitionArgs Empty = new CMKIdentityDefinitionArgs();
 
     /**
-     * The resource id of the user assigned identity to authenticate to customer's key vault.
+     * The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
      * 
      */
     @Import(name="userAssignedIdentity")

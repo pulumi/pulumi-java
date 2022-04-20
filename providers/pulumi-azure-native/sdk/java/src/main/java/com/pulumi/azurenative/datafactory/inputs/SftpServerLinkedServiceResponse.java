@@ -183,7 +183,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'Sftp'.
+     * Expected value is &#39;Sftp&#39;.
      * 
      */
     @Import(name="type", required=true)

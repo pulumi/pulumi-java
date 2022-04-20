@@ -78,7 +78,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+     * The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
      * 
      */
     @Import(name="protocol", required=true)

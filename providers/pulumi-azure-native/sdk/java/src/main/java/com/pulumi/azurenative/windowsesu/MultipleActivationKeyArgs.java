@@ -44,7 +44,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
+     * &lt;code&gt; true &lt;/code&gt; if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; &lt;code&gt; false &lt;/code&gt; otherwise.
      * 
      */
     @Import(name="isEligible")

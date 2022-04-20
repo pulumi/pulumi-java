@@ -193,14 +193,14 @@ public class Extension extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
+     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
      */
     @Export(name="releaseTrain", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseTrain;
 
     /**
-     * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
+     * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
      */
     public Output</* @Nullable */ String> releaseTrain() {
@@ -263,14 +263,14 @@ public class Extension extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
-     * @return Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+     * @return Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
      */
     public Output</* @Nullable */ String> version() {

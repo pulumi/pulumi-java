@@ -99,7 +99,7 @@ public final class XeroSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'XeroSource'.
+     * Expected value is &#39;XeroSource&#39;.
      * 
      */
     @Import(name="type", required=true)

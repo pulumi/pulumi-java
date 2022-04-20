@@ -42,7 +42,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The worker profile name.  Must be "worker" (immutable).
+     * The worker profile name.  Must be &#34;worker&#34; (immutable).
      * 
      */
     @Import(name="name")

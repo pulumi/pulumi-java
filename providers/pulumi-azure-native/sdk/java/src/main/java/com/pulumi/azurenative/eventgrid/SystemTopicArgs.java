@@ -40,7 +40,7 @@ public final class SystemTopicArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)

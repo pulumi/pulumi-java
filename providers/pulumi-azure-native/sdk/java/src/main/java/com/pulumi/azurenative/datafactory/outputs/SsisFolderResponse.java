@@ -29,7 +29,7 @@ public final class SsisFolderResponse {
     private final @Nullable String name;
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Folder'.
+     * Expected value is &#39;Folder&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class SsisFolderResponse {
     }
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Folder'.
+     * Expected value is &#39;Folder&#39;.
      * 
     */
     public String type() {

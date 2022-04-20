@@ -24,7 +24,7 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
     private final @Nullable Object timestampFormat;
     /**
      * The export setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeExportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
      * 
      */
     private final String type;
@@ -55,7 +55,7 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
     }
     /**
      * The export setting type.
-     * Expected value is 'AzureDatabricksDeltaLakeExportCommand'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
      * 
     */
     public String type() {

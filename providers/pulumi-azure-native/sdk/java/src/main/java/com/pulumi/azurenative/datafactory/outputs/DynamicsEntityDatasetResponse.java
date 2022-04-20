@@ -59,7 +59,7 @@ public final class DynamicsEntityDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsEntity'.
+     * Expected value is &#39;DynamicsEntity&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class DynamicsEntityDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'DynamicsEntity'.
+     * Expected value is &#39;DynamicsEntity&#39;.
      * 
     */
     public String type() {

@@ -115,7 +115,7 @@ public final class ConcurObjectDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'ConcurObject'.
+     * Expected value is &#39;ConcurObject&#39;.
      * 
      */
     @Import(name="type", required=true)

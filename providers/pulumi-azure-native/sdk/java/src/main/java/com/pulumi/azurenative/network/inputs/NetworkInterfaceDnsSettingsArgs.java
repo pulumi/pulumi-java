@@ -21,7 +21,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
     public static final NetworkInterfaceDnsSettingsArgs Empty = new NetworkInterfaceDnsSettingsArgs();
 
     /**
-     * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     * List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
      */
     @Import(name="dnsServers")

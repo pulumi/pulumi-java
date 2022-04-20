@@ -64,14 +64,14 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
         return this.backendPort;
     }
     /**
-     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
     @Export(name="enableFloatingIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFloatingIP;
 
     /**
-     * @return Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
     public Output</* @Nullable */ Boolean> enableFloatingIP() {

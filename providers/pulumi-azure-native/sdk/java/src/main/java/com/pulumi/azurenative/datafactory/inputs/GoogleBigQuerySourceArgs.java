@@ -99,7 +99,7 @@ public final class GoogleBigQuerySourceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Copy source type.
-     * Expected value is 'GoogleBigQuerySource'.
+     * Expected value is &#39;GoogleBigQuerySource&#39;.
      * 
      */
     @Import(name="type", required=true)

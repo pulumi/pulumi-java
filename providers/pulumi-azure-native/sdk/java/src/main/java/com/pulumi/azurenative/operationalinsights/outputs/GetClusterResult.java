@@ -25,7 +25,7 @@ public final class GetClusterResult {
      */
     private final @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces;
     /**
-     * The cluster's billing type.
+     * The cluster&#39;s billing type.
      * 
      */
     private final @Nullable String billingType;
@@ -55,7 +55,7 @@ public final class GetClusterResult {
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
     private final @Nullable Boolean isAvailabilityZonesEnabled;
@@ -95,7 +95,7 @@ public final class GetClusterResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class GetClusterResult {
         return this.associatedWorkspaces == null ? List.of() : this.associatedWorkspaces;
     }
     /**
-     * The cluster's billing type.
+     * The cluster&#39;s billing type.
      * 
     */
     public Optional<String> billingType() {
@@ -186,7 +186,7 @@ public final class GetClusterResult {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
     */
     public Optional<Boolean> isAvailabilityZonesEnabled() {
@@ -242,7 +242,7 @@ public final class GetClusterResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

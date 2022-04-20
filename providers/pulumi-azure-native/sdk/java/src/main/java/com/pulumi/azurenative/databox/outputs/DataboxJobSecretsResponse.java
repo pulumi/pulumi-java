@@ -26,7 +26,7 @@ public final class DataboxJobSecretsResponse {
     private final CloudErrorResponse error;
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     private final String jobSecretsType;
@@ -64,7 +64,7 @@ public final class DataboxJobSecretsResponse {
     }
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
     */
     public String jobSecretsType() {

@@ -25,7 +25,7 @@ public final class GetSavedSearchResult {
      */
     private final String displayName;
     /**
-     * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
+     * The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
      */
     private final @Nullable String etag;
@@ -35,7 +35,7 @@ public final class GetSavedSearchResult {
      */
     private final @Nullable String functionAlias;
     /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
     private final @Nullable String functionParameters;
@@ -60,7 +60,7 @@ public final class GetSavedSearchResult {
      */
     private final @Nullable List<TagResponse> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class GetSavedSearchResult {
         return this.displayName;
     }
     /**
-     * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
+     * The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
     */
     public Optional<String> etag() {
@@ -125,7 +125,7 @@ public final class GetSavedSearchResult {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
     */
     public Optional<String> functionParameters() {
@@ -160,7 +160,7 @@ public final class GetSavedSearchResult {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

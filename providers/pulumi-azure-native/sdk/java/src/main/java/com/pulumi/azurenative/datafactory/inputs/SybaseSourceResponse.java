@@ -99,7 +99,7 @@ public final class SybaseSourceResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'SybaseSource'.
+     * Expected value is &#39;SybaseSource&#39;.
      * 
      */
     @Import(name="type", required=true)

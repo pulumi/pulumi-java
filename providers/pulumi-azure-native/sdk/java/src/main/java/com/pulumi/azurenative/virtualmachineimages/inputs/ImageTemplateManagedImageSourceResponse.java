@@ -30,7 +30,7 @@ public final class ImageTemplateManagedImageSourceResponse extends com.pulumi.re
 
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -78,7 +78,7 @@ public final class ApplicationRuleConditionResponse extends com.pulumi.resources
 
     /**
      * Rule Condition Type.
-     * Expected value is 'ApplicationRuleCondition'.
+     * Expected value is &#39;ApplicationRuleCondition&#39;.
      * 
      */
     @Import(name="ruleConditionType", required=true)

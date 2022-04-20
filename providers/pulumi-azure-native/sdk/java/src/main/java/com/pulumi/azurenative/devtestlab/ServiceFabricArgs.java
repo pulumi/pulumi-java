@@ -28,7 +28,7 @@ public final class ServiceFabricArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The backing service fabric resource's id
+     * The backing service fabric resource&#39;s id
      * 
      */
     @Import(name="externalServiceFabricId")

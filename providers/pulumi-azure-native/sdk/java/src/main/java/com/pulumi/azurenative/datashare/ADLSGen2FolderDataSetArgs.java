@@ -61,7 +61,7 @@ public final class ADLSGen2FolderDataSetArgs extends com.pulumi.resources.Resour
 
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2Folder'.
+     * Expected value is &#39;AdlsGen2Folder&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -83,7 +83,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse extends com.pulumi
 
     /**
      * Task type.
-     * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
+     * Expected value is &#39;GetUserTables.AzureSqlDb.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

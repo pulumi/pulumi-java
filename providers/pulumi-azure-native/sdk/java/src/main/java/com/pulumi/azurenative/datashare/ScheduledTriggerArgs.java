@@ -31,7 +31,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Kind of synchronization on trigger.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     @Import(name="kind", required=true)

@@ -59,7 +59,7 @@ public final class ConcurObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'ConcurObject'.
+     * Expected value is &#39;ConcurObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class ConcurObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'ConcurObject'.
+     * Expected value is &#39;ConcurObject&#39;.
      * 
     */
     public String type() {

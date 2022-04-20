@@ -38,7 +38,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
+     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
      */
     @Import(name="endpointLocation")
@@ -71,7 +71,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
     @Import(name="geoMapping")
@@ -93,7 +93,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Import(name="minChildEndpoints")
@@ -104,7 +104,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Import(name="minChildEndpointsIPv4")
@@ -115,7 +115,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     @Import(name="minChildEndpointsIPv6")
@@ -137,7 +137,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
     @Import(name="priority")
@@ -148,7 +148,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
     @Import(name="subnets")
@@ -170,7 +170,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
+     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
      */
     @Import(name="targetResourceId")
@@ -192,7 +192,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
+     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
      */
     @Import(name="weight")

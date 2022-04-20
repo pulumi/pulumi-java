@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GitRepoVolumeResponse {
     /**
-     * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     private final @Nullable String directory;
@@ -38,7 +38,7 @@ public final class GitRepoVolumeResponse {
     }
 
     /**
-     * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
     */
     public Optional<String> directory() {

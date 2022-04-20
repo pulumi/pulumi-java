@@ -51,7 +51,7 @@ public final class OrcSinkResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy sink type.
-     * Expected value is 'OrcSink'.
+     * Expected value is &#39;OrcSink&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class OrcSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'OrcSink'.
+     * Expected value is &#39;OrcSink&#39;.
      * 
     */
     public String type() {

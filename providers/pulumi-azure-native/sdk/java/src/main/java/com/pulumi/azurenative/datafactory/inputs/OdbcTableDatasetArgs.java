@@ -115,7 +115,7 @@ public final class OdbcTableDatasetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of dataset.
-     * Expected value is 'OdbcTable'.
+     * Expected value is &#39;OdbcTable&#39;.
      * 
      */
     @Import(name="type", required=true)

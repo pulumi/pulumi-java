@@ -56,7 +56,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
 
     /**
      * The class type.
-     * Expected value is 'InMage'.
+     * Expected value is &#39;InMage&#39;.
      * 
      */
     @Import(name="instanceType")

@@ -129,7 +129,7 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
     @Import(name="version")

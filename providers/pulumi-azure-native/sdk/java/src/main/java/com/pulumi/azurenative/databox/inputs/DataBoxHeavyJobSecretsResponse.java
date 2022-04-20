@@ -56,7 +56,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
 
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxHeavy'.
+     * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
     @Import(name="jobSecretsType", required=true)

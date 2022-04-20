@@ -19,7 +19,7 @@ public final class TarGZipReadSettingsResponse {
     private final @Nullable Object preserveCompressionFileNameAsFolder;
     /**
      * The Compression setting type.
-     * Expected value is 'TarGZipReadSettings'.
+     * Expected value is &#39;TarGZipReadSettings&#39;.
      * 
      */
     private final String type;
@@ -41,7 +41,7 @@ public final class TarGZipReadSettingsResponse {
     }
     /**
      * The Compression setting type.
-     * Expected value is 'TarGZipReadSettings'.
+     * Expected value is &#39;TarGZipReadSettings&#39;.
      * 
     */
     public String type() {

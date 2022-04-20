@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
     /**
-     * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+     * Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
      * 
      */
     private final @Nullable Boolean protectFromScaleIn;
@@ -31,7 +31,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
     }
 
     /**
-     * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+     * Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
      * 
     */
     public Optional<Boolean> protectFromScaleIn() {

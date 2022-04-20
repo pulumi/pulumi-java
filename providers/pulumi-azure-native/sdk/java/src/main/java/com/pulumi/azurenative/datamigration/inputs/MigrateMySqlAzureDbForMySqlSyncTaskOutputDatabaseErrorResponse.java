@@ -52,7 +52,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
 
     /**
      * Result type
-     * Expected value is 'DatabaseLevelErrorOutput'.
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

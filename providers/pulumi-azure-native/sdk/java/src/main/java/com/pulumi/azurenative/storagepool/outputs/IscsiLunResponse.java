@@ -15,7 +15,7 @@ public final class IscsiLunResponse {
      */
     private final String managedDiskAzureResourceId;
     /**
-     * User defined name for iSCSI LUN; example: "lun0"
+     * User defined name for iSCSI LUN; example: &#34;lun0&#34;
      * 
      */
     private final String name;
@@ -36,7 +36,7 @@ public final class IscsiLunResponse {
         return this.managedDiskAzureResourceId;
     }
     /**
-     * User defined name for iSCSI LUN; example: "lun0"
+     * User defined name for iSCSI LUN; example: &#34;lun0&#34;
      * 
     */
     public String name() {

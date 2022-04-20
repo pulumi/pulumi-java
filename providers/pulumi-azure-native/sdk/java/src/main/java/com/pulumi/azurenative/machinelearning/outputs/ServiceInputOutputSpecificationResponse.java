@@ -29,7 +29,7 @@ public final class ServiceInputOutputSpecificationResponse {
      */
     private final @Nullable String title;
     /**
-     * The type of the entity described in swagger. Always 'object'.
+     * The type of the entity described in swagger. Always &#39;object&#39;.
      * 
      */
     private final String type;
@@ -68,7 +68,7 @@ public final class ServiceInputOutputSpecificationResponse {
         return Optional.ofNullable(this.title);
     }
     /**
-     * The type of the entity described in swagger. Always 'object'.
+     * The type of the entity described in swagger. Always &#39;object&#39;.
      * 
     */
     public String type() {

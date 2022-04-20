@@ -69,14 +69,14 @@ public class Route extends com.pulumi.resources.CustomResource {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
-     * @return Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> enabledState() {

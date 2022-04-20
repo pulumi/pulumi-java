@@ -21,7 +21,7 @@ public final class GetEndpointResult {
      */
     private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
     /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
+     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
      */
     private final @Nullable String endpointLocation;
@@ -36,7 +36,7 @@ public final class GetEndpointResult {
      */
     private final @Nullable String endpointStatus;
     /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
     private final @Nullable List<String> geoMapping;
@@ -46,17 +46,17 @@ public final class GetEndpointResult {
      */
     private final @Nullable String id;
     /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     private final @Nullable Double minChildEndpoints;
     /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     private final @Nullable Double minChildEndpointsIPv4;
     /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
     private final @Nullable Double minChildEndpointsIPv6;
@@ -66,12 +66,12 @@ public final class GetEndpointResult {
      */
     private final @Nullable String name;
     /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
     private final @Nullable Double priority;
     /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
     private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
@@ -81,7 +81,7 @@ public final class GetEndpointResult {
      */
     private final @Nullable String target;
     /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
+     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
      */
     private final @Nullable String targetResourceId;
@@ -91,7 +91,7 @@ public final class GetEndpointResult {
      */
     private final @Nullable String type;
     /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
+     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
      */
     private final @Nullable Double weight;
@@ -140,7 +140,7 @@ public final class GetEndpointResult {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
     /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
+     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
     */
     public Optional<String> endpointLocation() {
@@ -161,7 +161,7 @@ public final class GetEndpointResult {
         return Optional.ofNullable(this.endpointStatus);
     }
     /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
     */
     public List<String> geoMapping() {
@@ -175,21 +175,21 @@ public final class GetEndpointResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
     */
     public Optional<Double> minChildEndpoints() {
         return Optional.ofNullable(this.minChildEndpoints);
     }
     /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
     */
     public Optional<Double> minChildEndpointsIPv4() {
         return Optional.ofNullable(this.minChildEndpointsIPv4);
     }
     /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
     */
     public Optional<Double> minChildEndpointsIPv6() {
@@ -203,14 +203,14 @@ public final class GetEndpointResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
     */
     public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
     */
     public List<EndpointPropertiesResponseSubnets> subnets() {
@@ -224,7 +224,7 @@ public final class GetEndpointResult {
         return Optional.ofNullable(this.target);
     }
     /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
+     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
     */
     public Optional<String> targetResourceId() {
@@ -238,7 +238,7 @@ public final class GetEndpointResult {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
+     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
     */
     public Optional<Double> weight() {

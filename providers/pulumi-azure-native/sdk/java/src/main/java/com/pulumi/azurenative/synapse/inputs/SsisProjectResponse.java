@@ -91,7 +91,7 @@ public final class SsisProjectResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Project'.
+     * Expected value is &#39;Project&#39;.
      * 
      */
     @Import(name="type", required=true)

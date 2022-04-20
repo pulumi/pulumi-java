@@ -27,7 +27,7 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * List of path's spatial type
+     * List of path&#39;s spatial type
      * 
      */
     @Import(name="types")

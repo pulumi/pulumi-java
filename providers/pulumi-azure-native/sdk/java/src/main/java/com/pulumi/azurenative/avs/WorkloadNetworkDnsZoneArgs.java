@@ -51,7 +51,7 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
+     * NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
      * 
      */
     @Import(name="dnsZoneId")

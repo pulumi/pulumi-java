@@ -134,14 +134,14 @@ public class Server extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
-     * @return Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
+     * @return Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     public Output</* @Nullable */ String> minimalTlsVersion() {
@@ -190,14 +190,14 @@ public class Server extends com.pulumi.resources.CustomResource {
         return this.privateEndpointConnections;
     }
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
-     * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> publicNetworkAccess() {

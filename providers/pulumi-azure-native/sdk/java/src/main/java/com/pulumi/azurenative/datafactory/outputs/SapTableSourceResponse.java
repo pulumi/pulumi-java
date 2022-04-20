@@ -39,7 +39,7 @@ public final class SapTableSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
+     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -90,7 +90,7 @@ public final class SapTableSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapTableSource'.
+     * Expected value is &#39;SapTableSource&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class SapTableSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
+     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -238,7 +238,7 @@ public final class SapTableSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapTableSource'.
+     * Expected value is &#39;SapTableSource&#39;.
      * 
     */
     public String type() {

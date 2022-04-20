@@ -59,7 +59,7 @@ public final class AmazonRdsForOracleTableDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForOracleTable'.
+     * Expected value is &#39;AmazonRdsForOracleTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AmazonRdsForOracleTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForOracleTable'.
+     * Expected value is &#39;AmazonRdsForOracleTable&#39;.
      * 
     */
     public String type() {

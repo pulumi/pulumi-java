@@ -95,7 +95,7 @@ public final class DelimitedTextSinkArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Copy sink type.
-     * Expected value is 'DelimitedTextSink'.
+     * Expected value is &#39;DelimitedTextSink&#39;.
      * 
      */
     @Import(name="type", required=true)

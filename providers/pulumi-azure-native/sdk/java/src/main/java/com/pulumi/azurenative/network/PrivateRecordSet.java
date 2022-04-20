@@ -239,14 +239,14 @@ public class PrivateRecordSet extends com.pulumi.resources.CustomResource {
         return this.txtRecords;
     }
     /**
-     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     * @return The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
      */
     public Output<String> type() {

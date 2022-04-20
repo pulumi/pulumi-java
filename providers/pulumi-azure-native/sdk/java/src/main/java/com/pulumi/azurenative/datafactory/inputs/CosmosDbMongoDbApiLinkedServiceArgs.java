@@ -103,7 +103,7 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends com.pulumi.resour
 
     /**
      * Type of linked service.
-     * Expected value is 'CosmosDbMongoDbApi'.
+     * Expected value is &#39;CosmosDbMongoDbApi&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -20,7 +20,7 @@ public final class AmlTokenArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine identity framework.
-     * Expected value is 'AMLToken'.
+     * Expected value is &#39;AMLToken&#39;.
      * 
      */
     @Import(name="identityType", required=true)

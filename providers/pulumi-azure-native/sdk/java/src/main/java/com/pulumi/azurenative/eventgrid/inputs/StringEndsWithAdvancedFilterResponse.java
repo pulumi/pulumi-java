@@ -33,7 +33,7 @@ public final class StringEndsWithAdvancedFilterResponse extends com.pulumi.resou
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringEndsWith'.
+     * Expected value is &#39;StringEndsWith&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

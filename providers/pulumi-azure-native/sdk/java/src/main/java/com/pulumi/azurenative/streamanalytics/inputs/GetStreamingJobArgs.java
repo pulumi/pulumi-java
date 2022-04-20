@@ -15,7 +15,7 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStreamingJobArgs Empty = new GetStreamingJobArgs();
 
     /**
-     * The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than 'inputs', 'transformation', 'outputs', and 'functions'.
+     * The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than &#39;inputs&#39;, &#39;transformation&#39;, &#39;outputs&#39;, and &#39;functions&#39;.
      * 
      */
     @Import(name="expand")

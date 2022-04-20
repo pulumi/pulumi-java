@@ -102,7 +102,7 @@ public final class GetBlockchainMemberResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the service - e.g. "Microsoft.Blockchain"
+     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
      */
     private final String type;
@@ -281,7 +281,7 @@ public final class GetBlockchainMemberResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the service - e.g. "Microsoft.Blockchain"
+     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
     */
     public String type() {

@@ -43,7 +43,7 @@ public final class MedianStoppingPolicyResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * Expected value is 'MedianStopping'.
+     * Expected value is &#39;MedianStopping&#39;.
      * 
      */
     @Import(name="policyType", required=true)

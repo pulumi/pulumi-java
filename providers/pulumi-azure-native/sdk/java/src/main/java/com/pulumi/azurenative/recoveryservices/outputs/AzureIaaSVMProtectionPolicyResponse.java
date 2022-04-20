@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 public final class AzureIaaSVMProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureIaasVM'.
+     * Expected value is &#39;AzureIaasVM&#39;.
      * 
      */
     private final String backupManagementType;
@@ -48,7 +48,7 @@ public final class AzureIaaSVMProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -73,7 +73,7 @@ public final class AzureIaaSVMProtectionPolicyResponse {
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureIaasVM'.
+     * Expected value is &#39;AzureIaasVM&#39;.
      * 
     */
     public String backupManagementType() {
@@ -111,7 +111,7 @@ public final class AzureIaaSVMProtectionPolicyResponse {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
     */
     public Optional<String> timeZone() {

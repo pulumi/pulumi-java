@@ -50,7 +50,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -108,7 +108,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
+     * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
      * 
     */
     public String taskType() {

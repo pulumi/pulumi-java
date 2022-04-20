@@ -49,7 +49,7 @@ public final class ServiceNowSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'ServiceNowSource'.
+     * Expected value is &#39;ServiceNowSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class ServiceNowSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ServiceNowSource'.
+     * Expected value is &#39;ServiceNowSource&#39;.
      * 
     */
     public String type() {

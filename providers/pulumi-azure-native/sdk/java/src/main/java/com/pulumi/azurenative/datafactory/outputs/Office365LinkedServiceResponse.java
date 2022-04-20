@@ -50,12 +50,12 @@ public final class Office365LinkedServiceResponse {
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     private final Object servicePrincipalId;
     /**
-     * Specify the application's key.
+     * Specify the application&#39;s key.
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
@@ -66,7 +66,7 @@ public final class Office365LinkedServiceResponse {
     private final Object servicePrincipalTenantId;
     /**
      * Type of linked service.
-     * Expected value is 'Office365'.
+     * Expected value is &#39;Office365&#39;.
      * 
      */
     private final String type;
@@ -138,14 +138,14 @@ public final class Office365LinkedServiceResponse {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
     */
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
-     * Specify the application's key.
+     * Specify the application&#39;s key.
      * 
     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
@@ -160,7 +160,7 @@ public final class Office365LinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Office365'.
+     * Expected value is &#39;Office365&#39;.
      * 
     */
     public String type() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The cluster's billing type.
+     * The cluster&#39;s billing type.
      * 
      */
     @EnumType

@@ -57,7 +57,7 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
 
     /**
      * Trigger type.
-     * Expected value is 'MultiplePipelineTrigger'.
+     * Expected value is &#39;MultiplePipelineTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -50,7 +50,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
+     * NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
      * 
      */
     @Import(name="publicIPId")

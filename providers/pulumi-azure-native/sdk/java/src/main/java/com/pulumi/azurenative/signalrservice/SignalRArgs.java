@@ -41,7 +41,7 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     @Import(name="features")
@@ -52,7 +52,7 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Import(name="kind")

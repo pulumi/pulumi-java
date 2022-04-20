@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     @EnumType

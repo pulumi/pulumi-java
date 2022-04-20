@@ -137,7 +137,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of dataset.
-     * Expected value is 'SapOpenHubTable'.
+     * Expected value is &#39;SapOpenHubTable&#39;.
      * 
      */
     @Import(name="type", required=true)

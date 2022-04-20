@@ -126,7 +126,7 @@ public final class HiveObjectDatasetResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of dataset.
-     * Expected value is 'HiveObject'.
+     * Expected value is &#39;HiveObject&#39;.
      * 
      */
     @Import(name="type", required=true)

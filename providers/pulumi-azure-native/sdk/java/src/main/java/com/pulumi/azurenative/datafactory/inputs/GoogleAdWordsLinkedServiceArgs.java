@@ -195,7 +195,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
 
     /**
      * Type of linked service.
-     * Expected value is 'GoogleAdWords'.
+     * Expected value is &#39;GoogleAdWords&#39;.
      * 
      */
     @Import(name="type", required=true)

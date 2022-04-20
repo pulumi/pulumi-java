@@ -118,7 +118,7 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends com.pulumi
 
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRdsForSqlServer'.
+     * Expected value is &#39;AmazonRdsForSqlServer&#39;.
      * 
      */
     @Import(name="type", required=true)

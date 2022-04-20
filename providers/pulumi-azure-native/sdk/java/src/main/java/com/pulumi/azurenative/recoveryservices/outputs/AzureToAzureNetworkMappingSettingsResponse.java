@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class AzureToAzureNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
-     * Expected value is 'AzureToAzure'.
+     * Expected value is &#39;AzureToAzure&#39;.
      * 
      */
     private final String instanceType;
@@ -40,7 +40,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
 
     /**
      * Gets the Instance type.
-     * Expected value is 'AzureToAzure'.
+     * Expected value is &#39;AzureToAzure&#39;.
      * 
     */
     public String instanceType() {

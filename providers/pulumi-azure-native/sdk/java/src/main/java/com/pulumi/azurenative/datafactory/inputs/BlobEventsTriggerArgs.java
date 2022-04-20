@@ -37,7 +37,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
     @Import(name="blobPathBeginsWith")
@@ -48,7 +48,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
     @Import(name="blobPathEndsWith")
@@ -115,7 +115,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Trigger type.
-     * Expected value is 'BlobEventsTrigger'.
+     * Expected value is &#39;BlobEventsTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

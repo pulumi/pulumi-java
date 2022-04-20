@@ -128,7 +128,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends com.pulumi.resou
 
     /**
      * Type of linked service.
-     * Expected value is 'MicrosoftAccess'.
+     * Expected value is &#39;MicrosoftAccess&#39;.
      * 
      */
     @Import(name="type", required=true)

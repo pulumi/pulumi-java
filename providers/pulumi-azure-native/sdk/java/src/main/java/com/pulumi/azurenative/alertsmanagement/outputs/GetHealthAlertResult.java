@@ -56,7 +56,7 @@ public final class GetHealthAlertResult {
      */
     private final String name;
     /**
-     * the list of resource id's that this health alert is scoped to.
+     * the list of resource id&#39;s that this health alert is scoped to.
      * 
      */
     private final @Nullable List<String> scopes;
@@ -154,7 +154,7 @@ public final class GetHealthAlertResult {
         return this.name;
     }
     /**
-     * the list of resource id's that this health alert is scoped to.
+     * the list of resource id&#39;s that this health alert is scoped to.
      * 
     */
     public List<String> scopes() {

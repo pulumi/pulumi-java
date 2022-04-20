@@ -91,14 +91,14 @@ public class ProximityPlacementGroup extends com.pulumi.resources.CustomResource
         return this.name;
     }
     /**
-     * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     * Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
      * 
      */
     @Export(name="proximityPlacementGroupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupType;
 
     /**
-     * @return Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     * @return Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
      * 
      */
     public Output</* @Nullable */ String> proximityPlacementGroupType() {

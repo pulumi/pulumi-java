@@ -27,7 +27,7 @@ public final class GetBlobFolderDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
      */
     private final String kind;
@@ -116,7 +116,7 @@ public final class GetBlobFolderDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'BlobFolder'.
+     * Expected value is &#39;BlobFolder&#39;.
      * 
     */
     public String kind() {

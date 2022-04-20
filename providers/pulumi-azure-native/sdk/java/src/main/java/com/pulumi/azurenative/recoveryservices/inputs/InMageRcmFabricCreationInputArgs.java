@@ -33,7 +33,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
 
     /**
      * Gets the class type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     @Import(name="instanceType")

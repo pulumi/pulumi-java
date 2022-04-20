@@ -57,7 +57,7 @@ public final class ParquetSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'ParquetSource'.
+     * Expected value is &#39;ParquetSource&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class ParquetSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ParquetSource'.
+     * Expected value is &#39;ParquetSource&#39;.
      * 
     */
     public String type() {

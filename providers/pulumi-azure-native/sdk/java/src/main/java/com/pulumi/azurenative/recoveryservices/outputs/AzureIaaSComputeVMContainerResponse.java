@@ -21,7 +21,7 @@ public final class AzureIaaSComputeVMContainerResponse {
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
      */
     private final String containerType;
@@ -88,7 +88,7 @@ public final class AzureIaaSComputeVMContainerResponse {
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
     */
     public String containerType() {

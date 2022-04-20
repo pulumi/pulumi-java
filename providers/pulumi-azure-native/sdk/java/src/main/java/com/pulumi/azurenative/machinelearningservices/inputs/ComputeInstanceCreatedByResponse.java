@@ -39,7 +39,7 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
     }
 
     /**
-     * Uniquely identifies user' Azure Active Directory organization.
+     * Uniquely identifies user&#39; Azure Active Directory organization.
      * 
      */
     @Import(name="userOrgId", required=true)

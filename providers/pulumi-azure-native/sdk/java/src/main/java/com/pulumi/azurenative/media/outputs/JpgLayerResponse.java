@@ -24,7 +24,7 @@ public final class JpgLayerResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgLayer'.
+     * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
      * 
      */
     private final String odataType;
@@ -69,7 +69,7 @@ public final class JpgLayerResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.JpgLayer'.
+     * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
      * 
     */
     public String odataType() {

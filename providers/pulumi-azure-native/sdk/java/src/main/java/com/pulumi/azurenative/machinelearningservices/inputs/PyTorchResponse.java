@@ -22,7 +22,7 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'PyTorch'.
+     * Expected value is &#39;PyTorch&#39;.
      * 
      */
     @Import(name="distributionType", required=true)

@@ -25,7 +25,7 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     public static final CreationDataArgs Empty = new CreationDataArgs();
 
     /**
-     * This enumerates the possible sources of a disk's creation.
+     * This enumerates the possible sources of a disk&#39;s creation.
      * 
      */
     @Import(name="createOption", required=true)

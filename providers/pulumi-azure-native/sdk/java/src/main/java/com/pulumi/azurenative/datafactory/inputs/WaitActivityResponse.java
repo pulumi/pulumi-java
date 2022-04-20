@@ -58,7 +58,7 @@ public final class WaitActivityResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Type of activity.
-     * Expected value is 'Wait'.
+     * Expected value is &#39;Wait&#39;.
      * 
      */
     @Import(name="type", required=true)

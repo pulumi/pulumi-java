@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServerResult {
     /**
-     * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     * The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
     private final @Nullable String administratorLogin;
@@ -63,7 +63,7 @@ public final class GetServerResult {
      */
     private final List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -98,7 +98,7 @@ public final class GetServerResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -156,7 +156,7 @@ public final class GetServerResult {
     }
 
     /**
-     * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     * The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
     */
     public Optional<String> administratorLogin() {
@@ -219,7 +219,7 @@ public final class GetServerResult {
         return this.privateEndpointConnections;
     }
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> publicNetworkAccess() {
@@ -268,7 +268,7 @@ public final class GetServerResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

@@ -33,7 +33,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
+     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
      * 
      */
     @Import(name="backendPort")
@@ -55,7 +55,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
     @Import(name="enableFloatingIP")
@@ -99,7 +99,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
      * 
      */
     @Import(name="frontendPort", required=true)

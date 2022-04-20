@@ -31,7 +31,7 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * the dimension operator. Only 'Include' and 'Exclude' are supported
+     * the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
      * 
      */
     @Import(name="operator", required=true)

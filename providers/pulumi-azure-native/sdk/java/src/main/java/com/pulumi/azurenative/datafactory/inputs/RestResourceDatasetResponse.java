@@ -159,7 +159,7 @@ public final class RestResourceDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'RestResource'.
+     * Expected value is &#39;RestResource&#39;.
      * 
      */
     @Import(name="type", required=true)

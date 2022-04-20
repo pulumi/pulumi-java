@@ -44,7 +44,7 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Expected value is 'AzureRetentionRule'.
+     * Expected value is &#39;AzureRetentionRule&#39;.
      * 
      */
     @Import(name="objectType", required=true)

@@ -33,7 +33,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
     private final @Nullable String adxTableName;
     /**
      * The type of time series connection resource.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
      */
     private final String connectionType;
@@ -117,7 +117,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
     }
     /**
      * The type of time series connection resource.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
     */
     public String connectionType() {

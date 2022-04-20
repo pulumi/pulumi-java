@@ -56,7 +56,7 @@ public final class GetCustomResourceProviderResult {
      */
     private final String type;
     /**
-     * A list of validations to run on the custom resource provider's requests.
+     * A list of validations to run on the custom resource provider&#39;s requests.
      * 
      */
     private final @Nullable List<CustomRPValidationsResponse> validations;
@@ -140,7 +140,7 @@ public final class GetCustomResourceProviderResult {
         return this.type;
     }
     /**
-     * A list of validations to run on the custom resource provider's requests.
+     * A list of validations to run on the custom resource provider&#39;s requests.
      * 
     */
     public List<CustomRPValidationsResponse> validations() {

@@ -29,7 +29,7 @@ public final class OracleCloudStorageLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'OracleCloudStorageLocation'.
+     * Expected value is &#39;OracleCloudStorageLocation&#39;.
      * 
      */
     private final String type;
@@ -76,7 +76,7 @@ public final class OracleCloudStorageLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'OracleCloudStorageLocation'.
+     * Expected value is &#39;OracleCloudStorageLocation&#39;.
      * 
     */
     public String type() {

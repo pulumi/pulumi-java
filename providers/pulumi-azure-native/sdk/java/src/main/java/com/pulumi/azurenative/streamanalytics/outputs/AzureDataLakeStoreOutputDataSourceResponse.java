@@ -53,7 +53,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
     private final @Nullable String tokenUserPrincipalName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.DataLake/Accounts'.
+     * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
      * 
      */
     private final String type;
@@ -138,7 +138,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.DataLake/Accounts'.
+     * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
      * 
     */
     public String type() {

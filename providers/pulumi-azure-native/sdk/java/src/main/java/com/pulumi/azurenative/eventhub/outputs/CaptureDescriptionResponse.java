@@ -25,7 +25,7 @@ public final class CaptureDescriptionResponse {
      */
     private final @Nullable Boolean enabled;
     /**
-     * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+     * Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
      * 
      */
     private final @Nullable String encoding;
@@ -76,7 +76,7 @@ public final class CaptureDescriptionResponse {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+     * Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
      * 
     */
     public Optional<String> encoding() {

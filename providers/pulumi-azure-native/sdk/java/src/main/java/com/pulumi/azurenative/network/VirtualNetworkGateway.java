@@ -55,14 +55,14 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
         return this.activeActive;
     }
     /**
-     * Virtual network gateway's BGP speaker settings.
+     * Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
-     * @return Virtual network gateway's BGP speaker settings.
+     * @return Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {

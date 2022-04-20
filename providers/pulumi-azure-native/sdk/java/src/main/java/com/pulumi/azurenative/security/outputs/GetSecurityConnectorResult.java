@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityConnectorResult {
     /**
-     * The multi cloud resource's cloud name.
+     * The multi cloud resource&#39;s cloud name.
      * 
      */
     private final @Nullable String cloudName;
@@ -60,7 +60,7 @@ public final class GetSecurityConnectorResult {
      */
     private final @Nullable List<Object> offerings;
     /**
-     * The multi cloud account's organizational data
+     * The multi cloud account&#39;s organizational data
      * 
      */
     private final @Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData;
@@ -109,7 +109,7 @@ public final class GetSecurityConnectorResult {
     }
 
     /**
-     * The multi cloud resource's cloud name.
+     * The multi cloud resource&#39;s cloud name.
      * 
     */
     public Optional<String> cloudName() {
@@ -165,7 +165,7 @@ public final class GetSecurityConnectorResult {
         return this.offerings == null ? List.of() : this.offerings;
     }
     /**
-     * The multi cloud account's organizational data
+     * The multi cloud account&#39;s organizational data
      * 
     */
     public Optional<SecurityConnectorPropertiesResponseOrganizationalData> organizationalData() {

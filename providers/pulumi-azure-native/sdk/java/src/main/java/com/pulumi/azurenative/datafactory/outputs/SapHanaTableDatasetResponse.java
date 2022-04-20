@@ -59,7 +59,7 @@ public final class SapHanaTableDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'SapHanaTable'.
+     * Expected value is &#39;SapHanaTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SapHanaTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SapHanaTable'.
+     * Expected value is &#39;SapHanaTable&#39;.
      * 
     */
     public String type() {

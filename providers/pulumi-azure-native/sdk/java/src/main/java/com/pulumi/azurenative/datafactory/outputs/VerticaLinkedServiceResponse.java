@@ -54,7 +54,7 @@ public final class VerticaLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
      * Type of linked service.
-     * Expected value is 'Vertica'.
+     * Expected value is &#39;Vertica&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class VerticaLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Vertica'.
+     * Expected value is &#39;Vertica&#39;.
      * 
     */
     public String type() {

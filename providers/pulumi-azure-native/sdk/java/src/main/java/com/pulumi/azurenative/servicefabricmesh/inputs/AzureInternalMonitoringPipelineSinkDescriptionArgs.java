@@ -66,7 +66,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
 
     /**
      * The kind of DiagnosticsSink.
-     * Expected value is 'AzureInternalMonitoringPipeline'.
+     * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
      * 
      */
     @Import(name="kind", required=true)

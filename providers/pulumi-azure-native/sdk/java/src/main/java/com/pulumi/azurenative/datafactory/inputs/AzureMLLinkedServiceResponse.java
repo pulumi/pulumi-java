@@ -150,7 +150,7 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureML'.
+     * Expected value is &#39;AzureML&#39;.
      * 
      */
     @Import(name="type", required=true)

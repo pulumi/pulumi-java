@@ -32,7 +32,7 @@ public final class GetBlobContainerDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     private final String kind;
@@ -130,7 +130,7 @@ public final class GetBlobContainerDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
     */
     public String kind() {

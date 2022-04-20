@@ -31,7 +31,7 @@ public final class ActivityTimelineItemResponse {
     private final String firstActivityTimeUTC;
     /**
      * The entity query kind
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
      */
     private final String kind;
@@ -101,7 +101,7 @@ public final class ActivityTimelineItemResponse {
     }
     /**
      * The entity query kind
-     * Expected value is 'Activity'.
+     * Expected value is &#39;Activity&#39;.
      * 
     */
     public String kind() {

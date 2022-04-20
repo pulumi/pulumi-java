@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class VMwareV2FabricSpecificDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareV2'.
+     * Expected value is &#39;VMwareV2&#39;.
      * 
      */
     private final String instanceType;
@@ -52,7 +52,7 @@ public final class VMwareV2FabricSpecificDetailsResponse {
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMwareV2'.
+     * Expected value is &#39;VMwareV2&#39;.
      * 
     */
     public String instanceType() {

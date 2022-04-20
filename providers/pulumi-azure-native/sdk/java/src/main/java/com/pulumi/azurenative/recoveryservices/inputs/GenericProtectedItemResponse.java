@@ -89,7 +89,7 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * Name of this backup item's fabric.
+     * Name of this backup item&#39;s fabric.
      * 
      */
     @Import(name="fabricName")
@@ -189,7 +189,7 @@ public final class GenericProtectedItemResponse extends com.pulumi.resources.Inv
 
     /**
      * backup item type.
-     * Expected value is 'GenericProtectedItem'.
+     * Expected value is &#39;GenericProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

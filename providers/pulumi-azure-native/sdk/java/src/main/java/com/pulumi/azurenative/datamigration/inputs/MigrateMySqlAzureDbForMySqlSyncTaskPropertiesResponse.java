@@ -88,7 +88,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * Task type.
-     * Expected value is 'Migrate.MySql.AzureDbForMySql.Sync'.
+     * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

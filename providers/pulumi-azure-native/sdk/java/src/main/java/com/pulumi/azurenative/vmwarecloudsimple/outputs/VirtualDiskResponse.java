@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualDiskResponse {
     /**
-     * Disk's Controller id
+     * Disk&#39;s Controller id
      * 
      */
     private final String controllerId;
     /**
-     * Disk's independence mode type
+     * Disk&#39;s independence mode type
      * 
      */
     private final String independenceMode;
     /**
-     * Disk's total size
+     * Disk&#39;s total size
      * 
      */
     private final Integer totalSize;
     /**
-     * Disk's id
+     * Disk&#39;s id
      * 
      */
     private final @Nullable String virtualDiskId;
     /**
-     * Disk's display name
+     * Disk&#39;s display name
      * 
      */
     private final String virtualDiskName;
@@ -53,35 +53,35 @@ public final class VirtualDiskResponse {
     }
 
     /**
-     * Disk's Controller id
+     * Disk&#39;s Controller id
      * 
     */
     public String controllerId() {
         return this.controllerId;
     }
     /**
-     * Disk's independence mode type
+     * Disk&#39;s independence mode type
      * 
     */
     public String independenceMode() {
         return this.independenceMode;
     }
     /**
-     * Disk's total size
+     * Disk&#39;s total size
      * 
     */
     public Integer totalSize() {
         return this.totalSize;
     }
     /**
-     * Disk's id
+     * Disk&#39;s id
      * 
     */
     public Optional<String> virtualDiskId() {
         return Optional.ofNullable(this.virtualDiskId);
     }
     /**
-     * Disk's display name
+     * Disk&#39;s display name
      * 
     */
     public String virtualDiskName() {

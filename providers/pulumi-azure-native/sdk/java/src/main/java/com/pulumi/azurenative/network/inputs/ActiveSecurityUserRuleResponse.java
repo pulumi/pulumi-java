@@ -124,7 +124,7 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
 
     /**
      * Whether the rule is custom or default.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     @Import(name="kind", required=true)

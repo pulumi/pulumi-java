@@ -33,7 +33,7 @@ public final class AllowlistCustomAlertRuleResponse {
     private final Boolean isEnabled;
     /**
      * The type of the custom alert rule.
-     * Expected value is 'AllowlistCustomAlertRule'.
+     * Expected value is &#39;AllowlistCustomAlertRule&#39;.
      * 
      */
     private final String ruleType;
@@ -89,7 +89,7 @@ public final class AllowlistCustomAlertRuleResponse {
     }
     /**
      * The type of the custom alert rule.
-     * Expected value is 'AllowlistCustomAlertRule'.
+     * Expected value is &#39;AllowlistCustomAlertRule&#39;.
      * 
     */
     public String ruleType() {

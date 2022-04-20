@@ -49,7 +49,7 @@ public final class GoogleAdWordsSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'GoogleAdWordsSource'.
+     * Expected value is &#39;GoogleAdWordsSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class GoogleAdWordsSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'GoogleAdWordsSource'.
+     * Expected value is &#39;GoogleAdWordsSource&#39;.
      * 
     */
     public String type() {

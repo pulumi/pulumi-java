@@ -33,7 +33,7 @@ public final class AKSArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of compute
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     @Import(name="computeType", required=true)

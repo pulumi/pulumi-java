@@ -27,7 +27,7 @@ public final class GetKustoClusterDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     private final String kind;
@@ -109,7 +109,7 @@ public final class GetKustoClusterDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoCluster'.
+     * Expected value is &#39;KustoCluster&#39;.
      * 
     */
     public String kind() {

@@ -41,7 +41,7 @@ public final class GetPipelineResult {
      */
     private final Integer pipelineId;
     /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     private final String pipelineType;
@@ -119,7 +119,7 @@ public final class GetPipelineResult {
         return this.pipelineId;
     }
     /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
     */
     public String pipelineType() {

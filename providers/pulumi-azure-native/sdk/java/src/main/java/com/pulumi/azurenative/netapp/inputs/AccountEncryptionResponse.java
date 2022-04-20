@@ -19,7 +19,7 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     public static final AccountEncryptionResponse Empty = new AccountEncryptionResponse();
 
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
      * 
      */
     @Import(name="keySource")

@@ -23,12 +23,12 @@ public final class ManagedServiceIdentityResponse {
      */
     private final String tenantId;
     /**
-     * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+     * Type of managed service identity. The type &#39;SystemAssigned&#39; includes an implicitly created identity. The type &#39;None&#39; will remove any identities from the resource.
      * 
      */
     private final String type;
     /**
-     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
      * 
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
@@ -60,14 +60,14 @@ public final class ManagedServiceIdentityResponse {
         return this.tenantId;
     }
     /**
-     * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+     * Type of managed service identity. The type &#39;SystemAssigned&#39; includes an implicitly created identity. The type &#39;None&#39; will remove any identities from the resource.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+     * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
      * 
     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {

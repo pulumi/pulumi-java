@@ -66,7 +66,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
 
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'PlatformImage'.
+     * Expected value is &#39;PlatformImage&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -77,7 +77,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
     }
 
     /**
-     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
+     * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If &#39;latest&#39; is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying &#39;latest&#39; could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
      */
     @Import(name="version")

@@ -131,14 +131,14 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
         return this.releaseNoteUri;
     }
     /**
-     * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     @Export(name="supportedOSType", type=String.class, parameters={})
     private Output<String> supportedOSType;
 
     /**
-     * @return This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * @return This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     public Output<String> supportedOSType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @EnumType

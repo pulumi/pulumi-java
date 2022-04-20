@@ -17,12 +17,12 @@ public final class ResourceIdentityResponse {
      */
     private final String principalId;
     /**
-     * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+     * The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
      * 
      */
     private final String tenantId;
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
      */
     private final @Nullable String type;
@@ -45,14 +45,14 @@ public final class ResourceIdentityResponse {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+     * The tenant id associated with the resource&#39;s identity. This property will only be provided for a system-assigned identity.
      * 
     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
     */
     public Optional<String> type() {

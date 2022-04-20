@@ -130,14 +130,14 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+     * The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+     * @return The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
      * 
      */
     public Output<String> type() {

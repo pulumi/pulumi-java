@@ -52,7 +52,7 @@ public final class A2AReplicationDetailsResponse {
     private final String initialRecoveryZone;
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
      */
     private final String instanceType;
@@ -72,7 +72,7 @@ public final class A2AReplicationDetailsResponse {
      */
     private final @Nullable String lastRpoCalculatedTime;
     /**
-     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
+     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the &#34;same&#34; protected item even though other internal Ids/ARM Id might be changing.
      * 
      */
     private final @Nullable String lifecycleId;
@@ -364,7 +364,7 @@ public final class A2AReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'A2A'.
+     * Expected value is &#39;A2A&#39;.
      * 
     */
     public String instanceType() {
@@ -392,7 +392,7 @@ public final class A2AReplicationDetailsResponse {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
-     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
+     * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the &#34;same&#34; protected item even though other internal Ids/ARM Id might be changing.
      * 
     */
     public Optional<String> lifecycleId() {

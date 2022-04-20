@@ -54,7 +54,7 @@ public final class CommonDataServiceForAppsSourceResponse extends com.pulumi.res
     }
 
     /**
-     * FetchXML is a proprietary query language that is used in Microsoft Common Data Service for Apps (online & on-premises). Type: string (or Expression with resultType string).
+     * FetchXML is a proprietary query language that is used in Microsoft Common Data Service for Apps (online &amp; on-premises). Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -88,7 +88,7 @@ public final class CommonDataServiceForAppsSourceResponse extends com.pulumi.res
 
     /**
      * Copy source type.
-     * Expected value is 'CommonDataServiceForAppsSource'.
+     * Expected value is &#39;CommonDataServiceForAppsSource&#39;.
      * 
      */
     @Import(name="type", required=true)

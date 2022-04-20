@@ -178,7 +178,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'HttpFile'.
+     * Expected value is &#39;HttpFile&#39;.
      * 
      */
     @Import(name="type", required=true)

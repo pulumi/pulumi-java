@@ -31,7 +31,7 @@ public final class AzureSqlSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -71,13 +71,13 @@ public final class AzureSqlSourceResponse {
      */
     private final @Nullable Object sqlReaderStoredProcedureName;
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
     /**
      * Copy source type.
-     * Expected value is 'AzureSqlSource'.
+     * Expected value is &#39;AzureSqlSource&#39;.
      * 
      */
     private final String type;
@@ -134,7 +134,7 @@ public final class AzureSqlSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -190,7 +190,7 @@ public final class AzureSqlSourceResponse {
         return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
     */
     public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
@@ -198,7 +198,7 @@ public final class AzureSqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureSqlSource'.
+     * Expected value is &#39;AzureSqlSource&#39;.
      * 
     */
     public String type() {

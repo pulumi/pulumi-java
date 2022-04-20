@@ -164,28 +164,28 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
      */
     @Export(name="osState", type=String.class, parameters={})
     private Output<String> osState;
 
     /**
-     * @return This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * @return This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
      */
     public Output<String> osState() {
         return this.osState;
     }
     /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
-     * @return This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * @return This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     public Output<String> osType() {

@@ -71,7 +71,7 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Expected value that satisfies the expression result of the 'on' property.
+     * Expected value that satisfies the expression result of the &#39;on&#39; property.
      * 
      */
     @Import(name="value")

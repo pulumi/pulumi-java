@@ -20,7 +20,7 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     public static final GcmCredentialArgs Empty = new GcmCredentialArgs();
 
     /**
-     * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
+     * The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
      * 
      */
     @Import(name="gcmEndpoint")

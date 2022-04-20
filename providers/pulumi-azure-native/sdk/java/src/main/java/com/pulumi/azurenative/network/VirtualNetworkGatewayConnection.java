@@ -350,14 +350,14 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
         return this.trafficSelectorPolicies;
     }
     /**
-     * Collection of all tunnels' connection health status.
+     * Collection of all tunnels&#39; connection health status.
      * 
      */
     @Export(name="tunnelConnectionStatus", type=List.class, parameters={TunnelConnectionHealthResponse.class})
     private Output<List<TunnelConnectionHealthResponse>> tunnelConnectionStatus;
 
     /**
-     * @return Collection of all tunnels' connection health status.
+     * @return Collection of all tunnels&#39; connection health status.
      * 
      */
     public Output<List<TunnelConnectionHealthResponse>> tunnelConnectionStatus() {

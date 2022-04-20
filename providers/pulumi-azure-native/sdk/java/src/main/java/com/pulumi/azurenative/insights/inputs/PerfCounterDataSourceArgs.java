@@ -27,7 +27,7 @@ public final class PerfCounterDataSourceArgs extends com.pulumi.resources.Resour
     /**
      * A list of specifier names of the performance counters you want to collect.
      * Use a wildcard (*) to collect a counter for all instances.
-     * To get a list of performance counters on Windows, run the command 'typeperf'.
+     * To get a list of performance counters on Windows, run the command &#39;typeperf&#39;.
      * 
      */
     @Import(name="counterSpecifiers")

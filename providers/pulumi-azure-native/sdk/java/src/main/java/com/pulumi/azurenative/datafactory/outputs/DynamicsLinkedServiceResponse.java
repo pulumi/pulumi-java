@@ -26,7 +26,7 @@ public final class DynamicsLinkedServiceResponse {
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+     * The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
      */
     private final Object authenticationType;
@@ -41,7 +41,7 @@ public final class DynamicsLinkedServiceResponse {
      */
     private final @Nullable CredentialReferenceResponse credential;
     /**
-     * The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+     * The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
      */
     private final Object deploymentType;
@@ -81,12 +81,12 @@ public final class DynamicsLinkedServiceResponse {
      */
     private final @Nullable Object port;
     /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
     /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object servicePrincipalCredentialType;
@@ -102,7 +102,7 @@ public final class DynamicsLinkedServiceResponse {
     private final @Nullable Object serviceUri;
     /**
      * Type of linked service.
-     * Expected value is 'Dynamics'.
+     * Expected value is &#39;Dynamics&#39;.
      * 
      */
     private final String type;
@@ -160,7 +160,7 @@ public final class DynamicsLinkedServiceResponse {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+     * The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
     */
     public Object authenticationType() {
@@ -181,7 +181,7 @@ public final class DynamicsLinkedServiceResponse {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+     * The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
     */
     public Object deploymentType() {
@@ -237,14 +237,14 @@ public final class DynamicsLinkedServiceResponse {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalCredential() {
         return Optional.ofNullable(this.servicePrincipalCredential);
     }
     /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> servicePrincipalCredentialType() {
@@ -266,7 +266,7 @@ public final class DynamicsLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Dynamics'.
+     * Expected value is &#39;Dynamics&#39;.
      * 
     */
     public String type() {

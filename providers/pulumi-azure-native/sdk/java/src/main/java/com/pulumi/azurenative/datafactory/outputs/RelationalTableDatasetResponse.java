@@ -59,7 +59,7 @@ public final class RelationalTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'RelationalTable'.
+     * Expected value is &#39;RelationalTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class RelationalTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'RelationalTable'.
+     * Expected value is &#39;RelationalTable&#39;.
      * 
     */
     public String type() {

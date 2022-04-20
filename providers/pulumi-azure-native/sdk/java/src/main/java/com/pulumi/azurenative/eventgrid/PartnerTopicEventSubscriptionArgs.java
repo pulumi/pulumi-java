@@ -32,8 +32,8 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     public static final PartnerTopicEventSubscriptionArgs Empty = new PartnerTopicEventSubscriptionArgs();
 
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     @Import(name="deadLetterDestination")
@@ -44,7 +44,7 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     }
 
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
+     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
@@ -69,7 +69,7 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
 
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     @Import(name="destination")
@@ -146,7 +146,7 @@ public final class PartnerTopicEventSubscriptionArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)

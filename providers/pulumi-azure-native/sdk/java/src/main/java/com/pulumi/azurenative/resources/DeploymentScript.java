@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:resources:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
  * 
  */

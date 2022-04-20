@@ -41,7 +41,7 @@ public final class StreamInputPropertiesResponse {
     private final @Nullable Object serialization;
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Stream'.
+     * Expected value is &#39;Stream&#39;.
      * 
      */
     private final String type;
@@ -90,7 +90,7 @@ public final class StreamInputPropertiesResponse {
     }
     /**
      * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Stream'.
+     * Expected value is &#39;Stream&#39;.
      * 
     */
     public String type() {

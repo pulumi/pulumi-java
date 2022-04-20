@@ -34,7 +34,7 @@ public final class AzureBlobStorageWriteSettingsResponse {
     private final @Nullable Object maxConcurrentConnections;
     /**
      * The write setting type.
-     * Expected value is 'AzureBlobStorageWriteSettings'.
+     * Expected value is &#39;AzureBlobStorageWriteSettings&#39;.
      * 
      */
     private final String type;
@@ -83,7 +83,7 @@ public final class AzureBlobStorageWriteSettingsResponse {
     }
     /**
      * The write setting type.
-     * Expected value is 'AzureBlobStorageWriteSettings'.
+     * Expected value is &#39;AzureBlobStorageWriteSettings&#39;.
      * 
     */
     public String type() {

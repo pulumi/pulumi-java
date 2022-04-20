@@ -183,7 +183,7 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The type of the run request.
-     * Expected value is 'DockerBuildRequest'.
+     * Expected value is &#39;DockerBuildRequest&#39;.
      * 
      */
     @Import(name="type", required=true)

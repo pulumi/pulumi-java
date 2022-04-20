@@ -123,7 +123,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'BlobSink'.
+     * Expected value is &#39;BlobSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -43,7 +43,7 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
      * 
      */
     @Import(name="type")
@@ -55,7 +55,7 @@ public final class IdentityInfoResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-     * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * This property is currently not used and reserved for future usage.
      * 
      */

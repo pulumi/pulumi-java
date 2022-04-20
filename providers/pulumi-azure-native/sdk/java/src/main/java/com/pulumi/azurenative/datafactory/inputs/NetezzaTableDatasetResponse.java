@@ -126,7 +126,7 @@ public final class NetezzaTableDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'NetezzaTable'.
+     * Expected value is &#39;NetezzaTable&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -75,7 +75,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     }
 
     /**
-     * The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
+     * The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
      * 
      */
     @Import(name="partitionKey")
@@ -87,7 +87,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/DocumentDB'.
+     * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -66,7 +66,7 @@ public final class VirtualNetworkPeeringResponse {
      */
     private final @Nullable AddressSpaceResponse remoteAddressSpace;
     /**
-     * The reference to the remote virtual network's Bgp Communities.
+     * The reference to the remote virtual network&#39;s Bgp Communities.
      * 
      */
     private final @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
@@ -196,7 +196,7 @@ public final class VirtualNetworkPeeringResponse {
         return Optional.ofNullable(this.remoteAddressSpace);
     }
     /**
-     * The reference to the remote virtual network's Bgp Communities.
+     * The reference to the remote virtual network&#39;s Bgp Communities.
      * 
     */
     public Optional<VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {

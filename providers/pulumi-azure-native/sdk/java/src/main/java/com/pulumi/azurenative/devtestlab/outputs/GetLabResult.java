@@ -21,7 +21,7 @@ public final class GetLabResult {
      */
     private final @Nullable LabAnnouncementPropertiesResponse announcement;
     /**
-     * The lab's artifact storage account.
+     * The lab&#39;s artifact storage account.
      * 
      */
     private final String artifactsStorageAccount;
@@ -31,12 +31,12 @@ public final class GetLabResult {
      */
     private final String createdDate;
     /**
-     * The lab's default premium storage account.
+     * The lab&#39;s default premium storage account.
      * 
      */
     private final String defaultPremiumStorageAccount;
     /**
-     * The lab's default storage account.
+     * The lab&#39;s default storage account.
      * 
      */
     private final String defaultStorageAccount;
@@ -91,14 +91,14 @@ public final class GetLabResult {
      */
     private final String networkSecurityGroupId;
     /**
-     * The lab's premium data disk storage account.
+     * The lab&#39;s premium data disk storage account.
      * 
      */
     private final String premiumDataDiskStorageAccount;
     /**
      * The setting to enable usage of premium data disks.
-     * When its value is 'Enabled', creation of standard or premium data disks is allowed.
-     * When its value is 'Disabled', only creation of standard data disks is allowed.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
     private final @Nullable String premiumDataDisks;
@@ -108,7 +108,7 @@ public final class GetLabResult {
      */
     private final String provisioningState;
     /**
-     * The public IP address for the lab's load balancer.
+     * The public IP address for the lab&#39;s load balancer.
      * 
      */
     private final String publicIpId;
@@ -133,7 +133,7 @@ public final class GetLabResult {
      */
     private final String uniqueIdentifier;
     /**
-     * The lab's Key vault.
+     * The lab&#39;s Key vault.
      * 
      */
     private final String vaultName;
@@ -205,7 +205,7 @@ public final class GetLabResult {
         return Optional.ofNullable(this.announcement);
     }
     /**
-     * The lab's artifact storage account.
+     * The lab&#39;s artifact storage account.
      * 
     */
     public String artifactsStorageAccount() {
@@ -219,14 +219,14 @@ public final class GetLabResult {
         return this.createdDate;
     }
     /**
-     * The lab's default premium storage account.
+     * The lab&#39;s default premium storage account.
      * 
     */
     public String defaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
-     * The lab's default storage account.
+     * The lab&#39;s default storage account.
      * 
     */
     public String defaultStorageAccount() {
@@ -303,7 +303,7 @@ public final class GetLabResult {
         return this.networkSecurityGroupId;
     }
     /**
-     * The lab's premium data disk storage account.
+     * The lab&#39;s premium data disk storage account.
      * 
     */
     public String premiumDataDiskStorageAccount() {
@@ -311,8 +311,8 @@ public final class GetLabResult {
     }
     /**
      * The setting to enable usage of premium data disks.
-     * When its value is 'Enabled', creation of standard or premium data disks is allowed.
-     * When its value is 'Disabled', only creation of standard data disks is allowed.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
     */
     public Optional<String> premiumDataDisks() {
@@ -326,7 +326,7 @@ public final class GetLabResult {
         return this.provisioningState;
     }
     /**
-     * The public IP address for the lab's load balancer.
+     * The public IP address for the lab&#39;s load balancer.
      * 
     */
     public String publicIpId() {
@@ -361,7 +361,7 @@ public final class GetLabResult {
         return this.uniqueIdentifier;
     }
     /**
-     * The lab's Key vault.
+     * The lab&#39;s Key vault.
      * 
     */
     public String vaultName() {

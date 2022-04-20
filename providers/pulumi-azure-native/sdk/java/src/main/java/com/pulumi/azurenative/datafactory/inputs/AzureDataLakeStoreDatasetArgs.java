@@ -154,7 +154,7 @@ public final class AzureDataLakeStoreDatasetArgs extends com.pulumi.resources.Re
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureDataLakeStoreFile'.
+     * Expected value is &#39;AzureDataLakeStoreFile&#39;.
      * 
      */
     @Import(name="type", required=true)

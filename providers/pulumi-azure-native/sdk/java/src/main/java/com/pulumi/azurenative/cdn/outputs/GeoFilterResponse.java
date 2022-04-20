@@ -21,7 +21,7 @@ public final class GeoFilterResponse {
      */
     private final List<String> countryCodes;
     /**
-     * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
+     * Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
      * 
      */
     private final String relativePath;
@@ -51,7 +51,7 @@ public final class GeoFilterResponse {
         return this.countryCodes;
     }
     /**
-     * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
+     * Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
      * 
     */
     public String relativePath() {

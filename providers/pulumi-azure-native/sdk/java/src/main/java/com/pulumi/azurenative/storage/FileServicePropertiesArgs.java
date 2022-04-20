@@ -41,7 +41,7 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The name of the file Service within the specified storage account. File Service Name must be "default"
+     * The name of the file Service within the specified storage account. File Service Name must be &#34;default&#34;
      * 
      */
     @Import(name="fileServicesName")
@@ -63,7 +63,7 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

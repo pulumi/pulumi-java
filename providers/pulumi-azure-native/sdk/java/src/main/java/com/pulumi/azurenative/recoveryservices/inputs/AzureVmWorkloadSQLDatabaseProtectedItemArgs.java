@@ -252,7 +252,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSQLDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSQLDatabase&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

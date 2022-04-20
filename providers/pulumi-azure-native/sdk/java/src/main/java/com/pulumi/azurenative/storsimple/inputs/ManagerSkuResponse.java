@@ -17,7 +17,7 @@ public final class ManagerSkuResponse extends com.pulumi.resources.InvokeArgs {
     public static final ManagerSkuResponse Empty = new ManagerSkuResponse();
 
     /**
-     * Refers to the sku name which should be "Standard"
+     * Refers to the sku name which should be &#34;Standard&#34;
      * 
      */
     @Import(name="name", required=true)

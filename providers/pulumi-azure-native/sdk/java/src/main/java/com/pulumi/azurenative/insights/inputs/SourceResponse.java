@@ -53,7 +53,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Set value to 'ResultCount' .
+     * Set value to &#39;ResultCount&#39; .
      * 
      */
     @Import(name="queryType")

@@ -17,7 +17,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     public static final ResourceIdentityResponse Empty = new ResourceIdentityResponse();
 
     /**
-     * The user assigned managed identity's resource identifier to use when accessing a resource.
+     * The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
      * 
      */
     @Import(name="userAssignedIdentity", required=true)

@@ -114,7 +114,7 @@ public final class ValidationActivityArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of activity.
-     * Expected value is 'Validation'.
+     * Expected value is &#39;Validation&#39;.
      * 
      */
     @Import(name="type", required=true)

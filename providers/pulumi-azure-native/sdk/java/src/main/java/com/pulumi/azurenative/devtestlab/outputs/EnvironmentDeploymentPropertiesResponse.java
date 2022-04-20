@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentDeploymentPropertiesResponse {
     /**
-     * The Azure Resource Manager template's identifier.
+     * The Azure Resource Manager template&#39;s identifier.
      * 
      */
     private final @Nullable String armTemplateId;
@@ -33,7 +33,7 @@ public final class EnvironmentDeploymentPropertiesResponse {
     }
 
     /**
-     * The Azure Resource Manager template's identifier.
+     * The Azure Resource Manager template&#39;s identifier.
      * 
     */
     public Optional<String> armTemplateId() {

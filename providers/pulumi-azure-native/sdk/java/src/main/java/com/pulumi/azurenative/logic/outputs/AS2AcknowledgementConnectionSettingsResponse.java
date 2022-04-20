@@ -20,7 +20,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
      */
     private final Boolean keepHttpConnectionAlive;
     /**
-     * Indicates whether to support HTTP status code 'CONTINUE'.
+     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
      */
     private final Boolean supportHttpStatusCodeContinue;
@@ -57,7 +57,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
         return this.keepHttpConnectionAlive;
     }
     /**
-     * Indicates whether to support HTTP status code 'CONTINUE'.
+     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
     */
     public Boolean supportHttpStatusCodeContinue() {

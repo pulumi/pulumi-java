@@ -99,7 +99,7 @@ public final class AzureBlobFSSourceResponse extends com.pulumi.resources.Invoke
 
     /**
      * Copy source type.
-     * Expected value is 'AzureBlobFSSource'.
+     * Expected value is &#39;AzureBlobFSSource&#39;.
      * 
      */
     @Import(name="type", required=true)

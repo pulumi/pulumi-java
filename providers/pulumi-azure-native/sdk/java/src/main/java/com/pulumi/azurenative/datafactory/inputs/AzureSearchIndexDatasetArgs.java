@@ -115,7 +115,7 @@ public final class AzureSearchIndexDatasetArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureSearchIndex'.
+     * Expected value is &#39;AzureSearchIndex&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -22,7 +22,7 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum to determine the job distribution type.
-     * Expected value is 'PyTorch'.
+     * Expected value is &#39;PyTorch&#39;.
      * 
      */
     @Import(name="distributionType", required=true)

@@ -99,7 +99,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
     }
 
     /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeEnd")
@@ -110,7 +110,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
     }
 
     /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="modifiedDatetimeStart")
@@ -144,7 +144,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends com.pulumi.resourc
 
     /**
      * The read setting type.
-     * Expected value is 'AzureDataLakeStoreReadSettings'.
+     * Expected value is &#39;AzureDataLakeStoreReadSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

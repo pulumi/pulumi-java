@@ -51,28 +51,28 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.availabilityState;
     }
     /**
-     * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Export(name="clientAffinityEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientAffinityEnabled;
 
     /**
-     * @return <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> clientAffinityEnabled() {
         return this.clientAffinityEnabled;
     }
     /**
-     * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="clientCertEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientCertEnabled;
 
     /**
-     * @return <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> clientCertEnabled() {
@@ -169,14 +169,14 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.defaultHostName;
     }
     /**
-     * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
+     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
-     * @return <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
     public Output</* @Nullable */ Boolean> enabled() {
@@ -199,14 +199,14 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.enabledHostNames;
     }
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
+     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
     @Export(name="hostNameSslStates", type=List.class, parameters={HostNameSslStateResponse.class})
     private Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates;
 
     /**
-     * @return Hostname SSL states are used to manage the SSL bindings for app's hostnames.
+     * @return Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
     public Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates() {
@@ -227,16 +227,16 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.hostNames;
     }
     /**
-     * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
-     *  If <code>true</code>, the app is only accessible via API management process.
+     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
     @Export(name="hostNamesDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hostNamesDisabled;
 
     /**
-     * @return <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
-     *  If <code>true</code>, the app is only accessible via API management process.
+     * @return &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
     public Output</* @Nullable */ Boolean> hostNamesDisabled() {
@@ -315,14 +315,14 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.inProgressOperationId;
     }
     /**
-     * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="isDefaultContainer", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultContainer;
 
     /**
-     * @return <code>true</code> if the app is a default container; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output<Boolean> isDefaultContainer() {
@@ -485,14 +485,14 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.repositorySiteName;
     }
     /**
-     * <code>true</code> if reserved; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
-     * @return <code>true</code> if reserved; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> reserved() {
@@ -513,28 +513,28 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
         return this.resourceGroup;
     }
     /**
-     * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="scmSiteAlsoStopped", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> scmSiteAlsoStopped;
 
     /**
-     * @return <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> scmSiteAlsoStopped() {
         return this.scmSiteAlsoStopped;
     }
     /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     @Export(name="serverFarmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverFarmId;
 
     /**
-     * @return Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     public Output</* @Nullable */ String> serverFarmId() {

@@ -241,7 +241,7 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends com.pulumi
 
     /**
      * backup item type.
-     * Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
+     * Expected value is &#39;Microsoft.ClassicCompute/virtualMachines&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

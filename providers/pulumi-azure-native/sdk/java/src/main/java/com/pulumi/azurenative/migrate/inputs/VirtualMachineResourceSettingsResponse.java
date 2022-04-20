@@ -21,7 +21,7 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
      */
     @Import(name="resourceType", required=true)

@@ -27,7 +27,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 
     /**
-     * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
+     * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, &#34;Logging, Metrics&#34;), or None to bypass none of those traffics.
      * 
      */
     @Import(name="bypass")

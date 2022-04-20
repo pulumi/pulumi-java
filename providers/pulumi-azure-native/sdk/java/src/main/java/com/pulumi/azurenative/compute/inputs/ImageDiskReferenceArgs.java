@@ -32,7 +32,7 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+     * If the disk is created from an image&#39;s data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
      * 
      */
     @Import(name="lun")

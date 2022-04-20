@@ -29,7 +29,7 @@ public final class VmGuestHealthAlertCriterionResponse {
     private final @Nullable List<String> monitorTypes;
     /**
      * specifies the type of the alert criterion.
-     * Expected value is 'GuestVmHealth'.
+     * Expected value is &#39;GuestVmHealth&#39;.
      * 
      */
     private final String namespace;
@@ -69,7 +69,7 @@ public final class VmGuestHealthAlertCriterionResponse {
     }
     /**
      * specifies the type of the alert criterion.
-     * Expected value is 'GuestVmHealth'.
+     * Expected value is &#39;GuestVmHealth&#39;.
      * 
     */
     public String namespace() {

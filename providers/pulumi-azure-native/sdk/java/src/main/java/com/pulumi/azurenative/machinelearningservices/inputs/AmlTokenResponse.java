@@ -19,7 +19,7 @@ public final class AmlTokenResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Enum to determine identity framework.
-     * Expected value is 'AMLToken'.
+     * Expected value is &#39;AMLToken&#39;.
      * 
      */
     @Import(name="identityType", required=true)

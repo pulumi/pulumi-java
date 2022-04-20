@@ -49,7 +49,7 @@ public final class AzureMariaDBSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureMariaDBSource'.
+     * Expected value is &#39;AzureMariaDBSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzureMariaDBSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureMariaDBSource'.
+     * Expected value is &#39;AzureMariaDBSource&#39;.
      * 
     */
     public String type() {

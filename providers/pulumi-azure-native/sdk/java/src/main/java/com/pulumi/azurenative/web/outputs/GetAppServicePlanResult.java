@@ -33,7 +33,7 @@ public final class GetAppServicePlanResult {
      */
     private final @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile;
     /**
-     * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean hyperV;
@@ -43,12 +43,12 @@ public final class GetAppServicePlanResult {
      */
     private final String id;
     /**
-     * If <code>true</code>, this App Service Plan owns spot instances.
+     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
      */
     private final @Nullable Boolean isSpot;
     /**
-     * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean isXenon;
@@ -88,8 +88,8 @@ public final class GetAppServicePlanResult {
      */
     private final Integer numberOfSites;
     /**
-     * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-     * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
+     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
     private final @Nullable Boolean perSiteScaling;
@@ -99,7 +99,7 @@ public final class GetAppServicePlanResult {
      */
     private final String provisioningState;
     /**
-     * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean reserved;
@@ -234,7 +234,7 @@ public final class GetAppServicePlanResult {
         return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
     /**
-     * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
     */
     public Optional<Boolean> hyperV() {
@@ -248,14 +248,14 @@ public final class GetAppServicePlanResult {
         return this.id;
     }
     /**
-     * If <code>true</code>, this App Service Plan owns spot instances.
+     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
     */
     public Optional<Boolean> isSpot() {
         return Optional.ofNullable(this.isSpot);
     }
     /**
-     * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
+     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
     */
     public Optional<Boolean> isXenon() {
@@ -311,8 +311,8 @@ public final class GetAppServicePlanResult {
         return this.numberOfSites;
     }
     /**
-     * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-     * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
+     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
     */
     public Optional<Boolean> perSiteScaling() {
@@ -326,7 +326,7 @@ public final class GetAppServicePlanResult {
         return this.provisioningState;
     }
     /**
-     * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
+     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
     */
     public Optional<Boolean> reserved() {

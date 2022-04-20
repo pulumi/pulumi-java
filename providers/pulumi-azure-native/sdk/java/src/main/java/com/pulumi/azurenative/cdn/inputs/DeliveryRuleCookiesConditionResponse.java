@@ -20,7 +20,7 @@ public final class DeliveryRuleCookiesConditionResponse extends com.pulumi.resou
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'Cookies'.
+     * Expected value is &#39;Cookies&#39;.
      * 
      */
     @Import(name="name", required=true)

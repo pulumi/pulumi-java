@@ -22,7 +22,7 @@ public final class GetScheduledSynchronizationSettingResult {
     private final String id;
     /**
      * Kind of synchronization setting.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     private final String kind;
@@ -102,7 +102,7 @@ public final class GetScheduledSynchronizationSettingResult {
     }
     /**
      * Kind of synchronization setting.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
     */
     public String kind() {

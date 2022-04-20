@@ -20,7 +20,7 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
     public static final JavaScriptFunctionBindingArgs Empty = new JavaScriptFunctionBindingArgs();
 
     /**
-     * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
+     * The JavaScript code containing a single function definition. For example: &#39;function (x, y) { return x + y; }&#39;
      * 
      */
     @Import(name="script")
@@ -32,7 +32,7 @@ public final class JavaScriptFunctionBindingArgs extends com.pulumi.resources.Re
 
     /**
      * Indicates the function binding type.
-     * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
+     * Expected value is &#39;Microsoft.StreamAnalytics/JavascriptUdf&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Supported protocols for the customer's endpoint.
+     * Supported protocols for the customer&#39;s endpoint.
      * 
      */
     @EnumType

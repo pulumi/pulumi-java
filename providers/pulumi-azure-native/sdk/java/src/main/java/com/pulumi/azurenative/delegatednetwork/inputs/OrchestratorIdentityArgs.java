@@ -16,7 +16,7 @@ public final class OrchestratorIdentityArgs extends com.pulumi.resources.Resourc
     public static final OrchestratorIdentityArgs Empty = new OrchestratorIdentityArgs();
 
     /**
-     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
      */
     @Import(name="type")

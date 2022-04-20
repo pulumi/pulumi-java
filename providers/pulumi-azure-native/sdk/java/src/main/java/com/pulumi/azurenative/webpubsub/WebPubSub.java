@@ -76,7 +76,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     @Export(name="features", type=List.class, parameters={WebPubSubFeatureResponse.class})
@@ -88,7 +88,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     public Output</* @Nullable */ List<WebPubSubFeatureResponse>> features() {
@@ -193,18 +193,18 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * Enable or disable public network access. Default to "Enabled".
-     * When it's Enabled, network ACLs still apply.
-     * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
-     * @return Enable or disable public network access. Default to "Enabled".
-     * When it's Enabled, network ACLs still apply.
-     * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * @return Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
     public Output</* @Nullable */ String> publicNetworkAccess() {
@@ -309,14 +309,14 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
         return this.tls;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     public Output<String> type() {

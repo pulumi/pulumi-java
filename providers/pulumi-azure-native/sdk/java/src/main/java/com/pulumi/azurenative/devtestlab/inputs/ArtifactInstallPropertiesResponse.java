@@ -21,7 +21,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     public static final ArtifactInstallPropertiesResponse Empty = new ArtifactInstallPropertiesResponse();
 
     /**
-     * The artifact's identifier.
+     * The artifact&#39;s identifier.
      * 
      */
     @Import(name="artifactId")
@@ -32,7 +32,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     }
 
     /**
-     * The artifact's title.
+     * The artifact&#39;s title.
      * 
      */
     @Import(name="artifactTitle")

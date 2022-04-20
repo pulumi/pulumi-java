@@ -49,7 +49,7 @@ public final class DeepCreatedOriginResponse {
      */
     private final @Nullable Integer priority;
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkAlias;
@@ -59,12 +59,12 @@ public final class DeepCreatedOriginResponse {
      */
     private final @Nullable String privateLinkApprovalMessage;
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
     private final @Nullable String privateLinkLocation;
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
     private final @Nullable String privateLinkResourceId;
@@ -152,7 +152,7 @@ public final class DeepCreatedOriginResponse {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
+     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
     */
     public Optional<String> privateLinkAlias() {
@@ -166,14 +166,14 @@ public final class DeepCreatedOriginResponse {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
-     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
     */
     public Optional<String> privateLinkResourceId() {

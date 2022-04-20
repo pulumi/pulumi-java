@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends com.pulumi.res
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.SqlDb'.
+     * Expected value is &#39;ConnectToTarget.SqlDb&#39;.
      * 
      */
     @Import(name="taskType", required=true)

@@ -47,7 +47,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     }
 
     /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: &#34;latest&#34;.
      * 
      */
     @Import(name="inferencingStackVersion")

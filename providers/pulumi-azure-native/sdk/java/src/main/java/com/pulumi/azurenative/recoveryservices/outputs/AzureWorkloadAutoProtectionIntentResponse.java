@@ -28,7 +28,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse {
     private final @Nullable String policyId;
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureWorkloadAutoProtectionIntent'.
+     * Expected value is &#39;AzureWorkloadAutoProtectionIntent&#39;.
      * 
      */
     private final String protectionIntentItemType;
@@ -82,7 +82,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse {
     }
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureWorkloadAutoProtectionIntent'.
+     * Expected value is &#39;AzureWorkloadAutoProtectionIntent&#39;.
      * 
     */
     public String protectionIntentItemType() {

@@ -59,7 +59,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
 
     /**
      * The class type.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     @Import(name="instanceType")

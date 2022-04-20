@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
+     * Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
     @EnumType

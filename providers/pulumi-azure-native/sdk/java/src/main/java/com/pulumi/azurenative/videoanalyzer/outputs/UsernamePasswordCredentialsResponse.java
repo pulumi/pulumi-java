@@ -16,7 +16,7 @@ public final class UsernamePasswordCredentialsResponse {
     private final String password;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
      * 
      */
     private final String type;
@@ -45,7 +45,7 @@ public final class UsernamePasswordCredentialsResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
      * 
     */
     public String type() {

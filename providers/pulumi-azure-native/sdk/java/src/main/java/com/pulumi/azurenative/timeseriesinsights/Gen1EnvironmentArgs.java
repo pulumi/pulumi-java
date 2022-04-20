@@ -22,7 +22,7 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     public static final Gen1EnvironmentArgs Empty = new Gen1EnvironmentArgs();
 
     /**
-     * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
+     * ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
      * 
      */
     @Import(name="dataRetentionTime", required=true)
@@ -45,7 +45,7 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The kind of the environment.
-     * Expected value is 'Gen1'.
+     * Expected value is &#39;Gen1&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -100,7 +100,7 @@ public final class Gen1EnvironmentArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
     @Import(name="storageLimitExceededBehavior")

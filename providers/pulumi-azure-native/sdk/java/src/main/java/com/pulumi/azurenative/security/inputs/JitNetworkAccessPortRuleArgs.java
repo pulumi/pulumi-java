@@ -20,7 +20,7 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
     public static final JitNetworkAccessPortRuleArgs Empty = new JitNetworkAccessPortRuleArgs();
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
      */
     @Import(name="allowedSourceAddressPrefix")
@@ -31,7 +31,7 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
      */
     @Import(name="allowedSourceAddressPrefixes")

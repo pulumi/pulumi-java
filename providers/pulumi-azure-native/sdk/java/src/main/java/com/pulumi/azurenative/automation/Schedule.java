@@ -92,14 +92,14 @@ public class Schedule extends com.pulumi.resources.CustomResource {
         return this.expiryTime;
     }
     /**
-     * Gets or sets the expiry time's offset in minutes.
+     * Gets or sets the expiry time&#39;s offset in minutes.
      * 
      */
     @Export(name="expiryTimeOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> expiryTimeOffsetMinutes;
 
     /**
-     * @return Gets or sets the expiry time's offset in minutes.
+     * @return Gets or sets the expiry time&#39;s offset in minutes.
      * 
      */
     public Output</* @Nullable */ Double> expiryTimeOffsetMinutes() {
@@ -190,14 +190,14 @@ public class Schedule extends com.pulumi.resources.CustomResource {
         return this.nextRun;
     }
     /**
-     * Gets or sets the next run time's offset in minutes.
+     * Gets or sets the next run time&#39;s offset in minutes.
      * 
      */
     @Export(name="nextRunOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> nextRunOffsetMinutes;
 
     /**
-     * @return Gets or sets the next run time's offset in minutes.
+     * @return Gets or sets the next run time&#39;s offset in minutes.
      * 
      */
     public Output</* @Nullable */ Double> nextRunOffsetMinutes() {
@@ -218,14 +218,14 @@ public class Schedule extends com.pulumi.resources.CustomResource {
         return this.startTime;
     }
     /**
-     * Gets the start time's offset in minutes.
+     * Gets the start time&#39;s offset in minutes.
      * 
      */
     @Export(name="startTimeOffsetMinutes", type=Double.class, parameters={})
     private Output<Double> startTimeOffsetMinutes;
 
     /**
-     * @return Gets the start time's offset in minutes.
+     * @return Gets the start time&#39;s offset in minutes.
      * 
      */
     public Output<Double> startTimeOffsetMinutes() {

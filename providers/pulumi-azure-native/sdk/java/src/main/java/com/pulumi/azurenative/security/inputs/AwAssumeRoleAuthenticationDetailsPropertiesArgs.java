@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Creating a Role to Delegate Permissions to an IAM User (write only)</a>
+ * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html&#34;&gt;Creating a Role to Delegate Permissions to an IAM User (write only)&lt;/a&gt;
  * 
  */
 public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
 
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-     * Expected value is 'awsAssumeRole'.
+     * Expected value is &#39;awsAssumeRole&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

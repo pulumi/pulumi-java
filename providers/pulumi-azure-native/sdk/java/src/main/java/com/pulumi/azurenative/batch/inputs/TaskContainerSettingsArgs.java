@@ -18,7 +18,7 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
     public static final TaskContainerSettingsArgs Empty = new TaskContainerSettingsArgs();
 
     /**
-     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
+     * These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
      * 
      */
     @Import(name="containerRunOptions")
@@ -29,7 +29,7 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
+     * This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
      * 
      */
     @Import(name="imageName", required=true)

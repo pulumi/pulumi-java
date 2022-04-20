@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+ * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
  * 
  */
 public final class UserManagedHttpsParametersResponse extends com.pulumi.resources.InvokeArgs {
@@ -22,7 +22,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
 
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="certificateSource", required=true)
@@ -33,7 +33,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     }
 
     /**
-     * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+     * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
      * 
      */
     @Import(name="certificateSourceParameters", required=true)

@@ -32,7 +32,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends com.pulumi.re
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'IsNullOrUndefined'.
+     * Expected value is &#39;IsNullOrUndefined&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

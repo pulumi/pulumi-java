@@ -19,7 +19,7 @@ public final class GetWebAppSourceControlSlotResult {
      */
     private final @Nullable String branch;
     /**
-     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean deploymentRollbackEnabled;
@@ -34,17 +34,17 @@ public final class GetWebAppSourceControlSlotResult {
      */
     private final String id;
     /**
-     * <code>true</code> if this is deployed via GitHub action.
+     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
     private final @Nullable Boolean isGitHubAction;
     /**
-     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
     private final @Nullable Boolean isManualIntegration;
     /**
-     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
     private final @Nullable Boolean isMercurial;
@@ -103,7 +103,7 @@ public final class GetWebAppSourceControlSlotResult {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> deploymentRollbackEnabled() {
@@ -124,21 +124,21 @@ public final class GetWebAppSourceControlSlotResult {
         return this.id;
     }
     /**
-     * <code>true</code> if this is deployed via GitHub action.
+     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
     */
     public Optional<Boolean> isGitHubAction() {
         return Optional.ofNullable(this.isGitHubAction);
     }
     /**
-     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
     */
     public Optional<Boolean> isManualIntegration() {
         return Optional.ofNullable(this.isManualIntegration);
     }
     /**
-     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
     */
     public Optional<Boolean> isMercurial() {

@@ -89,7 +89,7 @@ public final class SnowflakeSourceResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy source type.
-     * Expected value is 'SnowflakeSource'.
+     * Expected value is &#39;SnowflakeSource&#39;.
      * 
      */
     @Import(name="type", required=true)

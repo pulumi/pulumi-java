@@ -88,7 +88,7 @@ public final class CommonDataServiceForAppsSinkResponse extends com.pulumi.resou
 
     /**
      * Copy sink type.
-     * Expected value is 'CommonDataServiceForAppsSink'.
+     * Expected value is &#39;CommonDataServiceForAppsSink&#39;.
      * 
      */
     @Import(name="type", required=true)

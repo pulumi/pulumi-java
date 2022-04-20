@@ -77,7 +77,7 @@ public final class MicrosoftAccessSinkResponse extends com.pulumi.resources.Invo
 
     /**
      * Copy sink type.
-     * Expected value is 'MicrosoftAccessSink'.
+     * Expected value is &#39;MicrosoftAccessSink&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -36,14 +36,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:insights:AutoscaleSetting")
 public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
     /**
-     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+     * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
-     * @return the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+     * @return the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
      */
     public Output</* @Nullable */ Boolean> enabled() {

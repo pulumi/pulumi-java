@@ -92,7 +92,7 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'MongoDbV2'.
+     * Expected value is &#39;MongoDbV2&#39;.
      * 
      */
     @Import(name="type", required=true)

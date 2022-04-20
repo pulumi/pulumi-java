@@ -56,7 +56,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRdsForOracle'.
+     * Expected value is &#39;AmazonRdsForOracle&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRdsForOracle'.
+     * Expected value is &#39;AmazonRdsForOracle&#39;.
      * 
     */
     public String type() {

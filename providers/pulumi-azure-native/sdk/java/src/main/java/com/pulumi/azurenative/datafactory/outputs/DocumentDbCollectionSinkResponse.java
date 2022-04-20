@@ -39,7 +39,7 @@ public final class DocumentDbCollectionSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'DocumentDbCollectionSink'.
+     * Expected value is &#39;DocumentDbCollectionSink&#39;.
      * 
      */
     private final String type;
@@ -118,7 +118,7 @@ public final class DocumentDbCollectionSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'DocumentDbCollectionSink'.
+     * Expected value is &#39;DocumentDbCollectionSink&#39;.
      * 
     */
     public String type() {

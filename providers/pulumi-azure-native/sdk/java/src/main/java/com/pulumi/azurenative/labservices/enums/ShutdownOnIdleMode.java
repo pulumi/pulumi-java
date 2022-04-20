@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum ShutdownOnIdleMode {
         /**
-         * The VM won't be shut down when it is idle.
+         * The VM won&#39;t be shut down when it is idle.
          * 
          */
         None("None"),

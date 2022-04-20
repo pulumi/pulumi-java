@@ -137,7 +137,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
      */
     @Import(name="osState", required=true)
@@ -148,7 +148,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     @Import(name="osType", required=true)

@@ -51,7 +51,7 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The security contact's phone number
+     * The security contact&#39;s phone number
      * 
      */
     @Import(name="phone")

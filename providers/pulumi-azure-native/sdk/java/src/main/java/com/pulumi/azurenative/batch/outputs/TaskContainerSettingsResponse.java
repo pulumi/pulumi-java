@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TaskContainerSettingsResponse {
     /**
-     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
+     * These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
      * 
      */
     private final @Nullable String containerRunOptions;
     /**
-     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
+     * This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
      * 
      */
     private final String imageName;
@@ -42,14 +42,14 @@ public final class TaskContainerSettingsResponse {
     }
 
     /**
-     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
+     * These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
      * 
     */
     public Optional<String> containerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
     /**
-     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
+     * This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
      * 
     */
     public String imageName() {

@@ -49,7 +49,7 @@ public final class AzureDataExplorerSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataExplorerSink'.
+     * Expected value is &#39;AzureDataExplorerSink&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class AzureDataExplorerSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataExplorerSink'.
+     * Expected value is &#39;AzureDataExplorerSink&#39;.
      * 
     */
     public String type() {

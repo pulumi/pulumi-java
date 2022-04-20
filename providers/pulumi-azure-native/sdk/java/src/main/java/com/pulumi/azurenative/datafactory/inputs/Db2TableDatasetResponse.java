@@ -126,7 +126,7 @@ public final class Db2TableDatasetResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Type of dataset.
-     * Expected value is 'Db2Table'.
+     * Expected value is &#39;Db2Table&#39;.
      * 
      */
     @Import(name="type", required=true)

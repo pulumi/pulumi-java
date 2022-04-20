@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * In some cases the start task may be re-run even though the node was not rebooted. Due to this, start tasks should be idempotent and exit gracefully if the setup they're performing has already been done. Special care should be taken to avoid start tasks which create breakaway process or install/launch services from the start task working directory, as this will block Batch from being able to re-run the start task.
+ * In some cases the start task may be re-run even though the node was not rebooted. Due to this, start tasks should be idempotent and exit gracefully if the setup they&#39;re performing has already been done. Special care should be taken to avoid start tasks which create breakaway process or install/launch services from the start task working directory, as this will block Batch from being able to re-run the start task.
  * 
  */
 public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
@@ -26,7 +26,7 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     public static final StartTaskResponse Empty = new StartTaskResponse();
 
     /**
-     * The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. Required if any other properties of the startTask are specified.
+     * The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using &#34;cmd /c MyCommand&#34; in Windows or &#34;/bin/sh -c MyCommand&#34; in Linux. Required if any other properties of the startTask are specified.
      * 
      */
     @Import(name="commandLine")

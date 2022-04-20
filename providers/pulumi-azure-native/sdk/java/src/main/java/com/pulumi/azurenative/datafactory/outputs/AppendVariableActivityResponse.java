@@ -32,7 +32,7 @@ public final class AppendVariableActivityResponse {
     private final String name;
     /**
      * Type of activity.
-     * Expected value is 'AppendVariable'.
+     * Expected value is &#39;AppendVariable&#39;.
      * 
      */
     private final String type;
@@ -93,7 +93,7 @@ public final class AppendVariableActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AppendVariable'.
+     * Expected value is &#39;AppendVariable&#39;.
      * 
     */
     public String type() {

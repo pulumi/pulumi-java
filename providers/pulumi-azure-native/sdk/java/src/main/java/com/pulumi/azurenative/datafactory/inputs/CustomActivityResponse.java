@@ -161,7 +161,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Type of activity.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -45,7 +45,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.SqlDb.Sync'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.SqlDb.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
     }
     /**
      * Task type.
-     * Expected value is 'ValidateMigrationInput.SqlServer.SqlDb.Sync'.
+     * Expected value is &#39;ValidateMigrationInput.SqlServer.SqlDb.Sync&#39;.
      * 
     */
     public String taskType() {

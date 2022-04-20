@@ -20,7 +20,7 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'Anonymous'.
+     * Expected value is &#39;Anonymous&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

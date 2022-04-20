@@ -21,7 +21,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     public static final AppServiceCertificateOrderArgs Empty = new AppServiceCertificateOrderArgs();
 
     /**
-     * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="autoRenew")

@@ -29,7 +29,7 @@ public final class MySqlConnectionInfoResponse {
     private final String serverName;
     /**
      * Type of connection info
-     * Expected value is 'MySqlConnectionInfo'.
+     * Expected value is &#39;MySqlConnectionInfo&#39;.
      * 
      */
     private final String type;
@@ -76,7 +76,7 @@ public final class MySqlConnectionInfoResponse {
     }
     /**
      * Type of connection info
-     * Expected value is 'MySqlConnectionInfo'.
+     * Expected value is &#39;MySqlConnectionInfo&#39;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends com.pul
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'UrlFileExtension'.
+     * Expected value is &#39;UrlFileExtension&#39;.
      * 
      */
     @Import(name="name", required=true)

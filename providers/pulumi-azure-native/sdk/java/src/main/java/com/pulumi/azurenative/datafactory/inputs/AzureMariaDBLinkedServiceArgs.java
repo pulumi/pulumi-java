@@ -104,7 +104,7 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureMariaDB'.
+     * Expected value is &#39;AzureMariaDB&#39;.
      * 
      */
     @Import(name="type", required=true)

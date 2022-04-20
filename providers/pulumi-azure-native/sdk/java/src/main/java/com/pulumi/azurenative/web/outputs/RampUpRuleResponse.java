@@ -30,9 +30,9 @@ public final class RampUpRuleResponse {
      */
     private final @Nullable Integer changeIntervalInMinutes;
     /**
-     * In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or
-     * <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
-     * can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
+     * In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+     * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
+     * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
      * 
      */
     private final @Nullable Double changeStep;
@@ -52,7 +52,7 @@ public final class RampUpRuleResponse {
      */
     private final @Nullable String name;
     /**
-     * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
+     * Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
      * 
      */
     private final @Nullable Double reroutePercentage;
@@ -100,9 +100,9 @@ public final class RampUpRuleResponse {
         return Optional.ofNullable(this.changeIntervalInMinutes);
     }
     /**
-     * In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or
-     * <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
-     * can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
+     * In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+     * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
+     * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
      * 
     */
     public Optional<Double> changeStep() {
@@ -130,7 +130,7 @@ public final class RampUpRuleResponse {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
+     * Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
      * 
     */
     public Optional<Double> reroutePercentage() {

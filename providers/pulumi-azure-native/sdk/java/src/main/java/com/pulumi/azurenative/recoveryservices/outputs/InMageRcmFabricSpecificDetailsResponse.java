@@ -39,7 +39,7 @@ public final class InMageRcmFabricSpecificDetailsResponse {
     private final List<DraDetailsResponse> dras;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
      */
     private final String instanceType;
@@ -158,7 +158,7 @@ public final class InMageRcmFabricSpecificDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageRcm'.
+     * Expected value is &#39;InMageRcm&#39;.
      * 
     */
     public String instanceType() {

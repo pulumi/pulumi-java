@@ -15,7 +15,7 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
     public static final GetVirtualMachineScaleSetArgs Empty = new GetVirtualMachineScaleSetArgs();
 
     /**
-     * The expand expression to apply on the operation. 'UserData' retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
+     * The expand expression to apply on the operation. &#39;UserData&#39; retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
      * 
      */
     @Import(name="expand")

@@ -59,7 +59,7 @@ public final class SquareObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SquareObject'.
+     * Expected value is &#39;SquareObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SquareObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SquareObject'.
+     * Expected value is &#39;SquareObject&#39;.
      * 
     */
     public String type() {

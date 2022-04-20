@@ -131,14 +131,14 @@ public class TransactionNode extends com.pulumi.resources.CustomResource {
         return this.publicKey;
     }
     /**
-     * The type of the service - e.g. "Microsoft.Blockchain"
+     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the service - e.g. "Microsoft.Blockchain"
+     * @return The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
      */
     public Output<String> type() {

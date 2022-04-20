@@ -21,7 +21,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
 
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
      */
     @Import(name="actionType", required=true)

@@ -44,7 +44,7 @@ public final class AzureDataLakeStoreSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataLakeStoreSink'.
+     * Expected value is &#39;AzureDataLakeStoreSink&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzureDataLakeStoreSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureDataLakeStoreSink'.
+     * Expected value is &#39;AzureDataLakeStoreSink&#39;.
      * 
     */
     public String type() {

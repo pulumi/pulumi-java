@@ -131,7 +131,7 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable Integer osDiskSizeGB;
     /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
      */
     private final @Nullable String osDiskType;
@@ -146,7 +146,7 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String osType;
     /**
-     * Pod SubnetID specifies the VNet's subnet identifier for pods.
+     * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
      * 
      */
     private final @Nullable String podSubnetID;
@@ -201,7 +201,7 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String vmSize;
     /**
-     * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
+     * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
      * 
      */
     private final @Nullable String vnetSubnetID;
@@ -439,7 +439,7 @@ public final class GetAgentPoolResult {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
     /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
     */
     public Optional<String> osDiskType() {
@@ -460,7 +460,7 @@ public final class GetAgentPoolResult {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Pod SubnetID specifies the VNet's subnet identifier for pods.
+     * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
      * 
     */
     public Optional<String> podSubnetID() {
@@ -537,7 +537,7 @@ public final class GetAgentPoolResult {
         return Optional.ofNullable(this.vmSize);
     }
     /**
-     * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
+     * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
      * 
     */
     public Optional<String> vnetSubnetID() {

@@ -183,7 +183,7 @@ public final class PhoenixLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'Phoenix'.
+     * Expected value is &#39;Phoenix&#39;.
      * 
      */
     @Import(name="type", required=true)

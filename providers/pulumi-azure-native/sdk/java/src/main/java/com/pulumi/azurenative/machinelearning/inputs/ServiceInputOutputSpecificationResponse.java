@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
+ * The swagger 2.0 schema describing the service&#39;s inputs or outputs. See Swagger specification: http://swagger.io/specification/
  * 
  */
 public final class ServiceInputOutputSpecificationResponse extends com.pulumi.resources.InvokeArgs {
@@ -55,7 +55,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     }
 
     /**
-     * The type of the entity described in swagger. Always 'object'.
+     * The type of the entity described in swagger. Always &#39;object&#39;.
      * 
      */
     @Import(name="type", required=true)

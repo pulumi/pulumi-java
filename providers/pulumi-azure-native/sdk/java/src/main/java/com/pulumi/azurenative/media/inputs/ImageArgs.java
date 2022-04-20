@@ -46,7 +46,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Image'.
+     * Expected value is &#39;#Microsoft.Media.Image&#39;.
      * 
      */
     @Import(name="odataType", required=true)

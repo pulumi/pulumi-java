@@ -95,7 +95,7 @@ public final class JsonSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'JsonSink'.
+     * Expected value is &#39;JsonSink&#39;.
      * 
      */
     @Import(name="type", required=true)

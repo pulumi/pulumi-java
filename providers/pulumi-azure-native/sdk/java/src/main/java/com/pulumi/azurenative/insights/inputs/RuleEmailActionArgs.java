@@ -22,7 +22,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     public static final RuleEmailActionArgs Empty = new RuleEmailActionArgs();
 
     /**
-     * the list of administrator's custom email addresses to notify of the activation of the alert.
+     * the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
      * 
      */
     @Import(name="customEmails")
@@ -34,7 +34,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -104,7 +104,7 @@ public final class PostgreSqlLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'PostgreSql'.
+     * Expected value is &#39;PostgreSql&#39;.
      * 
      */
     @Import(name="type", required=true)

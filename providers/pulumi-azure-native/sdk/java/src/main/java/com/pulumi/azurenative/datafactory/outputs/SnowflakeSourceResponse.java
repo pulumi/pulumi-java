@@ -45,7 +45,7 @@ public final class SnowflakeSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SnowflakeSource'.
+     * Expected value is &#39;SnowflakeSource&#39;.
      * 
      */
     private final String type;
@@ -112,7 +112,7 @@ public final class SnowflakeSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SnowflakeSource'.
+     * Expected value is &#39;SnowflakeSource&#39;.
      * 
     */
     public String type() {

@@ -24,7 +24,7 @@ public final class BanditPolicyResponse {
      */
     private final @Nullable Integer evaluationInterval;
     /**
-     * Expected value is 'Bandit'.
+     * Expected value is &#39;Bandit&#39;.
      * 
      */
     private final String policyType;
@@ -68,7 +68,7 @@ public final class BanditPolicyResponse {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
-     * Expected value is 'Bandit'.
+     * Expected value is &#39;Bandit&#39;.
      * 
     */
     public String policyType() {

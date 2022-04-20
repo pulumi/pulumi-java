@@ -33,7 +33,7 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
+     * Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
      * 
      */
     @Import(name="formParameters")
@@ -55,7 +55,7 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
      */
     @Import(name="schemaId")
@@ -66,7 +66,7 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
+     * Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
      */
     @Import(name="typeName")

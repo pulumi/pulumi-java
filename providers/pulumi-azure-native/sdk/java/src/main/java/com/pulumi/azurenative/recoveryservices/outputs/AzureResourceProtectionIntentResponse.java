@@ -33,7 +33,7 @@ public final class AzureResourceProtectionIntentResponse {
     private final @Nullable String policyId;
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureResourceItem'.
+     * Expected value is &#39;AzureResourceItem&#39;.
      * 
      */
     private final String protectionIntentItemType;
@@ -96,7 +96,7 @@ public final class AzureResourceProtectionIntentResponse {
     }
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureResourceItem'.
+     * Expected value is &#39;AzureResourceItem&#39;.
      * 
     */
     public String protectionIntentItemType() {

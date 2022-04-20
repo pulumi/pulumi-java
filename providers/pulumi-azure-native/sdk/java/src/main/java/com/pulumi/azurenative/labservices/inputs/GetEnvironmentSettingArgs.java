@@ -26,7 +26,7 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Specify the $expand query. Example: 'properties($select=publishingState)'
+     * Specify the $expand query. Example: &#39;properties($select=publishingState)&#39;
      * 
      */
     @Import(name="expand")

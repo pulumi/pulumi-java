@@ -24,7 +24,7 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
     public static final DashboardLensResponse Empty = new DashboardLensResponse();
 
     /**
-     * The dashboard len's metadata.
+     * The dashboard len&#39;s metadata.
      * 
      */
     @Import(name="metadata")

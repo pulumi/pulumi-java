@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+     * The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
      */
     @EnumType

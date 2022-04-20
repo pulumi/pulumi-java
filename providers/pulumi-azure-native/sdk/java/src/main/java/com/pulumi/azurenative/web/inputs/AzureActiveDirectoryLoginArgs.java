@@ -22,7 +22,7 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
     public static final AzureActiveDirectoryLoginArgs Empty = new AzureActiveDirectoryLoginArgs();
 
     /**
-     * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="disableWWWAuthenticate")
@@ -34,7 +34,7 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
 
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
-     * a user logs in. Each parameter must be in the form "key=value".
+     * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
      */
     @Import(name="loginParameters")

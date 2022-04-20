@@ -20,7 +20,7 @@ public final class AclArgs extends com.pulumi.resources.ResourceArgs {
     public static final AclArgs Empty = new AclArgs();
 
     /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
      * 
      */
     @Import(name="initiatorIqn", required=true)

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
+     * Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
      * 
      */
     @EnumType

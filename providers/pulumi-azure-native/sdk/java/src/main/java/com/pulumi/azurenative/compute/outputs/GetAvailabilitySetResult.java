@@ -43,12 +43,12 @@ public final class GetAvailabilitySetResult {
      */
     private final @Nullable Integer platformUpdateDomainCount;
     /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     private final @Nullable SubResourceResponse proximityPlacementGroup;
     /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
      */
     private final @Nullable SkuResponse sku;
@@ -135,14 +135,14 @@ public final class GetAvailabilitySetResult {
         return Optional.ofNullable(this.platformUpdateDomainCount);
     }
     /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
     */
     public Optional<SubResourceResponse> proximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
     /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
     */
     public Optional<SkuResponse> sku() {

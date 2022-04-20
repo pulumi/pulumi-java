@@ -54,7 +54,7 @@ public final class AzureTableSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzureTableSource'.
+     * Expected value is &#39;AzureTableSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class AzureTableSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzureTableSource'.
+     * Expected value is &#39;AzureTableSource&#39;.
      * 
     */
     public String type() {

@@ -40,7 +40,7 @@ public final class MCASDataConnectorArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The kind of the data connector
-     * Expected value is 'MicrosoftCloudAppSecurity'.
+     * Expected value is &#39;MicrosoftCloudAppSecurity&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -51,7 +51,7 @@ public final class MCASDataConnectorArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

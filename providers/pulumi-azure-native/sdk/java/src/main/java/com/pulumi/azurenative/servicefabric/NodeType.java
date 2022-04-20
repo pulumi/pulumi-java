@@ -234,14 +234,14 @@ public class NodeType extends com.pulumi.resources.CustomResource {
         return this.vmImageSku;
     }
     /**
-     * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
     @Export(name="vmImageVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImageVersion;
 
     /**
-     * @return The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * @return The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
     public Output</* @Nullable */ String> vmImageVersion() {

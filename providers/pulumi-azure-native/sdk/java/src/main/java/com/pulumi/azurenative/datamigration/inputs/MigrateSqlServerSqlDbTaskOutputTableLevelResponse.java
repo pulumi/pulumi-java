@@ -97,7 +97,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
 
     /**
      * Result type
-     * Expected value is 'TableLevelOutput'.
+     * Expected value is &#39;TableLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

@@ -19,7 +19,7 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     public static final WsfcDomainProfileResponse Empty = new WsfcDomainProfileResponse();
 
     /**
-     * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
+     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
      * 
      */
     @Import(name="clusterBootstrapAccount")

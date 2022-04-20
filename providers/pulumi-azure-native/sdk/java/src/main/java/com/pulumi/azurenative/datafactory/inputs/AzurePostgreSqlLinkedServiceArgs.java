@@ -104,7 +104,7 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
 
     /**
      * Type of linked service.
-     * Expected value is 'AzurePostgreSql'.
+     * Expected value is &#39;AzurePostgreSql&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -99,7 +99,7 @@ public final class ResponsysSourceArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy source type.
-     * Expected value is 'ResponsysSource'.
+     * Expected value is &#39;ResponsysSource&#39;.
      * 
      */
     @Import(name="type", required=true)

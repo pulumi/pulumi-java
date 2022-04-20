@@ -126,7 +126,7 @@ public final class AzureStorageLinkedServiceResponse extends com.pulumi.resource
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureStorage'.
+     * Expected value is &#39;AzureStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

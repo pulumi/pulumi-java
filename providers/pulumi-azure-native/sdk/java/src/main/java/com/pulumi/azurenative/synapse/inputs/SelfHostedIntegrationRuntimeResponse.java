@@ -46,7 +46,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
 
     /**
      * The type of integration runtime.
-     * Expected value is 'SelfHosted'.
+     * Expected value is &#39;SelfHosted&#39;.
      * 
      */
     @Import(name="type", required=true)

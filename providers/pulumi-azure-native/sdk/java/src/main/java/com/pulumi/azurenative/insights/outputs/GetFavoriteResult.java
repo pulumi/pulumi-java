@@ -64,7 +64,7 @@ public final class GetFavoriteResult {
      */
     private final String userId;
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
     private final @Nullable String version;
@@ -166,7 +166,7 @@ public final class GetFavoriteResult {
         return this.userId;
     }
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
     */
     public Optional<String> version() {

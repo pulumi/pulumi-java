@@ -104,7 +104,7 @@ public final class MariaDBLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'MariaDB'.
+     * Expected value is &#39;MariaDB&#39;.
      * 
      */
     @Import(name="type", required=true)

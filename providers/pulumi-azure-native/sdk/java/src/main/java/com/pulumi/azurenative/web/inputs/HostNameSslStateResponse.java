@@ -64,7 +64,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Set to <code>true</code> to update existing hostname.
+     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
      * 
      */
     @Import(name="toUpdate")

@@ -27,7 +27,7 @@ public final class GetBlobContainerDataSetResult {
     private final String id;
     /**
      * Kind of data set.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
      */
     private final String kind;
@@ -109,7 +109,7 @@ public final class GetBlobContainerDataSetResult {
     }
     /**
      * Kind of data set.
-     * Expected value is 'Container'.
+     * Expected value is &#39;Container&#39;.
      * 
     */
     public String kind() {

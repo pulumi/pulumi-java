@@ -51,7 +51,7 @@ public final class AzureSearchLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'AzureSearch'.
+     * Expected value is &#39;AzureSearch&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzureSearchLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureSearch'.
+     * Expected value is &#39;AzureSearch&#39;.
      * 
     */
     public String type() {

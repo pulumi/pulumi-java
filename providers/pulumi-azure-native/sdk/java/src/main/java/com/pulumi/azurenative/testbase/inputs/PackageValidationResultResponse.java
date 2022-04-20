@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The validation results. There's validation on package when it's created or updated.
+ * The validation results. There&#39;s validation on package when it&#39;s created or updated.
  * 
  */
 public final class PackageValidationResultResponse extends com.pulumi.resources.InvokeArgs {

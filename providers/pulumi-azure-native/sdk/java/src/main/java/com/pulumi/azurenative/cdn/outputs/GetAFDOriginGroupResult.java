@@ -48,7 +48,7 @@ public final class GetAFDOriginGroupResult {
      */
     private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings;
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String sessionAffinityState;
@@ -140,7 +140,7 @@ public final class GetAFDOriginGroupResult {
         return Optional.ofNullable(this.responseBasedAfdOriginErrorDetectionSettings);
     }
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
     */
     public Optional<String> sessionAffinityState() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
      */
     private final String odataType;
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
      * 
     */
     public String odataType() {

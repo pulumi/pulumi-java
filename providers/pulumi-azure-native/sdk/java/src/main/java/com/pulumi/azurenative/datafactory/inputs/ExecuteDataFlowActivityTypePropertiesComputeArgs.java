@@ -20,7 +20,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
     public static final ExecuteDataFlowActivityTypePropertiesComputeArgs Empty = new ExecuteDataFlowActivityTypePropertiesComputeArgs();
 
     /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
      * 
      */
     @Import(name="computeType")

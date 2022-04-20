@@ -99,7 +99,7 @@ public final class QuickBooksSourceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy source type.
-     * Expected value is 'QuickBooksSource'.
+     * Expected value is &#39;QuickBooksSource&#39;.
      * 
      */
     @Import(name="type", required=true)

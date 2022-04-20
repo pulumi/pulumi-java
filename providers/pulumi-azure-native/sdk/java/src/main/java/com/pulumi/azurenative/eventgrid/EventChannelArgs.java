@@ -87,7 +87,7 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the resource group within the user's subscription.
+     * The name of the resource group within the user&#39;s subscription.
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -98,7 +98,7 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Source of the event channel. This represents a unique resource in the partner's resource model.
+     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     @Import(name="source")

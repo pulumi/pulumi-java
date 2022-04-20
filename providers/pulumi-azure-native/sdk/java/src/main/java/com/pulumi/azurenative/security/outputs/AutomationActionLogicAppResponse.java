@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class AutomationActionLogicAppResponse {
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'LogicApp'.
+     * Expected value is &#39;LogicApp&#39;.
      * 
      */
     private final String actionType;
@@ -40,7 +40,7 @@ public final class AutomationActionLogicAppResponse {
 
     /**
      * The type of the action that will be triggered by the Automation
-     * Expected value is 'LogicApp'.
+     * Expected value is &#39;LogicApp&#39;.
      * 
     */
     public String actionType() {

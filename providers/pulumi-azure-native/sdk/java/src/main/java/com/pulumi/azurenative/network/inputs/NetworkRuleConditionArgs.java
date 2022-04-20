@@ -90,7 +90,7 @@ public final class NetworkRuleConditionArgs extends com.pulumi.resources.Resourc
 
     /**
      * Rule Condition Type.
-     * Expected value is 'NetworkRuleCondition'.
+     * Expected value is &#39;NetworkRuleCondition&#39;.
      * 
      */
     @Import(name="ruleConditionType", required=true)

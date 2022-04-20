@@ -17,7 +17,7 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String description;
     /**
-     * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
+     * Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
      * 
      */
     private final @Nullable String key;
@@ -38,7 +38,7 @@ public final class SshPublicKeyResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
+     * Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
      * 
     */
     public Optional<String> key() {

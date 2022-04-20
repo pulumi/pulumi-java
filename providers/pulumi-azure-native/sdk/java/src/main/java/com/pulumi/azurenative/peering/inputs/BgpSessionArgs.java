@@ -54,7 +54,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv4 session address on Microsoft's end.
+     * The IPv4 session address on Microsoft&#39;s end.
      * 
      */
     @Import(name="microsoftSessionIPv4Address")
@@ -65,7 +65,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv6 session address on Microsoft's end.
+     * The IPv6 session address on Microsoft&#39;s end.
      * 
      */
     @Import(name="microsoftSessionIPv6Address")
@@ -76,7 +76,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv4 session address on peer's end.
+     * The IPv4 session address on peer&#39;s end.
      * 
      */
     @Import(name="peerSessionIPv4Address")
@@ -87,7 +87,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv6 session address on peer's end.
+     * The IPv6 session address on peer&#39;s end.
      * 
      */
     @Import(name="peerSessionIPv6Address")
@@ -98,7 +98,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv4 prefix that contains both ends' IPv4 addresses.
+     * The IPv4 prefix that contains both ends&#39; IPv4 addresses.
      * 
      */
     @Import(name="sessionPrefixV4")
@@ -109,7 +109,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The IPv6 prefix that contains both ends' IPv6 addresses.
+     * The IPv6 prefix that contains both ends&#39; IPv6 addresses.
      * 
      */
     @Import(name="sessionPrefixV6")

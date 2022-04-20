@@ -41,7 +41,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
 
     /**
      * The authentication type.
-     * Expected value is 'ApiKey'.
+     * Expected value is &#39;ApiKey&#39;.
      * 
      */
     @Import(name="type", required=true)

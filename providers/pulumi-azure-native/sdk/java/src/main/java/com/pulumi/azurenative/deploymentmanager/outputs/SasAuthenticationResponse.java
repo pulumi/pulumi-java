@@ -16,7 +16,7 @@ public final class SasAuthenticationResponse {
     private final String sasUri;
     /**
      * The authentication type
-     * Expected value is 'Sas'.
+     * Expected value is &#39;Sas&#39;.
      * 
      */
     private final String type;
@@ -38,7 +38,7 @@ public final class SasAuthenticationResponse {
     }
     /**
      * The authentication type
-     * Expected value is 'Sas'.
+     * Expected value is &#39;Sas&#39;.
      * 
     */
     public String type() {

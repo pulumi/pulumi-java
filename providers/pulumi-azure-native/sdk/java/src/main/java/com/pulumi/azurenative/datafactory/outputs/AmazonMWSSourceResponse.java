@@ -49,7 +49,7 @@ public final class AmazonMWSSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AmazonMWSSource'.
+     * Expected value is &#39;AmazonMWSSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AmazonMWSSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AmazonMWSSource'.
+     * Expected value is &#39;AmazonMWSSource&#39;.
      * 
     */
     public String type() {

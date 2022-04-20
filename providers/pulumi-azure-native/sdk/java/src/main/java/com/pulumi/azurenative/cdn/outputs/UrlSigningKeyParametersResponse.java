@@ -29,7 +29,7 @@ public final class UrlSigningKeyParametersResponse {
     private final @Nullable String secretVersion;
     /**
      * The type of the Secret to create.
-     * Expected value is 'UrlSigningKey'.
+     * Expected value is &#39;UrlSigningKey&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class UrlSigningKeyParametersResponse {
     }
     /**
      * The type of the Secret to create.
-     * Expected value is 'UrlSigningKey'.
+     * Expected value is &#39;UrlSigningKey&#39;.
      * 
     */
     public String type() {

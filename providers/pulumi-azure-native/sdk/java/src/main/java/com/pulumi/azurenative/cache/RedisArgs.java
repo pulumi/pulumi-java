@@ -47,7 +47,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
+     * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;)
      * 
      */
     @Import(name="minimumTlsVersion")
@@ -69,7 +69,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
+     * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;. If &#39;Disabled&#39;, private endpoints are the exclusive access method. Default value is &#39;Enabled&#39;
      * 
      */
     @Import(name="publicNetworkAccess")

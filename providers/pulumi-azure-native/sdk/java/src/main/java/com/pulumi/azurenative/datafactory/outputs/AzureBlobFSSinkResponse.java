@@ -46,7 +46,7 @@ public final class AzureBlobFSSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'AzureBlobFSSink'.
+     * Expected value is &#39;AzureBlobFSSink&#39;.
      * 
      */
     private final String type;
@@ -127,7 +127,7 @@ public final class AzureBlobFSSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'AzureBlobFSSink'.
+     * Expected value is &#39;AzureBlobFSSink&#39;.
      * 
     */
     public String type() {

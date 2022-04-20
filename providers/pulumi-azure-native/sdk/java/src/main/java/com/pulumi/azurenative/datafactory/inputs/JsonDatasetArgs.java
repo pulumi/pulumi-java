@@ -151,7 +151,7 @@ public final class JsonDatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
      */
     @Import(name="type", required=true)

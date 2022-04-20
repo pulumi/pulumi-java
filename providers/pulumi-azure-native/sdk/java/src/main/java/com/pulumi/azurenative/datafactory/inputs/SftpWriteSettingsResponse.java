@@ -66,7 +66,7 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
 
     /**
      * The write setting type.
-     * Expected value is 'SftpWriteSettings'.
+     * Expected value is &#39;SftpWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -77,7 +77,7 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
+     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn&#39;t support rename operation. Type: boolean (or Expression with resultType boolean).
      * 
      */
     @Import(name="useTempFileRename")

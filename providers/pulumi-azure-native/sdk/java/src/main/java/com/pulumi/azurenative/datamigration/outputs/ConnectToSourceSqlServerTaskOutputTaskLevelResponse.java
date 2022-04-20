@@ -34,7 +34,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
     private final Map<String,String> logins;
     /**
      * Type of result - database level or task level
-     * Expected value is 'TaskLevelOutput'.
+     * Expected value is &#39;TaskLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -104,7 +104,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
     }
     /**
      * Type of result - database level or task level
-     * Expected value is 'TaskLevelOutput'.
+     * Expected value is &#39;TaskLevelOutput&#39;.
      * 
     */
     public String resultType() {

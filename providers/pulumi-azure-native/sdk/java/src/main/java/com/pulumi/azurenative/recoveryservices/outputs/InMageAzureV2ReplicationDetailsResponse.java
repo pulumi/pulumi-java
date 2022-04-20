@@ -66,7 +66,7 @@ public final class InMageAzureV2ReplicationDetailsResponse {
     private final @Nullable String infrastructureVmId;
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
      */
     private final String instanceType;
@@ -475,7 +475,7 @@ public final class InMageAzureV2ReplicationDetailsResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
     */
     public String instanceType() {

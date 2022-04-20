@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Provides information about the drive's status
+ * Provides information about the drive&#39;s status
  * 
  */
 public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
@@ -68,7 +68,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The drive's hardware serial number, without spaces.
+     * The drive&#39;s hardware serial number, without spaces.
      * 
      */
     @Import(name="driveId")
@@ -134,7 +134,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The drive's current state.
+     * The drive&#39;s current state.
      * 
      */
     @Import(name="state")

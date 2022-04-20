@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a virtual machine scale set network profile's network configurations.
+ * Describes a virtual machine scale set network profile&#39;s network configurations.
  * 
  */
 public final class VirtualMachineScaleSetNetworkConfigurationArgs extends com.pulumi.resources.ResourceArgs {

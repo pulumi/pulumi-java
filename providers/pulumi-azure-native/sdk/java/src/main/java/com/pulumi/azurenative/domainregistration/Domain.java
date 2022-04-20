@@ -39,14 +39,14 @@ public class Domain extends com.pulumi.resources.CustomResource {
         return this.authCode;
     }
     /**
-     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
     /**
-     * @return <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> autoRenew() {
@@ -207,14 +207,14 @@ public class Domain extends com.pulumi.resources.CustomResource {
         return this.nameServers;
     }
     /**
-     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Export(name="privacy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privacy;
 
     /**
-     * @return <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * @return &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> privacy() {
@@ -235,7 +235,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     * &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */
@@ -243,7 +243,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
     private Output<Boolean> readyForDnsRecordManagement;
 
     /**
-     * @return <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+     * @return &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */

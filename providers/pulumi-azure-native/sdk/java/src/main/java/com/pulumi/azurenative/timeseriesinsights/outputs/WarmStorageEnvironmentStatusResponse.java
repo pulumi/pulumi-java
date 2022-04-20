@@ -23,7 +23,7 @@ public final class WarmStorageEnvironmentStatusResponse {
      */
     private final @Nullable Integer maxCount;
     /**
-     * This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
+     * This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
      * 
      */
     private final @Nullable String state;
@@ -53,7 +53,7 @@ public final class WarmStorageEnvironmentStatusResponse {
         return Optional.ofNullable(this.maxCount);
     }
     /**
-     * This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
+     * This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
      * 
     */
     public Optional<String> state() {

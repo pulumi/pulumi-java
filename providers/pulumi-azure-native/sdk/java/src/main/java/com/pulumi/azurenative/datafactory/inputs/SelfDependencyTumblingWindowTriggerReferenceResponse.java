@@ -43,7 +43,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
 
     /**
      * The type of dependency reference.
-     * Expected value is 'SelfDependencyTumblingWindowTriggerReference'.
+     * Expected value is &#39;SelfDependencyTumblingWindowTriggerReference&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -24,7 +24,7 @@ public final class GetScheduledTriggerResult {
     private final String id;
     /**
      * Kind of synchronization on trigger.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     private final String kind;
@@ -118,7 +118,7 @@ public final class GetScheduledTriggerResult {
     }
     /**
      * Kind of synchronization on trigger.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
     */
     public String kind() {

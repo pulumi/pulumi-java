@@ -21,7 +21,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
     private final String id;
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -87,7 +87,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
     }
     /**
      * Result type
-     * Expected value is 'MigrationLevelOutput'.
+     * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
     */
     public String resultType() {

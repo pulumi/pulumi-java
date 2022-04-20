@@ -32,7 +32,7 @@ public final class GetWebPubSubHubResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final String type;
@@ -80,7 +80,7 @@ public final class GetWebPubSubHubResult {
         return this.systemData;
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
     */
     public String type() {

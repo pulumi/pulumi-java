@@ -115,7 +115,7 @@ public final class MySqlTableDatasetResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of dataset.
-     * Expected value is 'MySqlTable'.
+     * Expected value is &#39;MySqlTable&#39;.
      * 
      */
     @Import(name="type", required=true)

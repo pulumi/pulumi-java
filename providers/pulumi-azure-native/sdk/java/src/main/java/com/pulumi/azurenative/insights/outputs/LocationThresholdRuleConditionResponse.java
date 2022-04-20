@@ -27,7 +27,7 @@ public final class LocationThresholdRuleConditionResponse {
     private final Integer failedLocationCount;
     /**
      * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition&#39;.
      * 
      */
     private final String odataType;
@@ -65,7 +65,7 @@ public final class LocationThresholdRuleConditionResponse {
     }
     /**
      * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-     * Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition&#39;.
      * 
     */
     public String odataType() {

@@ -32,7 +32,7 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
+     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
      * 
      */
     @Import(name="ruleSets")

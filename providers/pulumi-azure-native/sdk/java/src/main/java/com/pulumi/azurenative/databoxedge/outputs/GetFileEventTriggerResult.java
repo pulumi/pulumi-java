@@ -26,7 +26,7 @@ public final class GetFileEventTriggerResult {
     private final String id;
     /**
      * Trigger Kind.
-     * Expected value is 'FileEvent'.
+     * Expected value is &#39;FileEvent&#39;.
      * 
      */
     private final String kind;
@@ -92,7 +92,7 @@ public final class GetFileEventTriggerResult {
     }
     /**
      * Trigger Kind.
-     * Expected value is 'FileEvent'.
+     * Expected value is &#39;FileEvent&#39;.
      * 
     */
     public String kind() {

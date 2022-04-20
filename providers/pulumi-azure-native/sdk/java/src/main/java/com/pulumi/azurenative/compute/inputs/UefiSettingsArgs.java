@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01
+ * Specifies the security settings like secure boot and vTPM used while creating the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
  * 
  */
 public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
     public static final UefiSettingsArgs Empty = new UefiSettingsArgs();
 
     /**
-     * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
+     * Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
      */
     @Import(name="secureBootEnabled")
@@ -31,7 +31,7 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
+     * Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
      * 
      */
     @Import(name="vTpmEnabled")

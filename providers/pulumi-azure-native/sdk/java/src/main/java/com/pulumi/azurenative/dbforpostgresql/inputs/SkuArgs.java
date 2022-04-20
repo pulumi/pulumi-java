@@ -23,7 +23,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     public static final SkuArgs Empty = new SkuArgs();
 
     /**
-     * The scale up/out capacity, representing server's compute units.
+     * The scale up/out capacity, representing server&#39;s compute units.
      * 
      */
     @Import(name="capacity")

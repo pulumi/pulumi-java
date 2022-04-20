@@ -118,14 +118,14 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
         return this.clientRegistrationEndpoint;
     }
     /**
-     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
-     * @return Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     * @return Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
     public Output</* @Nullable */ String> clientSecret() {
@@ -244,14 +244,14 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
         return this.supportState;
     }
     /**
-     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
      */
     @Export(name="tokenBodyParameters", type=List.class, parameters={TokenBodyParameterContractResponse.class})
     private Output</* @Nullable */ List<TokenBodyParameterContractResponse>> tokenBodyParameters;
 
     /**
-     * @return Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     * @return Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
      */
     public Output</* @Nullable */ List<TokenBodyParameterContractResponse>> tokenBodyParameters() {

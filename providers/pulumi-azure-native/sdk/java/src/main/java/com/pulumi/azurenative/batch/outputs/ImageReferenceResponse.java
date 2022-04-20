@@ -32,7 +32,7 @@ public final class ImageReferenceResponse {
      */
     private final @Nullable String sku;
     /**
-     * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
     private final @Nullable String version;
@@ -80,7 +80,7 @@ public final class ImageReferenceResponse {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
     */
     public Optional<String> version() {

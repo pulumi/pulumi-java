@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomOpenIdConnectProviderResponse {
     /**
-     * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -40,7 +40,7 @@ public final class CustomOpenIdConnectProviderResponse {
     }
 
     /**
-     * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> enabled() {

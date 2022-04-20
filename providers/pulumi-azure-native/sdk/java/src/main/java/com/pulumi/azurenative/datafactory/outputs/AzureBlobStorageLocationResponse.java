@@ -29,7 +29,7 @@ public final class AzureBlobStorageLocationResponse {
     private final @Nullable Object folderPath;
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureBlobStorageLocation'.
+     * Expected value is &#39;AzureBlobStorageLocation&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class AzureBlobStorageLocationResponse {
     }
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureBlobStorageLocation'.
+     * Expected value is &#39;AzureBlobStorageLocation&#39;.
      * 
     */
     public String type() {

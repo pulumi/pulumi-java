@@ -87,7 +87,7 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends com.pu
 
     /**
      * Task type.
-     * Expected value is 'ConnectToSource.SqlServer'.
+     * Expected value is &#39;ConnectToSource.SqlServer&#39;.
      * 
      */
     @Import(name="taskType", required=true)

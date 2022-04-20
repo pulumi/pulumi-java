@@ -23,7 +23,7 @@ public final class ImageResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Image'.
+     * Expected value is &#39;#Microsoft.Media.Image&#39;.
      * 
      */
     private final String odataType;
@@ -89,7 +89,7 @@ public final class ImageResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Image'.
+     * Expected value is &#39;#Microsoft.Media.Image&#39;.
      * 
     */
     public String odataType() {

@@ -21,7 +21,7 @@ public final class GalleryDataDiskImageResponse extends com.pulumi.resources.Inv
     public static final GalleryDataDiskImageResponse Empty = new GalleryDataDiskImageResponse();
 
     /**
-     * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
+     * The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
      * 
      */
     @Import(name="hostCaching")

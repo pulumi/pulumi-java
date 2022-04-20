@@ -37,7 +37,7 @@ public final class WebHookActivityResponse {
      */
     private final @Nullable String description;
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object headers;
@@ -52,7 +52,7 @@ public final class WebHookActivityResponse {
      */
     private final String name;
     /**
-     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
+     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode &gt;= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object reportStatusOnCallBack;
@@ -63,7 +63,7 @@ public final class WebHookActivityResponse {
     private final @Nullable String timeout;
     /**
      * Type of activity.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
      */
     private final String type;
@@ -135,7 +135,7 @@ public final class WebHookActivityResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> headers() {
@@ -156,7 +156,7 @@ public final class WebHookActivityResponse {
         return this.name;
     }
     /**
-     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
+     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode &gt;= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
     public Optional<Object> reportStatusOnCallBack() {
@@ -171,7 +171,7 @@ public final class WebHookActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'WebHook'.
+     * Expected value is &#39;WebHook&#39;.
      * 
     */
     public String type() {

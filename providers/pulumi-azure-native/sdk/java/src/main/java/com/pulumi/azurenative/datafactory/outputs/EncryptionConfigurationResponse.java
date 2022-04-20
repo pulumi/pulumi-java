@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionConfigurationResponse {
     /**
-     * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
      */
     private final @Nullable CMKIdentityDefinitionResponse identity;
@@ -46,7 +46,7 @@ public final class EncryptionConfigurationResponse {
     }
 
     /**
-     * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
     */
     public Optional<CMKIdentityDefinitionResponse> identity() {

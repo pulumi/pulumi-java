@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class VmmToVmmNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
-     * Expected value is 'VmmToVmm'.
+     * Expected value is &#39;VmmToVmm&#39;.
      * 
      */
     private final String instanceType;
@@ -23,7 +23,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse {
 
     /**
      * Gets the Instance type.
-     * Expected value is 'VmmToVmm'.
+     * Expected value is &#39;VmmToVmm&#39;.
      * 
     */
     public String instanceType() {

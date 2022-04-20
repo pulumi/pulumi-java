@@ -60,7 +60,7 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+     * A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
     @Import(name="version")

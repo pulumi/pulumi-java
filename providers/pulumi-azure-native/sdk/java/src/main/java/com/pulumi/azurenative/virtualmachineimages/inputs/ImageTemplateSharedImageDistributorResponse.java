@@ -90,7 +90,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
 
     /**
      * Type of distribution.
-     * Expected value is 'SharedImage'.
+     * Expected value is &#39;SharedImage&#39;.
      * 
      */
     @Import(name="type", required=true)

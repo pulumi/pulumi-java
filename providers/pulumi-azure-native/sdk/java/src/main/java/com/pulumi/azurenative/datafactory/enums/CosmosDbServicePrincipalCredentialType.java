@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
      */
     @EnumType

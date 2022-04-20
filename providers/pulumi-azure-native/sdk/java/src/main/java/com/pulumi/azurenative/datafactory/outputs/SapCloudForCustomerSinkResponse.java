@@ -39,7 +39,7 @@ public final class SapCloudForCustomerSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'SapCloudForCustomerSink'.
+     * Expected value is &#39;SapCloudForCustomerSink&#39;.
      * 
      */
     private final String type;
@@ -54,7 +54,7 @@ public final class SapCloudForCustomerSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
     /**
-     * The write behavior for the operation. Default is 'Insert'.
+     * The write behavior for the operation. Default is &#39;Insert&#39;.
      * 
      */
     private final @Nullable String writeBehavior;
@@ -118,7 +118,7 @@ public final class SapCloudForCustomerSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'SapCloudForCustomerSink'.
+     * Expected value is &#39;SapCloudForCustomerSink&#39;.
      * 
     */
     public String type() {
@@ -139,7 +139,7 @@ public final class SapCloudForCustomerSinkResponse {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * The write behavior for the operation. Default is 'Insert'.
+     * The write behavior for the operation. Default is &#39;Insert&#39;.
      * 
     */
     public Optional<String> writeBehavior() {

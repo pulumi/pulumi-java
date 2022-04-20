@@ -27,7 +27,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends com.pulumi.resource
 
     /**
      * The mode to create a new server.
-     * Expected value is 'GeoRestore'.
+     * Expected value is &#39;GeoRestore&#39;.
      * 
      */
     @Import(name="createMode", required=true)
@@ -49,7 +49,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends com.pulumi.resource
     }
 
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Import(name="publicNetworkAccess")

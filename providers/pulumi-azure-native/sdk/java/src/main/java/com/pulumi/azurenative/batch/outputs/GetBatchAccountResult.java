@@ -99,7 +99,7 @@ public final class GetBatchAccountResult {
      */
     private final String provisioningState;
     /**
-     * If not specified, the default value is 'enabled'.
+     * If not specified, the default value is &#39;enabled&#39;.
      * 
      */
     private final String publicNetworkAccess;
@@ -270,7 +270,7 @@ public final class GetBatchAccountResult {
         return this.provisioningState;
     }
     /**
-     * If not specified, the default value is 'enabled'.
+     * If not specified, the default value is &#39;enabled&#39;.
      * 
     */
     public String publicNetworkAccess() {

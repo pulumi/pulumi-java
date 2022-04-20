@@ -233,14 +233,14 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
         return this.unmaskedIpLoggingStatus;
     }
     /**
-     * Properties of the IoT Security solution's user defined resources.
+     * Properties of the IoT Security solution&#39;s user defined resources.
      * 
      */
     @Export(name="userDefinedResources", type=UserDefinedResourcesPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> userDefinedResources;
 
     /**
-     * @return Properties of the IoT Security solution's user defined resources.
+     * @return Properties of the IoT Security solution&#39;s user defined resources.
      * 
      */
     public Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> userDefinedResources() {

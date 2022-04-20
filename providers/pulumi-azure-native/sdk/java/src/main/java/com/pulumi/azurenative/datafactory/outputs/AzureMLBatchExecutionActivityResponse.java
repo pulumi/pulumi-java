@@ -51,7 +51,7 @@ public final class AzureMLBatchExecutionActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'AzureMLBatchExecution'.
+     * Expected value is &#39;AzureMLBatchExecution&#39;.
      * 
      */
     private final String type;
@@ -61,12 +61,12 @@ public final class AzureMLBatchExecutionActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
      * 
      */
     private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
      * 
      */
     private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
@@ -139,7 +139,7 @@ public final class AzureMLBatchExecutionActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AzureMLBatchExecution'.
+     * Expected value is &#39;AzureMLBatchExecution&#39;.
      * 
     */
     public String type() {
@@ -153,14 +153,14 @@ public final class AzureMLBatchExecutionActivityResponse {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
      * 
     */
     public Map<String,AzureMLWebServiceFileResponse> webServiceInputs() {
         return this.webServiceInputs == null ? Map.of() : this.webServiceInputs;
     }
     /**
-     * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+     * Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
      * 
     */
     public Map<String,AzureMLWebServiceFileResponse> webServiceOutputs() {

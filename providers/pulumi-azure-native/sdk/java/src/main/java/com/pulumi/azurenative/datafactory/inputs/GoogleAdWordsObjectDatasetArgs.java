@@ -115,7 +115,7 @@ public final class GoogleAdWordsObjectDatasetArgs extends com.pulumi.resources.R
 
     /**
      * Type of dataset.
-     * Expected value is 'GoogleAdWordsObject'.
+     * Expected value is &#39;GoogleAdWordsObject&#39;.
      * 
      */
     @Import(name="type", required=true)

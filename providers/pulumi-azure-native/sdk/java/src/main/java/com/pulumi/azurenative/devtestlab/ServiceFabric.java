@@ -62,14 +62,14 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
         return this.environmentId;
     }
     /**
-     * The backing service fabric resource's id
+     * The backing service fabric resource&#39;s id
      * 
      */
     @Export(name="externalServiceFabricId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalServiceFabricId;
 
     /**
-     * @return The backing service fabric resource's id
+     * @return The backing service fabric resource&#39;s id
      * 
      */
     public Output</* @Nullable */ String> externalServiceFabricId() {

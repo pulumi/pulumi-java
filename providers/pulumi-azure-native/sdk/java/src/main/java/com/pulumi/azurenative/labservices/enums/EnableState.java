@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+     * Whether a VM will get shutdown when it hasn&#39;t been connected to after a period of time.
      * 
      */
     @EnumType

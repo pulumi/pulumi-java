@@ -109,7 +109,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * The name of the managed disk that is being created. The name can&#39;t be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
     @Import(name="diskName")
@@ -120,7 +120,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
+     * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
      * 
      */
     @Import(name="diskSizeGB")

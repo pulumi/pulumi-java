@@ -128,7 +128,7 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of linked service.
-     * Expected value is 'SapBW'.
+     * Expected value is &#39;SapBW&#39;.
      * 
      */
     @Import(name="type", required=true)

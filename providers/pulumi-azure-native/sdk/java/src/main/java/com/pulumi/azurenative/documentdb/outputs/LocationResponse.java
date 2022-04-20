@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LocationResponse {
     /**
-     * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+     * The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
      * 
      */
     private final String documentEndpoint;
@@ -24,7 +24,7 @@ public final class LocationResponse {
      */
     private final @Nullable Integer failoverPriority;
     /**
-     * The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
      */
     private final String id;
@@ -39,7 +39,7 @@ public final class LocationResponse {
      */
     private final @Nullable String locationName;
     /**
-     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
+     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
      * 
      */
     private final String provisioningState;
@@ -61,7 +61,7 @@ public final class LocationResponse {
     }
 
     /**
-     * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+     * The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
      * 
     */
     public String documentEndpoint() {
@@ -75,7 +75,7 @@ public final class LocationResponse {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
-     * The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
     */
     public String id() {
@@ -96,7 +96,7 @@ public final class LocationResponse {
         return Optional.ofNullable(this.locationName);
     }
     /**
-     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
+     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
      * 
     */
     public String provisioningState() {

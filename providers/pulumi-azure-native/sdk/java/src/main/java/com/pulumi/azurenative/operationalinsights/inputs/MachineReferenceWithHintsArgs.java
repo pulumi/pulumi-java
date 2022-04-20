@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * A machine reference with a hint of the machine's name and operating system.
+ * A machine reference with a hint of the machine&#39;s name and operating system.
  * 
  */
 public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.ResourceArgs {
@@ -31,7 +31,7 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
 
     /**
      * Specifies the sub-class of the reference.
-     * Expected value is 'ref:machinewithhints'.
+     * Expected value is &#39;ref:machinewithhints&#39;.
      * 
      */
     @Import(name="kind", required=true)

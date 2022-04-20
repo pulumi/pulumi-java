@@ -80,7 +80,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates type of action rule
-     * Expected value is 'ActionGroup'.
+     * Expected value is &#39;ActionGroup&#39;.
      * 
      */
     @Import(name="type", required=true)

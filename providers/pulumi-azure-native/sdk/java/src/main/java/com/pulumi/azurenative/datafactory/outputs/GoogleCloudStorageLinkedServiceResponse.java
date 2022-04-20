@@ -61,7 +61,7 @@ public final class GoogleCloudStorageLinkedServiceResponse {
     private final @Nullable Object serviceUrl;
     /**
      * Type of linked service.
-     * Expected value is 'GoogleCloudStorage'.
+     * Expected value is &#39;GoogleCloudStorage&#39;.
      * 
      */
     private final String type;
@@ -146,7 +146,7 @@ public final class GoogleCloudStorageLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'GoogleCloudStorage'.
+     * Expected value is &#39;GoogleCloudStorage&#39;.
      * 
     */
     public String type() {

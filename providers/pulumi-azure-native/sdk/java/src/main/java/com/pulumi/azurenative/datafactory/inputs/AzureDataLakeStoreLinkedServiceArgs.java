@@ -184,7 +184,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataLakeStore'.
+     * Expected value is &#39;AzureDataLakeStore&#39;.
      * 
      */
     @Import(name="type", required=true)

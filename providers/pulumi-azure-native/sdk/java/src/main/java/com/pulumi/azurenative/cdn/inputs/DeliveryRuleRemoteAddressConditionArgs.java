@@ -21,7 +21,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends com.pulumi.res
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RemoteAddress'.
+     * Expected value is &#39;RemoteAddress&#39;.
      * 
      */
     @Import(name="name", required=true)

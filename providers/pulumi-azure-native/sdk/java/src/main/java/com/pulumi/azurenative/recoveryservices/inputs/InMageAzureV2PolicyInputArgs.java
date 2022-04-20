@@ -46,7 +46,7 @@ public final class InMageAzureV2PolicyInputArgs extends com.pulumi.resources.Res
 
     /**
      * The class type.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
      */
     @Import(name="instanceType")
@@ -57,7 +57,7 @@ public final class InMageAzureV2PolicyInputArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
+     * A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
      * 
      */
     @Import(name="multiVmSyncStatus", required=true)

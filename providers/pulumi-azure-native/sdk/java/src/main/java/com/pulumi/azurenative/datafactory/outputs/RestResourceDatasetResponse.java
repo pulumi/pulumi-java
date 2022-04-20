@@ -79,7 +79,7 @@ public final class RestResourceDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'RestResource'.
+     * Expected value is &#39;RestResource&#39;.
      * 
      */
     private final String type;
@@ -200,7 +200,7 @@ public final class RestResourceDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'RestResource'.
+     * Expected value is &#39;RestResource&#39;.
      * 
     */
     public String type() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+ * Azure Data Factory secure string definition. The string value will be masked with asterisks &#39;*&#39; during Get or List API calls.
  * 
  */
 public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the secret.
-     * Expected value is 'SecureString'.
+     * Expected value is &#39;SecureString&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -36,7 +36,7 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
 
     /**
      * Gets the Instance type.
-     * Expected value is 'HyperVReplicaBaseReplicationDetails'.
+     * Expected value is &#39;HyperVReplicaBaseReplicationDetails&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

@@ -46,7 +46,7 @@ public final class AzureDataExplorerLinkedServiceResponse {
      */
     private final @Nullable String description;
     /**
-     * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
+     * The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
      */
     private final Object endpoint;
@@ -72,7 +72,7 @@ public final class AzureDataExplorerLinkedServiceResponse {
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class AzureDataExplorerLinkedServiceResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
+     * The endpoint of Azure Data Explorer (the engine&#39;s endpoint). URL will be in the format https://&lt;clusterName&gt;.&lt;regionName&gt;.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
     */
     public Object endpoint() {
@@ -175,7 +175,7 @@ public final class AzureDataExplorerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AzureDataExplorer'.
+     * Expected value is &#39;AzureDataExplorer&#39;.
      * 
     */
     public String type() {

@@ -195,7 +195,7 @@ public final class GoogleBigQueryLinkedServiceArgs extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'GoogleBigQuery'.
+     * Expected value is &#39;GoogleBigQuery&#39;.
      * 
      */
     @Import(name="type", required=true)

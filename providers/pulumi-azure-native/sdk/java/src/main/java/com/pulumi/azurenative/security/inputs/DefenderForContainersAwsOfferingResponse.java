@@ -80,7 +80,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
 
     /**
      * The type of the security offering.
-     * Expected value is 'DefenderForContainersAws'.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
      * 
      */
     @Import(name="offeringType", required=true)

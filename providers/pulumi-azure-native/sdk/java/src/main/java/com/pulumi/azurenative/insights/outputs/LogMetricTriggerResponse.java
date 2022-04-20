@@ -18,7 +18,7 @@ public final class LogMetricTriggerResponse {
      */
     private final @Nullable String metricColumn;
     /**
-     * Metric Trigger Type - 'Consecutive' or 'Total'
+     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
      */
     private final @Nullable String metricTriggerType;
@@ -28,7 +28,7 @@ public final class LogMetricTriggerResponse {
      */
     private final @Nullable Double threshold;
     /**
-     * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
+     * Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
      * 
      */
     private final @Nullable String thresholdOperator;
@@ -53,7 +53,7 @@ public final class LogMetricTriggerResponse {
         return Optional.ofNullable(this.metricColumn);
     }
     /**
-     * Metric Trigger Type - 'Consecutive' or 'Total'
+     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
     */
     public Optional<String> metricTriggerType() {
@@ -67,7 +67,7 @@ public final class LogMetricTriggerResponse {
         return Optional.ofNullable(this.threshold);
     }
     /**
-     * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
+     * Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
      * 
     */
     public Optional<String> thresholdOperator() {

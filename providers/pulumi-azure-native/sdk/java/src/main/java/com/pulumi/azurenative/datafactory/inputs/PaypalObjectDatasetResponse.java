@@ -115,7 +115,7 @@ public final class PaypalObjectDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'PaypalObject'.
+     * Expected value is &#39;PaypalObject&#39;.
      * 
      */
     @Import(name="type", required=true)

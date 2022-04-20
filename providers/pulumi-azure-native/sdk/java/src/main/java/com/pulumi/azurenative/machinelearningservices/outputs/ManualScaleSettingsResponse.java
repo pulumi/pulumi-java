@@ -28,7 +28,7 @@ public final class ManualScaleSettingsResponse {
      */
     private final @Nullable Integer minInstances;
     /**
-     * Expected value is 'Manual'.
+     * Expected value is &#39;Manual&#39;.
      * 
      */
     private final String scaleType;
@@ -67,7 +67,7 @@ public final class ManualScaleSettingsResponse {
         return Optional.ofNullable(this.minInstances);
     }
     /**
-     * Expected value is 'Manual'.
+     * Expected value is &#39;Manual&#39;.
      * 
     */
     public String scaleType() {

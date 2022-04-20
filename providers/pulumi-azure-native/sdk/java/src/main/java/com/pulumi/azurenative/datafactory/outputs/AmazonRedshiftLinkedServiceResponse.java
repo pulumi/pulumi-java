@@ -66,7 +66,7 @@ public final class AmazonRedshiftLinkedServiceResponse {
     private final Object server;
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRedshift'.
+     * Expected value is &#39;AmazonRedshift&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class AmazonRedshiftLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'AmazonRedshift'.
+     * Expected value is &#39;AmazonRedshift&#39;.
      * 
     */
     public String type() {

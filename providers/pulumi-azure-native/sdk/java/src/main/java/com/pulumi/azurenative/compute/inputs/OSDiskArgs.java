@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+ * Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
  * 
  */
 public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
@@ -31,7 +31,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     public static final OSDiskArgs Empty = new OSDiskArgs();
 
     /**
-     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.
+     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None** for Standard storage. **ReadOnly** for Premium storage.
      * 
      */
     @Import(name="caching")
@@ -42,7 +42,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
      */
     @Import(name="createOption", required=true)
@@ -53,7 +53,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.
+     * Specifies whether OS Disk should be deleted or detached upon VM deletion. &lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the OS disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the os disk is retained after VM is deleted. &lt;br&gt;&lt;br&gt; The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.
      * 
      */
     @Import(name="deleteOption")
@@ -75,7 +75,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
      * 
      */
     @Import(name="diskSizeGB")
@@ -86,7 +86,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
+     * Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
      */
     @Import(name="encryptionSettings")
@@ -130,7 +130,7 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     @Import(name="osType")

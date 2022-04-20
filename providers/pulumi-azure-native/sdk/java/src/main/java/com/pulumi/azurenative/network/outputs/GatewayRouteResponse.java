@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GatewayRouteResponse {
     /**
-     * The route's AS path sequence.
+     * The route&#39;s AS path sequence.
      * 
      */
     private final String asPath;
     /**
-     * The gateway's local address.
+     * The gateway&#39;s local address.
      * 
      */
     private final String localAddress;
     /**
-     * The route's network prefix.
+     * The route&#39;s network prefix.
      * 
      */
     private final String network;
     /**
-     * The route's next hop.
+     * The route&#39;s next hop.
      * 
      */
     private final String nextHop;
@@ -41,7 +41,7 @@ public final class GatewayRouteResponse {
      */
     private final String sourcePeer;
     /**
-     * The route's weight.
+     * The route&#39;s weight.
      * 
      */
     private final Integer weight;
@@ -65,28 +65,28 @@ public final class GatewayRouteResponse {
     }
 
     /**
-     * The route's AS path sequence.
+     * The route&#39;s AS path sequence.
      * 
     */
     public String asPath() {
         return this.asPath;
     }
     /**
-     * The gateway's local address.
+     * The gateway&#39;s local address.
      * 
     */
     public String localAddress() {
         return this.localAddress;
     }
     /**
-     * The route's network prefix.
+     * The route&#39;s network prefix.
      * 
     */
     public String network() {
         return this.network;
     }
     /**
-     * The route's next hop.
+     * The route&#39;s next hop.
      * 
     */
     public String nextHop() {
@@ -107,7 +107,7 @@ public final class GatewayRouteResponse {
         return this.sourcePeer;
     }
     /**
-     * The route's weight.
+     * The route&#39;s weight.
      * 
     */
     public Integer weight() {

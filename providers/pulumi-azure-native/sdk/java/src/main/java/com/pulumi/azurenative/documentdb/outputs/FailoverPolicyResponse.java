@@ -18,7 +18,7 @@ public final class FailoverPolicyResponse {
      */
     private final @Nullable Integer failoverPriority;
     /**
-     * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
      */
     private final String id;
@@ -46,7 +46,7 @@ public final class FailoverPolicyResponse {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
-     * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     * The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
     */
     public String id() {

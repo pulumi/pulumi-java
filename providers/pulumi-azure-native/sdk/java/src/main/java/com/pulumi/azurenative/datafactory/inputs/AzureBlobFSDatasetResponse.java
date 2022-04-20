@@ -154,7 +154,7 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlobFSFile'.
+     * Expected value is &#39;AzureBlobFSFile&#39;.
      * 
      */
     @Import(name="type", required=true)

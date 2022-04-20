@@ -54,7 +54,7 @@ public final class GetTransactionNodeResult {
      */
     private final String publicKey;
     /**
-     * The type of the service - e.g. "Microsoft.Blockchain"
+     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
      */
     private final String type;
@@ -145,7 +145,7 @@ public final class GetTransactionNodeResult {
         return this.publicKey;
     }
     /**
-     * The type of the service - e.g. "Microsoft.Blockchain"
+     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
     */
     public String type() {

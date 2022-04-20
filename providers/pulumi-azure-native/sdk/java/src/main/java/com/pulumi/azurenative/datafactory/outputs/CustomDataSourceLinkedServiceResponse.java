@@ -38,7 +38,7 @@ public final class CustomDataSourceLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'CustomDataSource'.
+     * Expected value is &#39;CustomDataSource&#39;.
      * 
      */
     private final String type;
@@ -87,7 +87,7 @@ public final class CustomDataSourceLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'CustomDataSource'.
+     * Expected value is &#39;CustomDataSource&#39;.
      * 
     */
     public String type() {

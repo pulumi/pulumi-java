@@ -37,7 +37,7 @@ public final class GetAccountResult {
      */
     private final String createdBy;
     /**
-     * Gets the creators of the entity's object id.
+     * Gets the creators of the entity&#39;s object id.
      * 
      */
     private final String createdByObjectId;
@@ -182,7 +182,7 @@ public final class GetAccountResult {
         return this.createdBy;
     }
     /**
-     * Gets the creators of the entity's object id.
+     * Gets the creators of the entity&#39;s object id.
      * 
     */
     public String createdByObjectId() {

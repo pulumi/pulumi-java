@@ -17,7 +17,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The essential information related to the peer's ASN.
+ * The essential information related to the peer&#39;s ASN.
  * API Version: 2021-01-01.
  * 
  * ## Example Usage

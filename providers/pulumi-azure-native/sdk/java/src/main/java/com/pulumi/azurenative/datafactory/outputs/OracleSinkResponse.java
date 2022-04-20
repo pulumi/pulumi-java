@@ -39,7 +39,7 @@ public final class OracleSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'OracleSink'.
+     * Expected value is &#39;OracleSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class OracleSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'OracleSink'.
+     * Expected value is &#39;OracleSink&#39;.
      * 
     */
     public String type() {

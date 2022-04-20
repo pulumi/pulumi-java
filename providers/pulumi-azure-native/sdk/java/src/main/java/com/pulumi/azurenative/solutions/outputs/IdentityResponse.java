@@ -29,7 +29,7 @@ public final class IdentityResponse {
      */
     private final @Nullable String type;
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,UserAssignedResourceIdentityResponse> userAssignedIdentities;
@@ -68,7 +68,7 @@ public final class IdentityResponse {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
     */
     public Map<String,UserAssignedResourceIdentityResponse> userAssignedIdentities() {

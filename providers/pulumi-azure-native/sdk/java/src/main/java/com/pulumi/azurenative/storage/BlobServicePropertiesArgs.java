@@ -44,7 +44,7 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The name of the blob Service within the specified storage account. Blob Service Name must be 'default'
+     * The name of the blob Service within the specified storage account. Blob Service Name must be &#39;default&#39;
      * 
      */
     @Import(name="blobServicesName")
@@ -132,7 +132,7 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

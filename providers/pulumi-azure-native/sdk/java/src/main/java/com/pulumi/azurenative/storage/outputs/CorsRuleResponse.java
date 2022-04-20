@@ -22,7 +22,7 @@ public final class CorsRuleResponse {
      */
     private final List<String> allowedMethods;
     /**
-     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
+     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
      * 
      */
     private final List<String> allowedOrigins;
@@ -66,7 +66,7 @@ public final class CorsRuleResponse {
         return this.allowedMethods;
     }
     /**
-     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
+     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
      * 
     */
     public List<String> allowedOrigins() {

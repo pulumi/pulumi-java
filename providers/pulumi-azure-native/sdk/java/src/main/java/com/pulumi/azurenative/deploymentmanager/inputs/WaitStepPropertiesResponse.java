@@ -31,7 +31,7 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
 
     /**
      * The type of step.
-     * Expected value is 'Wait'.
+     * Expected value is &#39;Wait&#39;.
      * 
      */
     @Import(name="stepType", required=true)

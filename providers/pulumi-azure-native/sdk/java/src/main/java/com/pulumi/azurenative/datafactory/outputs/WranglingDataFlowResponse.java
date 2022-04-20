@@ -47,7 +47,7 @@ public final class WranglingDataFlowResponse {
     private final @Nullable List<PowerQuerySourceResponse> sources;
     /**
      * Type of data flow.
-     * Expected value is 'WranglingDataFlow'.
+     * Expected value is &#39;WranglingDataFlow&#39;.
      * 
      */
     private final String type;
@@ -114,7 +114,7 @@ public final class WranglingDataFlowResponse {
     }
     /**
      * Type of data flow.
-     * Expected value is 'WranglingDataFlow'.
+     * Expected value is &#39;WranglingDataFlow&#39;.
      * 
     */
     public String type() {

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAlertsSuppressionRuleResult {
     /**
-     * Type of the alert to automatically suppress. For all alert types, use '*'
+     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
      */
     private final String alertType;
@@ -88,7 +88,7 @@ public final class GetAlertsSuppressionRuleResult {
     }
 
     /**
-     * Type of the alert to automatically suppress. For all alert types, use '*'
+     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
     */
     public String alertType() {

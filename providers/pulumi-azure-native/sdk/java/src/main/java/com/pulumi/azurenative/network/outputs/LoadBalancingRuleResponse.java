@@ -20,7 +20,7 @@ public final class LoadBalancingRuleResponse {
      */
     private final @Nullable SubResourceResponse backendAddressPool;
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
+     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
      * 
      */
     private final @Nullable Integer backendPort;
@@ -30,7 +30,7 @@ public final class LoadBalancingRuleResponse {
      */
     private final @Nullable Boolean disableOutboundSnat;
     /**
-     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
     private final @Nullable Boolean enableFloatingIP;
@@ -50,7 +50,7 @@ public final class LoadBalancingRuleResponse {
      */
     private final @Nullable SubResourceResponse frontendIPConfiguration;
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
      * 
      */
     private final Integer frontendPort;
@@ -139,7 +139,7 @@ public final class LoadBalancingRuleResponse {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
+     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
      * 
     */
     public Optional<Integer> backendPort() {
@@ -153,7 +153,7 @@ public final class LoadBalancingRuleResponse {
         return Optional.ofNullable(this.disableOutboundSnat);
     }
     /**
-     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
     */
     public Optional<Boolean> enableFloatingIP() {
@@ -181,7 +181,7 @@ public final class LoadBalancingRuleResponse {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
      * 
     */
     public Integer frontendPort() {

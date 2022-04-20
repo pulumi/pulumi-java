@@ -257,7 +257,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse extends com.p
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSQLDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSQLDatabase&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

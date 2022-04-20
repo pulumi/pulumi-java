@@ -61,7 +61,7 @@ public final class GetPartnerNamespaceResult {
     private final String provisioningState;
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -173,7 +173,7 @@ public final class GetPartnerNamespaceResult {
     }
     /**
      * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
      * 
     */
     public Optional<String> publicNetworkAccess() {

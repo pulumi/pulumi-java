@@ -36,7 +36,7 @@ public final class SqlSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -71,13 +71,13 @@ public final class SqlSourceResponse {
      */
     private final @Nullable Object sqlReaderStoredProcedureName;
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
     /**
      * Copy source type.
-     * Expected value is 'SqlSource'.
+     * Expected value is &#39;SqlSource&#39;.
      * 
      */
     private final String type;
@@ -141,7 +141,7 @@ public final class SqlSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -190,7 +190,7 @@ public final class SqlSourceResponse {
         return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
     */
     public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
@@ -198,7 +198,7 @@ public final class SqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SqlSource'.
+     * Expected value is &#39;SqlSource&#39;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     public static final ReportFilterResponse Empty = new ReportFilterResponse();
 
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     @Import(name="and")
@@ -42,7 +42,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
      */
     @Import(name="not")
@@ -53,7 +53,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The logical "OR" expression. Must have at least 2 items.
+     * The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
      */
     @Import(name="or")

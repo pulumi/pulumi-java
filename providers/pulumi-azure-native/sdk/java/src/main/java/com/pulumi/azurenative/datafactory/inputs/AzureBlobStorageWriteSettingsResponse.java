@@ -66,7 +66,7 @@ public final class AzureBlobStorageWriteSettingsResponse extends com.pulumi.reso
 
     /**
      * The write setting type.
-     * Expected value is 'AzureBlobStorageWriteSettings'.
+     * Expected value is &#39;AzureBlobStorageWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

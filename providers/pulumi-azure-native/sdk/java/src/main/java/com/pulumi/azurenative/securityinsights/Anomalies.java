@@ -63,7 +63,7 @@ public class Anomalies extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the setting
-     * Expected value is 'Anomalies'.
+     * Expected value is &#39;Anomalies&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -71,7 +71,7 @@ public class Anomalies extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the setting
-     * Expected value is 'Anomalies'.
+     * Expected value is &#39;Anomalies&#39;.
      * 
      */
     public Output<String> kind() {

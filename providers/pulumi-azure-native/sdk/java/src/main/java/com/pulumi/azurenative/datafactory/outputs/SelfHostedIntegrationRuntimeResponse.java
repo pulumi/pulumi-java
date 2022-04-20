@@ -26,7 +26,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
     private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
     /**
      * The type of integration runtime.
-     * Expected value is 'SelfHosted'.
+     * Expected value is &#39;SelfHosted&#39;.
      * 
      */
     private final String type;
@@ -57,7 +57,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
     }
     /**
      * The type of integration runtime.
-     * Expected value is 'SelfHosted'.
+     * Expected value is &#39;SelfHosted&#39;.
      * 
     */
     public String type() {

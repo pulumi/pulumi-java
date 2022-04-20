@@ -39,7 +39,7 @@ public final class FileSystemSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'FileSystemSink'.
+     * Expected value is &#39;FileSystemSink&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class FileSystemSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'FileSystemSink'.
+     * Expected value is &#39;FileSystemSink&#39;.
      * 
     */
     public String type() {

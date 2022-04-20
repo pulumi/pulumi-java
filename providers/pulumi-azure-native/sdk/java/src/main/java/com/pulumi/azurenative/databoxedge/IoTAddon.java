@@ -91,7 +91,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
     }
     /**
      * Addon type.
-     * Expected value is 'IotEdge'.
+     * Expected value is &#39;IotEdge&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -99,7 +99,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Addon type.
-     * Expected value is 'IotEdge'.
+     * Expected value is &#39;IotEdge&#39;.
      * 
      */
     public Output<String> kind() {

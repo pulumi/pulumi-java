@@ -29,7 +29,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionResult {
      */
     private final String name;
     /**
-     * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+     * The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
     private final @Nullable String subnetResourceId;
@@ -89,7 +89,7 @@ public final class GetWebAppSwiftVirtualNetworkConnectionResult {
         return this.name;
     }
     /**
-     * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+     * The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
     */
     public Optional<String> subnetResourceId() {

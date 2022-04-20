@@ -115,7 +115,7 @@ public final class MongoDbV2CollectionDatasetArgs extends com.pulumi.resources.R
 
     /**
      * Type of dataset.
-     * Expected value is 'MongoDbV2Collection'.
+     * Expected value is &#39;MongoDbV2Collection&#39;.
      * 
      */
     @Import(name="type", required=true)

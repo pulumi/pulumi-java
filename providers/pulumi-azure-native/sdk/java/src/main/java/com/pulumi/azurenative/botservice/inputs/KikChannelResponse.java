@@ -22,7 +22,7 @@ public final class KikChannelResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The channel name
-     * Expected value is 'KikChannel'.
+     * Expected value is &#39;KikChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

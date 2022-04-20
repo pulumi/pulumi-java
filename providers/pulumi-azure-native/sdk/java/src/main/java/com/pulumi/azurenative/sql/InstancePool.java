@@ -35,14 +35,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:sql:InstancePool")
 public class InstancePool extends com.pulumi.resources.CustomResource {
     /**
-     * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
      */
     @Export(name="licenseType", type=String.class, parameters={})
     private Output<String> licenseType;
 
     /**
-     * @return The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
      */
     public Output<String> licenseType() {

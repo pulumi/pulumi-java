@@ -151,7 +151,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'HDInsight'.
+     * Expected value is &#39;HDInsight&#39;.
      * 
      */
     @Import(name="type", required=true)

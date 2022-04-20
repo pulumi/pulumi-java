@@ -20,7 +20,7 @@ public final class GitRepoVolumeArgs extends com.pulumi.resources.ResourceArgs {
     public static final GitRepoVolumeArgs Empty = new GitRepoVolumeArgs();
 
     /**
-     * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     @Import(name="directory")

@@ -111,7 +111,7 @@ public final class VirtualMachineScaleSetExtensionArgs extends com.pulumi.resour
     }
 
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     @Import(name="type")

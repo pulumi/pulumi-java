@@ -151,14 +151,14 @@ public class ManagedInstance extends com.pulumi.resources.CustomResource {
         return this.keyId;
     }
     /**
-     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
      */
     @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
-     * @return The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (regular price inclusive of a new SQL license) and &#39;BasePrice&#39; (discounted AHB price for bringing your own SQL licenses).
      * 
      */
     public Output</* @Nullable */ String> licenseType() {
@@ -193,14 +193,14 @@ public class ManagedInstance extends com.pulumi.resources.CustomResource {
         return this.maintenanceConfigurationId;
     }
     /**
-     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
-     * @return Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+     * @return Minimal TLS version. Allowed values: &#39;None&#39;, &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     public Output</* @Nullable */ String> minimalTlsVersion() {
@@ -372,7 +372,7 @@ public class ManagedInstance extends com.pulumi.resources.CustomResource {
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * An example of valid timezone id is &#34;Pacific Standard Time&#34; or &#34;W. Europe Standard Time&#34;.
      * 
      */
     @Export(name="timezoneId", type=String.class, parameters={})
@@ -384,7 +384,7 @@ public class ManagedInstance extends com.pulumi.resources.CustomResource {
      * KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
      * You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
      * List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-     * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
+     * An example of valid timezone id is &#34;Pacific Standard Time&#34; or &#34;W. Europe Standard Time&#34;.
      * 
      */
     public Output</* @Nullable */ String> timezoneId() {

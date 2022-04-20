@@ -34,8 +34,8 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
-     *  The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

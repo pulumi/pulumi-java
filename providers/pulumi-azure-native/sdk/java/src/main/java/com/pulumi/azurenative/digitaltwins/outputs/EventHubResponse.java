@@ -43,7 +43,7 @@ public final class EventHubResponse {
     private final @Nullable String deadLetterUri;
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
      */
     private final String endpointType;
@@ -131,7 +131,7 @@ public final class EventHubResponse {
     }
     /**
      * The type of Digital Twins endpoint
-     * Expected value is 'EventHub'.
+     * Expected value is &#39;EventHub&#39;.
      * 
     */
     public String endpointType() {

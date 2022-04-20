@@ -37,7 +37,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
      */
     private final @Nullable String maxmemoryDelta;
     /**
-     * The eviction strategy used when your data won't fit within its memory limit.
+     * The eviction strategy used when your data won&#39;t fit within its memory limit.
      * 
      */
     private final @Nullable String maxmemoryPolicy;
@@ -129,7 +129,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
         return Optional.ofNullable(this.maxmemoryDelta);
     }
     /**
-     * The eviction strategy used when your data won't fit within its memory limit.
+     * The eviction strategy used when your data won&#39;t fit within its memory limit.
      * 
     */
     public Optional<String> maxmemoryPolicy() {

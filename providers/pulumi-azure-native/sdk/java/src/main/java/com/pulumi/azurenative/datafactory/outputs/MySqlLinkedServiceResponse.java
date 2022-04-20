@@ -54,7 +54,7 @@ public final class MySqlLinkedServiceResponse {
     private final @Nullable AzureKeyVaultSecretReferenceResponse password;
     /**
      * Type of linked service.
-     * Expected value is 'MySql'.
+     * Expected value is &#39;MySql&#39;.
      * 
      */
     private final String type;
@@ -130,7 +130,7 @@ public final class MySqlLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'MySql'.
+     * Expected value is &#39;MySql&#39;.
      * 
     */
     public String type() {

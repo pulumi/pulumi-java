@@ -55,7 +55,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
 
     /**
      * The type of dependency reference.
-     * Expected value is 'TumblingWindowTriggerDependencyReference'.
+     * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
      * 
      */
     @Import(name="type", required=true)

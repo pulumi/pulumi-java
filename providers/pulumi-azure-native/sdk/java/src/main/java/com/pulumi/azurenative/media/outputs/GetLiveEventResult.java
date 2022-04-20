@@ -86,7 +86,7 @@ public final class GetLiveEventResult {
      */
     private final String resourceState;
     /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
+     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
      */
     private final @Nullable List<String> streamOptions;
@@ -106,7 +106,7 @@ public final class GetLiveEventResult {
      */
     private final @Nullable List<LiveEventTranscriptionResponse> transcriptions;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -250,7 +250,7 @@ public final class GetLiveEventResult {
         return this.resourceState;
     }
     /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
+     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
     */
     public List<String> streamOptions() {
@@ -278,7 +278,7 @@ public final class GetLiveEventResult {
         return this.transcriptions == null ? List.of() : this.transcriptions;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

@@ -19,7 +19,7 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
     public static final CustomRPActionRouteDefinitionResponse Empty = new CustomRPActionRouteDefinitionResponse();
 
     /**
-     * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
+     * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
      * 
      */
     @Import(name="endpoint", required=true)
@@ -30,7 +30,7 @@ public final class CustomRPActionRouteDefinitionResponse extends com.pulumi.reso
     }
 
     /**
-     * The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
+     * The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
      * 
      */
     @Import(name="name", required=true)

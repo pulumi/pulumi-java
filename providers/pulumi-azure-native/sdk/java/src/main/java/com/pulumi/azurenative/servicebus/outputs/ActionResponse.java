@@ -24,7 +24,7 @@ public final class ActionResponse {
      */
     private final @Nullable Boolean requiresPreprocessing;
     /**
-     * SQL expression. e.g. MyProperty='ABC'
+     * SQL expression. e.g. MyProperty=&#39;ABC&#39;
      * 
      */
     private final @Nullable String sqlExpression;
@@ -54,7 +54,7 @@ public final class ActionResponse {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
-     * SQL expression. e.g. MyProperty='ABC'
+     * SQL expression. e.g. MyProperty=&#39;ABC&#39;
      * 
     */
     public Optional<String> sqlExpression() {

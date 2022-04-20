@@ -16,7 +16,7 @@ public final class PngFormatResponse {
     private final String filenamePattern;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngFormat'.
+     * Expected value is &#39;#Microsoft.Media.PngFormat&#39;.
      * 
      */
     private final String odataType;
@@ -38,7 +38,7 @@ public final class PngFormatResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.PngFormat'.
+     * Expected value is &#39;#Microsoft.Media.PngFormat&#39;.
      * 
     */
     public String odataType() {

@@ -131,14 +131,14 @@ public class Controller extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * DNS of the target container host's API server
+     * DNS of the target container host&#39;s API server
      * 
      */
     @Export(name="targetContainerHostApiServerFqdn", type=String.class, parameters={})
     private Output<String> targetContainerHostApiServerFqdn;
 
     /**
-     * @return DNS of the target container host's API server
+     * @return DNS of the target container host&#39;s API server
      * 
      */
     public Output<String> targetContainerHostApiServerFqdn() {

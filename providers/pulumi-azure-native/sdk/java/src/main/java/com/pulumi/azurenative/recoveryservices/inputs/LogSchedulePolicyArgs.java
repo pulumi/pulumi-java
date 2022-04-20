@@ -33,7 +33,7 @@ public final class LogSchedulePolicyArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'LogSchedulePolicy'.
+     * Expected value is &#39;LogSchedulePolicy&#39;.
      * 
      */
     @Import(name="schedulePolicyType", required=true)

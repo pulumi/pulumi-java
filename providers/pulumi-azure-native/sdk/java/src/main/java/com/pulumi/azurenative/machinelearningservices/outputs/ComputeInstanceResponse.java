@@ -22,7 +22,7 @@ public final class ComputeInstanceResponse {
     private final @Nullable String computeLocation;
     /**
      * The type of compute
-     * Expected value is 'ComputeInstance'.
+     * Expected value is &#39;ComputeInstance&#39;.
      * 
      */
     private final String computeType;
@@ -86,7 +86,7 @@ public final class ComputeInstanceResponse {
     }
     /**
      * The type of compute
-     * Expected value is 'ComputeInstance'.
+     * Expected value is &#39;ComputeInstance&#39;.
      * 
     */
     public String computeType() {

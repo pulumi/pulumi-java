@@ -17,17 +17,17 @@ public final class PolicyDefinitionGroupResponse {
      */
     private final @Nullable String additionalMetadataId;
     /**
-     * The group's category.
+     * The group&#39;s category.
      * 
      */
     private final @Nullable String category;
     /**
-     * The group's description.
+     * The group&#39;s description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The group's display name.
+     * The group&#39;s display name.
      * 
      */
     private final @Nullable String displayName;
@@ -59,21 +59,21 @@ public final class PolicyDefinitionGroupResponse {
         return Optional.ofNullable(this.additionalMetadataId);
     }
     /**
-     * The group's category.
+     * The group&#39;s category.
      * 
     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * The group's description.
+     * The group&#39;s description.
      * 
     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The group's display name.
+     * The group&#39;s display name.
      * 
     */
     public Optional<String> displayName() {

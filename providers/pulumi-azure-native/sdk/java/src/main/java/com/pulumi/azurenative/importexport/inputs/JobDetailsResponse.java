@@ -185,7 +185,7 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Specifies the return carrier and customer's account with the carrier.
+     * Specifies the return carrier and customer&#39;s account with the carrier.
      * 
      */
     @Import(name="returnShipping")

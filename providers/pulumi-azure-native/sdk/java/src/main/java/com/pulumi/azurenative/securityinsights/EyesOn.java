@@ -63,7 +63,7 @@ public class EyesOn extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the setting
-     * Expected value is 'EyesOn'.
+     * Expected value is &#39;EyesOn&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -71,7 +71,7 @@ public class EyesOn extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the setting
-     * Expected value is 'EyesOn'.
+     * Expected value is &#39;EyesOn&#39;.
      * 
      */
     public Output<String> kind() {

@@ -29,7 +29,7 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
 
     /**
      * Information about the destination where events have to be delivered for the event subscription.
-     * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     @Import(name="destination")

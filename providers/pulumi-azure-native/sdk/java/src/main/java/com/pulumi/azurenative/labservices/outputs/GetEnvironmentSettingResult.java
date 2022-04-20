@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEnvironmentSettingResult {
     /**
-     * Describes the user's progress in configuring their environment setting
+     * Describes the user&#39;s progress in configuring their environment setting
      * 
      */
     private final @Nullable String configurationState;
@@ -125,7 +125,7 @@ public final class GetEnvironmentSettingResult {
     }
 
     /**
-     * Describes the user's progress in configuring their environment setting
+     * Describes the user&#39;s progress in configuring their environment setting
      * 
     */
     public Optional<String> configurationState() {

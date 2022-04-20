@@ -121,7 +121,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
+     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
      */
     @Import(name="releaseTrain")
@@ -165,7 +165,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
      */
     @Import(name="version")

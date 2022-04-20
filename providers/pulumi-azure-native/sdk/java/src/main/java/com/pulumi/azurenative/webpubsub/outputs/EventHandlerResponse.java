@@ -25,16 +25,16 @@ public final class EventHandlerResponse {
     private final @Nullable List<String> systemEvents;
     /**
      * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
-     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
+     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can&#39;t contains parameters.
      * 
      */
     private final String urlTemplate;
     /**
      * Gets or sets the matching pattern for event names.
      * There are 3 kind of patterns supported:
-     *     1. "*", it to matches any event name
-     *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
-     *     3. The single event name, for example, "event1", it matches "event1"
+     *     1. &#34;*&#34;, it to matches any event name
+     *     2. Combine multiple events with &#34;,&#34;, for example &#34;event1,event2&#34;, it matches event &#34;event1&#34; and &#34;event2&#34;
+     *     3. The single event name, for example, &#34;event1&#34;, it matches &#34;event1&#34;
      * 
      */
     private final @Nullable String userEventPattern;
@@ -67,7 +67,7 @@ public final class EventHandlerResponse {
     }
     /**
      * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
-     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
+     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can&#39;t contains parameters.
      * 
     */
     public String urlTemplate() {
@@ -76,9 +76,9 @@ public final class EventHandlerResponse {
     /**
      * Gets or sets the matching pattern for event names.
      * There are 3 kind of patterns supported:
-     *     1. "*", it to matches any event name
-     *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
-     *     3. The single event name, for example, "event1", it matches "event1"
+     *     1. &#34;*&#34;, it to matches any event name
+     *     2. Combine multiple events with &#34;,&#34;, for example &#34;event1,event2&#34;, it matches event &#34;event1&#34; and &#34;event2&#34;
+     *     3. The single event name, for example, &#34;event1&#34;, it matches &#34;event1&#34;
      * 
     */
     public Optional<String> userEventPattern() {

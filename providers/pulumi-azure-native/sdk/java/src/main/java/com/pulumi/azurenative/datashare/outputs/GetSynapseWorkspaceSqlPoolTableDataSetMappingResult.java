@@ -27,7 +27,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
      */
     private final String kind;
@@ -102,7 +102,7 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     * Expected value is &#39;SynapseWorkspaceSqlPoolTable&#39;.
      * 
     */
     public String kind() {

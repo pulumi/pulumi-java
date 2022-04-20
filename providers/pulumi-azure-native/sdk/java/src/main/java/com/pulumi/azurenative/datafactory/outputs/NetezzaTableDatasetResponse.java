@@ -64,7 +64,7 @@ public final class NetezzaTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'NetezzaTable'.
+     * Expected value is &#39;NetezzaTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class NetezzaTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'NetezzaTable'.
+     * Expected value is &#39;NetezzaTable&#39;.
      * 
     */
     public String type() {

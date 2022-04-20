@@ -18,7 +18,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
+ * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format &lt;endpointname&gt;.azureedge.net.
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
@@ -41,14 +41,14 @@ public class AFDEndpoint extends com.pulumi.resources.CustomResource {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
-     * @return Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> enabledState() {

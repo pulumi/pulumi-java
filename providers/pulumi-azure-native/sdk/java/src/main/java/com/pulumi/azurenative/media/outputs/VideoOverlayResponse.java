@@ -45,7 +45,7 @@ public final class VideoOverlayResponse {
     private final String inputLabel;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.VideoOverlay'.
+     * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
      * 
      */
     private final String odataType;
@@ -133,7 +133,7 @@ public final class VideoOverlayResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.VideoOverlay'.
+     * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
      * 
     */
     public String odataType() {

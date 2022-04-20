@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Describes an automation rule condition that evaluates a property's value
+ * Describes an automation rule condition that evaluates a property&#39;s value
  * 
  */
 public final class AutomationRulePropertyValuesConditionResponse extends com.pulumi.resources.InvokeArgs {
@@ -31,7 +31,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
 
     /**
      * The type of the automation rule condition
-     * Expected value is 'Property'.
+     * Expected value is &#39;Property&#39;.
      * 
      */
     @Import(name="conditionType", required=true)

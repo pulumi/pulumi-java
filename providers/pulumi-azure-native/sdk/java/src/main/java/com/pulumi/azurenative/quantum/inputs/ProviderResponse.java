@@ -19,7 +19,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     public static final ProviderResponse Empty = new ProviderResponse();
 
     /**
-     * The provider's marketplace application display name.
+     * The provider&#39;s marketplace application display name.
      * 
      */
     @Import(name="applicationName")

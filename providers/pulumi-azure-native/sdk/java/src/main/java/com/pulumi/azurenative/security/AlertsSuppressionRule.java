@@ -33,14 +33,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:security:AlertsSuppressionRule")
 public class AlertsSuppressionRule extends com.pulumi.resources.CustomResource {
     /**
-     * Type of the alert to automatically suppress. For all alert types, use '*'
+     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
      */
     @Export(name="alertType", type=String.class, parameters={})
     private Output<String> alertType;
 
     /**
-     * @return Type of the alert to automatically suppress. For all alert types, use '*'
+     * @return Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
      */
     public Output<String> alertType() {

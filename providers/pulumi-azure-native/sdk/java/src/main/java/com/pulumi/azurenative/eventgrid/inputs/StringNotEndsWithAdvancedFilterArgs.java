@@ -33,7 +33,7 @@ public final class StringNotEndsWithAdvancedFilterArgs extends com.pulumi.resour
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotEndsWith'.
+     * Expected value is &#39;StringNotEndsWith&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

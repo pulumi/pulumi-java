@@ -23,7 +23,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
     public static final VirtualMachineScaleSetStorageProfileArgs Empty = new VirtualMachineScaleSetStorageProfileArgs();
 
     /**
-     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="dataDisks")
@@ -45,7 +45,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
     }
 
     /**
-     * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies information about the operating system disk used by the virtual machines in the scale set. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="osDisk")

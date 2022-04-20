@@ -32,7 +32,7 @@ public final class CompressionSettingsResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
+     * Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won&#39;t be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
      * 
      */
     @Import(name="isCompressionEnabled")

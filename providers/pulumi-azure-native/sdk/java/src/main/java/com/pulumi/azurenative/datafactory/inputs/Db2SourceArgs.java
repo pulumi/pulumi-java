@@ -99,7 +99,7 @@ public final class Db2SourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'Db2Source'.
+     * Expected value is &#39;Db2Source&#39;.
      * 
      */
     @Import(name="type", required=true)

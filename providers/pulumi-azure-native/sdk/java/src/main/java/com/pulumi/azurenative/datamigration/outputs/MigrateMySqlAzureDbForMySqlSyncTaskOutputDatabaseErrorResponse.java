@@ -30,7 +30,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     private final String id;
     /**
      * Result type
-     * Expected value is 'DatabaseLevelErrorOutput'.
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
      */
     private final String resultType;
@@ -70,7 +70,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     }
     /**
      * Result type
-     * Expected value is 'DatabaseLevelErrorOutput'.
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
      * 
     */
     public String resultType() {

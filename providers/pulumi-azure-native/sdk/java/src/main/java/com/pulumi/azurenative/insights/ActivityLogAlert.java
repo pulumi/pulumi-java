@@ -92,14 +92,14 @@ public class ActivityLogAlert extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
-     * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
      */
     public Output</* @Nullable */ String> location() {

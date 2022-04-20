@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The alerts' productName on which the cases will be generated
+     * The alerts&#39; productName on which the cases will be generated
      * 
      */
     @EnumType

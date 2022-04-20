@@ -44,7 +44,7 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
      * 
      */
     @Import(name="odataType", required=true)

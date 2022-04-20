@@ -73,7 +73,7 @@ public final class GetProfileResult {
      */
     private final @Nullable String trafficRoutingMethod;
     /**
-     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
     private final @Nullable String trafficViewEnrollmentStatus;
@@ -191,7 +191,7 @@ public final class GetProfileResult {
         return Optional.ofNullable(this.trafficRoutingMethod);
     }
     /**
-     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
+     * Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
     */
     public Optional<String> trafficViewEnrollmentStatus() {

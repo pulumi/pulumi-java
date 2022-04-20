@@ -76,7 +76,7 @@ public class ADLSGen2FileSystemDataSetMapping extends com.pulumi.resources.Custo
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'AdlsGen2FileSystem'.
+     * Expected value is &#39;AdlsGen2FileSystem&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -84,7 +84,7 @@ public class ADLSGen2FileSystemDataSetMapping extends com.pulumi.resources.Custo
 
     /**
      * @return Kind of data set mapping.
-     * Expected value is 'AdlsGen2FileSystem'.
+     * Expected value is &#39;AdlsGen2FileSystem&#39;.
      * 
      */
     public Output<String> kind() {

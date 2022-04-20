@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Properties of the IoT Security solution's user defined resources.
+ * Properties of the IoT Security solution&#39;s user defined resources.
  * 
  */
 public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
     public static final UserDefinedResourcesPropertiesResponse Empty = new UserDefinedResourcesPropertiesResponse();
 
     /**
-     * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
+     * Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
      * 
      */
     @Import(name="query", required=true)

@@ -43,7 +43,7 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
 
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'DataPath'.
+     * Expected value is &#39;DataPath&#39;.
      * 
      */
     @Import(name="referenceType", required=true)

@@ -23,7 +23,7 @@ public final class VolumeReferenceResponse {
      */
     private final String name;
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
      */
     private final @Nullable Boolean readOnly;
@@ -53,7 +53,7 @@ public final class VolumeReferenceResponse {
         return this.name;
     }
     /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
+     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
     */
     public Optional<Boolean> readOnly() {
