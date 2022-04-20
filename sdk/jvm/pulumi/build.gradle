@@ -127,11 +127,6 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-task javadocJar(type: Jar) {
-    from javadoc
-    classifier = 'javadoc'
-}
-
 publishing {
     publications {
         gpr(MavenPublication) {
@@ -140,7 +135,6 @@ publishing {
             version = version
             from components.java
             artifact sourcesJar
-            artifact javadocJar
 
             pom {
                 inceptionYear = "2022"
