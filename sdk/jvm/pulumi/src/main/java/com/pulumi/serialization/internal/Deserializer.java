@@ -1,6 +1,5 @@
 package com.pulumi.serialization.internal;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Value;
@@ -13,19 +12,16 @@ import com.pulumi.asset.FileAsset;
 import com.pulumi.asset.RemoteArchive;
 import com.pulumi.asset.RemoteAsset;
 import com.pulumi.asset.StringAsset;
-import com.pulumi.core.Tuples;
-import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.Resource;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -39,9 +35,11 @@ import static com.google.protobuf.Value.KindCase.STRUCT_VALUE;
 import static com.pulumi.serialization.internal.Structs.tryGetStringValue;
 import static com.pulumi.serialization.internal.Structs.tryGetStructValue;
 import static com.pulumi.serialization.internal.Structs.tryGetValue;
+import static java.util.Collections.unmodifiableList;
+import static java.util.Objects.requireNonNull;
 
 /**
- * Also @see {@link Serializer}
+ * @see Serializer
  */
 public class Deserializer {
 
@@ -50,7 +48,8 @@ public class Deserializer {
     }
 
     public OutputData<Object> deserialize(Value value) {
-        Objects.requireNonNull(value);
+        requireNonNull(value, "Expected value to be non-null");
+
         return deserializeCore(value, v -> {
             switch (v.getKindCase()) {
                 case NUMBER_VALUE:
@@ -79,10 +78,10 @@ public class Deserializer {
         });
     }
 
-    private <T> OutputData<T> deserializeCore(Value value, Function<Value, OutputData<T>> func) {
-        var secret = unwrapSecret(value);
-        boolean isSecret = secret.t2;
-        value = secret.t1;
+    private <T> OutputData<T> deserializeCore(Value maybeSecret, Function<Value, OutputData<T>> func) {
+        var unwrapped = unwrapSecret(maybeSecret);
+        var isSecret = unwrapped.isSecret;
+        var value = unwrapped.value;
 
         if (value.getKindCase() == STRING_VALUE && Constants.UnknownValue.equals(value.getStringValue())) {
             // always deserialize unknown as the null value.
@@ -137,14 +136,14 @@ public class Deserializer {
     private OutputData<List<?>> deserializeList(Value value) {
         return deserializeOneOf(value, LIST_VALUE, v -> {
             var resources = new HashSet<Resource>();
-            var result = new LinkedList<Optional<?>>();
+            var result = new ArrayList<Object>(); // will hold nulls
             var isKnown = true;
             var isSecret = false;
 
             for (var element : v.getListValue().getValuesList()) {
                 var elementData = deserialize(element);
                 resources.addAll(elementData.getResources());
-                result.add(elementData.getValueOptional());
+                result.add(elementData.getValueNullable());
                 isKnown = isKnown && elementData.isKnown();
                 isSecret = isSecret || elementData.isSecret();
             }
@@ -152,7 +151,7 @@ public class Deserializer {
             if (isKnown) {
                 return OutputData.ofNullable(
                         ImmutableSet.copyOf(resources),
-                        ImmutableList.copyOf(result),
+                        unmodifiableList(result), // Can't be immutable because this contains null
                         true,
                         isSecret
                 );
@@ -167,10 +166,10 @@ public class Deserializer {
         });
     }
 
-    private OutputData<Map<String, Optional<?>>> deserializeStruct(Value value) {
+    private OutputData<Map<String, ?>> deserializeStruct(Value value) {
         return deserializeOneOf(value, STRUCT_VALUE, v -> {
             var resources = new HashSet<Resource>();
-            var result = new HashMap<String, Optional<?>>();
+            var result = new HashMap<String, Object>();
             var isKnown = true;
             var isSecret = false;
 
@@ -187,9 +186,18 @@ public class Deserializer {
                 }
 
                 var elementData = deserialize(element);
-                resources.addAll(elementData.getResources());
-                result.put(key, elementData.getValueOptional());
+                // Unknown values will be unwrapped at this point to a 'null'.
+                // To keep track of unknown values we aggregate here, before we skip the 'null' value.
+                // An example of this situation would be a map with only unknown elements.
                 isKnown = isKnown && elementData.isKnown();
+
+                var valueOrNull = elementData.getValueNullable();
+                if (valueOrNull == null) {
+                    continue; // skip null early, because most collections cannot handle null values
+                }
+                result.put(key, valueOrNull);
+
+                resources.addAll(elementData.getResources());
                 isSecret = isSecret || elementData.isSecret();
             }
 
@@ -214,12 +222,12 @@ public class Deserializer {
         });
     }
 
-    private static Tuple2<Value, Boolean> unwrapSecret(Value value) {
+    private static UnwrappedSecret unwrapSecret(Value value) {
         return innerUnwrapSecret(value, false);
     }
 
-    private static Tuple2<Value, Boolean> innerUnwrapSecret(Value value, boolean isSecret) {
-        var sig = isSpecialStruct(value);
+    private static UnwrappedSecret innerUnwrapSecret(Value value, boolean isSecret) {
+        var sig = checkSpecialStruct(value);
         if (sig.isPresent() && Constants.SpecialSecretSig.equals(sig.get())) {
             var secretValue = tryGetValue(value.getStructValue(), Constants.SecretValueName)
                     .orElseThrow(() -> {
@@ -229,13 +237,27 @@ public class Deserializer {
             return innerUnwrapSecret(secretValue, true);
         }
 
-        return Tuples.of(value, isSecret);
+        return UnwrappedSecret.of(value, isSecret);
+    }
+
+    private static final class UnwrappedSecret {
+        public final Value value;
+        public final boolean isSecret;
+
+        private UnwrappedSecret(Value value, boolean isSecret) {
+            this.value = requireNonNull(value, "Expected value to be non-null");
+            this.isSecret = isSecret;
+        }
+
+        private static UnwrappedSecret of(Value value, boolean isSecret) {
+            return new UnwrappedSecret(value, isSecret);
+        }
     }
 
     /**
      * @return signature of the special Struct or empty if not a special Struct
      */
-    private static Optional<String> isSpecialStruct(Value value) {
+    private static Optional<String> checkSpecialStruct(Value value) {
         return Stream.of(value)
                 .filter(v -> v.getKindCase() == STRUCT_VALUE)
                 .flatMap(v -> v.getStructValue().getFieldsMap().entrySet().stream())
@@ -246,7 +268,7 @@ public class Deserializer {
     }
 
     private static Optional<AssetOrArchive> tryDeserializeAssetOrArchive(Value value) {
-        var sig = isSpecialStruct(value);
+        var sig = checkSpecialStruct(value);
         if (sig.isPresent()) {
             if (Constants.SpecialAssetSig.equals(sig.get())) {
                 return Optional.of(deserializeAsset(value));
@@ -318,7 +340,7 @@ public class Deserializer {
     }
 
     private Optional<Resource> tryDeserializeResource(Value value) {
-        var sig = isSpecialStruct(value);
+        var sig = checkSpecialStruct(value);
         if (sig.isEmpty() || !Constants.SpecialResourceSig.equals(sig.get())) {
             return Optional.empty();
         }

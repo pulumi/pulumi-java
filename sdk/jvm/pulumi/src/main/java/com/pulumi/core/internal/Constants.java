@@ -15,7 +15,7 @@ public class Constants {
     public static final String UnknownValue = "04da6b54-80e4-46f7-96ec-b56ff0331ba9";
 
     /**
-     * SpecialSigKey is sometimes used to encode type identity inside of a map. See sdk/go/common/resource/properties.go.
+     * SpecialSigKey is sometimes used to encode type identity inside a map. See sdk/go/common/resource/properties.go.
      */
     public static final String SpecialSigKey = "4dabf18193072939515e22adb298388d";
 
