@@ -1,5 +1,6 @@
 package com.example.pulumi;
 
+import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.asset.FileAsset;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
@@ -17,6 +18,7 @@ import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EmptyDirVolumeSourceArgs;
+import com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
@@ -30,6 +32,12 @@ import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResourceOptions;
 
 import javax.annotation.Nullable;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -46,7 +54,7 @@ public class JarDeployment extends ComponentResource {
         return args.build();
     }
 
-    public Output<String> deployJar(String filepath, Output<String> jarBucket) {
+    public BucketObject deployJar(String filepath, Output<String> jarBucket) {
         final var file = new FileAsset(filepath);
 
         final var appJar = new BucketObject("my-jar.jar", BucketObjectArgs.builder()
@@ -54,9 +62,13 @@ public class JarDeployment extends ComponentResource {
                 .source(file)
                 .build());
 
-        return Output.format("s3://%s/%s", appJar.bucket(), appJar.key());
+        return appJar;
     }
-    public Output<String> deployApp(Output<String> kubeconfig, Output<String> s3CpAssetPath) {
+    private static Output<String> getS3CpPath(BucketObject obj) {
+        return Output.format("s3://%s/%s", obj.bucket(), obj.key());
+    }
+    //return Output.format("s3://%s/%s", appJar.bucket(), appJar.key());
+    public Output<String> deployApp(Output<String> kubeconfig, BucketObject appJar) {
         // Create a Kubernetes provider instance that uses our cluster from above.
         final var clusterProvider = new Provider("myProvider",
                 ProviderArgs.builder()
@@ -73,7 +85,9 @@ public class JarDeployment extends ComponentResource {
                 clusterResourceOptions);
 
         // Export the Namespace name
-        final var appLabels = Map.of("appClass", "gs-spring-boot");
+        final var appLabels = Map.of(
+                "appClass", "gs-spring-boot"
+        );
 
         final var metadata = ObjectMetaArgs.builder()
                 .namespace(namespace.getId())
@@ -100,7 +114,7 @@ public class JarDeployment extends ComponentResource {
                                                 .name("init")
                                                 .image("amazon/aws-cli")
                                                 .command(
-                                                        Output.tuple(s3CpAssetPath, Output.of(TARGET_DIR))
+                                                        Output.tuple(getS3CpPath(appJar), Output.of(TARGET_DIR))
                                                                 .applyValue(t -> List.of( "aws", "s3", "cp", t.t1, t.t2+"/app.jar")))
                                                 .volumeMounts(
                                                         VolumeMountArgs.builder()
@@ -112,6 +126,10 @@ public class JarDeployment extends ComponentResource {
                                                 .name("app")
                                                 .image("openjdk")
                                                 .command("java", "-jar", TARGET_DIR +"/app.jar")
+                                                .env(EnvVarArgs.builder()
+                                                        .name("APPLICATION_ETAG")
+                                                        .value(appJar.etag())
+                                                        .build())
                                                 .volumeMounts(
                                                         VolumeMountArgs.builder()
                                                                 .name("jar-volume")
@@ -125,7 +143,8 @@ public class JarDeployment extends ComponentResource {
                                         .build())
                                 .build())
                         .build())
-                .build(), clusterResourceOptions);
+                .build(),
+                clusterResourceOptions);
         // Create a LoadBalancer Service for the Deployment
         final var service = new Service("app-svc", ServiceArgs.builder()
                 .metadata(metadata)
@@ -141,21 +160,15 @@ public class JarDeployment extends ComponentResource {
         return service.status().applyValue(data -> data.loadBalancer().get().ingress().get(0).hostname().get()).applyValue(String::valueOf);
     }
     public JarDeployment(String name, LambdaArgs applyArgs) {
-        this(name, applyArgs, null);
-    }
-    public JarDeployment(String name, LambdaArgs applyArgs, @Nullable ComponentResourceOptions options) {
         super("example:spring:JarDeployment",
                 name,
                 JarDeployment.apply(applyArgs),
-                options);
+                null);
 
         final var args = JarDeployment.apply(applyArgs);
 
-        final var jarBucket = args.getBucketName();
-
-        final var s3CpAssetPath = deployJar(args.getJarPath(), args.getBucketName());
-
-        this.endpoint = deployApp(args.getKubeconfig(), s3CpAssetPath);
+        final var appJar = deployJar(args.getJarPath(), args.getBucketName());
+        this.endpoint = deployApp(args.getKubeconfig(), appJar);
 
         return;
     }

@@ -9,10 +9,7 @@ import com.pulumi.aws.iam.*;
 import com.pulumi.core.Output;
 import com.pulumi.eks.Cluster;
 import com.pulumi.eks.ClusterArgs;
-import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.resources.CustomResourceOptions;
-import com.pulumi.resources.ResourceArgs;
 
 import java.text.MessageFormat;
 import java.util.List;
@@ -48,15 +45,17 @@ public class EKSStack {
                                 .limit(2)
                                 .collect(Collectors.toList()));
 
-        var cluster = new Cluster("my-cluster", ClusterArgs.builder()
-                .vpcId(vpcIdOutput)
-                .subnetIds(subnetIdsOutput)
-                .instanceType("t2.micro")
-                .minSize(1)
-                .maxSize(2)
-                .build(), ComponentResourceOptions.builder()
-                .protect(true)
-                .build());
+        var cluster = new Cluster("my-cluster",
+                ClusterArgs.builder()
+                    .vpcId(vpcIdOutput)
+                    .subnetIds(subnetIdsOutput)
+                    .instanceType("t2.micro")
+                    .minSize(1)
+                    .maxSize(2)
+                    .build(),
+                ComponentResourceOptions.builder()
+                    .protect(true)
+                    .build());
 
         var roleName = cluster.instanceRoles()
                 .applyValue(t -> t.get(0))

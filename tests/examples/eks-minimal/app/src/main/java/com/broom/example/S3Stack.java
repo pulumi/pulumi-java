@@ -26,7 +26,8 @@ public class S3Stack {
     public S3Stack() {
         this.bucket = new Bucket("jar-bucket");
 
-        this.readPolicy = new Policy("read-bucket-object", PolicyArgs.builder()
+        this.readPolicy = new Policy("read-bucket-object",
+                PolicyArgs.builder()
                 .policy(Output.format(
                         "{\"Version\": \"2012-10-17\", \"Statement\": [ {\"Effect\": \"Allow\", \"Action\": \"s3:GetObject\", \"Resource\": \"arn:aws:s3:::%s/*\"}]}",
                         bucket.bucket()))
