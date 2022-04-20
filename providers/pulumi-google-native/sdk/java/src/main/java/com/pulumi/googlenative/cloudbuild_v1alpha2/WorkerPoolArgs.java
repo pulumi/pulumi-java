@@ -36,7 +36,7 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
     @Import(name="region", required=true)

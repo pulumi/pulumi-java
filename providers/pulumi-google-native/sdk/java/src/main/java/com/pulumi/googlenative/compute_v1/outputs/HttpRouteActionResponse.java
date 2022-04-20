@@ -32,7 +32,7 @@ public final class HttpRouteActionResponse {
      */
     private final DurationResponse maxStreamDuration;
     /**
-     * Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
      * 
      */
     private final RequestMirrorPolicyResponse requestMirrorPolicy;
@@ -99,7 +99,7 @@ public final class HttpRouteActionResponse {
         return this.maxStreamDuration;
     }
     /**
-     * Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
      * 
     */
     public RequestMirrorPolicyResponse requestMirrorPolicy() {

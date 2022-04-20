@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LocalCopyResponse {
     /**
-     * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
+     * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or &#34;boot&#34;, which represents the Docker instance&#39;s boot disk and has a mount point of `/`.
      * 
      */
     private final String disk;
     /**
-     * The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,
+     * The path within the user&#39;s docker container where this input should be localized to and from, relative to the specified disk&#39;s mount point. For example: file.txt,
      * 
      */
     private final String path;
@@ -29,14 +29,14 @@ public final class LocalCopyResponse {
     }
 
     /**
-     * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
+     * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or &#34;boot&#34;, which represents the Docker instance&#39;s boot disk and has a mount point of `/`.
      * 
     */
     public String disk() {
         return this.disk;
     }
     /**
-     * The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,
+     * The path within the user&#39;s docker container where this input should be localized to and from, relative to the specified disk&#39;s mount point. For example: file.txt,
      * 
     */
     public String path() {

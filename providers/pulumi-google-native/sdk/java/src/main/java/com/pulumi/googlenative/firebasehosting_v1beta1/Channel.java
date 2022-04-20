@@ -36,14 +36,14 @@ public class Channel extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
      * 
      */
     @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
-     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
      * 
      */
     public Output<String> expireTime() {
@@ -134,14 +134,14 @@ public class Channel extends com.pulumi.resources.CustomResource {
         return this.updateTime;
     }
     /**
-     * The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
+     * The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
      * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
-     * @return The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
+     * @return The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
      * 
      */
     public Output<String> url() {

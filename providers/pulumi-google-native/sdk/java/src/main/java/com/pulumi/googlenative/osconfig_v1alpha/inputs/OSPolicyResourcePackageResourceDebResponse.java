@@ -18,7 +18,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
     public static final OSPolicyResourcePackageResourceDebResponse Empty = new OSPolicyResourcePackageResourceDebResponse();
 
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
      */
     @Import(name="pullDeps", required=true)

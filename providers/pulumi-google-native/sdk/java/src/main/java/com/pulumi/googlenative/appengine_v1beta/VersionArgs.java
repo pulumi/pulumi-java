@@ -209,7 +209,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Relative name of the version within the service. Example: v1. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names: "default", "latest", and any name with the prefix "ah-".
+     * Relative name of the version within the service. Example: v1. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names: &#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     @Import(name="id")
@@ -264,7 +264,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
+     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
      */
     @Import(name="manualScaling")
@@ -352,7 +352,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The path or name of the app's main executable.
+     * The path or name of the app&#39;s main executable.
      * 
      */
     @Import(name="runtimeMainExecutablePath")

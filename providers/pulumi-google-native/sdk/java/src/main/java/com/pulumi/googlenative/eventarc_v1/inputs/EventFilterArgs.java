@@ -19,7 +19,7 @@ public final class EventFilterArgs extends com.pulumi.resources.ResourceArgs {
     public static final EventFilterArgs Empty = new EventFilterArgs();
 
     /**
-     * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+     * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
      * 
      */
     @Import(name="attribute", required=true)

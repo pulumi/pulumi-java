@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
     @EnumType

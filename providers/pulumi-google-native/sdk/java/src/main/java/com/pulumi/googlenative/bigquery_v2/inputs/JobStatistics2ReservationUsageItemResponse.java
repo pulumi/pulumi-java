@@ -13,7 +13,7 @@ public final class JobStatistics2ReservationUsageItemResponse extends com.pulumi
     public static final JobStatistics2ReservationUsageItemResponse Empty = new JobStatistics2ReservationUsageItemResponse();
 
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or &#34;unreserved&#34; for on-demand resources usage.
      * 
      */
     @Import(name="name", required=true)

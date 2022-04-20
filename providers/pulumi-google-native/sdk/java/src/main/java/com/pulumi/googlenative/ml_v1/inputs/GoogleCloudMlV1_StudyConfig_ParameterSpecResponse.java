@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends com
     public static final GoogleCloudMlV1_StudyConfig_ParameterSpecResponse Empty = new GoogleCloudMlV1_StudyConfig_ParameterSpecResponse();
 
     /**
-     * The value spec for a 'CATEGORICAL' parameter.
+     * The value spec for a &#39;CATEGORICAL&#39; parameter.
      * 
      */
     @Import(name="categoricalValueSpec", required=true)
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends com
     }
 
     /**
-     * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     * A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
      * 
      */
     @Import(name="childParameterSpecs", required=true)
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends com
     }
 
     /**
-     * The value spec for a 'DISCRETE' parameter.
+     * The value spec for a &#39;DISCRETE&#39; parameter.
      * 
      */
     @Import(name="discreteValueSpec", required=true)
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends com
     }
 
     /**
-     * The value spec for a 'DOUBLE' parameter.
+     * The value spec for a &#39;DOUBLE&#39; parameter.
      * 
      */
     @Import(name="doubleValueSpec", required=true)
@@ -69,7 +69,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends com
     }
 
     /**
-     * The value spec for an 'INTEGER' parameter.
+     * The value spec for an &#39;INTEGER&#39; parameter.
      * 
      */
     @Import(name="integerValueSpec", required=true)

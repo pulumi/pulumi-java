@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
      */
     private final String audioEncoding;
     /**
-     * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.
+     * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
      * 
      */
     private final Boolean enableWordInfo;
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
      */
     private final Integer sampleRateHertz;
     /**
-     * Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+     * Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
      * 
      */
     private final Boolean singleUtterance;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
         return this.audioEncoding;
     }
     /**
-     * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.
+     * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
      * 
     */
     public Boolean enableWordInfo() {
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
         return this.sampleRateHertz;
     }
     /**
-     * Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+     * Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
      * 
     */
     public Boolean singleUtterance() {

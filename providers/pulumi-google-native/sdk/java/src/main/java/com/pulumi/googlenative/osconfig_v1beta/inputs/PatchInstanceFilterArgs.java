@@ -34,7 +34,7 @@ public final class PatchInstanceFilterArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
+     * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example &#34;env=prod or env=staging&#34;.
      * 
      */
     @Import(name="groupLabels")
@@ -45,7 +45,7 @@ public final class PatchInstanceFilterArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     @Import(name="instanceNamePrefixes")

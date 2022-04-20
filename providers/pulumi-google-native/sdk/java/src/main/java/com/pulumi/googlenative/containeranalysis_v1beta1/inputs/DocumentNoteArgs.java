@@ -20,7 +20,7 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
     public static final DocumentNoteArgs Empty = new DocumentNoteArgs();
 
     /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
      * 
      */
     @Import(name="dataLicence")

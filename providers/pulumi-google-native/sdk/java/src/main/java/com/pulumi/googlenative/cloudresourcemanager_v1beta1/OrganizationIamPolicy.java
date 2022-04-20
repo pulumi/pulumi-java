@@ -17,8 +17,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Sets the access control policy on an Organization resource. Replaces any existing policy. The `resource` field should be the organization's resource name, e.g. "organizations/123".
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Sets the access control policy on an Organization resource. Replaces any existing policy. The `resource` field should be the organization&#39;s resource name, e.g. &#34;organizations/123&#34;.
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */

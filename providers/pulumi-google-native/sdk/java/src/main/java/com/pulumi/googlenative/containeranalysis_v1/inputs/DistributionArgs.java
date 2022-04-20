@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * This represents a particular channel of distribution for a given package. E.g., Debian's jessie-backports dpkg mirror.
+ * This represents a particular channel of distribution for a given package. E.g., Debian&#39;s jessie-backports dpkg mirror.
  * 
  */
 public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {

@@ -17,7 +17,7 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
     public static final LanguageCodePairResponse Empty = new LanguageCodePairResponse();
 
     /**
-     * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
+     * The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
     @Import(name="sourceLanguageCode", required=true)
@@ -28,7 +28,7 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
+     * The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
     @Import(name="targetLanguageCode", required=true)

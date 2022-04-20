@@ -92,14 +92,14 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     *  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
+     *  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
      * 
      */
     @Export(name="namedPorts", type=List.class, parameters={NamedPortResponse.class})
     private Output<List<NamedPortResponse>> namedPorts;
 
     /**
-     * @return  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
+     * @return  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
      * 
      */
     public Output<List<NamedPortResponse>> namedPorts() {

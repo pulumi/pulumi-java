@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.
+ * Apt patching is completed by executing `apt-get update &amp;&amp; apt-get upgrade`. Additional options can be set to control how this is executed.
  * 
  */
 public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {

@@ -131,7 +131,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
     @Import(name="noteName")

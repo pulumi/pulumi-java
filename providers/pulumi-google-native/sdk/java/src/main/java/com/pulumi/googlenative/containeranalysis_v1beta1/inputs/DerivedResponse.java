@@ -54,7 +54,7 @@ public final class DerivedResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
      */
     @Import(name="layerInfo", required=true)

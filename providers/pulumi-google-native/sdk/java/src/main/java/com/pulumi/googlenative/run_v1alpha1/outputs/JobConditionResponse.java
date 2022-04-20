@@ -20,7 +20,7 @@ public final class JobConditionResponse {
      */
     private final String message;
     /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
+     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
      */
     private final String reason;
@@ -35,7 +35,7 @@ public final class JobConditionResponse {
      */
     private final String status;
     /**
-     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
+     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * &#34;Completed&#34;: True when the Job has successfully completed. * &#34;Started&#34;: True when the Job has successfully started running. * &#34;ResourcesAvailable&#34;: True when underlying resources have been provisioned.
      * 
      */
     private final String type;
@@ -71,7 +71,7 @@ public final class JobConditionResponse {
         return this.message;
     }
     /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
+     * Optional. One-word CamelCase reason for the condition&#39;s last transition.
      * 
     */
     public String reason() {
@@ -92,7 +92,7 @@ public final class JobConditionResponse {
         return this.status;
     }
     /**
-     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
+     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * &#34;Completed&#34;: True when the Job has successfully completed. * &#34;Started&#34;: True when the Job has successfully started running. * &#34;ResourcesAvailable&#34;: True when underlying resources have been provisioned.
      * 
     */
     public String type() {

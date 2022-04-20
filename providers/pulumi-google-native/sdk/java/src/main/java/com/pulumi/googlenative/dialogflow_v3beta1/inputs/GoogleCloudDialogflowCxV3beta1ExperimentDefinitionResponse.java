@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
     public static final GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse Empty = new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse();
 
     /**
-     * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
     @Import(name="condition", required=true)

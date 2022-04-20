@@ -20,7 +20,7 @@ public final class TfLiteModelArgs extends com.pulumi.resources.ResourceArgs {
     public static final TfLiteModelArgs Empty = new TfLiteModelArgs();
 
     /**
-     * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
+     * The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
      * 
      */
     @Import(name="automlModel")

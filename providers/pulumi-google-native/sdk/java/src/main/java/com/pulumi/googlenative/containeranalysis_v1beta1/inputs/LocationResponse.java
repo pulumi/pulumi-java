@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * An occurrence of a particular package installation found within a system's filesystem. E.g., glibc was found in `/var/lib/dpkg/status`.
+ * An occurrence of a particular package installation found within a system&#39;s filesystem. E.g., glibc was found in `/var/lib/dpkg/status`.
  * 
  */
 public final class LocationResponse extends com.pulumi.resources.InvokeArgs {

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Prevents a term in the query from being used in search. Example: Don't search for "shoddy".
+ * Prevents a term in the query from being used in search. Example: Don&#39;t search for &#34;shoddy&#34;.
  * 
  */
 public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse extends com.pulumi.resources.InvokeArgs {

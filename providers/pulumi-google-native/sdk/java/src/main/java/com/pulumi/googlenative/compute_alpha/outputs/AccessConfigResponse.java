@@ -52,12 +52,12 @@ public final class AccessConfigResponse {
      */
     private final String publicPtrDomainName;
     /**
-     * Specifies whether a public DNS 'A' record should be created for the external IP address of this access configuration.
+     * Specifies whether a public DNS &#39;A&#39; record should be created for the external IP address of this access configuration.
      * 
      */
     private final Boolean setPublicDns;
     /**
-     * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
+     * Specifies whether a public DNS &#39;PTR&#39; record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
      * 
      */
     private final Boolean setPublicPtr;
@@ -150,14 +150,14 @@ public final class AccessConfigResponse {
         return this.publicPtrDomainName;
     }
     /**
-     * Specifies whether a public DNS 'A' record should be created for the external IP address of this access configuration.
+     * Specifies whether a public DNS &#39;A&#39; record should be created for the external IP address of this access configuration.
      * 
     */
     public Boolean setPublicDns() {
         return this.setPublicDns;
     }
     /**
-     * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
+     * Specifies whether a public DNS &#39;PTR&#39; record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
      * 
     */
     public Boolean setPublicPtr() {

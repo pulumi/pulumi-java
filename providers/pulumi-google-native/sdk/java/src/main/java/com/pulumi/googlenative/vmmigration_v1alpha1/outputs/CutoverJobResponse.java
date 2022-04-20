@@ -23,7 +23,7 @@ public final class CutoverJobResponse {
      */
     private final String createTime;
     /**
-     * Provides details for the errors that led to the Cutover Job's state.
+     * Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
     private final StatusResponse error;
@@ -95,7 +95,7 @@ public final class CutoverJobResponse {
         return this.createTime;
     }
     /**
-     * Provides details for the errors that led to the Cutover Job's state.
+     * Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
     */
     public StatusResponse error() {

@@ -74,7 +74,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     @Import(name="queryStringBlacklist", required=true)
@@ -85,7 +85,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     @Import(name="queryStringWhitelist", required=true)

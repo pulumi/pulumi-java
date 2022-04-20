@@ -15,7 +15,7 @@ public final class DatabaseFlagsResponse {
      */
     private final String name;
     /**
-     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
+     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn&#39;t take a value.
      * 
      */
     private final String value;
@@ -36,7 +36,7 @@ public final class DatabaseFlagsResponse {
         return this.name;
     }
     /**
-     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
+     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn&#39;t take a value.
      * 
     */
     public String value() {

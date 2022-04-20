@@ -14,7 +14,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates an agent version. The new version points to the agent instance in the "default" environment.
+ * Creates an agent version. The new version points to the agent instance in the &#34;default&#34; environment.
  * Auto-naming is currently not supported for this resource.
  * 
  */

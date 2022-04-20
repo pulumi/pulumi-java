@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum RegionHealthCheckServiceHealthStatusAggregationPolicy {
         /**
-         * If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
+         * If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY.
          * 
          */
         And("AND"),

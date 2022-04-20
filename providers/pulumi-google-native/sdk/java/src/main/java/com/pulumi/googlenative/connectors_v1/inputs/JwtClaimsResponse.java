@@ -17,7 +17,7 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     public static final JwtClaimsResponse Empty = new JwtClaimsResponse();
 
     /**
-     * Value for the "aud" claim.
+     * Value for the &#34;aud&#34; claim.
      * 
      */
     @Import(name="audience", required=true)
@@ -28,7 +28,7 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Value for the "iss" claim.
+     * Value for the &#34;iss&#34; claim.
      * 
      */
     @Import(name="issuer", required=true)
@@ -39,7 +39,7 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Value for the "sub" claim.
+     * Value for the &#34;sub&#34; claim.
      * 
      */
     @Import(name="subject", required=true)

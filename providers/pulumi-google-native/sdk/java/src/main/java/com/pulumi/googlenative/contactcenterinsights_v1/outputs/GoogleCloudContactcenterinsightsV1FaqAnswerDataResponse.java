@@ -17,7 +17,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
      */
     private final String answer;
     /**
-     * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     private final Double confidenceScore;
@@ -66,7 +66,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
         return this.answer;
     }
     /**
-     * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
     */
     public Double confidenceScore() {

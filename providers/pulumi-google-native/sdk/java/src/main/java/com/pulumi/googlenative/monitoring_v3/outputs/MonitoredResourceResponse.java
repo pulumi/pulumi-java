@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class MonitoredResourceResponse {
     /**
-     * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
+     * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels &#34;project_id&#34;, &#34;instance_id&#34;, and &#34;zone&#34;.
      * 
      */
     private final Map<String,String> labels;
@@ -30,7 +30,7 @@ public final class MonitoredResourceResponse {
     }
 
     /**
-     * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
+     * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels &#34;project_id&#34;, &#34;instance_id&#34;, and &#34;zone&#34;.
      * 
     */
     public Map<String,String> labels() {

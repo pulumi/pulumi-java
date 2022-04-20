@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * HttpRouteRuleMatch criteria for a request's query parameter.
+ * HttpRouteRuleMatch criteria for a request&#39;s query parameter.
  * 
  */
 public final class HttpQueryParameterMatchArgs extends com.pulumi.resources.ResourceArgs {

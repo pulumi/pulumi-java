@@ -17,7 +17,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
     public static final GoogleDatastoreAdminV1IndexedPropertyResponse Empty = new GoogleDatastoreAdminV1IndexedPropertyResponse();
 
     /**
-     * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
      * 
      */
     @Import(name="direction", required=true)

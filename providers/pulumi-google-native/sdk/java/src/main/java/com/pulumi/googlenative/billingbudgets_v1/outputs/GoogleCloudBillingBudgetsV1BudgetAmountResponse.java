@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse {
     /**
-     * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     * Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
      * 
      */
     private final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
@@ -30,7 +30,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse {
     }
 
     /**
-     * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     * Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
      * 
     */
     public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount() {

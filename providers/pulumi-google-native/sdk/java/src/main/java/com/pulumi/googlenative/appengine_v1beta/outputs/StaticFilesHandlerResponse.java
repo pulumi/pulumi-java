@@ -27,7 +27,7 @@ public final class StaticFilesHandlerResponse {
      */
     private final Map<String,String> httpHeaders;
     /**
-     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
      */
     private final String mimeType;
@@ -87,7 +87,7 @@ public final class StaticFilesHandlerResponse {
         return this.httpHeaders;
     }
     /**
-     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
     */
     public String mimeType() {

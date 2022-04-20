@@ -30,7 +30,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
+     * The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
      * 
      */
     @Import(name="name", required=true)

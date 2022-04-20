@@ -21,7 +21,7 @@ public final class OnPremisesConfigurationArgs extends com.pulumi.resources.Reso
     public static final OnPremisesConfigurationArgs Empty = new OnPremisesConfigurationArgs();
 
     /**
-     * PEM representation of the trusted CA's x509 certificate.
+     * PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     @Import(name="caCertificate")
@@ -32,7 +32,7 @@ public final class OnPremisesConfigurationArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * PEM representation of the replica's x509 certificate.
+     * PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     @Import(name="clientCertificate")
@@ -43,7 +43,7 @@ public final class OnPremisesConfigurationArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     @Import(name="clientKey")

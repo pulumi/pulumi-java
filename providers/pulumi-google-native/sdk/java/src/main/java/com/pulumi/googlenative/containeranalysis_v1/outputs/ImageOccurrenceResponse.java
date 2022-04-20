@@ -29,7 +29,7 @@ public final class ImageOccurrenceResponse {
      */
     private final FingerprintResponse fingerprint;
     /**
-     * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
      */
     private final List<LayerResponse> layerInfo;
@@ -68,7 +68,7 @@ public final class ImageOccurrenceResponse {
         return this.fingerprint;
     }
     /**
-     * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
     */
     public List<LayerResponse> layerInfo() {

@@ -42,7 +42,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
     }
 
     /**
-     * The command with which the replica's custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.
+     * The command with which the replica&#39;s custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image&#39;s ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.
      * 
      */
     @Import(name="containerCommand", required=true)

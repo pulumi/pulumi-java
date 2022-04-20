@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's custom placement configuration for Custom Dual Regions.
+ * The bucket&#39;s custom placement configuration for Custom Dual Regions.
  * 
  */
 public final class BucketCustomPlacementConfigResponse extends com.pulumi.resources.InvokeArgs {

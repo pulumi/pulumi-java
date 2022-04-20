@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The settings for a topic's partitions.
+ * The settings for a topic&#39;s partitions.
  * 
  */
 public final class PartitionConfigResponse extends com.pulumi.resources.InvokeArgs {

@@ -112,7 +112,7 @@ public final class InstanceGroupConfigResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -&gt; Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
      */
     @Import(name="minCpuPlatform", required=true)

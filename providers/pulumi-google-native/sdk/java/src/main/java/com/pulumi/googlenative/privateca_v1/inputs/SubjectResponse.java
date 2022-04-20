@@ -17,7 +17,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     public static final SubjectResponse Empty = new SubjectResponse();
 
     /**
-     * The "common name" of the subject.
+     * The &#34;common name&#34; of the subject.
      * 
      */
     @Import(name="commonName", required=true)

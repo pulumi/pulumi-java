@@ -61,7 +61,7 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The image storing this feedback if the feedback is an image representing operator's comments.
+     * The image storing this feedback if the feedback is an image representing operator&#39;s comments.
      * 
      */
     @Import(name="image")
@@ -72,7 +72,7 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
+     * Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
      * 
      */
     @Import(name="name")

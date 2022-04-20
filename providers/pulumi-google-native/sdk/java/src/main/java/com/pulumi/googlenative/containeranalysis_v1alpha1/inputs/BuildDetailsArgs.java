@@ -22,7 +22,7 @@ public final class BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
     public static final BuildDetailsArgs Empty = new BuildDetailsArgs();
 
     /**
-     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
+     * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
      * 
      */
     @Import(name="intotoStatement")

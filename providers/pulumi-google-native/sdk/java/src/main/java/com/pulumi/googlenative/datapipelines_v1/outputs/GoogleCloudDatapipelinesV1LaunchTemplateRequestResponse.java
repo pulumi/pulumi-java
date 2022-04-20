@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     /**
-     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
+     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
      * 
      */
     private final String gcsPath;
@@ -52,7 +52,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     }
 
     /**
-     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
+     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
      * 
     */
     public String gcsPath() {

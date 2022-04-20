@@ -20,7 +20,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
      */
     private final String clientName;
     /**
-     * Developer's information to be used in OAuth consent screen.
+     * Developer&#39;s information to be used in OAuth consent screen.
      * 
      */
     private final String developerEmailAddress;
@@ -50,7 +50,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
         return this.clientName;
     }
     /**
-     * Developer's information to be used in OAuth consent screen.
+     * Developer&#39;s information to be used in OAuth consent screen.
      * 
     */
     public String developerEmailAddress() {

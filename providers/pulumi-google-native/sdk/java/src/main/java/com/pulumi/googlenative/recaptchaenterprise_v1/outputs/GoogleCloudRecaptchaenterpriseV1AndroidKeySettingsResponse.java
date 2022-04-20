@@ -17,7 +17,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
      */
     private final Boolean allowAllPackageNames;
     /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
      */
     private final List<String> allowedPackageNames;
@@ -38,7 +38,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
         return this.allowAllPackageNames;
     }
     /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
+     * Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
      * 
     */
     public List<String> allowedPackageNames() {

@@ -16,7 +16,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * Creates a new Customer resource under the reseller or distributor account. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: * Required request parameters are missing or invalid. * Domain field value doesn't match the primary email domain. Return value: The newly created Customer resource.
+ * Creates a new Customer resource under the reseller or distributor account. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: * Required request parameters are missing or invalid. * Domain field value doesn&#39;t match the primary email domain. Return value: The newly created Customer resource.
  * Auto-naming is currently not supported for this resource.
  * 
  */
@@ -37,28 +37,28 @@ public class Customer extends com.pulumi.resources.CustomResource {
         return this.alternateEmail;
     }
     /**
-     * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
     @Export(name="channelPartnerId", type=String.class, parameters={})
     private Output<String> channelPartnerId;
 
     /**
-     * @return Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     * @return Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
     public Output<String> channelPartnerId() {
         return this.channelPartnerId;
     }
     /**
-     * The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
+     * The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
     @Export(name="cloudIdentityId", type=String.class, parameters={})
     private Output<String> cloudIdentityId;
 
     /**
-     * @return The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
+     * @return The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
     public Output<String> cloudIdentityId() {
@@ -93,28 +93,28 @@ public class Customer extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The customer's primary domain. Must match the primary contact email's domain.
+     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
      */
     @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
-     * @return The customer's primary domain. Must match the primary contact email's domain.
+     * @return The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
      */
     public Output<String> domain() {
         return this.domain;
     }
     /**
-     * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
     @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
-     * @return Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * @return Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
     public Output<String> languageCode() {
@@ -149,14 +149,14 @@ public class Customer extends com.pulumi.resources.CustomResource {
         return this.orgDisplayName;
     }
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
      */
     @Export(name="orgPostalAddress", type=GoogleTypePostalAddressResponse.class, parameters={})
     private Output<GoogleTypePostalAddressResponse> orgPostalAddress;
 
     /**
-     * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
      */
     public Output<GoogleTypePostalAddressResponse> orgPostalAddress() {

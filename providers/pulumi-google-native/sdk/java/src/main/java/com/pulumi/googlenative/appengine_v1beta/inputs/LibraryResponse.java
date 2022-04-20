@@ -17,7 +17,7 @@ public final class LibraryResponse extends com.pulumi.resources.InvokeArgs {
     public static final LibraryResponse Empty = new LibraryResponse();
 
     /**
-     * Name of the library. Example: "django".
+     * Name of the library. Example: &#34;django&#34;.
      * 
      */
     @Import(name="name", required=true)
@@ -28,7 +28,7 @@ public final class LibraryResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Version of the library to select, or "latest".
+     * Version of the library to select, or &#34;latest&#34;.
      * 
      */
     @Import(name="version", required=true)

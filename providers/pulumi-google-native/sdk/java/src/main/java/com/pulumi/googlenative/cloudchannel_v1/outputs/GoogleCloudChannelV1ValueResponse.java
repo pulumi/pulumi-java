@@ -28,7 +28,7 @@ public final class GoogleCloudChannelV1ValueResponse {
      */
     private final String int64Value;
     /**
-     * Represents an 'Any' proto value.
+     * Represents an &#39;Any&#39; proto value.
      * 
      */
     private final Map<String,String> protoValue;
@@ -74,7 +74,7 @@ public final class GoogleCloudChannelV1ValueResponse {
         return this.int64Value;
     }
     /**
-     * Represents an 'Any' proto value.
+     * Represents an &#39;Any&#39; proto value.
      * 
     */
     public Map<String,String> protoValue() {

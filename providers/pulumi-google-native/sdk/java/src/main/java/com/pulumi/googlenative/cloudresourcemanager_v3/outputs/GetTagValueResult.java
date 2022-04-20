@@ -35,7 +35,7 @@ public final class GetTagValueResult {
      */
     private final String namespacedName;
     /**
-     * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
     private final String parent;
@@ -106,7 +106,7 @@ public final class GetTagValueResult {
         return this.namespacedName;
     }
     /**
-     * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
     */
     public String parent() {

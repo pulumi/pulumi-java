@@ -22,7 +22,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     public static final GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs Empty = new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs();
 
     /**
-     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
+     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
      * 
      */
     @Import(name="gcsPath")

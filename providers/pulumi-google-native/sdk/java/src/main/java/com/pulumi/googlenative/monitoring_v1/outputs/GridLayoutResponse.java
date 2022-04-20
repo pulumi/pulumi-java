@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GridLayoutResponse {
     /**
-     * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
      */
     private final String columns;
@@ -31,7 +31,7 @@ public final class GridLayoutResponse {
     }
 
     /**
-     * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
+     * The number of columns into which the view&#39;s width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
     */
     public String columns() {

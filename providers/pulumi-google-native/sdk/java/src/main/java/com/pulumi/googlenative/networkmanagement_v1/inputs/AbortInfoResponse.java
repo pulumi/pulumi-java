@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the final state "abort" and associated resource.
+ * Details of the final state &#34;abort&#34; and associated resource.
  * 
  */
 public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {

@@ -40,7 +40,7 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Location of the file on the device, inside the app's sandboxed filesystem
+     * Location of the file on the device, inside the app&#39;s sandboxed filesystem
      * 
      */
     @Import(name="devicePath", required=true)

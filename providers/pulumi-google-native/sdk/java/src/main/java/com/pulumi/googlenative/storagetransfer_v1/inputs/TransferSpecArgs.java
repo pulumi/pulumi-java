@@ -94,7 +94,7 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
+     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
      * 
      */
     @Import(name="objectConditions")
@@ -160,7 +160,7 @@ public final class TransferSpecArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
+     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
      * 
      */
     @Import(name="transferOptions")

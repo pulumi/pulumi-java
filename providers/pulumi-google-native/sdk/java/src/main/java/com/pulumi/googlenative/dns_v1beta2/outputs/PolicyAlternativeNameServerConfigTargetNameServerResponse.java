@@ -20,7 +20,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
      */
     private final String ipv4Address;
     /**
-     * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
      */
     private final String ipv6Address;
@@ -53,7 +53,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
         return this.ipv4Address;
     }
     /**
-     * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
+     * IPv6 address to forward to. Does not accept both fields (ipv4 &amp; ipv6) being populated.
      * 
     */
     public String ipv6Address() {

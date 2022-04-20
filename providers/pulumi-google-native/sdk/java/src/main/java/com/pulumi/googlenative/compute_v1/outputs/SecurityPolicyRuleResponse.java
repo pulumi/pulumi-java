@@ -36,7 +36,7 @@ public final class SecurityPolicyRuleResponse {
      */
     private final String kind;
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
      */
     private final SecurityPolicyRuleMatcherResponse match;
@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleResponse {
      */
     private final Integer priority;
     /**
-     * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
+     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
      */
     private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
@@ -112,7 +112,7 @@ public final class SecurityPolicyRuleResponse {
         return this.kind;
     }
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
     */
     public SecurityPolicyRuleMatcherResponse match() {
@@ -133,7 +133,7 @@ public final class SecurityPolicyRuleResponse {
         return this.priority;
     }
     /**
-     * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
+     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
     */
     public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {

@@ -42,7 +42,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The optional list of row keys that will be used to initially split the table into several tablets (tablets are similar to HBase regions). Given two split keys, `s1` and `s2`, three tablets will be created, spanning the key ranges: `[, s1), [s1, s2), [s2, )`. Example: * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",` `"other", "zz"]` * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]` * Key assignment: - Tablet 1 `[, apple) => {"a"}.` - Tablet 2 `[apple, customer_1) => {"apple", "custom"}.` - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.` - Tablet 4 `[customer_2, other) => {"customer_2"}.` - Tablet 5 `[other, ) => {"other", "zz"}.`
+     * The optional list of row keys that will be used to initially split the table into several tablets (tablets are similar to HBase regions). Given two split keys, `s1` and `s2`, three tablets will be created, spanning the key ranges: `[, s1), [s1, s2), [s2, )`. Example: * Row keys := `[&#34;a&#34;, &#34;apple&#34;, &#34;custom&#34;, &#34;customer_1&#34;, &#34;customer_2&#34;,` `&#34;other&#34;, &#34;zz&#34;]` * initial_split_keys := `[&#34;apple&#34;, &#34;customer_1&#34;, &#34;customer_2&#34;, &#34;other&#34;]` * Key assignment: - Tablet 1 `[, apple) =&gt; {&#34;a&#34;}.` - Tablet 2 `[apple, customer_1) =&gt; {&#34;apple&#34;, &#34;custom&#34;}.` - Tablet 3 `[customer_1, customer_2) =&gt; {&#34;customer_1&#34;}.` - Tablet 4 `[customer_2, other) =&gt; {&#34;customer_2&#34;}.` - Tablet 5 `[other, ) =&gt; {&#34;other&#34;, &#34;zz&#34;}.`
      * 
      */
     @Import(name="initialSplits")

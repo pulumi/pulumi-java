@@ -28,7 +28,7 @@ public final class ServiceMeshAnalysisMessageResponse {
      */
     private final ServiceMeshAnalysisMessageBaseResponse messageBase;
     /**
-     * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
      */
     private final List<String> resourcePaths;
@@ -67,7 +67,7 @@ public final class ServiceMeshAnalysisMessageResponse {
         return this.messageBase;
     }
     /**
-     * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
     */
     public List<String> resourcePaths() {

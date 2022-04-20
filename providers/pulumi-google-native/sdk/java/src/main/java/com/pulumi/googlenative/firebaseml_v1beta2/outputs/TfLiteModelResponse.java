@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TfLiteModelResponse {
     /**
-     * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
+     * The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
      * 
      */
     private final String automlModel;
@@ -36,7 +36,7 @@ public final class TfLiteModelResponse {
     }
 
     /**
-     * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
+     * The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
      * 
     */
     public String automlModel() {

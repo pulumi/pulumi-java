@@ -33,7 +33,7 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example 'serviceusage.googleapis.com/billing-enabled'. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include "serviceusage.googleapis.com/tos/cloud". Other Google APIs should include "serviceusage.googleapis.com/tos/universal". Additional ToS can be included based on the business needs.
+     * Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
      * 
      */
     @Import(name="requirements")
@@ -44,7 +44,7 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     @Import(name="rules")

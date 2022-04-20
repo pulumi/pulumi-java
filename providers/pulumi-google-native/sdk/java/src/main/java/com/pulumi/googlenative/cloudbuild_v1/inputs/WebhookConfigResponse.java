@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
+ * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger&#39;s webhook URL.
  * 
  */
 public final class WebhookConfigResponse extends com.pulumi.resources.InvokeArgs {

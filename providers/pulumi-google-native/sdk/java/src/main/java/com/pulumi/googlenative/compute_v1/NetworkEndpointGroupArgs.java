@@ -33,7 +33,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Import(name="appEngine")
@@ -44,7 +44,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Import(name="cloudFunction")
@@ -55,7 +55,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Import(name="cloudRun")
@@ -99,7 +99,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
+     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
      */
     @Import(name="network")
@@ -128,7 +128,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
+     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
      */
     @Import(name="pscTargetService")

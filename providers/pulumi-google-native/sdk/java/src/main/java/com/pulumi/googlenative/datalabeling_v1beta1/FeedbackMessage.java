@@ -49,28 +49,28 @@ public class FeedbackMessage extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The image storing this feedback if the feedback is an image representing operator's comments.
+     * The image storing this feedback if the feedback is an image representing operator&#39;s comments.
      * 
      */
     @Export(name="image", type=String.class, parameters={})
     private Output<String> image;
 
     /**
-     * @return The image storing this feedback if the feedback is an image representing operator's comments.
+     * @return The image storing this feedback if the feedback is an image representing operator&#39;s comments.
      * 
      */
     public Output<String> image() {
         return this.image;
     }
     /**
-     * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
+     * Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
+     * @return Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
      * 
      */
     public Output<String> name() {

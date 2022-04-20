@@ -28,7 +28,7 @@ public final class DatabaseFlagsResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
+     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn&#39;t take a value.
      * 
      */
     @Import(name="value", required=true)

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     /**
-     * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
      * 
      */
     private final String direction;
@@ -29,7 +29,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     }
 
     /**
-     * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
+     * The indexed property&#39;s direction. Must not be DIRECTION_UNSPECIFIED.
      * 
     */
     public String direction() {

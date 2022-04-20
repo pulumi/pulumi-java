@@ -53,7 +53,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     * The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
      * 
      */
     @Import(name="destroyEventTime", required=true)
@@ -64,7 +64,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
      */
     @Import(name="destroyTime", required=true)
@@ -86,7 +86,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The time this CryptoKeyVersion's key material was generated.
+     * The time this CryptoKeyVersion&#39;s key material was generated.
      * 
      */
     @Import(name="generateTime", required=true)
@@ -119,7 +119,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * The time at which this CryptoKeyVersion's key material was most recently imported.
+     * The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
      * 
      */
     @Import(name="importTime", required=true)

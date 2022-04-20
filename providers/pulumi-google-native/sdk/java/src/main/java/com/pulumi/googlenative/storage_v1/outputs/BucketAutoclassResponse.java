@@ -16,7 +16,7 @@ public final class BucketAutoclassResponse {
      */
     private final Boolean enabled;
     /**
-     * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
+     * A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
      * 
      */
     private final String toggleTime;
@@ -37,7 +37,7 @@ public final class BucketAutoclassResponse {
         return this.enabled;
     }
     /**
-     * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
+     * A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
      * 
     */
     public String toggleTime() {

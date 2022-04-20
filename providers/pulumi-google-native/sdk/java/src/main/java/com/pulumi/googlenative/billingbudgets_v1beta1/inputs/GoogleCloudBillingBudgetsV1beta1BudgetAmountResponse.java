@@ -18,7 +18,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
     public static final GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse Empty = new GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse();
 
     /**
-     * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     * Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
      * 
      */
     @Import(name="lastPeriodAmount", required=true)

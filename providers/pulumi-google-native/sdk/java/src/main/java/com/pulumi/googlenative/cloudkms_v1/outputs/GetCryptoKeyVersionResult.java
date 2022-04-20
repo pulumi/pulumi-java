@@ -28,12 +28,12 @@ public final class GetCryptoKeyVersionResult {
      */
     private final String createTime;
     /**
-     * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     * The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
      * 
      */
     private final String destroyEventTime;
     /**
-     * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
      */
     private final String destroyTime;
@@ -43,7 +43,7 @@ public final class GetCryptoKeyVersionResult {
      */
     private final ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
     /**
-     * The time this CryptoKeyVersion's key material was generated.
+     * The time this CryptoKeyVersion&#39;s key material was generated.
      * 
      */
     private final String generateTime;
@@ -58,7 +58,7 @@ public final class GetCryptoKeyVersionResult {
      */
     private final String importJob;
     /**
-     * The time at which this CryptoKeyVersion's key material was most recently imported.
+     * The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
      * 
      */
     private final String importTime;
@@ -137,14 +137,14 @@ public final class GetCryptoKeyVersionResult {
         return this.createTime;
     }
     /**
-     * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     * The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
      * 
     */
     public String destroyEventTime() {
         return this.destroyEventTime;
     }
     /**
-     * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
     */
     public String destroyTime() {
@@ -158,7 +158,7 @@ public final class GetCryptoKeyVersionResult {
         return this.externalProtectionLevelOptions;
     }
     /**
-     * The time this CryptoKeyVersion's key material was generated.
+     * The time this CryptoKeyVersion&#39;s key material was generated.
      * 
     */
     public String generateTime() {
@@ -179,7 +179,7 @@ public final class GetCryptoKeyVersionResult {
         return this.importJob;
     }
     /**
-     * The time at which this CryptoKeyVersion's key material was most recently imported.
+     * The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
      * 
     */
     public String importTime() {

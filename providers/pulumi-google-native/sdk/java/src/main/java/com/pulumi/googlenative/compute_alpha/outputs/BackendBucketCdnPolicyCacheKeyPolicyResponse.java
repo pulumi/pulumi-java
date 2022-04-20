@@ -16,7 +16,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
      */
     private final List<String> includeHttpHeaders;
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     private final List<String> queryStringWhitelist;
@@ -37,7 +37,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
         return this.includeHttpHeaders;
     }
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
     */
     public List<String> queryStringWhitelist() {

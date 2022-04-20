@@ -17,7 +17,7 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     public static final SkippedDetailResponse Empty = new SkippedDetailResponse();
 
     /**
-     * If the App doesn't support the specific API level.
+     * If the App doesn&#39;t support the specific API level.
      * 
      */
     @Import(name="incompatibleAppVersion", required=true)
@@ -28,7 +28,7 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * If the App doesn't run on the specific architecture, for example, x86.
+     * If the App doesn&#39;t run on the specific architecture, for example, x86.
      * 
      */
     @Import(name="incompatibleArchitecture", required=true)
@@ -39,7 +39,7 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * If the requested OS version doesn't run on the specific device model.
+     * If the requested OS version doesn&#39;t run on the specific device model.
      * 
      */
     @Import(name="incompatibleDevice", required=true)

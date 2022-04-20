@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourceExecResourceResponse {
     /**
-     * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
+     * What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce.
      * 
      */
     private final OSPolicyResourceExecResourceExecResponse enforce;
     /**
-     * What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
+     * What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate.
      * 
      */
     private final OSPolicyResourceExecResourceExecResponse validate;
@@ -29,14 +29,14 @@ public final class OSPolicyResourceExecResourceResponse {
     }
 
     /**
-     * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
+     * What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce.
      * 
     */
     public OSPolicyResourceExecResourceExecResponse enforce() {
         return this.enforce;
     }
     /**
-     * What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
+     * What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate.
      * 
     */
     public OSPolicyResourceExecResourceExecResponse validate() {

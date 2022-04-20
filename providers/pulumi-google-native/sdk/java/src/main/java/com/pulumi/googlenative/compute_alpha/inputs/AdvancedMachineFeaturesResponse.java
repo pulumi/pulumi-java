@@ -62,7 +62,7 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     }
 
     /**
-     * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
+     * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
      * 
      */
     @Import(name="visibleCoreCount", required=true)

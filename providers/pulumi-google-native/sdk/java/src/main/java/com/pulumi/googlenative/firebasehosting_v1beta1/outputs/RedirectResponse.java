@@ -16,7 +16,7 @@ public final class RedirectResponse {
      */
     private final String glob;
     /**
-     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"
+     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
      * 
      */
     private final String location;
@@ -51,7 +51,7 @@ public final class RedirectResponse {
         return this.glob;
     }
     /**
-     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"
+     * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: &#34;glob&#34;: &#34;/:capture*&#34;, &#34;statusCode&#34;: 301, &#34;location&#34;: &#34;https://example.com/foo/:capture&#34;
      * 
     */
     public String location() {

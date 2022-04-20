@@ -30,7 +30,7 @@ public final class GetOsPolicyAssignmentResult {
      */
     private final String description;
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     private final String etag;
@@ -132,7 +132,7 @@ public final class GetOsPolicyAssignmentResult {
         return this.description;
     }
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
+     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
     */
     public String etag() {

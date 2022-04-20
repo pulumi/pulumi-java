@@ -30,7 +30,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     }
 
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
      */
     @Import(name="allowedBundleIds", required=true)

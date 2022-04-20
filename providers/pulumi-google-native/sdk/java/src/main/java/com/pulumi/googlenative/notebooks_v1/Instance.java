@@ -100,14 +100,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     @Export(name="customGpuDriverPath", type=String.class, parameters={})
     private Output<String> customGpuDriverPath;
 
     /**
-     * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     public Output<String> customGpuDriverPath() {
@@ -170,28 +170,28 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.disks;
     }
     /**
-     * Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
+     * Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
     @Export(name="installGpuDriver", type=Boolean.class, parameters={})
     private Output<Boolean> installGpuDriver;
 
     /**
-     * @return Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
+     * @return Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
     public Output<Boolean> installGpuDriver() {
         return this.installGpuDriver;
     }
     /**
-     * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
+     * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
      * 
      */
     @Export(name="instanceOwners", type=List.class, parameters={String.class})
     private Output<List<String>> instanceOwners;
 
     /**
-     * @return Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
+     * @return Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance&#39;s service account can use the instance.
      * 
      */
     public Output<List<String>> instanceOwners() {

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends com
     public static final GoogleCloudDialogflowV2beta1IntentMessageTextArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTextArgs();
 
     /**
-     * Optional. The collection of the agent's responses.
+     * Optional. The collection of the agent&#39;s responses.
      * 
      */
     @Import(name="text")

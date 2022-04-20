@@ -20,7 +20,7 @@ import java.util.Objects;
 @CustomType
 public final class JobStatisticsResponse {
     /**
-     * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+     * [TrustedTester] [Output-only] Job progress (0.0 -&gt; 1.0) for LOAD and EXTRACT jobs.
      * 
      */
     private final Double completionRatio;
@@ -60,7 +60,7 @@ public final class JobStatisticsResponse {
      */
     private final JobStatistics2Response query;
     /**
-     * Quotas which delayed this job's start time.
+     * Quotas which delayed this job&#39;s start time.
      * 
      */
     private final List<String> quotaDeferments;
@@ -144,7 +144,7 @@ public final class JobStatisticsResponse {
     }
 
     /**
-     * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+     * [TrustedTester] [Output-only] Job progress (0.0 -&gt; 1.0) for LOAD and EXTRACT jobs.
      * 
     */
     public Double completionRatio() {
@@ -200,7 +200,7 @@ public final class JobStatisticsResponse {
         return this.query;
     }
     /**
-     * Quotas which delayed this job's start time.
+     * Quotas which delayed this job&#39;s start time.
      * 
     */
     public List<String> quotaDeferments() {

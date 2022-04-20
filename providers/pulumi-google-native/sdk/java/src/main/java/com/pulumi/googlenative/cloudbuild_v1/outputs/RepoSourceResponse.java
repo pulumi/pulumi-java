@@ -22,7 +22,7 @@ public final class RepoSourceResponse {
      */
     private final String commitSha;
     /**
-     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
+     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
      * 
      */
     private final String dir;
@@ -87,7 +87,7 @@ public final class RepoSourceResponse {
         return this.commitSha;
     }
     /**
-     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
+     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
      * 
     */
     public String dir() {

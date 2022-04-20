@@ -17,7 +17,7 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
     public static final SandboxConfigResponse Empty = new SandboxConfigResponse();
 
     /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
+     * Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
      * 
      */
     @Import(name="sandboxType", required=true)

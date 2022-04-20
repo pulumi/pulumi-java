@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ServiceMeshTypeResponse {
     /**
-     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. "IST0001" is mapped to the "InternalError" message type.)
+     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. &#34;IST0001&#34; is mapped to the &#34;InternalError&#34; message type.)
      * 
      */
     private final String code;
     /**
-     * A human-readable name for the message type. e.g. "InternalError", "PodMissingProxy". This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
+     * A human-readable name for the message type. e.g. &#34;InternalError&#34;, &#34;PodMissingProxy&#34;. This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
      * 
      */
     private final String displayName;
@@ -29,14 +29,14 @@ public final class ServiceMeshTypeResponse {
     }
 
     /**
-     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. "IST0001" is mapped to the "InternalError" message type.)
+     * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. &#34;IST0001&#34; is mapped to the &#34;InternalError&#34; message type.)
      * 
     */
     public String code() {
         return this.code;
     }
     /**
-     * A human-readable name for the message type. e.g. "InternalError", "PodMissingProxy". This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
+     * A human-readable name for the message type. e.g. &#34;InternalError&#34;, &#34;PodMissingProxy&#34;. This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)
      * 
     */
     public String displayName() {

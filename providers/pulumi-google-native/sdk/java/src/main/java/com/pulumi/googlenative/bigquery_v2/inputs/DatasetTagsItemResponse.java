@@ -13,7 +13,7 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
     public static final DatasetTagsItemResponse Empty = new DatasetTagsItemResponse();
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
+     * [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
      * 
      */
     @Import(name="tagKey", required=true)
@@ -24,7 +24,7 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * [Required] Friendly short name of the tag value, e.g. "production".
+     * [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
      * 
      */
     @Import(name="tagValue", required=true)

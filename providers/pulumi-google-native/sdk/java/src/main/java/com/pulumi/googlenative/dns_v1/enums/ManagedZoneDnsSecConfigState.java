@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         On("on"),
         /**
-         * DNSSEC is enabled, but in a "transfer" mode.
+         * DNSSEC is enabled, but in a &#34;transfer&#34; mode.
          * 
          */
         Transfer("transfer");

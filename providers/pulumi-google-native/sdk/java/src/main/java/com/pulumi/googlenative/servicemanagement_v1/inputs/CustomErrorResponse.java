@@ -19,7 +19,7 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
     public static final CustomErrorResponse Empty = new CustomErrorResponse();
 
     /**
-     * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
+     * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     @Import(name="rules", required=true)
@@ -30,7 +30,7 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
+     * The list of custom error detail types, e.g. &#39;google.foo.v1.CustomError&#39;.
      * 
      */
     @Import(name="types", required=true)

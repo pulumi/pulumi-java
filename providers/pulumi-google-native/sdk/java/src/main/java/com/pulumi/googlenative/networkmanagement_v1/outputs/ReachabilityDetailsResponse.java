@@ -18,7 +18,7 @@ public final class ReachabilityDetailsResponse {
      */
     private final StatusResponse error;
     /**
-     * The overall result of the test's configuration analysis.
+     * The overall result of the test&#39;s configuration analysis.
      * 
      */
     private final String result;
@@ -53,7 +53,7 @@ public final class ReachabilityDetailsResponse {
         return this.error;
     }
     /**
-     * The overall result of the test's configuration analysis.
+     * The overall result of the test&#39;s configuration analysis.
      * 
     */
     public String result() {

@@ -18,7 +18,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
     public static final BackendResponse Empty = new BackendResponse();
 
     /**
-     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     @Import(name="rules", required=true)

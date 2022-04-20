@@ -17,8 +17,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Sets the access control policy on a TagValue, replacing any existing policy. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have `resourcemanager.tagValues.setIamPolicy` permission on the identified tagValue.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Sets the access control policy on a TagValue, replacing any existing policy. The `resource` field should be the TagValue&#39;s resource name. For example: `tagValues/1234`. The caller must have `resourcemanager.tagValues.setIamPolicy` permission on the identified tagValue.
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */

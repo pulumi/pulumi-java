@@ -24,7 +24,7 @@ public final class GetCertificateAuthorityResult {
      */
     private final AccessUrlsResponse accessUrls;
     /**
-     * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * A structured description of this CertificateAuthority&#39;s CA certificate and its issuers. Ordered as self-to-root.
      * 
      */
     private final List<CertificateDescriptionResponse> caCertificateDescriptions;
@@ -69,7 +69,7 @@ public final class GetCertificateAuthorityResult {
      */
     private final Map<String,String> labels;
     /**
-     * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
      * 
      */
     private final String lifetime;
@@ -79,7 +79,7 @@ public final class GetCertificateAuthorityResult {
      */
     private final String name;
     /**
-     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority&#39;s certificate.
      * 
      */
     private final List<String> pemCaCertificates;
@@ -157,7 +157,7 @@ public final class GetCertificateAuthorityResult {
         return this.accessUrls;
     }
     /**
-     * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * A structured description of this CertificateAuthority&#39;s CA certificate and its issuers. Ordered as self-to-root.
      * 
     */
     public List<CertificateDescriptionResponse> caCertificateDescriptions() {
@@ -220,7 +220,7 @@ public final class GetCertificateAuthorityResult {
         return this.labels;
     }
     /**
-     * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
      * 
     */
     public String lifetime() {
@@ -234,7 +234,7 @@ public final class GetCertificateAuthorityResult {
         return this.name;
     }
     /**
-     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority&#39;s certificate.
      * 
     */
     public List<String> pemCaCertificates() {

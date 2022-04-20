@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * BuildApproval describes a build's approval configuration, state, and result.
+ * BuildApproval describes a build&#39;s approval configuration, state, and result.
  * 
  */
 public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs {
@@ -41,7 +41,7 @@ public final class BuildApprovalResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The state of this build's approval.
+     * The state of this build&#39;s approval.
      * 
      */
     @Import(name="state", required=true)

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RetentionConfigResponse {
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
      */
     private final String perPartitionBytes;
@@ -29,7 +29,7 @@ public final class RetentionConfigResponse {
     }
 
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
     */
     public String perPartitionBytes() {

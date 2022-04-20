@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class UsageRuleResponse {
     /**
-     * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
+     * If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
      * 
      */
     private final Boolean allowUnregisteredCalls;
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
     private final String selector;
@@ -37,14 +37,14 @@ public final class UsageRuleResponse {
     }
 
     /**
-     * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
+     * If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
      * 
     */
     public Boolean allowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
     }
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
     */
     public String selector() {

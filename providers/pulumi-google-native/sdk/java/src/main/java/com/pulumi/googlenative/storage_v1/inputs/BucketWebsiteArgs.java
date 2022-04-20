@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+ * The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
  * 
  */
 public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     public static final BucketWebsiteArgs Empty = new BucketWebsiteArgs();
 
     /**
-     * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
      * 
      */
     @Import(name="mainPageSuffix")

@@ -23,7 +23,7 @@ public final class GetJobResult {
      */
     private final String kind;
     /**
-     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * Optional. Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
      */
     private final ObjectMetaResponse metadata;
@@ -67,7 +67,7 @@ public final class GetJobResult {
         return this.kind;
     }
     /**
-     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+     * Optional. Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
     */
     public ObjectMetaResponse metadata() {

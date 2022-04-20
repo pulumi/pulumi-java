@@ -21,7 +21,7 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     public static final InternalCheckerArgs Empty = new InternalCheckerArgs();
 
     /**
-     * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
     @Import(name="displayName")
@@ -54,7 +54,7 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
+     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
      */
     @Import(name="network")

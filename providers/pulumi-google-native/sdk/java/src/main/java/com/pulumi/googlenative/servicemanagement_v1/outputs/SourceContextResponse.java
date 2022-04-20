@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SourceContextResponse {
     /**
-     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
+     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
      * 
      */
     private final String fileName;
@@ -21,7 +21,7 @@ public final class SourceContextResponse {
     }
 
     /**
-     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
+     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
      * 
     */
     public String fileName() {

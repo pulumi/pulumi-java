@@ -43,7 +43,7 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
+     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
      * 
      */
     @Import(name="network")
@@ -54,7 +54,7 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
+     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
      * 
      */
     @Import(name="subnetwork")

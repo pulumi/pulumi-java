@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AppliedLicenseResponse {
     /**
-     * The OS license returned from the adaptation module's report.
+     * The OS license returned from the adaptation module&#39;s report.
      * 
      */
     private final String osLicense;
@@ -29,7 +29,7 @@ public final class AppliedLicenseResponse {
     }
 
     /**
-     * The OS license returned from the adaptation module's report.
+     * The OS license returned from the adaptation module&#39;s report.
      * 
     */
     public String osLicense() {

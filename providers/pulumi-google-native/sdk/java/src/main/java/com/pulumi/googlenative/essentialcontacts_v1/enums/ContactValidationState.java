@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Valid("VALID"),
         /**
-         * The contact is considered invalid. This may become the state if the contact's email is found to be unreachable.
+         * The contact is considered invalid. This may become the state if the contact&#39;s email is found to be unreachable.
          * 
          */
         Invalid("INVALID");

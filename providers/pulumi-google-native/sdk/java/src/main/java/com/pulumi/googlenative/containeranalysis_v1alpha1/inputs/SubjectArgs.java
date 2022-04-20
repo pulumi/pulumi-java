@@ -21,7 +21,7 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     /**
-     * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
      */
     @Import(name="digest")

@@ -29,7 +29,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the cluster&#39;s secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     @Import(name="clusterSecondaryRangeName", required=true)
@@ -51,7 +51,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the services&#39; secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     @Import(name="servicesSecondaryRangeName", required=true)

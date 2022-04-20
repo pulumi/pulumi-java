@@ -16,7 +16,7 @@ public final class TargetProjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final TargetProjectArgs Empty = new TargetProjectArgs();
 
     /**
-     * The target project's description.
+     * The target project&#39;s description.
      * 
      */
     @Import(name="description")

@@ -23,7 +23,7 @@ public final class GetBackendBucketResult {
      */
     private final BackendBucketCdnPolicyResponse cdnPolicy;
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
      */
     private final String compressionMode;
@@ -116,7 +116,7 @@ public final class GetBackendBucketResult {
         return this.cdnPolicy;
     }
     /**
-     * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+     * Compress text responses using Brotli or gzip compression, based on the client&#39;s Accept-Encoding header.
      * 
     */
     public String compressionMode() {

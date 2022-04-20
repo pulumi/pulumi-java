@@ -26,7 +26,7 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     * Maximum number of iterations specified as max_iterations in the &#39;CREATE MODEL&#39; query. The actual number of iterations may be less than this number due to early stop.
      * 
      */
     @Import(name="maxIterations", required=true)

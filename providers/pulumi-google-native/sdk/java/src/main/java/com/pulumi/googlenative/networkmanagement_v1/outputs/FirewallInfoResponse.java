@@ -27,7 +27,7 @@ public final class FirewallInfoResponse {
      */
     private final String displayName;
     /**
-     * The firewall rule's type.
+     * The firewall rule&#39;s type.
      * 
      */
     private final String firewallRuleType;
@@ -108,7 +108,7 @@ public final class FirewallInfoResponse {
         return this.displayName;
     }
     /**
-     * The firewall rule's type.
+     * The firewall rule&#39;s type.
      * 
     */
     public String firewallRuleType() {

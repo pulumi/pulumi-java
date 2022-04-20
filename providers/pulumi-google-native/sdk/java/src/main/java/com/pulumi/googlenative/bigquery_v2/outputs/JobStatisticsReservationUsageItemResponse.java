@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class JobStatisticsReservationUsageItemResponse {
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or &#34;unreserved&#34; for on-demand resources usage.
      * 
      */
     private final String name;
@@ -29,7 +29,7 @@ public final class JobStatisticsReservationUsageItemResponse {
     }
 
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or &#34;unreserved&#34; for on-demand resources usage.
      * 
     */
     public String name() {

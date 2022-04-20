@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse();
 
     /**
-     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)

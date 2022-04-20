@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class MaterializedViewDefinitionResponse {
     /**
-     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
+     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
      * 
      */
     private final Boolean enableRefresh;
@@ -26,7 +26,7 @@ public final class MaterializedViewDefinitionResponse {
      */
     private final String query;
     /**
-     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
+     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
      * 
      */
     private final String refreshIntervalMs;
@@ -44,7 +44,7 @@ public final class MaterializedViewDefinitionResponse {
     }
 
     /**
-     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
+     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is &#34;true&#34;.
      * 
     */
     public Boolean enableRefresh() {
@@ -65,7 +65,7 @@ public final class MaterializedViewDefinitionResponse {
         return this.query;
     }
     /**
-     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
+     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is &#34;1800000&#34; (30 minutes).
      * 
     */
     public String refreshIntervalMs() {

@@ -31,7 +31,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     }
 
     /**
-     * Indication to perform a 'guest aware' snapshot.
+     * Indication to perform a &#39;guest aware&#39; snapshot.
      * 
      */
     @Import(name="guestFlush", required=true)

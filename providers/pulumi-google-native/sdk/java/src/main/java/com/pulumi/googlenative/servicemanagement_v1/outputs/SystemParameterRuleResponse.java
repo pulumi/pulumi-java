@@ -17,7 +17,7 @@ public final class SystemParameterRuleResponse {
      */
     private final List<SystemParameterResponse> parameters;
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
     private final String selector;
@@ -38,7 +38,7 @@ public final class SystemParameterRuleResponse {
         return this.parameters;
     }
     /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
+     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
     */
     public String selector() {

@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         SqlIpAddressTypeUnspecified("SQL_IP_ADDRESS_TYPE_UNSPECIFIED"),
         /**
-         * IP address the customer is supposed to connect to. Usually this is the load balancer's IP address
+         * IP address the customer is supposed to connect to. Usually this is the load balancer&#39;s IP address
          * 
          */
         Primary("PRIMARY"),

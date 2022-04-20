@@ -19,7 +19,7 @@ public final class GetAgentResult {
      */
     private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings;
     /**
-     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
     private final String avatarUri;
@@ -117,7 +117,7 @@ public final class GetAgentResult {
         return this.advancedSettings;
     }
     /**
-     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
     */
     public String avatarUri() {

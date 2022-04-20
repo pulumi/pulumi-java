@@ -53,7 +53,7 @@ public final class GoogleCloudChannelV1ValueResponse extends com.pulumi.resource
     }
 
     /**
-     * Represents an 'Any' proto value.
+     * Represents an &#39;Any&#39; proto value.
      * 
      */
     @Import(name="protoValue", required=true)

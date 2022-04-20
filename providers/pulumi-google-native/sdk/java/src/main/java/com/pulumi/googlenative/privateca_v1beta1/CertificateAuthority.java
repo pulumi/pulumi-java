@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 /**
  * Create a new CertificateAuthority in a given Project and Location.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -45,14 +45,14 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
         return this.accessUrls;
     }
     /**
-     * A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * A structured description of this CertificateAuthority&#39;s CA certificate and its issuers. Ordered as self-to-root.
      * 
      */
     @Export(name="caCertificateDescriptions", type=List.class, parameters={CertificateDescriptionResponse.class})
     private Output<List<CertificateDescriptionResponse>> caCertificateDescriptions;
 
     /**
-     * @return A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
+     * @return A structured description of this CertificateAuthority&#39;s CA certificate and its issuers. Ordered as self-to-root.
      * 
      */
     public Output<List<CertificateDescriptionResponse>> caCertificateDescriptions() {
@@ -171,14 +171,14 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
      * 
      */
     @Export(name="lifetime", type=String.class, parameters={})
     private Output<String> lifetime;
 
     /**
-     * @return The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate.
      * 
      */
     public Output<String> lifetime() {
@@ -199,14 +199,14 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority&#39;s certificate.
      * 
      */
     @Export(name="pemCaCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> pemCaCertificates;
 
     /**
-     * @return This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
+     * @return This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority&#39;s certificate.
      * 
      */
     public Output<List<String>> pemCaCertificates() {

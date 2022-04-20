@@ -41,7 +41,7 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * The "running state" of the Feature in this Hub.
+     * The &#34;running state&#34; of the Feature in this Hub.
      * 
      */
     @Import(name="state", required=true)

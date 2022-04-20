@@ -20,7 +20,7 @@ public final class RelationshipOccurrenceResponse {
      */
     private final String source;
     /**
-     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
      * 
      */
     private final String target;
@@ -57,7 +57,7 @@ public final class RelationshipOccurrenceResponse {
         return this.source;
     }
     /**
-     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are &#34;known unknowns&#34;, the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
      * 
     */
     public String target() {

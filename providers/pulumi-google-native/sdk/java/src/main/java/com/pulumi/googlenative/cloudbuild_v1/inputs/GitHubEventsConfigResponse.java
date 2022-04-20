@@ -19,7 +19,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     public static final GitHubEventsConfigResponse Empty = new GitHubEventsConfigResponse();
 
     /**
-     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
      * 
      */
     @Import(name="enterpriseConfigResourceName", required=true)
@@ -41,7 +41,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
      * 
      */
     @Import(name="name", required=true)
@@ -52,7 +52,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     @Import(name="owner", required=true)

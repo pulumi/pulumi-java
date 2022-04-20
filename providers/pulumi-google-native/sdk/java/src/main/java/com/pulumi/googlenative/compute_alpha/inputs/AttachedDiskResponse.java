@@ -79,7 +79,7 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * [Input Only] Whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
+     * [Input Only] Whether to force attach the regional disk even if it&#39;s currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
      * 
      */
     @Import(name="forceAttach", required=true)

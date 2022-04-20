@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Represents a group of VM intances that can be identified as having all these labels, for example "env=prod and app=web".
+ * Represents a group of VM intances that can be identified as having all these labels, for example &#34;env=prod and app=web&#34;.
  * 
  */
 public final class AssignmentGroupLabelArgs extends com.pulumi.resources.ResourceArgs {

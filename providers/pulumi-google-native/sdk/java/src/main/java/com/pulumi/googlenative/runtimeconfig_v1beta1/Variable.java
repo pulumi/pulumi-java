@@ -47,14 +47,14 @@ public class Variable extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: "my text value"`. The string must be valid UTF-8.
+     * The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: &#34;my text value&#34;`. The string must be valid UTF-8.
      * 
      */
     @Export(name="text", type=String.class, parameters={})
     private Output<String> text;
 
     /**
-     * @return The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: "my text value"`. The string must be valid UTF-8.
+     * @return The string value of the variable. The length of the value must be less than 4096 bytes. Empty values are also accepted. For example, `text: &#34;my text value&#34;`. The string must be valid UTF-8.
      * 
      */
     public Output<String> text() {

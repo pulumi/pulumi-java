@@ -22,7 +22,7 @@ public final class TableDataSetResponse {
      */
     private final TableDisplayOptionsResponse tableDisplayOptions;
     /**
-     * Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."
+     * Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value i.e. &#34;${resource.labels.project_id}.&#34;
      * 
      */
     private final String tableTemplate;
@@ -59,7 +59,7 @@ public final class TableDataSetResponse {
         return this.tableDisplayOptions;
     }
     /**
-     * Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value i.e. "${resource.labels.project_id}."
+     * Optional. A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value i.e. &#34;${resource.labels.project_id}.&#34;
      * 
     */
     public String tableTemplate() {

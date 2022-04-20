@@ -17,7 +17,7 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     public static final ClusterStatusResponse Empty = new ClusterStatusResponse();
 
     /**
-     * Optional. Output only. Details of cluster's state.
+     * Optional. Output only. Details of cluster&#39;s state.
      * 
      */
     @Import(name="detail", required=true)
@@ -28,7 +28,7 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The cluster's state.
+     * The cluster&#39;s state.
      * 
      */
     @Import(name="state", required=true)

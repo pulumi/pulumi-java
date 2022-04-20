@@ -23,7 +23,7 @@ public final class PatchInstanceFilterResponse {
      */
     private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     private final List<String> instanceNamePrefixes;
@@ -67,7 +67,7 @@ public final class PatchInstanceFilterResponse {
         return this.groupLabels;
     }
     /**
-     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
+     * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
     */
     public List<String> instanceNamePrefixes() {

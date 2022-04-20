@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SoftwareRecipeArtifactRemoteResponse {
     /**
-     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.
+     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
      * 
      */
     private final String checksum;
@@ -29,7 +29,7 @@ public final class SoftwareRecipeArtifactRemoteResponse {
     }
 
     /**
-     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.
+     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
      * 
     */
     public String checksum() {

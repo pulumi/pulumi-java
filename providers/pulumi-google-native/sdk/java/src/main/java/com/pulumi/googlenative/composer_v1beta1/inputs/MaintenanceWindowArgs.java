@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The configuration settings for Cloud Composer maintenance window. The following example: ```{ "startTime":"2019-08-01T01:00:00Z" "endTime":"2019-08-01T07:00:00Z" "recurrence":"FREQ=WEEKLY;BYDAY=TU,WE" }``` would define a maintenance window between 01 and 07 hours UTC during each Tuesday and Wednesday.
+ * The configuration settings for Cloud Composer maintenance window. The following example: ```{ &#34;startTime&#34;:&#34;2019-08-01T01:00:00Z&#34; &#34;endTime&#34;:&#34;2019-08-01T07:00:00Z&#34; &#34;recurrence&#34;:&#34;FREQ=WEEKLY;BYDAY=TU,WE&#34; }``` would define a maintenance window between 01 and 07 hours UTC during each Tuesday and Wednesday.
  * 
  */
 public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceArgs {

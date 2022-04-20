@@ -50,28 +50,28 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The fully qualified URL of the endpoint's ILB Forwarding Rule.
+     * The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
      * 
      */
     @Export(name="endpointForwardingRule", type=String.class, parameters={})
     private Output<String> endpointForwardingRule;
 
     /**
-     * @return The fully qualified URL of the endpoint's ILB Forwarding Rule.
+     * @return The fully qualified URL of the endpoint&#39;s ILB Forwarding Rule.
      * 
      */
     public Output<String> endpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
-     * The IP address of the IDS Endpoint's ILB.
+     * The IP address of the IDS Endpoint&#39;s ILB.
      * 
      */
     @Export(name="endpointIp", type=String.class, parameters={})
     private Output<String> endpointIp;
 
     /**
-     * @return The IP address of the IDS Endpoint's ILB.
+     * @return The IP address of the IDS Endpoint&#39;s ILB.
      * 
      */
     public Output<String> endpointIp() {

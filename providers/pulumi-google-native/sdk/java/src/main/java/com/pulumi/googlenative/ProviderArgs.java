@@ -17,7 +17,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     /**
-     * Additional user-agent string to append to the default one (<prod_name>/<ver>).
+     * Additional user-agent string to append to the default one (&lt;prod_name&gt;/&lt;ver&gt;).
      * 
      */
     @Import(name="appendUserAgent")
@@ -28,7 +28,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn't specified.
+     * This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn&#39;t specified.
      * 
      */
     @Import(name="disablePartnerName", json=true)

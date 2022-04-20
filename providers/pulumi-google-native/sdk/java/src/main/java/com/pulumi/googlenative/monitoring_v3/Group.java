@@ -77,14 +77,14 @@ public class Group extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
+     * The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
      * 
      */
     @Export(name="parentName", type=String.class, parameters={})
     private Output<String> parentName;
 
     /**
-     * @return The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
+     * @return The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
      * 
      */
     public Output<String> parentName() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses without these headers will not be cached at Google's edge, and will require a full trip to the origin on every request, potentially impacting performance and increasing load on the origin server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static content, including common image formats, media (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content (including HTML), will not be cached.
+     * Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses without these headers will not be cached at Google&#39;s edge, and will require a full trip to the origin on every request, potentially impacting performance and increasing load on the origin server. FORCE_CACHE_ALL Cache all content, ignoring any &#34;private&#34;, &#34;no-store&#34; or &#34;no-cache&#34; directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static content, including common image formats, media (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content (including HTML), will not be cached.
      * 
      */
     @EnumType
@@ -20,13 +20,13 @@ import java.util.StringJoiner;
          */
         CacheAllStatic("CACHE_ALL_STATIC"),
         /**
-         * Cache all content, ignoring any "private", "no-store" or "no-cache" directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-user (user identifiable) content.
+         * Cache all content, ignoring any &#34;private&#34;, &#34;no-store&#34; or &#34;no-cache&#34; directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-user (user identifiable) content.
          * 
          */
         ForceCacheAll("FORCE_CACHE_ALL"),
         InvalidCacheMode("INVALID_CACHE_MODE"),
         /**
-         * Requires the origin to set valid caching headers to cache content. Responses without these headers will not be cached at Google's edge, and will require a full trip to the origin on every request, potentially impacting performance and increasing load on the origin server.
+         * Requires the origin to set valid caching headers to cache content. Responses without these headers will not be cached at Google&#39;s edge, and will require a full trip to the origin on every request, potentially impacting performance and increasing load on the origin server.
          * 
          */
         UseOriginHeaders("USE_ORIGIN_HEADERS");

@@ -17,7 +17,7 @@ public final class ShieldedVmIntegrityPolicyResponse extends com.pulumi.resource
     public static final ShieldedVmIntegrityPolicyResponse Empty = new ShieldedVmIntegrityPolicyResponse();
 
     /**
-     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
+     * Updates the integrity policy baseline using the measurements from the VM instance&#39;s most recent boot.
      * 
      */
     @Import(name="updateAutoLearnPolicy", required=true)

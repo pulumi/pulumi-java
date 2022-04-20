@@ -20,7 +20,7 @@ public final class CloudRunArgs extends com.pulumi.resources.ResourceArgs {
     public static final CloudRunArgs Empty = new CloudRunArgs();
 
     /**
-     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
      * 
      */
     @Import(name="path")

@@ -38,7 +38,7 @@ public final class GetKeyResult {
      */
     private final String expiresAt;
     /**
-     * Input only. Expiration time, in seconds, for the consumer key. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * Input only. Expiration time, in seconds, for the consumer key. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
      */
     private final String expiresInSeconds;
@@ -116,7 +116,7 @@ public final class GetKeyResult {
         return this.expiresAt;
     }
     /**
-     * Input only. Expiration time, in seconds, for the consumer key. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
+     * Input only. Expiration time, in seconds, for the consumer key. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
      * 
     */
     public String expiresInSeconds() {

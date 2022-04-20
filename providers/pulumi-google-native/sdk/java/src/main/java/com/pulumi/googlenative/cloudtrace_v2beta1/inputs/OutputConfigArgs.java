@@ -20,7 +20,7 @@ public final class OutputConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final OutputConfigArgs Empty = new OutputConfigArgs();
 
     /**
-     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+     * The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
      * 
      */
     @Import(name="destination")

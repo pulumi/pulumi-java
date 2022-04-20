@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The settings for a subscription's message delivery.
+ * The settings for a subscription&#39;s message delivery.
  * 
  */
 public final class DeliveryConfigResponse extends com.pulumi.resources.InvokeArgs {

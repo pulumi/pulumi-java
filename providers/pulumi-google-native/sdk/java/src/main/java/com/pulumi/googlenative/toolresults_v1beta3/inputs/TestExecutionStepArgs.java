@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A step that represents running tests. It accepts ant-junit xml files which will be parsed into structured test results by the service. Xml file paths are updated in order to append more files, however they can't be deleted. Users can also add test results manually by using the test_result field.
+ * A step that represents running tests. It accepts ant-junit xml files which will be parsed into structured test results by the service. Xml file paths are updated in order to append more files, however they can&#39;t be deleted. Users can also add test results manually by using the test_result field.
  * 
  */
 public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceArgs {

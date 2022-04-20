@@ -39,42 +39,42 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.annotations;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Export(name="appEngine", type=NetworkEndpointGroupAppEngineResponse.class, parameters={})
     private Output<NetworkEndpointGroupAppEngineResponse> appEngine;
 
     /**
-     * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     public Output<NetworkEndpointGroupAppEngineResponse> appEngine() {
         return this.appEngine;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Export(name="cloudFunction", type=NetworkEndpointGroupCloudFunctionResponse.class, parameters={})
     private Output<NetworkEndpointGroupCloudFunctionResponse> cloudFunction;
 
     /**
-     * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     public Output<NetworkEndpointGroupCloudFunctionResponse> cloudFunction() {
         return this.cloudFunction;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     @Export(name="cloudRun", type=NetworkEndpointGroupCloudRunResponse.class, parameters={})
     private Output<NetworkEndpointGroupCloudRunResponse> cloudRun;
 
     /**
-     * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
     public Output<NetworkEndpointGroupCloudRunResponse> cloudRun() {
@@ -151,14 +151,14 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
+     * The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
      */
     @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
-     * @return The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
+     * @return The URL of the network to which all network endpoints in the NEG belong. Uses &#34;default&#34; project network if unspecified.
      * 
      */
     public Output<String> network() {
@@ -179,14 +179,14 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.networkEndpointType;
     }
     /**
-     * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
+     * The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
      */
     @Export(name="pscTargetService", type=String.class, parameters={})
     private Output<String> pscTargetService;
 
     /**
-     * @return The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
+     * @return The target service url used to set up private service connection to a Google API. An example value is: &#34;asia-northeast3-cloudkms.googleapis.com&#34;
      * 
      */
     public Output<String> pscTargetService() {
@@ -221,14 +221,14 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
         return this.selfLink;
     }
     /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
      * 
      */
     @Export(name="serverlessDeployment", type=NetworkEndpointGroupServerlessDeploymentResponse.class, parameters={})
     private Output<NetworkEndpointGroupServerlessDeploymentResponse> serverlessDeployment;
 
     /**
-     * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.
      * 
      */
     public Output<NetworkEndpointGroupServerlessDeploymentResponse> serverlessDeployment() {

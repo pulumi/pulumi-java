@@ -23,14 +23,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:healthcare/v1:ConsentArtifact")
 public class ConsentArtifact extends com.pulumi.resources.CustomResource {
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
      */
     @Export(name="consentContentScreenshots", type=List.class, parameters={ImageResponse.class})
     private Output<List<ImageResponse>> consentContentScreenshots;
 
     /**
-     * @return Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+     * @return Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
      */
     public Output<List<ImageResponse>> consentContentScreenshots() {
@@ -93,28 +93,28 @@ public class ConsentArtifact extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
-     * @return User's UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
      */
     public Output<String> userId() {
         return this.userId;
     }
     /**
-     * Optional. User's signature.
+     * Optional. User&#39;s signature.
      * 
      */
     @Export(name="userSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> userSignature;
 
     /**
-     * @return Optional. User's signature.
+     * @return Optional. User&#39;s signature.
      * 
      */
     public Output<SignatureResponse> userSignature() {

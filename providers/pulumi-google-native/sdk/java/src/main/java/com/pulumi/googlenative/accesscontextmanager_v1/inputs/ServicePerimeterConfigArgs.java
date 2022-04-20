@@ -24,7 +24,7 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     public static final ServicePerimeterConfigArgs Empty = new ServicePerimeterConfigArgs();
 
     /**
-     * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.
+     * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `&#34;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL&#34;`. For Service Perimeter Bridge, must be empty.
      * 
      */
     @Import(name="accessLevels")
@@ -68,7 +68,7 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.
+     * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter&#39;s access restrictions.
      * 
      */
     @Import(name="restrictedServices")

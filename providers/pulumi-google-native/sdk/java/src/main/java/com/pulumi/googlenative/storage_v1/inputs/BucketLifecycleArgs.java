@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's lifecycle configuration. See lifecycle management for more information.
+ * The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
  * 
  */
 public final class BucketLifecycleArgs extends com.pulumi.resources.ResourceArgs {

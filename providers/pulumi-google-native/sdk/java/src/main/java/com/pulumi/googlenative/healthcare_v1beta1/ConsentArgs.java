@@ -20,7 +20,7 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConsentArgs Empty = new ConsentArgs();
 
     /**
-     * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+     * The resource name of the Consent artifact that contains proof of the end user&#39;s consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
     @Import(name="consentArtifact", required=true)
@@ -85,7 +85,7 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
+     * Optional. Represents a user&#39;s consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
     @Import(name="policies")
@@ -125,7 +125,7 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Import(name="userId", required=true)

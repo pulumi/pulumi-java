@@ -107,14 +107,14 @@ public class ClientTlsPolicy extends com.pulumi.resources.CustomResource {
         return this.serverValidationCa;
     }
     /**
-     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
+     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
      * 
      */
     @Export(name="sni", type=String.class, parameters={})
     private Output<String> sni;
 
     /**
-     * @return Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
+     * @return Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
      * 
      */
     public Output<String> sni() {

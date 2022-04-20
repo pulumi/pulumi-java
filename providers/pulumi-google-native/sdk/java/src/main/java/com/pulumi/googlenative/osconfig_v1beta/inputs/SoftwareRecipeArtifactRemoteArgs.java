@@ -20,7 +20,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
     public static final SoftwareRecipeArtifactRemoteArgs Empty = new SoftwareRecipeArtifactRemoteArgs();
 
     /**
-     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.
+     * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
      * 
      */
     @Import(name="checksum")

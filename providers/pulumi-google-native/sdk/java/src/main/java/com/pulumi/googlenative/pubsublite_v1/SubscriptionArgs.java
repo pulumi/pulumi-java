@@ -17,7 +17,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * 
      */
     @Import(name="deliveryConfig")

@@ -19,7 +19,7 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
     public static final HTTPGetActionResponse Empty = new HTTPGetActionResponse();
 
     /**
-     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+     * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
      * 
      */
     @Import(name="host", required=true)

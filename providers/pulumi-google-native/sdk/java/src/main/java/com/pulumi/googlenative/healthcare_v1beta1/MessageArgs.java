@@ -103,7 +103,7 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
+     * The parsed version of the raw message data schematized according to this store&#39;s schemas and type definitions.
      * 
      */
     @Import(name="schematizedData")

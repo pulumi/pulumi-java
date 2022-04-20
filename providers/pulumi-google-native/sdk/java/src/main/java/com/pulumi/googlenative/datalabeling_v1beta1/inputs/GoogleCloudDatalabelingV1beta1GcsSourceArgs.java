@@ -30,7 +30,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
     }
 
     /**
-     * The format of the source file. Only "text/csv" is supported.
+     * The format of the source file. Only &#34;text/csv&#34; is supported.
      * 
      */
     @Import(name="mimeType", required=true)

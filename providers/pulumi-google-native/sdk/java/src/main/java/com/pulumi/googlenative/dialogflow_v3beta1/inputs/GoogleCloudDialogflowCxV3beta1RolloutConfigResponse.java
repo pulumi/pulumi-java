@@ -19,7 +19,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends c
     public static final GoogleCloudDialogflowCxV3beta1RolloutConfigResponse Empty = new GoogleCloudDialogflowCxV3beta1RolloutConfigResponse();
 
     /**
-     * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. &#34;containment_rate &lt; 10% OR average_turn_count &lt; 3&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
     @Import(name="failureCondition", required=true)
@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends c
     }
 
     /**
-     * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. &#34;containment_rate &gt; 60% AND callback_rate &lt; 20%&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
     @Import(name="rolloutCondition", required=true)

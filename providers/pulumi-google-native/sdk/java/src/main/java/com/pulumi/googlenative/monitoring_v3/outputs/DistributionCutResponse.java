@@ -16,7 +16,7 @@ public final class DistributionCutResponse {
      */
     private final String distributionFilter;
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     private final GoogleMonitoringV3RangeResponse range;
@@ -37,7 +37,7 @@ public final class DistributionCutResponse {
         return this.distributionFilter;
     }
     /**
-     * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
+     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
     */
     public GoogleMonitoringV3RangeResponse range() {

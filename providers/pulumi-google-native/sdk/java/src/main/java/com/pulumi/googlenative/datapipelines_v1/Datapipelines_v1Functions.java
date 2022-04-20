@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Datapipelines_v1Functions {
     /**
-     * Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
+     * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
      * 
      */
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {

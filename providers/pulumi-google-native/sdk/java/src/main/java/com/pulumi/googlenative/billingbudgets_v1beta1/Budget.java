@@ -53,28 +53,28 @@ public class Budget extends com.pulumi.resources.CustomResource {
         return this.amount;
     }
     /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
      */
     @Export(name="budgetFilter", type=GoogleCloudBillingBudgetsV1beta1FilterResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1beta1FilterResponse> budgetFilter;
 
     /**
-     * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
+     * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget&#39;s time period, as well as other filters.
      * 
      */
     public Output<GoogleCloudBillingBudgetsV1beta1FilterResponse> budgetFilter() {
         return this.budgetFilter;
     }
     /**
-     * User data for display name in UI. Validation: <= 60 chars.
+     * User data for display name in UI. Validation: &lt;= 60 chars.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return User data for display name in UI. Validation: <= 60 chars.
+     * @return User data for display name in UI. Validation: &lt;= 60 chars.
      * 
      */
     public Output<String> displayName() {

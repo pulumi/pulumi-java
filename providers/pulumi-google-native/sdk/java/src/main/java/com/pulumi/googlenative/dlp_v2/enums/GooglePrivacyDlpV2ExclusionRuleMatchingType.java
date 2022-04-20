@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         MatchingTypePartialMatch("MATCHING_TYPE_PARTIAL_MATCH"),
         /**
-         * Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn't match the regex - Exclude info type: no intersection with affecting info types findings
+         * Inverse match. - Dictionary: no tokens in the finding match the dictionary - Regex: finding doesn&#39;t match the regex - Exclude info type: no intersection with affecting info types findings
          * 
          */
         MatchingTypeInverseMatch("MATCHING_TYPE_INVERSE_MATCH");

@@ -61,14 +61,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * The database's lifecycle state. Read-only.
+     * The database&#39;s lifecycle state. Read-only.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
-     * @return The database's lifecycle state. Read-only.
+     * @return The database&#39;s lifecycle state. Read-only.
      * 
      */
     public Output<String> state() {

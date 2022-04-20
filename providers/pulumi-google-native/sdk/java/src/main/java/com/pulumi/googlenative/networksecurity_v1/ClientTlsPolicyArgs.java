@@ -96,7 +96,7 @@ public final class ClientTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
+     * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: &#34;secure.example.com&#34;.
      * 
      */
     @Import(name="sni")

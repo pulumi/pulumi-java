@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class DurationResponse {
     /**
-     * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
      */
     private final Integer nanos;
@@ -30,7 +30,7 @@ public final class DurationResponse {
     }
 
     /**
-     * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
+     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
     */
     public Integer nanos() {

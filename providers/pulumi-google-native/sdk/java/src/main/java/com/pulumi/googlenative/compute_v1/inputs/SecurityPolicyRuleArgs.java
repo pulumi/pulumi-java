@@ -59,7 +59,7 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
      */
     @Import(name="match")
@@ -92,7 +92,7 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
+     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
      */
     @Import(name="rateLimitOptions")

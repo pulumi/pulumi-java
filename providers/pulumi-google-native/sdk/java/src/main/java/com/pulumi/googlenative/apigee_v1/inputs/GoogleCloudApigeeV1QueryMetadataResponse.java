@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     }
 
     /**
-     * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
+     * Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
      * 
      */
     @Import(name="metrics", required=true)

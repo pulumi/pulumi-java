@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class ConfigMapEnvSourceResponse {
     /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
      * 
      */
     private final LocalObjectReferenceResponse localObjectReference;
@@ -38,7 +38,7 @@ public final class ConfigMapEnvSourceResponse {
     }
 
     /**
-     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
      * 
     */
     public LocalObjectReferenceResponse localObjectReference() {

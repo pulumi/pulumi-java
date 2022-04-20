@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class QueryParameterTypeResponse {
     /**
-     * [Optional] The type of the array's elements, if this is an array.
+     * [Optional] The type of the array&#39;s elements, if this is an array.
      * 
      */
     private final QueryParameterTypeResponse arrayType;
@@ -38,7 +38,7 @@ public final class QueryParameterTypeResponse {
     }
 
     /**
-     * [Optional] The type of the array's elements, if this is an array.
+     * [Optional] The type of the array&#39;s elements, if this is an array.
      * 
     */
     public QueryParameterTypeResponse arrayType() {

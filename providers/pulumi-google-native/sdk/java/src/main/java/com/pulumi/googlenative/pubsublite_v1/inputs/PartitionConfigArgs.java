@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The settings for a topic's partitions.
+ * The settings for a topic&#39;s partitions.
  * 
  */
 public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs {

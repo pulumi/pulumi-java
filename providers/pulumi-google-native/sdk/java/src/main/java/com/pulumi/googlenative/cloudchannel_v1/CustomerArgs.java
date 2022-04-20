@@ -36,7 +36,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
     @Import(name="channelPartnerId")
@@ -54,7 +54,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The customer's primary domain. Must match the primary contact email's domain.
+     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
      */
     @Import(name="domain", required=true)
@@ -65,7 +65,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
     @Import(name="languageCode")
@@ -87,7 +87,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
      */
     @Import(name="orgPostalAddress", required=true)

@@ -18,7 +18,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      */
     private final String chainName;
     /**
-     * Indication to perform a 'guest aware' snapshot.
+     * Indication to perform a &#39;guest aware&#39; snapshot.
      * 
      */
     private final Boolean guestFlush;
@@ -53,7 +53,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
         return this.chainName;
     }
     /**
-     * Indication to perform a 'guest aware' snapshot.
+     * Indication to perform a &#39;guest aware&#39; snapshot.
      * 
     */
     public Boolean guestFlush() {

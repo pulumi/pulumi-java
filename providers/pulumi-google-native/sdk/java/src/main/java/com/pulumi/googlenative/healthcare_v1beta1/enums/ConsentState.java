@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         StateUnspecified("STATE_UNSPECIFIED"),
         /**
-         * The Consent is active and is considered when evaluating a user's consent on resources.
+         * The Consent is active and is considered when evaluating a user&#39;s consent on resources.
          * 
          */
         Active("ACTIVE"),
@@ -30,17 +30,17 @@ import java.util.StringJoiner;
          */
         Archived("ARCHIVED"),
         /**
-         * A revoked Consent is not considered when evaluating a user's consent on resources.
+         * A revoked Consent is not considered when evaluating a user&#39;s consent on resources.
          * 
          */
         Revoked("REVOKED"),
         /**
-         * A draft Consent is not considered when evaluating a user's consent on resources unless explicitly specified.
+         * A draft Consent is not considered when evaluating a user&#39;s consent on resources unless explicitly specified.
          * 
          */
         Draft("DRAFT"),
         /**
-         * When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user's consent on resources.
+         * When a draft Consent is rejected by a user, it is set to a rejected state. A rejected Consent is not considered when evaluating a user&#39;s consent on resources.
          * 
          */
         Rejected("REJECTED");

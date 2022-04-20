@@ -247,14 +247,14 @@ public class Route extends com.pulumi.resources.CustomResource {
         return this.priority;
     }
     /**
-     * The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route
+     * The type of this route, which can be one of the following values: - &#39;TRANSIT&#39; for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - &#39;SUBNET&#39; for a route from a subnet of the VPC - &#39;BGP&#39; for a route learned from a BGP peer of this router - &#39;STATIC&#39; for a static route
      * 
      */
     @Export(name="routeType", type=String.class, parameters={})
     private Output<String> routeType;
 
     /**
-     * @return The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route
+     * @return The type of this route, which can be one of the following values: - &#39;TRANSIT&#39; for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - &#39;SUBNET&#39; for a route from a subnet of the VPC - &#39;BGP&#39; for a route learned from a BGP peer of this router - &#39;STATIC&#39; for a static route
      * 
      */
     public Output<String> routeType() {

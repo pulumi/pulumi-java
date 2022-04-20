@@ -46,7 +46,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+     * A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account&#39;s credentials. The digests of the pushed images will be stored in the `Build` resource&#39;s results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
      * 
      */
     @Import(name="images")

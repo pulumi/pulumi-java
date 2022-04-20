@@ -51,7 +51,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     @Import(name="host", required=true)

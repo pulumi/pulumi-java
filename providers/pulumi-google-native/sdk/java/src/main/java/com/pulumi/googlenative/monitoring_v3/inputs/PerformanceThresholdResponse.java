@@ -41,7 +41,7 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * If window performance >= threshold, the window is counted as good.
+     * If window performance &gt;= threshold, the window is counted as good.
      * 
      */
     @Import(name="threshold", required=true)

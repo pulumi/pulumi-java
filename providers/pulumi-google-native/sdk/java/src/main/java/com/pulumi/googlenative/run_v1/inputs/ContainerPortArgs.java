@@ -21,7 +21,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     public static final ContainerPortArgs Empty = new ContainerPortArgs();
 
     /**
-     * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+     * (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
     @Import(name="containerPort")
@@ -32,7 +32,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     * (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
      * 
      */
     @Import(name="name")
@@ -43,7 +43,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
+     * (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
      */
     @Import(name="protocol")
