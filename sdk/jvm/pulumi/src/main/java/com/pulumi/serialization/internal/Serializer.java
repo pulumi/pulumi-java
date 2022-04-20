@@ -28,6 +28,7 @@ import com.pulumi.resources.Resource;
 import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -37,7 +38,14 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.stream.Collectors;
+
+import static com.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
+import static com.pulumi.core.internal.CompletableFutures.joinMapValues;
+import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.collectingAndThen;
+import static java.util.stream.Collectors.toCollection;
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
 
 public class Serializer {
 
@@ -46,7 +54,7 @@ public class Serializer {
     private final Log log;
 
     public Serializer(Log log) {
-        this.log = Objects.requireNonNull(log);
+        this.log = requireNonNull(log);
         this.dependentResources = new HashSet<>();
     }
 
@@ -104,7 +112,7 @@ public class Serializer {
      * No other result type are allowed to be returned.
      */
     public CompletableFuture</* @Nullable */ Object> serializeAsync(String ctx, @Nullable Object prop, boolean keepResources) {
-        Objects.requireNonNull(ctx);
+        requireNonNull(ctx);
 
         // IMPORTANT:
         // IMPORTANT: Keep this in sync with serializesPropertiesSync in invoke.ts
@@ -167,8 +175,8 @@ public class Serializer {
                     (OutputData<Object> data) -> {
                         this.dependentResources.addAll(data.getResources());
 
-                        // When serializing an InputOutput, we will either serialize it as its resolved value
-                        // or the "unknown value" sentinel.
+                        // When serializing an InputOutput, we will either
+                        // serialize it as its resolved value or the "unknown value" sentinel.
                         // We will do the former for all outputs created directly by user code (such outputs always
                         // resolve isKnown to true) and for any resource outputs that were resolved with known values.
                         var isKnown = data.isKnown();
@@ -299,8 +307,8 @@ public class Serializer {
 
     @Nullable
     private Object serializeJson(String ctx, JsonElement element) {
-        Objects.requireNonNull(ctx);
-        Objects.requireNonNull(element);
+        requireNonNull(ctx);
+        requireNonNull(element);
 
         if (element.isJsonNull()) {
             return null;
@@ -369,14 +377,12 @@ public class Serializer {
         );
     }
 
-    // TODO: should we omit null's like serializeMapAsync()?
     private CompletableFuture<ArrayList</* @Nullable */ Object>> serializeListAsync(String ctx, List</* @Nullable */ Object> list, boolean keepResources) {
         log.excessive(String.format("Serialize property[%s]: Hit list", ctx));
 
         var resultFutures = new ArrayList<CompletableFuture</* @Nullable */ Object>>(list.size());
         for (int i = 0, n = list.size(); i < n; i++) {
             log.excessive(String.format("Serialize property[%s]: array[%d] element", ctx, i));
-
             resultFutures.add(serializeAsync(String.format("%s[%s]", ctx, i), list.get(i), keepResources));
         }
 
@@ -384,29 +390,26 @@ public class Serializer {
         return CompletableFutures.flatAllOf(resultFutures).thenApply(
                 completed -> completed.stream()
                         .map(CompletableFuture::join)
-                        .collect(Collectors.toCollection(ArrayList::new))
+                        .collect(toCollection(ArrayList::new))
         );
     }
 
-    private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeMapAsync(String ctx, Map<Object, /* @Nullable */ Object> map, boolean keepResources) {
+    private CompletableFuture<Map<String, Object>> serializeMapAsync(String ctx, Map<Object, /* @Nullable */ Object> rawMap, boolean keepResources) {
         log.excessive(String.format("Serialize property[%s]: Hit dictionary", ctx));
-
+        var map = stringKeysOrThrow(rawMap);
         var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
         for (var key : map.keySet()) {
-            if (!(key instanceof String)) {
-                throw new UnsupportedOperationException(
-                        String.format("Dictionaries are only supported with string keys:\n\t%s", ctx));
-            }
-            var stringKey = (String) key;
-
-            log.excessive(String.format("Serialize property[%s]: object.%s", ctx, stringKey));
-
-            // When serializing an object, we omit any keys with null values, see code below. This matches JSON semantics.
-            resultFutures.put(stringKey, serializeAsync(String.format("%s.%s", ctx, stringKey), map.get(stringKey), keepResources));
+            log.excessive(String.format("Serialize property[%s]: object.%s", ctx, key));
+            resultFutures.put(key, serializeAsync(String.format("%s.%s", ctx, key), map.get(key), keepResources));
         }
 
-        // allOf() will omit the nulls, we treat properties with null values as if they do not exist.
-        return CompletableFutures.allOf(resultFutures);
+        // We treat entries with null values as if they do not exist.
+        return CompletableFutures.flatAllOf(resultFutures).thenApply(
+                completed -> completed.entrySet().stream()
+                        .filter(ignoreNullMapValues())
+                        .map(joinMapValues())
+                        .collect(toMap(Map.Entry::getKey, Map.Entry::getValue))
+        );
     }
 
     /**
@@ -416,9 +419,9 @@ public class Serializer {
     @InternalUse
     public static Struct createStruct(Map<String, Object> serializedMap) {
         var result = Struct.newBuilder();
-        for (var key : serializedMap.keySet()) { // TODO: C# had '.OrderBy(k => k)' here, what does it do?
-            result.putFields(key, createValue(serializedMap.get(key)));
-        }
+        serializedMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.naturalOrder()))
+                .forEach(e -> result.putFields(e.getKey(), createValue(e.getValue())));
         return result.build();
     }
 
@@ -445,31 +448,37 @@ public class Serializer {
         }
         if (value instanceof List) {
             //noinspection unchecked
-            List<Value> values = ((List<Object>) value).stream()
+            var list = ((List<Object>) value).stream()
                     .map(Serializer::createValue)
-                    .collect(Collectors.<Value>toList());
-            return builder.setListValue(ListValue.newBuilder().addAllValues(values)).build();
+                    .collect(collectingAndThen(toList(),
+                            l -> ListValue.newBuilder().addAllValues(l))
+                    );
+            return builder.setListValue(list).build();
         }
         if (value instanceof Map) {
-            Function<Object, String> keyCollector = (Object key) -> {
-                if (key instanceof String) {
-                    return (String) key;
-                } else {
-                    throw new UnsupportedOperationException(
-                            String.format("Expected a 'String' key, got: %s", key.getClass().getCanonicalName()));
-                }
-            };
-            Function</*@Nullable*/ Object, /*@Nullable*/ Object> valueCollector = (/*@Nullable*/ Object v) -> v;
-            //noinspection unchecked
-            Map<String, Object> map = ((Map<Object, Object>) value).entrySet().stream().collect(
-                    Collectors.toMap(
-                            keyCollector.compose(Map.Entry::getKey),
-                            valueCollector.compose(Map.Entry::getValue)
-                    )
-            );
+            //noinspection rawtypes
+            Map<String, Object> map = stringKeysOrThrow((Map) value);
             return builder.setStructValue(createStruct(map)).build();
         }
-        throw new UnsupportedOperationException(
-                String.format("Unsupported value when converting to protobuf, type: '%s'", value.getClass().getSimpleName()));
+        throw new UnsupportedOperationException(String.format(
+                "Unsupported value when converting to protobuf, type: '%s'",
+                value.getClass().getTypeName()
+        ));
+    }
+
+    /**
+     * @throws UnsupportedOperationException if the given map key is not String
+     */
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    private static Map<String, Object> stringKeysOrThrow(Map map) {
+        map.keySet().stream().findFirst().ifPresent(key -> {
+            if (!(key instanceof String)) {
+                throw new UnsupportedOperationException(String.format(
+                        "Expected a 'String' key, got: %s",
+                        key.getClass().getTypeName()
+                ));
+            }
+        });
+        return (Map<String, Object>) map;
     }
 }

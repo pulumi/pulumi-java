@@ -31,14 +31,14 @@ public class StackReference extends CustomResource {
     /**
      * The outputs of the referenced stack.
      */
-    @Export(name = "outputs", type = ImmutableMap.class, parameters = {String.class, Object.class})
-    public Output<ImmutableMap<String, Object>> outputs;
+    @Export(name = "outputs", type = Map.class, parameters = {String.class, Object.class})
+    public Output<Map<String, Object>> outputs;
 
     /**
      * The names of any stack outputs which contain secrets.
      */
-    @Export(name = "secretOutputNames", type = ImmutableList.class, parameters = String.class)
-    public Output<ImmutableList<String>> secretOutputNames;
+    @Export(name = "secretOutputNames", type = List.class, parameters = String.class)
+    public Output<List<String>> secretOutputNames;
 
     /**
      * Create a {@link StackReference} resource with the given unique name.
@@ -95,21 +95,21 @@ public class StackReference extends CustomResource {
     }
 
     public Output<Map<String, Object>> getOutputs() {
-        return outputs.applyValue(map -> map);
+        return outputs.applyValue(ImmutableMap::copyOf);
     }
 
     public Output<List<String>> getSecretOutputNames() {
-        return secretOutputNames.applyValue(list -> list);
+        return secretOutputNames.applyValue(ImmutableList::copyOf);
     }
 
     /**
-     * Fetches the value of the named stack output, or null if the stack output was not found.
+     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
      * <p>
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
      */
-    public Output<Object> getOutput(Output<String> name) {
+    public Output<?> getOutput(Output<String> name) {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
         // We do this dance, so we can ensure that the Output we return is not needlessly tainted as a secret.
@@ -126,7 +126,7 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
      */
-    public Output<Object> requireOutput(Output<String> name) {
+    public Output<?> requireOutput(Output<String> name) {
         var value = Output.tuple(name, this.name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t3, v.t1).orElseThrow(
                         () -> new KeyMissingException(v.t1, v.t2)));
@@ -144,7 +144,7 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
      */
-    public CompletableFuture<Object> getValueAsync(Output<String> name) {
+    public CompletableFuture<?> getValueAsync(Output<String> name) {
         return Internal.of(this.getOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
@@ -164,7 +164,7 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
      */
-    public CompletableFuture<Object> requireValueAsync(Output<String> name) {
+    public CompletableFuture<?> requireValueAsync(Output<String> name) {
         return Internal.of(this.requireOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
@@ -178,7 +178,7 @@ public class StackReference extends CustomResource {
     private CompletableFuture<Boolean> isSecretOutputName(Output<String> name) {
         return Internal.of(name).getDataAsync().thenCompose(
                 (OutputData<String> nameOutput) -> Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
-                        (OutputData<ImmutableList<String>> secretOutputNamesData) -> {
+                        (OutputData<List<String>> secretOutputNamesData) -> {
                             // If either the name or set of secret outputs is unknown, we can't do anything smart,
                             // so we just copy the secret-ness from the entire outputs value.
                             if (!(nameOutput.isKnown() && secretOutputNamesData.isKnown())) {
