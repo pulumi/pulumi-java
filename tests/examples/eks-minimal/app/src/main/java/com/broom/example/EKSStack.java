@@ -76,7 +76,7 @@ public class EKSStack {
         return this.cluster.kubeconfig().applyValue(obj -> {
             final var gson = new GsonBuilder().disableHtmlEscaping().create();
             final var data = gson.toJson(obj);
-            return kubeconfigJSON(data);
+            return kubeconfigYAML(data);
         });
     }
 
@@ -85,10 +85,10 @@ public class EKSStack {
      * @param data
      * @return EKS kubeconfig in YAML format
      */
-    private static String kubeconfigJSON(String data) {
-        final var endpoint = data.split(Pattern.quote("\"server\":{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
-        final var caCert = data.split(Pattern.quote("\"certificate-authority-data\":{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
-        final var clusterName = data.split(Pattern.quote("{\"value\":\"--cluster-name\"},{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
+    private static String kubeconfigYAML(String json) {
+        final var endpoint = json.split(Pattern.quote("\"server\":{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
+        final var caCert = json.split(Pattern.quote("\"certificate-authority-data\":{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
+        final var clusterName = json.split(Pattern.quote("{\"value\":\"--cluster-name\"},{\"value\":\""))[1].split(Pattern.quote("\"}"))[0];
 
         return MessageFormat.format(String.join("\n",
                 "apiVersion: v1",

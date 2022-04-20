@@ -45,6 +45,20 @@ public class JarDeployment extends ComponentResource {
     static final String TARGET_DIR = "/var/run/secrets/java";
     public final Output<String> endpoint;
 
+    public JarDeployment(String name, LambdaArgs applyArgs) {
+        super("example:spring:JarDeployment",
+                name,
+                JarDeployment.apply(applyArgs),
+                null);
+
+        final var args = JarDeployment.apply(applyArgs);
+
+        final var appJar = deployJar(args.getJarPath(), args.getBucketName());
+        this.endpoint = deployApp(args.getKubeconfig(), appJar);
+
+        return;
+    }
+
     public interface LambdaArgs {
          void op(JarDeploymentArgs.JarDeploymentArgsBuilder a);
     }
@@ -64,11 +78,12 @@ public class JarDeployment extends ComponentResource {
 
         return appJar;
     }
+
     private static Output<String> getS3CpPath(BucketObject obj) {
         return Output.format("s3://%s/%s", obj.bucket(), obj.key());
     }
-    //return Output.format("s3://%s/%s", appJar.bucket(), appJar.key());
-    public Output<String> deployApp(Output<String> kubeconfig, BucketObject appJar) {
+
+    public CustomResourceOptions clusterResourceOptions(Output<String> kubeconfig) {
         // Create a Kubernetes provider instance that uses our cluster from above.
         final var clusterProvider = new Provider("myProvider",
                 ProviderArgs.builder()
@@ -78,6 +93,12 @@ public class JarDeployment extends ComponentResource {
         final var clusterResourceOptions = CustomResourceOptions.builder()
                 .provider(clusterProvider)
                 .build();
+        return clusterResourceOptions;
+    }
+
+    public Output<String> deployApp(Output<String> kubeconfig, BucketObject appJar) {
+
+        final var clusterResourceOptions = clusterResourceOptions(kubeconfig);
 
         // Create a Kubernetes Namespace
         final var namespace = new Namespace("ns-1", NamespaceArgs.builder()
@@ -89,6 +110,7 @@ public class JarDeployment extends ComponentResource {
                 "appClass", "gs-spring-boot"
         );
 
+        // Configure Metadata args
         final var metadata = ObjectMetaArgs.builder()
                 .namespace(namespace.getId())
                 .labels(appLabels)
@@ -159,17 +181,5 @@ public class JarDeployment extends ComponentResource {
                 .build(), clusterResourceOptions);
         return service.status().applyValue(data -> data.loadBalancer().get().ingress().get(0).hostname().get()).applyValue(String::valueOf);
     }
-    public JarDeployment(String name, LambdaArgs applyArgs) {
-        super("example:spring:JarDeployment",
-                name,
-                JarDeployment.apply(applyArgs),
-                null);
 
-        final var args = JarDeployment.apply(applyArgs);
-
-        final var appJar = deployJar(args.getJarPath(), args.getBucketName());
-        this.endpoint = deployApp(args.getKubeconfig(), appJar);
-
-        return;
-    }
 }
