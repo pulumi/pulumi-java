@@ -1,6 +1,7 @@
 /* {{ .TemplateComment }} */
 
 plugins {
+    id("signing")
     id("java-library")
     id("maven-publish")
 }
